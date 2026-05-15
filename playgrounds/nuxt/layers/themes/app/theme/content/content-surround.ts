@@ -1,6 +1,6 @@
 // @unocss-include
 
-export default {
+export const contentSurround = {
   slots: {
     root: 'grid grid-cols-1 sm:grid-cols-2 gap-8',
     link: 'group block px-6 py-8 rounded-lg border border-border hover:bg-background-elevated/50 focus-visible:outline-primary transition-colors',

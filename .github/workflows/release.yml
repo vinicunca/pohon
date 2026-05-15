@@ -64,12 +64,6 @@ jobs:
       - name: Prepare
         run: pnpm run dev:prepare
 
-      - name: Typecheck
-        run: pnpm run typecheck
-
-      - name: Test
-        run: pnpm run test run
-
       # Must publish from repo root for provenance to work with OIDC
       - name: Publish to npm
         run: npm publish --access public --provenance

@@ -2,7 +2,7 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
 import type { ComponentConfig } from '../../types/uv';
-import theme from '#build/ui/prose/h-3';
+import theme from '#build/ui/prose/h3';
 
 type ProseH3 = ComponentConfig<typeof theme, AppConfig, 'h3', 'ui.prose'>;
 

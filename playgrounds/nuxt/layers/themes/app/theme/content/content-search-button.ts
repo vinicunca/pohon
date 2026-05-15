@@ -1,5 +1,5 @@
 // @unocss-include
-export default {
+export const contentSearchButton = {
   slots: {
     base: '',
     label: '',

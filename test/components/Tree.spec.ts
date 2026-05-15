@@ -1,4 +1,4 @@
-import type { AkarTreeItem } from '../../src/runtime/components/Tree.vue';
+import type { TreeItem } from '../../src/runtime/components/Tree.vue';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { describe, expect, it } from 'vitest';
 import { axe } from 'vitest-axe';
@@ -10,7 +10,7 @@ import { expectEmitPayloadType } from '../utils/types';
 describe('tree', () => {
   const sizes = Object.keys(theme.variants.size) as any;
 
-  const items: Array<AkarTreeItem> = [
+  const items: Array<TreeItem> = [
     {
       id: 'root',
       label: 'app',
@@ -40,7 +40,7 @@ describe('tree', () => {
     ['with defaultExpanded', { props: { ...props, defaultExpanded: [items[0]] } }],
     // Key mapping
     ['with labelKey', { props: { ...props, labelKey: 'id' } }],
-    ['with getKey', { props: { ...props, getKey: (item: AkarTreeItem) => item.id } }],
+    ['with getKey', { props: { ...props, getKey: (item: TreeItem) => item.id } }],
     // Multiple
     ['with multiple', { props: { ...props, multiple: true } }],
     ['with multiple and modelValue', { props: { ...props, multiple: true, modelValue: [items[0], items[1]] } }],
