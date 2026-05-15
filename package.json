@@ -103,11 +103,7 @@
       ]
     }
   },
-  "bin": {
-    "pohon-ui": "./cli/index.mjs"
-  },
   "files": [
-    "cli",
     "dist",
     "vue-plugin.d.ts"
   ],
