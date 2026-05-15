@@ -1,0 +1,559 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tree > renders with as correctly 1`] = `
+"<div data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</div>"
+`;
+
+exports[`Tree > renders with class correctly 1`] = `
+"<ul data-slot="root" class="absolute" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with collapsedIcon correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Default Collapsed</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with default slot correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with defaultExpanded correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with defaultValue correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="true" aria-expanded="false" aria-level="1" data-indent="1" data-selected="" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with defautExpanded item correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="true" aria-level="1" data-indent="1" data-expanded="" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder-open" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Default Expanded</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <ul role="group" data-slot="listWithChildren" class="">
+      <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="2" data-indent="2" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+        <!--v-if-->
+      </li>
+      <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="2" data-indent="2" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+          <!--v-if-->
+        </button>
+        <!--v-if-->
+      </li>
+      <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="2" data-indent="2" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+          <!--v-if-->
+        </button>
+        <!--v-if-->
+      </li>
+    </ul>
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with disabled correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" disabled="" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" disabled="" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" disabled="" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with disabled item correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" disabled="" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Disabled item</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with dynamic slot correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary">dynamic slot</button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with expanded correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with expandedIcon correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="true" aria-level="1" data-indent="1" data-expanded="" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:chevron-up" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Default Expanded</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <ul role="group" data-slot="listWithChildren" class="">
+      <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="2" data-indent="2" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+        <!--v-if-->
+      </li>
+      <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="2" data-indent="2" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+          <!--v-if-->
+        </button>
+        <!--v-if-->
+      </li>
+      <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="2" data-indent="2" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+          <!--v-if-->
+        </button>
+        <!--v-if-->
+      </li>
+    </ul>
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with getKey correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with item slot correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary">item slot</button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary">item slot</button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with item-leading slot correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary">leading slot<span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary">leading slot<span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with item-trailing slot correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span><span data-slot="linkTrailing" class="">trailing slot</span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span><span data-slot="linkTrailing" class="">trailing slot</span></button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with item-wrapper slot correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class="">wrapper slot
+    <!--v-if-->
+  </li>
+  <li role="presentation" class="">wrapper slot
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with items correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with labelKey correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">root</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app-vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt-config-ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with modelValue correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="true" aria-expanded="false" aria-level="1" data-indent="1" data-selected="" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with multiple and defaultValue correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree" aria-multiselectable="true">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="true" aria-expanded="false" aria-level="1" data-indent="1" data-selected="" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="true" aria-level="1" data-indent="1" data-selected="" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with multiple and modelValue correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree" aria-multiselectable="true">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="true" aria-expanded="false" aria-level="1" data-indent="1" data-selected="" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="true" aria-level="1" data-indent="1" data-selected="" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with multiple correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree" aria-multiselectable="true">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with neutral color correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class=""><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class=""><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class=""><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with size lg correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with size md correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with size sm correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with size xl correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with size xs correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with trailingIcon correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:arrow-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with ui correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary font-bold"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary font-bold"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary font-bold"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;
+
+exports[`Tree > renders with virtualize correctly 1`] = `
+"<ul data-slot="root" tabindex="-1" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <div data-akar-virtualizer="" style="position: relative; width: 100%; height: 96px;"></div>
+</ul>"
+`;
+
+exports[`Tree > renders without nested correctly 1`] = `
+"<ul data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="tree">
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-expanded="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-lucide:folder" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app</span><span data-slot="linkTrailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-vue" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">app.vue</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+  <li role="presentation" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" role="treeitem" aria-selected="false" aria-level="1" data-indent="1" type="button" data-slot="link" class="focus-visible:before:ring-primary"><span class="iconify i-vscode-icons:file-type-nuxt" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">nuxt.config.ts</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </li>
+</ul>"
+`;

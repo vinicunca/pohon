@@ -1,0 +1,31 @@
+import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { describe, expect, it } from 'vitest';
+import { axe } from 'vitest-axe';
+import Marquee from '../../src/runtime/components/Marquee.vue';
+import { renderEach } from '../component-render';
+
+describe('marquee', () => {
+  renderEach(Marquee, [
+    // Props
+    ['with as', { props: { as: 'section' } }],
+    ['with class', { props: { class: 'text-xl' } }],
+    ['with pauseOnHover', { props: { pauseOnHover: true } }],
+    ['with reverse', { props: { reverse: true } }],
+    ['with orientation', { props: { orientation: 'vertical' } }],
+    ['with repeat', { props: { repeat: 6 } }],
+    ['with overlay off', { props: { overlay: false } }],
+    ['with ui', { props: { ui: { content: 'gap-4' } } }],
+    // Slots
+    ['with default slot', { slots: { default: () => 'Default slot' } }],
+  ]);
+
+  it('passes accessibility tests', async () => {
+    const wrapper = await mountSuspended(Marquee, {
+      slots: {
+        default: () => 'Default slot',
+      },
+    });
+
+    expect(await axe(wrapper.element)).toHaveNoViolations();
+  });
+});

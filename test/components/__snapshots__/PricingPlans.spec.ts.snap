@@ -1,0 +1,591 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PricingPlans > renders with as correctly 1`] = `
+"<section data-orientation="horizontal" class="" style="--count: 3;">
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Basic</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$10</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Pro</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$20</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Enterprise</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$30</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</section>"
+`;
+
+exports[`PricingPlans > renders with class correctly 1`] = `
+"<div data-orientation="horizontal" class="gap-y-12" style="--count: 3;">
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Basic</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$10</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Pro</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$20</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Enterprise</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$30</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PricingPlans > renders with compact and scale correctly 1`] = `
+"<div data-orientation="horizontal" class="" style="--count: 3;">
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Basic</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$10</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Pro</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$20</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Enterprise</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$30</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PricingPlans > renders with compact correctly 1`] = `
+"<div data-orientation="horizontal" class="" style="--count: 3;">
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Basic</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$10</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Pro</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$20</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Enterprise</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$30</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PricingPlans > renders with default slot correctly 1`] = `"<div data-orientation="horizontal" class="" style="--count: 3;">Default slot</div>"`;
+
+exports[`PricingPlans > renders with one plan correctly 1`] = `
+"<div data-orientation="horizontal" class="" style="--count: 1;">
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Basic</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$10</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PricingPlans > renders with orientation vertical correctly 1`] = `
+"<div data-orientation="vertical" class="" style="--count: 3;">
+  <!---->
+  <div data-orientation="horizontal" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Basic</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <div data-slot="footer" class="">
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$10</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!---->
+  <div data-orientation="horizontal" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Pro</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <div data-slot="footer" class="">
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$20</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!---->
+  <div data-orientation="horizontal" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Enterprise</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <div data-slot="footer" class="">
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$30</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlans > renders with scale correctly 1`] = `
+"<div data-orientation="horizontal" class="" style="--count: 3;">
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Basic</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$10</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Pro</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$20</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Enterprise</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$30</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PricingPlans > renders with three plans correctly 1`] = `
+"<div data-orientation="horizontal" class="" style="--count: 3;">
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Basic</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$10</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Pro</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$20</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Enterprise</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$30</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PricingPlans > renders with two plans correctly 1`] = `
+"<div data-orientation="horizontal" class="" style="--count: 2;">
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Basic</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$10</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+  <!---->
+  <div data-orientation="vertical" data-slot="root">
+    <!--v-if-->
+    <div data-slot="body" class="">
+      <div data-slot="titleWrapper" class="">
+        <div data-slot="title" class="">Pro</div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div data-slot="priceWrapper" class="">
+        <!--v-if-->
+        <div data-slot="price" class="">$20</div>
+        <!--v-if-->
+      </div>
+      <ul data-slot="features" class="">
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+        <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;

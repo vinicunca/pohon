@@ -1,0 +1,1126 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Stepper > renders with as correctly 1`] = `
+"<section role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</section>"
+`;
+
+exports[`Stepper > renders with class correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root" class="gap-8">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with content slot correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <div data-slot="content" class="">Content slot</div>
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with custom slot correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div data-state="completed" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="completed" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="completed" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="completed" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="completed" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="completed" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <div data-slot="content" class="">Custom slot</div>
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 2 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with custom-wrapper slot correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">Custom wrapper slot</div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with default slot correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with defaultValue correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div data-state="completed" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="completed" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="completed" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 1 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with description slot correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Description slot</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Description slot</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with indicator slot correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">Indicator slot</div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">Indicator slot</div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">Indicator slot</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with items correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with modelValue correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div data-state="completed" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="completed" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="completed" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 1 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with neutral color correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with size lg horizontal correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with size lg vertical correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="vertical" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="vertical" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="vertical" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="vertical" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="vertical" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="vertical" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with size md horizontal correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with size md vertical correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="vertical" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="vertical" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="vertical" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="vertical" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="vertical" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="vertical" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with size sm horizontal correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with size sm vertical correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="vertical" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="vertical" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="vertical" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="vertical" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="vertical" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="vertical" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with size xl horizontal correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with size xl vertical correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="vertical" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="vertical" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="vertical" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="vertical" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="vertical" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="vertical" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with size xs horizontal correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with size xs vertical correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="vertical" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="vertical" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="vertical" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="vertical" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="vertical" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="vertical" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with title slot correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Title slot</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Title slot</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with ui correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="font-bold">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="font-bold">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="font-bold">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with valueKey correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders with wrapper slot correctly 1`] = `
+"<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">Wrapper slot</div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">Wrapper slot</div>
+    </div>
+    <div data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" disabled="" data-disabled="" data-orientation="horizontal" tabindex="-1" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;
+
+exports[`Stepper > renders without linear correctly 1`] = `
+"<div role="group" aria-label="progress" data-orientation="horizontal" data-slot="root">
+  <div data-slot="header" class="">
+    <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="active" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-1" aria-labelledby="akar-stepper-item-title-v-0" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-0" data-slot="title" class="">Address</div>
+        <div id="akar-stepper-item-description-v-1" data-slot="description" class="">Add your address here</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-3" aria-labelledby="akar-stepper-item-title-v-2" data-slot="trigger" class="">
+          <div data-slot="indicator" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></div>
+        </button>
+        <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class=""></div>
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-2" data-slot="title" class="">Shipping</div>
+        <div id="akar-stepper-item-description-v-3" data-slot="description" class="">Set your preferred shipping method</div>
+      </div>
+    </div>
+    <div data-state="inactive" data-orientation="horizontal" data-slot="item" class="">
+      <div data-slot="container" class=""><button type="button" data-state="inactive" data-orientation="horizontal" tabindex="0" aria-describedby="akar-stepper-item-description-v-5" aria-labelledby="akar-stepper-item-title-v-4" data-slot="trigger" class="">
+          <div data-slot="indicator" class="">3</div>
+        </button>
+        <!--v-if-->
+      </div>
+      <div data-slot="wrapper" class="">
+        <div id="akar-stepper-item-title-v-4" data-slot="title" class="">Checkout</div>
+        <div id="akar-stepper-item-description-v-5" data-slot="description" class="">Confirm your order</div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+  <div aria-live="polite" aria-atomic="true" role="status" style="transform: translateX(-100%); position: absolute; pointer-events: none; opacity: 0; margin: 0px;"> Step 0 of 3</div>
+</div>"
+`;

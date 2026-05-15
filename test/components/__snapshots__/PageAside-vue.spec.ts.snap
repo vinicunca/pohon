@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PageAside > renders with as correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class="">
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageAside > renders with bottom slot correctly 1`] = `
+"<aside data-slot="root" class="">
+  <div data-slot="container" class="">
+    <!--v-if-->Bottom slot
+  </div>
+</aside>"
+`;
+
+exports[`PageAside > renders with class correctly 1`] = `
+"<aside data-slot="root" class="lg:flex">
+  <div data-slot="container" class="">
+    <!--v-if-->
+  </div>
+</aside>"
+`;
+
+exports[`PageAside > renders with default slot correctly 1`] = `
+"<aside data-slot="root" class="">
+  <div data-slot="container" class="">
+    <!--v-if-->Default slot
+  </div>
+</aside>"
+`;
+
+exports[`PageAside > renders with top slot correctly 1`] = `
+"<aside data-slot="root" class="">
+  <div data-slot="container" class="">
+    <div data-slot="top" class="">
+      <div data-slot="topHeader" class=""></div>
+      <div data-slot="topBody" class="">Top slot</div>
+      <div data-slot="topFooter" class=""></div>
+    </div>
+  </div>
+</aside>"
+`;
+
+exports[`PageAside > renders with ui correctly 1`] = `
+"<aside data-slot="root" class="">
+  <div data-slot="container" class="absolute">
+    <!--v-if-->
+  </div>
+</aside>"
+`;

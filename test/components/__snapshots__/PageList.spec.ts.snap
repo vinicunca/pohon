@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PageList > renders with as correctly 1`] = `"<div role="list" class=""></div>"`;
+
+exports[`PageList > renders with class correctly 1`] = `"<div role="list" class="gap-2"></div>"`;
+
+exports[`PageList > renders with default slot correctly 1`] = `"<div role="list" class="">Default slot</div>"`;
+
+exports[`PageList > renders with divide correctly 1`] = `"<div role="list" class=""></div>"`;

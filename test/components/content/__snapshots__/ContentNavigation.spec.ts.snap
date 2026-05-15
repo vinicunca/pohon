@@ -1,0 +1,1249 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ContentNavigation > renders with class correctly 1`] = `
+"<nav data-slot="root" class="w-48">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with defaultOpen correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with link slot correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">Link slot</button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">Link slot</a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">Link slot</a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">Link slot</a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">Link slot</a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">Link slot</a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">Link slot</button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">Link slot</a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">Link slot</a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">Link slot</a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">Link slot</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with link-leading slot correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">Link leading slot<span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">Link leading slot<span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">Link leading slot<span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">Link leading slot<span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">Link leading slot<span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">Link leading slot<span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">Link leading slot<span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span></button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">Link leading slot<span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">Link leading slot<span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">Link leading slot<span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">Link leading slot<span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with link-title slot correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Link title slot<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Link title slot<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Link title slot<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Link title slot<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Link title slot<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Link title slot<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Link title slot<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Link title slot<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Link title slot<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Link title slot<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Link title slot<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with link-trailing slot correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class="">Link trailing slot</span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span><span data-slot="linkTrailing" class="">Link trailing slot</span>
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span><span data-slot="linkTrailing" class="">Link trailing slot</span>
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span><span data-slot="linkTrailing" class="">Link trailing slot</span>
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span><span data-slot="linkTrailing" class="">Link trailing slot</span>
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span><span data-slot="linkTrailing" class="">Link trailing slot</span>
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class="">Link trailing slot</span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span><span data-slot="linkTrailing" class="">Link trailing slot</span>
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span><span data-slot="linkTrailing" class="">Link trailing slot</span>
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span><span data-slot="linkTrailing" class="">Link trailing slot</span>
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span><span data-slot="linkTrailing" class="">Link trailing slot</span>
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with navigation correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with neutral variant link correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with neutral variant link highlight correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with neutral variant link highlight neutral correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with neutral variant pill correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with neutral variant pill highlight correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with neutral variant pill highlight neutral correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with primary variant link correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with primary variant link highlight correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with primary variant pill correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with primary variant pill highlight correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with trailingIcon correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:plus" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:plus" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders with ui correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders without collapsible correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;
+
+exports[`ContentNavigation > renders without defaultOpen correctly 1`] = `
+"<nav data-slot="root">
+  <ul>
+    <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
+        <!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-1">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/getting-started" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Introduction<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/installation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Installation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/theming" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Theming<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/structure" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Structure<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/getting-started/content" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">Content<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+    <li data-state="open" data-disabled="" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" class="">
+        <!--v-if--><span data-slot="linkTitle" class="">Components<!--v-if--></span><span data-slot="linkTrailing" class=""><!--v-if--><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="linkTrailingIcon"></span></span>
+      </button>
+      <div role="region" aria-labelledby="akar-accordion-trigger-v-0-0-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-0-0-3">
+        <!---->
+        <ul data-slot="root">
+          <li data-slot="item" class=""><a href="/components/content-navigation" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentNavigation<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-search" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSearch<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-surround" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentSurround<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+          <li data-slot="item" class=""><a href="/components/content-toc" data-slot="link">
+              <!--v-if--><span data-slot="linkTitle" class="">ContentToc<!--v-if--></span>
+              <!--v-if-->
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>"
+`;

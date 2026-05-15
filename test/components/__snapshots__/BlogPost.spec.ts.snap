@@ -1,0 +1,548 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BlogPost > renders with as correctly 1`] = `
+"<section data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</section>"
+`;
+
+exports[`BlogPost > renders with author correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with authors correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    <div data-slot="authors" class="">
+      <div data-slot="root" class="">
+        <!--v-if--><button type="button" data-slot="base" class=""><span data-slot="root"><img src="https://github.com/atinux.png" alt="atinux" data-slot="image"></span></button><button type="button" data-slot="base" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span></button>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with authors slot correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">Authors slot</div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with badge correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with badge object correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with badge slot correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class="">Badge slot<time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time></div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with body slot correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>Body slot</div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with class correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="absolute">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with date correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <div data-slot="meta" class="">
+      <!--v-if--><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with date slot correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Date slot</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with description correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    <div data-slot="description" class="">Description</div>
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with description slot correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description slot</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with footer slot correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-slot="footer" class="">Footer slot</div>
+</article>"
+`;
+
+exports[`BlogPost > renders with header slot correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class="">Header slot</div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with image correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" data-slot="image"></div>
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with orientation horizontal correctly 1`] = `
+"<article data-orientation="horizontal" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with orientation vertical correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with title correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <h2 data-slot="title" class="">Title</h2>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with title slot correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title slot" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title slot</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with to & image correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Post link" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with to correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Post link" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with ui correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with variant ghost correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with variant naked correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with variant outline correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with variant soft correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;
+
+exports[`BlogPost > renders with variant subtle correctly 1`] = `
+"<article data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
+    </div>
+    <h2 data-slot="title" class="">Title</h2>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="authors" class="">
+      <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" data-slot="image"></span>
+        <div data-slot="wrapper" class="">
+          <!--v-if-->
+          <p data-slot="name" class="">Benjamin Canac</p>
+          <p data-slot="description" class="">benjamincanac</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</article>"
+`;

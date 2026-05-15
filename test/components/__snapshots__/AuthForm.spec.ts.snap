@@ -1,0 +1,989 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AuthForm > renders with as correctly 1`] = `
+"<section data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</section>"
+`;
+
+exports[`AuthForm > renders with class correctly 1`] = `
+"<div data-slot="root" class="max-w-sm">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with description correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="header" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <div data-slot="description" class="">Description</div>
+  </div>
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with description slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="header" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <div data-slot="description" class="">Description</div>
+  </div>
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with disabled correctly 1`] = `
+"<div data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" disabled="" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" disabled="" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with fields correctly 1`] = `
+"<div data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with footer slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <div data-slot="footer" class="">Footer</div>
+</div>"
+`;
+
+exports[`AuthForm > renders with header slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="header" class="">Header</div>
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with icon correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="header" class="">
+    <div data-slot="leading" class=""><span class="iconify i-lucide:user" aria-hidden="true" data-slot="leadingIcon"></span></div>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with leading slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="header" class="">
+    <div data-slot="leading" class="">Leading</div>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with loading correctly 1`] = `
+"<div data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" disabled="" data-slot="base" class=""><span class="iconify i-lucide:loader-circle" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with providers correctly 1`] = `
+"<div data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="providers" class=""><button type="button" data-slot="base" class=""><span class="iconify i-simple-icons:google" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Google</span>
+        <!--v-if-->
+      </button></div>
+    <!---->
+    <div data-orientation="horizontal" role="separator" data-slot="root">
+      <!--v-if-->
+      <div data-slot="border" class=""></div>
+      <div data-slot="container" class=""><span data-slot="label" class="">or</span></div>
+      <div data-slot="border" class=""></div>
+      <!--v-if-->
+    </div>
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with providers slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="providers" class="">Providers</div>
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with separator correctly 1`] = `
+"<div data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with submit correctly 1`] = `
+"<div data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Submit</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with submit slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if-->Submit
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with title correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="header" class="">
+    <!--v-if-->
+    <div data-slot="title" class="">Title</div>
+    <!--v-if-->
+  </div>
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with title slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="header" class="">
+    <!--v-if-->
+    <div data-slot="title" class="">Title</div>
+    <!--v-if-->
+  </div>
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with ui correctly 1`] = `
+"<div data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--v-if--><button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`AuthForm > renders with validation slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <form id="v-0-0-0" class="" data-slot="form">
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-1" data-slot="label" class="">Email</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-1" type="text" name="email" data-slot="input" autocomplete="off" aria-invalid="true" aria-describedby="v-0-0-1-error">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div id="v-0-0-1-error" data-slot="error" class="">Invalid email format</div>
+        </div>
+      </div>
+      <div data-orientation="vertical" data-slot="root" class="">
+        <div data-slot="wrapper" class="">
+          <div data-slot="labelWrapper" class=""><label for="v-0-0-2" data-slot="label" class="">Password</label>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div class="">
+          <div data-slot="root" class=""><input id="v-0-0-2" type="password" name="password" data-slot="password" autocomplete="off" aria-invalid="false">
+            <!--v-if--><span data-slot="trailing" class=""><button type="button" aria-label="Show password" aria-pressed="false" data-slot="base" class="" aria-controls="v-0-0-2"><span class="iconify i-lucide:eye" aria-hidden="true" data-slot="leadingIcon"></span>
+            <!--v-if-->
+            <!--v-if--></button></span>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>Validation<button type="submit" data-slot="base" class="">
+        <!--v-if--><span data-slot="label" class="">Continue</span>
+        <!--v-if-->
+      </button>
+    </form>
+  </div>
+  <!--v-if-->
+</div>"
+`;

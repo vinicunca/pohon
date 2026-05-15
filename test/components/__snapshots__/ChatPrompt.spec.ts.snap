@@ -1,0 +1,122 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`chatPrompt > renders with as correctly 1`] = `
+"<section data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="root" class=""><textarea rows="1" placeholder="Type your message here…" data-slot="body" value=""></textarea>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</section>"
+`;
+
+exports[`chatPrompt > renders with class correctly 1`] = `
+"<form data-slot="root" class="p-5">
+  <!--v-if-->
+  <div data-slot="root" class=""><textarea rows="1" placeholder="Type your message here…" data-slot="body" value=""></textarea>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</form>"
+`;
+
+exports[`chatPrompt > renders with error correctly 1`] = `
+"<form data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="root" class=""><textarea rows="1" placeholder="Type your message here…" data-slot="body" disabled="" value=""></textarea>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</form>"
+`;
+
+exports[`chatPrompt > renders with footer slot correctly 1`] = `
+"<form data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="root" class=""><textarea rows="1" placeholder="Type your message here…" data-slot="body" value=""></textarea>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <div data-slot="footer" class="">Footer slot</div>
+</form>"
+`;
+
+exports[`chatPrompt > renders with header slot correctly 1`] = `
+"<form data-slot="root" class="">
+  <div data-slot="header" class="">Header slot</div>
+  <div data-slot="root" class=""><textarea rows="1" placeholder="Type your message here…" data-slot="body" value=""></textarea>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</form>"
+`;
+
+exports[`chatPrompt > renders with placeholder correctly 1`] = `
+"<form data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="root" class=""><textarea rows="1" placeholder="Placeholder" data-slot="body" value=""></textarea>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</form>"
+`;
+
+exports[`chatPrompt > renders with ui correctly 1`] = `
+"<form data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="root" class=""><textarea rows="1" placeholder="Type your message here…" data-slot="body" value=""></textarea>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</form>"
+`;
+
+exports[`chatPrompt > renders with variant naked correctly 1`] = `
+"<form data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="root" class=""><textarea rows="1" placeholder="Type your message here…" data-slot="body" value=""></textarea>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</form>"
+`;
+
+exports[`chatPrompt > renders with variant outline correctly 1`] = `
+"<form data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="root" class=""><textarea rows="1" placeholder="Type your message here…" data-slot="body" value=""></textarea>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</form>"
+`;
+
+exports[`chatPrompt > renders with variant soft correctly 1`] = `
+"<form data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="root" class=""><textarea rows="1" placeholder="Type your message here…" data-slot="body" value=""></textarea>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</form>"
+`;
+
+exports[`chatPrompt > renders with variant subtle correctly 1`] = `
+"<form data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="root" class=""><textarea rows="1" placeholder="Type your message here…" data-slot="body" value=""></textarea>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</form>"
+`;

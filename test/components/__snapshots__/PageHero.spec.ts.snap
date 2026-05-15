@@ -1,0 +1,237 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PageHero > renders with as correctly 1`] = `
+"<section data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container"></div>
+</section>"
+`;
+
+exports[`PageHero > renders with body slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <div data-slot="body" class="">Body slot</div>
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with bottom slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container"></div>Bottom slot
+</div>"
+`;
+
+exports[`PageHero > renders with class correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="absolute">
+  <div class="" data-slot="container"></div>
+</div>"
+`;
+
+exports[`PageHero > renders with default slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <!--v-if-->Default slot
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with description correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <div data-slot="wrapper" class="">
+      <div data-slot="header" class="">
+        <!--v-if-->
+        <!--v-if-->
+        <div data-slot="description" class="">Description</div>
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with description slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <div data-slot="wrapper" class="">
+      <div data-slot="header" class="">
+        <!--v-if-->
+        <!--v-if-->
+        <div data-slot="description" class="">Description slot</div>
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with footer slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <div data-slot="footer" class="">Footer slot</div>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with header slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <div data-slot="wrapper" class="">
+      <div data-slot="header" class="">Header slot</div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with headline slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <div data-slot="wrapper" class="">
+      <div data-slot="header" class="">
+        <div data-slot="headline" class="">Headline slot</div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with links correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <div data-slot="footer" class="">
+        <div data-slot="links" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with links slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <div data-slot="footer" class="">
+        <div data-slot="links" class="">Links slot</div>
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with orientation horizontal correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <!--v-if-->
+    <div class="hidden lg:block"></div>
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with orientation horizontal links correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <div data-slot="footer" class="">
+        <div data-slot="links" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+    </div>
+    <div class="hidden lg:block"></div>
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with orientation horizontal reverse correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <!--v-if-->
+    <div class="hidden lg:block"></div>
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with reverse correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container"></div>
+</div>"
+`;
+
+exports[`PageHero > renders with title correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <div data-slot="wrapper" class="">
+      <div data-slot="header" class="">
+        <!--v-if-->
+        <h1 data-slot="title" class="">Title</h1>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with title slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="" data-slot="container">
+    <div data-slot="wrapper" class="">
+      <div data-slot="header" class="">
+        <!--v-if-->
+        <h1 data-slot="title" class="">Title slot</h1>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageHero > renders with top slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">Top slot<div class="" data-slot="container"></div>
+</div>"
+`;
+
+exports[`PageHero > renders with ui correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div class="max-w-5xl" data-slot="container"></div>
+</div>"
+`;

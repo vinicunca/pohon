@@ -1,0 +1,281 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`switch > renders with ariaLabel correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button aria-label="Aria label" data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with as correctly 1`] = `
+"<section data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</section>"
+`;
+
+exports[`switch > renders with checkedIcon correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="true" aria-required="false" data-state="checked" value="on"><span data-state="checked" data-slot="thumb" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg><!--v-if--></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with class correctly 1`] = `
+"<div data-slot="root" class="inline-flex">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with color neutral correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="true" aria-required="false" data-state="checked" value="on"><span data-state="checked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with defaultValue correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="true" aria-required="false" data-state="checked" value="on"><span data-state="checked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with description correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <div data-slot="wrapper" class=""><label for="v-0" data-slot="label" class="">Label</label>
+    <p data-slot="description" class="">Description</p>
+  </div>
+</div>"
+`;
+
+exports[`switch > renders with description slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <div data-slot="wrapper" class=""><label for="v-0" data-slot="label" class="">Description slot</label>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`switch > renders with disabled correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" data-disabled="" disabled="" value="on"><span data-state="unchecked" data-disabled="" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with highlight correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with highlight neutral correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with id correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="id" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with label correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <div data-slot="wrapper" class=""><label for="v-0" data-slot="label" class="">Label</label>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`switch > renders with label slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <div data-slot="wrapper" class=""><label for="v-0" data-slot="label" class="">Label slot</label>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`switch > renders with loading correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" data-disabled="" disabled="" value="on"><span data-state="unchecked" data-disabled="" data-slot="thumb" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with loadingIcon correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" data-disabled="" disabled="" value="on"><span data-state="unchecked" data-disabled="" data-slot="thumb" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with modelValue correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="true" aria-required="false" data-state="checked" value="on"><span data-state="checked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with name correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with required correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="true" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <div data-slot="wrapper" class=""><label for="v-0" data-slot="label" class="">Label</label>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`switch > renders with size lg correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with size md correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with size sm correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with size xl correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with size xs correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with trueValue/falseValue as number correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="true" aria-required="false" data-state="checked" value="on"><span data-state="checked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with trueValue/falseValue as string correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="true" aria-required="false" data-state="checked" value="on"><span data-state="checked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with trueValue/falseValue unchecked correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with ui correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with uncheckedIcon correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="on"><span data-state="unchecked" data-slot="thumb" class=""><!--v-if--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class=""></svg></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`switch > renders with value correctly 1`] = `
+"<div data-slot="root" class="">
+  <div data-slot="container" class=""><button data-slot="base" id="v-0" role="switch" type="button" aria-checked="false" aria-required="false" data-state="unchecked" value="value"><span data-state="unchecked" data-slot="thumb" class=""></span>
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;

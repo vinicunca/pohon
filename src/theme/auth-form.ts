@@ -1,0 +1,20 @@
+export default {
+  slots: {
+    root: '',
+    header: '',
+    leading: '',
+    leadingIcon: '',
+    title: '',
+    description: '',
+    body: '',
+    providers: '',
+    checkbox: '',
+    select: '',
+    password: '',
+    otp: '',
+    input: '',
+    separator: '',
+    form: '',
+    footer: '',
+  },
+};

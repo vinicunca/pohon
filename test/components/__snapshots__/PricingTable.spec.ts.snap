@@ -1,0 +1,3933 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PricingTable > renders with as correctly 1`] = `
+"<section data-slot="root">
+  <table data-slot="table" class="">
+    <!--v-if-->
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Free</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For personal and small teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$0</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+              <!--v-if--></span>
+            </div>
+            <div data-slot="tierDescription" class="">For medium and large teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$9</div>
+              <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Enterprise</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For large enterprises</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Custom</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Contact us</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Free</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For personal and small teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$0</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+          <!--v-if--></span>
+        </div>
+        <div data-slot="tierDescription" class="">For medium and large teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$9</div>
+          <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Enterprise</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For large enterprises</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Custom</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Contact us</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>"
+`;
+
+exports[`PricingTable > renders with caption correctly 1`] = `
+"<div data-slot="root">
+  <table data-slot="table" class="">
+    <caption data-slot="caption" class="">Caption</caption>
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Free</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For personal and small teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$0</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+              <!--v-if--></span>
+            </div>
+            <div data-slot="tierDescription" class="">For medium and large teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$9</div>
+              <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Enterprise</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For large enterprises</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Custom</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Contact us</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Free</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For personal and small teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$0</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+          <!--v-if--></span>
+        </div>
+        <div data-slot="tierDescription" class="">For medium and large teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$9</div>
+          <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Enterprise</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For large enterprises</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Custom</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Contact us</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;
+
+exports[`PricingTable > renders with caption slot correctly 1`] = `
+"<div data-slot="root">
+  <table data-slot="table" class="">
+    <caption data-slot="caption" class="">Caption slot</caption>
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Free</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For personal and small teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$0</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+              <!--v-if--></span>
+            </div>
+            <div data-slot="tierDescription" class="">For medium and large teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$9</div>
+              <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Enterprise</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For large enterprises</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Custom</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Contact us</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Free</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For personal and small teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$0</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+          <!--v-if--></span>
+        </div>
+        <div data-slot="tierDescription" class="">For medium and large teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$9</div>
+          <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Enterprise</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For large enterprises</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Custom</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Contact us</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;
+
+exports[`PricingTable > renders with class correctly 1`] = `
+"<div data-slot="root" class="max-w-sm">
+  <table data-slot="table" class="">
+    <!--v-if-->
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Free</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For personal and small teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$0</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+              <!--v-if--></span>
+            </div>
+            <div data-slot="tierDescription" class="">For medium and large teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$9</div>
+              <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Enterprise</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For large enterprises</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Custom</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Contact us</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Free</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For personal and small teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$0</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+          <!--v-if--></span>
+        </div>
+        <div data-slot="tierDescription" class="">For medium and large teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$9</div>
+          <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Enterprise</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For large enterprises</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Custom</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Contact us</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;
+
+exports[`PricingTable > renders with tier slot correctly 1`] = `
+"<div data-slot="root">
+  <table data-slot="table" class="">
+    <!--v-if-->
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">Tier slot</div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">Tier slot</div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">Tier slot</div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">Tier slot</div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">Tier slot</div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">Tier slot</div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;
+
+exports[`PricingTable > renders with tier-badge slot correctly 1`] = `
+"<div data-slot="root">
+  <table data-slot="table" class="">
+    <!--v-if-->
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Free</div>Tier badge slot
+            </div>
+            <div data-slot="tierDescription" class="">For personal and small teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$0</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Pro</div>Tier badge slot
+            </div>
+            <div data-slot="tierDescription" class="">For medium and large teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$9</div>
+              <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Enterprise</div>Tier badge slot
+            </div>
+            <div data-slot="tierDescription" class="">For large enterprises</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Custom</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Contact us</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Free</div>Tier badge slot
+        </div>
+        <div data-slot="tierDescription" class="">For personal and small teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$0</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Pro</div>Tier badge slot
+        </div>
+        <div data-slot="tierDescription" class="">For medium and large teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$9</div>
+          <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Enterprise</div>Tier badge slot
+        </div>
+        <div data-slot="tierDescription" class="">For large enterprises</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Custom</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Contact us</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;
+
+exports[`PricingTable > renders with tier-billing slot correctly 1`] = `
+"<div data-slot="root">
+  <table data-slot="table" class="">
+    <!--v-if-->
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Free</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For personal and small teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$0</div>
+              <div data-slot="tierBilling" class="">Tier billing slot</div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+              <!--v-if--></span>
+            </div>
+            <div data-slot="tierDescription" class="">For medium and large teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$9</div>
+              <div data-slot="tierBilling" class="">Tier billing slot</div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Enterprise</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For large enterprises</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Custom</div>
+              <div data-slot="tierBilling" class="">Tier billing slot</div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Contact us</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Free</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For personal and small teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$0</div>
+          <div data-slot="tierBilling" class="">Tier billing slot</div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+          <!--v-if--></span>
+        </div>
+        <div data-slot="tierDescription" class="">For medium and large teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$9</div>
+          <div data-slot="tierBilling" class="">Tier billing slot</div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Enterprise</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For large enterprises</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Custom</div>
+          <div data-slot="tierBilling" class="">Tier billing slot</div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Contact us</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;
+
+exports[`PricingTable > renders with tier-button slot correctly 1`] = `
+"<div data-slot="root">
+  <table data-slot="table" class="">
+    <!--v-if-->
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Free</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For personal and small teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$0</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class="">Tier button slot</div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+              <!--v-if--></span>
+            </div>
+            <div data-slot="tierDescription" class="">For medium and large teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$9</div>
+              <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+            </div>
+            <div data-slot="tierButton" class="">Tier button slot</div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Enterprise</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For large enterprises</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Custom</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class="">Tier button slot</div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Free</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For personal and small teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$0</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class="">Tier button slot</div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+          <!--v-if--></span>
+        </div>
+        <div data-slot="tierDescription" class="">For medium and large teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$9</div>
+          <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+        </div>
+        <div data-slot="tierButton" class="">Tier button slot</div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Enterprise</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For large enterprises</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Custom</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class="">Tier button slot</div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;
+
+exports[`PricingTable > renders with tier-description slot correctly 1`] = `
+"<div data-slot="root">
+  <table data-slot="table" class="">
+    <!--v-if-->
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Free</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">Tier description slot</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$0</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+              <!--v-if--></span>
+            </div>
+            <div data-slot="tierDescription" class="">Tier description slot</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$9</div>
+              <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Enterprise</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">Tier description slot</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Custom</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Contact us</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Free</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">Tier description slot</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$0</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+          <!--v-if--></span>
+        </div>
+        <div data-slot="tierDescription" class="">Tier description slot</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$9</div>
+          <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Enterprise</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">Tier description slot</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Custom</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Contact us</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;
+
+exports[`PricingTable > renders with tier-discount slot correctly 1`] = `
+"<div data-slot="root">
+  <table data-slot="table" class="">
+    <!--v-if-->
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Free</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For personal and small teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <div data-slot="tierDiscount" class="">Tier discount slot</div>
+              <div data-slot="tierPrice" class="">$0</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+              <!--v-if--></span>
+            </div>
+            <div data-slot="tierDescription" class="">For medium and large teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <div data-slot="tierDiscount" class="">Tier discount slot</div>
+              <div data-slot="tierPrice" class="">$9</div>
+              <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Enterprise</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For large enterprises</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <div data-slot="tierDiscount" class="">Tier discount slot</div>
+              <div data-slot="tierPrice" class="">Custom</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Contact us</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Free</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For personal and small teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <div data-slot="tierDiscount" class="">Tier discount slot</div>
+          <div data-slot="tierPrice" class="">$0</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+          <!--v-if--></span>
+        </div>
+        <div data-slot="tierDescription" class="">For medium and large teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <div data-slot="tierDiscount" class="">Tier discount slot</div>
+          <div data-slot="tierPrice" class="">$9</div>
+          <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Enterprise</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For large enterprises</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <div data-slot="tierDiscount" class="">Tier discount slot</div>
+          <div data-slot="tierPrice" class="">Custom</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Contact us</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;
+
+exports[`PricingTable > renders with tier-price slot correctly 1`] = `
+"<div data-slot="root">
+  <table data-slot="table" class="">
+    <!--v-if-->
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Free</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For personal and small teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Tier price slot</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+              <!--v-if--></span>
+            </div>
+            <div data-slot="tierDescription" class="">For medium and large teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Tier price slot</div>
+              <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Enterprise</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For large enterprises</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Tier price slot</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Contact us</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Free</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For personal and small teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Tier price slot</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+          <!--v-if--></span>
+        </div>
+        <div data-slot="tierDescription" class="">For medium and large teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Tier price slot</div>
+          <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Enterprise</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For large enterprises</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Tier price slot</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Contact us</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;
+
+exports[`PricingTable > renders with tier-title slot correctly 1`] = `
+"<div data-slot="root">
+  <table data-slot="table" class="">
+    <!--v-if-->
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Tier title slot</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For personal and small teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$0</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Tier title slot</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+              <!--v-if--></span>
+            </div>
+            <div data-slot="tierDescription" class="">For medium and large teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$9</div>
+              <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Tier title slot</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For large enterprises</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Custom</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Contact us</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Tier title slot</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For personal and small teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$0</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Tier title slot</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+          <!--v-if--></span>
+        </div>
+        <div data-slot="tierDescription" class="">For medium and large teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$9</div>
+          <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Tier title slot</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For large enterprises</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Custom</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Contact us</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;
+
+exports[`PricingTable > renders with tiers and sections correctly 1`] = `
+"<div data-slot="root">
+  <table data-slot="table" class="">
+    <!--v-if-->
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Free</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For personal and small teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$0</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+              <!--v-if--></span>
+            </div>
+            <div data-slot="tierDescription" class="">For medium and large teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$9</div>
+              <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Enterprise</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For large enterprises</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Custom</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Contact us</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Free</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For personal and small teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$0</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+          <!--v-if--></span>
+        </div>
+        <div data-slot="tierDescription" class="">For medium and large teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$9</div>
+          <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Enterprise</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For large enterprises</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Custom</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Contact us</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;
+
+exports[`PricingTable > renders with ui correctly 1`] = `
+"<div data-slot="root">
+  <table data-slot="table" class="table-auto">
+    <!--v-if-->
+    <thead data-slot="thead" class="">
+      <tr data-slot="tr" class="">
+        <td></td>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Free</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For personal and small teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$0</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+              <!--v-if--></span>
+            </div>
+            <div data-slot="tierDescription" class="">For medium and large teams</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">$9</div>
+              <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Get started</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+        <th scope="col" data-slot="tier" class="">
+          <div data-slot="tierWrapper" class="">
+            <div data-slot="tierTitleWrapper" class="">
+              <div data-slot="tierTitle" class="">Enterprise</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierDescription" class="">For large enterprises</div>
+            <div data-slot="tierPriceWrapper" class="">
+              <!--v-if-->
+              <div data-slot="tierPrice" class="">Custom</div>
+              <!--v-if-->
+            </div>
+            <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+                <!--v-if--><span data-slot="label" class="">Contact us</span>
+                <!--v-if-->
+              </button></div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody data-slot="tbody" class="">
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Features</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">4</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">1</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">10</div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr data-slot="tr" class="">
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="sectionTitle" class="">Support</div>
+        </th>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+        <td data-slot="td" class=""></td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" data-slot="th" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+        </th>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </td>
+        <td data-slot="td" class="">
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ul data-slot="list" class="">
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Free</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For personal and small teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$0</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class="">4</div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">1</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Pro</div><span data-slot="tierBadge" class=""><!--v-if--><span data-slot="label" class="">Most popular</span>
+          <!--v-if--></span>
+        </div>
+        <div data-slot="tierDescription" class="">For medium and large teams</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">$9</div>
+          <div data-slot="tierBilling" class=""><span data-slot="tierBillingPeriod" class="">billed annually</span><span data-slot="tierBillingCycle" class="">/month</span></div>
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Get started</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class="">10</div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+    </li>
+    <li data-slot="item" class="">
+      <div data-slot="tierWrapper" class="">
+        <div data-slot="tierTitleWrapper" class="">
+          <div data-slot="tierTitle" class="">Enterprise</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierDescription" class="">For large enterprises</div>
+        <div data-slot="tierPriceWrapper" class="">
+          <!--v-if-->
+          <div data-slot="tierPrice" class="">Custom</div>
+          <!--v-if-->
+        </div>
+        <div data-slot="tierButton" class=""><button type="button" data-slot="base" class="">
+            <!--v-if--><span data-slot="label" class="">Contact us</span>
+            <!--v-if-->
+          </button></div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Features</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited projects</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited members</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Unlimited integrations</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+      </div>
+      <div data-slot="section" class="">
+        <div data-slot="sectionTitle" class="">Support</div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">Email support</div>
+          <div data-slot="featureValue" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="tierFeatureIcon"></span></div>
+        </div>
+        <div data-slot="feature" class="">
+          <div data-slot="featureTitle" class="">24/7 support</div>
+          <div data-slot="featureValue" class="">Enterprise</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>"
+`;

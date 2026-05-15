@@ -1,0 +1,211 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ColorPicker > renders with as correctly 1`] = `
+"<section data-v-c9a043d6="" data-slot="root" class="">
+  <div data-v-c9a043d6="" data-slot="picker" class="">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #FFFFFF; left: 0%; top: 0%;"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #FF0000; top: 0%;"></div>
+    </div>
+  </div>
+</section>"
+`;
+
+exports[`ColorPicker > renders with class correctly 1`] = `
+"<div data-v-c9a043d6="" data-slot="root" class="w-96">
+  <div data-v-c9a043d6="" data-slot="picker" class="">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #FFFFFF; left: 0%; top: 0%;"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #FF0000; top: 0%;"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ColorPicker > renders with disabled correctly 1`] = `
+"<div data-v-c9a043d6="" data-slot="root" class="" data-disabled="true">
+  <div data-v-c9a043d6="" data-slot="picker" class="">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #FFFFFF; left: 0%; top: 0%;" data-disabled="true"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #FF0000; top: 0%;" data-disabled="true"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ColorPicker > renders with format cmyk correctly 1`] = `
+"<div data-v-c9a043d6="" data-slot="root" class="">
+  <div data-v-c9a043d6="" data-slot="picker" class="">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #00FF8C;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #00C16A; left: 100%; top: 24.310000000000002%;"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #00FF8C; top: 42.48666666666667%;"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ColorPicker > renders with format hex correctly 1`] = `
+"<div data-v-c9a043d6="" data-slot="root" class="">
+  <div data-v-c9a043d6="" data-slot="picker" class="">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #00FF8C;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #00C16A; left: 100%; top: 24.313726000000003%;"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #00FF8C; top: 42.48704666666667%;"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ColorPicker > renders with format hsl correctly 1`] = `
+"<div data-v-c9a043d6="" data-slot="root" class="">
+  <div data-v-c9a043d6="" data-slot="picker" class="">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #00FF8C;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #00C16A; left: 100%; top: 24.400000000000006%;"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #00FF8C; top: 42.5%;"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ColorPicker > renders with format lab correctly 1`] = `
+"<div data-v-c9a043d6="" data-slot="root" class="">
+  <div data-v-c9a043d6="" data-slot="picker" class="">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #00FF6F;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #00C757; left: 100%; top: 22.031043999999994%;"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #00FF6F; top: 40.609066111111105%;"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ColorPicker > renders with format rgb correctly 1`] = `
+"<div data-v-c9a043d6="" data-slot="root" class="">
+  <div data-v-c9a043d6="" data-slot="picker" class="">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #00FF8C;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #00C16A; left: 100%; top: 24.313726000000003%;"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #00FF8C; top: 42.48704666666667%;"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ColorPicker > renders with size lg correctly 1`] = `
+"<div data-v-c9a043d6="" data-slot="root" class="">
+  <div data-v-c9a043d6="" data-slot="picker" class="">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #FFFFFF; left: 0%; top: 0%;"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #FF0000; top: 0%;"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ColorPicker > renders with size md correctly 1`] = `
+"<div data-v-c9a043d6="" data-slot="root" class="">
+  <div data-v-c9a043d6="" data-slot="picker" class="">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #FFFFFF; left: 0%; top: 0%;"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #FF0000; top: 0%;"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ColorPicker > renders with size sm correctly 1`] = `
+"<div data-v-c9a043d6="" data-slot="root" class="">
+  <div data-v-c9a043d6="" data-slot="picker" class="">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #FFFFFF; left: 0%; top: 0%;"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #FF0000; top: 0%;"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ColorPicker > renders with size xl correctly 1`] = `
+"<div data-v-c9a043d6="" data-slot="root" class="">
+  <div data-v-c9a043d6="" data-slot="picker" class="">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #FFFFFF; left: 0%; top: 0%;"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #FF0000; top: 0%;"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ColorPicker > renders with size xs correctly 1`] = `
+"<div data-v-c9a043d6="" data-slot="root" class="">
+  <div data-v-c9a043d6="" data-slot="picker" class="">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #FFFFFF; left: 0%; top: 0%;"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #FF0000; top: 0%;"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ColorPicker > renders with ui correctly 1`] = `
+"<div data-v-c9a043d6="" data-slot="root" class="">
+  <div data-v-c9a043d6="" data-slot="picker" class="gap-8">
+    <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
+      <div data-v-c9a043d6="" data-slot="selectorBackground" class="" data-color-picker-background="">
+        <div data-v-c9a043d6="" data-slot="selectorThumb" class="" style="background-color: #FFFFFF; left: 0%; top: 0%;"></div>
+      </div>
+    </div>
+    <div data-v-c9a043d6="" data-slot="track" class="" data-color-picker-track="">
+      <div data-v-c9a043d6="" data-slot="trackThumb" class="" style="background-color: #FF0000; top: 0%;"></div>
+    </div>
+  </div>
+</div>"
+`;

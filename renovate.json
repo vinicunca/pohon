@@ -1,0 +1,68 @@
+{
+  "extends": [
+    "github>nuxt/renovate-config-nuxt"
+  ],
+  "timezone": "Asia/Makassar",
+  "schedule": ["* 6-9 * * 1"],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "ignoreDeps": [
+    "actions/stale",
+    "@nuxt/test-utils"
+  ],
+  "packageRules": [
+    {
+      "groupName": "unocss",
+      "matchPackageNames": [
+        "unocss",
+        "@unocss/nuxt",
+        "unocss-variants"
+      ]
+    },
+    {
+      "groupName": "akar",
+      "matchPackageNames": [
+        "akar",
+        "vaul-vue"
+      ]
+    },
+    {
+      "groupName": "tiptap",
+      "matchPackageNames": [
+        "@tiptap/*"
+      ]
+    },
+    {
+      "groupName": "vite",
+      "matchPackageNames": [
+        "@vitejs/plugin-vue",
+        "vite",
+        "vue",
+        "vue-router"
+      ]
+    },
+    {
+      "groupName": "vue-tsc",
+      "matchPackageNames": [
+        "vue-tsc",
+        "vue-component-type-helpers"
+      ]
+    },
+    {
+      "matchDepTypes": [
+        "peerDependencies"
+      ],
+      "enabled": false
+    },
+    {
+      "matchDepTypes": [
+        "resolutions"
+      ],
+      "enabled": false
+    }
+  ],
+  "postUpdateOptions": [
+    "pnpmDedupe"
+  ]
+}

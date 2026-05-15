@@ -1,0 +1,107 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BlogPosts > renders with as correctly 1`] = `
+"<section data-orientation="horizontal" class="">
+  <article data-orientation="vertical" data-slot="root" class="">
+    <div data-slot="header" class=""><img alt="Image alt" src="https://picsum.photos/640/360" data-slot="image"></div>
+    <div data-slot="body" class="">
+      <!--v-if-->
+      <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+        <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="">Dec 13, 2024</time>
+      </div>
+      <h2 data-slot="title" class="">Title</h2>
+      <div data-slot="description" class="">Description</div>
+      <div data-slot="authors" class="">
+        <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://i.pravatar.cc/120?img=1" alt="Author" data-slot="image"></span>
+          <div data-slot="wrapper" class="">
+            <!--v-if-->
+            <p data-slot="name" class="">Author</p>
+            <!--v-if-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--v-if-->
+  </article>
+</section>"
+`;
+
+exports[`BlogPosts > renders with class correctly 1`] = `
+"<div data-orientation="horizontal" class="gap-y-12">
+  <article data-orientation="vertical" data-slot="root" class="">
+    <div data-slot="header" class=""><img alt="Image alt" src="https://picsum.photos/640/360" data-slot="image"></div>
+    <div data-slot="body" class="">
+      <!--v-if-->
+      <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+        <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="">Dec 13, 2024</time>
+      </div>
+      <h2 data-slot="title" class="">Title</h2>
+      <div data-slot="description" class="">Description</div>
+      <div data-slot="authors" class="">
+        <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://i.pravatar.cc/120?img=1" alt="Author" data-slot="image"></span>
+          <div data-slot="wrapper" class="">
+            <!--v-if-->
+            <p data-slot="name" class="">Author</p>
+            <!--v-if-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--v-if-->
+  </article>
+</div>"
+`;
+
+exports[`BlogPosts > renders with default slot correctly 1`] = `"<div data-orientation="horizontal" class="">Default slot</div>"`;
+
+exports[`BlogPosts > renders with orientation vertical correctly 1`] = `
+"<div data-orientation="vertical" class="">
+  <article data-orientation="horizontal" data-slot="root" class="">
+    <div data-slot="header" class=""><img alt="Image alt" src="https://picsum.photos/640/360" data-slot="image"></div>
+    <div data-slot="body" class="">
+      <!--v-if-->
+      <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+        <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="">Dec 13, 2024</time>
+      </div>
+      <h2 data-slot="title" class="">Title</h2>
+      <div data-slot="description" class="">Description</div>
+      <div data-slot="authors" class="">
+        <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://i.pravatar.cc/120?img=1" alt="Author" data-slot="image"></span>
+          <div data-slot="wrapper" class="">
+            <!--v-if-->
+            <p data-slot="name" class="">Author</p>
+            <!--v-if-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--v-if-->
+  </article>
+</div>"
+`;
+
+exports[`BlogPosts > renders with posts correctly 1`] = `
+"<div data-orientation="horizontal" class="">
+  <article data-orientation="vertical" data-slot="root" class="">
+    <div data-slot="header" class=""><img alt="Image alt" src="https://picsum.photos/640/360" data-slot="image"></div>
+    <div data-slot="body" class="">
+      <!--v-if-->
+      <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+        <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="">Dec 13, 2024</time>
+      </div>
+      <h2 data-slot="title" class="">Title</h2>
+      <div data-slot="description" class="">Description</div>
+      <div data-slot="authors" class="">
+        <div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://i.pravatar.cc/120?img=1" alt="Author" data-slot="image"></span>
+          <div data-slot="wrapper" class="">
+            <!--v-if-->
+            <p data-slot="name" class="">Author</p>
+            <!--v-if-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--v-if-->
+  </article>
+</div>"
+`;

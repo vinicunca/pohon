@@ -1,0 +1,1184 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ContextMenu > renders with class correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="min-w-96">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with custom slot correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with default slot correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Default slot</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with descriptionKey correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed"><span class="iconify i-lucide:user" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Profile<!--v-if--></span><span data-slot="itemDescription" class="">Profile</span></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Dashboard<!--v-if--></span><span data-slot="itemDescription" class="">Dashboard</span></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Analytics<!--v-if--></span><span data-slot="itemDescription" class="">Analytics</span></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">A</kbd></span>
+          <!----></span>
+        </button></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with disabled correctly 1`] = `
+"<span data-state="closed" data-disabled="" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<!---->
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with externalIcon correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<span class="iconify i-lucide:external-link" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with item slot correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">Item slot</button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">Item slot</button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">Item slot</button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">Item slot</button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">Item slot</button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">Item slot</button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">Item slot</button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">Item slot</button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item">Item slot</a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with item-description slot correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed"><span class="iconify i-lucide:user" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Profile<!--v-if--></span><span data-slot="itemDescription" class="">Item description slot</span></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Dashboard<!--v-if--></span><span data-slot="itemDescription" class="">Item description slot</span></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Analytics<!--v-if--></span><span data-slot="itemDescription" class="">Item description slot</span></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">A</kbd></span>
+          <!----></span>
+        </button></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with item-label slot correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Item label slot<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Item label slot<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Item label slot<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Item label slot<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Item label slot<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Item label slot<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Item label slot<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Item label slot<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Item label slot<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with item-leading slot correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">Item leading slot<span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">Item leading slot<span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">Item leading slot<span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">Item leading slot<span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">Item leading slot<span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">Item leading slot<span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">Item leading slot<span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">Item leading slot<span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item">Item leading slot<span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with item-trailing slot correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class="">Item trailing slot<!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class="">Item trailing slot<!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class="">Item trailing slot<!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class="">Item trailing slot<!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class="">Item trailing slot<!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class="">Item trailing slot<!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class="">Item trailing slot<!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class="">Item trailing slot<!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class="">Item trailing slot<!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with items correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="--akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; pointer-events: auto; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with items with description correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed"><span class="iconify i-lucide:user" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Profile<!--v-if--></span><span data-slot="itemDescription" class="">View and edit your profile</span></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Dashboard<!--v-if--></span><span data-slot="itemDescription" class="">Main overview page</span></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Analytics<!--v-if--></span><span data-slot="itemDescription" class="">View detailed statistics</span></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">A</kbd></span>
+          <!----></span>
+        </button></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with labelKey correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if-->
+          <!--v-if--><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if-->
+          <!--v-if--><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if-->
+          <!--v-if--><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if-->
+          <!--v-if--><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if-->
+          <!--v-if--><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if-->
+          <!--v-if--><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if-->
+          <!--v-if--><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if-->
+          <!--v-if--><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">i-simple-icons-github<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with size lg correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with size md correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with size sm correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with size xl correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with size xs correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders with ui correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github size-4" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="itemLabelExternalIcon"></span></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`ContextMenu > renders without externalIcon correctly 1`] = `
+"<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
+<!--teleport start-->
+
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="pointer-events: auto; --akar-context-menu-content-transform-origin: var(--akar-popper-transform-origin); --akar-context-menu-content-available-width: var(--akar-popper-available-width); --akar-context-menu-content-available-height: var(--akar-popper-available-height); --akar-context-menu-trigger-width: var(--akar-popper-anchor-width); --akar-context-menu-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" data-orientation="vertical" dir="ltr" role="menu" aria-orientation="vertical" data-akar-menu-content="" data-state="open" data-side="right" data-align="start">
+    <div role="presentation" data-slot="viewport" class="">
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-0" data-slot="group" class=""><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-1" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Appearance<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-2" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Sidebar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">Ctrl</kbd><kbd class="">S</kbd></span>
+          <!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Show Toolbar<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span data-slot="itemTrailingKbds" class=""><kbd class="">⇧</kbd><kbd class="">Ctrl</kbd><kbd class="">D</kbd></span>
+          <!----></span>
+        </button><button type="button" disabled="" data-akar-collection-item="" role="menuitem" tabindex="-1" aria-disabled="true" data-disabled="" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Collapse Pinned Tabs<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button></div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-3" data-slot="group" class=""><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Refresh the Page<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cookies and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button><button type="button" data-akar-collection-item="" role="menuitem" tabindex="-1" data-slot="item">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Clear Cache and Refresh<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </button>
+        <div role="separator" aria-orientation="horizontal" data-slot="separator" class=""></div><button data-akar-collection-item="" role="menuitem" tabindex="-1" type="button" data-slot="item" class="" id="akar-menu-sub-trigger-v-0-0-4" aria-haspopup="menu" aria-expanded="false" aria-controls="" data-state="closed">
+          <!--v-if--><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Developer<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="itemTrailingIcon"></span>
+          <!----></span>
+        </button>
+        <!---->
+        <!--teleport start-->
+        <!---->
+        <!--teleport end-->
+      </div>
+      <div role="group" aria-labelledby="akar-menu-group-v-0-0-5" data-slot="group" class=""><a href="https://github.com/vinicunca/pohon" role="menuitem" tabindex="-1" rel="noopener noreferrer" target="_blank" data-akar-collection-item="" data-slot="item"><span class="iconify i-simple-icons:github" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">GitHub<!--v-if--></span>
+          <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--><!----></span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--teleport end-->"
+`;

@@ -1,0 +1,99 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ContentSurround > renders with as correctly 1`] = `
+"<section data-slot="root"><a href="/getting-started" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="">Introduction</p>
+    <p data-slot="linkDescription" class="">Pohon UI harnesses the combined strengths of Akar, UnoCSS, and UnoCss Variants to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces.</p>
+  </a><a href="/getting-started/theme" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-right" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="">Theme</p>
+    <p data-slot="linkDescription" class="">Learn how to customize Pohon UI components using UnoCSS, CSS variables and the UnoCss Variants API for powerful and flexible theming.</p>
+  </a></section>"
+`;
+
+exports[`ContentSurround > renders with class correctly 1`] = `
+"<div data-slot="root" class="gap-12"><a href="/getting-started" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="">Introduction</p>
+    <p data-slot="linkDescription" class="">Pohon UI harnesses the combined strengths of Akar, UnoCSS, and UnoCss Variants to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces.</p>
+  </a><a href="/getting-started/theme" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-right" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="">Theme</p>
+    <p data-slot="linkDescription" class="">Learn how to customize Pohon UI components using UnoCSS, CSS variables and the UnoCss Variants API for powerful and flexible theming.</p>
+  </a></div>"
+`;
+
+exports[`ContentSurround > renders with link slot correctly 1`] = `"<div data-slot="root"><a href="/getting-started" data-slot="link" class="">Link slot</a><a href="/getting-started/theme" data-slot="link" class="">Link slot</a></div>"`;
+
+exports[`ContentSurround > renders with link-leading slot correctly 1`] = `
+"<div data-slot="root"><a href="/getting-started" data-slot="link" class="">
+    <div data-slot="linkLeading" class="">Link leading slot</div>
+    <p data-slot="linkTitle" class="">Introduction</p>
+    <p data-slot="linkDescription" class="">Pohon UI harnesses the combined strengths of Akar, UnoCSS, and UnoCss Variants to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces.</p>
+  </a><a href="/getting-started/theme" data-slot="link" class="">
+    <div data-slot="linkLeading" class="">Link leading slot</div>
+    <p data-slot="linkTitle" class="">Theme</p>
+    <p data-slot="linkDescription" class="">Learn how to customize Pohon UI components using UnoCSS, CSS variables and the UnoCss Variants API for powerful and flexible theming.</p>
+  </a></div>"
+`;
+
+exports[`ContentSurround > renders with link-title slot correctly 1`] = `
+"<div data-slot="root"><a href="/getting-started" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="">Link title slot</p>
+    <p data-slot="linkDescription" class="">Pohon UI harnesses the combined strengths of Akar, UnoCSS, and UnoCss Variants to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces.</p>
+  </a><a href="/getting-started/theme" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-right" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="">Link title slot</p>
+    <p data-slot="linkDescription" class="">Learn how to customize Pohon UI components using UnoCSS, CSS variables and the UnoCss Variants API for powerful and flexible theming.</p>
+  </a></div>"
+`;
+
+exports[`ContentSurround > renders with nextIcon correctly 1`] = `
+"<div data-slot="root"><a href="/getting-started" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="">Introduction</p>
+    <p data-slot="linkDescription" class="">Pohon UI harnesses the combined strengths of Akar, UnoCSS, and UnoCss Variants to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces.</p>
+  </a><a href="/getting-started/theme" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="">Theme</p>
+    <p data-slot="linkDescription" class="">Learn how to customize Pohon UI components using UnoCSS, CSS variables and the UnoCss Variants API for powerful and flexible theming.</p>
+  </a></div>"
+`;
+
+exports[`ContentSurround > renders with prevIcon correctly 1`] = `
+"<div data-slot="root"><a href="/getting-started" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:chevron-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="">Introduction</p>
+    <p data-slot="linkDescription" class="">Pohon UI harnesses the combined strengths of Akar, UnoCSS, and UnoCss Variants to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces.</p>
+  </a><a href="/getting-started/theme" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-right" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="">Theme</p>
+    <p data-slot="linkDescription" class="">Learn how to customize Pohon UI components using UnoCSS, CSS variables and the UnoCss Variants API for powerful and flexible theming.</p>
+  </a></div>"
+`;
+
+exports[`ContentSurround > renders with surround correctly 1`] = `
+"<div data-slot="root"><a href="/getting-started" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="">Introduction</p>
+    <p data-slot="linkDescription" class="">Pohon UI harnesses the combined strengths of Akar, UnoCSS, and UnoCss Variants to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces.</p>
+  </a><a href="/getting-started/theme" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-right" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="">Theme</p>
+    <p data-slot="linkDescription" class="">Learn how to customize Pohon UI components using UnoCSS, CSS variables and the UnoCss Variants API for powerful and flexible theming.</p>
+  </a></div>"
+`;
+
+exports[`ContentSurround > renders with ui correctly 1`] = `
+"<div data-slot="root"><a href="/getting-started" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="text-xl">Introduction</p>
+    <p data-slot="linkDescription" class="">Pohon UI harnesses the combined strengths of Akar, UnoCSS, and UnoCss Variants to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces.</p>
+  </a><a href="/getting-started/theme" data-slot="link" class="">
+    <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-right" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
+    <p data-slot="linkTitle" class="text-xl">Theme</p>
+    <p data-slot="linkDescription" class="">Learn how to customize Pohon UI components using UnoCSS, CSS variables and the UnoCss Variants API for powerful and flexible theming.</p>
+  </a></div>"
+`;

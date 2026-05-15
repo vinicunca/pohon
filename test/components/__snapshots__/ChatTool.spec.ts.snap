@@ -1,0 +1,166 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ChatTool > renders with chevron leading and icon correctly 1`] = `
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class=""><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span>
+    <!--v-if--></span><span data-slot="label" class="">Searching components<!--v-if--></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class=""></div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with chevron leading correctly 1`] = `
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
+    <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class=""></div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with chevronIcon correctly 1`] = `
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
+    <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class=""></div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with class correctly 1`] = `
+"<div data-state="closed" data-slot="root" class="my-5"><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
+    <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class=""></div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with default slot correctly 1`] = `
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="">
+    <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span>
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class="">Tool output content</div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with defaultOpen correctly 1`] = `
+"<div data-state="open" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" disabled="" data-slot="trigger" class="">
+    <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;">
+    <div data-slot="body" class=""></div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with icon correctly 1`] = `
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class=""><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span>
+    <!--v-if--></span><span data-slot="label" class="">Searching components<!--v-if--></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class=""></div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with loading and loadingIcon correctly 1`] = `
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class=""><span data-slot="leading" class=""><span class="iconify i-lucide:loader" aria-hidden="true" data-slot="leadingIcon"></span>
+    <!--v-if--></span><span data-slot="label" class="">Searching components<!--v-if--></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class=""></div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with loading correctly 1`] = `
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class=""><span data-slot="leading" class=""><span class="iconify i-lucide:loader-circle" aria-hidden="true" data-slot="leadingIcon"></span>
+    <!--v-if--></span><span data-slot="label" class="">Searching components<!--v-if--></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class=""></div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with streaming correctly 1`] = `
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
+    <!--v-if--><span data-slot="label" class=""><span style="--spread: 40px; --duration: 2s;" data-slot="base" class="">Searching components</span>
+    <!--v-if--></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class=""></div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with suffix correctly 1`] = `
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
+    <!--v-if--><span data-slot="label" class="">Searching components<span data-slot="suffix" class="">Button</span></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class=""></div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with text correctly 1`] = `
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
+    <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class=""></div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with ui correctly 1`] = `
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
+    <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class="text-muted"></div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with variant card correctly 1`] = `
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
+    <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class=""></div>
+  </div>
+</div>"
+`;
+
+exports[`ChatTool > renders with variant inline correctly 1`] = `
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
+    <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
+    <!--v-if-->
+  </button>
+  <div data-slot="content" class="" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+    <div data-slot="body" class=""></div>
+  </div>
+</div>"
+`;

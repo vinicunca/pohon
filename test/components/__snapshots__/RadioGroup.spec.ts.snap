@@ -1,0 +1,1274 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`radioGroup > renders with ariaLabel correctly 1`] = `
+"<div id="v-0-0" data-slot="root" aria-label="Aria label" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="1" aria-label="1">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with as correctly 1`] = `
+"<section id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="1" aria-label="1">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</section>"
+`;
+
+exports[`radioGroup > renders with class correctly 1`] = `
+"<div id="v-0-0" data-slot="root" class="absolute" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="1" aria-label="1">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with defaultValue correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with description correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="1" aria-label="1">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <p data-slot="description" class="">Description 0</p>
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <p data-slot="description" class="">Description 1</p>
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <p data-slot="description" class="">Description 2</p>
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with description slot correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="1" aria-label="1">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Description slot</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Description slot</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Description slot</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with descriptionKey correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="1" aria-label="1">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <p data-slot="description" class="">1</p>
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <p data-slot="description" class="">2</p>
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <p data-slot="description" class="">3</p>
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with disabled correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="-1" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" data-disabled="" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-disabled="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="false" disabled="" data-state="unchecked" required="false" value="1" aria-label="1">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-disabled="" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" disabled="" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-disabled="" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" disabled="" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with indicator end correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with indicator hidden correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with indicator start correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with items correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="1" aria-label="1">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with label slot correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="1" aria-label="1">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Label slot</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Label slot</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Label slot</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with labelKey correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="1" aria-label="1">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with legend slot correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="1" aria-label="1">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Legend slot</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Legend slot</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Legend slot</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with modelValue correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with neutral variant card correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if--><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:1" data-slot="label" class="">Option 1</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:2" data-slot="label" class="">Option 2</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:3" data-slot="label" class="">Option 3</p>
+        <!--v-if-->
+      </div>
+    </label>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with neutral variant card highlight correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if--><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:1" data-slot="label" class="">Option 1</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:2" data-slot="label" class="">Option 2</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:3" data-slot="label" class="">Option 3</p>
+        <!--v-if-->
+      </div>
+    </label>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with neutral variant list correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with neutral variant list highlight correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with neutral variant table correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if--><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:1" data-slot="label" class="">Option 1</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:2" data-slot="label" class="">Option 2</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:3" data-slot="label" class="">Option 3</p>
+        <!--v-if-->
+      </div>
+    </label>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with neutral variant table highlight correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if--><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:1" data-slot="label" class="">Option 1</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:2" data-slot="label" class="">Option 2</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:3" data-slot="label" class="">Option 3</p>
+        <!--v-if-->
+      </div>
+    </label>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with primary variant card correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if--><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:1" data-slot="label" class="">Option 1</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:2" data-slot="label" class="">Option 2</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:3" data-slot="label" class="">Option 3</p>
+        <!--v-if-->
+      </div>
+    </label>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with primary variant card highlight correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if--><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:1" data-slot="label" class="">Option 1</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:2" data-slot="label" class="">Option 2</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:3" data-slot="label" class="">Option 3</p>
+        <!--v-if-->
+      </div>
+    </label>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with primary variant list correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with primary variant list highlight correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with primary variant table correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if--><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:1" data-slot="label" class="">Option 1</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:2" data-slot="label" class="">Option 2</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:3" data-slot="label" class="">Option 3</p>
+        <!--v-if-->
+      </div>
+    </label>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with primary variant table highlight correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if--><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:1" data-slot="label" class="">Option 1</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:2" data-slot="label" class="">Option 2</p>
+        <!--v-if-->
+      </div>
+    </label><label data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="">
+        <p for="v-0-0:3" data-slot="label" class="">Option 3</p>
+        <!--v-if-->
+      </div>
+    </label>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with required correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="true">
+  <fieldset data-slot="fieldset">
+    <legend data-slot="legend" class="">Legend</legend>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="true" value="1" aria-label="1">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="true" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="true" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with size lg correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with size md correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with size sm correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with size xl correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with size xs correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with ui correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="1" aria-label="1">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="ms-4"><label for="v-0-0:1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="2" aria-label="2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="ms-4"><label for="v-0-0:2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="3" aria-label="3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class="ms-4"><label for="v-0-0:3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`radioGroup > renders with valueKey correctly 1`] = `
+"<div id="v-0-0" data-slot="root" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
+  <fieldset data-slot="fieldset">
+    <!--v-if-->
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="" id="v-0-0:Option 1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" value="Option 1" aria-label="Option 1"><span data-state="checked" data-slot="indicator" class=""></span>
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:Option 1" data-slot="label" class="">Option 1</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:Option 2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="Option 2" aria-label="Option 2">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:Option 2" data-slot="label" class="">Option 2</label>
+        <!--v-if-->
+      </div>
+    </div>
+    <div data-slot="item" class="">
+      <div data-slot="container" class=""><button data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="" id="v-0-0:Option 3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" value="Option 3" aria-label="Option 3">
+          <!---->
+          <!--v-if-->
+        </button></div>
+      <div data-slot="wrapper" class=""><label for="v-0-0:Option 3" data-slot="label" class="">Option 3</label>
+        <!--v-if-->
+      </div>
+    </div>
+  </fieldset>
+  <!--v-if-->
+</div>"
+`;

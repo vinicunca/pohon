@@ -1,0 +1,61 @@
+import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { describe, expect, it } from 'vitest';
+import { axe } from 'vitest-axe';
+import { defineComponent } from 'vue';
+import DashboardGroup from '../../src/runtime/components/DashboardGroup.vue';
+import DashboardNavbar from '../../src/runtime/components/DashboardNavbar.vue';
+import { renderEach } from '../component-render';
+
+const DashboardWrapper = defineComponent({
+  components: {
+    PDashboardGroup: DashboardGroup as any,
+    PDashboardNavbar: DashboardNavbar as any,
+  },
+  inheritAttrs: false,
+  template: `<PDashboardGroup>
+  <PDashboardNavbar v-bind="$attrs">
+    <template v-for="(_, name) in $slots" #[name]="slotData">
+      <slot :name="name" v-bind="slotData" />
+    </template>
+  </PDashboardNavbar>
+</PDashboardGroup>`,
+});
+
+describe('dashboardNavbar', () => {
+  renderEach(
+    DashboardWrapper,
+    [
+    // Props
+      ['with icon', { props: { icon: 'i-lucide-house' } }],
+      ['with title', { props: { title: 'Dashboard' } }],
+      ['without toggle', { props: { toggle: false } }],
+      ['with toggle', { props: { toggle: { color: 'primary' as const, variant: 'solid' as const } } }],
+      ['with toggleSide', { props: { toggleSide: 'right' as const } }],
+      ['with as', { props: { as: 'section' } }],
+      ['with class', { props: { class: 'px-8' } }],
+      ['with ui', { props: { ui: { left: 'gap-3' } } }],
+      // Slots
+      ['with title slot', { slots: { title: () => 'Title slot' } }],
+      ['with leading slot', { slots: { leading: () => 'Leading slot' } }],
+      ['with trailing slot', { slots: { trailing: () => 'Trailing slot' } }],
+      ['with left slot', { slots: { left: () => 'Left slot' } }],
+      ['with default slot', { slots: { default: () => 'Default slot' } }],
+      ['with right slot', { slots: { right: () => 'Right slot' } }],
+      ['with toggle slot', { slots: { toggle: () => 'Toggle slot' } }],
+    ],
+    async (_, options) => {
+      const wrapper = await mountSuspended(DashboardWrapper, options);
+      expect(wrapper.html()).toMatchSnapshot();
+    },
+  );
+
+  it('passes accessibility tests', async () => {
+    const wrapper = await mountSuspended(DashboardWrapper, {
+      props: {
+        title: 'Dashboard',
+      },
+    });
+
+    expect(await axe(wrapper.element)).toHaveNoViolations();
+  });
+});

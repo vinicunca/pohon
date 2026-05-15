@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ChatShimmer > renders with class correctly 1`] = `"<span style="--spread: 20px; --duration: 2s;" data-slot="base" class="font-bold">Loading...</span>"`;
+
+exports[`ChatShimmer > renders with duration correctly 1`] = `"<span style="--spread: 20px; --duration: 3s;" data-slot="base" class="">Loading...</span>"`;
+
+exports[`ChatShimmer > renders with spread correctly 1`] = `"<span style="--spread: 40px; --duration: 2s;" data-slot="base" class="">Loading...</span>"`;
+
+exports[`ChatShimmer > renders with text correctly 1`] = `"<span style="--spread: 20px; --duration: 2s;" data-slot="base" class="">Loading...</span>"`;
+
+exports[`ChatShimmer > renders with ui correctly 1`] = `"<span style="--spread: 20px; --duration: 2s;" data-slot="base" class="font-bold">Loading...</span>"`;

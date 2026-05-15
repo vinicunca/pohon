@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PageColumns > renders with as correctly 1`] = `"<section class=""></section>"`;
+
+exports[`PageColumns > renders with class correctly 1`] = `"<div class="xl:columns-4"></div>"`;
+
+exports[`PageColumns > renders with default slot correctly 1`] = `"<div class="">Default slot</div>"`;

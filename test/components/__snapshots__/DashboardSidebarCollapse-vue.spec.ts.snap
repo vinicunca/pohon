@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DashboardSidebarCollapse > renders with class correctly 1`] = `
+"<div class=""><button type="button" aria-label="Collapse sidebar" data-slot="base" class="p-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+    <!--v-if-->
+    <!--v-if-->
+  </button></div>"
+`;
+
+exports[`DashboardSidebarCollapse > renders with color correctly 1`] = `
+"<div class=""><button type="button" aria-label="Collapse sidebar" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+    <!--v-if-->
+    <!--v-if-->
+  </button></div>"
+`;
+
+exports[`DashboardSidebarCollapse > renders with side correctly 1`] = `
+"<div class=""><button type="button" aria-label="Collapse sidebar" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+    <!--v-if-->
+    <!--v-if-->
+  </button></div>"
+`;
+
+exports[`DashboardSidebarCollapse > renders with variant correctly 1`] = `
+"<div class=""><button type="button" aria-label="Collapse sidebar" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+    <!--v-if-->
+    <!--v-if-->
+  </button></div>"
+`;

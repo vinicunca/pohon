@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DashboardGroup > renders with as correctly 1`] = `"<section class=""></section>"`;
+
+exports[`DashboardGroup > renders with class correctly 1`] = `"<div class="inset-4"></div>"`;
+
+exports[`DashboardGroup > renders with default slot correctly 1`] = `"<div class="">Default slot</div>"`;

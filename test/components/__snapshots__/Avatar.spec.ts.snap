@@ -1,0 +1,61 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`avatar > renders with alt correctly 1`] = `"<span data-slot="root"><span data-slot="fallback" class="">BC</span></span>"`;
+
+exports[`avatar > renders with as (object) correctly 1`] = `
+"<section data-slot="root">
+  <p src="https://github.com/benjamincanac.png" data-slot="image"></p>
+</section>"
+`;
+
+exports[`avatar > renders with as (partial object) correctly 1`] = `"<span data-slot="root"><p src="https://github.com/benjamincanac.png" data-slot="image"></p></span>"`;
+
+exports[`avatar > renders with as correctly 1`] = `"<section data-slot="root"><span data-slot="fallback" class="">&nbsp;</span></section>"`;
+
+exports[`avatar > renders with chip correctly 1`] = `"<span data-slot="root" class=""><span data-slot="fallback" class="">&nbsp;</span><span data-slot="base" class="">1</span></span>"`;
+
+exports[`avatar > renders with class correctly 1`] = `"<span data-slot="root" class="bg-default"><span data-slot="fallback" class="">&nbsp;</span></span>"`;
+
+exports[`avatar > renders with color error correctly 1`] = `"<span data-slot="root"><span data-slot="fallback" class="">BC</span></span>"`;
+
+exports[`avatar > renders with color info correctly 1`] = `"<span data-slot="root"><span data-slot="fallback" class="">BC</span></span>"`;
+
+exports[`avatar > renders with color neutral correctly 1`] = `"<span data-slot="root"><span data-slot="fallback" class="">BC</span></span>"`;
+
+exports[`avatar > renders with color primary correctly 1`] = `"<span data-slot="root"><span data-slot="fallback" class="">BC</span></span>"`;
+
+exports[`avatar > renders with color secondary correctly 1`] = `"<span data-slot="root"><span data-slot="fallback" class="">BC</span></span>"`;
+
+exports[`avatar > renders with color success correctly 1`] = `"<span data-slot="root"><span data-slot="fallback" class="">BC</span></span>"`;
+
+exports[`avatar > renders with color warning correctly 1`] = `"<span data-slot="root"><span data-slot="fallback" class="">BC</span></span>"`;
+
+exports[`avatar > renders with custom size correctly 1`] = `"<span data-slot="root" class="size-100"><img src="https://github.com/benjamincanac.png" width="400" height="400" data-slot="image"></span>"`;
+
+exports[`avatar > renders with default slot correctly 1`] = `"<span data-slot="root">🇫🇷</span>"`;
+
+exports[`avatar > renders with icon correctly 1`] = `"<span data-slot="root"><span class="iconify i-lucide:image" aria-hidden="true" data-slot="icon"></span></span>"`;
+
+exports[`avatar > renders with size 2xl correctly 1`] = `"<span data-slot="root"><img src="https://github.com/benjamincanac.png" data-slot="image"></span>"`;
+
+exports[`avatar > renders with size 2xs correctly 1`] = `"<span data-slot="root"><img src="https://github.com/benjamincanac.png" data-slot="image"></span>"`;
+
+exports[`avatar > renders with size 3xl correctly 1`] = `"<span data-slot="root"><img src="https://github.com/benjamincanac.png" data-slot="image"></span>"`;
+
+exports[`avatar > renders with size 3xs correctly 1`] = `"<span data-slot="root"><img src="https://github.com/benjamincanac.png" data-slot="image"></span>"`;
+
+exports[`avatar > renders with size lg correctly 1`] = `"<span data-slot="root"><img src="https://github.com/benjamincanac.png" data-slot="image"></span>"`;
+
+exports[`avatar > renders with size md correctly 1`] = `"<span data-slot="root"><img src="https://github.com/benjamincanac.png" data-slot="image"></span>"`;
+
+exports[`avatar > renders with size sm correctly 1`] = `"<span data-slot="root"><img src="https://github.com/benjamincanac.png" data-slot="image"></span>"`;
+
+exports[`avatar > renders with size xl correctly 1`] = `"<span data-slot="root"><img src="https://github.com/benjamincanac.png" data-slot="image"></span>"`;
+
+exports[`avatar > renders with size xs correctly 1`] = `"<span data-slot="root"><img src="https://github.com/benjamincanac.png" data-slot="image"></span>"`;
+
+exports[`avatar > renders with src correctly 1`] = `"<span data-slot="root"><img src="https://github.com/benjamincanac.png" data-slot="image"></span>"`;
+
+exports[`avatar > renders with text correctly 1`] = `"<span data-slot="root"><span data-slot="fallback" class="">+1</span></span>"`;
+
+exports[`avatar > renders with ui correctly 1`] = `"<span data-slot="root"><span data-slot="fallback" class="font-bold">&nbsp;</span></span>"`;

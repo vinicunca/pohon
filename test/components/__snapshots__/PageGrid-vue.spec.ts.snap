@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PageGrid > renders with as correctly 1`] = `"<section class=""></section>"`;
+
+exports[`PageGrid > renders with class correctly 1`] = `"<div class="xl:grid-cols-4"></div>"`;
+
+exports[`PageGrid > renders with default slot correctly 1`] = `"<div class="">Default slot</div>"`;

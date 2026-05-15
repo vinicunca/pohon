@@ -1,0 +1,43 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ChatPromptSubmit > renders with class correctly 1`] = `
+"<button type="submit" aria-label="Send prompt" data-slot="base" class=""><span class="iconify i-lucide:arrow-up" aria-hidden="true" data-slot="leadingIcon"></span>
+  <!--v-if-->
+  <!--v-if-->
+</button>"
+`;
+
+exports[`ChatPromptSubmit > renders with icon correctly 1`] = `
+"<button type="submit" aria-label="Send prompt" data-slot="base" class=""><span class="iconify i-lucide:send" aria-hidden="true" data-slot="leadingIcon"></span>
+  <!--v-if-->
+  <!--v-if-->
+</button>"
+`;
+
+exports[`ChatPromptSubmit > renders with status error correctly 1`] = `
+"<button type="button" aria-label="Send prompt" data-slot="base" class=""><span class="iconify i-lucide:rotate-ccw" aria-hidden="true" data-slot="leadingIcon"></span>
+  <!--v-if-->
+  <!--v-if-->
+</button>"
+`;
+
+exports[`ChatPromptSubmit > renders with status ready correctly 1`] = `
+"<button type="submit" aria-label="Send prompt" data-slot="base" class=""><span class="iconify i-lucide:arrow-up" aria-hidden="true" data-slot="leadingIcon"></span>
+  <!--v-if-->
+  <!--v-if-->
+</button>"
+`;
+
+exports[`ChatPromptSubmit > renders with status streaming correctly 1`] = `
+"<button type="button" aria-label="Send prompt" data-slot="base" class=""><span class="iconify i-lucide:square" aria-hidden="true" data-slot="leadingIcon"></span>
+  <!--v-if-->
+  <!--v-if-->
+</button>"
+`;
+
+exports[`ChatPromptSubmit > renders with status submitted correctly 1`] = `
+"<button type="button" aria-label="Send prompt" data-slot="base" class=""><span class="iconify i-lucide:square" aria-hidden="true" data-slot="leadingIcon"></span>
+  <!--v-if-->
+  <!--v-if-->
+</button>"
+`;

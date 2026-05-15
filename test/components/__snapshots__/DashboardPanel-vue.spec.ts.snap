@@ -1,0 +1,105 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DashboardPanel > renders with body slot correctly 1`] = `
+"<div class="">
+  <div id="dashboard-panel-v-0" data-dragging="false" data-slot="root">
+    <div data-slot="body" class="">Body slot</div>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DashboardPanel > renders with class correctly 1`] = `
+"<div class="">
+  <div id="dashboard-panel-v-0" data-dragging="false" data-slot="root" class="lg:border-none">
+    <div data-slot="body" class=""></div>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DashboardPanel > renders with default slot correctly 1`] = `
+"<div class="">
+  <div id="dashboard-panel-v-0" data-dragging="false" data-slot="root">Default slot</div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DashboardPanel > renders with defaultSize correctly 1`] = `
+"<div class="">
+  <div id="dashboard-panel-v-0" data-dragging="false" data-slot="root" style="--width: 50%;">
+    <div data-slot="body" class=""></div>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DashboardPanel > renders with footer slot correctly 1`] = `
+"<div class="">
+  <div id="dashboard-panel-v-0" data-dragging="false" data-slot="root">
+    <div data-slot="body" class=""></div>Footer slot
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DashboardPanel > renders with header slot correctly 1`] = `
+"<div class="">
+  <div id="dashboard-panel-v-0" data-dragging="false" data-slot="root">Header slot<div data-slot="body" class=""></div>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DashboardPanel > renders with id correctly 1`] = `
+"<div class="">
+  <div id="dashboard-panel-test" data-dragging="false" data-slot="root">
+    <div data-slot="body" class=""></div>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DashboardPanel > renders with maxSize correctly 1`] = `
+"<div class="">
+  <div id="dashboard-panel-v-0" data-dragging="false" data-slot="root">
+    <div data-slot="body" class=""></div>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DashboardPanel > renders with minSize correctly 1`] = `
+"<div class="">
+  <div id="dashboard-panel-v-0" data-dragging="false" data-slot="root">
+    <div data-slot="body" class=""></div>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`DashboardPanel > renders with resizable correctly 1`] = `
+"<div class="">
+  <div id="dashboard-panel-v-0" data-dragging="false" data-slot="root">
+    <div data-slot="body" class=""></div>
+  </div>
+  <div role="separator" class="" aria-controls="dashboard-panel-v-0" data-slot="handle"></div>
+</div>"
+`;
+
+exports[`DashboardPanel > renders with resize-handle slot correctly 1`] = `
+"<div class="">
+  <div id="dashboard-panel-v-0" data-dragging="false" data-slot="root">
+    <div data-slot="body" class=""></div>
+  </div>Resize handle slot
+</div>"
+`;
+
+exports[`DashboardPanel > renders with ui correctly 1`] = `
+"<div class="">
+  <div id="dashboard-panel-v-0" data-dragging="false" data-slot="root">
+    <div data-slot="body" class="p-8"></div>
+  </div>
+  <!--v-if-->
+</div>"
+`;

@@ -1,0 +1,1029 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`fileUpload > renders with accept correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="image/*">
+</div>"
+`;
+
+exports[`fileUpload > renders with actions slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <div data-slot="actions" class="">Actions slot</div>
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with ariaLabel correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*" aria-label="Aria label">
+</div>"
+`;
+
+exports[`fileUpload > renders with as correctly 1`] = `
+"<section data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</section>"
+`;
+
+exports[`fileUpload > renders with class correctly 1`] = `
+"<div data-slot="root" class="w-full gap-4">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with default slot correctly 1`] = `"<div data-slot="root" class="">Default slot<input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*"></div>"`;
+
+exports[`fileUpload > renders with description correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <div data-slot="description" class="">SVG, PNG, JPG or GIF (max. 2MB)</div>
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with description slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <div data-slot="description" class="">Description slot</div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with disabled correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="-1">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*" disabled="">
+</div>"
+`;
+
+exports[`fileUpload > renders with disabled correctly 2`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="-1">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*" disabled="">
+</div>"
+`;
+
+exports[`fileUpload > renders with disabled variant button correctly 1`] = `
+"<div data-slot="root" class=""><button type="button" disabled="" data-dragging="false" data-slot="base" class="" tabindex="-1">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span>
+      <!--v-if-->
+    </div>
+  </button>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*" disabled="">
+</div>"
+`;
+
+exports[`fileUpload > renders with file slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class="">File slot</div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with file-leading slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class="">File leading slot<div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button></div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with file-name slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">File name slot</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with file-size slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">File size slot</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with file-trailing slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div>File trailing slot
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with fileDelete correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with fileDeleteIcon correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:trash" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with fileIcon correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with files slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">Files slot</div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with files-bottom slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div>Files bottom slot<input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with files-top slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>Files top slot<div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with highlight correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with highlight neutral correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with icon correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:image" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with id correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" id="id" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with label correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <div data-slot="label" class="">Drop your image here</div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with label slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <div data-slot="label" class="">Label slot</div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with layout grid correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with layout grid multiple correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <div data-slot="files" class="">
+      <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+        <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+          <!--v-if-->
+          <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+        </button>
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*" multiple="">
+</div>"
+`;
+
+exports[`fileUpload > renders with layout list correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with layout list multiple correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*" multiple="">
+</div>"
+`;
+
+exports[`fileUpload > renders with leading slot correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class="">Leading slot
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with modelValue correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with multiple correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <div data-slot="files" class="">
+      <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+        <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+          <!--v-if-->
+          <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+        </button>
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*" multiple="">
+</div>"
+`;
+
+exports[`fileUpload > renders with name correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" name="name" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with neutral color correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with position inside correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <div data-slot="files" class="">
+      <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+        <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+          <!--v-if-->
+          <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+        </button>
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with position inside multiple correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <div data-slot="files" class="">
+      <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+        <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+          <!--v-if-->
+          <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+        </button>
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*" multiple="">
+</div>"
+`;
+
+exports[`fileUpload > renders with position outside correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with position outside multiple correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <div data-slot="files" class="">
+      <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+        <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+          <!--v-if-->
+          <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+        </button>
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*" multiple="">
+</div>"
+`;
+
+exports[`fileUpload > renders with required correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*" required="">
+</div>"
+`;
+
+exports[`fileUpload > renders with required correctly 2`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*" required="">
+</div>"
+`;
+
+exports[`fileUpload > renders with size lg correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with size lg variant button correctly 1`] = `
+"<div data-slot="root" class=""><button type="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span>
+      <!--v-if-->
+    </div>
+  </button>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with size md correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with size md variant button correctly 1`] = `
+"<div data-slot="root" class=""><button type="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span>
+      <!--v-if-->
+    </div>
+  </button>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with size sm correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with size sm variant button correctly 1`] = `
+"<div data-slot="root" class=""><button type="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span>
+      <!--v-if-->
+    </div>
+  </button>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with size xl correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with size xl variant button correctly 1`] = `
+"<div data-slot="root" class=""><button type="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span>
+      <!--v-if-->
+    </div>
+  </button>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with size xs correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with size xs variant button correctly 1`] = `
+"<div data-slot="root" class=""><button type="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span>
+      <!--v-if-->
+    </div>
+  </button>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with ui correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="rounded-xl" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with variant area correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders with variant button correctly 1`] = `
+"<div data-slot="root" class=""><button type="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span>
+      <!--v-if-->
+    </div>
+  </button>
+  <div data-slot="files" class="">
+    <div data-slot="file" class=""><span data-slot="root"><img src="blob:mock-url-file.txt" data-slot="image"></span>
+      <div data-slot="fileWrapper" class=""><span data-slot="fileName" class="">file.txt</span><span data-slot="fileSize" class="">0B</span></div><button type="button" aria-label="Remove file.txt" data-slot="base" class="">
+        <!--v-if-->
+        <!--v-if--><span class="iconify i-lucide:x" aria-hidden="true" data-slot="trailingIcon"></span>
+      </button>
+    </div>
+  </div><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders without dropzone correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders without interactive correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="-1">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders without preview correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*">
+</div>"
+`;
+
+exports[`fileUpload > renders without preview with multiple correctly 1`] = `
+"<div data-slot="root" class="">
+  <div role="button" data-dragging="false" data-slot="base" class="" tabindex="0">
+    <!--v-if-->
+    <div data-slot="wrapper" class=""><span data-slot="root"><span class="iconify i-lucide:upload" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if--><input data-hidden="" tabindex="-1" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;" type="file" accept="*" multiple="">
+</div>"
+`;

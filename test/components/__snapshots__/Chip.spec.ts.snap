@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Chip > renders with as correctly 1`] = `"<span data-slot="root" class=""><span data-slot="base" class=""></span></span>"`;
+
+exports[`Chip > renders with class correctly 1`] = `"<div data-slot="root" class="mx-auto"><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with color neutral correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with content slot correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class="">Content slot</span></div>"`;
+
+exports[`Chip > renders with default slot correctly 1`] = `"<div data-slot="root" class="">Default slot<span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with inset correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with position bottom-left correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with position bottom-right correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with position top-left correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with position top-right correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with size 2xl correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with size 2xs correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with size 3xl correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with size 3xs correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with size lg correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with size md correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with size sm correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with size xl correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with size xs correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class=""></span></div>"`;
+
+exports[`Chip > renders with text correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class="">Text</span></div>"`;
+
+exports[`Chip > renders with ui correctly 1`] = `"<div data-slot="root" class=""><span data-slot="base" class="text-muted"></span></div>"`;
+
+exports[`Chip > renders without show correctly 1`] = `
+"<div data-slot="root" class="">
+  <!--v-if-->
+</div>"
+`;

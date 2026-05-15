@@ -1,0 +1,21 @@
+{
+  "name": "playground-repl",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "bundle": "vite build --config vite.config.bundle.ts",
+    "build": "pnpm bundle && vite build"
+  },
+  "dependencies": {
+    "@vue/repl": "^4.7.2",
+    "pohon-ui": "workspace:*",
+    "tailwindcss": "^4.2.4",
+    "vue": "^3.5.30"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.5",
+    "vite": "^7.3.1"
+  }
+}

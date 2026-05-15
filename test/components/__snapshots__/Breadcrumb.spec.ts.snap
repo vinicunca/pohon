@@ -1,0 +1,172 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`breadcrumb > renders with as correctly 1`] = `
+"<div aria-label="breadcrumb" data-slot="root" class="">
+  <ol data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/" data-slot="link"><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="Benjamin Canac" data-slot="image"></span><span data-slot="linkLabel" class="">Home</span></a></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><span data-slot="link"><span class="iconify i-lucide:box" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Components</span></span></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><a href="/components/breadcrumb" data-slot="link"><span class="iconify i-lucide:link" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Breadcrumb</span></a></li>
+    <!--v-if-->
+  </ol>
+</div>"
+`;
+
+exports[`breadcrumb > renders with class correctly 1`] = `
+"<nav aria-label="breadcrumb" data-slot="root" class="w-48">
+  <ol data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/" data-slot="link"><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="Benjamin Canac" data-slot="image"></span><span data-slot="linkLabel" class="">Home</span></a></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><span data-slot="link"><span class="iconify i-lucide:box" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Components</span></span></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><a href="/components/breadcrumb" data-slot="link"><span class="iconify i-lucide:link" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Breadcrumb</span></a></li>
+    <!--v-if-->
+  </ol>
+</nav>"
+`;
+
+exports[`breadcrumb > renders with color neutral correctly 1`] = `
+"<nav aria-label="breadcrumb" data-slot="root" class="">
+  <ol data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/" data-slot="link"><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="Benjamin Canac" data-slot="image"></span><span data-slot="linkLabel" class="">Home</span></a></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><span data-slot="link"><span class="iconify i-lucide:box" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Components</span></span></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><a href="/components/breadcrumb" data-slot="link"><span class="iconify i-lucide:link" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Breadcrumb</span></a></li>
+    <!--v-if-->
+  </ol>
+</nav>"
+`;
+
+exports[`breadcrumb > renders with custom slot correctly 1`] = `
+"<nav aria-label="breadcrumb" data-slot="root" class="">
+  <ol data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/" data-slot="link"><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="Benjamin Canac" data-slot="image"></span><span data-slot="linkLabel" class="">Home</span></a></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><span data-slot="link"><span class="iconify i-lucide:box" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Components</span></span></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><a href="/components/breadcrumb" data-slot="link">Custom slot</a></li>
+    <!--v-if-->
+  </ol>
+</nav>"
+`;
+
+exports[`breadcrumb > renders with item slot correctly 1`] = `
+"<nav aria-label="breadcrumb" data-slot="root" class="">
+  <ol data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/" data-slot="link">Item slot</a></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><span data-slot="link">Item slot</span></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><a href="/components/breadcrumb" data-slot="link"><span class="iconify i-lucide:link" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Breadcrumb</span></a></li>
+    <!--v-if-->
+  </ol>
+</nav>"
+`;
+
+exports[`breadcrumb > renders with item-label slot correctly 1`] = `
+"<nav aria-label="breadcrumb" data-slot="root" class="">
+  <ol data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/" data-slot="link"><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="Benjamin Canac" data-slot="image"></span><span data-slot="linkLabel" class="">Item label slot</span></a></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><span data-slot="link"><span class="iconify i-lucide:box" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Item label slot</span></span></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><a href="/components/breadcrumb" data-slot="link"><span class="iconify i-lucide:link" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Breadcrumb</span></a></li>
+    <!--v-if-->
+  </ol>
+</nav>"
+`;
+
+exports[`breadcrumb > renders with item-leading slot correctly 1`] = `
+"<nav aria-label="breadcrumb" data-slot="root" class="">
+  <ol data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/" data-slot="link">Item leading slot<span data-slot="linkLabel" class="">Home</span></a></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><span data-slot="link">Item leading slot<span data-slot="linkLabel" class="">Components</span></span></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><a href="/components/breadcrumb" data-slot="link"><span class="iconify i-lucide:link" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Breadcrumb</span></a></li>
+    <!--v-if-->
+  </ol>
+</nav>"
+`;
+
+exports[`breadcrumb > renders with item-trailing slot correctly 1`] = `
+"<nav aria-label="breadcrumb" data-slot="root" class="">
+  <ol data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/" data-slot="link"><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="Benjamin Canac" data-slot="image"></span><span data-slot="linkLabel" class="">Home</span>Item trailing slot</a></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><span data-slot="link"><span class="iconify i-lucide:box" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Components</span>Item trailing slot</span></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><a href="/components/breadcrumb" data-slot="link"><span class="iconify i-lucide:link" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Breadcrumb</span></a></li>
+    <!--v-if-->
+  </ol>
+</nav>"
+`;
+
+exports[`breadcrumb > renders with items correctly 1`] = `
+"<nav aria-label="breadcrumb" data-slot="root" class="">
+  <ol data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/" data-slot="link"><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="Benjamin Canac" data-slot="image"></span><span data-slot="linkLabel" class="">Home</span></a></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><span data-slot="link"><span class="iconify i-lucide:box" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Components</span></span></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><a href="/components/breadcrumb" data-slot="link"><span class="iconify i-lucide:link" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Breadcrumb</span></a></li>
+    <!--v-if-->
+  </ol>
+</nav>"
+`;
+
+exports[`breadcrumb > renders with labelKey correctly 1`] = `
+"<nav aria-label="breadcrumb" data-slot="root" class="">
+  <ol data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/" data-slot="link"><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="Benjamin Canac" data-slot="image"></span>
+        <!--v-if-->
+      </a></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><span data-slot="link"><span class="iconify i-lucide:box" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">i-lucide-box</span></span></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><a href="/components/breadcrumb" data-slot="link"><span class="iconify i-lucide:link" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">i-lucide-link</span></a></li>
+    <!--v-if-->
+  </ol>
+</nav>"
+`;
+
+exports[`breadcrumb > renders with separator slot correctly 1`] = `
+"<nav aria-label="breadcrumb" data-slot="root" class="">
+  <ol data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/" data-slot="link"><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="Benjamin Canac" data-slot="image"></span><span data-slot="linkLabel" class="">Home</span></a></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class="">/</li>
+    <li data-slot="item" class=""><span data-slot="link"><span class="iconify i-lucide:box" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Components</span></span></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class="">/</li>
+    <li data-slot="item" class=""><a href="/components/breadcrumb" data-slot="link"><span class="iconify i-lucide:link" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Breadcrumb</span></a></li>
+    <!--v-if-->
+  </ol>
+</nav>"
+`;
+
+exports[`breadcrumb > renders with separatorIcon correctly 1`] = `
+"<nav aria-label="breadcrumb" data-slot="root" class="">
+  <ol data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/" data-slot="link"><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="Benjamin Canac" data-slot="image"></span><span data-slot="linkLabel" class="">Home</span></a></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><span data-slot="link"><span class="iconify i-lucide:box" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Components</span></span></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:minus" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><a href="/components/breadcrumb" data-slot="link"><span class="iconify i-lucide:link" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Breadcrumb</span></a></li>
+    <!--v-if-->
+  </ol>
+</nav>"
+`;
+
+exports[`breadcrumb > renders with ui correctly 1`] = `
+"<nav aria-label="breadcrumb" data-slot="root" class="">
+  <ol data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/" data-slot="link" class="font-bold"><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="Benjamin Canac" data-slot="image"></span><span data-slot="linkLabel" class="">Home</span></a></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><span data-slot="link" class="font-bold"><span class="iconify i-lucide:box" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Components</span></span></li>
+    <li role="presentation" aria-hidden="true" data-slot="separator" class=""><span class="iconify i-lucide:chevron-right" aria-hidden="true" data-slot="separatorIcon"></span></li>
+    <li data-slot="item" class=""><a href="/components/breadcrumb" data-slot="link" class="font-bold"><span class="iconify i-lucide:link" aria-hidden="true" data-slot="linkLeadingIcon"></span><span data-slot="linkLabel" class="">Breadcrumb</span></a></li>
+    <!--v-if-->
+  </ol>
+</nav>"
+`;

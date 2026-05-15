@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DashboardSearchButton > renders with class correctly 1`] = `"<button type="button" data-slot="base" class="w-full"><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Search…</span><span data-slot="trailing" class=""><kbd class="">Ctrl</kbd><kbd class="">k</kbd></span></button>"`;
+
+exports[`DashboardSearchButton > renders with collapsed correctly 1`] = `"<button type="button" aria-label="Search…" data-slot="base" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Search…</span><span data-slot="trailing" class=""><kbd class="">Ctrl</kbd><kbd class="">k</kbd></span></button>"`;
+
+exports[`DashboardSearchButton > renders with icon correctly 1`] = `"<button type="button" data-slot="base" class=""><span class="iconify i-lucide:house" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Search…</span><span data-slot="trailing" class=""><kbd class="">Ctrl</kbd><kbd class="">k</kbd></span></button>"`;
+
+exports[`DashboardSearchButton > renders with kbds correctly 1`] = `"<button type="button" data-slot="base" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Search…</span><span data-slot="trailing" class=""><kbd class="">Alt</kbd><kbd class="">o</kbd></span></button>"`;
+
+exports[`DashboardSearchButton > renders with label correctly 1`] = `"<button type="button" data-slot="base" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Open</span><span data-slot="trailing" class=""><kbd class="">Ctrl</kbd><kbd class="">k</kbd></span></button>"`;

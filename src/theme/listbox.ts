@@ -1,0 +1,117 @@
+import type { ModuleOptions } from '../module';
+
+export default (options: Required<ModuleOptions>) => ({
+  slots: {
+    root: '',
+    input: '',
+    content: '',
+    group: '',
+    label: '',
+    separator: '',
+    empty: '',
+    loading: '',
+    loadingIcon: '',
+    item: '',
+    itemLeadingIcon: '',
+    itemLeadingAvatar: '',
+    itemLeadingAvatarSize: '',
+    itemLeadingChip: '',
+    itemLeadingChipSize: '',
+    itemWrapper: '',
+    itemLabel: '',
+    itemDescription: '',
+    itemTrailing: '',
+    itemTrailingIcon: '',
+  },
+  variants: {
+    size: {
+      xs: {
+        label: '',
+        empty: '',
+        loading: '',
+        loadingIcon: '',
+        item: '',
+        itemLeadingIcon: '',
+        itemLeadingAvatarSize: '',
+        itemLeadingChip: '',
+        itemLeadingChipSize: '',
+        itemTrailingIcon: '',
+      },
+      sm: {
+        label: '',
+        empty: '',
+        loading: '',
+        loadingIcon: '',
+        item: '',
+        itemLeadingIcon: '',
+        itemLeadingAvatarSize: '',
+        itemLeadingChip: '',
+        itemLeadingChipSize: '',
+        itemTrailingIcon: '',
+      },
+      md: {
+        label: '',
+        empty: '',
+        loading: '',
+        loadingIcon: '',
+        item: '',
+        itemLeadingIcon: '',
+        itemLeadingAvatarSize: '',
+        itemLeadingChip: '',
+        itemLeadingChipSize: '',
+        itemTrailingIcon: '',
+      },
+      lg: {
+        label: '',
+        empty: '',
+        loading: '',
+        loadingIcon: '',
+        item: '',
+        itemLeadingIcon: '',
+        itemLeadingAvatarSize: '',
+        itemLeadingChip: '',
+        itemLeadingChipSize: '',
+        itemTrailingIcon: '',
+      },
+      xl: {
+        label: '',
+        empty: '',
+        loading: '',
+        loadingIcon: '',
+        item: '',
+        itemLeadingIcon: '',
+        itemLeadingAvatarSize: '',
+        itemLeadingChip: '',
+        itemLeadingChipSize: '',
+        itemTrailingIcon: '',
+        itemDescription: '',
+      },
+    },
+    color: {
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, ''])),
+      neutral: '',
+    },
+    virtualize: {
+      true: {
+        content: '',
+      },
+      false: {
+        content: '',
+      },
+    },
+    disabled: {
+      true: {
+        root: '',
+      },
+    },
+    highlight: {
+      true: '',
+    },
+  },
+
+  compoundVariants: [],
+
+  defaultVariants: {
+    size: 'md',
+  },
+});

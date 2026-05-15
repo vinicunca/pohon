@@ -1,0 +1,24 @@
+import type { App } from 'vue';
+import basePlugin from 'pohon-ui/vue-plugin';
+import './main.css';
+
+const componentModules = import.meta.glob('../../../src/runtime/components/*.vue', { eager: true }) as Record<string, { default: any }>;
+
+const components: Record<string, any> = {};
+for (const [path, mod] of Object.entries(componentModules)) {
+  const name = `U${path.match(/([^/]+)\.vue$/)?.[1]}`;
+  components[name] = mod.default;
+}
+
+export function install(app: App) {
+  app.use(basePlugin);
+  for (const [name, component] of Object.entries(components)) {
+    app.component(name, component);
+  }
+}
+
+export default { install };
+
+export { defineShortcuts, extractShortcuts } from '../../../src/runtime/composables/defineShortcuts';
+export { useOverlay } from '../../../src/runtime/composables/useOverlay';
+export { useToast } from '../../../src/runtime/composables/useToast';

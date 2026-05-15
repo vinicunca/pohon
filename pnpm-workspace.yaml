@@ -1,0 +1,21 @@
+ignoreWorkspaceRootCheck: true
+
+packages:
+  - ./
+  - cli
+  - docs
+  - playgrounds/nuxt
+  - playgrounds/vue
+  - playgrounds/repl
+
+allowBuilds:
+  '@parcel/watcher': false
+  better-sqlite3: true
+  esbuild: false
+  puppeteer: true
+  sharp: true
+  simple-git-hooks: true
+  vue-demi: false
+
+overrides:
+  h3: 1.15.11

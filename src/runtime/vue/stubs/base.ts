@@ -1,0 +1,100 @@
+import type { Ref, Plugin as VuePlugin } from 'vue';
+import type { NuxtApp } from '#app';
+import { useColorMode as useColorModeVueUse } from '@vueuse/core';
+import { createHooks } from 'hookable';
+import { onScopeDispose, ref } from 'vue';
+import appConfig from '#build/app.config';
+
+export { defineLocale } from '../../composables/defineLocale';
+
+export { defineShortcuts } from '../../composables/defineShortcuts';
+export { useLocale } from '../../composables/useLocale';
+export { useAppConfig } from '../composables/useAppConfig';
+export { useHead } from '@unhead/vue';
+
+export function clearError() {
+
+}
+
+export function useColorMode() {
+  if (!appConfig.colorMode) {
+    return {
+      forced: true,
+    };
+  }
+
+  const { store, system } = useColorModeVueUse();
+
+  return {
+    get preference() {
+      return store.value === 'auto' ? 'system' : store.value;
+    },
+    set preference(value) {
+      store.value = value === 'system' ? 'auto' : value;
+    },
+    get value() {
+      return store.value === 'auto' ? system.value : store.value;
+    },
+    forced: false,
+  };
+}
+
+export function useCookie<T = string>(_name: string, _options: Record<string, any> = {}) {
+  const value = ref(_options?.default?.() ?? null) as Ref<T>;
+
+  return {
+    value: value.value,
+    get: () => value.value,
+    set: () => {},
+    update: () => {},
+    refresh: () => Promise.resolve(value.value),
+    remove: () => {},
+  };
+}
+
+const state: Record<string, any> = {};
+
+export function useState<T>(key: string, init: () => T): Ref<T> {
+  if (state[key]) {
+    return state[key] as Ref<T>;
+  }
+  const value = ref(init());
+  state[key] = value;
+  return value as Ref<T>;
+}
+
+const hooks = createHooks();
+
+export function useNuxtApp() {
+  return {
+    isHydrating: true,
+    payload: { serverRendered: import.meta.env.SSR || false },
+    hooks,
+    hook: hooks.hook,
+  };
+}
+
+export function useRuntimeHook(name: string, fn: (...args: Array<any>) => void): void {
+  const nuxtApp = useNuxtApp();
+
+  const unregister = nuxtApp.hook(name, fn);
+
+  onScopeDispose(unregister);
+}
+
+export function useRuntimeConfig() {
+  return {
+    app: {
+      baseURL: '/',
+    },
+    public: {},
+  };
+}
+
+export function defineNuxtPlugin(plugin: (nuxtApp: NuxtApp) => void) {
+  return {
+    install(app) {
+      app.runWithContext(() => plugin({ vueApp: app } as NuxtApp));
+    },
+  } satisfies VuePlugin;
+}

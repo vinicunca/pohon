@@ -1,0 +1,145 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PageAnchors > renders with as correctly 1`] = `
+"<div data-slot="root" class="">
+  <ul data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/docs" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:book-open" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Documentation<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="/playground" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-simple-icons:stackblitz" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Playground<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="/roadmap" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:map" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Roadmap<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="https://github.com/vinicunca/pohon/releases" rel="noopener noreferrer" target="_blank" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:rocket" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Releases<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="linkLabelExternalIcon"></span></span>
+      </a></li>
+  </ul>
+</div>"
+`;
+
+exports[`PageAnchors > renders with class correctly 1`] = `
+"<nav data-slot="root" class="lg:mb-12">
+  <ul data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/docs" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:book-open" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Documentation<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="/playground" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-simple-icons:stackblitz" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Playground<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="/roadmap" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:map" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Roadmap<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="https://github.com/vinicunca/pohon/releases" rel="noopener noreferrer" target="_blank" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:rocket" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Releases<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="linkLabelExternalIcon"></span></span>
+      </a></li>
+  </ul>
+</nav>"
+`;
+
+exports[`PageAnchors > renders with link slot correctly 1`] = `
+"<nav data-slot="root" class="">
+  <ul data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/docs" data-slot="link">Link slot</a></li>
+    <li data-slot="item" class=""><a href="/playground" data-slot="link">Link slot</a></li>
+    <li data-slot="item" class=""><a href="/roadmap" data-slot="link">Link slot</a></li>
+    <li data-slot="item" class=""><a href="https://github.com/vinicunca/pohon/releases" rel="noopener noreferrer" target="_blank" data-slot="link">Link slot</a></li>
+  </ul>
+</nav>"
+`;
+
+exports[`PageAnchors > renders with link-label slot correctly 1`] = `
+"<nav data-slot="root" class="">
+  <ul data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/docs" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:book-open" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Link label slot<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="/playground" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-simple-icons:stackblitz" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Link label slot<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="/roadmap" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:map" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Link label slot<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="https://github.com/vinicunca/pohon/releases" rel="noopener noreferrer" target="_blank" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:rocket" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Link label slot<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="linkLabelExternalIcon"></span></span>
+      </a></li>
+  </ul>
+</nav>"
+`;
+
+exports[`PageAnchors > renders with link-leading slot correctly 1`] = `
+"<nav data-slot="root" class="">
+  <ul data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/docs" data-slot="link">
+        <div data-slot="linkLeading" class="">Link leading slot</div><span data-slot="linkLabel" class="">Documentation<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="/playground" data-slot="link">
+        <div data-slot="linkLeading" class="">Link leading slot</div><span data-slot="linkLabel" class="">Playground<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="/roadmap" data-slot="link">
+        <div data-slot="linkLeading" class="">Link leading slot</div><span data-slot="linkLabel" class="">Roadmap<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="https://github.com/vinicunca/pohon/releases" rel="noopener noreferrer" target="_blank" data-slot="link">
+        <div data-slot="linkLeading" class="">Link leading slot</div><span data-slot="linkLabel" class="">Releases<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="linkLabelExternalIcon"></span></span>
+      </a></li>
+  </ul>
+</nav>"
+`;
+
+exports[`PageAnchors > renders with link-trailing slot correctly 1`] = `
+"<nav data-slot="root" class="">
+  <ul data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/docs" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:book-open" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Documentation<!--v-if--></span>Link trailing slot
+      </a></li>
+    <li data-slot="item" class=""><a href="/playground" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-simple-icons:stackblitz" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Playground<!--v-if--></span>Link trailing slot
+      </a></li>
+    <li data-slot="item" class=""><a href="/roadmap" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:map" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Roadmap<!--v-if--></span>Link trailing slot
+      </a></li>
+    <li data-slot="item" class=""><a href="https://github.com/vinicunca/pohon/releases" rel="noopener noreferrer" target="_blank" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:rocket" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Releases<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="linkLabelExternalIcon"></span></span>Link trailing slot
+      </a></li>
+  </ul>
+</nav>"
+`;
+
+exports[`PageAnchors > renders with links correctly 1`] = `
+"<nav data-slot="root" class="">
+  <ul data-slot="list" class="">
+    <li data-slot="item" class=""><a href="/docs" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:book-open" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Documentation<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="/playground" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-simple-icons:stackblitz" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Playground<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="/roadmap" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:map" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Roadmap<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="https://github.com/vinicunca/pohon/releases" rel="noopener noreferrer" target="_blank" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:rocket" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Releases<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="linkLabelExternalIcon"></span></span>
+      </a></li>
+  </ul>
+</nav>"
+`;
+
+exports[`PageAnchors > renders with ui correctly 1`] = `
+"<nav data-slot="root" class="">
+  <ul data-slot="list" class="gap-6">
+    <li data-slot="item" class=""><a href="/docs" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:book-open" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Documentation<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="/playground" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-simple-icons:stackblitz" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Playground<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="/roadmap" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:map" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Roadmap<!--v-if--></span>
+      </a></li>
+    <li data-slot="item" class=""><a href="https://github.com/vinicunca/pohon/releases" rel="noopener noreferrer" target="_blank" data-slot="link">
+        <div data-slot="linkLeading" class=""><span class="iconify i-lucide:rocket" aria-hidden="true" data-slot="linkLeadingIcon"></span></div><span data-slot="linkLabel" class="">Releases<span class="iconify i-lucide:arrow-up-right" aria-hidden="true" data-slot="linkLabelExternalIcon"></span></span>
+      </a></li>
+  </ul>
+</nav>"
+`;

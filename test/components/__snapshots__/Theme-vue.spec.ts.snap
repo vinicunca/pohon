@@ -1,0 +1,62 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`theme > renders with empty ui correctly 1`] = `
+"<button type="button" data-slot="base" class="">
+  <!--v-if--><span data-slot="label" class="">Button</span>
+  <!--v-if-->
+</button>"
+`;
+
+exports[`theme > renders with nested theme overriding outer theme correctly 1`] = `
+"<button type="button" data-slot="base" class="px-[2.234rem]">
+  <!--v-if--><span data-slot="label" class="text-[#000]">Button</span>
+  <!--v-if-->
+</button>"
+`;
+
+exports[`theme > renders with theme applied to alert correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="border-[3px]">
+  <!--v-if-->
+  <div data-slot="wrapper" class="">
+    <div data-slot="title" class="">Alert</div>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`theme > renders with theme applied to badge correctly 1`] = `
+"<span data-slot="base" class="rounded-[1.234rem]"><!--v-if--><span data-slot="label" class="">Badge</span>
+<!--v-if--></span>"
+`;
+
+exports[`theme > renders with theme applied to button base slot correctly 1`] = `
+"<button type="button" data-slot="base" class="px-[1.234rem]">
+  <!--v-if--><span data-slot="label" class="text-[#ff0]">Button</span>
+  <!--v-if-->
+</button>"
+`;
+
+exports[`theme > renders with theme applied to multiple component types correctly 1`] = `
+"<button type="button" data-slot="base" class="px-[1.234rem]">
+  <!--v-if--><span data-slot="label" class="">Button</span>
+  <!--v-if-->
+</button>
+<span data-slot="base" class="rounded-[1.234rem]"><!--v-if--><span data-slot="label" class="">Badge</span>
+<!--v-if--></span>"
+`;
+
+exports[`theme > renders with theme not affecting unrelated component correctly 1`] = `
+"<button type="button" data-slot="base" class="">
+  <!--v-if--><span data-slot="label" class="">Button</span>
+  <!--v-if-->
+</button>"
+`;
+
+exports[`theme > renders with ui prop taking priority over theme correctly 1`] = `
+"<button type="button" data-slot="base" class="px-[2.234rem]">
+  <!--v-if--><span data-slot="label" class="text-[#ff0]">Button</span>
+  <!--v-if-->
+</button>"
+`;

@@ -1,0 +1,964 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PricingPlan > renders with as correctly 1`] = `
+"<section data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</section>"
+`;
+
+exports[`PricingPlan > renders with badge correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`PricingPlan > renders with badge object correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`PricingPlan > renders with badge slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div>Badge slot
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with billing cycle correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">&nbsp;</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`PricingPlan > renders with billing period correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span>
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`PricingPlan > renders with billing slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class="">Billing slot</div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with body slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">Body slot</div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with button correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <div data-slot="footer" class="">
+    <!--v-if-->
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with button slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if-->Button slot<div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with class correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="rounded-xl">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with description correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`PricingPlan > renders with description slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description slot</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with discount correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`PricingPlan > renders with discount slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">Discount slot</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with features correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <!--v-if-->
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`PricingPlan > renders with features object correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <!--v-if-->
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:star" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`PricingPlan > renders with features slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">Features slot</ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with footer slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">Footer slot</div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with header slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <div data-slot="header" class="">Header slot</div>
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with highlight correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with orientation horizontal correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <!--v-if-->
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with orientation vertical correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with price correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div data-slot="priceWrapper" class="">
+      <!--v-if-->
+      <div data-slot="price" class="">$249</div>
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`PricingPlan > renders with price slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">Price slot</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with scale correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with tagline correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with tagline slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline slot</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with terms correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <div data-slot="footer" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with terms slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms slot</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with title correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div>
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`PricingPlan > renders with title slot correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title slot</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with ui correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="gap-12">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with variant outline correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with variant soft correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with variant solid correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;
+
+exports[`PricingPlan > renders with variant subtle correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root">
+  <!--v-if-->
+  <div data-slot="body" class="">
+    <div data-slot="titleWrapper" class="">
+      <div data-slot="title" class="">Title</div><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="">Description</div>
+    <div data-slot="priceWrapper" class="">
+      <div data-slot="discount" class="">$249</div>
+      <div data-slot="price" class="">$199</div>
+      <div data-slot="billing" class=""><span data-slot="billingPeriod" class="">billed annually</span><span data-slot="billingCycle" class="">/month</span></div>
+    </div>
+    <ul data-slot="features" class="">
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 1</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 2</span></li>
+      <li data-slot="feature" class=""><span class="iconify i-lucide:circle-check" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="">
+    <div data-slot="tagline" class="">Tagline</div>
+    <!--v-if--><button type="button" data-slot="base" class="">
+      <!--v-if--><span data-slot="label" class="">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="">Terms</div>
+  </div>
+</div>"
+`;

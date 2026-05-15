@@ -1,0 +1,79 @@
+<script lang="ts">
+import type { AppConfig } from '@nuxt/schema';
+import type { VNode } from 'vue';
+import type { AccordionProps } from '../../types';
+import type { ComponentConfig } from '../../types/uv';
+import theme from '#build/ui/prose/accordion';
+
+type ProseAccordion = ComponentConfig<typeof theme, AppConfig, 'accordion', 'ui.prose'>;
+
+export interface ProseAccordionProps {
+  type?: 'single' | 'multiple';
+  class?: any;
+  ui?: ProseAccordion['slots'] & AccordionProps['ui'];
+}
+
+export interface ProseAccordionSlots {
+  default(props?: {}): Array<VNode>;
+}
+</script>
+
+<script setup lang="ts">
+import { computed, onBeforeUpdate, ref } from 'vue';
+import { useAppConfig } from '#imports';
+import { useComponentProps } from '../../composables/useComponentProps';
+import { transformUI } from '../../utils';
+import { uv } from '../../utils/uv';
+import PAccordion from '../Accordion.vue';
+
+const _props = withDefaults(
+  defineProps<ProseAccordionProps>(),
+  {
+    type: 'multiple',
+  },
+);
+const slots = defineSlots<ProseAccordionSlots>();
+
+const props = useComponentProps('prose.accordion', _props);
+
+const appConfig = useAppConfig() as ProseAccordion['AppConfig'];
+
+const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.accordion || {}) }));
+
+const rerenderCount = ref(1);
+
+const items = computed<Array<{
+  index: number;
+  label: string;
+  icon: string;
+  component: any;
+}>>(() => {
+  // eslint-disable-next-line ts/no-unused-expressions
+  rerenderCount.value;
+  return slots.default?.()?.flatMap(transformSlot).filter(Boolean) || [];
+});
+
+function transformSlot(slot: any, index: number) {
+  if (typeof slot.type === 'symbol') {
+    return slot.children?.map(transformSlot);
+  }
+
+  return {
+    index,
+    label: slot.props?.label || `${index}`,
+    description: slot.props?.description,
+    icon: slot.props?.icon,
+    component: slot,
+  };
+}
+
+onBeforeUpdate(() => rerenderCount.value++);
+</script>
+
+<template>
+  <PAccordion :type="props.type" :items="items" :unmount-on-hide="false" :class="props.class" :ui="transformUI(ui(), props.ui)">
+    <template #content="{ item }">
+      <component :is="item.component" />
+    </template>
+  </PAccordion>
+</template>

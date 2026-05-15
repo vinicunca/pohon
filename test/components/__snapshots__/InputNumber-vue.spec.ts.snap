@@ -1,0 +1,601 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`inputNumber > renders with .optional modifier correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with ariaLabel correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" aria-label="Aria label" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with as correctly 1`] = `
+"<section data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</section>"
+`;
+
+exports[`inputNumber > renders with class correctly 1`] = `
+"<div data-slot="root" class="absolute" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with decrement slot correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class="">-</div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with decrementIcon correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with disabled correctly 1`] = `
+"<div data-slot="root" role="group" data-disabled=""><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" disabled="" data-disabled="" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" disabled="" tabindex="-1" aria-label="Increment" data-disabled="" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" disabled="" tabindex="-1" aria-label="Decrement" data-disabled="" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with increment slot correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class="">+</div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with incrementIcon correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with name correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with neutral variant ghost correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with neutral variant ghost highlight correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with neutral variant none correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with neutral variant none highlight correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with neutral variant outline correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with neutral variant outline highlight correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with neutral variant soft correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with neutral variant soft highlight correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with neutral variant subtle correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with neutral variant subtle highlight correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with orientation vertical correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with placeholder correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" placeholder="Number..." data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with primary variant ghost correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with primary variant ghost highlight correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with primary variant none correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with primary variant none highlight correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with primary variant outline correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with primary variant outline highlight correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with primary variant soft correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with primary variant soft highlight correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with primary variant subtle correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with primary variant subtle highlight correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with required correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" required="" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with size lg correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with size md correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with size sm correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with size xl correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with size xs correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders with ui correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" class="rounded-full" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders without decrement correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders without decrement vertical correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <div data-slot="increment" class=""><button type="button" tabindex="-1" aria-label="Increment" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders without increment and decrement correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <!--v-if-->
+  <!--v-if-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders without increment and decrement vertical correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <!--v-if-->
+  <!--v-if-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders without increment correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <!--v-if-->
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputNumber > renders without increment vertical correctly 1`] = `
+"<div data-slot="root" role="group"><input role="spinbutton" type="text" tabindex="0" inputmode="decimal" autocomplete="off" autocorrect="off" spellcheck="false" aria-roledescription="Number field" data-slot="base" value="">
+  <!--v-if-->
+  <div data-slot="decrement" class=""><button type="button" tabindex="-1" aria-label="Decrement" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
+      <!--v-if-->
+      <!--v-if-->
+    </button></div>
+  <!--v-if-->
+</div>"
+`;

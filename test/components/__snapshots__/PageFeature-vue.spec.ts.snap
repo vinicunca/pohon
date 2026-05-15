@@ -1,0 +1,141 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PageFeature > renders with as correctly 1`] = `
+"<section data-orientation="horizontal" data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="wrapper" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</section>"
+`;
+
+exports[`PageFeature > renders with class correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="rounded-xl">
+  <div data-slot="leading" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg></div>
+  <div data-slot="wrapper" class="">
+    <!--v-if-->
+    <div data-slot="title" class="">Title</div>
+    <div data-slot="description" class="">Description</div>
+  </div>
+</div>"
+`;
+
+exports[`PageFeature > renders with default slot correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="">
+  <div data-slot="leading" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg></div>
+  <div data-slot="wrapper" class="">
+    <!--v-if-->Default slot
+  </div>
+</div>"
+`;
+
+exports[`PageFeature > renders with description correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="wrapper" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <div data-slot="description" class="">Description</div>
+  </div>
+</div>"
+`;
+
+exports[`PageFeature > renders with description slot correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="">
+  <div data-slot="leading" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg></div>
+  <div data-slot="wrapper" class="">
+    <!--v-if-->
+    <div data-slot="title" class="">Title</div>
+    <div data-slot="description" class="">Description slot</div>
+  </div>
+</div>"
+`;
+
+exports[`PageFeature > renders with icon correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="">
+  <div data-slot="leading" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg></div>
+  <div data-slot="wrapper" class="">
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageFeature > renders with leading slot correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="">
+  <div data-slot="leading" class="">Leading slot</div>
+  <div data-slot="wrapper" class="">
+    <!--v-if-->
+    <div data-slot="title" class="">Title</div>
+    <div data-slot="description" class="">Description</div>
+  </div>
+</div>"
+`;
+
+exports[`PageFeature > renders with orientation horizontal correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="">
+  <div data-slot="leading" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg></div>
+  <div data-slot="wrapper" class="">
+    <!--v-if-->
+    <div data-slot="title" class="">Title</div>
+    <div data-slot="description" class="">Description</div>
+  </div>
+</div>"
+`;
+
+exports[`PageFeature > renders with orientation vertical correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="leading" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg></div>
+  <div data-slot="wrapper" class="">
+    <!--v-if-->
+    <div data-slot="title" class="">Title</div>
+    <div data-slot="description" class="">Description</div>
+  </div>
+</div>"
+`;
+
+exports[`PageFeature > renders with title correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="wrapper" class="">
+    <!--v-if-->
+    <div data-slot="title" class="">Title</div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageFeature > renders with title slot correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="">
+  <div data-slot="leading" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg></div>
+  <div data-slot="wrapper" class="">
+    <!--v-if-->
+    <div data-slot="title" class="">Title slot</div>
+    <div data-slot="description" class="">Description</div>
+  </div>
+</div>"
+`;
+
+exports[`PageFeature > renders with to correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="">
+  <!--v-if-->
+  <div data-slot="wrapper" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Feature link" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`PageFeature > renders with ui correctly 1`] = `
+"<div data-orientation="horizontal" data-slot="root" class="">
+  <div data-slot="leading" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg></div>
+  <div data-slot="wrapper" class="">
+    <!--v-if-->
+    <div data-slot="title" class="font-bold">Title</div>
+    <div data-slot="description" class="">Description</div>
+  </div>
+</div>"
+`;

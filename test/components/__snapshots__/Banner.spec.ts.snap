@@ -1,0 +1,268 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Banner > renders with actions correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class=""><span class="iconify i-lucide:rocket" aria-hidden="true" data-slot="icon"></span>
+      <div data-slot="title" class="">Title</div>
+      <div data-slot="actions" class=""><button type="button" data-slot="base" class="">
+          <!--v-if--><span data-slot="label" class="">Learn more</span><span class="iconify i-lucide:arrow-right" aria-hidden="true" data-slot="trailingIcon"></span>
+        </button></div>
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with actions slot correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <div data-slot="actions" class="">Actions slot</div>
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with as correctly 1`] = `
+"<section class="banner" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</section>"
+`;
+
+exports[`Banner > renders with class correctly 1`] = `
+"<div class="banner z-10" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with close correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class=""><button type="button" aria-label="Close" data-slot="base" class=""><span class="iconify i-lucide:x" aria-hidden="true" data-slot="leadingIcon"></span>
+        <!--v-if-->
+        <!--v-if-->
+      </button></div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with close slot correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class="">Close slot</div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with closeIcon correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with icon correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class=""><span class="iconify i-lucide:rocket" aria-hidden="true" data-slot="icon"></span>
+      <div data-slot="title" class="">Title</div>
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with id correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with leading slot correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class="">Leading slot
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with neutral color correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class=""><span class="iconify i-lucide:rocket" aria-hidden="true" data-slot="icon"></span>
+      <div data-slot="title" class="">Title</div>
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with target correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root"><a href="https://nuxt.com" tabindex="-1" rel="noopener noreferrer" target="_blank" class="focus:outline-none"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with title correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class="">
+      <!--v-if-->
+      <div data-slot="title" class="">Title</div>
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with title slot correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class="">
+      <!--v-if-->
+      <div data-slot="title" class="">Title slot</div>
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with to correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root"><a href="/getting-started" tabindex="-1" class="focus:outline-none"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div class="" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Banner > renders with ui correctly 1`] = `
+"<div class="banner" data-banner-id="banner-banner" data-slot="root">
+  <!--v-if-->
+  <div class="gap-6" data-slot="container">
+    <div data-slot="left" class=""></div>
+    <div data-slot="center" class="">
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div data-slot="right" class="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;

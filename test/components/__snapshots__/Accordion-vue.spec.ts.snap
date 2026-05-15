@@ -1,0 +1,858 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Accordion > renders with as correctly 1`] = `
+"<section data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</section>"
+`;
+
+exports[`Accordion > renders with as correctly 2`] = `
+"<section data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</section>"
+`;
+
+exports[`Accordion > renders with body slot correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="open" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="open" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-3">
+      <div data-slot="body" class="">Body slot</div>
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with class correctly 1`] = `
+"<div data-slot="root" class="w-96">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with collapsible correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with content slot correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="open" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="open" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-3">Content slot</div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with custom body slot correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="open" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="open" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-11">
+      <div data-slot="body" class="">Custom body slot</div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with custom slot correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="open" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="open" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-11">Custom slot</div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with default slot correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Default slot</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="open" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="open" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Default slot</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-3">
+      <div data-slot="body" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</div>
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Default slot</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Default slot</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Default slot</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Default slot</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with defaultValue correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="open" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="open" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-3">
+      <div data-slot="body" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</div>
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with disabled correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-0" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-4" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-6" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-8" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-10" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with items correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with labelKey correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">i-lucide-info</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">i-lucide-download</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">i-lucide-pipette</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">i-lucide-layout-dashboard</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">i-lucide-layers-3</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">i-lucide-wrench</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with leading slot correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class="">Leading slot<span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="open" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="open" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class="">Leading slot<span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-3">
+      <div data-slot="body" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</div>
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class="">Leading slot<span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class="">Leading slot<span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class="">Leading slot<span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class="">Leading slot<span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with modelValue correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="open" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="open" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-3">
+      <div data-slot="body" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</div>
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with trailing slot correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span>Trailing slot</button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="open" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="open" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span>Trailing slot</button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-3">
+      <div data-slot="body" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</div>
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span>Trailing slot</button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span>Trailing slot</button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span>Trailing slot</button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span>Trailing slot</button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with trailingIcon correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with type correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with ui correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="border-border-accented">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="border-border-accented">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="border-border-accented">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="border-border-accented">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="border-border-accented">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="border-border-accented">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with unmountOnHide correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-1" hidden="">
+      <div data-slot="body" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</div>
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <div data-slot="body" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</div>
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <div data-slot="body" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</div>
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <div data-slot="body" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</div>
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <div data-slot="body" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</div>
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <div data-slot="body" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Accordion > renders with valueKey correctly 1`] = `
+"<div data-slot="root">
+  <div data-state="open" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="open" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Getting Started</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-0" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;" data-slot="content" class="" id="akar-collapsible-content-v-1">
+      <div data-slot="body" class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</div>
+    </div>
+  </div>
+  <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-2" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Installation</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-2" data-state="closed" data-disabled="" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-3" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-4" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Theming</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-4" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-5" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-6" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Layouts</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-6" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-7" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-8" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Components</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-8" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-9" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
+    <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-10" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg><span data-slot="label" class="">Utilities</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button></div>
+    <div role="region" aria-labelledby="akar-accordion-trigger-v-10" data-state="closed" data-orientation="vertical" style="--akar-accordion-content-width: var(--akar-collapsible-content-width); --akar-accordion-content-height: var(--akar-collapsible-content-height); --akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;" data-slot="content" class="" id="akar-collapsible-content-v-11" hidden="">
+      <!--v-if-->
+    </div>
+  </div>
+</div>"
+`;

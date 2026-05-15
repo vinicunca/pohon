@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DashboardResizeHandle > renders with as correctly 1`] = `
+"<div class="">
+  <section role="separator" class=""></section>
+</div>"
+`;
+
+exports[`DashboardResizeHandle > renders with class correctly 1`] = `
+"<div class="">
+  <div role="separator" class="absolute"></div>
+</div>"
+`;
+
+exports[`DashboardResizeHandle > renders with default slot correctly 1`] = `
+"<div class="">
+  <div role="separator" class="">Default slot</div>
+</div>"
+`;

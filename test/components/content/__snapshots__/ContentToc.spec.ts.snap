@@ -1,0 +1,815 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ContentToc > renders with as correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<div data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`ContentToc > renders with bottom slot correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div data-slot="bottom" class="">Bottom slot</div>
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with class correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root" class="lg:px-8">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with content slot correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->Content slot
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with default slot correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">Default slot</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">Default slot</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with highlight circuit variant correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <div data-slot="indicator" class="" style="width: 0.75rem; height: 12.25rem;">
+        <div data-slot="indicatorLine" class=""></div>
+        <!--v-if-->
+      </div>
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with highlight circuit variant neutral color correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <div data-slot="indicator" class="" style="width: 0.75rem; height: 12.25rem;">
+        <div data-slot="indicatorLine" class=""></div>
+        <!--v-if-->
+      </div>
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with highlight correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <div data-slot="indicator" class="">
+        <div data-slot="indicatorLine" class=""></div>
+        <!--v-if-->
+      </div>
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with highlight neutral color correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <div data-slot="indicator" class="">
+        <div data-slot="indicatorLine" class=""></div>
+        <!--v-if-->
+      </div>
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with highlight straight variant correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <div data-slot="indicator" class="">
+        <div data-slot="indicatorLine" class=""></div>
+        <!--v-if-->
+      </div>
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with highlight straight variant neutral color correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <div data-slot="indicator" class="">
+        <div data-slot="indicatorLine" class=""></div>
+        <!--v-if-->
+      </div>
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with leading slot correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden">Leading slot<span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex">Leading slot<span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with link slot correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class="">Link slot</a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class="">Link slot</a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class="">Link slot</a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class="">Link slot</a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class="">Link slot</a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class="">Link slot</a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class="">Link slot</a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with links correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with neutral color correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with title correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with top slot correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <div data-slot="top" class="">Top slot</div><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with trailing slot correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class="">Trailing slot</span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class="">Trailing slot</span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with trailingIcon correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:plus" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:plus" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
+
+exports[`ContentToc > renders with ui correctly 1`] = `
+"<!-- eslint-disable-next-line vue/no-template-shadow -->
+<nav data-state="closed" data-slot="root">
+  <div data-slot="container" class="">
+    <!--v-if--><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="lg:hidden"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down size-6" aria-hidden="true" data-slot="trailingIcon"></span></span></button>
+    <div data-slot="content" class="lg:hidden" id="akar-collapsible-content-v-0-0-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+      <!--v-if-->
+    </div>
+    <p data-slot="trigger" class="hidden lg:flex"><span data-slot="title" class="">On this page</span><span data-slot="trailing" class=""><span class="iconify i-lucide:chevron-down size-6" aria-hidden="true" data-slot="trailingIcon"></span></span></p>
+    <div data-slot="content" class="hidden lg:flex">
+      <!--v-if-->
+      <ul class="">
+        <li class=""><a href="#installation" data-slot="link" class=""><span data-slot="linkText" class="">Installation</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#components" data-slot="link" class=""><span data-slot="linkText" class="">Components</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#typography" data-slot="link" class=""><span data-slot="linkText" class="">Typography</span></a>
+          <!--v-if-->
+        </li>
+        <li class=""><a href="#utils" data-slot="link" class=""><span data-slot="linkText" class="">Utils</span></a>
+          <ul class="">
+            <li class=""><a href="#mapcontentnavigation" data-slot="link" class=""><span data-slot="linkText" class="">mapContentNavigation</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpageheadline" data-slot="link" class=""><span data-slot="linkText" class="">findPageHeadline</span></a>
+              <!--v-if-->
+            </li>
+            <li class=""><a href="#findpagebreadcrumb" data-slot="link" class=""><span data-slot="linkText" class="">findPageBreadcrumb</span></a>
+              <!--v-if-->
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--v-if-->
+  </div>
+</nav>"
+`;
