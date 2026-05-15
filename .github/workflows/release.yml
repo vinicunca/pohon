@@ -13,6 +13,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     environment: npm
 
+    # nuxt-module-build / rollup can exceed Node's default ~2GB heap during prepack
+    env:
+      NODE_OPTIONS: --max-old-space-size=4096
+
     permissions:
       id-token: write
       contents: read
@@ -25,9 +29,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v5
 
       - name: Install node
         uses: actions/setup-node@v6
