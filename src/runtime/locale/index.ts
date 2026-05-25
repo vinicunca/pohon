@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 export { default as ar } from './ar';
 export { default as az } from './az';
 export { default as be } from './be';

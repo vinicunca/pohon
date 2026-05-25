@@ -228,6 +228,7 @@ export default vinicuncaESLint(
       'sonar/no-nested-conditional': 'off',
       'sonar/void-use': 'off',
       'sonar/no-empty-test-file': 'off',
+      'sonar/no-hardcoded-passwords': 'off',
     },
   },
 
