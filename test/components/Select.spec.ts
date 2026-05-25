@@ -116,6 +116,18 @@ describe('select', () => {
     },
   );
 
+  it('with trailing false should not render trailing section', () => {
+    const wrapper = mount(Select, {
+      props: {
+        ...props,
+        trailing: false,
+      },
+    });
+
+    expect(wrapper.find('[data-slot="trailing"]').exists()).toBe(false);
+    expect(wrapper.find('[data-slot="trailingIcon"]').exists()).toBe(false);
+  });
+
   it('passes accessibility tests', async () => {
     const wrapper = await mountSuspended(Select, {
       props: {

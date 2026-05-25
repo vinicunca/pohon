@@ -191,12 +191,6 @@ export const presetPohon = definePreset<undefined, VinicuncaTheme>(() => {
 
     presets: [
       presetVinicunca({
-        wind4: {
-          preflights: {
-            theme: true,
-          },
-        },
-
         extendedTheme: {
           keyframes: {
             'accordion-down': {

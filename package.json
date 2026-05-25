@@ -1,7 +1,7 @@
 {
   "name": "pohon-ui",
   "type": "module",
-  "version": "2.0.0",
+  "version": "2.0.0-rc1.2",
   "packageManager": "pnpm@11.0.9",
   "description": "A UI Library for Modern Web Apps, powered by Vue & UnoCSS.",
   "license": "MIT",
@@ -243,7 +243,7 @@
     "unplugin-auto-import": "^21.0.0",
     "unplugin-vue-components": "^32.0.0",
     "vaul-vue": "0.4.1",
-    "vue-component-type-helpers": "^3.2.8"
+    "vue-component-type-helpers": "^3.3.0"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^1.0.2",
@@ -254,18 +254,18 @@
     "@vinicunca/eslint-config": "^5.0.0",
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue/test-utils": "^2.4.10",
-    "ai": "^6.0.177",
+    "ai": "^6.0.185",
     "embla-carousel": "^8.6.0",
-    "eslint": "^10.3.0",
+    "eslint": "^10.4.0",
     "happy-dom": "^20.9.0",
     "nuxt": "^4.4.2",
     "release-it": "^19.2.4",
     "unbuild": "^3.6.1",
-    "vitest": "^4.1.5",
+    "vitest": "^4.1.6",
     "vitest-axe": "^0.1.0",
     "vitest-environment-nuxt": "^1.0.1",
     "vue": "^3.5.30",
-    "vue-tsc": "^3.2.8"
+    "vue-tsc": "^3.3.0"
   },
   "resolutions": {
     "@nuxt/kit": "^4.4.2",
