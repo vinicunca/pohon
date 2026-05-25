@@ -1,5 +1,4 @@
-import type { HookResult } from '@nuxt/schema';
-import type { ModuleDependencies } from 'nuxt/schema';
+import type { HookResult, ModuleDependencies } from '@nuxt/schema';
 import { addComponentsDir, addImports, addImportsDir, addPlugin, createResolver, defineNuxtModule, hasNuxtModule } from '@nuxt/kit';
 import { defu } from 'defu';
 import { name, version } from '../package.json';

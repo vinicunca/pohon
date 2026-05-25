@@ -118,6 +118,12 @@ const valueMultiple = ref([fruits[0]!, vegetables[0]!]);
       clear
     />
     <PInputMenu
+      placeholder="Autocomplete"
+      mode="autocomplete"
+      :items="items"
+      v-bind="props"
+    />
+    <PInputMenu
       placeholder="Highlight"
       highlight
       :items="items"

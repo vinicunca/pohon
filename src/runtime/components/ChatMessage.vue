@@ -56,6 +56,7 @@ export interface ChatMessageSlots<TMetadata = unknown, TDataParts extends UIData
   header?(props: UIMessage<TMetadata, TDataParts, TTools>): Array<VNode>;
   leading?(props: UIMessage<TMetadata, TDataParts, TTools> & { avatar: ChatMessageProps<TMetadata, TDataParts, TTools>['avatar']; ui: ChatMessage['ui'] }): Array<VNode>;
   files?(props: Omit<UIMessage<TMetadata, TDataParts, TTools>, 'parts'> & { parts: Array<FileUIPart> }): Array<VNode>;
+  body?(props: UIMessage<TMetadata, TDataParts, TTools>): Array<VNode>;
   content?(props: UIMessage<TMetadata, TDataParts, TTools> & { content?: string }): Array<VNode>;
   actions?(props: UIMessage<TMetadata, TDataParts, TTools> & { actions: ChatMessageProps<TMetadata, TDataParts, TTools>['actions'] }): Array<VNode>;
 }
@@ -118,31 +119,34 @@ const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.chatMessage 
         </slot>
       </div>
 
-      <div v-if="props.content || textParts.length || !!slots.content" data-slot="content" :class="ui.content({ class: props.ui?.content })">
-        <slot name="content" v-bind="{ ...messageProps, content: props.content }">
-          <template v-if="props.content">
-            {{ props.content }}
-          </template>
-          <template v-else>
-            <template v-for="(part, index) in textParts" :key="`${props.id}-${part.type}-${index}`">
-              {{ part.text }}
-            </template>
-          </template>
-        </slot>
-      </div>
-
-      <div v-if="props.actions || !!slots.actions" data-slot="actions" :class="ui.actions({ class: props.ui?.actions })">
-        <slot name="actions" v-bind="{ ...messageProps, actions: props.actions }">
-          <PTooltip v-for="(action, index) in props.actions" :key="index" :text="action.label">
-            <PButton
-              size="sm"
-              color="neutral"
-              variant="ghost"
-              v-bind="omit(action, ['onClick'])"
-              :label="undefined"
-              @click="typeof action.onClick === 'function' ? action.onClick($event, messageProps) : undefined"
-            />
-          </PTooltip>
+      <div v-if="props.content || textParts.length || !!slots.content || props.actions || !!slots.actions || !!slots.body" data-slot="body" :class="ui.body({ class: props.ui?.body })">
+        <slot name="body" v-bind="{ ...messageProps }">
+          <div v-if="props.content || textParts.length || !!slots.content" data-slot="content" :class="ui.content({ class: props.ui?.content })">
+            <slot name="content" v-bind="{ ...messageProps, content: props.content }">
+              <template v-if="props.content">
+                {{ props.content }}
+              </template>
+              <template v-else>
+                <template v-for="(part, index) in textParts" :key="`${props.id}-${part.type}-${index}`">
+                  {{ part.text }}
+                </template>
+              </template>
+            </slot>
+          </div>
+          <div v-if="props.actions || !!slots.actions" data-slot="actions" :class="ui.actions({ class: props.ui?.actions })">
+            <slot name="actions" v-bind="{ ...messageProps, actions: props.actions }">
+              <PTooltip v-for="(action, index) in props.actions" :key="index" :text="action.label">
+                <PButton
+                  size="sm"
+                  color="neutral"
+                  variant="ghost"
+                  v-bind="omit(action, ['onClick'])"
+                  :label="undefined"
+                  @click="typeof action.onClick === 'function' ? action.onClick($event, messageProps) : undefined"
+                />
+              </PTooltip>
+            </slot>
+          </div>
         </slot>
       </div>
     </div>

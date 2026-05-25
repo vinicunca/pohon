@@ -8,17 +8,29 @@ packages:
   - playgrounds/vue
   - playgrounds/repl
 
+linkWorkspacePackages: true
+
 allowBuilds:
   '@parcel/watcher': false
+  '@vercel/speed-insights': false
   better-sqlite3: true
   esbuild: false
   puppeteer: true
   sharp: true
   simple-git-hooks: true
+  unrs-resolver: false
   vue-demi: false
 
 overrides:
+  '@nuxt/kit': ^4.4.6
+  '@nuxt/test-utils': 4.0.2
   '@types/node': 25.3.0
+  c12: ^3.3.2
   h3: 1.15.11
+  pohon-ui: workspace:*
+  typescript: ^6.0.3
   unplugin: 3.0.0
   unplugin-auto-import: 21.0.0
+
+minimumReleaseAgeExclude:
+  - akar@2.0.7

@@ -5,6 +5,7 @@ export default (options: Required<ModuleOptions>) => ({
     root: '',
     header: '',
     container: '',
+    body: '',
     leading: '',
     leadingIcon: '',
     leadingAvatar: '',
@@ -57,6 +58,7 @@ export default (options: Required<ModuleOptions>) => ({
   },
   compoundVariants: [],
   defaultVariants: {
+    side: 'left',
     variant: 'naked',
     color: 'neutral',
   },

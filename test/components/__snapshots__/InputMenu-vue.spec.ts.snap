@@ -263,6 +263,162 @@ exports[`inputMenu > renders with autocomplete correctly 1`] = `
 </div>"
 `;
 
+exports[`inputMenu > renders with autocomplete mode and content correctly 1`] = `
+"<div dir="ltr" data-slot="root" style="pointer-events: auto;"><input aria-disabled="false" type="text" aria-expanded="true" aria-controls="" aria-autocomplete="list" role="combobox" autocomplete="off" data-slot="base" class="" value="" aria-activedescendant="akar-combobox-item-v-3">
+  <!--v-if--><button type="button" tabindex="-1" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" data-slot="trailing" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button>
+  <!--teleport start-->
+  <div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+    <div data-dismissable-layer="" style="display: flex; flex-direction: column; box-sizing: border-box; --akar-combobox-content-transform-origin: var(--akar-popper-transform-origin); --akar-combobox-content-available-width: var(--akar-popper-available-width); --akar-combobox-content-available-height: var(--akar-popper-available-height); --akar-combobox-trigger-width: var(--akar-popper-anchor-width); --akar-combobox-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" role="listbox" aria-orientation="vertical" aria-multiselectable="false" data-orientation="vertical" position="popper" hidewhenempty="true" id="akar-combobox-content-v-0" data-state="open" data-side="bottom" data-align="center">
+      <!--v-if-->
+      <div role="presentation" data-slot="viewport" class="">
+        <!--v-if-->
+        <div role="group" aria-labelledby="" id="akar-combobox-group-v-1" data-slot="group" class="">
+          <div id="akar-combobox-item-v-3" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Backlog</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-5" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Todo</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-7" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">In Progress</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-9" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Done</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-11" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Canceled</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <!--teleport end-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputMenu > renders with autocomplete mode and defaultValue correctly 1`] = `
+"<div dir="ltr" data-slot="root" style="pointer-events: auto;"><input aria-disabled="false" type="text" aria-expanded="true" aria-controls="" aria-autocomplete="list" role="combobox" autocomplete="off" data-slot="base" class="" value="Backlog" aria-activedescendant="akar-combobox-item-v-3">
+  <!--v-if--><button type="button" tabindex="-1" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" data-slot="trailing" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button>
+  <!--teleport start-->
+  <div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+    <div data-dismissable-layer="" style="display: flex; flex-direction: column; box-sizing: border-box; --akar-combobox-content-transform-origin: var(--akar-popper-transform-origin); --akar-combobox-content-available-width: var(--akar-popper-available-width); --akar-combobox-content-available-height: var(--akar-popper-available-height); --akar-combobox-trigger-width: var(--akar-popper-anchor-width); --akar-combobox-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" role="listbox" aria-orientation="vertical" aria-multiselectable="false" data-orientation="vertical" position="popper" id="akar-combobox-content-v-0" data-state="open" data-side="bottom" data-align="center">
+      <!--v-if-->
+      <div role="presentation" data-slot="viewport" class="">
+        <!--v-if-->
+        <div role="group" aria-labelledby="" id="akar-combobox-group-v-1" data-slot="group" class="">
+          <div id="akar-combobox-item-v-3" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Backlog</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <!--teleport end-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputMenu > renders with autocomplete mode and modelValue correctly 1`] = `
+"<div dir="ltr" data-slot="root" style="pointer-events: auto;"><input aria-disabled="false" type="text" aria-expanded="true" aria-controls="" aria-autocomplete="list" role="combobox" autocomplete="off" data-slot="base" class="" value="Backlog" aria-activedescendant="akar-combobox-item-v-3">
+  <!--v-if--><button type="button" tabindex="-1" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" data-slot="trailing" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button>
+  <!--teleport start-->
+  <div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+    <div data-dismissable-layer="" style="display: flex; flex-direction: column; box-sizing: border-box; --akar-combobox-content-transform-origin: var(--akar-popper-transform-origin); --akar-combobox-content-available-width: var(--akar-popper-available-width); --akar-combobox-content-available-height: var(--akar-popper-available-height); --akar-combobox-trigger-width: var(--akar-popper-anchor-width); --akar-combobox-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" role="listbox" aria-orientation="vertical" aria-multiselectable="false" data-orientation="vertical" position="popper" id="akar-combobox-content-v-0" data-state="open" data-side="bottom" data-align="center">
+      <!--v-if-->
+      <div role="presentation" data-slot="viewport" class="">
+        <!--v-if-->
+        <div role="group" aria-labelledby="" id="akar-combobox-group-v-1" data-slot="group" class="">
+          <div id="akar-combobox-item-v-3" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Backlog</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <!--teleport end-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputMenu > renders with autocomplete mode and placeholder correctly 1`] = `
+"<div dir="ltr" data-slot="root" style="pointer-events: auto;"><input aria-disabled="false" type="text" aria-expanded="true" aria-controls="" aria-autocomplete="list" role="combobox" autocomplete="off" data-slot="base" class="" placeholder="Type something..." value="" aria-activedescendant="akar-combobox-item-v-3">
+  <!--v-if--><button type="button" tabindex="-1" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" data-slot="trailing" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button>
+  <!--teleport start-->
+  <div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+    <div data-dismissable-layer="" style="display: flex; flex-direction: column; box-sizing: border-box; --akar-combobox-content-transform-origin: var(--akar-popper-transform-origin); --akar-combobox-content-available-width: var(--akar-popper-available-width); --akar-combobox-content-available-height: var(--akar-popper-available-height); --akar-combobox-trigger-width: var(--akar-popper-anchor-width); --akar-combobox-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" role="listbox" aria-orientation="vertical" aria-multiselectable="false" data-orientation="vertical" position="popper" id="akar-combobox-content-v-0" data-state="open" data-side="bottom" data-align="center">
+      <!--v-if-->
+      <div role="presentation" data-slot="viewport" class="">
+        <!--v-if-->
+        <div role="group" aria-labelledby="" id="akar-combobox-group-v-1" data-slot="group" class="">
+          <div id="akar-combobox-item-v-3" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Backlog</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-5" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Todo</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-7" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">In Progress</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-9" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Done</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-11" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Canceled</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <!--teleport end-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputMenu > renders with autocomplete mode correctly 1`] = `
+"<div dir="ltr" data-slot="root" style="pointer-events: auto;"><input aria-disabled="false" type="text" aria-expanded="true" aria-controls="" aria-autocomplete="list" role="combobox" autocomplete="off" data-slot="base" class="" value="" aria-activedescendant="akar-combobox-item-v-3">
+  <!--v-if--><button type="button" tabindex="-1" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" data-slot="trailing" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button>
+  <!--teleport start-->
+  <div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+    <div data-dismissable-layer="" style="display: flex; flex-direction: column; box-sizing: border-box; --akar-combobox-content-transform-origin: var(--akar-popper-transform-origin); --akar-combobox-content-available-width: var(--akar-popper-available-width); --akar-combobox-content-available-height: var(--akar-popper-available-height); --akar-combobox-trigger-width: var(--akar-popper-anchor-width); --akar-combobox-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" role="listbox" aria-orientation="vertical" aria-multiselectable="false" data-orientation="vertical" position="popper" id="akar-combobox-content-v-0" data-state="open" data-side="bottom" data-align="center">
+      <!--v-if-->
+      <div role="presentation" data-slot="viewport" class="">
+        <!--v-if-->
+        <div role="group" aria-labelledby="" id="akar-combobox-group-v-1" data-slot="group" class="">
+          <div id="akar-combobox-item-v-3" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Backlog</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-5" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Todo</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-7" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">In Progress</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-9" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Done</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-11" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Canceled</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <!--teleport end-->
+  <!--v-if-->
+</div>"
+`;
+
 exports[`inputMenu > renders with avatar and leadingIcon correctly 1`] = `
 "<div dir="ltr" data-slot="root"><input aria-disabled="false" type="text" aria-expanded="false" aria-controls="" aria-autocomplete="list" role="combobox" autocomplete="off" data-slot="base" class="" value=""><span data-slot="leading" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg></span><button type="button" tabindex="-1" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="false" aria-controls="" data-state="closed" aria-disabled="false" data-slot="trailing" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button>
   <!--teleport start-->
@@ -571,6 +727,42 @@ exports[`inputMenu > renders with disabled correctly 1`] = `
             <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
           </div>
           <div id="akar-combobox-item-v-11" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" disabled="" data-disabled="" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Canceled</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <!--teleport end-->
+  <!--v-if-->
+</div>"
+`;
+
+exports[`inputMenu > renders with html autocomplete attribute correctly 1`] = `
+"<div dir="ltr" data-slot="root" style="pointer-events: auto;"><input aria-disabled="false" type="text" aria-expanded="true" aria-controls="" aria-autocomplete="list" role="combobox" autocomplete="email" data-slot="base" class="" value="" aria-activedescendant="akar-combobox-item-v-3">
+  <!--v-if--><button type="button" tabindex="-1" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" data-slot="trailing" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class=""></svg></button>
+  <!--teleport start-->
+  <div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+    <div data-dismissable-layer="" style="display: flex; flex-direction: column; box-sizing: border-box; --akar-combobox-content-transform-origin: var(--akar-popper-transform-origin); --akar-combobox-content-available-width: var(--akar-popper-available-width); --akar-combobox-content-available-height: var(--akar-popper-available-height); --akar-combobox-trigger-width: var(--akar-popper-anchor-width); --akar-combobox-trigger-height: var(--akar-popper-anchor-height); animation: none; outline-color: none; outline-style: none; outline-width: initial;" tabindex="-1" data-slot="content" role="listbox" aria-orientation="vertical" aria-multiselectable="false" data-orientation="vertical" position="popper" id="akar-combobox-content-v-0" data-state="open" data-side="bottom" data-align="center">
+      <!--v-if-->
+      <div role="presentation" data-slot="viewport" class="">
+        <!--v-if-->
+        <div role="group" aria-labelledby="" id="akar-combobox-group-v-1" data-slot="group" class="">
+          <div id="akar-combobox-item-v-3" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Backlog</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-5" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Todo</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-7" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">In Progress</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-9" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Done</span>
+            <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
+          </div>
+          <div id="akar-combobox-item-v-11" data-slot="item" class="" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="itemLeadingIcon" class=""></svg><span data-slot="itemWrapper" class=""><span data-slot="itemLabel" class="">Canceled</span>
             <!--v-if--></span><span data-slot="itemTrailing" class=""><!--v-if--></span>
           </div>
         </div>
