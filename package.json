@@ -215,7 +215,7 @@
     "@vueuse/core": "^14.3.0",
     "@vueuse/integrations": "^14.3.0",
     "@vueuse/shared": "^14.3.0",
-    "akar": "2.0.7",
+    "akar": "2.0.8",
     "colortranslator": "^5.0.0",
     "consola": "^3.4.2",
     "defu": "^6.1.7",

@@ -134,8 +134,8 @@ importers:
         specifier: ^14.3.0
         version: 14.3.0(vue@3.5.34(typescript@6.0.3))
       akar:
-        specifier: 2.0.7
-        version: 2.0.7(vue@3.5.34(typescript@6.0.3))
+        specifier: 2.0.8
+        version: 2.0.8(vue@3.5.34(typescript@6.0.3))
       colortranslator:
         specifier: ^5.0.0
         version: 5.0.0
@@ -5082,8 +5082,8 @@ packages:
   ajv@8.18.0:
     resolution: {integrity: sha512-PlXPeEWMXMZ7sPYOHqmDyCJzcfNrUr3fGNKtezX14ykXOEIvyK81d+qydx89KY5O71FKMPaQ2vBfBFI5NHR63A==}
 
-  akar@2.0.7:
-    resolution: {integrity: sha512-KZyFMO5e0L/RCbljfXNayvZsHYFPf73nWWkSPvESWl2FFVrQNnSPgZLLYWw3IAVbveHwS2ziA+HvPcr45dNfkw==}
+  akar@2.0.8:
+    resolution: {integrity: sha512-6KZmqbDS/rwkdkwmFF55ksG7cZv4urv7g6DiLqj42/ujHQaTJ4J2RR2K45c7i5m3F9sWCF5QlUH9wI3OBErvJw==}
     peerDependencies:
       vue: '>= 3.4.0'
 
@@ -15714,7 +15714,7 @@ snapshots:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
-  akar@2.0.7(vue@3.5.34(typescript@6.0.3)):
+  akar@2.0.8(vue@3.5.34(typescript@6.0.3)):
     dependencies:
       '@floating-ui/dom': 1.7.6
       '@floating-ui/vue': 1.1.10(vue@3.5.34(typescript@6.0.3))

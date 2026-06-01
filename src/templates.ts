@@ -122,7 +122,7 @@ export function getTemplates(options: ModuleOptions, uiConfig: Record<string, an
       const iconUnion = iconKeys.length ? iconKeys.map((i) => JSON.stringify(i)).join(' | ') : 'string';
 
       return `import * as ui from '#build/ui';
-import type { UvConfig } from 'pohon-ui';
+import type { UvConfig, DeepRequired } from 'pohon-ui';
 import type { colors } from 'unocss/preset-mini';
 
 type IconsConfig = Record<${iconUnion} | (string & {}), string>
@@ -138,6 +138,8 @@ type AppConfigUI = {
   icons?: Partial<IconsConfig>;
 } & UvConfig<typeof ui>;
 
+type AppConfigRuntimeUI = DeepRequired<Pick<AppConfigUI, 'colors' | 'icons' | 'tv'>> & Omit<AppConfigUI, 'colors' | 'icons' | 'tv'>
+
 declare module '@nuxt/schema' {
   interface AppConfigInput {
     /**
@@ -145,6 +147,10 @@ declare module '@nuxt/schema' {
      * @see https://pohon.vinicunca.dev/docs/getting-started/theme/components
      */
     ui?: AppConfigUI;
+  }
+
+  interface AppConfig {
+    ui: AppConfigRuntimeUI
   }
 }
 

@@ -31,6 +31,3 @@ overrides:
   typescript: ^6.0.3
   unplugin: 3.0.0
   unplugin-auto-import: 21.0.0
-
-minimumReleaseAgeExclude:
-  - akar@2.0.7
