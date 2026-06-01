@@ -1,5 +1,7 @@
 # Changelog
 
+## [2.0.0-rc4](https://github.com/vinicunca/pohon/compare/v2.0.0-rc3...v2.0.0-rc4) (2026-06-01)
+
 ## [2.0.0-rc3](https://github.com/vinicunca/pohon/compare/v2.0.0-rc2...v2.0.0-rc3) (2026-06-01)
 
 ### Bug Fixes
