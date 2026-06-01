@@ -31,3 +31,7 @@ overrides:
   typescript: ^6.0.3
   unplugin: 3.0.0
   unplugin-auto-import: 21.0.0
+
+minimumReleaseAgeExclude:
+  - '@vinicunca/unocss-preset@1.47.0'
+  - akar@2.0.8

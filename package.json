@@ -211,7 +211,7 @@
     "@unhead/vue": "^2.1.15",
     "@unocss/nuxt": "66.6.8",
     "@vinicunca/perkakas": "1.15.0",
-    "@vinicunca/unocss-preset": "^1.45.0",
+    "@vinicunca/unocss-preset": "^1.47.0",
     "@vueuse/core": "^14.3.0",
     "@vueuse/integrations": "^14.3.0",
     "@vueuse/shared": "^14.3.0",
