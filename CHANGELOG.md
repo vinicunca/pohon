@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.0-rc3](https://github.com/vinicunca/pohon/compare/v2.0.0-rc2...v2.0.0-rc3) (2026-06-01)
+
+### Bug Fixes
+
+* expose typings ([7c9eb57](https://github.com/vinicunca/pohon/commit/7c9eb577869bfb1d5582386c291a18042c57fcc0))
+
 ## [2.0.0-rc2](https://github.com/vinicunca/pohon/compare/v2.0.0...v2.0.0-rc2) (2026-05-25)
 
 ### ⚠ BREAKING CHANGES
