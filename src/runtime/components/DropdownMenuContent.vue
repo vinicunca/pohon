@@ -1,7 +1,10 @@
 <!-- eslint-disable vue/block-tag-newline -->
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
-import type { DropdownMenuContentEmits as RekaDropdownMenuContentEmits, DropdownMenuContentProps as RekaDropdownMenuContentProps } from 'akar';
+import type {
+  DropdownMenuContentEmits as AkarDropdownMenuContentEmits,
+  DropdownMenuContentProps as AkarDropdownMenuContentProps,
+} from 'akar';
 import type { VNode } from 'vue';
 import type theme from '#build/ui/dropdown-menu';
 import type { AvatarProps, DropdownMenuItem, DropdownMenuSlots, IconProps, InputProps, KbdProps } from '../types';
@@ -10,7 +13,7 @@ import type { ComponentConfig } from '../types/uv';
 
 type DropdownMenu = ComponentConfig<typeof theme, AppConfig, 'dropdownMenu'>;
 
-interface DropdownMenuContentProps<T extends ArrayOrNested<DropdownMenuItem>> extends Omit<RekaDropdownMenuContentProps, 'as' | 'asChild' | 'forceMount'> {
+interface DropdownMenuContentProps<T extends ArrayOrNested<DropdownMenuItem>> extends Omit<AkarDropdownMenuContentProps, 'as' | 'asChild' | 'forceMount'> {
   items?: T;
   portal?: boolean | string | HTMLElement;
   sub?: boolean;
@@ -38,7 +41,7 @@ interface DropdownMenuContentProps<T extends ArrayOrNested<DropdownMenuItem>> ex
   uiOverride?: DropdownMenu['slots'];
 }
 
-interface DropdownMenuContentEmits extends RekaDropdownMenuContentEmits {
+interface DropdownMenuContentEmits extends AkarDropdownMenuContentEmits {
   'update:searchTerm': [value: string];
 }
 

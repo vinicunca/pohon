@@ -159,7 +159,16 @@ export type ListboxSlots<T extends ArrayOrNested<ListboxItem> = ArrayOrNested<Li
 
 <script setup lang="ts" generic="T extends ArrayOrNested<ListboxItem>, VK extends GetItemKeys<T> | undefined = undefined, M extends boolean = false, Mod extends Omit<ModelModifiers, 'lazy'> = Omit<ModelModifiers, 'lazy'>">
 import { createReusableTemplate, reactivePick } from '@vueuse/core';
-import { ListboxContent, ListboxFilter, ListboxGroup, ListboxGroupLabel, ListboxItemIndicator, ListboxRoot, ListboxVirtualizer, ListboxItem as RekaListboxItem } from 'akar';
+import {
+  ListboxItem as AkarListboxItem,
+  ListboxContent,
+  ListboxFilter,
+  ListboxGroup,
+  ListboxGroupLabel,
+  ListboxItemIndicator,
+  ListboxRoot,
+  ListboxVirtualizer,
+} from 'akar';
 import { defu } from 'defu';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
@@ -308,7 +317,7 @@ const filteredItems = computed(() => filteredGroups.value.flatMap((group) => gro
 
     <div v-else-if="item.type === 'separator'" role="separator" data-slot="separator" :class="ui.separator({ class: [props.ui?.separator, item.ui?.separator, item.class] })" />
 
-    <RekaListboxItem
+    <AkarListboxItem
       v-else
       :value="props.valueKey ? get(item, props.valueKey as string) : item"
       :disabled="item.disabled"
@@ -353,7 +362,7 @@ const filteredItems = computed(() => filteredGroups.value.flatMap((group) => gro
           </ListboxItemIndicator>
         </span>
       </slot>
-    </RekaListboxItem>
+    </AkarListboxItem>
   </DefineItemTemplate>
 
   <ListboxRoot

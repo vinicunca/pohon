@@ -15,17 +15,17 @@
     "@comark/vue": "^0.3.1",
     "@iconify-json/lucide": "^1.2.108",
     "@iconify-json/simple-icons": "^1.2.83",
-    "@internationalized/date": "^3.12.1",
+    "@internationalized/date": "^3.12.2",
     "@nuxt/content": "^3.14.0",
-    "@tiptap/extension-emoji": "^3.22.4",
-    "@tiptap/extension-text-align": "^3.22.4",
-    "ai": "^6.0.185",
+    "@tiptap/extension-emoji": "^3.24.0",
+    "@tiptap/extension-text-align": "^3.24.0",
+    "ai": "^6.0.193",
     "nuxt": "^4.4.6",
     "pohon-ui": "workspace:*",
     "zod": "^4.4.3"
   },
   "devDependencies": {
     "typescript": "^6.0.3",
-    "vue-tsc": "^3.3.0"
+    "vue-tsc": "^3.3.3"
   }
 }

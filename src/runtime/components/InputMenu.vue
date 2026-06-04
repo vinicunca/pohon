@@ -236,7 +236,7 @@ import { TagsInputInput, TagsInputItem, TagsInputItemDelete, TagsInputItemText, 
 import { Autocomplete, Combobox } from 'akar/namespaced';
 import { defu } from 'defu';
 import { isEqual } from 'ohash/utils';
-import { computed, nextTick, onMounted, toRaw, toRef, useTemplateRef, watch } from 'vue';
+import { computed, nextTick, onMounted, ref, toRaw, toRef, useTemplateRef, watch } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentIcons } from '../composables/useComponentIcons';
 import { useComponentProps } from '../composables/useComponentProps';
@@ -461,7 +461,11 @@ function onFocus(event: FocusEvent) {
   emitFormFocus();
 }
 
+const isOpen = ref(false);
+
 function onUpdateOpen(value: boolean) {
+  isOpen.value = value;
+
   let timeoutId;
 
   if (!value) {
@@ -532,6 +536,25 @@ function onClear() {
 }
 
 const viewportRef = useTemplateRef('viewportRef');
+
+const comboboxRootRef = useTemplateRef('comboboxRootRef');
+
+// akar only re-highlights the first item when the list goes from empty to non-empty.
+// With `create-item`, the create item is always registered so the count never drops to 0,
+// leaving the highlight stale when async `items` load. Re-highlight when items change while open.
+// Wait an extra tick so freshly mounted items are registered in akar's collection before highlighting.
+watch(
+  () => props.items,
+  async () => {
+    if (!isOpen.value) {
+      return;
+    }
+
+    await nextTick();
+    comboboxRootRef.value?.highlightFirstItem?.();
+  },
+  { flush: 'post' },
+);
 
 defineExpose({
   inputRef: toRef(() => inputRef.value?.$el as HTMLInputElement),
@@ -612,6 +635,7 @@ defineExpose({
   </DefineItemTemplate>
 
   <Component.Root
+    ref="comboboxRootRef"
     v-slot="{ modelValue, open }"
     v-bind="rootProps"
     :name="name"

@@ -21,8 +21,8 @@ type CalendarModelValue<R extends boolean = false, M extends boolean = false> = 
     ? (Array<DateValue> | undefined)
     : (DateValue | undefined);
 
-type _CalendarRootProps = Omit<CalendarRootProps, 'as' | 'asChild' | 'modelValue' | 'defaultValue' | 'dir' | 'locale' | 'calendarLabel' | 'multiple'>;
-type _RangeCalendarRootProps = Omit<RangeCalendarRootProps, 'as' | 'asChild' | 'modelValue' | 'defaultValue' | 'dir' | 'locale' | 'calendarLabel' | 'multiple'>;
+type _CalendarRootProps = Omit<CalendarRootProps, 'as' | 'asChild' | 'modelValue' | 'defaultValue' | 'dir' | 'calendarLabel' | 'multiple'>;
+type _RangeCalendarRootProps = Omit<RangeCalendarRootProps, 'as' | 'asChild' | 'modelValue' | 'defaultValue' | 'dir' | 'calendarLabel' | 'multiple'>;
 
 export interface CalendarProps<R extends boolean = false, M extends boolean = false> extends _RangeCalendarRootProps, _CalendarRootProps {
   /**
@@ -231,7 +231,7 @@ const CalendarComp = computed(() => props.range ? RangeCalendar : SingleCalendar
               data-slot="cellWeek"
               :class="ui.cellWeek({ class: props.ui?.cellWeek })"
             >
-              {{ getWeekNumber(weekDates[0], locale.code) }}
+              {{ getWeekNumber(weekDates[0], props.locale ?? locale.code) }}
             </td>
             <CalendarComp.Cell
               v-for="weekDate in weekDates"
