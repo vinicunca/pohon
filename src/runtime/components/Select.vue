@@ -208,6 +208,7 @@ const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.select || {}
   trailing: isTrailing.value || !!slots.trailing,
   fieldGroup: orientation.value,
   position: position.value,
+  multiple: props.multiple,
 }));
 
 const groups = computed<Array<Array<SelectItem>>>(() =>

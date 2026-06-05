@@ -105,6 +105,9 @@ export default (options: Required<ModuleOptions>) => {
             content: '',
           },
         },
+        multiple: {
+          true: '',
+        },
       },
 
       compoundVariants: [],

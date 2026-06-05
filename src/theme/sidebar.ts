@@ -15,6 +15,13 @@ export default {
     rail: '',
   },
   variants: {
+    transition: {
+      true: {
+        gap: '',
+        container: '',
+        rail: '',
+      },
+    },
     side: {
       left: {
         container: '',

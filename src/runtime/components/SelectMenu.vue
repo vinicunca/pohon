@@ -320,6 +320,7 @@ const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.selectMenu |
   trailing: isTrailing.value || !!slots.trailing,
   fieldGroup: orientation.value,
   virtualize: !!props.virtualize,
+  multiple: props.multiple,
 }));
 
 function displayValue(value: GetItemValue<T, VK, ExcludeItem> | Array<GetItemValue<T, VK, ExcludeItem>>): string | undefined {

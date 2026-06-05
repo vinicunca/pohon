@@ -63,6 +63,11 @@ export interface SidebarProps<T extends SidebarMode = SidebarMode> {
    */
   rail?: boolean;
   /**
+   * Animate the sidebar when collapsing or expanding.
+   * @defaultValue true
+   */
+  transition?: boolean;
+  /**
    * The mode of the sidebar menu on mobile.
    * @defaultValue 'slideover'
    */
@@ -112,6 +117,7 @@ const _props = withDefaults(
     collapsible: 'offcanvas',
     side: 'left',
     close: false,
+    transition: true,
     rail: false,
     mode: 'slideover' as never,
   },
@@ -192,6 +198,7 @@ const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.sidebar || {
   side: props.side,
   variant: props.variant,
   collapsible: props.collapsible,
+  transition: props.transition,
 }));
 
 const Menu = computed(() => ({
