@@ -12,4 +12,5 @@ export const publicComposables: Record<string, Array<string>> = {
   useScrollShadow: ['useScrollShadow'],
   useScrollspy: ['useScrollspy'],
   useToast: ['useToast'],
+  useTour: ['useTour'],
 };
