@@ -23,7 +23,9 @@ watch(file, async (newFile) => {
     }
 
     // Simulate upload delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => {
+      setTimeout(resolve, 1000);
+    });
 
     const pos = props.getPos();
     if (typeof pos !== 'number') {

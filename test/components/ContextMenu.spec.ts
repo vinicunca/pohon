@@ -9,7 +9,7 @@ import ContextMenu from '../../src/runtime/components/ContextMenu.vue';
 import { renderEach } from '../component-render';
 import { expectSlotProps } from '../utils/types';
 
-type ContextMenu = ComponentConfig<typeof theme, AppConfig, 'contextMenu'>;
+type ContextMenuType = ComponentConfig<typeof theme, AppConfig, 'contextMenu'>;
 
 const ContextMenuWrapper = defineComponent({
   components: {
@@ -161,21 +161,21 @@ describe('contextMenu', () => {
     // normal
     expectSlotProps('item', () => ContextMenu({
       items: [{ label: 'foo', value: 'bar' }],
-    })).toEqualTypeOf<{ item: { label: string; value: string }; index: number; active: boolean; ui: ContextMenu['ui'] }>();
+    })).toEqualTypeOf<{ item: { label: string; value: string }; index: number; active: boolean; ui: ContextMenuType['ui'] }>();
 
     // groups
     expectSlotProps('item', () => ContextMenu({
       items: [[{ label: 'foo', value: 'bar' }]],
-    })).toEqualTypeOf<{ item: { label: string; value: string }; index: number; active: boolean; ui: ContextMenu['ui'] }>();
+    })).toEqualTypeOf<{ item: { label: string; value: string }; index: number; active: boolean; ui: ContextMenuType['ui'] }>();
 
     // custom
     expectSlotProps('item', () => ContextMenu({
       items: [{ label: 'foo', value: 'bar', custom: 'nice' }],
-    })).toEqualTypeOf<{ item: { label: string; value: string; custom: string }; index: number; active: boolean; ui: ContextMenu['ui'] }>();
+    })).toEqualTypeOf<{ item: { label: string; value: string; custom: string }; index: number; active: boolean; ui: ContextMenuType['ui'] }>();
 
     // custom + groups
     expectSlotProps('item', () => ContextMenu({
       items: [[{ label: 'foo', value: 'bar', custom: 'nice' }]],
-    })).toEqualTypeOf<{ item: { label: string; value: string; custom: string }; index: number; active: boolean; ui: ContextMenu['ui'] }>();
+    })).toEqualTypeOf<{ item: { label: string; value: string; custom: string }; index: number; active: boolean; ui: ContextMenuType['ui'] }>();
   });
 });

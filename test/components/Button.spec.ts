@@ -1,3 +1,4 @@
+/* eslint-disable sonar/no-identical-functions */
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { flushPromises } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';

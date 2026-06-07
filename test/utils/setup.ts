@@ -4,7 +4,7 @@ import * as matchers from 'vitest-axe/matchers';
 
 // @ts-expect-error incomplete implementation
 window.IntersectionObserver = class IntersectionObserver {
-  // eslint-disable-next-line
+  // eslint-disable-next-line ts/no-useless-constructor
   constructor() {}
   observe() {}
   unobserve() {}

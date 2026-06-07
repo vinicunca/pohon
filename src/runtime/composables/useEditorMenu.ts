@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/valid-types */
 import type { Placement, Strategy } from '@floating-ui/dom';
 import type { SuggestionOptions, SuggestionProps } from '@tiptap/suggestion';
 import type { Editor } from '@tiptap/vue-3';

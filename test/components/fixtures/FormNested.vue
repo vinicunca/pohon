@@ -16,12 +16,12 @@ const nestedSchema = z.object({
   field: z.string().min(1),
 });
 
-const form = useTemplateRef('form');
+const formRef = useTemplateRef('formRef');
 </script>
 
 <template>
   <PForm
-    ref="form"
+    ref="formRef"
     :state="state"
     :schema="schema"
   >
@@ -46,7 +46,6 @@ const form = useTemplateRef('form');
 
     <PForm
       v-if="showNested"
-      ref="nestedForm"
       name="nested"
       :schema="nestedSchema"
       nested

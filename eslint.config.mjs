@@ -200,7 +200,12 @@ const noBarePropRefs = {
 
 export default vinicuncaESLint(
   {
-    ignores: ['.github/**/*.md'],
+    ignores: [
+      '.github/**/*.md',
+      'skills/**/*.md',
+      // TODO: remove when docs is ready
+      'docs/**',
+    ],
     unocss: {
       configPath: 'playgrounds/nuxt/uno.config.ts',
     },
@@ -229,6 +234,7 @@ export default vinicuncaESLint(
       'sonar/void-use': 'off',
       'sonar/no-empty-test-file': 'off',
       'sonar/no-hardcoded-passwords': 'off',
+      'sonar/fixme-tag': 'off',
     },
   },
 
@@ -240,7 +246,10 @@ export default vinicuncaESLint(
   },
 
   {
-    files: ['playgrounds/**'],
+    files: [
+      'playgrounds/**',
+      'test/**',
+    ],
     rules: {
       'no-console': 'off',
     },

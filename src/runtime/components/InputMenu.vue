@@ -495,6 +495,7 @@ function onRemoveTag(event: any, modelValue: GetModelValue<T, VK, true, ExcludeI
   if (props.multiple) {
     const filteredValue = modelValue.filter((value) => !isEqual(value, event));
     emits('update:modelValue', filteredValue as ApplyModifiers<GetModelValue<T, VK, M, ExcludeItem>, Mod>);
+    // eslint-disable-next-line vue/custom-event-name-casing
     emits('remove-tag', event);
     onUpdate(filteredValue);
   }

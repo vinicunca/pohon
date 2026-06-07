@@ -8,7 +8,7 @@ import NavigationMenu from '../../src/runtime/components/NavigationMenu.vue';
 import { renderEach } from '../component-render';
 import { expectSlotProps } from '../utils/types';
 
-type NavigationMenu = ComponentConfig<typeof theme, AppConfig, 'navigationMenu'>;
+type NavigationMenuType = ComponentConfig<typeof theme, AppConfig, 'navigationMenu'>;
 
 describe('navigationMenu', () => {
   const variants = Object.keys(theme.variants.variant) as any;
@@ -135,21 +135,21 @@ describe('navigationMenu', () => {
     // normal
     expectSlotProps('item', () => NavigationMenu({
       items: [{ label: 'foo', value: 'bar' }],
-    })).toEqualTypeOf<{ item: { label: string; value: string }; index: number; active: boolean; ui: NavigationMenu['ui'] }>();
+    })).toEqualTypeOf<{ item: { label: string; value: string }; index: number; active: boolean; ui: NavigationMenuType['ui'] }>();
 
     // groups
     expectSlotProps('item', () => NavigationMenu({
       items: [[{ label: 'foo', value: 'bar' }]],
-    })).toEqualTypeOf<{ item: { label: string; value: string }; index: number; active: boolean; ui: NavigationMenu['ui'] }>();
+    })).toEqualTypeOf<{ item: { label: string; value: string }; index: number; active: boolean; ui: NavigationMenuType['ui'] }>();
 
     // custom
     expectSlotProps('item', () => NavigationMenu({
       items: [{ label: 'foo', value: 'bar', custom: 'nice' }],
-    })).toEqualTypeOf<{ item: { label: string; value: string; custom: string }; index: number; active: boolean; ui: NavigationMenu['ui'] }>();
+    })).toEqualTypeOf<{ item: { label: string; value: string; custom: string }; index: number; active: boolean; ui: NavigationMenuType['ui'] }>();
 
     // custom + groups
     expectSlotProps('item', () => NavigationMenu({
       items: [[{ label: 'foo', value: 'bar', custom: 'nice' }]],
-    })).toEqualTypeOf<{ item: { label: string; value: string; custom: string }; index: number; active: boolean; ui: NavigationMenu['ui'] }>();
+    })).toEqualTypeOf<{ item: { label: string; value: string; custom: string }; index: number; active: boolean; ui: NavigationMenuType['ui'] }>();
   });
 });

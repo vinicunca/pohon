@@ -1,4 +1,3 @@
-import { presetPohon } from 'pohon-ui/uno-preset';
 import { defineConfig } from 'unocss';
 import { BRANDS } from './layers/themes/app/constants';
 
@@ -8,7 +7,6 @@ export default defineConfig({
   },
 
   presets: [
-    presetPohon(),
   ],
 
   theme: {

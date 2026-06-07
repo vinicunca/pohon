@@ -110,6 +110,7 @@ const modelValueWithMappedId = ref<(typeof itemsWithMappedId)[number]>();
   </Matrix>
 
   <!-- Typescript tests -->
+  <!-- eslint-disable-next-line vue/no-constant-condition -->
   <template v-if="false">
     <PTree
       :model-value="modelValues"

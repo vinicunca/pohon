@@ -9,7 +9,7 @@ import DropdownMenu from '../../src/runtime/components/DropdownMenu.vue';
 import { renderEach } from '../component-render';
 import { expectSlotProps } from '../utils/types';
 
-type DropdownMenu = ComponentConfig<typeof theme, AppConfig, 'dropdownMenu'>;
+type DropdownMenuType = ComponentConfig<typeof theme, AppConfig, 'dropdownMenu'>;
 
 describe('dropdownMenu', () => {
   const sizes = Object.keys(theme.variants.size) as any;
@@ -166,21 +166,21 @@ describe('dropdownMenu', () => {
     // normal
     expectSlotProps('item', () => DropdownMenu({
       items: [{ label: 'foo', value: 'bar' }],
-    })).toEqualTypeOf<{ item: { label: string; value: string }; index: number; active: boolean; ui: DropdownMenu['ui'] }>();
+    })).toEqualTypeOf<{ item: { label: string; value: string }; index: number; active: boolean; ui: DropdownMenuType['ui'] }>();
 
     // groups
     expectSlotProps('item', () => DropdownMenu({
       items: [[{ label: 'foo', value: 'bar' }]],
-    })).toEqualTypeOf<{ item: { label: string; value: string }; index: number; active: boolean; ui: DropdownMenu['ui'] }>();
+    })).toEqualTypeOf<{ item: { label: string; value: string }; index: number; active: boolean; ui: DropdownMenuType['ui'] }>();
 
     // custom
     expectSlotProps('item', () => DropdownMenu({
       items: [{ label: 'foo', value: 'bar', custom: 'nice' }],
-    })).toEqualTypeOf<{ item: { label: string; value: string; custom: string }; index: number; active: boolean; ui: DropdownMenu['ui'] }>();
+    })).toEqualTypeOf<{ item: { label: string; value: string; custom: string }; index: number; active: boolean; ui: DropdownMenuType['ui'] }>();
 
     // custom + groups
     expectSlotProps('item', () => DropdownMenu({
       items: [[{ label: 'foo', value: 'bar', custom: 'nice' }]],
-    })).toEqualTypeOf<{ item: { label: string; value: string; custom: string }; index: number; active: boolean; ui: DropdownMenu['ui'] }>();
+    })).toEqualTypeOf<{ item: { label: string; value: string; custom: string }; index: number; active: boolean; ui: DropdownMenuType['ui'] }>();
   });
 });

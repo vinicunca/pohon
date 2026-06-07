@@ -10,7 +10,9 @@ async function simulateStreaming() {
 
   for (const char of content) {
     text.value += char;
-    await new Promise((resolve) => setTimeout(resolve, 20));
+    await new Promise((resolve) => {
+      setTimeout(resolve, 20);
+    });
   }
 
   streaming.value = false;

@@ -158,7 +158,9 @@ function onSelect(item: any) {
 }
 
 defineShortcuts({
-  meta_k: () => open.value = !open.value,
+  meta_k: () => {
+    open.value = !open.value;
+  },
   ...extractShortcuts(groups.value),
 });
 </script>
