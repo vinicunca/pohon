@@ -62,8 +62,7 @@
     "./locale": {
       "types": "./dist/runtime/locale/index.d.ts",
       "import": "./dist/runtime/locale/index.js"
-    },
-    "./uno-preset": "./dist/runtime/uno.preset.js"
+    }
   },
   "main": "./dist/module.mjs",
   "typesVersions": {
