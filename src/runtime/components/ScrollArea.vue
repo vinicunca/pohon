@@ -59,6 +59,12 @@ export interface ScrollAreaProps<T extends ScrollAreaItem = ScrollAreaItem> {
    * @defaultValue false
    */
   virtualize?: boolean | ScrollAreaVirtualizeOptions;
+  /**
+   * Display fade shadows on the scrollable edges to indicate more content.
+   * Pass an object to configure the shadow size (in px).
+   * @defaultValue false
+   */
+  shadow?: boolean | { size?: number };
   class?: any;
   ui?: ScrollArea['slots'];
 }
@@ -88,6 +94,7 @@ import { computed, onMounted, onUnmounted, toRef, useTemplateRef, watch } from '
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useLocale } from '../composables/useLocale';
+import { useScrollShadow } from '../composables/useScrollShadow';
 import { uv } from '../utils/uv';
 
 const _props = withDefaults(
@@ -95,6 +102,7 @@ const _props = withDefaults(
   {
     orientation: 'vertical',
     virtualize: false,
+    shadow: false,
   },
 );
 const emits = defineEmits<ScrollAreaEmits>();
@@ -109,6 +117,16 @@ const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.scrollArea |
 }));
 
 const rootRef = useTemplateRef<ComponentPublicInstance>('rootRef');
+
+const scrollShadowStyle = props.shadow
+  ? useScrollShadow(
+    computed(() => rootRef.value?.$el as HTMLElement | undefined),
+    {
+      orientation: () => props.orientation ?? 'vertical',
+      size: typeof props.shadow === 'object' ? props.shadow.size : undefined,
+    },
+  ).style
+  : undefined;
 
 const isRtl = computed(() => dir.value === 'rtl');
 const isHorizontal = computed(() => props.orientation === 'horizontal');
@@ -275,6 +293,7 @@ defineExpose({
     :as="props.as"
     data-slot="root"
     :data-orientation="props.orientation"
+    :style="scrollShadowStyle"
     :class="ui.root({ class: [props.ui?.root, props.class] })"
   >
     <template v-if="virtualizer">

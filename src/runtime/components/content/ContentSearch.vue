@@ -4,7 +4,7 @@ import type { ContentNavigationItem } from '@nuxt/content';
 import type { AppConfig } from '@nuxt/schema';
 import type { UseFuseOptions } from '@vueuse/integrations/useFuse';
 import type { VNode } from 'vue';
-import type { ButtonProps, CommandPaletteGroup, CommandPaletteItem, CommandPaletteProps, CommandPaletteSlots, IconProps, LinkProps, LinkPropsKeys, ModalProps } from '../../types';
+import type { ButtonProps, CommandPaletteGroup, CommandPaletteItem, CommandPaletteProps, CommandPaletteSlots, IconProps, InputProps, LinkProps, LinkPropsKeys, ModalProps } from '../../types';
 import type { ComponentConfig } from '../../types/uv';
 import theme from '#build/ui/content/content-search';
 
@@ -67,6 +67,12 @@ export interface ContentSearchProps<T extends ContentSearchLink = ContentSearchL
    * @defaultValue true
    */
   close?: boolean | Omit<ButtonProps, LinkPropsKeys>;
+  /**
+   * Configure the input or hide it with `false`.
+   * `{ fixed: true }`{lang="ts-type"}
+   * @defaultValue true
+   */
+  input?: boolean | Omit<InputProps, 'modelValue' | 'defaultValue'>;
   /**
    * Keyboard shortcut to open the search (used by [`defineShortcuts`](https://pohon.vinicunca.dev/docs/composables/define-shortcuts))
    * @defaultValue 'meta_k'
@@ -162,6 +168,13 @@ const appConfig = useAppConfig() as ContentSearch['AppConfig'];
 
 const commandPaletteProps = useForwardProps(reactivePick(props, 'size', 'icon', 'placeholder', 'autofocus', 'loading', 'loadingIcon', 'close', 'closeIcon', 'searchDelay'));
 const modalProps = useForwardProps(reactivePick(props, 'overlay', 'transition', 'content', 'dismissible', 'fullscreen', 'modal', 'portal'));
+
+const inputProps = computed(() => {
+  if (props.input === false) {
+    return false;
+  }
+  return defu(typeof props.input === 'object' ? props.input : {}, { fixed: true });
+});
 
 const getProxySlots = () => omit(slots, ['content']);
 
@@ -373,7 +386,7 @@ defineExpose({
           v-bind="commandPaletteProps"
           :groups="groups"
           :fuse="fuse"
-          :input="{ fixed: true }"
+          :input="inputProps"
           :ui="transformUI(omit(ui, ['modal']), props.ui)"
           @update:model-value="onSelect"
           @update:open="open = $event"
