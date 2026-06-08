@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PageAnchors > renders with as correctly 1`] = `
+exports[`pageAnchors > renders with as correctly 1`] = `
 "<div data-slot="root" class="">
   <ul data-slot="list" class="">
     <li data-slot="item" class=""><a href="/docs" data-slot="link">
@@ -19,7 +19,7 @@ exports[`PageAnchors > renders with as correctly 1`] = `
 </div>"
 `;
 
-exports[`PageAnchors > renders with class correctly 1`] = `
+exports[`pageAnchors > renders with class correctly 1`] = `
 "<nav data-slot="root" class="lg:mb-12">
   <ul data-slot="list" class="">
     <li data-slot="item" class=""><a href="/docs" data-slot="link">
@@ -38,7 +38,7 @@ exports[`PageAnchors > renders with class correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageAnchors > renders with link slot correctly 1`] = `
+exports[`pageAnchors > renders with link slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <ul data-slot="list" class="">
     <li data-slot="item" class=""><a href="/docs" data-slot="link">Link slot</a></li>
@@ -49,7 +49,7 @@ exports[`PageAnchors > renders with link slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageAnchors > renders with link-label slot correctly 1`] = `
+exports[`pageAnchors > renders with link-label slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <ul data-slot="list" class="">
     <li data-slot="item" class=""><a href="/docs" data-slot="link">
@@ -68,7 +68,7 @@ exports[`PageAnchors > renders with link-label slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageAnchors > renders with link-leading slot correctly 1`] = `
+exports[`pageAnchors > renders with link-leading slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <ul data-slot="list" class="">
     <li data-slot="item" class=""><a href="/docs" data-slot="link">
@@ -87,7 +87,7 @@ exports[`PageAnchors > renders with link-leading slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageAnchors > renders with link-trailing slot correctly 1`] = `
+exports[`pageAnchors > renders with link-trailing slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <ul data-slot="list" class="">
     <li data-slot="item" class=""><a href="/docs" data-slot="link">
@@ -106,7 +106,7 @@ exports[`PageAnchors > renders with link-trailing slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageAnchors > renders with links correctly 1`] = `
+exports[`pageAnchors > renders with links correctly 1`] = `
 "<nav data-slot="root" class="">
   <ul data-slot="list" class="">
     <li data-slot="item" class=""><a href="/docs" data-slot="link">
@@ -125,7 +125,7 @@ exports[`PageAnchors > renders with links correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageAnchors > renders with ui correctly 1`] = `
+exports[`pageAnchors > renders with ui correctly 1`] = `
 "<nav data-slot="root" class="">
   <ul data-slot="list" class="gap-6">
     <li data-slot="item" class=""><a href="/docs" data-slot="link">

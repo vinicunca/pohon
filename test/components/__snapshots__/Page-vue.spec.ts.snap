@@ -1,8 +1,8 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Page > renders with all slots correctly 1`] = `"<div data-slot="root" class="">Left slot<div data-slot="center" class="">Default slot</div>Right slot</div>"`;
+exports[`page > renders with all slots correctly 1`] = `"<div data-slot="root" class="">Left slot<div data-slot="center" class="">Default slot</div>Right slot</div>"`;
 
-exports[`Page > renders with as correctly 1`] = `
+exports[`page > renders with as correctly 1`] = `
 "<section data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class=""></div>
@@ -10,7 +10,7 @@ exports[`Page > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`Page > renders with class correctly 1`] = `
+exports[`page > renders with class correctly 1`] = `
 "<div data-slot="root" class="lg:gap-4">
   <!--v-if-->
   <div data-slot="center" class=""></div>
@@ -18,7 +18,7 @@ exports[`Page > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`Page > renders with default slot correctly 1`] = `
+exports[`page > renders with default slot correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class="">Default slot</div>
@@ -26,20 +26,20 @@ exports[`Page > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Page > renders with left slot correctly 1`] = `
+exports[`page > renders with left slot correctly 1`] = `
 "<div data-slot="root" class="">Left slot<div data-slot="center" class=""></div>
   <!--v-if-->
 </div>"
 `;
 
-exports[`Page > renders with right slot correctly 1`] = `
+exports[`page > renders with right slot correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class=""></div>Right slot
 </div>"
 `;
 
-exports[`Page > renders with ui correctly 1`] = `
+exports[`page > renders with ui correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class=""></div>

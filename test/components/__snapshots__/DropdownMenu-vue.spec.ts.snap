@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DropdownMenu > renders with arrow correctly 1`] = `
+exports[`dropdownMenu > renders with arrow correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -64,7 +64,7 @@ exports[`DropdownMenu > renders with arrow correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with class correctly 1`] = `
+exports[`dropdownMenu > renders with class correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -128,7 +128,7 @@ exports[`DropdownMenu > renders with class correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with custom slot correctly 1`] = `
+exports[`dropdownMenu > renders with custom slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -190,7 +190,7 @@ exports[`DropdownMenu > renders with custom slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with default slot correctly 1`] = `
+exports[`dropdownMenu > renders with default slot correctly 1`] = `
 "Default slot
 <!--teleport start-->
 
@@ -254,7 +254,7 @@ exports[`DropdownMenu > renders with default slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with descriptionKey correctly 1`] = `
+exports[`dropdownMenu > renders with descriptionKey correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -318,7 +318,7 @@ exports[`DropdownMenu > renders with descriptionKey correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with disabled correctly 1`] = `
+exports[`dropdownMenu > renders with disabled correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -382,7 +382,7 @@ exports[`DropdownMenu > renders with disabled correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with externalIcon correctly 1`] = `
+exports[`dropdownMenu > renders with externalIcon correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -446,7 +446,7 @@ exports[`DropdownMenu > renders with externalIcon correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with filter and searchTerm correctly 1`] = `
+exports[`dropdownMenu > renders with filter and searchTerm correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -470,7 +470,7 @@ exports[`DropdownMenu > renders with filter and searchTerm correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with filter correctly 1`] = `
+exports[`dropdownMenu > renders with filter correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -537,7 +537,7 @@ exports[`DropdownMenu > renders with filter correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with item slot correctly 1`] = `
+exports[`dropdownMenu > renders with item slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -575,7 +575,7 @@ exports[`DropdownMenu > renders with item slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with item-description slot correctly 1`] = `
+exports[`dropdownMenu > renders with item-description slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -603,7 +603,7 @@ exports[`DropdownMenu > renders with item-description slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with item-label slot correctly 1`] = `
+exports[`dropdownMenu > renders with item-label slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -667,7 +667,7 @@ exports[`DropdownMenu > renders with item-label slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with item-leading slot correctly 1`] = `
+exports[`dropdownMenu > renders with item-leading slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -731,7 +731,7 @@ exports[`DropdownMenu > renders with item-leading slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with item-trailing slot correctly 1`] = `
+exports[`dropdownMenu > renders with item-trailing slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -791,7 +791,7 @@ exports[`DropdownMenu > renders with item-trailing slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with items correctly 1`] = `
+exports[`dropdownMenu > renders with items correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -855,7 +855,7 @@ exports[`DropdownMenu > renders with items correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with items with description correctly 1`] = `
+exports[`dropdownMenu > renders with items with description correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -883,7 +883,7 @@ exports[`DropdownMenu > renders with items with description correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with labelKey correctly 1`] = `
+exports[`dropdownMenu > renders with labelKey correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -947,7 +947,7 @@ exports[`DropdownMenu > renders with labelKey correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with size lg correctly 1`] = `
+exports[`dropdownMenu > renders with size lg correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -1011,7 +1011,7 @@ exports[`DropdownMenu > renders with size lg correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with size md correctly 1`] = `
+exports[`dropdownMenu > renders with size md correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -1075,7 +1075,7 @@ exports[`DropdownMenu > renders with size md correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with size sm correctly 1`] = `
+exports[`dropdownMenu > renders with size sm correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -1139,7 +1139,7 @@ exports[`DropdownMenu > renders with size sm correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with size xl correctly 1`] = `
+exports[`dropdownMenu > renders with size xl correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -1203,7 +1203,7 @@ exports[`DropdownMenu > renders with size xl correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with size xs correctly 1`] = `
+exports[`dropdownMenu > renders with size xs correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -1267,7 +1267,7 @@ exports[`DropdownMenu > renders with size xs correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders with ui correctly 1`] = `
+exports[`dropdownMenu > renders with ui correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -1331,7 +1331,7 @@ exports[`DropdownMenu > renders with ui correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`DropdownMenu > renders without externalIcon correctly 1`] = `
+exports[`dropdownMenu > renders without externalIcon correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 

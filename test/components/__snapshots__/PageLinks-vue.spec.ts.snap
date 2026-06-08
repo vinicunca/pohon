@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PageLinks > renders with as correctly 1`] = `
+exports[`pageLinks > renders with as correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <ul data-slot="list" class="">
@@ -12,7 +12,7 @@ exports[`PageLinks > renders with as correctly 1`] = `
 </div>"
 `;
 
-exports[`PageLinks > renders with class correctly 1`] = `
+exports[`pageLinks > renders with class correctly 1`] = `
 "<nav data-slot="root" class="gap-1.5">
   <!--v-if-->
   <ul data-slot="list" class="">
@@ -24,7 +24,7 @@ exports[`PageLinks > renders with class correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageLinks > renders with link slot correctly 1`] = `
+exports[`pageLinks > renders with link slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <ul data-slot="list" class="">
@@ -36,7 +36,7 @@ exports[`PageLinks > renders with link slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageLinks > renders with link-label slot correctly 1`] = `
+exports[`pageLinks > renders with link-label slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <ul data-slot="list" class="">
@@ -48,7 +48,7 @@ exports[`PageLinks > renders with link-label slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageLinks > renders with link-leading slot correctly 1`] = `
+exports[`pageLinks > renders with link-leading slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <ul data-slot="list" class="">
@@ -60,7 +60,7 @@ exports[`PageLinks > renders with link-leading slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageLinks > renders with link-trailing slot correctly 1`] = `
+exports[`pageLinks > renders with link-trailing slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <ul data-slot="list" class="">
@@ -72,7 +72,7 @@ exports[`PageLinks > renders with link-trailing slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageLinks > renders with links correctly 1`] = `
+exports[`pageLinks > renders with links correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <ul data-slot="list" class="">
@@ -84,7 +84,7 @@ exports[`PageLinks > renders with links correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageLinks > renders with title correctly 1`] = `
+exports[`pageLinks > renders with title correctly 1`] = `
 "<nav data-slot="root" class="">
   <p data-slot="title" class="">Resources</p>
   <ul data-slot="list" class="">
@@ -96,7 +96,7 @@ exports[`PageLinks > renders with title correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageLinks > renders with title slot correctly 1`] = `
+exports[`pageLinks > renders with title slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <p data-slot="title" class="">Title slot</p>
   <ul data-slot="list" class="">
@@ -108,7 +108,7 @@ exports[`PageLinks > renders with title slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`PageLinks > renders with ui correctly 1`] = `
+exports[`pageLinks > renders with ui correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <ul data-slot="list" class="gap-3">

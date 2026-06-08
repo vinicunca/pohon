@@ -1,12 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PageHero > renders with as correctly 1`] = `
+exports[`pageHero > renders with as correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>
 </section>"
 `;
 
-exports[`PageHero > renders with body slot correctly 1`] = `
+exports[`pageHero > renders with body slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -19,19 +19,19 @@ exports[`PageHero > renders with body slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageHero > renders with bottom slot correctly 1`] = `
+exports[`pageHero > renders with bottom slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>Bottom slot
 </div>"
 `;
 
-exports[`PageHero > renders with class correctly 1`] = `
+exports[`pageHero > renders with class correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="absolute">
   <div class="" data-slot="container"></div>
 </div>"
 `;
 
-exports[`PageHero > renders with default slot correctly 1`] = `
+exports[`pageHero > renders with default slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <!--v-if-->Default slot
@@ -39,7 +39,7 @@ exports[`PageHero > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageHero > renders with description correctly 1`] = `
+exports[`pageHero > renders with description correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -56,7 +56,7 @@ exports[`PageHero > renders with description correctly 1`] = `
 </div>"
 `;
 
-exports[`PageHero > renders with description slot correctly 1`] = `
+exports[`pageHero > renders with description slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -73,7 +73,7 @@ exports[`PageHero > renders with description slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageHero > renders with footer slot correctly 1`] = `
+exports[`pageHero > renders with footer slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -86,7 +86,7 @@ exports[`PageHero > renders with footer slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageHero > renders with header slot correctly 1`] = `
+exports[`pageHero > renders with header slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -99,7 +99,7 @@ exports[`PageHero > renders with header slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageHero > renders with headline slot correctly 1`] = `
+exports[`pageHero > renders with headline slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -116,7 +116,7 @@ exports[`PageHero > renders with headline slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageHero > renders with links correctly 1`] = `
+exports[`pageHero > renders with links correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -134,7 +134,7 @@ exports[`PageHero > renders with links correctly 1`] = `
 </div>"
 `;
 
-exports[`PageHero > renders with links slot correctly 1`] = `
+exports[`pageHero > renders with links slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -149,7 +149,7 @@ exports[`PageHero > renders with links slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageHero > renders with orientation horizontal correctly 1`] = `
+exports[`pageHero > renders with orientation horizontal correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div class="" data-slot="container">
     <!--v-if-->
@@ -158,7 +158,7 @@ exports[`PageHero > renders with orientation horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`PageHero > renders with orientation horizontal links correctly 1`] = `
+exports[`pageHero > renders with orientation horizontal links correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -176,7 +176,7 @@ exports[`PageHero > renders with orientation horizontal links correctly 1`] = `
 </div>"
 `;
 
-exports[`PageHero > renders with orientation horizontal reverse correctly 1`] = `
+exports[`pageHero > renders with orientation horizontal reverse correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div class="" data-slot="container">
     <!--v-if-->
@@ -185,13 +185,13 @@ exports[`PageHero > renders with orientation horizontal reverse correctly 1`] = 
 </div>"
 `;
 
-exports[`PageHero > renders with reverse correctly 1`] = `
+exports[`pageHero > renders with reverse correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>
 </div>"
 `;
 
-exports[`PageHero > renders with title correctly 1`] = `
+exports[`pageHero > renders with title correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -208,7 +208,7 @@ exports[`PageHero > renders with title correctly 1`] = `
 </div>"
 `;
 
-exports[`PageHero > renders with title slot correctly 1`] = `
+exports[`pageHero > renders with title slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -225,12 +225,12 @@ exports[`PageHero > renders with title slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageHero > renders with top slot correctly 1`] = `
+exports[`pageHero > renders with top slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">Top slot<div class="" data-slot="container"></div>
 </div>"
 `;
 
-exports[`PageHero > renders with ui correctly 1`] = `
+exports[`pageHero > renders with ui correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="max-w-5xl" data-slot="container"></div>
 </div>"

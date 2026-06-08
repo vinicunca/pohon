@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DashboardNavbar > renders with as correctly 1`] = `
+exports[`dashboardNavbar > renders with as correctly 1`] = `
 "<div class="">
   <!---->
   <section data-slot="root">
@@ -19,7 +19,7 @@ exports[`DashboardNavbar > renders with as correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders with class correctly 1`] = `
+exports[`dashboardNavbar > renders with class correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root" class="px-8">
@@ -38,7 +38,7 @@ exports[`DashboardNavbar > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders with default slot correctly 1`] = `
+exports[`dashboardNavbar > renders with default slot correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root">
@@ -57,7 +57,7 @@ exports[`DashboardNavbar > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders with icon correctly 1`] = `
+exports[`dashboardNavbar > renders with icon correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root">
@@ -75,7 +75,7 @@ exports[`DashboardNavbar > renders with icon correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders with leading slot correctly 1`] = `
+exports[`dashboardNavbar > renders with leading slot correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root">
@@ -92,7 +92,7 @@ exports[`DashboardNavbar > renders with leading slot correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders with left slot correctly 1`] = `
+exports[`dashboardNavbar > renders with left slot correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root">
@@ -108,7 +108,7 @@ exports[`DashboardNavbar > renders with left slot correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders with right slot correctly 1`] = `
+exports[`dashboardNavbar > renders with right slot correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root">
@@ -127,7 +127,7 @@ exports[`DashboardNavbar > renders with right slot correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders with title correctly 1`] = `
+exports[`dashboardNavbar > renders with title correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root">
@@ -146,7 +146,7 @@ exports[`DashboardNavbar > renders with title correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders with title slot correctly 1`] = `
+exports[`dashboardNavbar > renders with title slot correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root">
@@ -165,7 +165,7 @@ exports[`DashboardNavbar > renders with title slot correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders with toggle correctly 1`] = `
+exports[`dashboardNavbar > renders with toggle correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root">
@@ -184,7 +184,7 @@ exports[`DashboardNavbar > renders with toggle correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders with toggle slot correctly 1`] = `
+exports[`dashboardNavbar > renders with toggle slot correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root">
@@ -200,7 +200,7 @@ exports[`DashboardNavbar > renders with toggle slot correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders with toggleSide correctly 1`] = `
+exports[`dashboardNavbar > renders with toggleSide correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root">
@@ -218,7 +218,7 @@ exports[`DashboardNavbar > renders with toggleSide correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders with trailing slot correctly 1`] = `
+exports[`dashboardNavbar > renders with trailing slot correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root">
@@ -237,7 +237,7 @@ exports[`DashboardNavbar > renders with trailing slot correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders with ui correctly 1`] = `
+exports[`dashboardNavbar > renders with ui correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root">
@@ -256,7 +256,7 @@ exports[`DashboardNavbar > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardNavbar > renders without toggle correctly 1`] = `
+exports[`dashboardNavbar > renders without toggle correctly 1`] = `
 "<div class="">
   <!---->
   <div data-slot="root">

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`FormField > renders with as correctly 1`] = `
+exports[`formField > renders with as correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -12,7 +12,7 @@ exports[`FormField > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`FormField > renders with class correctly 1`] = `
+exports[`formField > renders with class correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="relative">
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -24,7 +24,7 @@ exports[`FormField > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with default slot correctly 1`] = `
+exports[`formField > renders with default slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -36,7 +36,7 @@ exports[`FormField > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with description slot correctly 1`] = `
+exports[`formField > renders with description slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -48,7 +48,7 @@ exports[`FormField > renders with description slot correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with error correctly 1`] = `
+exports[`formField > renders with error correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -60,7 +60,7 @@ exports[`FormField > renders with error correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with error slot correctly 1`] = `
+exports[`formField > renders with error slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -72,7 +72,7 @@ exports[`FormField > renders with error slot correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with help correctly 1`] = `
+exports[`formField > renders with help correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -84,7 +84,7 @@ exports[`FormField > renders with help correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with help slot correctly 1`] = `
+exports[`formField > renders with help slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -96,7 +96,7 @@ exports[`FormField > renders with help slot correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with hint correctly 1`] = `
+exports[`formField > renders with hint correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -108,7 +108,7 @@ exports[`FormField > renders with hint correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with hint slot correctly 1`] = `
+exports[`formField > renders with hint slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -120,7 +120,7 @@ exports[`FormField > renders with hint slot correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with label and description correctly 1`] = `
+exports[`formField > renders with label and description correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <div data-slot="labelWrapper" class=""><label for="v-0-0" data-slot="label" class="">Username</label>
@@ -134,7 +134,7 @@ exports[`FormField > renders with label and description correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with label slot correctly 1`] = `
+exports[`formField > renders with label slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <div data-slot="labelWrapper" class=""><label for="v-0-0" data-slot="label" class="">Label slot</label>
@@ -148,7 +148,7 @@ exports[`FormField > renders with label slot correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with orientation horizontal correctly 1`] = `
+exports[`formField > renders with orientation horizontal correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <div data-slot="labelWrapper" class=""><label for="v-0-0" data-slot="label" class="">Username</label>
@@ -162,7 +162,7 @@ exports[`FormField > renders with orientation horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with orientation vertical correctly 1`] = `
+exports[`formField > renders with orientation vertical correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <div data-slot="labelWrapper" class=""><label for="v-0-0" data-slot="label" class="">Username</label>
@@ -176,7 +176,7 @@ exports[`FormField > renders with orientation vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with required correctly 1`] = `
+exports[`formField > renders with required correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <div data-slot="labelWrapper" class=""><label for="v-0-0" data-slot="label" class="">Username</label>
@@ -190,21 +190,7 @@ exports[`FormField > renders with required correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with size lg correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="">
-  <div data-slot="wrapper" class="">
-    <div data-slot="labelWrapper" class=""><label for="v-0-0" data-slot="label" class="">Username</label>
-      <!--v-if-->
-    </div>
-    <p id="v-0-0-description" data-slot="description" class="">Enter your username</p>
-  </div>
-  <div class="">
-    <!--v-if-->
-  </div>
-</div>"
-`;
-
-exports[`FormField > renders with size md correctly 1`] = `
+exports[`formField > renders with size lg correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <div data-slot="labelWrapper" class=""><label for="v-0-0" data-slot="label" class="">Username</label>
@@ -218,7 +204,7 @@ exports[`FormField > renders with size md correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with size sm correctly 1`] = `
+exports[`formField > renders with size md correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <div data-slot="labelWrapper" class=""><label for="v-0-0" data-slot="label" class="">Username</label>
@@ -232,7 +218,7 @@ exports[`FormField > renders with size sm correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with size xl correctly 1`] = `
+exports[`formField > renders with size sm correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <div data-slot="labelWrapper" class=""><label for="v-0-0" data-slot="label" class="">Username</label>
@@ -246,7 +232,7 @@ exports[`FormField > renders with size xl correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with size xs correctly 1`] = `
+exports[`formField > renders with size xl correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <div data-slot="labelWrapper" class=""><label for="v-0-0" data-slot="label" class="">Username</label>
@@ -260,7 +246,21 @@ exports[`FormField > renders with size xs correctly 1`] = `
 </div>"
 `;
 
-exports[`FormField > renders with ui correctly 1`] = `
+exports[`formField > renders with size xs correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="wrapper" class="">
+    <div data-slot="labelWrapper" class=""><label for="v-0-0" data-slot="label" class="">Username</label>
+      <!--v-if-->
+    </div>
+    <p id="v-0-0-description" data-slot="description" class="">Enter your username</p>
+  </div>
+  <div class="">
+    <!--v-if-->
+  </div>
+</div>"
+`;
+
+exports[`formField > renders with ui correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="wrapper" class="">
     <!--v-if-->

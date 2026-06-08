@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PageCard > renders with as correctly 1`] = `
+exports[`pageCard > renders with as correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -10,7 +10,7 @@ exports[`PageCard > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`PageCard > renders with body slot correctly 1`] = `
+exports[`pageCard > renders with body slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -25,7 +25,7 @@ exports[`PageCard > renders with body slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with class correctly 1`] = `
+exports[`pageCard > renders with class correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="rounded-xl">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -43,7 +43,7 @@ exports[`PageCard > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with default slot correctly 1`] = `
+exports[`pageCard > renders with default slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -61,7 +61,7 @@ exports[`PageCard > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with description correctly 1`] = `
+exports[`pageCard > renders with description correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -79,7 +79,7 @@ exports[`PageCard > renders with description correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with description slot correctly 1`] = `
+exports[`pageCard > renders with description slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -97,7 +97,7 @@ exports[`PageCard > renders with description slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with footer slot correctly 1`] = `
+exports[`pageCard > renders with footer slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -115,7 +115,7 @@ exports[`PageCard > renders with footer slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with header slot correctly 1`] = `
+exports[`pageCard > renders with header slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -133,7 +133,7 @@ exports[`PageCard > renders with header slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with highlight color error correctly 1`] = `
+exports[`pageCard > renders with highlight color error correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -151,7 +151,7 @@ exports[`PageCard > renders with highlight color error correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with highlight color info correctly 1`] = `
+exports[`pageCard > renders with highlight color info correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -169,7 +169,7 @@ exports[`PageCard > renders with highlight color info correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with highlight color neutral correctly 1`] = `
+exports[`pageCard > renders with highlight color neutral correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -187,7 +187,7 @@ exports[`PageCard > renders with highlight color neutral correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with highlight color neutral correctly 2`] = `
+exports[`pageCard > renders with highlight color neutral correctly 2`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -205,7 +205,7 @@ exports[`PageCard > renders with highlight color neutral correctly 2`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with highlight color primary correctly 1`] = `
+exports[`pageCard > renders with highlight color primary correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -223,7 +223,7 @@ exports[`PageCard > renders with highlight color primary correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with highlight color secondary correctly 1`] = `
+exports[`pageCard > renders with highlight color secondary correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -241,7 +241,7 @@ exports[`PageCard > renders with highlight color secondary correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with highlight color success correctly 1`] = `
+exports[`pageCard > renders with highlight color success correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -259,7 +259,7 @@ exports[`PageCard > renders with highlight color success correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with highlight color warning correctly 1`] = `
+exports[`pageCard > renders with highlight color warning correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -277,7 +277,7 @@ exports[`PageCard > renders with highlight color warning correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with highlight correctly 1`] = `
+exports[`pageCard > renders with highlight correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -295,7 +295,7 @@ exports[`PageCard > renders with highlight correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with icon correctly 1`] = `
+exports[`pageCard > renders with icon correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -310,7 +310,7 @@ exports[`PageCard > renders with icon correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with leading slot correctly 1`] = `
+exports[`pageCard > renders with leading slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -328,7 +328,7 @@ exports[`PageCard > renders with leading slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with orientation horizontal correctly 1`] = `
+exports[`pageCard > renders with orientation horizontal correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -346,7 +346,7 @@ exports[`PageCard > renders with orientation horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with orientation horizontal reverse correctly 1`] = `
+exports[`pageCard > renders with orientation horizontal reverse correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -364,7 +364,7 @@ exports[`PageCard > renders with orientation horizontal reverse correctly 1`] = 
 </div>"
 `;
 
-exports[`PageCard > renders with orientation vertical correctly 1`] = `
+exports[`pageCard > renders with orientation vertical correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -382,7 +382,7 @@ exports[`PageCard > renders with orientation vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with orientation vertical reverse correctly 1`] = `
+exports[`pageCard > renders with orientation vertical reverse correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -400,25 +400,7 @@ exports[`PageCard > renders with orientation vertical reverse correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with spotlight color error correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="">
-  <div data-slot="spotlight" class=""></div>
-  <div data-slot="container" class="">
-    <div data-slot="wrapper" class="">
-      <!--v-if-->
-      <div data-slot="leading" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg></div>
-      <div data-slot="body" class="">
-        <div data-slot="title" class="">Title</div>
-        <div data-slot="description" class="">Description</div>
-      </div>
-      <!--v-if-->
-    </div>
-  </div>
-  <!--v-if-->
-</div>"
-`;
-
-exports[`PageCard > renders with spotlight color info correctly 1`] = `
+exports[`pageCard > renders with spotlight color error correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="spotlight" class=""></div>
   <div data-slot="container" class="">
@@ -436,7 +418,7 @@ exports[`PageCard > renders with spotlight color info correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with spotlight color neutral correctly 1`] = `
+exports[`pageCard > renders with spotlight color info correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="spotlight" class=""></div>
   <div data-slot="container" class="">
@@ -454,7 +436,7 @@ exports[`PageCard > renders with spotlight color neutral correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with spotlight color neutral correctly 2`] = `
+exports[`pageCard > renders with spotlight color neutral correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="spotlight" class=""></div>
   <div data-slot="container" class="">
@@ -472,7 +454,7 @@ exports[`PageCard > renders with spotlight color neutral correctly 2`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with spotlight color primary correctly 1`] = `
+exports[`pageCard > renders with spotlight color neutral correctly 2`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="spotlight" class=""></div>
   <div data-slot="container" class="">
@@ -490,7 +472,7 @@ exports[`PageCard > renders with spotlight color primary correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with spotlight color secondary correctly 1`] = `
+exports[`pageCard > renders with spotlight color primary correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="spotlight" class=""></div>
   <div data-slot="container" class="">
@@ -508,7 +490,7 @@ exports[`PageCard > renders with spotlight color secondary correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with spotlight color success correctly 1`] = `
+exports[`pageCard > renders with spotlight color secondary correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="spotlight" class=""></div>
   <div data-slot="container" class="">
@@ -526,7 +508,7 @@ exports[`PageCard > renders with spotlight color success correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with spotlight color warning correctly 1`] = `
+exports[`pageCard > renders with spotlight color success correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="spotlight" class=""></div>
   <div data-slot="container" class="">
@@ -544,7 +526,7 @@ exports[`PageCard > renders with spotlight color warning correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with spotlight correctly 1`] = `
+exports[`pageCard > renders with spotlight color warning correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="spotlight" class=""></div>
   <div data-slot="container" class="">
@@ -562,7 +544,25 @@ exports[`PageCard > renders with spotlight correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with title correctly 1`] = `
+exports[`pageCard > renders with spotlight correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="spotlight" class=""></div>
+  <div data-slot="container" class="">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <div data-slot="leading" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg></div>
+      <div data-slot="body" class="">
+        <div data-slot="title" class="">Title</div>
+        <div data-slot="description" class="">Description</div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <!--v-if-->
+</div>"
+`;
+
+exports[`pageCard > renders with title correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -580,7 +580,7 @@ exports[`PageCard > renders with title correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with title slot correctly 1`] = `
+exports[`pageCard > renders with title slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -598,16 +598,16 @@ exports[`PageCard > renders with title slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with to correctly 1`] = `
+exports[`pageCard > renders with to correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
     <!--v-if-->
-  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Card link" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Card link" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
 </div>"
 `;
 
-exports[`PageCard > renders with ui correctly 1`] = `
+exports[`pageCard > renders with ui correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -625,7 +625,7 @@ exports[`PageCard > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with variant ghost correctly 1`] = `
+exports[`pageCard > renders with variant ghost correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -643,7 +643,7 @@ exports[`PageCard > renders with variant ghost correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with variant ghost highlight correctly 1`] = `
+exports[`pageCard > renders with variant ghost highlight correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -661,7 +661,7 @@ exports[`PageCard > renders with variant ghost highlight correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with variant ghost to correctly 1`] = `
+exports[`pageCard > renders with variant ghost to correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -674,11 +674,11 @@ exports[`PageCard > renders with variant ghost to correctly 1`] = `
       </div>
       <!--v-if-->
     </div>
-  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
 </div>"
 `;
 
-exports[`PageCard > renders with variant naked correctly 1`] = `
+exports[`pageCard > renders with variant naked correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -696,7 +696,7 @@ exports[`PageCard > renders with variant naked correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with variant naked highlight correctly 1`] = `
+exports[`pageCard > renders with variant naked highlight correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -714,7 +714,7 @@ exports[`PageCard > renders with variant naked highlight correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with variant naked to correctly 1`] = `
+exports[`pageCard > renders with variant naked to correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -727,11 +727,11 @@ exports[`PageCard > renders with variant naked to correctly 1`] = `
       </div>
       <!--v-if-->
     </div>
-  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
 </div>"
 `;
 
-exports[`PageCard > renders with variant outline correctly 1`] = `
+exports[`pageCard > renders with variant outline correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -749,7 +749,7 @@ exports[`PageCard > renders with variant outline correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with variant outline highlight correctly 1`] = `
+exports[`pageCard > renders with variant outline highlight correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -767,7 +767,7 @@ exports[`PageCard > renders with variant outline highlight correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with variant outline to correctly 1`] = `
+exports[`pageCard > renders with variant outline to correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -780,11 +780,11 @@ exports[`PageCard > renders with variant outline to correctly 1`] = `
       </div>
       <!--v-if-->
     </div>
-  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
 </div>"
 `;
 
-exports[`PageCard > renders with variant soft correctly 1`] = `
+exports[`pageCard > renders with variant soft correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -802,7 +802,7 @@ exports[`PageCard > renders with variant soft correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with variant soft highlight correctly 1`] = `
+exports[`pageCard > renders with variant soft highlight correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -820,7 +820,7 @@ exports[`PageCard > renders with variant soft highlight correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with variant soft to correctly 1`] = `
+exports[`pageCard > renders with variant soft to correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -833,11 +833,11 @@ exports[`PageCard > renders with variant soft to correctly 1`] = `
       </div>
       <!--v-if-->
     </div>
-  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
 </div>"
 `;
 
-exports[`PageCard > renders with variant solid correctly 1`] = `
+exports[`pageCard > renders with variant solid correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -855,7 +855,7 @@ exports[`PageCard > renders with variant solid correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with variant solid highlight correctly 1`] = `
+exports[`pageCard > renders with variant solid highlight correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -873,7 +873,7 @@ exports[`PageCard > renders with variant solid highlight correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with variant solid to correctly 1`] = `
+exports[`pageCard > renders with variant solid to correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -886,11 +886,11 @@ exports[`PageCard > renders with variant solid to correctly 1`] = `
       </div>
       <!--v-if-->
     </div>
-  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
 </div>"
 `;
 
-exports[`PageCard > renders with variant subtle correctly 1`] = `
+exports[`pageCard > renders with variant subtle correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -908,7 +908,7 @@ exports[`PageCard > renders with variant subtle correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with variant subtle highlight correctly 1`] = `
+exports[`pageCard > renders with variant subtle highlight correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -926,7 +926,7 @@ exports[`PageCard > renders with variant subtle highlight correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCard > renders with variant subtle to correctly 1`] = `
+exports[`pageCard > renders with variant subtle to correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">
@@ -939,6 +939,6 @@ exports[`PageCard > renders with variant subtle to correctly 1`] = `
       </div>
       <!--v-if-->
     </div>
-  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  </div><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
 </div>"
 `;

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ContextMenu > renders with class correctly 1`] = `
+exports[`contextMenu > renders with class correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="min-w-96">Right Click</span>
 <!--teleport start-->
 
@@ -63,7 +63,7 @@ exports[`ContextMenu > renders with class correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with custom slot correctly 1`] = `
+exports[`contextMenu > renders with custom slot correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -126,7 +126,7 @@ exports[`ContextMenu > renders with custom slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with default slot correctly 1`] = `
+exports[`contextMenu > renders with default slot correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Default slot</span>
 <!--teleport start-->
 
@@ -189,7 +189,7 @@ exports[`ContextMenu > renders with default slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with descriptionKey correctly 1`] = `
+exports[`contextMenu > renders with descriptionKey correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -222,7 +222,7 @@ exports[`ContextMenu > renders with descriptionKey correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with disabled correctly 1`] = `
+exports[`contextMenu > renders with disabled correctly 1`] = `
 "<span data-state="closed" data-disabled="" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -237,7 +237,7 @@ exports[`ContextMenu > renders with disabled correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with externalIcon correctly 1`] = `
+exports[`contextMenu > renders with externalIcon correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -300,7 +300,7 @@ exports[`ContextMenu > renders with externalIcon correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with item slot correctly 1`] = `
+exports[`contextMenu > renders with item slot correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -335,7 +335,7 @@ exports[`ContextMenu > renders with item slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with item-description slot correctly 1`] = `
+exports[`contextMenu > renders with item-description slot correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -368,7 +368,7 @@ exports[`ContextMenu > renders with item-description slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with item-label slot correctly 1`] = `
+exports[`contextMenu > renders with item-label slot correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -431,7 +431,7 @@ exports[`ContextMenu > renders with item-label slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with item-leading slot correctly 1`] = `
+exports[`contextMenu > renders with item-leading slot correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -486,7 +486,7 @@ exports[`ContextMenu > renders with item-leading slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with item-trailing slot correctly 1`] = `
+exports[`contextMenu > renders with item-trailing slot correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -547,7 +547,7 @@ exports[`ContextMenu > renders with item-trailing slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with items correctly 1`] = `
+exports[`contextMenu > renders with items correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -610,7 +610,7 @@ exports[`ContextMenu > renders with items correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with items with description correctly 1`] = `
+exports[`contextMenu > renders with items with description correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -643,7 +643,7 @@ exports[`ContextMenu > renders with items with description correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with labelKey correctly 1`] = `
+exports[`contextMenu > renders with labelKey correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -706,7 +706,7 @@ exports[`ContextMenu > renders with labelKey correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with size lg correctly 1`] = `
+exports[`contextMenu > renders with size lg correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -769,7 +769,7 @@ exports[`ContextMenu > renders with size lg correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with size md correctly 1`] = `
+exports[`contextMenu > renders with size md correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -832,7 +832,7 @@ exports[`ContextMenu > renders with size md correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with size sm correctly 1`] = `
+exports[`contextMenu > renders with size sm correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -895,7 +895,7 @@ exports[`ContextMenu > renders with size sm correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with size xl correctly 1`] = `
+exports[`contextMenu > renders with size xl correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -958,7 +958,7 @@ exports[`ContextMenu > renders with size xl correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with size xs correctly 1`] = `
+exports[`contextMenu > renders with size xs correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -1021,7 +1021,7 @@ exports[`ContextMenu > renders with size xs correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders with ui correctly 1`] = `
+exports[`contextMenu > renders with ui correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 
@@ -1084,7 +1084,7 @@ exports[`ContextMenu > renders with ui correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`ContextMenu > renders without externalIcon correctly 1`] = `
+exports[`contextMenu > renders without externalIcon correctly 1`] = `
 "<span data-state="open" style="pointer-events: auto;" class="">Right Click</span>
 <!--teleport start-->
 

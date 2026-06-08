@@ -1,12 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PageCTA > renders with as correctly 1`] = `
+exports[`pageCTA > renders with as correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>
 </section>"
 `;
 
-exports[`PageCTA > renders with body slot correctly 1`] = `
+exports[`pageCTA > renders with body slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -19,19 +19,19 @@ exports[`PageCTA > renders with body slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCTA > renders with bottom slot correctly 1`] = `
+exports[`pageCTA > renders with bottom slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>Bottom slot
 </div>"
 `;
 
-exports[`PageCTA > renders with class correctly 1`] = `
+exports[`pageCTA > renders with class correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="rounded-none">
   <div class="" data-slot="container"></div>
 </div>"
 `;
 
-exports[`PageCTA > renders with default slot correctly 1`] = `
+exports[`pageCTA > renders with default slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <!--v-if-->Default slot
@@ -39,7 +39,7 @@ exports[`PageCTA > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCTA > renders with description correctly 1`] = `
+exports[`pageCTA > renders with description correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -55,7 +55,7 @@ exports[`PageCTA > renders with description correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCTA > renders with description slot correctly 1`] = `
+exports[`pageCTA > renders with description slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -71,7 +71,7 @@ exports[`PageCTA > renders with description slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCTA > renders with footer slot correctly 1`] = `
+exports[`pageCTA > renders with footer slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -84,7 +84,7 @@ exports[`PageCTA > renders with footer slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCTA > renders with header slot correctly 1`] = `
+exports[`pageCTA > renders with header slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -97,7 +97,7 @@ exports[`PageCTA > renders with header slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCTA > renders with links correctly 1`] = `
+exports[`pageCTA > renders with links correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -115,7 +115,7 @@ exports[`PageCTA > renders with links correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCTA > renders with links slot correctly 1`] = `
+exports[`pageCTA > renders with links slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -130,7 +130,7 @@ exports[`PageCTA > renders with links slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCTA > renders with orientation horizontal correctly 1`] = `
+exports[`pageCTA > renders with orientation horizontal correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div class="" data-slot="container">
     <!--v-if-->
@@ -139,7 +139,7 @@ exports[`PageCTA > renders with orientation horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCTA > renders with orientation horizontal links correctly 1`] = `
+exports[`pageCTA > renders with orientation horizontal links correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -157,7 +157,7 @@ exports[`PageCTA > renders with orientation horizontal links correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCTA > renders with orientation horizontal reverse correctly 1`] = `
+exports[`pageCTA > renders with orientation horizontal reverse correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div class="" data-slot="container">
     <!--v-if-->
@@ -166,13 +166,13 @@ exports[`PageCTA > renders with orientation horizontal reverse correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCTA > renders with reverse correctly 1`] = `
+exports[`pageCTA > renders with reverse correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>
 </div>"
 `;
 
-exports[`PageCTA > renders with title correctly 1`] = `
+exports[`pageCTA > renders with title correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -188,7 +188,7 @@ exports[`PageCTA > renders with title correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCTA > renders with title slot correctly 1`] = `
+exports[`pageCTA > renders with title slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -204,42 +204,42 @@ exports[`PageCTA > renders with title slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PageCTA > renders with top slot correctly 1`] = `
+exports[`pageCTA > renders with top slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">Top slot<div class="" data-slot="container"></div>
 </div>"
 `;
 
-exports[`PageCTA > renders with ui correctly 1`] = `
+exports[`pageCTA > renders with ui correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="max-w-5xl" data-slot="container"></div>
 </div>"
 `;
 
-exports[`PageCTA > renders with variant naked correctly 1`] = `
+exports[`pageCTA > renders with variant naked correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>
 </div>"
 `;
 
-exports[`PageCTA > renders with variant outline correctly 1`] = `
+exports[`pageCTA > renders with variant outline correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>
 </div>"
 `;
 
-exports[`PageCTA > renders with variant soft correctly 1`] = `
+exports[`pageCTA > renders with variant soft correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>
 </div>"
 `;
 
-exports[`PageCTA > renders with variant solid correctly 1`] = `
+exports[`pageCTA > renders with variant solid correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>
 </div>"
 `;
 
-exports[`PageCTA > renders with variant subtle correctly 1`] = `
+exports[`pageCTA > renders with variant subtle correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>
 </div>"

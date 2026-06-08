@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Stepper > renders with as correctly 1`] = `
+exports[`stepper > renders with as correctly 1`] = `
 "<section role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -42,7 +42,7 @@ exports[`Stepper > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`Stepper > renders with class correctly 1`] = `
+exports[`stepper > renders with class correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root" class="gap-8">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -84,7 +84,7 @@ exports[`Stepper > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with content slot correctly 1`] = `
+exports[`stepper > renders with content slot correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -126,7 +126,7 @@ exports[`Stepper > renders with content slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with custom slot correctly 1`] = `
+exports[`stepper > renders with custom slot correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div data-state="completed" data-orientation="horizontal" data-slot="item" class="">
@@ -168,7 +168,7 @@ exports[`Stepper > renders with custom slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with custom-wrapper slot correctly 1`] = `
+exports[`stepper > renders with custom-wrapper slot correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -207,7 +207,7 @@ exports[`Stepper > renders with custom-wrapper slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with default slot correctly 1`] = `
+exports[`stepper > renders with default slot correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -249,7 +249,7 @@ exports[`Stepper > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with defaultValue correctly 1`] = `
+exports[`stepper > renders with defaultValue correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div data-state="completed" data-orientation="horizontal" data-slot="item" class="">
@@ -291,7 +291,7 @@ exports[`Stepper > renders with defaultValue correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with description slot correctly 1`] = `
+exports[`stepper > renders with description slot correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -333,7 +333,7 @@ exports[`Stepper > renders with description slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with indicator slot correctly 1`] = `
+exports[`stepper > renders with indicator slot correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -375,7 +375,7 @@ exports[`Stepper > renders with indicator slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with items correctly 1`] = `
+exports[`stepper > renders with items correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -417,7 +417,7 @@ exports[`Stepper > renders with items correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with modelValue correctly 1`] = `
+exports[`stepper > renders with modelValue correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div data-state="completed" data-orientation="horizontal" data-slot="item" class="">
@@ -459,7 +459,7 @@ exports[`Stepper > renders with modelValue correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with neutral color correctly 1`] = `
+exports[`stepper > renders with neutral color correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -501,7 +501,7 @@ exports[`Stepper > renders with neutral color correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with size lg horizontal correctly 1`] = `
+exports[`stepper > renders with size lg horizontal correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -543,7 +543,7 @@ exports[`Stepper > renders with size lg horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with size lg vertical correctly 1`] = `
+exports[`stepper > renders with size lg vertical correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="vertical" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="vertical" data-slot="item" class="">
@@ -585,7 +585,7 @@ exports[`Stepper > renders with size lg vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with size md horizontal correctly 1`] = `
+exports[`stepper > renders with size md horizontal correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -627,7 +627,7 @@ exports[`Stepper > renders with size md horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with size md vertical correctly 1`] = `
+exports[`stepper > renders with size md vertical correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="vertical" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="vertical" data-slot="item" class="">
@@ -669,7 +669,7 @@ exports[`Stepper > renders with size md vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with size sm horizontal correctly 1`] = `
+exports[`stepper > renders with size sm horizontal correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -711,7 +711,7 @@ exports[`Stepper > renders with size sm horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with size sm vertical correctly 1`] = `
+exports[`stepper > renders with size sm vertical correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="vertical" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="vertical" data-slot="item" class="">
@@ -753,7 +753,7 @@ exports[`Stepper > renders with size sm vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with size xl horizontal correctly 1`] = `
+exports[`stepper > renders with size xl horizontal correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -795,7 +795,7 @@ exports[`Stepper > renders with size xl horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with size xl vertical correctly 1`] = `
+exports[`stepper > renders with size xl vertical correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="vertical" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="vertical" data-slot="item" class="">
@@ -837,7 +837,7 @@ exports[`Stepper > renders with size xl vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with size xs horizontal correctly 1`] = `
+exports[`stepper > renders with size xs horizontal correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -879,7 +879,7 @@ exports[`Stepper > renders with size xs horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with size xs vertical correctly 1`] = `
+exports[`stepper > renders with size xs vertical correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="vertical" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="vertical" data-slot="item" class="">
@@ -921,7 +921,7 @@ exports[`Stepper > renders with size xs vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with title slot correctly 1`] = `
+exports[`stepper > renders with title slot correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -963,7 +963,7 @@ exports[`Stepper > renders with title slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with ui correctly 1`] = `
+exports[`stepper > renders with ui correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -1005,7 +1005,7 @@ exports[`Stepper > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with valueKey correctly 1`] = `
+exports[`stepper > renders with valueKey correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -1047,7 +1047,7 @@ exports[`Stepper > renders with valueKey correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders with wrapper slot correctly 1`] = `
+exports[`stepper > renders with wrapper slot correctly 1`] = `
 "<div role="group" aria-label="progress" data-linear="" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">
@@ -1083,7 +1083,7 @@ exports[`Stepper > renders with wrapper slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Stepper > renders without linear correctly 1`] = `
+exports[`stepper > renders without linear correctly 1`] = `
 "<div role="group" aria-label="progress" data-orientation="horizontal" data-slot="root">
   <div data-slot="header" class="">
     <div aria-current="true" data-state="active" data-orientation="horizontal" data-slot="item" class="">

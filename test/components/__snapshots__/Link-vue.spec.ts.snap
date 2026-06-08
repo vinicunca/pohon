@@ -1,31 +1,31 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Link > renders with activeClass correctly 1`] = `"<button type="button" class="text-highlighted"></button>"`;
+exports[`link > renders with activeClass correctly 1`] = `"<button type="button" class="text-highlighted"></button>"`;
 
-exports[`Link > renders with as correctly 1`] = `"<div class=""></div>"`;
+exports[`link > renders with as correctly 1`] = `"<div class=""></div>"`;
 
-exports[`Link > renders with class correctly 1`] = `"<button type="button" class="font-medium"></button>"`;
+exports[`link > renders with class correctly 1`] = `"<button type="button" class="font-medium"></button>"`;
 
-exports[`Link > renders with default slot correctly 1`] = `"<button type="button" class="">Default slot</button>"`;
+exports[`link > renders with default slot correctly 1`] = `"<button type="button" class="">Default slot</button>"`;
 
-exports[`Link > renders with disabled correctly 1`] = `"<button type="button" disabled="" class=""></button>"`;
+exports[`link > renders with disabled correctly 1`] = `"<button type="button" disabled="" class=""></button>"`;
 
-exports[`Link > renders with external prop correctly 1`] = `"<a href="/api/download" rel="noopener noreferrer" class=""></a>"`;
+exports[`link > renders with external prop correctly 1`] = `"<a href="/api/download" rel="noopener noreferrer" class=""></a>"`;
 
-exports[`Link > renders with external to and target correctly 1`] = `"<a href="https://example.com" rel="noopener noreferrer" target="_blank" class=""></a>"`;
+exports[`link > renders with external to and target correctly 1`] = `"<a href="https://example.com" rel="noopener noreferrer" target="_blank" class=""></a>"`;
 
-exports[`Link > renders with external to correctly 1`] = `"<a href="https://example.com" rel="noopener noreferrer" class=""></a>"`;
+exports[`link > renders with external to correctly 1`] = `"<a href="https://example.com" rel="noopener noreferrer" class=""></a>"`;
 
-exports[`Link > renders with inactiveClass correctly 1`] = `"<button type="button" class="hover:color-primary"></button>"`;
+exports[`link > renders with inactiveClass correctly 1`] = `"<button type="button" class="hover:color-primary"></button>"`;
 
-exports[`Link > renders with internal to and target correctly 1`] = `"<a href="/about" rel="noopener noreferrer" target="_blank" class=""></a>"`;
+exports[`link > renders with internal to and target correctly 1`] = `"<a href="/about" rel="noopener noreferrer" target="_blank" class=""></a>"`;
 
-exports[`Link > renders with raw activeClass correctly 1`] = `"<button type="button" class="text-highlighted"></button>"`;
+exports[`link > renders with raw activeClass correctly 1`] = `"<button type="button" class="text-highlighted"></button>"`;
 
-exports[`Link > renders with raw correctly 1`] = `"<button type="button" class=""></button>"`;
+exports[`link > renders with raw correctly 1`] = `"<button type="button" class=""></button>"`;
 
-exports[`Link > renders with raw inactiveClass correctly 1`] = `"<button type="button" class="hover:color-primary"></button>"`;
+exports[`link > renders with raw inactiveClass correctly 1`] = `"<button type="button" class="hover:color-primary"></button>"`;
 
-exports[`Link > renders with to correctly 1`] = `"<a href="/" class=""></a>"`;
+exports[`link > renders with to correctly 1`] = `"<a href="/" class=""></a>"`;
 
-exports[`Link > renders with type correctly 1`] = `"<button type="submit" class=""></button>"`;
+exports[`link > renders with type correctly 1`] = `"<button type="submit" class=""></button>"`;

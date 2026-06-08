@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Marquee > renders with as correctly 1`] = `
+exports[`marquee > renders with as correctly 1`] = `
 "<section data-orientation="horizontal" data-slot="root" class="">
   <div data-slot="content" class=""></div>
   <div data-slot="content" class=""></div>
@@ -9,7 +9,7 @@ exports[`Marquee > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`Marquee > renders with class correctly 1`] = `
+exports[`marquee > renders with class correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="text-xl">
   <div data-slot="content" class=""></div>
   <div data-slot="content" class=""></div>
@@ -18,7 +18,7 @@ exports[`Marquee > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`Marquee > renders with default slot correctly 1`] = `
+exports[`marquee > renders with default slot correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div data-slot="content" class="">Default slot</div>
   <div data-slot="content" class="">Default slot</div>
@@ -27,7 +27,7 @@ exports[`Marquee > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Marquee > renders with orientation correctly 1`] = `
+exports[`marquee > renders with orientation correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="content" class=""></div>
   <div data-slot="content" class=""></div>
@@ -36,7 +36,7 @@ exports[`Marquee > renders with orientation correctly 1`] = `
 </div>"
 `;
 
-exports[`Marquee > renders with overlay off correctly 1`] = `
+exports[`marquee > renders with overlay off correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div data-slot="content" class=""></div>
   <div data-slot="content" class=""></div>
@@ -45,7 +45,7 @@ exports[`Marquee > renders with overlay off correctly 1`] = `
 </div>"
 `;
 
-exports[`Marquee > renders with pauseOnHover correctly 1`] = `
+exports[`marquee > renders with pauseOnHover correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div data-slot="content" class=""></div>
   <div data-slot="content" class=""></div>
@@ -54,7 +54,7 @@ exports[`Marquee > renders with pauseOnHover correctly 1`] = `
 </div>"
 `;
 
-exports[`Marquee > renders with repeat correctly 1`] = `
+exports[`marquee > renders with repeat correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div data-slot="content" class=""></div>
   <div data-slot="content" class=""></div>
@@ -65,7 +65,7 @@ exports[`Marquee > renders with repeat correctly 1`] = `
 </div>"
 `;
 
-exports[`Marquee > renders with reverse correctly 1`] = `
+exports[`marquee > renders with reverse correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div data-slot="content" class=""></div>
   <div data-slot="content" class=""></div>
@@ -74,7 +74,7 @@ exports[`Marquee > renders with reverse correctly 1`] = `
 </div>"
 `;
 
-exports[`Marquee > renders with ui correctly 1`] = `
+exports[`marquee > renders with ui correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div data-slot="content" class="gap-4"></div>
   <div data-slot="content" class="gap-4"></div>

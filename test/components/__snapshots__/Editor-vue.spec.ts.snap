@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Editor > renders with as correctly 1`] = `
+exports[`editor > renders with as correctly 1`] = `
 "<section data-slot="root" class="">
   <div role="presentation" data-slot="content" class="">
     <div contenteditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" translate="no" class="tiptap ProseMirror undefined" tabindex="0">
@@ -10,7 +10,7 @@ exports[`Editor > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`Editor > renders with class correctly 1`] = `
+exports[`editor > renders with class correctly 1`] = `
 "<div data-slot="root" class="min-h-80">
   <div role="presentation" data-slot="content" class="">
     <div contenteditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" translate="no" class="tiptap ProseMirror undefined" tabindex="0">
@@ -20,7 +20,7 @@ exports[`Editor > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`Editor > renders with default slot correctly 1`] = `
+exports[`editor > renders with default slot correctly 1`] = `
 "<div data-slot="root" class="">Default slot<div role="presentation" data-slot="content" class="">
     <div contenteditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" translate="no" class="tiptap ProseMirror undefined" tabindex="0">
       <p><br class="ProseMirror-trailingBreak"></p>
@@ -29,7 +29,7 @@ exports[`Editor > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Editor > renders with placeholder correctly 1`] = `
+exports[`editor > renders with placeholder correctly 1`] = `
 "<div data-slot="root" class="">
   <div role="presentation" data-slot="content" class="">
     <div contenteditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" translate="no" class="tiptap ProseMirror undefined" tabindex="0">
@@ -39,7 +39,7 @@ exports[`Editor > renders with placeholder correctly 1`] = `
 </div>"
 `;
 
-exports[`Editor > renders with ui correctly 1`] = `
+exports[`editor > renders with ui correctly 1`] = `
 "<div data-slot="root" class="">
   <div role="presentation" data-slot="content" class="">
     <div contenteditable="true" autocomplete="off" autocorrect="off" autocapitalize="off" translate="no" class="tiptap ProseMirror sm:px-14" tabindex="0">

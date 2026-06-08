@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`User > renders with as correctly 1`] = `
+exports[`user > renders with as correctly 1`] = `
 "<section data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -10,7 +10,7 @@ exports[`User > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`User > renders with avatar correctly 1`] = `
+exports[`user > renders with avatar correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -20,7 +20,7 @@ exports[`User > renders with avatar correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with avatar slot correctly 1`] = `
+exports[`user > renders with avatar slot correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">Avatar slot<div data-slot="wrapper" class="">
     <!--v-if-->
     <p data-slot="name" class="">Benjamin Canac</p>
@@ -29,7 +29,7 @@ exports[`User > renders with avatar slot correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with chip correctly 1`] = `
+exports[`user > renders with chip correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <div data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span><span data-slot="base" class=""></span></div>
   <div data-slot="wrapper" class="">
@@ -40,7 +40,7 @@ exports[`User > renders with chip correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with class correctly 1`] = `
+exports[`user > renders with class correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="absolute"><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -50,7 +50,7 @@ exports[`User > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with default slot correctly 1`] = `
+exports[`user > renders with default slot correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->Default slot
@@ -58,7 +58,7 @@ exports[`User > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with description correctly 1`] = `
+exports[`user > renders with description correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="wrapper" class="">
@@ -69,7 +69,7 @@ exports[`User > renders with description correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with description slot correctly 1`] = `
+exports[`user > renders with description slot correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -79,7 +79,7 @@ exports[`User > renders with description slot correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with name correctly 1`] = `
+exports[`user > renders with name correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="wrapper" class="">
@@ -90,7 +90,7 @@ exports[`User > renders with name correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with name slot correctly 1`] = `
+exports[`user > renders with name slot correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -100,7 +100,7 @@ exports[`User > renders with name slot correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with orientation horizontal correctly 1`] = `
+exports[`user > renders with orientation horizontal correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -110,7 +110,7 @@ exports[`User > renders with orientation horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with orientation vertical correctly 1`] = `
+exports[`user > renders with orientation vertical correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -120,7 +120,7 @@ exports[`User > renders with orientation vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with size 2xl correctly 1`] = `
+exports[`user > renders with size 2xl correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -130,7 +130,7 @@ exports[`User > renders with size 2xl correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with size 2xs correctly 1`] = `
+exports[`user > renders with size 2xs correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -140,7 +140,7 @@ exports[`User > renders with size 2xs correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with size 3xl correctly 1`] = `
+exports[`user > renders with size 3xl correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -150,7 +150,7 @@ exports[`User > renders with size 3xl correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with size 3xs correctly 1`] = `
+exports[`user > renders with size 3xs correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -160,7 +160,7 @@ exports[`User > renders with size 3xs correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with size lg correctly 1`] = `
+exports[`user > renders with size lg correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -170,7 +170,7 @@ exports[`User > renders with size lg correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with size md correctly 1`] = `
+exports[`user > renders with size md correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -180,7 +180,7 @@ exports[`User > renders with size md correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with size sm correctly 1`] = `
+exports[`user > renders with size sm correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -190,7 +190,7 @@ exports[`User > renders with size sm correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with size xl correctly 1`] = `
+exports[`user > renders with size xl correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -200,7 +200,7 @@ exports[`User > renders with size xl correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with size xs correctly 1`] = `
+exports[`user > renders with size xs correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
@@ -210,16 +210,16 @@ exports[`User > renders with size xs correctly 1`] = `
 </div>"
 `;
 
-exports[`User > renders with to correctly 1`] = `
+exports[`user > renders with to correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
-  <div data-slot="wrapper" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Benjamin Canac" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="wrapper" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Benjamin Canac" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <p data-slot="name" class="">Benjamin Canac</p>
     <p data-slot="description" class="">Software Engineer</p>
   </div>
 </div>"
 `;
 
-exports[`User > renders with ui correctly 1`] = `
+exports[`user > renders with ui correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class=""><span data-slot="root"><img src="https://github.com/benjamincanac.png" alt="User avatar" data-slot="image"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->

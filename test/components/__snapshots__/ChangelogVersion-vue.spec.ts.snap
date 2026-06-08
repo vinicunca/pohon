@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ChangelogVersion > renders with actions slot correctly 1`] = `
+exports[`changelogVersion > renders with actions slot correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -17,7 +17,7 @@ exports[`ChangelogVersion > renders with actions slot correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with as correctly 1`] = `
+exports[`changelogVersion > renders with as correctly 1`] = `
 "<section data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -32,7 +32,7 @@ exports[`ChangelogVersion > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`ChangelogVersion > renders with authors correctly 1`] = `
+exports[`changelogVersion > renders with authors correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -57,7 +57,7 @@ exports[`ChangelogVersion > renders with authors correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with authors slot correctly 1`] = `
+exports[`changelogVersion > renders with authors slot correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -74,7 +74,7 @@ exports[`ChangelogVersion > renders with authors slot correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with badge correctly 1`] = `
+exports[`changelogVersion > renders with badge correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -97,7 +97,7 @@ exports[`ChangelogVersion > renders with badge correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with badge object correctly 1`] = `
+exports[`changelogVersion > renders with badge object correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -120,7 +120,7 @@ exports[`ChangelogVersion > renders with badge object correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with badge slot correctly 1`] = `
+exports[`changelogVersion > renders with badge slot correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -142,7 +142,7 @@ exports[`ChangelogVersion > renders with badge slot correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with body slot correctly 1`] = `
+exports[`changelogVersion > renders with body slot correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -157,7 +157,7 @@ exports[`ChangelogVersion > renders with body slot correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with class correctly 1`] = `
+exports[`changelogVersion > renders with class correctly 1`] = `
 "<article data-slot="root" class="absolute">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -172,7 +172,7 @@ exports[`ChangelogVersion > renders with class correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with date correctly 1`] = `
+exports[`changelogVersion > renders with date correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class=""><time datetime="2025-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2025</time>
     <div data-slot="dot" class="">
@@ -193,7 +193,7 @@ exports[`ChangelogVersion > renders with date correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with date slot correctly 1`] = `
+exports[`changelogVersion > renders with date slot correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -216,7 +216,7 @@ exports[`ChangelogVersion > renders with date slot correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with description correctly 1`] = `
+exports[`changelogVersion > renders with description correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -236,7 +236,7 @@ exports[`ChangelogVersion > renders with description correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with description slot correctly 1`] = `
+exports[`changelogVersion > renders with description slot correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -256,7 +256,7 @@ exports[`ChangelogVersion > renders with description slot correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with description slot correctly 2`] = `
+exports[`changelogVersion > renders with description slot correctly 2`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -276,7 +276,7 @@ exports[`ChangelogVersion > renders with description slot correctly 2`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with footer slot correctly 1`] = `
+exports[`changelogVersion > renders with footer slot correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -291,7 +291,7 @@ exports[`ChangelogVersion > renders with footer slot correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with header slot correctly 1`] = `
+exports[`changelogVersion > renders with header slot correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -306,7 +306,7 @@ exports[`ChangelogVersion > renders with header slot correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with image correctly 1`] = `
+exports[`changelogVersion > renders with image correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -328,7 +328,7 @@ exports[`ChangelogVersion > renders with image correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with image slot correctly 1`] = `
+exports[`changelogVersion > renders with image slot correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -350,7 +350,7 @@ exports[`ChangelogVersion > renders with image slot correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with indicator slot correctly 1`] = `
+exports[`changelogVersion > renders with indicator slot correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">Indicator slot</div>
   <div data-slot="container" class="">
@@ -360,7 +360,7 @@ exports[`ChangelogVersion > renders with indicator slot correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with title correctly 1`] = `
+exports[`changelogVersion > renders with title correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -382,7 +382,7 @@ exports[`ChangelogVersion > renders with title correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with title slot correctly 1`] = `
+exports[`changelogVersion > renders with title slot correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -404,7 +404,7 @@ exports[`ChangelogVersion > renders with title slot correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with title slot correctly 2`] = `
+exports[`changelogVersion > renders with title slot correctly 2`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -426,7 +426,7 @@ exports[`ChangelogVersion > renders with title slot correctly 2`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with to & image correctly 1`] = `
+exports[`changelogVersion > renders with to & image correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -439,14 +439,14 @@ exports[`ChangelogVersion > renders with to & image correctly 1`] = `
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
-      <div data-slot="imageWrapper" class=""><img src="https://picsum.photos/640/360" data-slot="image"><a href="/changelog" aria-label="Version link" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a></div>
+      <div data-slot="imageWrapper" class=""><img src="https://picsum.photos/640/360" data-slot="image"><a href="/changelog" aria-label="Version link" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a></div>
     </div>
     <!--v-if-->
   </div>
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with to correctly 1`] = `
+exports[`changelogVersion > renders with to correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -461,7 +461,7 @@ exports[`ChangelogVersion > renders with to correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders with ui correctly 1`] = `
+exports[`changelogVersion > renders with ui correctly 1`] = `
 "<article data-slot="root" class="">
   <div data-slot="indicator" class="">
     <!--v-if-->
@@ -476,7 +476,7 @@ exports[`ChangelogVersion > renders with ui correctly 1`] = `
 </article>"
 `;
 
-exports[`ChangelogVersion > renders without indicator correctly 1`] = `
+exports[`changelogVersion > renders without indicator correctly 1`] = `
 "<article data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">

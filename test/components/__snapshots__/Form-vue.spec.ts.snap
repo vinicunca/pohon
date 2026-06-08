@@ -375,3 +375,391 @@ exports[`Form > zod validation works > without error 1`] = `
   </div>
 </form>"
 `;
+
+exports[`form > custom validation works > with error 1`] = `
+"<form id="42" method="post" class="">
+  <div data-orientation="vertical" data-slot="root" class="" id="emailField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="email" type="text" name="email" data-slot="base" autocomplete="off" aria-invalid="false" value="bob@dylan.com">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-orientation="vertical" data-slot="root" class="" id="passwordField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="password" type="text" name="password" data-slot="base" autocomplete="off" aria-invalid="true" value="short" aria-describedby="v-1-error">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div id="v-1-error" data-slot="error" class="">Must be at least 8 characters</div>
+    </div>
+  </div>
+</form>"
+`;
+
+exports[`form > custom validation works > without error 1`] = `
+"<form id="42" method="post" class="">
+  <div data-orientation="vertical" data-slot="root" class="" id="emailField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="email" type="text" name="email" data-slot="base" autocomplete="off" aria-invalid="false" value="bob@dylan.com">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-orientation="vertical" data-slot="root" class="" id="passwordField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="password" type="text" name="password" data-slot="base" autocomplete="off" aria-invalid="false" value="validpassword">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</form>"
+`;
+
+exports[`form > joi validation works > with error 1`] = `
+"<form id="42" method="post" class="">
+  <div data-orientation="vertical" data-slot="root" class="" id="emailField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="email" type="text" name="email" data-slot="base" autocomplete="off" aria-invalid="false" value="bob@dylan.com">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-orientation="vertical" data-slot="root" class="" id="passwordField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="password" type="text" name="password" data-slot="base" autocomplete="off" aria-invalid="true" value="short" aria-describedby="v-1-error">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div id="v-1-error" data-slot="error" class="">Must be at least 8 characters</div>
+    </div>
+  </div>
+</form>"
+`;
+
+exports[`form > joi validation works > without error 1`] = `
+"<form id="42" method="post" class="">
+  <div data-orientation="vertical" data-slot="root" class="" id="emailField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="email" type="text" name="email" data-slot="base" autocomplete="off" aria-invalid="false" value="bob@dylan.com">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-orientation="vertical" data-slot="root" class="" id="passwordField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="password" type="text" name="password" data-slot="base" autocomplete="off" aria-invalid="false" value="validpassword">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</form>"
+`;
+
+exports[`form > renders with aria-label correctly 1`] = `"<form id="v-0" method="post" class="" aria-label="Contact form"></form>"`;
+
+exports[`form > renders with class correctly 1`] = `"<form id="v-0" method="post" class="gap-4"></form>"`;
+
+exports[`form > renders with default slot correctly 1`] = `"<form id="v-0" method="post" class="">Form slot</form>"`;
+
+exports[`form > renders with id correctly 1`] = `"<form id="id" method="post" class=""></form>"`;
+
+exports[`form > renders with method correctly 1`] = `"<form id="v-0" method="get" class=""></form>"`;
+
+exports[`form > renders with name correctly 1`] = `"<form id="v-0" name="contact" method="post" class=""></form>"`;
+
+exports[`form > renders with state correctly 1`] = `"<form id="v-0" method="post" class=""></form>"`;
+
+exports[`form > renders with ui correctly 1`] = `"<form id="v-0" method="post" class="rounded-lg"></form>"`;
+
+exports[`form > superstruct validation works > with error 1`] = `
+"<form id="42" method="post" class="">
+  <div data-orientation="vertical" data-slot="root" class="" id="emailField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="email" type="text" name="email" data-slot="base" autocomplete="off" aria-invalid="false" value="bob@dylan.com">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-orientation="vertical" data-slot="root" class="" id="passwordField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="password" type="text" name="password" data-slot="base" autocomplete="off" aria-invalid="true" value="short" aria-describedby="v-1-error">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div id="v-1-error" data-slot="error" class="">Must be at least 8 characters</div>
+    </div>
+  </div>
+</form>"
+`;
+
+exports[`form > superstruct validation works > without error 1`] = `
+"<form id="42" method="post" class="">
+  <div data-orientation="vertical" data-slot="root" class="" id="emailField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="email" type="text" name="email" data-slot="base" autocomplete="off" aria-invalid="false" value="bob@dylan.com">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-orientation="vertical" data-slot="root" class="" id="passwordField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="password" type="text" name="password" data-slot="base" autocomplete="off" aria-invalid="false" value="validpassword">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</form>"
+`;
+
+exports[`form > valibot validation works > with error 1`] = `
+"<form id="42" method="post" class="">
+  <div data-orientation="vertical" data-slot="root" class="" id="emailField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="email" type="text" name="email" data-slot="base" autocomplete="off" aria-invalid="false" value="bob@dylan.com">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-orientation="vertical" data-slot="root" class="" id="passwordField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="password" type="text" name="password" data-slot="base" autocomplete="off" aria-invalid="true" value="short" aria-describedby="v-1-error">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div id="v-1-error" data-slot="error" class="">Must be at least 8 characters</div>
+    </div>
+  </div>
+</form>"
+`;
+
+exports[`form > valibot validation works > without error 1`] = `
+"<form id="42" method="post" class="">
+  <div data-orientation="vertical" data-slot="root" class="" id="emailField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="email" type="text" name="email" data-slot="base" autocomplete="off" aria-invalid="false" value="bob@dylan.com">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-orientation="vertical" data-slot="root" class="" id="passwordField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="password" type="text" name="password" data-slot="base" autocomplete="off" aria-invalid="false" value="validpassword">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</form>"
+`;
+
+exports[`form > yup validation works > with error 1`] = `
+"<form id="42" method="post" class="">
+  <div data-orientation="vertical" data-slot="root" class="" id="emailField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="email" type="text" name="email" data-slot="base" autocomplete="off" aria-invalid="false" value="bob@dylan.com">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-orientation="vertical" data-slot="root" class="" id="passwordField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="password" type="text" name="password" data-slot="base" autocomplete="off" aria-invalid="true" value="short" aria-describedby="v-1-error">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div id="v-1-error" data-slot="error" class="">Must be at least 8 characters</div>
+    </div>
+  </div>
+</form>"
+`;
+
+exports[`form > yup validation works > without error 1`] = `
+"<form id="42" method="post" class="">
+  <div data-orientation="vertical" data-slot="root" class="" id="emailField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="email" type="text" name="email" data-slot="base" autocomplete="off" aria-invalid="false" value="bob@dylan.com">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-orientation="vertical" data-slot="root" class="" id="passwordField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="password" type="text" name="password" data-slot="base" autocomplete="off" aria-invalid="false" value="validpassword">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</form>"
+`;
+
+exports[`form > zod validation works > with error 1`] = `
+"<form id="42" method="post" class="">
+  <div data-orientation="vertical" data-slot="root" class="" id="emailField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="email" type="text" name="email" data-slot="base" autocomplete="off" aria-invalid="false" value="bob@dylan.com">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-orientation="vertical" data-slot="root" class="" id="passwordField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="password" type="text" name="password" data-slot="base" autocomplete="off" aria-invalid="true" value="short" aria-describedby="v-1-error">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div id="v-1-error" data-slot="error" class="">Must be at least 8 characters</div>
+    </div>
+  </div>
+</form>"
+`;
+
+exports[`form > zod validation works > without error 1`] = `
+"<form id="42" method="post" class="">
+  <div data-orientation="vertical" data-slot="root" class="" id="emailField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="email" type="text" name="email" data-slot="base" autocomplete="off" aria-invalid="false" value="bob@dylan.com">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div data-orientation="vertical" data-slot="root" class="" id="passwordField">
+    <div data-slot="wrapper" class="">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div class="">
+      <div data-slot="root" class=""><input id="password" type="text" name="password" data-slot="base" autocomplete="off" aria-invalid="false" value="validpassword">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</form>"
+`;

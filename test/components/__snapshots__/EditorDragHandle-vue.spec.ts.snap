@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`EditorDragHandle > renders with as correctly 1`] = `
+exports[`editorDragHandle > renders with as correctly 1`] = `
 "<div class="drag-handle" style="position: absolute; visibility: hidden;" data-dragging="false" data-slot="root">
   <section data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
     <!--v-if-->
@@ -9,16 +9,16 @@ exports[`EditorDragHandle > renders with as correctly 1`] = `
 </div>"
 `;
 
-exports[`EditorDragHandle > renders with class correctly 1`] = `
+exports[`editorDragHandle > renders with class correctly 1`] = `
 "<div class="items-start" style="position: absolute; visibility: hidden;" data-dragging="false" data-slot="root"><button type="button" data-slot="base" class="items-start"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
     <!--v-if-->
     <!--v-if-->
   </button></div>"
 `;
 
-exports[`EditorDragHandle > renders with default slot correctly 1`] = `"<div class="drag-handle" style="position: absolute; visibility: hidden;" data-dragging="false" data-slot="root">Default slot</div>"`;
+exports[`editorDragHandle > renders with default slot correctly 1`] = `"<div class="drag-handle" style="position: absolute; visibility: hidden;" data-dragging="false" data-slot="root">Default slot</div>"`;
 
-exports[`EditorDragHandle > renders with ui correctly 1`] = `
+exports[`editorDragHandle > renders with ui correctly 1`] = `
 "<div class="drag-handle" style="position: absolute; visibility: hidden;" data-dragging="false" data-slot="root"><button type="button" data-slot="base" class="px-4"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
     <!--v-if-->
     <!--v-if-->

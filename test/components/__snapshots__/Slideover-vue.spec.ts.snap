@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Slideover > renders with actions slot correctly 1`] = `
+exports[`slideover > renders with actions slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -23,7 +23,7 @@ exports[`Slideover > renders with actions slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with body slot correctly 1`] = `
+exports[`slideover > renders with body slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -46,7 +46,7 @@ exports[`Slideover > renders with body slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with bottom side correctly 1`] = `
+exports[`slideover > renders with bottom side correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -73,7 +73,7 @@ exports[`Slideover > renders with bottom side correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with bottom side inset correctly 1`] = `
+exports[`slideover > renders with bottom side inset correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -100,7 +100,7 @@ exports[`Slideover > renders with bottom side inset correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with class correctly 1`] = `
+exports[`slideover > renders with class correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -123,7 +123,7 @@ exports[`Slideover > renders with class correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with close slot correctly 1`] = `
+exports[`slideover > renders with close slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -143,7 +143,7 @@ exports[`Slideover > renders with close slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with closeIcon correctly 1`] = `
+exports[`slideover > renders with closeIcon correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -166,7 +166,7 @@ exports[`Slideover > renders with closeIcon correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with content slot correctly 1`] = `
+exports[`slideover > renders with content slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -180,7 +180,7 @@ exports[`Slideover > renders with content slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with default slot correctly 1`] = `
+exports[`slideover > renders with default slot correctly 1`] = `
 "Default slot
 <!--teleport start-->
 
@@ -203,7 +203,7 @@ exports[`Slideover > renders with default slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with description correctly 1`] = `
+exports[`slideover > renders with description correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -230,7 +230,7 @@ exports[`Slideover > renders with description correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with description slot correctly 1`] = `
+exports[`slideover > renders with description slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -256,7 +256,7 @@ exports[`Slideover > renders with description slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with footer slot correctly 1`] = `
+exports[`slideover > renders with footer slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -279,7 +279,7 @@ exports[`Slideover > renders with footer slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with header slot correctly 1`] = `
+exports[`slideover > renders with header slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -297,7 +297,7 @@ exports[`Slideover > renders with header slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with left side correctly 1`] = `
+exports[`slideover > renders with left side correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -324,7 +324,7 @@ exports[`Slideover > renders with left side correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with left side inset correctly 1`] = `
+exports[`slideover > renders with left side inset correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -351,7 +351,7 @@ exports[`Slideover > renders with left side inset correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with open correctly 1`] = `
+exports[`slideover > renders with open correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -374,7 +374,7 @@ exports[`Slideover > renders with open correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with right side correctly 1`] = `
+exports[`slideover > renders with right side correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -401,7 +401,7 @@ exports[`Slideover > renders with right side correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with right side inset correctly 1`] = `
+exports[`slideover > renders with right side inset correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -428,7 +428,7 @@ exports[`Slideover > renders with right side inset correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with title correctly 1`] = `
+exports[`slideover > renders with title correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -454,7 +454,7 @@ exports[`Slideover > renders with title correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with title slot correctly 1`] = `
+exports[`slideover > renders with title slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -480,7 +480,7 @@ exports[`Slideover > renders with title slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with top side correctly 1`] = `
+exports[`slideover > renders with top side correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -507,7 +507,7 @@ exports[`Slideover > renders with top side correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with top side inset correctly 1`] = `
+exports[`slideover > renders with top side inset correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -534,7 +534,7 @@ exports[`Slideover > renders with top side inset correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders with ui correctly 1`] = `
+exports[`slideover > renders with ui correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -557,7 +557,7 @@ exports[`Slideover > renders with ui correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders without close correctly 1`] = `
+exports[`slideover > renders without close correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -582,7 +582,7 @@ exports[`Slideover > renders without close correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders without overlay correctly 1`] = `
+exports[`slideover > renders without overlay correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -609,7 +609,7 @@ exports[`Slideover > renders without overlay correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Slideover > renders without transition correctly 1`] = `
+exports[`slideover > renders without transition correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Tooltip > renders with arrow correctly 1`] = `
+exports[`tooltip > renders with arrow correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -17,7 +17,7 @@ exports[`Tooltip > renders with arrow correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Tooltip > renders with class correctly 1`] = `
+exports[`tooltip > renders with class correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -35,7 +35,7 @@ exports[`Tooltip > renders with class correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Tooltip > renders with content slot correctly 1`] = `
+exports[`tooltip > renders with content slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -52,7 +52,7 @@ exports[`Tooltip > renders with content slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Tooltip > renders with default slot correctly 1`] = `
+exports[`tooltip > renders with default slot correctly 1`] = `
 "Default slot
 <!--teleport start-->
 
@@ -70,7 +70,7 @@ exports[`Tooltip > renders with default slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Tooltip > renders with kbds correctly 1`] = `
+exports[`tooltip > renders with kbds correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -87,7 +87,7 @@ exports[`Tooltip > renders with kbds correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Tooltip > renders with text correctly 1`] = `
+exports[`tooltip > renders with text correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -105,7 +105,7 @@ exports[`Tooltip > renders with text correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Tooltip > renders with ui correctly 1`] = `
+exports[`tooltip > renders with ui correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 

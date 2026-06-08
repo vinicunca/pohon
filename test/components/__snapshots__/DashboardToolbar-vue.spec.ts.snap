@@ -1,36 +1,36 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DashboardToolbar > renders with as correctly 1`] = `
+exports[`dashboardToolbar > renders with as correctly 1`] = `
 "<section data-slot="root" class="">
   <div data-slot="left" class=""></div>
   <div data-slot="right" class=""></div>
 </section>"
 `;
 
-exports[`DashboardToolbar > renders with class correctly 1`] = `
+exports[`dashboardToolbar > renders with class correctly 1`] = `
 "<div data-slot="root" class="px-8">
   <div data-slot="left" class=""></div>
   <div data-slot="right" class=""></div>
 </div>"
 `;
 
-exports[`DashboardToolbar > renders with default slot correctly 1`] = `"<div data-slot="root" class="">Default slot</div>"`;
+exports[`dashboardToolbar > renders with default slot correctly 1`] = `"<div data-slot="root" class="">Default slot</div>"`;
 
-exports[`DashboardToolbar > renders with left slot correctly 1`] = `
+exports[`dashboardToolbar > renders with left slot correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="left" class="">Left slot</div>
   <div data-slot="right" class=""></div>
 </div>"
 `;
 
-exports[`DashboardToolbar > renders with right slot correctly 1`] = `
+exports[`dashboardToolbar > renders with right slot correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="left" class=""></div>
   <div data-slot="right" class="">Right slot</div>
 </div>"
 `;
 
-exports[`DashboardToolbar > renders with ui correctly 1`] = `
+exports[`dashboardToolbar > renders with ui correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="left" class="items-center">Left slot</div>
   <div data-slot="right" class=""></div>

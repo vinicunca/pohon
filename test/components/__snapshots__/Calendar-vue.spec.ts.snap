@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Calendar > renders with as correctly 1`] = `
+exports[`calendar > renders with as correctly 1`] = `
 "<section aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -184,7 +184,7 @@ exports[`Calendar > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`Calendar > renders with class correctly 1`] = `
+exports[`calendar > renders with class correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root" class="max-w-sm">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -368,7 +368,7 @@ exports[`Calendar > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with color neutral correctly 1`] = `
+exports[`calendar > renders with color neutral correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -552,7 +552,7 @@ exports[`Calendar > renders with color neutral correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with day slot correctly 1`] = `
+exports[`calendar > renders with day slot correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -736,7 +736,7 @@ exports[`Calendar > renders with day slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with default value correctly 1`] = `
+exports[`calendar > renders with default value correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -920,7 +920,7 @@ exports[`Calendar > renders with default value correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with disabled correctly 1`] = `
+exports[`calendar > renders with disabled correctly 1`] = `
 "<div aria-label="Event Date, January 2025" data-disabled="" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" disabled="" aria-label="Previous year" aria-disabled="true" data-disabled="true" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1104,7 +1104,7 @@ exports[`Calendar > renders with disabled correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with heading slot correctly 1`] = `
+exports[`calendar > renders with heading slot correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1288,7 +1288,7 @@ exports[`Calendar > renders with heading slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with isDateDisabled correctly 1`] = `
+exports[`calendar > renders with isDateDisabled correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1472,7 +1472,7 @@ exports[`Calendar > renders with isDateDisabled correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with isDateUnavailable correctly 1`] = `
+exports[`calendar > renders with isDateUnavailable correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1656,7 +1656,7 @@ exports[`Calendar > renders with isDateUnavailable correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with modelValue correctly 1`] = `
+exports[`calendar > renders with modelValue correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1840,7 +1840,7 @@ exports[`Calendar > renders with modelValue correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with multiple correctly 1`] = `
+exports[`calendar > renders with multiple correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -2024,7 +2024,7 @@ exports[`Calendar > renders with multiple correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with nextMonth correctly 1`] = `
+exports[`calendar > renders with nextMonth correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" nextmonth="[object Object]" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -2208,7 +2208,7 @@ exports[`Calendar > renders with nextMonth correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with nextYear correctly 1`] = `
+exports[`calendar > renders with nextYear correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" nextyear="[object Object]" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -2392,7 +2392,7 @@ exports[`Calendar > renders with nextYear correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with numberOfMonths correctly 1`] = `
+exports[`calendar > renders with numberOfMonths correctly 1`] = `
 "<div aria-label="Event Date, January - February 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -2735,7 +2735,7 @@ exports[`Calendar > renders with numberOfMonths correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with prevMonth correctly 1`] = `
+exports[`calendar > renders with prevMonth correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" prevmonth="[object Object]" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -2919,7 +2919,7 @@ exports[`Calendar > renders with prevMonth correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with prevYear correctly 1`] = `
+exports[`calendar > renders with prevYear correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" prevyear="[object Object]" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -3103,7 +3103,7 @@ exports[`Calendar > renders with prevYear correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with range and defaultValue correctly 1`] = `
+exports[`calendar > renders with range and defaultValue correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
     <div role="heading" aria-level="2">Event Date, January 2025</div>
@@ -3287,7 +3287,7 @@ exports[`Calendar > renders with range and defaultValue correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with range and modelValue correctly 1`] = `
+exports[`calendar > renders with range and modelValue correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
     <div role="heading" aria-level="2">Event Date, January 2025</div>
@@ -3471,7 +3471,7 @@ exports[`Calendar > renders with range and modelValue correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with range correctly 1`] = `
+exports[`calendar > renders with range correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div style="border: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
     <div role="heading" aria-level="2">Event Date, January 2025</div>
@@ -3655,7 +3655,7 @@ exports[`Calendar > renders with range correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with readonly correctly 1`] = `
+exports[`calendar > renders with readonly correctly 1`] = `
 "<div aria-label="Event Date, January 2025" data-readonly="" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -3839,7 +3839,7 @@ exports[`Calendar > renders with readonly correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with size lg correctly 1`] = `
+exports[`calendar > renders with size lg correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -4023,7 +4023,7 @@ exports[`Calendar > renders with size lg correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with size md correctly 1`] = `
+exports[`calendar > renders with size md correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -4207,7 +4207,7 @@ exports[`Calendar > renders with size md correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with size sm correctly 1`] = `
+exports[`calendar > renders with size sm correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -4391,7 +4391,7 @@ exports[`Calendar > renders with size sm correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with size xl correctly 1`] = `
+exports[`calendar > renders with size xl correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -4575,7 +4575,7 @@ exports[`Calendar > renders with size xl correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with size xs correctly 1`] = `
+exports[`calendar > renders with size xs correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -4759,7 +4759,7 @@ exports[`Calendar > renders with size xs correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with ui correctly 1`] = `
+exports[`calendar > renders with ui correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class="gap-4"><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -4943,7 +4943,7 @@ exports[`Calendar > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with variant outline correctly 1`] = `
+exports[`calendar > renders with variant outline correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -5127,7 +5127,7 @@ exports[`Calendar > renders with variant outline correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with variant soft correctly 1`] = `
+exports[`calendar > renders with variant soft correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -5311,7 +5311,7 @@ exports[`Calendar > renders with variant soft correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with variant solid correctly 1`] = `
+exports[`calendar > renders with variant solid correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -5495,7 +5495,7 @@ exports[`Calendar > renders with variant solid correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with variant subtle correctly 1`] = `
+exports[`calendar > renders with variant subtle correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -5679,7 +5679,7 @@ exports[`Calendar > renders with variant subtle correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with week-day slot correctly 1`] = `
+exports[`calendar > renders with week-day slot correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -5863,7 +5863,7 @@ exports[`Calendar > renders with week-day slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with weekNumbers correctly 1`] = `
+exports[`calendar > renders with weekNumbers correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" weeknumbers="true" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -6047,7 +6047,7 @@ exports[`Calendar > renders with weekNumbers correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with weekStartsOn correctly 1`] = `
+exports[`calendar > renders with weekStartsOn correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -6231,7 +6231,7 @@ exports[`Calendar > renders with weekStartsOn correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders with weekdayFormat correctly 1`] = `
+exports[`calendar > renders with weekdayFormat correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -6415,7 +6415,7 @@ exports[`Calendar > renders with weekdayFormat correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders without fixedWeeks correctly 1`] = `
+exports[`calendar > renders without fixedWeeks correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -6575,7 +6575,7 @@ exports[`Calendar > renders without fixedWeeks correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders without monthControls correctly 1`] = `
+exports[`calendar > renders without monthControls correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class=""><button type="button" aria-label="Previous year" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -6755,7 +6755,7 @@ exports[`Calendar > renders without monthControls correctly 1`] = `
 </div>"
 `;
 
-exports[`Calendar > renders without yearControls correctly 1`] = `
+exports[`calendar > renders without yearControls correctly 1`] = `
 "<div aria-label="Event Date, January 2025" dir="ltr" data-slot="root">
   <div data-slot="header" class="">
     <!--v-if--><button type="button" aria-label="Previous month" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>

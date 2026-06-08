@@ -1,12 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`AuthForm > renders with as correctly 1`] = `
+exports[`authForm > renders with as correctly 1`] = `
 "<section data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -46,13 +46,13 @@ exports[`AuthForm > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`AuthForm > renders with class correctly 1`] = `
+exports[`authForm > renders with class correctly 1`] = `
 "<div data-slot="root" class="max-w-sm">
   <!--v-if-->
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -92,7 +92,7 @@ exports[`AuthForm > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with description correctly 1`] = `
+exports[`authForm > renders with description correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="header" class="">
     <!--v-if-->
@@ -102,7 +102,7 @@ exports[`AuthForm > renders with description correctly 1`] = `
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -142,7 +142,7 @@ exports[`AuthForm > renders with description correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with description slot correctly 1`] = `
+exports[`authForm > renders with description slot correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="header" class="">
     <!--v-if-->
@@ -152,7 +152,7 @@ exports[`AuthForm > renders with description slot correctly 1`] = `
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -192,13 +192,13 @@ exports[`AuthForm > renders with description slot correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with disabled correctly 1`] = `
+exports[`authForm > renders with disabled correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -238,13 +238,13 @@ exports[`AuthForm > renders with disabled correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with fields correctly 1`] = `
+exports[`authForm > renders with fields correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -284,13 +284,13 @@ exports[`AuthForm > renders with fields correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with footer slot correctly 1`] = `
+exports[`authForm > renders with footer slot correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -330,13 +330,13 @@ exports[`AuthForm > renders with footer slot correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with header slot correctly 1`] = `
+exports[`authForm > renders with header slot correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="header" class="">Header</div>
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -376,7 +376,7 @@ exports[`AuthForm > renders with header slot correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with icon correctly 1`] = `
+exports[`authForm > renders with icon correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="header" class="">
     <div data-slot="leading" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg></div>
@@ -386,7 +386,7 @@ exports[`AuthForm > renders with icon correctly 1`] = `
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -426,7 +426,7 @@ exports[`AuthForm > renders with icon correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with leading slot correctly 1`] = `
+exports[`authForm > renders with leading slot correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="header" class="">
     <div data-slot="leading" class="">Leading</div>
@@ -436,7 +436,7 @@ exports[`AuthForm > renders with leading slot correctly 1`] = `
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -476,13 +476,13 @@ exports[`AuthForm > renders with leading slot correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with loading correctly 1`] = `
+exports[`authForm > renders with loading correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -521,7 +521,7 @@ exports[`AuthForm > renders with loading correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with providers correctly 1`] = `
+exports[`authForm > renders with providers correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -536,7 +536,7 @@ exports[`AuthForm > renders with providers correctly 1`] = `
       <div data-slot="border" class=""></div>
       <!--v-if-->
     </div>
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -576,13 +576,13 @@ exports[`AuthForm > renders with providers correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with providers slot correctly 1`] = `
+exports[`authForm > renders with providers slot correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
     <div data-slot="providers" class="">Providers</div>
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -622,13 +622,13 @@ exports[`AuthForm > renders with providers slot correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with separator correctly 1`] = `
+exports[`authForm > renders with separator correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -668,13 +668,13 @@ exports[`AuthForm > renders with separator correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with submit correctly 1`] = `
+exports[`authForm > renders with submit correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -714,13 +714,13 @@ exports[`AuthForm > renders with submit correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with submit slot correctly 1`] = `
+exports[`authForm > renders with submit slot correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -757,7 +757,7 @@ exports[`AuthForm > renders with submit slot correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with title correctly 1`] = `
+exports[`authForm > renders with title correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="header" class="">
     <!--v-if-->
@@ -767,7 +767,7 @@ exports[`AuthForm > renders with title correctly 1`] = `
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -807,7 +807,7 @@ exports[`AuthForm > renders with title correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with title slot correctly 1`] = `
+exports[`authForm > renders with title slot correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="header" class="">
     <!--v-if-->
@@ -817,7 +817,7 @@ exports[`AuthForm > renders with title slot correctly 1`] = `
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -857,13 +857,13 @@ exports[`AuthForm > renders with title slot correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with ui correctly 1`] = `
+exports[`authForm > renders with ui correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>
@@ -903,13 +903,13 @@ exports[`AuthForm > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`AuthForm > renders with validation slot correctly 1`] = `
+exports[`authForm > renders with validation slot correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
     <!--v-if-->
     <!--v-if-->
-    <form id="v-0" class="" data-slot="form">
+    <form id="v-0" method="post" class="" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="">
         <div data-slot="wrapper" class="">
           <div data-slot="labelWrapper" class=""><label for="v-1" data-slot="label" class="">Email</label>

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Pagination > renders with as correctly 1`] = `
+exports[`pagination > renders with as correctly 1`] = `
 "<div data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -33,7 +33,7 @@ exports[`Pagination > renders with as correctly 1`] = `
 </div>"
 `;
 
-exports[`Pagination > renders with class correctly 1`] = `
+exports[`pagination > renders with class correctly 1`] = `
 "<nav data-slot="root" class="relative">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -66,7 +66,7 @@ exports[`Pagination > renders with class correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with defaultPage correctly 1`] = `
+exports[`pagination > renders with defaultPage correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -99,7 +99,7 @@ exports[`Pagination > renders with defaultPage correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with disabled correctly 1`] = `
+exports[`pagination > renders with disabled correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -132,7 +132,7 @@ exports[`Pagination > renders with disabled correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with ellipsis slot correctly 1`] = `
+exports[`pagination > renders with ellipsis slot correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -165,7 +165,7 @@ exports[`Pagination > renders with ellipsis slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with ellipsisIcon correctly 1`] = `
+exports[`pagination > renders with ellipsisIcon correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -207,7 +207,7 @@ exports[`Pagination > renders with ellipsisIcon correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with first slot correctly 1`] = `
+exports[`pagination > renders with first slot correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class="">First slot<button type="button" disabled="" aria-label="Previous Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -237,7 +237,7 @@ exports[`Pagination > renders with first slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with firstIcon correctly 1`] = `
+exports[`pagination > renders with firstIcon correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -270,7 +270,7 @@ exports[`Pagination > renders with firstIcon correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with item slot correctly 1`] = `
+exports[`pagination > renders with item slot correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -288,7 +288,7 @@ exports[`Pagination > renders with item slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with itemsPerPage correctly 1`] = `
+exports[`pagination > renders with itemsPerPage correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -321,7 +321,7 @@ exports[`Pagination > renders with itemsPerPage correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with last slot correctly 1`] = `
+exports[`pagination > renders with last slot correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -351,7 +351,7 @@ exports[`Pagination > renders with last slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with lastIcon correctly 1`] = `
+exports[`pagination > renders with lastIcon correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -384,7 +384,7 @@ exports[`Pagination > renders with lastIcon correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with neutral active variant ghost correctly 1`] = `
+exports[`pagination > renders with neutral active variant ghost correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -417,7 +417,7 @@ exports[`Pagination > renders with neutral active variant ghost correctly 1`] = 
 </nav>"
 `;
 
-exports[`Pagination > renders with neutral active variant link correctly 1`] = `
+exports[`pagination > renders with neutral active variant link correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -450,7 +450,7 @@ exports[`Pagination > renders with neutral active variant link correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with neutral active variant outline correctly 1`] = `
+exports[`pagination > renders with neutral active variant outline correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -483,7 +483,7 @@ exports[`Pagination > renders with neutral active variant outline correctly 1`] 
 </nav>"
 `;
 
-exports[`Pagination > renders with neutral active variant soft correctly 1`] = `
+exports[`pagination > renders with neutral active variant soft correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -516,7 +516,7 @@ exports[`Pagination > renders with neutral active variant soft correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with neutral active variant solid correctly 1`] = `
+exports[`pagination > renders with neutral active variant solid correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -549,7 +549,7 @@ exports[`Pagination > renders with neutral active variant solid correctly 1`] = 
 </nav>"
 `;
 
-exports[`Pagination > renders with neutral active variant subtle correctly 1`] = `
+exports[`pagination > renders with neutral active variant subtle correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -582,7 +582,7 @@ exports[`Pagination > renders with neutral active variant subtle correctly 1`] =
 </nav>"
 `;
 
-exports[`Pagination > renders with neutral variant ghost correctly 1`] = `
+exports[`pagination > renders with neutral variant ghost correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -615,7 +615,7 @@ exports[`Pagination > renders with neutral variant ghost correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with neutral variant link correctly 1`] = `
+exports[`pagination > renders with neutral variant link correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -648,7 +648,7 @@ exports[`Pagination > renders with neutral variant link correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with neutral variant outline correctly 1`] = `
+exports[`pagination > renders with neutral variant outline correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -681,7 +681,7 @@ exports[`Pagination > renders with neutral variant outline correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with neutral variant soft correctly 1`] = `
+exports[`pagination > renders with neutral variant soft correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -714,7 +714,7 @@ exports[`Pagination > renders with neutral variant soft correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with neutral variant solid correctly 1`] = `
+exports[`pagination > renders with neutral variant solid correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -747,7 +747,7 @@ exports[`Pagination > renders with neutral variant solid correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with neutral variant subtle correctly 1`] = `
+exports[`pagination > renders with neutral variant subtle correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -780,7 +780,7 @@ exports[`Pagination > renders with neutral variant subtle correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with next slot correctly 1`] = `
+exports[`pagination > renders with next slot correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -810,7 +810,7 @@ exports[`Pagination > renders with next slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with nextIcon correctly 1`] = `
+exports[`pagination > renders with nextIcon correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -843,7 +843,7 @@ exports[`Pagination > renders with nextIcon correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with page correctly 1`] = `
+exports[`pagination > renders with page correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -876,7 +876,7 @@ exports[`Pagination > renders with page correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with prev slot correctly 1`] = `
+exports[`pagination > renders with prev slot correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -906,7 +906,7 @@ exports[`Pagination > renders with prev slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with prevIcon correctly 1`] = `
+exports[`pagination > renders with prevIcon correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -939,7 +939,7 @@ exports[`Pagination > renders with prevIcon correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with primary active variant ghost correctly 1`] = `
+exports[`pagination > renders with primary active variant ghost correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -972,7 +972,7 @@ exports[`Pagination > renders with primary active variant ghost correctly 1`] = 
 </nav>"
 `;
 
-exports[`Pagination > renders with primary active variant link correctly 1`] = `
+exports[`pagination > renders with primary active variant link correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1005,7 +1005,7 @@ exports[`Pagination > renders with primary active variant link correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with primary active variant outline correctly 1`] = `
+exports[`pagination > renders with primary active variant outline correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1038,7 +1038,7 @@ exports[`Pagination > renders with primary active variant outline correctly 1`] 
 </nav>"
 `;
 
-exports[`Pagination > renders with primary active variant soft correctly 1`] = `
+exports[`pagination > renders with primary active variant soft correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1071,7 +1071,7 @@ exports[`Pagination > renders with primary active variant soft correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with primary active variant solid correctly 1`] = `
+exports[`pagination > renders with primary active variant solid correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1104,7 +1104,7 @@ exports[`Pagination > renders with primary active variant solid correctly 1`] = 
 </nav>"
 `;
 
-exports[`Pagination > renders with primary active variant subtle correctly 1`] = `
+exports[`pagination > renders with primary active variant subtle correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1137,7 +1137,7 @@ exports[`Pagination > renders with primary active variant subtle correctly 1`] =
 </nav>"
 `;
 
-exports[`Pagination > renders with primary variant ghost correctly 1`] = `
+exports[`pagination > renders with primary variant ghost correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1170,7 +1170,7 @@ exports[`Pagination > renders with primary variant ghost correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with primary variant link correctly 1`] = `
+exports[`pagination > renders with primary variant link correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1203,7 +1203,7 @@ exports[`Pagination > renders with primary variant link correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with primary variant outline correctly 1`] = `
+exports[`pagination > renders with primary variant outline correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1236,7 +1236,7 @@ exports[`Pagination > renders with primary variant outline correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with primary variant soft correctly 1`] = `
+exports[`pagination > renders with primary variant soft correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1269,7 +1269,7 @@ exports[`Pagination > renders with primary variant soft correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with primary variant solid correctly 1`] = `
+exports[`pagination > renders with primary variant solid correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1302,7 +1302,7 @@ exports[`Pagination > renders with primary variant solid correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with primary variant subtle correctly 1`] = `
+exports[`pagination > renders with primary variant subtle correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1335,7 +1335,7 @@ exports[`Pagination > renders with primary variant subtle correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with showEdges correctly 1`] = `
+exports[`pagination > renders with showEdges correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1382,7 +1382,7 @@ exports[`Pagination > renders with showEdges correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with siblingCount correctly 1`] = `
+exports[`pagination > renders with siblingCount correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1424,7 +1424,7 @@ exports[`Pagination > renders with siblingCount correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with size lg correctly 1`] = `
+exports[`pagination > renders with size lg correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1457,7 +1457,7 @@ exports[`Pagination > renders with size lg correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with size md correctly 1`] = `
+exports[`pagination > renders with size md correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1490,7 +1490,7 @@ exports[`Pagination > renders with size md correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with size sm correctly 1`] = `
+exports[`pagination > renders with size sm correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1523,7 +1523,7 @@ exports[`Pagination > renders with size sm correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with size xl correctly 1`] = `
+exports[`pagination > renders with size xl correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1556,7 +1556,7 @@ exports[`Pagination > renders with size xl correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with size xs correctly 1`] = `
+exports[`pagination > renders with size xs correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1589,7 +1589,7 @@ exports[`Pagination > renders with size xs correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with total correctly 1`] = `
+exports[`pagination > renders with total correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class=""><button type="button" disabled="" aria-label="First Page" data-slot="base" class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1622,7 +1622,7 @@ exports[`Pagination > renders with total correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders with ui correctly 1`] = `
+exports[`pagination > renders with ui correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class="gap-3"><button type="button" disabled="" aria-label="First Page" data-slot="base" class="rounded-full"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class=""></svg>
       <!--v-if-->
@@ -1655,7 +1655,7 @@ exports[`Pagination > renders with ui correctly 1`] = `
 </nav>"
 `;
 
-exports[`Pagination > renders without showControls correctly 1`] = `
+exports[`pagination > renders without showControls correctly 1`] = `
 "<nav data-slot="root">
   <div data-slot="list" class="">
     <!--v-if-->

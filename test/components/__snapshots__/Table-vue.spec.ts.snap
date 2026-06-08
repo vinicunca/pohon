@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Table > renders with as correctly 1`] = `
+exports[`table > renders with as correctly 1`] = `
 "<section data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -55,7 +55,7 @@ exports[`Table > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`Table > renders with body-bottom slot correctly 1`] = `
+exports[`table > renders with body-bottom slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -110,7 +110,7 @@ exports[`Table > renders with body-bottom slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with body-top slot correctly 1`] = `
+exports[`table > renders with body-top slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -164,7 +164,7 @@ exports[`Table > renders with body-top slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with caption correctly 1`] = `
+exports[`table > renders with caption correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <caption data-slot="caption" class="">Table caption</caption>
@@ -219,7 +219,7 @@ exports[`Table > renders with caption correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with caption slot correctly 1`] = `
+exports[`table > renders with caption slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <caption data-slot="caption" class="">Caption slot</caption>
@@ -274,7 +274,7 @@ exports[`Table > renders with caption slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with cell slot correctly 1`] = `
+exports[`table > renders with cell slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -329,7 +329,7 @@ exports[`Table > renders with cell slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with class correctly 1`] = `
+exports[`table > renders with class correctly 1`] = `
 "<div data-slot="root" class="absolute">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -384,7 +384,7 @@ exports[`Table > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with columns correctly 1`] = `
+exports[`table > renders with columns correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -569,7 +569,7 @@ exports[`Table > renders with columns correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with data correctly 1`] = `
+exports[`table > renders with data correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -624,7 +624,7 @@ exports[`Table > renders with data correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with empty correctly 1`] = `
+exports[`table > renders with empty correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -642,7 +642,7 @@ exports[`Table > renders with empty correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with empty slot correctly 1`] = `
+exports[`table > renders with empty slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -705,7 +705,7 @@ exports[`Table > renders with empty slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with expanded slot correctly 1`] = `
+exports[`table > renders with expanded slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -760,7 +760,7 @@ exports[`Table > renders with expanded slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with header slot correctly 1`] = `
+exports[`table > renders with header slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -815,7 +815,7 @@ exports[`Table > renders with header slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with loading animation carousel correctly 1`] = `
+exports[`table > renders with loading animation carousel correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -870,7 +870,7 @@ exports[`Table > renders with loading animation carousel correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with loading animation carousel-inverse correctly 1`] = `
+exports[`table > renders with loading animation carousel-inverse correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -925,7 +925,7 @@ exports[`Table > renders with loading animation carousel-inverse correctly 1`] =
 </div>"
 `;
 
-exports[`Table > renders with loading animation elastic correctly 1`] = `
+exports[`table > renders with loading animation elastic correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -980,7 +980,7 @@ exports[`Table > renders with loading animation elastic correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with loading animation swing correctly 1`] = `
+exports[`table > renders with loading animation swing correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1035,7 +1035,7 @@ exports[`Table > renders with loading animation swing correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with loading color error correctly 1`] = `
+exports[`table > renders with loading color error correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1090,7 +1090,7 @@ exports[`Table > renders with loading color error correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with loading color info correctly 1`] = `
+exports[`table > renders with loading color info correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1145,7 +1145,7 @@ exports[`Table > renders with loading color info correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with loading color neutral correctly 1`] = `
+exports[`table > renders with loading color neutral correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1200,7 +1200,7 @@ exports[`Table > renders with loading color neutral correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with loading color primary correctly 1`] = `
+exports[`table > renders with loading color primary correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1255,7 +1255,7 @@ exports[`Table > renders with loading color primary correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with loading color secondary correctly 1`] = `
+exports[`table > renders with loading color secondary correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1310,7 +1310,7 @@ exports[`Table > renders with loading color secondary correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with loading color success correctly 1`] = `
+exports[`table > renders with loading color success correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1365,7 +1365,7 @@ exports[`Table > renders with loading color success correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with loading color warning correctly 1`] = `
+exports[`table > renders with loading color warning correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1420,7 +1420,7 @@ exports[`Table > renders with loading color warning correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with loading correctly 1`] = `
+exports[`table > renders with loading correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1475,7 +1475,7 @@ exports[`Table > renders with loading correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with loading slot correctly 1`] = `
+exports[`table > renders with loading slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1538,7 +1538,7 @@ exports[`Table > renders with loading slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with meta field on columns correctly 1`] = `
+exports[`table > renders with meta field on columns correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1723,7 +1723,7 @@ exports[`Table > renders with meta field on columns correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with meta prop correctly 1`] = `
+exports[`table > renders with meta prop correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1778,7 +1778,7 @@ exports[`Table > renders with meta prop correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with row pinning and virtualization correctly 1`] = `
+exports[`table > renders with row pinning and virtualization correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1800,7 +1800,7 @@ exports[`Table > renders with row pinning and virtualization correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with row pinning correctly 1`] = `
+exports[`table > renders with row pinning correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1855,7 +1855,7 @@ exports[`Table > renders with row pinning correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with sticky correctly 1`] = `
+exports[`table > renders with sticky correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -1910,7 +1910,7 @@ exports[`Table > renders with sticky correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with ui correctly 1`] = `
+exports[`table > renders with ui correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="table-auto">
     <!--v-if-->
@@ -1965,7 +1965,7 @@ exports[`Table > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with virtualize and sticky correctly 1`] = `
+exports[`table > renders with virtualize and sticky correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -2027,7 +2027,7 @@ exports[`Table > renders with virtualize and sticky correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders with virtualize correctly 1`] = `
+exports[`table > renders with virtualize correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
@@ -2049,7 +2049,7 @@ exports[`Table > renders with virtualize correctly 1`] = `
 </div>"
 `;
 
-exports[`Table > renders without data correctly 1`] = `
+exports[`table > renders without data correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="base" class="">
     <!--v-if-->
