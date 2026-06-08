@@ -23,6 +23,7 @@ jobs:
 
     env:
       NUXT_GITHUB_TOKEN: ${{ secrets.NUXT_GITHUB_TOKEN }}
+      NODE_OPTIONS: --max-old-space-size=4096
 
     steps:
       - name: Checkout
