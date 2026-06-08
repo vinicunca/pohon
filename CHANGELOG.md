@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0-rc5](https://github.com/vinicunca/pohon/compare/v2.0.0-rc4...v2.0.0-rc5) (2026-06-08)
+
+### Features
+
+* **ContentSearch/DashboardSearch:** forward input config to command palette ([9d61343](https://github.com/vinicunca/pohon/commit/9d61343d80977781d1c8cb1007f144795f7cc3a0))
+* **FileUpload:** expose removeFile in slots ([4c88cfd](https://github.com/vinicunca/pohon/commit/4c88cfd6943818f0fc343f24cb4f4c606bca4c55))
+* **useTour:** new composable ([59943c8](https://github.com/vinicunca/pohon/commit/59943c8dd7cb591376bb2f4c6791a7522f4240bf))
+
+### Bug Fixes
+
+* **InputNumber/InputDate/InputTime/Calendar:** restore locale prop ([b04f27a](https://github.com/vinicunca/pohon/commit/b04f27ad5886fc87b2799804e7db76189e5f594c))
+
 ## [2.0.0-rc4](https://github.com/vinicunca/pohon/compare/v2.0.0-rc3...v2.0.0-rc4) (2026-06-01)
 
 ## [2.0.0-rc3](https://github.com/vinicunca/pohon/compare/v2.0.0-rc2...v2.0.0-rc3) (2026-06-01)
