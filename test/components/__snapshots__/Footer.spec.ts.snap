@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Footer > renders with as correctly 1`] = `
+exports[`footer > renders with as correctly 1`] = `
 "<section data-slot="root" class="">
   <!--v-if-->
   <div class="" data-slot="container">
@@ -12,7 +12,7 @@ exports[`Footer > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`Footer > renders with bottom slot correctly 1`] = `
+exports[`footer > renders with bottom slot correctly 1`] = `
 "<footer data-slot="root" class="">
   <!--v-if-->
   <div class="" data-slot="container">
@@ -24,7 +24,7 @@ exports[`Footer > renders with bottom slot correctly 1`] = `
 </footer>"
 `;
 
-exports[`Footer > renders with class correctly 1`] = `
+exports[`footer > renders with class correctly 1`] = `
 "<footer data-slot="root" class="relative">
   <!--v-if-->
   <div class="" data-slot="container">
@@ -36,7 +36,7 @@ exports[`Footer > renders with class correctly 1`] = `
 </footer>"
 `;
 
-exports[`Footer > renders with default slot correctly 1`] = `
+exports[`footer > renders with default slot correctly 1`] = `
 "<footer data-slot="root" class="">
   <!--v-if-->
   <div class="" data-slot="container">
@@ -48,7 +48,7 @@ exports[`Footer > renders with default slot correctly 1`] = `
 </footer>"
 `;
 
-exports[`Footer > renders with left slot correctly 1`] = `
+exports[`footer > renders with left slot correctly 1`] = `
 "<footer data-slot="root" class="">
   <!--v-if-->
   <div class="" data-slot="container">
@@ -60,7 +60,7 @@ exports[`Footer > renders with left slot correctly 1`] = `
 </footer>"
 `;
 
-exports[`Footer > renders with right slot correctly 1`] = `
+exports[`footer > renders with right slot correctly 1`] = `
 "<footer data-slot="root" class="">
   <!--v-if-->
   <div class="" data-slot="container">
@@ -72,7 +72,7 @@ exports[`Footer > renders with right slot correctly 1`] = `
 </footer>"
 `;
 
-exports[`Footer > renders with top slot correctly 1`] = `
+exports[`footer > renders with top slot correctly 1`] = `
 "<footer data-slot="root" class="">
   <div data-slot="top" class="">Top slot</div>
   <div class="" data-slot="container">
@@ -84,7 +84,7 @@ exports[`Footer > renders with top slot correctly 1`] = `
 </footer>"
 `;
 
-exports[`Footer > renders with ui correctly 1`] = `
+exports[`footer > renders with ui correctly 1`] = `
 "<footer data-slot="root" class="">
   <!--v-if-->
   <div class="lg:gap-x-1.5" data-slot="container">

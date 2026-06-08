@@ -1,12 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PageSection > renders with as correctly 1`] = `
+exports[`pageSection > renders with as correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>
 </div>"
 `;
 
-exports[`PageSection > renders with body slot correctly 1`] = `
+exports[`pageSection > renders with body slot correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -19,19 +19,19 @@ exports[`PageSection > renders with body slot correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with bottom slot correctly 1`] = `
+exports[`pageSection > renders with bottom slot correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>Bottom slot
 </section>"
 `;
 
-exports[`PageSection > renders with class correctly 1`] = `
+exports[`pageSection > renders with class correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="absolute">
   <div class="" data-slot="container"></div>
 </section>"
 `;
 
-exports[`PageSection > renders with default slot correctly 1`] = `
+exports[`pageSection > renders with default slot correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <!--v-if-->Default slot
@@ -39,7 +39,7 @@ exports[`PageSection > renders with default slot correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with description correctly 1`] = `
+exports[`pageSection > renders with description correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -57,7 +57,7 @@ exports[`PageSection > renders with description correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with description slot correctly 1`] = `
+exports[`pageSection > renders with description slot correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -75,7 +75,7 @@ exports[`PageSection > renders with description slot correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with features and description correctly 1`] = `
+exports[`pageSection > renders with features and description correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -104,7 +104,7 @@ exports[`PageSection > renders with features and description correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with features and title correctly 1`] = `
+exports[`pageSection > renders with features and title correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -133,7 +133,7 @@ exports[`PageSection > renders with features and title correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with features correctly 1`] = `
+exports[`pageSection > renders with features correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -157,7 +157,7 @@ exports[`PageSection > renders with features correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with features slot correctly 1`] = `
+exports[`pageSection > renders with features slot correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -172,7 +172,7 @@ exports[`PageSection > renders with features slot correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with footer slot correctly 1`] = `
+exports[`pageSection > renders with footer slot correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -185,7 +185,7 @@ exports[`PageSection > renders with footer slot correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with header slot correctly 1`] = `
+exports[`pageSection > renders with header slot correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -198,7 +198,7 @@ exports[`PageSection > renders with header slot correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with headline correctly 1`] = `
+exports[`pageSection > renders with headline correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -216,7 +216,7 @@ exports[`PageSection > renders with headline correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with headline slot correctly 1`] = `
+exports[`pageSection > renders with headline slot correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -234,7 +234,7 @@ exports[`PageSection > renders with headline slot correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with icon correctly 1`] = `
+exports[`pageSection > renders with icon correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -252,7 +252,7 @@ exports[`PageSection > renders with icon correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with leading slot correctly 1`] = `
+exports[`pageSection > renders with leading slot correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -270,7 +270,7 @@ exports[`PageSection > renders with leading slot correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with links and features correctly 1`] = `
+exports[`pageSection > renders with links and features correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -299,7 +299,7 @@ exports[`PageSection > renders with links and features correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with links correctly 1`] = `
+exports[`pageSection > renders with links correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -317,7 +317,7 @@ exports[`PageSection > renders with links correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with links slot correctly 1`] = `
+exports[`pageSection > renders with links slot correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -332,7 +332,7 @@ exports[`PageSection > renders with links slot correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with orientation horizontal correctly 1`] = `
+exports[`pageSection > renders with orientation horizontal correctly 1`] = `
 "<section data-orientation="horizontal" data-slot="root" class="">
   <div class="" data-slot="container">
     <!--v-if-->
@@ -341,7 +341,7 @@ exports[`PageSection > renders with orientation horizontal correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with orientation horizontal features correctly 1`] = `
+exports[`pageSection > renders with orientation horizontal features correctly 1`] = `
 "<section data-orientation="horizontal" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -365,7 +365,7 @@ exports[`PageSection > renders with orientation horizontal features correctly 1`
 </section>"
 `;
 
-exports[`PageSection > renders with orientation horizontal links correctly 1`] = `
+exports[`pageSection > renders with orientation horizontal links correctly 1`] = `
 "<section data-orientation="horizontal" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -383,7 +383,7 @@ exports[`PageSection > renders with orientation horizontal links correctly 1`] =
 </section>"
 `;
 
-exports[`PageSection > renders with orientation horizontal reverse correctly 1`] = `
+exports[`pageSection > renders with orientation horizontal reverse correctly 1`] = `
 "<section data-orientation="horizontal" data-slot="root" class="">
   <div class="" data-slot="container">
     <!--v-if-->
@@ -392,13 +392,13 @@ exports[`PageSection > renders with orientation horizontal reverse correctly 1`]
 </section>"
 `;
 
-exports[`PageSection > renders with reverse correctly 1`] = `
+exports[`pageSection > renders with reverse correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container"></div>
 </section>"
 `;
 
-exports[`PageSection > renders with title correctly 1`] = `
+exports[`pageSection > renders with title correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -416,7 +416,7 @@ exports[`PageSection > renders with title correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with title slot correctly 1`] = `
+exports[`pageSection > renders with title slot correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="" data-slot="container">
     <div data-slot="wrapper" class="">
@@ -434,12 +434,12 @@ exports[`PageSection > renders with title slot correctly 1`] = `
 </section>"
 `;
 
-exports[`PageSection > renders with top slot correctly 1`] = `
+exports[`pageSection > renders with top slot correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">Top slot<div class="" data-slot="container"></div>
 </section>"
 `;
 
-exports[`PageSection > renders with ui correctly 1`] = `
+exports[`pageSection > renders with ui correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div class="max-w-5xl" data-slot="container"></div>
 </section>"

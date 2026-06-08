@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ContentNavigation > renders with class correctly 1`] = `
+exports[`contentNavigation > renders with class correctly 1`] = `
 "<nav data-slot="root" class="w-48">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -62,7 +62,7 @@ exports[`ContentNavigation > renders with class correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with defaultOpen correctly 1`] = `
+exports[`contentNavigation > renders with defaultOpen correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -124,7 +124,7 @@ exports[`ContentNavigation > renders with defaultOpen correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with link slot correctly 1`] = `
+exports[`contentNavigation > renders with link slot correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">Link slot</button>
@@ -154,7 +154,7 @@ exports[`ContentNavigation > renders with link slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with link-leading slot correctly 1`] = `
+exports[`contentNavigation > renders with link-leading slot correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">Link leading slot<span data-slot="linkTitle" class="">Getting Started<!--v-if--></span><span data-slot="linkTrailing" class=""><span data-slot="linkTrailingBadge" class=""><!--v-if--><span data-slot="label" class="">New</span>
@@ -204,7 +204,7 @@ exports[`ContentNavigation > renders with link-leading slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with link-title slot correctly 1`] = `
+exports[`contentNavigation > renders with link-title slot correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -266,7 +266,7 @@ exports[`ContentNavigation > renders with link-title slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with link-trailing slot correctly 1`] = `
+exports[`contentNavigation > renders with link-trailing slot correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -318,7 +318,7 @@ exports[`ContentNavigation > renders with link-trailing slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with navigation correctly 1`] = `
+exports[`contentNavigation > renders with navigation correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -380,7 +380,7 @@ exports[`ContentNavigation > renders with navigation correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with neutral variant link correctly 1`] = `
+exports[`contentNavigation > renders with neutral variant link correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -442,7 +442,7 @@ exports[`ContentNavigation > renders with neutral variant link correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with neutral variant link highlight correctly 1`] = `
+exports[`contentNavigation > renders with neutral variant link highlight correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -504,7 +504,7 @@ exports[`ContentNavigation > renders with neutral variant link highlight correct
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with neutral variant link highlight neutral correctly 1`] = `
+exports[`contentNavigation > renders with neutral variant link highlight neutral correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -566,7 +566,7 @@ exports[`ContentNavigation > renders with neutral variant link highlight neutral
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with neutral variant pill correctly 1`] = `
+exports[`contentNavigation > renders with neutral variant pill correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -628,7 +628,7 @@ exports[`ContentNavigation > renders with neutral variant pill correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with neutral variant pill highlight correctly 1`] = `
+exports[`contentNavigation > renders with neutral variant pill highlight correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -690,7 +690,7 @@ exports[`ContentNavigation > renders with neutral variant pill highlight correct
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with neutral variant pill highlight neutral correctly 1`] = `
+exports[`contentNavigation > renders with neutral variant pill highlight neutral correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -752,7 +752,7 @@ exports[`ContentNavigation > renders with neutral variant pill highlight neutral
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with primary variant link correctly 1`] = `
+exports[`contentNavigation > renders with primary variant link correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -814,7 +814,7 @@ exports[`ContentNavigation > renders with primary variant link correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with primary variant link highlight correctly 1`] = `
+exports[`contentNavigation > renders with primary variant link highlight correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -876,7 +876,7 @@ exports[`ContentNavigation > renders with primary variant link highlight correct
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with primary variant pill correctly 1`] = `
+exports[`contentNavigation > renders with primary variant pill correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -938,7 +938,7 @@ exports[`ContentNavigation > renders with primary variant pill correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with primary variant pill highlight correctly 1`] = `
+exports[`contentNavigation > renders with primary variant pill highlight correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -1000,7 +1000,7 @@ exports[`ContentNavigation > renders with primary variant pill highlight correct
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with trailingIcon correctly 1`] = `
+exports[`contentNavigation > renders with trailingIcon correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -1062,7 +1062,7 @@ exports[`ContentNavigation > renders with trailingIcon correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders with ui correctly 1`] = `
+exports[`contentNavigation > renders with ui correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -1124,7 +1124,7 @@ exports[`ContentNavigation > renders with ui correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders without collapsible correctly 1`] = `
+exports[`contentNavigation > renders without collapsible correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">
@@ -1186,7 +1186,7 @@ exports[`ContentNavigation > renders without collapsible correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentNavigation > renders without defaultOpen correctly 1`] = `
+exports[`contentNavigation > renders without defaultOpen correctly 1`] = `
 "<nav data-slot="root">
   <ul>
     <li data-state="open" data-orientation="vertical" data-slot="itemWithChildren" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" class="">

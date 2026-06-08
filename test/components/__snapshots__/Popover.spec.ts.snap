@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Popover > renders with anchor slot correctly 1`] = `
+exports[`popover > renders with anchor slot correctly 1`] = `
 "<!--v-if-->
 Anchor slot
 <!--teleport start-->
@@ -16,7 +16,7 @@ Anchor slot
 <!--teleport end-->"
 `;
 
-exports[`Popover > renders with arrow correctly 1`] = `
+exports[`popover > renders with arrow correctly 1`] = `
 "<!--v-if-->
 <!--v-if-->
 <!--teleport start-->
@@ -32,7 +32,7 @@ exports[`Popover > renders with arrow correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Popover > renders with class correctly 1`] = `
+exports[`popover > renders with class correctly 1`] = `
 "<!--v-if-->
 <!--v-if-->
 <!--teleport start-->
@@ -48,7 +48,7 @@ exports[`Popover > renders with class correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Popover > renders with content slot correctly 1`] = `
+exports[`popover > renders with content slot correctly 1`] = `
 "<!--v-if-->
 <!--v-if-->
 <!--teleport start-->
@@ -66,7 +66,7 @@ exports[`Popover > renders with content slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Popover > renders with default slot correctly 1`] = `
+exports[`popover > renders with default slot correctly 1`] = `
 "Default slot
 <!--v-if-->
 <!--teleport start-->
@@ -82,7 +82,7 @@ exports[`Popover > renders with default slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Popover > renders with open correctly 1`] = `
+exports[`popover > renders with open correctly 1`] = `
 "<!--v-if-->
 <!--v-if-->
 <!--teleport start-->
@@ -98,7 +98,25 @@ exports[`Popover > renders with open correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Popover > renders with ui correctly 1`] = `
+exports[`popover > renders with reference correctly 1`] = `
+"<!--v-if-->
+<!--v-if-->
+<!--teleport start-->
+
+
+
+<div data-akar-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-dismissable-layer="" style="--akar-popover-content-transform-origin: var(--akar-popper-transform-origin); --akar-popover-content-available-width: var(--akar-popper-available-width); --akar-popover-content-available-height: var(--akar-popper-available-height); --akar-popover-trigger-width: var(--akar-popper-anchor-width); --akar-popover-trigger-height: var(--akar-popper-anchor-height); animation: none;" tabindex="-1" data-slot="content" id="akar-popover-content-v-0-0-0" data-state="open" aria-labelledby="" role="dialog" data-side="bottom" data-align="center">Content slot
+    <!--v-if-->
+  </div>
+</div>
+
+
+
+<!--teleport end-->"
+`;
+
+exports[`popover > renders with ui correctly 1`] = `
 "<!--v-if-->
 <!--v-if-->
 <!--teleport start-->

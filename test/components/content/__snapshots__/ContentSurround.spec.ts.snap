@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ContentSurround > renders with as correctly 1`] = `
+exports[`contentSurround > renders with as correctly 1`] = `
 "<section data-slot="root"><a href="/getting-started" data-slot="link" class="">
     <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
     <p data-slot="linkTitle" class="">Introduction</p>
@@ -12,7 +12,7 @@ exports[`ContentSurround > renders with as correctly 1`] = `
   </a></section>"
 `;
 
-exports[`ContentSurround > renders with class correctly 1`] = `
+exports[`contentSurround > renders with class correctly 1`] = `
 "<div data-slot="root" class="gap-12"><a href="/getting-started" data-slot="link" class="">
     <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
     <p data-slot="linkTitle" class="">Introduction</p>
@@ -24,9 +24,9 @@ exports[`ContentSurround > renders with class correctly 1`] = `
   </a></div>"
 `;
 
-exports[`ContentSurround > renders with link slot correctly 1`] = `"<div data-slot="root"><a href="/getting-started" data-slot="link" class="">Link slot</a><a href="/getting-started/theme" data-slot="link" class="">Link slot</a></div>"`;
+exports[`contentSurround > renders with link slot correctly 1`] = `"<div data-slot="root"><a href="/getting-started" data-slot="link" class="">Link slot</a><a href="/getting-started/theme" data-slot="link" class="">Link slot</a></div>"`;
 
-exports[`ContentSurround > renders with link-leading slot correctly 1`] = `
+exports[`contentSurround > renders with link-leading slot correctly 1`] = `
 "<div data-slot="root"><a href="/getting-started" data-slot="link" class="">
     <div data-slot="linkLeading" class="">Link leading slot</div>
     <p data-slot="linkTitle" class="">Introduction</p>
@@ -38,7 +38,7 @@ exports[`ContentSurround > renders with link-leading slot correctly 1`] = `
   </a></div>"
 `;
 
-exports[`ContentSurround > renders with link-title slot correctly 1`] = `
+exports[`contentSurround > renders with link-title slot correctly 1`] = `
 "<div data-slot="root"><a href="/getting-started" data-slot="link" class="">
     <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
     <p data-slot="linkTitle" class="">Link title slot</p>
@@ -50,7 +50,7 @@ exports[`ContentSurround > renders with link-title slot correctly 1`] = `
   </a></div>"
 `;
 
-exports[`ContentSurround > renders with nextIcon correctly 1`] = `
+exports[`contentSurround > renders with nextIcon correctly 1`] = `
 "<div data-slot="root"><a href="/getting-started" data-slot="link" class="">
     <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
     <p data-slot="linkTitle" class="">Introduction</p>
@@ -62,7 +62,7 @@ exports[`ContentSurround > renders with nextIcon correctly 1`] = `
   </a></div>"
 `;
 
-exports[`ContentSurround > renders with prevIcon correctly 1`] = `
+exports[`contentSurround > renders with prevIcon correctly 1`] = `
 "<div data-slot="root"><a href="/getting-started" data-slot="link" class="">
     <div data-slot="linkLeading" class=""><span class="iconify i-lucide:chevron-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
     <p data-slot="linkTitle" class="">Introduction</p>
@@ -74,7 +74,7 @@ exports[`ContentSurround > renders with prevIcon correctly 1`] = `
   </a></div>"
 `;
 
-exports[`ContentSurround > renders with surround correctly 1`] = `
+exports[`contentSurround > renders with surround correctly 1`] = `
 "<div data-slot="root"><a href="/getting-started" data-slot="link" class="">
     <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
     <p data-slot="linkTitle" class="">Introduction</p>
@@ -86,7 +86,7 @@ exports[`ContentSurround > renders with surround correctly 1`] = `
   </a></div>"
 `;
 
-exports[`ContentSurround > renders with ui correctly 1`] = `
+exports[`contentSurround > renders with ui correctly 1`] = `
 "<div data-slot="root"><a href="/getting-started" data-slot="link" class="">
     <div data-slot="linkLeading" class=""><span class="iconify i-lucide:arrow-left" aria-hidden="true" data-slot="linkLeadingIcon"></span></div>
     <p data-slot="linkTitle" class="text-xl">Introduction</p>

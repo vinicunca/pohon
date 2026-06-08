@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Header > renders with as correctly 1`] = `
+exports[`header > renders with as correctly 1`] = `
 "<section data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -18,7 +18,7 @@ exports[`Header > renders with as correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with body slot correctly 1`] = `
+exports[`header > renders with body slot correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -36,7 +36,7 @@ exports[`Header > renders with body slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with bottom slot correctly 1`] = `
+exports[`header > renders with bottom slot correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -54,7 +54,7 @@ exports[`Header > renders with bottom slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with class correctly 1`] = `
+exports[`header > renders with class correctly 1`] = `
 "<header data-slot="root" class="border-b-0">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -72,7 +72,7 @@ exports[`Header > renders with class correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with content slot correctly 1`] = `
+exports[`header > renders with content slot correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -90,7 +90,7 @@ exports[`Header > renders with content slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with default slot correctly 1`] = `
+exports[`header > renders with default slot correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -108,7 +108,7 @@ exports[`Header > renders with default slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with left slot correctly 1`] = `
+exports[`header > renders with left slot correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -126,7 +126,7 @@ exports[`Header > renders with left slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with mode drawer correctly 1`] = `
+exports[`header > renders with mode drawer correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -156,7 +156,7 @@ exports[`Header > renders with mode drawer correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with mode modal correctly 1`] = `
+exports[`header > renders with mode modal correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -195,7 +195,7 @@ exports[`Header > renders with mode modal correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with mode slideover correctly 1`] = `
+exports[`header > renders with mode slideover correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -232,7 +232,7 @@ exports[`Header > renders with mode slideover correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with right slot correctly 1`] = `
+exports[`header > renders with right slot correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -250,7 +250,7 @@ exports[`Header > renders with right slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with title correctly 1`] = `
+exports[`header > renders with title correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -268,7 +268,7 @@ exports[`Header > renders with title correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with title slot correctly 1`] = `
+exports[`header > renders with title slot correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -286,7 +286,7 @@ exports[`Header > renders with title slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with to correctly 1`] = `
+exports[`header > renders with to correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -304,7 +304,7 @@ exports[`Header > renders with to correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with toggle correctly 1`] = `
+exports[`header > renders with toggle correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -322,7 +322,7 @@ exports[`Header > renders with toggle correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with toggle slot correctly 1`] = `
+exports[`header > renders with toggle slot correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">
@@ -337,7 +337,7 @@ exports[`Header > renders with toggle slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with toggleSide correctly 1`] = `
+exports[`header > renders with toggleSide correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class=""><button type="button" aria-label="Open menu" data-slot="base" class=""><span class="iconify i-lucide:menu" aria-hidden="true" data-slot="leadingIcon"></span>
@@ -355,7 +355,7 @@ exports[`Header > renders with toggleSide correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with top slot correctly 1`] = `
+exports[`header > renders with top slot correctly 1`] = `
 "<header data-slot="root">Top slot<div class="" data-slot="container">
     <div data-slot="left" class="">
       <!--v-if--><a href="/" aria-label="Pohon UI" data-slot="title" class="">Pohon UI</a>
@@ -372,7 +372,7 @@ exports[`Header > renders with top slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders with ui correctly 1`] = `
+exports[`header > renders with ui correctly 1`] = `
 "<header data-slot="root">
   <div class="gap-1.5" data-slot="container">
     <div data-slot="left" class="">
@@ -390,7 +390,7 @@ exports[`Header > renders with ui correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Header > renders without toggle correctly 1`] = `
+exports[`header > renders without toggle correctly 1`] = `
 "<header data-slot="root">
   <div class="" data-slot="container">
     <div data-slot="left" class="">

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`NavigationMenu > renders with arrow correctly 1`] = `
+exports[`navigationMenu > renders with arrow correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -53,7 +53,7 @@ exports[`NavigationMenu > renders with arrow correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with as correctly 1`] = `
+exports[`navigationMenu > renders with as correctly 1`] = `
 "<section data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -101,7 +101,7 @@ exports[`NavigationMenu > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`NavigationMenu > renders with chip correctly 1`] = `
+exports[`navigationMenu > renders with chip correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -129,7 +129,7 @@ exports[`NavigationMenu > renders with chip correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with class correctly 1`] = `
+exports[`navigationMenu > renders with class correctly 1`] = `
 "<nav data-slot="root" class="w-48" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -177,7 +177,7 @@ exports[`NavigationMenu > renders with class correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with content orientation vertical correctly 1`] = `
+exports[`navigationMenu > renders with content orientation vertical correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -226,7 +226,7 @@ exports[`NavigationMenu > renders with content orientation vertical correctly 1`
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with custom slot correctly 1`] = `
+exports[`navigationMenu > renders with custom slot correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -274,7 +274,7 @@ exports[`NavigationMenu > renders with custom slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with defaultValue correctly 1`] = `
+exports[`navigationMenu > renders with defaultValue correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -323,7 +323,7 @@ exports[`NavigationMenu > renders with defaultValue correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with externalIcon correctly 1`] = `
+exports[`navigationMenu > renders with externalIcon correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -371,7 +371,7 @@ exports[`NavigationMenu > renders with externalIcon correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with item slot correctly 1`] = `
+exports[`navigationMenu > renders with item slot correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -413,7 +413,7 @@ exports[`NavigationMenu > renders with item slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with item-label slot correctly 1`] = `
+exports[`navigationMenu > renders with item-label slot correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -461,7 +461,7 @@ exports[`NavigationMenu > renders with item-label slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with item-leading slot correctly 1`] = `
+exports[`navigationMenu > renders with item-leading slot correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -509,7 +509,7 @@ exports[`NavigationMenu > renders with item-leading slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with item-trailing slot correctly 1`] = `
+exports[`navigationMenu > renders with item-trailing slot correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -551,7 +551,7 @@ exports[`NavigationMenu > renders with item-trailing slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with items correctly 1`] = `
+exports[`navigationMenu > renders with items correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -599,7 +599,7 @@ exports[`NavigationMenu > renders with items correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with labelKey correctly 1`] = `
+exports[`navigationMenu > renders with labelKey correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -647,7 +647,7 @@ exports[`NavigationMenu > renders with labelKey correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with modelValue correctly 1`] = `
+exports[`navigationMenu > renders with modelValue correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -696,7 +696,7 @@ exports[`NavigationMenu > renders with modelValue correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with neutral variant link correctly 1`] = `
+exports[`navigationMenu > renders with neutral variant link correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -744,7 +744,7 @@ exports[`NavigationMenu > renders with neutral variant link correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with neutral variant link highlight correctly 1`] = `
+exports[`navigationMenu > renders with neutral variant link highlight correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -792,7 +792,7 @@ exports[`NavigationMenu > renders with neutral variant link highlight correctly 
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with neutral variant link highlight neutral correctly 1`] = `
+exports[`navigationMenu > renders with neutral variant link highlight neutral correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -840,7 +840,7 @@ exports[`NavigationMenu > renders with neutral variant link highlight neutral co
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with neutral variant pill correctly 1`] = `
+exports[`navigationMenu > renders with neutral variant pill correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -888,7 +888,7 @@ exports[`NavigationMenu > renders with neutral variant pill correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with neutral variant pill highlight correctly 1`] = `
+exports[`navigationMenu > renders with neutral variant pill highlight correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -936,7 +936,7 @@ exports[`NavigationMenu > renders with neutral variant pill highlight correctly 
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with neutral variant pill highlight neutral correctly 1`] = `
+exports[`navigationMenu > renders with neutral variant pill highlight neutral correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -984,7 +984,7 @@ exports[`NavigationMenu > renders with neutral variant pill highlight neutral co
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with orientation vertical and collapsed correctly 1`] = `
+exports[`navigationMenu > renders with orientation vertical and collapsed correctly 1`] = `
 "<nav data-collapsed="true" data-slot="root" data-orientation="vertical" dir="ltr" data-akar-navigation-menu="">
   <ul data-slot="list">
     <li data-menu-item="" data-slot="item" class=""></li>
@@ -1019,7 +1019,7 @@ exports[`NavigationMenu > renders with orientation vertical and collapsed correc
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with orientation vertical correctly 1`] = `
+exports[`navigationMenu > renders with orientation vertical correctly 1`] = `
 "<nav data-slot="root" data-orientation="vertical" dir="ltr" data-akar-navigation-menu="">
   <ul data-slot="list">
     <li data-state="closed" data-orientation="vertical" data-slot="item" class="">
@@ -1064,7 +1064,7 @@ exports[`NavigationMenu > renders with orientation vertical correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with primary variant link correctly 1`] = `
+exports[`navigationMenu > renders with primary variant link correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -1112,7 +1112,7 @@ exports[`NavigationMenu > renders with primary variant link correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with primary variant link highlight correctly 1`] = `
+exports[`navigationMenu > renders with primary variant link highlight correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -1160,7 +1160,7 @@ exports[`NavigationMenu > renders with primary variant link highlight correctly 
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with primary variant pill correctly 1`] = `
+exports[`navigationMenu > renders with primary variant pill correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -1208,7 +1208,7 @@ exports[`NavigationMenu > renders with primary variant pill correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with primary variant pill highlight correctly 1`] = `
+exports[`navigationMenu > renders with primary variant pill highlight correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -1256,7 +1256,7 @@ exports[`NavigationMenu > renders with primary variant pill highlight correctly 
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with trailingIcon correctly 1`] = `
+exports[`navigationMenu > renders with trailingIcon correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -1304,7 +1304,7 @@ exports[`NavigationMenu > renders with trailingIcon correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with ui correctly 1`] = `
+exports[`navigationMenu > renders with ui correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -1352,7 +1352,7 @@ exports[`NavigationMenu > renders with ui correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with unmountOnHide correctly 1`] = `
+exports[`navigationMenu > renders with unmountOnHide correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -1487,7 +1487,7 @@ exports[`NavigationMenu > renders with unmountOnHide correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders with valueKey correctly 1`] = `
+exports[`navigationMenu > renders with valueKey correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">
@@ -1570,7 +1570,7 @@ exports[`NavigationMenu > renders with valueKey correctly 1`] = `
 </nav>"
 `;
 
-exports[`NavigationMenu > renders without externalIcon correctly 1`] = `
+exports[`navigationMenu > renders without externalIcon correctly 1`] = `
 "<nav data-slot="root" data-orientation="horizontal" dir="ltr" data-akar-navigation-menu="">
   <div style="position: relative;">
     <ul data-slot="list" data-orientation="horizontal">

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Modal > renders with actions slot correctly 1`] = `
+exports[`modal > renders with actions slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -25,7 +25,7 @@ exports[`Modal > renders with actions slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with body slot correctly 1`] = `
+exports[`modal > renders with body slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -50,7 +50,7 @@ exports[`Modal > renders with body slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with class correctly 1`] = `
+exports[`modal > renders with class correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -75,7 +75,7 @@ exports[`Modal > renders with class correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with close slot correctly 1`] = `
+exports[`modal > renders with close slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -97,7 +97,7 @@ exports[`Modal > renders with close slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with closeIcon correctly 1`] = `
+exports[`modal > renders with closeIcon correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -122,7 +122,7 @@ exports[`Modal > renders with closeIcon correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with content slot correctly 1`] = `
+exports[`modal > renders with content slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -138,7 +138,7 @@ exports[`Modal > renders with content slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with default slot correctly 1`] = `
+exports[`modal > renders with default slot correctly 1`] = `
 "Default slot
 <!--teleport start-->
 
@@ -163,7 +163,7 @@ exports[`Modal > renders with default slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with description correctly 1`] = `
+exports[`modal > renders with description correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -192,7 +192,7 @@ exports[`Modal > renders with description correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with description slot correctly 1`] = `
+exports[`modal > renders with description slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -220,7 +220,7 @@ exports[`Modal > renders with description slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with footer slot correctly 1`] = `
+exports[`modal > renders with footer slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -245,7 +245,7 @@ exports[`Modal > renders with footer slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with fullscreen correctly 1`] = `
+exports[`modal > renders with fullscreen correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -274,7 +274,7 @@ exports[`Modal > renders with fullscreen correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with header slot correctly 1`] = `
+exports[`modal > renders with header slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -294,7 +294,7 @@ exports[`Modal > renders with header slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with open correctly 1`] = `
+exports[`modal > renders with open correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -319,7 +319,7 @@ exports[`Modal > renders with open correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with scrollable and fullscreen correctly 1`] = `
+exports[`modal > renders with scrollable and fullscreen correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -347,7 +347,7 @@ exports[`Modal > renders with scrollable and fullscreen correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with scrollable and without overlay correctly 1`] = `
+exports[`modal > renders with scrollable and without overlay correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -375,7 +375,7 @@ exports[`Modal > renders with scrollable and without overlay correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with scrollable correctly 1`] = `
+exports[`modal > renders with scrollable correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -403,7 +403,7 @@ exports[`Modal > renders with scrollable correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with title correctly 1`] = `
+exports[`modal > renders with title correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -431,7 +431,7 @@ exports[`Modal > renders with title correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with title slot correctly 1`] = `
+exports[`modal > renders with title slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -459,7 +459,7 @@ exports[`Modal > renders with title slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders with ui correctly 1`] = `
+exports[`modal > renders with ui correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -484,7 +484,7 @@ exports[`Modal > renders with ui correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders without close correctly 1`] = `
+exports[`modal > renders without close correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -511,7 +511,7 @@ exports[`Modal > renders without close correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders without overlay correctly 1`] = `
+exports[`modal > renders without overlay correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -540,7 +540,7 @@ exports[`Modal > renders without overlay correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Modal > renders without transition correctly 1`] = `
+exports[`modal > renders without transition correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 

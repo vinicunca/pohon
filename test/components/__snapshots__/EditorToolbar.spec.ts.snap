@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`EditorToolbar > renders with as correctly 1`] = `
+exports[`editorToolbar > renders with as correctly 1`] = `
 "<section role="toolbar" data-slot="base" class="">
   <div role="group" data-slot="group" class=""><button type="button" disabled="" id="akar-dropdown-menu-trigger-v-0-0-0" aria-haspopup="menu" aria-expanded="false" data-state="closed" aria-label="Headings" data-slot="base" class=""><span class="iconify i-lucide:heading" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -31,7 +31,7 @@ exports[`EditorToolbar > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`EditorToolbar > renders with class correctly 1`] = `
+exports[`editorToolbar > renders with class correctly 1`] = `
 "<div role="toolbar" data-slot="base" class="overflow-x-auto">
   <div role="group" data-slot="group" class=""><button type="button" disabled="" id="akar-dropdown-menu-trigger-v-0-0-0" aria-haspopup="menu" aria-expanded="false" data-state="closed" aria-label="Headings" data-slot="base" class=""><span class="iconify i-lucide:heading" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -62,7 +62,7 @@ exports[`EditorToolbar > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`EditorToolbar > renders with item slot correctly 1`] = `
+exports[`editorToolbar > renders with item slot correctly 1`] = `
 "<div role="toolbar" data-slot="base" class="">
   <div role="group" data-slot="group" class="">Item slot</div>
   <div data-orientation="vertical" aria-orientation="vertical" role="separator" data-slot="separator" class=""></div>
@@ -71,7 +71,7 @@ exports[`EditorToolbar > renders with item slot correctly 1`] = `
 </div>"
 `;
 
-exports[`EditorToolbar > renders with layout bubble correctly 1`] = `
+exports[`editorToolbar > renders with layout bubble correctly 1`] = `
 "<div tabindex="-1" style="visibility: hidden; position: absolute;">
   <div role="toolbar" data-slot="base" class="">
     <div role="group" data-slot="group" class=""><button type="button" disabled="" id="akar-dropdown-menu-trigger-v-0-0-0" aria-haspopup="menu" aria-expanded="false" data-state="closed" aria-label="Headings" data-slot="base" class=""><span class="iconify i-lucide:heading" aria-hidden="true" data-slot="leadingIcon"></span>
@@ -104,7 +104,7 @@ exports[`EditorToolbar > renders with layout bubble correctly 1`] = `
 </div>"
 `;
 
-exports[`EditorToolbar > renders with layout floating correctly 1`] = `
+exports[`editorToolbar > renders with layout floating correctly 1`] = `
 "<div tabindex="-1" style="visibility: hidden; position: absolute;">
   <div role="toolbar" data-slot="base" class="">
     <div role="group" data-slot="group" class=""><button type="button" disabled="" id="akar-dropdown-menu-trigger-v-0-0-0" aria-haspopup="menu" aria-expanded="false" data-state="closed" aria-label="Headings" data-slot="base" class=""><span class="iconify i-lucide:heading" aria-hidden="true" data-slot="leadingIcon"></span>
@@ -137,7 +137,7 @@ exports[`EditorToolbar > renders with layout floating correctly 1`] = `
 </div>"
 `;
 
-exports[`EditorToolbar > renders with ui correctly 1`] = `
+exports[`editorToolbar > renders with ui correctly 1`] = `
 "<div role="toolbar" data-slot="base" class="">
   <div role="group" data-slot="group" class=""><button type="button" disabled="" id="akar-dropdown-menu-trigger-v-0-0-0" aria-haspopup="menu" aria-expanded="false" data-state="closed" aria-label="Headings" data-slot="base" class=""><span class="iconify i-lucide:heading" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->

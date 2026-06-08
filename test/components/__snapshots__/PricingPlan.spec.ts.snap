@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PricingPlan > renders with as correctly 1`] = `
+exports[`pricingPlan > renders with as correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -31,7 +31,7 @@ exports[`PricingPlan > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`PricingPlan > renders with badge correctly 1`] = `
+exports[`pricingPlan > renders with badge correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -47,7 +47,7 @@ exports[`PricingPlan > renders with badge correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with badge object correctly 1`] = `
+exports[`pricingPlan > renders with badge object correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -63,7 +63,7 @@ exports[`PricingPlan > renders with badge object correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with badge slot correctly 1`] = `
+exports[`pricingPlan > renders with badge slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -93,7 +93,7 @@ exports[`PricingPlan > renders with badge slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with billing cycle correctly 1`] = `
+exports[`pricingPlan > renders with billing cycle correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -113,7 +113,7 @@ exports[`PricingPlan > renders with billing cycle correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with billing period correctly 1`] = `
+exports[`pricingPlan > renders with billing period correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -135,7 +135,7 @@ exports[`PricingPlan > renders with billing period correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with billing slot correctly 1`] = `
+exports[`pricingPlan > renders with billing slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -166,7 +166,7 @@ exports[`PricingPlan > renders with billing slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with body slot correctly 1`] = `
+exports[`pricingPlan > renders with body slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">Body slot</div>
@@ -181,7 +181,7 @@ exports[`PricingPlan > renders with body slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with button correctly 1`] = `
+exports[`pricingPlan > renders with button correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -204,7 +204,7 @@ exports[`PricingPlan > renders with button correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with button slot correctly 1`] = `
+exports[`pricingPlan > renders with button slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -231,7 +231,7 @@ exports[`PricingPlan > renders with button slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with class correctly 1`] = `
+exports[`pricingPlan > renders with class correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="rounded-xl">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -262,7 +262,7 @@ exports[`PricingPlan > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with description correctly 1`] = `
+exports[`pricingPlan > renders with description correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -278,7 +278,7 @@ exports[`PricingPlan > renders with description correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with description slot correctly 1`] = `
+exports[`pricingPlan > renders with description slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -309,7 +309,7 @@ exports[`PricingPlan > renders with description slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with discount correctly 1`] = `
+exports[`pricingPlan > renders with discount correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -329,7 +329,7 @@ exports[`PricingPlan > renders with discount correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with discount slot correctly 1`] = `
+exports[`pricingPlan > renders with discount slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -360,7 +360,7 @@ exports[`PricingPlan > renders with discount slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with features correctly 1`] = `
+exports[`pricingPlan > renders with features correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -380,7 +380,7 @@ exports[`PricingPlan > renders with features correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with features object correctly 1`] = `
+exports[`pricingPlan > renders with features object correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -400,7 +400,7 @@ exports[`PricingPlan > renders with features object correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with features slot correctly 1`] = `
+exports[`pricingPlan > renders with features slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -427,7 +427,7 @@ exports[`PricingPlan > renders with features slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with footer slot correctly 1`] = `
+exports[`pricingPlan > renders with footer slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -451,7 +451,7 @@ exports[`PricingPlan > renders with footer slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with header slot correctly 1`] = `
+exports[`pricingPlan > renders with header slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <div data-slot="header" class="">Header slot</div>
   <div data-slot="body" class="">
@@ -482,7 +482,7 @@ exports[`PricingPlan > renders with header slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with highlight correctly 1`] = `
+exports[`pricingPlan > renders with highlight correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -513,7 +513,7 @@ exports[`PricingPlan > renders with highlight correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with orientation horizontal correctly 1`] = `
+exports[`pricingPlan > renders with orientation horizontal correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -544,7 +544,7 @@ exports[`PricingPlan > renders with orientation horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with orientation vertical correctly 1`] = `
+exports[`pricingPlan > renders with orientation vertical correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -575,7 +575,7 @@ exports[`PricingPlan > renders with orientation vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with price correctly 1`] = `
+exports[`pricingPlan > renders with price correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -595,7 +595,7 @@ exports[`PricingPlan > renders with price correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with price slot correctly 1`] = `
+exports[`pricingPlan > renders with price slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -626,7 +626,7 @@ exports[`PricingPlan > renders with price slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with scale correctly 1`] = `
+exports[`pricingPlan > renders with scale correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -657,7 +657,7 @@ exports[`PricingPlan > renders with scale correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with tagline correctly 1`] = `
+exports[`pricingPlan > renders with tagline correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -678,7 +678,7 @@ exports[`PricingPlan > renders with tagline correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with tagline slot correctly 1`] = `
+exports[`pricingPlan > renders with tagline slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -709,7 +709,7 @@ exports[`PricingPlan > renders with tagline slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with terms correctly 1`] = `
+exports[`pricingPlan > renders with terms correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -730,7 +730,7 @@ exports[`PricingPlan > renders with terms correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with terms slot correctly 1`] = `
+exports[`pricingPlan > renders with terms slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -761,7 +761,7 @@ exports[`PricingPlan > renders with terms slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with title correctly 1`] = `
+exports[`pricingPlan > renders with title correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -777,7 +777,7 @@ exports[`PricingPlan > renders with title correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with title slot correctly 1`] = `
+exports[`pricingPlan > renders with title slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -808,7 +808,7 @@ exports[`PricingPlan > renders with title slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with ui correctly 1`] = `
+exports[`pricingPlan > renders with ui correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -839,7 +839,7 @@ exports[`PricingPlan > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with variant outline correctly 1`] = `
+exports[`pricingPlan > renders with variant outline correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -870,7 +870,7 @@ exports[`PricingPlan > renders with variant outline correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with variant soft correctly 1`] = `
+exports[`pricingPlan > renders with variant soft correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -901,7 +901,7 @@ exports[`PricingPlan > renders with variant soft correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with variant solid correctly 1`] = `
+exports[`pricingPlan > renders with variant solid correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -932,7 +932,7 @@ exports[`PricingPlan > renders with variant solid correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingPlan > renders with variant subtle correctly 1`] = `
+exports[`pricingPlan > renders with variant subtle correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root">
   <!--v-if-->
   <div data-slot="body" class="">

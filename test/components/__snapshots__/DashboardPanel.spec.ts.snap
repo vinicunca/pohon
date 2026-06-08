@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DashboardPanel > renders with body slot correctly 1`] = `
+exports[`dashboardPanel > renders with body slot correctly 1`] = `
 "<div class="">
   <div id="dashboard-panel-v-0-0-0" data-dragging="false" data-slot="root">
     <div data-slot="body" class="">Body slot</div>
@@ -9,7 +9,7 @@ exports[`DashboardPanel > renders with body slot correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardPanel > renders with class correctly 1`] = `
+exports[`dashboardPanel > renders with class correctly 1`] = `
 "<div class="">
   <div id="dashboard-panel-v-0-0-0" data-dragging="false" data-slot="root" class="lg:border-none">
     <div data-slot="body" class=""></div>
@@ -18,14 +18,14 @@ exports[`DashboardPanel > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardPanel > renders with default slot correctly 1`] = `
+exports[`dashboardPanel > renders with default slot correctly 1`] = `
 "<div class="">
   <div id="dashboard-panel-v-0-0-0" data-dragging="false" data-slot="root">Default slot</div>
   <!--v-if-->
 </div>"
 `;
 
-exports[`DashboardPanel > renders with defaultSize correctly 1`] = `
+exports[`dashboardPanel > renders with defaultSize correctly 1`] = `
 "<div class="">
   <div id="dashboard-panel-v-0-0-0" data-dragging="false" data-slot="root" style="--width: 50%;">
     <div data-slot="body" class=""></div>
@@ -34,7 +34,7 @@ exports[`DashboardPanel > renders with defaultSize correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardPanel > renders with footer slot correctly 1`] = `
+exports[`dashboardPanel > renders with footer slot correctly 1`] = `
 "<div class="">
   <div id="dashboard-panel-v-0-0-0" data-dragging="false" data-slot="root">
     <div data-slot="body" class=""></div>Footer slot
@@ -43,7 +43,7 @@ exports[`DashboardPanel > renders with footer slot correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardPanel > renders with header slot correctly 1`] = `
+exports[`dashboardPanel > renders with header slot correctly 1`] = `
 "<div class="">
   <div id="dashboard-panel-v-0-0-0" data-dragging="false" data-slot="root">Header slot<div data-slot="body" class=""></div>
   </div>
@@ -51,7 +51,7 @@ exports[`DashboardPanel > renders with header slot correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardPanel > renders with id correctly 1`] = `
+exports[`dashboardPanel > renders with id correctly 1`] = `
 "<div class="">
   <div id="dashboard-panel-test" data-dragging="false" data-slot="root">
     <div data-slot="body" class=""></div>
@@ -60,7 +60,7 @@ exports[`DashboardPanel > renders with id correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardPanel > renders with maxSize correctly 1`] = `
+exports[`dashboardPanel > renders with maxSize correctly 1`] = `
 "<div class="">
   <div id="dashboard-panel-v-0-0-0" data-dragging="false" data-slot="root">
     <div data-slot="body" class=""></div>
@@ -69,7 +69,7 @@ exports[`DashboardPanel > renders with maxSize correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardPanel > renders with minSize correctly 1`] = `
+exports[`dashboardPanel > renders with minSize correctly 1`] = `
 "<div class="">
   <div id="dashboard-panel-v-0-0-0" data-dragging="false" data-slot="root">
     <div data-slot="body" class=""></div>
@@ -78,7 +78,7 @@ exports[`DashboardPanel > renders with minSize correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardPanel > renders with resizable correctly 1`] = `
+exports[`dashboardPanel > renders with resizable correctly 1`] = `
 "<div class="">
   <div id="dashboard-panel-v-0-0-0" data-dragging="false" data-slot="root">
     <div data-slot="body" class=""></div>
@@ -87,7 +87,7 @@ exports[`DashboardPanel > renders with resizable correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardPanel > renders with resize-handle slot correctly 1`] = `
+exports[`dashboardPanel > renders with resize-handle slot correctly 1`] = `
 "<div class="">
   <div id="dashboard-panel-v-0-0-0" data-dragging="false" data-slot="root">
     <div data-slot="body" class=""></div>
@@ -95,7 +95,7 @@ exports[`DashboardPanel > renders with resize-handle slot correctly 1`] = `
 </div>"
 `;
 
-exports[`DashboardPanel > renders with ui correctly 1`] = `
+exports[`dashboardPanel > renders with ui correctly 1`] = `
 "<div class="">
   <div id="dashboard-panel-v-0-0-0" data-dragging="false" data-slot="root">
     <div data-slot="body" class="p-8"></div>

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Timeline > renders with as correctly 1`] = `
+exports[`timeline > renders with as correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -45,7 +45,7 @@ exports[`Timeline > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`Timeline > renders with class correctly 1`] = `
+exports[`timeline > renders with class correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="gap-8">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -90,7 +90,7 @@ exports[`Timeline > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with custom-wrapper slot correctly 1`] = `
+exports[`timeline > renders with custom-wrapper slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -131,7 +131,7 @@ exports[`Timeline > renders with custom-wrapper slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with date slot correctly 1`] = `
+exports[`timeline > renders with date slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -176,7 +176,7 @@ exports[`Timeline > renders with date slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with defaultValue correctly 1`] = `
+exports[`timeline > renders with defaultValue correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="" data-state="completed">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -221,7 +221,7 @@ exports[`Timeline > renders with defaultValue correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with description slot correctly 1`] = `
+exports[`timeline > renders with description slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -266,7 +266,7 @@ exports[`Timeline > renders with description slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with indicator slot correctly 1`] = `
+exports[`timeline > renders with indicator slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root">Indicator slot</span>
@@ -311,7 +311,7 @@ exports[`Timeline > renders with indicator slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with items correctly 1`] = `
+exports[`timeline > renders with items correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -356,7 +356,7 @@ exports[`Timeline > renders with items correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with modelValue correctly 1`] = `
+exports[`timeline > renders with modelValue correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="" data-state="completed">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -401,7 +401,7 @@ exports[`Timeline > renders with modelValue correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with neutral color correctly 1`] = `
+exports[`timeline > renders with neutral color correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -446,52 +446,7 @@ exports[`Timeline > renders with neutral color correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with reverse and defaultValue correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="">
-  <div data-slot="item" class="">
-    <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
-      <div data-orientation="vertical" aria-orientation="vertical" role="separator" data-slot="separator" class=""></div>
-    </div>
-    <div data-slot="wrapper" class="">
-      <div data-slot="date" class="">Mar 15, 2025</div>
-      <div data-slot="title" class="">Project Kickoff</div>
-      <div data-slot="description" class="">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
-    </div>
-  </div>
-  <div data-slot="item" class="" data-state="active">
-    <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:palette text-inherit" aria-hidden="true" data-slot="icon"></span></span>
-      <div data-orientation="vertical" aria-orientation="vertical" role="separator" data-slot="separator" class=""></div>
-    </div>
-    <div data-slot="wrapper" class="">
-      <div data-slot="date" class="">Mar 22, 2025</div>
-      <div data-slot="title" class="">Design Phase</div>
-      <div data-slot="description" class="">User research and design workshops. Created wireframes and prototypes for user testing</div>
-    </div>
-  </div>
-  <div data-slot="item" class="" data-state="completed">
-    <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:code text-inherit" aria-hidden="true" data-slot="icon"></span></span>
-      <div data-orientation="vertical" aria-orientation="vertical" role="separator" data-slot="separator" class=""></div>
-    </div>
-    <div data-slot="wrapper" class="">
-      <div data-slot="date" class="">Mar 29, 2025</div>
-      <div data-slot="title" class="">Development Sprint</div>
-      <div data-slot="description" class="">Frontend and backend development. Implemented core features and integrated with APIs.</div>
-    </div>
-  </div>
-  <div data-slot="item" class="" data-state="completed">
-    <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:check-circle text-inherit" aria-hidden="true" data-slot="icon"></span></span>
-      <!--v-if-->
-    </div>
-    <div data-slot="wrapper" class="">
-      <div data-slot="date" class="">Apr 5, 2025</div>
-      <div data-slot="title" class="">Testing &amp; Deployment</div>
-      <div data-slot="description" class="">QA testing and performance optimization. Deployed the application to production.</div>
-    </div>
-  </div>
-</div>"
-`;
-
-exports[`Timeline > renders with reverse and modelValue correctly 1`] = `
+exports[`timeline > renders with reverse and defaultValue correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -536,7 +491,52 @@ exports[`Timeline > renders with reverse and modelValue correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with reverse correctly 1`] = `
+exports[`timeline > renders with reverse and modelValue correctly 1`] = `
+"<div data-orientation="vertical" data-slot="root" class="">
+  <div data-slot="item" class="">
+    <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
+      <div data-orientation="vertical" aria-orientation="vertical" role="separator" data-slot="separator" class=""></div>
+    </div>
+    <div data-slot="wrapper" class="">
+      <div data-slot="date" class="">Mar 15, 2025</div>
+      <div data-slot="title" class="">Project Kickoff</div>
+      <div data-slot="description" class="">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
+    </div>
+  </div>
+  <div data-slot="item" class="" data-state="active">
+    <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:palette text-inherit" aria-hidden="true" data-slot="icon"></span></span>
+      <div data-orientation="vertical" aria-orientation="vertical" role="separator" data-slot="separator" class=""></div>
+    </div>
+    <div data-slot="wrapper" class="">
+      <div data-slot="date" class="">Mar 22, 2025</div>
+      <div data-slot="title" class="">Design Phase</div>
+      <div data-slot="description" class="">User research and design workshops. Created wireframes and prototypes for user testing</div>
+    </div>
+  </div>
+  <div data-slot="item" class="" data-state="completed">
+    <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:code text-inherit" aria-hidden="true" data-slot="icon"></span></span>
+      <div data-orientation="vertical" aria-orientation="vertical" role="separator" data-slot="separator" class=""></div>
+    </div>
+    <div data-slot="wrapper" class="">
+      <div data-slot="date" class="">Mar 29, 2025</div>
+      <div data-slot="title" class="">Development Sprint</div>
+      <div data-slot="description" class="">Frontend and backend development. Implemented core features and integrated with APIs.</div>
+    </div>
+  </div>
+  <div data-slot="item" class="" data-state="completed">
+    <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:check-circle text-inherit" aria-hidden="true" data-slot="icon"></span></span>
+      <!--v-if-->
+    </div>
+    <div data-slot="wrapper" class="">
+      <div data-slot="date" class="">Apr 5, 2025</div>
+      <div data-slot="title" class="">Testing &amp; Deployment</div>
+      <div data-slot="description" class="">QA testing and performance optimization. Deployed the application to production.</div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`timeline > renders with reverse correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -581,7 +581,7 @@ exports[`Timeline > renders with reverse correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size 2xl horizontal correctly 1`] = `
+exports[`timeline > renders with size 2xl horizontal correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -626,7 +626,7 @@ exports[`Timeline > renders with size 2xl horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size 2xl vertical correctly 1`] = `
+exports[`timeline > renders with size 2xl vertical correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -671,7 +671,7 @@ exports[`Timeline > renders with size 2xl vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size 2xs horizontal correctly 1`] = `
+exports[`timeline > renders with size 2xs horizontal correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -716,7 +716,7 @@ exports[`Timeline > renders with size 2xs horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size 2xs vertical correctly 1`] = `
+exports[`timeline > renders with size 2xs vertical correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -761,7 +761,7 @@ exports[`Timeline > renders with size 2xs vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size 3xl horizontal correctly 1`] = `
+exports[`timeline > renders with size 3xl horizontal correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -806,7 +806,7 @@ exports[`Timeline > renders with size 3xl horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size 3xl vertical correctly 1`] = `
+exports[`timeline > renders with size 3xl vertical correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -851,7 +851,7 @@ exports[`Timeline > renders with size 3xl vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size 3xs horizontal correctly 1`] = `
+exports[`timeline > renders with size 3xs horizontal correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -896,7 +896,7 @@ exports[`Timeline > renders with size 3xs horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size 3xs vertical correctly 1`] = `
+exports[`timeline > renders with size 3xs vertical correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -941,7 +941,7 @@ exports[`Timeline > renders with size 3xs vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size lg horizontal correctly 1`] = `
+exports[`timeline > renders with size lg horizontal correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -986,7 +986,7 @@ exports[`Timeline > renders with size lg horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size lg vertical correctly 1`] = `
+exports[`timeline > renders with size lg vertical correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -1031,7 +1031,7 @@ exports[`Timeline > renders with size lg vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size md horizontal correctly 1`] = `
+exports[`timeline > renders with size md horizontal correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -1076,7 +1076,7 @@ exports[`Timeline > renders with size md horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size md vertical correctly 1`] = `
+exports[`timeline > renders with size md vertical correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -1121,7 +1121,7 @@ exports[`Timeline > renders with size md vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size sm horizontal correctly 1`] = `
+exports[`timeline > renders with size sm horizontal correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -1166,7 +1166,7 @@ exports[`Timeline > renders with size sm horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size sm vertical correctly 1`] = `
+exports[`timeline > renders with size sm vertical correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -1211,7 +1211,7 @@ exports[`Timeline > renders with size sm vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size xl horizontal correctly 1`] = `
+exports[`timeline > renders with size xl horizontal correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -1256,7 +1256,7 @@ exports[`Timeline > renders with size xl horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size xl vertical correctly 1`] = `
+exports[`timeline > renders with size xl vertical correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -1301,7 +1301,7 @@ exports[`Timeline > renders with size xl vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size xs horizontal correctly 1`] = `
+exports[`timeline > renders with size xs horizontal correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -1346,7 +1346,7 @@ exports[`Timeline > renders with size xs horizontal correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with size xs vertical correctly 1`] = `
+exports[`timeline > renders with size xs vertical correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -1391,7 +1391,7 @@ exports[`Timeline > renders with size xs vertical correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with title slot correctly 1`] = `
+exports[`timeline > renders with title slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -1436,7 +1436,7 @@ exports[`Timeline > renders with title slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with ui correctly 1`] = `
+exports[`timeline > renders with ui correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -1481,7 +1481,7 @@ exports[`Timeline > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with valueKey correctly 1`] = `
+exports[`timeline > renders with valueKey correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="" data-state="completed">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>
@@ -1526,7 +1526,7 @@ exports[`Timeline > renders with valueKey correctly 1`] = `
 </div>"
 `;
 
-exports[`Timeline > renders with wrapper slot correctly 1`] = `
+exports[`timeline > renders with wrapper slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="">
   <div data-slot="item" class="">
     <div data-slot="container" class=""><span data-slot="root"><span class="iconify i-lucide:rocket text-inherit" aria-hidden="true" data-slot="icon"></span></span>

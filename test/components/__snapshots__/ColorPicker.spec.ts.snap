@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ColorPicker > renders with as correctly 1`] = `
+exports[`colorPicker > renders with as correctly 1`] = `
 "<section data-v-c9a043d6="" data-slot="root" class="">
   <div data-v-c9a043d6="" data-slot="picker" class="">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
@@ -15,7 +15,7 @@ exports[`ColorPicker > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`ColorPicker > renders with class correctly 1`] = `
+exports[`colorPicker > renders with class correctly 1`] = `
 "<div data-v-c9a043d6="" data-slot="root" class="w-96">
   <div data-v-c9a043d6="" data-slot="picker" class="">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
@@ -30,7 +30,7 @@ exports[`ColorPicker > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`ColorPicker > renders with disabled correctly 1`] = `
+exports[`colorPicker > renders with disabled correctly 1`] = `
 "<div data-v-c9a043d6="" data-slot="root" class="" data-disabled="true">
   <div data-v-c9a043d6="" data-slot="picker" class="">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
@@ -45,7 +45,7 @@ exports[`ColorPicker > renders with disabled correctly 1`] = `
 </div>"
 `;
 
-exports[`ColorPicker > renders with format cmyk correctly 1`] = `
+exports[`colorPicker > renders with format cmyk correctly 1`] = `
 "<div data-v-c9a043d6="" data-slot="root" class="">
   <div data-v-c9a043d6="" data-slot="picker" class="">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #00FF8C;">
@@ -60,7 +60,7 @@ exports[`ColorPicker > renders with format cmyk correctly 1`] = `
 </div>"
 `;
 
-exports[`ColorPicker > renders with format hex correctly 1`] = `
+exports[`colorPicker > renders with format hex correctly 1`] = `
 "<div data-v-c9a043d6="" data-slot="root" class="">
   <div data-v-c9a043d6="" data-slot="picker" class="">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #00FF8C;">
@@ -75,7 +75,7 @@ exports[`ColorPicker > renders with format hex correctly 1`] = `
 </div>"
 `;
 
-exports[`ColorPicker > renders with format hsl correctly 1`] = `
+exports[`colorPicker > renders with format hsl correctly 1`] = `
 "<div data-v-c9a043d6="" data-slot="root" class="">
   <div data-v-c9a043d6="" data-slot="picker" class="">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #00FF8C;">
@@ -90,7 +90,7 @@ exports[`ColorPicker > renders with format hsl correctly 1`] = `
 </div>"
 `;
 
-exports[`ColorPicker > renders with format lab correctly 1`] = `
+exports[`colorPicker > renders with format lab correctly 1`] = `
 "<div data-v-c9a043d6="" data-slot="root" class="">
   <div data-v-c9a043d6="" data-slot="picker" class="">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #00FF6F;">
@@ -105,7 +105,7 @@ exports[`ColorPicker > renders with format lab correctly 1`] = `
 </div>"
 `;
 
-exports[`ColorPicker > renders with format rgb correctly 1`] = `
+exports[`colorPicker > renders with format rgb correctly 1`] = `
 "<div data-v-c9a043d6="" data-slot="root" class="">
   <div data-v-c9a043d6="" data-slot="picker" class="">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #00FF8C;">
@@ -120,7 +120,7 @@ exports[`ColorPicker > renders with format rgb correctly 1`] = `
 </div>"
 `;
 
-exports[`ColorPicker > renders with size lg correctly 1`] = `
+exports[`colorPicker > renders with size lg correctly 1`] = `
 "<div data-v-c9a043d6="" data-slot="root" class="">
   <div data-v-c9a043d6="" data-slot="picker" class="">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
@@ -135,7 +135,7 @@ exports[`ColorPicker > renders with size lg correctly 1`] = `
 </div>"
 `;
 
-exports[`ColorPicker > renders with size md correctly 1`] = `
+exports[`colorPicker > renders with size md correctly 1`] = `
 "<div data-v-c9a043d6="" data-slot="root" class="">
   <div data-v-c9a043d6="" data-slot="picker" class="">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
@@ -150,7 +150,7 @@ exports[`ColorPicker > renders with size md correctly 1`] = `
 </div>"
 `;
 
-exports[`ColorPicker > renders with size sm correctly 1`] = `
+exports[`colorPicker > renders with size sm correctly 1`] = `
 "<div data-v-c9a043d6="" data-slot="root" class="">
   <div data-v-c9a043d6="" data-slot="picker" class="">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
@@ -165,7 +165,7 @@ exports[`ColorPicker > renders with size sm correctly 1`] = `
 </div>"
 `;
 
-exports[`ColorPicker > renders with size xl correctly 1`] = `
+exports[`colorPicker > renders with size xl correctly 1`] = `
 "<div data-v-c9a043d6="" data-slot="root" class="">
   <div data-v-c9a043d6="" data-slot="picker" class="">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
@@ -180,7 +180,7 @@ exports[`ColorPicker > renders with size xl correctly 1`] = `
 </div>"
 `;
 
-exports[`ColorPicker > renders with size xs correctly 1`] = `
+exports[`colorPicker > renders with size xs correctly 1`] = `
 "<div data-v-c9a043d6="" data-slot="root" class="">
   <div data-v-c9a043d6="" data-slot="picker" class="">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">
@@ -195,7 +195,7 @@ exports[`ColorPicker > renders with size xs correctly 1`] = `
 </div>"
 `;
 
-exports[`ColorPicker > renders with ui correctly 1`] = `
+exports[`colorPicker > renders with ui correctly 1`] = `
 "<div data-v-c9a043d6="" data-slot="root" class="">
   <div data-v-c9a043d6="" data-slot="picker" class="gap-8">
     <div data-v-c9a043d6="" data-slot="selector" class="" style="background-color: #FF0000;">

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Toast > renders with actions correctly 1`] = `
+exports[`toast > renders with actions correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -40,7 +40,7 @@ exports[`Toast > renders with actions correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with as correctly 1`] = `
+exports[`toast > renders with as correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -77,7 +77,7 @@ exports[`Toast > renders with as correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with avatar correctly 1`] = `
+exports[`toast > renders with avatar correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -113,7 +113,7 @@ exports[`Toast > renders with avatar correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with class correctly 1`] = `
+exports[`toast > renders with class correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -150,7 +150,7 @@ exports[`Toast > renders with class correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with close slot correctly 1`] = `
+exports[`toast > renders with close slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -184,7 +184,7 @@ exports[`Toast > renders with close slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with closeIcon correctly 1`] = `
+exports[`toast > renders with closeIcon correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -221,7 +221,7 @@ exports[`Toast > renders with closeIcon correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with color neutral correctly 1`] = `
+exports[`toast > renders with color neutral correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -258,7 +258,7 @@ exports[`Toast > renders with color neutral correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with description correctly 1`] = `
+exports[`toast > renders with description correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -295,7 +295,7 @@ exports[`Toast > renders with description correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with description slot correctly 1`] = `
+exports[`toast > renders with description slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -332,7 +332,7 @@ exports[`Toast > renders with description slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with icon correctly 1`] = `
+exports[`toast > renders with icon correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -368,7 +368,7 @@ exports[`Toast > renders with icon correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with leading slot correctly 1`] = `
+exports[`toast > renders with leading slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -403,7 +403,7 @@ exports[`Toast > renders with leading slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with orientation horizontal correctly 1`] = `
+exports[`toast > renders with orientation horizontal correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -440,7 +440,7 @@ exports[`Toast > renders with orientation horizontal correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with orientation vertical correctly 1`] = `
+exports[`toast > renders with orientation vertical correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -479,7 +479,7 @@ exports[`Toast > renders with orientation vertical correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with title correctly 1`] = `
+exports[`toast > renders with title correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -516,7 +516,7 @@ exports[`Toast > renders with title correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with title slot correctly 1`] = `
+exports[`toast > renders with title slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -553,7 +553,7 @@ exports[`Toast > renders with title slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with type correctly 1`] = `
+exports[`toast > renders with type correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -590,7 +590,7 @@ exports[`Toast > renders with type correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders with ui correctly 1`] = `
+exports[`toast > renders with ui correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->
@@ -627,7 +627,7 @@ exports[`Toast > renders with ui correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Toast > renders without close correctly 1`] = `
+exports[`toast > renders without close correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 <!--teleport end-->

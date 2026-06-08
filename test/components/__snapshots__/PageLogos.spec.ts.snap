@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PageLogos > renders with as correctly 1`] = `
+exports[`pageLogos > renders with as correctly 1`] = `
 "<section data-slot="root">
   <!--v-if-->
   <div data-slot="logos" class="">
@@ -9,7 +9,7 @@ exports[`PageLogos > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`PageLogos > renders with class correctly 1`] = `
+exports[`pageLogos > renders with class correctly 1`] = `
 "<div data-slot="root" class="text-xl">
   <!--v-if-->
   <div data-slot="logos" class="">
@@ -18,28 +18,28 @@ exports[`PageLogos > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`PageLogos > renders with default slot correctly 1`] = `
+exports[`pageLogos > renders with default slot correctly 1`] = `
 "<div data-slot="root">
   <!--v-if-->
   <div data-slot="logos" class="">Default slot</div>
 </div>"
 `;
 
-exports[`PageLogos > renders with default slot correctly 2`] = `
+exports[`pageLogos > renders with default slot correctly 2`] = `
 "<div data-slot="root">
   <!--v-if-->
   <div data-slot="logos" class="">Default slot</div>
 </div>"
 `;
 
-exports[`PageLogos > renders with items correctly 1`] = `
+exports[`pageLogos > renders with items correctly 1`] = `
 "<div data-slot="root">
   <!--v-if-->
   <div data-slot="logos" class=""><span data-slot="root"><img src="https://avatars.githubusercontent.com/u/739984?v=4" alt="Benjamin Canac" data-slot="image"></span><span data-slot="root"><img src="https://avatars.githubusercontent.com/u/71938701?v=4" alt="Hugo Richard" data-slot="image"></span></div>
 </div>"
 `;
 
-exports[`PageLogos > renders with marquee correctly 1`] = `
+exports[`pageLogos > renders with marquee correctly 1`] = `
 "<div data-slot="root">
   <!--v-if-->
   <div data-orientation="horizontal" data-slot="logos" class="">
@@ -51,7 +51,7 @@ exports[`PageLogos > renders with marquee correctly 1`] = `
 </div>"
 `;
 
-exports[`PageLogos > renders with title correctly 1`] = `
+exports[`pageLogos > renders with title correctly 1`] = `
 "<div data-slot="root">
   <h2 data-slot="title" class="">Title</h2>
   <div data-slot="logos" class="">
@@ -60,7 +60,7 @@ exports[`PageLogos > renders with title correctly 1`] = `
 </div>"
 `;
 
-exports[`PageLogos > renders with ui correctly 1`] = `
+exports[`pageLogos > renders with ui correctly 1`] = `
 "<div data-slot="root">
   <!--v-if-->
   <div data-slot="logos" class="">

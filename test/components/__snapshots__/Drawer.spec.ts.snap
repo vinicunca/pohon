@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Drawer > renders with body slot correctly 1`] = `
+exports[`drawer > renders with body slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -21,7 +21,7 @@ exports[`Drawer > renders with body slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with class correctly 1`] = `
+exports[`drawer > renders with class correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -42,7 +42,7 @@ exports[`Drawer > renders with class correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with content slot correctly 1`] = `
+exports[`drawer > renders with content slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -58,7 +58,7 @@ exports[`Drawer > renders with content slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with default slot correctly 1`] = `
+exports[`drawer > renders with default slot correctly 1`] = `
 "Default slot
 <!--teleport start-->
 
@@ -79,7 +79,7 @@ exports[`Drawer > renders with default slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with description correctly 1`] = `
+exports[`drawer > renders with description correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -104,7 +104,7 @@ exports[`Drawer > renders with description correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with description slot correctly 1`] = `
+exports[`drawer > renders with description slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -128,7 +128,7 @@ exports[`Drawer > renders with description slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with direction bottom correctly 1`] = `
+exports[`drawer > renders with direction bottom correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -153,7 +153,7 @@ exports[`Drawer > renders with direction bottom correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with direction bottom inset correctly 1`] = `
+exports[`drawer > renders with direction bottom inset correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -178,7 +178,7 @@ exports[`Drawer > renders with direction bottom inset correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with direction left correctly 1`] = `
+exports[`drawer > renders with direction left correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -203,7 +203,7 @@ exports[`Drawer > renders with direction left correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with direction left inset correctly 1`] = `
+exports[`drawer > renders with direction left inset correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -228,7 +228,7 @@ exports[`Drawer > renders with direction left inset correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with direction right correctly 1`] = `
+exports[`drawer > renders with direction right correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -253,7 +253,7 @@ exports[`Drawer > renders with direction right correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with direction right inset correctly 1`] = `
+exports[`drawer > renders with direction right inset correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -278,7 +278,7 @@ exports[`Drawer > renders with direction right inset correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with direction top correctly 1`] = `
+exports[`drawer > renders with direction top correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -303,7 +303,7 @@ exports[`Drawer > renders with direction top correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with direction top inset correctly 1`] = `
+exports[`drawer > renders with direction top inset correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -328,7 +328,7 @@ exports[`Drawer > renders with direction top inset correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with footer slot correctly 1`] = `
+exports[`drawer > renders with footer slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -349,7 +349,7 @@ exports[`Drawer > renders with footer slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with header slot correctly 1`] = `
+exports[`drawer > renders with header slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -370,7 +370,7 @@ exports[`Drawer > renders with header slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with title correctly 1`] = `
+exports[`drawer > renders with title correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -394,7 +394,7 @@ exports[`Drawer > renders with title correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with title slot correctly 1`] = `
+exports[`drawer > renders with title slot correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -418,7 +418,7 @@ exports[`Drawer > renders with title slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders with ui correctly 1`] = `
+exports[`drawer > renders with ui correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -439,7 +439,7 @@ exports[`Drawer > renders with ui correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders without handle correctly 1`] = `
+exports[`drawer > renders without handle correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 
@@ -464,7 +464,7 @@ exports[`Drawer > renders without handle correctly 1`] = `
 <!--teleport end-->"
 `;
 
-exports[`Drawer > renders without overlay correctly 1`] = `
+exports[`drawer > renders without overlay correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
 

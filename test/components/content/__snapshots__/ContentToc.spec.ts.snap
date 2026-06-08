@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ContentToc > renders with as correctly 1`] = `
+exports[`contentToc > renders with as correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <div data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -41,7 +41,7 @@ exports[`ContentToc > renders with as correctly 1`] = `
 </div>"
 `;
 
-exports[`ContentToc > renders with bottom slot correctly 1`] = `
+exports[`contentToc > renders with bottom slot correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -82,7 +82,7 @@ exports[`ContentToc > renders with bottom slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with class correctly 1`] = `
+exports[`contentToc > renders with class correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root" class="lg:px-8">
   <div data-slot="container" class="">
@@ -123,7 +123,7 @@ exports[`ContentToc > renders with class correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with content slot correctly 1`] = `
+exports[`contentToc > renders with content slot correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -140,7 +140,7 @@ exports[`ContentToc > renders with content slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with default slot correctly 1`] = `
+exports[`contentToc > renders with default slot correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -181,7 +181,7 @@ exports[`ContentToc > renders with default slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with highlight circuit variant correctly 1`] = `
+exports[`contentToc > renders with highlight circuit variant correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -225,7 +225,7 @@ exports[`ContentToc > renders with highlight circuit variant correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with highlight circuit variant neutral color correctly 1`] = `
+exports[`contentToc > renders with highlight circuit variant neutral color correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -269,7 +269,7 @@ exports[`ContentToc > renders with highlight circuit variant neutral color corre
 </nav>"
 `;
 
-exports[`ContentToc > renders with highlight correctly 1`] = `
+exports[`contentToc > renders with highlight correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -313,7 +313,7 @@ exports[`ContentToc > renders with highlight correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with highlight neutral color correctly 1`] = `
+exports[`contentToc > renders with highlight neutral color correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -357,7 +357,7 @@ exports[`ContentToc > renders with highlight neutral color correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with highlight straight variant correctly 1`] = `
+exports[`contentToc > renders with highlight straight variant correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -401,7 +401,7 @@ exports[`ContentToc > renders with highlight straight variant correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with highlight straight variant neutral color correctly 1`] = `
+exports[`contentToc > renders with highlight straight variant neutral color correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -445,7 +445,7 @@ exports[`ContentToc > renders with highlight straight variant neutral color corr
 </nav>"
 `;
 
-exports[`ContentToc > renders with leading slot correctly 1`] = `
+exports[`contentToc > renders with leading slot correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -486,7 +486,7 @@ exports[`ContentToc > renders with leading slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with link slot correctly 1`] = `
+exports[`contentToc > renders with link slot correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -527,7 +527,7 @@ exports[`ContentToc > renders with link slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with links correctly 1`] = `
+exports[`contentToc > renders with links correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -568,7 +568,7 @@ exports[`ContentToc > renders with links correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with neutral color correctly 1`] = `
+exports[`contentToc > renders with neutral color correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -609,7 +609,7 @@ exports[`ContentToc > renders with neutral color correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with title correctly 1`] = `
+exports[`contentToc > renders with title correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -650,7 +650,7 @@ exports[`ContentToc > renders with title correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with top slot correctly 1`] = `
+exports[`contentToc > renders with top slot correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -691,7 +691,7 @@ exports[`ContentToc > renders with top slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with trailing slot correctly 1`] = `
+exports[`contentToc > renders with trailing slot correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -732,7 +732,7 @@ exports[`ContentToc > renders with trailing slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with trailingIcon correctly 1`] = `
+exports[`contentToc > renders with trailingIcon correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">
@@ -773,7 +773,7 @@ exports[`ContentToc > renders with trailingIcon correctly 1`] = `
 </nav>"
 `;
 
-exports[`ContentToc > renders with ui correctly 1`] = `
+exports[`contentToc > renders with ui correctly 1`] = `
 "<!-- eslint-disable-next-line vue/no-template-shadow -->
 <nav data-state="closed" data-slot="root">
   <div data-slot="container" class="">

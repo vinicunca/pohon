@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`CommandPalette > renders with as correctly 1`] = `
+exports[`commandPalette > renders with as correctly 1`] = `
 "<section dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -50,7 +50,7 @@ exports[`CommandPalette > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`CommandPalette > renders with by correctly 1`] = `
+exports[`commandPalette > renders with by correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -99,7 +99,7 @@ exports[`CommandPalette > renders with by correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with childrenIcon correctly 1`] = `
+exports[`commandPalette > renders with childrenIcon correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -149,7 +149,7 @@ exports[`CommandPalette > renders with childrenIcon correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with class correctly 1`] = `
+exports[`commandPalette > renders with class correctly 1`] = `
 "<div dir="ltr" data-slot="root" class="divide-accented">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -199,7 +199,7 @@ exports[`CommandPalette > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with close correctly 1`] = `
+exports[`commandPalette > renders with close correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span><span data-slot="trailing" class=""><button type="button" aria-label="Close" data-slot="base" class=""><span class="iconify i-lucide:x" aria-hidden="true" data-slot="leadingIcon"></span>
     <!--v-if-->
@@ -250,7 +250,7 @@ exports[`CommandPalette > renders with close correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with close slot correctly 1`] = `
+exports[`commandPalette > renders with close slot correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span><span data-slot="trailing" class="">Close slot</span></div>
   <div data-slot="content" class="" role="listbox" tabindex="-1" aria-orientation="vertical" aria-multiselectable="false" data-orientation="vertical">
@@ -298,7 +298,7 @@ exports[`CommandPalette > renders with close slot correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with closeIcon correctly 1`] = `
+exports[`commandPalette > renders with closeIcon correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span><span data-slot="trailing" class=""><button type="button" aria-label="Close" data-slot="base" class=""><span class="iconify i-lucide:trash" aria-hidden="true" data-slot="leadingIcon"></span>
     <!--v-if-->
@@ -349,7 +349,7 @@ exports[`CommandPalette > renders with closeIcon correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with custom slot correctly 1`] = `
+exports[`commandPalette > renders with custom slot correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -396,7 +396,7 @@ exports[`CommandPalette > renders with custom slot correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with defaultValue correctly 1`] = `
+exports[`commandPalette > renders with defaultValue correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -446,7 +446,7 @@ exports[`CommandPalette > renders with defaultValue correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with descriptionKey correctly 1`] = `
+exports[`commandPalette > renders with descriptionKey correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -479,7 +479,7 @@ exports[`CommandPalette > renders with descriptionKey correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with disabled correctly 1`] = `
+exports[`commandPalette > renders with disabled correctly 1`] = `
 "<div dir="ltr" data-disabled="" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" disabled="" autocomplete="off" data-disabled="" aria-disabled="true" value=""><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -529,7 +529,7 @@ exports[`CommandPalette > renders with disabled correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with empty slot correctly 1`] = `
+exports[`commandPalette > renders with empty slot correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -579,7 +579,7 @@ exports[`CommandPalette > renders with empty slot correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with footer slot correctly 1`] = `
+exports[`commandPalette > renders with footer slot correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -629,7 +629,7 @@ exports[`CommandPalette > renders with footer slot correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with group-label slot correctly 1`] = `
+exports[`commandPalette > renders with group-label slot correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -679,7 +679,7 @@ exports[`CommandPalette > renders with group-label slot correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with groups correctly 1`] = `
+exports[`commandPalette > renders with groups correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -729,7 +729,7 @@ exports[`CommandPalette > renders with groups correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with groups with description correctly 1`] = `
+exports[`commandPalette > renders with groups with description correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -762,7 +762,7 @@ exports[`CommandPalette > renders with groups with description correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with icon correctly 1`] = `
+exports[`commandPalette > renders with icon correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:terminal" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -812,7 +812,7 @@ exports[`CommandPalette > renders with icon correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with item slot correctly 1`] = `
+exports[`commandPalette > renders with item slot correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -838,7 +838,7 @@ exports[`CommandPalette > renders with item slot correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with item-description slot correctly 1`] = `
+exports[`commandPalette > renders with item-description slot correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -871,7 +871,7 @@ exports[`CommandPalette > renders with item-description slot correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with item-label slot correctly 1`] = `
+exports[`commandPalette > renders with item-label slot correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -917,7 +917,7 @@ exports[`CommandPalette > renders with item-label slot correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with item-leading slot correctly 1`] = `
+exports[`commandPalette > renders with item-leading slot correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -964,7 +964,7 @@ exports[`CommandPalette > renders with item-leading slot correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with item-trailing slot correctly 1`] = `
+exports[`commandPalette > renders with item-trailing slot correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1011,7 +1011,7 @@ exports[`CommandPalette > renders with item-trailing slot correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with labelKey correctly 1`] = `
+exports[`commandPalette > renders with labelKey correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1057,7 +1057,7 @@ exports[`CommandPalette > renders with labelKey correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with loading correctly 1`] = `
+exports[`commandPalette > renders with loading correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:loader-circle" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1107,7 +1107,7 @@ exports[`CommandPalette > renders with loading correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with loadingIcon correctly 1`] = `
+exports[`commandPalette > renders with loadingIcon correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:loader" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1157,7 +1157,7 @@ exports[`CommandPalette > renders with loadingIcon correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with modelValue correctly 1`] = `
+exports[`commandPalette > renders with modelValue correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1207,7 +1207,7 @@ exports[`CommandPalette > renders with modelValue correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with placeholder correctly 1`] = `
+exports[`commandPalette > renders with placeholder correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Search..." data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1257,7 +1257,7 @@ exports[`CommandPalette > renders with placeholder correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with searchTerm and preserveGroupOrder correctly 1`] = `
+exports[`commandPalette > renders with searchTerm and preserveGroupOrder correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="f" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1287,7 +1287,7 @@ exports[`CommandPalette > renders with searchTerm and preserveGroupOrder correct
 </div>"
 `;
 
-exports[`CommandPalette > renders with searchTerm correctly 1`] = `
+exports[`commandPalette > renders with searchTerm correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="f" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1317,7 +1317,7 @@ exports[`CommandPalette > renders with searchTerm correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with selectedIcon correctly 1`] = `
+exports[`commandPalette > renders with selectedIcon correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1367,7 +1367,7 @@ exports[`CommandPalette > renders with selectedIcon correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with size lg correctly 1`] = `
+exports[`commandPalette > renders with size lg correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1417,7 +1417,7 @@ exports[`CommandPalette > renders with size lg correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with size md correctly 1`] = `
+exports[`commandPalette > renders with size md correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1467,7 +1467,7 @@ exports[`CommandPalette > renders with size md correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with size sm correctly 1`] = `
+exports[`commandPalette > renders with size sm correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1517,7 +1517,7 @@ exports[`CommandPalette > renders with size sm correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with size xl correctly 1`] = `
+exports[`commandPalette > renders with size xl correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1567,7 +1567,7 @@ exports[`CommandPalette > renders with size xl correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with size xs correctly 1`] = `
+exports[`commandPalette > renders with size xs correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1617,7 +1617,7 @@ exports[`CommandPalette > renders with size xs correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with trailingIcon correctly 1`] = `
+exports[`commandPalette > renders with trailingIcon correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span><span data-slot="trailing" class=""><span class="iconify i-lucide:settings" aria-hidden="true" data-slot="trailingIcon"></span></span></div>
   <div data-slot="content" class="" role="listbox" tabindex="-1" aria-orientation="vertical" aria-multiselectable="false" data-orientation="vertical">
@@ -1665,7 +1665,7 @@ exports[`CommandPalette > renders with trailingIcon correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with ui correctly 1`] = `
+exports[`commandPalette > renders with ui correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class="[&amp;>input]:h-10"><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1715,7 +1715,7 @@ exports[`CommandPalette > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with users-group-label slot correctly 1`] = `
+exports[`commandPalette > renders with users-group-label slot correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1765,7 +1765,7 @@ exports[`CommandPalette > renders with users-group-label slot correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with valueKey correctly 1`] = `
+exports[`commandPalette > renders with valueKey correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value="" aria-activedescendant="akar-listbox-item-v-0-0-1"><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1814,7 +1814,7 @@ exports[`CommandPalette > renders with valueKey correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders with virtualize correctly 1`] = `
+exports[`commandPalette > renders with virtualize correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value=""><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1829,7 +1829,7 @@ exports[`CommandPalette > renders with virtualize correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders without groups correctly 1`] = `
+exports[`commandPalette > renders without groups correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <div data-slot="root" class=""><input type="text" placeholder="Type a command or search…" data-slot="input" autocomplete="off" aria-disabled="false" value=""><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span></span>
     <!--v-if-->
@@ -1842,7 +1842,7 @@ exports[`CommandPalette > renders without groups correctly 1`] = `
 </div>"
 `;
 
-exports[`CommandPalette > renders without input correctly 1`] = `
+exports[`commandPalette > renders without input correctly 1`] = `
 "<div dir="ltr" data-slot="root">
   <!--v-if-->
   <div data-slot="content" class="" role="listbox" tabindex="-1" aria-orientation="vertical" aria-multiselectable="false" data-orientation="vertical">

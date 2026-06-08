@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`FooterColumns > renders with as correctly 1`] = `
+exports[`footerColumns > renders with as correctly 1`] = `
 "<section data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class="">
@@ -58,7 +58,7 @@ exports[`FooterColumns > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`FooterColumns > renders with class correctly 1`] = `
+exports[`footerColumns > renders with class correctly 1`] = `
 "<nav data-slot="root" class="px-10">
   <!--v-if-->
   <div data-slot="center" class="">
@@ -116,7 +116,7 @@ exports[`FooterColumns > renders with class correctly 1`] = `
 </nav>"
 `;
 
-exports[`FooterColumns > renders with column-label slot correctly 1`] = `
+exports[`footerColumns > renders with column-label slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class="">
@@ -174,7 +174,7 @@ exports[`FooterColumns > renders with column-label slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`FooterColumns > renders with columns correctly 1`] = `
+exports[`footerColumns > renders with columns correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class="">
@@ -232,7 +232,7 @@ exports[`FooterColumns > renders with columns correctly 1`] = `
 </nav>"
 `;
 
-exports[`FooterColumns > renders with default slot correctly 1`] = `
+exports[`footerColumns > renders with default slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class="">Default slot</div>
@@ -240,7 +240,7 @@ exports[`FooterColumns > renders with default slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`FooterColumns > renders with left slot correctly 1`] = `
+exports[`footerColumns > renders with left slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <div data-slot="left" class="">Left slot</div>
   <div data-slot="center" class="">
@@ -298,7 +298,7 @@ exports[`FooterColumns > renders with left slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`FooterColumns > renders with link slot correctly 1`] = `
+exports[`footerColumns > renders with link slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class="">
@@ -334,7 +334,7 @@ exports[`FooterColumns > renders with link slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`FooterColumns > renders with link-label slot correctly 1`] = `
+exports[`footerColumns > renders with link-label slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class="">
@@ -392,7 +392,7 @@ exports[`FooterColumns > renders with link-label slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`FooterColumns > renders with link-leading slot correctly 1`] = `
+exports[`footerColumns > renders with link-leading slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class="">
@@ -428,7 +428,7 @@ exports[`FooterColumns > renders with link-leading slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`FooterColumns > renders with link-trailing slot correctly 1`] = `
+exports[`footerColumns > renders with link-trailing slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class="">
@@ -486,7 +486,7 @@ exports[`FooterColumns > renders with link-trailing slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`FooterColumns > renders with right slot correctly 1`] = `
+exports[`footerColumns > renders with right slot correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class="">
@@ -544,7 +544,7 @@ exports[`FooterColumns > renders with right slot correctly 1`] = `
 </nav>"
 `;
 
-exports[`FooterColumns > renders with ui correctly 1`] = `
+exports[`footerColumns > renders with ui correctly 1`] = `
 "<nav data-slot="root" class="">
   <!--v-if-->
   <div data-slot="center" class="">

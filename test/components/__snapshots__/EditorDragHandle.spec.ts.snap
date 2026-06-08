@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`EditorDragHandle > renders with as correctly 1`] = `
+exports[`editorDragHandle > renders with as correctly 1`] = `
 "<div class="drag-handle" style="position: absolute; visibility: hidden;" data-dragging="false" data-slot="root">
   <section data-slot="base" class=""><span class="iconify i-lucide:grip-vertical" aria-hidden="true" data-slot="leadingIcon"></span>
     <!--v-if-->
@@ -9,16 +9,16 @@ exports[`EditorDragHandle > renders with as correctly 1`] = `
 </div>"
 `;
 
-exports[`EditorDragHandle > renders with class correctly 1`] = `
+exports[`editorDragHandle > renders with class correctly 1`] = `
 "<div class="items-start" style="position: absolute; visibility: hidden;" data-dragging="false" data-slot="root"><button type="button" data-slot="base" class="items-start"><span class="iconify i-lucide:grip-vertical" aria-hidden="true" data-slot="leadingIcon"></span>
     <!--v-if-->
     <!--v-if-->
   </button></div>"
 `;
 
-exports[`EditorDragHandle > renders with default slot correctly 1`] = `"<div class="drag-handle" style="position: absolute; visibility: hidden;" data-dragging="false" data-slot="root">Default slot</div>"`;
+exports[`editorDragHandle > renders with default slot correctly 1`] = `"<div class="drag-handle" style="position: absolute; visibility: hidden;" data-dragging="false" data-slot="root">Default slot</div>"`;
 
-exports[`EditorDragHandle > renders with ui correctly 1`] = `
+exports[`editorDragHandle > renders with ui correctly 1`] = `
 "<div class="drag-handle" style="position: absolute; visibility: hidden;" data-dragging="false" data-slot="root"><button type="button" data-slot="base" class="px-4"><span class="iconify i-lucide:grip-vertical" aria-hidden="true" data-slot="leadingIcon"></span>
     <!--v-if-->
     <!--v-if-->

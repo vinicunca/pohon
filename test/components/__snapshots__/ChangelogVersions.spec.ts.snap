@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ChangelogVersions > renders with as correctly 1`] = `
+exports[`changelogVersions > renders with as correctly 1`] = `
 "<section data-slot="root" class="">
   <div data-slot="indicator" class="">
     <div data-slot="beam" class="" style="height: 0%;"></div>
@@ -44,7 +44,7 @@ exports[`ChangelogVersions > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`ChangelogVersions > renders with class correctly 1`] = `
+exports[`changelogVersions > renders with class correctly 1`] = `
 "<div data-slot="root" class="absolute">
   <div data-slot="indicator" class="">
     <div data-slot="beam" class="" style="height: 0%;"></div>
@@ -88,7 +88,7 @@ exports[`ChangelogVersions > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`ChangelogVersions > renders with default slot correctly 1`] = `
+exports[`changelogVersions > renders with default slot correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="indicator" class="">
     <div data-slot="beam" class="" style="height: 0%;"></div>
@@ -97,7 +97,7 @@ exports[`ChangelogVersions > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`ChangelogVersions > renders with indicator slot correctly 1`] = `
+exports[`changelogVersions > renders with indicator slot correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="indicator" class="">Indicator slot</div>
   <div data-slot="container" class="">
@@ -139,7 +139,7 @@ exports[`ChangelogVersions > renders with indicator slot correctly 1`] = `
 </div>"
 `;
 
-exports[`ChangelogVersions > renders with ui correctly 1`] = `
+exports[`changelogVersions > renders with ui correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="indicator" class="bg-primary">
     <div data-slot="beam" class="" style="height: 0%;"></div>
@@ -183,7 +183,7 @@ exports[`ChangelogVersions > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`ChangelogVersions > renders with versions correctly 1`] = `
+exports[`changelogVersions > renders with versions correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="indicator" class="">
     <div data-slot="beam" class="" style="height: 0%;"></div>
@@ -227,7 +227,7 @@ exports[`ChangelogVersions > renders with versions correctly 1`] = `
 </div>"
 `;
 
-exports[`ChangelogVersions > renders without indicator correctly 1`] = `
+exports[`changelogVersions > renders without indicator correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="container" class="">

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Accordion > renders with as correctly 1`] = `
+exports[`accordion > renders with as correctly 1`] = `
 "<section data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -41,7 +41,7 @@ exports[`Accordion > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`Accordion > renders with as correctly 2`] = `
+exports[`accordion > renders with as correctly 2`] = `
 "<section data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -82,7 +82,7 @@ exports[`Accordion > renders with as correctly 2`] = `
 </section>"
 `;
 
-exports[`Accordion > renders with body slot correctly 1`] = `
+exports[`accordion > renders with body slot correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -123,7 +123,7 @@ exports[`Accordion > renders with body slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with class correctly 1`] = `
+exports[`accordion > renders with class correctly 1`] = `
 "<div data-slot="root" class="w-96">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -164,7 +164,7 @@ exports[`Accordion > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with collapsible correctly 1`] = `
+exports[`accordion > renders with collapsible correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -205,7 +205,7 @@ exports[`Accordion > renders with collapsible correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with content slot correctly 1`] = `
+exports[`accordion > renders with content slot correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -244,7 +244,7 @@ exports[`Accordion > renders with content slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with custom body slot correctly 1`] = `
+exports[`accordion > renders with custom body slot correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -285,7 +285,7 @@ exports[`Accordion > renders with custom body slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with custom slot correctly 1`] = `
+exports[`accordion > renders with custom slot correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -324,7 +324,7 @@ exports[`Accordion > renders with custom slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with default slot correctly 1`] = `
+exports[`accordion > renders with default slot correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Default slot</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -365,7 +365,7 @@ exports[`Accordion > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with defaultValue correctly 1`] = `
+exports[`accordion > renders with defaultValue correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -406,7 +406,7 @@ exports[`Accordion > renders with defaultValue correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with disabled correctly 1`] = `
+exports[`accordion > renders with disabled correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-disabled="" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-disabled="" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-disabled="" disabled="" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" aria-disabled="true" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -447,7 +447,7 @@ exports[`Accordion > renders with disabled correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with items correctly 1`] = `
+exports[`accordion > renders with items correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -488,7 +488,7 @@ exports[`Accordion > renders with items correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with labelKey correctly 1`] = `
+exports[`accordion > renders with labelKey correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">i-lucide-info</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -529,7 +529,7 @@ exports[`Accordion > renders with labelKey correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with leading slot correctly 1`] = `
+exports[`accordion > renders with leading slot correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class="">Leading slot<span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -570,7 +570,7 @@ exports[`Accordion > renders with leading slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with modelValue correctly 1`] = `
+exports[`accordion > renders with modelValue correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -611,7 +611,7 @@ exports[`Accordion > renders with modelValue correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with trailing slot correctly 1`] = `
+exports[`accordion > renders with trailing slot correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span>Trailing slot</button></div>
@@ -652,7 +652,7 @@ exports[`Accordion > renders with trailing slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with trailingIcon correctly 1`] = `
+exports[`accordion > renders with trailingIcon correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:plus" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -693,7 +693,7 @@ exports[`Accordion > renders with trailingIcon correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with type correctly 1`] = `
+exports[`accordion > renders with type correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -734,7 +734,7 @@ exports[`Accordion > renders with type correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with ui correctly 1`] = `
+exports[`accordion > renders with ui correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="border-border-accented">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -775,7 +775,7 @@ exports[`Accordion > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with unmountOnHide correctly 1`] = `
+exports[`accordion > renders with unmountOnHide correctly 1`] = `
 "<div data-slot="root">
   <div data-state="closed" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="closed" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>
@@ -816,7 +816,7 @@ exports[`Accordion > renders with unmountOnHide correctly 1`] = `
 </div>"
 `;
 
-exports[`Accordion > renders with valueKey correctly 1`] = `
+exports[`accordion > renders with valueKey correctly 1`] = `
 "<div data-slot="root">
   <div data-state="open" data-orientation="vertical" data-slot="item" class="">
     <div data-orientation="vertical" data-state="open" data-slot="header" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" id="akar-accordion-trigger-v-0-0-0" data-akar-collection-item="" data-orientation="vertical" data-slot="trigger" class=""><span class="iconify i-lucide:info" aria-hidden="true" data-slot="leadingIcon"></span><span data-slot="label" class="">Getting Started</span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span></button></div>

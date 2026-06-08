@@ -1,9 +1,9 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`BlogPost > renders with as correctly 1`] = `
+exports[`blogPost > renders with as correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -23,7 +23,7 @@ exports[`BlogPost > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`BlogPost > renders with author correctly 1`] = `
+exports[`blogPost > renders with author correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -45,7 +45,7 @@ exports[`BlogPost > renders with author correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with authors correctly 1`] = `
+exports[`blogPost > renders with authors correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -63,10 +63,10 @@ exports[`BlogPost > renders with authors correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with authors slot correctly 1`] = `
+exports[`blogPost > renders with authors slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -78,7 +78,7 @@ exports[`BlogPost > renders with authors slot correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with badge correctly 1`] = `
+exports[`blogPost > renders with badge correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -95,7 +95,7 @@ exports[`BlogPost > renders with badge correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with badge object correctly 1`] = `
+exports[`blogPost > renders with badge object correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -112,10 +112,10 @@ exports[`BlogPost > renders with badge object correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with badge slot correctly 1`] = `
+exports[`blogPost > renders with badge slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class="">Badge slot<time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time></div>
     <h2 data-slot="title" class="">Title</h2>
     <div data-slot="description" class="">Description</div>
@@ -133,18 +133,18 @@ exports[`BlogPost > renders with badge slot correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with body slot correctly 1`] = `
+exports[`blogPost > renders with body slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>Body slot</div>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>Body slot</div>
   <!--v-if-->
 </article>"
 `;
 
-exports[`BlogPost > renders with class correctly 1`] = `
+exports[`blogPost > renders with class correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="absolute">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -164,7 +164,7 @@ exports[`BlogPost > renders with class correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with date correctly 1`] = `
+exports[`blogPost > renders with date correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -180,10 +180,10 @@ exports[`BlogPost > renders with date correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with date slot correctly 1`] = `
+exports[`blogPost > renders with date slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Date slot</time>
     </div>
@@ -203,7 +203,7 @@ exports[`BlogPost > renders with date slot correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with description correctly 1`] = `
+exports[`blogPost > renders with description correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -217,10 +217,10 @@ exports[`BlogPost > renders with description correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with description slot correctly 1`] = `
+exports[`blogPost > renders with description slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -240,10 +240,10 @@ exports[`BlogPost > renders with description slot correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with footer slot correctly 1`] = `
+exports[`blogPost > renders with footer slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -263,10 +263,10 @@ exports[`BlogPost > renders with footer slot correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with header slot correctly 1`] = `
+exports[`blogPost > renders with header slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class="">Header slot</div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -286,7 +286,7 @@ exports[`BlogPost > renders with header slot correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with image correctly 1`] = `
+exports[`blogPost > renders with image correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" data-slot="image"></div>
   <div data-slot="body" class="">
@@ -300,10 +300,10 @@ exports[`BlogPost > renders with image correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with orientation horizontal correctly 1`] = `
+exports[`blogPost > renders with orientation horizontal correctly 1`] = `
 "<article data-orientation="horizontal" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -323,10 +323,10 @@ exports[`BlogPost > renders with orientation horizontal correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with orientation vertical correctly 1`] = `
+exports[`blogPost > renders with orientation vertical correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -346,7 +346,7 @@ exports[`BlogPost > renders with orientation vertical correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with title correctly 1`] = `
+exports[`blogPost > renders with title correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">
@@ -360,10 +360,10 @@ exports[`BlogPost > renders with title correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with title slot correctly 1`] = `
+exports[`blogPost > renders with title slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title slot" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title slot" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -383,10 +383,10 @@ exports[`BlogPost > renders with title slot correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with to & image correctly 1`] = `
+exports[`blogPost > renders with to & image correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Post link" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Post link" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <!--v-if-->
     <!--v-if-->
     <!--v-if-->
@@ -396,10 +396,10 @@ exports[`BlogPost > renders with to & image correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with to correctly 1`] = `
+exports[`blogPost > renders with to correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <!--v-if-->
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Post link" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Post link" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <!--v-if-->
     <!--v-if-->
     <!--v-if-->
@@ -409,10 +409,10 @@ exports[`BlogPost > renders with to correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with ui correctly 1`] = `
+exports[`blogPost > renders with ui correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -432,10 +432,10 @@ exports[`BlogPost > renders with ui correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with variant ghost correctly 1`] = `
+exports[`blogPost > renders with variant ghost correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -455,10 +455,10 @@ exports[`BlogPost > renders with variant ghost correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with variant naked correctly 1`] = `
+exports[`blogPost > renders with variant naked correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -478,10 +478,10 @@ exports[`BlogPost > renders with variant naked correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with variant outline correctly 1`] = `
+exports[`blogPost > renders with variant outline correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -501,10 +501,10 @@ exports[`BlogPost > renders with variant outline correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with variant soft correctly 1`] = `
+exports[`blogPost > renders with variant soft correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>
@@ -524,10 +524,10 @@ exports[`BlogPost > renders with variant soft correctly 1`] = `
 </article>"
 `;
 
-exports[`BlogPost > renders with variant subtle correctly 1`] = `
+exports[`blogPost > renders with variant subtle correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="">
   <div data-slot="header" class=""><img src="https://picsum.photos/640/360" alt="Title" data-slot="image"></div>
-  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a>
+  <div data-slot="body" class=""><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="peer focus:outline-none"><span class="inset-0 absolute" aria-hidden="true"></span></a>
     <div data-slot="meta" class=""><span data-slot="badge" class=""><!--v-if--><span data-slot="label" class="">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="">Jan 1, 2024</time>
     </div>

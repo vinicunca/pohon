@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PricingTable > renders with as correctly 1`] = `
+exports[`pricingTable > renders with as correctly 1`] = `
 "<section data-slot="root">
   <table data-slot="table" class="">
     <!--v-if-->
@@ -289,7 +289,7 @@ exports[`PricingTable > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`PricingTable > renders with caption correctly 1`] = `
+exports[`pricingTable > renders with caption correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="table" class="">
     <caption data-slot="caption" class="">Caption</caption>
@@ -578,7 +578,7 @@ exports[`PricingTable > renders with caption correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingTable > renders with caption slot correctly 1`] = `
+exports[`pricingTable > renders with caption slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="table" class="">
     <caption data-slot="caption" class="">Caption slot</caption>
@@ -867,7 +867,7 @@ exports[`PricingTable > renders with caption slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingTable > renders with class correctly 1`] = `
+exports[`pricingTable > renders with class correctly 1`] = `
 "<div data-slot="root" class="max-w-sm">
   <table data-slot="table" class="">
     <!--v-if-->
@@ -1156,7 +1156,7 @@ exports[`PricingTable > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingTable > renders with tier slot correctly 1`] = `
+exports[`pricingTable > renders with tier slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="table" class="">
     <!--v-if-->
@@ -1355,7 +1355,7 @@ exports[`PricingTable > renders with tier slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingTable > renders with tier-badge slot correctly 1`] = `
+exports[`pricingTable > renders with tier-badge slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="table" class="">
     <!--v-if-->
@@ -1638,7 +1638,7 @@ exports[`PricingTable > renders with tier-badge slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingTable > renders with tier-billing slot correctly 1`] = `
+exports[`pricingTable > renders with tier-billing slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="table" class="">
     <!--v-if-->
@@ -1927,7 +1927,7 @@ exports[`PricingTable > renders with tier-billing slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingTable > renders with tier-button slot correctly 1`] = `
+exports[`pricingTable > renders with tier-button slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="table" class="">
     <!--v-if-->
@@ -2198,7 +2198,7 @@ exports[`PricingTable > renders with tier-button slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingTable > renders with tier-description slot correctly 1`] = `
+exports[`pricingTable > renders with tier-description slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="table" class="">
     <!--v-if-->
@@ -2487,7 +2487,7 @@ exports[`PricingTable > renders with tier-description slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingTable > renders with tier-discount slot correctly 1`] = `
+exports[`pricingTable > renders with tier-discount slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="table" class="">
     <!--v-if-->
@@ -2776,7 +2776,7 @@ exports[`PricingTable > renders with tier-discount slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingTable > renders with tier-price slot correctly 1`] = `
+exports[`pricingTable > renders with tier-price slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="table" class="">
     <!--v-if-->
@@ -3065,7 +3065,7 @@ exports[`PricingTable > renders with tier-price slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingTable > renders with tier-title slot correctly 1`] = `
+exports[`pricingTable > renders with tier-title slot correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="table" class="">
     <!--v-if-->
@@ -3354,7 +3354,7 @@ exports[`PricingTable > renders with tier-title slot correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingTable > renders with tiers and sections correctly 1`] = `
+exports[`pricingTable > renders with tiers and sections correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="table" class="">
     <!--v-if-->
@@ -3643,7 +3643,7 @@ exports[`PricingTable > renders with tiers and sections correctly 1`] = `
 </div>"
 `;
 
-exports[`PricingTable > renders with ui correctly 1`] = `
+exports[`pricingTable > renders with ui correctly 1`] = `
 "<div data-slot="root">
   <table data-slot="table" class="table-auto">
     <!--v-if-->

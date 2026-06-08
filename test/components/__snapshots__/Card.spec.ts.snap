@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Card > renders with as correctly 1`] = `
+exports[`card > renders with as correctly 1`] = `
 "<section data-slot="root" class="">
   <!--v-if-->
   <!--v-if-->
@@ -8,7 +8,7 @@ exports[`Card > renders with as correctly 1`] = `
 </section>"
 `;
 
-exports[`Card > renders with class correctly 1`] = `
+exports[`card > renders with class correctly 1`] = `
 "<div data-slot="root" class="rounded-xl">
   <!--v-if-->
   <!--v-if-->
@@ -16,7 +16,7 @@ exports[`Card > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`Card > renders with default slot correctly 1`] = `
+exports[`card > renders with default slot correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <div data-slot="body" class="">Default slot</div>
@@ -24,7 +24,7 @@ exports[`Card > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Card > renders with description correctly 1`] = `
+exports[`card > renders with description correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="header" class="">
     <!--v-if-->
@@ -35,7 +35,7 @@ exports[`Card > renders with description correctly 1`] = `
 </div>"
 `;
 
-exports[`Card > renders with description slot correctly 1`] = `
+exports[`card > renders with description slot correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="header" class="">
     <!--v-if-->
@@ -46,7 +46,7 @@ exports[`Card > renders with description slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Card > renders with footer slot correctly 1`] = `
+exports[`card > renders with footer slot correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <!--v-if-->
@@ -54,7 +54,7 @@ exports[`Card > renders with footer slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Card > renders with header slot correctly 1`] = `
+exports[`card > renders with header slot correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="header" class="">Header slot</div>
   <!--v-if-->
@@ -62,7 +62,7 @@ exports[`Card > renders with header slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Card > renders with title and description correctly 1`] = `
+exports[`card > renders with title and description correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="header" class="">
     <div data-slot="title" class="">Title</div>
@@ -73,7 +73,7 @@ exports[`Card > renders with title and description correctly 1`] = `
 </div>"
 `;
 
-exports[`Card > renders with title correctly 1`] = `
+exports[`card > renders with title correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="header" class="">
     <div data-slot="title" class="">Title</div>
@@ -84,7 +84,7 @@ exports[`Card > renders with title correctly 1`] = `
 </div>"
 `;
 
-exports[`Card > renders with title slot correctly 1`] = `
+exports[`card > renders with title slot correctly 1`] = `
 "<div data-slot="root" class="">
   <div data-slot="header" class="">
     <div data-slot="title" class="">Title slot</div>
@@ -95,7 +95,7 @@ exports[`Card > renders with title slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Card > renders with ui correctly 1`] = `
+exports[`card > renders with ui correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <!--v-if-->
@@ -103,7 +103,7 @@ exports[`Card > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`Card > renders with variant outline correctly 1`] = `
+exports[`card > renders with variant outline correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <!--v-if-->
@@ -111,7 +111,7 @@ exports[`Card > renders with variant outline correctly 1`] = `
 </div>"
 `;
 
-exports[`Card > renders with variant soft correctly 1`] = `
+exports[`card > renders with variant soft correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <!--v-if-->
@@ -119,7 +119,7 @@ exports[`Card > renders with variant soft correctly 1`] = `
 </div>"
 `;
 
-exports[`Card > renders with variant solid correctly 1`] = `
+exports[`card > renders with variant solid correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <!--v-if-->
@@ -127,7 +127,7 @@ exports[`Card > renders with variant solid correctly 1`] = `
 </div>"
 `;
 
-exports[`Card > renders with variant subtle correctly 1`] = `
+exports[`card > renders with variant subtle correctly 1`] = `
 "<div data-slot="root" class="">
   <!--v-if-->
   <!--v-if-->

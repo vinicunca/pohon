@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ChatTool > renders with chevron leading and icon correctly 1`] = `
+exports[`chatTool > renders with chevron leading and icon correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class=""><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span>
     <!--v-if--></span><span data-slot="label" class="">Searching components<!--v-if--></span>
     <!--v-if-->
@@ -11,7 +11,7 @@ exports[`ChatTool > renders with chevron leading and icon correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with chevron leading correctly 1`] = `
+exports[`chatTool > renders with chevron leading correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
     <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
     <!--v-if-->
@@ -22,7 +22,7 @@ exports[`ChatTool > renders with chevron leading correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with chevronIcon correctly 1`] = `
+exports[`chatTool > renders with chevronIcon correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
     <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
     <!--v-if-->
@@ -33,7 +33,7 @@ exports[`ChatTool > renders with chevronIcon correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with class correctly 1`] = `
+exports[`chatTool > renders with class correctly 1`] = `
 "<div data-state="closed" data-slot="root" class="my-5"><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
     <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
     <!--v-if-->
@@ -44,7 +44,7 @@ exports[`ChatTool > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with default slot correctly 1`] = `
+exports[`chatTool > renders with default slot correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="">
     <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span><span class="iconify i-lucide:chevron-down" aria-hidden="true" data-slot="trailingIcon"></span>
   </button>
@@ -54,7 +54,7 @@ exports[`ChatTool > renders with default slot correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with defaultOpen correctly 1`] = `
+exports[`chatTool > renders with defaultOpen correctly 1`] = `
 "<div data-state="open" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" disabled="" data-slot="trigger" class="">
     <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
     <!--v-if-->
@@ -65,7 +65,7 @@ exports[`ChatTool > renders with defaultOpen correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with icon correctly 1`] = `
+exports[`chatTool > renders with icon correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class=""><span data-slot="leading" class=""><span class="iconify i-lucide:search" aria-hidden="true" data-slot="leadingIcon"></span>
     <!--v-if--></span><span data-slot="label" class="">Searching components<!--v-if--></span>
     <!--v-if-->
@@ -76,7 +76,7 @@ exports[`ChatTool > renders with icon correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with loading and loadingIcon correctly 1`] = `
+exports[`chatTool > renders with loading and loadingIcon correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class=""><span data-slot="leading" class=""><span class="iconify i-lucide:loader" aria-hidden="true" data-slot="leadingIcon"></span>
     <!--v-if--></span><span data-slot="label" class="">Searching components<!--v-if--></span>
     <!--v-if-->
@@ -87,7 +87,7 @@ exports[`ChatTool > renders with loading and loadingIcon correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with loading correctly 1`] = `
+exports[`chatTool > renders with loading correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class=""><span data-slot="leading" class=""><span class="iconify i-lucide:loader-circle" aria-hidden="true" data-slot="leadingIcon"></span>
     <!--v-if--></span><span data-slot="label" class="">Searching components<!--v-if--></span>
     <!--v-if-->
@@ -98,7 +98,7 @@ exports[`ChatTool > renders with loading correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with streaming correctly 1`] = `
+exports[`chatTool > renders with streaming correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
     <!--v-if--><span data-slot="label" class=""><span style="--spread: 40px; --duration: 2s;" data-slot="base" class="">Searching components</span>
     <!--v-if--></span>
@@ -110,7 +110,7 @@ exports[`ChatTool > renders with streaming correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with suffix correctly 1`] = `
+exports[`chatTool > renders with suffix correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
     <!--v-if--><span data-slot="label" class="">Searching components<span data-slot="suffix" class="">Button</span></span>
     <!--v-if-->
@@ -121,7 +121,7 @@ exports[`ChatTool > renders with suffix correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with text correctly 1`] = `
+exports[`chatTool > renders with text correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
     <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
     <!--v-if-->
@@ -132,7 +132,7 @@ exports[`ChatTool > renders with text correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with ui correctly 1`] = `
+exports[`chatTool > renders with ui correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
     <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
     <!--v-if-->
@@ -143,7 +143,7 @@ exports[`ChatTool > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with variant card correctly 1`] = `
+exports[`chatTool > renders with variant card correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
     <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
     <!--v-if-->
@@ -154,7 +154,7 @@ exports[`ChatTool > renders with variant card correctly 1`] = `
 </div>"
 `;
 
-exports[`ChatTool > renders with variant inline correctly 1`] = `
+exports[`chatTool > renders with variant inline correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="">
     <!--v-if--><span data-slot="label" class="">Searching components<!--v-if--></span>
     <!--v-if-->
