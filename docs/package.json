@@ -65,6 +65,6 @@
   },
   "devDependencies": {
     "@types/sortablejs": "^1.15.9",
-    "@unocss/preset-wind4": "^66.6.8"
+    "@unocss/preset-wind4": "^66.7.0"
   }
 }
