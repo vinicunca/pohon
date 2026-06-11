@@ -20,12 +20,12 @@
     "@tiptap/extension-emoji": "^3.24.0",
     "@tiptap/extension-text-align": "^3.24.0",
     "ai": "^6.0.193",
-    "nuxt": "^4.4.7",
+    "nuxt": "^4.4.8",
     "pohon-ui": "workspace:*",
     "zod": "^4.4.3"
   },
   "devDependencies": {
     "typescript": "^6.0.3",
-    "vue-tsc": "^3.3.3"
+    "vue-tsc": "^3.3.4"
   }
 }
