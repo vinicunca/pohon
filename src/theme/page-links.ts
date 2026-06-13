@@ -1,22 +1,24 @@
-export default {
+import type { ModuleOptions } from '../module';
+
+export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: '',
-    title: '',
-    list: '',
-    item: '',
-    link: '',
-    linkLeadingIcon: '',
-    linkLabel: '',
-    linkLabelExternalIcon: '',
+    root: 'flex flex-col gap-3',
+    title: 'text-sm font-semibold flex items-center gap-1.5',
+    list: 'flex flex-col gap-2',
+    item: 'relative',
+    link: 'group text-sm flex items-center gap-1.5 rounded-sm outline-primary/25 focus-visible:outline-3',
+    linkLeadingIcon: 'size-5 shrink-0',
+    linkLabel: 'truncate',
+    linkLabelExternalIcon: 'size-3 absolute top-0 text-dimmed',
   },
   variants: {
     active: {
       true: {
-        link: '',
+        link: 'text-primary font-medium',
       },
       false: {
-        link: '',
+        link: ['text-muted hover:text-default', options.theme.transitions && 'transition-colors'],
       },
     },
   },
-};
+});

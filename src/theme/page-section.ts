@@ -1,49 +1,49 @@
 export default {
   slots: {
-    root: '',
-    container: '',
+    root: 'relative isolate',
+    container: 'flex flex-col lg:grid py-16 sm:py-24 lg:py-32 gap-8 sm:gap-16',
     wrapper: '',
     header: '',
-    leading: '',
-    leadingIcon: '',
-    headline: '',
-    title: '',
-    description: '',
-    body: '',
-    features: '',
-    footer: '',
-    links: '',
+    leading: 'flex items-center mb-6',
+    leadingIcon: 'size-10 shrink-0 text-primary',
+    headline: 'mb-3',
+    title: 'text-3xl sm:text-4xl lg:text-5xl text-pretty tracking-tight font-bold text-highlighted',
+    description: 'text-base sm:text-lg text-muted',
+    body: 'mt-8',
+    features: 'grid',
+    footer: 'mt-8',
+    links: 'flex flex-wrap gap-x-6 gap-y-3',
   },
   variants: {
     orientation: {
       horizontal: {
-        container: '',
-        description: '',
-        features: '',
+        container: 'lg:grid-cols-2 lg:items-center',
+        description: 'text-pretty',
+        features: 'gap-4',
       },
       vertical: {
         container: '',
-        headline: '',
-        leading: '',
-        title: '',
-        description: '',
-        links: '',
-        features: '',
+        headline: 'justify-center',
+        leading: 'justify-center',
+        title: 'text-center',
+        description: 'text-center text-balance',
+        links: 'justify-center',
+        features: 'sm:grid-cols-2 lg:grid-cols-3 gap-8',
       },
     },
     reverse: {
       true: {
-        wrapper: '',
+        wrapper: 'order-last',
       },
     },
     headline: {
       true: {
-        headline: '',
+        headline: 'font-semibold text-primary flex items-center gap-1.5',
       },
     },
     title: {
       true: {
-        description: '',
+        description: 'mt-6',
       },
     },
     description: {
@@ -53,5 +53,23 @@ export default {
       true: '',
     },
   },
-  compoundVariants: [],
+  compoundVariants: [{
+    orientation: 'vertical',
+    title: true,
+    class: {
+      body: 'mt-16',
+    },
+  }, {
+    orientation: 'vertical',
+    description: true,
+    class: {
+      body: 'mt-16',
+    },
+  }, {
+    orientation: 'vertical',
+    body: true,
+    class: {
+      footer: 'mt-16',
+    },
+  }],
 };

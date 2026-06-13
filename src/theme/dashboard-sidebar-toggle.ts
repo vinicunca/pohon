@@ -1,5 +1,5 @@
 export default {
-  base: '',
+  base: 'lg:hidden',
   variants: {
     side: {
       left: '',

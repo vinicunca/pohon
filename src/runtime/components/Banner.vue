@@ -160,7 +160,6 @@ function onClose() {
       :aria-label="props.title"
       v-bind="{ to: props.to, target: props.target, ...$attrs }"
       class="focus:outline-none"
-      tabindex="-1"
       raw
     >
       <span class="inset-0 absolute" aria-hidden="true" />

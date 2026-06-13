@@ -1,3 +1,3 @@
 export default {
-  base: '',
+  base: 'border-t border-default my-12',
 };

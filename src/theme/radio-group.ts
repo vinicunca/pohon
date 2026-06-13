@@ -2,26 +2,26 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: '',
-    fieldset: '',
-    legend: '',
-    item: '',
-    container: '',
-    base: '',
-    indicator: '',
-    wrapper: '',
-    label: '',
-    description: '',
+    root: 'relative',
+    fieldset: 'flex gap-x-2',
+    legend: 'mb-1 block font-medium text-default',
+    item: 'flex items-start',
+    container: 'flex items-center',
+    base: 'rounded-full ring ring-inset ring-accented overflow-hidden focus-visible:outline-3',
+    indicator: 'flex items-center justify-center size-full after:bg-default after:rounded-full',
+    wrapper: 'w-full',
+    label: 'block font-medium text-default',
+    description: 'text-muted',
   },
   variants: {
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        base: '',
-        indicator: '',
+        base: `outline-${color}/25 focus-visible:ring-${color}`,
+        indicator: `bg-${color}`,
       }])),
       neutral: {
-        base: '',
-        indicator: '',
+        base: 'outline-inverted/25 focus-visible:ring-inverted',
+        indicator: 'bg-inverted',
       },
     },
     variant: {
@@ -29,96 +29,165 @@ export default (options: Required<ModuleOptions>) => ({
         item: '',
       },
       card: {
-        item: '',
+        item: 'border border-muted rounded-lg',
       },
       table: {
-        item: '',
+        item: 'border border-muted',
       },
     },
     orientation: {
       horizontal: {
-        fieldset: '',
+        fieldset: 'flex-row',
       },
       vertical: {
-        fieldset: '',
+        fieldset: 'flex-col',
       },
     },
     indicator: {
       start: {
-        item: '',
-        wrapper: '',
+        item: 'flex-row',
+        wrapper: 'ms-2',
       },
       end: {
-        item: '',
-        wrapper: '',
+        item: 'flex-row-reverse',
+        wrapper: 'me-2',
       },
       hidden: {
-        base: '',
-        wrapper: '',
+        base: 'sr-only',
+        wrapper: 'text-center',
       },
     },
     size: {
       xs: {
-        fieldset: '',
-        legend: '',
-        base: '',
-        item: '',
-        container: '',
-        indicator: '',
+        fieldset: 'gap-y-0.5',
+        legend: 'text-xs',
+        base: 'size-3',
+        item: 'text-xs',
+        container: 'h-4',
+        indicator: 'after:size-1',
       },
       sm: {
-        fieldset: '',
-        legend: '',
-        base: '',
-        item: '',
-        container: '',
-        indicator: '',
+        fieldset: 'gap-y-0.5',
+        legend: 'text-xs',
+        base: 'size-3.5',
+        item: 'text-xs',
+        container: 'h-4',
+        indicator: 'after:size-1',
       },
       md: {
-        fieldset: '',
-        legend: '',
-        base: '',
-        item: '',
-        container: '',
-        indicator: '',
+        fieldset: 'gap-y-1',
+        legend: 'text-sm',
+        base: 'size-4',
+        item: 'text-sm',
+        container: 'h-5',
+        indicator: 'after:size-1.5',
       },
       lg: {
-        fieldset: '',
-        legend: '',
-        base: '',
-        item: '',
-        container: '',
-        indicator: '',
+        fieldset: 'gap-y-1',
+        legend: 'text-sm',
+        base: 'size-4.5',
+        item: 'text-sm',
+        container: 'h-5',
+        indicator: 'after:size-1.5',
       },
       xl: {
-        fieldset: '',
-        legend: '',
-        base: '',
-        item: '',
-        container: '',
-        indicator: '',
-      },
-    },
-    disabled: {
-      true: {
-        item: '',
-        base: '',
-        label: '',
-        description: '',
-      },
-    },
-    required: {
-      true: {
-        legend: '',
+        fieldset: 'gap-y-1.5',
+        legend: 'text-base',
+        base: 'size-5',
+        item: 'text-base',
+        container: 'h-6',
+        indicator: 'after:size-2',
       },
     },
     highlight: {
       true: '',
     },
+    disabled: {
+      true: {
+        item: 'opacity-75',
+        base: 'cursor-not-allowed',
+        label: 'cursor-not-allowed',
+        description: 'cursor-not-allowed',
+      },
+    },
+    required: {
+      true: {
+        legend: 'after:content-[\'*\'] after:ms-0.5 after:text-error',
+      },
+    },
   },
-
-  compoundVariants: [],
-
+  compoundVariants: [
+    { size: 'xs', variant: ['card', 'table'], class: { item: 'p-2.5' } },
+    { size: 'sm', variant: ['card', 'table'], class: { item: 'p-3' } },
+    { size: 'md', variant: ['card', 'table'], class: { item: 'p-3.5' } },
+    { size: 'lg', variant: ['card', 'table'], class: { item: 'p-4' } },
+    { size: 'xl', variant: ['card', 'table'], class: { item: 'p-4.5' } },
+    {
+      orientation: 'horizontal',
+      variant: 'table',
+      class: {
+        item: 'first-of-type:rounded-s-lg last-of-type:rounded-e-lg',
+        fieldset: 'gap-0 -space-x-px',
+      },
+    },
+    {
+      orientation: 'vertical',
+      variant: 'table',
+      class: {
+        item: 'first-of-type:rounded-t-lg last-of-type:rounded-b-lg',
+        fieldset: 'gap-0 -space-y-px',
+      },
+    },
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'card',
+      class: {
+        item: `has-data-[state=checked]:border-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      variant: 'card',
+      class: {
+        item: 'has-data-[state=checked]:border-inverted',
+      },
+    },
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'table',
+      class: {
+        item: `has-data-[state=checked]:bg-${color}/10 has-data-[state=checked]:border-${color}/50 has-data-[state=checked]:z-[1]`,
+      },
+    })),
+    {
+      color: 'neutral',
+      variant: 'table',
+      class: {
+        item: 'has-data-[state=checked]:bg-elevated has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:z-[1]',
+      },
+    },
+    {
+      variant: ['card', 'table'],
+      disabled: true,
+      class: {
+        item: 'cursor-not-allowed',
+      },
+    },
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      highlight: true,
+      class: {
+        base: `ring-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      highlight: true,
+      class: {
+        base: 'ring-inverted',
+      },
+    },
+  ],
   defaultVariants: {
     size: 'md',
     color: 'primary',

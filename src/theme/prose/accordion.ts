@@ -1,6 +1,6 @@
 export default {
   slots: {
-    root: '',
-    trigger: '',
+    root: 'my-5',
+    trigger: 'text-base',
   },
 };

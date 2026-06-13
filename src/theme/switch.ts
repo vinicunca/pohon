@@ -2,90 +2,106 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: '',
-    base: '',
-    container: '',
-    thumb: '',
-    icon: '',
-    wrapper: '',
-    label: '',
-    description: '',
+    root: 'relative flex items-start',
+    base: ['inline-flex items-center shrink-0 rounded-full border-2 border-transparent focus-visible:outline-3 data-[state=unchecked]:bg-accented', options.theme.transitions && 'transition-[background] duration-200'],
+    container: 'flex items-center',
+    thumb: 'group pointer-events-none rounded-full bg-default shadow-lg ring-0 transition-transform duration-200 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:rtl:-translate-x-0 flex items-center justify-center',
+    icon: ['absolute shrink-0 group-data-[state=unchecked]:text-dimmed opacity-0 size-10/12', options.theme.transitions && 'transition-[color,opacity] duration-200'],
+    wrapper: 'ms-2',
+    label: 'block font-medium text-default',
+    description: 'text-muted',
   },
   variants: {
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        base: '',
-        icon: '',
+        base: `data-[state=checked]:bg-${color} outline-${color}/25`,
+        icon: `group-data-[state=checked]:text-${color}`,
       }])),
       neutral: {
-        base: '',
-        icon: '',
+        base: 'data-[state=checked]:bg-inverted outline-inverted/25',
+        icon: 'group-data-[state=checked]:text-highlighted',
       },
     },
     size: {
       xs: {
-        base: '',
-        container: '',
-        thumb: '',
-        wrapper: '',
+        base: 'w-7',
+        container: 'h-4',
+        thumb: 'size-3 data-[state=checked]:translate-x-3 data-[state=checked]:rtl:-translate-x-3',
+        wrapper: 'text-xs',
       },
       sm: {
-        base: '',
-        container: '',
-        thumb: '',
-        wrapper: '',
+        base: 'w-8',
+        container: 'h-4',
+        thumb: 'size-3.5 data-[state=checked]:translate-x-3.5 data-[state=checked]:rtl:-translate-x-3.5',
+        wrapper: 'text-xs',
       },
       md: {
-        base: '',
-        container: '',
-        thumb: '',
-        wrapper: '',
+        base: 'w-9',
+        container: 'h-5',
+        thumb: 'size-4 data-[state=checked]:translate-x-4 data-[state=checked]:rtl:-translate-x-4',
+        wrapper: 'text-sm',
       },
       lg: {
-        base: '',
-        container: '',
-        thumb: '',
-        wrapper: '',
+        base: 'w-10',
+        container: 'h-5',
+        thumb: 'size-4.5 data-[state=checked]:translate-x-4.5 data-[state=checked]:rtl:-translate-x-4.5',
+        wrapper: 'text-sm',
       },
       xl: {
-        base: '',
-        container: '',
-        thumb: '',
-        wrapper: '',
+        base: 'w-11',
+        container: 'h-6',
+        thumb: 'size-5 data-[state=checked]:translate-x-5 data-[state=checked]:rtl:-translate-x-5',
+        wrapper: 'text-base',
       },
     },
     checked: {
       true: {
-        icon: '',
+        icon: 'group-data-[state=checked]:opacity-100',
       },
     },
     unchecked: {
       true: {
-        icon: '',
+        icon: 'group-data-[state=unchecked]:opacity-100',
       },
     },
     loading: {
       true: {
-        icon: '',
-      },
-    },
-    required: {
-      true: {
-        label: '',
-      },
-    },
-    disabled: {
-      true: {
-        root: '',
-        base: '',
-        label: '',
-        description: '',
+        icon: 'animate-spin',
       },
     },
     highlight: {
       true: '',
     },
+    required: {
+      true: {
+        label: 'after:content-[\'*\'] after:ms-0.5 after:text-error',
+      },
+    },
+    disabled: {
+      true: {
+        root: 'opacity-75',
+        base: 'cursor-not-allowed',
+        label: 'cursor-not-allowed',
+        description: 'cursor-not-allowed',
+      },
+    },
   },
+  compoundVariants: [
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      highlight: true,
+      class: {
+        base: `ring ring-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      highlight: true,
+      class: {
+        base: 'ring ring-inverted',
+      },
+    },
+  ],
   defaultVariants: {
     color: 'primary',
     size: 'md',

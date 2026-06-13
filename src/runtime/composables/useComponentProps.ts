@@ -1,7 +1,7 @@
-import type { ClassValue } from 'unocss-variants';
 import type { ComputedRef, VNode } from 'vue';
 import type * as ui from '#build/ui';
 import type * as ComponentTypes from '../types';
+import type { SlotClass } from '../types/uv';
 import { createContext } from 'akar';
 import defu from 'defu';
 import { computed, getCurrentInstance } from 'vue';
@@ -9,8 +9,8 @@ import { useAppConfig } from '#imports';
 import { get } from '../utils';
 
 type ThemeSlotOverrides<T> = T extends { slots: infer S extends Record<string, any> }
-  ? { [K in keyof S]?: ClassValue }
-  : { [K in keyof T]?: T[K] extends Array<any> ? ClassValue : T[K] extends Record<string, any> ? ThemeSlotOverrides<T[K]> : ClassValue };
+  ? { [K in keyof S]?: SlotClass }
+  : { [K in keyof T]?: T[K] extends Array<any> ? SlotClass : T[K] extends Record<string, any> ? ThemeSlotOverrides<T[K]> : SlotClass };
 
 /**
  * Flat slot-class override shape: `{ button: { base: '...' }, modal: {...} }`.

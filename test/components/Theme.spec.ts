@@ -250,7 +250,7 @@ describe('theme', () => {
     expect(wrapper.find('[data-slot="root"]').classes()).toContain('input-theme-class');
   });
 
-  it.skip(':props applies prop defaults to child', async () => {
+  it(':props applies prop defaults to child', async () => {
     const wrapper = await mountSuspended({
       components: { Theme, Button },
       template: `
@@ -264,7 +264,7 @@ describe('theme', () => {
     expect(wrapper.find('button').classes()).not.toContain('bg-primary');
   });
 
-  it.skip('explicit prop wins over :props (other theme props still flow through)', async () => {
+  it('explicit prop wins over :props (other theme props still flow through)', async () => {
     const wrapper = await mountSuspended({
       components: { Theme, Button },
       template: `
@@ -278,7 +278,7 @@ describe('theme', () => {
     expect(wrapper.find('button').classes()).not.toContain('bg-error/10');
   });
 
-  it.skip(':props applies to multiple component types simultaneously', async () => {
+  it(':props applies to multiple component types simultaneously', async () => {
     const wrapper = await mountSuspended({
       components: { Theme, Button, Checkbox },
       template: `
@@ -290,10 +290,10 @@ describe('theme', () => {
     });
 
     expect(wrapper.find('button').classes()).toContain('bg-error/10');
-    expect(wrapper.html()).toContain('focus-visible:outline-success');
+    expect(wrapper.html()).toContain('focus-visible:ring-success');
   });
 
-  it.skip(':props does not leak outside scope', async () => {
+  it(':props does not leak outside scope', async () => {
     const wrapper = await mountSuspended({
       components: { Theme, Button },
       template: `
@@ -310,7 +310,7 @@ describe('theme', () => {
     expect(wrapper.find('.outside-btn').classes()).not.toContain('bg-error/10');
   });
 
-  it.skip('nested :props inherits non-overridden keys from outer', async () => {
+  it('nested :props inherits non-overridden keys from outer', async () => {
     const wrapper = await mountSuspended({
       components: { Theme, Button },
       template: `
@@ -333,7 +333,7 @@ describe('theme', () => {
   // down the tree only overrides a different component (e.g. button). Both
   // should compose: tooltips below the inner theme still inherit the outer's
   // tooltip defaults, and the inner's button override applies only locally.
-  it.skip('nested :props inherits across different components', async () => {
+  it('nested :props inherits across different components', async () => {
     const wrapper = await mountSuspended({
       components: { Theme, TooltipProvider, Tooltip, Button },
       template: `
@@ -360,7 +360,7 @@ describe('theme', () => {
     expect(wrapper.find('[data-slot="arrow"]').exists()).toBe(true);
   });
 
-  it.skip('reacts to :props changes', async () => {
+  it('reacts to :props changes', async () => {
     const themeProps = ref<{ button: Partial<ButtonProps> }>({ button: { color: 'error', variant: 'soft' } });
 
     const wrapper = await mountSuspended({
@@ -382,7 +382,7 @@ describe('theme', () => {
     expect(wrapper.find('button').classes()).not.toContain('bg-error/10');
   });
 
-  it.skip(':props and :ui work together', async () => {
+  it(':props and :ui work together', async () => {
     const wrapper = await mountSuspended({
       components: { Theme, Button },
       template: `
@@ -419,7 +419,7 @@ describe('theme', () => {
   });
 
   // Without a `<PTheme :props>` ancestor, an unset Boolean prop must stay unset
-  // so the underlying Akar primitive's own default applies. The proxy gates the
+  // so the underlying akar primitive's own default applies. The proxy gates the
   // `_props` fallback on `withDefaults` having a real default, otherwise Vue's
   // auto-cast `false` would leak through.
   it('bare component does not pass Vue auto-cast `false` to akar primitive', async () => {
@@ -452,23 +452,21 @@ describe('theme', () => {
     });
 
     // theme `color` flows through the proxy onto the checkbox
-    // TODO: Need to find a way since the theme is headless
-    // expect(wrapper.html()).toContain('focus-visible:outline-success');
+    expect(wrapper.html()).toContain('focus-visible:ring-success');
     // FormField label is wired up
     expect(wrapper.text()).toContain('Accept');
     // FormField-injected `size` (xl) wins over `<PTheme :props>` size (xs).
     // `useFormField` reads `_props.size` (raw, undefined here) so it falls back
     // to the FormField context — proving the proxy isn't shadowing field injection.
-    // TODO: Need to find a way since the theme is headless
-    // expect(wrapper.find('button[role="checkbox"]').classes()).toContain('size-5');
-    // expect(wrapper.find('button[role="checkbox"]').classes()).not.toContain('size-3');
+    expect(wrapper.find('button[role="checkbox"]').classes()).toContain('size-5');
+    expect(wrapper.find('button[role="checkbox"]').classes()).not.toContain('size-3');
   });
 
   // FormField validation errors must always win over `<PTheme :props>` color.
   // `useFormField` reads raw `_props` and short-circuits to `'error'` when a
   // validation message is present, so the proxy fallback in
   // `color: color.value ?? props.color` never runs.
-  it.skip('formField validation error overrides :props color', async () => {
+  it('formField validation error overrides :props color', async () => {
     const wrapper = await mountSuspended({
       components: { Theme, FormField, Checkbox },
       template: `
@@ -480,8 +478,8 @@ describe('theme', () => {
       `,
     });
 
-    expect(wrapper.html()).toContain('focus-visible:outline-error');
-    expect(wrapper.html()).not.toContain('focus-visible:outline-success');
+    expect(wrapper.html()).toContain('focus-visible:ring-error');
+    expect(wrapper.html()).not.toContain('focus-visible:ring-success');
   });
 
   // `useFieldGroup` shares the same closer-context-wins fallback as
@@ -489,7 +487,7 @@ describe('theme', () => {
   // `<PFieldGroup>` must take its size from the wrapping group, not from
   // `<PTheme :props="{ button: { size } }">`. Regressed once when components
   // were passing the proxy `props` to `useFieldGroup` instead of `_props`.
-  it.skip('fieldGroup size wins over :props button size', async () => {
+  it('fieldGroup size wins over :props button size', async () => {
     const wrapper = await mountSuspended({
       components: { Theme, FieldGroup, Button },
       template: `
@@ -508,7 +506,7 @@ describe('theme', () => {
 
   // `useAvatarGroup` follows the same pattern: `<PAvatarGroup size>` is the
   // closer context and must beat `<PTheme :props="{ avatar: { size } }">`.
-  it.skip('avatarGroup size wins over :props avatar size', async () => {
+  it('avatarGroup size wins over :props avatar size', async () => {
     const wrapper = await mountSuspended({
       components: { Theme, AvatarGroup, Avatar },
       template: `

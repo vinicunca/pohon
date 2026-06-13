@@ -2,37 +2,37 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: '',
-    base: '',
+    root: 'inline-flex flex-row-reverse justify-end',
+    base: 'relative rounded-full ring-bg first:me-0',
   },
   variants: {
     size: {
       '3xs': {
-        base: '',
+        base: 'ring -me-0.5',
       },
       '2xs': {
-        base: '',
+        base: 'ring -me-0.5',
       },
       'xs': {
-        base: '',
+        base: 'ring -me-0.5',
       },
       'sm': {
-        base: '',
+        base: 'ring-2 -me-1.5',
       },
       'md': {
-        base: '',
+        base: 'ring-2 -me-1.5',
       },
       'lg': {
-        base: '',
+        base: 'ring-2 -me-1.5',
       },
       'xl': {
-        base: '',
+        base: 'ring-3 -me-2',
       },
       '2xl': {
-        base: '',
+        base: 'ring-3 -me-2',
       },
       '3xl': {
-        base: '',
+        base: 'ring-3 -me-2',
       },
     },
     color: {

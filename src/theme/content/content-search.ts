@@ -6,7 +6,7 @@ export default {
   variants: {
     fullscreen: {
       false: {
-        modal: '',
+        modal: 'sm:max-w-3xl h-full sm:h-[28rem]',
       },
     },
     size: {

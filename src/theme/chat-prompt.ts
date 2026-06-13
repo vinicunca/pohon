@@ -1,21 +1,21 @@
 export default {
   slots: {
-    root: '',
-    header: '',
-    body: '',
-    footer: '',
+    root: 'relative flex flex-col items-stretch gap-2 px-2.5 py-2 w-full rounded-lg backdrop-blur',
+    header: 'flex items-center gap-1.5',
+    body: 'items-start',
+    footer: 'flex items-center justify-between gap-1.5',
     base: '',
   },
   variants: {
     variant: {
       outline: {
-        root: '',
+        root: 'bg-default/75 ring ring-default',
       },
       soft: {
-        root: '',
+        root: 'bg-elevated/50',
       },
       subtle: {
-        root: '',
+        root: 'bg-elevated/50 ring ring-default',
       },
       naked: {
         root: '',

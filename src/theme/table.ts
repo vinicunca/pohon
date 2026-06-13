@@ -2,41 +2,41 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: '',
-    base: '',
-    caption: '',
-    thead: '',
-    tbody: '',
-    tfoot: '',
-    tr: '',
-    th: '',
-    td: '',
-    separator: '',
-    empty: '',
-    loading: '',
+    root: 'relative overflow-auto outline-primary/25 focus-visible:outline-3',
+    base: 'min-w-full overflow-clip',
+    caption: 'sr-only',
+    thead: 'relative',
+    tbody: 'isolate [&>tr]:data-[selectable=true]:hover:bg-elevated/50 [&>tr]:data-[selectable=true]:outline-primary/25 [&>tr]:data-[selectable=true]:focus-visible:outline-3 divide-y divide-default',
+    tfoot: 'relative',
+    tr: 'data-[selected=true]:bg-elevated/50',
+    th: 'px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&:has([role=checkbox])]:pe-0',
+    td: 'p-4 text-sm text-muted whitespace-nowrap [&:has([role=checkbox])]:pe-0',
+    separator: 'absolute z-1 left-0 w-full h-px bg-(--ui-border-accented)',
+    empty: 'py-6 text-center text-sm text-muted',
+    loading: 'py-6 text-center',
   },
   variants: {
     pinned: {
       true: {
-        th: '',
-        td: '',
+        th: 'sticky bg-default/75 z-1',
+        td: 'sticky bg-default/75 z-1',
       },
     },
     sticky: {
       true: {
-        thead: '',
-        tfoot: '',
+        thead: 'sticky top-0 inset-x-0 bg-default/75 backdrop-blur z-1',
+        tfoot: 'sticky bottom-0 inset-x-0 bg-default/75 backdrop-blur z-1',
       },
       header: {
-        thead: '',
+        thead: 'sticky top-0 inset-x-0 bg-default/75 backdrop-blur z-1',
       },
       footer: {
-        tfoot: '',
+        tfoot: 'sticky bottom-0 inset-x-0 bg-default/75 backdrop-blur z-1',
       },
     },
     loading: {
       true: {
-        thead: '',
+        thead: 'after:absolute after:z-1 after:h-px',
       },
     },
     loadingAnimation: {
@@ -50,9 +50,43 @@ export default (options: Required<ModuleOptions>) => ({
       neutral: '',
     },
   },
-
-  compoundVariants: [],
-
+  compoundVariants: [...(options.theme.colors || []).map((loadingColor: string) => ({
+    loading: true,
+    loadingColor,
+    class: {
+      thead: `after:bg-${loadingColor}`,
+    },
+  })), {
+    loading: true,
+    loadingColor: 'neutral',
+    class: {
+      thead: 'after:bg-inverted',
+    },
+  }, {
+    loading: true,
+    loadingAnimation: 'carousel',
+    class: {
+      thead: 'after:animate-[carousel_2s_ease-in-out_infinite] rtl:after:animate-[carousel-rtl_2s_ease-in-out_infinite]',
+    },
+  }, {
+    loading: true,
+    loadingAnimation: 'carousel-inverse',
+    class: {
+      thead: 'after:animate-[carousel-inverse_2s_ease-in-out_infinite] rtl:after:animate-[carousel-inverse-rtl_2s_ease-in-out_infinite]',
+    },
+  }, {
+    loading: true,
+    loadingAnimation: 'swing',
+    class: {
+      thead: 'after:animate-[swing_2s_ease-in-out_infinite]',
+    },
+  }, {
+    loading: true,
+    loadingAnimation: 'elastic',
+    class: {
+      thead: 'after:animate-[elastic_2s_ease-in-out_infinite]',
+    },
+  }],
   defaultVariants: {
     loadingColor: 'primary',
     loadingAnimation: 'carousel',

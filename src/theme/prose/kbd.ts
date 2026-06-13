@@ -1,3 +1,3 @@
 export default {
-  base: '',
+  base: 'align-text-top',
 };

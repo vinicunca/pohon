@@ -1,3 +1,3 @@
 export default {
-  base: '',
+  base: 'fixed inset-0 flex overflow-hidden',
 };

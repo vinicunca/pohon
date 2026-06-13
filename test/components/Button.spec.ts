@@ -72,8 +72,7 @@ describe('button', () => {
 
     const icon = wrapper.findComponent({ name: 'Icon' });
 
-    // TODO: Need to find a way since the theme is headless
-    // expect(icon.classes()).toContain('animate-spin');
+    expect(icon.classes()).toContain('animate-spin');
     expect(icon?.vm?.name).toBe('i-lucide-loader-circle');
 
     resolve?.(null);
@@ -106,8 +105,7 @@ describe('button', () => {
 
     const icon = wrapper.findComponent({ name: 'Icon' });
 
-    // TODO: Need to find a way since the theme is headless
-    // expect(icon.classes()).toContain('animate-spin');
+    expect(icon.classes()).toContain('animate-spin');
     expect(icon?.vm?.name).toBe('i-lucide-loader-circle');
 
     resolve?.(null);
@@ -127,5 +125,19 @@ describe('button', () => {
     });
 
     expect(await axe(wrapper.element)).toHaveNoViolations();
+  });
+
+  it('replaces a slot class through a `:ui` function', async () => {
+    const wrapper = await mountSuspended(Button, {
+      props: {
+        label: 'Button',
+        ui: { label: () => 'text-3xl font-bold' },
+      },
+    });
+
+    const label = wrapper.get('[data-slot="label"]');
+    expect(label.classes()).toContain('text-3xl');
+    // The default `truncate` class is dropped, not merged.
+    expect(label.classes()).not.toContain('truncate');
   });
 });

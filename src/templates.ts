@@ -8,7 +8,7 @@ import { genExport } from 'knitwork';
 import * as theme from './theme';
 import * as themeContent from './theme/content';
 import * as themeProse from './theme/prose';
-import { applyDefaultVariants } from './utils/theme';
+import { applyDefaultVariants, applyUnstyled } from './utils/theme';
 
 export function getTemplates(options: ModuleOptions, uiConfig: Record<string, any>, nuxt?: Nuxt) {
   const templates: Array<NuxtTemplate> = [];
@@ -29,6 +29,9 @@ export function getTemplates(options: ModuleOptions, uiConfig: Record<string, an
 
           // Override default variants from nuxt.config.ts
           result = applyDefaultVariants(result, options.theme?.defaultVariants);
+
+          // Strip default theme classes if `unstyled` is enabled
+          result = applyUnstyled(result, options.theme?.unstyled);
 
           const variants = Object.entries(result.variants || {})
             .filter(([_, values]) => {
@@ -59,14 +62,16 @@ export function getTemplates(options: ModuleOptions, uiConfig: Record<string, an
             const templatePath = fileURLToPath(new URL(`./theme/${path ? `${path}/` : ''}${toKebabCase(component)}`, import.meta.url));
             const themeUtilsPath = fileURLToPath(new URL('./utils/theme', import.meta.url));
             const defaultVariantsJson = JSON.stringify(options.theme?.defaultVariants) ?? 'undefined';
+            const unstyledJson = JSON.stringify(options.theme?.unstyled) ?? 'undefined';
 
             return [
               `import template from ${JSON.stringify(templatePath)}`,
-              `import { applyDefaultVariants } from ${JSON.stringify(themeUtilsPath)}`,
+              `import { applyDefaultVariants, applyUnstyled } from ${JSON.stringify(themeUtilsPath)}`,
               ...generateVariantDeclarations(variants),
               `const options = ${JSON.stringify(options, null, 2)}`,
               'let result = typeof template === \'function\' ? (template as Function)(options) : template',
               `result = applyDefaultVariants(result, ${defaultVariantsJson})`,
+              `result = applyUnstyled(result, ${unstyledJson})`,
               `const theme = ${json}`,
               'export default result as typeof theme',
             ].join('\n\n');

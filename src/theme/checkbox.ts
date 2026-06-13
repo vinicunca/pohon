@@ -2,24 +2,24 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: '',
-    container: '',
-    base: '',
-    indicator: '',
-    icon: '',
-    wrapper: '',
-    label: '',
-    description: '',
+    root: 'relative flex items-start',
+    container: 'flex items-center',
+    base: 'rounded-sm ring ring-inset ring-accented overflow-hidden focus-visible:outline-3',
+    indicator: 'flex items-center justify-center size-full text-inverted',
+    icon: 'shrink-0 size-full',
+    wrapper: 'w-full',
+    label: 'block font-medium text-default',
+    description: 'text-muted',
   },
   variants: {
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        base: '',
-        indicator: '',
+        base: `outline-${color}/25 focus-visible:ring-${color}`,
+        indicator: `bg-${color}`,
       }])),
       neutral: {
-        base: '',
-        indicator: '',
+        base: 'outline-inverted/25 focus-visible:ring-inverted',
+        indicator: 'bg-inverted',
       },
     },
     variant: {
@@ -27,61 +27,61 @@ export default (options: Required<ModuleOptions>) => ({
         root: '',
       },
       card: {
-        root: '',
+        root: 'border border-muted rounded-lg',
       },
     },
     indicator: {
       start: {
-        root: '',
-        wrapper: '',
+        root: 'flex-row',
+        wrapper: 'ms-2',
       },
       end: {
-        root: '',
-        wrapper: '',
+        root: 'flex-row-reverse',
+        wrapper: 'me-2',
       },
       hidden: {
-        base: '',
-        wrapper: '',
+        base: 'sr-only',
+        wrapper: 'text-center',
       },
     },
     size: {
       xs: {
-        base: '',
-        container: '',
-        wrapper: '',
+        base: 'size-3',
+        container: 'h-4',
+        wrapper: 'text-xs',
       },
       sm: {
-        base: '',
-        container: '',
-        wrapper: '',
+        base: 'size-3.5',
+        container: 'h-4',
+        wrapper: 'text-xs',
       },
       md: {
-        base: '',
-        container: '',
-        wrapper: '',
+        base: 'size-4',
+        container: 'h-5',
+        wrapper: 'text-sm',
       },
       lg: {
-        base: '',
-        container: '',
-        wrapper: '',
+        base: 'size-4.5',
+        container: 'h-5',
+        wrapper: 'text-sm',
       },
       xl: {
-        base: '',
-        container: '',
-        wrapper: '',
+        base: 'size-5',
+        container: 'h-6',
+        wrapper: 'text-base',
       },
     },
     required: {
       true: {
-        label: '',
+        label: 'after:content-[\'*\'] after:ms-0.5 after:text-error',
       },
     },
     disabled: {
       true: {
-        root: '',
-        base: '',
-        label: '',
-        description: '',
+        root: 'opacity-75',
+        base: 'cursor-not-allowed',
+        label: 'cursor-not-allowed',
+        description: 'cursor-not-allowed',
       },
     },
     highlight: {
@@ -91,8 +91,48 @@ export default (options: Required<ModuleOptions>) => ({
       true: '',
     },
   },
-  compoundVariants: [],
-
+  compoundVariants: [
+    { size: 'xs', variant: 'card', class: { root: 'p-2.5' } },
+    { size: 'sm', variant: 'card', class: { root: 'p-3' } },
+    { size: 'md', variant: 'card', class: { root: 'p-3.5' } },
+    { size: 'lg', variant: 'card', class: { root: 'p-4' } },
+    { size: 'xl', variant: 'card', class: { root: 'p-4.5' } },
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'card',
+      class: {
+        root: `has-data-[state=checked]:border-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      variant: 'card',
+      class: {
+        root: 'has-data-[state=checked]:border-inverted',
+      },
+    },
+    {
+      variant: 'card',
+      disabled: true,
+      class: {
+        root: 'cursor-not-allowed',
+      },
+    },
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      highlight: true,
+      class: {
+        base: `ring-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      highlight: true,
+      class: {
+        base: 'ring-inverted',
+      },
+    },
+  ],
   defaultVariants: {
     size: 'md',
     color: 'primary',

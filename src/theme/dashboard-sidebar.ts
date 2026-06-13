@@ -1,25 +1,25 @@
 export default {
   slots: {
-    root: '',
-    header: '',
-    body: '',
-    footer: '',
+    root: 'relative hidden lg:flex flex-col min-h-svh min-w-16 w-(--width) shrink-0',
+    header: 'h-(--ui-header-height) shrink-0 flex items-center gap-1.5 px-4',
+    body: 'flex flex-col gap-4 flex-1 overflow-y-auto px-4 py-2',
+    footer: 'shrink-0 flex items-center gap-1.5 px-4 py-2',
     toggle: '',
     handle: '',
-    content: '',
-    overlay: '',
+    content: 'lg:hidden',
+    overlay: 'lg:hidden',
   },
   variants: {
     menu: {
       true: {
-        header: '',
-        body: '',
-        footer: '',
+        header: 'sm:px-6',
+        body: 'sm:px-6',
+        footer: 'sm:px-6',
       },
     },
     side: {
       left: {
-        root: '',
+        root: 'border-e border-default',
       },
       right: {
         root: '',
@@ -30,7 +30,7 @@ export default {
         toggle: '',
       },
       right: {
-        toggle: '',
+        toggle: 'ms-auto',
       },
     },
   },

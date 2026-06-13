@@ -1,83 +1,86 @@
-export default {
+import type { ModuleOptions } from '../module';
+
+export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: '',
+    root: 'relative group/user',
     wrapper: '',
-    name: '',
-    description: '',
-    avatar: '',
+    name: 'font-medium',
+    description: 'text-muted',
+    avatar: 'shrink-0',
   },
   variants: {
     orientation: {
       horizontal: {
-        root: '',
+        root: 'flex items-center',
       },
       vertical: {
-        root: '',
+        root: 'flex flex-col',
       },
     },
     to: {
       true: {
-        name: '',
-        description: '',
-        avatar: '',
+        root: ['rounded-md outline-primary/25 has-focus-visible:outline-3', options.theme.transitions && 'transition'],
+        name: ['text-default peer-hover:text-highlighted peer-focus-visible:text-highlighted', options.theme.transitions && 'transition-colors'],
+        description: ['peer-hover:text-toned peer-focus-visible:text-toned', options.theme.transitions && 'transition-colors'],
+        avatar: 'transform transition-transform duration-200 group-hover/user:scale-115 group-has-focus-visible/user:scale-115',
       },
       false: {
-        name: '',
+        name: 'text-highlighted',
         description: '',
       },
     },
     size: {
       '3xs': {
-        root: '',
-        wrapper: '',
-        name: '',
-        description: '',
+        root: 'gap-1',
+        wrapper: 'flex items-center gap-1',
+        name: 'text-xs',
+        description: 'text-xs',
       },
       '2xs': {
-        root: '',
-        wrapper: '',
-        name: '',
-        description: '',
+        root: 'gap-1.5',
+        wrapper: 'flex items-center gap-1.5',
+        name: 'text-xs',
+        description: 'text-xs',
       },
       'xs': {
-        root: '',
-        wrapper: '',
-        name: '',
-        description: '',
+        root: 'gap-1.5',
+        wrapper: 'flex items-center gap-1.5',
+        name: 'text-xs',
+        description: 'text-xs',
       },
       'sm': {
-        root: '',
-        name: '',
-        description: '',
+        root: 'gap-2',
+        name: 'text-xs',
+        description: 'text-xs',
       },
       'md': {
-        root: '',
-        name: '',
-        description: '',
+        root: 'gap-2',
+        name: 'text-sm',
+        description: 'text-xs',
       },
       'lg': {
-        root: '',
-        name: '',
-        description: '',
+        root: 'gap-2.5',
+        name: 'text-sm',
+        description: 'text-sm',
       },
       'xl': {
-        root: '',
-        name: '',
-        description: '',
+        root: 'gap-2.5',
+        name: 'text-base',
+        description: 'text-sm',
       },
       '2xl': {
-        root: '',
-        name: '',
-        description: '',
+        root: 'gap-3',
+        name: 'text-base',
+        description: 'text-base',
       },
       '3xl': {
-        root: '',
-        name: '',
-        description: '',
+        root: 'gap-3',
+        name: 'text-lg',
+        description: 'text-base',
       },
     },
   },
   defaultVariants: {
     size: 'md',
   },
-};
+});
