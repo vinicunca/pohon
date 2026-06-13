@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.0-rc7](https://github.com/vinicunca/pohon/compare/v2.0.0-rc6...v2.0.0-rc7) (2026-06-13)
+
+### Features
+
+* bring back theme definitions ([4e4e206](https://github.com/vinicunca/pohon/commit/4e4e2060a20aa7f714660d87c0a448e17f13f44f))
+
 ## [2.0.0-rc6](https://github.com/vinicunca/pohon/compare/v2.0.0-rc5...v2.0.0-rc6) (2026-06-09)
 
 ## [2.0.0-rc5](https://github.com/vinicunca/pohon/compare/v2.0.0-rc4...v2.0.0-rc5) (2026-06-08)
