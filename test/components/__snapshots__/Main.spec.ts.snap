@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`main > renders with as correctly 1`] = `"<section class=""></section>"`;
+exports[`main > renders with as correctly 1`] = `"<section class="min-h-[calc(100vh-var(--ui-header-height))]"></section>"`;
 
-exports[`main > renders with class correctly 1`] = `"<main class="min-h-full"></main>"`;
+exports[`main > renders with class correctly 1`] = `"<main class="min-h-[calc(100vh-var(--ui-header-height))] min-h-full"></main>"`;
 
-exports[`main > renders with default slot correctly 1`] = `"<main class="">Default slot</main>"`;
+exports[`main > renders with default slot correctly 1`] = `"<main class="min-h-[calc(100vh-var(--ui-header-height))]">Default slot</main>"`;

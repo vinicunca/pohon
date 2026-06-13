@@ -234,9 +234,9 @@ describe('select', () => {
           items: ['Option 1', 'Option 2'],
         },
         slotTemplate: `
-        <UFormField name="value" label="Label">
-          <USelect :items="items" :portal="false" />
-        </UFormField>
+        <PFormField name="value" label="Label">
+          <PSelect :items="items" :portal="false" />
+        </PFormField>
         `,
       });
 

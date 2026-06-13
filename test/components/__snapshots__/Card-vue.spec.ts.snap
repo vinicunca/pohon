@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`card > renders with as correctly 1`] = `
-"<section data-slot="root" class="">
+"<section data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
@@ -9,7 +9,7 @@ exports[`card > renders with as correctly 1`] = `
 `;
 
 exports[`card > renders with class correctly 1`] = `
-"<div data-slot="root" class="rounded-xl">
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default rounded-xl">
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
@@ -17,18 +17,18 @@ exports[`card > renders with class correctly 1`] = `
 `;
 
 exports[`card > renders with default slot correctly 1`] = `
-"<div data-slot="root" class="">
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
   <!--v-if-->
-  <div data-slot="body" class="">Default slot</div>
+  <div data-slot="body" class="p-4 sm:p-6">Default slot</div>
   <!--v-if-->
 </div>"
 `;
 
 exports[`card > renders with description correctly 1`] = `
-"<div data-slot="root" class="">
-  <div data-slot="header" class="">
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
+  <div data-slot="header" class="p-4 sm:px-6">
     <!--v-if-->
-    <div data-slot="description" class="">Description</div>
+    <div data-slot="description" class="mt-1 text-muted text-sm">Description</div>
   </div>
   <!--v-if-->
   <!--v-if-->
@@ -36,10 +36,10 @@ exports[`card > renders with description correctly 1`] = `
 `;
 
 exports[`card > renders with description slot correctly 1`] = `
-"<div data-slot="root" class="">
-  <div data-slot="header" class="">
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
+  <div data-slot="header" class="p-4 sm:px-6">
     <!--v-if-->
-    <div data-slot="description" class="">Description slot</div>
+    <div data-slot="description" class="mt-1 text-muted text-sm">Description slot</div>
   </div>
   <!--v-if-->
   <!--v-if-->
@@ -47,26 +47,26 @@ exports[`card > renders with description slot correctly 1`] = `
 `;
 
 exports[`card > renders with footer slot correctly 1`] = `
-"<div data-slot="root" class="">
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
   <!--v-if-->
   <!--v-if-->
-  <div data-slot="footer" class="">Footer slot</div>
+  <div data-slot="footer" class="p-4 sm:px-6">Footer slot</div>
 </div>"
 `;
 
 exports[`card > renders with header slot correctly 1`] = `
-"<div data-slot="root" class="">
-  <div data-slot="header" class="">Header slot</div>
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
+  <div data-slot="header" class="p-4 sm:px-6">Header slot</div>
   <!--v-if-->
   <!--v-if-->
 </div>"
 `;
 
 exports[`card > renders with title and description correctly 1`] = `
-"<div data-slot="root" class="">
-  <div data-slot="header" class="">
-    <div data-slot="title" class="">Title</div>
-    <div data-slot="description" class="">Description</div>
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
+  <div data-slot="header" class="p-4 sm:px-6">
+    <div data-slot="title" class="text-highlighted font-semibold">Title</div>
+    <div data-slot="description" class="mt-1 text-muted text-sm">Description</div>
   </div>
   <!--v-if-->
   <!--v-if-->
@@ -74,9 +74,9 @@ exports[`card > renders with title and description correctly 1`] = `
 `;
 
 exports[`card > renders with title correctly 1`] = `
-"<div data-slot="root" class="">
-  <div data-slot="header" class="">
-    <div data-slot="title" class="">Title</div>
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
+  <div data-slot="header" class="p-4 sm:px-6">
+    <div data-slot="title" class="text-highlighted font-semibold">Title</div>
     <!--v-if-->
   </div>
   <!--v-if-->
@@ -85,9 +85,9 @@ exports[`card > renders with title correctly 1`] = `
 `;
 
 exports[`card > renders with title slot correctly 1`] = `
-"<div data-slot="root" class="">
-  <div data-slot="header" class="">
-    <div data-slot="title" class="">Title slot</div>
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
+  <div data-slot="header" class="p-4 sm:px-6">
+    <div data-slot="title" class="text-highlighted font-semibold">Title slot</div>
     <!--v-if-->
   </div>
   <!--v-if-->
@@ -96,7 +96,7 @@ exports[`card > renders with title slot correctly 1`] = `
 `;
 
 exports[`card > renders with ui correctly 1`] = `
-"<div data-slot="root" class="">
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
@@ -104,7 +104,7 @@ exports[`card > renders with ui correctly 1`] = `
 `;
 
 exports[`card > renders with variant outline correctly 1`] = `
-"<div data-slot="root" class="">
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
@@ -112,7 +112,7 @@ exports[`card > renders with variant outline correctly 1`] = `
 `;
 
 exports[`card > renders with variant soft correctly 1`] = `
-"<div data-slot="root" class="">
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-elevated/50 divide-y divide-default">
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
@@ -120,7 +120,7 @@ exports[`card > renders with variant soft correctly 1`] = `
 `;
 
 exports[`card > renders with variant solid correctly 1`] = `
-"<div data-slot="root" class="">
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-inverted text-inverted">
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
@@ -128,7 +128,7 @@ exports[`card > renders with variant solid correctly 1`] = `
 `;
 
 exports[`card > renders with variant subtle correctly 1`] = `
-"<div data-slot="root" class="">
+"<div data-slot="root" class="rounded-lg overflow-hidden bg-elevated/50 ring ring-default divide-y divide-default">
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
