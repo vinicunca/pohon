@@ -61,6 +61,8 @@ export interface SlideoverProps extends DialogRootProps {
 }
 
 export interface SlideoverEmits extends DialogRootEmits {
+  'leave': [];
+  'enter': [];
   'after:leave': [];
   'after:enter': [];
   'close:prevent': [];
@@ -157,7 +159,9 @@ const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.slideover ||
           data-slot="content"
           :class="ui.content({ class: [!slots.default && props.class, props.ui?.content] })"
           v-bind="contentProps"
+          @enter="emits('enter')"
           @after-enter="emits('after:enter')"
+          @leave="emits('leave')"
           @after-leave="emits('after:leave')"
           v-on="contentEvents"
         >

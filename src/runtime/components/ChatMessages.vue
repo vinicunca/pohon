@@ -70,7 +70,7 @@ export interface ChatMessagesProps<T extends Array<UIMessage> = Array<UIMessage>
 }
 
 export type ChatMessagesSlots<T extends Array<UIMessage> = Array<UIMessage>> = {
-  default?(props?: {}): Array<VNode>;
+  default?(props: { registerMessageRef: (id: string, element: ComponentPublicInstance | null) => void }): Array<VNode>;
   indicator?(props: { ui: ChatMessages['ui'] }): Array<VNode>;
   viewport?(props: { ui: ChatMessages['ui']; onClick: () => void }): Array<VNode>;
 } & {
@@ -78,7 +78,6 @@ export type ChatMessagesSlots<T extends Array<UIMessage> = Array<UIMessage>> = {
     ? (props: P & { message: MessageBase<T> }) => Array<VNode>
     : never
 };
-
 </script>
 
 <script setup lang="ts" generic="T extends UIMessage[] = UIMessage[]">
@@ -314,6 +313,10 @@ onMounted(() => {
     }, { childList: true, subtree: true });
   }
 });
+
+defineExpose({
+  registerMessageRef,
+});
 </script>
 
 <template>
@@ -324,7 +327,7 @@ onMounted(() => {
     :class="ui.root({ class: [props.ui?.root, props.class] })"
     :style="{ '--last-message-height': `${lastMessageHeight}px` }"
   >
-    <slot>
+    <slot :register-message-ref="registerMessageRef">
       <template v-for="message in props.messages" :key="message.id">
         <PChatMessage
           v-if="message.parts?.length"
