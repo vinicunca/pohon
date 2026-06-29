@@ -56,7 +56,7 @@ const props = useComponentProps('kbd', _props);
 const { getKbdKey } = useKbd();
 const appConfig = useAppConfig() as Kbd['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.kbd || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.kbd || {}) }));
 </script>
 
 <template>

@@ -2,9 +2,10 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { AvatarProps, IconProps } from '../types';
 import type { DynamicSlots, GetItemKeys } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/timeline';
 
 type Timeline = ComponentConfig<typeof theme, AppConfig, 'timeline'>;
@@ -94,7 +95,7 @@ const modelValue = defineModel<string | number>();
 
 const appConfig = useAppConfig() as Timeline['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.timeline || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.timeline || {}) })({
   orientation: props.orientation,
   size: props.size,
   color: props.color,

@@ -1,4 +1,4 @@
-import type { LinkProps } from '../types';
+import type { LinkProps } from '../components/Link.vue';
 import { reactivePick } from '@vueuse/core';
 import { diff, isEqual } from 'ohash/utils';
 

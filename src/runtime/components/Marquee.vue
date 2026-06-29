@@ -67,7 +67,7 @@ const props = useComponentProps('marquee', _props);
 
 const appConfig = useAppConfig() as Marquee['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.marquee || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.marquee || {}) })({
   pauseOnHover: props.pauseOnHover,
   orientation: props.orientation,
   reverse: props.reverse,

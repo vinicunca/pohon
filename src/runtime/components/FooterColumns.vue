@@ -1,8 +1,9 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { IconProps, LinkProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { IconProps } from './Icon.vue';
+import type { LinkProps } from './Link.vue';
 import theme from '#build/ui/footer-columns';
 
 type FooterColumns = ComponentConfig<typeof theme, AppConfig, 'footerColumns'>;
@@ -70,7 +71,7 @@ const props = useComponentProps<FooterColumnsProps<T>>('footerColumns', _props);
 
 const appConfig = useAppConfig() as FooterColumns['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.footerColumns || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.footerColumns || {}) })());
 </script>
 
 <template>

@@ -79,7 +79,7 @@ const rootProps = useForwardProps(reactivePick(props, 'disabled', 'id', 'mask', 
 
 const { emitFormInput, emitFormFocus, emitFormChange, emitFormBlur, size, color, id, name, highlight, disabled, ariaAttrs } = useFormField<PinInputProps>(_props);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pinInput || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pinInput || {}) })({
   color: color.value ?? props.color,
   variant: props.variant,
   size: size.value ?? props.size,

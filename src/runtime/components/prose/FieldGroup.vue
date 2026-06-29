@@ -36,7 +36,7 @@ const props = useComponentProps('prose.fieldGroup', _props);
 
 const appConfig = useAppConfig() as ProseFieldGroup['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.fieldGroup || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.fieldGroup || {}) }));
 </script>
 
 <template>

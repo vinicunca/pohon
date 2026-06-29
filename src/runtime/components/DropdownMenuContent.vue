@@ -7,9 +7,13 @@ import type {
 } from 'akar';
 import type { VNode } from 'vue';
 import type theme from '#build/ui/dropdown-menu';
-import type { AvatarProps, DropdownMenuItem, DropdownMenuSlots, IconProps, InputProps, KbdProps } from '../types';
 import type { ArrayOrNested, DynamicSlots, GetItemKeys, MergeTypes, NestedItem } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { DropdownMenuItem, DropdownMenuSlots } from './DropdownMenu.vue';
+import type { IconProps } from './Icon.vue';
+import type { InputProps } from './Input.vue';
+import type { KbdProps } from './Kbd.vue';
 
 type DropdownMenu = ComponentConfig<typeof theme, AppConfig, 'dropdownMenu'>;
 

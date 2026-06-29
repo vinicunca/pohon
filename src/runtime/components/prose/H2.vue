@@ -33,7 +33,7 @@ const props = useComponentProps('prose.h2', _props);
 const appConfig = useAppConfig() as ProseH2['AppConfig'];
 const { headings } = useRuntimeConfig().public?.mdc || {};
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.h2 || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.h2 || {}) })());
 
 const generate = computed(() => props.id && typeof headings?.anchorLinks === 'object' && headings.anchorLinks.h2);
 </script>

@@ -1,9 +1,11 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { BadgeProps, LinkProps, UserProps } from '../types';
 import type { ImgHTMLAttributes } from '../types/html';
 import type { ComponentConfig } from '../types/uv';
+import type { BadgeProps } from './Badge.vue';
+import type { LinkProps } from './Link.vue';
+import type { UserProps } from './User.vue';
 import theme from '#build/ui/blog-post';
 
 type BlogPost = ComponentConfig<typeof theme, AppConfig, 'blogPost'>;
@@ -88,7 +90,7 @@ const { locale } = useLocale();
 const appConfig = useAppConfig() as BlogPost['AppConfig'];
 const formatter = useDateFormatter(locale.value.code);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.blogPost || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.blogPost || {}) })({
   orientation: props.orientation,
   variant: props.variant,
   image: !!props.image,

@@ -96,7 +96,7 @@ defineSlots<LinkSlots>();
 const appConfig = useAppConfig() as Link['AppConfig'];
 
 const ui = computed(() => uv({
-  extend: uv(theme),
+  extend: theme,
   ...defu({
     variants: {
       active: {

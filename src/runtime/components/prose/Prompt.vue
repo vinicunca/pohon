@@ -1,8 +1,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { IconProps } from '../../types';
 import type { ComponentConfig } from '../../types/uv';
+import type { IconProps } from '../Icon.vue';
 import theme from '#build/ui/prose/prompt';
 
 type ProsePrompt = ComponentConfig<typeof theme, AppConfig, 'prompt', 'ui.prose'>;
@@ -53,7 +53,7 @@ const { t } = useLocale();
 const { copy, copied } = useClipboard();
 const appConfig = useAppConfig() as ProsePrompt['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.prompt || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.prompt || {}) })());
 
 function getPromptText() {
   const children = slots.default?.();

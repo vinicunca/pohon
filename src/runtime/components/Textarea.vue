@@ -2,10 +2,10 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
 import type { UseComponentIconsProps } from '../composables/useComponentIcons';
-import type { AvatarProps } from '../types';
 import type { TextareaHTMLAttributes } from '../types/html';
 import type { ApplyModifiers, ModelModifiers } from '../types/input';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
 import theme from '#build/ui/textarea';
 
 type Textarea = ComponentConfig<typeof theme, AppConfig, 'textarea'>;
@@ -102,7 +102,7 @@ const appConfig = useAppConfig() as Textarea['AppConfig'];
 const { emitFormFocus, emitFormBlur, emitFormInput, emitFormChange, size, color, id, name, highlight, disabled, ariaAttrs } = useFormField<TextareaProps<T>>(_props, { deferInputValidation: true });
 const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.textarea || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.textarea || {}) })({
   color: color.value ?? props.color,
   variant: props.variant,
   size: size?.value ?? props.size,

@@ -2,9 +2,9 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { CheckboxRootEmits, CheckboxRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { IconProps } from '../types';
 import type { ButtonHTMLAttributes } from '../types/html';
 import type { ComponentConfig } from '../types/uv';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/checkbox';
 
 type Checkbox = ComponentConfig<typeof theme, AppConfig, 'checkbox'>;
@@ -96,7 +96,7 @@ const forwardedAttrs = computed(() => {
   return rest;
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.checkbox || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.checkbox || {}) })({
   size: size.value ?? props.size,
   color: color.value ?? props.color,
   highlight: highlight.value ?? props.highlight,

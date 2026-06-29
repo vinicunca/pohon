@@ -2,8 +2,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { PricingPlanProps, PricingPlanSlots } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { PricingPlanProps, PricingPlanSlots } from './PricingPlan.vue';
 import theme from '#build/ui/pricing-plans';
 
 type PricingPlans = ComponentConfig<typeof theme, AppConfig, 'pricingPlans'>;
@@ -73,7 +73,7 @@ const getProxySlots = () => omit(slots, ['default']);
 
 const appConfig = useAppConfig() as PricingPlans['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pricingPlans || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pricingPlans || {}) }));
 
 const count = computed(() => props.plans?.length || slots.default?.()?.flatMap(mapSlot).filter(Boolean)?.length || 3);
 

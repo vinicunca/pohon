@@ -1,5 +1,5 @@
 <script lang="ts">
-import type { SelectMenuItem, SelectMenuProps } from '../../../types';
+import type { SelectMenuItem, SelectMenuProps } from '../../../components/SelectMenu.vue';
 
 export interface ColorModeSelectProps extends Omit<SelectMenuProps<Array<SelectMenuItem>>, 'icon' | 'items' | 'modelValue'> {
 }

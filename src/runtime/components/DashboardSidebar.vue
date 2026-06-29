@@ -2,8 +2,12 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
 import type { UseResizableProps } from '../composables/useResizable';
-import type { ButtonProps, DrawerProps, LinkPropsKeys, ModalProps, SlideoverProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { DrawerProps } from './Drawer.vue';
+import type { LinkPropsKeys } from './Link.vue';
+import type { ModalProps } from './Modal.vue';
+import type { SlideoverProps } from './Slideover.vue';
 import theme from '#build/ui/dashboard-sidebar';
 
 type DashboardSidebar = ComponentConfig<typeof theme, AppConfig, 'dashboardSidebar'>;
@@ -141,7 +145,7 @@ watch(() => route.fullPath, () => {
   open.value = false;
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.dashboardSidebar || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardSidebar || {}) })({
   side: props.side,
 }));
 

@@ -3,8 +3,8 @@ import type { TocLink } from '@nuxt/content';
 import type { AppConfig } from '@nuxt/schema';
 import type { CollapsibleRootEmits, CollapsibleRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { IconProps } from '../../types';
 import type { ComponentConfig } from '../../types/uv';
+import type { IconProps } from '../Icon.vue';
 import theme from '#build/ui/content/content-toc';
 
 type ContentToc = ComponentConfig<typeof theme, AppConfig, 'contentToc'>;
@@ -112,7 +112,7 @@ const [DefineListTemplate, ReuseListTemplate] = createReusableTemplate<{ links: 
 const [DefineTriggerTemplate, ReuseTriggerTemplate] = createReusableTemplate<{ open: boolean }>();
 const [DefineContentTemplate, ReuseContentTemplate] = createReusableTemplate();
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.contentToc || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.contentToc || {}) })({
   color: props.color,
   highlight: props.highlight,
   highlightVariant: props.highlightVariant,

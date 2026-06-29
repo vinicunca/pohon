@@ -1,7 +1,11 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
-import type { ButtonProps, ButtonSlots, IconProps, KbdProps, LinkPropsKeys, TooltipProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps, ButtonSlots } from './Button.vue';
+import type { IconProps } from './Icon.vue';
+import type { KbdProps } from './Kbd.vue';
+import type { LinkPropsKeys } from './Link.vue';
+import type { TooltipProps } from './Tooltip.vue';
 import theme from '#build/ui/dashboard-search-button';
 
 type DashboardSearchButton = ComponentConfig<typeof theme, AppConfig, 'dashboardSearchButton'>;
@@ -90,7 +94,7 @@ const { t } = useLocale();
 const appConfig = useAppConfig() as DashboardSearchButton['AppConfig'];
 const { toggleSearch } = useDashboard({ toggleSearch: () => {} });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.dashboardSearchButton || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardSearchButton || {}) })({
   collapsed: props.collapsed,
 }));
 </script>

@@ -2,9 +2,13 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { ToastRootEmits, ToastRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { AvatarProps, ButtonProps, IconProps, LinkPropsKeys, ProgressProps } from '../types';
 import type { StringOrVNode } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkPropsKeys } from './Link.vue';
+import type { ProgressProps } from './Progress.vue';
 import theme from '#build/ui/toast';
 
 type Toast = ComponentConfig<typeof theme, AppConfig, 'toast'>;
@@ -110,7 +114,7 @@ const appConfig = useAppConfig() as Toast['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'defaultOpen', 'open', 'duration', 'type'), emits);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.toast || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.toast || {}) })({
   color: props.color,
   orientation: props.orientation,
   title: !!props.title || !!slots.title,

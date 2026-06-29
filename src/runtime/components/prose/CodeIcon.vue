@@ -1,7 +1,7 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
-import type { IconProps } from '../../types';
 import type { ComponentConfig } from '../../types/uv';
+import type { IconProps } from '../Icon.vue';
 import theme from '#build/ui/prose/code-icon';
 
 type ProseCodeIcon = ComponentConfig<typeof theme, AppConfig, 'codeIcon', 'ui.prose'>;

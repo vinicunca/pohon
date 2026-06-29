@@ -36,7 +36,7 @@ const props = useComponentProps('container', _props);
 
 const appConfig = useAppConfig() as Container['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.container || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.container || {}) }));
 </script>
 
 <template>

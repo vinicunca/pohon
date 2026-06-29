@@ -30,7 +30,7 @@ const props = useComponentProps('prose.codePreview', _props);
 
 const appConfig = useAppConfig() as ProseCodePreview['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.codePreview || {}) })({ code: !!slots.code }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.codePreview || {}) })({ code: !!slots.code }));
 </script>
 
 <template>

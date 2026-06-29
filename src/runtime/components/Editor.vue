@@ -123,7 +123,7 @@ const attrs = useAttrs();
 
 const appConfig = useAppConfig() as Editor['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.editor || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.editor || {}) })({
   placeholderMode: typeof props.placeholder === 'object' ? props.placeholder.mode : undefined,
 }));
 

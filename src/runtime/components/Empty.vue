@@ -1,8 +1,10 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { AvatarProps, ButtonProps, IconProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/empty';
 
 type Empty = ComponentConfig<typeof theme, AppConfig, 'empty'>;
@@ -64,7 +66,7 @@ const props = useComponentProps('empty', _props);
 
 const appConfig = useAppConfig() as Empty['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.empty || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.empty || {}) })({
   variant: props.variant,
   size: props.size,
 }));

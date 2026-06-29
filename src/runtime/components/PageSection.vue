@@ -1,8 +1,10 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { ButtonProps, IconProps, PageFeatureProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
+import type { PageFeatureProps } from './PageFeature.vue';
 import theme from '#build/ui/page-section';
 
 type PageSection = ComponentConfig<typeof theme, AppConfig, 'pageSection'>;
@@ -87,7 +89,7 @@ const props = useComponentProps('pageSection', _props);
 
 const appConfig = useAppConfig() as PageSection['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pageSection || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageSection || {}) })({
   orientation: props.orientation,
   reverse: props.reverse,
   title: !!props.title || !!slots.title,

@@ -23,7 +23,7 @@ const props = useComponentProps('prose.hr', _props);
 
 const appConfig = useAppConfig() as ProseHr['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.hr || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.hr || {}) }));
 </script>
 
 <template>

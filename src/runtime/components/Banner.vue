@@ -1,8 +1,10 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { ButtonProps, IconProps, LinkProps, LinkPropsKeys } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkProps, LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/banner';
 
 type Banner = ComponentConfig<typeof theme, AppConfig, 'banner'>;
@@ -86,7 +88,7 @@ const props = useComponentProps('banner', _props);
 const { t } = useLocale();
 const appConfig = useAppConfig() as Banner['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.banner || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.banner || {}) })({
   color: props.color,
   to: !!props.to,
 }));

@@ -3,9 +3,15 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { AccordionRootProps, NavigationMenuContentEmits, NavigationMenuContentProps, NavigationMenuRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { AvatarProps, BadgeProps, ChipProps, IconProps, LinkProps, PopoverProps, TooltipProps } from '../types';
 import type { ArrayOrNested, DynamicSlots, EmitsToProps, GetItemKeys, MergeTypes, NestedItem } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { BadgeProps } from './Badge.vue';
+import type { ChipProps } from './Chip.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkProps } from './Link.vue';
+import type { PopoverProps } from './Popover.vue';
+import type { TooltipProps } from './Tooltip.vue';
 import theme from '#build/ui/navigation-menu';
 
 type NavigationMenu = ComponentConfig<typeof theme, AppConfig, 'navigationMenu'>;
@@ -292,7 +298,7 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: N
   },
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.navigationMenu || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.navigationMenu || {}) })({
   orientation: props.orientation,
   contentOrientation: props.orientation === 'vertical' ? undefined : props.contentOrientation,
   collapsed: props.collapsed,

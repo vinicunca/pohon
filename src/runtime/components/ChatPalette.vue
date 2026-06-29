@@ -36,7 +36,7 @@ const props = useComponentProps('chatPalette', _props);
 
 const appConfig = useAppConfig() as ChatPalette['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.chatPalette || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatPalette || {}) })());
 </script>
 
 <template>

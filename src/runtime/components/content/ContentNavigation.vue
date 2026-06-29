@@ -3,8 +3,10 @@ import type { ContentNavigationItem } from '@nuxt/content';
 import type { AppConfig } from '@nuxt/schema';
 import type { AccordionRootEmits, AccordionRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { BadgeProps, IconProps, LinkProps } from '../../types';
 import type { ComponentConfig } from '../../types/uv';
+import type { BadgeProps } from '../Badge.vue';
+import type { IconProps } from '../Icon.vue';
+import type { LinkProps } from '../Link.vue';
 import theme from '#build/ui/content/content-navigation';
 
 type ContentNavigation = ComponentConfig<typeof theme, AppConfig, 'contentNavigation'>;
@@ -133,7 +135,7 @@ const appConfig = useAppConfig() as ContentNavigation['AppConfig'];
 
 const [DefineLinkTemplate, ReuseLinkTemplate] = createReusableTemplate<{ link: ContentNavigationLink; active: boolean }>();
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.contentNavigation || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.contentNavigation || {}) })({
   color: props.color,
   variant: props.variant,
   highlight: props.highlight,

@@ -4,9 +4,11 @@ import type { AppConfig } from '@nuxt/schema';
 import type { DragHandleProps } from '@tiptap/extension-drag-handle-vue-3';
 import type { Editor, JSONContent } from '@tiptap/vue-3';
 import type { VNode } from 'vue';
-import type { ButtonProps, IconProps, LinkPropsKeys } from '../types';
 import type { FloatingUIOptions } from '../types/editor';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/editor-drag-handle';
 
 type EditorDragHandle = ComponentConfig<typeof theme, AppConfig, 'editorDragHandle'>;
@@ -77,7 +79,7 @@ const buttonProps = useForwardProps(reactiveOmit(props, 'icon', 'options', 'edit
 
 const appConfig = useAppConfig() as EditorDragHandle['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.editorDragHandle || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.editorDragHandle || {}) })());
 
 const floatingUIOptions = computed(() => defu(props.options, {
   strategy: 'absolute' as Strategy,

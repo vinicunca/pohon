@@ -1,9 +1,11 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { ButtonProps, IconProps, LinkPropsKeys } from '../types';
 import type { ComponentConfig } from '../types/uv';
 import type { DashboardContext } from '../utils/dashboard';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/dashboard-navbar';
 
 type DashboardNavbar = ComponentConfig<typeof theme, AppConfig, 'dashboardNavbar'>;
@@ -77,7 +79,7 @@ const dashboardContext = useDashboard({});
 
 const [DefineToggleTemplate, ReuseToggleTemplate] = createReusableTemplate();
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.dashboardNavbar || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardNavbar || {}) })());
 </script>
 
 <template>

@@ -1,9 +1,10 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { ChipProps, IconProps } from '../types';
 import type { ImgHTMLAttributes } from '../types/html';
 import type { ComponentConfig } from '../types/uv';
+import type { ChipProps } from './Chip.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/avatar';
 
 type Avatar = ComponentConfig<typeof theme, AppConfig, 'avatar'>;
@@ -72,7 +73,7 @@ const appConfig = useAppConfig() as Avatar['AppConfig'];
 
 const { size, color } = useAvatarGroup(_props);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.avatar || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.avatar || {}) })({
   size: size.value ?? props.size,
   color: color.value ?? props.color,
 }));

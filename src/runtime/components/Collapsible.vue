@@ -49,7 +49,7 @@ const appConfig = useAppConfig() as Collapsible['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'defaultOpen', 'open', 'disabled', 'unmountOnHide'), emits);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.collapsible || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.collapsible || {}) })());
 </script>
 
 <template>

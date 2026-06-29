@@ -1,8 +1,9 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { IconProps, LinkProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { IconProps } from './Icon.vue';
+import type { LinkProps } from './Link.vue';
 import theme from '#build/ui/page-feature';
 
 type PageFeature = ComponentConfig<typeof theme, AppConfig, 'pageFeature'>;
@@ -64,7 +65,7 @@ const props = useComponentProps('pageFeature', _props);
 
 const appConfig = useAppConfig() as PageFeature['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pageFeature || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageFeature || {}) })({
   orientation: props.orientation,
   title: !!props.title || !!slots.title,
   to: !!props.to || !!props.onClick,

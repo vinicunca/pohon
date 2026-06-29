@@ -2,8 +2,8 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
 import type { UseComponentIconsProps } from '../composables/useComponentIcons';
-import type { AvatarProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
 import theme from '#build/ui/badge';
 
 type Badge = ComponentConfig<typeof theme, AppConfig, 'badge'>;
@@ -65,7 +65,7 @@ const appConfig = useAppConfig() as Badge['AppConfig'];
 const { orientation, size: fieldGroupSize } = useFieldGroup<BadgeProps>(_props);
 const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.badge || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.badge || {}) })({
   color: props.color,
   variant: props.variant,
   size: fieldGroupSize.value ?? props.size,

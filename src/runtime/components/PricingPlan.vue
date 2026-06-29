@@ -1,8 +1,10 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { BadgeProps, ButtonProps, IconProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { BadgeProps } from './Badge.vue';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/pricing-plan';
 
 type PricingPlan = ComponentConfig<typeof theme, AppConfig, 'pricingPlan'>;
@@ -136,7 +138,7 @@ const appConfig = useAppConfig() as PricingPlan['AppConfig'];
 
 const [DefinePriceTemplate, ReusePriceTemplate] = createReusableTemplate();
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pricingPlan || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pricingPlan || {}) })({
   orientation: props.orientation,
   variant: props.variant,
   highlight: props.highlight,

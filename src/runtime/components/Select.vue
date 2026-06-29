@@ -3,11 +3,14 @@ import type { AppConfig } from '@nuxt/schema';
 import type { SelectArrowProps, SelectContentEmits, SelectContentProps, SelectRootEmits, SelectRootProps } from 'akar';
 import type { VNode } from 'vue';
 import type { UseComponentIconsProps } from '../composables/useComponentIcons';
-import type { AvatarProps, ChipProps, IconProps, InputProps } from '../types';
 import type { ButtonHTMLAttributes } from '../types/html';
 import type { ApplyModifiers, ModelModifiers } from '../types/input';
 import type { AcceptableValue, ArrayOrNested, EmitsToProps, GetItemKeys, GetModelValue, NestedItem } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { ChipProps } from './Chip.vue';
+import type { IconProps } from './Icon.vue';
+import type { InputProps } from './Input.vue';
 import theme from '#build/ui/select';
 
 type Select = ComponentConfig<typeof theme, AppConfig, 'select'>;
@@ -198,7 +201,7 @@ const selectSize = computed(() => fieldGroupSize.value || formFieldSize.value);
 
 const isItemAligned = computed(() => position.value === 'item-aligned');
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.select || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.select || {}) })({
   color: color.value ?? props.color,
   variant: props.variant,
   size: selectSize.value ?? props.size,

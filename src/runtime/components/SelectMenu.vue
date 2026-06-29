@@ -3,11 +3,16 @@ import type { AppConfig } from '@nuxt/schema';
 import type { ComboboxArrowProps, ComboboxContentEmits, ComboboxContentProps, ComboboxRootEmits, ComboboxRootProps } from 'akar';
 import type { VNode } from 'vue';
 import type { UseComponentIconsProps } from '../composables/useComponentIcons';
-import type { AvatarProps, ButtonProps, ChipProps, IconProps, InputProps, LinkPropsKeys } from '../types';
 import type { ButtonHTMLAttributes } from '../types/html';
 import type { ApplyModifiers, ModelModifiers } from '../types/input';
 import type { AcceptableValue, ArrayOrNested, EmitsToProps, GetItemKeys, GetItemValue, GetModelValue, NestedItem } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { ButtonProps } from './Button.vue';
+import type { ChipProps } from './Chip.vue';
+import type { IconProps } from './Icon.vue';
+import type { InputProps } from './Input.vue';
+import type { LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/select-menu';
 
 type SelectMenu = ComponentConfig<typeof theme, AppConfig, 'selectMenu'>;
@@ -310,7 +315,7 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: S
   },
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.selectMenu || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.selectMenu || {}) })({
   color: color.value ?? props.color,
   variant: props.variant,
   size: selectSize?.value ?? props.size,

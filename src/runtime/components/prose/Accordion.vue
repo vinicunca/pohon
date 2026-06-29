@@ -1,8 +1,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { AccordionProps } from '../../types';
 import type { ComponentConfig } from '../../types/uv';
+import type { AccordionProps } from '../Accordion.vue';
 import theme from '#build/ui/prose/accordion';
 
 type ProseAccordion = ComponentConfig<typeof theme, AppConfig, 'accordion', 'ui.prose'>;
@@ -38,7 +38,7 @@ const props = useComponentProps('prose.accordion', _props);
 
 const appConfig = useAppConfig() as ProseAccordion['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.accordion || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.accordion || {}) }));
 
 const rerenderCount = ref(1);
 

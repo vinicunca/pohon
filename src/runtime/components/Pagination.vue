@@ -2,8 +2,9 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { PaginationRootEmits, PaginationRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { ButtonProps, IconProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/pagination';
 
 type Pagination = ComponentConfig<typeof theme, AppConfig, 'pagination'>;
@@ -144,7 +145,7 @@ const nextIcon = computed(() => props.nextIcon || (dir.value === 'rtl' ? appConf
 
 const lastIcon = computed(() => props.lastIcon || (dir.value === 'rtl' ? appConfig.ui.icons.chevronDoubleLeft : appConfig.ui.icons.chevronDoubleRight));
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pagination || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pagination || {}) })());
 </script>
 
 <template>

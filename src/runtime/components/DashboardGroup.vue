@@ -46,7 +46,7 @@ const props = useComponentProps('dashboardGroup', _props);
 const nuxtApp = useNuxtApp();
 const appConfig = useAppConfig() as DashboardGroup['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.dashboardGroup || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardGroup || {}) }));
 
 const sidebarOpen = ref(false);
 const sidebarCollapsed = ref(false);

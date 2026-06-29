@@ -2,8 +2,8 @@
 import type { ContentNavigationItem } from '@nuxt/content';
 import type { AppConfig } from '@nuxt/schema';
 import type { PropType, VNode } from 'vue';
-import type { IconProps } from '../../types';
 import type { ComponentConfig } from '../../types/uv';
+import type { IconProps } from '../Icon.vue';
 import theme from '#build/ui/content/content-surround';
 
 type ContentSurround = ComponentConfig<typeof theme, AppConfig, 'contentSurround'>;
@@ -81,7 +81,7 @@ const [DefineLinkTemplate, ReuseLinkTemplate] = createReusableTemplate<{ link?: 
   },
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.contentSurround || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.contentSurround || {}) })());
 
 const prevIcon = computed(() => props.prevIcon || (dir.value === 'rtl' ? appConfig.ui.icons.arrowRight : appConfig.ui.icons.arrowLeft));
 

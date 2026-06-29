@@ -3,9 +3,9 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { TreeItemSelectEvent, TreeItemToggleEvent, TreeRootEmits, TreeRootProps } from 'akar';
 import type { ComponentPublicInstance, VNode } from 'vue';
-import type { IconProps } from '../types';
 import type { DynamicSlots, GetItemKeys } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/tree';
 
 type Tree = ComponentConfig<typeof theme, AppConfig, 'tree'>;
@@ -223,7 +223,7 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: T
   },
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.tree || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.tree || {}) })({
   color: props.color,
   size: props.size,
   virtualize: !!props.virtualize,

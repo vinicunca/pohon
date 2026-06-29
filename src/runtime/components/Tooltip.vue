@@ -2,9 +2,9 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { TooltipArrowProps, TooltipContentEmits, TooltipContentProps, TooltipRootEmits, TooltipRootProps, TooltipTriggerProps } from 'akar';
 import type { VNode } from 'vue';
-import type { KbdProps } from '../types';
 import type { EmitsToProps } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { KbdProps } from './Kbd.vue';
 import theme from '#build/ui/tooltip';
 
 type Tooltip = ComponentConfig<typeof theme, AppConfig, 'tooltip'>;
@@ -83,7 +83,7 @@ const portalProps = usePortal(toRef(() => props.portal));
 const contentProps = toRef(() => defu(props.content, providerContext.content.value, { side: 'bottom', sideOffset: 8, collisionPadding: 8 }) as TooltipContentProps);
 const arrowProps = toRef(() => defu(props.arrow, { rounded: true }) as TooltipArrowProps);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.tooltip || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.tooltip || {}) })({
   side: contentProps.value.side,
 }));
 </script>

@@ -1,8 +1,11 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { AvatarProps, ButtonProps, IconProps, LinkPropsKeys } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/alert';
 
 type Alert = ComponentConfig<typeof theme, AppConfig, 'alert'>;
@@ -95,7 +98,7 @@ const props = useComponentProps('alert', _props);
 const { t } = useLocale();
 const appConfig = useAppConfig() as Alert['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.alert || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.alert || {}) })({
   color: props.color,
   variant: props.variant,
   orientation: props.orientation,

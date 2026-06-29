@@ -50,7 +50,7 @@ const props = useComponentProps('chatShimmer', _props);
 
 const appConfig = useAppConfig() as ChatShimmer['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.chatShimmer || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatShimmer || {}) }));
 
 const spread = computed(() => props.text.length * props.spread);
 </script>

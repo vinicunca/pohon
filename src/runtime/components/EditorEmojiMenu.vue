@@ -46,7 +46,7 @@ const props = withDefaults(
 
 const appConfig = useAppConfig() as EditorEmojiMenu['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.editorEmojiMenu || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.editorEmojiMenu || {}) })({
   size: props.size,
 }));
 

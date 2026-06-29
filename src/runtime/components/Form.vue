@@ -107,7 +107,7 @@ const props = useComponentProps<FormProps<S, T, N>>('form', _props);
 
 const appConfig = useAppConfig() as FormConfig['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.form || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.form || {}) }));
 
 const formId = props.id ?? useId() as string;
 const formRef = useTemplateRef('formRef');

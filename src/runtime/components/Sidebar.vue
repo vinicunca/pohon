@@ -1,8 +1,13 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { ButtonProps, DrawerProps, IconProps, LinkPropsKeys, ModalProps, SlideoverProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { DrawerProps } from './Drawer.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkPropsKeys } from './Link.vue';
+import type { ModalProps } from './Modal.vue';
+import type { SlideoverProps } from './Slideover.vue';
 import theme from '#build/ui/sidebar';
 
 type Sidebar = ComponentConfig<typeof theme, AppConfig, 'sidebar'>;
@@ -194,7 +199,7 @@ function closeSidebar() {
 
 const hasHeader = computed(() => !!slots.header || props.title || !!slots.title || props.description || !!slots.description || !!slots.actions || canClose.value || !!slots.close);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.sidebar || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.sidebar || {}) })({
   side: props.side,
   variant: props.variant,
   collapsible: props.collapsible,

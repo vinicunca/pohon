@@ -38,7 +38,7 @@ const props = useComponentProps('dashboardToolbar', _props);
 
 const appConfig = useAppConfig() as DashboardToolbar['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.dashboardToolbar || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardToolbar || {}) })());
 </script>
 
 <template>

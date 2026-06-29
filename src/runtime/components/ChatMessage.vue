@@ -2,8 +2,10 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { FileUIPart, TextUIPart, UIDataTypes, UIMessage, UITools } from 'ai';
 import type { VNode } from 'vue';
-import type { AvatarProps, ButtonProps, IconProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/chat-message';
 
 type ChatMessage = ComponentConfig<typeof theme, AppConfig, 'chatMessage'>;
@@ -91,7 +93,7 @@ const textParts = computed(() => props.parts?.filter((part): part is TextUIPart 
 
 const messageProps = computed(() => omit(props, ['as', 'icon', 'avatar', 'variant', 'color', 'side', 'actions', 'compact', 'class', 'ui', 'content']));
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.chatMessage || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatMessage || {}) })({
   variant: props.variant,
   color: props.color,
   side: props.side,

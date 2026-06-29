@@ -30,7 +30,7 @@ const props = useComponentProps('prose.blockquote', _props);
 
 const appConfig = useAppConfig() as ProseBlockquote['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.blockquote || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.blockquote || {}) }));
 </script>
 
 <template>

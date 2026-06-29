@@ -115,7 +115,7 @@ const contentEvents = computed(() => {
   };
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.drawer || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.drawer || {}) })({
   direction: props.direction,
   inset: props.inset,
   snapPoints: props.snapPoints && props.snapPoints.length > 0,

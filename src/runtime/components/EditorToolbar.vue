@@ -5,10 +5,13 @@ import type { BubbleMenuPluginProps } from '@tiptap/extension-bubble-menu';
 import type { FloatingMenuPluginProps } from '@tiptap/extension-floating-menu';
 import type { Editor } from '@tiptap/vue-3';
 import type { VNode } from 'vue';
-import type { ButtonProps, DropdownMenuItem, DropdownMenuProps, LinkPropsKeys, TooltipProps } from '../types';
 import type { EditorCustomHandlers, EditorItem } from '../types/editor';
 import type { ArrayOrNested, DynamicSlots, MergeTypes, NestedItem } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { DropdownMenuItem, DropdownMenuProps } from './DropdownMenu.vue';
+import type { LinkPropsKeys } from './Link.vue';
+import type { TooltipProps } from './Tooltip.vue';
 import theme from '#build/ui/editor-toolbar';
 
 type EditorToolbar = ComponentConfig<typeof theme, AppConfig, 'editorToolbar'>;
@@ -147,7 +150,7 @@ const options = computed(() => defu((props as any).options, {
   shift: { padding: 8 },
 }));
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.editorToolbar || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.editorToolbar || {}) })({
   layout: props.layout,
 }));
 

@@ -1,7 +1,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
-import type { ButtonProps, LinkPropsKeys } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/dashboard-sidebar-toggle';
 
 type DashboardSidebarToggle = ComponentConfig<typeof theme, AppConfig, 'dashboardSidebarToggle'>;
@@ -54,7 +55,7 @@ const { t } = useLocale();
 const appConfig = useAppConfig() as DashboardSidebarToggle['AppConfig'];
 const { sidebarOpen, toggleSidebar } = useDashboard({ sidebarOpen: ref(false), toggleSidebar: () => {} });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.dashboardSidebarToggle || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardSidebarToggle || {}) }));
 </script>
 
 <template>

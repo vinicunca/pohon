@@ -2,9 +2,9 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { SwitchRootEmits, SwitchRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { IconProps } from '../types';
 import type { ButtonHTMLAttributes } from '../types/html';
 import type { ComponentConfig } from '../types/uv';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/switch';
 
 type Switch = ComponentConfig<typeof theme, AppConfig, 'switch'>;
@@ -91,7 +91,7 @@ const forwardedAttrs = computed(() => {
   return rest;
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.switch || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.switch || {}) })({
   size: size.value ?? props.size,
   color: color.value ?? props.color,
   highlight: highlight.value ?? props.highlight,

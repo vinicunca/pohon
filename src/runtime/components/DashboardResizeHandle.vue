@@ -36,7 +36,7 @@ const props = useComponentProps('dashboardResizeHandle', _props);
 
 const appConfig = useAppConfig() as DashboardResizeHandle['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.dashboardResizeHandle || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardResizeHandle || {}) }));
 </script>
 
 <template>

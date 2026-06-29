@@ -50,7 +50,7 @@ const props = useComponentProps('fieldGroup', _props);
 
 const appConfig = useAppConfig() as FieldGroup['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.fieldGroup || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.fieldGroup || {}) }));
 
 provide(fieldGroupInjectionKey, computed(() => ({
   orientation: props.orientation,

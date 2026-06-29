@@ -2,9 +2,9 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { CollapsibleRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { IconProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
 import type { ChatShimmerProps } from './ChatShimmer.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/chat-tool';
 
 type ChatTool = ComponentConfig<typeof theme, AppConfig, 'chatTool'>;
@@ -99,7 +99,7 @@ const props = useComponentProps('chatTool', _props);
 
 const appConfig = useAppConfig() as ChatTool['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.chatTool || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatTool || {}) })({
   variant: props.variant,
   chevron: props.chevron,
   loading: props.loading,

@@ -41,7 +41,7 @@ const props = useComponentProps('pageList', _props);
 
 const appConfig = useAppConfig() as PageList['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pageList || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageList || {}) }));
 </script>
 
 <template>

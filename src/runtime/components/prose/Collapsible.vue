@@ -1,8 +1,9 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { CollapsibleProps, IconProps } from '../../types';
 import type { ComponentConfig } from '../../types/uv';
+import type { CollapsibleProps } from '../Collapsible.vue';
+import type { IconProps } from '../Icon.vue';
 import theme from '#build/ui/prose/collapsible';
 
 type ProseCollapsible = ComponentConfig<typeof theme, AppConfig, 'collapsible', 'ui.prose'>;
@@ -56,7 +57,7 @@ const props = useComponentProps('prose.collapsible', _props);
 const { t } = useLocale();
 const appConfig = useAppConfig() as ProseCollapsible['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.collapsible || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.collapsible || {}) })());
 </script>
 
 <template>

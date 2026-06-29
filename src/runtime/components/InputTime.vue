@@ -3,8 +3,9 @@ import type { AppConfig } from '@nuxt/schema';
 import type { SegmentPart, TimeFieldRootEmits, TimeFieldRootProps, TimeRangeFieldRootEmits, TimeRangeFieldRootProps, TimeValue } from 'akar';
 import type { ComponentPublicInstance, VNode } from 'vue';
 import type { UseComponentIconsProps } from '../composables/useComponentIcons';
-import type { AvatarProps, IconProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/input-time';
 
 type InputTime = ComponentConfig<typeof theme, AppConfig, 'inputTime'>;
@@ -116,7 +117,7 @@ const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponen
 
 const inputSize = computed(() => fieldGroupSize.value || formFieldSize.value);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.inputTime || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputTime || {}) })({
   color: color.value ?? props.color,
   variant: props.variant,
   size: inputSize.value ?? props.size,

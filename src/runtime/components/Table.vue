@@ -283,7 +283,7 @@ function processColumns(columns: Array<TableColumn<T>>): Array<TableColumn<T>> {
   });
 }
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.table || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.table || {}) })({
   sticky: props.sticky,
   loading: props.loading,
   loadingColor: props.loadingColor,

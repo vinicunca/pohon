@@ -1,8 +1,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { SliderRootProps } from 'akar';
-import type { TooltipProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { TooltipProps } from './Tooltip.vue';
 import theme from '#build/ui/slider';
 
 type Slider = ComponentConfig<typeof theme, AppConfig, 'slider'>;
@@ -96,7 +96,7 @@ const sliderValue = computed({
 
 const thumbs = computed(() => sliderValue.value?.length ?? 1);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.slider || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.slider || {}) })({
   disabled: disabled.value,
   size: size.value ?? props.size,
   color: color.value ?? props.color,

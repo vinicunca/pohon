@@ -2,8 +2,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { PricingPlanProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { PricingPlanProps } from './PricingPlan.vue';
 import theme from '#build/ui/pricing-table';
 
 type PricingTable = ComponentConfig<typeof theme, AppConfig, 'pricingTable'>;
@@ -135,7 +135,7 @@ function formatSlotName(item: { id?: string; title: string }): string {
     .replace(/^-|-$/g, '');
 }
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pricingTable || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pricingTable || {}) })());
 
 const [DefineTierTemplate, ReuseTierTemplate] = createReusableTemplate<{ tier: PricingTableTier }>({
   props: {

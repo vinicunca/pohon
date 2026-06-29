@@ -1,8 +1,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { ButtonProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
 import theme from '#build/ui/page-cta';
 
 type PageCTA = ComponentConfig<typeof theme, AppConfig, 'pageCTA'>;
@@ -73,7 +73,7 @@ const props = useComponentProps('pageCTA', _props);
 
 const appConfig = useAppConfig() as PageCTA['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pageCTA || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageCTA || {}) })({
   variant: props.variant,
   orientation: props.orientation,
   reverse: props.reverse,

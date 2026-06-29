@@ -49,7 +49,7 @@ const props = useComponentProps('avatarGroup', _props);
 
 const appConfig = useAppConfig() as AvatarGroup['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.avatarGroup || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.avatarGroup || {}) })({
   size: props.size,
   color: props.color,
 }));

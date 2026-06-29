@@ -1,9 +1,11 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { BadgeProps, LinkProps, UserProps } from '../types';
 import type { ImgHTMLAttributes } from '../types/html';
 import type { ComponentConfig } from '../types/uv';
+import type { BadgeProps } from './Badge.vue';
+import type { LinkProps } from './Link.vue';
+import type { UserProps } from './User.vue';
 import theme from '#build/ui/changelog-version';
 
 type ChangelogVersion = ComponentConfig<typeof theme, AppConfig, 'changelogVersion'>;
@@ -96,7 +98,7 @@ const [DefineDateTemplate, ReuseDateTemplate] = createReusableTemplate<{ hidden?
   },
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.changelogVersion || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.changelogVersion || {}) })({
   to: !!props.to || !!props.onClick,
 }));
 

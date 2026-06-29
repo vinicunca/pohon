@@ -2,9 +2,11 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { UseFileDialogReturn } from '@vueuse/core';
 import type { MaybeRef, VNode } from 'vue';
-import type { ButtonProps, IconProps, LinkPropsKeys } from '../types';
 import type { InputHTMLAttributes } from '../types/html';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/file-upload';
 
 type FileUpload = ComponentConfig<typeof theme, AppConfig, 'fileUpload'>;
@@ -206,7 +208,7 @@ const position = computed(() => {
   return props.position;
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.fileUpload || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.fileUpload || {}) })({
   dropzone: props.dropzone,
   interactive: props.interactive,
   color: color.value ?? props.color,

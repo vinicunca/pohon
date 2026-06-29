@@ -30,7 +30,7 @@ const props = useComponentProps('prose.thead', _props);
 
 const appConfig = useAppConfig() as ProseThead['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.thead || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.thead || {}) }));
 </script>
 
 <template>

@@ -1,8 +1,9 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { IconProps, LinkProps } from '../../types';
 import type { ComponentConfig } from '../../types/uv';
+import type { IconProps } from '../Icon.vue';
+import type { LinkProps } from '../Link.vue';
 import theme from '#build/ui/prose/card';
 
 type ProseCard = ComponentConfig<typeof theme, AppConfig, 'card', 'ui.prose'>;
@@ -44,7 +45,7 @@ const props = useComponentProps('prose.card', _props);
 
 const appConfig = useAppConfig() as ProseCard['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.card || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.card || {}) })({
   color: props.color,
   to: !!props.to,
   title: !!props.title,

@@ -3,9 +3,11 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { TabsRootEmits, TabsRootProps } from 'akar';
 import type { ComponentPublicInstance, VNode } from 'vue';
-import type { AvatarProps, BadgeProps, IconProps } from '../types';
 import type { DynamicSlots, GetItemKeys } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { BadgeProps } from './Badge.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/tabs';
 
 type Tabs = ComponentConfig<typeof theme, AppConfig, 'tabs'>;
@@ -127,7 +129,7 @@ const appConfig = useAppConfig() as Tabs['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'unmountOnHide'), emits);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.tabs || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.tabs || {}) })({
   color: props.color,
   variant: props.variant,
   size: props.size,

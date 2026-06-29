@@ -1,5 +1,5 @@
 import type { InjectionKey, Ref } from 'vue';
-import type { ToastEmits, ToastProps } from '../types';
+import type { ToastEmits, ToastProps } from '../components/Toast.vue';
 import type { EmitsToProps } from '../types/utils';
 import { inject, nextTick, ref } from 'vue';
 import { useState } from '#imports';

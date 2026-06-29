@@ -42,7 +42,7 @@ const props = useComponentProps('pageAside', _props);
 
 const appConfig = useAppConfig() as PageAside['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pageAside || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageAside || {}) })());
 </script>
 
 <template>

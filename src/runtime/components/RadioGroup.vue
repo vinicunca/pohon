@@ -124,7 +124,7 @@ const rootProps = useForwardProps(reactivePick(props, 'as', 'loop', 'required'),
 const { emitFormChange, emitFormInput, color, highlight, name, size, id: _id, disabled, ariaAttrs } = useFormField<RadioGroupProps<T>>(_props, { bind: false });
 const id = _id.value ?? useId();
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.radioGroup || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.radioGroup || {}) })({
   size: size.value ?? props.size,
   color: color.value ?? props.color,
   highlight: highlight.value ?? props.highlight,

@@ -9,9 +9,11 @@ import type { ClassNamesOptionsType } from 'embla-carousel-class-names';
 import type { FadeOptionsType } from 'embla-carousel-fade';
 import type { WheelGesturesPluginOptions } from 'embla-carousel-wheel-gestures';
 import type { VNode } from 'vue';
-import type { ButtonProps, IconProps, LinkPropsKeys } from '../types';
 import type { AcceptableValue } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/carousel';
 
 type Carousel = ComponentConfig<typeof theme, AppConfig, 'carousel'>;
@@ -187,7 +189,7 @@ const stopAutoScrollOnInteraction = computed(() => {
   return props.autoScroll?.stopOnInteraction ?? true;
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.carousel || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.carousel || {}) })({
   orientation: props.orientation,
 }));
 

@@ -147,9 +147,9 @@ describe('inputRating', () => {
           },
         },
         slotTemplate: `
-        <UFormField name="rating">
-          <UInputRating v-model="state.rating" />
-        </UFormField>
+        <PFormField name="rating">
+          <PInputRating v-model="state.rating" />
+        </PFormField>
         `,
       });
       const rating = wrapper.findComponent(InputRating);

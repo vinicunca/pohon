@@ -3,10 +3,13 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { ListboxRootEmits, ListboxRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { AvatarProps, ChipProps, IconProps, InputProps } from '../types';
 import type { ApplyModifiers, ModelModifiers } from '../types/input';
 import type { ArrayOrNested, GetItemKeys, GetModelValue, NestedItem } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { ChipProps } from './Chip.vue';
+import type { IconProps } from './Icon.vue';
+import type { InputProps } from './Input.vue';
 import { computed, toRaw, toRef } from 'vue';
 import theme from '#build/ui/listbox';
 
@@ -236,7 +239,7 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: L
   },
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.listbox || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.listbox || {}) })({
   color: color.value ?? props.color,
   size: size.value ?? props.size,
   highlight: highlight.value ?? props.highlight,

@@ -3,9 +3,10 @@ import type { AppConfig } from '@nuxt/schema';
 import type { AcceptableInputValue, TagsInputRootEmits, TagsInputRootProps } from 'akar';
 import type { VNode } from 'vue';
 import type { UseComponentIconsProps } from '../composables/useComponentIcons';
-import type { AvatarProps, IconProps } from '../types';
 import type { InputHTMLAttributes } from '../types/html';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/input-tags';
 
 type InputTags = ComponentConfig<typeof theme, AppConfig, 'inputTags'>;
@@ -105,7 +106,7 @@ const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponen
 
 const inputSize = computed(() => fieldGroupSize.value || formFieldSize.value);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.inputTags || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputTags || {}) })({
   color: color.value ?? props.color,
   variant: props.variant,
   size: inputSize?.value ?? props.size,

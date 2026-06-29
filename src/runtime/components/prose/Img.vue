@@ -49,7 +49,7 @@ const [DefineZoomedImageTemplate, ReuseZoomedImageTemplate] = createReusableTemp
 
 const open = ref(false);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.img || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.img || {}) })({
   zoom: props.zoom,
   open: open.value,
   width: !!props.width,

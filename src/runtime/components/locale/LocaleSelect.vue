@@ -1,6 +1,6 @@
 <script lang="ts">
-import type { SelectMenuProps } from '../../types';
 import type { Locale } from '../../types/locale';
+import type { SelectMenuProps } from '../SelectMenu.vue';
 
 export interface LocaleSelectProps extends Omit<SelectMenuProps<Array<Locale<any>>, 'code', false>, 'items' | 'modelValue'> {
   locales?: Array<Locale<any>>;

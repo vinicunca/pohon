@@ -3,9 +3,9 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { StepperRootEmits, StepperRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { IconProps } from '../types';
 import type { DynamicSlots, GetItemKeys } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/stepper';
 
 type Stepper = ComponentConfig<typeof theme, AppConfig, 'stepper'>;
@@ -107,7 +107,7 @@ const appConfig = useAppConfig() as Stepper['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'linear'));
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.stepper || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.stepper || {}) })({
   orientation: props.orientation,
   size: props.size,
   color: props.color,

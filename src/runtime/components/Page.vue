@@ -45,7 +45,7 @@ onBeforeUpdate(() => {
   hasRight.value = !!slots.right;
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.page || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.page || {}) })({
   left: hasLeft.value,
   right: hasRight.value,
 }));

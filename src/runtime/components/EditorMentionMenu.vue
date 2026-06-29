@@ -1,8 +1,9 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { EditorMenuOptions } from '../composables/useEditorMenu';
-import type { AvatarProps, IconProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/editor-mention-menu';
 
 type EditorMentionMenu = ComponentConfig<typeof theme, AppConfig, 'editorMentionMenu'>;
@@ -53,7 +54,7 @@ const searchTerm = defineModel<string>('searchTerm', { default: '' });
 
 const appConfig = useAppConfig() as EditorMentionMenu['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.editorMentionMenu || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.editorMentionMenu || {}) })({
   size: props.size,
 }));
 

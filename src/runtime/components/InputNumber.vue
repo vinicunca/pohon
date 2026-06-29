@@ -2,10 +2,12 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { NumberFieldRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { ButtonProps, IconProps, LinkPropsKeys } from '../types';
 import type { InputHTMLAttributes } from '../types/html';
 import type { ModelModifiers } from '../types/input';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/input-number';
 
 type InputNumber = ComponentConfig<typeof theme, AppConfig, 'inputNumber'>;
@@ -124,7 +126,7 @@ const { orientation, size: fieldGroupSize } = useFieldGroup<InputNumberProps<T, 
 
 const inputSize = computed(() => fieldGroupSize.value || formFieldSize.value);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.inputNumber || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputNumber || {}) })({
   color: color.value ?? props.color,
   variant: props.variant,
   size: inputSize.value ?? props.size,

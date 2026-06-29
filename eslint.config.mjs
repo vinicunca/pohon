@@ -268,4 +268,26 @@ export default vinicuncaESLint(
       'pohon-ui/no-bare-prop-refs': 'error',
     },
   },
+
+  {
+    files: [
+      'src/runtime/components/**/*.vue',
+      'src/runtime/composables/**/*.ts',
+    ],
+    rules: {
+      'no-restricted-imports': ['error', {
+        paths: [
+          { name: '../types', message: 'Import cross-component types from their source file (e.g. \'./Button.vue\') or a specific \'../types/*\' module, not the \'../types\' barrel: it re-exports every component, so one import eagerly loads the whole library into a consumer\'s type graph.' },
+          { name: '../../types', message: 'Import cross-component types from their source file (e.g. \'./Button.vue\') or a specific \'../../types/*\' module, not the \'../../types\' barrel: it re-exports every component, so one import eagerly loads the whole library into a consumer\'s type graph.' },
+        ],
+      }],
+    },
+  },
+
+  {
+    files: ['src/runtime/composables/useComponentProps.ts'],
+    rules: {
+      'no-restricted-imports': 'off',
+    },
+  },
 );

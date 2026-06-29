@@ -71,7 +71,7 @@ const show = defineModel<boolean>('show', { default: true });
 const { size } = useAvatarGroup(_props);
 const appConfig = useAppConfig() as Chip['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.chip || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chip || {}) })({
   color: props.color,
   size: size.value ?? props.size,
   position: props.position,

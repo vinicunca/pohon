@@ -1,8 +1,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { ButtonProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
 import theme from '#build/ui/page-hero';
 
 type PageHero = ComponentConfig<typeof theme, AppConfig, 'pageHero'>;
@@ -70,7 +70,7 @@ const props = useComponentProps('pageHero', _props);
 
 const appConfig = useAppConfig() as PageHero['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pageHero || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageHero || {}) })({
   orientation: props.orientation,
   reverse: props.reverse,
   title: !!props.title || !!slots.title,

@@ -2,9 +2,11 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { DialogContentEmits, DialogContentProps, DialogRootEmits, DialogRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { ButtonProps, IconProps, LinkPropsKeys } from '../types';
 import type { EmitsToProps } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/slideover';
 
 type Slideover = ComponentConfig<typeof theme, AppConfig, 'slideover'>;
@@ -136,7 +138,7 @@ const contentEvents = computed(() => {
   };
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.slideover || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.slideover || {}) })({
   transition: props.transition,
   side: props.side,
   inset: props.inset,

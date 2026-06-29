@@ -36,7 +36,7 @@ const props = useComponentProps('pageGrid', _props);
 
 const appConfig = useAppConfig() as PageGrid['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pageGrid || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageGrid || {}) }));
 </script>
 
 <template>

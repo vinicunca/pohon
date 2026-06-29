@@ -2,9 +2,12 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { ContextMenuContentEmits as AkarContextMenuContentEmits, ContextMenuContentProps as AkarContextMenuContentProps } from 'akar';
 import type theme from '#build/ui/context-menu';
-import type { AvatarProps, ContextMenuItem, ContextMenuSlots, IconProps, KbdProps } from '../types';
 import type { ArrayOrNested, GetItemKeys } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { ContextMenuItem, ContextMenuSlots } from './ContextMenu.vue';
+import type { IconProps } from './Icon.vue';
+import type { KbdProps } from './Kbd.vue';
 
 type ContextMenu = ComponentConfig<typeof theme, AppConfig, 'contextMenu'>;
 

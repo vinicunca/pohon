@@ -97,7 +97,7 @@ const swipeDirection = computed(() => {
   return 'right';
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.toaster || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.toaster || {}) })({
   position: props.position,
   swipeDirection: swipeDirection.value,
 }));

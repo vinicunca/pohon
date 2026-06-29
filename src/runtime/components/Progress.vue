@@ -164,7 +164,7 @@ function stepVariant(index: number | string) {
   return 'other';
 }
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.progress || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.progress || {}) })({
   animation: props.animation,
   size: props.size,
   color: props.color,

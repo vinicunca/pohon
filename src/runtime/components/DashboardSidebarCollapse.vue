@@ -1,7 +1,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
-import type { ButtonProps, LinkPropsKeys } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/dashboard-sidebar-collapse';
 
 type DashboardSidebarCollapse = ComponentConfig<typeof theme, AppConfig, 'dashboardSidebarCollapse'>;
@@ -52,7 +53,7 @@ const { t } = useLocale();
 const appConfig = useAppConfig() as DashboardSidebarCollapse['AppConfig'];
 const { sidebarCollapsed, collapseSidebar } = useDashboard({ sidebarCollapsed: ref(false), collapseSidebar: () => {} });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.dashboardSidebarCollapse || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardSidebarCollapse || {}) }));
 </script>
 
 <template>

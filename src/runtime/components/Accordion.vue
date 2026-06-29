@@ -3,9 +3,9 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { AccordionRootEmits, AccordionRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { IconProps } from '../types';
 import type { DynamicSlots, GetItemKeys } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/accordion';
 
 type Accordion = ComponentConfig<typeof theme, AppConfig, 'accordion'>;
@@ -106,7 +106,7 @@ const appConfig = useAppConfig() as Accordion['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'collapsible', 'defaultValue', 'disabled', 'modelValue', 'unmountOnHide'), emits);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.accordion || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.accordion || {}) })({
   disabled: props.disabled,
 }));
 </script>

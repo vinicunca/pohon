@@ -45,7 +45,7 @@ const props = useComponentProps('card', _props);
 
 const appConfig = useAppConfig() as Card['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.card || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.card || {}) })({
   variant: props.variant,
 }));
 </script>

@@ -1,8 +1,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { ButtonProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
 import theme from '#build/ui/page-header';
 
 type PageHeader = ComponentConfig<typeof theme, AppConfig, 'pageHeader'>;
@@ -49,7 +49,7 @@ const props = useComponentProps('pageHeader', _props);
 
 const appConfig = useAppConfig() as PageHeader['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pageHeader || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageHeader || {}) })({
   title: !!props.title || !!slots.title,
 }));
 </script>

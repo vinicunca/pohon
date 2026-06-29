@@ -1,5 +1,5 @@
 import type { ComputedRef, InjectionKey } from 'vue';
-import type { AvatarGroupProps } from '../types';
+import type { AvatarGroupProps } from '../components/AvatarGroup.vue';
 import { computed, inject, provide } from 'vue';
 
 export const avatarGroupInjectionKey: InjectionKey<ComputedRef<{ size: AvatarGroupProps['size']; color: AvatarGroupProps['color'] }>> = Symbol('pohon-ui.avatar-group');

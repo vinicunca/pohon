@@ -2,8 +2,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { BlogPostProps, BlogPostSlots } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { BlogPostProps, BlogPostSlots } from './BlogPost.vue';
 import theme from '#build/ui/blog-posts';
 
 type BlogPosts = ComponentConfig<typeof theme, AppConfig, 'blogPosts'>;
@@ -60,7 +60,7 @@ const getProxySlots = () => omit(slots, ['default']);
 
 const appConfig = useAppConfig() as BlogPosts['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.blogPosts || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.blogPosts || {}) }));
 </script>
 
 <template>

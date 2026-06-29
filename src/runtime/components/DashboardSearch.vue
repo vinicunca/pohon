@@ -3,8 +3,12 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { UseFuseOptions } from '@vueuse/integrations/useFuse';
 import type { VNode } from 'vue';
-import type { ButtonProps, CommandPaletteGroup, CommandPaletteItem, CommandPaletteProps, CommandPaletteSlots, InputProps, LinkPropsKeys, ModalProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { CommandPaletteGroup, CommandPaletteItem, CommandPaletteProps, CommandPaletteSlots } from './CommandPalette.vue';
+import type { InputProps } from './Input.vue';
+import type { LinkPropsKeys } from './Link.vue';
+import type { ModalProps } from './Modal.vue';
 import theme from '#build/ui/dashboard-search';
 
 type DashboardSearch = ComponentConfig<typeof theme, AppConfig, 'dashboardSearch'>;
@@ -125,7 +129,7 @@ const fuse = computed(() => defu({}, props.fuse, {
   },
 }));
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.dashboardSearch || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardSearch || {}) })({
   size: props.size,
   fullscreen: props.fullscreen,
 }));

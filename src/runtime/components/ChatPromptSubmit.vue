@@ -1,8 +1,10 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { ChatStatus } from 'ai';
-import type { ButtonProps, ButtonSlots, IconProps, LinkPropsKeys } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps, ButtonSlots } from './Button.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/chat-prompt-submit';
 
 type ChatPromptSubmit = ComponentConfig<typeof theme, AppConfig, 'chatPromptSubmit'>;
@@ -153,7 +155,7 @@ const statusButtonProps = computed(() => ({
   },
 } satisfies { [key: string]: ButtonProps })[props.status]);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.chatPromptSubmit || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatPromptSubmit || {}) })());
 </script>
 
 <template>

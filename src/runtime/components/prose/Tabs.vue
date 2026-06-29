@@ -1,8 +1,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { TabsProps } from '../../types';
 import type { ComponentConfig } from '../../types/uv';
+import type { TabsProps } from '../Tabs.vue';
 import theme from '#build/ui/prose/tabs';
 
 type ProseTabs = ComponentConfig<typeof theme, AppConfig, 'tabs', 'ui.prose'>;
@@ -52,7 +52,7 @@ const model = defineModel<string>();
 
 const appConfig = useAppConfig() as ProseTabs['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.tabs || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.tabs || {}) }));
 
 const rerenderCount = ref(1);
 

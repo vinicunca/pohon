@@ -1,8 +1,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { IconProps } from '../../types';
 import type { ComponentConfig } from '../../types/uv';
+import type { IconProps } from '../Icon.vue';
 import theme from '#build/ui/prose/code-collapse';
 
 type ProseCodeCollapse = ComponentConfig<typeof theme, AppConfig, 'codeCollapse', 'ui.prose'>;
@@ -56,7 +56,7 @@ const open = defineModel<boolean>('open', { default: false });
 const { t } = useLocale();
 const appConfig = useAppConfig() as ProseCodeCollapse['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.codeCollapse || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.codeCollapse || {}) })({
   open: open.value,
 }));
 </script>

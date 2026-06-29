@@ -70,7 +70,7 @@ const appConfig = useAppConfig() as ProseCodeTree['AppConfig'];
 
 const [DefineTreeTemplate, ReuseTreeTemplate] = createReusableTemplate<{ items: Array<TreeNode>; level: number }>();
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.codeTree || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.codeTree || {}) })());
 
 const initialPath = props.modelValue ?? props.defaultValue;
 const model = ref(initialPath ? { path: initialPath } : undefined);

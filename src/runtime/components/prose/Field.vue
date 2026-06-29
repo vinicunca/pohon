@@ -51,7 +51,7 @@ const props = useComponentProps('prose.field', _props);
 
 const appConfig = useAppConfig() as ProseField['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.field || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.field || {}) })());
 </script>
 
 <template>

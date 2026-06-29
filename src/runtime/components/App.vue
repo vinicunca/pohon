@@ -1,8 +1,8 @@
 <script lang="ts">
 import type { ConfigProviderProps, TooltipProviderProps } from 'akar';
 import type { VNode } from 'vue';
-import type { ToasterProps } from '../types';
 import type { Locale, Messages } from '../types/locale';
+import type { ToasterProps } from './Toaster.vue';
 
 export interface AppProps<T extends Messages = Messages> extends Omit<ConfigProviderProps, 'useId' | 'locale'> {
   tooltip?: TooltipProviderProps;

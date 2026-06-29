@@ -2,9 +2,9 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { CheckboxGroupRootEmits, CheckboxGroupRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { CheckboxProps } from '../types';
 import type { AcceptableValue, GetItemKeys, GetModelValue, GetModelValueEmits } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { CheckboxProps } from './Checkbox.vue';
 import theme from '#build/ui/checkbox-group';
 
 type CheckboxGroup = ComponentConfig<typeof theme, AppConfig, 'checkboxGroup'>;

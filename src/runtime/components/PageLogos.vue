@@ -1,8 +1,8 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { MarqueeProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { MarqueeProps } from './Marquee.vue';
 import theme from '#build/ui/page-logos';
 
 type PageLogos = ComponentConfig<typeof theme, AppConfig, 'pageLogos'>;
@@ -58,7 +58,7 @@ const props = useComponentProps('pageLogos', _props);
 
 const appConfig = useAppConfig() as PageLogos['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pageLogos || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageLogos || {}) })());
 </script>
 
 <template>

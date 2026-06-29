@@ -31,7 +31,7 @@ const props = useComponentProps('prose.badge', _props);
 
 const appConfig = useAppConfig() as ProseBadge['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.badge || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.badge || {}) }));
 </script>
 
 <template>

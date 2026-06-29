@@ -2,11 +2,11 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
 import type { UseComponentIconsProps } from '../composables/useComponentIcons';
-import type { AvatarProps } from '../types';
 import type { InputHTMLAttributes } from '../types/html';
 import type { ApplyModifiers, ModelModifiers } from '../types/input';
 import type { AcceptableValue } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
 import theme from '#build/ui/input';
 
 type Input = ComponentConfig<typeof theme, AppConfig, 'input'>;
@@ -104,7 +104,7 @@ const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponen
 
 const inputSize = computed(() => fieldGroupSize.value || formFieldSize.value);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.input || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.input || {}) })({
   type: props.type as Input['variants']['type'],
   color: color.value ?? props.color,
   variant: props.variant,

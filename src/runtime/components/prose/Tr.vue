@@ -30,7 +30,7 @@ const props = useComponentProps('prose.tr', _props);
 
 const appConfig = useAppConfig() as ProseTr['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.tr || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.tr || {}) }));
 </script>
 
 <template>

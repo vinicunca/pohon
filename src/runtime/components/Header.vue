@@ -1,8 +1,12 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { ButtonProps, DrawerProps, LinkPropsKeys, ModalProps, SlideoverProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { DrawerProps } from './Drawer.vue';
+import type { LinkPropsKeys } from './Link.vue';
+import type { ModalProps } from './Modal.vue';
+import type { SlideoverProps } from './Slideover.vue';
 import theme from '#build/ui/header';
 
 type Header = ComponentConfig<typeof theme, AppConfig, 'header'>;
@@ -117,7 +121,7 @@ watch(() => route.fullPath, () => {
   open.value = false;
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.header || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.header || {}) })());
 
 const Menu = computed(() => ({
   slideover: PSlideover,

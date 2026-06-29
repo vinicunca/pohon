@@ -36,7 +36,7 @@ const props = useComponentProps('pageColumns', _props);
 
 const appConfig = useAppConfig() as PageColumns['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.pageColumns || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageColumns || {}) }));
 </script>
 
 <template>

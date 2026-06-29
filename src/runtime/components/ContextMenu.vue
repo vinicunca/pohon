@@ -3,9 +3,12 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { ContextMenuContentEmits, ContextMenuContentProps, ContextMenuRootEmits, ContextMenuRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { AvatarProps, IconProps, KbdProps, LinkProps } from '../types';
 import type { ArrayOrNested, DynamicSlots, EmitsToProps, GetItemKeys, MergeTypes, NestedItem } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { IconProps } from './Icon.vue';
+import type { KbdProps } from './Kbd.vue';
+import type { LinkProps } from './Link.vue';
 import theme from '#build/ui/context-menu';
 
 type ContextMenu = ComponentConfig<typeof theme, AppConfig, 'contextMenu'>;
@@ -141,7 +144,7 @@ const rootProps = useForwardProps(reactivePick(props, 'modal'), emits);
 const contentProps = toRef(() => props.content);
 const getProxySlots = () => omit(slots, ['default']);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.contextMenu || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.contextMenu || {}) })({
   size: props.size,
 }));
 </script>

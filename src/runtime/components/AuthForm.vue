@@ -2,11 +2,20 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { ButtonProps, CheckboxProps, FormFieldProps, FormProps, IconProps, InputProps, LinkPropsKeys, PinInputProps, SelectMenuProps, SeparatorProps } from '../types';
 import type { FormSchema, FormSubmitEvent, InferInput } from '../types/form';
 import type { FormHTMLAttributes } from '../types/html';
 import type { NonUnion } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { CheckboxProps } from './Checkbox.vue';
+import type { FormProps } from './Form.vue';
+import type { FormFieldProps } from './FormField.vue';
+import type { IconProps } from './Icon.vue';
+import type { InputProps } from './Input.vue';
+import type { LinkPropsKeys } from './Link.vue';
+import type { PinInputProps } from './PinInput.vue';
+import type { SelectMenuProps } from './SelectMenu.vue';
+import type { SeparatorProps } from './Separator.vue';
 import theme from '#build/ui/auth-form';
 
 type AuthForm = ComponentConfig<typeof theme, AppConfig, 'authForm'>;
@@ -154,7 +163,7 @@ const props = useComponentProps<AuthFormProps<T, F>>('authForm', _props);
 const { t } = useLocale();
 const appConfig = useAppConfig() as AuthForm['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.authForm || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.authForm || {}) })());
 
 const formRef = useTemplateRef('formRef');
 

@@ -40,7 +40,7 @@ const props = useComponentProps('main', _props);
 
 const appConfig = useAppConfig() as Main['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.main || {}) }));
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.main || {}) }));
 </script>
 
 <template>

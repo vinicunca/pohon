@@ -95,7 +95,7 @@ const modelValue = defineModel<string>(undefined);
 
 const appConfig = useAppConfig() as ColorPicker['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.colorPicker || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.colorPicker || {}) })({
   size: props.size,
 }));
 

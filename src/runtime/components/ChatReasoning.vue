@@ -2,9 +2,9 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { CollapsibleRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { IconProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
 import type { ChatShimmerProps } from './ChatShimmer.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/chat-reasoning';
 
 type ChatReasoning = ComponentConfig<typeof theme, AppConfig, 'chatReasoning'>;
@@ -93,7 +93,7 @@ const props = useComponentProps('chatReasoning', _props);
 const { t, code } = useLocale();
 const appConfig = useAppConfig() as ChatReasoning['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.chatReasoning || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatReasoning || {}) })({
   chevron: props.chevron,
 }));
 

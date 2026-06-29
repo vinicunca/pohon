@@ -12,8 +12,10 @@ import type {
   YearPickerRootProps,
 } from 'akar';
 import type { Component, ComputedRef, VNode } from 'vue';
-import type { ButtonProps, IconProps, LinkPropsKeys } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkPropsKeys } from './Link.vue';
 import { getLocalTimeZone, today } from '@internationalized/date';
 import { getWeekNumber } from 'akar/date';
 import theme from '#build/ui/calendar';
@@ -299,7 +301,7 @@ const prevMonthIcon = computed(() => props.prevMonthIcon || (dir.value === 'rtl'
 const prevLabel = computed(() => view.value === 'day' ? t('calendar.prevMonth') : t('calendar.prevYear'));
 const nextLabel = computed(() => view.value === 'day' ? t('calendar.nextMonth') : t('calendar.nextYear'));
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.calendar || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.calendar || {}) })({
   color: props.color,
   size: props.size,
   variant: props.variant,

@@ -2,8 +2,9 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { Ref, VNode } from 'vue';
 import type { UseComponentIconsProps } from '../composables/useComponentIcons';
-import type { AvatarProps, LinkProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { LinkProps } from './Link.vue';
 import theme from '#build/ui/button';
 
 type Button = ComponentConfig<typeof theme, AppConfig, 'button'>;
@@ -91,7 +92,7 @@ const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponen
 );
 
 const ui = computed(() => uv({
-  extend: uv(theme),
+  extend: theme,
   ...defu({
     variants: {
       active: {

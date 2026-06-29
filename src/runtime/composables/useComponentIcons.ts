@@ -1,5 +1,6 @@
 import type { MaybeRefOrGetter } from 'vue';
-import type { AvatarProps, IconProps } from '../types';
+import type { AvatarProps } from '../components/Avatar.vue';
+import type { IconProps } from '../components/Icon.vue';
 import { computed, toValue } from 'vue';
 import { useAppConfig } from '#imports';
 

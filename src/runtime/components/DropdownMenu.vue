@@ -3,9 +3,13 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { DropdownMenuArrowProps, DropdownMenuContentEmits, DropdownMenuContentProps, DropdownMenuRootEmits, DropdownMenuRootProps } from 'akar';
 import type { VNode } from 'vue';
-import type { AvatarProps, IconProps, InputProps, KbdProps, LinkProps } from '../types';
 import type { ArrayOrNested, DynamicSlots, EmitsToProps, GetItemKeys, MergeTypes, NestedItem } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { IconProps } from './Icon.vue';
+import type { InputProps } from './Input.vue';
+import type { KbdProps } from './Kbd.vue';
+import type { LinkProps } from './Link.vue';
 import theme from '#build/ui/dropdown-menu';
 
 type DropdownMenu = ComponentConfig<typeof theme, AppConfig, 'dropdownMenu'>;
@@ -177,7 +181,7 @@ const contentProps = toRef(() => defu(props.content, { side: 'bottom', sideOffse
 const arrowProps = toRef(() => defu(props.arrow, { rounded: true }) as DropdownMenuArrowProps);
 const getProxySlots = () => omit(slots, ['default']);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.dropdownMenu || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dropdownMenu || {}) })({
   size: props.size,
 }));
 </script>

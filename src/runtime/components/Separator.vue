@@ -2,8 +2,9 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { SeparatorProps as _SeparatorProps } from 'akar';
 import type { VNode } from 'vue';
-import type { AvatarProps, IconProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/separator';
 
 type Separator = ComponentConfig<typeof theme, AppConfig, 'separator'>;
@@ -86,7 +87,7 @@ const [DefineContainer, ReuseContainer] = createReusableTemplate();
 
 const hasContent = computed(() => !!(props.label || props.icon || props.avatar || slots.default));
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.separator || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.separator || {}) })({
   color: props.color,
   orientation: props.orientation,
   size: props.size,

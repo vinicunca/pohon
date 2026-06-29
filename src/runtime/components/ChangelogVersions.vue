@@ -3,8 +3,8 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { SpringOptions, UseScrollOptions } from 'motion-v';
 import type { VNode } from 'vue';
-import type { ChangelogVersionProps, ChangelogVersionSlots } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ChangelogVersionProps, ChangelogVersionSlots } from './ChangelogVersion.vue';
 import theme from '#build/ui/changelog-versions';
 
 type ChangelogVersions = ComponentConfig<typeof theme, AppConfig, 'changelogVersions'>;
@@ -81,7 +81,7 @@ const { scrollYProgress } = useScroll(scrollOptions.value);
 const y = useSpring(scrollYProgress, springOptions);
 const height = useTransform(() => `${Number(y.get()) * 100}%`);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.changelogVersions || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.changelogVersions || {}) })());
 </script>
 
 <template>

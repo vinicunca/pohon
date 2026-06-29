@@ -2,8 +2,9 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
 import type { NuxtError } from '#app';
-import type { ButtonProps, IconProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/error';
 
 type Error = ComponentConfig<typeof theme, AppConfig, 'error'>;
@@ -70,7 +71,7 @@ const props = useComponentProps('error', _props);
 const { t } = useLocale();
 const appConfig = useAppConfig() as Error['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.error || {}) })());
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.error || {}) })());
 
 function handleError() {
   clearError({ redirect: props.redirect });

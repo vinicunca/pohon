@@ -3,8 +3,11 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { ChatStatus, UIDataTypes, UIMessage, UITools } from 'ai';
 import type { ComponentPublicInstance, VNode } from 'vue';
-import type { ButtonProps, ChatMessageProps, ChatMessageSlots, IconProps, LinkPropsKeys } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
+import type { ChatMessageProps, ChatMessageSlots } from './ChatMessage.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/chat-messages';
 
 type ChatMessages = ComponentConfig<typeof theme, AppConfig, 'chatMessages'>;
@@ -124,7 +127,7 @@ const appConfig = useAppConfig() as ChatMessages['AppConfig'];
 const userProps = toRef(() => defu(props.user, { side: 'right' as const, variant: 'soft' as const }));
 const assistantProps = toRef(() => defu(props.assistant, { side: 'left' as const, variant: 'naked' as const }));
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.chatMessages || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatMessages || {}) })({
   compact: props.compact,
 }));
 

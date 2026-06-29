@@ -74,7 +74,7 @@ const props = useComponentProps('formField', _props);
 
 const appConfig = useAppConfig() as FormField['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.formField || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.formField || {}) })({
   size: props.size,
   required: props.required,
   orientation: props.orientation,

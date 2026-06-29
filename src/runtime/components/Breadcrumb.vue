@@ -2,9 +2,11 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { AvatarProps, IconProps, LinkProps } from '../types';
 import type { DynamicSlots, GetItemKeys } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { IconProps } from './Icon.vue';
+import type { LinkProps } from './Link.vue';
 import theme from '#build/ui/breadcrumb';
 
 type Breadcrumb = ComponentConfig<typeof theme, AppConfig, 'breadcrumb'>;
@@ -92,7 +94,7 @@ const appConfig = useAppConfig() as Breadcrumb['AppConfig'];
 
 const separatorIcon = computed(() => props.separatorIcon || (dir.value === 'rtl' ? appConfig.ui.icons.chevronLeft : appConfig.ui.icons.chevronRight));
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.breadcrumb || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.breadcrumb || {}) })({
   color: props.color,
 }));
 </script>

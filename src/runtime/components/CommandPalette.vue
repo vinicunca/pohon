@@ -6,9 +6,15 @@ import type { ListboxRootEmits, ListboxRootProps } from 'akar';
 import type { FuseResult } from 'fuse.js';
 import type { VNode } from 'vue';
 import type { UseComponentIconsProps } from '../composables/useComponentIcons';
-import type { AvatarProps, ButtonProps, ChipProps, IconProps, InputProps, KbdProps, LinkProps, LinkPropsKeys } from '../types';
 import type { GetItemKeys } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { ButtonProps } from './Button.vue';
+import type { ChipProps } from './Chip.vue';
+import type { IconProps } from './Icon.vue';
+import type { InputProps } from './Input.vue';
+import type { KbdProps } from './Kbd.vue';
+import type { LinkProps, LinkPropsKeys } from './Link.vue';
 import theme from '#build/ui/command-palette';
 
 type CommandPalette = ComponentConfig<typeof theme, AppConfig, 'commandPalette'>;
@@ -300,7 +306,7 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: C
   },
 });
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.commandPalette || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.commandPalette || {}) })({
   size: props.size,
   virtualize: !!props.virtualize,
 }));

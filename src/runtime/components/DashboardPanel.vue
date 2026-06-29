@@ -50,7 +50,7 @@ const id = `${dashboardContext.storageKey}-panel-${props.id || useId()}`;
 
 const { el, size, isDragging, onMouseDown, onTouchStart, onDoubleClick } = useResizable(id, toRef(() => ({ ...dashboardContext, ...props })));
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.dashboardPanel || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardPanel || {}) })({
   size: !!size.value,
 }));
 </script>

@@ -1,8 +1,9 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { IconProps, LinkProps } from '../../types';
 import type { ComponentConfig } from '../../types/uv';
+import type { IconProps } from '../Icon.vue';
+import type { LinkProps } from '../Link.vue';
 import theme from '#build/ui/prose/callout';
 
 type ProseCallout = ComponentConfig<typeof theme, AppConfig, 'callout', 'ui.prose'>;
@@ -42,7 +43,7 @@ const props = useComponentProps('prose.callout', _props);
 
 const appConfig = useAppConfig() as ProseCallout['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.prose?.callout || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.callout || {}) })({
   color: props.color,
   to: !!props.to,
 }));

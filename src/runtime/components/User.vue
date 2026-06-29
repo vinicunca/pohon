@@ -1,8 +1,10 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { AvatarProps, ChipProps, LinkProps } from '../types';
 import type { ComponentConfig } from '../types/uv';
+import type { AvatarProps } from './Avatar.vue';
+import type { ChipProps } from './Chip.vue';
+import type { LinkProps } from './Link.vue';
 import theme from '#build/ui/user';
 
 type User = ComponentConfig<typeof theme, AppConfig, 'user'>;
@@ -65,7 +67,7 @@ const props = useComponentProps('user', _props);
 
 const appConfig = useAppConfig() as User['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.user || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.user || {}) })({
   size: props.size,
   orientation: props.orientation,
   to: !!props.to || !!props.onClick,

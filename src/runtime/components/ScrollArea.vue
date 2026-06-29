@@ -112,7 +112,7 @@ const props = useComponentProps<ScrollAreaProps<T>>('scrollArea', _props);
 const { dir } = useLocale();
 const appConfig = useAppConfig() as ScrollArea['AppConfig'];
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.scrollArea || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.scrollArea || {}) })({
   orientation: props.orientation,
 }));
 
