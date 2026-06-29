@@ -4,8 +4,13 @@ import type { ContentNavigationItem } from '@nuxt/content';
 import type { AppConfig } from '@nuxt/schema';
 import type { UseFuseOptions } from '@vueuse/integrations/useFuse';
 import type { VNode } from 'vue';
-import type { ButtonProps, CommandPaletteGroup, CommandPaletteItem, CommandPaletteProps, CommandPaletteSlots, IconProps, InputProps, LinkProps, LinkPropsKeys, ModalProps } from '../../types';
 import type { ComponentConfig } from '../../types/uv';
+import type { ButtonProps } from '../Button.vue';
+import type { CommandPaletteGroup, CommandPaletteItem, CommandPaletteProps, CommandPaletteSlots } from '../CommandPalette.vue';
+import type { IconProps } from '../Icon.vue';
+import type { InputProps } from '../Input.vue';
+import type { LinkProps, LinkPropsKeys } from '../Link.vue';
+import type { ModalProps } from '../Modal.vue';
 import theme from '#build/ui/content/content-search';
 
 type ContentSearch = ComponentConfig<typeof theme, AppConfig, 'contentSearch'>;
@@ -55,7 +60,7 @@ export interface ContentSearchItem extends Omit<LinkProps, 'custom'>, CommandPal
   icon?: IconProps['name'];
 }
 
-export interface ContentSearchProps<T extends ContentSearchLink = ContentSearchLink> extends Pick<ModalProps, 'title' | 'description' | 'overlay' | 'transition' | 'content' | 'dismissible' | 'fullscreen' | 'modal' | 'portal'>, Pick<CommandPaletteProps<CommandPaletteGroup<ContentSearchItem>, ContentSearchItem>, 'icon' | 'placeholder' | 'autofocus' | 'loading' | 'loadingIcon' | 'closeIcon' | 'groups'> {
+export interface ContentSearchProps<T extends ContentSearchLink = ContentSearchLink> extends Pick<ModalProps, 'title' | 'description' | 'overlay' | 'transition' | 'content' | 'dismissible' | 'fullscreen' | 'modal' | 'portal' | 'unmountOnHide'>, Pick<CommandPaletteProps<CommandPaletteGroup<ContentSearchItem>, ContentSearchItem>, 'icon' | 'trailingIcon' | 'selectedIcon' | 'childrenIcon' | 'placeholder' | 'autofocus' | 'loading' | 'loadingIcon' | 'closeIcon' | 'back' | 'backIcon' | 'disabled' | 'highlightOnHover' | 'labelKey' | 'descriptionKey' | 'preserveGroupOrder' | 'virtualize' | 'groups'> {
   /**
    * @defaultValue 'md'
    */
@@ -74,7 +79,7 @@ export interface ContentSearchProps<T extends ContentSearchLink = ContentSearchL
    */
   input?: boolean | Omit<InputProps, 'modelValue' | 'defaultValue'>;
   /**
-   * Keyboard shortcut to open the search (used by [`defineShortcuts`](https://pohon.vinicunca.dev/docs/composables/define-shortcuts))
+   * Keyboard shortcut to open the search (used by [`defineShortcuts`](https://ui.nuxt.com/docs/composables/define-shortcuts))
    * @defaultValue 'meta_k'
    */
   shortcut?: string;
@@ -83,7 +88,7 @@ export interface ContentSearchProps<T extends ContentSearchLink = ContentSearchL
   navigation?: Array<ContentNavigationItem>;
   files?: Array<ContentSearchFile>;
   /**
-   * Options for [useFuse](https://vueuse.org/integrations/useFuse) passed to the [CommandPalette](https://pohon.vinicunca.dev/docs/components/command-palette).
+   * Options for [useFuse](https://vueuse.org/integrations/useFuse) passed to the [CommandPalette](https://ui.nuxt.com/docs/components/command-palette).
    * @defaultValue {
       fuseOptions: {
         ignoreLocation: true,
@@ -144,16 +149,13 @@ import { uv } from '../../utils/uv';
 import PCommandPalette from '../CommandPalette.vue';
 import PModal from '../Modal.vue';
 
-const _props = withDefaults(
-  defineProps<ContentSearchProps<T>>(),
-  {
-    shortcut: 'meta_k',
-    colorMode: true,
-    close: true,
-    fullscreen: false,
-    searchDelay: 100,
-  },
-);
+const _props = withDefaults(defineProps<ContentSearchProps<T>>(), {
+  shortcut: 'meta_k',
+  colorMode: true,
+  close: true,
+  fullscreen: false,
+  searchDelay: 100,
+});
 const slots = defineSlots<ContentSearchSlots>();
 
 const props = useComponentProps<ContentSearchProps<T>>('contentSearch', _props);
@@ -166,9 +168,8 @@ const { open, mapNavigationItems, mapLinks, mapSearchResults, postFilter } = use
 const colorMode = useColorMode();
 const appConfig = useAppConfig() as ContentSearch['AppConfig'];
 
-const commandPaletteProps = useForwardProps(reactivePick(props, 'size', 'icon', 'placeholder', 'autofocus', 'loading', 'loadingIcon', 'close', 'closeIcon', 'searchDelay'));
-const modalProps = useForwardProps(reactivePick(props, 'overlay', 'transition', 'content', 'dismissible', 'fullscreen', 'modal', 'portal'));
-
+const commandPaletteProps = useForwardProps(reactivePick(props, 'size', 'icon', 'trailingIcon', 'selectedIcon', 'childrenIcon', 'placeholder', 'autofocus', 'loading', 'loadingIcon', 'close', 'closeIcon', 'back', 'backIcon', 'disabled', 'highlightOnHover', 'labelKey', 'descriptionKey', 'preserveGroupOrder', 'virtualize', 'searchDelay'));
+const modalProps = useForwardProps(reactivePick(props, 'overlay', 'transition', 'content', 'dismissible', 'fullscreen', 'modal', 'portal', 'unmountOnHide'));
 const inputProps = computed(() => {
   if (props.input === false) {
     return false;
@@ -190,7 +191,7 @@ const fuse = computed(() => defu(
   } as UseFuseOptions<T>,
 ));
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.contentSearch || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.contentSearch || {}) })({
   size: props.size,
   fullscreen: props.fullscreen,
 }));

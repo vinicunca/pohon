@@ -61,6 +61,7 @@ export { default as input } from './input';
 export { default as inputDate } from './input-date';
 export { default as inputMenu } from './input-menu';
 export { default as inputNumber } from './input-number';
+export { default as inputRating } from './input-rating';
 export { default as inputTags } from './input-tags';
 export { default as inputTime } from './input-time';
 export { default as kbd } from './kbd';

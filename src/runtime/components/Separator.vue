@@ -65,6 +65,8 @@ import { uv } from '../utils/uv';
 import PAvatar from './Avatar.vue';
 import PIcon from './Icon.vue';
 
+defineOptions({ inheritAttrs: false });
+
 const _props = withDefaults(
   defineProps<SeparatorProps>(),
   {
@@ -104,7 +106,7 @@ const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.separator ||
     </div>
   </DefineContainer>
 
-  <AkarSeparator v-bind="rootProps" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <AkarSeparator v-bind="{ ...rootProps, ...$attrs }" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <ReuseContainer v-if="hasContent && props.position === 'start'" />
 
     <div data-slot="border" :class="ui.border({ class: props.ui?.border })" />

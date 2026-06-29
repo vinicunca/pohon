@@ -9,7 +9,7 @@ import theme from '#build/ui/popover';
 type Popover = ComponentConfig<typeof theme, AppConfig, 'popover'>;
 type PopoverMode = 'click' | 'hover';
 
-export interface PopoverProps<M extends PopoverMode = PopoverMode> extends PopoverRootProps, Pick<HoverCardRootProps, 'openDelay' | 'closeDelay'> {
+export interface PopoverProps<M extends PopoverMode = PopoverMode> extends PopoverRootProps, Pick<HoverCardRootProps, 'openDelay' | 'closeDelay' | 'enableTouch'> {
   /**
    * The display mode of the popover.
    * @defaultValue 'click'
@@ -34,7 +34,7 @@ export interface PopoverProps<M extends PopoverMode = PopoverMode> extends Popov
   /**
    * The reference (or anchor) element that is being referred to for positioning.
    *
-   * * Accepts an element or a virtual element (anything with `getBoundingClientRect`),
+   * Accepts an element or a virtual element (anything with `getBoundingClientRect`),
    * and can be changed reactively to re-anchor the popover (e.g. for a guided tour).
    * If not provided will use the current component as anchor.
    */
@@ -63,7 +63,6 @@ export interface PopoverSlots<M extends PopoverMode = PopoverMode> {
 
 <script setup lang="ts" generic="M extends PopoverMode">
 import { reactivePick } from '@vueuse/core';
-import { } from 'akar';
 import { Popover as AkarPopover, HoverCard } from 'akar/namespaced';
 import { defu } from 'defu';
 import { computed, toRef } from 'vue';
@@ -92,7 +91,7 @@ const props = useComponentProps<PopoverProps<M>>('popover', _props);
 
 const appConfig = useAppConfig() as Popover['AppConfig'];
 
-const pick = props.mode === 'hover' ? reactivePick(props, 'defaultOpen', 'open', 'openDelay', 'closeDelay') : reactivePick(props, 'defaultOpen', 'open', 'modal');
+const pick = props.mode === 'hover' ? reactivePick(props, 'defaultOpen', 'open', 'openDelay', 'closeDelay', 'enableTouch') : reactivePick(props, 'defaultOpen', 'open', 'modal');
 const rootProps = useForwardProps(pick, emits);
 const portalProps = usePortal(toRef(() => props.portal));
 const contentProps = toRef(() => defu(props.content, { side: 'bottom', sideOffset: 8, collisionPadding: 8 }) as PopoverContentProps);
@@ -115,7 +114,7 @@ const contentEvents = computed(() => {
 });
 const arrowProps = toRef(() => defu(props.arrow, { rounded: true }) as PopoverArrowProps);
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.popover || {}) })({
+const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.popover || {}) })({
   side: contentProps.value.side,
 }));
 

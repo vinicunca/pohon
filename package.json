@@ -232,7 +232,7 @@
     "@vueuse/core": "^14.3.0",
     "@vueuse/integrations": "^14.3.0",
     "@vueuse/shared": "^14.3.0",
-    "akar": "2.0.12",
+    "akar": "2.0.14",
     "colortranslator": "^5.0.0",
     "consola": "^3.4.2",
     "defu": "^6.1.7",

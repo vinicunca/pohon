@@ -106,7 +106,7 @@ export type AuthFormSlots<T extends object = object, F extends AuthFormField = A
 
 <script setup lang="ts" generic="T extends FormSchema, F extends AuthFormField">
 import { Primitive } from 'akar';
-import { computed, reactive, ref, useTemplateRef } from 'vue';
+import { computed, reactive, shallowReactive, useTemplateRef } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useLocale } from '../composables/useLocale';
@@ -157,8 +157,16 @@ const appConfig = useAppConfig() as AuthForm['AppConfig'];
 const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.authForm || {}) })());
 
 const formRef = useTemplateRef('formRef');
-const passwordVisibility = ref(false);
-const passwordRef = useTemplateRef('passwordRef');
+
+const passwordVisibility = reactive<Record<string, boolean>>(
+  (_props.fields as Array<TypedAuthFormField> || []).reduce<Record<string, boolean>>((acc, field) => {
+    if (field.type === 'password' && field.name) {
+      acc[field.name as string] = false;
+    }
+    return acc;
+  }, {}),
+);
+const passwordRefs = shallowReactive<Record<string, { inputRef?: HTMLInputElement | null } | null>>({});
 
 function pickFieldProps(field: F) {
   const fields = ['name', 'errorPattern', 'help', 'error', 'hint', 'size', 'required', 'eagerValidation', 'validateOnInputDelay'] as Array<keyof F>;
@@ -285,23 +293,23 @@ defineExpose({
             />
             <PInput
               v-else-if="field.type === 'password'"
-              ref="passwordRef"
+              :ref="(el: any) => { passwordRefs[field.name] = el }"
               v-model="state[field.name]"
               data-slot="password"
               :class="ui.password({ class: props.ui?.password })"
               v-bind="(omitFieldProps(field) as AuthFormInputField<'password'>)"
-              :type="passwordVisibility ? 'text' : 'password'"
+              :type="passwordVisibility[field.name] ? 'text' : 'password'"
             >
               <template #trailing>
                 <PButton
                   color="neutral"
                   variant="link"
                   size="sm"
-                  :icon="passwordVisibility ? appConfig.ui.icons.eyeOff : appConfig.ui.icons.eye"
-                  :aria-label="passwordVisibility ? t('authForm.hidePassword') : t('authForm.showPassword')"
-                  :aria-pressed="passwordVisibility"
-                  :aria-controls="passwordRef?.[0]?.inputRef?.id"
-                  @click="passwordVisibility = !passwordVisibility"
+                  :icon="passwordVisibility[field.name] ? appConfig.ui.icons.eyeOff : appConfig.ui.icons.eye"
+                  :aria-label="passwordVisibility[field.name] ? t('authForm.hidePassword') : t('authForm.showPassword')"
+                  :aria-pressed="!!passwordVisibility[field.name]"
+                  :aria-controls="passwordRefs[field.name]?.inputRef?.id"
+                  @click="passwordVisibility[field.name] = !passwordVisibility[field.name]"
                 />
               </template>
             </PInput>
