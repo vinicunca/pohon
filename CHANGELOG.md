@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.0.0-rc7.0](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7...v2.0.0-rc7.0) (2026-06-30)
+
+### Features
+
+* **Modal/Slideover:** add leave and enter events ([3927e51](https://github.com/vinicunca/pohon/commit/3927e5188c1b92103a6a77f20dd77aa3bb52b1cb))
+
+### Bug Fixes
+
+* **Separator:** forward fall-through attributes to root ([e4aade5](https://github.com/vinicunca/pohon/commit/e4aade56aedcd3abade10092e54accf6f7aee90c))
+
+### Performance Improvements
+
+* **components:** drop the redundant inner  in component extend ([09fcce1](https://github.com/vinicunca/pohon/commit/09fcce1cb064e004cf92296a3cdfbbe6178d7b82))
+* **types:** decouple useComponentProps from the component-types barrel ([715ce04](https://github.com/vinicunca/pohon/commit/715ce0407383079b10cd8cecdd6fc69b5db20cdc))
+
 ## [2.0.0-rc7](https://github.com/vinicunca/pohon/compare/v2.0.0-rc6...v2.0.0-rc7) (2026-06-13)
 
 ### Features
