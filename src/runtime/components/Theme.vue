@@ -1,6 +1,6 @@
 <script lang="ts">
 import type { VNode } from 'vue';
-import type { ThemeContextDefaults, ThemeDefaults, ThemeUI } from '../composables/useComponentProps';
+import type { ThemeContextDefaults, ThemeDefaults, ThemeUI } from '../types/theme';
 import defu from 'defu';
 import { computed } from 'vue';
 import { injectThemeContext, provideThemeContext } from '../composables/useComponentProps';

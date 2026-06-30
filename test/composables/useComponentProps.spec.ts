@@ -1,5 +1,5 @@
 import type * as ui from '#build/ui';
-import type { ThemeDefaults } from '../../src/runtime/composables/useComponentProps';
+import type { ThemeDefaults } from '../../src/runtime/types/theme';
 import { describe, expectTypeOf, it } from 'vitest';
 
 /**

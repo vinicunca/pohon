@@ -9,8 +9,14 @@ type ScrollArea = ComponentConfig<typeof theme, AppConfig, 'scrollArea'>;
 
 export interface ScrollAreaVirtualizeOptions extends Partial<Omit<
   VirtualizerOptions<Element, Element>,
-  'count' | 'getScrollElement' | 'horizontal' | 'isRtl' | 'estimateSize' | 'lanes' | 'enabled'
+  'count' | 'horizontal' | 'isRtl' | 'estimateSize' | 'lanes' | 'enabled'
 >> {
+  /**
+   * Virtualize against an external scroll element instead of the component's own root.
+   * Pair with `scrollMargin` set to the content's offset from the scroll element's start.
+   * @defaultValue undefined
+   */
+  getScrollElement?: () => Element | null;
   /**
    * Estimated size (in px) of each item along the scroll axis. Can be a number or a function.
    * @defaultValue 100
@@ -90,21 +96,18 @@ export interface ScrollAreaEmits {
 import { useVirtualizer } from '@tanstack/vue-virtual';
 import { Primitive } from 'akar';
 import { defu } from 'defu';
-import { computed, onMounted, onUnmounted, toRef, useTemplateRef, watch } from 'vue';
+import { computed, onUnmounted, toRef, useTemplateRef, watch } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useLocale } from '../composables/useLocale';
 import { useScrollShadow } from '../composables/useScrollShadow';
 import { uv } from '../utils/uv';
 
-const _props = withDefaults(
-  defineProps<ScrollAreaProps<T>>(),
-  {
-    orientation: 'vertical',
-    virtualize: false,
-    shadow: false,
-  },
-);
+const _props = withDefaults(defineProps<ScrollAreaProps<T>>(), {
+  orientation: 'vertical',
+  virtualize: false,
+  shadow: false,
+});
 const emits = defineEmits<ScrollAreaEmits>();
 defineSlots<ScrollAreaSlots<T>>();
 const props = useComponentProps<ScrollAreaProps<T>>('scrollArea', _props);
@@ -131,6 +134,12 @@ const scrollShadowStyle = props.shadow
 const isRtl = computed(() => dir.value === 'rtl');
 const isHorizontal = computed(() => props.orientation === 'horizontal');
 const isVertical = computed(() => !isHorizontal.value);
+
+// When an external scroll element is provided, it owns the scroll
+const isExternalScroll = computed(() => typeof props.virtualize === 'object' && !!props.virtualize.getScrollElement);
+
+// The scroll viewport: the external element when provided, otherwise the component's root.
+const getScrollElement = () => (isExternalScroll.value ? virtualizerProps.value.getScrollElement?.() : rootRef.value?.$el) ?? null;
 
 const virtualizerProps = toRef(() => {
   const options = typeof props.virtualize === 'boolean' ? {} : props.virtualize;
@@ -180,7 +189,7 @@ const virtualizer = !!props.virtualize && useVirtualizer({
   get count() {
     return props.items?.length || 0;
   },
-  getScrollElement: () => rootRef.value?.$el,
+  getScrollElement,
   get horizontal() {
     return isHorizontal.value;
   },
@@ -203,6 +212,8 @@ function getVirtualItemStyle(virtualItem: VirtualItem): CSSProperties {
   const hasLanes = lanes.value !== undefined && lanes.value > 1;
   const lane = virtualItem.lane;
   const gap = virtualizerProps.value.gap ?? 0;
+  // In external-scroll mode `start` includes `scrollMargin`; subtract it so items sit inline.
+  const offset = virtualItem.start - (isExternalScroll.value ? (virtualizerProps.value.scrollMargin ?? 0) : 0);
 
   // For cross-axis gaps: calculate size and position accounting for gaps between lanes
   // laneSize = (100% - (lanes - 1) * gap) / lanes
@@ -221,32 +232,37 @@ function getVirtualItemStyle(virtualItem: VirtualItem): CSSProperties {
     blockSize: isHorizontal.value ? (hasLanes ? laneSize : '100%') : undefined,
     inlineSize: isVertical.value ? (hasLanes ? laneSize : '100%') : undefined,
     transform: isHorizontal.value
-      ? `translateX(${isRtl.value ? -virtualItem.start : virtualItem.start}px)`
-      : `translateY(${virtualItem.start}px)`,
+      ? `translateX(${isRtl.value ? -offset : offset}px)`
+      : `translateY(${offset}px)`,
   };
 }
 
-// Recalculate layout on container resize (e.g. estimateSize depends on lane width)
+// Recalculate layout when the scroll viewport resizes (e.g. estimateSize depends on lane width).
+// Re-observe if the scroll element changes.
 let resizeObserver: ResizeObserver | null = null;
 let rafId: number | null = null;
 
-onMounted(() => {
-  if (virtualizer) {
-    const el = rootRef.value?.$el;
-    if (el) {
-      resizeObserver = new ResizeObserver(() => {
-        if (rafId !== null) {
-          return;
-        }
-        rafId = requestAnimationFrame(() => {
-          rafId = null;
-          virtualizer.value.measure();
-        });
-      });
-      resizeObserver.observe(el);
+watch(
+  getScrollElement,
+  (el) => {
+    resizeObserver?.disconnect();
+    resizeObserver = null;
+    if (!virtualizer || !el) {
+      return;
     }
-  }
-});
+    resizeObserver = new ResizeObserver(() => {
+      if (rafId !== null) {
+        return;
+      }
+      rafId = requestAnimationFrame(() => {
+        rafId = null;
+        virtualizer.value.measure();
+      });
+    });
+    resizeObserver.observe(el);
+  },
+  { immediate: true },
+);
 
 onUnmounted(() => {
   if (rafId !== null) {
@@ -293,8 +309,8 @@ defineExpose({
     :as="props.as"
     data-slot="root"
     :data-orientation="props.orientation"
-    :style="scrollShadowStyle"
     :class="ui.root({ class: [props.ui?.root, props.class] })"
+    :style="[scrollShadowStyle, isExternalScroll ? { overflow: 'visible' } : undefined]"
   >
     <template v-if="virtualizer">
       <div

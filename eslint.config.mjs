@@ -283,11 +283,4 @@ export default vinicuncaESLint(
       }],
     },
   },
-
-  {
-    files: ['src/runtime/composables/useComponentProps.ts'],
-    rules: {
-      'no-restricted-imports': 'off',
-    },
-  },
 );
