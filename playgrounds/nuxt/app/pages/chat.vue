@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import type { UIMessage } from 'ai';
-import { Chat } from '@ai-sdk/vue';
+import { useChat } from '@ai-sdk/vue';
 import { Comark } from '@comark/vue';
 import highlight from '@comark/vue/plugins/highlight';
 import { getToolName, isReasoningUIPart, isTextUIPart, isToolUIPart } from 'ai';
@@ -8,11 +7,9 @@ import { isPartStreaming, isToolStreaming } from 'pohon-ui/utils/ai';
 
 const toast = useToast();
 
-const messages: Array<UIMessage> = [];
 const input = ref('');
 
-const chat = new Chat({
-  messages,
+const { messages, status, error, sendMessage, regenerate, stop } = useChat({
   onError(error) {
     let message = error.message;
     try {
@@ -35,16 +32,16 @@ function onSubmit() {
     return;
   }
 
-  chat.sendMessage({ text: input.value });
+  sendMessage({ text: input.value });
 
   input.value = '';
 }
 
 function clearMessages() {
-  if (chat.status === 'streaming') {
-    chat.stop();
+  if (status.value === 'streaming' || status.value === 'submitted') {
+    stop();
   }
-  chat.messages = [];
+  messages.value = [];
 }
 
 function getDomain(url: string): string {
@@ -58,13 +55,38 @@ function getDomain(url: string): string {
 function getFaviconUrl(url: string): string {
   return `https://www.google.com/s2/favicons?sz=32&domain=${getDomain(url)}`;
 }
+
+function generateMessages() {
+  messages.value = [
+    ...messages.value,
+    {
+      id: '1',
+      parts: [{ type: 'text', text: 'Hello, how are you?' }],
+      role: 'user',
+    },
+    {
+      id: '2',
+      parts: [{ type: 'text', text: 'Fine, and you ?' }],
+      role: 'assistant',
+    },
+  ];
+}
 </script>
 
 <template>
-  <PDashboardNavbar class="border-b-0 inset-x-0 top-0 absolute z-5 lg:pointer-events-none">
+  <PDashboardNavbar class="absolute top-0 inset-x-0 z-5 border-b-0 lg:pointer-events-none">
     <template #right>
       <PButton
-        v-if="chat.messages.length"
+        v-if="!messages.length"
+        icon="i-lucide-messages-square"
+        label="Generate messages"
+        color="neutral"
+        variant="ghost"
+        class="pointer-events-auto"
+        @click="generateMessages"
+      />
+      <PButton
+        v-if="messages.length"
         icon="i-lucide-list-x"
         color="neutral"
         variant="ghost"
@@ -74,13 +96,14 @@ function getFaviconUrl(url: string): string {
     </template>
   </PDashboardNavbar>
 
-  <div class="mx-auto flex flex-1 flex-col gap-4 max-w-xl min-h-0 w-full sm:gap-6">
+  <div class="flex-1 flex flex-col gap-4 sm:gap-6 max-w-xl w-full mx-auto min-h-0">
     <PChatMessages
       should-auto-scroll
-      :messages="chat.messages"
-      :status="chat.status"
+      :messages="messages"
+      :status="status"
       :spacing-offset="72"
       :assistant="{ actions: [{ label: 'Edit', icon: 'i-lucide-pencil', onClick: () => console.log('edit') }] }"
+      :user="{ actions: [{ label: 'Edit', icon: 'i-lucide-pencil', onClick: () => console.log('edit') }], icon: 'i-lucide-user' }"
     >
       <template #content="{ message }">
         <template
@@ -126,7 +149,7 @@ function getFaviconUrl(url: string): string {
           >
             <div
               v-if="part.output && (part.output as any[]).length"
-              class="border-default p-1 border rounded-md max-h-40 overflow-y-auto"
+              class="p-1 border border-default rounded-md max-h-40 overflow-y-auto"
             >
               <a
                 v-for="source in (part.output as any[])"
@@ -134,17 +157,17 @@ function getFaviconUrl(url: string): string {
                 :href="source.url"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hover:text-default hover:bg-elevated/50 text-sm color-text-muted px-2 py-1 rounded-md flex gap-2 min-w-0 transition-colors items-center"
+                class="flex items-center gap-2 px-2 py-1 text-sm text-muted hover:text-default hover:bg-elevated/50 transition-colors min-w-0 rounded-md"
               >
                 <img
                   :src="getFaviconUrl(source.url)"
                   :alt="getDomain(source.url)"
-                  class="rounded-sm shrink-0 size-4"
+                  class="size-4 shrink-0 rounded-sm"
                   loading="lazy"
                   @error="($event.target as HTMLImageElement).style.display = 'none'"
                 >
                 <span class="truncate">{{ source.title || source.url }}</span>
-                <span class="text-dimmed text-xs ms-auto shrink-0">{{ getDomain(source.url) }}</span>
+                <span class="text-xs text-dimmed ms-auto shrink-0">{{ getDomain(source.url) }}</span>
               </a>
             </div>
           </PChatTool>
@@ -154,15 +177,15 @@ function getFaviconUrl(url: string): string {
 
     <PChatPrompt
       v-model="input"
-      :error="chat.error"
+      :error="error"
       variant="subtle"
-      class="bottom-0 sticky"
+      class="sticky bottom-0"
       @submit="onSubmit"
     >
       <PChatPromptSubmit
-        :status="chat.status"
-        @stop="chat.stop()"
-        @reload="chat.regenerate()"
+        :status="status"
+        @stop="stop()"
+        @reload="regenerate()"
       />
     </PChatPrompt>
   </div>

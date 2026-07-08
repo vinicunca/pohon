@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { UIMessage } from 'ai';
-import { Chat } from '@ai-sdk/vue';
+import { useChat } from '@ai-sdk/vue';
 import theme from '#build/ui/sidebar';
 
 const variants = Object.keys(theme.variants.variant);
@@ -11,21 +11,18 @@ const openRight = ref(true);
 
 const variant = ref('sidebar' as keyof typeof theme.variants.variant);
 
-const messages: Array<UIMessage> = [
-  {
-    id: '1',
-    role: 'user',
-    parts: [{ type: 'text', text: 'What is Pohon UI?' }],
-  },
-  {
-    id: '2',
-    role: 'assistant',
-    parts: [{ type: 'text', text: 'Pohon UI is a Vue component library built on Akar, UnoCSS, and UnoCss Variants. It provides 125+ accessible components for building modern web apps.' }],
-  },
-];
+const initialMessages: Array<UIMessage> = [{
+  id: '1',
+  role: 'user',
+  parts: [{ type: 'text', text: 'What is Nuxt UI?' }],
+}, {
+  id: '2',
+  role: 'assistant',
+  parts: [{ type: 'text', text: 'Nuxt UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }],
+}];
 
-const chat = new Chat({
-  messages,
+const { messages, status, error, sendMessage, regenerate, stop } = useChat({
+  messages: initialMessages,
   onError(error) {
     console.error(error);
   },
@@ -36,7 +33,7 @@ function onSubmit() {
     return;
   }
 
-  chat.sendMessage({ text: input.value });
+  sendMessage({ text: input.value });
 
   input.value = '';
 }
@@ -70,8 +67,8 @@ function onSubmit() {
       />
     </PSidebar>
 
-    <div class="bg-default flex flex-1 flex-col overflow-hidden peer-data-[variant=inset]:m-4 peer-data-[variant=inset]:rounded-xl peer-data-[variant=inset]:ring peer-data-[variant=inset]:ring-ring peer-data-[variant=inset]:shadow-sm lg:peer-data-[variant=floating]:my-4 lg:peer-data-[variant=inset]:mx-0">
-      <Navbar class="w-full relative">
+    <div class="flex-1 flex flex-col overflow-hidden lg:peer-data-[variant=floating]:my-4 peer-data-[variant=inset]:m-4 lg:peer-data-[variant=inset]:mx-0 peer-data-[variant=inset]:rounded-xl peer-data-[variant=inset]:shadow-sm peer-data-[variant=inset]:ring peer-data-[variant=inset]:ring-default bg-default">
+      <Navbar class="relative w-full">
         <PSelect
           v-model="variant"
           :items="variants"
@@ -95,7 +92,7 @@ function onSubmit() {
         />
       </Navbar>
 
-      <div class="p-4 flex-1 sm:px-6">
+      <div class="flex-1 p-4 sm:px-6">
         <PSkeleton class="size-full animate-pulse" />
       </div>
     </div>
@@ -110,8 +107,8 @@ function onSubmit() {
       :style="{ '--sidebar-width': '20rem' }"
     >
       <PChatMessages
-        :messages="chat.messages"
-        :status="chat.status"
+        :messages="messages"
+        :status="status"
         compact
         class="px-0"
       />
@@ -119,7 +116,7 @@ function onSubmit() {
       <template #footer>
         <PChatPrompt
           v-model="input"
-          :error="chat.error"
+          :error="error"
           variant="subtle"
           size="sm"
           :ui="{ base: 'px-0' }"
@@ -127,9 +124,9 @@ function onSubmit() {
         >
           <PChatPromptSubmit
             size="sm"
-            :status="chat.status"
-            @stop="chat.stop()"
-            @reload="chat.regenerate()"
+            :status="status"
+            @stop="stop()"
+            @reload="regenerate()"
           />
         </PChatPrompt>
       </template>
