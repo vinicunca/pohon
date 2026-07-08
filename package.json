@@ -211,7 +211,7 @@
     "@nuxtjs/color-mode": "^4.0.1",
     "@standard-schema/spec": "^1.1.0",
     "@tanstack/vue-table": "^8.21.3",
-    "@tanstack/vue-virtual": "^3.13.30",
+    "@tanstack/vue-virtual": "^3.13.31",
     "@tiptap/core": "^3.26.1",
     "@tiptap/extension-bubble-menu": "^3.26.1",
     "@tiptap/extension-code": "^3.26.1",
@@ -260,11 +260,11 @@
     "ufo": "^1.6.4",
     "unocss": "^66.7.0",
     "unocss-variants": "1.2.1",
-    "unplugin": "^3.2.0",
+    "unplugin": "^3.3.0",
     "unplugin-auto-import": "^21.0.0",
     "unplugin-vue-components": "^32.0.0",
     "vaul-vue": "0.4.1",
-    "vue-component-type-helpers": "^3.3.5"
+    "vue-component-type-helpers": "^3.3.6"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^1.0.2",
@@ -286,6 +286,6 @@
     "vitest-axe": "^0.1.0",
     "vitest-environment-nuxt": "^2.0.0",
     "vue": "^3.5.39",
-    "vue-tsc": "^3.3.5"
+    "vue-tsc": "^3.3.6"
   }
 }
