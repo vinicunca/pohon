@@ -1,4 +1,4 @@
-import type { RuntimeOptions } from '@nuxt/icon';
+import type { ModuleOptions as NuxtIconModuleOptions, RuntimeOptions } from '@nuxt/icon';
 import type { colors } from 'unocss/preset-mini';
 import type { UnpluginOptions } from 'unplugin';
 import type { Options as AutoImportOptions } from 'unplugin-auto-import/types';
@@ -16,6 +16,7 @@ import { createUnplugin } from 'unplugin';
 import AppConfigPlugin from './plugins/app-config';
 import AutoImportPlugin from './plugins/auto-import';
 import ComponentImportPlugin from './plugins/components';
+import IconsPlugin from './plugins/icons';
 import NuxtEnvironmentPlugin from './plugins/nuxt-environment';
 import PluginsPlugin from './plugins/plugins';
 import TemplatePlugin from './plugins/templates';
@@ -36,9 +37,16 @@ export interface PohonUiOptions extends Omit<ModuleOptions, 'fonts' | 'colorMode
   dts?: boolean;
   ui?: AppConfigUI;
   /**
-   * Default props for the `Icon` component
+   * Default props for the `Icon` component, plus build-time icon bundling through
+   * `clientBundle`, which mirrors [`@nuxt/icon`'s option](https://github.com/nuxt/icon#client-bundle)
+   * (`icons`, `scan`, `sizeLimitKb`). Bundling is enabled by default for Pohon UI's own icons
+   * (when their collection is installed); set `clientBundle: false` to opt out.
+   * @see https://pohon.vinicunca.dev/docs/getting-started/integrations/icons/vue#collections
    */
-  icon?: Pick<RuntimeOptions, 'customize' | 'size' | 'mode'>;
+  icon?: Partial<Pick<RuntimeOptions, 'customize' | 'size' | 'mode'>> & {
+    // `includeCustomCollections` is omitted: the Vue build has no custom-collections feature.
+    clientBundle?: false | Omit<NonNullable<NuxtIconModuleOptions['clientBundle']>, 'includeCustomCollections'>;
+  };
   /**
    * Enable or disable `@vueuse/core` color-mode integration
    * @defaultValue `true`
@@ -74,22 +82,33 @@ export interface PohonUiOptions extends Omit<ModuleOptions, 'fonts' | 'colorMode
    * @see https://pohon.vinicunca.dev/docs/getting-started/installation/vue#scanpackages
    */
   scanPackages?: Array<string>;
+  /**
+   * Root directory where the `.nuxt-ui` directory (generated theme templates) is created.
+   * Useful for setups like `electron-vite` where `config.root` points to a sub-directory
+   * (e.g. `src/renderer`) that Tailwind doesn't scan.
+   * @defaultValue `config.root`
+   * @see https://pohon.vinicunca.dev/docs/getting-started/installation/vue#root
+   */
+  root?: string;
 }
 
 export const runtimeDir = normalize(fileURLToPath(new URL('./runtime', import.meta.url)));
 
-export const PohonUiPlugin = createUnplugin<PohonUiOptions | undefined>((_options = {}, meta) => {
+export const NuxtUIPlugin = createUnplugin<PohonUiOptions | undefined>((_options = {}, meta) => {
   const options = defu(_options, { fonts: false }, defaultOptions);
 
   options.theme = options.theme || {};
   options.theme.colors = resolveColors(options.theme.colors);
 
-  const appConfig = defu({ ui: options.ui, colorMode: options.colorMode, icon: options.icon }, { ui: getDefaultConfig(options.theme) });
+  // `clientBundle` is a build-time concern, so keep it out of the runtime app config.
+  const { clientBundle, ...icon } = options.icon || {};
+  const appConfig = defu({ ui: options.ui, colorMode: options.colorMode, icon }, { ui: getDefaultConfig(options.theme) });
 
   return [
     NuxtEnvironmentPlugin(options),
     ComponentImportPlugin(options, meta),
     AutoImportPlugin(options, meta),
+    IconsPlugin(options, appConfig),
     PluginsPlugin(options),
     TemplatePlugin(options, appConfig),
     AppConfigPlugin(options, appConfig),

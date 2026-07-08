@@ -10,7 +10,7 @@ export { defineLocale } from '../../composables/defineLocale';
 export { defineShortcuts } from '../../composables/defineShortcuts';
 export { useLocale } from '../../composables/useLocale';
 export { useAppConfig } from '../composables/useAppConfig';
-export { useHead } from '@unhead/vue';
+export { injectHead, useHead } from '@unhead/vue';
 
 export function clearError() {
 
