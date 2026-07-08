@@ -59,9 +59,7 @@ export interface RadioGroupProps<T extends Array<RadioGroupItem> = Array<RadioGr
    * @defaultValue 'primary'
    */
   color?: RadioGroup['variants']['color'];
-  /**
-   * Highlight the ring color like a focus state.
-   */
+  /** Highlight the ring color like a focus state. */
   highlight?: boolean;
   /**
    * The orientation the radio buttons are laid out.
@@ -121,7 +119,7 @@ const appConfig = useAppConfig() as RadioGroup['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'loop', 'required'), emits);
 
-const { emitFormChange, emitFormInput, color, highlight, name, size, id: _id, disabled, ariaAttrs } = useFormField<RadioGroupProps<T>>(_props, { bind: false });
+const { emitFormChange, emitFormInput, color, name, size, highlight, id: _id, disabled, ariaAttrs } = useFormField<RadioGroupProps<T>>(_props, { bind: false });
 const id = _id.value ?? useId();
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.radioGroup || {}) })({

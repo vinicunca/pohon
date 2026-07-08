@@ -30,14 +30,12 @@ export interface CheckboxProps<T = boolean> extends Pick<CheckboxRootProps<T>, '
    */
   size?: Checkbox['variants']['size'];
   /**
-   * Highlight the ring color like a focus state.
-   */
-  highlight?: boolean;
-  /**
    * Position of the indicator.
    * @defaultValue 'start'
    */
   indicator?: Checkbox['variants']['indicator'];
+  /** Highlight the ring color like a focus state. */
+  highlight?: boolean;
   /**
    * The icon displayed when checked.
    * @defaultValue appConfig.ui.icons.check
@@ -99,9 +97,9 @@ const forwardedAttrs = computed(() => {
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.checkbox || {}) })({
   size: size.value ?? props.size,
   color: color.value ?? props.color,
-  highlight: highlight.value ?? props.highlight,
   variant: props.variant,
   indicator: props.indicator,
+  highlight: highlight.value ?? props.highlight,
   required: props.required,
   disabled: disabled.value,
 }));
@@ -117,7 +115,7 @@ function onUpdate(value: any) {
 
 <!-- eslint-disable vue/no-template-shadow -->
 <template>
-  <Primitive :as="(!props.variant || props.variant === 'list') ? props.as : Label" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <Primitive :as="(!props.variant || props.variant === 'list') ? props.as : Label" :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <div data-slot="container" :class="ui.container({ class: props.ui?.container })">
       <CheckboxRoot
         :id="id"

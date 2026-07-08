@@ -519,7 +519,7 @@ describe('theme', () => {
       `,
     });
 
-    const avatars = wrapper.findAll('span[data-slot="root"]');
+    const avatars = wrapper.findAll('span[data-slot="base"]');
     expect(avatars.length).toBeGreaterThan(0);
     avatars.forEach((avatar) => {
       expect(avatar.classes()).toContain('size-10');

@@ -10,6 +10,7 @@ export interface IconProps {
 </script>
 
 <script setup lang="ts">
+import NuxtIcon from '@nuxt/icon/runtime/components/index.js';
 import { reactivePick } from '@vueuse/core';
 import { useForwardProps } from 'akar';
 
@@ -19,6 +20,6 @@ const iconProps = useForwardProps(reactivePick(props, 'mode', 'size', 'customize
 </script>
 
 <template>
-  <Icon v-if="typeof name === 'string'" :name="name" v-bind="iconProps" />
+  <NuxtIcon v-if="typeof name === 'string'" :name="name" v-bind="iconProps" />
   <component :is="name" v-else />
 </template>

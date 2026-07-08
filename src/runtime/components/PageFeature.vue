@@ -78,7 +78,14 @@ const ariaLabel = computed(() => {
 </script>
 
 <template>
-  <Primitive :as="props.as" :data-orientation="props.orientation" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })" @click="props.onClick">
+  <Primitive
+    :as="props.as"
+    v-bind="!props.to ? $attrs : {}"
+    :data-orientation="props.orientation"
+    :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'"
+    :class="ui.root({ class: [props.ui?.root, props.class] })"
+    @click="props.onClick"
+  >
     <div v-if="props.icon || !!slots.leading" data-slot="leading" :class="ui.leading({ class: props.ui?.leading })">
       <slot name="leading" :ui="ui">
         <PIcon v-if="props.icon" :name="props.icon" data-slot="leadingIcon" :class="ui.leadingIcon({ class: props.ui?.leadingIcon })" />
@@ -89,11 +96,11 @@ const ariaLabel = computed(() => {
       <PLink
         v-if="props.to"
         :aria-label="ariaLabel"
-        v-bind="{ to: props.to, target: props.target, ...$attrs }"
-        class="peer focus:outline-none"
+        v-bind="{ 'to': props.to, 'target': props.target, ...$attrs, 'data-slot': undefined }"
+        class="focus:outline-none peer"
         raw
       >
-        <span class="inset-0 absolute" aria-hidden="true" />
+        <span class="absolute inset-0" aria-hidden="true" />
       </PLink>
 
       <slot>

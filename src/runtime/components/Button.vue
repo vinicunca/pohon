@@ -127,8 +127,8 @@ const ui = computed(() => uv({
     custom
   >
     <PLinkBase
-      v-bind="slotProps"
       data-slot="base"
+      v-bind="slotProps"
       :class="ui.base({
         class: [props.ui?.base, props.class],
         active,

@@ -507,11 +507,13 @@ const comboboxRootRef = useTemplateRef('comboboxRootRef');
 // akar only re-highlights the first item when the list goes from empty to non-empty.
 // With `create-item`, the create item is always registered so the count never drops to 0,
 // leaving the highlight stale when async `items` load. Re-highlight when items change while open.
+// Scoped to `create-item` only, otherwise this fires on infinite-scroll appends too and
+// scrolls the viewport back to the top.
 // Wait an extra tick so freshly mounted items are registered in akar's collection before highlighting.
 watch(
   () => props.items,
   async () => {
-    if (!isOpen.value) {
+    if (!isOpen.value || !props.createItem) {
       return;
     }
 

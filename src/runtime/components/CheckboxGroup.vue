@@ -21,7 +21,7 @@ export type CheckboxGroupItem = CheckboxGroupValue | {
   [key: string]: any;
 };
 
-export interface CheckboxGroupProps<T extends Array<CheckboxGroupItem> = Array<CheckboxGroupItem>, VK extends GetItemKeys<T> = 'value'> extends Pick<CheckboxGroupRootProps, 'disabled' | 'loop' | 'name' | 'required'>, Pick<CheckboxProps, 'color' | 'indicator' | 'icon' | 'highlight'> {
+export interface CheckboxGroupProps<T extends Array<CheckboxGroupItem> = Array<CheckboxGroupItem>, VK extends GetItemKeys<T> = 'value'> extends Pick<CheckboxGroupRootProps, 'disabled' | 'loop' | 'name' | 'required'>, Pick<CheckboxProps, 'color' | 'highlight' | 'indicator' | 'icon'> {
   /**
    * The element or component this component should render as.
    * @defaultValue 'div'

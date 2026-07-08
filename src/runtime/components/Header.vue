@@ -175,7 +175,7 @@ function toggleOpen() {
     </div>
   </DefineRightTemplate>
 
-  <Primitive :as="props.as" v-bind="$attrs" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <Primitive :as="props.as" data-slot="root" v-bind="$attrs" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <slot name="top" />
 
     <PContainer data-slot="container" :class="ui.container({ class: props.ui?.container })">

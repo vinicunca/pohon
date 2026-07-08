@@ -21,6 +21,8 @@ describe('pinInput', () => {
     ['with type', { props: { type: 'number' } }],
     ['with placeholder', { props: { placeholder: '*' } }],
     ['with length', { props: { length: 6 } }],
+    ['with separator', { props: { length: 6, separator: 3 } }],
+    ['with separator positions', { props: { length: 7, separator: [3, 4] } }],
     ['with disabled', { props: { disabled: true } }],
     ['with required', { props: { required: true } }],
     ['with mask', { props: { mask: true } }],
@@ -34,6 +36,8 @@ describe('pinInput', () => {
     ['with as', { props: { as: 'span' } }],
     ['with class', { props: { class: 'absolute' } }],
     ['with ui', { props: { ui: { base: 'rounded-full' } } }],
+    // Slots
+    ['with separator slot', { props: { lenght: 6, separator: 3 }, slots: { separator: () => '=' } }],
   ]);
 
   describe('emits', () => {

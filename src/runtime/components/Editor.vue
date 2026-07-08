@@ -101,18 +101,16 @@ import { computed, provide, useAttrs, watch } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useForwardProps } from '../composables/useForwardProps';
+import { omit } from '../utils';
 import { createHandlers } from '../utils/editor';
 import { uv } from '../utils/uv';
 
 defineOptions({ inheritAttrs: false });
 
-const _props = withDefaults(
-  defineProps<EditorProps<T, H>>(),
-  {
-    image: true,
-    mention: true,
-  },
-);
+const _props = withDefaults(defineProps<EditorProps<T, H>>(), {
+  image: true,
+  mention: true,
+});
 const emits = defineEmits<EditorEmits<T>>();
 
 defineSlots<EditorSlots<H>>();
@@ -134,7 +132,7 @@ const editorProps = computed(() => defu(props.editorProps, {
     autocomplete: 'off',
     autocorrect: 'off',
     autocapitalize: 'off',
-    ...attrs,
+    ...omit(attrs, ['data-slot']),
     class: ui.value.base({ class: props.ui?.base }),
   },
 } as EditorOptions['editorProps']));
@@ -284,7 +282,7 @@ defineExpose({
 </script>
 
 <template>
-  <Primitive :as="props.as" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <Primitive :as="props.as" :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <template v-if="editor">
       <slot :editor="editor" :handlers="handlers" />
 

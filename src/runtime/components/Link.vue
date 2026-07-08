@@ -136,6 +136,7 @@ const props = withDefaults(
     type: 'button',
     ariaCurrentValue: 'page',
     active: undefined,
+    locale: undefined,
   },
 );
 defineSlots<LinkSlots>();

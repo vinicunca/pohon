@@ -77,11 +77,11 @@ export interface CommandPaletteProps<G extends CommandPaletteGroup<T> = CommandP
    */
   size?: CommandPalette['variants']['size'];
   /**
-   * The icon displayed in the input.
+   * The icon displayed in the input. Set to `false` to hide the icon.
    * @defaultValue appConfig.ui.icons.search
    * @IconifyIcon
    */
-  icon?: IconProps['name'];
+  icon?: IconProps['name'] | false;
   /**
    * The icon displayed on the right side of the input.
    * @defaultValue appConfig.ui.icons.search
@@ -156,7 +156,7 @@ export interface CommandPaletteProps<G extends CommandPaletteGroup<T> = CommandP
   fuse?: UseFuseOptions<T>;
   /**
    * Enable virtualization for large lists.
-   * Note: when enabled, all groups are flattened into a single list due to a limitation of Akar (https://github.com/unovue/akar/issues/1885).
+   * Note: when enabled, all groups are flattened into a single list due to a limitation of Akar
    * @defaultValue false
    */
   virtualize?: boolean | {
@@ -329,7 +329,7 @@ const groups = computed(() => history.value?.length ? [history.value[history.val
 
 const items = computed(() => groups.value?.filter((group) => {
   if (!group.id) {
-    console.warn('[pohon-ui] CommandPalette group is missing an `id` property');
+    console.warn('[@nuxt/ui] CommandPalette group is missing an `id` property');
     return false;
   }
   if (group.ignoreFilter) {
@@ -521,7 +521,7 @@ function onSelect(e: Event, item: T) {
   <DefineItemTemplate v-slot="{ item, index, group }">
     <PLink v-slot="{ active, ...slotProps }" v-bind="pickLinkProps(item)" custom>
       <ListboxItem
-        :value="props.valueKey ? get(item, props.valueKey as string) : omit(item, ['matches' as any, 'group' as any, 'onSelect', 'labelHtml', 'suffixHtml', 'children'])"
+        :value="props.valueKey ? get(item, props.valueKey as string) : omit(item, ['matches' as any, 'group' as any, 'onSelect', 'labelHtml', 'suffixHtml', 'descriptionHtml', 'children'])"
         :disabled="item.disabled"
         as-child
         @select="onSelect($event, item as T)"
@@ -590,18 +590,18 @@ function onSelect(e: Event, item: T) {
     </PLink>
   </DefineItemTemplate>
 
-  <ListboxRoot v-bind="{ ...rootProps, ...$attrs }" ref="rootRef" :selection-behavior="props.selectionBehavior" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <ListboxRoot ref="rootRef" data-slot="root" v-bind="{ ...rootProps, ...$attrs }" :selection-behavior="props.selectionBehavior" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <ListboxFilter v-if="props.input" v-model="searchTerm" as-child>
       <PInput
         variant="none"
         :size="props.size"
-        v-bind="typeof props.input === 'object' ? props.input : {}"
         :placeholder="placeholder"
         :autofocus="props.autofocus"
         :loading="props.loading"
         :loading-icon="props.loadingIcon"
         :trailing-icon="props.trailingIcon"
-        :icon="props.icon || appConfig.ui.icons.search"
+        :icon="props.icon === false ? undefined : (props.icon ?? appConfig.ui.icons.search)"
+        v-bind="typeof props.input === 'object' ? props.input : {}"
         data-slot="input"
         :class="ui.input({ class: props.ui?.input })"
         @keydown.backspace="onBackspace"

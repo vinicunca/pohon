@@ -126,11 +126,18 @@ const ariaLabel = computed(() => {
 </script>
 
 <template>
-  <Primitive :as="props.as" :data-orientation="props.orientation" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })" @click="props.onClick">
+  <Primitive
+    :as="props.as"
+    v-bind="!props.to ? $attrs : {}"
+    :data-orientation="props.orientation"
+    :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'"
+    :class="ui.root({ class: [props.ui?.root, props.class] })"
+    @click="props.onClick"
+  >
     <PLink
       v-if="props.to"
       :aria-label="ariaLabel"
-      v-bind="{ to: props.to, target: props.target, ...$attrs }"
+      v-bind="{ 'to': props.to, 'target': props.target, ...$attrs, 'data-slot': undefined }"
       class="focus:outline-none absolute inset-0"
       raw
     />

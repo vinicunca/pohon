@@ -152,19 +152,20 @@ function onClose() {
   <Primitive
     v-show="isVisible"
     :as="props.as"
+    v-bind="!props.to ? $attrs : {}"
     class="banner"
     :data-banner-id="id"
-    data-slot="root"
+    :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'"
     :class="ui.root({ class: [props.ui?.root, props.class] })"
   >
     <PLink
       v-if="props.to"
       :aria-label="props.title"
-      v-bind="{ to: props.to, target: props.target, ...$attrs }"
+      v-bind="{ 'to': props.to, 'target': props.target, ...$attrs, 'data-slot': undefined }"
       class="focus:outline-none"
       raw
     >
-      <span class="inset-0 absolute" aria-hidden="true" />
+      <span class="absolute inset-0" aria-hidden="true" />
     </PLink>
 
     <PContainer data-slot="container" :class="ui.container({ class: props.ui?.container })">

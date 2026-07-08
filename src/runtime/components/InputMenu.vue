@@ -119,7 +119,7 @@ export interface InputMenuProps<T extends ArrayOrNested<InputMenuItem> = ArrayOr
   portal?: boolean | string | HTMLElement;
   /**
    * Enable virtualization for large lists.
-   * Note: when enabled, all groups are flattened into a single list due to a limitation of Akar (https://github.com/unovue/akar/issues/1885).
+   * Note: when enabled, all groups are flattened into a single list due to a limitation of Akar
    * @defaultValue false
    */
   virtualize?: boolean | {
@@ -241,7 +241,7 @@ import { TagsInputInput, TagsInputItem, TagsInputItemDelete, TagsInputItemText, 
 import { Autocomplete, Combobox } from 'akar/namespaced';
 import { defu } from 'defu';
 import { isEqual } from 'ohash/utils';
-import { computed, nextTick, onMounted, ref, toRaw, toRef, useTemplateRef, watch } from 'vue';
+import { computed, nextTick, onMounted, ref, toRaw, toRef, useAttrs, useTemplateRef, watch } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentIcons } from '../composables/useComponentIcons';
 import { useComponentProps } from '../composables/useComponentProps';
@@ -261,21 +261,18 @@ import PIcon from './Icon.vue';
 
 defineOptions({ inheritAttrs: false });
 
-const _props = withDefaults(
-  defineProps<InputMenuProps<T, VK, M, Mod, C>>(),
-  {
-    type: 'text',
-    autofocusDelay: 0,
-    portal: true,
-    labelKey: 'label',
-    descriptionKey: 'description',
-    resetSearchTermOnBlur: true,
-    resetSearchTermOnSelect: true,
-    resetModelValueOnClear: true,
-    virtualize: false,
-    mode: 'combobox',
-  },
-);
+const _props = withDefaults(defineProps<InputMenuProps<T, VK, M, Mod, C>>(), {
+  type: 'text',
+  autofocusDelay: 0,
+  portal: true,
+  labelKey: 'label',
+  descriptionKey: 'description',
+  resetSearchTermOnBlur: true,
+  resetSearchTermOnSelect: true,
+  resetModelValueOnClear: true,
+  virtualize: false,
+  mode: 'combobox',
+});
 const emits = defineEmits<InputMenuEmits<T, VK, M, Mod, C>>();
 const slots = defineSlots<InputMenuSlots<T, VK, M, Mod, C>>();
 
@@ -293,6 +290,17 @@ const rootPropsPick = reactivePick(props, 'as', 'modelValue', 'defaultValue', 'o
 const rootPropsOmitted = reactiveOmit(rootPropsPick, 'multiple', 'resetSearchTermOnSelect', 'resetModelValueOnClear', 'by');
 const rootProps = useForwardProps(computed(() => isAutocomplete.value ? rootPropsOmitted : rootPropsPick), emits);
 const Component = computed(() => isAutocomplete.value ? Autocomplete : Combobox);
+
+const attrs = useAttrs();
+
+// In multiple non-autocomplete mode `Root` is `as-child`: it renders no element and
+// merges its attributes onto `Anchor`, where the child's own `data-slot` wins the
+// merge. `Anchor` is then the effective root, so it reads the caller's `data-slot`
+// itself. In every other mode `Root` renders its own element (and receives the
+// caller's value through its own binding), so `Anchor` keeps its `base` label.
+const baseDataSlot = computed(() => props.multiple && !isAutocomplete.value
+  ? ((attrs['data-slot'] as string | undefined) ?? 'base')
+  : 'base');
 const portalProps = usePortal(toRef(() => props.portal));
 const contentProps = toRef(() => defu(props.content, { side: 'bottom', sideOffset: 8, collisionPadding: 8, position: 'popper' }) as ComboboxContentProps);
 const arrowProps = toRef(() => defu(props.arrow, { rounded: true }) as ComboboxArrowProps);
@@ -467,7 +475,6 @@ function onFocus(event: FocusEvent) {
 }
 
 const isOpen = ref(false);
-
 function onUpdateOpen(value: boolean) {
   isOpen.value = value;
 
@@ -548,19 +555,17 @@ const comboboxRootRef = useTemplateRef('comboboxRootRef');
 // akar only re-highlights the first item when the list goes from empty to non-empty.
 // With `create-item`, the create item is always registered so the count never drops to 0,
 // leaving the highlight stale when async `items` load. Re-highlight when items change while open.
+// Scoped to `create-item` only, otherwise this fires on infinite-scroll appends too and
+// scrolls the viewport back to the top.
 // Wait an extra tick so freshly mounted items are registered in akar's collection before highlighting.
-watch(
-  () => props.items,
-  async () => {
-    if (!isOpen.value) {
-      return;
-    }
+watch(() => props.items, async () => {
+  if (!isOpen.value || !props.createItem) {
+    return;
+  }
 
-    await nextTick();
-    comboboxRootRef.value?.highlightFirstItem?.();
-  },
-  { flush: 'post' },
-);
+  await nextTick();
+  comboboxRootRef.value?.highlightFirstItem?.();
+}, { flush: 'post' });
 
 defineExpose({
   inputRef: toRef(() => inputRef.value?.$el as HTMLInputElement),
@@ -646,14 +651,14 @@ defineExpose({
     v-bind="rootProps"
     :name="name"
     :disabled="disabled"
-    data-slot="root"
+    :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'"
     :class="ui.root({ class: [props.ui?.root, props.class] })"
     :as-child="!!props.multiple && !isAutocomplete"
     ignore-filter
     @update:model-value="onUpdate"
     @update:open="onUpdateOpen"
   >
-    <Component.Anchor :as-child="!props.multiple" data-slot="base" :class="ui.base({ class: props.ui?.base })">
+    <Component.Anchor :as-child="!props.multiple" :data-slot="baseDataSlot" :class="ui.base({ class: props.ui?.base })">
       <TagsInputRoot
         v-if="props.multiple && !isAutocomplete"
         v-slot="{ modelValue: tags }"
@@ -698,6 +703,7 @@ defineExpose({
         :id="id"
         ref="inputRef"
         v-bind="{ ...(!isAutocomplete ? { displayValue } : {}), ...$attrs, ...ariaAttrs }"
+        :data-slot="props.multiple ? undefined : 'base'"
         :type="props.type"
         :placeholder="props.placeholder"
         :required="props.required"

@@ -82,6 +82,12 @@ exports[`scrollArea > renders with virtualize boolean correctly 1`] = `
 </div>"
 `;
 
+exports[`scrollArea > renders with virtualize external scroll element correctly 1`] = `
+"<div data-slot="root" data-orientation="vertical" class="relative outline-primary/25 focus-visible:outline-3 overflow-y-auto overflow-x-hidden overflow-visible">
+  <div data-slot="viewport" class="relative flex flex-col" style="position: relative; inline-size: 100%; block-size: 300px;"></div>
+</div>"
+`;
+
 exports[`scrollArea > renders with virtualize gap correctly 1`] = `
 "<div data-slot="root" data-orientation="vertical" class="relative outline-primary/25 focus-visible:outline-3 overflow-y-auto overflow-x-hidden">
   <div data-slot="viewport" class="relative flex flex-col" style="position: relative; inline-size: 100%; block-size: 320px;"></div>

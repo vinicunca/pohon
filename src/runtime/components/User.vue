@@ -75,7 +75,14 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.user || {}) })({
 </script>
 
 <template>
-  <Primitive :as="props.as" :data-orientation="props.orientation" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })" @click="props.onClick">
+  <Primitive
+    :as="props.as"
+    v-bind="!props.to ? $attrs : {}"
+    :data-orientation="props.orientation"
+    :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'"
+    :class="ui.root({ class: [props.ui?.root, props.class] })"
+    @click="props.onClick"
+  >
     <slot name="avatar" :ui="ui">
       <PChip v-if="props.chip && props.avatar" inset v-bind="typeof props.chip === 'object' ? props.chip : {}" :size="props.size">
         <PAvatar :alt="props.name" v-bind="props.avatar" :size="props.size" data-slot="avatar" :class="ui.avatar({ class: props.ui?.avatar })" />
@@ -94,11 +101,11 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.user || {}) })({
       <PLink
         v-if="props.to"
         :aria-label="props.name"
-        v-bind="{ to: props.to, target: props.target, ...$attrs }"
-        class="peer focus:outline-none"
+        v-bind="{ 'to': props.to, 'target': props.target, ...$attrs, 'data-slot': undefined }"
+        class="focus:outline-none peer"
         raw
       >
-        <span class="inset-0 absolute" aria-hidden="true" />
+        <span class="absolute inset-0" aria-hidden="true" />
       </PLink>
 
       <slot>

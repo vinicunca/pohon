@@ -1,6 +1,8 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { describe, expect, it } from 'vitest';
 import { axe } from 'vitest-axe';
+import { createSSRApp, h } from 'vue';
+import { renderToString } from 'vue/server-renderer';
 import Modal from '../../src/runtime/components/Modal.vue';
 import { renderEach } from '../component-render';
 
@@ -45,5 +47,33 @@ describe('modal', () => {
     });
 
     expect(await axe(wrapper.element)).toHaveNoViolations();
+  });
+
+  describe('sSR', () => {
+    const TITLE = 'SSR Modal Content';
+
+    // `renderToString` reproduces the `useMounted()` gate in akar's `Teleport`
+    // (false on the server), so this asserts the real server-rendered output.
+    async function renderSSR(props: Record<string, any>) {
+      const ctx: Record<string, any> = {};
+      const html = await renderToString(createSSRApp(() => h(Modal as any, props)), ctx);
+      return html + JSON.stringify(ctx.teleports ?? {});
+    }
+
+    it('does not render content during SSR by default', async () => {
+      expect(await renderSSR({ open: true, portal: false, title: TITLE })).not.toContain(TITLE);
+    });
+
+    it('renders an open modal during SSR when unmountOnHide is false and portal is disabled', async () => {
+      expect(await renderSSR({ open: true, portal: false, unmountOnHide: false, title: TITLE })).toContain(TITLE);
+    });
+
+    it('keeps a closed modal in the SSR output when unmountOnHide is false (SEO)', async () => {
+      expect(await renderSSR({ open: false, portal: false, unmountOnHide: false, title: TITLE })).toContain(TITLE);
+    });
+
+    it('does not force content into SSR when the portal is enabled', async () => {
+      expect(await renderSSR({ open: true, unmountOnHide: false, title: TITLE })).not.toContain(TITLE);
+    });
   });
 });

@@ -132,8 +132,9 @@ const ariaLabel = computed(() => {
   <Primitive
     ref="cardRef"
     :as="props.as"
+    v-bind="!props.to ? $attrs : {}"
     :data-orientation="props.orientation"
-    data-slot="root"
+    :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'"
     :class="ui.root({ class: [props.ui?.root, props.class] })"
     :style="spotlight && { '--spotlight-x': `${elementX}px`, '--spotlight-y': `${elementY}px` }"
     @click="props.onClick"
@@ -179,11 +180,11 @@ const ariaLabel = computed(() => {
     <PLink
       v-if="props.to"
       :aria-label="ariaLabel"
-      v-bind="{ to: props.to, target: props.target, ...$attrs }"
-      class="peer focus:outline-none"
+      v-bind="{ 'to': props.to, 'target': props.target, ...$attrs, 'data-slot': undefined }"
+      class="focus:outline-none peer"
       raw
     >
-      <span class="inset-0 absolute" aria-hidden="true" />
+      <span class="absolute inset-0" aria-hidden="true" />
     </PLink>
   </Primitive>
 </template>

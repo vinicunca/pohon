@@ -94,7 +94,7 @@ export interface PohonUiOptions extends Omit<ModuleOptions, 'fonts' | 'colorMode
 
 export const runtimeDir = normalize(fileURLToPath(new URL('./runtime', import.meta.url)));
 
-export const NuxtUIPlugin = createUnplugin<PohonUiOptions | undefined>((_options = {}, meta) => {
+export const PohonUiPlugin = createUnplugin<PohonUiOptions | undefined>((_options = {}, meta) => {
   const options = defu(_options, { fonts: false }, defaultOptions);
 
   options.theme = options.theme || {};

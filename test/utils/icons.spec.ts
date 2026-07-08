@@ -50,7 +50,7 @@ describe('getClientBundleIcons', () => {
     expect(names).toContain('lucide:x');
   });
 
-  it('skips overrides from collections Nuxt UI does not ship defaults in', () => {
+  it('skips overrides from collections Pohon UI does not ship defaults in', () => {
     // `heroicons` is single-word and would convert safely, but `svg-spinners` would
     // mis-convert to `svg:...`. Without `@nuxt/icon`'s collection list we can't tell them
     // apart, so we only trust shipped collections (`lucide`) and leave everything else to

@@ -1,5 +1,6 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
+import type { VNode } from 'vue';
 import type { ComponentConfig } from '../../types/uv';
 import theme from '#build/ui/prose/kbd';
 
@@ -12,7 +13,7 @@ export interface ProseKbdProps {
 }
 
 export interface ProseKbdSlots {
-  default?(props?: {}): any;
+  default?(props?: {}): Array<VNode>;
 }
 </script>
 

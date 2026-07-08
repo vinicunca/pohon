@@ -83,7 +83,7 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageLogos || {})
     </template>
   </DefineCreateItemTemplate>
 
-  <Primitive :as="props.as" v-bind="$attrs" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <Primitive :as="props.as" data-slot="root" v-bind="$attrs" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <h2 v-if="props.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
       {{ props.title }}
     </h2>

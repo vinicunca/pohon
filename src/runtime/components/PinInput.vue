@@ -2,7 +2,7 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { PinInputRootEmits, PinInputRootProps } from 'akar';
-import type { ComponentPublicInstance } from 'vue';
+import type { ComponentPublicInstance, VNode } from 'vue';
 import type { ComponentConfig } from '../types/uv';
 import theme from '#build/ui/pin-input';
 
@@ -39,6 +39,13 @@ export interface PinInputProps<T extends PinInputType = 'text'> extends Pick<Pin
   highlight?: boolean;
   /** Keep the mobile text size on all breakpoints. */
   fixed?: boolean;
+  /**
+   * Group inputs by inserting a separator between them.
+   * Pass a number to insert one after every Nth input, or an array of positions to insert after specific inputs.
+   * @example 3 // after every 3rd input → [X][X][X] • [X][X][X]
+   * @example [3, 4] // after the 3rd and 4th inputs → [X][X][X] • [X] • [X][X][X]
+   */
+  separator?: number | Array<number>;
   class?: any;
   ui?: PinInput['slots'];
 }
@@ -48,6 +55,9 @@ export type PinInputEmits<T extends PinInputType = 'text'> = PinInputRootEmits<T
   blur: [event: Event];
 };
 
+export interface PinInputSlots {
+  separator?(props: { index: number }): Array<VNode>;
+}
 </script>
 
 <script setup lang="ts" generic="T extends PinInputType">
@@ -61,15 +71,13 @@ import { useForwardProps } from '../composables/useForwardProps';
 import { looseToNumber } from '../utils';
 import { uv } from '../utils/uv';
 
-const _props = withDefaults(
-  defineProps<PinInputProps<T>>(),
-  {
-    type: 'text' as never,
-    length: 5,
-    autofocusDelay: 0,
-  },
-);
+const _props = withDefaults(defineProps<PinInputProps<T>>(), {
+  type: 'text' as never,
+  length: 5,
+  autofocusDelay: 0,
+});
 const emits = defineEmits<PinInputEmits<T>>();
+defineSlots<PinInputSlots>();
 
 const props = useComponentProps<PinInputProps<T>>('pinInput', _props);
 
@@ -115,6 +123,24 @@ function autoFocus() {
   }
 }
 
+function shouldInsertSeparator(index: number) {
+  if (props.separator === undefined) {
+    return false;
+  }
+
+  const position = index + 1;
+  if (position >= looseToNumber(props.length)) {
+    return false;
+  }
+
+  if (Array.isArray(props.separator)) {
+    return props.separator.includes(position);
+  }
+
+  const separator = looseToNumber(props.separator);
+  return Number.isInteger(separator) && separator > 0 && position % separator === 0;
+}
+
 onMounted(() => {
   setTimeout(() => {
     autoFocus();
@@ -139,16 +165,25 @@ defineExpose({
     @update:model-value="emitFormInput()"
     @complete="onComplete"
   >
-    <PinInputInput
-      v-for="(ids, index) in looseToNumber(props.length)"
-      :key="ids"
-      :ref="el => setInputRef(index as number, el)"
-      :index="(index as number)"
-      data-slot="base"
-      :class="ui.base({ class: props.ui?.base })"
-      :disabled="disabled"
-      @blur="onBlur"
-      @focus="emitFormFocus"
-    />
+    <template v-for="(ids, index) in looseToNumber(props.length)" :key="ids">
+      <PinInputInput
+        :ref="el => setInputRef(index as number, el)"
+        :index="(index as number)"
+        data-slot="base"
+        :class="ui.base({ class: props.ui?.base })"
+        :disabled="disabled"
+        @blur="onBlur"
+        @focus="emitFormFocus"
+      />
+      <span
+        v-if="shouldInsertSeparator(index as number)"
+        data-slot="separator"
+        role="presentation"
+        aria-hidden="true"
+        :class="ui.separator({ class: props.ui?.separator })"
+      >
+        <slot name="separator" :index="(index as number)">•</slot>
+      </span>
+    </template>
   </PinInputRoot>
 </template>

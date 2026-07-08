@@ -12,11 +12,11 @@ type ContentSearchButton = ComponentConfig<typeof theme, AppConfig, 'contentSear
 
 export interface ContentSearchButtonProps extends Omit<ButtonProps, LinkPropsKeys | 'icon' | 'label' | 'color' | 'variant'> {
   /**
-   * The icon displayed in the button.
+   * The icon displayed in the button. Set to `false` to hide the icon.
    * @defaultValue appConfig.ui.icons.search
    * @IconifyIcon
    */
-  icon?: IconProps['name'];
+  icon?: IconProps['name'] | false;
   /**
    * The label displayed in the button.
    * @defaultValue t('contentSearchButton.label')
@@ -102,7 +102,7 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.contentSearchBut
 <template>
   <DefineButtonTemplate>
     <PButton
-      :icon="props.icon || appConfig.ui.icons.search"
+      :icon="props.icon === false ? undefined : (props.icon ?? appConfig.ui.icons.search)"
       :label="props.label || t('contentSearchButton.label')"
       :variant="props.variant || (props.collapsed ? 'ghost' : 'outline')"
       v-bind="{

@@ -36,6 +36,7 @@ describe('radioGroup', () => {
     ...variants.map((variant: string) => [`with primary variant ${variant} highlight`, { props: { ...props, variant, highlight: true, defaultValue: '1' } }]),
     ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { ...props, variant, color: 'neutral', defaultValue: '1' } }]),
     ...variants.map((variant: string) => [`with neutral variant ${variant} highlight`, { props: { ...props, variant, color: 'neutral', highlight: true, defaultValue: '1' } }]),
+    ...variants.map((variant: string) => [`with horizontal variant ${variant}`, { props: { ...props, variant, orientation: 'horizontal', defaultValue: '1' } }]),
     ...indicators.map((indicator: string) => [`with indicator ${indicator}`, { props: { ...props, indicator, defaultValue: '1' } }]),
     ['with ariaLabel', { props, attrs: { 'aria-label': 'Aria label' } }],
     ['with as', { props: { ...props, as: 'section' } }],

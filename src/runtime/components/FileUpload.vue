@@ -20,11 +20,11 @@ export interface FileUploadProps<M extends boolean = false> extends /** @vue-ign
   id?: string;
   name?: string;
   /**
-   * The icon to display.
+   * The icon to display. Set to `false` to hide the icon.
    * @defaultValue appConfig.ui.icons.upload
    * @IconifyIcon
    */
-  icon?: IconProps['name'];
+  icon?: IconProps['name'] | false;
   label?: string;
   description?: string;
   /**
@@ -360,7 +360,7 @@ defineExpose({
     </template>
   </DefineFilesTemplate>
 
-  <Primitive :as="props.as" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <Primitive :as="props.as" :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <slot :open="open" :remove-file="removeFile" :ui="ui">
       <component
         :is="variant === 'button' ? 'button' : 'div'"
@@ -368,6 +368,7 @@ defineExpose({
         :type="variant === 'button' ? 'button' : undefined"
         :role="variant === 'button' ? undefined : 'button'"
         :disabled="variant === 'button' ? disabled : undefined"
+        :aria-disabled="variant === 'button' ? undefined : (disabled || undefined)"
         :data-dragging="isDragging"
         data-slot="base"
         :class="ui.base({ class: props.ui?.base })"
@@ -380,8 +381,10 @@ defineExpose({
 
         <div v-if="position === 'inside' ? (!props.preview || (multiple ? !(modelValue as File[])?.length : !modelValue)) : true" data-slot="wrapper" :class="ui.wrapper({ class: props.ui?.wrapper })">
           <slot name="leading" :ui="ui">
-            <PIcon v-if="variant === 'button'" :name="props.icon || appConfig.ui.icons.upload" data-slot="icon" :class="ui.icon({ class: props.ui?.icon })" />
-            <PAvatar v-else :icon="props.icon || appConfig.ui.icons.upload" :size="props.size" data-slot="avatar" :class="ui.avatar({ class: props.ui?.avatar })" />
+            <template v-if="props.icon !== false">
+              <PIcon v-if="variant === 'button'" :name="props.icon ?? appConfig.ui.icons.upload" data-slot="icon" :class="ui.icon({ class: props.ui?.icon })" />
+              <PAvatar v-else :icon="props.icon ?? appConfig.ui.icons.upload" :size="props.size" data-slot="avatar" :class="ui.avatar({ class: props.ui?.avatar })" />
+            </template>
           </slot>
 
           <template v-if="variant !== 'button'">
@@ -417,7 +420,7 @@ defineExpose({
       :multiple="(multiple as boolean)"
       :required="props.required"
       :disabled="disabled"
-      v-bind="{ ...$attrs, ...ariaAttrs }"
+      v-bind="{ ...$attrs, ...ariaAttrs, 'data-slot': undefined }"
     />
   </Primitive>
 </template>

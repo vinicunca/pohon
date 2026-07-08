@@ -59,9 +59,9 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardPanel |
   <div
     :id="id"
     ref="el"
+    data-slot="root"
     v-bind="$attrs"
     :data-dragging="isDragging"
-    data-slot="root"
     :class="ui.root({ class: [props.ui?.root, props.class] })"
     :style="[size ? { '--width': `${size}${dashboardContext.unit}` } : undefined]"
   >

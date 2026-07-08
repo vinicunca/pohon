@@ -107,7 +107,7 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.separator || {})
     </div>
   </DefineContainer>
 
-  <AkarSeparator v-bind="{ ...rootProps, ...$attrs }" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <AkarSeparator data-slot="root" v-bind="{ ...rootProps, ...$attrs }" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <ReuseContainer v-if="hasContent && props.position === 'start'" />
 
     <div data-slot="border" :class="ui.border({ class: props.ui?.border })" />

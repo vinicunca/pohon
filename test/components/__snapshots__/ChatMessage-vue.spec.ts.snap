@@ -30,7 +30,7 @@ exports[`chatMessage > renders with avatar correctly 1`] = `
 "<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
   <!--v-if-->
   <div data-slot="container" class="relative flex items-start gap-3 pb-8">
-    <div data-slot="leading" class="inline-flex items-center justify-center min-h-6"><span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0"><img src="https://github.com/benjamincanac.png" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span></div>
+    <div data-slot="leading" class="inline-flex items-center justify-center min-h-6"><span data-slot="leadingAvatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0"><img src="https://github.com/benjamincanac.png" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span></div>
     <div data-slot="body" class="min-w-0">
       <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 w-full">Hello, how are you?</div>
       <!--v-if-->
@@ -106,6 +106,19 @@ exports[`chatMessage > renders with files slot correctly 1`] = `
 </article>"
 `;
 
+exports[`chatMessage > renders with header slot correctly 1`] = `
+"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
+  <div data-slot="header" class="flex mb-1.5">Header slot</div>
+  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
+    <!--v-if-->
+    <div data-slot="body" class="min-w-0">
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 w-full">Hello, how are you?</div>
+      <!--v-if-->
+    </div>
+  </div>
+</article>"
+`;
+
 exports[`chatMessage > renders with icon correctly 1`] = `
 "<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
   <!--v-if-->
@@ -132,6 +145,71 @@ exports[`chatMessage > renders with leading slot correctly 1`] = `
 </article>"
 `;
 
+exports[`chatMessage > renders with neutral variant naked correctly 1`] = `
+"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
+  <!--v-if-->
+  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
+    <!--v-if-->
+    <div data-slot="body" class="min-w-0">
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 w-full">Hello, how are you?</div>
+      <!--v-if-->
+    </div>
+  </div>
+</article>"
+`;
+
+exports[`chatMessage > renders with neutral variant outline correctly 1`] = `
+"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
+  <!--v-if-->
+  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
+    <!--v-if-->
+    <div data-slot="body" class="min-w-0">
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-default ring ring-default">Hello, how are you?</div>
+      <!--v-if-->
+    </div>
+  </div>
+</article>"
+`;
+
+exports[`chatMessage > renders with neutral variant soft correctly 1`] = `
+"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
+  <!--v-if-->
+  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
+    <!--v-if-->
+    <div data-slot="body" class="min-w-0">
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-elevated/50">Hello, how are you?</div>
+      <!--v-if-->
+    </div>
+  </div>
+</article>"
+`;
+
+exports[`chatMessage > renders with neutral variant solid correctly 1`] = `
+"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
+  <!--v-if-->
+  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
+    <!--v-if-->
+    <div data-slot="body" class="min-w-0">
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-inverted text-inverted">Hello, how are you?</div>
+      <!--v-if-->
+    </div>
+  </div>
+</article>"
+`;
+
+exports[`chatMessage > renders with neutral variant subtle correctly 1`] = `
+"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
+  <!--v-if-->
+  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
+    <!--v-if-->
+    <div data-slot="body" class="min-w-0">
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-elevated/50 ring ring-default">Hello, how are you?</div>
+      <!--v-if-->
+    </div>
+  </div>
+</article>"
+`;
+
 exports[`chatMessage > renders with parts correctly 1`] = `
 "<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
   <!--v-if-->
@@ -139,6 +217,71 @@ exports[`chatMessage > renders with parts correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="min-w-0">
       <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 w-full">Hello, how are you?</div>
+      <!--v-if-->
+    </div>
+  </div>
+</article>"
+`;
+
+exports[`chatMessage > renders with primary variant naked correctly 1`] = `
+"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
+  <!--v-if-->
+  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
+    <!--v-if-->
+    <div data-slot="body" class="min-w-0">
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 w-full text-primary">Hello, how are you?</div>
+      <!--v-if-->
+    </div>
+  </div>
+</article>"
+`;
+
+exports[`chatMessage > renders with primary variant outline correctly 1`] = `
+"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
+  <!--v-if-->
+  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
+    <!--v-if-->
+    <div data-slot="body" class="min-w-0">
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 text-primary ring ring-primary/25">Hello, how are you?</div>
+      <!--v-if-->
+    </div>
+  </div>
+</article>"
+`;
+
+exports[`chatMessage > renders with primary variant soft correctly 1`] = `
+"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
+  <!--v-if-->
+  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
+    <!--v-if-->
+    <div data-slot="body" class="min-w-0">
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-primary/10 text-primary">Hello, how are you?</div>
+      <!--v-if-->
+    </div>
+  </div>
+</article>"
+`;
+
+exports[`chatMessage > renders with primary variant solid correctly 1`] = `
+"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
+  <!--v-if-->
+  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
+    <!--v-if-->
+    <div data-slot="body" class="min-w-0">
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-primary text-inverted">Hello, how are you?</div>
+      <!--v-if-->
+    </div>
+  </div>
+</article>"
+`;
+
+exports[`chatMessage > renders with primary variant subtle correctly 1`] = `
+"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
+  <!--v-if-->
+  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
+    <!--v-if-->
+    <div data-slot="body" class="min-w-0">
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-primary/10 text-primary ring ring-primary/25">Hello, how are you?</div>
       <!--v-if-->
     </div>
   </div>
@@ -178,71 +321,6 @@ exports[`chatMessage > renders with ui correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="min-w-0">
       <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 w-full">Hello, how are you?</div>
-      <!--v-if-->
-    </div>
-  </div>
-</article>"
-`;
-
-exports[`chatMessage > renders with variant naked correctly 1`] = `
-"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
-  <!--v-if-->
-  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
-    <!--v-if-->
-    <div data-slot="body" class="min-w-0">
-      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 w-full">Hello, how are you?</div>
-      <!--v-if-->
-    </div>
-  </div>
-</article>"
-`;
-
-exports[`chatMessage > renders with variant outline correctly 1`] = `
-"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
-  <!--v-if-->
-  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
-    <!--v-if-->
-    <div data-slot="body" class="min-w-0">
-      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-default ring ring-default">Hello, how are you?</div>
-      <!--v-if-->
-    </div>
-  </div>
-</article>"
-`;
-
-exports[`chatMessage > renders with variant soft correctly 1`] = `
-"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
-  <!--v-if-->
-  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
-    <!--v-if-->
-    <div data-slot="body" class="min-w-0">
-      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-elevated/50">Hello, how are you?</div>
-      <!--v-if-->
-    </div>
-  </div>
-</article>"
-`;
-
-exports[`chatMessage > renders with variant solid correctly 1`] = `
-"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
-  <!--v-if-->
-  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
-    <!--v-if-->
-    <div data-slot="body" class="min-w-0">
-      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-inverted text-inverted">Hello, how are you?</div>
-      <!--v-if-->
-    </div>
-  </div>
-</article>"
-`;
-
-exports[`chatMessage > renders with variant subtle correctly 1`] = `
-"<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
-  <!--v-if-->
-  <div data-slot="container" class="relative flex items-start gap-3 pb-8">
-    <!--v-if-->
-    <div data-slot="body" class="min-w-0">
-      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-elevated/50 ring ring-default">Hello, how are you?</div>
       <!--v-if-->
     </div>
   </div>

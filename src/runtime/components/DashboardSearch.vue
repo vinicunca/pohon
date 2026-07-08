@@ -13,7 +13,7 @@ import theme from '#build/ui/dashboard-search';
 
 type DashboardSearch = ComponentConfig<typeof theme, AppConfig, 'dashboardSearch'>;
 
-export interface DashboardSearchProps<T extends CommandPaletteItem = CommandPaletteItem> extends Pick<ModalProps, 'title' | 'description' | 'overlay' | 'transition' | 'content' | 'dismissible' | 'fullscreen' | 'modal' | 'portal'>, Pick<CommandPaletteProps<CommandPaletteGroup<T>, T>, 'icon' | 'placeholder' | 'autofocus' | 'loading' | 'loadingIcon' | 'closeIcon' | 'groups'> {
+export interface DashboardSearchProps<T extends CommandPaletteItem = CommandPaletteItem> extends Pick<ModalProps, 'title' | 'description' | 'overlay' | 'transition' | 'content' | 'dismissible' | 'fullscreen' | 'modal' | 'portal' | 'unmountOnHide'>, Pick<CommandPaletteProps<CommandPaletteGroup<T>, T>, 'icon' | 'trailingIcon' | 'selectedIcon' | 'childrenIcon' | 'placeholder' | 'autofocus' | 'loading' | 'loadingIcon' | 'closeIcon' | 'back' | 'backIcon' | 'disabled' | 'highlightOnHover' | 'labelKey' | 'descriptionKey' | 'preserveGroupOrder' | 'virtualize' | 'groups'> {
   /**
    * @defaultValue 'md'
    */
@@ -111,9 +111,8 @@ const { t } = useLocale();
 const colorMode = useColorMode();
 const appConfig = useAppConfig() as DashboardSearch['AppConfig'];
 
-const commandPaletteProps = useForwardProps(reactivePick(props, 'size', 'icon', 'placeholder', 'autofocus', 'loading', 'loadingIcon', 'close', 'closeIcon', 'searchDelay'));
-const modalProps = useForwardProps(reactivePick(props, 'overlay', 'transition', 'content', 'dismissible', 'fullscreen', 'modal', 'portal'));
-
+const commandPaletteProps = useForwardProps(reactivePick(props, 'size', 'icon', 'trailingIcon', 'selectedIcon', 'childrenIcon', 'placeholder', 'autofocus', 'loading', 'loadingIcon', 'close', 'closeIcon', 'back', 'backIcon', 'disabled', 'highlightOnHover', 'labelKey', 'descriptionKey', 'preserveGroupOrder', 'virtualize', 'searchDelay'));
+const modalProps = useForwardProps(reactivePick(props, 'overlay', 'transition', 'content', 'dismissible', 'fullscreen', 'modal', 'portal', 'unmountOnHide'));
 const inputProps = computed(() => {
   if (props.input === false) {
     return false;
