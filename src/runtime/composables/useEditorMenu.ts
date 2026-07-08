@@ -1,5 +1,6 @@
 /* eslint-disable jsdoc/valid-types */
 import type { Placement, Strategy } from '@floating-ui/dom';
+import type { Plugin } from '@tiptap/pm/state';
 import type { SuggestionOptions, SuggestionProps } from '@tiptap/suggestion';
 import type { Editor } from '@tiptap/vue-3';
 import type { ComputedRef, MaybeRef, Ref } from 'vue';
@@ -515,7 +516,8 @@ export function useEditorMenu<T = any>(options: EditorMenuOptions<T>) {
   }
 
   // Create the suggestion plugin
-  const plugin = Suggestion({
+  // Explicitly typed as `Plugin` since `SuggestionPluginState` is not exported by `@tiptap/suggestion`
+  const plugin: Plugin = Suggestion({
     ...(options.suggestion || {}),
     pluginKey: pluginKeyInstance,
     editor: options.editor,
