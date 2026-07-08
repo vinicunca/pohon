@@ -13,13 +13,6 @@ export default defineConfig({
           neutral: 'slate',
         },
       },
-      autoImport: {
-        dirs: ['../nuxt/app/composables'],
-        imports: ['vue'],
-      },
-      components: {
-        dirs: ['../nuxt/app/components'],
-      },
     }),
   ],
 });

@@ -94,7 +94,7 @@ export default function IconsPlugin(options: PohonUiOptions, appConfig: Record<s
   }
 
   return {
-    name: 'nuxt:ui:icons',
+    name: 'pohon:ui:icons',
     enforce: 'pre',
     resolveId(id) {
       if (id === VIRTUAL_ID) {

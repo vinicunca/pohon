@@ -35,6 +35,7 @@ provide('components', components);
       :toaster="appConfig.toaster"
       :dir="appConfig.dir"
     >
+      <PIcon name="cif:gb" />
       <PDashboardGroup
         unit="rem"
         storage="local"
@@ -43,7 +44,7 @@ provide('components', components);
           class="bg-elevated/25"
           resizable
           collapsible
-          :toggle="{ size: 'sm', variant: 'outline', class: 'ring-ring' }"
+          :toggle="{ size: 'sm', variant: 'outline', class: 'ring-default' }"
         >
           <template #header="{ collapsed }">
             <RouterLink
@@ -59,7 +60,7 @@ provide('components', components);
 
             <div
               v-if="!collapsed"
-              class="ms-auto flex items-center"
+              class="flex items-center ms-auto"
             >
               <ThemeDropdown />
 
@@ -97,7 +98,7 @@ provide('components', components);
           }"
         >
           <template #body>
-            <div class="flex shrink-0 flex-col min-h-full items-center justify-center">
+            <div class="flex flex-col items-center justify-center min-h-full shrink-0">
               <RouterView />
             </div>
           </template>

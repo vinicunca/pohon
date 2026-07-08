@@ -3,8 +3,6 @@ import { createApp, ref } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import App from './app.vue';
 
-import './assets/css/main.css';
-
 const pages = import.meta.glob(['../../nuxt/app/pages/*.vue', '../../nuxt/app/pages/components/*.vue']);
 
 const routes = Object.keys(pages).map((path) => {
