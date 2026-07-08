@@ -17,5 +17,10 @@ export default {
         item: '',
       },
     },
+    externalScroll: {
+      true: {
+        root: 'overflow-visible',
+      },
+    },
   },
 };

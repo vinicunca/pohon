@@ -39,6 +39,11 @@ export default (options: Required<ModuleOptions>) => ({
         thead: 'after:absolute after:z-1 after:h-px',
       },
     },
+    externalScroll: {
+      true: {
+        root: 'overflow-visible',
+      },
+    },
     loadingAnimation: {
       'carousel': '',
       'carousel-inverse': '',
@@ -50,43 +55,50 @@ export default (options: Required<ModuleOptions>) => ({
       neutral: '',
     },
   },
-  compoundVariants: [...(options.theme.colors || []).map((loadingColor: string) => ({
-    loading: true,
-    loadingColor,
-    class: {
-      thead: `after:bg-${loadingColor}`,
+  compoundVariants: [
+    ...(options.theme.colors || []).map((loadingColor: string) => ({
+      loading: true,
+      loadingColor,
+      class: {
+        thead: `after:bg-${loadingColor}`,
+      },
+    })),
+    {
+      loading: true,
+      loadingColor: 'neutral',
+      class: {
+        thead: 'after:bg-inverted',
+      },
     },
-  })), {
-    loading: true,
-    loadingColor: 'neutral',
-    class: {
-      thead: 'after:bg-inverted',
+    {
+      loading: true,
+      loadingAnimation: 'carousel',
+      class: {
+        thead: 'after:animate-[carousel_2s_ease-in-out_infinite] rtl:after:animate-[carousel-rtl_2s_ease-in-out_infinite]',
+      },
     },
-  }, {
-    loading: true,
-    loadingAnimation: 'carousel',
-    class: {
-      thead: 'after:animate-[carousel_2s_ease-in-out_infinite] rtl:after:animate-[carousel-rtl_2s_ease-in-out_infinite]',
+    {
+      loading: true,
+      loadingAnimation: 'carousel-inverse',
+      class: {
+        thead: 'after:animate-[carousel-inverse_2s_ease-in-out_infinite] rtl:after:animate-[carousel-inverse-rtl_2s_ease-in-out_infinite]',
+      },
     },
-  }, {
-    loading: true,
-    loadingAnimation: 'carousel-inverse',
-    class: {
-      thead: 'after:animate-[carousel-inverse_2s_ease-in-out_infinite] rtl:after:animate-[carousel-inverse-rtl_2s_ease-in-out_infinite]',
+    {
+      loading: true,
+      loadingAnimation: 'swing',
+      class: {
+        thead: 'after:animate-[swing_2s_ease-in-out_infinite]',
+      },
     },
-  }, {
-    loading: true,
-    loadingAnimation: 'swing',
-    class: {
-      thead: 'after:animate-[swing_2s_ease-in-out_infinite]',
+    {
+      loading: true,
+      loadingAnimation: 'elastic',
+      class: {
+        thead: 'after:animate-[elastic_2s_ease-in-out_infinite]',
+      },
     },
-  }, {
-    loading: true,
-    loadingAnimation: 'elastic',
-    class: {
-      thead: 'after:animate-[elastic_2s_ease-in-out_infinite]',
-    },
-  }],
+  ],
   defaultVariants: {
     loadingColor: 'primary',
     loadingAnimation: 'carousel',
