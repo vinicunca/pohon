@@ -13,7 +13,7 @@ import theme from '#build/ui/toast';
 
 type Toast = ComponentConfig<typeof theme, AppConfig, 'toast'>;
 
-export interface ToastProps extends Pick<ToastRootProps, 'defaultOpen' | 'open' | 'type' | 'duration'> {
+export interface ToastProps extends Pick<ToastRootProps, 'defaultOpen' | 'open' | 'type'> {
   /**
    * The element or component this component should render as.
    * @defaultValue 'li'

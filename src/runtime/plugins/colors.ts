@@ -1,7 +1,7 @@
 import type { UseHeadInput } from '@unhead/vue/types';
 import { colors } from '@unocss/preset-wind4/colors';
 import { computed } from 'vue';
-import { defineNuxtPlugin, useAppConfig, useHead, useNuxtApp } from '#imports';
+import { defineNuxtPlugin, injectHead, useAppConfig, useHead, useNuxtApp } from '#imports';
 
 const shades = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950] as const;
 
@@ -14,10 +14,14 @@ function getColor(color: keyof typeof colors, shade: typeof shades[number]): str
 
 function generateShades(key: string, value: string, prefix?: string) {
   const prefixStr = prefix ? `${prefix}-` : '';
-  return `${shades.map((shade) => `--ui-color-${key}-${shade}: var(--${prefixStr}colors-${value === 'neutral' ? 'old-neutral' : value}-${shade}, ${getColor(value as keyof typeof colors, shade)});`).join('\n  ')}`;
+  return `${shades.map((shade) => `--ui-color-${key}-${shade}: var(--${prefixStr}color-${value === 'neutral' ? 'old-neutral' : value}-${shade}, ${getColor(value as keyof typeof colors, shade)});`).join('\n  ')}`;
 }
 function generateColor(key: string, shade: number) {
   return `--ui-${key}: var(--ui-color-${key}-${shade});`;
+}
+
+function removeTemporaryColorsStyle() {
+  document.querySelector('[data-pohon-ui-colors]')?.remove();
 }
 
 export default defineNuxtPlugin(() => {
@@ -28,7 +32,7 @@ export default defineNuxtPlugin(() => {
     const { neutral, ...colors } = appConfig.ui.colors;
     const prefix = (appConfig.ui as { prefix?: string }).prefix;
 
-    return `@layer properties {
+    return `@layer theme {
   :root, :host {
   ${Object.entries(appConfig.ui.colors).map(([key, value]: [string, string]) => generateShades(key, value, prefix)).join('\n  ')}
   }
@@ -58,11 +62,13 @@ export default defineNuxtPlugin(() => {
     style.setAttribute('data-pohon-ui-colors', '');
     document.head.appendChild(style);
 
-    headData.script = [
-      {
-        innerHTML: 'document.head.removeChild(document.querySelector(\'[data-pohon-ui-colors]\'))',
-      },
-    ];
+    // `hookOnce` is only available on unhead v2's `Hookable`. In v3 `hooks` is a `HookableCore`
+    // that exposes `hook` only, so self-unhook to keep the once semantics across both versions.
+    const head = injectHead();
+    const unhook = head.hooks?.hook('dom:rendered', () => {
+      removeTemporaryColorsStyle();
+      unhook?.();
+    });
   }
 
   useHead(headData);
