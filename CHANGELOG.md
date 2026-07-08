@@ -1,5 +1,7 @@
 # Changelog
 
+## [2.0.0-rc7.2](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.1...v2.0.0-rc7.2) (2026-07-08)
+
 ## [2.0.0-rc7.1](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.0...v2.0.0-rc7.1) (2026-07-08)
 
 ### Features
