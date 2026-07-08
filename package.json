@@ -269,7 +269,7 @@
   "devDependencies": {
     "@nuxt/module-builder": "^1.0.2",
     "@nuxt/test-utils": "^4.0.2",
-    "@release-it/conventional-changelog": "^10.0.6",
+    "@release-it/conventional-changelog": "^11.0.1",
     "@tanstack/table-core": "^8.21.3",
     "@unocss/preset-wind4": "^66.7.0",
     "@vinicunca/eslint-config": "^5.0.0",
@@ -280,7 +280,7 @@
     "eslint": "^10.6.0",
     "happy-dom": "^20.10.3",
     "nuxt": "^4.4.8",
-    "release-it": "^19.2.4",
+    "release-it": "^20.2.1",
     "unbuild": "^3.6.1",
     "vitest": "^4.1.6",
     "vitest-axe": "^0.1.0",
