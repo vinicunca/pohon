@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.0.0-rc7.1](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.0...v2.0.0-rc7.1) (2026-07-08)
+
+### Features
+
+* **Drawer:** add close and closeIcon props ([ecf766f](https://github.com/vinicunca/pohon/commit/ecf766f74df0a2a43c92f450b3713058a407c628))
+* **module:** pre-bundle used icons into @nuxt/icon client bundle ([a3b0285](https://github.com/vinicunca/pohon/commit/a3b0285ee73ef3b6cab406a20348e265b56a518c))
+* **Table:** add getScrollElement virtualize option ([b9076a1](https://github.com/vinicunca/pohon/commit/b9076a10d203d4b3818627d1c95f76c24f2ee0ec))
+* **unplugin:** pre-bundle used icons into the Vue/Vite build ([e2ec6ef](https://github.com/vinicunca/pohon/commit/e2ec6ef0333da5cc2b21af2697d844efcf07ae60))
+
+### Bug Fixes
+
+* **Button:** allow inline event handlers with non-void return types ([c4ac3de](https://github.com/vinicunca/pohon/commit/c4ac3ded147d79c79ae04c84ae769e183c7d7d21))
+* **ChatMessages:** re-evaluate streaming indicator on each render ([be848bb](https://github.com/vinicunca/pohon/commit/be848bb320dc4abd220ea4fb69d902404427c5db))
+* **components:** forward data-slot to component root ([6e58664](https://github.com/vinicunca/pohon/commit/6e5866447bdb966f8f9a908b6d643ff19767b174))
+* **Link:** apply rel prop to internal links ([2aa891f](https://github.com/vinicunca/pohon/commit/2aa891fe0f3c60782fa80ce8e3e9b888921e23a1))
+* **module:** avoid unhead v2-only hookOnce in colors plugin ([6da28a1](https://github.com/vinicunca/pohon/commit/6da28a12c557abcc40cf956c7e90be4f0f17eb2d))
+* **useComponentProps:** let app config defaultVariants override withDefaults ([a2fe14d](https://github.com/vinicunca/pohon/commit/a2fe14de09bf013a61517c05152fe0a9017b6b9f))
+
 ## [2.0.0-rc7.0](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7...v2.0.0-rc7.0) (2026-06-30)
 
 ### Features
