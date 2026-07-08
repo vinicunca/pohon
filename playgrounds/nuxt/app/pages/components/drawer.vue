@@ -15,8 +15,8 @@ const inset = ref(false);
     <PDrawer
       v-model:open="open"
       title="Drawer with v-model"
-      description="This is useful to control the state yourself."
       :inset="inset"
+      close
     >
       <PButton
         color="neutral"
@@ -49,6 +49,7 @@ const inset = ref(false);
       title="Drawer with `should-scale-background`"
       description="You need to add the `data-vaul-drawer-wrapper` directive to your content to make it work."
       :inset="inset"
+      close
     >
       <PButton
         color="neutral"
@@ -66,6 +67,7 @@ const inset = ref(false);
       :inset="inset"
       :ui="{ content: 'h-full' }"
       should-scale-background
+      close
     >
       <PButton
         color="neutral"
@@ -86,7 +88,7 @@ const inset = ref(false);
           />
 
           <template #content>
-            <Placeholder class="m-4 flex-1" />
+            <Placeholder class="flex-1 m-4" />
           </template>
         </PDrawer>
       </template>
@@ -99,6 +101,7 @@ const inset = ref(false);
       :modal="false"
       :overlay="false"
       :inset="inset"
+      close
     >
       <PButton
         label="Open unclosable"
@@ -115,6 +118,7 @@ const inset = ref(false);
       title="Drawer with bottom direction"
       direction="bottom"
       :inset="inset"
+      close
     >
       <PButton
         color="neutral"
@@ -131,6 +135,7 @@ const inset = ref(false);
       title="Drawer with left direction"
       direction="left"
       :inset="inset"
+      close
     >
       <PButton
         color="neutral"
@@ -139,7 +144,7 @@ const inset = ref(false);
       />
 
       <template #body>
-        <Placeholder class="h-full w-96" />
+        <Placeholder class="w-96 h-full" />
       </template>
     </PDrawer>
 
@@ -147,6 +152,7 @@ const inset = ref(false);
       title="Drawer with top direction"
       direction="top"
       :inset="inset"
+      close
     >
       <PButton
         color="neutral"
@@ -163,6 +169,7 @@ const inset = ref(false);
       title="Drawer with right direction"
       direction="right"
       :inset="inset"
+      close
     >
       <PButton
         color="neutral"
@@ -171,7 +178,7 @@ const inset = ref(false);
       />
 
       <template #body>
-        <Placeholder class="h-full w-96" />
+        <Placeholder class="w-96 h-full" />
       </template>
     </PDrawer>
   </div>
