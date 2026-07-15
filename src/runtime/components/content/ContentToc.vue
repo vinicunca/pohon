@@ -74,11 +74,12 @@ export interface ContentTocSlots<T extends ContentTocLink = ContentTocLink> {
 <script setup lang="ts" generic="T extends ContentTocLink">
 import { createReusableTemplate, reactivePick } from '@vueuse/core';
 import { CollapsibleContent, CollapsibleRoot, CollapsibleTrigger } from 'akar';
-import { computed, onUnmounted } from 'vue';
+import { computed, nextTick, onUnmounted, useTemplateRef, watch } from 'vue';
 import { useAppConfig, useNuxtApp, useRouter } from '#imports';
 import { useComponentProps } from '../../composables/useComponentProps';
 import { useForwardProps } from '../../composables/useForwardProps';
 import { useLocale } from '../../composables/useLocale';
+import { useScrollShadow } from '../../composables/useScrollShadow';
 import { useScrollspy } from '../../composables/useScrollspy';
 import { uv } from '../../utils/uv';
 import PIcon from '../Icon.vue';
@@ -102,6 +103,9 @@ const { t } = useLocale();
 const router = useRouter();
 const appConfig = useAppConfig() as ContentToc['AppConfig'];
 const { activeHeadings, updateHeadings } = useScrollspy();
+
+const contentRef = useTemplateRef<HTMLElement>('contentRef');
+const { style: scrollShadowStyle } = useScrollShadow(contentRef);
 
 const [DefineListTemplate, ReuseListTemplate] = createReusableTemplate<{ links: Array<T>; level: number }>({
   props: {
@@ -138,18 +142,49 @@ function flattenLinksWithLevel(links: Array<T>, level = 0): Array<{ link: T; lev
 
 const linkHeight = 1.75; // rem — text-sm line-height (1.25rem) + py-1 (0.5rem)
 
+const activeIndex = computed(() => {
+  if (!activeHeadings.value?.length) {
+    return -1;
+  }
+
+  return flattenLinks(props.links || []).findIndex((link) => activeHeadings.value.includes(link.id));
+});
+
 const indicatorStyle = computed(() => {
   if (!activeHeadings.value?.length) {
     return;
   }
 
-  const flatLinks = flattenLinks(props.links || []);
-  const activeIndex = flatLinks.findIndex((link) => activeHeadings.value.includes(link.id));
-
   return {
     '--indicator-size': `${linkHeight * activeHeadings.value.length}rem`,
-    '--indicator-position': activeIndex >= 0 ? `${activeIndex * linkHeight}rem` : '0rem',
+    '--indicator-position': activeIndex.value >= 0 ? `${activeIndex.value * linkHeight}rem` : '0rem',
   };
+});
+
+// Keep the active link centered within the (desktop) list when it changes.
+// Scroll the container directly rather than `scrollIntoView` so only the list
+// moves, never the page.
+watch(activeIndex, (index) => {
+  const container = contentRef.value;
+  if (index < 0 || !container) {
+    return;
+  }
+
+  nextTick(() => {
+    const link = container.querySelectorAll<HTMLElement>('a[data-slot="link"]')[index];
+    if (!link) {
+      return;
+    }
+
+    const containerRect = container.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    const linkOffset = (linkRect.top - containerRect.top) + container.scrollTop;
+
+    container.scrollTo({
+      top: linkOffset - container.clientHeight / 2 + linkRect.height / 2,
+      behavior: 'smooth',
+    });
+  });
 });
 
 // Generate SVG path for the circuit line structure
@@ -280,7 +315,7 @@ onUnmounted(() => {
           <ReuseTriggerTemplate :open="open" />
         </p>
 
-        <div data-slot="content" :class="ui.content({ class: [props.ui?.content, 'hidden lg:flex'] })">
+        <div ref="contentRef" data-slot="content" :class="ui.content({ class: [props.ui?.content, 'hidden lg:flex'] })" :style="scrollShadowStyle">
           <ReuseContentTemplate />
         </div>
       </template>
