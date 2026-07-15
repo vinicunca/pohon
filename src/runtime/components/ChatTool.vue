@@ -3,6 +3,7 @@ import type { AppConfig } from '@nuxt/schema';
 import type { CollapsibleRootProps } from 'akar';
 import type { VNode } from 'vue';
 import type { ComponentConfig } from '../types/uv';
+import type { ButtonProps } from './Button.vue';
 import type { ChatShimmerProps } from './ChatShimmer.vue';
 import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/chat-tool';
@@ -59,6 +60,11 @@ export interface ChatToolProps extends Pick<CollapsibleRootProps, 'defaultOpen' 
    * Customize the [`ChatShimmer`](https://pohon.vinicunca.dev/docs/components/chat-shimmer) component when streaming.
    */
   shimmer?: Partial<Omit<ChatShimmerProps, 'text'>>;
+  /**
+   * Display a list of actions below the trigger, useful for tool approval flows.
+   * `{ size: 'xs' }`{lang="ts-type"}
+   */
+  actions?: Array<ButtonProps>;
   class?: any;
   ui?: ChatTool['slots'];
 }
@@ -69,15 +75,17 @@ export interface ChatToolEmits {
 
 export interface ChatToolSlots {
   default?(props: { open: boolean }): Array<VNode>;
+  actions?(props?: {}): Array<VNode>;
 }
 </script>
 
 <script setup lang="ts">
 import { CollapsibleContent, CollapsibleRoot, CollapsibleTrigger } from 'akar';
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { uv } from '../utils/uv';
+import PButton from './Button.vue';
 import PChatShimmer from './ChatShimmer.vue';
 import PIcon from './Icon.vue';
 
@@ -115,6 +123,19 @@ function setOpen(value: boolean) {
 }
 
 const hasContent = computed(() => !!slots.default);
+
+// Auto-open when actions first appear (e.g. a pending tool approval) so the content
+// is visible while the user decides. Uncontrolled only, respects an explicit `defaultOpen`,
+// and fires once so the user can still collapse it.
+watch(
+  () => !!props.actions?.length,
+  (hasActions) => {
+    if (hasActions && hasContent.value && props.open === undefined && props.defaultOpen === undefined) {
+      internalOpen.value = true;
+    }
+  },
+  { immediate: true },
+);
 
 const resolvedLoadingIcon = computed(() => props.loadingIcon || appConfig.ui.icons?.loading);
 const resolvedIcon = computed(() => props.loading ? resolvedLoadingIcon.value : props.icon);
@@ -172,5 +193,16 @@ const chevronIconName = computed(() => props.chevronIcon || appConfig.ui.icons?.
         <slot :open="isOpen" />
       </div>
     </CollapsibleContent>
+
+    <div
+      v-if="props.actions?.length || !!slots.actions"
+      data-slot="actions"
+      :data-state="hasContent && isOpen ? 'open' : 'closed'"
+      :class="ui.actions({ class: props.ui?.actions })"
+    >
+      <slot name="actions">
+        <PButton v-for="(action, index) in props.actions" :key="index" size="xs" v-bind="action" />
+      </slot>
+    </div>
   </CollapsibleRoot>
 </template>

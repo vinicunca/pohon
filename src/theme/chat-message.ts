@@ -57,87 +57,102 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
   },
-  compoundVariants: [{
-    compact: true,
-    actions: true,
-    class: {
-      container: 'pb-8',
+  compoundVariants: [
+    {
+      compact: true,
+      actions: true,
+      class: {
+        container: 'pb-8',
+      },
     },
-  }, {
-    variant: ['solid', 'outline', 'soft', 'subtle'],
-    compact: false,
-    class: {
-      content: 'px-4 py-3 rounded-lg min-h-12',
-      leading: 'mt-2',
+    {
+      variant: ['solid', 'outline', 'soft', 'subtle'],
+      compact: false,
+      class: {
+        content: 'px-4 py-3 rounded-lg min-h-12',
+        leading: 'mt-2',
+      },
     },
-  }, {
-    variant: ['solid', 'outline', 'soft', 'subtle'],
-    compact: true,
-    class: {
-      content: 'px-2 py-1 rounded-lg min-h-8',
-      leading: 'mt-1',
+    {
+      variant: ['solid', 'outline', 'soft', 'subtle'],
+      compact: true,
+      class: {
+        content: 'px-2 py-1 rounded-lg min-h-8',
+        leading: 'mt-1',
+      },
     },
-  }, {
-    variant: 'naked',
-    side: 'left',
-    class: {
-      content: 'w-full',
+    {
+      variant: 'naked',
+      side: 'left',
+      class: {
+        body: 'w-full',
+        content: 'w-full',
+      },
     },
-  }, ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'solid',
-    class: {
-      content: `bg-${color} text-inverted`,
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'solid',
+      class: {
+        content: `bg-${color} text-inverted`,
+      },
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'outline',
+      class: {
+        content: `text-${color} ring ring-${color}/25`,
+      },
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'soft',
+      class: {
+        content: `bg-${color}/10 text-${color}`,
+      },
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'subtle',
+      class: {
+        content: `bg-${color}/10 text-${color} ring ring-${color}/25`,
+      },
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'naked',
+      class: {
+        content: `text-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      variant: 'solid',
+      class: {
+        content: 'bg-inverted text-inverted',
+      },
     },
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'outline',
-    class: {
-      content: `text-${color} ring ring-${color}/25`,
+    {
+      color: 'neutral',
+      variant: 'outline',
+      class: {
+        content: 'bg-default ring ring-default',
+      },
     },
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'soft',
-    class: {
-      content: `bg-${color}/10 text-${color}`,
+    {
+      color: 'neutral',
+      variant: 'soft',
+      class: {
+        content: 'bg-elevated/50',
+      },
     },
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'subtle',
-    class: {
-      content: `bg-${color}/10 text-${color} ring ring-${color}/25`,
+    {
+      color: 'neutral',
+      variant: 'subtle',
+      class: {
+        content: 'bg-elevated/50 ring ring-default',
+      },
     },
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'naked',
-    class: {
-      content: `text-${color}`,
-    },
-  })), {
-    color: 'neutral',
-    variant: 'solid',
-    class: {
-      content: 'bg-inverted text-inverted',
-    },
-  }, {
-    color: 'neutral',
-    variant: 'outline',
-    class: {
-      content: 'bg-default ring ring-default',
-    },
-  }, {
-    color: 'neutral',
-    variant: 'soft',
-    class: {
-      content: 'bg-elevated/50',
-    },
-  }, {
-    color: 'neutral',
-    variant: 'subtle',
-    class: {
-      content: 'bg-elevated/50 ring ring-default',
-    },
-  }],
+  ],
   defaultVariants: {
     side: 'left',
     variant: 'naked',
