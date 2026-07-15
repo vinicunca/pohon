@@ -56,11 +56,11 @@ describe('chatPrompt', () => {
   });
 
   it('re-enables submit after compositionend cooldown', async () => {
-    vi.useFakeTimers();
-
     const wrapper = await mountSuspended(ChatPrompt, {
       props: { modelValue: 'Hello' },
     });
+
+    vi.useFakeTimers();
 
     const textarea = wrapper.find('textarea');
     await textarea.trigger('compositionend');

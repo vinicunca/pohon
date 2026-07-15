@@ -119,11 +119,8 @@ importers:
         specifier: 66.7.0
         version: 66.7.0(esbuild@0.28.0)(magicast@0.5.3)(rollup@4.59.0)(vite@7.3.5(@types/node@25.3.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0))
       '@vinicunca/perkakas':
-        specifier: 1.15.0
-        version: 1.15.0
-      '@vinicunca/unocss-preset':
-        specifier: ^1.47.0
-        version: 1.47.0(@vinicunca/perkakas@1.15.0)(unocss@66.7.0(@unocss/webpack@66.7.0(esbuild@0.28.0)(rollup@4.59.0)(vite@7.3.5(@types/node@25.3.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)))(esbuild@0.28.0)(rollup@4.59.0)(vite@7.3.5(@types/node@25.3.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)))
+        specifier: 1.16.0
+        version: 1.16.0
       '@vueuse/core':
         specifier: ^14.3.0
         version: 14.3.0(vue@3.5.39(typescript@6.0.3))
@@ -196,9 +193,6 @@ importers:
       superstruct:
         specifier: ^2.0.0
         version: 2.0.2
-      tailwind-merge:
-        specifier: ^3.5.0
-        version: 3.5.0
       tinyglobby:
         specifier: ^0.2.17
         version: 0.2.17
@@ -4871,15 +4865,9 @@ packages:
       svelte-eslint-parser:
         optional: true
 
-  '@vinicunca/perkakas@1.15.0':
-    resolution: {integrity: sha512-EkA0aiXZjGw9LlkKEoBz/jHyTPvBE9Vpz+8zDEPxiRTv/nbCq8k6kDkT9fiE7R02P/OOohanlep+Q5gIPHNQIA==}
+  '@vinicunca/perkakas@1.16.0':
+    resolution: {integrity: sha512-nV7L8LDOzsKrHT/kkblKI6rJuMvJPmsAnUppRTg2xZ1qq7ZW5ekMSX1zMmWgU5xON47XNrzAXInd+dfokgElKA==}
     engines: {node: '>=20.0.0'}
-
-  '@vinicunca/unocss-preset@1.47.0':
-    resolution: {integrity: sha512-QxDtN2vZhFfB3voU1ThCUxk8thtrM98Y0jyofB6wCWHJBXveDcXBi0h34iVd3M5ghpyvFBWvGZXwGsJixnhk8g==}
-    peerDependencies:
-      '@vinicunca/perkakas': ^1.15.0
-      unocss: 66.7.0
 
   '@vitejs/plugin-vue-jsx@5.1.5':
     resolution: {integrity: sha512-jIAsvHOEtWpslLOI2MeElGFxH7M8pM83BU/Tor4RLyiwH0FM4nUW3xdvbw20EeU9wc5IspQwMq225K3CMnJEpA==}
@@ -9699,9 +9687,6 @@ packages:
   tagged-tag@1.0.0:
     resolution: {integrity: sha512-yEFYrVhod+hdNyx7g5Bnkkb0G6si8HJurOoOEgC8B/O0uXLHlaey/65KRv6cuWBNhBgHKAROVpc7QyYqE5gFng==}
     engines: {node: '>=20'}
-
-  tailwind-merge@3.5.0:
-    resolution: {integrity: sha512-I8K9wewnVDkL1NTGoqWmVEIlUcB9gFriAEkXkfCjX5ib8ezGxtR3xD7iZIxrfArjEsH7F1CHD4RFUtxefdqV/A==}
 
   tailwind-merge@3.6.0:
     resolution: {integrity: sha512-uxL7qAVQriqRQPAyK3pj66VqskWqoZ37PW94jwOTwNfq/z9oyu1V+eqrZqtR2+fCiXdYOZe/Modt8GtvqNzu+w==}
@@ -15867,12 +15852,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@vinicunca/perkakas@1.15.0': {}
-
-  '@vinicunca/unocss-preset@1.47.0(@vinicunca/perkakas@1.15.0)(unocss@66.7.0(@unocss/webpack@66.7.0(esbuild@0.28.0)(rollup@4.59.0)(vite@7.3.5(@types/node@25.3.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)))(esbuild@0.28.0)(rollup@4.59.0)(vite@7.3.5(@types/node@25.3.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)))':
-    dependencies:
-      '@vinicunca/perkakas': 1.15.0
-      unocss: 66.7.0(@unocss/webpack@66.7.0(esbuild@0.28.0)(rollup@4.59.0)(vite@7.3.5(@types/node@25.3.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)))(esbuild@0.28.0)(rollup@4.59.0)(vite@7.3.5(@types/node@25.3.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0))
+  '@vinicunca/perkakas@1.16.0': {}
 
   '@vitejs/plugin-vue-jsx@5.1.5(vite@7.3.5(@types/node@25.3.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.0)(yaml@2.9.0))(vue@3.5.38(typescript@6.0.3))':
     dependencies:
@@ -16496,7 +16476,7 @@ snapshots:
       '@internationalized/date': 3.12.2
       '@internationalized/number': 3.6.7
       '@tanstack/vue-virtual': 3.13.30(vue@3.5.39(typescript@6.0.3))
-      '@vinicunca/perkakas': 1.15.0
+      '@vinicunca/perkakas': 1.16.0
       '@vueuse/core': 14.3.0(vue@3.5.39(typescript@6.0.3))
       '@vueuse/shared': 14.3.0(vue@3.5.39(typescript@6.0.3))
       aria-hidden: 1.2.6
@@ -22911,8 +22891,6 @@ snapshots:
 
   tagged-tag@1.0.0: {}
 
-  tailwind-merge@3.5.0: {}
-
   tailwind-merge@3.6.0: {}
 
   tailwind-variants@3.2.2(tailwind-merge@3.6.0)(tailwindcss@4.3.1):
@@ -23488,7 +23466,7 @@ snapshots:
 
   unocss-variants@1.2.1:
     dependencies:
-      '@vinicunca/perkakas': 1.15.0
+      '@vinicunca/perkakas': 1.16.0
 
   unocss@66.7.0(@unocss/webpack@66.7.0(esbuild@0.28.0)(rollup@4.59.0)(vite@7.3.5(@types/node@25.3.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)))(esbuild@0.28.0)(rollup@4.59.0)(vite@7.3.5(@types/node@25.3.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)):
     dependencies:
