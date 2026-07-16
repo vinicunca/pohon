@@ -6,27 +6,42 @@ export function useScrollspy() {
   const activeHeadings = ref<Array<string>>([]);
 
   function observerCallback(entries: Array<IntersectionObserverEntry>) {
-    entries.forEach((entry) => {
+    // Batched into a single write so the watcher runs once per callback, not once per entry.
+    const headings = new Set(visibleHeadings.value);
+    let changed = false;
+
+    for (const entry of entries) {
       const id = entry.target.id;
       if (!id) {
-        return;
+        continue;
       }
 
       if (entry.isIntersecting) {
-        visibleHeadings.value = [...visibleHeadings.value, id];
-      } else {
-        visibleHeadings.value = visibleHeadings.value.filter((h) => h !== id);
+        if (!headings.has(id)) {
+          headings.add(id);
+          changed = true;
+        }
+      } else if (headings.delete(id)) {
+        changed = true;
       }
-    });
+    }
+
+    if (changed) {
+      visibleHeadings.value = [...headings];
+    }
   }
 
   function updateHeadings(headings: Array<Element>) {
-    headings.forEach((heading) => {
-      if (!observer.value) {
-        return;
-      }
+    if (!observer.value) {
+      return;
+    }
 
-      observer.value.observe(heading);
+    // Drop previously observed targets so repeated calls (e.g. on page navigation) don't accumulate.
+    observer.value.disconnect();
+    visibleHeadings.value = [];
+
+    headings.forEach((heading) => {
+      observer.value!.observe(heading);
     });
   }
 
