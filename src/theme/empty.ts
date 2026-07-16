@@ -59,6 +59,11 @@ export default {
         description: 'text-muted',
       },
     },
+    loading: {
+      true: {
+        avatar: '[&>[data-slot=icon]]:animate-spin',
+      },
+    },
   },
   defaultVariants: {
     variant: 'outline',

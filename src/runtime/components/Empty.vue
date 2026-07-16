@@ -21,6 +21,14 @@ export interface EmptyProps {
    */
   icon?: IconProps['name'];
   avatar?: AvatarProps;
+  /** When `true`, the loading icon will be displayed. */
+  loading?: boolean;
+  /**
+   * The icon when the `loading` prop is `true`.
+   * @defaultValue appConfig.ui.icons.loading
+   * @IconifyIcon
+   */
+  loadingIcon?: IconProps['name'];
   title?: string;
   description?: string;
   /**
@@ -56,8 +64,8 @@ import { computed } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { uv } from '../utils/uv';
-import PAvatar from './Avatar.vue';
-import PButton from './Button.vue';
+import UAvatar from './Avatar.vue';
+import UButton from './Button.vue';
 
 const _props = defineProps<EmptyProps>();
 const slots = defineSlots<EmptySlots>();
@@ -66,18 +74,21 @@ const props = useComponentProps('empty', _props);
 
 const appConfig = useAppConfig() as Empty['AppConfig'];
 
+const iconName = computed(() => props.loading ? (props.loadingIcon || appConfig.ui.icons.loading) : props.icon);
+
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.empty || {}) })({
   variant: props.variant,
   size: props.size,
+  loading: props.loading,
 }));
 </script>
 
 <template>
-  <Primitive :as="props.as" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
-    <div v-if="!!slots.header || (props.icon || props.avatar || !!slots.leading) || (props.title || !!slots.title) || (props.description || !!slots.description)" data-slot="header" :class="ui.header({ class: props.ui?.header })">
+  <Primitive :as="props.as" :aria-busy="props.loading ? 'true' : undefined" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+    <div v-if="!!slots.header || (iconName || props.avatar || !!slots.leading) || (props.title || !!slots.title) || (props.description || !!slots.description)" data-slot="header" :class="ui.header({ class: props.ui?.header })">
       <slot name="header">
         <slot name="leading" :ui="ui">
-          <PAvatar v-if="props.icon || props.avatar" :icon="props.icon" v-bind="typeof props.avatar === 'object' ? props.avatar : {}" data-slot="avatar" :class="ui.avatar({ class: props.ui?.avatar })" />
+          <UAvatar v-if="iconName || props.avatar" :icon="iconName" v-bind="typeof props.avatar === 'object' ? props.avatar : {}" data-slot="avatar" :class="ui.avatar({ class: props.ui?.avatar })" />
         </slot>
 
         <h2 v-if="props.title || !!slots.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
@@ -98,7 +109,7 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.empty || {}) })(
       <slot name="body">
         <div v-if="props.actions?.length || !!slots.actions" data-slot="actions" :class="ui.actions({ class: props.ui?.actions })">
           <slot name="actions">
-            <PButton v-for="(action, index) in props.actions" :key="index" :size="props.size" v-bind="action" />
+            <UButton v-for="(action, index) in props.actions" :key="index" :size="props.size" v-bind="action" />
           </slot>
         </div>
       </slot>
