@@ -1,5 +1,34 @@
 # Changelog
 
+## [2.0.0-rc7.3](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.2...v2.0.0-rc7.3) (2026-07-16)
+
+### Features
+
+* **ChatPrompt:** add body slot and focus highlight ([1874ed4](https://github.com/vinicunca/pohon/commit/1874ed43a546c115bae152bd36d537756cf40dce))
+* **ChatTool:** add actions prop for tool approval ([487ced7](https://github.com/vinicunca/pohon/commit/487ced77fdd759620347f2d0026f51aa41e6d10e))
+* **ContentToc:** scroll list independently and center active link ([7fc7c25](https://github.com/vinicunca/pohon/commit/7fc7c25d52a392599c16644cc6220885e5a306ae))
+* **Editor:** allow disabling starter kit for plain text ([8b512d4](https://github.com/vinicunca/pohon/commit/8b512d475d50f3e039a2fdbc8b8b1ef67bdfef2a))
+* **Empty:** add loading and loadingIcon props ([72ea0dc](https://github.com/vinicunca/pohon/commit/72ea0dc568a3e4bd5d43adfa94da4d138a56c2ea))
+* **Prompt:** add claude action ([1c676ba](https://github.com/vinicunca/pohon/commit/1c676ba9a10af38b92f504c6bd18e188b4c19bed))
+
+### Bug Fixes
+
+* **BlogPost/ChangelogVersion:** format date in UTC to prevent hydration mismatch ([5c76655](https://github.com/vinicunca/pohon/commit/5c76655a00b1113504ee8f34164b6c359ead2b0b))
+* **Carousel:** prevent reset when plugin props use inline objects ([0937f6a](https://github.com/vinicunca/pohon/commit/0937f6a24197d657b15dbaab2a09101aa1c12cb1))
+* **defineShortcuts:** add missing arrowdown to shiftable keys ([d590159](https://github.com/vinicunca/pohon/commit/d590159fa2001e009288772cad846d284a220c1b))
+* **defineShortcuts:** defer standalone shortcuts that prefix a chain ([c571578](https://github.com/vinicunca/pohon/commit/c5715782cd6c347e79e758bd9a75bbc6f8feb962))
+* **Editor:** prevent suggestion menu blinking on keystroke ([9545306](https://github.com/vinicunca/pohon/commit/95453065274a31f35c414fccd2104eef3796ebca))
+* **inertia:** make useRoute().fullPath reactive across navigation ([e52e156](https://github.com/vinicunca/pohon/commit/e52e1566b38edbcdd49581615acc1ff0bf3ac6b1))
+* **types:** type prose components in app config ([46a87eb](https://github.com/vinicunca/pohon/commit/46a87eb28fbdca4ddef73ddaf4dfa6fe106a8ab6))
+* **useFileUpload:** keep dropzone type filter reactive to accept ([8e12070](https://github.com/vinicunca/pohon/commit/8e12070dcbca04ce66795e24f4c4062761458055))
+* **useResizable:** share resize logic between mouse and touch ([1149533](https://github.com/vinicunca/pohon/commit/114953377bb3b1e5ef5cbf733b5e4b7fa0fe6e70))
+* **useScrollspy:** unobserve previous headings on update ([e993910](https://github.com/vinicunca/pohon/commit/e9939104261811c249a85eafdb73cbde7276a564))
+* **useToast:** dedupe duplicate ids and handle max of 0 ([d314334](https://github.com/vinicunca/pohon/commit/d314334c7217e24ee335d00ba29ee90f5b9cb289))
+
+### Performance Improvements
+
+* **vue:** skip rewriting unchanged templates ([9c1090c](https://github.com/vinicunca/pohon/commit/9c1090cdb0f741909d517378687e9231eb1435c2))
+
 ## [2.0.0-rc7.2](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.1...v2.0.0-rc7.2) (2026-07-08)
 
 ## [2.0.0-rc7.1](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.0...v2.0.0-rc7.1) (2026-07-08)
