@@ -11,6 +11,13 @@ exports[`chatPrompt > renders with as correctly 1`] = `
 </section>"
 `;
 
+exports[`chatPrompt > renders with body slot correctly 1`] = `
+"<form data-slot="root" class="relative flex flex-col items-stretch gap-2 px-2.5 py-2 w-full rounded-lg backdrop-blur bg-default/75 ring ring-default">
+  <!--v-if-->Body slot
+  <!--v-if-->
+</form>"
+`;
+
 exports[`chatPrompt > renders with class correctly 1`] = `
 "<form data-slot="root" class="relative flex flex-col items-stretch gap-2 px-2.5 py-2 w-full rounded-lg backdrop-blur bg-default/75 ring ring-default p-5">
   <!--v-if-->

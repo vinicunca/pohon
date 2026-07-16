@@ -19,6 +19,10 @@ export interface ChatPromptProps extends Pick<TextareaProps, 'rows' | 'autofocus
    */
   placeholder?: string;
   /**
+   * @defaultValue 'primary'
+   */
+  color?: ChatPrompt['variants']['color'];
+  /**
    * @defaultValue 'outline'
    */
   variant?: ChatPrompt['variants']['variant'];
@@ -41,6 +45,10 @@ export interface ChatPromptEmits {
 export interface ChatPromptSlots extends TextareaSlots {
   header?(props?: {}): Array<VNode>;
   footer?(props?: {}): Array<VNode>;
+  /**
+   * Replace the internal textarea, e.g. to render an [Editor](/docs/components/editor) with mentions.
+   */
+  body?(props: { submit: (event?: Event) => void; close: (event?: Event) => void; placeholder: string; disabled: boolean; ui: any }): Array<VNode>;
 }
 </script>
 
@@ -59,16 +67,13 @@ import PTextarea from './Textarea.vue';
 
 defineOptions({ inheritAttrs: false });
 
-const _props = withDefaults(
-  defineProps<ChatPromptProps>(),
-  {
-    as: 'form',
-    autofocus: true,
-    autoresize: true,
-    rows: 1,
-    submitOnEnter: true,
-  },
-);
+const _props = withDefaults(defineProps<ChatPromptProps>(), {
+  as: 'form',
+  autofocus: true,
+  autoresize: true,
+  rows: 1,
+  submitOnEnter: true,
+});
 const emits = defineEmits<ChatPromptEmits>();
 const slots = defineSlots<ChatPromptSlots>();
 
@@ -81,26 +86,27 @@ const appConfig = useAppConfig() as ChatPrompt['AppConfig'];
 
 const textareaProps = useForwardProps(reactivePick(props, 'rows', 'autofocus', 'autofocusDelay', 'autoresize', 'autoresizeDelay', 'maxrows', 'icon', 'avatar', 'loading', 'loadingIcon'));
 
-const getProxySlots = () => omit(slots, ['header', 'footer']);
+const getProxySlots = () => omit(slots, ['header', 'footer', 'body']);
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatPrompt || {}) })({
+  color: props.color,
   variant: props.variant,
 }));
 
 const textareaRef = useTemplateRef('textareaRef');
 
-function submit(e: Event) {
+function submit(e?: Event) {
   if (model.value.trim() === '') {
     return;
   }
 
-  emits('submit', e);
+  emits('submit', e ?? new Event('submit'));
 }
 
-function blur(e: Event) {
+function blur(e?: Event) {
   textareaRef.value?.textareaRef?.blur();
 
-  emits('close', e);
+  emits('close', e ?? new Event('close'));
 }
 
 const { onKeydown: onEnter, onCompositionEnd } = useIMEGuard((event) => {
@@ -140,24 +146,33 @@ defineExpose({
       <slot name="header" />
     </div>
 
-    <PTextarea
-      ref="textareaRef"
-      v-model="model"
+    <slot
+      name="body"
+      :submit="submit"
+      :close="blur"
       :placeholder="props.placeholder ?? t('chatPrompt.placeholder')"
       :disabled="Boolean(props.error) || props.disabled"
-      variant="none"
-      fixed
-      v-bind="{ ...textareaProps, ...$attrs }"
-      :ui="transformUI(omit(ui, ['root', 'body', 'header', 'footer']), props.ui)"
-      data-slot="body"
-      :class="ui.body({ class: props.ui?.body })"
-      @keydown="onKeydown"
-      @compositionend="onCompositionEnd"
+      :ui="ui"
     >
-      <template v-for="(_, name) in getProxySlots()" #[name]="slotData">
-        <slot :name="name" v-bind="slotData" />
-      </template>
-    </PTextarea>
+      <PTextarea
+        ref="textareaRef"
+        v-model="model"
+        :placeholder="props.placeholder ?? t('chatPrompt.placeholder')"
+        :disabled="Boolean(props.error) || props.disabled"
+        variant="none"
+        fixed
+        v-bind="{ ...textareaProps, ...$attrs }"
+        :ui="transformUI(omit(ui, ['root', 'body', 'header', 'footer']), props.ui)"
+        data-slot="body"
+        :class="ui.body({ class: props.ui?.body })"
+        @keydown="onKeydown"
+        @compositionend="onCompositionEnd"
+      >
+        <template v-for="(_, name) in getProxySlots()" #[name]="slotData">
+          <slot :name="name" v-bind="slotData" />
+        </template>
+      </PTextarea>
+    </slot>
 
     <div v-if="!!slots.footer" data-slot="footer" :class="ui.footer({ class: props.ui?.footer })">
       <slot name="footer" />
