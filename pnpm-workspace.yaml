@@ -6,7 +6,7 @@ minimumReleaseAgeExclude:
 packages:
   - ./
   - cli
-  - docs
+  # - docs
   - playgrounds/nuxt
   - playgrounds/vue
   - playgrounds/repl
