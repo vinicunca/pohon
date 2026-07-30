@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.0-rc7.4](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.3...v2.0.0-rc7.4) (2026-07-30)
+
+### Features
+
+* disable colors plugin ([6758bb8](https://github.com/vinicunca/pohon/commit/6758bb8160816bafad0a6de26d8e6993069aa401))
+
 ## [2.0.0-rc7.3](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.2...v2.0.0-rc7.3) (2026-07-16)
 
 ### Features
