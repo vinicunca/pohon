@@ -1,5 +1,5 @@
 import { defineConfig } from 'unocss';
-import { BRANDS } from './layers/themes/app/constants';
+// import { BRANDS } from './layers/themes/app/constants';
 
 export default defineConfig({
   outputToCssLayers: {
@@ -21,6 +21,6 @@ export default defineConfig({
      * Therefore uno doesn't know about these dynamic classes, so we need to add them to the safelist.
      */
     () => ['focus:ring-2', 'focus:ring-inset'],
-    ...BRANDS.map((brand) => `focus:ring-${brand}`),
+    // ...BRANDS.map((brand) => `focus:ring-${brand}`),
   ],
 });

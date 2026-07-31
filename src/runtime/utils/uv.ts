@@ -1,6 +1,6 @@
 import type { ClassValue, UvCompoundVariants, UvDefaultVariants, UvReturnType, UvVariants } from 'unocss-variants';
 import type { SlotClassReplacer } from '../types/uv';
-import { createUv } from 'unocss-variants';
+import { uv as createUv } from 'unocss-variants';
 
 // Internal `unocss-variants` helpers that are not re-exported.
 type UVSlots = Record<string, ClassValue> | undefined;
@@ -47,7 +47,7 @@ type WideUV = {
   ): Widen<UvReturnType<V, S, B, EV, ES, E>>;
 };
 
-const baseUv = /* @__PURE__ */ createUv();
+const baseUv = /* @__PURE__ */ createUv;
 
 /**
  * Wraps `unocss-variants`' `uv` so slot classes can be **replaced** (not just

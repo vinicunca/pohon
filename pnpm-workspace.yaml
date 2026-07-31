@@ -1,7 +1,6 @@
 ignoreWorkspaceRootCheck: true
 
-minimumReleaseAgeExclude:
-  - akar@2.0.14
+minimumReleaseAge: 0
 
 packages:
   - ./
@@ -25,10 +24,10 @@ allowBuilds:
   vue-demi: false
 
 overrides:
-  '@nuxt/kit': ^4.4.8
+  '@nuxt/kit': ^4.5.1
   '@nuxt/test-utils': 4.0.2
   '@types/node': 25.3.0
-  c12: ^3.3.2
+  c12: ^3.3.4
   h3: 1.15.11
   pohon-ui: workspace:*
   typescript: ^6.0.3

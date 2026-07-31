@@ -3,6 +3,12 @@ export default defineNuxtConfig({
     timing: true,
   },
 
+  ui: {
+    theme: {
+      unstyled: true,
+    },
+  },
+
   modules: [
     'pohon-ui',
   ],

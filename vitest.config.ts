@@ -27,7 +27,7 @@ export default defineConfig({
         test: {
           name: 'nuxt',
           dir: './test',
-          include: ['components/**/**.spec.ts', 'composables/**.spec.ts', 'utils/**/**.spec.ts'],
+          include: ['components/**/**.spec.ts', 'composables/**.spec.ts', 'utils/**/**.spec.ts', 'templates/**/*.spec.ts'],
           environment: 'nuxt',
           environmentOptions: {
             nuxt: {
@@ -43,12 +43,62 @@ export default defineConfig({
           name: 'vue',
           environment: 'happy-dom',
           dir: './test',
-          include: ['components/**.spec.ts', 'composables/**.spec.ts', 'utils/**/**.spec.ts'],
+          include: ['components/**.spec.ts', 'composables/**.spec.ts', 'utils/**/**.spec.ts', 'templates/**/*.spec.ts'],
           setupFiles: ['./test/utils/setup.ts'],
         },
         plugins: [
           vue(),
           ui({ dts: false }),
+          {
+            name: 'pohon-ui-test:components',
+            enforce: 'pre',
+            resolveId(id) {
+              if (id === '@nuxt/test-utils/runtime') {
+                return fileURLToPath(new URL('test/utils/mount.ts', import.meta.url));
+              }
+            },
+          },
+          {
+            name: 'pohon-ui-test:components',
+            enforce: 'pre',
+            resolveId(id) {
+              if (id === '#components') {
+                return '#components';
+              }
+            },
+            load(id) {
+              if (id === '#components' || id === '?import#components') {
+                const resolvedComponents = [...vueRouterOverrides, ...vueComponents, ...components];
+                const renderedComponents = new Set<string>();
+                return resolvedComponents.map((file) => {
+                  const componentName = file.split('/').pop()!.replace('.vue', '');
+                  if (renderedComponents.has(componentName)) {
+                    return '';
+                  }
+                  renderedComponents.add(componentName);
+                  return `export { default as P${componentName} } from '${file}'`;
+                }).join('\n');
+              }
+            },
+          },
+        ],
+      },
+      {
+        extends: true,
+        test: {
+          name: 'vue-unstyled',
+          environment: 'happy-dom',
+          dir: './test',
+          include: ['unstyled/**/*.spec.ts'],
+          setupFiles: ['./test/utils/setup.ts'],
+        },
+        plugins: [
+          vue(),
+          ui({
+            dts: false,
+            theme: { unstyled: true },
+            root: fileURLToPath(new URL('test/unstyled/', import.meta.url)),
+          }),
           {
             name: 'pohon-ui-test:components',
             enforce: 'pre',
