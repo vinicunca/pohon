@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.0-rc7.5](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.4...v2.0.0-rc7.5) (2026-07-31)
+
+### Features
+
+* upgrade unocss-variants ([d970887](https://github.com/vinicunca/pohon/commit/d9708878ef007b9b2ed01c2b05d7903cd80736b8))
+
 ## [2.0.0-rc7.4](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.3...v2.0.0-rc7.4) (2026-07-30)
 
 ### Features
