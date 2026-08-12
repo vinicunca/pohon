@@ -258,7 +258,7 @@
     "tinyglobby": "^0.2.17",
     "ufo": "^1.6.4",
     "unocss": "^66.7.0",
-    "unocss-variants": "1.3.2",
+    "unocss-variants": "1.3.3",
     "unplugin": "^3.3.0",
     "unplugin-auto-import": "^21.0.0",
     "unplugin-vue-components": "^32.1.0",
