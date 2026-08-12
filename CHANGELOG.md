@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.0.0-rc7.6](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.5...v2.0.0-rc7.6) (2026-08-12)
+
+### Features
+
+* **locale:** validate locales against CLDR in CLI and tests ([e145608](https://github.com/vinicunca/pohon/commit/e145608f7bbe57b3ac262dce984940cfde66993a))
+* **prose:** configurable heading anchors and copy button ([b17f468](https://github.com/vinicunca/pohon/commit/b17f4687332e099e772a92fac15c31013dc1c944))
+
+### Bug Fixes
+
+* **AuthForm:** type submit payload with the schema output ([942d361](https://github.com/vinicunca/pohon/commit/942d361410e4726d5177a5c9a5ba8720df34991e))
+* **CommandPalette:** always escape search highlight to prevent XSS ([0fbe800](https://github.com/vinicunca/pohon/commit/0fbe800e7b61243498046b7d7a6924c16465eae4))
+* **ContentToc:** prevent list from collapsing ([cf6c7a5](https://github.com/vinicunca/pohon/commit/cf6c7a5986962e29b1f6b902cf08169dd0d2c206))
+* **Editor:** ignore updates without document changes ([5a5649b](https://github.com/vinicunca/pohon/commit/5a5649b55135b1b0170c1922114363e84086f40b))
+* **Modal:** emit transition events from overlay when scrollable ([9f867d2](https://github.com/vinicunca/pohon/commit/9f867d208b6af2b16c386d4e9fd365e2f90b7601))
+* test suite and locales ([30e8acd](https://github.com/vinicunca/pohon/commit/30e8acdf8727e2edbbe0f3737cd53068c6c87ee9))
+* **theme:** blank top-level base in applyUnstyled ([32de0c1](https://github.com/vinicunca/pohon/commit/32de0c1a1170d2673a8dae510786f5f2db8f13b6))
+
+### Performance Improvements
+
+* **Button/Select/SelectMenu/InputMenu:** narrow reactive dependencies ([da52521](https://github.com/vinicunca/pohon/commit/da5252124aa26ddd50dfdec01c5e84f4b202c721))
+* **components:** memoize tv slot invocations with simple args ([3675ecd](https://github.com/vinicunca/pohon/commit/3675ecd16b2dac9d090d1275cca8f95ab0221677))
+
 ## [2.0.0-rc7.5](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.4...v2.0.0-rc7.5) (2026-07-31)
 
 ### Features
