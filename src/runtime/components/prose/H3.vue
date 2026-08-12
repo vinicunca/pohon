@@ -2,12 +2,19 @@
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
 import type { ComponentConfig } from '../../types/uv';
+import { isBoolean } from '@vinicunca/perkakas';
 import theme from '#build/ui/prose/h3';
 
 type ProseH3 = ComponentConfig<typeof theme, AppConfig, 'h3', 'ui.prose'>;
 
 export interface ProseH3Props {
   id?: string;
+  /**
+   * Wrap the heading in an anchor link when an `id` is present.
+   * `@nuxt/content` and `@nuxtjs/mdc` enable this for H2–H4 by default.
+   * @defaultValue false
+   */
+  anchor?: boolean;
   class?: any;
   ui?: ProseH3['slots'];
 }
@@ -31,11 +38,13 @@ defineSlots<ProseH3Slots>();
 const props = useComponentProps('prose.h3', _props);
 
 const appConfig = useAppConfig() as ProseH3['AppConfig'];
+
+// NOTE: the `mdc.headings.anchorLinks` fallback is deprecated, remove in v5 in favor of the `anchor` prop.
 const { headings } = useRuntimeConfig().public?.mdc || {};
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.h3 || {}) })());
 
-const generate = computed(() => props.id && typeof headings?.anchorLinks === 'object' && headings.anchorLinks.h3);
+const generate = computed(() => props.id && (props.anchor ?? (isBoolean(headings?.anchorLinks) ? headings.anchorLinks : headings?.anchorLinks?.h3) ?? false));
 </script>
 
 <template>
