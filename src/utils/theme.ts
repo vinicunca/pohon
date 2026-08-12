@@ -29,17 +29,9 @@ export function applyDefaultVariants(result: any, defaultVariants?: { color?: st
  * validate. Mirrors `tailwind-variants` shapes: a slot value is either a class
  * string/array or, inside `variants`/`compoundVariants`, an object mapping slot
  * names to classes.
- *
- * The top-level `base` is blanked too: slot-less themes (`container`, `kbd`,
- * `link`, `main`, …) carry all their classes there and have no `slots` object.
- *
- * Returns a new object rather than mutating `result`. Themes authored as plain
- * objects (as opposed to `(options) => ({ … })` factories) are module-level
- * singletons, so blanking one in place would leak the unstyled classes into
- * every later read of that same module.
  * @param result - The theme result object
  * @param unstyled - Whether to strip the theme classes
- * @returns A copy of the theme result with blanked class strings
+ * @returns The theme result with blanked class strings
  */
 export function applyUnstyled(result: any, unstyled?: boolean): any {
   if (!result || !unstyled) {
@@ -50,32 +42,37 @@ export function applyUnstyled(result: any, unstyled?: boolean): any {
     ? Object.fromEntries(Object.keys(value as Record<string, unknown>).map((slot) => [slot, '']))
     : '';
 
-  const unstyledResult = { ...result };
+  // Copy before reassigning: object-shaped themes are the shared module export
+  // (function-shaped ones produce a fresh object per call), and blanking the
+  // shared object in place would blank every later read — the Vue dev server
+  // re-generates themes as component detection grows.
+  result = { ...result };
 
-  // Guarded so a theme without `base` does not gain the key.
-  if (unstyledResult.base) {
-    unstyledResult.base = '';
+  // Single-element components have no `slots`: their classes live in a
+  // top-level `base` string (or array, when parts are conditional).
+  if (result.base) {
+    result.base = '';
   }
 
-  if (unstyledResult.slots) {
-    unstyledResult.slots = Object.fromEntries(Object.keys(unstyledResult.slots).map((slot) => [slot, '']));
+  if (result.slots) {
+    result.slots = Object.fromEntries(Object.keys(result.slots).map((slot) => [slot, '']));
   }
 
-  if (unstyledResult.variants) {
-    unstyledResult.variants = Object.fromEntries(
-      Object.entries(unstyledResult.variants).map(([name, group]) => [
+  if (result.variants) {
+    result.variants = Object.fromEntries(
+      Object.entries(result.variants).map(([name, group]) => [
         name,
         Object.fromEntries(Object.entries(group as Record<string, unknown>).map(([key, value]) => [key, blank(value)])),
       ]),
     );
   }
 
-  if (unstyledResult.compoundVariants) {
-    unstyledResult.compoundVariants = unstyledResult.compoundVariants.map((entry: Record<string, unknown>) => {
+  if (result.compoundVariants) {
+    result.compoundVariants = result.compoundVariants.map((entry: Record<string, unknown>) => {
       const { class: cls, ...selectors } = entry;
       return { ...selectors, class: blank(cls) };
     });
   }
 
-  return unstyledResult;
+  return result;
 }
