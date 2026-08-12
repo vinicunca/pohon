@@ -1,70 +1,55 @@
 name: release
 
-permissions:
-  contents: write
-
 on:
   push:
     tags:
       - "*"
 
 jobs:
-  release:
+  publish:
     runs-on: ${{ matrix.os }}
-    environment: npm
-
-    # nuxt-module-build / rollup can exceed Node's default ~2GB heap during prepack
-    env:
-      NODE_OPTIONS: --max-old-space-size=4096
 
     permissions:
-      id-token: write
       contents: read
 
     strategy:
       matrix:
         os: [ubuntu-latest] # macos-latest, windows-latest
-        node: [22]
+        node: [24]
+
+    env:
+      NUXT_GITHUB_TOKEN: ${{ secrets.NUXT_GITHUB_TOKEN }}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
 
       - name: Install node
         uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node }}
-
-      - uses: pnpm/action-setup@v6
-        name: Install pnpm
-        with:
-          run_install: false
-
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - uses: actions/cache@v5
-        name: Setup pnpm cache
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          cache: pnpm
 
       - name: Install dependencies
-        shell: bash
-        run: pnpm i --frozen-lockfile
-
-      - name: Update npm (Trusted Publishers requires npm >= 11.5.1)
-        # Workaround for npm/cli#9151: Node 22's bundled npm 10.9.7 is broken
-        # (missing promise-retry). Pin to 11.11.0 which installs successfully.
-        run: npm install -g npm@11.11.0
+        run: pnpm install
 
       - name: Prepare
         run: pnpm run dev:prepare
 
-      # Must publish from repo root for provenance to work with OIDC
-      - name: Publish to npm
-        run: npm publish --access public --provenance
+      - parallel:
+          - name: Lint
+            run: pnpm run lint
+          - name: Typecheck
+            run: pnpm run typecheck
+          - name: Test
+            run: pnpm run test run
+
+      - name: Publish
+        run: ./scripts/release.sh
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}

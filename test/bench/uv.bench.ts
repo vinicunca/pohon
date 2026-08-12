@@ -5,7 +5,7 @@ import tableTheme from '#build/ui/table';
 import { uv } from '../../src/runtime/utils/uv';
 
 // Representative invocation props for each component (mirrors the objects the
-// components pass to `tv(...)(...)` at runtime).
+// components pass to `uv(...)(...)` at runtime).
 const buttonProps = {
   color: 'primary',
   variant: 'solid',

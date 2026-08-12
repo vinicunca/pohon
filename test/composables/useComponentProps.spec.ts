@@ -63,7 +63,7 @@ describe('app.config defaultVariants', () => {
     });
 
     const root = wrapper.find('[data-slot="root"]');
-    // Drives both the `data-orientation` attribute and the tv class resolution,
+    // Drives both the `data-orientation` attribute and the uv class resolution,
     // even though `orientation` isn't set in the theme's `defaultVariants`.
     expect(root.attributes('data-orientation')).toBe('horizontal');
     expect(root.classes()).toContain('place-items-baseline');

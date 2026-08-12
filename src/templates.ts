@@ -143,7 +143,7 @@ type AppConfigUI = {
   icons?: Partial<IconsConfig>;
 } & UvConfig<typeof ui>;
 
-type AppConfigRuntimeUI = DeepRequired<Pick<AppConfigUI, 'colors' | 'icons' | 'tv'>> & typeof ui;
+type AppConfigRuntimeUI = DeepRequired<Pick<AppConfigUI, 'colors' | 'icons' | 'uv'>> & typeof ui;
 
 declare module '@nuxt/schema' {
   interface AppConfigInput {

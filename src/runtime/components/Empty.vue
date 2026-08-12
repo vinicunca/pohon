@@ -65,7 +65,7 @@ import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { uv } from '../utils/uv';
 import UAvatar from './Avatar.vue';
-import UButton from './Button.vue';
+import PButton from './Button.vue';
 
 const _props = defineProps<EmptyProps>();
 const slots = defineSlots<EmptySlots>();
@@ -109,7 +109,7 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.empty || {}) })(
       <slot name="body">
         <div v-if="props.actions?.length || !!slots.actions" data-slot="actions" :class="ui.actions({ class: props.ui?.actions })">
           <slot name="actions">
-            <UButton v-for="(action, index) in props.actions" :key="index" :size="props.size" v-bind="action" />
+            <PButton v-for="(action, index) in props.actions" :key="index" :size="props.size" v-bind="action" />
           </slot>
         </div>
       </slot>

@@ -9,7 +9,7 @@ const uvt = uv as unknown as (config?: any) => (variants?: any) => {
   label: (props?: any) => string;
 };
 
-describe('tv class replace', () => {
+describe('uv class replace', () => {
   const theme = {
     slots: { base: 'inline-flex rounded-md text-sm', label: 'truncate' },
     variants: {
@@ -85,8 +85,8 @@ describe('tv class replace', () => {
   });
 });
 
-describe('tv class replace (slotless component)', () => {
-  // A slotless theme has only a `base` and no `slots`, so `tv()(props)` returns
+describe('uv class replace (slotless component)', () => {
+  // A slotless theme has only a `base` and no `slots`, so `uv()(props)` returns
   // a string rather than an object of slot functions (e.g. the Container theme).
   const tvBase = uv as unknown as (config?: any) => (props?: any) => string;
   const build = () => tvBase({ extend: tvBase({ base: 'inline-flex rounded-md px-4' }) });

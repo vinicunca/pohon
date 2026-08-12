@@ -136,7 +136,7 @@ function applyReplacer(replacer: SlotClassReplacer, slotProps: Record<string, an
 }
 
 /**
- * Wrap the slot functions returned by `tv()` so a replacer (from `:ui` / `class`
+ * Wrap the slot functions returned by `uv()` so a replacer (from `:ui` / `class`
  * at call time, or from `app.config.ui` at construction time) drops the slot's
  * baked-in default chain and returns only its replacement. Without a replacer the
  * original slot function runs untouched, so the common merge path is unaffected.

@@ -158,7 +158,7 @@ import { useComponentProps } from '../composables/useComponentProps';
 import { useForwardProps } from '../composables/useForwardProps';
 import { useLocale } from '../composables/useLocale';
 import { uv } from '../utils/uv';
-import UButton from './Button.vue';
+import PButton from './Button.vue';
 
 const _props = withDefaults(defineProps<CalendarProps<R, M>>(), {
   type: 'date',
@@ -326,10 +326,10 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.calendar || {}) 
   >
     <Picker.Header data-slot="header" :class="ui.header({ class: props.ui?.header })">
       <Picker.Prev v-if="view === 'day' && props.yearControls" :prev-page="(date: DateValue) => paginateYear(date, -1)" :aria-label="t('calendar.prevYear')" as-child>
-        <UButton :icon="prevYearIcon" :size="props.size" color="neutral" variant="ghost" v-bind="props.prevYear" />
+        <PButton :icon="prevYearIcon" :size="props.size" color="neutral" variant="ghost" v-bind="props.prevYear" />
       </Picker.Prev>
       <Picker.Prev v-if="view !== 'day' || props.monthControls" :aria-label="prevLabel" as-child>
-        <UButton :icon="prevMonthIcon" :size="props.size" color="neutral" variant="ghost" v-bind="props.prevMonth" />
+        <PButton :icon="prevMonthIcon" :size="props.size" color="neutral" variant="ghost" v-bind="props.prevMonth" />
       </Picker.Prev>
       <Picker.Heading v-slot="{ headingValue }" data-slot="heading" :class="ui.heading({ class: props.ui?.heading })">
         <slot
@@ -340,7 +340,7 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.calendar || {}) 
           :set-view="setView"
           :set-placeholder="setPlaceholder"
         >
-          <UButton
+          <PButton
             v-if="switchable && props.viewControl"
             :label="headingValue"
             :size="props.size"
@@ -354,10 +354,10 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.calendar || {}) 
         </slot>
       </Picker.Heading>
       <Picker.Next v-if="view !== 'day' || props.monthControls" :aria-label="nextLabel" as-child>
-        <UButton :icon="nextMonthIcon" :size="props.size" color="neutral" variant="ghost" v-bind="props.nextMonth" />
+        <PButton :icon="nextMonthIcon" :size="props.size" color="neutral" variant="ghost" v-bind="props.nextMonth" />
       </Picker.Next>
       <Picker.Next v-if="view === 'day' && props.yearControls" :next-page="(date: DateValue) => paginateYear(date, 1)" :aria-label="t('calendar.nextYear')" as-child>
-        <UButton :icon="nextYearIcon" :size="props.size" color="neutral" variant="ghost" v-bind="props.nextYear" />
+        <PButton :icon="nextYearIcon" :size="props.size" color="neutral" variant="ghost" v-bind="props.nextYear" />
       </Picker.Next>
     </Picker.Header>
     <div data-slot="body" :class="ui.body({ class: props.ui?.body })">
