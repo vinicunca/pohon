@@ -2,7 +2,7 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { FormSchema, FormSubmitEvent, InferInput } from '../types/form';
+import type { FormData, FormSchema, FormSubmitEvent, InferInput } from '../types/form';
 import type { FormHTMLAttributes } from '../types/html';
 import type { NonUnion } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
@@ -140,7 +140,7 @@ const _props = withDefaults(
   },
 );
 
-defineEmits<AuthFormEmits<typeof state>>();
+defineEmits<AuthFormEmits<FormData<T>>>();
 
 const slots = defineSlots<AuthFormSlots<typeof state, F>>();
 
