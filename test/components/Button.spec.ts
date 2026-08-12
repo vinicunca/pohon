@@ -70,7 +70,7 @@ describe('button', () => {
     button.trigger('click');
     await flushPromises();
 
-    const icon = wrapper.findComponent({ name: 'Icon' });
+    const icon = wrapper.findComponent({ name: 'PIcon' });
 
     expect(icon.classes()).toContain('animate-spin');
     expect(icon?.vm?.name).toBe('i-lucide-loader-circle');

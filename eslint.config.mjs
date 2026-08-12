@@ -283,4 +283,13 @@ export default vinicuncaESLint(
       }],
     },
   },
+
+  {
+    files: [
+      'src/runtime/locale/**/*.ts',
+    ],
+    rules: {
+      camelcase: 'off',
+    },
+  },
 );

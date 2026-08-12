@@ -41,7 +41,7 @@ function propIsDefined(vnode: VNode | null | undefined, prop: string): boolean {
 
 /**
  * Resolve a component's props with the priority chain:
- *    explicit prop > nearest UTheme > app.config.ui.<name>.defaultVariants
+ *   explicit prop > nearest PTheme > app.config.ui.<name>.defaultVariants
  *     > withDefaults
  *
  * The returned proxy transparently reads from `props`, falling through to the

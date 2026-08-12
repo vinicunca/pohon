@@ -14,7 +14,7 @@ export default defineConfig({
   test: {
     testTimeout: 5000,
     globals: true,
-    silent: true,
+    // silent: true,
     resolveSnapshotPath(path, extension, { config }) {
       if (config.name === 'vue') {
         return path.replace(/\/([^/]+)\.spec\.ts$/, `/__snapshots__/$1-vue.spec.ts${extension}`);

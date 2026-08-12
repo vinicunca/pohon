@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 export { default as ar } from './ar';
 export { default as az } from './az';
 export { default as be } from './be';
@@ -9,6 +8,7 @@ export { default as ckb } from './ckb';
 export { default as cs } from './cs';
 export { default as da } from './da';
 export { default as de } from './de';
+export { default as de_at } from './de_at';
 export { default as de_ch } from './de_ch';
 export { default as el } from './el';
 export { default as en } from './en';
@@ -51,8 +51,8 @@ export { default as sk } from './sk';
 export { default as sl } from './sl';
 export { default as sq } from './sq';
 export { default as sv } from './sv';
+export { default as tg } from './tg';
 export { default as th } from './th';
-export { default as tj } from './tj';
 export { default as tr } from './tr';
 export { default as ug_cn } from './ug_cn';
 export { default as uk } from './uk';

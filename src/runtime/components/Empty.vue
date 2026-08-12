@@ -64,7 +64,7 @@ import { computed } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { uv } from '../utils/uv';
-import UAvatar from './Avatar.vue';
+import PAvatar from './Avatar.vue';
 import PButton from './Button.vue';
 
 const _props = defineProps<EmptyProps>();
@@ -88,7 +88,7 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.empty || {}) })(
     <div v-if="!!slots.header || (iconName || props.avatar || !!slots.leading) || (props.title || !!slots.title) || (props.description || !!slots.description)" data-slot="header" :class="ui.header({ class: props.ui?.header })">
       <slot name="header">
         <slot name="leading" :ui="ui">
-          <UAvatar v-if="iconName || props.avatar" :icon="iconName" v-bind="typeof props.avatar === 'object' ? props.avatar : {}" data-slot="avatar" :class="ui.avatar({ class: props.ui?.avatar })" />
+          <PAvatar v-if="iconName || props.avatar" :icon="iconName" v-bind="typeof props.avatar === 'object' ? props.avatar : {}" data-slot="avatar" :class="ui.avatar({ class: props.ui?.avatar })" />
         </slot>
 
         <h2 v-if="props.title || !!slots.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
