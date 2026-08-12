@@ -1,4 +1,5 @@
 import { fileURLToPath } from 'node:url';
+import codspeedPlugin from '@codspeed/vitest-plugin';
 import { defineVitestProject } from '@nuxt/test-utils/config';
 import vue from '@vitejs/plugin-vue';
 import { glob } from 'tinyglobby';
@@ -101,6 +102,9 @@ export default defineConfig({
           setupFiles: ['./test/utils/setup.ts'],
         },
         plugins: [
+          // Instruments benchmarks when running under the CodSpeed runner in CI,
+          // inactive for a local `pnpm bench`.
+          codspeedPlugin(),
           vue(),
           ui({
             dts: false,
