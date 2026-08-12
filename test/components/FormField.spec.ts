@@ -21,6 +21,16 @@ import {
 } from '#components';
 import { renderEach } from '../component-render';
 
+// Mock useId to force a consistent return value in Nuxt and Vue. This is required to test aria attributes.
+// `vi.mock` is hoisted to the top of the module, so it must live at the top level to reflect its actual execution order.
+vi.mock('vue', async () => {
+  const actual = await vi.importActual('vue');
+  return {
+    ...actual,
+    useId: () => 'v-0-0', // Static value matching Nuxt's format
+  };
+});
+
 const inputComponents = [PInput, PRadioGroup, PTextarea, PCheckbox, PSelect, PSelectMenu, PInputMenu, PInputNumber, PSwitch, PSlider, PPinInput, PFileUpload];
 
 async function renderFormField(options: {
@@ -99,15 +109,6 @@ describe('formField', () => {
   });
 
   describe.each(inputComponents.map((inputComponent) => [(inputComponent as any).__name, inputComponent]))('%s integration', async (name: string, inputComponent: any) => {
-    // Mock useId to force a consistent return value in Nuxt and Vue. This is required to test aria attributes.
-    vi.mock('vue', async () => {
-      const actual = await vi.importActual('vue');
-      return {
-        ...actual,
-        useId: () => 'v-0-0', // Static value matching Nuxt's format
-      };
-    });
-
     if (name === 'RadioGroup') {
       it('unbinds label for', async () => {
         const wrapper = await renderFormField({

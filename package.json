@@ -230,7 +230,7 @@
     "@tiptap/starter-kit": "^3.29.0",
     "@tiptap/suggestion": "^3.29.0",
     "@tiptap/vue-3": "^3.29.0",
-    "@unhead/vue": "^2.1.16",
+    "@unhead/vue": "^3.2.3",
     "@unocss/nuxt": "66.7.0",
     "@vinicunca/perkakas": "1.16.0",
     "@vueuse/core": "^14.3.0",
