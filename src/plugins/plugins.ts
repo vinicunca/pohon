@@ -12,7 +12,8 @@ import { runtimeDir } from '../unplugin';
  * Pohon UI _Nuxt_ plugins in `src/runtime/plugins/` in a pure Vue environment.
  */
 export default function PluginsPlugin(options: PohonUiOptions) {
-  const plugins = globSync(['**/*', '!*.d.ts'], { cwd: join(runtimeDir, 'plugins'), absolute: true });
+  // const plugins = globSync(['**/*', '!*.d.ts'], { cwd: join(runtimeDir, 'plugins'), absolute: true });
+  const plugins: Array<string> = [];
 
   plugins.unshift(resolvePathSync('../runtime/vue/plugins/router', { extensions: ['.ts', '.mjs', '.js'], url: import.meta.url }));
   plugins.unshift(resolvePathSync('../runtime/vue/plugins/head', { extensions: ['.ts', '.mjs', '.js'], url: import.meta.url }));
