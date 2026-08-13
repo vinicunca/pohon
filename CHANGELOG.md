@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.0-rc7.7](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.6...v2.0.0-rc7.7) (2026-08-13)
+
+### Features
+
+* remove plugin from vite ([8552e10](https://github.com/vinicunca/pohon/commit/8552e1048ff611d8010d94ae31679c44b18d7b30))
+
 ## [2.0.0-rc7.6](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.5...v2.0.0-rc7.6) (2026-08-12)
 
 ### Features
