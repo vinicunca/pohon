@@ -1,6 +1,8 @@
 ignoreWorkspaceRootCheck: true
 linkWorkspacePackages: true
-minimumReleaseAge: 0
+
+minimumReleaseAgeExclude:
+  - nuxt-agent-discovery@0.4.0
 
 packages:
   - ./

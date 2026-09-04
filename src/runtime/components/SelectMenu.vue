@@ -274,17 +274,20 @@ import PInput from './Input.vue';
 
 defineOptions({ inheritAttrs: false });
 
-const _props = withDefaults(defineProps<SelectMenuProps<T, VK, M, Mod, C>>(), {
-  portal: true,
-  searchInput: true,
-  labelKey: 'label',
-  descriptionKey: 'description',
-  resetSearchTermOnBlur: true,
-  resetSearchTermOnSelect: true,
-  resetModelValueOnClear: true,
-  autofocusDelay: 0,
-  virtualize: false,
-});
+const _props = withDefaults(
+  defineProps<SelectMenuProps<T, VK, M, Mod, C>>(),
+  {
+    portal: true,
+    searchInput: true,
+    labelKey: 'label',
+    descriptionKey: 'description',
+    resetSearchTermOnBlur: true,
+    resetSearchTermOnSelect: true,
+    resetModelValueOnClear: true,
+    autofocusDelay: 0,
+    virtualize: false,
+  },
+);
 const emits = defineEmits<SelectMenuEmits<T, VK, M, Mod, C>>();
 const slots = defineSlots<SelectMenuSlots<T, VK, M, Mod, C>>();
 
