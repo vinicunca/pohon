@@ -56,16 +56,12 @@ import { uv } from '../utils/uv';
 import PTooltip from './Tooltip.vue';
 
 defineOptions({ inheritAttrs: false });
-
-const _props = withDefaults(
-  defineProps<SliderProps>(),
-  {
-    min: 0,
-    max: 100,
-    step: 1,
-    orientation: 'horizontal',
-  },
-);
+const _props = withDefaults(defineProps<SliderProps>(), {
+  min: 0,
+  max: 100,
+  step: 1,
+  orientation: 'horizontal',
+});
 const emits = defineEmits<SliderEmits>();
 
 const props = useComponentProps<SliderProps>('slider', _props);
@@ -76,19 +72,12 @@ const appConfig = useAppConfig() as Slider['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'orientation', 'min', 'max', 'step', 'minStepsBetweenThumbs', 'inverted'));
 
-const {
-  id,
-  emitFormChange,
-  emitFormInput,
-  size: formFieldSize,
-  color: formFieldColor,
-  name,
-  disabled: formFieldDisabled,
-  ariaAttrs,
-} = useFormField<SliderProps>(_props);
+const { id, emitFormChange, emitFormInput, size: formFieldSize, color: formFieldColor, name, disabled: formFieldDisabled, ariaAttrs } = useFormField<SliderProps>(_props);
 
 const color = computed(() => formFieldColor.value ?? props.color);
+
 const size = computed(() => formFieldSize.value ?? props.size);
+
 const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
 const defaultSliderValue = computed(() => {
