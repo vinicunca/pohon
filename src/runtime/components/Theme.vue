@@ -1,9 +1,6 @@
 <script lang="ts">
 import type { VNode } from 'vue';
 import type { ThemeContextDefaults, ThemeDefaults, ThemeUI } from '../types/theme';
-import defu from 'defu';
-import { computed } from 'vue';
-import { injectThemeContext, provideThemeContext } from '../composables/useComponentProps';
 
 export interface ThemeProps {
   /**
@@ -25,6 +22,10 @@ export interface ThemeSlots {
 </script>
 
 <script setup lang="ts">
+import defu from 'defu';
+import { computed } from 'vue';
+import { injectThemeContext, provideThemeContext } from '../composables/useComponentProps';
+
 const _props = defineProps<ThemeProps>();
 defineSlots<ThemeSlots>();
 

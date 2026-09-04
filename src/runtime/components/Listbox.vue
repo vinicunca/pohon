@@ -10,7 +10,6 @@ import type { AvatarProps } from './Avatar.vue';
 import type { ChipProps } from './Chip.vue';
 import type { IconProps } from './Icon.vue';
 import type { InputProps } from './Input.vue';
-import { computed, toRaw, toRef } from 'vue';
 import theme from '#build/ui/listbox';
 
 type Listbox = ComponentConfig<typeof theme, AppConfig, 'listbox'>;
@@ -174,6 +173,7 @@ import {
 } from 'akar';
 import { defu } from 'defu';
 import { useAppConfig } from '#imports';
+import { computed, toRaw, toRef } from 'vue';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useFilter } from '../composables/useFilter';
 import { useFormField } from '../composables/useFormField';
