@@ -51,12 +51,12 @@ export interface ChatMessagesProps<T extends Array<UIMessage> = Array<UIMessage>
    * The `user` messages props.
    * `{ side: 'right', variant: 'soft' }`{lang="ts-type"}
    */
-  user?: Pick<PropsBase<T>, 'icon' | 'avatar' | 'variant' | 'side' | 'actions' | 'ui'>;
+  user?: Pick<PropsBase<T>, 'icon' | 'avatar' | 'variant' | 'side' | 'actions' | 'ui' | 'color'>;
   /**
    * The `assistant` messages props.
    * `{ side: 'left', variant: 'naked' }`{lang="ts-type"}
    */
-  assistant?: Pick<PropsBase<T>, 'icon' | 'avatar' | 'variant' | 'side' | 'actions' | 'ui'>;
+  assistant?: Pick<PropsBase<T>, 'icon' | 'avatar' | 'variant' | 'side' | 'actions' | 'ui' | 'color'>;
   /**
    * Render the messages in a compact style.
    * This is done automatically when used inside a `PChatPalette`{lang="ts-type"}.
@@ -87,7 +87,7 @@ export type ChatMessagesSlots<T extends Array<UIMessage> = Array<UIMessage>> = {
 import { useElementBounding, useEventListener, useMutationObserver, watchThrottled } from '@vueuse/core';
 import { Presence } from 'akar';
 import { defu } from 'defu';
-import { computed, nextTick, onMounted, ref, toRef, watch } from 'vue';
+import { computed, nextTick, onMounted, ref, shallowRef, toRef, watch } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { omit } from '../utils';
@@ -138,8 +138,8 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatMessages || 
   compact: props.compact,
 }));
 
-const el = ref<HTMLElement | null>(null);
-const parent = ref<HTMLElement | null>(null);
+const el = shallowRef<HTMLElement | null>(null);
+const parent = shallowRef<HTMLElement | null>(null);
 const messagesRefs = ref(new Map<string, HTMLElement>());
 
 const showAutoScroll = ref(false);
