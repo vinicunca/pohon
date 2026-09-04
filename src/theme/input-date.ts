@@ -8,7 +8,7 @@ export default (options: Required<ModuleOptions>) => {
     slots: {
       root: () => undefined,
       base: () => ['group relative inline-flex items-center rounded-md select-none', options.theme.transitions && 'transition-colors'],
-      segment: ['rounded text-center outline-hidden data-placeholder:text-dimmed data-[segment=literal]:text-muted data-invalid:text-error data-disabled:cursor-not-allowed data-disabled:opacity-75', options.theme.transitions && 'transition-colors'],
+      segment: ['rounded-sm text-center outline-hidden data-placeholder:text-dimmed data-[segment=literal]:text-muted data-invalid:text-error data-disabled:cursor-not-allowed data-disabled:opacity-75', options.theme.transitions && 'transition-colors'],
       separatorIcon: 'shrink-0 size-4 text-muted',
     },
     variants: {
@@ -39,35 +39,42 @@ export default (options: Required<ModuleOptions>) => {
         Object.entries(prev).map(([key, value]) => [key, replaceFocus(value)]),
       ),
     },
-    compoundVariants: (prev: Array<Record<string, any>>) => [...prev.map((item) => ({
-      ...item,
-      class: typeof item.class === 'string' ? replaceFocus(item.class) : item.class,
-    })), {
-      variant: 'outline',
-      class: {
-        segment: 'focus:bg-elevated',
+    compoundVariants: (prev: Array<Record<string, any>>) => [
+      ...prev.map((item) => ({
+        ...item,
+        class: typeof item.class === 'string' ? replaceFocus(item.class) : item.class,
+      })),
+      {
+        variant: 'outline',
+        class: {
+          segment: 'focus:bg-elevated',
+        },
       },
-    }, {
-      variant: 'soft',
-      class: {
-        segment: 'focus:bg-accented/50 group-hover:focus:bg-accented',
+      {
+        variant: 'soft',
+        class: {
+          segment: 'focus:bg-accented/50 group-hover:focus:bg-accented',
+        },
       },
-    }, {
-      variant: 'subtle',
-      class: {
-        segment: 'focus:bg-accented',
+      {
+        variant: 'subtle',
+        class: {
+          segment: 'focus:bg-accented',
+        },
       },
-    }, {
-      variant: 'ghost',
-      class: {
-        segment: 'focus:bg-elevated group-hover:focus:bg-accented',
+      {
+        variant: 'ghost',
+        class: {
+          segment: 'focus:bg-elevated group-hover:focus:bg-accented',
+        },
       },
-    }, {
-      variant: 'none',
-      class: {
-        segment: 'focus:bg-elevated',
+      {
+        variant: 'none',
+        class: {
+          segment: 'focus:bg-elevated',
+        },
       },
-    }],
+    ],
   }, input(options));
 };
 

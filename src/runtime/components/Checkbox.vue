@@ -37,7 +37,7 @@ export interface CheckboxProps<T = boolean> extends Pick<CheckboxRootProps<T>, '
   /** Highlight the ring color like a focus state. */
   highlight?: boolean;
   /**
-   * The icon displayed when checked.
+   * The icon displayed when checked, or above the label when `indicator` is `hidden`.
    * @defaultValue appConfig.ui.icons.check
    * @IconifyIcon
    */
@@ -84,25 +84,23 @@ const appConfig = useAppConfig() as Checkbox['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'required', 'value', 'defaultValue', 'modelValue', 'trueValue', 'falseValue'), emits);
 
-const {
-  id: _id,
-  emitFormChange,
-  emitFormInput,
-  size: formFieldSize,
-  color: formFieldColor,
-  highlight: formFieldHighlight,
-  name,
-  disabled: formFieldDisabled,
-  ariaAttrs,
-} = useFormField<CheckboxProps<T>>(_props);
+const { id: _id, emitFormChange, emitFormInput, size: formFieldSize, color: formFieldColor, highlight: formFieldHighlight, name, disabled: formFieldDisabled, ariaAttrs } = useFormField<CheckboxProps<T>>(_props);
 const id = _id.value ?? useId();
 
 const color = computed(() => formFieldColor.value ?? props.color);
+
 const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
+
 const size = computed(() => formFieldSize.value ?? props.size);
+
 const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
+// When the indicator is hidden the checked icon is never visible, so `icon` renders above the
+// label instead. No `appConfig` fallback here, an unset `icon` must render nothing.
+const labelIcon = computed(() => props.indicator === 'hidden' ? props.icon : undefined);
+
 const attrs = useAttrs();
+
 // Omit `data-state` to prevent conflicts with parent components (e.g. TooltipTrigger)
 const forwardedAttrs = computed(() => {
   const { 'data-state': _, ...rest } = attrs;
@@ -136,13 +134,13 @@ function onUpdate(value: any) {
         :id="id"
         v-bind="{ ...rootProps, ...forwardedAttrs, ...ariaAttrs }"
         :name="name"
-        :disabled="props.disabled"
+        :disabled="disabled"
         data-slot="base"
         :class="ui.base({ class: props.ui?.base })"
         @update:model-value="onUpdate"
       >
         <template #default="{ state }">
-          <CheckboxIndicator data-slot="indicator" :class="ui.indicator({ class: props.ui?.indicator })">
+          <CheckboxIndicator v-if="props.indicator !== 'hidden'" data-slot="indicator" :class="ui.indicator({ class: props.ui?.indicator })">
             <PIcon v-if="state === 'indeterminate'" :name="props.indeterminateIcon || appConfig.ui.icons.minus" data-slot="icon" :class="ui.icon({ class: props.ui?.icon })" />
             <PIcon v-else :name="props.icon || appConfig.ui.icons.check" data-slot="icon" :class="ui.icon({ class: props.ui?.icon })" />
           </CheckboxIndicator>
@@ -150,7 +148,8 @@ function onUpdate(value: any) {
       </CheckboxRoot>
     </div>
 
-    <div v-if="(props.label || !!slots.label) || (props.description || !!slots.description)" data-slot="wrapper" :class="ui.wrapper({ class: props.ui?.wrapper })">
+    <div v-if="labelIcon || (props.label || !!slots.label) || (props.description || !!slots.description)" data-slot="wrapper" :class="ui.wrapper({ class: props.ui?.wrapper })">
+      <PIcon v-if="labelIcon" :name="labelIcon" data-slot="icon" :class="ui.icon({ class: props.ui?.icon })" />
       <component :is="(!props.variant || props.variant === 'list') ? Label : 'p'" v-if="props.label || !!slots.label" :for="id" data-slot="label" :class="ui.label({ class: props.ui?.label })">
         <slot name="label" :label="props.label">
           {{ props.label }}

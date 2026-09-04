@@ -5,6 +5,7 @@ import type { VNode } from 'vue';
 import type { AcceptableValue, GetItemKeys, GetModelValue, GetModelValueEmits } from '../types/utils';
 import type { ComponentConfig } from '../types/uv';
 import type { CheckboxProps } from './Checkbox.vue';
+import type { IconProps } from './Icon.vue';
 import theme from '#build/ui/checkbox-group';
 
 type CheckboxGroup = ComponentConfig<typeof theme, AppConfig, 'checkboxGroup'>;
@@ -16,6 +17,11 @@ export type CheckboxGroupItem = CheckboxGroupValue | {
   description?: string;
   disabled?: boolean;
   value?: string;
+  /**
+   * The icon displayed when checked, or above the label when `indicator` is `hidden`.
+   * @IconifyIcon
+   */
+  icon?: IconProps['name'];
   class?: any;
   ui?: Pick<CheckboxGroup['slots'], 'item'> & Omit<Required<CheckboxProps>['ui'], 'root'>;
   [key: string]: any;
@@ -107,7 +113,7 @@ const props = useComponentProps<CheckboxGroupProps<T, VK>>('checkboxGroup', _pro
 const appConfig = useAppConfig() as CheckboxGroup['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'modelValue', 'defaultValue', 'orientation', 'loop', 'required'), emits);
-const checkboxProps = useForwardProps(reactivePick(props, 'variant', 'indicator', 'icon'));
+const checkboxProps = useForwardProps(reactivePick(props, 'variant', 'indicator'));
 const getProxySlots = () => omit(slots, ['legend']);
 
 const {
@@ -125,8 +131,7 @@ const id = _id.value ?? useId();
 
 // `color`, `size` and `highlight` are group-level only, they are not part of the item API, so
 // every child gets the group's resolved value. Resolving them here rather than at each binding
-// keeps the `tv()` call and the forwarding to `UCheckbox` in sync.
-
+// keeps the `uv()` call and the forwarding to `PCheckbox` in sync.
 const color = computed(() => formFieldColor.value ?? props.color);
 const size = computed(() => formFieldSize.value ?? props.size);
 const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
@@ -194,7 +199,7 @@ function onUpdate(value: any) {
     :id="id"
     v-bind="(rootProps as any)"
     :name="name"
-    :disabled="props.disabled"
+    :disabled="disabled"
     data-slot="root"
     :class="ui.root({ class: [props.ui?.root, props.class] })"
     @update:model-value="onUpdate"
@@ -210,14 +215,15 @@ function onUpdate(value: any) {
         v-for="item in normalizedItems"
         :key="item.value"
         v-bind="{ ...item, ...checkboxProps }"
-        :color="props.color"
-        :highlight="props.highlight"
-        :size="props.size"
+        :icon="item.icon ?? props.icon"
+        :color="color"
+        :highlight="highlight"
+        :size="size"
         :name="name"
-        :disabled="item.disabled || props.disabled"
+        :disabled="item.disabled || disabled"
         :ui="{ ...(props.ui ? omit(props.ui, ['root']) : undefined), ...(item.ui || {}) }"
         data-slot="item"
-        :class="ui.item({ class: [props.ui?.item, item.ui?.item, item.class], disabled: item.disabled || props.disabled })"
+        :class="ui.item({ class: [props.ui?.item, item.ui?.item, item.class], disabled: item.disabled || disabled })"
       >
         <template v-for="(_, name) in getProxySlots()" #[name]>
           <slot :name="(name as keyof CheckboxGroupSlots<T>)" :item="item" />
