@@ -44,6 +44,9 @@ function propIsDefined(vnode: VNode | null | undefined, prop: string): boolean {
  *   explicit prop > nearest PTheme > app.config.ui.<name>.defaultVariants
  *     > withDefaults
  *
+ * `class` is the exception: theme and explicit classes are concatenated so the
+ * CSS cascade resolves conflicts without class merging.
+ *
  * The returned proxy transparently reads from `props`, falling through to the
  * injected `ThemeContext` and `app.config.ui.<name>.defaultVariants` for
  * defaults. The component's uv() `defaultVariants` are intentionally left out
@@ -88,11 +91,15 @@ export function useComponentProps<T extends object>(name: string, props: T): T {
         return defu(raw ?? {}, themeUi ?? {});
       }
 
+      const themeValue = themeEntry?.[prop];
+      if (prop === 'class' && themeValue !== undefined && raw !== undefined) {
+        return [themeValue, raw];
+      }
+
       if (vm && propIsDefined(vm.vnode, prop)) {
         return raw;
       }
 
-      const themeValue = themeEntry?.[prop];
       if (themeValue !== undefined) {
         return themeValue;
       }

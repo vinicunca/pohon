@@ -109,7 +109,7 @@ describe('formField', () => {
   });
 
   describe.each(inputComponents.map((inputComponent) => [(inputComponent as any).__name, inputComponent]))('%s integration', async (name: string, inputComponent: any) => {
-    if (name === 'PRadioGroup') {
+    if (inputComponent === PRadioGroup) {
       it('unbinds label for', async () => {
         const wrapper = await renderFormField({
           props: { label: 'Label' },

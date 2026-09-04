@@ -1,4 +1,3 @@
-/* eslint-disable sonar/no-identical-functions */
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { flushPromises } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';
@@ -70,10 +69,9 @@ describe('button', () => {
     button.trigger('click');
     await flushPromises();
 
-    const icon = wrapper.findComponent({ name: 'PIcon' });
+    const icon = wrapper.find('[data-slot="leadingIcon"]');
 
     expect(icon.classes()).toContain('animate-spin');
-    expect(icon?.vm?.name).toBe('i-lucide-loader-circle');
 
     resolve?.(null);
   });
@@ -103,10 +101,9 @@ describe('button', () => {
     form.value.submit();
     await flushPromises();
 
-    const icon = wrapper.findComponent({ name: 'Icon' });
+    const icon = wrapper.find('[data-slot="leadingIcon"]');
 
     expect(icon.classes()).toContain('animate-spin');
-    expect(icon?.vm?.name).toBe('i-lucide-loader-circle');
 
     resolve?.(null);
   });

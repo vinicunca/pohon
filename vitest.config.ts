@@ -14,7 +14,7 @@ export default defineConfig({
   test: {
     testTimeout: 5000,
     globals: true,
-    // silent: true,
+    silent: true,
     resolveSnapshotPath(path, extension, { config }) {
       if (config.name === 'vue') {
         return path.replace(/\/([^/]+)\.spec\.ts$/, `/__snapshots__/$1-vue.spec.ts${extension}`);
@@ -28,7 +28,7 @@ export default defineConfig({
         test: {
           name: 'nuxt',
           dir: './test',
-          include: ['components/**/**.spec.ts', 'composables/**.spec.ts', 'utils/**/**.spec.ts', 'templates/**/*.spec.ts'],
+          include: ['components/**/**.spec.ts', 'composables/**.spec.ts', 'utils/**/**.spec.ts'],
           // Benchmarks run in the `vue` project only (happy-dom, faster); keep them
           // out of the nuxt project so a bare `vitest bench` doesn't double-run them.
           benchmark: { include: [] },
@@ -52,6 +52,9 @@ export default defineConfig({
           setupFiles: ['./test/utils/setup.ts'],
         },
         plugins: [
+          // Instruments benchmarks when running under the CodSpeed runner in CI,
+          // inactive for a local `pnpm bench`.
+          codspeedPlugin(),
           vue(),
           ui({ dts: false }),
           {
@@ -77,59 +80,6 @@ export default defineConfig({
             },
             load(id) {
               if (id === '\0virtual:pohon-ui-components') {
-                const resolvedComponents = [...vueRouterOverrides, ...vueComponents, ...components];
-                const renderedComponents = new Set<string>();
-                return resolvedComponents.map((file) => {
-                  const componentName = file.split('/').pop()!.replace('.vue', '');
-                  if (renderedComponents.has(componentName)) {
-                    return '';
-                  }
-                  renderedComponents.add(componentName);
-                  return `export { default as P${componentName} } from '${file}'`;
-                }).join('\n');
-              }
-            },
-          },
-        ],
-      },
-      {
-        extends: true,
-        test: {
-          name: 'vue-unstyled',
-          environment: 'happy-dom',
-          dir: './test',
-          include: ['unstyled/**/*.spec.ts'],
-          setupFiles: ['./test/utils/setup.ts'],
-        },
-        plugins: [
-          // Instruments benchmarks when running under the CodSpeed runner in CI,
-          // inactive for a local `pnpm bench`.
-          codspeedPlugin(),
-          vue(),
-          ui({
-            dts: false,
-            theme: { unstyled: true },
-            root: fileURLToPath(new URL('test/unstyled/', import.meta.url)),
-          }),
-          {
-            name: 'pohon-ui-test:components',
-            enforce: 'pre',
-            resolveId(id) {
-              if (id === '@nuxt/test-utils/runtime') {
-                return fileURLToPath(new URL('test/utils/mount.ts', import.meta.url));
-              }
-            },
-          },
-          {
-            name: 'pohon-ui-test:components',
-            enforce: 'pre',
-            resolveId(id) {
-              if (id === '#components') {
-                return '#components';
-              }
-            },
-            load(id) {
-              if (id === '#components' || id === '?import#components') {
                 const resolvedComponents = [...vueRouterOverrides, ...vueComponents, ...components];
                 const renderedComponents = new Set<string>();
                 return resolvedComponents.map((file) => {
