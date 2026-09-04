@@ -127,6 +127,7 @@ export interface ThemeDefaults {
   pricingPlans?: Partial<ComponentTypes.PricingPlansProps>;
   pricingTable?: Partial<ComponentTypes.PricingTableProps>;
   progress?: Partial<ComponentTypes.ProgressProps>;
+  progressGroup?: Partial<ComponentTypes.ProgressGroupProps>;
   /**
    * Prose components that expose overridable props, under a `prose` namespace
    * (mirrors `app.config.ui.prose` and `useComponentProps('prose.<tag>', …)`).
@@ -292,6 +293,7 @@ export type PThemePricingPlan = UvConfig<typeof ui>['pricingPlan'];
 export type PThemePricingPlans = UvConfig<typeof ui>['pricingPlans'];
 export type PThemePricingTable = UvConfig<typeof ui>['pricingTable'];
 export type PThemeProgress = UvConfig<typeof ui>['progress'];
+export type PThemeProgressGroup = UvConfig<typeof ui>['progressGroup'];
 export type PThemeRadioGroup = UvConfig<typeof ui>['radioGroup'];
 export type PThemeScrollArea = UvConfig<typeof ui>['scrollArea'];
 export type PThemeSelectMenu = UvConfig<typeof ui>['selectMenu'];
@@ -301,6 +303,7 @@ export type PThemeSidebar = UvConfig<typeof ui>['sidebar'];
 export type PThemeSkeleton = UvConfig<typeof ui>['skeleton'];
 export type PThemeSlideover = UvConfig<typeof ui>['slideover'];
 export type PThemeSlider = UvConfig<typeof ui>['slider'];
+export type PThemeSplitter = UvConfig<typeof ui>['splitter'];
 export type PThemeStepper = UvConfig<typeof ui>['stepper'];
 export type PThemeSwitch = UvConfig<typeof ui>['switch'];
 export type PThemeTable = UvConfig<typeof ui>['table'];
