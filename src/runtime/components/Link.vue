@@ -111,6 +111,10 @@ interface NuxtLinkDefaultSlotProps {
   rel: string | null;
   target: '_blank' | '_parent' | '_self' | '_top' | (string & {}) | null;
   isExternal: boolean;
+  // exposed since Nuxt 4.5, which stopped prefetching `custom` links itself
+  prefetch?: (nuxtApp?: any) => Promise<void>;
+  prefetched?: boolean;
+  shouldPrefetch?: (mode: 'visibility' | 'interaction') => boolean;
 }
 </script>
 
@@ -120,10 +124,11 @@ import { Slot, useForwardProps } from 'akar';
 import { defu } from 'defu';
 import { isEqual } from 'ohash/utils';
 import { hasProtocol } from 'ufo';
-import { computed } from 'vue';
+import { computed, getCurrentInstance, mergeProps, onBeforeUnmount, onMounted } from 'vue';
 import { useAppConfig, useNuxtApp, useRoute } from '#imports';
 import { mergeClasses } from '../utils';
 import { isPartiallyEqual } from '../utils/link';
+import { cancelIdleCallback, observeIntersection, requestIdleCallback } from '../utils/prefetch';
 import { uv } from '../utils/uv';
 import PLinkBase from './LinkBase.vue';
 
@@ -267,15 +272,81 @@ function isLinkActive({ route: linkRoute, isActive, isExactActive }: any = {}) {
   return false;
 }
 
-function resolveLinkClass({ route, isActive, isExactActive }: any = {}) {
+function resolveLinkClass({ route, isActive, isExactActive, prefetched }: any = {}) {
   const active = isLinkActive({ route, isActive, isExactActive });
+  const prefetchedClass = prefetched ? props.prefetchedClass : undefined;
 
   if (props.raw) {
-    return [props.class, active ? props.activeClass : props.inactiveClass];
+    return [props.class, active ? props.activeClass : props.inactiveClass, prefetchedClass];
   }
 
-  return ui.value({ class: props.class, active, disabled: props.disabled });
+  return ui.value({ class: prefetchedClass ? [props.class, prefetchedClass] : props.class, active, disabled: props.disabled });
 }
+
+// Since Nuxt 4.5, NuxtLink no longer prefetches `custom` links itself and
+// exposes `prefetch` / `shouldPrefetch` to the slot instead. Both triggers are
+// wired here on the rendered element, whether it is our own `PLinkBase` or the
+// element a custom slot renders. Older Nuxt versions pass neither and keep
+// observing on their own.
+const instance = getCurrentInstance();
+
+let prefetchApi: Pick<NuxtLinkDefaultSlotProps, 'prefetch' | 'shouldPrefetch'> | undefined;
+
+// Called with the app explicitly: NuxtLink's `prefetch` takes an optional
+// `nuxtApp` and would otherwise receive the event.
+function onPrefetch() {
+  prefetchApi?.prefetch?.(nuxtApp);
+}
+
+function getPrefetchListeners({ prefetch, shouldPrefetch }: NuxtLinkDefaultSlotProps, attrs: Record<string, unknown>) {
+  if (!prefetch || !shouldPrefetch) {
+    return undefined;
+  }
+
+  prefetchApi = { prefetch, shouldPrefetch };
+
+  if (!shouldPrefetch('interaction')) {
+    return undefined;
+  }
+
+  // Callers may listen to the same events on the link, keep their handlers.
+  return mergeProps(
+    { onPointerenter: attrs.onPointerenter, onFocus: attrs.onFocus },
+    { onPointerenter: onPrefetch, onFocus: onPrefetch },
+  );
+}
+
+let idleId: ReturnType<typeof requestIdleCallback>;
+let unobserve: (() => void) | null = null;
+
+onMounted(() => {
+  if (!prefetchApi?.shouldPrefetch?.('visibility')) {
+    return;
+  }
+
+  // Our root is the custom NuxtLink's fragment anchor, so the rendered element
+  // is its next sibling. This is the element NuxtLink itself observed for
+  // custom links before 4.5.
+  const root = instance?.proxy?.$el as Element | CharacterData | null;
+  const el = root instanceof Element ? root : root?.nextElementSibling;
+  if (!el) {
+    return;
+  }
+
+  idleId = requestIdleCallback(() => {
+    unobserve = observeIntersection(el, () => {
+      unobserve?.();
+      unobserve = null;
+      onPrefetch();
+    });
+  });
+});
+
+onBeforeUnmount(() => {
+  cancelIdleCallback(idleId);
+  unobserve?.();
+  unobserve = null;
+});
 </script>
 
 <template>
@@ -285,6 +356,8 @@ function resolveLinkClass({ route, isActive, isExactActive }: any = {}) {
         v-bind="{
           ...$attrs,
           ...(exact && isExactActive ? { 'aria-current': props.ariaCurrentValue } : {}),
+          ...((rest as NuxtLinkDefaultSlotProps).prefetched && prefetchedClass ? { class: prefetchedClass } : {}),
+          ...getPrefetchListeners(rest as NuxtLinkDefaultSlotProps, $attrs),
           as,
           type,
           disabled,
@@ -310,8 +383,9 @@ function resolveLinkClass({ route, isActive, isExactActive }: any = {}) {
         rel,
         target: (rest as NuxtLinkDefaultSlotProps).target,
         isExternal: (rest as NuxtLinkDefaultSlotProps).isExternal,
+        ...getPrefetchListeners(rest as NuxtLinkDefaultSlotProps, $attrs),
       }"
-      :class="resolveLinkClass({ route: linkRoute, isActive, isExactActive })"
+      :class="resolveLinkClass({ route: linkRoute, isActive, isExactActive, prefetched: (rest as NuxtLinkDefaultSlotProps).prefetched })"
     >
       <slot :active="isLinkActive({ route: linkRoute, isActive, isExactActive })" />
     </PLinkBase>
