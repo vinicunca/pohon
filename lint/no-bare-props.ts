@@ -1,4 +1,43 @@
-import { vinicuncaESLint } from '@vinicunca/eslint-config';
+import type { Rule } from 'eslint';
+
+type IdentifierNode = Extract<Rule.Node, { type: 'Identifier' }>;
+type VariableDeclaratorNode = Extract<Rule.Node, { type: 'VariableDeclarator' }>;
+type FunctionDeclarationNode = Extract<Rule.Node, { type: 'FunctionDeclaration' }>;
+type ClassDeclarationNode = Extract<Rule.Node, { type: 'ClassDeclaration' }>;
+type ImportDeclarationNode = Extract<Rule.Node, { type: 'ImportDeclaration' }>;
+type CallExpressionNode = Extract<Rule.Node, { type: 'CallExpression' }>;
+type BindingPattern
+  = { type: 'Identifier'; name: string }
+    | { type: 'ObjectPattern'; properties: Array<ObjectPatternProperty | RestElementPattern> }
+    | { type: 'ArrayPattern'; elements: Array<BindingPattern | RestElementPattern | null> }
+    | { type: 'AssignmentPattern'; left: BindingPattern }
+    | RestElementPattern;
+
+interface ObjectPatternProperty {
+  type: 'Property';
+  value: BindingPattern;
+}
+
+interface RestElementPattern {
+  type: 'RestElement';
+  argument: BindingPattern;
+}
+
+interface TemplateExpressionContainer {
+  references?: Array<{
+    variable?: unknown;
+    id: IdentifierNode;
+  }>;
+}
+
+interface TemplateParserServices {
+  defineTemplateBodyVisitor(
+    templateBodyVisitor: {
+      VExpressionContainer(node: TemplateExpressionContainer): void;
+    },
+    scriptVisitor: Rule.RuleListener,
+  ): Rule.RuleListener;
+}
 
 /**
  * Flag bare prop references in templates of components that use
@@ -53,7 +92,8 @@ const KNOWN_GLOBALS = new Set([
   'encodeURIComponent',
   'decodeURIComponent',
 ]);
-const noBarePropRefs = {
+
+export const noBarePropRefs: Rule.RuleModule = {
   meta: {
     type: 'problem',
     docs: {
@@ -66,7 +106,7 @@ const noBarePropRefs = {
     },
   },
   create(context) {
-    const parserServices = context.sourceCode?.parserServices ?? context.parserServices;
+    const parserServices = context.sourceCode.parserServices as Partial<TemplateParserServices>;
     if (!parserServices?.defineTemplateBodyVisitor) {
       return {};
     }
@@ -76,8 +116,8 @@ const noBarePropRefs = {
     let rawPropsVar = '_props';
     const setupBindings = new Set();
 
-    function collectIdsFromPattern(pattern) {
-      if (!pattern) {
+    function collectIdsFromPattern(pattern: unknown) {
+      if (!isBindingPattern(pattern)) {
         return;
       }
       if (pattern.type === 'Identifier') {
@@ -101,6 +141,14 @@ const noBarePropRefs = {
       } else if (pattern.type === 'RestElement') {
         collectIdsFromPattern(pattern.argument);
       }
+    }
+
+    function isBindingPattern(value: unknown): value is BindingPattern {
+      return typeof value === 'object'
+        && value !== null
+        && 'type' in value
+        && typeof value.type === 'string'
+        && ['Identifier', 'ObjectPattern', 'ArrayPattern', 'AssignmentPattern', 'RestElement'].includes(value.type);
     }
 
     return parserServices.defineTemplateBodyVisitor(
@@ -162,27 +210,27 @@ const noBarePropRefs = {
         },
       },
       {
-        'Program > VariableDeclaration > VariableDeclarator': function (node) {
+        'Program > VariableDeclaration > VariableDeclarator': function (node: VariableDeclaratorNode) {
           collectIdsFromPattern(node.id);
         },
-        'Program > FunctionDeclaration': function (node) {
+        'Program > FunctionDeclaration': function (node: FunctionDeclarationNode) {
           if (node.id?.type === 'Identifier') {
             setupBindings.add(node.id.name);
           }
         },
-        'Program > ClassDeclaration': function (node) {
+        'Program > ClassDeclaration': function (node: ClassDeclarationNode) {
           if (node.id?.type === 'Identifier') {
             setupBindings.add(node.id.name);
           }
         },
-        ImportDeclaration(node) {
+        ImportDeclaration(node: ImportDeclarationNode) {
           for (const spec of node.specifiers) {
             if (spec.local?.type === 'Identifier') {
               setupBindings.add(spec.local.name);
             }
           }
         },
-        'CallExpression[callee.name="useComponentProps"]': function (node) {
+        'CallExpression[callee.name="useComponentProps"]': function (node: CallExpressionNode) {
           usesComponentProps = true;
           const decl = node.parent?.type === 'VariableDeclarator' ? node.parent : null;
           if (decl?.id?.type === 'Identifier') {
@@ -197,99 +245,3 @@ const noBarePropRefs = {
     );
   },
 };
-
-export default vinicuncaESLint(
-  {
-    ignores: [
-      '.github/**/*.md',
-      'skills/**/*.md',
-      // TODO: remove when docs is ready
-      'docs/**',
-    ],
-    unocss: {
-      configPath: 'playgrounds/nuxt/uno.config.ts',
-    },
-  },
-  {
-    rules: {
-      'import/first': 'off',
-      'import/order': 'off',
-      'vue/multi-word-component-names': 'off',
-      '@typescript-eslint/ban-types': 'off',
-      '@typescript-eslint/no-empty-object-type': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-      'no-restricted-syntax': 'off',
-      'node/prefer-global/process': 'off',
-      'no-await-in-loop': 'off',
-      'no-nested-ternary': 'off',
-      'ts/consistent-type-definitions': 'off',
-      'ts/method-signature-style': 'off',
-      'pnpm/yaml-enforce-settings': 'off',
-
-      'sonar/no-nested-template-literals': 'off',
-      'sonar/no-nested-functions': 'off',
-      'sonar/use-type-alias': 'off',
-      'sonar/redundant-type-aliases': 'off',
-      'sonar/no-nested-conditional': 'off',
-      'sonar/void-use': 'off',
-      'sonar/no-empty-test-file': 'off',
-      'sonar/no-hardcoded-passwords': 'off',
-      'sonar/fixme-tag': 'off',
-    },
-  },
-
-  {
-    files: ['src/**/*.vue'],
-    rules: {
-      'vue/max-attributes-per-line': ['error', { singleline: 5 }],
-    },
-  },
-
-  {
-    files: [
-      'playgrounds/**',
-      'test/**',
-    ],
-    rules: {
-      'no-console': 'off',
-    },
-  },
-
-  {
-    files: ['src/runtime/components/**/*.vue'],
-    plugins: {
-      'pohon-ui': {
-        rules: {
-          'no-bare-prop-refs': noBarePropRefs,
-        },
-      },
-    },
-    rules: {
-      'pohon-ui/no-bare-prop-refs': 'error',
-    },
-  },
-
-  {
-    files: [
-      'src/runtime/components/**/*.vue',
-      'src/runtime/composables/**/*.ts',
-    ],
-    rules: {
-      'no-restricted-imports': ['error', {
-        paths: [
-          { name: '../types', message: 'Import cross-component types from their source file (e.g. \'./Button.vue\') or a specific \'../types/*\' module, not the \'../types\' barrel: it re-exports every component, so one import eagerly loads the whole library into a consumer\'s type graph.' },
-          { name: '../../types', message: 'Import cross-component types from their source file (e.g. \'./Button.vue\') or a specific \'../../types/*\' module, not the \'../../types\' barrel: it re-exports every component, so one import eagerly loads the whole library into a consumer\'s type graph.' },
-        ],
-      }],
-    },
-  },
-
-  {
-    files: [
-      'src/runtime/locale/**/*.ts',
-    ],
-    rules: {
-      camelcase: 'off',
-    },
-  },
-);

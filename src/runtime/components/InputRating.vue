@@ -90,17 +90,31 @@ const appConfig = useAppConfig() as InputRating['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'length', 'step', 'hoverable', 'clearable', 'required', 'modelValue', 'defaultValue'), emits);
 
-const { id, emitFormChange, emitFormInput, size, color, name, disabled: formDisabled, ariaAttrs } = useFormField<InputRatingProps>(_props);
+const {
+  id,
+  emitFormChange,
+  emitFormInput,
+  size: formFieldSize,
+  color: formFieldColor,
+  name,
+  disabled: formFieldDisabled,
+  ariaAttrs,
+} = useFormField<InputRatingProps>(_props);
 
+const color = computed(() => formFieldColor.value ?? props.color);
+
+const size = computed(() => formFieldSize.value ?? props.size);
+
+const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 // `readonly` blocks interaction too, but only an explicit `disabled` dims the control.
-const disabled = computed(() => formDisabled.value || props.readonly);
+const rootDisabled = computed(() => disabled.value || props.readonly);
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputRating || {}) })({
-  size: size.value ?? props.size,
-  color: color.value ?? props.color,
+  size: size.value,
+  color: color.value,
   orientation: props.orientation,
-  readonly: props.readonly && !formDisabled.value,
-  disabled: formDisabled.value,
+  readonly: props.readonly && !disabled.value,
+  disabled: disabled.value,
 }));
 
 const starIcon = computed(() => props.icon ?? appConfig.ui.icons.star);
@@ -121,7 +135,7 @@ function onUpdate(value: number) {
     data-slot="root"
     v-bind="{ ...rootProps, ...$attrs, ...ariaAttrs }"
     :name="name"
-    :disabled="disabled"
+    :disabled="rootDisabled"
     :aria-readonly="props.readonly || undefined"
     :orientation="props.orientation"
     :class="ui.root({ class: [props.ui?.root, props.class] })"

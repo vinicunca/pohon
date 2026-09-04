@@ -172,8 +172,8 @@ import {
   ListboxVirtualizer,
 } from 'akar';
 import { defu } from 'defu';
-import { useAppConfig } from '#imports';
 import { computed, toRaw, toRef } from 'vue';
+import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useFilter } from '../composables/useFilter';
 import { useFormField } from '../composables/useFormField';
@@ -189,17 +189,14 @@ import PInput from './Input.vue';
 
 defineOptions({ inheritAttrs: false });
 
-const _props = withDefaults(
-  defineProps<ListboxProps<T, VK, M, Mod>>(),
-  {
-    labelKey: 'label',
-    descriptionKey: 'description',
-    highlightOnHover: true,
-    filter: false,
-    autofocusDelay: 0,
-    virtualize: false,
-  },
-);
+const _props = withDefaults(defineProps<ListboxProps<T, VK, M, Mod>>(), {
+  labelKey: 'label',
+  descriptionKey: 'description',
+  highlightOnHover: true,
+  filter: false,
+  autofocusDelay: 0,
+  virtualize: false,
+});
 const emits = defineEmits<ListboxEmits<T, VK, M, Mod>>();
 const slots = defineSlots<ListboxSlots<T>>();
 
@@ -219,12 +216,30 @@ const virtualizerProps = toRef(() => {
   }
 
   return defu(typeof props.virtualize === 'boolean' ? {} : props.virtualize, {
-    estimateSize: getEstimateSize(filteredItems.value, size.value || 'md', props.descriptionKey as string, !!slots['item-description']),
+    estimateSize: getEstimateSize(filteredItems.value, size.value ?? 'md', props.descriptionKey as string, !!slots['item-description']),
   });
 });
 const inputProps = toRef(() => defu(typeof props.filter === 'object' ? props.filter : {}, { placeholder: t('listbox.search'), variant: 'none' }) as Omit<InputProps, 'modelValue' | 'defaultValue'>);
 
-const { emitFormChange, emitFormInput, name, size, color, id, highlight, disabled, ariaAttrs } = useFormField<InputProps>(_props, { bind: false });
+const {
+  emitFormChange,
+  emitFormInput,
+  name,
+  size: formFieldSize,
+  color: formFieldColor,
+  id,
+  highlight: formFieldHighlight,
+  disabled: formFieldDisabled,
+  ariaAttrs,
+} = useFormField<InputProps>(_props, { bind: false });
+
+const color = computed(() => formFieldColor.value ?? props.color);
+
+const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
+
+const size = computed(() => formFieldSize.value ?? props.size);
+
+const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
 const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: ListboxItem; index: number }>({
   props: {
@@ -240,9 +255,9 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: L
 });
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.listbox || {}) })({
-  color: color.value ?? props.color,
-  size: size.value ?? props.size,
-  highlight: highlight.value ?? props.highlight,
+  color: color.value,
+  size: size.value,
+  highlight: highlight.value,
   disabled: disabled.value,
   virtualize: !!props.virtualize,
 }));

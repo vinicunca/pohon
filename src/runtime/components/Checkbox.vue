@@ -84,8 +84,23 @@ const appConfig = useAppConfig() as Checkbox['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'required', 'value', 'defaultValue', 'modelValue', 'trueValue', 'falseValue'), emits);
 
-const { id: _id, emitFormChange, emitFormInput, size, color, highlight, name, disabled, ariaAttrs } = useFormField<CheckboxProps<T>>(_props);
+const {
+  id: _id,
+  emitFormChange,
+  emitFormInput,
+  size: formFieldSize,
+  color: formFieldColor,
+  highlight: formFieldHighlight,
+  name,
+  disabled: formFieldDisabled,
+  ariaAttrs,
+} = useFormField<CheckboxProps<T>>(_props);
 const id = _id.value ?? useId();
+
+const color = computed(() => formFieldColor.value ?? props.color);
+const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
+const size = computed(() => formFieldSize.value ?? props.size);
+const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
 const attrs = useAttrs();
 // Omit `data-state` to prevent conflicts with parent components (e.g. TooltipTrigger)
@@ -95,11 +110,11 @@ const forwardedAttrs = computed(() => {
 });
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.checkbox || {}) })({
-  size: size.value ?? props.size,
-  color: color.value ?? props.color,
+  size: size.value,
+  color: color.value,
   variant: props.variant,
   indicator: props.indicator,
-  highlight: highlight.value ?? props.highlight,
+  highlight: highlight.value,
   required: props.required,
   disabled: disabled.value,
 }));
@@ -121,7 +136,7 @@ function onUpdate(value: any) {
         :id="id"
         v-bind="{ ...rootProps, ...forwardedAttrs, ...ariaAttrs }"
         :name="name"
-        :disabled="disabled"
+        :disabled="props.disabled"
         data-slot="base"
         :class="ui.base({ class: props.ui?.base })"
         @update:model-value="onUpdate"

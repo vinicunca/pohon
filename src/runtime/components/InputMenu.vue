@@ -241,7 +241,7 @@ import { TagsInputInput, TagsInputItem, TagsInputItemDelete, TagsInputItemText, 
 import { Autocomplete, Combobox } from 'akar/namespaced';
 import { defu } from 'defu';
 import { isEqual } from 'ohash/utils';
-import { computed, nextTick, onMounted, ref, toRaw, toRef, useAttrs, useTemplateRef, watch } from 'vue';
+import { computed, nextTick, onMounted, onScopeDispose, ref, toRaw, toRef, useAttrs, useTemplateRef, watch } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentIcons } from '../composables/useComponentIcons';
 import { useComponentProps } from '../composables/useComponentProps';
@@ -311,11 +311,24 @@ const virtualizerProps = toRef(() => {
   }
 
   return defu(typeof props.virtualize === 'boolean' ? {} : props.virtualize, {
-    estimateSize: getEstimateSize(filteredItems.value, inputSize.value || 'md', props.descriptionKey as string, !!slots['item-description']),
+    estimateSize: getEstimateSize(filteredItems.value, size.value ?? 'md', props.descriptionKey as string, !!slots['item-description']),
   });
 });
 
-const { emitFormBlur, emitFormFocus, emitFormChange, emitFormInput, size: formFieldSize, color, id, name, highlight, disabled, ariaAttrs } = useFormField<InputProps>(_props);
+const {
+  emitFormBlur,
+  emitFormFocus,
+  emitFormChange,
+  emitFormInput,
+  size: formFieldSize,
+  color: formFieldColor,
+  id,
+  name,
+  highlight: formFieldHighlight,
+  disabled: formFieldDisabled,
+  ariaAttrs,
+} = useFormField<InputProps>(_props);
+
 const { orientation, size: fieldGroupSize } = useFieldGroup<InputProps>(_props);
 
 // Pass only the props the composable reads: `defu(props, ...)` copied every prop
@@ -332,7 +345,10 @@ const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponen
   loadingIcon: props.loadingIcon,
 })));
 
-const inputSize = computed(() => fieldGroupSize.value || formFieldSize.value);
+const color = computed(() => formFieldColor.value ?? props.color);
+const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
+const size = computed(() => fieldGroupSize.value ?? formFieldSize.value ?? props.size);
+const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
 const [DefineCreateItemTemplate, ReuseCreateItemTemplate] = createReusableTemplate();
 const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: InputMenuItem; index: number }>({
@@ -349,11 +365,11 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: I
 });
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputMenu || {}) })({
-  color: color.value ?? props.color,
+  color: color.value,
   variant: props.variant,
-  size: inputSize?.value ?? props.size,
+  size: size.value,
   loading: props.loading,
-  highlight: highlight.value ?? props.highlight,
+  highlight: highlight.value,
   fixed: props.fixed,
   leading: isLeading.value || !!props.avatar || !!slots.leading,
   trailing: isTrailing.value || !!slots.trailing,
@@ -417,6 +433,8 @@ function autoFocus() {
   }
 }
 
+let autofocusTimeoutId: ReturnType<typeof setTimeout> | undefined;
+
 onMounted(() => {
   nextTick(() => {
     if (isAutocomplete.value) {
@@ -426,10 +444,12 @@ onMounted(() => {
     }
   });
 
-  setTimeout(() => {
+  autofocusTimeoutId = setTimeout(() => {
     autoFocus();
   }, props.autofocusDelay);
 });
+
+onScopeDispose(() => clearTimeout(autofocusTimeoutId));
 
 watch(() => props.modelValue, (newValue) => {
   if (isAutocomplete.value) {
@@ -488,10 +508,12 @@ function onFocus(event: FocusEvent) {
 }
 
 const isOpen = ref(false);
+let timeoutId: ReturnType<typeof setTimeout> | undefined;
+
+onScopeDispose(() => clearTimeout(timeoutId));
+
 function onUpdateOpen(value: boolean) {
   isOpen.value = value;
-
-  let timeoutId;
 
   if (!value) {
     const event = new FocusEvent('blur');
@@ -500,7 +522,7 @@ function onUpdateOpen(value: boolean) {
     emitFormBlur();
 
     // Since we use `displayValue` prop inside ComboboxInput we should reset searchTerm manually
-    // https://akar.com/docs/components/combobox#api-reference
+    // https://akar.vincunca.dev/docs/components/combobox#api-reference
     if (!isAutocomplete.value && props.resetSearchTermOnBlur) {
       const STATE_ANIMATION_DELAY_MS = 100;
 
@@ -739,7 +761,7 @@ defineExpose({
             <PButton
               as="span"
               :icon="props.clearIcon || appConfig.ui.icons.close"
-              :size="inputSize"
+              :size="size"
               variant="link"
               color="neutral"
               tabindex="-1"

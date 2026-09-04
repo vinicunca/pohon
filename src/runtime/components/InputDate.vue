@@ -71,9 +71,8 @@ export interface InputDateSlots {
 
 <script setup lang="ts" generic="R extends boolean">
 import { createReusableTemplate, reactiveOmit } from '@vueuse/core';
-import { } from 'akar';
 import { DateRangeField as RangeDateField, DateField as SingleDateField } from 'akar/namespaced';
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, onScopeDispose, ref } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentIcons } from '../composables/useComponentIcons';
 import { useComponentProps } from '../composables/useComponentProps';
@@ -100,7 +99,20 @@ const props = useComponentProps<InputDateProps<R>>('inputDate', _props);
 const appConfig = useAppConfig() as InputDate['AppConfig'];
 
 const rootProps = useForwardProps(reactiveOmit(props, 'id', 'name', 'range', 'modelValue', 'defaultValue', 'color', 'variant', 'size', 'highlight', 'fixed', 'disabled', 'autofocus', 'autofocusDelay', 'icon', 'avatar', 'leading', 'leadingIcon', 'trailing', 'trailingIcon', 'loading', 'loadingIcon', 'separatorIcon', 'class', 'ui'), emits);
-const { emitFormBlur, emitFormFocus, emitFormChange, emitFormInput, size: formFieldSize, color, id, name, highlight, disabled, ariaAttrs } = useFormField<InputDateProps<R>>(_props);
+const {
+  emitFormBlur,
+  emitFormFocus,
+  emitFormChange,
+  emitFormInput,
+  size: formFieldSize,
+  color: formFieldColor,
+  id,
+  name,
+  highlight: formFieldHighlight,
+  disabled: formFieldDisabled,
+  ariaAttrs,
+} = useFormField<InputDateProps<R>>(_props);
+
 const { orientation, size: fieldGroupSize } = useFieldGroup<InputDateProps<R>>(_props);
 const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
 
@@ -109,13 +121,16 @@ const [DefineSegmentsTemplate, ReuseSegmentsTemplate] = createReusableTemplate<{
   type?: 'start' | 'end';
 }>();
 
-const inputSize = computed(() => fieldGroupSize.value || formFieldSize.value);
+const color = computed(() => formFieldColor.value ?? props.color);
+const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
+const size = computed(() => fieldGroupSize.value ?? formFieldSize.value ?? props.size);
+const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputDate || {}) })({
-  color: color.value ?? props.color,
+  color: color.value,
   variant: props.variant,
-  size: inputSize.value ?? props.size,
-  highlight: highlight.value ?? props.highlight,
+  size: size.value,
+  highlight: highlight.value,
   fixed: props.fixed,
   loading: props.loading,
   leading: isLeading.value || !!props.avatar || !!slots.leading,
@@ -155,11 +170,15 @@ function autoFocus() {
   }
 }
 
+let autofocusTimeoutId: ReturnType<typeof setTimeout> | undefined;
+
 onMounted(() => {
-  setTimeout(() => {
+  autofocusTimeoutId = setTimeout(() => {
     autoFocus();
   }, props.autofocusDelay);
 });
+
+onScopeDispose(() => clearTimeout(autofocusTimeoutId));
 
 const DateField = computed(() => props.range ? RangeDateField : SingleDateField);
 

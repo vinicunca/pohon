@@ -88,7 +88,7 @@ export interface InputNumberSlots {
 <script setup lang="ts" generic="T extends InputNumberValue = InputNumberValue, Mod extends Pick<ModelModifiers, 'optional'> = Pick<ModelModifiers, 'optional'>">
 import { reactivePick, useVModel } from '@vueuse/core';
 import { NumberFieldDecrement, NumberFieldIncrement, NumberFieldInput, NumberFieldRoot } from 'akar';
-import { computed, onMounted, toRef, useTemplateRef } from 'vue';
+import { computed, onMounted, onScopeDispose, toRef, useTemplateRef } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useFieldGroup } from '../composables/useFieldGroup';
@@ -121,16 +121,32 @@ const appConfig = useAppConfig() as InputNumber['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'stepSnapping', 'formatOptions', 'disableWheelChange', 'invertWheelChange', 'required', 'readonly', 'focusOnChange', 'locale'), emits);
 
-const { emitFormBlur, emitFormFocus, emitFormChange, emitFormInput, id, color, size: formFieldSize, name, highlight, disabled, ariaAttrs } = useFormField<InputNumberProps<T, Mod>>(_props);
+const {
+  emitFormBlur,
+  emitFormFocus,
+  emitFormChange,
+  emitFormInput,
+  id,
+  color: formFieldColor,
+  size: formFieldSize,
+  name,
+  highlight: formFieldHighlight,
+  disabled: formFieldDisabled,
+  ariaAttrs,
+} = useFormField<InputNumberProps<T, Mod>>(_props);
+
 const { orientation, size: fieldGroupSize } = useFieldGroup<InputNumberProps<T, Mod>>(_props);
 
-const inputSize = computed(() => fieldGroupSize.value || formFieldSize.value);
+const color = computed(() => formFieldColor.value ?? props.color);
+const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
+const size = computed(() => fieldGroupSize.value ?? formFieldSize.value ?? props.size);
+const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputNumber || {}) })({
-  color: color.value ?? props.color,
+  color: color.value,
   variant: props.variant,
-  size: inputSize.value ?? props.size,
-  highlight: highlight.value ?? props.highlight,
+  size: size.value,
+  highlight: highlight.value,
   fixed: props.fixed,
   orientation: props.orientation,
   fieldGroup: orientation.value,
@@ -168,11 +184,15 @@ function autoFocus() {
   }
 }
 
+let autofocusTimeoutId: ReturnType<typeof setTimeout> | undefined;
+
 onMounted(() => {
-  setTimeout(() => {
+  autofocusTimeoutId = setTimeout(() => {
     autoFocus();
   }, props.autofocusDelay);
 });
+
+onScopeDispose(() => clearTimeout(autofocusTimeoutId));
 
 defineExpose({
   inputRef: toRef(() => inputRef.value?.$el as HTMLInputElement),
@@ -211,7 +231,7 @@ defineExpose({
           <PButton
             :icon="incrementIcon"
             :color="color"
-            :size="inputSize"
+            :size="size"
             variant="link"
             :aria-label="t('inputNumber.increment')"
             v-bind="typeof props.increment === 'object' ? props.increment : undefined"
@@ -226,7 +246,7 @@ defineExpose({
           <PButton
             :icon="decrementIcon"
             :color="color"
-            :size="inputSize"
+            :size="size"
             variant="link"
             :aria-label="t('inputNumber.decrement')"
             v-bind="typeof props.decrement === 'object' ? props.decrement : undefined"

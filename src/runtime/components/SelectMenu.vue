@@ -53,6 +53,7 @@ export interface SelectMenuProps<T extends ArrayOrNested<SelectMenuItem> = Array
    * Whether to display the search input or not.
    * Can be an object to pass additional props to the input.
    * `{ placeholder: 'Search...', variant: 'none' }`{lang="ts-type"}
+   * Set `autofocus: false` to prevent the search input from being focused when the menu opens (e.g. to avoid opening the virtual keyboard on touch devices).
    * @defaultValue true
    */
   searchInput?: boolean | Omit<InputProps, 'modelValue' | 'defaultValue'>;
@@ -111,7 +112,7 @@ export interface SelectMenuProps<T extends ArrayOrNested<SelectMenuItem> = Array
   portal?: boolean | string | HTMLElement;
   /**
    * Enable virtualization for large lists.
-   * Note: when enabled, all groups are flattened into a single list due to a limitation of Akar (https://github.com/unovue/akar/issues/1885).
+   * Note: when enabled, all groups are flattened into a single list due to a limitation of Akar.
    * @defaultValue false
    */
   virtualize?: boolean | {
@@ -151,6 +152,8 @@ export interface SelectMenuProps<T extends ArrayOrNested<SelectMenuItem> = Array
   multiple?: M & boolean;
   /** Highlight the ring color like a focus state. */
   highlight?: boolean;
+  /** Keep the mobile text size on all breakpoints. */
+  fixed?: boolean;
   /**
    * Determines if custom user input that does not exist in options can be added.
    * @defaultValue false
@@ -231,9 +234,26 @@ export interface SelectMenuSlots<
 
 <script setup lang="ts" generic="T extends ArrayOrNested<SelectMenuItem>, VK extends GetItemKeys<T> | undefined = undefined, M extends boolean = false, Mod extends Omit<ModelModifiers, 'lazy'> = Omit<ModelModifiers, 'lazy'>, C extends boolean | object = false">
 import { createReusableTemplate, reactivePick } from '@vueuse/core';
-import { ComboboxAnchor, ComboboxArrow, ComboboxCancel, ComboboxContent, ComboboxEmpty, ComboboxGroup, ComboboxInput, ComboboxItem, ComboboxItemIndicator, ComboboxLabel, ComboboxPortal, ComboboxRoot, ComboboxSeparator, ComboboxTrigger, ComboboxVirtualizer, FocusScope } from 'akar';
+import {
+  ComboboxAnchor,
+  ComboboxArrow,
+  ComboboxCancel,
+  ComboboxContent,
+  ComboboxEmpty,
+  ComboboxGroup,
+  ComboboxInput,
+  ComboboxItem,
+  ComboboxItemIndicator,
+  ComboboxLabel,
+  ComboboxPortal,
+  ComboboxRoot,
+  ComboboxSeparator,
+  ComboboxTrigger,
+  ComboboxVirtualizer,
+  FocusScope,
+} from 'akar';
 import { defu } from 'defu';
-import { computed, nextTick, onMounted, ref, toRaw, toRef, useTemplateRef, watch } from 'vue';
+import { computed, nextTick, onMounted, onScopeDispose, ref, toRaw, toRef, useTemplateRef, watch } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentIcons } from '../composables/useComponentIcons';
 import { useComponentProps } from '../composables/useComponentProps';
@@ -254,20 +274,17 @@ import PInput from './Input.vue';
 
 defineOptions({ inheritAttrs: false });
 
-const _props = withDefaults(
-  defineProps<SelectMenuProps<T, VK, M, Mod, C>>(),
-  {
-    portal: true,
-    searchInput: true,
-    labelKey: 'label',
-    descriptionKey: 'description',
-    resetSearchTermOnBlur: true,
-    resetSearchTermOnSelect: true,
-    resetModelValueOnClear: true,
-    autofocusDelay: 0,
-    virtualize: false,
-  },
-);
+const _props = withDefaults(defineProps<SelectMenuProps<T, VK, M, Mod, C>>(), {
+  portal: true,
+  searchInput: true,
+  labelKey: 'label',
+  descriptionKey: 'description',
+  resetSearchTermOnBlur: true,
+  resetSearchTermOnSelect: true,
+  resetModelValueOnClear: true,
+  autofocusDelay: 0,
+  virtualize: false,
+});
 const emits = defineEmits<SelectMenuEmits<T, VK, M, Mod, C>>();
 const slots = defineSlots<SelectMenuSlots<T, VK, M, Mod, C>>();
 
@@ -290,16 +307,17 @@ const virtualizerProps = toRef(() => {
   }
 
   return defu(typeof props.virtualize === 'boolean' ? {} : props.virtualize, {
-    estimateSize: getEstimateSize(filteredItems.value, selectSize.value || 'md', props.descriptionKey as string, !!slots['item-description']),
+    estimateSize: getEstimateSize(filteredItems.value, size.value ?? 'md', props.descriptionKey as string, !!slots['item-description']),
   });
 });
-const searchInputProps = toRef(() => defu(props.searchInput, { placeholder: t('selectMenu.search'), variant: 'none' }) as Omit<InputProps, 'modelValue' | 'defaultValue'>);
+const searchInputProps = toRef(() => defu(props.searchInput, { placeholder: t('selectMenu.search'), variant: 'none', fixed: props.fixed }) as Omit<InputProps, 'modelValue' | 'defaultValue'>);
 
-const { emitFormBlur, emitFormFocus, emitFormInput, emitFormChange, size: formFieldSize, color, id, name, highlight, disabled, ariaAttrs } = useFormField<InputProps>(_props);
+const { emitFormBlur, emitFormFocus, emitFormInput, emitFormChange, size: formFieldSize, color: formFieldColor, id, name, highlight: formFieldHighlight, disabled: formFieldDisabled, ariaAttrs } = useFormField<InputProps>(_props);
+
 const { orientation, size: fieldGroupSize } = useFieldGroup<InputProps>(_props);
 // Pass only the props the composable reads: `defu(props, ...)` copied every prop
 // through the `useComponentProps` proxy and subscribed this computed (and `ui`,
-// which reads `isLeading`/`isTrailing`) to all of them, re-running the whole uv
+// which reads `isLeading`/`isTrailing`) to all of them, re-running the whole tv
 // pipeline on unrelated prop changes.
 const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(computed(() => ({
   icon: props.icon,
@@ -311,7 +329,13 @@ const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponen
   loadingIcon: props.loadingIcon,
 })));
 
-const selectSize = computed(() => fieldGroupSize.value || formFieldSize.value);
+const color = computed(() => formFieldColor.value ?? props.color);
+
+const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
+
+const size = computed(() => fieldGroupSize.value ?? formFieldSize.value ?? props.size);
+
+const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
 const [DefineCreateItemTemplate, ReuseCreateItemTemplate] = createReusableTemplate();
 const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: SelectMenuItem; index: number }>({
@@ -328,11 +352,12 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: S
 });
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.selectMenu || {}) })({
-  color: color.value ?? props.color,
+  color: color.value,
   variant: props.variant,
-  size: selectSize?.value ?? props.size,
+  size: size.value,
   loading: props.loading,
-  highlight: highlight.value ?? props.highlight,
+  highlight: highlight.value,
+  fixed: props.fixed,
   leading: isLeading.value || !!props.avatar || !!slots.leading,
   trailing: isTrailing.value || !!slots.trailing,
   fieldGroup: orientation.value,
@@ -409,11 +434,15 @@ function autoFocus() {
   }
 }
 
+let autofocusTimeoutId: ReturnType<typeof setTimeout> | undefined;
+
 onMounted(() => {
-  setTimeout(() => {
+  autofocusTimeoutId = setTimeout(() => {
     autoFocus();
   }, props.autofocusDelay);
 });
+
+onScopeDispose(() => clearTimeout(autofocusTimeoutId));
 
 function onUpdate(value: any) {
   if (toRaw(props.modelValue) === value) {
@@ -448,11 +477,12 @@ function onUpdate(value: any) {
 }
 
 const isOpen = ref(false);
+let timeoutId: ReturnType<typeof setTimeout> | undefined;
+
+onScopeDispose(() => clearTimeout(timeoutId));
 
 function onUpdateOpen(value: boolean) {
   isOpen.value = value;
-
-  let timeoutId;
 
   if (!value) {
     const event = new FocusEvent('blur');
@@ -461,7 +491,7 @@ function onUpdateOpen(value: boolean) {
     emitFormBlur();
 
     // Since we use `displayValue` prop inside ComboboxInput we should reset searchTerm manually
-    // https://akar.com/docs/components/combobox#api-reference
+    // https://akar.vinicunca.dev/docs/components/combobox#api-reference
     if (props.resetSearchTermOnBlur) {
       const STATE_ANIMATION_DELAY_MS = 100;
 
@@ -512,6 +542,13 @@ function onClear() {
   emits('clear');
 }
 
+function onMountAutoFocus(event: Event) {
+  // Prevent the `FocusScope` from focusing the search input on open when its autofocus is disabled.
+  if (searchInputProps.value.autofocus === false) {
+    event.preventDefault();
+  }
+}
+
 const viewportRef = useTemplateRef('viewportRef');
 
 const comboboxRootRef = useTemplateRef('comboboxRootRef');
@@ -522,18 +559,14 @@ const comboboxRootRef = useTemplateRef('comboboxRootRef');
 // Scoped to `create-item` only, otherwise this fires on infinite-scroll appends too and
 // scrolls the viewport back to the top.
 // Wait an extra tick so freshly mounted items are registered in akar's collection before highlighting.
-watch(
-  () => props.items,
-  async () => {
-    if (!isOpen.value || !props.createItem) {
-      return;
-    }
+watch(() => props.items, async () => {
+  if (!isOpen.value || !props.createItem) {
+    return;
+  }
 
-    await nextTick();
-    comboboxRootRef.value?.highlightFirstItem?.();
-  },
-  { flush: 'post' },
-);
+  await nextTick();
+  comboboxRootRef.value?.highlightFirstItem?.();
+}, { flush: 'post' });
 
 defineExpose({
   triggerRef: toRef(() => triggerRef.value?.$el as HTMLButtonElement),
@@ -657,7 +690,7 @@ defineExpose({
               <PButton
                 as="span"
                 :icon="props.clearIcon || appConfig.ui.icons.close"
-                :size="selectSize"
+                :size="size"
                 variant="link"
                 color="neutral"
                 tabindex="-1"
@@ -677,14 +710,14 @@ defineExpose({
     <ComboboxPortal v-bind="portalProps">
       <FieldGroupReset>
         <ComboboxContent data-slot="content" :class="ui.content({ class: props.ui?.content })" v-bind="contentProps">
-          <FocusScope trapped data-slot="focusScope" :class="ui.focusScope({ class: props.ui?.focusScope })">
+          <FocusScope trapped data-slot="focusScope" :class="ui.focusScope({ class: props.ui?.focusScope })" @mount-auto-focus="onMountAutoFocus">
             <slot name="content-top" />
 
             <ComboboxInput v-if="!!props.searchInput" v-model="searchTerm" :display-value="() => searchTerm" as-child>
               <PInput
                 autofocus
                 autocomplete="off"
-                :size="selectSize"
+                :size="size"
                 v-bind="searchInputProps"
                 :model-modifiers="{
                   trim: props.modelModifiers?.trim,

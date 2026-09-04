@@ -10,7 +10,10 @@ import AvatarGroup from '../../src/runtime/components/AvatarGroup.vue';
 import Badge from '../../src/runtime/components/Badge.vue';
 import Button from '../../src/runtime/components/Button.vue';
 import Checkbox from '../../src/runtime/components/Checkbox.vue';
+import CheckboxGroup from '../../src/runtime/components/CheckboxGroup.vue';
 import FieldGroup from '../../src/runtime/components/FieldGroup.vue';
+import FileUpload from '../../src/runtime/components/FileUpload.vue';
+import Form from '../../src/runtime/components/Form.vue';
 import FormField from '../../src/runtime/components/FormField.vue';
 import Input from '../../src/runtime/components/Input.vue';
 import Theme from '../../src/runtime/components/Theme.vue';
@@ -329,7 +332,7 @@ describe('theme', () => {
   });
 
   // Real-world layout: an outer `<PTheme :props>` set near the root configures
-  // a "global" component (e.g. tooltip), and an inner `<PTheme :props>` further
+  // a "global" component (e.g. tooltip), and an inner `<Theme :props>` further
   // down the tree only overrides a different component (e.g. button). Both
   // should compose: tooltips below the inner theme still inherit the outer's
   // tooltip defaults, and the inner's button override applies only locally.
@@ -399,11 +402,45 @@ describe('theme', () => {
     expect(wrapper.find('button').classes()).toContain('rounded-full');
   });
 
-  // Boolean values supplied via `:props` must reach a Akar primitive root through
+  // A `class` inside `:props` is merged with the component's own `class` instead
+  // of being replaced by it, otherwise any component setting a class would lose
+  // the theme class entirely.
+  it(':props class merges with an explicit class on the component', async () => {
+    const wrapper = await mountSuspended({
+      components: { Theme, Button },
+      template: `
+        <Theme :props="{ button: { class: 'rounded-full' } }">
+          <Button label="Themed" class="hidden lg:inline-flex" />
+        </Theme>
+      `,
+    });
+
+    const classes = wrapper.find('button').classes();
+    expect(classes).toContain('rounded-full');
+    expect(classes).toContain('hidden');
+    expect(classes).toContain('lg:inline-flex');
+  });
+
+  it(':props class is overridden by a conflicting explicit class', async () => {
+    const wrapper = await mountSuspended({
+      components: { Theme, Button },
+      template: `
+        <Theme :props="{ button: { class: 'rounded-full' } }">
+          <Button label="Themed" class="rounded-none" />
+        </Theme>
+      `,
+    });
+
+    const classes = wrapper.find('button').classes();
+    expect(classes).toContain('rounded-none');
+    expect(classes).not.toContain('rounded-full');
+  });
+
+  // Boolean values supplied via `:props` must reach a Reka primitive root through
   // `useForwardProps`. This is the path where Vue's auto-casting of unset Boolean
   // props would otherwise turn the proxy result into `false` and silently swallow
   // the theme value — the test pins down that the proxy + forwarder cooperate.
-  it(':props forwards a boolean to a akar primitive root (tooltip arrow)', async () => {
+  it(':props forwards a boolean to a reka primitive root (tooltip arrow)', async () => {
     const wrapper = await mountSuspended({
       components: { Theme, TooltipProvider, Tooltip },
       template: `
@@ -480,6 +517,94 @@ describe('theme', () => {
 
     expect(wrapper.html()).toContain('focus-visible:ring-error');
     expect(wrapper.html()).not.toContain('focus-visible:ring-success');
+  });
+
+  // `highlight` and `disabled` are Boolean props, which Vue auto-casts to
+  // `false` when unset. `useFormField` normalizes them back to `undefined` so
+  // the `highlight.value ?? props.highlight` fallback isn't short-circuited on
+  // `false` — otherwise `<PTheme :props>` never reaches any form control.
+  it(':props highlight reaches a form control', async () => {
+    const wrapper = await mountSuspended({
+      components: { Theme, Checkbox },
+      template: `
+        <Theme :props="{ checkbox: { highlight: true } }">
+          <Checkbox label="Accept" />
+        </Theme>
+      `,
+    });
+
+    expect(wrapper.find('button[role="checkbox"]').classes()).toContain('ring-primary');
+    expect(wrapper.find('button[role="checkbox"]').classes()).not.toContain('ring-accented');
+  });
+
+  // A theme-provided `disabled` must disable the control, not only paint it as
+  // disabled. Regressed when only the `uv()` call read the resolved value while
+  // the template kept binding the raw `useFormField` ref.
+  it(':props disabled disables a control instead of only styling it', async () => {
+    const wrapper = await mountSuspended({
+      components: { Theme, FileUpload },
+      template: `
+        <Theme :props="{ fileUpload: { disabled: true } }">
+          <FileUpload />
+        </Theme>
+      `,
+    });
+
+    expect(wrapper.html()).toContain('cursor-not-allowed');
+    expect(wrapper.find('input[type="file"]').attributes('disabled')).toBeDefined();
+    expect(wrapper.find('[data-slot="base"]').attributes('tabindex')).toBe('-1');
+  });
+
+  // `<PForm disabled>` is the closer context and must keep winning over an
+  // explicit `:disabled="false"` resolved through the proxy.
+  it('form disabled wins over :props disabled', async () => {
+    const wrapper = await mountSuspended({
+      components: { Theme, Form, Checkbox },
+      template: `
+        <Theme :props="{ checkbox: { disabled: false } }">
+          <Form :state="{}" disabled>
+            <Checkbox label="Accept" />
+          </Form>
+        </Theme>
+      `,
+    });
+
+    expect(wrapper.find('button[role="checkbox"]').attributes('disabled')).toBeDefined();
+  });
+
+  // CheckboxGroup resolves `color`/`size`/`highlight` once and forwards them to
+  // every child Checkbox, so a theme set on the group has to reach the items.
+  it(':props color on a checkbox group reaches its items', async () => {
+    const wrapper = await mountSuspended({
+      components: { Theme, CheckboxGroup },
+      template: `
+        <Theme :props="{ checkboxGroup: { color: 'success' } }">
+          <CheckboxGroup :items="[{ label: 'A', value: 'a' }]" :model-value="['a']" />
+        </Theme>
+      `,
+    });
+
+    expect(wrapper.html()).toContain('outline-success/25');
+    expect(wrapper.html()).not.toContain('outline-primary/25');
+  });
+
+  // The group resolves `color` once and hands it to every child, so a FormField
+  // validation error has to beat `<PTheme :props>` on the items too, not just on
+  // the group root.
+  it('formField error overrides :props color on a checkbox group', async () => {
+    const wrapper = await mountSuspended({
+      components: { Theme, FormField, CheckboxGroup },
+      template: `
+        <Theme :props="{ checkboxGroup: { color: 'success' } }">
+          <FormField label="Pick one" error="This field is required">
+            <CheckboxGroup :items="[{ label: 'A', value: 'a' }]" :model-value="['a']" />
+          </FormField>
+        </Theme>
+      `,
+    });
+
+    expect(wrapper.html()).toContain('outline-error/25');
+    expect(wrapper.html()).not.toContain('outline-success/25');
   });
 
   // `useFieldGroup` shares the same closer-context-wins fallback as

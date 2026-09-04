@@ -1,22 +1,29 @@
 {
+  // editor
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
     "source.organizeImports": "never"
   },
   "editor.formatOnSave": false,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
     "typescriptreact": "html",
     "postcss": "css"
   },
+  "eslint.useFlatConfig": true,
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
   "eslint.validate": [
     "javascript",
-    "javascriptreact",
     "typescript",
+    "javascriptreact",
     "typescriptreact",
     "vue",
     "html",

@@ -1,5 +1,5 @@
 import type { HookResult, ModuleDependencies } from '@nuxt/schema';
-import { addComponentsDir, addImports, addImportsDir, addPlugin, createResolver, defineNuxtModule, hasNuxtModule } from '@nuxt/kit';
+import { addComponentsDir, addImports, addImportsDir, createResolver, defineNuxtModule, hasNuxtModule } from '@nuxt/kit';
 import { defu } from 'defu';
 import { name, version } from '../package.json';
 import { publicComposables } from './imports';
@@ -222,8 +222,6 @@ export default defineNuxtModule<ModuleOptions>({
     // Isolate root node from portaled components
     nuxt.options.app.rootAttrs = nuxt.options.app.rootAttrs || {};
     nuxt.options.app.rootAttrs.class = [nuxt.options.app.rootAttrs.class, 'isolate'].filter(Boolean).join(' ');
-
-    // addPlugin({ src: resolve('./runtime/plugins/colors') });
 
     if (options.prose || options.mdc || options.content || hasNuxtModule('@nuxtjs/mdc') || hasNuxtModule('@nuxt/content')) {
       addComponentsDir({

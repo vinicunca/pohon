@@ -71,7 +71,7 @@ export interface InputTagsSlots<T extends InputTagItem = InputTagItem> {
 <script setup lang="ts" generic="T extends InputTagItem">
 import { reactivePick } from '@vueuse/core';
 import { TagsInputInput, TagsInputItem, TagsInputItemDelete, TagsInputItemText, TagsInputRoot } from 'akar';
-import { computed, onMounted, toRaw, toRef, useTemplateRef } from 'vue';
+import { computed, onMounted, onScopeDispose, toRaw, toRef, useTemplateRef } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentIcons } from '../composables/useComponentIcons';
 import { useComponentProps } from '../composables/useComponentProps';
@@ -84,13 +84,10 @@ import PIcon from './Icon.vue';
 
 defineOptions({ inheritAttrs: false });
 
-const _props = withDefaults(
-  defineProps<InputTagsProps<T>>(),
-  {
-    type: 'text',
-    autofocusDelay: 0,
-  },
-);
+const _props = withDefaults(defineProps<InputTagsProps<T>>(), {
+  type: 'text',
+  autofocusDelay: 0,
+});
 const emits = defineEmits<InputTagsEmits<T>>();
 const slots = defineSlots<InputTagsSlots<T>>();
 
@@ -100,18 +97,34 @@ const appConfig = useAppConfig() as InputTags['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'addOnPaste', 'addOnTab', 'addOnBlur', 'duplicate', 'delimiter', 'max', 'convertValue', 'displayValue', 'required'), emits);
 
-const { emitFormBlur, emitFormFocus, emitFormChange, emitFormInput, size: formFieldSize, color, id, name, highlight, disabled, ariaAttrs } = useFormField<InputTagsProps>(_props);
+const {
+  emitFormBlur,
+  emitFormFocus,
+  emitFormChange,
+  emitFormInput,
+  size: formFieldSize,
+  color: formFieldColor,
+  id,
+  name,
+  highlight: formFieldHighlight,
+  disabled: formFieldDisabled,
+  ariaAttrs,
+} = useFormField<InputTagsProps>(_props);
+
 const { orientation, size: fieldGroupSize } = useFieldGroup<InputTagsProps>(_props);
 const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
 
-const inputSize = computed(() => fieldGroupSize.value || formFieldSize.value);
+const color = computed(() => formFieldColor.value ?? props.color);
+const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
+const size = computed(() => fieldGroupSize.value ?? formFieldSize.value ?? props.size);
+const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputTags || {}) })({
-  color: color.value ?? props.color,
+  color: color.value,
   variant: props.variant,
-  size: inputSize?.value ?? props.size,
+  size: size.value,
   loading: props.loading,
-  highlight: highlight.value ?? props.highlight,
+  highlight: highlight.value,
   fixed: props.fixed,
   leading: isLeading.value || !!props.avatar || !!slots.leading,
   trailing: isTrailing.value || !!slots.trailing,
@@ -126,11 +139,15 @@ function autoFocus() {
   }
 }
 
+let autofocusTimeoutId: ReturnType<typeof setTimeout> | undefined;
+
 onMounted(() => {
-  setTimeout(() => {
+  autofocusTimeoutId = setTimeout(() => {
     autoFocus();
   }, props.autofocusDelay);
 });
+
+onScopeDispose(() => clearTimeout(autofocusTimeoutId));
 
 function onUpdate(value: Array<T>) {
   if (toRaw(props.modelValue) === value) {

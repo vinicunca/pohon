@@ -68,7 +68,7 @@ export interface InputSlots {
 <script setup lang="ts" generic="T extends InputValue, Mod extends ModelModifiers">
 import { useVModel } from '@vueuse/core';
 import { Primitive } from 'akar';
-import { computed, onMounted, useTemplateRef } from 'vue';
+import { computed, onMounted, onScopeDispose, useTemplateRef } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentIcons } from '../composables/useComponentIcons';
 import { useComponentProps } from '../composables/useComponentProps';
@@ -81,14 +81,11 @@ import PIcon from './Icon.vue';
 
 defineOptions({ inheritAttrs: false });
 
-const _props = withDefaults(
-  defineProps<InputProps<T, Mod>>(),
-  {
-    type: 'text',
-    autocomplete: 'off',
-    autofocusDelay: 0,
-  },
-);
+const _props = withDefaults(defineProps<InputProps<T, Mod>>(), {
+  type: 'text',
+  autocomplete: 'off',
+  autofocusDelay: 0,
+});
 const emits = defineEmits<InputEmits<T, Mod>>();
 const slots = defineSlots<InputSlots>();
 
@@ -98,19 +95,26 @@ const modelValue = useVModel<InputProps<T, Mod>, 'modelValue', 'update:modelValu
 
 const appConfig = useAppConfig() as Input['AppConfig'];
 
-const { emitFormBlur, emitFormInput, emitFormChange, size: formFieldSize, color, id, name, highlight, disabled, emitFormFocus, ariaAttrs } = useFormField<InputProps<T>>(_props, { deferInputValidation: true });
+const { emitFormBlur, emitFormInput, emitFormChange, size: formFieldSize, color: formFieldColor, id, name, highlight: formFieldHighlight, disabled: formFieldDisabled, emitFormFocus, ariaAttrs } = useFormField<InputProps<T>>(_props, { deferInputValidation: true });
+
 const { orientation, size: fieldGroupSize } = useFieldGroup<InputProps<T>>(_props);
 const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
 
-const inputSize = computed(() => fieldGroupSize.value || formFieldSize.value);
+const color = computed(() => formFieldColor.value ?? props.color);
+
+const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
+
+const size = computed(() => fieldGroupSize.value ?? formFieldSize.value ?? props.size);
+
+const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.input || {}) })({
   type: props.type as Input['variants']['type'],
-  color: color.value ?? props.color,
+  color: color.value,
   variant: props.variant,
-  size: inputSize?.value ?? props.size,
+  size: size.value,
   loading: props.loading,
-  highlight: highlight.value ?? props.highlight,
+  highlight: highlight.value,
   fixed: props.fixed,
   leading: isLeading.value || !!props.avatar || !!slots.leading,
   trailing: isTrailing.value || !!slots.trailing,
@@ -174,11 +178,15 @@ function autoFocus() {
   }
 }
 
+let autofocusTimeoutId: ReturnType<typeof setTimeout> | undefined;
+
 onMounted(() => {
-  setTimeout(() => {
+  autofocusTimeoutId = setTimeout(() => {
     autoFocus();
   }, props.autofocusDelay);
 });
+
+onScopeDispose(() => clearTimeout(autofocusTimeoutId));
 
 defineExpose({
   inputRef,

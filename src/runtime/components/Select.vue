@@ -110,6 +110,8 @@ export interface SelectProps<T extends ArrayOrNested<SelectItem> = ArrayOrNested
   multiple?: M & boolean;
   /** Highlight the ring color like a focus state. */
   highlight?: boolean;
+  /** Keep the mobile text size on all breakpoints. */
+  fixed?: boolean;
   autofocus?: boolean;
   autofocusDelay?: number;
   class?: any;
@@ -152,9 +154,23 @@ export interface SelectSlots<
 
 <script setup lang="ts" generic="T extends ArrayOrNested<SelectItem>, VK extends GetItemKeys<T> = 'value', M extends boolean = false, Mod extends Omit<ModelModifiers, 'lazy'> = Omit<ModelModifiers, 'lazy'>">
 import { reactivePick } from '@vueuse/core';
-import { SelectItem as RSelectItem, SelectValue as RSelectValue, SelectArrow, SelectContent, SelectGroup, SelectItemIndicator, SelectItemText, SelectLabel, SelectPortal, SelectRoot, SelectSeparator, SelectTrigger, SelectViewport } from 'akar';
+import {
+  SelectItem as AkarSelectItem,
+  SelectValue as AkarSelectValue,
+  SelectArrow,
+  SelectContent,
+  SelectGroup,
+  SelectItemIndicator,
+  SelectItemText,
+  SelectLabel,
+  SelectPortal,
+  SelectRoot,
+  SelectSeparator,
+  SelectTrigger,
+  SelectViewport,
+} from 'akar';
 import { defu } from 'defu';
-import { computed, onMounted, toRef, useTemplateRef } from 'vue';
+import { computed, onMounted, onScopeDispose, toRef, useTemplateRef } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentIcons } from '../composables/useComponentIcons';
 import { useComponentProps } from '../composables/useComponentProps';
@@ -170,16 +186,13 @@ import PIcon from './Icon.vue';
 
 defineOptions({ inheritAttrs: false });
 
-const _props = withDefaults(
-  defineProps<SelectProps<T, VK, M, Mod>>(),
-  {
-    valueKey: 'value' as never,
-    labelKey: 'label',
-    descriptionKey: 'description',
-    portal: true,
-    autofocusDelay: 0,
-  },
-);
+const _props = withDefaults(defineProps<SelectProps<T, VK, M, Mod>>(), {
+  valueKey: 'value' as never,
+  labelKey: 'label',
+  descriptionKey: 'description',
+  portal: true,
+  autofocusDelay: 0,
+});
 const emits = defineEmits<SelectEmits<T, VK, M, Mod>>();
 const slots = defineSlots<SelectSlots<T, VK, M, Mod>>();
 
@@ -193,11 +206,12 @@ const position = computed(() => props.content?.position ?? appConfig.ui?.select?
 const contentProps = toRef(() => defu(props.content, { side: 'bottom', sideOffset: 8, collisionPadding: 8, position: position.value }) as SelectContentProps);
 const arrowProps = toRef(() => defu(props.arrow, { rounded: true }) as SelectArrowProps);
 
-const { emitFormChange, emitFormInput, emitFormBlur, emitFormFocus, size: formFieldSize, color, id, name, highlight, disabled, ariaAttrs } = useFormField<InputProps>(_props);
+const { emitFormChange, emitFormInput, emitFormBlur, emitFormFocus, size: formFieldSize, color: formFieldColor, id, name, highlight: formFieldHighlight, disabled: formFieldDisabled, ariaAttrs } = useFormField<InputProps>(_props);
+
 const { orientation, size: fieldGroupSize } = useFieldGroup<InputProps>(_props);
 // Pass only the props the composable reads: `defu(props, ...)` copied every prop
 // through the `useComponentProps` proxy and subscribed this computed (and `ui`,
-// which reads `isLeading`/`isTrailing`) to all of them, re-running the whole uv
+// which reads `isLeading`/`isTrailing`) to all of them, re-running the whole tv
 // pipeline on unrelated prop changes.
 const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(computed(() => ({
   icon: props.icon,
@@ -209,16 +223,23 @@ const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponen
   loadingIcon: props.loadingIcon,
 })));
 
-const selectSize = computed(() => fieldGroupSize.value || formFieldSize.value);
+const color = computed(() => formFieldColor.value ?? props.color);
+
+const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
+
+const size = computed(() => fieldGroupSize.value ?? formFieldSize.value ?? props.size);
+
+const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
 const isItemAligned = computed(() => position.value === 'item-aligned');
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.select || {}) })({
-  color: color.value ?? props.color,
+  color: color.value,
   variant: props.variant,
-  size: selectSize.value ?? props.size,
+  size: size.value,
   loading: props.loading,
-  highlight: highlight.value ?? props.highlight,
+  highlight: highlight.value,
+  fixed: props.fixed,
   leading: isLeading.value || !!props.avatar || !!slots.leading,
   trailing: isTrailing.value || !!slots.trailing,
   fieldGroup: orientation.value,
@@ -264,11 +285,15 @@ function autoFocus() {
   }
 }
 
+let autofocusTimeoutId: ReturnType<typeof setTimeout> | undefined;
+
 onMounted(() => {
-  setTimeout(() => {
+  autofocusTimeoutId = setTimeout(() => {
     autoFocus();
   }, props.autofocusDelay);
 });
+
+onScopeDispose(() => clearTimeout(autofocusTimeoutId));
 
 function onUpdate(value: any) {
   if (props.modelModifiers?.trim && (typeof value === 'string' || value === null || value === undefined)) {
@@ -360,14 +385,14 @@ defineExpose({
       </span>
 
       <template v-for="displayedModelValue in [displayValue(modelValue as any)]" :key="displayedModelValue">
-        <RSelectValue
+        <AkarSelectValue
           :data-slot="displayedModelValue != null ? 'value' : 'placeholder'"
           :class="displayedModelValue != null ? ui.value({ class: props.ui?.value }) : ui.placeholder({ class: props.ui?.placeholder })"
         >
           <slot :model-value="(modelValue as ApplyModifiers<GetModelValue<T, VK, M, ExcludeItem>, Mod>)" :open="open" :ui="ui">
             {{ displayedModelValue ?? (props.placeholder ?? '&nbsp;') }}
           </slot>
-        </RSelectValue>
+        </AkarSelectValue>
       </template>
 
       <span v-if="isTrailing || !!slots.trailing" data-slot="trailing" :class="ui.trailing({ class: props.ui?.trailing })">
@@ -391,7 +416,7 @@ defineExpose({
 
                 <SelectSeparator v-else-if="isSelectItem(item) && item.type === 'separator'" data-slot="separator" :class="ui.separator({ class: [props.ui?.separator, item.ui?.separator, item.class] })" />
 
-                <RSelectItem
+                <AkarSelectItem
                   v-else
                   data-slot="item"
                   :class="ui.item({ class: [props.ui?.item, isSelectItem(item) && item.ui?.item, isSelectItem(item) && item.class] })"
@@ -436,7 +461,7 @@ defineExpose({
                       </SelectItemIndicator>
                     </span>
                   </slot>
-                </RSelectItem>
+                </AkarSelectItem>
               </template>
             </SelectGroup>
           </component>
