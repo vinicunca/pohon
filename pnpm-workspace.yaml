@@ -1,5 +1,5 @@
 ignoreWorkspaceRootCheck: true
-
+linkWorkspacePackages: true
 minimumReleaseAge: 0
 
 packages:
@@ -9,19 +9,6 @@ packages:
   - playgrounds/nuxt
   - playgrounds/vue
   - playgrounds/repl
-
-linkWorkspacePackages: true
-
-allowBuilds:
-  '@parcel/watcher': false
-  '@vercel/speed-insights': false
-  better-sqlite3: true
-  esbuild: false
-  puppeteer: true
-  sharp: true
-  simple-git-hooks: true
-  unrs-resolver: false
-  vue-demi: false
 
 overrides:
   # `@codspeed/vitest-plugin` caps its `vite` peer at ^7 while the repo resolves
@@ -41,3 +28,14 @@ overrides:
   typescript: ^6.0.3
   unplugin: 3.3.0
   unplugin-auto-import: 21.0.0
+
+allowBuilds:
+  '@parcel/watcher': false
+  '@vercel/speed-insights': false
+  better-sqlite3: true
+  esbuild: false
+  puppeteer: true
+  sharp: true
+  simple-git-hooks: true
+  unrs-resolver: false
+  vue-demi: false

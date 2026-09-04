@@ -53,26 +53,25 @@ const baseUv = /* @__PURE__ */ createUv;
  * Wraps `unocss-variants`' `uv` so slot classes can be **replaced** (not just
  * merged) through a function form — `(defaults) => classes` — in `:ui`, the
  * `class` prop and `app.config.ui`. The wrapper is transparent for every other
- * usage: it preserves the `UvReturnType` (so `extend: uv(theme)` keeps working
+ * usage: it preserves the `UvReturnType` (so `extend: theme` keeps working
  * via property reads) and only intercepts the slot functions on invocation.
  */
 export const uv = ((componentConfig?: any) => {
-  const { config: cleanConfig, directives } = extractDirectives(componentConfig);
-  const component = baseUv(cleanConfig);
+  const component = baseUv(resolveReplacers(componentConfig));
 
   return new Proxy(component, {
     apply(target, thisArg, args) {
       const result = Reflect.apply(target, thisArg, args);
       if (result && typeof result === 'object') {
-        return wrapSlots(result, directives);
+        return wrapSlots(result);
       }
 
       // Slotless components (only a `base`, no `slots`) return a string. Honor a
-      // replacer passed through `class` / `className` or a `base` directive from
-      // `app.config.ui`, otherwise return the merged string untouched.
+      // replacer passed through `class` / `className`, otherwise return the
+      // merged string untouched.
       if (typeof result === 'string') {
         const slotProps = args[0] ?? {};
-        const replacer = findReplacer(slotProps.class) ?? findReplacer(slotProps.className) ?? directives?.base;
+        const replacer = findReplacer(slotProps.class) ?? findReplacer(slotProps.className);
         if (replacer) {
           return applyReplacer(replacer, slotProps, () => Reflect.apply(target, thisArg, [{ ...slotProps, class: undefined, className: undefined }]));
         }
@@ -122,10 +121,10 @@ function plainClasses(value: unknown): Array<ClassValue> {
 }
 
 /**
- * Apply a replacer: drop the baked-in default chain and return only the
- * replacement, plus any plain classes passed alongside it. `resolveDefaults`
- * computes the slot's default classes (without any user class) so the replacer
- * can reuse part of them.
+ * Apply a call-time replacer: drop the resolved class chain (base + variants +
+ * compound variants) and return only the replacement, plus any plain classes
+ * passed alongside it. `resolveDefaults` computes that chain without any user
+ * class so the replacer can reuse part of it.
  */
 function applyReplacer(replacer: SlotClassReplacer, slotProps: Record<string, any>, resolveDefaults: () => string): string {
   return cx(
@@ -192,9 +191,9 @@ function memoKey(slotProps: Record<string, any>): string | undefined {
 }
 
 /**
- * Wrap the slot functions returned by `uv()` so a replacer (from `:ui` / `class`
- * at call time, or from `app.config.ui` at construction time) drops the slot's
- * baked-in default chain and returns only its replacement. Without a replacer the
+ * Wrap the slot functions returned by `uv()` so a replacer passed at call time
+ * (`:ui` / `class`, which includes what `<PTheme>` injects) drops the slot's
+ * resolved class chain and returns only its replacement. Without a replacer the
  * original slot function runs untouched, so the common merge path is unaffected.
  *
  * Repeated invocations with identical simple args (re-renders, table cells) are
@@ -202,7 +201,7 @@ function memoKey(slotProps: Record<string, any>): string | undefined {
  * input. The cache lives on the invocation result, so a factory rebuild (e.g.
  * `app.config.ui` change) or variant-prop recompute starts fresh.
  */
-function wrapSlots(slots: Record<string, any>, directives?: Record<string, SlotClassReplacer>) {
+function wrapSlots(slots: Record<string, any>) {
   // `undefined` is a real slot result: `tv` returns it (not `''`) for a slot
   // whose chain resolves to no classes, so it can't double as a miss sentinel.
   const memo = new Map<string, Map<string, string | undefined>>();
@@ -215,7 +214,7 @@ function wrapSlots(slots: Record<string, any>, directives?: Record<string, SlotC
       }
 
       return (slotProps: Record<string, any> = {}) => {
-        const replacer = findReplacer(slotProps.class) ?? findReplacer(slotProps.className) ?? directives?.[key];
+        const replacer = findReplacer(slotProps.class) ?? findReplacer(slotProps.className);
         if (!replacer) {
           const cacheKey = memoKey(slotProps);
           if (cacheKey === undefined) {
@@ -249,39 +248,81 @@ function wrapSlots(slots: Record<string, any>, directives?: Record<string, SlotC
 }
 
 /**
- * Pull construction-time replacers authored in `app.config.ui.<component>` (under
- * `slots` or the top-level `base`) out of the config so `createTV` only ever
- * receives valid class strings. They are applied at call time in `wrapSlots`,
- * alongside the `:ui` / `class` ones. The incoming config is never mutated.
+ * Flatten a raw theme class value (string, array, nested array with falsy holes)
+ * into the string a replacer receives as its `defaults` argument.
  */
-function extractDirectives(componentConfig: any): { config: any; directives?: Record<string, SlotClassReplacer> } {
+function defaultClasses(value: unknown): string {
+  return cx(value as ClassValue) ?? '';
+}
+
+/**
+ * Resolve construction-time replacers authored in `app.config.ui.<component>`
+ * (under `slots` or the top-level `base`) so `createUv` only ever receives valid
+ * class strings. The replacer takes the place of the slot's own classes from the
+ * extended theme, which means `variants` and `compoundVariants` still merge on
+ * top of the result — the same as when a plain string is used.
+ *
+ * Blanking the entry on the `extend` side is what makes it a replacement: `uv`
+ * only ever concatenates the extended theme into the component's own classes, it
+ * has no way to remove them. Call-time replacers (`:ui` / `class`) run after
+ * variant resolution instead and are handled in {@link wrapSlots}. The incoming
+ * config is never mutated.
+ */
+function resolveReplacers(componentConfig: any): any {
   if (!componentConfig || typeof componentConfig !== 'object') {
-    return { config: componentConfig };
-  }
-
-  let config = componentConfig;
-  let directives: Record<string, SlotClassReplacer> | undefined;
-
-  if (typeof componentConfig.base === 'function') {
-    directives = { base: componentConfig.base };
-    config = { ...config, base: '' };
+    return componentConfig;
   }
 
   const slots = componentConfig.slots;
-  if (slots && typeof slots === 'object') {
-    const replacers = Object.entries(slots).filter(([, value]) => typeof value === 'function');
-    if (replacers.length) {
-      directives ??= {};
-      const cleaned = { ...slots };
-      for (const [slot, replacer] of replacers) {
-        directives[slot] = replacer as SlotClassReplacer;
-        cleaned[slot] = '';
-      }
-      config = { ...config, slots: cleaned };
+  const replacers = slots && typeof slots === 'object'
+    ? Object.entries(slots).filter((entry): entry is [string, SlotClassReplacer] => typeof entry[1] === 'function')
+    : [];
+  const baseReplacer = typeof componentConfig.base === 'function' ? componentConfig.base as SlotClassReplacer : undefined;
+
+  if (!replacers.length && !baseReplacer) {
+    return componentConfig;
+  }
+
+  const extend = componentConfig.extend;
+  const resolved = { ...componentConfig };
+  let extendSlots: Record<string, any> | undefined;
+  let blankExtendBase = false;
+
+  if (baseReplacer) {
+    // A slotted component keeps its base under `slots.base`, a slotless one under
+    // the top-level `base`, so read whichever the extended theme actually has.
+    resolved.base = baseReplacer(defaultClasses(extend?.slots?.base ?? extend?.base));
+    if (extend?.slots?.base) {
+      extendSlots = { ...extend.slots, base: '' };
+    }
+    if (extend?.base) {
+      blankExtendBase = true;
     }
   }
 
-  return { config, directives };
+  if (replacers.length) {
+    const cleaned = { ...slots };
+    for (const [slot, replacer] of replacers) {
+      cleaned[slot] = replacer(defaultClasses(extend?.slots?.[slot]));
+      if (extend?.slots?.[slot]) {
+        extendSlots = { ...(extendSlots ?? extend.slots), [slot]: '' };
+      }
+    }
+    resolved.slots = cleaned;
+  }
+
+  if (extendSlots || blankExtendBase) {
+    const cleanedExtend = { ...extend };
+    if (extendSlots) {
+      cleanedExtend.slots = extendSlots;
+    }
+    if (blankExtendBase) {
+      cleanedExtend.base = '';
+    }
+    resolved.extend = cleanedExtend;
+  }
+
+  return resolved;
 }
 
 function cx(...classnames: Array<ClassValue>) {

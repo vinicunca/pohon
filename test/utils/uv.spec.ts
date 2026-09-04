@@ -21,6 +21,8 @@ describe('uv class replace', () => {
   };
 
   const build = () => uvt({ extend: uvt(theme) })({ color: 'primary', size: 'md' });
+  // Mirrors a component config with `app.config.ui` slot overrides spread in.
+  const buildWith = (slots: any) => uvt({ extend: theme, slots })({ color: 'primary', size: 'md' });
 
   it('keeps merging plain string classes (no regression)', () => {
     const ui = build();
@@ -65,15 +67,43 @@ describe('uv class replace', () => {
   });
 
   it('applies a construction-time replacer from `app.config.ui` slots', () => {
-    const ui = uvt({ extend: uvt(theme), slots: { label: () => 'text-xl' } })({ color: 'primary', size: 'md' });
+    const ui = buildWith({ label: () => 'text-xl' });
     expect(ui.label()).toBe('text-xl');
     // A sibling slot keeps its defaults.
     expect(ui.base()).toContain('inline-flex');
   });
 
+  it('keeps variants and compound variants on a construction-time replacer', () => {
+    const base = buildWith({ base: () => 'block w-full' }).base();
+
+    expect(base).not.toContain('inline-flex');
+    expect(base).not.toContain('rounded-md');
+    expect(base).toContain('block');
+    expect(base).toContain('w-full');
+    expect(base).toContain('bg-primary');
+    expect(base).toContain('px-2.5');
+    expect(base).toContain('gap-1.5');
+  });
+
+  it('passes only the theme slot classes to a construction-time replacer', () => {
+    let received: string | undefined;
+
+    buildWith({
+      base: (defaults: string) => {
+        received = defaults;
+        return 'replacement';
+      },
+    }).base();
+
+    expect(received).toBe('inline-flex rounded-md text-sm');
+  });
+
+  it('merges call-time classes onto a construction-time replacement', () => {
+    expect(buildWith({ label: () => 'text-xl' }).label({ class: 'font-bold' })).toBe('text-xl font-bold');
+  });
+
   it('lets a call-time `:ui` replacer win over an `app.config.ui` one', () => {
-    const ui = uvt({ extend: uvt(theme), slots: { label: () => 'from-config' } })({ color: 'primary', size: 'md' });
-    expect(ui.label({ class: () => 'from-ui' })).toBe('from-ui');
+    expect(buildWith({ label: () => 'from-config' }).label({ class: () => 'from-ui' })).toBe('from-ui');
   });
 
   it('replaces the base slot through a function forwarded in the class array', () => {
@@ -119,9 +149,19 @@ describe('uv class replace (slotless component)', () => {
     expect(received).toContain('inline-flex');
   });
 
-  it('applies a construction-time `base` replacer from `app.config.ui`', () => {
-    const ui = uvBase({ extend: uvBase({ base: 'inline-flex px-4' }), base: () => 'block' });
-    expect(ui()).toBe('block');
+  it('keeps variants on a construction-time `base` replacer', () => {
+    const ui = uvBase({
+      extend: {
+        base: 'inline-flex px-4',
+        variants: { active: { true: 'font-bold' } },
+      },
+      base: () => 'block',
+    });
+
+    const result = ui({ active: true });
+    expect(result).toContain('block');
+    expect(result).not.toContain('inline-flex');
+    expect(result).toContain('font-bold');
   });
 });
 
