@@ -1,43 +1,45 @@
 <!-- eslint-disable no-useless-escape -->
 <script setup lang="ts">
-import { Repl, useStore, useVueImportMap } from '@vue/repl';
-import CodeMirror from '@vue/repl/codemirror-editor';
-import { useColorMode } from '@vueuse/core';
-import { computed, ref, watchEffect } from 'vue';
+import { ref, computed, watchEffect } from 'vue'
+import { Repl, useStore, useVueImportMap } from '@vue/repl'
+import { useColorMode, useClipboard } from '@vueuse/core'
+import CodeMirror from '@vue/repl/codemirror-editor'
+import { publicComposables } from '../../../src/imports'
 
-const colorMode = useColorMode();
-const theme = computed(() => colorMode.value === 'dark' ? 'dark' : 'light');
+const colorMode = useColorMode()
+const theme = computed(() => colorMode.value === 'dark' ? 'dark' : 'light')
 
 const {
   importMap: vueImportMap,
-  vueVersion,
+  vueVersion
 } = useVueImportMap({
   runtimeDev: 'https://esm.sh/vue@3/dist/vue.esm-browser.js',
   runtimeProd: 'https://esm.sh/vue@3/dist/vue.esm-browser.prod.js',
-  serverRenderer: 'https://esm.sh/@vue/server-renderer@3/dist/server-renderer.esm-browser.js',
-});
+  serverRenderer: 'https://esm.sh/@vue/server-renderer@3/dist/server-renderer.esm-browser.js'
+})
 
 const builtinImportMap = computed(() => ({
   imports: {
     ...vueImportMap.value.imports,
-    'pohon-ui': '/pohon-ui.js',
+    'pohon-ui': '/nuxt-ui.js',
+    'pohon-ui/composables': '/nuxt-ui.js',
     'zod': 'https://esm.sh/zod@4?external=vue',
     '@vueuse/core': 'https://esm.sh/@vueuse/core?external=vue',
     '@tanstack/vue-table': 'https://esm.sh/@tanstack/vue-table?external=vue',
     '@internationalized/date': 'https://esm.sh/@internationalized/date',
-    'scule': 'https://esm.sh/scule',
-  },
-}));
+    'scule': 'https://esm.sh/scule'
+  }
+}))
 
 const store = useStore(
   {
     builtinImportMap,
     vueVersion,
     showOutput: ref(false),
-    outputMode: ref('preview'),
+    outputMode: ref('preview')
   },
-  location.hash,
-);
+  location.hash
+)
 
 const defaultCode = `<script setup lang="ts">
 import { z } from 'zod'
@@ -86,118 +88,141 @@ const state = reactive<Partial<Schema>>({
 <template>
   <div class="min-h-screen p-4 sm:p-6 lg:p-8 flex flex-col justify-center">
     <PCard class="max-w-md mx-auto" variant="subtle">
-      <PForm :schema="schema" :state="state" class="space-y-6">
+      <UForm :schema="schema" :state="state" class="space-y-6">
         <PPageCard title="Payment method" description="All transactions are secure and encrypted" variant="naked" />
 
-        <PFormField name="name" label="Name" required>
+        <UFormField name="name" label="Name" required>
           <PInput v-model="state.name" placeholder="John Doe" class="w-full" />
-        </PFormField>
+        </UFormField>
 
         <div class="grid grid-cols-3 gap-4">
-          <PFormField name="cardNumber" label="Card number" help="Enter your 16-digit number." required class="col-span-2">
+          <UFormField name="cardNumber" label="Card number" help="Enter your 16-digit number." required class="col-span-2">
             <PInput v-model="state.cardNumber" placeholder="1234 5678 9012 3456" class="w-full" />
-          </PFormField>
+          </UFormField>
 
-          <PFormField name="cvv" label="CVV" required>
+          <UFormField name="cvv" label="CVV" required>
             <PInput v-model="state.cvv" placeholder="123" class="w-full" />
-          </PFormField>
+          </UFormField>
         </div>
 
         <div class="grid grid-cols-2 gap-4">
-          <PFormField name="month" label="Month" required>
+          <UFormField name="month" label="Month" required>
             <PSelect v-model="state.month" :items="months" placeholder="MM" value-key="value" class="w-full" />
-          </PFormField>
+          </UFormField>
 
-          <PFormField name="year" label="Year" required>
+          <UFormField name="year" label="Year" required>
             <PSelect v-model="state.year" :items="years" placeholder="YYYY" value-key="value" class="w-full" />
-          </PFormField>
+          </UFormField>
         </div>
 
-        <PSeparator />
+        <USeparator />
 
         <PPageCard title="Billing address" description="The billing address associated with your payment method" variant="naked" />
 
-        <PFormField name="sameAsShipping">
+        <UFormField name="sameAsShipping">
           <PCheckbox v-model="state.sameAsShipping" label="Same as shipping address" color="neutral" />
-        </PFormField>
+        </UFormField>
 
-        <PSeparator />
+        <USeparator />
 
-        <PFormField name="comments" label="Comments">
+        <UFormField name="comments" label="Comments">
           <PTextarea v-model="state.comments" placeholder="Add any additional comments" :rows="3" class="w-full" />
-        </PFormField>
+        </UFormField>
 
         <div class="flex gap-3">
-          <PButton type="submit" color="neutral" label="Submit" />
-          <PButton type="button" label="Cancel" color="neutral" variant="outline" />
+          <UButton type="submit" color="neutral" label="Submit" />
+          <UButton type="button" label="Cancel" color="neutral" variant="outline" />
         </div>
-      </PForm>
+      </UForm>
     </PCard>
   </div>
-</template>`;
+</template>`
 
-const hasInitialHash = !!location.hash;
+const hasInitialHash = !!location.hash
 
 if (!hasInitialHash) {
   store.setFiles({
-    'src/App.vue': defaultCode,
-  }, 'src/App.vue');
+    'src/App.vue': defaultCode
+  }, 'src/App.vue')
 }
 
+const hasChanged = ref(hasInitialHash)
+
 watchEffect(() => {
-  const serialized = store.serialize();
-  if (!hasInitialHash && store.getFiles()['App.vue']?.trimEnd() === defaultCode.trimEnd()) {
+  const serialized = store.serialize()
+  const isDefault = !hasInitialHash && store.getFiles()['App.vue']?.trimEnd() === defaultCode.trimEnd()
+
+  hasChanged.value = !isDefault
+  if (isDefault) {
     if (location.hash) {
-      history.replaceState({}, '', location.pathname);
+      history.replaceState({}, '', location.pathname)
     }
-    return;
+    return
   }
-  history.replaceState({}, '', serialized);
-});
+  history.replaceState({}, '', serialized)
+})
+
+const { copy, copied } = useClipboard()
+function share() {
+  copy(location.href)
+}
+
+// Mirror the auto-imports available in a real Nuxt UI app so REPL code can call
+// these composables without importing them.
+const composables = Object.values(publicComposables).flat()
 
 const previewOptions = {
   headHTML: [
     '<script>window.__VUE_PROD_DEVTOOLS__=false<\/script>',
+    '<link rel="stylesheet" href="/nuxt-ui.css">',
     '<link rel="preconnect" href="https://fonts.bunny.net">',
     '<link href="https://fonts.bunny.net/css?family=public-sans:400,500,600,700" rel="stylesheet">',
     '<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"><\/script>',
     '<style type="text/tailwindcss">@theme { --font-sans: \'Public Sans\', sans-serif; }</style>',
     '<style>body { font-family: var(--font-sans); }</style>',
-    '<style>#app { isolation: isolate; }</style>',
+    '<style>#app { isolation: isolate; }</style>'
   ].join(''),
   customCode: {
-    importCode: 'import ui, { useToast, useOverlay, defineShortcuts, extractShortcuts } from \'pohon-ui\'\nimport { h } from \'vue\'\nwindow.useToast = useToast\nwindow.useOverlay = useOverlay\nwindow.defineShortcuts = defineShortcuts\nwindow.extractShortcuts = extractShortcuts',
-    useCode: 'app.use(ui)\napp.component(\'Placeholder\', { template: \'<div class="relative overflow-hidden rounded-sm border border-dashed border-border-accented opacity-75 px-4 flex items-center justify-center"><svg class="absolute inset-0 size-full stroke-inverted/10" fill="none"><defs><pattern id="placeholder-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3" /></pattern></defs><rect stroke="none" fill="url(#placeholder-pattern)" width="100%" height="100%" /></svg><slot /></div>\' })\nconst _Root = app._component\nconst _PApp = app.component(\'PApp\')\nconst _origMount = app.mount\napp.mount = function(el) {\n  const wrapper = _createApp({ render() { return h(_PApp, null, { default: () => h(_Root) }) } })\n  Object.assign(wrapper._context.components, app._context.components)\n  Object.assign(wrapper._context.directives, app._context.directives)\n  Object.assign(wrapper._context.provides, app._context.provides)\n  wrapper.config.errorHandler = e => console.error(e)\n  wrapper.mount(el)\n  window.__app__ = wrapper\n}',
-  },
-};
+    importCode: `import ui, { ${composables.join(', ')} } from 'pohon-ui'\nimport { h } from 'vue'\n${composables.map(name => `window.${name} = ${name}`).join('\n')}`,
+    useCode: `app.use(ui)\napp.component('Placeholder', { template: '<div class="relative overflow-hidden rounded-sm border border-dashed border-accented opacity-75 px-4 flex items-center justify-center"><svg class="absolute inset-0 size-full stroke-inverted/10" fill="none"><defs><pattern id="placeholder-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3" /></pattern></defs><rect stroke="none" fill="url(#placeholder-pattern)" width="100%" height="100%" /></svg><slot /></div>' })\nconst _Root = app._component\nconst _UApp = app.component('UApp')\nconst _origMount = app.mount\napp.mount = function(el) {\n  const wrapper = _createApp({ render() { return h(_UApp, null, { default: () => h(_Root) }) } })\n  Object.assign(wrapper._context.components, app._context.components)\n  Object.assign(wrapper._context.directives, app._context.directives)\n  Object.assign(wrapper._context.provides, app._context.provides)\n  wrapper.config.errorHandler = e => console.error(e)\n  wrapper.mount(el)\n  window.__app__ = wrapper\n}`
+  }
+}
 </script>
 
 <template>
-  <PApp>
-    <div class="flex flex-col h-dvh">
-      <PHeader
-        title="Pohon UI Playground"
-        :ui="{ container: 'max-w-none' }"
-      >
+  <UApp>
+    <div class="h-dvh flex flex-col">
+      <UHeader title="Nuxt UI Playground" :ui="{ container: 'max-w-none' }">
         <template #left>
-          <Logo class="text-highlighted shrink-0 h-6 w-auto" />
+          <Logo class="w-auto h-6 shrink-0 text-highlighted" />
         </template>
 
         <template #right>
-          <PColorModeButton />
-
-          <PTooltip text="Open on GitHub">
-            <PButton
+          <PTooltip :text="copied ? 'Copied!' : 'Share'" :disabled="!hasChanged">
+            <UButton
               color="neutral"
               variant="ghost"
-              to="https://github.com/vinicunca/pohon"
+              :icon="copied ? 'i-lucide-circle-check' : 'i-lucide-share'"
+              :disabled="!hasChanged"
+              aria-label="Share"
+              @click="share"
+            />
+          </PTooltip>
+
+          <UColorModeButton />
+
+          <PTooltip text="Open on GitHub">
+            <UButton
+              color="neutral"
+              variant="ghost"
+              to="https://github.com/nuxt/ui"
               target="_blank"
               icon="i-simple-icons:github"
               aria-label="GitHub"
             />
           </PTooltip>
         </template>
-      </PHeader>
+      </UHeader>
 
       <Repl
         :store="store"
@@ -212,7 +237,7 @@ const previewOptions = {
         class="flex-1"
       />
     </div>
-  </PApp>
+  </UApp>
 </template>
 
 <style>
@@ -224,7 +249,7 @@ const previewOptions = {
 .vue-repl,
 .dark .vue-repl {
   --bg: var(--ui-bg);
-  --bg-soft: var(--ui-bg-background-muted);
+  --bg-soft: var(--ui-bg-muted);
   --border: var(--ui-border);
   --text-light: var(--ui-text-muted);
   --color-branding: var(--ui-primary);
@@ -257,7 +282,7 @@ const previewOptions = {
 .dark .CodeMirror {
   --base: var(--ui-text);
   --comment: var(--ui-text-dimmed);
-  --selected-bg: var(--ui-bg-background-accented);
-  --selected-bg-non-focus: var(--ui-bg-background-accented);
+  --selected-bg: var(--ui-bg-accented);
+  --selected-bg-non-focus: var(--ui-bg-accented);
 }
 </style>

@@ -1,103 +1,81 @@
 <script setup lang="ts">
-const items = [
-  {
-    label: 'Figma Kit',
-    to: 'https://go.nuxt.com/figma-ui',
-    target: '_blank',
-  },
-  {
-    label: 'Playground',
-    to: 'https://stackblitz.com/edit/pohon-ui',
-    target: '_blank',
-  },
-  {
-    label: 'Releases',
-    to: 'https://github.com/vinicunca/pohon/releases',
-    target: '_blank',
-  },
-];
+const items = [{
+  label: 'Figma Kit',
+  to: 'https://go.nuxt.com/figma-ui',
+  target: '_blank'
+}, {
+  label: 'Playground',
+  to: 'https://stackblitz.com/edit/nuxt-ui',
+  target: '_blank'
+}, {
+  label: 'Releases',
+  to: 'https://github.com/nuxt/ui/releases',
+  target: '_blank'
+}]
 
-const columns = [
-  {
-    label: 'Community',
-    children: [{
-      label: 'Nuxters',
-      to: 'https://nuxters.nuxt.com',
-      target: '_blank',
-    }, {
-      label: 'Video Courses',
-      to: 'https://masteringnuxt.com/nuxt3?ref=nuxt',
-      target: '_blank',
-    }, {
-      label: 'Nuxt on GitHub',
-      to: 'https://github.com/nuxt',
-      target: '_blank',
-    }],
-  },
-  {
-    label: 'Solutions',
-    children: [{
-      label: 'Nuxt Content',
-      to: 'https://content.nuxt.com/',
-      target: '_blank',
-    }, {
-      label: 'Nuxt Image',
-      to: 'https://image.nuxt.com/',
-      target: '_blank',
-    }, {
-      label: 'Pohon UI',
-      to: 'https://pohon.vinicunca.dev/',
-      target: '_blank',
-    }],
-  },
-];
+const columns = [{
+  label: 'Community',
+  children: [{
+    label: 'Nuxters',
+    to: 'https://nuxters.nuxt.com',
+    target: '_blank'
+  }, {
+    label: 'Video Courses',
+    to: 'https://masteringnuxt.com/nuxt3?ref=nuxt',
+    target: '_blank'
+  }, {
+    label: 'Nuxt on GitHub',
+    to: 'https://github.com/nuxt',
+    target: '_blank'
+  }]
+}, {
+  label: 'Solutions',
+  children: [{
+    label: 'Nuxt Content',
+    to: 'https://content.nuxt.com/',
+    target: '_blank'
+  }, {
+    label: 'Nuxt Image',
+    to: 'https://image.nuxt.com/',
+    target: '_blank'
+  }, {
+    label: 'Nuxt UI',
+    to: 'https://ui.nuxt.com/',
+    target: '_blank'
+  }]
+}]
 </script>
 
 <template>
   <Navbar />
 
-  <PFooter class="border-default border-t min-h-0 w-full divide-divide divide-y">
+  <UFooter class="w-full border-t border-default divide-y divide-default min-h-0">
     <template #top>
       <PContainer>
-        <PFooterColumns :columns="columns">
+        <UFooterColumns :columns="columns">
           <template #right>
-            <PFormField
-              name="email"
-              label="Subscribe to our newsletter"
-              size="lg"
-            >
-              <PInput
-                type="email"
-                class="w-full"
-              >
+            <UFormField name="email" label="Subscribe to our newsletter" size="lg">
+              <PInput type="email" class="w-full">
                 <template #trailing>
-                  <PButton
-                    type="submit"
-                    size="xs"
-                    color="neutral"
-                    label="Subscribe"
-                  />
+                  <UButton type="submit" size="xs" color="neutral" label="Subscribe" />
                 </template>
               </PInput>
-            </PFormField>
+            </UFormField>
           </template>
-        </PFooterColumns>
+        </UFooterColumns>
       </PContainer>
     </template>
 
     <template #left>
-      <p class="text-sm color-text-muted">
+      <p class="text-muted text-sm">
         Copyright © {{ new Date().getFullYear() }}
       </p>
     </template>
 
-    <PNavigationMenu
-      :items="items"
-      variant="link"
-    />
+    <PNavigationMenu :items="items" variant="link" />
 
     <template #right>
-      <PButton
+      <UButton
         icon="i-simple-icons-discord"
         color="neutral"
         variant="ghost"
@@ -105,7 +83,7 @@ const columns = [
         target="_blank"
         aria-label="Discord"
       />
-      <PButton
+      <UButton
         icon="i-simple-icons-x"
         color="neutral"
         variant="ghost"
@@ -113,7 +91,7 @@ const columns = [
         target="_blank"
         aria-label="X"
       />
-      <PButton
+      <UButton
         icon="i-simple-icons-github"
         color="neutral"
         variant="ghost"
@@ -122,5 +100,5 @@ const columns = [
         aria-label="GitHub"
       />
     </template>
-  </PFooter>
+  </UFooter>
 </template>

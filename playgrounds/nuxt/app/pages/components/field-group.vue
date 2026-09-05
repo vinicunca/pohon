@@ -1,117 +1,62 @@
 <script setup lang="ts">
-import theme from '#build/ui/field-group';
+import theme from '#build/ui/field-group'
 
-const sizes = Object.keys(theme.variants.size);
-const orientations = Object.keys(theme.variants.orientation);
+const sizes = Object.keys(theme.variants.size)
+const orientations = Object.keys(theme.variants.orientation)
 
 const attrs = reactive({
-  size: ['md' as keyof typeof theme.variants.size],
-});
+  size: ['md' as keyof typeof theme.variants.size]
+})
 
-const orientation = ref('horizontal' as keyof typeof theme.variants.orientation);
+const orientation = ref('horizontal' as keyof typeof theme.variants.orientation)
 </script>
 
 <template>
   <Navbar>
-    <PSelect
-      v-model="attrs.size"
-      :items="sizes"
-      multiple
-    />
-    <PSelect
-      v-model="orientation"
-      :items="orientations"
-    />
+    <PSelect v-model="attrs.size" :items="sizes" multiple />
+    <PSelect v-model="orientation" :items="orientations" />
   </Navbar>
 
-  <Matrix
-    v-slot="props"
-    :attrs="attrs"
-  >
-    <PFieldGroup
-      :orientation="orientation"
-      v-bind="props"
-    >
-      <PButton
-        color="neutral"
-        variant="outline"
-      >
+  <Matrix v-slot="props" :attrs="attrs">
+    <UFieldGroup :orientation="orientation" v-bind="props">
+      <UButton color="neutral" variant="outline">
         Button
-      </PButton>
-    </PFieldGroup>
+      </UButton>
+    </UFieldGroup>
 
-    <PFieldGroup
-      :orientation="orientation"
-      v-bind="props"
-    >
+    <UFieldGroup :orientation="orientation" v-bind="props">
       <PInput placeholder="Search..." />
-    </PFieldGroup>
+    </UFieldGroup>
 
-    <PFieldGroup
-      :orientation="orientation"
-      v-bind="props"
-    >
-      <PButton
-        color="neutral"
-        variant="outline"
-      >
+    <UFieldGroup :orientation="orientation" v-bind="props">
+      <UButton color="neutral" variant="outline">
         Button
-      </PButton>
-      <PButton
-        color="neutral"
-        variant="subtle"
-      >
+      </UButton>
+      <UButton color="neutral" variant="subtle">
         Button
-      </PButton>
-      <PButton
-        color="neutral"
-        variant="outline"
-      >
+      </UButton>
+      <UButton color="neutral" variant="outline">
         Button
-      </PButton>
-    </PFieldGroup>
+      </UButton>
+    </UFieldGroup>
 
-    <PFieldGroup
-      :orientation="orientation"
-      v-bind="props"
-    >
-      <PButton
-        color="neutral"
-        variant="outline"
-      >
+    <UFieldGroup :orientation="orientation" v-bind="props">
+      <UButton color="neutral" variant="outline">
         Button
-      </PButton>
+      </UButton>
       <PInput placeholder="Search..." />
-    </PFieldGroup>
+    </UFieldGroup>
 
-    <PFieldGroup
-      :orientation="orientation"
-      v-bind="props"
-    >
+    <UFieldGroup :orientation="orientation" v-bind="props">
       <PInput placeholder="Search..." />
-      <PButton
-        color="neutral"
-        variant="outline"
-      >
+      <UButton color="neutral" variant="outline">
         Button
-      </PButton>
-    </PFieldGroup>
+      </UButton>
+    </UFieldGroup>
 
-    <PFieldGroup
-      :orientation="orientation"
-      v-bind="props"
-    >
-      <PBadge
-        color="neutral"
-        variant="outline"
-        size="lg"
-        label="https://"
-      />
-      <PInput
-        color="neutral"
-        variant="outline"
-        placeholder="www.example.com"
-      />
-    </PFieldGroup>
+    <UFieldGroup :orientation="orientation" v-bind="props">
+      <UBadge color="neutral" variant="outline" size="lg" label="https://" />
+      <PInput color="neutral" variant="outline" placeholder="www.example.com" />
+    </UFieldGroup>
   </Matrix>
 </template>

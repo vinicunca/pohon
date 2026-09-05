@@ -10,7 +10,7 @@
     /* Aliases */
     "paths": {
       "#build/ui": [
-        "./node_modules/.pohon-ui/ui"
+        "./node_modules/.nuxt-ui/ui"
       ]
     },
     "allowImportingTsExtensions": true,

@@ -15,12 +15,7 @@ function confirmDelete() {
 </script>
 
 <template>
-  <PButton
-    label="Delete"
-    color="error"
-    variant="soft"
-    @click="isOpen = true"
-  />
+  <UButton label="Delete" color="error" variant="soft" @click="isOpen = true" />
 
   <PModal
     v-model:open="isOpen"
@@ -29,17 +24,13 @@ function confirmDelete() {
     :ui="{ footer: 'justify-end' }"
   >
     <template #footer="{ close }">
-      <PButton
+      <UButton
         label="Cancel"
         color="neutral"
         variant="outline"
         @click="close"
       />
-      <PButton
-        label="Delete"
-        color="error"
-        @click="confirmDelete"
-      />
+      <UButton label="Delete" color="error" @click="confirmDelete" />
     </template>
   </PModal>
 </template>
@@ -68,17 +59,13 @@ const emit = defineEmits<{
     :description="description"
   >
     <template #footer>
-      <PButton
+      <UButton
         label="Cancel"
         color="neutral"
         variant="outline"
         @click="emit('close', false)"
       />
-      <PButton
-        label="Confirm"
-        color="error"
-        @click="emit('close', true)"
-      />
+      <UButton label="Confirm" color="error" @click="emit('close', true)" />
     </template>
   </PModal>
 </template>
@@ -91,8 +78,8 @@ const confirm = overlay.create(ConfirmModal);
 
 async function deleteItem(item) {
   const instance = confirm.open({
-    title: 'Delete item',
-    description: `Are you sure you want to delete "${item.name}"?`
+    title: "Delete item",
+    description: `Are you sure you want to delete "${item.name}"?`,
   });
 
   if (await instance.result) {
@@ -105,13 +92,13 @@ async function deleteItem(item) {
 
 ```vue
 <script setup lang="ts">
-import * as z from 'zod';
+import * as z from "zod";
 
 const isOpen = ref(false);
 
 const schema = z.object({
   name: z.string().min(1),
-  email: z.email()
+  email: z.email(),
 });
 
 type Schema = z.output<typeof schema>;
@@ -124,10 +111,7 @@ function onSave() {
 </script>
 
 <template>
-  <PButton
-    label="Add user"
-    @click="isOpen = true"
-  />
+  <UButton label="Add user" @click="isOpen = true" />
 
   <PSlideover
     v-model:open="isOpen"
@@ -135,43 +119,30 @@ function onSave() {
     description="Fill in the details below."
   >
     <template #body>
-      <PForm
+      <UForm
         id="user-form"
         :schema="schema"
         :state="state"
         class="space-y-4"
         @submit="onSave"
       >
-        <PFormField
-          name="name"
-          label="Name"
-        >
+        <UFormField name="name" label="Name">
           <PInput v-model="state.name" />
-        </PFormField>
-        <PFormField
-          name="email"
-          label="Email"
-        >
-          <PInput
-            v-model="state.email"
-            type="email"
-          />
-        </PFormField>
-      </PForm>
+        </UFormField>
+        <UFormField name="email" label="Email">
+          <PInput v-model="state.email" type="email" />
+        </UFormField>
+      </UForm>
     </template>
 
     <template #footer="{ close }">
-      <PButton
+      <UButton
         label="Cancel"
         color="neutral"
         variant="outline"
         @click="close"
       />
-      <PButton
-        type="submit"
-        form="user-form"
-        label="Save"
-      />
+      <UButton type="submit" form="user-form" label="Save" />
     </template>
   </PSlideover>
 </template>
@@ -186,31 +157,40 @@ const isOpen = ref(false);
 defineShortcuts({
   meta_k: () => {
     isOpen.value = true;
-  }
+  },
 });
 
 const groups = [
   {
-    id: 'actions',
-    label: 'Actions',
+    id: "actions",
+    label: "Actions",
     items: [
-      { label: 'New file', icon: 'i-lucide-file-plus', kbds: ['meta', 'n'], onSelect: () => newFile() },
-      { label: 'New folder', icon: 'i-lucide-folder-plus', onSelect: () => newFolder() }
-    ]
+      {
+        label: "New file",
+        icon: "i-lucide-file-plus",
+        kbds: ["meta", "n"],
+        onSelect: () => newFile(),
+      },
+      {
+        label: "New folder",
+        icon: "i-lucide-folder-plus",
+        onSelect: () => newFolder(),
+      },
+    ],
   },
   {
-    id: 'navigation',
-    label: 'Navigation',
+    id: "navigation",
+    label: "Navigation",
     items: [
-      { label: 'Dashboard', icon: 'i-lucide-house', to: '/dashboard' },
-      { label: 'Settings', icon: 'i-lucide-settings', to: '/settings' }
-    ]
-  }
+      { label: "Dashboard", icon: "i-lucide-house", to: "/dashboard" },
+      { label: "Settings", icon: "i-lucide-settings", to: "/settings" },
+    ],
+  },
 ];
 </script>
 
 <template>
-  <PButton
+  <UButton
     label="Search..."
     icon="i-lucide-search"
     color="neutral"
@@ -234,31 +214,20 @@ const isOpen = ref(false);
 </script>
 
 <template>
-  <PButton
-    label="Options"
-    @click="isOpen = true"
-  />
+  <UButton label="Options" @click="isOpen = true" />
 
-  <PDrawer
-    v-model:open="isOpen"
-    title="Options"
-  >
+  <PDrawer v-model:open="isOpen" title="Options">
     <template #body>
-      <div class="p-4 space-y-2">
-        <PButton
-          label="Share"
-          icon="i-lucide-share"
-          block
-          variant="ghost"
-        />
-        <PButton
+      <div class="space-y-2 p-4">
+        <UButton label="Share" icon="i-lucide-share" block variant="ghost" />
+        <UButton
           label="Export"
           icon="i-lucide-download"
           block
           variant="ghost"
         />
-        <PSeparator />
-        <PButton
+        <USeparator />
+        <UButton
           label="Delete"
           icon="i-lucide-trash"
           block
@@ -270,4 +239,3 @@ const isOpen = ref(false);
   </PDrawer>
 </template>
 ```
-

@@ -11,12 +11,12 @@ Build a rich text editor with toolbars, slash commands, mentions, and drag-and-d
 ## Component tree
 
 ```
-PEditor
-├── PEditorToolbar (fixed / bubble / floating)
-├── PEditorDragHandle
-├── PEditorSuggestionMenu
-├── PEditorMentionMenu
-└── PEditorEmojiMenu
+UEditor
+├── UEditorToolbar (fixed / bubble / floating)
+├── UEditorDragHandle
+├── UEditorSuggestionMenu
+├── UEditorMentionMenu
+└── UEditorEmojiMenu
 ```
 
 ## Basic editor
@@ -24,38 +24,41 @@ PEditor
 ```vue
 <script setup lang="ts">
 const content = ref({
-  type: 'doc',
+  type: "doc",
   content: [
     {
-      type: 'heading',
+      type: "heading",
       attrs: { level: 1 },
-      content: [{ type: 'text', text: 'Hello World' }]
+      content: [{ type: "text", text: "Hello World" }],
     },
     {
-      type: 'paragraph',
-      content: [{ type: 'text', text: 'Start writing...' }]
-    }
-  ]
+      type: "paragraph",
+      content: [{ type: "text", text: "Start writing..." }],
+    },
+  ],
 });
 </script>
 
 <template>
-  <PEditor
-    v-slot="{ editor }"
-    v-model="content"
-  >
-    <PEditorToolbar :editor="editor" />
-    <PEditorSuggestionMenu :editor="editor" />
-    <PEditorMentionMenu
+  <UEditor v-slot="{ editor }" v-model="content">
+    <UEditorToolbar :editor="editor" />
+    <UEditorSuggestionMenu :editor="editor" />
+    <UEditorMentionMenu
       :editor="editor"
       :items="[
-        { label: 'Benjamin', avatar: { src: 'https://github.com/benjamincanac.png' } },
-        { label: 'Sébastien', avatar: { src: 'https://github.com/atinux.png' } },
+        {
+          label: 'Benjamin',
+          avatar: { src: 'https://github.com/benjamincanac.png' },
+        },
+        {
+          label: 'Sébastien',
+          avatar: { src: 'https://github.com/atinux.png' },
+        },
       ]"
     />
-    <PEditorEmojiMenu :editor="editor" />
-    <PEditorDragHandle :editor="editor" />
-  </PEditor>
+    <UEditorEmojiMenu :editor="editor" />
+    <UEditorDragHandle :editor="editor" />
+  </UEditor>
 </template>
 ```
 
@@ -63,37 +66,37 @@ const content = ref({
 
 ## Key components
 
-- `PEditor` — rich text editor. `v-model` accepts JSON (default), HTML, or Markdown via `content-type` prop. Default slot provides `{ editor, handlers }` — `editor` is the Tiptap instance, `handlers` contains action functions for toolbar/menus.
-- `PEditorToolbar` — toolbar with `layout`: `'fixed'` (default), `'bubble'` (on selection), `'floating'` (on empty lines).
-- `PEditorDragHandle` — block drag-and-drop handle.
-- `PEditorSuggestionMenu` — slash command menu (type `/` to open).
-- `PEditorMentionMenu` — `@` mention menu.
-- `PEditorEmojiMenu` — emoji picker (type `:` to open).
+- `UEditor` — rich text editor. `v-model` accepts JSON (default), HTML, or Markdown via `content-type` prop. Default slot provides `{ editor, handlers }` — `editor` is the Tiptap instance, `handlers` contains action functions for toolbar/menus.
+- `UEditorToolbar` — toolbar with `layout`: `'fixed'` (default), `'bubble'` (on selection), `'floating'` (on empty lines).
+- `UEditorDragHandle` — block drag-and-drop handle.
+- `UEditorSuggestionMenu` — slash command menu (type `/` to open).
+- `UEditorMentionMenu` — `@` mention menu.
+- `UEditorEmojiMenu` — emoji picker (type `:` to open).
 
 ## Toolbar modes
 
 ```vue
 <!-- Fixed (default) — always visible at top -->
-<PEditorToolbar :editor="editor" />
+<UEditorToolbar :editor="editor" />
 
 <!-- Bubble — appears on text selection -->
-<PEditorToolbar :editor="editor" layout="bubble" />
+<UEditorToolbar :editor="editor" layout="bubble" />
 
 <!-- Floating — appears on empty lines -->
-<PEditorToolbar :editor="editor" layout="floating" />
+<UEditorToolbar :editor="editor" layout="floating" />
 ```
 
 ## Content types
 
 ```vue
 <!-- JSON (default) -->
-<PEditor v-model="jsonContent" />
+<UEditor v-model="jsonContent" />
 
 <!-- HTML -->
-<PEditor v-model="htmlContent" content-type="html" />
+<UEditor v-model="htmlContent" content-type="html" />
 
 <!-- Markdown -->
-<PEditor v-model="markdownContent" content-type="markdown" />
+<UEditor v-model="markdownContent" content-type="markdown" />
 ```
 
 ## With document sidebar
@@ -102,67 +105,56 @@ Combine with Dashboard layout for a multi-document editor:
 
 ```vue [layouts/editor.vue]
 <template>
-  <PDashboardGroup>
-    <PDashboardSidebar
-      collapsible
-      resizable
-    >
+  <UDashboardGroup>
+    <UDashboardSidebar collapsible resizable>
       <template #header>
-        <PButton
-          icon="i-lucide-plus"
-          label="New document"
-          block
-        />
+        <UButton icon="i-lucide-plus" label="New document" block />
       </template>
 
       <template #default="{ collapsed }">
         <PNavigationMenu
           :collapsed="collapsed"
-          :items="documents.map(doc => ({
-            label: doc.title,
-            to: `/editor/${doc.id}`,
-            icon: 'i-lucide-file-text',
-          }))"
+          :items="
+            documents.map((doc) => ({
+              label: doc.title,
+              to: `/editor/${doc.id}`,
+              icon: 'i-lucide-file-text',
+            }))
+          "
           orientation="vertical"
         />
       </template>
-    </PDashboardSidebar>
+    </UDashboardSidebar>
 
     <slot />
-  </PDashboardGroup>
+  </UDashboardGroup>
 </template>
 ```
 
 ```vue [pages/editor/[id].vue]
 <script setup lang="ts">
-definePageMeta({ layout: 'editor' });
+definePageMeta({ layout: "editor" });
 
-const content = ref({ type: 'doc', content: [] });
+const content = ref({ type: "doc", content: [] });
 </script>
 
 <template>
   <PDashboardPanel>
     <template #header>
-      <PDashboardNavbar title="Editor">
+      <UDashboardNavbar title="Editor">
         <template #right>
-          <PButton
-            label="Save"
-            icon="i-lucide-save"
-          />
+          <UButton label="Save" icon="i-lucide-save" />
         </template>
-      </PDashboardNavbar>
+      </UDashboardNavbar>
     </template>
 
     <PContainer class="py-8">
-      <PEditor
-        v-slot="{ editor }"
-        v-model="content"
-      >
-        <PEditorToolbar :editor="editor" />
-        <PEditorSuggestionMenu :editor="editor" />
-        <PEditorEmojiMenu :editor="editor" />
-        <PEditorDragHandle :editor="editor" />
-      </PEditor>
+      <UEditor v-slot="{ editor }" v-model="content">
+        <UEditorToolbar :editor="editor" />
+        <UEditorSuggestionMenu :editor="editor" />
+        <UEditorEmojiMenu :editor="editor" />
+        <UEditorDragHandle :editor="editor" />
+      </UEditor>
     </PContainer>
   </PDashboardPanel>
 </template>

@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { DropdownMenuItem } from 'pohon-ui';
-import theme from '#build/ui/dropdown-menu';
+import type { DropdownMenuItem } from 'pohon-ui'
+import theme from '#build/ui/dropdown-menu'
 
-const loading = ref(false);
+const loading = ref(false)
 
 const items = computed(() => [
   [{
     label: 'My account',
     avatar: {
-      src: 'https://github.com/benjamincanac.png',
+      src: 'https://github.com/benjamincanac.png'
     },
-    type: 'label' as const,
+    type: 'label' as const
   }],
   [{
     label: 'Profile',
@@ -18,67 +18,66 @@ const items = computed(() => [
     icon: 'i-lucide-user',
     slot: 'custom' as const,
     onSelect(e: Event) {
-      e.preventDefault();
-      console.log('Profile clicked');
-    },
+      e.preventDefault()
+      console.log('Profile clicked')
+    }
   }, {
     label: 'Billing',
     description: 'Manage billing',
     icon: 'i-lucide-credit-card',
     kbds: ['meta', 'b'],
     onSelect() {
-      console.log('Billing clicked');
-    },
+      console.log('Billing clicked')
+    }
   }, {
     label: 'Settings',
     icon: 'i-lucide-cog',
     kbds: ['?'],
     onSelect() {
-      console.log('Settings clicked');
-    },
-  }],
-  [{
+      console.log('Settings clicked')
+    }
+  }], [{
     label: 'Team',
     icon: 'i-lucide-users',
     filter: {
-      placeholder: 'Search members...',
+      placeholder: 'Search members...'
     },
     children: [{
       label: 'benjamincanac',
-      avatar: { src: 'https://github.com/benjamincanac.png' },
+      avatar: { src: 'https://github.com/benjamincanac.png' }
     }, {
       label: 'HugoRCD',
-      avatar: { src: 'https://github.com/HugoRCD.png' },
+      avatar: { src: 'https://github.com/HugoRCD.png' }
     }, {
       label: 'romhml',
-      avatar: { src: 'https://github.com/romhml.png' },
+      avatar: { src: 'https://github.com/romhml.png' }
     }, {
       label: 'sandros94',
-      avatar: { src: 'https://github.com/sandros94.png' },
+      avatar: { src: 'https://github.com/sandros94.png' }
     }, {
       label: 'hywax',
-      avatar: { src: 'https://github.com/hywax.png' },
+      avatar: { src: 'https://github.com/hywax.png' }
     }, {
       label: 'J-Michalek',
-      avatar: { src: 'https://github.com/J-Michalek.png' },
+      avatar: { src: 'https://github.com/J-Michalek.png' }
     }, {
       label: 'genu',
-      avatar: { src: 'https://github.com/genu.png' },
-    }],
+      avatar: { src: 'https://github.com/genu.png' }
+    }]
   }, {
     label: 'Invite users',
     icon: 'i-lucide-user-plus',
     children: [[{
       label: 'Invite by email',
-      icon: 'i-lucide-send-horizontal',
+      icon: 'i-lucide-send-horizontal'
     }, {
       label: 'Invite by link',
       icon: 'i-lucide-link',
       kbds: ['meta', 'i'],
       onSelect(e: Event) {
-        e.preventDefault();
-        console.log('Invite by link clicked');
-      },
+        e.preventDefault()
+        console.log('Invite by link clicked')
+      }
     }], [{
       label: 'More',
       description: 'Import from more sources',
@@ -89,120 +88,93 @@ const items = computed(() => [
         to: 'https://slack.com',
         target: '_blank',
         onSelect(e: Event) {
-          e.preventDefault();
-          console.log('Import from Slack clicked');
-        },
+          e.preventDefault()
+          console.log('Import from Slack clicked')
+        }
       }, {
         label: 'Import from Trello',
         icon: 'i-simple-icons-trello',
         onSelect(e: Event) {
-          e.preventDefault();
-          console.log('Import from Trello clicked');
-        },
+          e.preventDefault()
+          console.log('Import from Trello clicked')
+        }
       }, {
         label: 'Import from Asana',
         icon: 'i-simple-icons-asana',
         onSelect(e: Event) {
-          e.preventDefault();
-          console.log('Import from Asana clicked');
-        },
-      }],
-    }]],
+          e.preventDefault()
+          console.log('Import from Asana clicked')
+        }
+      }]
+    }]]
   }, {
     label: 'New team',
     icon: 'i-lucide-plus',
     kbds: ['meta', 'n'],
     loading: loading.value,
     onSelect(e: Event) {
-      e.preventDefault();
+      e.preventDefault()
 
-      loading.value = true;
+      loading.value = true
       setTimeout(() => {
-        loading.value = false;
-      }, 2000);
-    },
-  }],
-  [{
+        loading.value = false
+      }, 2000)
+    }
+  }], [{
     label: 'GitHub',
     icon: 'i-simple-icons-github',
-    to: 'https://github.com/vinicunca/pohon',
+    to: 'https://github.com/nuxt/ui',
     target: '_blank',
     onSelect(e: Event) {
-      e.preventDefault();
-    },
+      e.preventDefault()
+    }
   }, {
     label: 'Support',
     icon: 'i-lucide-life-buoy',
-    to: '/components/dropdown-menu',
+    to: '/components/dropdown-menu'
   }, {
-    type: 'separator' as const,
+    type: 'separator' as const
   }, {
     label: 'Keyboard Shortcuts',
-    icon: 'i-lucide-key-round',
+    icon: 'i-lucide-key-round'
   }, {
     label: 'API',
     icon: 'i-lucide-box',
-    disabled: true,
-  }],
-  [{
+    disabled: true
+  }], [{
     label: 'Logout',
     icon: 'i-lucide-log-out',
     color: 'error',
     kbds: ['shift', 'meta', 'q'],
     onSelect() {
-      console.log('Logout clicked');
-    },
-  }],
-] satisfies Array<Array<DropdownMenuItem>>);
+      console.log('Logout clicked')
+    }
+  }]
+] satisfies DropdownMenuItem[][])
 
-const sizes = Object.keys(theme.variants.size);
+const sizes = Object.keys(theme.variants.size)
 
 const attrs = reactive({
-  size: [theme.defaultVariants.size],
-});
+  size: [theme.defaultVariants.size]
+})
 
-const arrow = ref(false);
+const arrow = ref(false)
 
-defineShortcuts(extractShortcuts(items.value));
+defineShortcuts(extractShortcuts(items.value))
 </script>
 
 <template>
   <Navbar>
-    <PSelect
-      v-model="attrs.size"
-      :items="sizes"
-      multiple
-      placeholder="Size"
-    />
-    <PSwitch
-      v-model="arrow"
-      label="Arrow"
-    />
+    <PSelect v-model="attrs.size" :items="sizes" multiple placeholder="Size" />
+    <PSwitch v-model="arrow" label="Arrow" />
   </Navbar>
 
-  <Matrix
-    v-slot="props"
-    :attrs="attrs"
-  >
-    <PDropdownMenu
-      :items="items"
-      :arrow="arrow"
-      filter
-      :content="{ side: 'bottom', align: 'start' }"
-      v-bind="props"
-    >
-      <PButton
-        label="Open"
-        color="neutral"
-        variant="outline"
-        icon="i-lucide-menu"
-      />
+  <Matrix v-slot="props" :attrs="attrs">
+    <PDropdownMenu :items="items" :arrow="arrow" filter :content="{ side: 'bottom', align: 'start' }" v-bind="props">
+      <UButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
 
       <template #custom-trailing>
-        <PIcon
-          name="i-lucide-badge-check"
-          class="color-primary shrink-0 size-5"
-        />
+        <UIcon name="i-lucide-badge-check" class="shrink-0 size-5 text-primary" />
       </template>
     </PDropdownMenu>
   </Matrix>

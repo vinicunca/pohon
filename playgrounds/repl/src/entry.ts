@@ -2,11 +2,23 @@ import type { App } from 'vue';
 import basePlugin from 'pohon-ui/vue-plugin';
 import './main.css';
 
-const componentModules = import.meta.glob('../../../src/runtime/components/*.vue', { eager: true }) as Record<string, { default: any }>;
+const componentModules = import.meta.glob([
+  '../../../src/runtime/components/*.vue',
+  '!../../../src/runtime/components/Icon.vue',
+  '!../../../src/runtime/components/Link.vue',
+], { eager: true }) as Record<string, { default: any }>;
+const overrideModules = import.meta.glob([
+  '../../../src/runtime/vue/components/Icon.vue',
+  '../../../src/runtime/vue/overrides/none/Link.vue',
+], { eager: true }) as Record<string, { default: any }>;
 
 const components: Record<string, any> = {};
+for (const [path, mod] of Object.entries(overrideModules)) {
+  const name = `P${path.match(/([^/]+)\.vue$/)?.[1]}`;
+  components[name] = mod.default;
+}
 for (const [path, mod] of Object.entries(componentModules)) {
-  const name = `U${path.match(/([^/]+)\.vue$/)?.[1]}`;
+  const name = `P${path.match(/([^/]+)\.vue$/)?.[1]}`;
   components[name] = mod.default;
 }
 
@@ -19,6 +31,4 @@ export function install(app: App) {
 
 export default { install };
 
-export { defineShortcuts, extractShortcuts } from '../../../src/runtime/composables/defineShortcuts';
-export { useOverlay } from '../../../src/runtime/composables/useOverlay';
-export { useToast } from '../../../src/runtime/composables/useToast';
+export * from '../../../src/runtime/composables';

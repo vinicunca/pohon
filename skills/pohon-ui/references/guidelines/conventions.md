@@ -1,18 +1,24 @@
 # Conventions
 
-Coding patterns specific to Pohon UI.
+Coding patterns specific to Nuxt UI.
 
 ## Auto-registered modules
 
-Pohon UI automatically registers `@nuxt/icon`, `@nuxt/fonts`, and `@nuxtjs/color-mode`. Do **not** add them to your `modules` array. Configure them via root-level keys in `nuxt.config.ts`:
+Nuxt UI automatically registers `@nuxt/icon`, `@nuxt/fonts`, and `@nuxtjs/color-mode`. Do **not** add them to your `modules` array. Configure them via root-level keys in `nuxt.config.ts`:
 
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-  modules: ['pohon-ui'],
-  icon: { /* @nuxt/icon options */ },
-  fonts: { /* @nuxt/fonts options */ },
-  colorMode: { /* @nuxtjs/color-mode options */ }
+  modules: ["pohon-ui"],
+  icon: {
+    /* @nuxt/icon options */
+  },
+  fonts: {
+    /* @nuxt/fonts options */
+  },
+  colorMode: {
+    /* @nuxtjs/color-mode options */
+  },
 });
 ```
 
@@ -25,7 +31,7 @@ When using `@nuxt/content`, it **must** come after `pohon-ui` in the `modules` a
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-  modules: ['pohon-ui', '@nuxt/content']
+  modules: ["pohon-ui", "@nuxt/content"],
 });
 ```
 
@@ -42,17 +48,17 @@ Add `@source` in your CSS so Tailwind generates classes used in markdown/MDC:
 Use `mapContentNavigation` to transform content navigation for components like `PBreadcrumb`:
 
 ```ts
-import { findPageBreadcrumb } from '@nuxt/content/utils';
-import { mapContentNavigation } from 'pohon-ui/utils/content';
+import { mapContentNavigation } from "pohon-ui/utils/content";
+import { findPageBreadcrumb } from "@nuxt/content/utils";
 
 const breadcrumb = computed(() =>
-  mapContentNavigation(findPageBreadcrumb(navigation.value, page.value?.path))
+  mapContentNavigation(findPageBreadcrumb(navigation.value, page.value?.path)),
 );
 ```
 
 ## IDE setup
 
-Recommended `.vscode/settings.json` for Tailwind IntelliSense autocomplete with Pohon UI:
+Recommended `.vscode/settings.json` for Tailwind IntelliSense autocomplete with Nuxt UI:
 
 ```json
 {
@@ -63,29 +69,28 @@ Recommended `.vscode/settings.json` for Tailwind IntelliSense autocomplete with 
 }
 ```
 
-## PApp wrapper
+## UApp wrapper
 
-Always wrap your app in `PApp` — it provides:
+Always wrap your app in `UApp` — it provides:
+
 - Toast container (`useToast`)
 - Tooltip provider
 - Programmatic overlay context (`useOverlay`)
 - i18n locale support
 
 ```vue
-<PApp :locale="fr">
+<UApp :locale="fr">
   <NuxtPage /> <!-- or <RouterView /> for Vue -->
-</PApp>
+</UApp>
 ```
 
 ## Icons
 
-Pohon UI registers `@nuxt/icon` automatically. Format: `i-{collection}-{name}`. Prefer `lucide` collection.
+Nuxt UI registers `@nuxt/icon` automatically. Format: `i-{collection}-{name}`. Prefer `lucide` collection.
 
 ```vue
-<PIcon name="i-lucide-sun" class="size-5" />
-
-<PButton icon="i-lucide-plus" label="Add" />
-
+<UIcon name="i-lucide-sun" class="size-5" />
+<UButton icon="i-lucide-plus" label="Add" />
 <PAlert icon="i-lucide-info" title="Heads up" />
 ```
 
@@ -102,11 +107,13 @@ Custom local collections (Nuxt only):
 // nuxt.config.ts
 export default defineNuxtConfig({
   icon: {
-    customCollections: [{
-      prefix: 'custom',
-      dir: './app/assets/icons'
-    }]
-  }
+    customCollections: [
+      {
+        prefix: "custom",
+        dir: "./app/assets/icons",
+      },
+    ],
+  },
 });
 ```
 
@@ -119,15 +126,15 @@ Components like `Modal`, `Select`, `Accordion`, etc. use default icons from `app
 export default defineAppConfig({
   ui: {
     icons: {
-      loading: 'i-lucide-refresh-cw',
-      close: 'i-lucide-x',
-      check: 'i-lucide-check',
-      chevronDown: 'i-lucide-chevron-down',
-      chevronRight: 'i-lucide-chevron-right',
-      arrowLeft: 'i-lucide-arrow-left',
-      arrowRight: 'i-lucide-arrow-right'
-    }
-  }
+      loading: "i-lucide-refresh-cw",
+      close: "i-lucide-x",
+      check: "i-lucide-check",
+      chevronDown: "i-lucide-chevron-down",
+      chevronRight: "i-lucide-chevron-right",
+      arrowLeft: "i-lucide-arrow-left",
+      arrowRight: "i-lucide-arrow-right",
+    },
+  },
 });
 ```
 
@@ -135,17 +142,17 @@ export default defineAppConfig({
 
 Most components follow consistent slot naming:
 
-| Slot | Used by | Purpose |
-|---|---|---|
-| `#header` | Card, Modal, Slideover, DashboardPanel | Top section |
-| `#body` | DashboardPanel | Scrollable content area |
-| `#footer` | Card, Modal, Slideover, DashboardPanel | Bottom section |
-| `#left` | Page, DashboardNavbar | Left sidebar or content |
-| `#right` | Page, DashboardNavbar, Header | Right sidebar or content |
-| `#leading` | Input, Button, Alert | Before main content (icon area) |
-| `#trailing` | Input, Button | After main content (icon area) |
-| `#content` | Modal, Slideover, Popover, Tooltip | Full content override |
-| `#default` | Most components | Main content area |
+| Slot        | Used by                                | Purpose                         |
+| ----------- | -------------------------------------- | ------------------------------- |
+| `#header`   | Card, Modal, Slideover, DashboardPanel | Top section                     |
+| `#body`     | DashboardPanel                         | Scrollable content area         |
+| `#footer`   | Card, Modal, Slideover, DashboardPanel | Bottom section                  |
+| `#left`     | Page, DashboardNavbar                  | Left sidebar or content         |
+| `#right`    | Page, DashboardNavbar, Header          | Right sidebar or content        |
+| `#leading`  | Input, Button, Alert                   | Before main content (icon area) |
+| `#trailing` | Input, Button                          | After main content (icon area)  |
+| `#content`  | Modal, Slideover, Popover, Tooltip     | Full content override           |
+| `#default`  | Most components                        | Main content area               |
 
 ## Items arrays
 
@@ -155,8 +162,8 @@ Many components accept an `items` prop. Two patterns:
 
 ```ts
 const items = [
-  { label: 'Edit', icon: 'i-lucide-pencil' },
-  { label: 'Delete', icon: 'i-lucide-trash', color: 'error' }
+  { label: "Edit", icon: "i-lucide-pencil" },
+  { label: "Delete", icon: "i-lucide-trash", color: "error" },
 ];
 ```
 
@@ -165,16 +172,14 @@ const items = [
 ```ts
 const items = [
   [
-    { label: 'Edit', icon: 'i-lucide-pencil' },
-    { label: 'Duplicate', icon: 'i-lucide-copy' }
+    { label: "Edit", icon: "i-lucide-pencil" },
+    { label: "Duplicate", icon: "i-lucide-copy" },
   ],
-  [
-    { label: 'Delete', icon: 'i-lucide-trash', color: 'error' }
-  ]
+  [{ label: "Delete", icon: "i-lucide-trash", color: "error" }],
 ];
 ```
 
-Components supporting nested arrays: `PDropdownMenu`, `PContextMenu`, `PCommandPalette`, `PNavigationMenu`.
+Components supporting nested arrays: `PDropdownMenu`, `UContextMenu`, `PCommandPalette`, `PNavigationMenu`.
 
 ## Composables
 
@@ -184,15 +189,15 @@ Components supporting nested arrays: `PDropdownMenu`, `PContextMenu`, `PCommandP
 const toast = useToast();
 
 toast.add({
-  title: 'Success',
-  description: 'Item saved',
-  color: 'success',
-  icon: 'i-lucide-check-circle',
+  title: "Success",
+  description: "Item saved",
+  color: "success",
+  icon: "i-lucide-check-circle",
   duration: 5000,
-  actions: [{ label: 'Undo', onClick: () => {} }]
+  actions: [{ label: "Undo", onClick: () => {} }],
 });
 
-toast.remove('toast-id');
+toast.remove("toast-id");
 toast.clear();
 ```
 
@@ -203,8 +208,10 @@ Programmatic modals, slideovers, drawers — no template `v-model` needed. See [
 ```ts
 const overlay = useOverlay();
 const modal = overlay.create(MyComponent);
-const instance = modal.open({ title: 'Confirm?' });
-if (await instance.result) { /* confirmed */ }
+const instance = modal.open({ title: "Confirm?" });
+if (await instance.result) {
+  /* confirmed */
+}
 ```
 
 ### defineShortcuts
@@ -215,8 +222,8 @@ defineShortcuts({
   escape: () => close(),
   meta_enter: {
     handler: () => submit(),
-    whenever: [isFormValid]
-  }
+    whenever: [isFormValid],
+  },
 });
 ```
 
@@ -228,8 +235,8 @@ Wire up keyboard shortcuts from menu items:
 
 ```ts
 const items = [
-  { label: 'New file', kbds: ['meta', 'n'], onSelect: () => newFile() },
-  { label: 'Save', kbds: ['meta', 's'], onSelect: () => save() }
+  { label: "New file", kbds: ["meta", "n"], onSelect: () => newFile() },
+  { label: "Save", kbds: ["meta", "s"], onSelect: () => save() },
 ];
 
 defineShortcuts(extractShortcuts(items));
@@ -237,19 +244,19 @@ defineShortcuts(extractShortcuts(items));
 
 ### Internationalization (i18n)
 
-Pohon UI supports 50+ locales. Set the locale on `PApp` — all components inherit it.
+Nuxt UI supports 50+ locales. Set the locale on `UApp` — all components inherit it.
 
 #### Static locale
 
 ```vue
 <script setup lang="ts">
-import { fr } from 'pohon-ui/locale';
+import { fr } from "pohon-ui/locale";
 </script>
 
 <template>
-  <PApp :locale="fr">
+  <UApp :locale="fr">
     <NuxtPage />
-  </PApp>
+  </UApp>
 </template>
 ```
 
@@ -258,28 +265,28 @@ import { fr } from 'pohon-ui/locale';
 `extendLocale` is auto-imported. Override specific messages or the `code` (affects date/time formatting in Calendar, InputDate, InputTime):
 
 ```ts
-import { en } from 'pohon-ui/locale';
+import { en } from "pohon-ui/locale";
 
 const locale = extendLocale(en, {
-  code: 'en-AU',
+  code: "en-AU",
   messages: {
-    commandPalette: { placeholder: 'Search a component...' }
-  }
+    commandPalette: { placeholder: "Search a component..." },
+  },
 });
 ```
 
 #### Custom locale from scratch
 
 ```ts
-import type { Messages } from 'pohon-ui';
+import type { Messages } from "pohon-ui";
 
 const locale = defineLocale<Messages>({
-  name: 'My locale',
-  code: 'en',
-  dir: 'ltr',
+  name: "My locale",
+  code: "en",
+  dir: "ltr",
   messages: {
     // all component message keys
-  }
+  },
 });
 ```
 
@@ -288,20 +295,20 @@ const locale = defineLocale<Messages>({
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-  modules: ['pohon-ui', '@nuxtjs/i18n'],
+  modules: ["pohon-ui", "@nuxtjs/i18n"],
   i18n: {
     locales: [
-      { code: 'en', name: 'English' },
-      { code: 'fr', name: 'Français' },
-      { code: 'ar', name: 'العربية' }
-    ]
-  }
+      { code: "en", name: "English" },
+      { code: "fr", name: "Français" },
+      { code: "ar", name: "العربية" },
+    ],
+  },
 });
 ```
 
 ```vue
 <script setup lang="ts">
-import * as locales from 'pohon-ui/locale';
+import * as locales from "pohon-ui/locale";
 
 const { locale } = useI18n();
 
@@ -309,27 +316,28 @@ const lang = computed(() => locales[locale.value]?.code);
 const dir = computed(() => locales[locale.value]?.dir);
 
 useHead({
-  htmlAttrs: { lang, dir }
+  htmlAttrs: { lang, dir },
 });
 </script>
 
 <template>
-  <PApp :locale="locales[locale]">
+  <UApp :locale="locales[locale]">
     <NuxtPage />
-  </PApp>
+  </UApp>
 </template>
 ```
 
-Each locale has a `dir` property (`'ltr'` or `'rtl'`). `PApp` uses it to set directionality on all components. Use `useHead` to propagate `lang` and `dir` to the `<html>` element.
+Each locale has a `dir` property (`'ltr'` or `'rtl'`). `UApp` uses it to set directionality on all components. Use `useHead` to propagate `lang` and `dir` to the `<html>` element.
 
 ## Color mode
 
-Pohon UI registers `@nuxtjs/color-mode` automatically. Built-in components for switching:
-- `PColorModeButton` — single button toggle (light/dark)
-- `PColorModeSwitch` — toggle switch
-- `PColorModeSelect` — dropdown with system/light/dark options
-- `PColorModeAvatar` — displays different avatar per mode
-- `PColorModeImage` — displays different image per mode
+Nuxt UI registers `@nuxtjs/color-mode` automatically. Built-in components for switching:
+
+- `UColorModeButton` — single button toggle (light/dark)
+- `UColorModeSwitch` — toggle switch
+- `UColorModeSelect` — dropdown with system/light/dark options
+- `UColorModeAvatar` — displays different avatar per mode
+- `UColorModeImage` — displays different image per mode
 
 For custom color mode UI, use `useColorMode` with `ClientOnly` to avoid hydration mismatch:
 
@@ -338,10 +346,10 @@ For custom color mode UI, use `useColorMode` with `ClientOnly` to avoid hydratio
 const colorMode = useColorMode();
 
 const isDark = computed({
-  get: () => colorMode.value === 'dark',
+  get: () => colorMode.value === "dark",
   set: (v) => {
-    colorMode.preference = v ? 'dark' : 'light';
-  }
+    colorMode.preference = v ? "dark" : "light";
+  },
 });
 </script>
 
@@ -369,11 +377,12 @@ npx nuxi@latest init -t ui/chat         # AI chat (Vercel AI SDK)
 npx nuxi@latest init -t ui/editor       # Rich text editor
 npx nuxi@latest init -t ui/portfolio    # Portfolio
 npx nuxi@latest init -t ui/changelog    # Changelog
+npx nuxi@latest init -t ui/calendar     # Calendar
 ```
 
 ## Responsive patterns
 
-- Dashboard sidebar hides on mobile, shows a slideover/drawer via `PDashboardSidebar` `mode` prop
-- `PHeader` body slot is the mobile menu content (shown when hamburger is tapped)
+- Dashboard sidebar hides on mobile, shows a slideover/drawer via `UDashboardSidebar` `mode` prop
+- `UHeader` body slot is the mobile menu content (shown when hamburger is tapped)
 - Most components handle responsiveness automatically — avoid manual breakpoint classes unless needed
-- Use `PPageAside` for sidebars that should hide below `lg` breakpoint
+- Use `UPageAside` for sidebars that should hide below `lg` breakpoint

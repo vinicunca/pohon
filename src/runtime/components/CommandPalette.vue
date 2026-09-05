@@ -329,7 +329,7 @@ const groups = computed(() => history.value?.length ? [history.value[history.val
 
 const items = computed(() => groups.value?.filter((group) => {
   if (!group.id) {
-    console.warn('[@nuxt/ui] CommandPalette group is missing an `id` property');
+    console.warn('[pohon-ui] CommandPalette group is missing an `id` property');
     return false;
   }
   if (group.ignoreFilter) {

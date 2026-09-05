@@ -13,23 +13,27 @@ Build public-facing pages — landing, blog, changelog, pricing — using the He
 
 ```vue [app.vue]
 <script setup lang="ts">
-import type { NavigationMenuItem } from 'pohon-ui';
+import type { NavigationMenuItem } from "pohon-ui";
 
-const items = computed<Array<NavigationMenuItem>>(() => [{
-  label: 'Features',
-  to: '#features'
-}, {
-  label: 'Pricing',
-  to: '/pricing'
-}, {
-  label: 'Blog',
-  to: '/blog'
-}]);
+const items = computed<NavigationMenuItem[]>(() => [
+  {
+    label: "Features",
+    to: "#features",
+  },
+  {
+    label: "Pricing",
+    to: "/pricing",
+  },
+  {
+    label: "Blog",
+    to: "/blog",
+  },
+]);
 </script>
 
 <template>
-  <PApp>
-    <PHeader>
+  <UApp>
+    <UHeader>
       <template #title>
         <Logo class="h-6 w-auto" />
       </template>
@@ -37,13 +41,9 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
       <PNavigationMenu :items="items" />
 
       <template #right>
-        <PColorModeButton />
-        <PButton
-          label="Sign in"
-          color="neutral"
-          variant="ghost"
-        />
-        <PButton label="Get started" />
+        <UColorModeButton />
+        <UButton label="Sign in" color="neutral" variant="ghost" />
+        <UButton label="Get started" />
       </template>
 
       <template #body>
@@ -53,20 +53,20 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
           class="-mx-2.5"
         />
       </template>
-    </PHeader>
+    </UHeader>
 
-    <PMain>
+    <UMain>
       <NuxtPage />
-    </PMain>
+    </UMain>
 
-    <PFooter>
+    <UFooter>
       <template #left>
         <p class="text-muted text-sm">
           Copyright © {{ new Date().getFullYear() }}
         </p>
       </template>
       <template #right>
-        <PButton
+        <UButton
           icon="i-simple-icons-github"
           color="neutral"
           variant="ghost"
@@ -74,14 +74,14 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
           target="_blank"
         />
       </template>
-    </PFooter>
-  </PApp>
+    </UFooter>
+  </UApp>
 </template>
 ```
 
 ### Common mistakes
 
-- Forgetting the `#body` slot on `PHeader` — this is the mobile menu content. Without it, mobile users have no navigation.
+- Forgetting the `#body` slot on `UHeader` — this is the mobile menu content. Without it, mobile users have no navigation.
 - Using `variant="solid"` for both header and hero buttons — the header button should be lower weight than the hero CTA.
 
 ## Landing page
@@ -89,19 +89,24 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
 ```vue [pages/index.vue]
 <template>
   <PPageHero
-    title="Build faster with Pohon UI"
+    title="Build faster with Nuxt UI"
     description="A comprehensive Vue UI component library."
     :links="[
       { label: 'Get started', to: '/docs', icon: 'i-lucide-square-play' },
-      { label: 'Learn more', color: 'neutral', variant: 'subtle', trailingIcon: 'i-lucide-arrow-right' },
+      {
+        label: 'Learn more',
+        color: 'neutral',
+        variant: 'subtle',
+        trailingIcon: 'i-lucide-arrow-right',
+      },
     ]"
     orientation="horizontal"
   >
     <img
       src="/hero-image.png"
       alt="App screenshot"
-      class="rounded-lg ring ring-ring shadow-2xl"
-    >
+      class="rounded-lg shadow-2xl ring ring-default"
+    />
   </PPageHero>
 
   <PPageSection
@@ -110,9 +115,21 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
     title="Everything you need"
     description="A comprehensive suite of components and utilities."
     :features="[
-      { title: 'Accessible', description: 'Built on Akar with full ARIA support.', icon: 'i-lucide-accessibility' },
-      { title: 'Customizable', description: 'UnoCss Variants theming with full control.', icon: 'i-lucide-palette' },
-      { title: 'Responsive', description: 'Mobile-first components.', icon: 'i-lucide-monitor-smartphone' },
+      {
+        title: 'Accessible',
+        description: 'Built on Reka UI with full ARIA support.',
+        icon: 'i-lucide-accessibility',
+      },
+      {
+        title: 'Customizable',
+        description: 'Tailwind Variants theming with full control.',
+        icon: 'i-lucide-palette',
+      },
+      {
+        title: 'Responsive',
+        description: 'Mobile-first components.',
+        icon: 'i-lucide-monitor-smartphone',
+      },
     ]"
   />
 
@@ -121,7 +138,12 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
     description="Join the community and start building today."
     :links="[
       { label: 'Get started', color: 'neutral' },
-      { label: 'Star on GitHub', color: 'neutral', variant: 'subtle', trailingIcon: 'i-lucide-arrow-right' },
+      {
+        label: 'Star on GitHub',
+        color: 'neutral',
+        variant: 'subtle',
+        trailingIcon: 'i-lucide-arrow-right',
+      },
     ]"
   />
 
@@ -130,11 +152,27 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
     headline="Pricing"
     title="Simple, transparent pricing"
   >
-    <PPricingPlans
+    <UPricingPlans
       :plans="[
-        { title: 'Free', price: '$0', description: 'For personal projects', features: ['10 components', 'Community support'] },
-        { title: 'Pro', price: '$99', description: 'For teams', features: ['All components', 'Priority support'], highlight: true },
-        { title: 'Enterprise', price: 'Custom', description: 'For large teams', features: ['Custom components', 'Dedicated support'] },
+        {
+          title: 'Free',
+          price: '$0',
+          description: 'For personal projects',
+          features: ['10 components', 'Community support'],
+        },
+        {
+          title: 'Pro',
+          price: '$99',
+          description: 'For teams',
+          features: ['All components', 'Priority support'],
+          highlight: true,
+        },
+        {
+          title: 'Enterprise',
+          price: 'Custom',
+          description: 'For large teams',
+          features: ['Custom components', 'Dedicated support'],
+        },
       ]"
     />
   </PPageSection>
@@ -147,10 +185,10 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
 - `PPageSection` — content section with headline, title, description, and `features` grid. Use `id` for anchor links.
 - `PPageCTA` — call to action block.
 - `PPageGrid` / `PPageCard` — card grid for features, testimonials, etc.
-- `PPageFeature` — individual feature item.
-- `PPageLogos` — logo wall for social proof.
-- `PPricingPlans` / `PPricingTable` — pricing cards and comparison tables.
-- `PFooterColumns` — multi-column footer with link groups (used inside `PFooter`).
+- `UPageFeature` — individual feature item.
+- `UPageLogos` — logo wall for social proof.
+- `UPricingPlans` / `UPricingTable` — pricing cards and comparison tables.
+- `UFooterColumns` — multi-column footer with link groups (used inside `UFooter`).
 
 ## Variations
 
@@ -170,28 +208,27 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
 
 ```vue [pages/blog/index.vue]
 <script setup lang="ts">
-const { data: posts } = await useAsyncData('posts', () => queryCollection('posts').all());
+const { data: posts } = await useAsyncData("posts", () =>
+  queryCollection("posts").all(),
+);
 </script>
 
 <template>
-  <PPage>
-    <PPageHero
-      title="Blog"
-      description="The latest news and updates."
-    />
-    <PPageBody>
+  <UPage>
+    <PPageHero title="Blog" description="The latest news and updates." />
+    <UPageBody>
       <PContainer>
-        <PBlogPosts>
-          <PBlogPost
+        <UBlogPosts>
+          <UBlogPost
             v-for="post in posts"
             :key="post.path"
             v-bind="post"
             :to="post.path"
           />
-        </PBlogPosts>
+        </UBlogPosts>
       </PContainer>
-    </PPageBody>
-  </PPage>
+    </UPageBody>
+  </UPage>
 </template>
 ```
 
@@ -199,23 +236,25 @@ const { data: posts } = await useAsyncData('posts', () => queryCollection('posts
 
 ```vue [pages/changelog.vue]
 <script setup lang="ts">
-const { data: versions } = await useAsyncData('versions', () => queryCollection('changelog').all());
+const { data: versions } = await useAsyncData("versions", () =>
+  queryCollection("changelog").all(),
+);
 </script>
 
 <template>
-  <PPage>
+  <UPage>
     <PPageHero title="Changelog" />
-    <PPageBody>
+    <UPageBody>
       <PContainer>
-        <PChangelogVersions>
-          <PChangelogVersion
+        <UChangelogVersions>
+          <UChangelogVersion
             v-for="version in versions"
             :key="version.path"
             v-bind="version"
           />
-        </PChangelogVersions>
+        </UChangelogVersions>
       </PContainer>
-    </PPageBody>
-  </PPage>
+    </UPageBody>
+  </UPage>
 </template>
 ```

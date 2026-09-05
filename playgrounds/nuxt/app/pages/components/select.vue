@@ -1,178 +1,90 @@
 <script setup lang="ts">
-import type { AvatarProps, SelectItem } from 'pohon-ui';
-import type { User } from '~/types';
-import theme from '#build/ui/select';
+import type { SelectItem, AvatarProps } from 'pohon-ui'
+import theme from '#build/ui/select'
+import type { User } from '~/types'
 
-const colors = Object.keys(theme.variants.color);
-const sizes = Object.keys(theme.variants.size);
-const variants = Object.keys(theme.variants.variant);
+const colors = Object.keys(theme.variants.color)
+const sizes = Object.keys(theme.variants.size)
+const variants = Object.keys(theme.variants.variant)
 
 const attrs = reactive({
   color: [theme.defaultVariants.color],
   size: [theme.defaultVariants.size],
-  variant: [theme.defaultVariants.variant],
-});
+  variant: [theme.defaultVariants.variant]
+})
 
-const fruits = ['Apple', 'Banana', 'Blueberry', 'Grapes', 'Pineapple'];
-const vegetables = ['Aubergine', 'Broccoli', 'Carrot', 'Courgette', 'Leek'];
+const fruits = ['Apple', 'Banana', 'Blueberry', 'Grapes', 'Pineapple']
+const vegetables = ['Aubergine', 'Broccoli', 'Carrot', 'Courgette', 'Leek']
 
-const items = [[{ label: 'Fruits', type: 'label' as const }, ...fruits], [{ label: 'Vegetables', type: 'label' as const }, ...vegetables]];
+const items = [[{ label: 'Fruits', type: 'label' as const }, ...fruits], [{ label: 'Vegetables', type: 'label' as const }, ...vegetables]]
 
-const statuses = [
-  {
-    label: 'Backlog',
-    value: 'backlog',
-    description: 'Issues that have been identified but not yet prioritized',
-    icon: 'i-lucide-circle-help',
-  },
-  {
-    label: 'Todo',
-    value: 'todo',
-    description: 'Issues that are ready to be worked on',
-    icon: 'i-lucide-circle-plus',
-  },
-  {
-    label: 'In Progress',
-    value: 'in_progress',
-    description: 'Issues that are currently being worked on',
-    icon: 'i-lucide-circle-arrow-up',
-  },
-  {
-    label: 'Done',
-    value: 'done',
-    description: 'Issues that have been completed successfully',
-    icon: 'i-lucide-circle-check',
-  },
-  {
-    label: 'Canceled',
-    value: 'canceled',
-    description: 'Issues that have been cancelled or rejected',
-    icon: 'i-lucide-circle-x',
-  },
-] satisfies Array<SelectItem>;
+const statuses = [{
+  label: 'Backlog',
+  value: 'backlog',
+  description: 'Issues that have been identified but not yet prioritized',
+  icon: 'i-lucide-circle-help'
+}, {
+  label: 'Todo',
+  value: 'todo',
+  description: 'Issues that are ready to be worked on',
+  icon: 'i-lucide-circle-plus'
+}, {
+  label: 'In Progress',
+  value: 'in_progress',
+  description: 'Issues that are currently being worked on',
+  icon: 'i-lucide-circle-arrow-up'
+}, {
+  label: 'Done',
+  value: 'done',
+  description: 'Issues that have been completed successfully',
+  icon: 'i-lucide-circle-check'
+}, {
+  label: 'Canceled',
+  value: 'canceled',
+  description: 'Issues that have been cancelled or rejected',
+  icon: 'i-lucide-circle-x'
+}] satisfies SelectItem[]
 
 const { data: users, status } = await useFetch('https://jsonplaceholder.typicode.com/users', {
-  transform: (data: Array<User>) => {
-    return data?.map((user) => ({ label: user.name, value: String(user.id), avatar: { src: `https://i.pravatar.cc/120?img=${user.id}` } })) || [];
+  transform: (data: User[]) => {
+    return data?.map(user => ({ label: user.name, value: String(user.id), avatar: { src: `https://i.pravatar.cc/120?img=${user.id}` } })) || []
   },
-  lazy: true,
-});
+  lazy: true
+})
 
 function getStatusIcon(value: string) {
-  return statuses.find((status) => status.value === value)?.icon || 'i-lucide-user';
+  return statuses.find(status => status.value === value)?.icon || 'i-lucide-user'
 }
 
 function getUserAvatar(value: string) {
-  return users.value?.find((user) => user.value === value)?.avatar || {};
+  return users.value?.find(user => user.value === value)?.avatar || {}
 }
 
-const value = ref('Apple');
-const valueMultiple = ref([fruits[0]!, vegetables[0]!]);
+const value = ref('Apple')
+const valueMultiple = ref([fruits[0]!, vegetables[0]!])
 </script>
 
 <template>
   <Navbar>
-    <PSelect
-      v-model="attrs.color"
-      :items="colors"
-      multiple
-    />
-    <PSelect
-      v-model="attrs.size"
-      :items="sizes"
-      multiple
-    />
-    <PSelect
-      v-model="attrs.variant"
-      :items="variants"
-      multiple
-    />
+    <PSelect v-model="attrs.color" :items="colors" multiple />
+    <PSelect v-model="attrs.size" :items="sizes" multiple />
+    <PSelect v-model="attrs.variant" :items="variants" multiple />
   </Navbar>
 
-  <Matrix
-    v-slot="props"
-    :attrs="attrs"
-  >
-    <PSelect
-      v-model="value"
-      :items="items"
-      autofocus
-      v-bind="props"
-    />
-    <PSelect
-      :default-value="value"
-      :items="items"
-      v-bind="props"
-    />
-    <PSelect
-      v-model="valueMultiple"
-      multiple
-      placeholder="Multiple"
-      :items="items"
-      v-bind="props"
-    />
-    <PSelect
-      :default-value="valueMultiple"
-      multiple
-      placeholder="Multiple"
-      :items="items"
-      v-bind="props"
-    />
-    <PSelect
-      :default-value="value"
-      :items="items"
-      v-bind="props"
-      :content="{ position: 'item-aligned' }"
-    />
-    <PSelect
-      placeholder="Highlight"
-      highlight
-      :items="items"
-      v-bind="props"
-    />
-    <PSelect
-      placeholder="Disabled"
-      disabled
-      :items="items"
-      v-bind="props"
-    />
-    <PSelect
-      placeholder="Required"
-      required
-      :items="items"
-      v-bind="props"
-    />
-    <PSelect
-      placeholder="Search..."
-      icon="i-lucide-search"
-      :items="items"
-      v-bind="props"
-    />
-    <PSelect
-      placeholder="Search..."
-      trailing-icon="i-lucide-search"
-      :items="items"
-      v-bind="props"
-    />
-    <PSelect
-      placeholder="Search..."
-      :avatar="{ src: 'https://github.com/benjamincanac.png' }"
-      :items="items"
-      v-bind="props"
-    />
-    <PSelect
-      placeholder="Loading..."
-      loading
-      :items="items"
-      v-bind="props"
-    />
-    <PSelect
-      placeholder="Loading..."
-      loading
-      trailing
-      :items="items"
-      v-bind="props"
-    />
+  <Matrix v-slot="props" :attrs="attrs">
+    <PSelect v-model="value" :items="items" autofocus v-bind="props" />
+    <PSelect :default-value="value" :items="items" v-bind="props" />
+    <PSelect v-model="valueMultiple" multiple placeholder="Multiple" :items="items" v-bind="props" />
+    <PSelect :default-value="valueMultiple" multiple placeholder="Multiple" :items="items" v-bind="props" />
+    <PSelect :default-value="value" :items="items" v-bind="props" :content="{ position: 'item-aligned' }" />
+    <PSelect placeholder="Highlight" highlight :items="items" v-bind="props" />
+    <PSelect placeholder="Disabled" disabled :items="items" v-bind="props" />
+    <PSelect placeholder="Required" required :items="items" v-bind="props" />
+    <PSelect placeholder="Search..." icon="i-lucide-search" :items="items" v-bind="props" />
+    <PSelect placeholder="Search..." trailing-icon="i-lucide-search" :items="items" v-bind="props" />
+    <PSelect placeholder="Search..." :avatar="{ src: 'https://github.com/benjamincanac.png' }" :items="items" v-bind="props" />
+    <PSelect placeholder="Loading..." loading :items="items" v-bind="props" />
+    <PSelect placeholder="Loading..." loading trailing :items="items" v-bind="props" />
     <PSelect
       placeholder="Loading..."
       loading
@@ -189,11 +101,7 @@ const valueMultiple = ref([fruits[0]!, vegetables[0]!]);
       v-bind="props"
     >
       <template #leading="{ modelValue, ui }">
-        <PIcon
-          v-if="modelValue"
-          :name="getStatusIcon(modelValue)"
-          :class="ui.leadingIcon()"
-        />
+        <UIcon v-if="modelValue" :name="getStatusIcon(modelValue)" :class="ui.leadingIcon()" />
       </template>
     </PSelect>
     <PSelect
@@ -204,11 +112,7 @@ const valueMultiple = ref([fruits[0]!, vegetables[0]!]);
       v-bind="props"
     >
       <template #leading="{ modelValue, ui }">
-        <PAvatar
-          v-if="modelValue"
-          :size="(ui.itemLeadingAvatarSize() as AvatarProps['size'])"
-          v-bind="getUserAvatar(modelValue)"
-        />
+        <UAvatar v-if="modelValue" :size="(ui.itemLeadingAvatarSize() as AvatarProps['size'])" v-bind="getUserAvatar(modelValue)" />
       </template>
     </PSelect>
   </Matrix>

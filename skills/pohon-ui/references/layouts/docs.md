@@ -13,41 +13,45 @@ Build documentation sites with sidebar navigation, table of contents, and surrou
 ## Component tree
 
 ```
-PApp
-├── PHeader
-├── PMain
+UApp
+├── UHeader
+├── UMain
 │   └── NuxtLayout (docs)
-│       └── PPage
-│           ├── #left → PPageAside → PContentNavigation
+│       └── UPage
+│           ├── #left → UPageAside → UContentNavigation
 │           └── NuxtPage
-│               ├── PPageHeader
-│               ├── PPageBody → ContentRenderer + PContentSurround
-│               └── #right → PContentToc
-└── PFooter
+│               ├── UPageHeader
+│               ├── UPageBody → ContentRenderer + UContentSurround
+│               └── #right → UContentToc
+└── UFooter
 ```
 
 ## App shell
 
 ```vue [app.vue]
 <script setup lang="ts">
-import type { NavigationMenuItem } from 'pohon-ui';
+import type { NavigationMenuItem } from "pohon-ui";
 
 const route = useRoute();
 
-const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'));
+const { data: navigation } = await useAsyncData("navigation", () =>
+  queryCollectionNavigation("docs"),
+);
 
-provide('navigation', navigation);
+provide("navigation", navigation);
 
-const items = computed<Array<NavigationMenuItem>>(() => [{
-  label: 'Docs',
-  to: '/docs/getting-started',
-  active: route.path.startsWith('/docs')
-}]);
+const items = computed<NavigationMenuItem[]>(() => [
+  {
+    label: "Docs",
+    to: "/docs/getting-started",
+    active: route.path.startsWith("/docs"),
+  },
+]);
 </script>
 
 <template>
-  <PApp>
-    <PHeader>
+  <UApp>
+    <UHeader>
       <template #title>
         <Logo class="h-6 w-auto" />
       </template>
@@ -55,21 +59,21 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
       <PNavigationMenu :items="items" />
 
       <template #right>
-        <PContentSearchButton />
-        <PColorModeButton />
+        <UContentSearchButton />
+        <UColorModeButton />
       </template>
-    </PHeader>
+    </UHeader>
 
-    <PMain>
+    <UMain>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-    </PMain>
+    </UMain>
 
-    <PFooter />
+    <UFooter />
 
-    <PContentSearch :navigation="navigation" />
-  </PApp>
+    <UContentSearch :navigation="navigation" />
+  </UApp>
 </template>
 ```
 
@@ -77,21 +81,21 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
 
 ```vue [layouts/docs.vue]
 <script setup lang="ts">
-import type { ContentNavigationItem } from '@nuxt/content';
+import type { ContentNavigationItem } from "@nuxt/content";
 
-const navigation = inject<Ref<Array<ContentNavigationItem>>>('navigation');
+const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
 </script>
 
 <template>
-  <PPage>
+  <UPage>
     <template #left>
-      <PPageAside>
-        <PContentNavigation :navigation="navigation" />
-      </PPageAside>
+      <UPageAside>
+        <UContentNavigation :navigation="navigation" />
+      </UPageAside>
     </template>
 
     <slot />
-  </PPage>
+  </UPage>
 </template>
 ```
 
@@ -101,55 +105,52 @@ const navigation = inject<Ref<Array<ContentNavigationItem>>>('navigation');
 <script setup lang="ts">
 const route = useRoute();
 
-definePageMeta({ layout: 'docs' });
+definePageMeta({ layout: "docs" });
 
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('docs').path(route.path).first();
+  return queryCollection("docs").path(route.path).first();
 });
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
-  return queryCollectionItemSurroundings('docs', route.path);
+  return queryCollectionItemSurroundings("docs", route.path);
 });
 </script>
 
 <template>
-  <PPage>
-    <PPageHeader
-      :title="page.title"
-      :description="page.description"
-    />
+  <UPage>
+    <UPageHeader :title="page.title" :description="page.description" />
 
-    <PPageBody>
+    <UPageBody>
       <ContentRenderer :value="page" />
 
-      <PSeparator />
+      <USeparator />
 
-      <PContentSurround :surround="surround" />
-    </PPageBody>
+      <UContentSurround :surround="surround" />
+    </UPageBody>
 
     <template #right>
-      <PContentToc :links="page.body.toc.links" />
+      <UContentToc :links="page.body.toc.links" />
     </template>
-  </PPage>
+  </UPage>
 </template>
 ```
 
 ### How nesting works
 
-The outer `PPage` in the layout handles the **left sidebar**. The inner `PPage` in the page handles the **right sidebar**. They nest correctly — this is intentional.
+The outer `UPage` in the layout handles the **left sidebar**. The inner `UPage` in the page handles the **right sidebar**. They nest correctly — this is intentional.
 
 ### Common mistakes
 
 - Not providing navigation via `provide`/`inject` — the layout needs it from the app shell.
-- Forgetting `PContentSearch` in app.vue — search won't work without it.
-- Using `PContentSearchButton` without `PContentSearch` — the button opens search, but the search component must exist.
+- Forgetting `UContentSearch` in app.vue — search won't work without it.
+- Using `UContentSearchButton` without `UContentSearch` — the button opens search, but the search component must exist.
 
 ## Key components
 
-- `PPage` — multi-column grid with `#left`, `#default`, `#right` slots
-- `PPageAside` — sticky sidebar wrapper (visible from `lg` breakpoint)
-- `PContentNavigation` — sidebar navigation tree from Nuxt Content
-- `PContentToc` — table of contents from page headings
-- `PContentSurround` — prev/next links
-- `PContentSearch` / `PContentSearchButton` — search command palette
-- `PPageAnchors` — simpler alternative to full TOC
+- `UPage` — multi-column grid with `#left`, `#default`, `#right` slots
+- `UPageAside` — sticky sidebar wrapper (visible from `lg` breakpoint)
+- `UContentNavigation` — sidebar navigation tree from Nuxt Content
+- `UContentToc` — table of contents from page headings
+- `UContentSurround` — prev/next links
+- `UContentSearch` / `UContentSearchButton` — search command palette
+- `UPageAnchors` — simpler alternative to full TOC

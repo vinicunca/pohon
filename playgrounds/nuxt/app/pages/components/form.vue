@@ -1,100 +1,70 @@
 <script setup lang="ts">
-import type { FormSubmitEvent } from 'pohon-ui';
-import * as z from 'zod';
-import FormExampleElements from '../../../../../docs/app/components/content/examples/form/FormExampleElements.vue';
-import FormExampleNested from '../../../../../docs/app/components/content/examples/form/FormExampleNested.vue';
-import FormExampleNestedList from '../../../../../docs/app/components/content/examples/form/FormExampleNestedList.vue';
+import * as z from 'zod'
+import type { FormSubmitEvent } from 'pohon-ui'
+import FormExampleElements from '../../../../../docs/app/components/content/examples/form/FormExampleElements.vue'
+import FormExampleNestedList from '../../../../../docs/app/components/content/examples/form/FormExampleNestedList.vue'
+import FormExampleNested from '../../../../../docs/app/components/content/examples/form/FormExampleNested.vue'
 
 const schema = z.object({
   email: z.email(),
   password: z.string('Password is required').min(8),
-  tos: z.literal(true),
-});
+  tos: z.literal(true)
+})
 
-type Schema = z.input<typeof schema>;
+type Schema = z.input<typeof schema>
 
-const state = reactive<Partial<Schema>>({});
+const state = reactive<Partial<Schema>>({})
 
 function onSubmit(event: FormSubmitEvent<Schema>) {
-  console.log(event.data);
+  console.log(event.data)
 }
 
-const validateOn = ref(['input', 'change', 'blur']);
-const disabled = ref(false);
+const validateOn = ref(['input', 'change', 'blur'])
+const disabled = ref(false)
 </script>
 
 <template>
   <Navbar />
 
-  <div class="mt-16 pb-8 flex flex-col gap-8 min-h-0">
+  <div class="flex flex-col gap-8 min-h-0 mt-16 pb-8">
     <div class="flex gap-4">
-      <PForm
+      <UForm
         :state="state"
         :schema="schema"
-        class="flex flex-col gap-4 w-60"
+        class="gap-4 flex flex-col w-60"
         @submit="onSubmit"
       >
-        <PFormField
-          label="Email"
-          name="email"
-        >
-          <PInput
-            v-model="state.email"
-            placeholder="john@lennon.com"
-          />
-        </PFormField>
+        <UFormField label="Email" name="email">
+          <PInput v-model="state.email" placeholder="john@lennon.com" />
+        </UFormField>
 
-        <PFormField
-          label="Password"
-          name="password"
-        >
-          <PInput
-            v-model="state.password"
-            type="password"
-          />
-        </PFormField>
+        <UFormField label="Password" name="password">
+          <PInput v-model="state.password" type="password" />
+        </UFormField>
 
-        <PFormField name="tos">
-          <PCheckbox
-            v-model="state.tos"
-            label="I accept the terms and conditions"
-          />
-        </PFormField>
+        <UFormField name="tos">
+          <PCheckbox v-model="state.tos" label="I accept the terms and conditions" />
+        </UFormField>
 
         <div>
-          <PButton type="submit">
+          <UButton type="submit">
             Submit
-          </PButton>
+          </UButton>
         </div>
-      </PForm>
+      </UForm>
       <FormExampleNested />
       <FormExampleNestedList />
     </div>
 
-    <div class="border-default border rounded-lg">
-      <div class="px-4 py-2 flex gap-4 items-center">
-        <PFormField
-          label="Validate on"
-          class="flex gap-2 items-center"
-        >
-          <PSelectMenu
-            v-model="validateOn"
-            :items="['input', 'change', 'blur']"
-            multiple
-            class="w-48"
-          />
-        </PFormField>
-        <PCheckbox
-          v-model="disabled"
-          label="Disabled"
-        />
+    <div class="border border-default rounded-lg">
+      <div class="py-2 px-4 flex gap-4 items-center">
+        <UFormField label="Validate on" class="flex items-center gap-2">
+          <PSelectMenu v-model="validateOn" :items="['input', 'change', 'blur']" multiple class="w-48" />
+        </UFormField>
+        <PCheckbox v-model="disabled" label="Disabled" />
       </div>
 
-      <FormExampleElements
-        :validate-on="validateOn"
-        :disabled="disabled"
-        class="border-default p-4 border-t"
-      />
+      <FormExampleElements :validate-on="validateOn" :disabled="disabled" class="border-t border-default p-4" />
     </div>
   </div>
 </template>

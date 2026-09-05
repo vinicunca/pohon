@@ -30,16 +30,13 @@ pnpm add ai @ai-sdk/gateway @ai-sdk/vue @comark/vue
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
-  modules: [
-    'pohon-ui',
-    '@comark/nuxt'
-  ]
+  modules: ["pohon-ui", "@comark/nuxt"],
 });
 ```
 
 **Vue (Vite):** No module registration needed, import directly from `@comark/vue`.
 
-> `@comark/nuxt` (or `@comark/vue` for Vue projects) provides the `Comark` component used to render AI responses as streaming Markdown, it incrementally renders tokens as they arrive and automatically enables Pohon UI's prose components.
+> `@comark/nuxt` (or `@comark/vue` for Vue projects) provides the `Comark` component used to render AI responses as streaming Markdown, it incrementally renders tokens as they arrive and automatically enables Nuxt UI's prose components.
 
 ### Dark mode for syntax highlighting
 
@@ -60,34 +57,50 @@ html.dark .shiki span {
 Using [Vercel AI Gateway](https://vercel.com/ai-gateway) (recommended):
 
 ```ts [server/api/chat.post.ts]
-import { gateway } from '@ai-sdk/gateway';
-import { convertToModelMessages, streamText } from 'ai';
+import {
+  streamText,
+  convertToModelMessages,
+  toUIMessageStream,
+  createUIMessageStreamResponse,
+} from "ai";
+import { gateway } from "@ai-sdk/gateway";
 
 export default defineEventHandler(async (event) => {
   const { messages } = await readBody(event);
 
-  return streamText({
-    model: gateway('anthropic/claude-sonnet-4.6'),
-    system: 'You are a helpful assistant.',
-    messages: await convertToModelMessages(messages)
-  }).toUIMessageStreamResponse();
+  const result = streamText({
+    model: gateway("anthropic/claude-sonnet-5"),
+    instructions: "You are a helpful assistant.",
+    messages: await convertToModelMessages(messages),
+  });
+
+  const stream = toUIMessageStream({ stream: result.stream });
+  return createUIMessageStreamResponse({ stream });
 });
 ```
 
 Or with a direct provider (e.g., `pnpm add @ai-sdk/openai`):
 
 ```ts [server/api/chat.post.ts]
-import { openai } from '@ai-sdk/openai';
-import { convertToModelMessages, streamText } from 'ai';
+import {
+  streamText,
+  convertToModelMessages,
+  toUIMessageStream,
+  createUIMessageStreamResponse,
+} from "ai";
+import { openai } from "@ai-sdk/openai";
 
 export default defineEventHandler(async (event) => {
   const { messages } = await readBody(event);
 
-  return streamText({
-    model: openai('gpt-5-nano'),
-    system: 'You are a helpful assistant.',
-    messages: await convertToModelMessages(messages)
-  }).toUIMessageStreamResponse();
+  const result = streamText({
+    model: openai("gpt-5-nano"),
+    instructions: "You are a helpful assistant.",
+    messages: await convertToModelMessages(messages),
+  });
+
+  const stream = toUIMessageStream({ stream: result.stream });
+  return createUIMessageStreamResponse({ stream });
 });
 ```
 
@@ -95,60 +108,55 @@ export default defineEventHandler(async (event) => {
 
 ```
 PDashboardPanel
-├── #header → PDashboardNavbar
-├── #body → PContainer → PChatMessages
-│                         ├── #content → PChatReasoning, PChatTool, Comark
+├── #header → UDashboardNavbar
+├── #body → PContainer → UChatMessages
+│                         ├── #content → UChatReasoning, UChatTool, Comark
 │                         └── #indicator (loading)
-└── #footer → PContainer → PChatPrompt
-                            └── PChatPromptSubmit
+└── #footer → PContainer → UChatPrompt
+                            └── UChatPromptSubmit
 ```
 
 ## Full page chat
 
 ```vue [pages/chat/[id].vue]
 <script setup lang="ts">
-import { Chat } from '@ai-sdk/vue';
-import highlight from '@comark/nuxt/plugins/highlight';
-import { getToolName, isReasoningUIPart, isTextUIPart, isToolUIPart } from 'ai';
-import { isPartStreaming, isToolStreaming } from 'pohon-ui/utils/ai';
+import { isReasoningUIPart, isTextUIPart, isToolUIPart, getToolName } from "ai";
+import { useChat } from "@ai-sdk/vue";
+import { isPartStreaming, isToolStreaming } from "pohon-ui/utils/ai";
+import highlight from "@comark/nuxt/plugins/highlight";
 
-definePageMeta({ layout: 'dashboard' });
+definePageMeta({ layout: "dashboard" });
 
-const input = ref('');
+const input = ref("");
 
-const chat = new Chat({
+const { messages, status, error, sendMessage, stop, regenerate } = useChat({
   onError(error) {
     console.error(error);
-  }
+  },
 });
 
 function onSubmit() {
-  if (!input.value.trim()) {
-    return;
-  }
-  chat.sendMessage({ text: input.value });
-  input.value = '';
+  if (!input.value.trim()) return;
+  sendMessage({ text: input.value });
+  input.value = "";
 }
 </script>
 
 <template>
   <PDashboardPanel>
     <template #header>
-      <PDashboardNavbar title="Chat" />
+      <UDashboardNavbar title="Chat" />
     </template>
 
     <template #body>
       <PContainer>
-        <PChatMessages
-          :messages="chat.messages"
-          :status="chat.status"
-        >
+        <UChatMessages :messages="messages" :status="status">
           <template #content="{ message }">
             <template
               v-for="(part, index) in message.parts"
               :key="`${message.id}-${part.type}-${index}`"
             >
-              <PChatReasoning
+              <UChatReasoning
                 v-if="isReasoningUIPart(part)"
                 :text="part.text"
                 :streaming="isPartStreaming(part)"
@@ -159,9 +167,9 @@ function onSubmit() {
                   :plugins="[highlight()]"
                   class="*:first:mt-0 *:last:mb-0"
                 />
-              </PChatReasoning>
+              </UChatReasoning>
 
-              <PChatTool
+              <UChatTool
                 v-else-if="isToolUIPart(part)"
                 :text="getToolName(part)"
                 :streaming="isToolStreaming(part)"
@@ -184,23 +192,19 @@ function onSubmit() {
               </template>
             </template>
           </template>
-        </PChatMessages>
+        </UChatMessages>
       </PContainer>
     </template>
 
     <template #footer>
       <PContainer class="pb-4 sm:pb-6">
-        <PChatPrompt
-          v-model="input"
-          :error="chat.error"
-          @submit="onSubmit"
-        >
-          <PChatPromptSubmit
-            :status="chat.status"
-            @stop="chat.stop()"
-            @reload="chat.regenerate()"
+        <UChatPrompt v-model="input" :error="error" @submit="onSubmit">
+          <UChatPromptSubmit
+            :status="status"
+            @stop="stop()"
+            @reload="regenerate()"
           />
-        </PChatPrompt>
+        </UChatPrompt>
       </PContainer>
     </template>
   </PDashboardPanel>
@@ -209,28 +213,28 @@ function onSubmit() {
 
 ## Key components
 
-- `PChatMessages` — scrollable message list with auto-scroll. Props: `messages`, `status`. Slots: `#content` (per message), `#actions`, `#indicator`.
-- `PChatMessage` — individual bubble. Props: `message`, `side` (`'left'`/`'right'`).
-- `PChatReasoning` — collapsible reasoning block. Auto-opens during streaming, auto-closes when done. Use `isPartStreaming(part)` from `pohon-ui/utils/ai`.
-- `PChatTool` — tool invocation status. Use `isToolStreaming(part)`. Variants: `'inline'` (default), `'card'`.
-- `PChatPrompt` — enhanced textarea. Accepts all Textarea props + `error` prop.
-- `PChatPromptSubmit` — submit button with automatic status handling (send/stop/reload).
-- `PChatPalette` — layout wrapper for chat inside overlays.
+- `UChatMessages` — scrollable message list with auto-scroll. Props: `messages`, `status`. Slots: `#content` (per message), `#actions`, `#indicator`.
+- `UChatMessage` — individual bubble. Props: `message`, `side` (`'left'`/`'right'`).
+- `UChatReasoning` — collapsible reasoning block. Auto-opens during streaming, auto-closes when done. Use `isPartStreaming(part)` from `pohon-ui/utils/ai`.
+- `UChatTool` — tool invocation status. Use `isToolStreaming(part)`. Variants: `'inline'` (default), `'card'`.
+- `UChatPrompt` — enhanced textarea. Accepts all Textarea props + `error` prop.
+- `UChatPromptSubmit` — submit button with automatic status handling (send/stop/reload).
+- `UChatPalette` — layout wrapper for chat inside overlays.
 
 ## Chat in a modal
 
 ```vue
 <PModal v-model:open="isOpen">
   <template #content>
-    <PChatPalette>
-      <PChatMessages :messages="chat.messages" :status="chat.status" />
+    <UChatPalette>
+      <UChatMessages :messages="messages" :status="status" />
 
       <template #prompt>
-        <PChatPrompt v-model="input" @submit="onSubmit">
-          <PChatPromptSubmit :status="chat.status" />
-        </PChatPrompt>
+        <UChatPrompt v-model="input" @submit="onSubmit">
+          <UChatPromptSubmit :status="status" />
+        </UChatPrompt>
       </template>
-    </PChatPalette>
+    </UChatPalette>
   </template>
 </PModal>
 ```
@@ -238,8 +242,8 @@ function onSubmit() {
 ## With model selector
 
 ```vue
-<PChatPrompt v-model="input" @submit="onSubmit">
-  <PChatPromptSubmit :status="chat.status" />
+<UChatPrompt v-model="input" @submit="onSubmit">
+  <UChatPromptSubmit :status="status" />
 
   <template #footer>
     <PSelect
@@ -250,7 +254,7 @@ function onSubmit() {
       :items="models"
     />
   </template>
-</PChatPrompt>
+</UChatPrompt>
 ```
 
 ## Conversation sidebar
@@ -259,28 +263,18 @@ Combine with dashboard layout for a ChatGPT-like interface:
 
 ```vue [layouts/dashboard.vue]
 <template>
-  <PDashboardGroup>
-    <PDashboardSidebar
-      collapsible
-      resizable
-    >
+  <UDashboardGroup>
+    <UDashboardSidebar collapsible resizable>
       <template #header>
-        <PButton
-          icon="i-lucide-plus"
-          label="New chat"
-          block
-        />
+        <UButton icon="i-lucide-plus" label="New chat" block />
       </template>
 
       <template #default>
-        <PNavigationMenu
-          :items="conversations"
-          orientation="vertical"
-        />
+        <PNavigationMenu :items="conversations" orientation="vertical" />
       </template>
-    </PDashboardSidebar>
+    </UDashboardSidebar>
 
     <slot />
-  </PDashboardGroup>
+  </UDashboardGroup>
 </template>
 ```

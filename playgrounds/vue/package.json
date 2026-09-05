@@ -10,9 +10,9 @@
     "typecheck": "vue-tsc -p ./tsconfig.app.json"
   },
   "dependencies": {
+    "pohon-ui": "workspace:*",
     "@tiptap/extension-emoji": "^3.30.5",
     "@tiptap/extension-text-align": "^3.30.5",
-    "pohon-ui": "workspace:*",
     "vue": "^3.5.42",
     "vue-router": "^5.3.0",
     "zod": "^4.5.4"

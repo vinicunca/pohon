@@ -1,0 +1,33 @@
+<script setup lang="ts">
+import type { TabsItem } from 'pohon-ui'
+
+const items: TabsItem[] = [{
+  label: 'All',
+  value: 'all'
+}, {
+  label: 'Unread',
+  value: 'unread'
+}]
+</script>
+
+<template>
+  <UDashboardNavbar title="Inbox">
+    <template #leading>
+      <UDashboardSidebarCollapse />
+    </template>
+
+    <template #trailing>
+      <UBadge label="4" variant="subtle" />
+    </template>
+
+    <template #right>
+      <PTabs
+        :items="items"
+        default-value="all"
+        size="sm"
+        class="w-40"
+        :content="false"
+      />
+    </template>
+  </UDashboardNavbar>
+</template>

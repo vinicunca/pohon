@@ -12,7 +12,7 @@ async function componentRender<T>(nameOrHtml: string, options: MountSuspendedOpt
   if (options === undefined) {
     const app = {
       template: nameOrHtml,
-      components: { [`U${name}`]: component },
+      components: { [`P${name}`]: component },
     };
     const result = await mountSuspended(app);
     html = result.html();

@@ -1,53 +1,49 @@
 <script setup lang="ts">
-const virtualize = ref(true);
-const orientation = ref<'vertical' | 'horizontal'>('vertical');
-const estimateSize = ref(480);
-const gap = ref(16);
-const lanes = ref(4);
+const virtualize = ref(true)
+const orientation = ref<'vertical' | 'horizontal'>('vertical')
+const estimateSize = ref(480)
+const gap = ref(16)
+const lanes = ref(4)
 
-const heights = [320, 480, 640, 800];
+const heights = [320, 480, 640, 800]
 
 // Pseudo-random height selection with longer cycle to avoid alignment patterns
 function getHeight(index: number) {
-  const seed = (index * 11 + 7) % 17;
-  return heights[seed % heights.length]!;
+  const seed = (index * 11 + 7) % 17
+  return heights[seed % heights.length]!
 }
 
 const items = computed(() => {
   return Array.from({ length: 1000 }, (_, index) => {
-    const height = getHeight(index);
+    const height = getHeight(index)
     return {
       id: index,
       title: `Item ${index + 1}`,
       src: `https://picsum.photos/640/${height}?v=${index}`,
       width: 640,
-      height,
-    };
-  });
-});
+      height
+    }
+  })
+})
 
 const virtualizeOptions = computed(() => {
   if (!virtualize.value) {
-    return false;
+    return false
   }
   return {
     estimateSize: estimateSize.value,
     gap: gap.value,
-    lanes: lanes.value,
-  };
-});
+    lanes: lanes.value
+  }
+})
 </script>
 
 <template>
   <Navbar>
-    <PSwitch
-      v-model="virtualize"
-      label="Virtualize"
-      reverse
-    />
+    <PSwitch v-model="virtualize" label="Virtualize" reverse />
 
-    <PFieldGroup>
-      <PButton
+    <UFieldGroup>
+      <UButton
         color="neutral"
         variant="outline"
         active-variant="solid"
@@ -56,7 +52,7 @@ const virtualizeOptions = computed(() => {
         icon="i-lucide-move-vertical"
         @click="orientation = 'vertical'"
       />
-      <PButton
+      <UButton
         color="neutral"
         variant="outline"
         active-variant="solid"
@@ -65,7 +61,7 @@ const virtualizeOptions = computed(() => {
         icon="i-lucide-move-horizontal"
         @click="orientation = 'horizontal'"
       />
-    </PFieldGroup>
+    </UFieldGroup>
 
     <template v-if="virtualize">
       <PInput
@@ -86,12 +82,12 @@ const virtualizeOptions = computed(() => {
     </template>
   </Navbar>
 
-  <PScrollArea
+  <UScrollArea
     v-slot="{ item }"
     :items="items"
     :orientation="orientation"
     :virtualize="virtualizeOptions"
-    class="p-4 size-full"
+    class="size-full p-4"
   >
     <img
       :src="item.src"
@@ -101,5 +97,5 @@ const virtualizeOptions = computed(() => {
       loading="lazy"
       class="rounded-md size-full object-cover"
     >
-  </PScrollArea>
+  </UScrollArea>
 </template>

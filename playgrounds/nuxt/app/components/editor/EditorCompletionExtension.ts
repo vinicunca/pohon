@@ -1,48 +1,48 @@
-import { Extension } from '@tiptap/core';
-import { Plugin, PluginKey } from '@tiptap/pm/state';
-import { Decoration, DecorationSet } from '@tiptap/pm/view';
-import { useDebounceFn } from '@vueuse/core';
+import { Extension } from '@tiptap/core'
+import { Decoration, DecorationSet } from '@tiptap/pm/view'
+import { Plugin, PluginKey } from '@tiptap/pm/state'
+import { useDebounceFn } from '@vueuse/core'
 
 export interface CompletionOptions {
   /**
    * Debounce delay in ms before triggering completion
    * @defaultValue 250
    */
-  debounce?: number;
+  debounce?: number
   /**
    * Whether to automatically trigger completion while typing
    * @defaultValue false
    */
-  autoTrigger?: boolean;
+  autoTrigger?: boolean
   /**
    * Characters that should prevent completion from triggering
    * @defaultValue ['/', ':', '@']
    */
-  triggerCharacters?: Array<string>;
+  triggerCharacters?: string[]
   /**
    * Called when completion should be triggered, receives the editor instance
    */
-  onTrigger?: (editor: any) => void;
+  onTrigger?: (editor: any) => void
   /**
    * Called when suggestion is accepted
    */
-  onAccept?: () => void;
+  onAccept?: () => void
   /**
    * Called when suggestion is dismissed
    */
-  onDismiss?: () => void;
+  onDismiss?: () => void
 }
 
 export interface CompletionStorage {
-  suggestion: string;
-  position: number | undefined;
-  visible: boolean;
-  debouncedTrigger: ((editor: any) => void) | null;
-  setSuggestion: (text: string) => void;
-  clearSuggestion: () => void;
+  suggestion: string
+  position: number | undefined
+  visible: boolean
+  debouncedTrigger: ((editor: any) => void) | null
+  setSuggestion: (text: string) => void
+  clearSuggestion: () => void
 }
 
-export const completionPluginKey = new PluginKey('completion');
+export const completionPluginKey = new PluginKey('completion')
 
 export const Completion = Extension.create<CompletionOptions, CompletionStorage>({
   name: 'completion',
@@ -54,8 +54,8 @@ export const Completion = Extension.create<CompletionOptions, CompletionStorage>
       triggerCharacters: ['/', ':', '@'],
       onTrigger: undefined,
       onAccept: undefined,
-      onDismiss: undefined,
-    };
+      onDismiss: undefined
+    }
   },
 
   addStorage() {
@@ -65,18 +65,18 @@ export const Completion = Extension.create<CompletionOptions, CompletionStorage>
       visible: false,
       debouncedTrigger: null as ((editor: any) => void) | null,
       setSuggestion(text: string) {
-        this.suggestion = text;
+        this.suggestion = text
       },
       clearSuggestion() {
-        this.suggestion = '';
-        this.position = undefined;
-        this.visible = false;
-      },
-    };
+        this.suggestion = ''
+        this.position = undefined
+        this.visible = false
+      }
+    }
   },
 
   addProseMirrorPlugins() {
-    const storage = this.storage;
+    const storage = this.storage
 
     return [
       new Plugin({
@@ -84,22 +84,22 @@ export const Completion = Extension.create<CompletionOptions, CompletionStorage>
         props: {
           decorations(state) {
             if (!storage.visible || !storage.suggestion || storage.position === undefined) {
-              return DecorationSet.empty;
+              return DecorationSet.empty
             }
 
             const widget = Decoration.widget(storage.position, () => {
-              const span = document.createElement('span');
-              span.className = 'completion-suggestion';
-              span.textContent = storage.suggestion;
-              span.style.cssText = 'color: var(--ui-text-muted); opacity: 0.6; pointer-events: none;';
-              return span;
-            }, { side: 1 });
+              const span = document.createElement('span')
+              span.className = 'completion-suggestion'
+              span.textContent = storage.suggestion
+              span.style.cssText = 'color: var(--ui-text-muted); opacity: 0.6; pointer-events: none;'
+              return span
+            }, { side: 1 })
 
-            return DecorationSet.create(state.doc, [widget]);
-          },
-        },
-      }),
-    ];
+            return DecorationSet.create(state.doc, [widget])
+          }
+        }
+      })
+    ]
   },
 
   addKeyboardShortcuts() {
@@ -107,113 +107,111 @@ export const Completion = Extension.create<CompletionOptions, CompletionStorage>
       'Mod-j': ({ editor }) => {
         // Clear any existing suggestion first to avoid flickering
         if (this.storage.visible) {
-          this.storage.clearSuggestion();
-          this.options.onDismiss?.();
+          this.storage.clearSuggestion()
+          this.options.onDismiss?.()
         }
         // Manually trigger completion
-        this.storage.debouncedTrigger?.(editor as any);
-        return true;
+        this.storage.debouncedTrigger?.(editor as any)
+        return true
       },
       'Tab': ({ editor }) => {
         if (!this.storage.visible || !this.storage.suggestion || this.storage.position === undefined) {
-          return false;
+          return false
         }
 
         // Store values before clearing
-        const suggestion = this.storage.suggestion;
-        const position = this.storage.position;
+        const suggestion = this.storage.suggestion
+        const position = this.storage.position
 
         // Clear suggestion first
-        this.storage.clearSuggestion();
+        this.storage.clearSuggestion()
 
         // Force decoration update
-        editor.view.dispatch(editor.state.tr.setMeta('completionUpdate', true));
+        editor.view.dispatch(editor.state.tr.setMeta('completionUpdate', true))
 
         // Insert the suggestion text
-        editor.chain().focus().insertContentAt(position, suggestion).run();
+        editor.chain().focus().insertContentAt(position, suggestion).run()
 
-        this.options.onAccept?.();
-        return true;
+        this.options.onAccept?.()
+        return true
       },
       'Escape': ({ editor }) => {
         if (this.storage.visible) {
-          this.storage.clearSuggestion();
+          this.storage.clearSuggestion()
           // Force decoration update
-          editor.view.dispatch(editor.state.tr.setMeta('completionUpdate', true));
-          this.options.onDismiss?.();
-          return true;
+          editor.view.dispatch(editor.state.tr.setMeta('completionUpdate', true))
+          this.options.onDismiss?.()
+          return true
         }
-        return false;
-      },
-    };
+        return false
+      }
+    }
   },
 
   onUpdate({ editor }) {
     // Clear suggestion on any edit
     if (this.storage.visible) {
-      this.storage.clearSuggestion();
+      this.storage.clearSuggestion()
       // Force decoration update
-      editor.view.dispatch(editor.state.tr.setMeta('completionUpdate', true));
-      this.options.onDismiss?.();
+      editor.view.dispatch(editor.state.tr.setMeta('completionUpdate', true))
+      this.options.onDismiss?.()
     }
 
     // Debounced trigger check (only if autoTrigger is enabled)
     if (this.options.autoTrigger) {
-      this.storage.debouncedTrigger?.(editor as any);
+      this.storage.debouncedTrigger?.(editor as any)
     }
   },
 
   onSelectionUpdate({ editor }) {
     if (this.storage.visible) {
-      this.storage.clearSuggestion();
+      this.storage.clearSuggestion()
       // Force decoration update
-      editor.view.dispatch(editor.state.tr.setMeta('completionUpdate', true));
-      this.options.onDismiss?.();
+      editor.view.dispatch(editor.state.tr.setMeta('completionUpdate', true))
+      this.options.onDismiss?.()
     }
   },
 
   onCreate() {
-    const storage = this.storage;
-    const options = this.options;
+    const storage = this.storage
+    const options = this.options
 
     // Create debounced trigger function for this instance
     this.storage.debouncedTrigger = useDebounceFn((editor: any) => {
-      if (!options.onTrigger) {
-        return;
-      }
+      if (!options.onTrigger) return
 
-      const { state } = editor;
-      const { selection } = state;
-      const { $from } = selection;
+      const { state } = editor
+      const { selection } = state
+      const { $from } = selection
 
       // Only suggest at end of block with content
-      const isAtEndOfBlock = $from.parentOffset === $from.parent.content.size;
-      const hasContent = $from.parent.textContent.trim().length > 0;
-      const textContent = $from.parent.textContent;
+      const isAtEndOfBlock = $from.parentOffset === $from.parent.content.size
+      const hasContent = $from.parent.textContent.trim().length > 0
+      const textContent = $from.parent.textContent
 
       // Don't trigger if sentence is complete (ends with punctuation)
-      const endsWithPunctuation = /[.!?]\s*$/.test(textContent);
+      const endsWithPunctuation = /[.!?]\s*$/.test(textContent)
 
       // Don't trigger if text ends with trigger characters
-      const triggerChars = options.triggerCharacters || [];
-      const endsWithTrigger = triggerChars.some((char) => textContent.endsWith(char));
+      const triggerChars = options.triggerCharacters || []
+      const endsWithTrigger = triggerChars.some(char => textContent.endsWith(char))
 
       if (!isAtEndOfBlock || !hasContent || endsWithPunctuation || endsWithTrigger) {
-        return;
+        return
       }
 
       // Set position and mark as visible
-      storage.position = selection.from;
-      storage.visible = true;
+      storage.position = selection.from
+      storage.visible = true
 
       // Pass editor to let the handler extract content (e.g., as markdown)
-      options.onTrigger(editor);
-    }, options.debounce || 250);
+      options.onTrigger(editor)
+    }, options.debounce || 250)
   },
 
   onDestroy() {
-    this.storage.debouncedTrigger = null;
-  },
-});
+    this.storage.debouncedTrigger = null
+  }
+})
 
-export default Completion;
+export default Completion

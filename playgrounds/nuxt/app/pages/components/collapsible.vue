@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { useAppConfig } from '#imports';
+import { useAppConfig } from '#imports'
 
-const appConfig = useAppConfig();
+const appConfig = useAppConfig()
 </script>
 
 <template>
   <Navbar />
 
   <PCollapsible class="flex flex-col gap-2 w-48">
-    <PButton
+    <UButton
       class="group"
       icon="i-lucide-lightbulb"
       :trailing-icon="appConfig.ui.icons.chevronDown"

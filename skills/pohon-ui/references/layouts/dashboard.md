@@ -12,16 +12,16 @@ Build admin interfaces with resizable sidebars, multi-panel layouts, and toolbar
 ## Component tree
 
 ```
-PApp
+UApp
 └── NuxtLayout (dashboard)
-    └── PDashboardGroup
-        ├── PDashboardSidebar
+    └── UDashboardGroup
+        ├── UDashboardSidebar
         │   ├── #header (logo, search button)
         │   ├── #default (navigation) — receives { collapsed } slot prop
         │   └── #footer (user menu)
         └── NuxtPage
             └── PDashboardPanel
-                ├── #header → PDashboardNavbar + PDashboardToolbar
+                ├── #header → UDashboardNavbar + UDashboardToolbar
                 ├── #body (scrollable content)
                 └── #footer (optional)
 ```
@@ -30,35 +30,37 @@ PApp
 
 ```vue [layouts/dashboard.vue]
 <script setup lang="ts">
-import type { NavigationMenuItem } from 'pohon-ui';
+import type { NavigationMenuItem } from "pohon-ui";
 
-const items = computed<Array<NavigationMenuItem>>(() => [{
-  label: 'Home',
-  icon: 'i-lucide-house',
-  to: '/dashboard'
-}, {
-  label: 'Inbox',
-  icon: 'i-lucide-inbox',
-  to: '/dashboard/inbox'
-}, {
-  label: 'Users',
-  icon: 'i-lucide-users',
-  to: '/dashboard/users'
-}, {
-  label: 'Settings',
-  icon: 'i-lucide-settings',
-  to: '/dashboard/settings'
-}]);
+const items = computed<NavigationMenuItem[]>(() => [
+  {
+    label: "Home",
+    icon: "i-lucide-house",
+    to: "/dashboard",
+  },
+  {
+    label: "Inbox",
+    icon: "i-lucide-inbox",
+    to: "/dashboard/inbox",
+  },
+  {
+    label: "Users",
+    icon: "i-lucide-users",
+    to: "/dashboard/users",
+  },
+  {
+    label: "Settings",
+    icon: "i-lucide-settings",
+    to: "/dashboard/settings",
+  },
+]);
 </script>
 
 <template>
-  <PDashboardGroup>
-    <PDashboardSidebar
-      collapsible
-      resizable
-    >
+  <UDashboardGroup>
+    <UDashboardSidebar collapsible resizable>
       <template #header="{ collapsed }">
-        <PDashboardSearchButton :collapsed="collapsed" />
+        <UDashboardSearchButton :collapsed="collapsed" />
       </template>
 
       <template #default="{ collapsed }">
@@ -70,7 +72,7 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
       </template>
 
       <template #footer="{ collapsed }">
-        <PButton
+        <UButton
           :icon="collapsed ? 'i-lucide-log-out' : undefined"
           :label="collapsed ? undefined : 'Sign out'"
           color="neutral"
@@ -78,10 +80,10 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
           block
         />
       </template>
-    </PDashboardSidebar>
+    </UDashboardSidebar>
 
     <slot />
-  </PDashboardGroup>
+  </UDashboardGroup>
 </template>
 ```
 
@@ -89,23 +91,20 @@ const items = computed<Array<NavigationMenuItem>>(() => [{
 
 ```vue [pages/dashboard/index.vue]
 <script setup lang="ts">
-definePageMeta({ layout: 'dashboard' });
+definePageMeta({ layout: "dashboard" });
 </script>
 
 <template>
   <PDashboardPanel>
     <template #header>
-      <PDashboardNavbar title="Home">
+      <UDashboardNavbar title="Home">
         <template #leading>
-          <PDashboardSidebarCollapse />
+          <UDashboardSidebarCollapse />
         </template>
         <template #right>
-          <PButton
-            icon="i-lucide-plus"
-            label="New"
-          />
+          <UButton icon="i-lucide-plus" label="New" />
         </template>
-      </PDashboardNavbar>
+      </UDashboardNavbar>
     </template>
 
     <template #body>
@@ -127,21 +126,21 @@ definePageMeta({ layout: 'dashboard' });
 
 Root wrapper. Manages sidebar state and persistence.
 
-| Prop | Default | Purpose |
-|---|---|---|
-| `storage` | `'cookie'` | `'cookie'`, `'localStorage'`, `false` |
-| `storage-key` | `'dashboard'` | Storage key name |
+| Prop          | Default       | Purpose                               |
+| ------------- | ------------- | ------------------------------------- |
+| `storage`     | `'cookie'`    | `'cookie'`, `'localStorage'`, `false` |
+| `storage-key` | `'dashboard'` | Storage key name                      |
 
 ### DashboardSidebar
 
 Resizable, collapsible sidebar. Must be inside `DashboardGroup`.
 
-| Prop | Default | Purpose |
-|---|---|---|
-| `resizable` | `false` | Drag to resize |
-| `collapsible` | `false` | Collapse when dragged to edge |
-| `side` | `'left'` | `'left'` or `'right'` |
-| `mode` | `'slideover'` | Mobile: `'modal'`, `'slideover'`, `'drawer'` |
+| Prop          | Default       | Purpose                                      |
+| ------------- | ------------- | -------------------------------------------- |
+| `resizable`   | `false`       | Drag to resize                               |
+| `collapsible` | `false`       | Collapse when dragged to edge                |
+| `side`        | `'left'`      | `'left'` or `'right'`                        |
+| `mode`        | `'slideover'` | Mobile: `'modal'`, `'slideover'`, `'drawer'` |
 
 All slots receive `{ collapsed, collapse }` — `collapsed` is the boolean state, `collapse(value)` toggles it programmatically. Use `v-model:collapsed` and `v-model:open` (mobile) for state control.
 
@@ -151,7 +150,7 @@ Content panel with `#header`, `#body` (scrollable), `#footer`, and `#default` (r
 
 ### DashboardNavbar / DashboardToolbar
 
-Navbar: `#leading`, `#left`, `#default`, `#right` slots + `title` prop. Use `PDashboardSidebarCollapse` in `#leading` to toggle sidebar on mobile.
+Navbar: `#leading`, `#left`, `#default`, `#right` slots + `title` prop. Use `UDashboardSidebarCollapse` in `#leading` to toggle sidebar on mobile.
 Toolbar: same slots, sits below navbar for filters/actions.
 
 ### PNavigationMenu in sidebar
@@ -162,28 +161,22 @@ Always pass `:collapsed="collapsed"` to `PNavigationMenu` inside a collapsible s
 
 ```vue [pages/dashboard/inbox.vue]
 <script setup lang="ts">
-definePageMeta({ layout: 'dashboard' });
+definePageMeta({ layout: "dashboard" });
 </script>
 
 <template>
-  <PDashboardPanel
-    id="inbox-list"
-    resizable
-  >
+  <PDashboardPanel id="inbox-list" resizable>
     <template #header>
-      <PDashboardNavbar title="Inbox" />
+      <UDashboardNavbar title="Inbox" />
     </template>
     <template #body>
       <!-- Email list -->
     </template>
   </PDashboardPanel>
 
-  <PDashboardPanel
-    id="inbox-detail"
-    class="hidden lg:flex"
-  >
+  <PDashboardPanel id="inbox-detail" class="hidden lg:flex">
     <template #header>
-      <PDashboardNavbar title="Message" />
+      <UDashboardNavbar title="Message" />
     </template>
     <template #body>
       <!-- Email content -->
@@ -197,15 +190,15 @@ definePageMeta({ layout: 'dashboard' });
 ```vue
 <PDashboardPanel>
   <template #header>
-    <PDashboardNavbar title="Users" />
-    <PDashboardToolbar>
+    <UDashboardNavbar title="Users" />
+    <UDashboardToolbar>
       <template #left>
         <PInput icon="i-lucide-search" placeholder="Search..." />
       </template>
       <template #right>
         <PSelect :items="['All', 'Active', 'Inactive']" />
       </template>
-    </PDashboardToolbar>
+    </UDashboardToolbar>
   </template>
 </PDashboardPanel>
 ```
@@ -214,32 +207,32 @@ definePageMeta({ layout: 'dashboard' });
 
 ```vue [layouts/dashboard.vue]
 <template>
-  <PDashboardGroup>
-    <PDashboardSidebar>
+  <UDashboardGroup>
+    <UDashboardSidebar>
       <template #header>
-        <PDashboardSearchButton />
+        <UDashboardSearchButton />
       </template>
-    </PDashboardSidebar>
+    </UDashboardSidebar>
 
     <slot />
 
-    <PDashboardSearch :groups="searchGroups" />
-  </PDashboardGroup>
+    <UDashboardSearch :groups="searchGroups" />
+  </UDashboardGroup>
 </template>
 ```
 
 ## Right sidebar
 
 ```vue
-<PDashboardGroup>
-  <PDashboardSidebar collapsible resizable>
+<UDashboardGroup>
+  <UDashboardSidebar collapsible resizable>
     <!-- Left sidebar -->
-  </PDashboardSidebar>
+  </UDashboardSidebar>
 
   <slot />
 
-  <PDashboardSidebar side="right" resizable>
+  <UDashboardSidebar side="right" resizable>
     <!-- Right sidebar -->
-  </PDashboardSidebar>
-</PDashboardGroup>
+  </UDashboardSidebar>
+</UDashboardGroup>
 ```

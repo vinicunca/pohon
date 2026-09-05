@@ -181,7 +181,7 @@ jobs:
           cache: pnpm
 
       - name: Install latest nuxt/ui
-        run: pnpm install https://pkg.pr.new/@nuxt/ui@${{ env.COMMIT_SHA }} --lockfile-only
+        run: pnpm install https://pkg.pr.new/pohon-ui@${{ env.COMMIT_SHA }} --lockfile-only
 
       - name: Install dependencies
         run: pnpm install

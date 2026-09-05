@@ -1,56 +1,47 @@
 <script setup lang="ts">
-import type { NuxtError } from '#app';
+import type { NuxtError } from '#app'
+
+const { components, groups, items } = useNavigation()
 
 defineProps<{
-  error: NuxtError;
-}>();
+  error: NuxtError
+}>()
 
-const { components, groups, items } = useNavigation();
-
-provide('components', components);
+provide('components', components)
 </script>
 
 <template>
-  <PApp>
-    <PDashboardGroup unit="rem">
-      <PDashboardSidebar class="bg-elevated/25">
+  <UApp>
+    <UDashboardGroup unit="rem">
+      <UDashboardSidebar class="bg-elevated/25">
         <template #header>
-          <NuxtLink
-            to="/"
-            class="text-highlighted"
-          >
+          <NuxtLink to="/" class="text-highlighted">
             <Logo class="h-5 w-auto" />
           </NuxtLink>
 
-          <div class="ms-auto flex items-center">
+          <div class="flex items-center ms-auto">
             <ThemeDropdown />
 
-            <PColorModeButton />
+            <UColorModeButton />
           </div>
         </template>
 
-        <PDashboardSearchButton />
+        <UDashboardSearchButton />
 
-        <PNavigationMenu
-          :items="items"
-          orientation="vertical"
-        />
+        <PNavigationMenu :items="items" orientation="vertical" />
 
-        <PSeparator type="dashed" />
+        <USeparator type="dashed" />
 
-        <PNavigationMenu
-          :items="components"
-          orientation="vertical"
-        />
-      </PDashboardSidebar>
+        <PNavigationMenu :items="components" orientation="vertical" />
+      </UDashboardSidebar>
 
       <PDashboardPanel>
-        <PDashboardNavbar class="border-b-0" />
+        <UDashboardNavbar class="border-b-0" />
 
-        <PError :error="error" />
+        <UError :error="error" />
       </PDashboardPanel>
 
-      <PDashboardSearch :groups="groups" />
-    </PDashboardGroup>
-  </PApp>
+      <UDashboardSearch :groups="groups" />
+    </UDashboardGroup>
+  </UApp>
 </template>

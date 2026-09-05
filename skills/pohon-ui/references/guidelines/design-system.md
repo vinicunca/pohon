@@ -2,17 +2,17 @@
 
 ## Semantic colors
 
-Pohon UI uses 7 semantic colors. Never use raw Tailwind palette colors in components — always use these semantic names.
+Nuxt UI uses 7 semantic colors. Never use raw Tailwind palette colors in components — always use these semantic names.
 
-| Color | Default | When to use |
-|---|---|---|
-| `primary` | green | CTAs, active states, brand accent, links |
-| `secondary` | blue | Secondary actions, complementary highlights |
-| `success` | green | Success messages, confirmations, positive states |
-| `info` | blue | Informational alerts, tips, neutral highlights |
-| `warning` | yellow | Warnings, caution states, pending actions |
-| `error` | red | Errors, destructive actions, validation failures |
-| `neutral` | slate | Text, borders, backgrounds, disabled states, chrome |
+| Color       | Default | When to use                                         |
+| ----------- | ------- | --------------------------------------------------- |
+| `primary`   | green   | CTAs, active states, brand accent, links            |
+| `secondary` | blue    | Secondary actions, complementary highlights         |
+| `success`   | green   | Success messages, confirmations, positive states    |
+| `info`      | blue    | Informational alerts, tips, neutral highlights      |
+| `warning`   | yellow  | Warnings, caution states, pending actions           |
+| `error`     | red     | Errors, destructive actions, validation failures    |
+| `neutral`   | slate   | Text, borders, backgrounds, disabled states, chrome |
 
 ### Choosing colors for components
 
@@ -29,13 +29,13 @@ Pohon UI uses 7 semantic colors. Never use raw Tailwind palette colors in compon
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'indigo',
-      secondary: 'violet',
-      success: 'emerald',
-      error: 'rose',
-      neutral: 'zinc'
-    }
-  }
+      primary: "indigo",
+      secondary: "violet",
+      success: "emerald",
+      error: "rose",
+      neutral: "zinc",
+    },
+  },
 });
 ```
 
@@ -43,14 +43,15 @@ export default defineAppConfig({
 // Vue — vite.config.ts
 ui({
   ui: {
-    colors: { primary: 'indigo', secondary: 'violet', neutral: 'zinc' }
-  }
+    colors: { primary: "indigo", secondary: "violet", neutral: "zinc" },
+  },
 });
 ```
 
 Only colors that exist in your theme work — either Tailwind's defaults or custom colors defined with `@theme`.
 
 Available color palettes:
+
 - **Standard Tailwind**: red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose
 - **Neutral palettes** (for `neutral` key — pick one that matches the aesthetic):
   - `slate` — cool blue-gray, professional (default)
@@ -95,9 +96,17 @@ To add a color beyond the 7 defaults (e.g., `tertiary`), register it in `theme.c
 export default defineNuxtConfig({
   ui: {
     theme: {
-      colors: ['primary', 'secondary', 'tertiary', 'info', 'success', 'warning', 'error']
-    }
-  }
+      colors: [
+        "primary",
+        "secondary",
+        "tertiary",
+        "info",
+        "success",
+        "warning",
+        "error",
+      ],
+    },
+  },
 });
 ```
 
@@ -106,38 +115,41 @@ export default defineNuxtConfig({
 Use these everywhere instead of raw palette colors:
 
 ### Text
+
 - `text-default` — primary body text
 - `text-muted` — secondary text (descriptions, hints)
-- `color-text-toned` — medium-emphasis text (between muted and default)
+- `text-toned` — medium-emphasis text (between muted and default)
 - `text-dimmed` — tertiary text (placeholders, disabled)
 - `text-highlighted` — emphasized text (headings, important labels)
-- `color-text-inverted` — text on inverted backgrounds (pair with `bg-inverted`)
+- `text-inverted` — text on inverted backgrounds (pair with `bg-inverted`)
 
 ### Backgrounds
+
 - `bg-default` — page background
-- `bg-background-muted` — subtle backgrounds (hover states, alternating rows)
+- `bg-muted` — subtle backgrounds (hover states, alternating rows)
 - `bg-elevated` — raised surfaces (cards, dropdowns)
-- `bg-background-accented` — accent backgrounds (active states, selected items)
+- `bg-accented` — accent backgrounds (active states, selected items)
 - `bg-inverted` — inverse background (dark on light, light on dark)
 
 ### Borders
+
 - `border-default` — standard borders
-- `border-border-muted` — subtle borders (dividers, separators)
-- `border-border-accented` — accent borders (active states)
-- `border-border-inverted` — inverse borders
+- `border-muted` — subtle borders (dividers, separators)
+- `border-accented` — accent borders (active states)
+- `border-inverted` — inverse borders
 
 ## Variants
 
 Most components accept a `variant` prop. Choose based on visual weight:
 
-| Variant | Weight | When to use |
-|---|---|---|
-| `solid` | Highest | Primary actions, main CTAs |
-| `outline` | Medium | Secondary actions, form fields |
-| `soft` | Medium-low | Tags, badges, subtle buttons |
-| `subtle` | Low | Background highlights, less prominent actions |
-| `ghost` | Lowest | Inline actions, icon buttons, navigation items |
-| `link` | Lowest | Text-only links inside content |
+| Variant   | Weight     | When to use                                    |
+| --------- | ---------- | ---------------------------------------------- |
+| `solid`   | Highest    | Primary actions, main CTAs                     |
+| `outline` | Medium     | Secondary actions, form fields                 |
+| `soft`    | Medium-low | Tags, badges, subtle buttons                   |
+| `subtle`  | Low        | Background highlights, less prominent actions  |
+| `ghost`   | Lowest     | Inline actions, icon buttons, navigation items |
+| `link`    | Lowest     | Text-only links inside content                 |
 
 ### Rules
 
@@ -152,12 +164,12 @@ Most components accept a `variant` prop. Choose based on visual weight:
 Override theme **slots** on a single instance — wins over global config and variants.
 
 ```vue
-<PButton :ui="{ base: 'font-bold', trailingIcon: 'size-3 rotate-90' }" />
-
-<PCard :ui="{ header: 'bg-background-muted', body: 'p-8' }" />
+<UButton :ui="{ base: 'font-bold', trailingIcon: 'size-3 rotate-90' }" />
+<PCard :ui="{ header: 'bg-muted', body: 'p-8' }" />
 ```
 
 Rules for `ui` overrides:
+
 - **Prefer `defaultVariants`** over slot class overrides when possible (e.g., changing default button variant/size).
 - **Don't duplicate default classes** — check the generated theme file first to see what's already there.
 - Border radius defaults come from `--ui-radius`, but you can override with `rounded-*` classes in `ui` or `class` when you need a specific radius on a component.
@@ -167,14 +179,15 @@ Rules for `ui` overrides:
 Override the **root** (or `base`) slot only — simpler than `ui` for single-slot changes.
 
 ```vue
-<PButton class="font-bold" />
+<UButton class="font-bold" />
 ```
 
 ### Finding slot names
 
 Read the generated theme file for any component:
+
 - **Nuxt**: `.nuxt/ui/<component>.ts`
-- **Vue**: `node_modules/.pohon-ui/ui/<component>.ts`
+- **Vue**: `node_modules/.nuxt-ui/ui/<component>.ts`
 
 These files show every available slot name, variant combination, and default class.
 
@@ -188,35 +201,58 @@ export default defineAppConfig({
   ui: {
     button: {
       slots: {
-        base: 'font-bold'
+        base: "font-bold",
       },
       compoundVariants: [
         {
-          color: 'neutral',
-          variant: 'outline',
-          class: 'ring-ring hover:bg-background-accented'
-        }
+          color: "neutral",
+          variant: "outline",
+          class: "ring-default hover:bg-accented",
+        },
       ],
       defaultVariants: {
-        color: 'neutral',
-        variant: 'outline'
-      }
-    }
-  }
+        color: "neutral",
+        variant: "outline",
+      },
+    },
+  },
 });
 ```
 
-UnoCss Variants uses `tailwind-merge` under the hood — conflicting classes are resolved automatically.
+Tailwind Variants uses `tailwind-merge` under the hood — conflicting classes are resolved automatically.
 
-### `PTheme` (scoped overrides)
+### Replace instead of merge
+
+Classes from the `ui` prop, the `class` prop, and global config are merged onto the component defaults. To replace them instead, set the slot to a function, which receives the default classes as its argument so you can reuse part of them.
+
+In global config it replaces the slot's own classes, so `variants` and `compoundVariants` still apply on top. In the `ui` and `class` props it runs after the variants, so it replaces the resolved classes, variants included.
+
+```vue
+<UButton :ui="{ label: () => 'text-base font-bold' }" />
+```
+
+```ts
+// app.config.ts, applies to every instance
+export default defineAppConfig({
+  ui: {
+    button: {
+      slots: {
+        label: () => "text-base font-bold",
+      },
+    },
+  },
+});
+```
+
+### Theme component
 
 Override theme for a section of the component tree without affecting the rest of the app. Renders no DOM element — uses `provide`/`inject`:
 
 ```vue
-<PTheme :ui="{ button: { slots: { base: 'rounded-full' } } }">
-  <PButton label="Rounded" />
-  <PButton label="Also rounded" />
-</PTheme>
+<UTheme :ui="{ button: { slots: { base: 'rounded-full' } } }">
+  <UButton label="Rounded" />
+  <UButton label="Also rounded" />
+</UTheme>
 ```
 
 ### Global `defaultVariants`
@@ -229,11 +265,11 @@ export default defineNuxtConfig({
   ui: {
     theme: {
       defaultVariants: {
-        size: 'lg',
-        color: 'neutral'
-      }
-    }
-  }
+        size: "lg",
+        color: "neutral",
+      },
+    },
+  },
 });
 ```
 
@@ -246,24 +282,24 @@ Controls whether interactive components get `transition-colors`. Enabled by defa
 export default defineNuxtConfig({
   ui: {
     theme: {
-      transitions: false
-    }
-  }
+      transitions: false,
+    },
+  },
 });
 ```
 
 ### `theme.prefix`
 
-When using UnoCSS with a prefix, configure the same prefix in Pohon UI so component classes match:
+When using Tailwind CSS with a prefix, configure the same prefix in Nuxt UI so component classes match:
 
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
   ui: {
     theme: {
-      prefix: 'tw'
-    }
-  }
+      prefix: "tw",
+    },
+  },
 });
 ```
 
@@ -282,16 +318,16 @@ Enable automatic component detection to only generate CSS for components you act
 export default defineNuxtConfig({
   ui: {
     experimental: {
-      componentDetection: true
-    }
-  }
+      componentDetection: true,
+    },
+  },
 });
 ```
 
 For dynamic components (e.g., `<component :is="...">`), pass an array of component names to guarantee they're included:
 
 ```ts
-componentDetection: ['Modal', 'Dropdown', 'Popover'];
+componentDetection: ["Modal", "Dropdown", "Popover"];
 ```
 
 ## CSS `@theme` customization
@@ -302,8 +338,8 @@ Customize Tailwind design tokens in `main.css`:
 
 ```css
 @theme {
-  --font-sans: 'Public Sans', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: "Public Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 }
 ```
 
@@ -319,7 +355,7 @@ In Nuxt, fonts defined here are automatically loaded by `@nuxt/fonts`.
 
 ## CSS variables
 
-Pohon UI exposes CSS variables you can override in `main.css`:
+Nuxt UI exposes CSS variables you can override in `main.css`:
 
 ```css
 :root {

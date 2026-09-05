@@ -1,14 +1,4 @@
 export default defineNuxtConfig({
-  nitro: {
-    timing: true,
-  },
-
-  ui: {
-    theme: {
-      unstyled: true,
-    },
-  },
-
   modules: [
     'pohon-ui',
   ],
@@ -19,6 +9,12 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  content: {
+    experimental: {
+      sqliteConnector: 'native',
+    },
+  },
+
   routeRules: {
     '/docs/components/**': { redirect: { to: '/components/**', statusCode: 301 }, prerender: false },
   },
@@ -28,16 +24,27 @@ export default defineNuxtConfig({
   vite: {
     optimizeDeps: {
       include: [
-        '@vueuse/core',
-        'vaul-vue',
-        'unocss-variants',
-        '@vueuse/integrations/useFuse',
-        'ai',
         '@ai-sdk/vue',
         '@comark/vue',
-        '@comark/vue/plugins/highlight',
-        'unocss/preset-mini',
+        '@comark/vue/plugins/shiki',
+        '@vueuse/core',
+        '@vueuse/integrations/useFuse',
+        'ai',
+        'unocss-variants',
+        'vaul-vue',
       ],
+    },
+  },
+
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        paths: {
+          // The docs examples imported in `pages/components/form.vue` resolve
+          // `pohon-ui` from `docs/`, which the isolated CI install can't reach.
+          'pohon-ui': ['../node_modules/pohon-ui/dist/module.d.mts'],
+        },
+      },
     },
   },
 });

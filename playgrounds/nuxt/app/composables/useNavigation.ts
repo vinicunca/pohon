@@ -1,4 +1,4 @@
-import { upperName } from '../utils';
+import { upperName } from '../utils'
 
 const components = [
   'accordion',
@@ -14,6 +14,7 @@ const components = [
   'card',
   'carousel',
   'chat-message',
+  'chat-prompt',
   'chat-reasoning',
   'chat-shimmer',
   'chat-tool',
@@ -44,6 +45,7 @@ const components = [
   'input-date',
   'input-menu',
   'input-number',
+  'input-rating',
   'input-tags',
   'input-time',
   'input',
@@ -69,6 +71,7 @@ const components = [
   'pricing-plan',
   'pricing-table',
   'progress',
+  'progress-group',
   'radio-group',
   'scroll-area',
   'select-menu',
@@ -79,6 +82,7 @@ const components = [
   'skeleton',
   'slideover',
   'slider',
+  'splitter',
   'stepper',
   'switch',
   'table',
@@ -89,16 +93,14 @@ const components = [
   'toast',
   'tooltip',
   'tree',
-  'user',
-].map((component) => ({ label: upperName(component.split('/').pop() as string), icon: 'i-lucide-box', to: `/components/${component}` }));
+  'typography',
+  'user'
+].map(component => ({ label: upperName(component.split('/').pop() as string), icon: 'i-lucide-box', to: `/components/${component}` }))
 
-export function useNavigation() {
-  const appConfig = useAppConfig();
+export const useNavigation = () => {
+  const appConfig = useAppConfig()
 
-  const items = [
-    { label: 'Home', icon: 'i-lucide-home', to: '/' },
-    { label: 'Chat', icon: 'i-lucide-message-circle', to: '/chat' },
-  ];
+  const items = [{ label: 'Home', icon: 'i-lucide-home', to: '/' }, { label: 'Chat', icon: 'i-lucide-message-circle', to: '/chat' }]
   const groups = computed(() => [
     { id: 'links', items },
     { id: 'components', label: 'Components', items: components },
@@ -109,23 +111,19 @@ export function useNavigation() {
         label: 'LTR',
         icon: 'i-lucide-arrow-right',
         active: appConfig.dir === 'ltr',
-        onSelect: () => {
-          appConfig.dir = 'ltr';
-        },
+        onSelect: () => appConfig.dir = 'ltr'
       }, {
         label: 'RTL',
         icon: 'i-lucide-arrow-left',
         active: appConfig.dir === 'rtl',
-        onSelect: () => {
-          appConfig.dir = 'rtl';
-        },
-      }],
-    },
-  ]);
+        onSelect: () => appConfig.dir = 'rtl'
+      }]
+    }
+  ])
 
   return {
     components,
     groups,
-    items,
-  };
+    items
+  }
 }

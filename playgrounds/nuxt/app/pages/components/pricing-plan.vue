@@ -1,36 +1,24 @@
 <script setup lang="ts">
-import theme from '#build/ui/pricing-plan';
+import theme from '#build/ui/pricing-plan'
 
-const variants = Object.keys(theme.variants.variant);
-const orientations = Object.keys(theme.variants.orientation);
+const variants = Object.keys(theme.variants.variant)
+const orientations = Object.keys(theme.variants.orientation)
 
 const attrs = reactive({
-  variant: [theme.defaultVariants.variant],
-});
+  variant: [theme.defaultVariants.variant]
+})
 
-const orientation = ref('vertical' as keyof typeof theme.variants.orientation);
+const orientation = ref('vertical' as keyof typeof theme.variants.orientation)
 </script>
 
 <template>
   <Navbar>
-    <PSelect
-      v-model="attrs.variant"
-      :items="variants"
-      multiple
-    />
-    <PSelect
-      v-model="orientation"
-      :items="orientations"
-    />
+    <PSelect v-model="attrs.variant" :items="variants" multiple />
+    <PSelect v-model="orientation" :items="orientations" />
   </Navbar>
 
-  <Matrix
-    v-slot="props"
-    :attrs="attrs"
-    class="gap-4"
-    :class="orientation === 'horizontal' ? 'flex-col' : ''"
-  >
-    <PPricingPlan
+  <Matrix v-slot="props" :attrs="attrs" class="gap-4" :class="orientation === 'horizontal' ? 'flex-col' : ''">
+    <UPricingPlan
       title="Solo"
       description="For bootstrappers and indie hackers."
       price="$249"
@@ -44,10 +32,10 @@ const orientation = ref('vertical' as keyof typeof theme.variants.orientation);
         'One developer',
         'Unlimited projects',
         'Access to GitHub repository',
-        'Lifetime access',
+        'Lifetime access'
       ]"
       :button="{
-        label: 'Buy now',
+        label: 'Buy now'
       }"
       :orientation="orientation"
       v-bind="props"

@@ -12,6 +12,13 @@
     "module": "ESNext",
     /* Bundler mode */
     "moduleResolution": "bundler",
+
+    /* Aliases */
+    "paths": {
+      "#build/ui/*": [
+        "./node_modules/.nuxt-ui/ui/*"
+      ]
+    },
     "allowImportingTsExtensions": true,
     /* Linting */
     "strict": true,

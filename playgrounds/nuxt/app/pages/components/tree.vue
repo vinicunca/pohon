@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import type { TreeItem } from 'pohon-ui';
-import theme from '#build/ui/tree';
+import type { TreeItem } from 'pohon-ui'
+import theme from '#build/ui/tree'
 
-const colors = Object.keys(theme.variants.color);
-const sizes = Object.keys(theme.variants.size);
+const colors = Object.keys(theme.variants.color)
+const sizes = Object.keys(theme.variants.size)
 
 const attrs = reactive({
   color: [theme.defaultVariants.color],
-  size: [theme.defaultVariants.size],
-});
+  size: [theme.defaultVariants.size]
+})
 
-const nested = ref(true);
-const virtualize = ref(false);
+const nested = ref(true)
+const virtualize = ref(false)
 
 const items = [
   {
@@ -23,82 +23,62 @@ const items = [
       defaultExpanded: true,
       children: [
         { label: 'useAuth.ts', icon: 'i-vscode-icons-file-type-typescript' },
-        { label: 'useUser.ts', icon: 'i-vscode-icons-file-type-typescript' },
-      ],
+        { label: 'useUser.ts', icon: 'i-vscode-icons-file-type-typescript' }
+      ]
     }, {
       label: 'components',
       children: [{
         label: 'Home',
         children: [
           { label: 'Card.vue', icon: 'i-vscode-icons-file-type-vue' },
-          { label: 'Button.vue', icon: 'i-vscode-icons-file-type-vue' },
-        ],
-      }],
-    }],
+          { label: 'Button.vue', icon: 'i-vscode-icons-file-type-vue' }
+        ]
+      }]
+    }]
   },
   { label: 'app.vue', icon: 'i-vscode-icons-file-type-vue' },
-  { label: 'nuxt.config.ts', icon: 'i-vscode-icons-file-type-nuxt' },
-] satisfies Array<TreeItem>;
+  { label: 'nuxt.config.ts', icon: 'i-vscode-icons-file-type-nuxt' }
+] satisfies TreeItem[]
 
 const itemsWithMappedId = [
   { id: 'id', title: 'hello' },
   { id: 'id2', title: 'there' },
-  { id: 'id3', title: 'obiwan kenobi' },
-];
+  { id: 'id3', title: 'obiwan kenobi' }
+]
 
 const largeItems = Array(1000).fill(0).map((_, i) => ({
   label: `Item ${i + 1}`,
   icon: 'i-lucide-file',
   children: [
     { label: `Child ${i + 1}-1`, icon: 'i-lucide-file-text' },
-    { label: `Child ${i + 1}-2`, icon: 'i-lucide-file-text' },
-  ],
-})) satisfies Array<TreeItem>;
+    { label: `Child ${i + 1}-2`, icon: 'i-lucide-file-text' }
+  ]
+})) satisfies TreeItem[]
 
-const modelValue = ref<(typeof items)[number]>();
-const modelValues = ref<(typeof items)>([items[items.length - 2]!]);
-const modelValueWithMappedId = ref<(typeof itemsWithMappedId)[number]>();
+const modelValue = ref<(typeof items)[number]>()
+const modelValues = ref<(typeof items)>([items[items.length - 2]!])
+const modelValueWithMappedId = ref<(typeof itemsWithMappedId)[number]>()
 </script>
 
 <template>
   <Navbar>
-    <PSwitch
-      v-model="nested"
-      label="Nested"
-    />
-    <PSwitch
-      v-model="virtualize"
-      label="Virtualize"
-    />
-    <PSelect
-      v-model="attrs.color"
-      :items="colors"
-      placeholder="Color"
-      multiple
-    />
-    <PSelect
-      v-model="attrs.size"
-      :items="sizes"
-      placeholder="Size"
-      multiple
-    />
+    <PSwitch v-model="nested" label="Nested" />
+    <PSwitch v-model="virtualize" label="Virtualize" />
+    <PSelect v-model="attrs.color" :items="colors" placeholder="Color" multiple />
+    <PSelect v-model="attrs.size" :items="sizes" placeholder="Size" multiple />
   </Navbar>
 
-  <Matrix
-    v-slot="props"
-    :attrs="attrs"
-    container-class="w-60"
-  >
-    <PTree
+  <Matrix v-slot="props" :attrs="attrs" container-class="w-60">
+    <UTree
       v-if="virtualize"
       virtualize
       :items="largeItems"
       :nested="nested"
       v-bind="props"
-      class="h-80 w-full"
+      class="w-full h-80"
     />
 
-    <PTree
+    <UTree
       v-else
       v-model="modelValues"
       :items="items"
@@ -110,45 +90,15 @@ const modelValueWithMappedId = ref<(typeof itemsWithMappedId)[number]>();
   </Matrix>
 
   <!-- Typescript tests -->
-  <!-- eslint-disable-next-line vue/no-constant-condition -->
   <template v-if="false">
-    <PTree
-      :model-value="modelValues"
-      :items="items"
-      multiple
-    />
-    <PTree
-      :default-value="modelValues"
-      :items="items"
-      multiple
-    />
-    <PTree
-      :items="items"
-      multiple
-      @update:model-value="(payload) => payload"
-    />
-    <PTree
-      :model-value="modelValue"
-      :items="items"
-    />
-    <PTree
-      :default-value="modelValue"
-      :items="items"
-    />
-    <PTree
-      :items="items"
-      @update:model-value="(payload) => payload"
-    />
+    <UTree :model-value="modelValues" :items="items" multiple />
+    <UTree :default-value="modelValues" :items="items" multiple />
+    <UTree :items="items" multiple @update:model-value="(payload) => payload" />
+    <UTree :model-value="modelValue" :items="items" />
+    <UTree :default-value="modelValue" :items="items" />
+    <UTree :items="items" @update:model-value="(payload) => payload" />
 
-    <PTree
-      v-model="modelValueWithMappedId"
-      :items="itemsWithMappedId"
-      :get-key="(i) => i.id"
-    />
-    <PTree
-      v-model="modelValueWithMappedId"
-      :items="itemsWithMappedId"
-      label-key="title"
-    />
+    <UTree v-model="modelValueWithMappedId" :items="itemsWithMappedId" :get-key="(i) => i.id" />
+    <UTree v-model="modelValueWithMappedId" :items="itemsWithMappedId" label-key="title" />
   </template>
 </template>
