@@ -7,10 +7,10 @@ if (!page.value) {
 const appConfig = useAppConfig()
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon UI',
   title: page.value.title,
   description: page.value.description,
-  ogTitle: `${page.value.title} - Nuxt UI`,
+  ogTitle: `${page.value.title} - Pohon UI`,
   ogDescription: page.value.description
 })
 
@@ -70,7 +70,7 @@ if (import.meta.server) {
               <span class="text-sm text-white font-medium">
                 {{ item.name }}
               </span>
-              <UIcon :name="appConfig.ui.icons.external" class="size-4 shrink-0 text-white" />
+              <PIcon :name="appConfig.ui.icons.external" class="size-4 shrink-0 text-white" />
             </div>
           </li>
         </ul>

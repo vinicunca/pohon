@@ -34,7 +34,7 @@ const text = computed(() => {
 
 <template>
   <div class="space-y-2">
-    <UFormField label="Password">
+    <PFormField label="Password">
       <PInput
         v-model="password"
         placeholder="Password"
@@ -46,7 +46,7 @@ const text = computed(() => {
         class="w-full"
       >
         <template #trailing>
-          <UButton
+          <PButton
             color="neutral"
             variant="link"
             size="sm"
@@ -58,7 +58,7 @@ const text = computed(() => {
           />
         </template>
       </PInput>
-    </UFormField>
+    </PFormField>
 
     <PProgress
       :color="color"
@@ -79,7 +79,7 @@ const text = computed(() => {
         class="flex items-center gap-0.5"
         :class="req.met ? 'text-success' : 'text-muted'"
       >
-        <UIcon :name="req.met ? 'i-lucide-circle-check' : 'i-lucide-circle-x'" class="size-4 shrink-0" />
+        <PIcon :name="req.met ? 'i-lucide-circle-check' : 'i-lucide-circle-x'" class="size-4 shrink-0" />
 
         <span class="text-xs font-light">
           {{ req.text }}

@@ -15,7 +15,7 @@ defineShortcuts({
     placeholder="Search..."
   >
     <template #trailing>
-      <UKbd value="/" />
+      <PKbd value="/" />
     </template>
   </PInput>
 </template>

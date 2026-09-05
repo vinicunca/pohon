@@ -19,13 +19,15 @@ links:
 
 Use the Carousel component to display a list of items in a carousel.
 
-::component-example
----
+## ::component-example
+
 collapse: true
 overflowHidden: true
 name: 'carousel-example'
 class: '!p-0'
+
 ---
+
 ::
 
 ::note
@@ -36,11 +38,13 @@ Use your mouse to drag the carousel horizontally on desktop.
 
 Use the `items` prop as an array and render each item using the default slot:
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-items-example'
 class: 'p-8'
+
 ---
+
 ::
 
 You can also pass an array of objects with the following properties:
@@ -50,11 +54,13 @@ You can also pass an array of objects with the following properties:
 
 You can control how many items are visible by using the [`basis`](https://tailwindcss.com/docs/flex-basis) / [`width`](https://tailwindcss.com/docs/width) utility classes on the `item`:
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-items-multiple-example'
 class: 'p-8 px-16'
+
 ---
+
 ::
 
 ### Orientation
@@ -65,11 +71,13 @@ Use the `orientation` prop to change the orientation of the Progress. Defaults t
 Use your mouse to drag the carousel vertically on desktop.
 ::
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-orientation-example'
 class: 'p-8'
+
 ---
+
 ::
 
 ::caution
@@ -80,40 +88,47 @@ You need to specify a `height` on the container in vertical orientation.
 
 Use the `arrows` prop to display prev and next buttons.
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-arrows-example'
 class: 'p-8'
+
 ---
+
 ::
 
 ### Prev / Next
 
 Use the `prev` and `next` props to customize the prev and next buttons with any [Button](/docs/components/button) props.
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-prev-next-example'
 class: 'p-8'
+
 ---
+
 ::
 
 ### Prev / Next Icons
 
 Use the `prev-icon` and `next-icon` props to customize the buttons [Icon](/docs/components/icon). Defaults to `i-lucide-arrow-left` / `i-lucide-arrow-right`.
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-prev-next-icon-example'
 class: 'p-8'
 options:
-  - name: 'prevIcon'
-    label: 'prevIcon'
-    default: 'i-lucide-chevron-left'
-  - name: 'nextIcon'
-    label: 'nextIcon'
-    default: 'i-lucide-chevron-right'
+
+- name: 'prevIcon'
+  label: 'prevIcon'
+  default: 'i-lucide-chevron-left'
+- name: 'nextIcon'
+  label: 'nextIcon'
+  default: 'i-lucide-chevron-right'
+
 ---
+
 ::
 
 ::framework-only
@@ -132,20 +147,24 @@ You can customize these icons globally in your `vite.config.ts` under `ui.icons.
 
 Use the `dots` prop to display a list of dots to scroll to a specific slide.
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-dots-example'
 class: 'p-8 pb-12'
+
 ---
+
 ::
 
 The number of dots is based on the number of slides displayed in the view:
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-dots-multiple-example'
 class: 'p-8 px-16 pb-12'
+
 ---
+
 ::
 
 ## Plugins
@@ -158,11 +177,13 @@ This plugin is used to extend Embla Carousel with **autoplay** functionality.
 
 Use the `autoplay` prop as a boolean or an object to configure the [Autoplay plugin](https://www.embla-carousel.com/docs/v8/plugins/autoplay).
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-autoplay-example'
 class: 'p-8 px-16 pb-12'
+
 ---
+
 ::
 
 ::note
@@ -175,11 +196,13 @@ This plugin is used to extend Embla Carousel with **auto scroll** functionality.
 
 Use the `auto-scroll` prop as a boolean or an object to configure the [Auto Scroll plugin](https://www.embla-carousel.com/docs/v8/plugins/auto-scroll).
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-auto-scroll-example'
 class: 'p-8 px-16 pb-12'
+
 ---
+
 ::
 
 ::note
@@ -192,11 +215,13 @@ This plugin is used to extend Embla Carousel with **auto height** functionality.
 
 Use the `auto-height` prop as a boolean or an object to configure the [Auto Height plugin](https://www.embla-carousel.com/docs/v8/plugins/auto-height).
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-auto-height-example'
 class: 'p-8 pt-16'
+
 ---
+
 ::
 
 ::note
@@ -209,11 +234,13 @@ Class Names is a **class name toggle** utility plugin for Embla Carousel that en
 
 Use the `class-names` prop as a boolean or an object to configure the [Class Names plugin](https://www.embla-carousel.com/docs/v8/plugins/class-names).
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-class-names-example'
 class: 'p-8'
+
 ---
+
 ::
 
 ::note
@@ -226,11 +253,13 @@ This plugin is used to replace the Embla Carousel scroll functionality with **fa
 
 Use the `fade` prop as a boolean or an object to configure the [Fade plugin](https://www.embla-carousel.com/docs/v8/plugins/fade).
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-fade-example'
 class: 'p-8 pb-12'
+
 ---
+
 ::
 
 ### Wheel Gestures
@@ -243,11 +272,13 @@ Use the `wheel-gestures` prop as a boolean or an object to configure the [Wheel 
 Use your mouse wheel to scroll the carousel.
 ::
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-wheel-gestures-example'
 class: 'p-8 px-16'
+
 ---
+
 ::
 
 ## Examples
@@ -256,11 +287,13 @@ class: 'p-8 px-16'
 
 You can use the [`scrollTo`](https://www.embla-carousel.com/docs/v8/api/methods#scrollto) method on [`emblaApi`](#expose) to display thumbnails under the carousel that navigate to a specific slide.
 
-::component-example
----
+## ::component-example
+
 name: 'carousel-thumbnails-example'
 class: 'p-8 px-16'
+
 ---
+
 ::
 
 ## API
@@ -283,19 +316,19 @@ You can access the typed component instance using [`useTemplateRef`](https://vue
 
 ```vue
 <script setup lang="ts">
-const carousel = useTemplateRef('carousel')
+const carousel = useTemplateRef("carousel");
 </script>
 
 <template>
-  <UCarousel ref="carousel" />
+  <PCarousel ref="carousel" />
 </template>
 ```
 
 This will give you access to the following:
 
-| Name | Type |
-| ---- | ---- |
-| `emblaRef`{lang="ts-type"} | `Ref<HTMLElement \| null>`{lang="ts-type"} |
+| Name                       | Type                                                                                                              |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `emblaRef`{lang="ts-type"} | `Ref<HTMLElement \| null>`{lang="ts-type"}                                                                        |
 | `emblaApi`{lang="ts-type"} | [`Ref<EmblaCarouselType \| null>`{lang="ts-type"}](https://www.embla-carousel.com/docs/v8/api/methods#typescript) |
 
 ## Theme

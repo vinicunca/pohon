@@ -39,7 +39,7 @@ const columns = [{
     to: 'https://image.nuxt.com/',
     target: '_blank'
   }, {
-    label: 'Nuxt UI',
+    label: 'Pohon UI',
     to: 'https://ui.nuxt.com/',
     target: '_blank'
   }]
@@ -49,20 +49,20 @@ const columns = [{
 <template>
   <Navbar />
 
-  <UFooter class="w-full border-t border-default divide-y divide-default min-h-0">
+  <PFooter class="w-full border-t border-default divide-y divide-default min-h-0">
     <template #top>
       <PContainer>
-        <UFooterColumns :columns="columns">
+        <PFooterColumns :columns="columns">
           <template #right>
-            <UFormField name="email" label="Subscribe to our newsletter" size="lg">
+            <PFormField name="email" label="Subscribe to our newsletter" size="lg">
               <PInput type="email" class="w-full">
                 <template #trailing>
-                  <UButton type="submit" size="xs" color="neutral" label="Subscribe" />
+                  <PButton type="submit" size="xs" color="neutral" label="Subscribe" />
                 </template>
               </PInput>
-            </UFormField>
+            </PFormField>
           </template>
-        </UFooterColumns>
+        </PFooterColumns>
       </PContainer>
     </template>
 
@@ -75,7 +75,7 @@ const columns = [{
     <PNavigationMenu :items="items" variant="link" />
 
     <template #right>
-      <UButton
+      <PButton
         icon="i-simple-icons-discord"
         color="neutral"
         variant="ghost"
@@ -83,7 +83,7 @@ const columns = [{
         target="_blank"
         aria-label="Discord"
       />
-      <UButton
+      <PButton
         icon="i-simple-icons-x"
         color="neutral"
         variant="ghost"
@@ -91,7 +91,7 @@ const columns = [{
         target="_blank"
         aria-label="X"
       />
-      <UButton
+      <PButton
         icon="i-simple-icons-github"
         color="neutral"
         variant="ghost"
@@ -100,5 +100,5 @@ const columns = [{
         aria-label="GitHub"
       />
     </template>
-  </UFooter>
+  </PFooter>
 </template>

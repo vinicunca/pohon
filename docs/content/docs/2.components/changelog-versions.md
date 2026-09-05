@@ -14,13 +14,13 @@ The ChangelogVersions component provides a flexible layout to display a list of 
 
 ```vue {2,8}
 <template>
-  <UChangelogVersions>
-    <UChangelogVersion
+  <PChangelogVersions>
+    <PChangelogVersion
       v-for="(version, index) in versions"
       :key="index"
       v-bind="version"
     />
-  </UChangelogVersions>
+  </PChangelogVersions>
 </template>
 ```
 
@@ -172,20 +172,20 @@ const { data: versions } = await useAsyncData("versions", () =>
 </script>
 
 <template>
-  <UPage>
+  <PPage>
     <PPageHero title="Changelog" />
 
-    <UPageBody>
-      <UChangelogVersions>
-        <UChangelogVersion
+    <PPageBody>
+      <PChangelogVersions>
+        <PChangelogVersion
           v-for="(version, index) in versions"
           :key="index"
           v-bind="version"
           :to="version.path"
         />
-      </UChangelogVersions>
-    </UPageBody>
-  </UPage>
+      </PChangelogVersions>
+    </PPageBody>
+  </PPage>
 </template>
 ```
 
@@ -225,7 +225,7 @@ const scrollContainer = ref<HTMLElement>();
 
 <template>
   <div ref="scrollContainer" class="max-h-96 overflow-y-auto">
-    <UChangelogVersions
+    <PChangelogVersions
       v-if="scrollContainer"
       :indicator="{ container: scrollContainer }"
     />
@@ -234,7 +234,7 @@ const scrollContainer = ref<HTMLElement>();
 ```
 
 ::warning
-When using a custom `container`, make sure the container element is mounted before `UChangelogVersions`.
+When using a custom `container`, make sure the container element is mounted before `PChangelogVersions`.
 ::
 
 ## API
@@ -252,11 +252,11 @@ You can use all the slots of the [`ChangelogVersion`](/docs/components/changelog
 
 ```vue{3-5}
 <template>
-  <UChangelogVersions :versions="versions">
+  <PChangelogVersions :versions="versions">
     <template #body="{ version }">
       <MDC v-if="version.content" :value="version.content" />
     </template>
-  </UChangelogVersions>
+  </PChangelogVersions>
 </template>
 ```
 

@@ -15,7 +15,7 @@ function confirmDelete() {
 </script>
 
 <template>
-  <UButton label="Delete" color="error" variant="soft" @click="isOpen = true" />
+  <PButton label="Delete" color="error" variant="soft" @click="isOpen = true" />
 
   <PModal
     v-model:open="isOpen"
@@ -24,13 +24,13 @@ function confirmDelete() {
     :ui="{ footer: 'justify-end' }"
   >
     <template #footer="{ close }">
-      <UButton
+      <PButton
         label="Cancel"
         color="neutral"
         variant="outline"
         @click="close"
       />
-      <UButton label="Delete" color="error" @click="confirmDelete" />
+      <PButton label="Delete" color="error" @click="confirmDelete" />
     </template>
   </PModal>
 </template>
@@ -59,13 +59,13 @@ const emit = defineEmits<{
     :description="description"
   >
     <template #footer>
-      <UButton
+      <PButton
         label="Cancel"
         color="neutral"
         variant="outline"
         @click="emit('close', false)"
       />
-      <UButton label="Confirm" color="error" @click="emit('close', true)" />
+      <PButton label="Confirm" color="error" @click="emit('close', true)" />
     </template>
   </PModal>
 </template>
@@ -111,7 +111,7 @@ function onSave() {
 </script>
 
 <template>
-  <UButton label="Add user" @click="isOpen = true" />
+  <PButton label="Add user" @click="isOpen = true" />
 
   <PSlideover
     v-model:open="isOpen"
@@ -119,30 +119,30 @@ function onSave() {
     description="Fill in the details below."
   >
     <template #body>
-      <UForm
+      <PForm
         id="user-form"
         :schema="schema"
         :state="state"
         class="space-y-4"
         @submit="onSave"
       >
-        <UFormField name="name" label="Name">
+        <PFormField name="name" label="Name">
           <PInput v-model="state.name" />
-        </UFormField>
-        <UFormField name="email" label="Email">
+        </PFormField>
+        <PFormField name="email" label="Email">
           <PInput v-model="state.email" type="email" />
-        </UFormField>
-      </UForm>
+        </PFormField>
+      </PForm>
     </template>
 
     <template #footer="{ close }">
-      <UButton
+      <PButton
         label="Cancel"
         color="neutral"
         variant="outline"
         @click="close"
       />
-      <UButton type="submit" form="user-form" label="Save" />
+      <PButton type="submit" form="user-form" label="Save" />
     </template>
   </PSlideover>
 </template>
@@ -190,7 +190,7 @@ const groups = [
 </script>
 
 <template>
-  <UButton
+  <PButton
     label="Search..."
     icon="i-lucide-search"
     color="neutral"
@@ -214,20 +214,20 @@ const isOpen = ref(false);
 </script>
 
 <template>
-  <UButton label="Options" @click="isOpen = true" />
+  <PButton label="Options" @click="isOpen = true" />
 
   <PDrawer v-model:open="isOpen" title="Options">
     <template #body>
       <div class="space-y-2 p-4">
-        <UButton label="Share" icon="i-lucide-share" block variant="ghost" />
-        <UButton
+        <PButton label="Share" icon="i-lucide-share" block variant="ghost" />
+        <PButton
           label="Export"
           icon="i-lucide-download"
           block
           variant="ghost"
         />
-        <USeparator />
-        <UButton
+        <PSeparator />
+        <PButton
           label="Delete"
           icon="i-lucide-trash"
           block

@@ -13,7 +13,7 @@ const items = computed(() => mapContentNavigation(navigation?.value.map(item => 
 </script>
 
 <template>
-  <USeparator class="hidden lg:flex" />
+  <PSeparator class="hidden lg:flex" />
 
   <PContainer class="hidden lg:flex items-center justify-between">
     <PNavigationMenu :items="items" variant="pill" highlight class="-mx-2.5 -mb-px" />

@@ -67,19 +67,19 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UForm :schema="schema" :state="state" class="space-y-4 w-64" @submit="onSubmit">
-    <UFormField name="avatar" label="Avatar" description="JPG, GIF or PNG. 1MB Max.">
+  <PForm :schema="schema" :state="state" class="space-y-4 w-64" @submit="onSubmit">
+    <PFormField name="avatar" label="Avatar" description="JPG, GIF or PNG. 1MB Max.">
       <PFileUpload v-slot="{ open, removeFile }" v-model="state.avatar" accept="image/*">
         <div class="flex flex-wrap items-center gap-3">
-          <UAvatar size="lg" :src="state.avatar ? createObjectUrl(state.avatar) : undefined" icon="i-lucide-image" />
+          <PAvatar size="lg" :src="state.avatar ? createObjectUrl(state.avatar) : undefined" icon="i-lucide-image" />
 
-          <UButton :label="state.avatar ? 'Change image' : 'Upload image'" color="neutral" variant="outline" @click="open()" />
+          <PButton :label="state.avatar ? 'Change image' : 'Upload image'" color="neutral" variant="outline" @click="open()" />
         </div>
 
         <p v-if="state.avatar" class="text-xs text-muted mt-1.5">
           {{ state.avatar.name }}
 
-          <UButton
+          <PButton
             label="Remove"
             color="error"
             variant="link"
@@ -89,8 +89,8 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
           />
         </p>
       </PFileUpload>
-    </UFormField>
+    </PFormField>
 
-    <UButton type="submit" label="Submit" color="neutral" />
-  </UForm>
+    <PButton type="submit" label="Submit" color="neutral" />
+  </PForm>
 </template>

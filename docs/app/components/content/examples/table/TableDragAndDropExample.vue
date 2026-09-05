@@ -74,7 +74,7 @@ useSortable('.my-table-tbody', data, {
 </script>
 
 <template>
-  <UTable
+  <PTable
     ref="table"
     :data="data"
     :columns="columns"

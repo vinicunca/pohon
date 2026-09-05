@@ -8,7 +8,7 @@ defineShortcuts({
 
 <template>
   <PDrawer v-model:open="open">
-    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
+    <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
     <template #content>
       <Placeholder class="h-48 m-4" />

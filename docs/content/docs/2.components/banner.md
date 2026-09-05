@@ -210,22 +210,22 @@ Use the Banner component in your `app.vue` or in a layout:
 
 ```vue [app.vue]{3}
 <template>
-  <UApp>
+  <PApp>
     <PBanner
       icon="i-lucide-construction"
-      title="Nuxt UI v4 has been released!"
+      title="Pohon UI v4 has been released!"
     />
 
-    <UHeader />
+    <PHeader />
 
-    <UMain>
+    <PMain>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-    </UMain>
+    </PMain>
 
-    <UFooter />
-  </UApp>
+    <PFooter />
+  </PApp>
 </template>
 ```
 

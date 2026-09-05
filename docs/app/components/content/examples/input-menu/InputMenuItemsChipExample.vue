@@ -31,7 +31,7 @@ const value = ref(items.value[0])
 <template>
   <PInputMenu v-model="value" :items="items">
     <template #leading="{ modelValue, ui }">
-      <UChip
+      <PChip
         v-if="modelValue"
         v-bind="modelValue.chip"
         inset

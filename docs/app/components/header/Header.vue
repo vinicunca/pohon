@@ -14,7 +14,7 @@ function toggleChat() {
 
 <!-- eslint-disable vue/no-template-shadow -->
 <template>
-  <UHeader
+  <PHeader
     :ui="{
       left: 'min-w-0',
       right: 'gap-0.5',
@@ -32,11 +32,11 @@ function toggleChat() {
 
     <template #right>
       <PTooltip text="Search" :kbds="['meta', 'K']" ignore-non-keyboard-focus>
-        <UContentSearchButton />
+        <PContentSearchButton />
       </PTooltip>
 
       <PTooltip text="Ask AI" :kbds="['meta', 'I']" ignore-non-keyboard-focus>
-        <UButton
+        <PButton
           color="neutral"
           variant="ghost"
           icon="i-lucide-bot-message-square"
@@ -48,7 +48,7 @@ function toggleChat() {
       <ThemePicker />
 
       <PTooltip text="Open on GitHub" class="hidden lg:flex">
-        <UButton
+        <PButton
           color="neutral"
           variant="ghost"
           to="https://github.com/nuxt/ui"
@@ -74,5 +74,5 @@ function toggleChat() {
     <template v-if="route.path.startsWith('/docs/')" #bottom>
       <HeaderBottom />
     </template>
-  </UHeader>
+  </PHeader>
 </template>

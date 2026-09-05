@@ -18,7 +18,7 @@ Use the `level` prop to define which heading will be used for the steps.
 :::code-preview{class="[&>div]:\*:w-full"}
 ::steps{level="4"}
 
-#### Add the Nuxt UI module in your `nuxt.config.ts`
+#### Add the Pohon UI module in your `nuxt.config.ts`
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
@@ -45,7 +45,7 @@ npm run dev
 ````mdc
 ::steps{level="4"}
 
-#### Add the Nuxt UI module in your `nuxt.config.ts`
+#### Add the Pohon UI module in your `nuxt.config.ts`
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({

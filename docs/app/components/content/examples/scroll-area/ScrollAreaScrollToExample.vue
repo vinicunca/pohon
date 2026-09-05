@@ -23,7 +23,7 @@ function scrollToItem(index: number) {
 
 <template>
   <div class="w-full">
-    <UScrollArea
+    <PScrollArea
       v-slot="{ item, index }"
       ref="scrollArea"
       :items="items"
@@ -39,18 +39,18 @@ function scrollToItem(index: number) {
         class="rounded-none isolate"
         :class="[index === (targetIndex - 1) && 'bg-primary']"
       />
-    </UScrollArea>
+    </PScrollArea>
 
-    <UFieldGroup size="sm" class="px-4 py-3 border-t border-muted w-full">
-      <UButton icon="i-lucide-arrow-up-to-line" color="neutral" variant="outline" @click="scrollToTop">
+    <PFieldGroup size="sm" class="px-4 py-3 border-t border-muted w-full">
+      <PButton icon="i-lucide-arrow-up-to-line" color="neutral" variant="outline" @click="scrollToTop">
         Top
-      </UButton>
-      <UButton icon="i-lucide-arrow-down-to-line" color="neutral" variant="outline" @click="scrollToBottom">
+      </PButton>
+      <PButton icon="i-lucide-arrow-down-to-line" color="neutral" variant="outline" @click="scrollToBottom">
         Bottom
-      </UButton>
-      <UButton icon="i-lucide-navigation" color="neutral" variant="outline" @click="scrollToItem(targetIndex || 500)">
+      </PButton>
+      <PButton icon="i-lucide-navigation" color="neutral" variant="outline" @click="scrollToItem(targetIndex || 500)">
         Go to {{ targetIndex || 500 }}
-      </UButton>
-    </UFieldGroup>
+      </PButton>
+    </PFieldGroup>
   </div>
 </template>

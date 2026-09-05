@@ -5,13 +5,13 @@ const spread = ref(2)
 
 <template>
   <Navbar>
-    <UFormField label="Duration" orientation="horizontal">
+    <PFormField label="Duration" orientation="horizontal">
       <PInputNumber v-model="duration" class="w-28" />
-    </UFormField>
-    <UFormField label="Spread" orientation="horizontal">
+    </PFormField>
+    <PFormField label="Spread" orientation="horizontal">
       <PInputNumber v-model="spread" class="w-28" />
-    </UFormField>
+    </PFormField>
   </Navbar>
 
-  <UChatShimmer text="Thinking about it..." :duration="duration" :spread="spread" />
+  <PChatShimmer text="Thinking about it..." :duration="duration" :spread="spread" />
 </template>

@@ -16,7 +16,7 @@ const reverse = ref(false)
   <PPageHero
     title="The ultimate Vue UI library"
     description="A comprehensive, Nuxt-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications."
-    headline="Nuxt UI v4 is here!"
+    headline="Pohon UI v4 is here!"
     :orientation="orientation"
     :reverse="reverse"
     :links="[{ label: 'Get started', icon: 'i-lucide-square-play', to: 'https://ui.nuxt.com/docs/getting-started' }, { label: 'Explore components', trailingIcon: 'i-lucide-arrow-right', to: 'https://ui.nuxt.com/docs/components', color: 'neutral', variant: 'subtle' }]"

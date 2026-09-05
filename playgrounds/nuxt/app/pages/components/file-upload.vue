@@ -92,19 +92,19 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs" container-class="w-80">
-    <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
-      <UFormField name="avatar" label="Avatar" description="JPG, GIF or PNG. 1MB Max." v-bind="props">
+    <PForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
+      <PFormField name="avatar" label="Avatar" description="JPG, GIF or PNG. 1MB Max." v-bind="props">
         <PFileUpload v-slot="{ open, removeFile }" v-model="state.avatar" accept="image/*">
           <div class="flex flex-wrap items-center gap-3">
-            <UAvatar size="lg" :src="state.avatar ? createObjectUrl(state.avatar) : undefined" icon="i-lucide-image" />
+            <PAvatar size="lg" :src="state.avatar ? createObjectUrl(state.avatar) : undefined" icon="i-lucide-image" />
 
-            <UButton :label="state.avatar ? 'Change image' : 'Upload image'" color="neutral" @click="open()" />
+            <PButton :label="state.avatar ? 'Change image' : 'Upload image'" color="neutral" @click="open()" />
           </div>
 
           <p v-if="state.avatar" class="text-xs text-muted mt-1.5">
             {{ state.avatar.name }}
 
-            <UButton
+            <PButton
               label="Remove"
               color="error"
               variant="link"
@@ -114,10 +114,10 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
             />
           </p>
         </PFileUpload>
-      </UFormField>
+      </PFormField>
 
-      <UButton label="Submit" type="submit" :size="props?.size" />
-    </UForm>
+      <PButton label="Submit" type="submit" :size="props?.size" />
+    </PForm>
 
     <PFileUpload
       v-model="value"
@@ -144,7 +144,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       class="w-full min-h-44"
     >
       <template #actions="{ open }">
-        <UButton
+        <PButton
           label="Select images"
           icon="i-lucide-upload"
           color="neutral"
@@ -160,7 +160,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
             Files ({{ files?.length }})
           </p>
 
-          <UButton
+          <PButton
             label="Add files"
             color="neutral"
             variant="outline"
@@ -172,7 +172,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       </template>
 
       <template v-if="layout === 'list'" #files-bottom="{ removeFile, files }">
-        <UButton
+        <PButton
           v-if="files?.length"
           label="Remove files"
           color="neutral"

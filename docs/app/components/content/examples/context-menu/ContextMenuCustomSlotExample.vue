@@ -18,7 +18,7 @@ const items = [
 </script>
 
 <template>
-  <UContextMenu :items="items" :ui="{ content: 'w-48' }">
+  <PContextMenu :items="items" :ui="{ content: 'w-48' }">
     <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
       Right click here
     </div>
@@ -28,7 +28,7 @@ const items = [
     </template>
 
     <template #refresh-trailing>
-      <UIcon v-if="loading" name="i-lucide-loader-circle" class="shrink-0 size-5 text-primary animate-spin" />
+      <PIcon v-if="loading" name="i-lucide-loader-circle" class="shrink-0 size-5 text-primary animate-spin" />
     </template>
-  </UContextMenu>
+  </PContextMenu>
 </template>

@@ -31,7 +31,7 @@ const columns: FooterColumn[] = [{
     to: 'https://image.nuxt.com/',
     target: '_blank'
   }, {
-    label: 'Nuxt UI',
+    label: 'Pohon UI',
     to: 'https://ui.nuxt.com/',
     target: '_blank'
   }]
@@ -39,15 +39,15 @@ const columns: FooterColumn[] = [{
 </script>
 
 <template>
-  <UFooterColumns :columns="columns">
+  <PFooterColumns :columns="columns">
     <template #right>
-      <UFormField name="email" label="Subscribe to our newsletter" size="lg">
+      <PFormField name="email" label="Subscribe to our newsletter" size="lg">
         <PInput type="email" class="w-full">
           <template #trailing>
-            <UButton type="submit" size="xs" color="neutral" label="Subscribe" />
+            <PButton type="submit" size="xs" color="neutral" label="Subscribe" />
           </template>
         </PInput>
-      </UFormField>
+      </PFormField>
     </template>
-  </UFooterColumns>
+  </PFooterColumns>
 </template>

@@ -23,7 +23,7 @@ const items = computed<NavigationMenuItem[]>(() => [{
 </script>
 
 <template>
-  <UHeader>
+  <PHeader>
     <template #title>
       <Logo class="h-6 w-auto" />
     </template>
@@ -31,10 +31,10 @@ const items = computed<NavigationMenuItem[]>(() => [{
     <PNavigationMenu :items="items" />
 
     <template #right>
-      <UColorModeButton />
+      <PColorModeButton />
 
       <PTooltip text="Open on GitHub" :kbds="['meta', 'G']">
-        <UButton
+        <PButton
           color="neutral"
           variant="ghost"
           to="https://github.com/nuxt/ui"
@@ -44,5 +44,5 @@ const items = computed<NavigationMenuItem[]>(() => [{
         />
       </PTooltip>
     </template>
-  </UHeader>
+  </PHeader>
 </template>

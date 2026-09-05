@@ -16,7 +16,7 @@ const attrs = reactive({
   <Matrix v-slot="props" :attrs="attrs" class="flex-col w-full" container-class="w-full">
     <PBanner
       id="banner"
-      title="Nuxt UI v4 is officially released!"
+      title="Pohon UI v4 is officially released!"
       to="https://github.com/nuxt/ui/releases/tag/v4.0.0"
       icon="i-lucide-rocket"
       :actions="[{

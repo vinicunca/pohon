@@ -26,7 +26,7 @@ function onOpen() {
 
 <template>
   <PModal @update:open="onOpen">
-    <UButton
+    <PButton
       label="Search users..."
       color="neutral"
       variant="subtle"

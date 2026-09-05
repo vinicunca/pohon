@@ -27,6 +27,6 @@ const items: DropdownMenuItem[] = [{
     :content="{ align: 'start' }"
     :ui="{ content: 'w-64' }"
   >
-    <UButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
+    <PButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
   </PDropdownMenu>
 </template>

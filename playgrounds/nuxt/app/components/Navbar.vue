@@ -27,7 +27,7 @@ defineShortcuts({
 </script>
 
 <template>
-  <UDashboardNavbar
+  <PDashboardNavbar
     :title="title"
     :ui="{
       left: 'shrink-0',
@@ -36,13 +36,13 @@ defineShortcuts({
     class="absolute top-0 inset-x-0 z-5 bg-default"
   >
     <template #toggle>
-      <UDashboardSidebarToggle size="sm" variant="outline" class="ring-default" />
-      <UDashboardSidebarCollapse size="sm" variant="outline" class="ring-default" />
+      <PDashboardSidebarToggle size="sm" variant="outline" class="ring-default" />
+      <PDashboardSidebarCollapse size="sm" variant="outline" class="ring-default" />
     </template>
 
     <template #leading>
-      <UFieldGroup size="sm">
-        <UButton
+      <PFieldGroup size="sm">
+        <PButton
           icon="i-lucide-chevron-left"
           color="neutral"
           variant="outline"
@@ -51,7 +51,7 @@ defineShortcuts({
           aria-label="Previous component"
           @click="navigate(index - 1)"
         />
-        <UButton
+        <PButton
           icon="i-lucide-chevron-right"
           color="neutral"
           variant="outline"
@@ -60,12 +60,12 @@ defineShortcuts({
           aria-label="Next component"
           @click="navigate(index + 1)"
         />
-      </UFieldGroup>
+      </PFieldGroup>
     </template>
 
     <template #trailing>
       <slot name="trailing">
-        <UButton
+        <PButton
           icon="i-lucide-external-link"
           :to="to || `https://ui.nuxt.com/docs/components/${name}`"
           color="neutral"
@@ -79,5 +79,5 @@ defineShortcuts({
     <template #right>
       <slot />
     </template>
-  </UDashboardNavbar>
+  </PDashboardNavbar>
 </template>

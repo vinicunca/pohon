@@ -5,10 +5,10 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon UI',
   title: page.value.title,
   description: page.value.description,
-  ogTitle: `${page.value.title} - Nuxt UI`,
+  ogTitle: `${page.value.title} - Pohon UI`,
   ogDescription: page.value.description
 })
 
@@ -61,8 +61,8 @@ const { data: versions } = await useFetch('https://ungh.cc/repos/nuxt/ui/release
     <PPageSection :ui="{ container: '!py-0' }">
       <div class="py-4 md:py-8 lg:py-16 md:border-x border-default">
         <PContainer class="max-w-5xl">
-          <UChangelogVersions>
-            <UChangelogVersion
+          <PChangelogVersions>
+            <PChangelogVersion
               v-for="version in versions"
               :key="version.tag"
               v-bind="version"
@@ -81,8 +81,8 @@ const { data: versions } = await useFetch('https://ungh.cc/repos/nuxt/ui/release
                   :value="version.markdown"
                 />
               </template>
-            </UChangelogVersion>
-          </UChangelogVersions>
+            </PChangelogVersion>
+          </PChangelogVersions>
         </PContainer>
       </div>
     </PPageSection>

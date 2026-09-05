@@ -86,13 +86,13 @@ const items = (editor: Editor): DropdownMenuItem[][] => {
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     class="w-full min-h-19"
   >
-    <UEditorDragHandle v-slot="{ ui }" :editor="editor" @node-change="selectedNode = $event">
+    <PEditorDragHandle v-slot="{ ui }" :editor="editor" @node-change="selectedNode = $event">
       <PDropdownMenu
         v-slot="{ open }"
         :modal="false"
@@ -101,7 +101,7 @@ const items = (editor: Editor): DropdownMenuItem[][] => {
         :ui="{ content: 'w-48', label: 'text-xs' }"
         @update:open="editor.chain().setMeta('lockDragHandle', $event).run()"
       >
-        <UButton
+        <PButton
           icon="i-lucide-grip-vertical"
           color="neutral"
           variant="ghost"
@@ -111,6 +111,6 @@ const items = (editor: Editor): DropdownMenuItem[][] => {
           :class="ui.handle()"
         />
       </PDropdownMenu>
-    </UEditorDragHandle>
-  </UEditor>
+    </PEditorDragHandle>
+  </PEditor>
 </template>

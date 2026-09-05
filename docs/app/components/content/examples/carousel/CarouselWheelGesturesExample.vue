@@ -10,7 +10,7 @@ const items = [
 </script>
 
 <template>
-  <UCarousel
+  <PCarousel
     v-slot="{ item }"
     loop
     wheel-gestures
@@ -18,5 +18,5 @@ const items = [
     :ui="{ item: 'basis-1/3' }"
   >
     <img :src="item" width="234" height="234" class="rounded-lg" loading="lazy">
-  </UCarousel>
+  </PCarousel>
 </template>

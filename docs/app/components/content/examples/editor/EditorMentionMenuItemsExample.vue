@@ -30,13 +30,13 @@ const items: EditorMentionMenuItem[] = [{
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     placeholder="Type @ to mention..."
     class="w-full min-h-19"
   >
-    <UEditorMentionMenu :editor="editor" :items="items" />
-  </UEditor>
+    <PEditorMentionMenu :editor="editor" :items="items" />
+  </PEditor>
 </template>

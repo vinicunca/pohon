@@ -15,5 +15,5 @@ const links = [{
 <template>
   <Navbar />
 
-  <UPageAnchors :links="links" />
+  <PPageAnchors :links="links" />
 </template>

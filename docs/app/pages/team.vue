@@ -5,10 +5,10 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon UI',
   title: page.value.title,
   description: page.value.description,
-  ogTitle: `${page.value.title} - Nuxt UI`,
+  ogTitle: `${page.value.title} - Pohon UI`,
   ogDescription: page.value.description
 })
 
@@ -73,7 +73,7 @@ const icons = {
           variant="subtle"
         >
           <template #leading>
-            <UAvatar
+            <PAvatar
               :src="`https://ipx.nuxt.com/f_auto,s_80x80/gh_avatar/${user.login}`"
               :srcset="`https://ipx.nuxt.com/f_auto,s_160x160/gh_avatar/${user.login} 2x`"
               :alt="`${user.name} avatar`"
@@ -83,7 +83,7 @@ const icons = {
           </template>
 
           <div class="flex items-center justify-center gap-1">
-            <UButton
+            <PButton
               v-for="(link, key) in user.socialAccounts"
               :key="key"
               color="neutral"
@@ -94,7 +94,7 @@ const icons = {
               target="_blank"
               size="sm"
             />
-            <UButton
+            <PButton
               :to="`https://github.com/${user.login}`"
               color="neutral"
               variant="link"
@@ -102,7 +102,7 @@ const icons = {
               :icon="icons.github"
               target="_blank"
             />
-            <UButton
+            <PButton
               v-if="user.websiteUrl"
               :to="user.websiteUrl"
               color="neutral"
@@ -113,7 +113,7 @@ const icons = {
             />
           </div>
           <div v-if="user.sponsorsListing" class="flex items-center justify-center">
-            <UButton
+            <PButton
               :to="user.sponsorsListing"
               target="_blank"
               color="neutral"
@@ -142,7 +142,7 @@ const icons = {
           }"
         >
           <template #leading>
-            <UAvatar
+            <PAvatar
               :src="`https://ipx.nuxt.com/f_auto,s_80x80/gh_avatar/${contributor.username}`"
               :srcset="`https://ipx.nuxt.com/f_auto,s_160x160/gh_avatar/${contributor.username} 2x`"
               :alt="`${contributor.username} avatar`"
@@ -153,7 +153,7 @@ const icons = {
           </template>
 
           <div class="flex items-center justify-center gap-1">
-            <UButton
+            <PButton
               :to="`https://github.com/${contributor.username}`"
               color="neutral"
               variant="link"

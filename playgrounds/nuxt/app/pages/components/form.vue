@@ -28,39 +28,39 @@ const disabled = ref(false)
 
   <div class="flex flex-col gap-8 min-h-0 mt-16 pb-8">
     <div class="flex gap-4">
-      <UForm
+      <PForm
         :state="state"
         :schema="schema"
         class="gap-4 flex flex-col w-60"
         @submit="onSubmit"
       >
-        <UFormField label="Email" name="email">
+        <PFormField label="Email" name="email">
           <PInput v-model="state.email" placeholder="john@lennon.com" />
-        </UFormField>
+        </PFormField>
 
-        <UFormField label="Password" name="password">
+        <PFormField label="Password" name="password">
           <PInput v-model="state.password" type="password" />
-        </UFormField>
+        </PFormField>
 
-        <UFormField name="tos">
+        <PFormField name="tos">
           <PCheckbox v-model="state.tos" label="I accept the terms and conditions" />
-        </UFormField>
+        </PFormField>
 
         <div>
-          <UButton type="submit">
+          <PButton type="submit">
             Submit
-          </UButton>
+          </PButton>
         </div>
-      </UForm>
+      </PForm>
       <FormExampleNested />
       <FormExampleNestedList />
     </div>
 
     <div class="border border-default rounded-lg">
       <div class="py-2 px-4 flex gap-4 items-center">
-        <UFormField label="Validate on" class="flex items-center gap-2">
+        <PFormField label="Validate on" class="flex items-center gap-2">
           <PSelectMenu v-model="validateOn" :items="['input', 'change', 'blur']" multiple class="w-48" />
-        </UFormField>
+        </PFormField>
         <PCheckbox v-model="disabled" label="Disabled" />
       </div>
 

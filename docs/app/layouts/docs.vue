@@ -47,20 +47,20 @@ defineShortcuts({
 </script>
 
 <template>
-  <UMain>
+  <PMain>
     <PContainer>
-      <UPage>
+      <PPage>
         <template #left>
-          <UPageAside>
+          <PPageAside>
             <template v-if="isSearchActive" #top>
               <PInput ref="input" v-model="searchTerm" variant="soft" placeholder="Filter..." class="group">
                 <template #trailing>
-                  <UKbd value="/" variant="subtle" class="ring-muted bg-transparent text-muted" />
+                  <PKbd value="/" variant="subtle" class="ring-muted bg-transparent text-muted" />
                 </template>
               </PInput>
             </template>
 
-            <UContentNavigation
+            <PContentNavigation
               :key="navigationKey"
               :collapsible="false"
               :navigation="filteredNavigation"
@@ -69,11 +69,11 @@ defineShortcuts({
                 linkTrailingBadge: 'font-semibold uppercase'
               }"
             />
-          </UPageAside>
+          </PPageAside>
         </template>
 
         <slot />
-      </UPage>
+      </PPage>
     </PContainer>
-  </UMain>
+  </PMain>
 </template>

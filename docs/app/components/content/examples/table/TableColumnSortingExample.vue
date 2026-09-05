@@ -2,8 +2,8 @@
 import { h, resolveComponent } from 'vue'
 import type { TableColumn } from 'pohon-ui'
 
-const UBadge = resolveComponent('UBadge')
-const UButton = resolveComponent('UButton')
+const PBadge = resolveComponent('PBadge')
+const PButton = resolveComponent('PButton')
 
 type Payment = {
   id: string
@@ -71,14 +71,14 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
   header: ({ column }) => {
     const isSorted = column.getIsSorted()
 
-    return h(UButton, {
+    return h(PButton, {
       color: 'neutral',
       variant: 'ghost',
       label: 'Email',
@@ -112,7 +112,7 @@ const sorting = ref([{
 </script>
 
 <template>
-  <UTable
+  <PTable
     v-model:sorting="sorting"
     :data="data"
     :columns="columns"

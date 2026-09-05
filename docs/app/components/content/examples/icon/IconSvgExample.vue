@@ -21,5 +21,5 @@ const IconLightbulb = () => h(
 </script>
 
 <template>
-  <UIcon :name="IconLightbulb" class="size-5" />
+  <PIcon :name="IconLightbulb" class="size-5" />
 </template>

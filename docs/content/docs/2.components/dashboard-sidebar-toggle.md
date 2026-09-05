@@ -60,15 +60,15 @@ Even though this component is automatically displayed on mobile, you can use the
 
 ```vue [layouts/dashboard.vue]{4-6}
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar>
+  <PDashboardGroup>
+    <PDashboardSidebar>
       <template #toggle>
-        <UDashboardSidebarToggle variant="subtle" />
+        <PDashboardSidebarToggle variant="subtle" />
       </template>
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
     <slot />
-  </UDashboardGroup>
+  </PDashboardGroup>
 </template>
 ```
 
@@ -82,11 +82,11 @@ definePageMeta({
 <template>
   <PDashboardPanel>
     <template #header>
-      <UDashboardNavbar title="Home">
+      <PDashboardNavbar title="Home">
         <template #toggle>
-          <UDashboardSidebarToggle variant="subtle" />
+          <PDashboardSidebarToggle variant="subtle" />
         </template>
-      </UDashboardNavbar>
+      </PDashboardNavbar>
     </template>
   </PDashboardPanel>
 </template>

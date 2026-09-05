@@ -43,7 +43,7 @@ function shuffle() {
     <PSelect v-model="attrs.color" :items="colors" multiple />
     <PSelect v-model="attrs.size" :items="sizes" multiple />
     <PSelect v-model="orientation" :items="orientations" />
-    <UButton label="Shuffle" color="neutral" variant="subtle" @click="shuffle" />
+    <PButton label="Shuffle" color="neutral" variant="subtle" @click="shuffle" />
   </Navbar>
 
   <Matrix

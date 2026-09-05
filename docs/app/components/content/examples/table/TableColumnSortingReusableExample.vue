@@ -3,8 +3,8 @@ import { h, resolveComponent } from 'vue'
 import type { TableColumn } from 'pohon-ui'
 import type { Column } from '@tanstack/vue-table'
 
-const UBadge = resolveComponent('UBadge')
-const UButton = resolveComponent('UButton')
+const PBadge = resolveComponent('PBadge')
+const PButton = resolveComponent('PButton')
 const PDropdownMenu = resolveComponent('PDropdownMenu')
 
 type Payment = {
@@ -73,7 +73,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -129,7 +129,7 @@ function getHeader(column: Column<Payment>, label: string) {
         }
       }
     }]
-  }, () => h(UButton, {
+  }, () => h(PButton, {
     'color': 'neutral',
     'variant': 'ghost',
     label,
@@ -146,7 +146,7 @@ const sorting = ref([{
 </script>
 
 <template>
-  <UTable
+  <PTable
     v-model:sorting="sorting"
     :data="data"
     :columns="columns"

@@ -25,16 +25,16 @@ const actions = [
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs" container-class="max-w-lg">
-    <UChatMessage
+    <PChatMessage
       id="1"
       role="user"
       side="right"
-      :parts="[{ type: 'text', text: 'Can you help me set up Nuxt UI in my project?' }]"
+      :parts="[{ type: 'text', text: 'Can you help me set up Pohon UI in my project?' }]"
       :avatar="{ src: 'https://github.com/benjamincanac.png' }"
       :compact="compact"
       v-bind="props"
     />
-    <UChatMessage
+    <PChatMessage
       id="2"
       role="assistant"
       :parts="[{ type: 'text', text: 'Sure! First, install the package with `npx nuxi@latest module add ui`. Then make sure Tailwind CSS v4 is set up in your project.' }]"
@@ -43,7 +43,7 @@ const actions = [
       :compact="compact"
       v-bind="props"
     />
-    <UChatMessage
+    <PChatMessage
       id="3"
       role="user"
       side="right"
@@ -52,7 +52,7 @@ const actions = [
       :compact="compact"
       v-bind="props"
     />
-    <UChatMessage
+    <PChatMessage
       id="4"
       role="assistant"
       :parts="[{ type: 'text', text: 'You can customize the primary color and other theme options in your app.config.ts file. All components use semantic colors so they adapt automatically.' }]"

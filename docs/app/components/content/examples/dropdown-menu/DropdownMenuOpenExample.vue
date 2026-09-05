@@ -23,6 +23,6 @@ const items: DropdownMenuItem[] = [
 
 <template>
   <PDropdownMenu v-model:open="open" :items="items" :ui="{ content: 'w-48' }">
-    <UButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
+    <PButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
   </PDropdownMenu>
 </template>

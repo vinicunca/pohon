@@ -11,43 +11,43 @@ const actions: ButtonProps[] = [
   <Navbar />
 
   <div class="w-72 flex flex-col gap-4 items-start">
-    <UChatTool
+    <PChatTool
       text="Searched components"
       icon="i-lucide-search"
     />
 
-    <UChatTool
+    <PChatTool
       text="Reading component"
       suffix="Button"
       icon="i-lucide-file-text"
       streaming
     />
 
-    <UChatTool
+    <PChatTool
       text="Searching components..."
       icon="i-lucide-search"
       streaming
       loading
     />
 
-    <UChatTool
+    <PChatTool
       text="Searching components"
       icon="i-lucide-search"
       chevron="leading"
     >
       Found 5 matching components.
-    </UChatTool>
+    </PChatTool>
 
-    <UChatTool
+    <PChatTool
       text="Searched components"
       icon="i-lucide-search"
       variant="card"
       class="w-full"
     >
       Found 5 matching components.
-    </UChatTool>
+    </PChatTool>
 
-    <UChatTool
+    <PChatTool
       text="Run terminal command"
       suffix="pnpm run lint"
       icon="i-lucide-terminal"
@@ -57,6 +57,6 @@ const actions: ButtonProps[] = [
       :actions="actions"
     >
       <pre class="whitespace-pre-wrap">$ pnpm run lint</pre>
-    </UChatTool>
+    </PChatTool>
   </div>
 </template>

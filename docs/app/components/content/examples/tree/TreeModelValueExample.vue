@@ -31,5 +31,5 @@ const value = ref()
 </script>
 
 <template>
-  <UTree v-model="value" :items="items" />
+  <PTree v-model="value" :items="items" />
 </template>

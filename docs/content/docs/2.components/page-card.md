@@ -17,7 +17,7 @@ The PageCard component provides a flexible way to display content in a card with
 ## ::u-page-card
 
 title: 'Tailwind CSS'
-description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
 icon: 'i-simple-icons-tailwindcss'
 class: 'w-96'
 
@@ -63,7 +63,7 @@ hide:
 - title
   props:
   title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
   class: 'w-96'
 
 ---
@@ -85,7 +85,7 @@ hide:
 - description
   props:
   title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   class: 'w-96'
 
@@ -110,7 +110,7 @@ hide:
 - target
   props:
   title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   to: 'https://tailwindcss.com/blog/tailwindcss-v4'
   target: \_blank
@@ -138,7 +138,7 @@ hide:
 - target
   props:
   title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   to: 'https://tailwindcss.com/blog/tailwindcss-v4'
   target: \_blank
@@ -167,7 +167,7 @@ ignore:
 - icon
   props:
   title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   orientation: horizontal
   slots:
@@ -194,7 +194,7 @@ ignore:
 - icon
   props:
   title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   orientation: horizontal
   reverse: true
@@ -225,7 +225,7 @@ hide:
 - orientation
   props:
   title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   orientation: horizontal
   highlight: true
@@ -261,7 +261,7 @@ hide:
 - orientation
   props:
   title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   orientation: horizontal
   spotlight: true

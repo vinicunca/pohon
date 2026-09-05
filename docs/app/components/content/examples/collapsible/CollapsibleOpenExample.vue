@@ -8,7 +8,7 @@ defineShortcuts({
 
 <template>
   <PCollapsible v-model:open="open" class="flex flex-col gap-2 w-48">
-    <UButton
+    <PButton
       label="Open"
       color="neutral"
       variant="subtle"

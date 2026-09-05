@@ -52,7 +52,7 @@ features:
     to: /docs/getting-started/integrations/content
 design_system:
   title: Flexible design system
-  description: Build faster with Nuxt UI's CSS-first design system powered by Tailwind CSS and its semantic color system combined with a runtime configuration.
+  description: Build faster with Pohon UI's CSS-first design system powered by Tailwind CSS and its semantic color system combined with a runtime configuration.
   links:
     - label: Customize design system
       to: /docs/getting-started/theme/design-system
@@ -215,7 +215,7 @@ components:
 
     ```vue [Button.vue]
     <template>
-      <UButton
+      <PButton
         label="Button"
         size="md"
         variant="outline"
@@ -246,11 +246,11 @@ templates:
       description: Templates available for both Nuxt and Vue applications with framework-specific optimizations, choose the one that best fits your project needs.
       icon: i-simple-icons-vuedotjs
     - title: Fully customizable
-      description: Built on top of Nuxt UI components with complete source code access, easily customize colors, fonts, layouts, and components to match your brand identity.
+      description: Built on top of Pohon UI components with complete source code access, easily customize colors, fonts, layouts, and components to match your brand identity.
       icon: i-lucide-palette
 community:
-  title: Join the Nuxt UI community
-  description: Join our thriving open-source community to contribute code, report issues, suggest features, or help with documentation. Every contribution makes Nuxt UI better for everyone in the ecosystem.
+  title: Join the Pohon UI community
+  description: Join our thriving open-source community to contribute code, report issues, suggest features, or help with documentation. Every contribution makes Pohon UI better for everyone in the ecosystem.
   links:
     - label: Star on GitHub
       color: neutral

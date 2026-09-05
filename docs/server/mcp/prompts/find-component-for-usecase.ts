@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { queryCollection } from '@nuxt/content/server'
 
 export default defineMcpPrompt({
-  description: 'Find the best Nuxt UI component for a specific use case',
+  description: 'Find the best Pohon UI component for a specific use case',
   inputSchema: {
     usecase: z.string().describe('Describe what you want to build (e.g., "user login form", "data table", "navigation menu")')
   },
@@ -21,7 +21,7 @@ export default defineMcpPrompt({
           role: 'user' as const,
           content: {
             type: 'text' as const,
-            text: `Help me find the best Nuxt UI component for this use case: "${usecase}". Here are all available components: ${JSON.stringify(components, null, 2)}`
+            text: `Help me find the best Pohon UI component for this use case: "${usecase}". Here are all available components: ${JSON.stringify(components, null, 2)}`
           }
         }
       ]

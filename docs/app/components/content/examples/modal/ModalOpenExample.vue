@@ -8,7 +8,7 @@ defineShortcuts({
 
 <template>
   <PModal v-model:open="open">
-    <UButton label="Open" color="neutral" variant="subtle" />
+    <PButton label="Open" color="neutral" variant="subtle" />
 
     <template #content>
       <Placeholder class="h-48 m-4" />

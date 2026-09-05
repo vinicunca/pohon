@@ -74,9 +74,9 @@ function getEmojiFlag(locale: string): string {
     <div class="grid gap-6 grid-cols-2 md:grid-cols-3">
       <div v-for="locale in locales" :key="locale.code">
         <div class="flex gap-3 items-center">
-          <UAvatar size="xl">
+          <PAvatar size="xl">
             {{ getEmojiFlag(locale.code) }}
-          </UAvatar>
+          </PAvatar>
 
           <div class="text-sm">
             <div class="font-semibold">{{ locale.name }}</div>

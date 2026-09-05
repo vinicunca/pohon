@@ -47,14 +47,14 @@ function selectRange(range: typeof ranges[number]) {
 
 <template>
   <PPopover :content="{ align: 'center' }">
-    <UButton color="neutral" variant="subtle" icon="i-lucide-calendar">
+    <PButton color="neutral" variant="subtle" icon="i-lucide-calendar">
       {{ label }}
-    </UButton>
+    </PButton>
 
     <template #content>
       <div class="flex items-stretch divide-x divide-(--ui-border)">
         <div class="hidden sm:flex flex-col justify-center py-2">
-          <UButton
+          <PButton
             v-for="(range, index) in ranges"
             :key="index"
             :label="range.label"
@@ -67,7 +67,7 @@ function selectRange(range: typeof ranges[number]) {
           />
         </div>
 
-        <UCalendar v-model="modelValue" class="p-2" :number-of-months="isDesktop ? 2 : 1" range />
+        <PCalendar v-model="modelValue" class="p-2" :number-of-months="isDesktop ? 2 : 1" range />
       </div>
     </template>
   </PPopover>

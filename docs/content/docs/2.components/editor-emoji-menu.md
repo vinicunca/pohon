@@ -20,20 +20,22 @@ It uses the `useEditorMenu` composable built on top of TipTap's [Suggestion](htt
 It must be used inside an [Editor](/docs/components/editor) component's default slot to have access to the editor instance.
 ::
 
-::component-example
----
+## ::component-example
+
 elevated: true
 collapse: true
 name: 'editor-emoji-menu-example'
 class: 'p-8'
+
 ---
+
 ::
 
 ::warning
 The `@tiptap/extension-emoji` package is not installed by default, you need to install it separately.
 ::
 
-::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/extensions/nodes/emoji" target="_blank"}
+::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/extensions/nodes/emoji" target="\_blank"}
 Learn more about the Emoji extension in the TipTap documentation.
 ::
 
@@ -48,13 +50,15 @@ Use the `items` prop as an array of objects with the following properties:
 - `group?: string`{lang="ts-type"}
 - `fallbackImage?: string`{lang="ts-type"}
 
-::component-example
----
+## ::component-example
+
 elevated: true
 collapse: true
 name: 'editor-emoji-menu-items-example'
 class: 'p-8'
+
 ---
+
 ::
 
 ::note
@@ -67,9 +71,9 @@ Use the `char` prop to change the trigger character. Defaults to `:`{lang="ts-ty
 
 ```vue
 <template>
-  <UEditor v-slot="{ editor }">
-    <UEditorEmojiMenu :editor="editor" :items="items" char=";" />
-  </UEditor>
+  <PEditor v-slot="{ editor }">
+    <PEditorEmojiMenu :editor="editor" :items="items" char=";" />
+  </PEditor>
 </template>
 ```
 
@@ -81,15 +85,15 @@ This is useful when the trigger character should open directly after other chara
 
 ```vue
 <template>
-  <UEditor v-slot="{ editor }">
-    <UEditorEmojiMenu
+  <PEditor v-slot="{ editor }">
+    <PEditorEmojiMenu
       :editor="editor"
       :items="items"
       :suggestion="{
-        allowedPrefixes: null
+        allowedPrefixes: null,
       }"
     />
-  </UEditor>
+  </PEditor>
 </template>
 ```
 
@@ -99,16 +103,16 @@ Use the `options` prop to customize the positioning behavior using [Floating UI 
 
 ```vue
 <template>
-  <UEditor v-slot="{ editor }">
-    <UEditorEmojiMenu
+  <PEditor v-slot="{ editor }">
+    <PEditorEmojiMenu
       :editor="editor"
       :items="items"
       :options="{
         placement: 'bottom-start',
-        offset: 4
+        offset: 4,
       }"
     />
-  </UEditor>
+  </PEditor>
 </template>
 ```
 

@@ -50,7 +50,7 @@ const members: UserProps[] = [
 </script>
 
 <template>
-  <UEmpty
+  <PEmpty
     title="No team members"
     description="Invite your team to collaborate on this project."
     variant="naked"
@@ -61,14 +61,14 @@ const members: UserProps[] = [
     }]"
   >
     <template #leading>
-      <UAvatarGroup size="xl">
-        <UAvatar src="https://github.com/nuxt.png" alt="Nuxt" loading="lazy" />
-        <UAvatar src="https://github.com/unjs.png" alt="Unjs" loading="lazy" />
-      </UAvatarGroup>
+      <PAvatarGroup size="xl">
+        <PAvatar src="https://github.com/nuxt.png" alt="Nuxt" loading="lazy" />
+        <PAvatar src="https://github.com/unjs.png" alt="Unjs" loading="lazy" />
+      </PAvatarGroup>
     </template>
 
     <template #footer>
-      <USeparator class="my-4" />
+      <PSeparator class="my-4" />
 
       <div class="grid grid-cols-2 gap-4">
         <PPageCard
@@ -77,7 +77,7 @@ const members: UserProps[] = [
           :to="member.to"
           :ui="{ container: 'sm:p-4' }"
         >
-          <UUser
+          <PUser
             :avatar="member.avatar"
             :name="member.name"
             :description="member.description"
@@ -86,5 +86,5 @@ const members: UserProps[] = [
         </PPageCard>
       </div>
     </template>
-  </UEmpty>
+  </PEmpty>
 </template>

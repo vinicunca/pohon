@@ -27,9 +27,9 @@ const items: ContextMenuItem[][] = [
 </script>
 
 <template>
-  <UContextMenu :items="items" :ui="{ content: 'w-48' }">
+  <PContextMenu :items="items" :ui="{ content: 'w-48' }">
     <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
       Right click here
     </div>
-  </UContextMenu>
+  </PContextMenu>
 </template>

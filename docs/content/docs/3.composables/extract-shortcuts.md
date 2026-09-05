@@ -156,7 +156,7 @@ defineShortcuts(extractShortcuts(items));
 
 <template>
   <PDropdownMenu :items="items">
-    <UButton label="Actions" />
+    <PButton label="Actions" />
   </PDropdownMenu>
 </template>
 ```

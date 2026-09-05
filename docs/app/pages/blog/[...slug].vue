@@ -17,9 +17,9 @@ const title = page.value.seo?.title || page.value.title
 const description = page.value.seo?.description || page.value.description
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon UI',
   title,
-  ogTitle: `${title} - Nuxt UI`,
+  ogTitle: `${title} - Pohon UI`,
   description,
   ogDescription: description
 })
@@ -61,10 +61,10 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
 </script>
 
 <template>
-  <UPage v-if="page" :ui="{ center: 'lg:col-span-5 px-4 sm:px-6 lg:pl-8 lg:pr-0', right: 'lg:col-span-5' }" class="lg:gap-8">
-    <UPageHeader :title="page.title" :description="page.description" :ui="{ title: 'relative flex items-center' }">
+  <PPage v-if="page" :ui="{ center: 'lg:col-span-5 px-4 sm:px-6 lg:pl-8 lg:pr-0', right: 'lg:col-span-5' }" class="lg:gap-8">
+    <PPageHeader :title="page.title" :description="page.description" :ui="{ title: 'relative flex items-center' }">
       <template #headline>
-        <UButton
+        <PButton
           :icon="appConfig.ui.icons.arrowLeft"
           label="Back to blog"
           to="/blog"
@@ -78,28 +78,28 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
 
       <div v-if="page.authors?.length" class="flex items-center gap-6 mt-6">
         <template v-for="author in page.authors" :key="author.name">
-          <ULink v-if="author.to" :to="author.to" target="_blank" class="flex items-center gap-3 group">
-            <UAvatar :src="author.avatar?.src" :alt="author.name" size="lg" />
+          <PLink v-if="author.to" :to="author.to" target="_blank" class="flex items-center gap-3 group">
+            <PAvatar :src="author.avatar?.src" :alt="author.name" size="lg" />
             <div class="flex flex-col">
               <span class="text-sm font-medium text-highlighted">{{ author.name }}</span>
               <span class="text-xs text-muted group-hover:text-primary transition-colors">@{{ author.to.split('/').pop() }}</span>
             </div>
-          </ULink>
+          </PLink>
           <div v-else class="flex items-center gap-3">
-            <UAvatar :src="author.avatar?.src" :alt="author.name" size="lg" />
+            <PAvatar :src="author.avatar?.src" :alt="author.name" size="lg" />
             <span class="text-sm font-medium text-highlighted">{{ author.name }}</span>
           </div>
         </template>
       </div>
-    </UPageHeader>
+    </PPageHeader>
 
-    <UPageBody>
+    <PPageBody>
       <ContentRenderer v-if="page.body" :value="page" />
-    </UPageBody>
+    </PPageBody>
 
     <template #right>
       <div>
-        <UContentToc
+        <PContentToc
           :links="page.body.toc?.links"
           class="z-2 lg:hidden mx-0!"
         />
@@ -114,10 +114,10 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
             :ui="{ list: 'border-default', content: '[&>div>pre]:bg-muted/50 [&>div>pre]:border-default [&>div>pre]:rounded-none' }"
           />
           <div v-else class="size-full border-l border-default flex items-center justify-center">
-            <UIcon :name="appConfig.ui.icons.arrowDown" class="size-12 text-dimmed animate-bounce" />
+            <PIcon :name="appConfig.ui.icons.arrowDown" class="size-12 text-dimmed animate-bounce" />
           </div>
         </nav>
       </div>
     </template>
-  </UPage>
+  </PPage>
 </template>

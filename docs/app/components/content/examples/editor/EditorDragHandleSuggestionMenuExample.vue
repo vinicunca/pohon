@@ -27,17 +27,17 @@ const suggestionItems: EditorSuggestionMenuItem[][] = [[{
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-slot="{ editor, handlers }"
     v-model="value"
     content-type="markdown"
     class="w-full min-h-35"
     :ui="{ base: 'p-8 sm:px-16' }"
   >
-    <UEditorSuggestionMenu :editor="editor" :items="suggestionItems" />
+    <PEditorSuggestionMenu :editor="editor" :items="suggestionItems" />
 
-    <UEditorDragHandle v-slot="{ ui, onClick }" :editor="editor">
-      <UButton
+    <PEditorDragHandle v-slot="{ ui, onClick }" :editor="editor">
+      <PButton
         icon="i-lucide-plus"
         color="neutral"
         variant="ghost"
@@ -51,13 +51,13 @@ const suggestionItems: EditorSuggestionMenuItem[][] = [[{
         }"
       />
 
-      <UButton
+      <PButton
         icon="i-lucide-grip-vertical"
         color="neutral"
         variant="ghost"
         size="sm"
         :class="ui.handle()"
       />
-    </UEditorDragHandle>
-  </UEditor>
+    </PEditorDragHandle>
+  </PEditor>
 </template>

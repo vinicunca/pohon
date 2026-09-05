@@ -108,7 +108,7 @@ While these examples use [Nuxt Content](https://content.nuxt.com), the component
 
 Use the PageLinks component in the `bottom` slot of the ContentToc component to display a list of links below the table of contents.
 
-```vue [pages/[...slug\].vue]{48-52}
+```vue [pages/[...slug].vue]{48-52}
 <script setup lang="ts">
 import type { PageLink } from "pohon-ui";
 
@@ -148,27 +148,27 @@ const links = computed<PageLink[]>(() => [
 </script>
 
 <template>
-  <UPage>
-    <UPageHeader :title="page.title" :description="page.description" />
+  <PPage>
+    <PPageHeader :title="page.title" :description="page.description" />
 
-    <UPageBody>
+    <PPageBody>
       <ContentRenderer :value="page" />
 
-      <USeparator />
+      <PSeparator />
 
-      <UContentSurround :surround="surround" />
-    </UPageBody>
+      <PContentSurround :surround="surround" />
+    </PPageBody>
 
     <template #right>
-      <UContentToc :links="page.body.toc.links">
+      <PContentToc :links="page.body.toc.links">
         <template #bottom>
-          <USeparator type="dashed" />
+          <PSeparator type="dashed" />
 
-          <UPageLinks title="Community" :links="links" />
+          <PPageLinks title="Community" :links="links" />
         </template>
-      </UContentToc>
+      </PContentToc>
     </template>
-  </UPage>
+  </PPage>
 </template>
 ```
 

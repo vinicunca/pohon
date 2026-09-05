@@ -87,7 +87,7 @@ const users = [
 
 <template>
   <PModal v-model:open="open">
-    <UButton
+    <PButton
       label="Search users..."
       color="neutral"
       variant="subtle"

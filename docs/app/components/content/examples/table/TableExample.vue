@@ -4,9 +4,9 @@ import { upperFirst } from 'scule'
 import type { TableColumn } from 'pohon-ui'
 import { useClipboard } from '@vueuse/core'
 
-const UButton = resolveComponent('UButton')
+const PButton = resolveComponent('PButton')
 const PCheckbox = resolveComponent('PCheckbox')
-const UBadge = resolveComponent('UBadge')
+const PBadge = resolveComponent('PBadge')
 const PDropdownMenu = resolveComponent('PDropdownMenu')
 
 const toast = useToast()
@@ -182,14 +182,14 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
   header: ({ column }) => {
     const isSorted = column.getIsSorted()
 
-    return h(UButton, {
+    return h(PButton, {
       color: 'neutral',
       variant: 'ghost',
       label: 'Email',
@@ -261,7 +261,7 @@ const columns: TableColumn<Payment>[] = [{
       },
       items,
       'aria-label': 'Actions dropdown'
-    }, () => h(UButton, {
+    }, () => h(PButton, {
       'icon': 'i-lucide-ellipsis-vertical',
       'color': 'neutral',
       'variant': 'ghost',
@@ -287,7 +287,7 @@ function randomize() {
         @update:model-value="table?.tableApi?.getColumn('email')?.setFilterValue($event)"
       />
 
-      <UButton color="neutral" label="Randomize" @click="randomize" />
+      <PButton color="neutral" label="Randomize" @click="randomize" />
 
       <PDropdownMenu
         :items="table?.tableApi?.getAllColumns().filter(column => column.getCanHide()).map(column => ({
@@ -303,7 +303,7 @@ function randomize() {
         }))"
         :content="{ align: 'end' }"
       >
-        <UButton
+        <PButton
           label="Columns"
           color="neutral"
           variant="outline"
@@ -314,7 +314,7 @@ function randomize() {
       </PDropdownMenu>
     </div>
 
-    <UTable
+    <PTable
       ref="table"
       :data="data"
       :columns="columns"
@@ -324,7 +324,7 @@ function randomize() {
       <template #expanded="{ row }">
         <pre>{{ row.original }}</pre>
       </template>
-    </UTable>
+    </PTable>
 
     <div class="px-4 py-3.5 text-sm text-muted">
       {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length || 0 }} of

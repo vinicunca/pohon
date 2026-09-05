@@ -17,7 +17,7 @@ const items: NavigationMenuItem[] = [{
 </script>
 
 <template>
-  <UFooter>
+  <PFooter>
     <template #left>
       <p class="text-muted text-sm">
         Copyright © {{ new Date().getFullYear() }}
@@ -27,7 +27,7 @@ const items: NavigationMenuItem[] = [{
     <PNavigationMenu :items="items" variant="link" />
 
     <template #right>
-      <UButton
+      <PButton
         icon="i-simple-icons-discord"
         color="neutral"
         variant="ghost"
@@ -35,7 +35,7 @@ const items: NavigationMenuItem[] = [{
         target="_blank"
         aria-label="Discord"
       />
-      <UButton
+      <PButton
         icon="i-simple-icons-x"
         color="neutral"
         variant="ghost"
@@ -43,7 +43,7 @@ const items: NavigationMenuItem[] = [{
         target="_blank"
         aria-label="X"
       />
-      <UButton
+      <PButton
         icon="i-simple-icons-github"
         color="neutral"
         variant="ghost"
@@ -52,5 +52,5 @@ const items: NavigationMenuItem[] = [{
         aria-label="GitHub"
       />
     </template>
-  </UFooter>
+  </PFooter>
 </template>

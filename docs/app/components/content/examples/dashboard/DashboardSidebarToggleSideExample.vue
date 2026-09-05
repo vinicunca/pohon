@@ -15,8 +15,8 @@ const items: NavigationMenuItem[] = [{
 </script>
 
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar
+  <PDashboardGroup>
+    <PDashboardSidebar
       open
       toggle-side="right"
     >
@@ -28,12 +28,12 @@ const items: NavigationMenuItem[] = [{
         :items="items"
         orientation="vertical"
       />
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
     <PDashboardPanel>
       <template #header>
-        <UDashboardNavbar title="Dashboard" />
+        <PDashboardNavbar title="Dashboard" />
       </template>
     </PDashboardPanel>
-  </UDashboardGroup>
+  </PDashboardGroup>
 </template>

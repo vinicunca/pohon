@@ -93,7 +93,7 @@ ignore:
   slots:
   default: |
 
-      <UButton icon="i-lucide-menu" color="neutral" variant="outline" />
+      <PButton icon="i-lucide-menu" color="neutral" variant="outline" />
 
 ---
 
@@ -175,7 +175,7 @@ ignore:
   slots:
   default: |
 
-      <UButton icon="i-lucide-menu" color="neutral" variant="outline" />
+      <PButton icon="i-lucide-menu" color="neutral" variant="outline" />
 
 ---
 
@@ -223,7 +223,7 @@ ignore:
   slots:
   default: |
 
-      <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+      <PButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 
 ---
 
@@ -275,7 +275,7 @@ ignore:
   slots:
   default: |
 
-      <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+      <PButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 
 ---
 
@@ -314,7 +314,7 @@ ignore:
   slots:
   default: |
 
-      <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+      <PButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 
 ---
 
@@ -351,7 +351,7 @@ ignore:
   slots:
   default: |
 
-      <UButton size="xl" label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+      <PButton size="xl" label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 
 ---
 
@@ -393,7 +393,7 @@ ignore:
   slots:
   default: |
 
-      <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+      <PButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 
 ---
 
@@ -427,7 +427,7 @@ ignore:
   slots:
   default: |
 
-      <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+      <PButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
 
 ---
 

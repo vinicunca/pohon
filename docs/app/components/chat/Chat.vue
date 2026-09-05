@@ -228,7 +228,7 @@ defineShortcuts({
 </script>
 
 <template>
-  <USidebar
+  <PSidebar
     v-model:open="open"
     side="right"
     title="Ask AI"
@@ -238,7 +238,7 @@ defineShortcuts({
   >
     <template #actions>
       <PTooltip v-if="hasThemeChanges" text="Reset theme">
-        <UButton
+        <PButton
           icon="i-lucide-rotate-ccw"
           color="neutral"
           variant="ghost"
@@ -247,7 +247,7 @@ defineShortcuts({
       </PTooltip>
 
       <PTooltip v-if="canClear" text="Clear messages">
-        <UButton
+        <PButton
           icon="i-lucide-list-x"
           color="neutral"
           variant="ghost"
@@ -258,7 +258,7 @@ defineShortcuts({
 
     <template #close>
       <PTooltip text="Close" :kbds="['meta', 'i']">
-        <UButton
+        <PButton
           icon="i-lucide-panel-right-close"
           color="neutral"
           variant="ghost"
@@ -268,7 +268,7 @@ defineShortcuts({
       </PTooltip>
     </template>
 
-    <UTheme
+    <PTheme
       :props="{
         prose: {
           h1: { anchor: false },
@@ -294,7 +294,7 @@ defineShortcuts({
         }
       }"
     >
-      <UChatMessages
+      <PChatMessages
         v-if="chatMessages.length"
         should-auto-scroll
         :messages="chatMessages"
@@ -304,12 +304,12 @@ defineShortcuts({
         :user="{ ui: { container: 'max-w-full' } }"
       >
         <template #indicator>
-          <UChatTool icon="i-lucide-brain" text="Thinking..." streaming />
+          <PChatTool icon="i-lucide-brain" text="Thinking..." streaming />
         </template>
 
         <template #content="{ message }">
           <template v-for="(part, index) in message.parts" :key="`${message.id}-${part.type}-${index}`">
-            <UChatReasoning
+            <PChatReasoning
               v-if="isReasoningUIPart(part)"
               :text="part.text"
               :streaming="isPartStreaming(part)"
@@ -319,7 +319,7 @@ defineShortcuts({
                 :value="part.text"
                 :streaming="isPartStreaming(part)"
               />
-            </UChatReasoning>
+            </PChatReasoning>
 
             <template v-else-if="isTextUIPart(part) && part.text.length > 0">
               <ChatMarkdown
@@ -332,7 +332,7 @@ defineShortcuts({
               </p>
             </template>
 
-            <UChatTool
+            <PChatTool
               v-else-if="isToolUIPart(part)"
               :text="getToolText(part)"
               :icon="getToolIcon(part)"
@@ -340,20 +340,20 @@ defineShortcuts({
             />
           </template>
         </template>
-      </UChatMessages>
+      </PChatMessages>
 
       <div v-else class="flex flex-col gap-6">
-        <UPageLinks
+        <PPageLinks
           v-for="category in suggestions"
           :key="category.category"
           :title="category.category"
           :links="category.items.map(item => ({ label: item, onClick: () => askQuestion(item) }))"
         />
       </div>
-    </UTheme>
+    </PTheme>
 
     <template #footer>
-      <UChatPrompt
+      <PChatPrompt
         ref="promptRef"
         v-model="input"
         :error="error"
@@ -365,11 +365,11 @@ defineShortcuts({
         @submit="onSubmit"
       >
         <template #footer>
-          <ULink to="https://vercel.com/ai-gateway" target="_blank" class="inline-flex items-center gap-1 text-xs text-dimmed hover:text-muted">
-            Powered by <UIcon name="i-simple-icons-vercel" class="size-3" /> AI Gateway
-          </ULink>
+          <PLink to="https://vercel.com/ai-gateway" target="_blank" class="inline-flex items-center gap-1 text-xs text-dimmed hover:text-muted">
+            Powered by <PIcon name="i-simple-icons-vercel" class="size-3" /> AI Gateway
+          </PLink>
 
-          <UChatPromptSubmit
+          <PChatPromptSubmit
             size="sm"
             :status="status"
             :disabled="!input.trim()"
@@ -377,7 +377,7 @@ defineShortcuts({
             @reload="regenerate()"
           />
         </template>
-      </UChatPrompt>
+      </PChatPrompt>
     </template>
-  </USidebar>
+  </PSidebar>
 </template>

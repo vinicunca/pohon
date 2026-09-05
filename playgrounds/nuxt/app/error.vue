@@ -11,9 +11,9 @@ provide('components', components)
 </script>
 
 <template>
-  <UApp>
-    <UDashboardGroup unit="rem">
-      <UDashboardSidebar class="bg-elevated/25">
+  <PApp>
+    <PDashboardGroup unit="rem">
+      <PDashboardSidebar class="bg-elevated/25">
         <template #header>
           <NuxtLink to="/" class="text-highlighted">
             <Logo class="h-5 w-auto" />
@@ -22,26 +22,26 @@ provide('components', components)
           <div class="flex items-center ms-auto">
             <ThemeDropdown />
 
-            <UColorModeButton />
+            <PColorModeButton />
           </div>
         </template>
 
-        <UDashboardSearchButton />
+        <PDashboardSearchButton />
 
         <PNavigationMenu :items="items" orientation="vertical" />
 
-        <USeparator type="dashed" />
+        <PSeparator type="dashed" />
 
         <PNavigationMenu :items="components" orientation="vertical" />
-      </UDashboardSidebar>
+      </PDashboardSidebar>
 
       <PDashboardPanel>
-        <UDashboardNavbar class="border-b-0" />
+        <PDashboardNavbar class="border-b-0" />
 
-        <UError :error="error" />
+        <PError :error="error" />
       </PDashboardPanel>
 
-      <UDashboardSearch :groups="groups" />
-    </UDashboardGroup>
-  </UApp>
+      <PDashboardSearch :groups="groups" />
+    </PDashboardGroup>
+  </PApp>
 </template>

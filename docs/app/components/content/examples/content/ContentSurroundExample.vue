@@ -9,5 +9,5 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 </script>
 
 <template>
-  <UContentSurround :surround="(surround as any)" />
+  <PContentSurround :surround="(surround as any)" />
 </template>

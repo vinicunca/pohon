@@ -123,34 +123,34 @@ const items = Array.from({ length: 6 }).map((_, index) => ({
 <template>
   <Navbar>
     <PDropdownMenu :items="options" :content="{ align: 'end' }" :modal="false">
-      <UButton :label="`Options (${options.filter(option => option.checked).length})`" color="neutral" variant="outline" trailing-icon="i-lucide-chevron-down" />
+      <PButton :label="`Options (${options.filter(option => option.checked).length})`" color="neutral" variant="outline" trailing-icon="i-lucide-chevron-down" />
     </PDropdownMenu>
     <PDropdownMenu :items="plugins" :content="{ align: 'end' }" :modal="false">
-      <UButton :label="`Plugins (${plugins.filter(plugin => plugin.checked).length})`" color="neutral" variant="outline" trailing-icon="i-lucide-chevron-down" />
+      <PButton :label="`Plugins (${plugins.filter(plugin => plugin.checked).length})`" color="neutral" variant="outline" trailing-icon="i-lucide-chevron-down" />
     </PDropdownMenu>
     <PSelect v-model="orientation" :items="orientations" placeholder="Orientation" />
   </Navbar>
 
   <div class="space-y-11 min-h-0">
     <template v-if="classNames">
-      <UCarousel v-slot="{ item }" v-bind="bind" :items="items" :ui="{ item: 'basis-[70%] transition-opacity ease-in-out [&:not(.is-snapped)]:opacity-10', container: 'h-[352px]' }" class="w-full max-w-xl mx-auto">
+      <PCarousel v-slot="{ item }" v-bind="bind" :items="items" :ui="{ item: 'basis-[70%] transition-opacity ease-in-out [&:not(.is-snapped)]:opacity-10', container: 'h-[352px]' }" class="w-full max-w-xl mx-auto">
         <img :src="item.src" class="rounded-lg">
-      </UCarousel>
+      </PCarousel>
     </template>
     <template v-else-if="autoHeight">
-      <UCarousel v-slot="{ item }" v-bind="bind" :items="items" :ui="{ container: 'transition-[height] duration-200' }" class="w-full max-w-md mx-auto">
+      <PCarousel v-slot="{ item }" v-bind="bind" :items="items" :ui="{ container: 'transition-[height] duration-200' }" class="w-full max-w-md mx-auto">
         <img :src="item.src" class="rounded-lg">
-      </UCarousel>
+      </PCarousel>
     </template>
     <template v-else>
-      <UCarousel v-slot="{ item }" v-bind="bind" :items="items" class="w-[320px] mx-auto" :ui="{ container: 'h-[336px]' }">
+      <PCarousel v-slot="{ item }" v-bind="bind" :items="items" class="w-[320px] mx-auto" :ui="{ container: 'h-[336px]' }">
         <img :src="item.src" class="rounded-lg">
-      </UCarousel>
+      </PCarousel>
 
       <template v-if="orientation === 'horizontal'">
-        <UCarousel v-slot="{ item }" v-bind="bind" :items="items" :ui="{ item: 'basis-1/3' }" class="w-full max-w-xs mx-auto">
+        <PCarousel v-slot="{ item }" v-bind="bind" :items="items" :ui="{ item: 'basis-1/3' }" class="w-full max-w-xs mx-auto">
           <img :src="item.src" class="rounded-lg">
-        </UCarousel>
+        </PCarousel>
       </template>
     </template>
   </div>

@@ -9,5 +9,5 @@ const error = {
 <template>
   <Navbar />
 
-  <UError :error="error" />
+  <PError :error="error" />
 </template>

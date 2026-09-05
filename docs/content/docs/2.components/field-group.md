@@ -23,8 +23,8 @@ prettier: true
 slots:
 default: |
 
-    <UButton color="neutral" variant="subtle" label="Button" />
-    <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
+    <PButton color="neutral" variant="subtle" label="Button" />
+    <PButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 
 ---
 
@@ -44,8 +44,8 @@ size: xl
 slots:
 default: |
 
-    <UButton color="neutral" variant="subtle" label="Button" />
-    <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
+    <PButton color="neutral" variant="subtle" label="Button" />
+    <PButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 
 ---
 
@@ -65,8 +65,8 @@ orientation: vertical
 slots:
 default: |
 
-    <UButton color="neutral" variant="subtle" label="Submit" />
-    <UButton color="neutral" variant="outline" label="Cancel" />
+    <PButton color="neutral" variant="subtle" label="Submit" />
+    <PButton color="neutral" variant="outline" label="Cancel" />
 
 ---
 
@@ -88,7 +88,7 @@ default: |
 
     <PInput color="neutral" variant="outline" placeholder="Enter token" />
 
-    <UButton color="neutral" variant="subtle" icon="i-lucide-clipboard" />
+    <PButton color="neutral" variant="subtle" icon="i-lucide-clipboard" />
 
 ---
 

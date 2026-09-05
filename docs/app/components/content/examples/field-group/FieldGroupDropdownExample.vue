@@ -28,15 +28,15 @@ const items: DropdownMenuItem[] = [
 </script>
 
 <template>
-  <UFieldGroup>
-    <UButton color="neutral" variant="subtle" label="Settings" />
+  <PFieldGroup>
+    <PButton color="neutral" variant="subtle" label="Settings" />
 
     <PDropdownMenu :items="items">
-      <UButton
+      <PButton
         color="neutral"
         variant="outline"
         icon="i-lucide-chevron-down"
       />
     </PDropdownMenu>
-  </UFieldGroup>
+  </PFieldGroup>
 </template>

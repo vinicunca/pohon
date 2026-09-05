@@ -3,7 +3,7 @@ import { kebabCase } from 'scule'
 import { queryCollection } from '@nuxt/content/server'
 
 export default defineMcpTool({
-  description: 'Retrieves metadata for a Nuxt UI component including props, slots, and events. Props are compact by default, pass `full: true` to get the raw recursive prop schemas (very large)',
+  description: 'Retrieves metadata for a Pohon UI component including props, slots, and events. Props are compact by default, pass `full: true` to get the raw recursive prop schemas (very large)',
   annotations: {
     readOnlyHint: true,
     destructiveHint: false,
@@ -16,7 +16,7 @@ export default defineMcpTool({
   },
   inputExamples: [
     { componentName: 'Button' },
-    { componentName: 'UTable' },
+    { componentName: 'PTable' },
     { componentName: 'Tabs', full: true }
   ],
   cache: '30m',

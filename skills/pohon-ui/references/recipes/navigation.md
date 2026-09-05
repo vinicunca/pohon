@@ -4,10 +4,10 @@ Patterns for headers, sidebars, breadcrumbs, and tab navigation.
 
 ## Header with mobile menu
 
-`UHeader` default slot is desktop nav, `#body` is the mobile menu. Without `#body`, mobile users have no navigation.
+`PHeader` default slot is desktop nav, `#body` is the mobile menu. Without `#body`, mobile users have no navigation.
 
 ```vue
-<UHeader>
+<PHeader>
   <template #title>
     <Logo class="h-6 w-auto" />
   </template>
@@ -15,21 +15,21 @@ Patterns for headers, sidebars, breadcrumbs, and tab navigation.
   <PNavigationMenu :items="items" />
 
   <template #right>
-    <UColorModeButton />
-    <UButton label="Sign in" color="neutral" variant="ghost" />
+    <PColorModeButton />
+    <PButton label="Sign in" color="neutral" variant="ghost" />
   </template>
 
   <template #body>
     <PNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
   </template>
-</UHeader>
+</PHeader>
 ```
 
 > Full app shell example in [landing layout](../layouts/landing.md).
 
 ## Sidebar navigation (dashboard)
 
-See [dashboard layout](../layouts/dashboard.md) for the full sidebar pattern with `UDashboardSidebar` + `PNavigationMenu`. Key points:
+See [dashboard layout](../layouts/dashboard.md) for the full sidebar pattern with `PDashboardSidebar` + `PNavigationMenu`. Key points:
 
 - Pass `:collapsed="collapsed"` to `PNavigationMenu` inside collapsible sidebars
 - Use `NavigationMenuItem[][]` (nested arrays) for separate nav groups

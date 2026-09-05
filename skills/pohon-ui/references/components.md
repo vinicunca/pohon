@@ -6,45 +6,45 @@ Quick-reference index of all 125+ components. For full API docs (props, slots, e
 
 | Component        | Purpose                                                      |
 | ---------------- | ------------------------------------------------------------ |
-| `UApp`           | **Required** root wrapper — toasts, tooltips, overlays, i18n |
-| `UHeader`        | Responsive header with mobile menu                           |
-| `UFooter`        | Footer with left/right/top/bottom slots                      |
-| `UFooterColumns` | Multi-column footer with link groups                         |
-| `UMain`          | Main content area                                            |
+| `PApp`           | **Required** root wrapper — toasts, tooltips, overlays, i18n |
+| `PHeader`        | Responsive header with mobile menu                           |
+| `PFooter`        | Footer with left/right/top/bottom slots                      |
+| `PFooterColumns` | Multi-column footer with link groups                         |
+| `PMain`          | Main content area                                            |
 | `PContainer`     | Centered max-width container                                 |
 | `PSplitter`      | Resizable panels separated by draggable handles              |
-| `ULink`          | Enhanced link — NuxtLink/RouterLink with active states       |
+| `PLink`          | Enhanced link — NuxtLink/RouterLink with active states       |
 
 ## Element
 
 | Component        | Purpose                                              |
 | ---------------- | ---------------------------------------------------- |
-| `UButton`        | Buttons — links, actions, icons, loading states      |
-| `UBadge`         | Labels, tags, status indicators                      |
-| `UAvatar`        | User photos, initials, icons                         |
-| `UAvatarGroup`   | Stacked avatars with `max` limit                     |
-| `UIcon`          | Iconify icons (`i-{collection}-{name}`)              |
+| `PButton`        | Buttons — links, actions, icons, loading states      |
+| `PBadge`         | Labels, tags, status indicators                      |
+| `PAvatar`        | User photos, initials, icons                         |
+| `PAvatarGroup`   | Stacked avatars with `max` limit                     |
+| `PIcon`          | Iconify icons (`i-{collection}-{name}`)              |
 | `PCard`          | Bordered container with header/body/footer           |
 | `PAlert`         | Inline messages — info, warning, error, success      |
 | `PBanner`        | App-wide sticky announcement bar                     |
-| `UChip`          | Notification dot overlay on children                 |
-| `UKbd`           | Keyboard key display                                 |
-| `USeparator`     | Divider line with optional label                     |
+| `PChip`          | Notification dot overlay on children                 |
+| `PKbd`           | Keyboard key display                                 |
+| `PSeparator`     | Divider line with optional label                     |
 | `PSkeleton`      | Loading placeholder                                  |
 | `PProgress`      | Progress bar                                         |
 | `PProgressGroup` | Segmented progress bar with a list of items          |
-| `UToast`         | Toast notification (shown via `useToast`)            |
-| `UCalendar`      | Date calendar (single, range, multiple)              |
+| `PToast`         | Toast notification (shown via `useToast`)            |
+| `PCalendar`      | Date calendar (single, range, multiple)              |
 | `PCollapsible`   | Animated expand/collapse                             |
-| `UFieldGroup`    | Group form inputs horizontally                       |
-| `UMarquee`       | Scrolling content ticker                             |
-| `UCarousel`      | Image/content carousel with autoplay                 |
-| `UEmpty`         | Empty state placeholder with icon, title, actions    |
-| `UError`         | Error display with retry action                      |
-| `UScrollArea`    | Scrollable area with custom scrollbar                |
-| `UTimeline`      | Timeline display for events and activity             |
-| `UUser`          | User display — avatar + name + description           |
-| `UTheme`         | Theme provider — scoped color overrides for children |
+| `PFieldGroup`    | Group form inputs horizontally                       |
+| `PMarquee`       | Scrolling content ticker                             |
+| `PCarousel`      | Image/content carousel with autoplay                 |
+| `PEmpty`         | Empty state placeholder with icon, title, actions    |
+| `PError`         | Error display with retry action                      |
+| `PScrollArea`    | Scrollable area with custom scrollbar                |
+| `PTimeline`      | Timeline display for events and activity             |
+| `PUser`          | User display — avatar + name + description           |
+| `PTheme`         | Theme provider — scoped color overrides for children |
 
 ## Form
 
@@ -68,8 +68,8 @@ Quick-reference index of all 125+ components. For full API docs (props, slots, e
 | `PSlider`        | Range slider                                   |
 | `PColorPicker`   | Color picker (hex/rgb/hsl)                     |
 | `PFileUpload`    | File upload (button or drop area)              |
-| `UForm`          | Validation wrapper with Standard Schema        |
-| `UFormField`     | Field wrapper with label, hint, errors         |
+| `PForm`          | Validation wrapper with Standard Schema        |
+| `PFormField`     | Field wrapper with label, hint, errors         |
 
 ## Overlay
 
@@ -80,19 +80,19 @@ Quick-reference index of all 125+ components. For full API docs (props, slots, e
 | `PDrawer`         | Bottom sheet — mobile actions          |
 | `PPopover`        | Contextual popup attached to trigger   |
 | `PTooltip`        | Hover/focus hint (non-interactive)     |
-| `UContextMenu`    | Right-click menu                       |
+| `PContextMenu`    | Right-click menu                       |
 | `PCommandPalette` | Search + keyboard navigation (Cmd+K)   |
 
 ## Navigation
 
 | Component         | Purpose                                    |
 | ----------------- | ------------------------------------------ |
-| `USidebar`        | Standalone sidebar with header/body/footer |
+| `PSidebar`        | Standalone sidebar with header/body/footer |
 | `PNavigationMenu` | Primary nav — horizontal or vertical       |
 | `PTabs`           | Tab switcher within a page                 |
 | `PBreadcrumb`     | Location hierarchy                         |
 | `PDropdownMenu`   | Action menu on a trigger                   |
-| `UPagination`     | Page navigation                            |
+| `PPagination`     | Page navigation                            |
 | `PStepper`        | Multi-step wizard                          |
 | `PAccordion`      | Collapsible sections                       |
 
@@ -100,60 +100,60 @@ Quick-reference index of all 125+ components. For full API docs (props, slots, e
 
 | Component | Purpose                                                      |
 | --------- | ------------------------------------------------------------ |
-| `UTable`  | Data table (TanStack Table) with sorting, selection, pinning |
-| `UTree`   | Hierarchical tree view                                       |
+| `PTable`  | Data table (TanStack Table) with sorting, selection, pinning |
+| `PTree`   | Hierarchical tree view                                       |
 
 ## Dashboard
 
 | Component                   | Purpose                               |
 | --------------------------- | ------------------------------------- |
-| `UDashboardGroup`           | Root dashboard wrapper                |
-| `UDashboardSidebar`         | Resizable, collapsible sidebar        |
+| `PDashboardGroup`           | Root dashboard wrapper                |
+| `PDashboardSidebar`         | Resizable, collapsible sidebar        |
 | `PDashboardPanel`           | Content panel with header/body/footer |
-| `UDashboardNavbar`          | Panel header bar                      |
-| `UDashboardToolbar`         | Filter/action bar below navbar        |
-| `UDashboardResizeHandle`    | Resize handle between panels          |
-| `UDashboardSidebarToggle`   | Mobile sidebar toggle button          |
-| `UDashboardSearchButton`    | Search button for sidebar             |
-| `UDashboardSearch`          | Dashboard-level search overlay        |
-| `UDashboardSidebarCollapse` | Collapse button for sidebar           |
+| `PDashboardNavbar`          | Panel header bar                      |
+| `PDashboardToolbar`         | Filter/action bar below navbar        |
+| `PDashboardResizeHandle`    | Resize handle between panels          |
+| `PDashboardSidebarToggle`   | Mobile sidebar toggle button          |
+| `PDashboardSearchButton`    | Search button for sidebar             |
+| `PDashboardSearch`          | Dashboard-level search overlay        |
+| `PDashboardSidebarCollapse` | Collapse button for sidebar           |
 
 ## Page (marketing)
 
 | Component      | Purpose                                         |
 | -------------- | ----------------------------------------------- |
-| `UPage`        | Multi-column layout with left/right sidebars    |
+| `PPage`        | Multi-column layout with left/right sidebars    |
 | `PPageHero`    | Hero section — title, description, links, media |
 | `PPageSection` | Content section with features grid              |
 | `PPageCTA`     | Call to action block                            |
-| `UPageHeader`  | Page title and description                      |
-| `UPageBody`    | Main content area                               |
+| `PPageHeader`  | Page title and description                      |
+| `PPageBody`    | Main content area                               |
 | `PPageGrid`    | Card grid layout                                |
-| `UPageColumns` | Multi-column layout                             |
+| `PPageColumns` | Multi-column layout                             |
 | `PPageCard`    | Content card for grids                          |
-| `UPageFeature` | Feature item                                    |
-| `UPageLogos`   | Logo cloud                                      |
-| `UPageAside`   | Sticky sidebar wrapper                          |
-| `UPageAnchors` | Simple anchor links                             |
-| `UPageLinks`   | Related resource links                          |
-| `UPageList`    | List layout for page items                      |
+| `PPageFeature` | Feature item                                    |
+| `PPageLogos`   | Logo cloud                                      |
+| `PPageAside`   | Sticky sidebar wrapper                          |
+| `PPageAnchors` | Simple anchor links                             |
+| `PPageLinks`   | Related resource links                          |
+| `PPageList`    | List layout for page items                      |
 
 ## Blog & Changelog
 
 | Component            | Purpose                    |
 | -------------------- | -------------------------- |
-| `UBlogPosts`         | Blog post grid             |
-| `UBlogPost`          | Individual post card       |
-| `UChangelogVersions` | Changelog list             |
-| `UChangelogVersion`  | Individual changelog entry |
+| `PBlogPosts`         | Blog post grid             |
+| `PBlogPost`          | Individual post card       |
+| `PChangelogVersions` | Changelog list             |
+| `PChangelogVersion`  | Individual changelog entry |
 
 ## Pricing
 
 | Component       | Purpose                      |
 | --------------- | ---------------------------- |
-| `UPricingPlans` | Pricing plan cards           |
-| `UPricingPlan`  | Individual pricing plan card |
-| `UPricingTable` | Feature comparison table     |
+| `PPricingPlans` | Pricing plan cards           |
+| `PPricingPlan`  | Individual pricing plan card |
+| `PPricingTable` | Feature comparison table     |
 
 ## Prose — Base Typography
 
@@ -176,9 +176,9 @@ Standard Markdown elements auto-resolved by Comark/Content/MDC. No `::` prefix n
 
 ## Prose — Feature Components
 
-Nuxt UI-specific Prose components. In markdown files they are used **without the `Prose` prefix** (e.g. `::callout`, `::steps`). In Vue they are referenced as `ProseCallout`, `ProseSteps`, etc. Comark resolves them automatically when `pohon-ui` is installed.
+Pohon UI-specific Prose components. In markdown files they are used **without the `Prose` prefix** (e.g. `::callout`, `::steps`). In Vue they are referenced as `ProseCallout`, `ProseSteps`, etc. Comark resolves them automatically when `pohon-ui` is installed.
 
-Nuxt UI also registers shorthand aliases for `Callout`: `::note`, `::tip`, `::warning`, `::caution` (preset `color` + `icon`).
+Pohon UI also registers shorthand aliases for `Callout`: `::note`, `::tip`, `::warning`, `::caution` (preset `color` + `icon`).
 
 | Component                   | Purpose                                                               |
 | --------------------------- | --------------------------------------------------------------------- |
@@ -204,42 +204,42 @@ Nuxt UI also registers shorthand aliases for `Callout`: `::note`, `::tip`, `::wa
 
 | Component              | Purpose                         |
 | ---------------------- | ------------------------------- |
-| `UContentNavigation`   | Sidebar navigation from content |
-| `UContentToc`          | Table of contents               |
-| `UContentSurround`     | Prev/next navigation            |
-| `UContentSearch`       | Search command palette          |
-| `UContentSearchButton` | Trigger for content search      |
+| `PContentNavigation`   | Sidebar navigation from content |
+| `PContentToc`          | Table of contents               |
+| `PContentSurround`     | Prev/next navigation            |
+| `PContentSearch`       | Search command palette          |
+| `PContentSearchButton` | Trigger for content search      |
 
 ## Chat (AI)
 
 | Component           | Purpose                        |
 | ------------------- | ------------------------------ |
-| `UChatMessages`     | Scrollable message list        |
-| `UChatMessage`      | Individual message bubble      |
-| `UChatReasoning`    | Collapsible AI reasoning block |
-| `UChatTool`         | Tool invocation status         |
-| `UChatShimmer`      | Streaming text animation       |
-| `UChatPrompt`       | Enhanced textarea for prompts  |
-| `UChatPromptSubmit` | Submit button with status      |
-| `UChatPalette`      | Chat layout for overlays       |
+| `PChatMessages`     | Scrollable message list        |
+| `PChatMessage`      | Individual message bubble      |
+| `PChatReasoning`    | Collapsible AI reasoning block |
+| `PChatTool`         | Tool invocation status         |
+| `PChatShimmer`      | Streaming text animation       |
+| `PChatPrompt`       | Enhanced textarea for prompts  |
+| `PChatPromptSubmit` | Submit button with status      |
+| `PChatPalette`      | Chat layout for overlays       |
 
 ## Editor
 
 | Component               | Purpose                               |
 | ----------------------- | ------------------------------------- |
-| `UEditor`               | Rich text editor (JSON/HTML/Markdown) |
-| `UEditorToolbar`        | Toolbar (fixed/bubble/floating)       |
-| `UEditorDragHandle`     | Block drag-and-drop                   |
-| `UEditorSuggestionMenu` | Slash command menu                    |
-| `UEditorMentionMenu`    | @ mention menu                        |
-| `UEditorEmojiMenu`      | Emoji picker                          |
+| `PEditor`               | Rich text editor (JSON/HTML/Markdown) |
+| `PEditorToolbar`        | Toolbar (fixed/bubble/floating)       |
+| `PEditorDragHandle`     | Block drag-and-drop                   |
+| `PEditorSuggestionMenu` | Slash command menu                    |
+| `PEditorMentionMenu`    | @ mention menu                        |
+| `PEditorEmojiMenu`      | Emoji picker                          |
 
 ## Color Mode
 
 | Component          | Purpose                             |
 | ------------------ | ----------------------------------- |
-| `UColorModeButton` | Toggle button (light/dark)          |
-| `UColorModeSwitch` | Toggle switch (light/dark)          |
-| `UColorModeSelect` | Dropdown (light/dark/system)        |
-| `UColorModeAvatar` | Avatar that changes with color mode |
-| `UColorModeImage`  | Image that changes with color mode  |
+| `PColorModeButton` | Toggle button (light/dark)          |
+| `PColorModeSwitch` | Toggle switch (light/dark)          |
+| `PColorModeSelect` | Dropdown (light/dark/system)        |
+| `PColorModeAvatar` | Avatar that changes with color mode |
+| `PColorModeImage`  | Image that changes with color mode  |

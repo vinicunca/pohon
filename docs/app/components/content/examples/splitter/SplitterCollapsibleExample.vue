@@ -12,7 +12,7 @@ const items: SplitterItem[] = [
     <PSplitter id="splitter-collapsible-example" :items="items">
       <template #sidebar="{ collapsed, collapse, expand }">
         <div class="flex-1 flex items-center justify-center p-2">
-          <UButton
+          <PButton
             :icon="collapsed ? 'i-lucide-panel-left-open' : 'i-lucide-panel-left-close'"
             :label="collapsed ? undefined : 'Collapse'"
             :aria-label="collapsed ? 'Expand' : undefined"

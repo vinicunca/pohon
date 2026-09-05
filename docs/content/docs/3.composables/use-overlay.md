@@ -270,7 +270,7 @@ const openModalB = async () => {
 </script>
 
 <template>
-  <UButton label="Open Modal" @click="openModalA" />
+  <PButton label="Open Modal" @click="openModalA" />
 </template>
 ```
 
@@ -302,13 +302,13 @@ const emits = defineEmits<{
     :ui="{ footer: 'justify-end' }"
   >
     <template #footer>
-      <UButton
+      <PButton
         label="Cancel"
         color="neutral"
         variant="outline"
         @click="emits('close', false)"
       />
-      <UButton label="Confirm" color="neutral" @click="emits('close', true)" />
+      <PButton label="Confirm" color="neutral" @click="emits('close', true)" />
     </template>
   </PModal>
 </template>
@@ -357,7 +357,7 @@ const handleDelete = async () => {
 </script>
 
 <template>
-  <UButton label="Delete item" @click="handleDelete" />
+  <PButton label="Delete item" @click="handleDelete" />
 </template>
 ```
 
@@ -365,7 +365,7 @@ const handleDelete = async () => {
 
 ### Provide / Inject
 
-When opening overlays programmatically (modals, slideovers and so on), the overlay component can only access injected values from the component containing `UApp` (typically `app.vue` or layout components). This is because overlays are mounted outside of the page context by the `UApp` component.
+When opening overlays programmatically (modals, slideovers and so on), the overlay component can only access injected values from the component containing `PApp` (typically `app.vue` or layout components). This is because overlays are mounted outside of the page context by the `PApp` component.
 
 As such, using `provide()` in pages or parent components isn't supported directly. To pass provided values to overlays, the recommended approach is to use props instead:
 

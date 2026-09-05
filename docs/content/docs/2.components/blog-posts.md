@@ -14,9 +14,9 @@ The BlogPosts component provides a flexible layout to display a list of [BlogPos
 
 ```vue {2,8}
 <template>
-  <UBlogPosts>
-    <UBlogPost v-for="(post, index) in posts" :key="index" v-bind="post" />
-  </UBlogPosts>
+  <PBlogPosts>
+    <PBlogPost v-for="(post, index) in posts" :key="index" v-bind="post" />
+  </PBlogPosts>
 </template>
 ```
 
@@ -103,22 +103,22 @@ const { data: posts } = await useAsyncData("posts", () =>
 </script>
 
 <template>
-  <UPage>
+  <PPage>
     <PPageHero title="Blog" />
 
-    <UPageBody>
+    <PPageBody>
       <PContainer>
-        <UBlogPosts>
-          <UBlogPost
+        <PBlogPosts>
+          <PBlogPost
             v-for="(post, index) in posts"
             :key="index"
             v-bind="post"
             :to="post.path"
           />
-        </UBlogPosts>
+        </PBlogPosts>
       </PContainer>
-    </UPageBody>
-  </UPage>
+    </PPageBody>
+  </PPage>
 </template>
 ```
 

@@ -105,7 +105,7 @@ const valueMultiple = ref([fruits[0]!, vegetables[0]!])
       v-bind="props"
     >
       <template #leading="{ modelValue, ui }">
-        <UIcon v-if="modelValue" :name="modelValue.icon" :class="ui.leadingIcon()" />
+        <PIcon v-if="modelValue" :name="modelValue.icon" :class="ui.leadingIcon()" />
       </template>
     </PInputMenu>
     <PInputMenu
@@ -118,7 +118,7 @@ const valueMultiple = ref([fruits[0]!, vegetables[0]!])
       v-bind="props"
     >
       <template #leading="{ modelValue, ui }">
-        <UAvatar v-if="modelValue" :size="(ui.itemLeadingAvatarSize() as AvatarProps['size'])" v-bind="modelValue.avatar" />
+        <PAvatar v-if="modelValue" :size="(ui.itemLeadingAvatarSize() as AvatarProps['size'])" v-bind="modelValue.avatar" />
       </template>
     </PInputMenu>
     <PInputMenu

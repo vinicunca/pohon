@@ -17,20 +17,20 @@ The PageSection component wraps your content in a [Container](/docs/components/c
 ## ::u-page-section
 
 title: 'Beautiful Vue UI components'
-description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+description: 'Pohon UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
 headline: 'Features'
 features:
 
 - title: 'Icons'
-  description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+  description: 'Pohon UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
   icon: 'i-lucide-smile'
   to: '/docs/getting-started/integrations/icons'
 - title: 'Fonts'
-  description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+  description: 'Pohon UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
   icon: 'i-lucide-a-large-small'
   to: '/docs/getting-started/integrations/fonts'
 - title: 'Color Mode'
-  description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+  description: 'Pohon UI integrates with Nuxt Color Mode to switch between light and dark.'
   icon: 'i-lucide-sun-moon'
   to: '/docs/getting-started/integrations/color-mode'
 
@@ -75,7 +75,7 @@ ignore:
 - title
   props:
   title: 'Beautiful Vue UI components'
-  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  description: 'Pohon UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
 
 ---
 
@@ -94,7 +94,7 @@ ignore:
 - description
   props:
   title: 'Beautiful Vue UI components'
-  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  description: 'Pohon UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
   headline: 'Features'
 
 ---
@@ -114,7 +114,7 @@ ignore:
 - description
   props:
   title: 'Beautiful Vue UI components'
-  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  description: 'Pohon UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
   icon: 'i-lucide-rocket'
 
 ---
@@ -146,15 +146,15 @@ external:
 - features
   props:
   title: 'Beautiful Vue UI components'
-  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  description: 'Pohon UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
   features: - title: 'Icons'
-  description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+  description: 'Pohon UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
   icon: 'i-lucide-smile'
   to: '/docs/getting-started/integrations/icons' - title: 'Fonts'
-  description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+  description: 'Pohon UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
   icon: 'i-lucide-a-large-small'
   to: '/docs/getting-started/integrations/fonts' - title: 'Color Mode'
-  description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+  description: 'Pohon UI integrates with Nuxt Color Mode to switch between light and dark.'
   icon: 'i-lucide-sun-moon'
   to: '/docs/getting-started/integrations/color-mode'
 
@@ -180,7 +180,7 @@ external:
 - links
   props:
   title: 'Beautiful Vue UI components'
-  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  description: 'Pohon UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
   links: - label: 'Get started'
   to: '/docs/getting-started'
   icon: 'i-lucide-square-play'
@@ -216,17 +216,17 @@ external:
 - links
   props:
   title: 'Beautiful Vue UI components'
-  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  description: 'Pohon UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
   icon: 'i-lucide-rocket'
   orientation: horizontal
   features: - title: 'Icons'
-  description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+  description: 'Pohon UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
   icon: 'i-lucide-smile'
   to: '/docs/getting-started/integrations/icons' - title: 'Fonts'
-  description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+  description: 'Pohon UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
   icon: 'i-lucide-a-large-small'
   to: '/docs/getting-started/integrations/fonts' - title: 'Color Mode'
-  description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+  description: 'Pohon UI integrates with Nuxt Color Mode to switch between light and dark.'
   icon: 'i-lucide-sun-moon'
   to: '/docs/getting-started/integrations/color-mode'
   links: - label: 'Explore components'
@@ -266,18 +266,18 @@ external:
 - links
   props:
   title: 'Beautiful Vue UI components'
-  description: 'Nuxt UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
+  description: 'Pohon UI provides a comprehensive suite of components and utilities to help you build beautiful and accessible web applications with Vue and Nuxt.'
   icon: 'i-lucide-rocket'
   orientation: horizontal
   reverse: true
   features: - title: 'Icons'
-  description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
+  description: 'Pohon UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.'
   icon: 'i-lucide-smile'
   to: '/docs/getting-started/integrations/icons' - title: 'Fonts'
-  description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
+  description: 'Pohon UI integrates with Nuxt Fonts to provide plug-and-play font optimization.'
   icon: 'i-lucide-a-large-small'
   to: '/docs/getting-started/integrations/fonts' - title: 'Color Mode'
-  description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.'
+  description: 'Pohon UI integrates with Nuxt Color Mode to switch between light and dark.'
   icon: 'i-lucide-sun-moon'
   to: '/docs/getting-started/integrations/color-mode'
   links: - label: 'Explore components'

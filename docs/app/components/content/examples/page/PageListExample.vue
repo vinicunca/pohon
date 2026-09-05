@@ -92,7 +92,7 @@ const users = ref([
 </script>
 
 <template>
-  <UPageList>
+  <PPageList>
     <PPageCard
       v-for="(user, index) in users"
       :key="index"
@@ -101,8 +101,8 @@ const users = ref([
       :target="user.target"
     >
       <template #body>
-        <UUser :name="user.name" :description="user.description" :avatar="user.avatar" size="xl" class="relative" />
+        <PUser :name="user.name" :description="user.description" :avatar="user.avatar" size="xl" class="relative" />
       </template>
     </PPageCard>
-  </UPageList>
+  </PPageList>
 </template>

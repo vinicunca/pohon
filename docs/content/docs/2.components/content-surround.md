@@ -1,6 +1,6 @@
 ---
 title: ContentSurround
-description: 'A pair of prev and next links to navigate between pages.'
+description: "A pair of prev and next links to navigate between pages."
 category: content
 framework: nuxt
 links:
@@ -17,41 +17,46 @@ This component is only available when the `@nuxt/content` module is installed.
 
 Use the `surround` prop with the `surround`{lang="ts-type"} value you get when fetching a page surround.
 
-::component-example
----
+## ::component-example
+
 name: 'content-surround-example'
 props:
-  class: 'w-full'
+class: 'w-full'
+
 ---
+
 ::
 
 ### Prev / Next
 
 Use the `prev-icon` and `next-icon` props to customize the buttons [Icon](/docs/components/icon).
 
-::component-code{prefix="content"}
----
+## ::component-code{prefix="content"}
+
 prettier: true
 collapse: true
 ignore:
-  - surround
-external:
-  - surround
-externalTypes:
-  - ContentSurroundLink[]
-props:
+
+- surround
+  external:
+- surround
+  externalTypes:
+- ContentSurroundLink[]
+  props:
   prevIcon: 'i-lucide-chevron-left'
   nextIcon: 'i-lucide-chevron-right'
   surround:
-  - title: ContentSearchButton
-    path: /docs/components/content-search-button
-    stem: docs/2.components/content-search-button
-    description: A pre-styled Button to open the ContentSearch modal.
-  - title: ContentToc
-    path: /docs/components/content-toc
-    stem: docs/2.components/content-toc
-    description: A sticky Table of Contents with customizable slots.
+- title: ContentSearchButton
+  path: /docs/components/content-search-button
+  stem: docs/2.components/content-search-button
+  description: A pre-styled Button to open the ContentSearch modal.
+- title: ContentToc
+  path: /docs/components/content-toc
+  stem: docs/2.components/content-toc
+  description: A sticky Table of Contents with customizable slots.
+
 ---
+
 ::
 
 ## Examples
@@ -60,32 +65,38 @@ props:
 
 Use the ContentSurround component in a page to display the prev and next links:
 
-```vue [pages/\[...slug\\].vue]{19}
+```vue [pages/[...slug].vue]{19}
 <script setup lang="ts">
-const route = useRoute()
+const route = useRoute();
 
-const { data: page } = await useAsyncData(route.path, () => queryCollection('docs').path(route.path).first())
+const { data: page } = await useAsyncData(route.path, () =>
+  queryCollection("docs").path(route.path).first(),
+);
 if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Page not found",
+    fatal: true,
+  });
 }
 </script>
 
 <template>
-  <UPage v-if="page">
-    <UPageHeader :title="page.title" />
+  <PPage v-if="page">
+    <PPageHeader :title="page.title" />
 
-    <UPageBody>
+    <PPageBody>
       <ContentRenderer v-if="page.body" :value="page" />
 
-      <USeparator v-if="surround?.filter(Boolean).length" />
+      <PSeparator v-if="surround?.filter(Boolean).length" />
 
-      <UContentSurround :surround="(surround as any)" />
-    </UPageBody>
+      <PContentSurround :surround="surround as any" />
+    </PPageBody>
 
     <template v-if="page?.body?.toc?.links?.length" #right>
-      <UContentToc :links="page.body.toc.links" />
+      <PContentToc :links="page.body.toc.links" />
     </template>
-  </UPage>
+  </PPage>
 </template>
 ```
 

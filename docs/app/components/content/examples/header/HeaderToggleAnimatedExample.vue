@@ -50,7 +50,7 @@ const variants: { [k: string]: VariantType | ((custom: unknown) => VariantType) 
 </script>
 
 <template>
-  <UHeader>
+  <PHeader>
     <template #title>
       <Logo class="h-6 w-auto" />
     </template>
@@ -58,10 +58,10 @@ const variants: { [k: string]: VariantType | ((custom: unknown) => VariantType) 
     <PNavigationMenu :items="items" />
 
     <template #right>
-      <UColorModeButton />
+      <PColorModeButton />
 
       <PTooltip text="Open on GitHub" :kbds="['meta', 'G']">
-        <UButton
+        <PButton
           color="neutral"
           variant="ghost"
           to="https://github.com/nuxt/ui"
@@ -73,7 +73,7 @@ const variants: { [k: string]: VariantType | ((custom: unknown) => VariantType) 
     </template>
 
     <template #toggle="{ open, toggle, ui }">
-      <UButton
+      <PButton
         size="sm"
         variant="ghost"
         color="neutral"
@@ -122,11 +122,11 @@ const variants: { [k: string]: VariantType | ((custom: unknown) => VariantType) 
             tabindex="-1"
           />
         </svg>
-      </UButton>
+      </PButton>
     </template>
 
     <template #body>
       <PNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
     </template>
-  </UHeader>
+  </PHeader>
 </template>

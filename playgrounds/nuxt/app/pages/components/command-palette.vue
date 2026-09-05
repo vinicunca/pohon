@@ -166,7 +166,7 @@ defineShortcuts({
     <PSelect v-model="size" :items="sizes" />
 
     <PModal v-model:open="open">
-      <UButton label="Open modal" color="neutral" variant="outline" />
+      <PButton label="Open modal" color="neutral" variant="outline" />
 
       <template #content>
         <ReuseTemplate :close="true" @update:open="open = $event" />
@@ -174,7 +174,7 @@ defineShortcuts({
     </PModal>
 
     <PDrawer should-scale-background>
-      <UButton label="Open drawer" color="neutral" variant="outline" />
+      <PButton label="Open drawer" color="neutral" variant="outline" />
 
       <template #content>
         <ReuseTemplate class="border-t border-default mt-4" />
@@ -182,7 +182,7 @@ defineShortcuts({
     </PDrawer>
 
     <PPopover :content="{ side: 'right', align: 'start' }">
-      <UButton label="Select label (popover)" color="neutral" variant="outline" />
+      <PButton label="Select label (popover)" color="neutral" variant="outline" />
 
       <template #content>
         <PCommandPalette
@@ -214,22 +214,22 @@ defineShortcuts({
     >
       <template #footer>
         <div class="flex items-center justify-between gap-2">
-          <UIcon name="i-simple-icons-nuxtdotjs" class="size-5 text-dimmed ml-1" />
+          <PIcon name="i-simple-icons-nuxtdotjs" class="size-5 text-dimmed ml-1" />
           <div class="flex items-center gap-1">
-            <UButton color="neutral" variant="ghost" label="Open" size="xs">
+            <PButton color="neutral" variant="ghost" label="Open" size="xs">
               <template #trailing>
-                <UKbd value="enter" />
+                <PKbd value="enter" />
               </template>
-            </UButton>
+            </PButton>
 
-            <USeparator orientation="vertical" class="h-4" />
+            <PSeparator orientation="vertical" class="h-4" />
 
-            <UButton color="neutral" variant="ghost" label="Actions" size="xs">
+            <PButton color="neutral" variant="ghost" label="Actions" size="xs">
               <template #trailing>
-                <UKbd value="meta" />
-                <UKbd value="k" />
+                <PKbd value="meta" />
+                <PKbd value="k" />
               </template>
-            </UButton>
+            </PButton>
           </div>
         </div>
       </template>

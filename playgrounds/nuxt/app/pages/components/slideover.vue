@@ -28,7 +28,7 @@ function openSlideover() {
 
   <div class="flex flex-col gap-2 min-h-0">
     <PSlideover title="First slideover" :inset="inset">
-      <UButton color="neutral" variant="outline" label="Open with nested" />
+      <PButton color="neutral" variant="outline" label="Open with nested" />
 
       <template #body>
         <Placeholder class="size-full" />
@@ -36,13 +36,13 @@ function openSlideover() {
 
       <template #footer>
         <PSlideover title="Second slideover" :inset="inset">
-          <UButton label="Open second" />
+          <PButton label="Open second" />
         </PSlideover>
       </template>
     </PSlideover>
 
     <PSlideover title="Slideover on left side" description="This slideover has `side: 'left'` prop." side="left" :inset="inset">
-      <UButton label="Open on left" color="neutral" variant="subtle" />
+      <PButton label="Open on left" color="neutral" variant="subtle" />
 
       <template #body>
         <Placeholder class="size-full" />
@@ -50,7 +50,7 @@ function openSlideover() {
     </PSlideover>
 
     <PSlideover title="Slideover on top side" description="This slideover has `side: 'top'` prop." side="top" :inset="inset">
-      <UButton label="Open on top" color="neutral" variant="outline" />
+      <PButton label="Open on top" color="neutral" variant="outline" />
 
       <template #body>
         <Placeholder class="h-48 w-full" />
@@ -58,7 +58,7 @@ function openSlideover() {
     </PSlideover>
 
     <PSlideover title="Slideover on bottom side" description="This slideover has `side: 'bottom'` prop." side="bottom" :inset="inset">
-      <UButton label="Open on bottom" color="neutral" variant="subtle" />
+      <PButton label="Open on bottom" color="neutral" variant="subtle" />
 
       <template #body>
         <Placeholder class="h-48 w-full" />
@@ -71,10 +71,10 @@ function openSlideover() {
       </template>
     </PSlideover>
 
-    <UButton label="Open with v-model" color="neutral" variant="outline" @click="open = true" />
+    <PButton label="Open with v-model" color="neutral" variant="outline" @click="open = true" />
 
     <PSlideover title="Slideover without overlay" description="This slideover has `overlay: false` prop." :overlay="false" :inset="inset">
-      <UButton label="Open without overlay" color="neutral" variant="subtle" />
+      <PButton label="Open without overlay" color="neutral" variant="subtle" />
 
       <template #body>
         <Placeholder class="size-full" />
@@ -82,7 +82,7 @@ function openSlideover() {
     </PSlideover>
 
     <PSlideover title="Slideover without modal & overlay" description="This slideover has `modal: false` and `overlay: false` to interact with outside content." :overlay="false" :modal="false" :inset="inset">
-      <UButton label="Open without modal" color="neutral" variant="outline" />
+      <PButton label="Open without modal" color="neutral" variant="outline" />
 
       <template #body>
         <Placeholder class="size-full" />
@@ -90,7 +90,7 @@ function openSlideover() {
     </PSlideover>
 
     <PSlideover title="Slideover without transition" description="This slideover has `transition: false` prop." :transition="false" :inset="inset">
-      <UButton label="Open without transition" color="neutral" variant="subtle" />
+      <PButton label="Open without transition" color="neutral" variant="subtle" />
 
       <template #body>
         <Placeholder class="size-full" />
@@ -98,7 +98,7 @@ function openSlideover() {
     </PSlideover>
 
     <PSlideover title="Slideover without portal" description="This slideover has `portal: false` prop." :portal="false" :inset="inset">
-      <UButton label="Open without portal" color="neutral" variant="outline" />
+      <PButton label="Open without portal" color="neutral" variant="outline" />
 
       <template #body>
         <Placeholder class="size-full" />
@@ -113,7 +113,7 @@ function openSlideover() {
       :overlay="false"
       :inset="inset"
     >
-      <UButton label="Open unclosable" color="neutral" variant="subtle" />
+      <PButton label="Open unclosable" color="neutral" variant="subtle" />
 
       <template #body>
         <Placeholder class="size-full" />
@@ -121,7 +121,7 @@ function openSlideover() {
     </PSlideover>
 
     <PSlideover title="Slideover without close button" description="This slideover has `close: false` prop." :close="false" :inset="inset">
-      <UButton label="Open without close button" color="neutral" variant="outline" />
+      <PButton label="Open without close button" color="neutral" variant="outline" />
 
       <template #body>
         <Placeholder class="size-full" />
@@ -129,28 +129,28 @@ function openSlideover() {
     </PSlideover>
 
     <PSlideover title="Slideover with custom close button" description="The `close` prop inherits from the Button props." :close="{ color: 'primary', variant: 'solid', size: 'xs' }" :ui="{ close: 'top-3.5 rounded-full' }" :inset="inset">
-      <UButton label="Open with custom close button" color="neutral" variant="subtle" />
+      <PButton label="Open with custom close button" color="neutral" variant="subtle" />
 
       <template #body>
         <Placeholder class="size-full" />
       </template>
     </PSlideover>
 
-    <UButton label="Open programmatically" color="neutral" variant="outline" @click="openSlideover" />
+    <PButton label="Open programmatically" color="neutral" variant="outline" @click="openSlideover" />
 
     <PSlideover title="Slideover with scoped slot close" description="This slideover has a scoped slot close that can be used to close the slideover from within the content." :inset="inset">
-      <UButton color="neutral" variant="subtle" label="Open with scoped slot close" />
+      <PButton color="neutral" variant="subtle" label="Open with scoped slot close" />
 
       <template #header="{ close }">
-        <UButton label="Close with scoped slot close" @click="close" />
+        <PButton label="Close with scoped slot close" @click="close" />
       </template>
 
       <template #body="{ close }">
-        <UButton label="Close with scoped slot close" @click="close" />
+        <PButton label="Close with scoped slot close" @click="close" />
       </template>
 
       <template #footer="{ close }">
-        <UButton label="Close with scoped slot close" @click="close" />
+        <PButton label="Close with scoped slot close" @click="close" />
       </template>
     </PSlideover>
   </div>

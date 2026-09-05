@@ -88,52 +88,52 @@ const state = reactive<Partial<Schema>>({
 <template>
   <div class="min-h-screen p-4 sm:p-6 lg:p-8 flex flex-col justify-center">
     <PCard class="max-w-md mx-auto" variant="subtle">
-      <UForm :schema="schema" :state="state" class="space-y-6">
+      <PForm :schema="schema" :state="state" class="space-y-6">
         <PPageCard title="Payment method" description="All transactions are secure and encrypted" variant="naked" />
 
-        <UFormField name="name" label="Name" required>
+        <PFormField name="name" label="Name" required>
           <PInput v-model="state.name" placeholder="John Doe" class="w-full" />
-        </UFormField>
+        </PFormField>
 
         <div class="grid grid-cols-3 gap-4">
-          <UFormField name="cardNumber" label="Card number" help="Enter your 16-digit number." required class="col-span-2">
+          <PFormField name="cardNumber" label="Card number" help="Enter your 16-digit number." required class="col-span-2">
             <PInput v-model="state.cardNumber" placeholder="1234 5678 9012 3456" class="w-full" />
-          </UFormField>
+          </PFormField>
 
-          <UFormField name="cvv" label="CVV" required>
+          <PFormField name="cvv" label="CVV" required>
             <PInput v-model="state.cvv" placeholder="123" class="w-full" />
-          </UFormField>
+          </PFormField>
         </div>
 
         <div class="grid grid-cols-2 gap-4">
-          <UFormField name="month" label="Month" required>
+          <PFormField name="month" label="Month" required>
             <PSelect v-model="state.month" :items="months" placeholder="MM" value-key="value" class="w-full" />
-          </UFormField>
+          </PFormField>
 
-          <UFormField name="year" label="Year" required>
+          <PFormField name="year" label="Year" required>
             <PSelect v-model="state.year" :items="years" placeholder="YYYY" value-key="value" class="w-full" />
-          </UFormField>
+          </PFormField>
         </div>
 
-        <USeparator />
+        <PSeparator />
 
         <PPageCard title="Billing address" description="The billing address associated with your payment method" variant="naked" />
 
-        <UFormField name="sameAsShipping">
+        <PFormField name="sameAsShipping">
           <PCheckbox v-model="state.sameAsShipping" label="Same as shipping address" color="neutral" />
-        </UFormField>
+        </PFormField>
 
-        <USeparator />
+        <PSeparator />
 
-        <UFormField name="comments" label="Comments">
+        <PFormField name="comments" label="Comments">
           <PTextarea v-model="state.comments" placeholder="Add any additional comments" :rows="3" class="w-full" />
-        </UFormField>
+        </PFormField>
 
         <div class="flex gap-3">
-          <UButton type="submit" color="neutral" label="Submit" />
-          <UButton type="button" label="Cancel" color="neutral" variant="outline" />
+          <PButton type="submit" color="neutral" label="Submit" />
+          <PButton type="button" label="Cancel" color="neutral" variant="outline" />
         </div>
-      </UForm>
+      </PForm>
     </PCard>
   </div>
 </template>`
@@ -167,7 +167,7 @@ function share() {
   copy(location.href)
 }
 
-// Mirror the auto-imports available in a real Nuxt UI app so REPL code can call
+// Mirror the auto-imports available in a real Pohon UI app so REPL code can call
 // these composables without importing them.
 const composables = Object.values(publicComposables).flat()
 
@@ -184,22 +184,22 @@ const previewOptions = {
   ].join(''),
   customCode: {
     importCode: `import ui, { ${composables.join(', ')} } from 'pohon-ui'\nimport { h } from 'vue'\n${composables.map(name => `window.${name} = ${name}`).join('\n')}`,
-    useCode: `app.use(ui)\napp.component('Placeholder', { template: '<div class="relative overflow-hidden rounded-sm border border-dashed border-accented opacity-75 px-4 flex items-center justify-center"><svg class="absolute inset-0 size-full stroke-inverted/10" fill="none"><defs><pattern id="placeholder-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3" /></pattern></defs><rect stroke="none" fill="url(#placeholder-pattern)" width="100%" height="100%" /></svg><slot /></div>' })\nconst _Root = app._component\nconst _UApp = app.component('UApp')\nconst _origMount = app.mount\napp.mount = function(el) {\n  const wrapper = _createApp({ render() { return h(_UApp, null, { default: () => h(_Root) }) } })\n  Object.assign(wrapper._context.components, app._context.components)\n  Object.assign(wrapper._context.directives, app._context.directives)\n  Object.assign(wrapper._context.provides, app._context.provides)\n  wrapper.config.errorHandler = e => console.error(e)\n  wrapper.mount(el)\n  window.__app__ = wrapper\n}`
+    useCode: `app.use(ui)\napp.component('Placeholder', { template: '<div class="relative overflow-hidden rounded-sm border border-dashed border-accented opacity-75 px-4 flex items-center justify-center"><svg class="absolute inset-0 size-full stroke-inverted/10" fill="none"><defs><pattern id="placeholder-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3" /></pattern></defs><rect stroke="none" fill="url(#placeholder-pattern)" width="100%" height="100%" /></svg><slot /></div>' })\nconst _Root = app._component\nconst _UApp = app.component('PApp')\nconst _origMount = app.mount\napp.mount = function(el) {\n  const wrapper = _createApp({ render() { return h(_UApp, null, { default: () => h(_Root) }) } })\n  Object.assign(wrapper._context.components, app._context.components)\n  Object.assign(wrapper._context.directives, app._context.directives)\n  Object.assign(wrapper._context.provides, app._context.provides)\n  wrapper.config.errorHandler = e => console.error(e)\n  wrapper.mount(el)\n  window.__app__ = wrapper\n}`
   }
 }
 </script>
 
 <template>
-  <UApp>
+  <PApp>
     <div class="h-dvh flex flex-col">
-      <UHeader title="Nuxt UI Playground" :ui="{ container: 'max-w-none' }">
+      <PHeader title="Pohon UI Playground" :ui="{ container: 'max-w-none' }">
         <template #left>
           <Logo class="w-auto h-6 shrink-0 text-highlighted" />
         </template>
 
         <template #right>
           <PTooltip :text="copied ? 'Copied!' : 'Share'" :disabled="!hasChanged">
-            <UButton
+            <PButton
               color="neutral"
               variant="ghost"
               :icon="copied ? 'i-lucide-circle-check' : 'i-lucide-share'"
@@ -209,10 +209,10 @@ const previewOptions = {
             />
           </PTooltip>
 
-          <UColorModeButton />
+          <PColorModeButton />
 
           <PTooltip text="Open on GitHub">
-            <UButton
+            <PButton
               color="neutral"
               variant="ghost"
               to="https://github.com/nuxt/ui"
@@ -222,7 +222,7 @@ const previewOptions = {
             />
           </PTooltip>
         </template>
-      </UHeader>
+      </PHeader>
 
       <Repl
         :store="store"
@@ -237,7 +237,7 @@ const previewOptions = {
         class="flex-1"
       />
     </div>
-  </UApp>
+  </PApp>
 </template>
 
 <style>

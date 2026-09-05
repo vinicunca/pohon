@@ -39,5 +39,5 @@ function onToggle(e: TreeItemToggleEvent<TreeItem>) {
 </script>
 
 <template>
-  <UTree :items="items" @toggle="onToggle" />
+  <PTree :items="items" @toggle="onToggle" />
 </template>

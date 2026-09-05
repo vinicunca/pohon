@@ -42,7 +42,7 @@ const items = [{
 </script>
 
 <template>
-  <UTimeline
+  <PTimeline
     :items="items"
     size="xs"
     :ui="{
@@ -59,5 +59,5 @@ const items = [{
     <template #date="{ item }">
       {{ useTimeAgo(new Date(item.date)) }}
     </template>
-  </UTimeline>
+  </PTimeline>
 </template>

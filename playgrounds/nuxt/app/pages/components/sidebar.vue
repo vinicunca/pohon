@@ -14,11 +14,11 @@ const variant = ref('sidebar' as keyof typeof theme.variants.variant)
 const initialMessages: UIMessage[] = [{
   id: '1',
   role: 'user',
-  parts: [{ type: 'text', text: 'What is Nuxt UI?' }]
+  parts: [{ type: 'text', text: 'What is Pohon UI?' }]
 }, {
   id: '2',
   role: 'assistant',
-  parts: [{ type: 'text', text: 'Nuxt UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }]
+  parts: [{ type: 'text', text: 'Pohon UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }]
 }]
 
 const { messages, status, error, sendMessage, regenerate, stop } = useChat({
@@ -39,7 +39,7 @@ function onSubmit() {
 
 <template>
   <div class="flex flex-1" :class="[variant === 'inset' && 'bg-neutral-50 dark:bg-neutral-950']">
-    <USidebar
+    <PSidebar
       v-model:open="openLeft"
       side="left"
       :variant="variant"
@@ -57,13 +57,13 @@ function onSubmit() {
         orientation="vertical"
         :ui="{ link: 'p-1.5 overflow-hidden' }"
       />
-    </USidebar>
+    </PSidebar>
 
     <div class="flex-1 flex flex-col overflow-hidden lg:peer-data-[variant=floating]:my-4 peer-data-[variant=inset]:m-4 lg:peer-data-[variant=inset]:mx-0 peer-data-[variant=inset]:rounded-xl peer-data-[variant=inset]:shadow-sm peer-data-[variant=inset]:ring peer-data-[variant=inset]:ring-default bg-default">
       <Navbar class="relative w-full">
         <PSelect v-model="variant" :items="variants" />
 
-        <UButton
+        <PButton
           icon="i-lucide-panel-left"
           color="neutral"
           variant="soft"
@@ -71,7 +71,7 @@ function onSubmit() {
           aria-label="Toggle left sidebar"
           @click="openLeft = !openLeft"
         />
-        <UButton
+        <PButton
           icon="i-lucide-panel-right"
           color="neutral"
           variant="soft"
@@ -86,7 +86,7 @@ function onSubmit() {
       </div>
     </div>
 
-    <USidebar
+    <PSidebar
       v-model:open="openRight"
       side="right"
       :variant="variant"
@@ -95,7 +95,7 @@ function onSubmit() {
       rail
       :style="{ '--sidebar-width': '20rem' }"
     >
-      <UChatMessages
+      <PChatMessages
         :messages="messages"
         :status="status"
         compact
@@ -103,16 +103,16 @@ function onSubmit() {
       />
 
       <template #footer>
-        <UChatPrompt
+        <PChatPrompt
           v-model="input"
           :error="error"
           variant="subtle"
           size="sm"
           @submit="onSubmit"
         >
-          <UChatPromptSubmit size="sm" :status="status" @stop="stop()" @reload="regenerate()" />
-        </UChatPrompt>
+          <PChatPromptSubmit size="sm" :status="status" @stop="stop()" @reload="regenerate()" />
+        </PChatPrompt>
       </template>
-    </USidebar>
+    </PSidebar>
   </div>
 </template>

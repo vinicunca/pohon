@@ -415,7 +415,7 @@ const { data: ast } = useAsyncData(codeKey, async () => {
     <div ref="wrapperContainer" class="relative group/component">
       <div v-if="options.length" class="flex flex-wrap items-center gap-2.5 border border-muted border-b-0 relative rounded-t-md px-4 py-2.5 overflow-x-auto">
         <template v-for="option in options" :key="option.name">
-          <UFormField
+          <PFormField
             :label="option.label"
             size="sm"
             class="inline-flex ring ring-accented rounded-sm"
@@ -438,7 +438,7 @@ const { data: ast } = useAsyncData(codeKey, async () => {
               @update:model-value="setComponentProp(option.name, $event)"
             >
               <template v-if="option.name.toLowerCase().endsWith('color')" #leading="{ modelValue, ui }">
-                <UChip
+                <PChip
                   v-if="modelValue"
                   inset
                   standalone
@@ -457,7 +457,7 @@ const { data: ast } = useAsyncData(codeKey, async () => {
               :ui="{ base: 'rounded-sm rounded-l-none min-w-12' }"
               @update:model-value="setComponentProp(option.name, $event)"
             />
-          </UFormField>
+          </PFormField>
         </template>
       </div>
 

@@ -10,16 +10,16 @@ import { ImageUpload } from '../../components/editor/EditorImageUploadExtension'
 
 const editorRef = useTemplateRef('editorRef')
 
-const content = ref(`# Nuxt UI: A Modern UI Library
+const content = ref(`# Pohon UI: A Modern UI Library
 
-Welcome to **Nuxt UI**, a comprehensive UI library for *Nuxt 3* applications.
+Welcome to **Pohon UI**, a comprehensive UI library for *Nuxt 3* applications.
 Built with [Tailwind CSS](https://tailwindcss.com) and [Reka UI](https://reka-ui.com), it provides a complete set of components for building beautiful interfaces.
 
 ![Image](https://ui.nuxt.com/placeholder.jpeg)
 
 ## Key Features
 
-Nuxt UI combines the best of modern web development
+Pohon UI combines the best of modern web development
 
 - **Fully typed** with TypeScript support
 - *Customizable* theme system with semantic colors
@@ -29,13 +29,13 @@ Nuxt UI combines the best of modern web development
 
 ### Getting Started
 
-Install Nuxt UI in your project with the following command:
+Install Pohon UI in your project with the following command:
 
 \`\`\`
 npx nuxi@latest module add ui
 \`\`\`
 
-> *Nuxt UI is designed to be intuitive and easy to use, whether you're building a simple landing page or a complex application.*
+> *Pohon UI is designed to be intuitive and easy to use, whether you're building a simple landing page or a complex application.*
 
 ### Component Categories
 
@@ -50,9 +50,9 @@ Here's a simple example using the \`Button\` component:
 
 \`\`\`
 <template>
-  <UButton color="primary">
+  <PButton color="primary">
     Click me
-  </UButton>
+  </PButton>
 </template>
 \`\`\`
 
@@ -68,7 +68,7 @@ Powerful capabilities for modern applications
   - With multiple levels
   - And proper spacing
 
-Whether you're working on a personal project or building an enterprise application, Nuxt UI provides all the tools you need to create stunning user interfaces quickly and efficiently. The library is constantly evolving with new components and improvements based on community feedback.
+Whether you're working on a personal project or building an enterprise application, Pohon UI provides all the tools you need to create stunning user interfaces quickly and efficiently. The library is constantly evolving with new components and improvements based on community feedback.
 
 Visit our [documentation](https://ui.nuxt.com) to learn more and explore all available components.
 `)
@@ -465,7 +465,7 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     ref="editorRef"
     v-slot="{ editor, handlers }"
     v-model="content"
@@ -485,14 +485,14 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
     :ui="{ base: 'sm:px-14', content: 'max-w-2xl mx-auto' }"
   >
     <Navbar>
-      <UEditorToolbar :editor="editor" :items="toolbarItems">
+      <PEditorToolbar :editor="editor" :items="toolbarItems">
         <template #link>
           <EditorLinkPopover :editor="editor" auto-open />
         </template>
-      </UEditorToolbar>
+      </PEditorToolbar>
     </Navbar>
 
-    <UEditorToolbar
+    <PEditorToolbar
       :editor="editor"
       :items="toolbarItems"
       layout="bubble"
@@ -507,9 +507,9 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
       <template #link>
         <EditorLinkPopover :editor="editor" />
       </template>
-    </UEditorToolbar>
+    </PEditorToolbar>
 
-    <UEditorToolbar
+    <PEditorToolbar
       :editor="editor"
       :items="imageToolbarItems(editor)"
       layout="bubble"
@@ -518,14 +518,14 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
       }"
     />
 
-    <UEditorSuggestionMenu :editor="editor" :items="suggestionItems" />
+    <PEditorSuggestionMenu :editor="editor" :items="suggestionItems" />
 
-    <UEditorMentionMenu v-model:search-term="searchTerm" :editor="editor" :items="mentionItems" ignore-filter />
+    <PEditorMentionMenu v-model:search-term="searchTerm" :editor="editor" :items="mentionItems" ignore-filter />
 
-    <UEditorEmojiMenu :editor="editor" :items="emojiItems" />
+    <PEditorEmojiMenu :editor="editor" :items="emojiItems" />
 
-    <UEditorDragHandle v-slot="{ ui, onClick }" :editor="editor" @node-change="selectedNode = $event">
-      <UButton
+    <PEditorDragHandle v-slot="{ ui, onClick }" :editor="editor" @node-change="selectedNode = $event">
+      <PButton
         icon="i-lucide-plus"
         color="neutral"
         variant="ghost"
@@ -547,7 +547,7 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
         :ui="{ content: 'w-48', label: 'text-xs' }"
         @update:open="editor.chain().setMeta('lockDragHandle', $event).run()"
       >
-        <UButton
+        <PButton
           color="neutral"
           variant="ghost"
           active-variant="soft"
@@ -557,6 +557,6 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
           :class="ui.handle()"
         />
       </PDropdownMenu>
-    </UEditorDragHandle>
-  </UEditor>
+    </PEditorDragHandle>
+  </PEditor>
 </template>

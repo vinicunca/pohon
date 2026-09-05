@@ -5,12 +5,12 @@ Hover over the left side of this block to see the drag handle appear and reorder
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     class="w-full min-h-21"
   >
-    <UEditorDragHandle :editor="editor" />
-  </UEditor>
+    <PEditorDragHandle :editor="editor" />
+  </PEditor>
 </template>

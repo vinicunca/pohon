@@ -11,7 +11,7 @@ const password = ref('')
     :ui="{ trailing: 'pe-1' }"
   >
     <template #trailing>
-      <UButton
+      <PButton
         color="neutral"
         variant="link"
         size="sm"

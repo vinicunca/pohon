@@ -36,7 +36,7 @@ export default defineNuxtConfig({
 
 **Vue (Vite):** No module registration needed, import directly from `@comark/vue`.
 
-> `@comark/nuxt` (or `@comark/vue` for Vue projects) provides the `Comark` component used to render AI responses as streaming Markdown, it incrementally renders tokens as they arrive and automatically enables Nuxt UI's prose components.
+> `@comark/nuxt` (or `@comark/vue` for Vue projects) provides the `Comark` component used to render AI responses as streaming Markdown, it incrementally renders tokens as they arrive and automatically enables Pohon UI's prose components.
 
 ### Dark mode for syntax highlighting
 
@@ -108,12 +108,12 @@ export default defineEventHandler(async (event) => {
 
 ```
 PDashboardPanel
-├── #header → UDashboardNavbar
-├── #body → PContainer → UChatMessages
-│                         ├── #content → UChatReasoning, UChatTool, Comark
+├── #header → PDashboardNavbar
+├── #body → PContainer → PChatMessages
+│                         ├── #content → PChatReasoning, PChatTool, Comark
 │                         └── #indicator (loading)
-└── #footer → PContainer → UChatPrompt
-                            └── UChatPromptSubmit
+└── #footer → PContainer → PChatPrompt
+                            └── PChatPromptSubmit
 ```
 
 ## Full page chat
@@ -145,18 +145,18 @@ function onSubmit() {
 <template>
   <PDashboardPanel>
     <template #header>
-      <UDashboardNavbar title="Chat" />
+      <PDashboardNavbar title="Chat" />
     </template>
 
     <template #body>
       <PContainer>
-        <UChatMessages :messages="messages" :status="status">
+        <PChatMessages :messages="messages" :status="status">
           <template #content="{ message }">
             <template
               v-for="(part, index) in message.parts"
               :key="`${message.id}-${part.type}-${index}`"
             >
-              <UChatReasoning
+              <PChatReasoning
                 v-if="isReasoningUIPart(part)"
                 :text="part.text"
                 :streaming="isPartStreaming(part)"
@@ -167,9 +167,9 @@ function onSubmit() {
                   :plugins="[highlight()]"
                   class="*:first:mt-0 *:last:mb-0"
                 />
-              </UChatReasoning>
+              </PChatReasoning>
 
-              <UChatTool
+              <PChatTool
                 v-else-if="isToolUIPart(part)"
                 :text="getToolName(part)"
                 :streaming="isToolStreaming(part)"
@@ -192,19 +192,19 @@ function onSubmit() {
               </template>
             </template>
           </template>
-        </UChatMessages>
+        </PChatMessages>
       </PContainer>
     </template>
 
     <template #footer>
       <PContainer class="pb-4 sm:pb-6">
-        <UChatPrompt v-model="input" :error="error" @submit="onSubmit">
-          <UChatPromptSubmit
+        <PChatPrompt v-model="input" :error="error" @submit="onSubmit">
+          <PChatPromptSubmit
             :status="status"
             @stop="stop()"
             @reload="regenerate()"
           />
-        </UChatPrompt>
+        </PChatPrompt>
       </PContainer>
     </template>
   </PDashboardPanel>
@@ -213,28 +213,28 @@ function onSubmit() {
 
 ## Key components
 
-- `UChatMessages` — scrollable message list with auto-scroll. Props: `messages`, `status`. Slots: `#content` (per message), `#actions`, `#indicator`.
-- `UChatMessage` — individual bubble. Props: `message`, `side` (`'left'`/`'right'`).
-- `UChatReasoning` — collapsible reasoning block. Auto-opens during streaming, auto-closes when done. Use `isPartStreaming(part)` from `pohon-ui/utils/ai`.
-- `UChatTool` — tool invocation status. Use `isToolStreaming(part)`. Variants: `'inline'` (default), `'card'`.
-- `UChatPrompt` — enhanced textarea. Accepts all Textarea props + `error` prop.
-- `UChatPromptSubmit` — submit button with automatic status handling (send/stop/reload).
-- `UChatPalette` — layout wrapper for chat inside overlays.
+- `PChatMessages` — scrollable message list with auto-scroll. Props: `messages`, `status`. Slots: `#content` (per message), `#actions`, `#indicator`.
+- `PChatMessage` — individual bubble. Props: `message`, `side` (`'left'`/`'right'`).
+- `PChatReasoning` — collapsible reasoning block. Auto-opens during streaming, auto-closes when done. Use `isPartStreaming(part)` from `pohon-ui/utils/ai`.
+- `PChatTool` — tool invocation status. Use `isToolStreaming(part)`. Variants: `'inline'` (default), `'card'`.
+- `PChatPrompt` — enhanced textarea. Accepts all Textarea props + `error` prop.
+- `PChatPromptSubmit` — submit button with automatic status handling (send/stop/reload).
+- `PChatPalette` — layout wrapper for chat inside overlays.
 
 ## Chat in a modal
 
 ```vue
 <PModal v-model:open="isOpen">
   <template #content>
-    <UChatPalette>
-      <UChatMessages :messages="messages" :status="status" />
+    <PChatPalette>
+      <PChatMessages :messages="messages" :status="status" />
 
       <template #prompt>
-        <UChatPrompt v-model="input" @submit="onSubmit">
-          <UChatPromptSubmit :status="status" />
-        </UChatPrompt>
+        <PChatPrompt v-model="input" @submit="onSubmit">
+          <PChatPromptSubmit :status="status" />
+        </PChatPrompt>
       </template>
-    </UChatPalette>
+    </PChatPalette>
   </template>
 </PModal>
 ```
@@ -242,8 +242,8 @@ function onSubmit() {
 ## With model selector
 
 ```vue
-<UChatPrompt v-model="input" @submit="onSubmit">
-  <UChatPromptSubmit :status="status" />
+<PChatPrompt v-model="input" @submit="onSubmit">
+  <PChatPromptSubmit :status="status" />
 
   <template #footer>
     <PSelect
@@ -254,7 +254,7 @@ function onSubmit() {
       :items="models"
     />
   </template>
-</UChatPrompt>
+</PChatPrompt>
 ```
 
 ## Conversation sidebar
@@ -263,18 +263,18 @@ Combine with dashboard layout for a ChatGPT-like interface:
 
 ```vue [layouts/dashboard.vue]
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar collapsible resizable>
+  <PDashboardGroup>
+    <PDashboardSidebar collapsible resizable>
       <template #header>
-        <UButton icon="i-lucide-plus" label="New chat" block />
+        <PButton icon="i-lucide-plus" label="New chat" block />
       </template>
 
       <template #default>
         <PNavigationMenu :items="conversations" orientation="vertical" />
       </template>
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
     <slot />
-  </UDashboardGroup>
+  </PDashboardGroup>
 </template>
 ```

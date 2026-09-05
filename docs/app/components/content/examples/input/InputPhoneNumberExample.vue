@@ -33,7 +33,7 @@ watch(countryCode, () => {
 </script>
 
 <template>
-  <UFieldGroup>
+  <PFieldGroup>
     <PSelectMenu
       v-model="countryCode"
       :items="phoneCodes"
@@ -83,5 +83,5 @@ watch(countryCode, () => {
         {{ dialCode }}
       </template>
     </PInput>
-  </UFieldGroup>
+  </PFieldGroup>
 </template>

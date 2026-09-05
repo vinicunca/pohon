@@ -10,7 +10,7 @@ const modelValue = shallowRef(new CalendarDate(2022, 1, 10))
   <PInputDate ref="inputDate" v-model="modelValue">
     <template #trailing>
       <PPopover :reference="inputDate?.inputsRef[3]?.$el">
-        <UButton
+        <PButton
           color="neutral"
           variant="link"
           size="sm"
@@ -20,7 +20,7 @@ const modelValue = shallowRef(new CalendarDate(2022, 1, 10))
         />
 
         <template #content>
-          <UCalendar v-model="modelValue" class="p-2" />
+          <PCalendar v-model="modelValue" class="p-2" />
         </template>
       </PPopover>
     </template>

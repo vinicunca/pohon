@@ -50,7 +50,7 @@ const items: EditorEmojiMenuItem[] = [{
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-slot="{ editor }"
     v-model="value"
     :extensions="[Emoji]"
@@ -58,6 +58,6 @@ const items: EditorEmojiMenuItem[] = [{
     placeholder="Type : to add emojis..."
     class="w-full min-h-26"
   >
-    <UEditorEmojiMenu :editor="editor" :items="items" />
-  </UEditor>
+    <PEditorEmojiMenu :editor="editor" :items="items" />
+  </PEditor>
 </template>

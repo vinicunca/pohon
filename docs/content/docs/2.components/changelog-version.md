@@ -1,6 +1,6 @@
 ---
 title: ChangelogVersion
-description: 'A customizable article to display in a changelog.'
+description: "A customizable article to display in a changelog."
 category: page
 links:
   - label: GitHub
@@ -14,39 +14,42 @@ The ChangelogVersion component provides a flexible way to display an `<article>`
 
 ::code-preview
 
-::u-changelog-version
----
-title: 'Introducing Nuxt UI v3'
-description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+## ::u-changelog-version
+
+title: 'Introducing Pohon UI v3'
+description: 'Pohon UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
 image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
 date: 2025-03-12
 authors:
-  - name: Benjamin Canac
-    description: '@benjamincanac'
-    avatar:
-      src: https://github.com/benjamincanac.png
-      loading: lazy
-    to: https://x.com/benjamincanac
-    target: _blank
-  - name: Sebastien Chopin
-    description: '@atinux'
-    avatar:
-      src: https://github.com/atinux.png
-      loading: lazy
-    to: https://x.com/atinux
-    target: _blank
-  - name: Hugo Richard
-    description: '@hugorcd'
-    avatar:
-      src: https://github.com/hugorcd.png
-      loading: lazy
-    to: https://x.com/hugorcd
-    target: _blank
-to: 'https://nuxt.com/blog/nuxt-ui-v3'
-target: '_blank'
-class: 'w-full'
-ui.container: 'max-w-lg'
+
+- name: Benjamin Canac
+  description: '@benjamincanac'
+  avatar:
+  src: https://github.com/benjamincanac.png
+  loading: lazy
+  to: https://x.com/benjamincanac
+  target: \_blank
+- name: Sebastien Chopin
+  description: '@atinux'
+  avatar:
+  src: https://github.com/atinux.png
+  loading: lazy
+  to: https://x.com/atinux
+  target: \_blank
+- name: Hugo Richard
+  description: '@hugorcd'
+  avatar:
+  src: https://github.com/hugorcd.png
+  loading: lazy
+  to: https://x.com/hugorcd
+  target: \_blank
+  to: 'https://nuxt.com/blog/nuxt-ui-v3'
+  target: '\_blank'
+  class: 'w-full'
+  ui.container: 'max-w-lg'
+
 ---
+
 ::
 
 ::
@@ -59,38 +62,44 @@ Use the `ChangelogVersions` component to display multiple changelog versions in 
 
 Use the `title` prop to display the title of the ChangelogVersion.
 
-::component-code
----
+## ::component-code
+
 hide:
-  - class
-  - ui
-  - ui.container
-props:
-  title: 'Introducing Nuxt UI v3'
+
+- class
+- ui
+- ui.container
+  props:
+  title: 'Introducing Pohon UI v3'
   class: 'w-full'
   ui.container: 'max-w-lg'
+
 ---
+
 ::
 
 ### Description
 
 Use the `description` prop to display the description of the ChangelogVersion.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 hide:
-  - class
-  - ui
-  - ui.container
-ignore:
-  - title
-props:
-  title: 'Introducing Nuxt UI v3'
-  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+
+- class
+- ui
+- ui.container
+  ignore:
+- title
+  props:
+  title: 'Introducing Pohon UI v3'
+  description: 'Pohon UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
   class: 'w-full'
   ui.container: 'max-w-lg'
+
 ---
+
 ::
 
 ### Date
@@ -101,77 +110,86 @@ Use the `date` prop to display the date of the ChangelogVersion.
 The date is automatically formatted to the [current locale](/docs/getting-started/integrations/i18n/nuxt#locale). You can either pass a `Date` object or a string.
 ::
 
-::component-code
----
+## ::component-code
+
 prettier: true
 hide:
-  - class
-  - ui
-  - ui.container
-ignore:
-  - title
-  - description
-props:
-  title: 'Introducing Nuxt UI v3'
-  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+
+- class
+- ui
+- ui.container
+  ignore:
+- title
+- description
+  props:
+  title: 'Introducing Pohon UI v3'
+  description: 'Pohon UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
   date: 2025-03-12
   class: 'w-full'
   ui.container: 'max-w-lg'
+
 ---
+
 ::
 
 ### Badge
 
 Use the `badge` prop to display a [Badge](/docs/components/badge) on the ChangelogVersion.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 hide:
-  - class
-  - ui
-  - ui.container
-ignore:
-  - title
-  - description
-  - date
-props:
-  title: 'Introducing Nuxt UI v3'
-  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+
+- class
+- ui
+- ui.container
+  ignore:
+- title
+- description
+- date
+  props:
+  title: 'Introducing Pohon UI v3'
+  description: 'Pohon UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
   date: 2025-03-12
   badge: 'Release'
   class: 'w-full'
   ui.container: 'max-w-lg'
+
 ---
+
 ::
 
 You can pass any property from the [Badge](/docs/components/badge#props) component to customize it.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 hide:
-  - class
-  - ui
-  - ui.container
-ignore:
-  - title
-  - description
-  - date
-  - badge.label
-  - badge.color
-  - badge.variant
-props:
-  title: 'Introducing Nuxt UI v3'
-  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+
+- class
+- ui
+- ui.container
+  ignore:
+- title
+- description
+- date
+- badge.label
+- badge.color
+- badge.variant
+  props:
+  title: 'Introducing Pohon UI v3'
+  description: 'Pohon UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
   date: 2025-03-12
   badge:
-    label: 'Release'
-    color: primary
-    variant: outline
+  label: 'Release'
+  color: primary
+  variant: outline
   class: 'w-full'
   ui.container: 'max-w-lg'
+
 ---
+
 ::
 
 ### Image
@@ -182,25 +200,28 @@ Use the `image` prop to display an image in the BlogPost.
 If [`@nuxt/image`](https://image.nuxt.com/get-started/installation) is installed, the `<NuxtImg>` component will be used instead of the native `img` tag.
 ::
 
-::component-code
----
+## ::component-code
+
 prettier: true
 hide:
-  - class
-  - ui
-  - ui.container
-ignore:
-  - title
-  - description
-  - date
-props:
-  title: 'Introducing Nuxt UI v3'
-  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+
+- class
+- ui
+- ui.container
+  ignore:
+- title
+- description
+- date
+  props:
+  title: 'Introducing Pohon UI v3'
+  description: 'Pohon UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
   date: 2025-03-12
   image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
   class: 'w-full'
   ui.container: 'max-w-lg'
+
 ---
+
 ::
 
 ### Authors
@@ -216,109 +237,115 @@ Use the `authors` prop to display a list of [User](/docs/components/user) in the
 
 You can pass any property from the [Link](/docs/components/link#props) component such as `to`, `target`, etc.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 hide:
-  - class
-  - ui
-  - ui.container
-external:
-  - authors
-externalTypes:
-  - UserProps[]
-ignore:
-  - title
-  - description
-  - date
-  - image
-  - authors
-props:
-  title: 'Introducing Nuxt UI v3'
-  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+
+- class
+- ui
+- ui.container
+  external:
+- authors
+  externalTypes:
+- UserProps[]
+  ignore:
+- title
+- description
+- date
+- image
+- authors
+  props:
+  title: 'Introducing Pohon UI v3'
+  description: 'Pohon UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
   date: 2025-03-12
   image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
-  authors:
-    - name: Benjamin Canac
-      description: '@benjamincanac'
-      avatar:
-        src: https://github.com/benjamincanac.png
-        loading: lazy
-      to: https://x.com/benjamincanac
-      target: _blank
-    - name: Sebastien Chopin
-      description: '@atinux'
-      avatar:
-        src: https://github.com/atinux.png
-        loading: lazy
-      to: https://x.com/atinux
-      target: _blank
-    - name: Hugo Richard
-      description: '@hugorcd'
-      avatar:
-        src: https://github.com/hugorcd.png
-        loading: lazy
-      to: https://x.com/hugorcd
-      target: _blank
+  authors: - name: Benjamin Canac
+  description: '@benjamincanac'
+  avatar:
+  src: https://github.com/benjamincanac.png
+  loading: lazy
+  to: https://x.com/benjamincanac
+  target: \_blank - name: Sebastien Chopin
+  description: '@atinux'
+  avatar:
+  src: https://github.com/atinux.png
+  loading: lazy
+  to: https://x.com/atinux
+  target: \_blank - name: Hugo Richard
+  description: '@hugorcd'
+  avatar:
+  src: https://github.com/hugorcd.png
+  loading: lazy
+  to: https://x.com/hugorcd
+  target: \_blank
   class: 'w-full'
   ui.container: 'max-w-lg'
+
 ---
+
 ::
 
 ### Link
 
 You can pass any property from the [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) component such as `to`, `target`, `rel`, etc.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 hide:
-  - class
-  - ui
-  - ui.container
-ignore:
-  - title
-  - description
-  - date
-  - image
-  - target
-props:
-  title: 'Introducing Nuxt UI v3'
-  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+
+- class
+- ui
+- ui.container
+  ignore:
+- title
+- description
+- date
+- image
+- target
+  props:
+  title: 'Introducing Pohon UI v3'
+  description: 'Pohon UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
   date: 2025-03-12
   image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
   to: 'https://nuxt.com/blog/nuxt-ui-v3'
-  target: _blank
+  target: \_blank
   class: 'w-full'
   ui.container: 'max-w-lg'
+
 ---
+
 ::
 
 ### Indicator
 
 Use the `indicator` prop to hide the indicator dot on the left. Defaults to `true`.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 hide:
-  - class
-  - ui
-  - ui.container
-ignore:
-  - title
-  - description
-  - date
-  - image
-props:
-  title: 'Introducing Nuxt UI v3'
-  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
+
+- class
+- ui
+- ui.container
+  ignore:
+- title
+- description
+- date
+- image
+  props:
+  title: 'Introducing Pohon UI v3'
+  description: 'Pohon UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
   date: 2025-03-12
   image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
   indicator: false
   class: 'w-full'
   ui.container: 'max-w-lg'
+
 ---
+
 ::
 
 ::note
@@ -333,14 +360,16 @@ You can use the `body` slot to display custom content between the image and the 
 
 - the [MDC](https://github.com/nuxt-content/mdc?tab=readme-ov-file#mdc) component from `@nuxtjs/mdc` to display some markdown.
 - the [ContentRenderer](https://content.nuxt.com/docs/components/content-renderer) component from `@nuxt/content` to render the content of the page or list.
-- or use the `:u-changelog-version` component directly in your content with markdown inside the `body` slot as Nuxt UI provides pre-styled prose components.
+- or use the `:u-changelog-version` component directly in your content with markdown inside the `body` slot as Pohon UI provides pre-styled prose components.
 
-::component-example
----
+## ::component-example
+
 prettier: true
 name: 'changelog-version-markdown-example'
 collapse: true
+
 ---
+
 ::
 
 ## API

@@ -65,5 +65,5 @@ useSortable(tree, items, {
 </script>
 
 <template>
-  <UTree ref="tree" :nested="false" :unmount-on-hide="false" :items="items" />
+  <PTree ref="tree" :nested="false" :unmount-on-hide="false" :items="items" />
 </template>

@@ -22,17 +22,17 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
-    <UFormField label="Email" name="email">
+  <PForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
+    <PFormField label="Email" name="email">
       <PInput v-model="state.email" />
-    </UFormField>
+    </PFormField>
 
-    <UFormField label="Tags" name="tags" :error-pattern="/^tags\..+/">
+    <PFormField label="Tags" name="tags" :error-pattern="/^tags\..+/">
       <PInputTags v-model="state.tags" />
-    </UFormField>
+    </PFormField>
 
-    <UButton type="submit">
+    <PButton type="submit">
       Submit
-    </UButton>
-  </UForm>
+    </PButton>
+  </PForm>
 </template>

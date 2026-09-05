@@ -53,7 +53,7 @@ watch(file, async (newFile) => {
       class="min-h-48"
     >
       <template #leading>
-        <UAvatar
+        <PAvatar
           :icon="loading ? 'i-lucide-loader-circle' : 'i-lucide-image'"
           size="xl"
           :ui="{ icon: [loading && 'animate-spin'] }"

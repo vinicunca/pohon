@@ -53,11 +53,11 @@ const { data: navigation } = await useAsyncData("navigation", () =>
 </script>
 
 <template>
-  <UApp>
+  <PApp>
     <ClientOnly>
       <LazyUContentSearch :navigation="navigation" />
     </ClientOnly>
-  </UApp>
+  </PApp>
 </template>
 ```
 
@@ -84,7 +84,7 @@ const { data: files } = useLazyAsyncData(
 </script>
 
 <template>
-  <UApp>
+  <PApp>
     <ClientOnly>
       <LazyUContentSearch
         :navigation="navigation"
@@ -92,7 +92,7 @@ const { data: files } = useLazyAsyncData(
         :fuse="{ resultLimit: 20, fuseOptions: { threshold: 0.2 } }"
       />
     </ClientOnly>
-  </UApp>
+  </PApp>
 </template>
 ```
 
@@ -130,7 +130,7 @@ watch(open, (value) => {
 </script>
 
 <template>
-  <UApp>
+  <PApp>
     <ClientOnly>
       <LazyUContentSearch
         :navigation="navigation"
@@ -138,7 +138,7 @@ watch(open, (value) => {
         :search-status="status"
       />
     </ClientOnly>
-  </UApp>
+  </PApp>
 </template>
 ```
 
@@ -156,11 +156,11 @@ Use the `shortcut` prop to change the shortcut used in [defineShortcuts](/docs/c
 
 ```vue [app.vue]{5}
 <template>
-  <UApp>
+  <PApp>
     <ClientOnly>
       <LazyUContentSearch shortcut="meta_k" />
     </ClientOnly>
-  </UApp>
+  </PApp>
 </template>
 ```
 
@@ -190,11 +190,11 @@ const links = [
 </script>
 
 <template>
-  <UApp>
+  <PApp>
     <ClientOnly>
       <LazyUContentSearch :links="links" />
     </ClientOnly>
-  </UApp>
+  </PApp>
 </template>
 ```
 
@@ -214,11 +214,11 @@ You can disable this behavior by setting the `color-mode` prop to `false`:
 
 ```vue [app.vue]{5}
 <template>
-  <UApp>
+  <PApp>
     <ClientOnly>
       <LazyUContentSearch :color-mode="false" />
     </ClientOnly>
-  </UApp>
+  </PApp>
 </template>
 ```
 

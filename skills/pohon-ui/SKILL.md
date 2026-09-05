@@ -40,7 +40,7 @@ When you need to know **what a component accepts** or **how its API works**, use
 
 ## Core rules (always apply)
 
-1. **Always wrap the app in `UApp`** — required for toasts, tooltips, and programmatic overlays. Accepts a `locale` prop for i18n.
+1. **Always wrap the app in `PApp`** — required for toasts, tooltips, and programmatic overlays. Accepts a `locale` prop for i18n.
 2. **Always use semantic colors** — `text-default`, `bg-elevated`, `border-muted`, etc. Never use raw UnoCSS palette colors like `text-gray-500`.
 3. **Read generated theme files for slot names** — Nuxt: `.nuxt/pohon-ui/<component>.ts`, Vue: `node_modules/.pohon-ui/ui/<component>.ts`. These show every slot, variant, and default class for any component.
 4. **Override priority** (highest wins): `ui` prop / `class` prop → global config → theme defaults.

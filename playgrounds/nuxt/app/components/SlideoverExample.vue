@@ -13,7 +13,7 @@ const emit = defineEmits(['close'])
     </template>
 
     <template #footer>
-      <UButton color="neutral" label="Close" @click="emit('close')" />
+      <PButton color="neutral" label="Close" @click="emit('close')" />
     </template>
   </PSlideover>
 </template>

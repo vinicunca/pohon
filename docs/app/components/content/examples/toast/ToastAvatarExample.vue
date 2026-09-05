@@ -17,5 +17,5 @@ function showToast() {
 </script>
 
 <template>
-  <UButton label="Invite user" color="neutral" variant="outline" @click="showToast" />
+  <PButton label="Invite user" color="neutral" variant="outline" @click="showToast" />
 </template>

@@ -4,10 +4,10 @@ import Button from '../../src/runtime/components/Button.vue';
 
 // Where does a Button's render cost come from? Three rungs isolate it:
 //   1. plain <button>         — baseline DOM/reactivity cost of a trivial element
-//   2. PButton (no link)      — adds the Button + ULink component stack (ULink
+//   2. PButton (no link)      — adds the Button + PLink component stack (PLink
 //                               renders a plain <button> when there's no `to`)
 //   3. PButton (link, `to`)   — adds the router-link path (route resolution, RouterLink)
-// (2) − (1) = the Nuxt UI component-stack overhead; (3) − (2) = the routing overhead.
+// (2) − (1) = the Pohon UI component-stack overhead; (3) − (2) = the routing overhead.
 
 // Declares `loading` so the re-render benches can toggle a prop on it too.
 const Plain = { props: ['loading'], template: '<button type="button">x</button>' };

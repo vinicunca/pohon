@@ -76,21 +76,21 @@ const stepper = useTemplateRef('stepper')
     </PStepper>
 
     <div class="flex gap-2 justify-between">
-      <UButton
+      <PButton
         leading-icon="i-lucide-arrow-left"
         :disabled="!stepper?.hasPrev"
         @click="stepper?.prev()"
       >
         Prev
-      </UButton>
+      </PButton>
 
-      <UButton
+      <PButton
         trailing-icon="i-lucide-arrow-right"
         :disabled="!stepper?.hasNext"
         @click="stepper?.next()"
       >
         Next
-      </UButton>
+      </PButton>
     </div>
   </div>
 </template>

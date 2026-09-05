@@ -1,9 +1,9 @@
 seo:
   title: Blog
-  description: Tutorials, guides, and insights to help you build beautiful applications with Nuxt UI.
+  description: Tutorials, guides, and insights to help you build beautiful applications with Pohon UI.
 title: Blog
-description: Tutorials, guides, and insights to help you build beautiful applications with Nuxt UI.
+description: Tutorials, guides, and insights to help you build beautiful applications with Pohon UI.
 hero:
   title: Nuxt [UI]{.text-primary} Blog
-  description: Tutorials, guides, and insights to help you build beautiful applications with Nuxt UI.
+  description: Tutorials, guides, and insights to help you build beautiful applications with Pohon UI.
 navigation: false

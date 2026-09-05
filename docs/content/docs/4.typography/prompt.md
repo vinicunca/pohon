@@ -16,17 +16,17 @@ Use the `prompt` component to display a pre-built AI prompt that users can copy 
 ## ::component-code{slug="prompt" prose}
 
 props:
-description: Build a dashboard layout with Nuxt UI.
+description: Build a dashboard layout with Pohon UI.
 class: 'w-full my-0'
 hide:
 
 - class
   slots:
   default: |
-  You are a Nuxt UI expert. Help me build a dashboard layout with a collapsible sidebar and a sticky top navbar.
+  You are a Pohon UI expert. Help me build a dashboard layout with a collapsible sidebar and a sticky top navbar.
 
       Requirements:
-      - Use `PDashboardPanel`, `UDashboardSidebar`, and `UDashboardNavbar`
+      - Use `PDashboardPanel`, `PDashboardSidebar`, and `PDashboardNavbar`
       - Use semantic color tokens like `bg-elevated` and `text-muted` for theming
       - The sidebar should include navigation links with icons using `PNavigationMenu`
       - The navbar should display a breadcrumb, a search button, and a user dropdown menu
@@ -53,14 +53,14 @@ ignore:
   class: 'w-full my-0'
   slots:
   default: |
-  Create a registration form using Nuxt UI with Zod schema validation.
+  Create a registration form using Pohon UI with Zod schema validation.
 
       Requirements:
-      - Use `UForm` with a Zod schema for validation
-      - Add `UFormField` wrapping each input: name (`PInput`), email (`PInput` type email), role (`PSelect` with options Admin, Editor, Viewer)
-      - Include a submit `UButton` with loading state
+      - Use `PForm` with a Zod schema for validation
+      - Add `PFormField` wrapping each input: name (`PInput`), email (`PInput` type email), role (`PSelect` with options Admin, Editor, Viewer)
+      - Include a submit `PButton` with loading state
       - Display inline error messages below each field
-      - On successful submit, show a `UToast` notification
+      - On successful submit, show a `PToast` notification
 
 ---
 
@@ -89,7 +89,7 @@ ignore:
 
       Requirements:
       - Use `useColorMode` from `@nuxtjs/color-mode` to manage the current mode
-      - Render a `UButton` with `variant="ghost"` that cycles between `light`, `dark`, and `system` on click
+      - Render a `PButton` with `variant="ghost"` that cycles between `light`, `dark`, and `system` on click
       - Update the button icon dynamically: `i-lucide-sun` for light, `i-lucide-moon` for dark, `i-lucide-monitor` for system
       - Add a tooltip using `PTooltip` that shows the current active mode
 

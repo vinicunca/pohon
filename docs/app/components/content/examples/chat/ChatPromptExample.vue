@@ -16,9 +16,9 @@ function onSubmit() {
 </script>
 
 <template>
-  <UChatPrompt v-model="input" class="w-full" @submit="onSubmit">
+  <PChatPrompt v-model="input" class="w-full" @submit="onSubmit">
     <template #footer>
-      <UButton icon="i-lucide-plus" color="neutral" variant="ghost" size="sm" />
+      <PButton icon="i-lucide-plus" color="neutral" variant="ghost" size="sm" />
 
       <div class="flex items-center gap-1.5">
         <PSelect
@@ -31,8 +31,8 @@ function onSubmit() {
           square
         />
 
-        <UChatPromptSubmit size="sm" />
+        <PChatPromptSubmit size="sm" />
       </div>
     </template>
-  </UChatPrompt>
+  </PChatPrompt>
 </template>

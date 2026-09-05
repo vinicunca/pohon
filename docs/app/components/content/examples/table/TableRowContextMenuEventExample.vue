@@ -3,7 +3,7 @@ import { h, resolveComponent } from 'vue'
 import type { ContextMenuItem, TableColumn, TableRow } from 'pohon-ui'
 import { useClipboard } from '@vueuse/core'
 
-const UBadge = resolveComponent('UBadge')
+const PBadge = resolveComponent('PBadge')
 const PCheckbox = resolveComponent('PCheckbox')
 
 const toast = useToast()
@@ -87,7 +87,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -147,8 +147,8 @@ function onContextmenu(_e: Event, row: TableRow<Payment>) {
 </script>
 
 <template>
-  <UContextMenu :items="items">
-    <UTable
+  <PContextMenu :items="items">
+    <PTable
       :data="data"
       :columns="columns"
       class="flex-1"
@@ -157,6 +157,6 @@ function onContextmenu(_e: Event, row: TableRow<Payment>) {
       <template #expanded="{ row }">
         <pre>{{ row.original }}</pre>
       </template>
-    </UTable>
-  </UContextMenu>
+    </PTable>
+  </PContextMenu>
 </template>

@@ -155,7 +155,7 @@ watch(open, (isOpen) => {
       :dismissible="false"
     >
       <PTooltip text="Inspect theme slots" :disabled="open" :content="{ side: 'right' }">
-        <UButton
+        <PButton
           color="neutral"
           variant="outline"
           size="sm"
@@ -165,7 +165,7 @@ watch(open, (isOpen) => {
           tabindex="-1"
         >
           <ComponentThemeVisualizerIcon :open="open" />
-        </UButton>
+        </PButton>
       </PTooltip>
 
       <template #content>

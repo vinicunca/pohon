@@ -9,7 +9,7 @@ links:
     target: _blank
 ---
 
-Nuxt UI provides a set of components designed to build AI-powered chat interfaces. They integrate seamlessly with the [Vercel AI SDK](https://ai-sdk.dev/) for streaming responses, reasoning, tool calling, and more.
+Pohon UI provides a set of components designed to build AI-powered chat interfaces. They integrate seamlessly with the [Vercel AI SDK](https://ai-sdk.dev/) for streaming responses, reasoning, tool calling, and more.
 
 ::callout{icon="i-simple-icons-github"}
 Check out the [`Nuxt`](https://github.com/nuxt-ui-templates/chat) and [`Vue`](https://github.com/nuxt-ui-templates/chat-vue) AI Chat templates on GitHub for production-ready implementations.
@@ -67,7 +67,7 @@ export default defineNuxtConfig({
 ```
 
 ::::note
-[`@comark/nuxt`](https://comark.dev/rendering/nuxt) provides the `Markdown` component used to render AI responses as streaming Markdown, it incrementally renders tokens as they arrive, avoiding the flicker and re-parsing that traditional Markdown renderers cause. It also automatically enables Nuxt UI's [prose components](/docs/typography) so your content is styled to match your theme.
+[`@comark/nuxt`](https://comark.dev/rendering/nuxt) provides the `Markdown` component used to render AI responses as streaming Markdown, it incrementally renders tokens as they arrive, avoiding the flicker and re-parsing that traditional Markdown renderers cause. It also automatically enables Pohon UI's [prose components](/docs/typography) so your content is styled to match your theme.
 ::::
 
 :::
@@ -97,7 +97,7 @@ bun add ai @ai-sdk/gateway @ai-sdk/vue @comark/vue
 
 ::::note
 [`@comark/vue`](https://comark.dev/rendering/vue) provides the `Markdown` component used to render AI responses as streaming Markdown, it incrementally renders tokens as they arrive, avoiding the flicker and re-parsing that traditional Markdown renderers cause.
-<br><br>To use Nuxt UI's [prose components](/docs/typography) with Comark, enable the `prose` option in your `vite.config.ts`:
+<br><br>To use Pohon UI's [prose components](/docs/typography) with Comark, enable the `prose` option in your `vite.config.ts`:
 
 ```ts [vite.config.ts] {9}
 import { defineConfig } from "vite";
@@ -439,13 +439,13 @@ function onSubmit() {
 </script>
 
 <template>
-  <UChatMessages :messages="messages" :status="status">
+  <PChatMessages :messages="messages" :status="status">
     <template #content="{ message }">
       <template
         v-for="(part, index) in message.parts"
         :key="`${message.id}-${part.type}-${index}`"
       >
-        <UChatReasoning
+        <PChatReasoning
           v-if="isReasoningUIPart(part)"
           :text="part.text"
           :streaming="isPartStreaming(part)"
@@ -456,9 +456,9 @@ function onSubmit() {
             :plugins="[shiki()]"
             class="*:first:mt-0 *:last:mb-0"
           />
-        </UChatReasoning>
+        </PChatReasoning>
 
-        <UChatTool
+        <PChatTool
           v-else-if="isToolUIPart(part)"
           :text="getToolName(part)"
           :streaming="isToolStreaming(part)"
@@ -502,11 +502,11 @@ function onSubmit() {
         </template>
       </template>
     </template>
-  </UChatMessages>
+  </PChatMessages>
 
-  <UChatPrompt v-model="input" :error="error" @submit="onSubmit">
-    <UChatPromptSubmit :status="status" @stop="stop()" @reload="regenerate()" />
-  </UChatPrompt>
+  <PChatPrompt v-model="input" :error="error" @submit="onSubmit">
+    <PChatPromptSubmit :status="status" @stop="stop()" @reload="regenerate()" />
+  </PChatPrompt>
 </template>
 ```
 
@@ -552,13 +552,13 @@ function onSubmit() {
 </script>
 
 <template>
-  <UChatMessages :messages="messages" :status="status">
+  <PChatMessages :messages="messages" :status="status">
     <template #content="{ message }">
       <template
         v-for="(part, index) in message.parts"
         :key="`${message.id}-${part.type}-${index}`"
       >
-        <UChatReasoning
+        <PChatReasoning
           v-if="isReasoningUIPart(part)"
           :text="part.text"
           :streaming="isPartStreaming(part)"
@@ -569,9 +569,9 @@ function onSubmit() {
             :plugins="[shiki()]"
             class="*:first:mt-0 *:last:mb-0"
           />
-        </UChatReasoning>
+        </PChatReasoning>
 
-        <UChatTool
+        <PChatTool
           v-else-if="isToolUIPart(part)"
           :text="getToolName(part)"
           :streaming="isToolStreaming(part)"
@@ -615,11 +615,11 @@ function onSubmit() {
         </template>
       </template>
     </template>
-  </UChatMessages>
+  </PChatMessages>
 
-  <UChatPrompt v-model="input" :error="error" @submit="onSubmit">
-    <UChatPromptSubmit :status="status" @stop="stop()" @reload="regenerate()" />
-  </UChatPrompt>
+  <PChatPrompt v-model="input" :error="error" @submit="onSubmit">
+    <PChatPromptSubmit :status="status" @stop="stop()" @reload="regenerate()" />
+  </PChatPrompt>
 </template>
 ```
 

@@ -23,6 +23,6 @@ const kbdKeys = Object.keys(kbdKeysMap)
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs">
-    <UKbd v-for="(kdbKey, index) in kbdKeys" :key="index" :value="kdbKey" v-bind="props" />
+    <PKbd v-for="(kdbKey, index) in kbdKeys" :key="index" :value="kdbKey" v-bind="props" />
   </Matrix>
 </template>

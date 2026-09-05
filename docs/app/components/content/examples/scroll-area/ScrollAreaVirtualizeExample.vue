@@ -11,7 +11,7 @@ const items = computed(() => Array.from({ length: 1000 }, (_, i) => ({
 </script>
 
 <template>
-  <UScrollArea
+  <PScrollArea
     v-slot="{ item, index }"
     :items="items"
     :orientation="orientation"
@@ -23,5 +23,5 @@ const items = computed(() => Array.from({ length: 1000 }, (_, i) => ({
       :variant="index % 2 === 0 ? 'soft' : 'outline'"
       class="rounded-none"
     />
-  </UScrollArea>
+  </PScrollArea>
 </template>

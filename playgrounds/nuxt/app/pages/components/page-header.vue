@@ -1,7 +1,7 @@
 <template>
   <Navbar />
 
-  <UPageHeader
+  <PPageHeader
     title="PageHeader"
     description="A responsive page header with title, description and actions."
     headline="Components"

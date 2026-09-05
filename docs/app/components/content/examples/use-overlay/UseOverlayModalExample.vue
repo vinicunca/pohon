@@ -10,7 +10,7 @@ const emit = defineEmits<{ close: [] }>()
     :ui="{ footer: 'justify-end' }"
   >
     <template #footer>
-      <UButton label="Close" color="neutral" @click="emit('close')" />
+      <PButton label="Close" color="neutral" @click="emit('close')" />
     </template>
   </PModal>
 </template>

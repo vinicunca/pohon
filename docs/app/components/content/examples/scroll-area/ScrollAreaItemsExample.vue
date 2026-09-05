@@ -7,7 +7,7 @@ const items = Array.from({ length: 30 }, (_, i) => ({
 </script>
 
 <template>
-  <UScrollArea
+  <PScrollArea
     v-slot="{ item, index }"
     :items="items"
     class="w-full h-96"
@@ -17,5 +17,5 @@ const items = Array.from({ length: 30 }, (_, i) => ({
       :variant="index % 2 === 0 ? 'soft' : 'outline'"
       class="rounded-none"
     />
-  </UScrollArea>
+  </PScrollArea>
 </template>

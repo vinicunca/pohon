@@ -3,7 +3,7 @@ import { h, resolveComponent } from 'vue'
 import type { TableColumn } from 'pohon-ui'
 
 const PCheckbox = resolveComponent('PCheckbox')
-const UButton = resolveComponent('UButton')
+const PButton = resolveComponent('PButton')
 
 type Payment = {
   id: string
@@ -99,7 +99,7 @@ const columns: TableColumn<Payment>[] = [{
         class: 'flex items-center gap-2'
       },
       [
-        h(UButton, {
+        h(PButton, {
           color: 'neutral',
           variant: 'outline',
           size: 'xs',
@@ -152,7 +152,7 @@ const expanded = ref({ 0: true })
 </script>
 
 <template>
-  <UTable
+  <PTable
     v-model:expanded="expanded"
     :data="data"
     :columns="columns"

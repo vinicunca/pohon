@@ -21,26 +21,30 @@ links:
 
 The ScrollArea component creates scrollable containers with optional virtualization for large lists.
 
-::component-example
----
+## ::component-example
+
 collapse: true
 overflowHidden: true
 name: 'scroll-area-example'
 class: '!p-0'
+
 ---
+
 ::
 
 ### Items
 
 Use the `items` prop as an array and render each item using the default slot:
 
-::component-example
----
+## ::component-example
+
 collapse: true
 overflowHidden: true
 name: 'scroll-area-items-example'
 class: '!p-0'
+
 ---
+
 ::
 
 ::tip{to="#with-default-slot"}
@@ -51,20 +55,23 @@ You can also use the default slot without the `items` prop to render custom scro
 
 Use the `orientation` prop to change the scroll direction. Defaults to `vertical`.
 
-::component-example
----
+## ::component-example
+
 collapse: true
 overflowHidden: true
 name: 'scroll-area-orientation-example'
 class: '!p-0'
 options:
-  - name: orientation
-    label: orientation
-    default: horizontal
-    items:
-      - vertical
-      - horizontal
+
+- name: orientation
+  label: orientation
+  default: horizontal
+  items:
+  - vertical
+  - horizontal
+
 ---
+
 ::
 
 ### Virtualize
@@ -79,31 +86,36 @@ When virtualization is **enabled**, customize spacing via the `virtualize` prop 
 If all your items have the **same height**, set `skipMeasurement` to `true` in the `virtualize` prop to skip per-item DOM measurement and rely on `estimateSize` instead. This significantly improves performance for large uniform lists.
 ::
 
-::component-example
----
+## ::component-example
+
 collapse: true
 overflowHidden: true
 name: 'scroll-area-virtualize-example'
 class: '!p-0'
 options:
-  - name: orientation
-    label: orientation
-    default: vertical
-    items:
-      - vertical
-      - horizontal
+
+- name: orientation
+  label: orientation
+  default: vertical
+  items:
+  - vertical
+  - horizontal
+
 ---
+
 ::
 
 ### Shadow :badge{label="4.9+" class="align-text-top"}
 
 Use the `shadow` prop to display fade shadows on the scrollable edges, indicating that more content is available in the scroll direction. The fade automatically follows the `orientation` and only appears when the content overflows.
 
-::component-example
----
+## ::component-example
+
 collapse: true
 name: 'scroll-area-shadow-example'
+
 ---
+
 ::
 
 ::tip
@@ -116,28 +128,31 @@ Pass an object to the `shadow` prop to configure the fade size, e.g. `:shadow="{
 
 Use the `virtualize` prop with `lanes`, `gap`, and `estimateSize` options to create Pinterest-style masonry layouts with variable height items.
 
-::component-example
----
+## ::component-example
+
 collapse: true
 overflowHidden: true
 name: 'scroll-area-masonry-layout-example'
 class: '!p-0'
 options:
-  - name: orientation
-    label: orientation
-    default: vertical
-    items:
-      - vertical
-      - horizontal
-  - name: lanes
-    type: number
-    label: lanes
-    default: 3
-  - name: gap
-    type: number
-    label: gap
-    default: 16
+
+- name: orientation
+  label: orientation
+  default: vertical
+  items:
+  - vertical
+  - horizontal
+- name: lanes
+  type: number
+  label: lanes
+  default: 3
+- name: gap
+  type: number
+  label: gap
+  default: 16
+
 ---
+
 ::
 
 ::tip
@@ -148,34 +163,39 @@ For optimal performance, set `estimateSize` close to your average item height. I
 
 You can use the [`useWindowSize`](https://vueuse.org/core/useWindowSize/) (for viewport-based) or [`useElementSize`](https://vueuse.org/core/useElementSize/) (for container-based) composables to make the `lanes` reactive.
 
-::component-example
----
+## ::component-example
+
 collapse: true
 overflowHidden: true
 name: 'scroll-area-responsive-lanes-example'
 class: '!p-0'
+
 ---
+
 ::
 
 ### With external scroll element :badge{label="4.10+" class="align-text-top"}
 
 Pass a `getScrollElement` function in the `virtualize` prop to virtualize against an ancestor scroll container instead of the component's own viewport. Set `scrollMargin` to the list's offset from the scroll element's start (e.g. the height of the content above it).
 
-::component-example
----
+## ::component-example
+
 prettier: true
 collapse: true
 overflowHidden: true
 name: 'scroll-area-external-scroll-example'
 class: '!p-0'
 options:
-  - name: orientation
-    label: orientation
-    default: vertical
-    items:
-      - vertical
-      - horizontal
+
+- name: orientation
+  label: orientation
+  default: vertical
+  items:
+  - vertical
+  - horizontal
+
 ---
+
 ::
 
 ::note
@@ -190,27 +210,31 @@ The `shadow` prop has no effect in this mode, since the root no longer owns the 
 
 You can use the exposed `virtualizer` to programmatically control scroll position.
 
-::component-example
----
+## ::component-example
+
 collapse: true
 overflowHidden: true
 name: 'scroll-area-scroll-to-example'
 class: '!p-0'
+
 ---
+
 ::
 
 ### With infinite scroll
 
 You can use the [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/) composable to load more data as the user scrolls.
 
-::component-example
----
+## ::component-example
+
 prettier: true
 collapse: true
 overflowHidden: true
 name: 'scroll-area-infinite-scroll-example'
 class: '!p-0'
+
 ---
+
 ::
 
 ::note
@@ -221,11 +245,13 @@ This example uses `useLazyFetch` with `server: false` to fetch data on the clien
 
 You can use the default slot without the `items` prop to render custom scrollable content directly.
 
-::component-example
----
+## ::component-example
+
 name: 'scroll-area-default-slot-example'
 class: '!p-0'
+
 ---
+
 ::
 
 ## API
@@ -248,24 +274,24 @@ You can access the typed component instance using [`useTemplateRef`](https://vue
 
 ```vue
 <script setup lang="ts">
-const scrollArea = useTemplateRef('scrollArea')
+const scrollArea = useTemplateRef("scrollArea");
 
 // Scroll to a specific item
 function scrollToItem(index: number) {
-  scrollArea.value?.virtualizer?.scrollToIndex(index, { align: 'center' })
+  scrollArea.value?.virtualizer?.scrollToIndex(index, { align: "center" });
 }
 </script>
 
 <template>
-  <UScrollArea ref="scrollArea" :items="items" virtualize />
+  <PScrollArea ref="scrollArea" :items="items" virtualize />
 </template>
 ```
 
 This will give you access to the following:
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| `$el`{lang="ts-type"} | `HTMLElement`{lang="ts-type"} | The root element of the component. |
+| Name                          | Type                                            | Description                                                                                                                                        |
+| ----------------------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$el`{lang="ts-type"}         | `HTMLElement`{lang="ts-type"}                   | The root element of the component.                                                                                                                 |
 | `virtualizer`{lang="ts-type"} | `Ref<Virtualizer> \| undefined`{lang="ts-type"} | The [TanStack Virtual](https://tanstack.com/virtual/latest/docs/api/virtualizer) virtualizer instance (`undefined` if virtualization is disabled). |
 
 ## Theme

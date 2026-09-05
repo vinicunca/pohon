@@ -53,12 +53,12 @@ const items = [
   <PNavigationMenu :items="items" class="w-full justify-center">
     <template #more="{ item }">
       <PDropdownMenu :content="item.content" :items="item.items">
-        <UButton icon="i-lucide-ellipsis" color="neutral" variant="link" />
+        <PButton icon="i-lucide-ellipsis" color="neutral" variant="link" />
       </PDropdownMenu>
     </template>
 
     <template #github-trailing>
-      <UBadge label="6k+" color="neutral" variant="subtle" size="sm" />
+      <PBadge label="6k+" color="neutral" variant="subtle" size="sm" />
     </template>
   </PNavigationMenu>
 </template>

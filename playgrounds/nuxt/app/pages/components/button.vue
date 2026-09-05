@@ -24,17 +24,17 @@ function onClick() {
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs">
-    <UButton label="Button" v-bind="props" />
-    <UButton label="Link" to="/" v-bind="props" />
-    <UButton label="Disabled" disabled v-bind="props" />
-    <UButton label="Disabled link" to="#" disabled v-bind="props" />
-    <UButton label="Loading" loading v-bind="props" />
-    <UButton label="Loading" loading trailing v-bind="props" />
-    <UButton label="Loading auto" loading-auto v-bind="props" @click="onClick" />
-    <UButton label="Icon" icon="i-lucide-rocket" v-bind="props" />
-    <UButton label="Icon" icon="i-lucide-chevron-down" trailing v-bind="props" />
-    <UButton label="Avatar" :avatar="{ src: 'https://github.com/benjamincanac.png' }" v-bind="props" />
-    <UButton icon="i-lucide-rocket" v-bind="props" square />
-    <UButton :avatar="{ src: 'https://github.com/benjamincanac.png' }" v-bind="props" square />
+    <PButton label="Button" v-bind="props" />
+    <PButton label="Link" to="/" v-bind="props" />
+    <PButton label="Disabled" disabled v-bind="props" />
+    <PButton label="Disabled link" to="#" disabled v-bind="props" />
+    <PButton label="Loading" loading v-bind="props" />
+    <PButton label="Loading" loading trailing v-bind="props" />
+    <PButton label="Loading auto" loading-auto v-bind="props" @click="onClick" />
+    <PButton label="Icon" icon="i-lucide-rocket" v-bind="props" />
+    <PButton label="Icon" icon="i-lucide-chevron-down" trailing v-bind="props" />
+    <PButton label="Avatar" :avatar="{ src: 'https://github.com/benjamincanac.png' }" v-bind="props" />
+    <PButton icon="i-lucide-rocket" v-bind="props" square />
+    <PButton :avatar="{ src: 'https://github.com/benjamincanac.png' }" v-bind="props" square />
   </Matrix>
 </template>

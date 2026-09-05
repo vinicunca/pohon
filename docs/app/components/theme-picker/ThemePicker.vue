@@ -40,7 +40,7 @@ const {
 <template>
   <PPopover v-model:open="open" :ui="{ content: 'w-72 px-6 py-4 flex flex-col gap-4 overflow-y-auto max-h-[calc(100vh-5rem)]' }">
     <template #default>
-      <UButton
+      <PButton
         icon="i-lucide-swatch-book"
         color="neutral"
         :variant="open ? 'soft' : 'ghost'"
@@ -55,7 +55,7 @@ const {
         <legend class="text-[11px] leading-none font-semibold mb-2 select-none flex items-center gap-1">
           Primary
 
-          <UButton
+          <PButton
             to="/docs/getting-started/theme/css-variables#colors"
             size="xs"
             color="neutral"
@@ -92,7 +92,7 @@ const {
         <legend class="text-[11px] leading-none font-semibold mb-2 select-none flex items-center gap-1">
           Neutral
 
-          <UButton
+          <PButton
             to="/docs/getting-started/theme/css-variables#text"
             size="xs"
             color="neutral"
@@ -119,7 +119,7 @@ const {
         <legend class="text-[11px] leading-none font-semibold mb-2 select-none flex items-center gap-1">
           Radius
 
-          <UButton
+          <PButton
             to="/docs/getting-started/theme/css-variables#radius"
             size="xs"
             color="neutral"
@@ -146,7 +146,7 @@ const {
         <legend class="text-[11px] leading-none font-semibold mb-2 select-none flex items-center gap-1">
           Font
 
-          <UButton
+          <PButton
             to="/docs/getting-started/integrations/fonts"
             size="xs"
             color="neutral"
@@ -174,7 +174,7 @@ const {
         <legend class="text-[11px] leading-none font-semibold mb-2 select-none flex items-center gap-1">
           Icons
 
-          <UButton
+          <PButton
             to="/docs/getting-started/integrations/icons"
             size="xs"
             color="neutral"
@@ -202,7 +202,7 @@ const {
         <legend class="text-[11px] leading-none font-semibold mb-2 select-none flex items-center gap-1">
           Color Mode
 
-          <UButton
+          <PButton
             to="/docs/getting-started/integrations/color-mode"
             size="xs"
             color="neutral"
@@ -230,7 +230,7 @@ const {
         </legend>
 
         <div class="flex items-center justify-between gap-1 -mx-2">
-          <UButton
+          <PButton
             v-if="hasCSSChanges"
             color="neutral"
             variant="soft"
@@ -240,7 +240,7 @@ const {
             :icon="copiedCSS ? 'i-lucide-copy-check' : 'i-lucide-copy'"
             @click="copyCSS(exportCSS())"
           />
-          <UButton
+          <PButton
             v-if="hasConfigChanges"
             color="neutral"
             variant="soft"
@@ -251,7 +251,7 @@ const {
             @click="copyConfig(exportConfig())"
           />
           <PTooltip text="Reset theme">
-            <UButton
+            <PButton
               color="neutral"
               variant="outline"
               size="sm"

@@ -39,7 +39,7 @@ const items = computed<DropdownMenuItem[]>(() => [{
 
 <template>
   <PDropdownMenu :items="items" :content="{ side: 'right', align: 'start' }">
-    <UButton
+    <PButton
       icon="i-lucide-swatch-book"
       color="neutral"
       variant="ghost"

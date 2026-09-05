@@ -1,5 +1,5 @@
 ---
-description: 'A component to create infinite scrolling content.'
+description: "A component to create infinite scrolling content."
 category: data
 keywords:
   - ticker
@@ -15,19 +15,21 @@ links:
 
 Use the default slot with your content to create an infinite scrolling animation.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 slots:
-  default: |
+default: |
 
-    <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-x" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-github" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-x" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
+
 ---
+
 :u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
 :u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
 :u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
@@ -44,21 +46,23 @@ The animation is automatically disabled when the user prefers reduced motion, th
 
 Use the `pause-on-hover` prop to pause the animation when the user hovers over the content.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 props:
-  pauseOnHover: true
+pauseOnHover: true
 slots:
-  default: |
+default: |
 
-    <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-x" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-github" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-x" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
+
 ---
+
 :u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
 :u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
 :u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
@@ -71,21 +75,23 @@ slots:
 
 Use the `reverse` prop to reverse the direction of the animation.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 props:
-  reverse: true
+reverse: true
 slots:
-  default: |
+default: |
 
-    <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-x" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-github" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-x" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
+
 ---
+
 :u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
 :u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
 :u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
@@ -98,22 +104,24 @@ slots:
 
 Use the `orientation` prop to change the scrolling direction.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 class: 'h-96'
 props:
-  orientation: 'vertical'
+orientation: 'vertical'
 slots:
-  default: |
+default: |
 
-    <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-x" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-github" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-x" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
+
 ---
+
 :u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
 :u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
 :u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
@@ -126,21 +134,23 @@ slots:
 
 Use the `repeat` prop to specify how many times the content should be repeated in the animation.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 props:
-  repeat: 6
+repeat: 6
 slots:
-  default: |
+default: |
 
-    <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-x" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-github" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-x" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
+
 ---
+
 :u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
 :u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
 :u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
@@ -153,21 +163,23 @@ slots:
 
 Use the `overlay` prop to remove the gradient overlays on the edges of the marquee.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 props:
-  overlay: false
+overlay: false
 slots:
-  default: |
+default: |
 
-    <UIcon name="i-simple-icons-github" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-x" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
-    <UIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-github" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-discord" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-x" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-instagram" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-linkedin" class="size-10 shrink-0" />
+    <PIcon name="i-simple-icons-facebook" class="size-10 shrink-0" />
+
 ---
+
 :u-icon{name="i-simple-icons-github" class="size-10 shrink-0"}
 :u-icon{name="i-simple-icons-discord" class="size-10 shrink-0"}
 :u-icon{name="i-simple-icons-x" class="size-10 shrink-0"}
@@ -182,28 +194,32 @@ slots:
 
 Use the `Marquee` component to create an infinite scrolling animation for your testimonials.
 
-::component-example{label="With Items"}
----
+## ::component-example{label="With Items"}
+
 prettier: true
 name: 'marquee-testimonials'
 collapse: true
 overflowHidden: true
 class: 'px-0'
+
 ---
+
 ::
 
 ### Screenshots
 
 Use the `Marquee` component to create an infinite scrolling animation for your screenshots.
 
-::component-example{label="With Screenshots"}
----
+## ::component-example{label="With Screenshots"}
+
 prettier: true
 name: 'marquee-screenshots'
 collapse: true
 overflowHidden: true
 class: '!p-0'
+
 ---
+
 ::
 
 ## API

@@ -18,17 +18,17 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UForm :schema="r$" :state="r$.$value" class="space-y-4" @submit="onSubmit">
-    <UFormField label="Email" name="email">
+  <PForm :schema="r$" :state="r$.$value" class="space-y-4" @submit="onSubmit">
+    <PFormField label="Email" name="email">
       <PInput v-model="r$.$value.email" />
-    </UFormField>
+    </PFormField>
 
-    <UFormField label="Password" name="password">
+    <PFormField label="Password" name="password">
       <PInput v-model="r$.$value.password" type="password" />
-    </UFormField>
+    </PFormField>
 
-    <UButton type="submit">
+    <PButton type="submit">
       Submit
-    </UButton>
-  </UForm>
+    </PButton>
+  </PForm>
 </template>

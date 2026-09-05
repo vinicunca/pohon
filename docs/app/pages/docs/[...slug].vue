@@ -66,9 +66,9 @@ const frameworkSuffix = !prefix && page.value?.framework === 'vue' ? ' for Vue' 
 const description = page.value?.seo?.description ? page.value.seo.description : page.value?.description
 
 useSeoMeta({
-  titleTemplate: `${prefix}%s ${suffix}- Nuxt UI${frameworkSuffix}`,
+  titleTemplate: `${prefix}%s ${suffix}- Pohon UI${frameworkSuffix}`,
   title,
-  ogTitle: `${prefix}${title} ${suffix}- Nuxt UI${frameworkSuffix}`,
+  ogTitle: `${prefix}${title} ${suffix}- Pohon UI${frameworkSuffix}`,
   description,
   ogDescription: description
 })
@@ -86,7 +86,7 @@ if (import.meta.server) {
     defineOgImage('Docs.takumi', {
       title: page.value.title,
       description: page.value.description,
-      headline: breadcrumb.value?.[breadcrumb.value.length - 1]?.label || 'Nuxt UI',
+      headline: breadcrumb.value?.[breadcrumb.value.length - 1]?.label || 'Pohon UI',
       framework: page.value?.framework
     })
   }
@@ -130,14 +130,14 @@ const links = computed(() => [{
 </script>
 
 <template>
-  <UPage
+  <PPage
     v-if="page"
     :ui="open ? {
       center: 'lg:col-span-10',
       right: 'lg:hidden'
     } : undefined"
   >
-    <UPageHeader>
+    <PPageHeader>
       <template #headline>
         <PBreadcrumb :items="breadcrumb" />
       </template>
@@ -145,7 +145,7 @@ const links = computed(() => [{
       <template #title>
         {{ page.title }}
 
-        <UBadge
+        <PBadge
           v-if="page.navigation?.badge"
           :label="page.navigation?.badge"
           variant="subtle"
@@ -159,7 +159,7 @@ const links = computed(() => [{
       </template>
 
       <template #links>
-        <UButton
+        <PButton
           v-for="link in page.links"
           :key="link.label"
           color="neutral"
@@ -168,35 +168,35 @@ const links = computed(() => [{
           v-bind="link"
         >
           <template v-if="link.avatar" #leading>
-            <UAvatar v-bind="link.avatar" size="2xs" :alt="`${link.label} avatar`" />
+            <PAvatar v-bind="link.avatar" size="2xs" :alt="`${link.label} avatar`" />
           </template>
-        </UButton>
+        </PButton>
         <PageHeaderLinks />
       </template>
-    </UPageHeader>
+    </PPageHeader>
 
-    <UPageBody>
+    <PPageBody>
       <ContentRenderer v-if="page.body" :value="page" />
 
-      <USeparator v-if="surround?.filter(Boolean).length" />
+      <PSeparator v-if="surround?.filter(Boolean).length" />
 
-      <UContentSurround :surround="(surround as any)" />
-    </UPageBody>
+      <PContentSurround :surround="(surround as any)" />
+    </PPageBody>
 
     <template v-if="page?.body?.toc?.links?.length" #right>
-      <UContentToc :links="page.body.toc.links" class="z-2" highlight highlight-variant="circuit">
+      <PContentToc :links="page.body.toc.links" class="z-2" highlight highlight-variant="circuit">
         <template #bottom>
-          <USeparator v-if="page.body?.toc?.links?.length" type="dashed" />
+          <PSeparator v-if="page.body?.toc?.links?.length" type="dashed" />
 
-          <UPageLinks :links="links" />
+          <PPageLinks :links="links" />
 
           <template v-if="!isDev">
-            <USeparator type="dashed" />
+            <PSeparator type="dashed" />
 
             <AdsCarbon />
           </template>
         </template>
-      </UContentToc>
+      </PContentToc>
     </template>
-  </UPage>
+  </PPage>
 </template>

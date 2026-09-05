@@ -31,13 +31,13 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
         <code>:props={{ `{ button: { color: '${color}', variant: '${variant}', size: '${size}' } }` }}</code>
       </p>
 
-      <UTheme :props="{ button: { color, variant, size } }">
+      <PTheme :props="{ button: { color, variant, size } }">
         <div class="flex items-center gap-2">
-          <UButton label="Themed" />
-          <UButton label="Themed with icon" icon="i-lucide-rocket" />
-          <UButton label="Themed square" icon="i-lucide-star" square />
+          <PButton label="Themed" />
+          <PButton label="Themed with icon" icon="i-lucide-rocket" />
+          <PButton label="Themed square" icon="i-lucide-star" square />
         </div>
-      </UTheme>
+      </PTheme>
     </div>
 
     <!-- Explicit prop overrides theme -->
@@ -46,14 +46,14 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
         Explicit props win over <code>:props</code>
       </p>
 
-      <UTheme :props="{ button: { color, variant, size } }">
+      <PTheme :props="{ button: { color, variant, size } }">
         <div class="flex items-center gap-2">
-          <UButton label="Theme only" />
-          <UButton label="color=primary" color="primary" />
-          <UButton label="variant=solid" variant="solid" />
-          <UButton label="size=xs" size="xs" />
+          <PButton label="Theme only" />
+          <PButton label="color=primary" color="primary" />
+          <PButton label="variant=solid" variant="solid" />
+          <PButton label="size=xs" size="xs" />
         </div>
-      </UTheme>
+      </PTheme>
     </div>
 
     <!-- :ui (slot classes) + :props (prop defaults) together -->
@@ -62,47 +62,47 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
         <code>:ui</code> slot classes + <code>:props</code> prop defaults together
       </p>
 
-      <UTheme
+      <PTheme
         :props="{ button: { color, variant } }"
         :ui="{ button: { base: 'font-bold rounded-full' } }"
       >
         <div class="flex items-center gap-2">
-          <UButton label="Styled + themed" />
-          <UButton label="With icon" icon="i-lucide-zap" />
+          <PButton label="Styled + themed" />
+          <PButton label="With icon" icon="i-lucide-zap" />
         </div>
-      </UTheme>
+      </PTheme>
     </div>
 
-    <!-- Nested UTheme: inner overrides bleed in, other components inherit from outer -->
+    <!-- Nested PTheme: inner overrides bleed in, other components inherit from outer -->
     <div class="flex flex-col gap-2">
       <p class="text-sm font-medium text-muted">
-        Nested <code>&lt;UTheme&gt;</code>: outer sets tooltip globally, inner only overrides button — both compose
+        Nested <code>&lt;PTheme&gt;</code>: outer sets tooltip globally, inner only overrides button — both compose
       </p>
 
-      <UTheme :props="{ button: { color, variant, size }, tooltip: { delayDuration: 0, arrow: true } }">
+      <PTheme :props="{ button: { color, variant, size }, tooltip: { delayDuration: 0, arrow: true } }">
         <div class="flex items-center gap-2">
           <PTooltip text="Outer tooltip (instant + arrow)">
-            <UButton label="Outer" />
+            <PButton label="Outer" />
           </PTooltip>
-          <UTheme :props="{ button: { color: 'success' } }">
+          <PTheme :props="{ button: { color: 'success' } }">
             <PTooltip text="Inner tooltip still inherits delay + arrow">
-              <UButton label="color=success (inner)" />
+              <PButton label="color=success (inner)" />
             </PTooltip>
-          </UTheme>
+          </PTheme>
           <PTooltip text="Outer tooltip again">
-            <UButton label="Outer again" />
+            <PButton label="Outer again" />
           </PTooltip>
         </div>
-      </UTheme>
+      </PTheme>
     </div>
 
-    <!-- :props on form components (with and without UFormField wrapping) -->
+    <!-- :props on form components (with and without PFormField wrapping) -->
     <div class="flex flex-col gap-2">
       <p class="text-sm font-medium text-muted">
-        <code>:props</code> flows into every form component (with or without <code>&lt;UFormField&gt;</code>)
+        <code>:props</code> flows into every form component (with or without <code>&lt;PFormField&gt;</code>)
       </p>
 
-      <UTheme :props="{ input: { size, color }, pinInput: { size, color }, checkbox: { size, color }, switch: { size, color }, radioGroup: { color, orientation: 'horizontal' }, select: { color, variant: 'subtle' } }">
+      <PTheme :props="{ input: { size, color }, pinInput: { size, color }, checkbox: { size, color }, switch: { size, color }, radioGroup: { color, orientation: 'horizontal' }, select: { color, variant: 'subtle' } }">
         <div class="flex flex-col gap-4">
           <div class="flex items-center gap-4">
             <PInput v-model="input" placeholder="Bare input" />
@@ -115,41 +115,41 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
             <PSelect v-model="select" :items="selectItems" placeholder="Themed select" />
           </div>
         </div>
-      </UTheme>
+      </PTheme>
     </div>
 
-    <!-- Closer context wins: UFormField/FieldGroup beats :props; error beats both -->
+    <!-- Closer context wins: PFormField/FieldGroup beats :props; error beats both -->
     <div class="flex flex-col gap-2">
       <p class="text-sm font-medium text-muted">
-        Closer context wins: <code>&lt;UFormField size="xl"&gt;</code> beats <code>:props</code>; validation error forces <code>error</code> color
+        Closer context wins: <code>&lt;PFormField size="xl"&gt;</code> beats <code>:props</code>; validation error forces <code>error</code> color
       </p>
 
-      <UTheme :props="{ input: { size, color } }">
+      <PTheme :props="{ input: { size, color } }">
         <div class="flex flex-col gap-3">
-          <UFormField label="Bare (theme size applies)">
+          <PFormField label="Bare (theme size applies)">
             <PInput v-model="input" placeholder="theme size" />
-          </UFormField>
-          <UFormField label="FormField size=xl wins" size="xl">
+          </PFormField>
+          <PFormField label="FormField size=xl wins" size="xl">
             <PInput v-model="input" placeholder="formfield size" />
-          </UFormField>
-          <UFormField label="With error: error color wins" error="Required">
+          </PFormField>
+          <PFormField label="With error: error color wins" error="Required">
             <PInput v-model="input" placeholder="error color" />
-          </UFormField>
+          </PFormField>
         </div>
-      </UTheme>
+      </PTheme>
     </div>
 
     <!-- Baseline: bare components must keep Reka primitives' own defaults -->
     <div class="flex flex-col gap-2">
       <p class="text-sm font-medium text-muted">
-        Without <code>&lt;UTheme&gt;</code> (baseline) — bare Tooltip uses Reka's default delay and has no arrow; bare Checkbox matches unstyled defaults
+        Without <code>&lt;PTheme&gt;</code> (baseline) — bare Tooltip uses Reka's default delay and has no arrow; bare Checkbox matches unstyled defaults
       </p>
 
       <div class="flex items-center gap-4">
-        <UButton label="Default" />
-        <UButton label="Default with icon" icon="i-lucide-rocket" />
+        <PButton label="Default" />
+        <PButton label="Default with icon" icon="i-lucide-rocket" />
         <PTooltip text="Default delay, no arrow">
-          <UButton label="Hover (baseline)" variant="outline" />
+          <PButton label="Hover (baseline)" variant="outline" />
         </PTooltip>
         <PCheckbox label="Bare checkbox" />
       </div>

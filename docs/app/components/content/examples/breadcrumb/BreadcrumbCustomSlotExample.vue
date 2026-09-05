@@ -37,7 +37,7 @@ const items = [
   <PBreadcrumb :items="items">
     <template #dropdown="{ item }">
       <PDropdownMenu :items="item.children">
-        <UButton :icon="item.icon" color="neutral" variant="link" class="p-0.5" />
+        <PButton :icon="item.icon" color="neutral" variant="link" class="p-0.5" />
       </PDropdownMenu>
     </template>
   </PBreadcrumb>

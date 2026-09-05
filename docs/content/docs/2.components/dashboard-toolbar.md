@@ -24,9 +24,9 @@ definePageMeta({
 <template>
   <PDashboardPanel>
     <template #header>
-      <UDashboardNavbar />
+      <PDashboardNavbar />
 
-      <UDashboardToolbar />
+      <PDashboardToolbar />
     </template>
   </PDashboardPanel>
 </template>

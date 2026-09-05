@@ -31,17 +31,17 @@ async function onError(event: FormErrorEvent) {
 </script>
 
 <template>
-  <UForm :validate="validate" :state="state" class="space-y-4" @submit="onSubmit" @error="onError">
-    <UFormField label="Email" name="email">
+  <PForm :validate="validate" :state="state" class="space-y-4" @submit="onSubmit" @error="onError">
+    <PFormField label="Email" name="email">
       <PInput v-model="state.email" />
-    </UFormField>
+    </PFormField>
 
-    <UFormField label="Password" name="password">
+    <PFormField label="Password" name="password">
       <PInput v-model="state.password" type="password" />
-    </UFormField>
+    </PFormField>
 
-    <UButton type="submit">
+    <PButton type="submit">
       Submit
-    </UButton>
-  </UForm>
+    </PButton>
+  </PForm>
 </template>

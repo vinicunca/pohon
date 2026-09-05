@@ -95,10 +95,10 @@ function getDropdownActions(user: User): DropdownMenuItem[][] {
 </script>
 
 <template>
-  <UTable :data="data" :columns="columns" class="flex-1">
+  <PTable :data="data" :columns="columns" class="flex-1">
     <template #name-cell="{ row }">
       <div class="flex items-center gap-3">
-        <UAvatar :src="`https://i.pravatar.cc/120?img=${row.original.id}`" size="lg" loading="lazy" :alt="`${row.original.name} avatar`" />
+        <PAvatar :src="`https://i.pravatar.cc/120?img=${row.original.id}`" size="lg" loading="lazy" :alt="`${row.original.name} avatar`" />
         <div>
           <p class="font-medium text-highlighted">
             {{ row.original.name }}
@@ -111,8 +111,8 @@ function getDropdownActions(user: User): DropdownMenuItem[][] {
     </template>
     <template #action-cell="{ row }">
       <PDropdownMenu :items="getDropdownActions(row.original)">
-        <UButton icon="i-lucide-ellipsis-vertical" color="neutral" variant="ghost" aria-label="Actions" />
+        <PButton icon="i-lucide-ellipsis-vertical" color="neutral" variant="ghost" aria-label="Actions" />
       </PDropdownMenu>
     </template>
-  </UTable>
+  </PTable>
 </template>

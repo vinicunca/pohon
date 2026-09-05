@@ -91,7 +91,7 @@ watch(matches, () => {
           This header scrolls away with the cards, sharing one scrollbar.
         </p>
       </div>
-      <UBadge
+      <PBadge
         color="neutral"
         variant="subtle"
         :label="`${users.length} members`"
@@ -103,7 +103,7 @@ watch(matches, () => {
       class="z-10 flex items-center px-6 py-3 border-y border-default bg-elevated/50 backdrop-blur"
       :class="isHorizontal ? 'sticky left-0' : 'sticky top-0'"
     >
-      <UFieldGroup>
+      <PFieldGroup>
         <PInput
           v-model="query"
           placeholder="Find a member..."
@@ -123,7 +123,7 @@ watch(matches, () => {
             </span>
           </template>
         </PInput>
-        <UButton
+        <PButton
           :icon="isHorizontal ? 'i-lucide-chevron-left' : 'i-lucide-chevron-up'"
           color="neutral"
           variant="outline"
@@ -131,7 +131,7 @@ watch(matches, () => {
           :disabled="!matches.length"
           @click="step(-1)"
         />
-        <UButton
+        <PButton
           :icon="isHorizontal ? 'i-lucide-chevron-right' : 'i-lucide-chevron-down'"
           color="neutral"
           variant="outline"
@@ -139,9 +139,9 @@ watch(matches, () => {
           :disabled="!matches.length"
           @click="step(1)"
         />
-      </UFieldGroup>
+      </PFieldGroup>
 
-      <UButton
+      <PButton
         :icon="isHorizontal ? 'i-lucide-arrow-left-to-line' : 'i-lucide-arrow-up-to-line'"
         color="neutral"
         variant="outline"
@@ -166,7 +166,7 @@ watch(matches, () => {
             This header scrolls away with the cards, sharing one scrollbar.
           </p>
         </div>
-        <UBadge
+        <PBadge
           color="neutral"
           variant="subtle"
           class="self-start"
@@ -174,7 +174,7 @@ watch(matches, () => {
         />
       </div>
 
-      <UScrollArea
+      <PScrollArea
         ref="scrollArea"
         v-slot="{ item, index }"
         :orientation="orientation"
@@ -190,7 +190,7 @@ watch(matches, () => {
             class="flex gap-3 h-full min-w-0"
             :class="isHorizontal ? 'flex-col items-center justify-center text-center' : 'items-center'"
           >
-            <UAvatar
+            <PAvatar
               :src="item.image"
               :alt="item.firstName"
               :size="isHorizontal ? '2xl' : 'lg'"
@@ -206,7 +206,7 @@ watch(matches, () => {
             </div>
           </div>
         </PPageCard>
-      </UScrollArea>
+      </PScrollArea>
     </div>
   </div>
 </template>

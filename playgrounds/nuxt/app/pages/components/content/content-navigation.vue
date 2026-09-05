@@ -88,7 +88,7 @@ const navigation = [{
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs" class="gap-5">
-    <UContentNavigation
+    <PContentNavigation
       :navigation="navigation"
       :highlight="highlight"
       :highlight-color="highlightColor"

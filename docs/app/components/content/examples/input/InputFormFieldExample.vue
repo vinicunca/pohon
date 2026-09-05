@@ -3,7 +3,7 @@ const email = ref('')
 </script>
 
 <template>
-  <UFormField label="Email" help="We won't share your email." required>
+  <PFormField label="Email" help="We won't share your email." required>
     <PInput v-model="email" placeholder="Enter your email" icon="i-lucide-at-sign" />
-  </UFormField>
+  </PFormField>
 </template>

@@ -38,5 +38,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <UTimeline v-model="active" :items="items" class="w-96" />
+  <PTimeline v-model="active" :items="items" class="w-96" />
 </template>

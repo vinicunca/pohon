@@ -20,10 +20,10 @@ const attrs = reactive({
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs">
-    <UBadge label="Badge" v-bind="props" />
-    <UBadge icon="i-lucide-rocket" label="Icon" v-bind="props" />
-    <UBadge :avatar="{ src: 'https://github.com/benjamincanac.png' }" label="Avatar" v-bind="props" />
-    <UBadge icon="i-lucide-rocket" v-bind="props" />
-    <UBadge :avatar="{ src: 'https://github.com/benjamincanac.png' }" v-bind="props" />
+    <PBadge label="Badge" v-bind="props" />
+    <PBadge icon="i-lucide-rocket" label="Icon" v-bind="props" />
+    <PBadge :avatar="{ src: 'https://github.com/benjamincanac.png' }" label="Avatar" v-bind="props" />
+    <PBadge icon="i-lucide-rocket" v-bind="props" />
+    <PBadge :avatar="{ src: 'https://github.com/benjamincanac.png' }" v-bind="props" />
   </Matrix>
 </template>

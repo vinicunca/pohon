@@ -30,11 +30,11 @@ const items = [
 </script>
 
 <template>
-  <UTree :items="items">
+  <PTree :items="items">
     <template #app="{ item }">
       <p class="italic font-bold">
         {{ item.label }}
       </p>
     </template>
-  </UTree>
+  </PTree>
 </template>

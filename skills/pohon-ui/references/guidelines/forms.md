@@ -2,7 +2,7 @@
 
 ## Basic pattern
 
-Nuxt UI forms use `UForm` + `UFormField` + Standard Schema validation (Zod, Valibot, Yup, or Joi).
+Pohon UI forms use `PForm` + `PFormField` + Standard Schema validation (Zod, Valibot, Yup, or Joi).
 
 ```vue
 <script setup lang="ts">
@@ -18,42 +18,42 @@ type Schema = z.output<typeof schema>;
 const state = reactive<Partial<Schema>>({ email: "", password: "" });
 
 function onSubmit(event: FormSubmitEvent<Schema>) {
-  // UForm validates before emitting @submit — access validated data via event.data
+  // PForm validates before emitting @submit — access validated data via event.data
 }
 </script>
 
 <template>
-  <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
-    <UFormField name="email" label="Email" required>
+  <PForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
+    <PFormField name="email" label="Email" required>
       <PInput
         v-model="state.email"
         type="email"
         placeholder="you@example.com"
       />
-    </UFormField>
+    </PFormField>
 
-    <UFormField name="password" label="Password" required>
+    <PFormField name="password" label="Password" required>
       <PInput
         v-model="state.password"
         type="password"
         placeholder="Min 8 characters"
       />
-    </UFormField>
+    </PFormField>
 
-    <UButton type="submit" label="Sign in" />
-  </UForm>
+    <PButton type="submit" label="Sign in" />
+  </PForm>
 </template>
 ```
 
 ## Key rules
 
-- Always use `UFormField` around inputs — it connects validation errors via the `name` prop
-- The `name` prop on `UFormField` must match the schema field name exactly
+- Always use `PFormField` around inputs — it connects validation errors via the `name` prop
+- The `name` prop on `PFormField` must match the schema field name exactly
 - Use `reactive<Partial<Schema>>({})` for state — `Partial` allows empty initial values
 - `@submit` only fires when validation passes
 - For nested objects, use dot notation: `name="address.city"`
 
-## UFormField props
+## PFormField props
 
 | Prop          | Purpose                                     |
 | ------------- | ------------------------------------------- |
@@ -69,43 +69,43 @@ function onSubmit(event: FormSubmitEvent<Schema>) {
 ### Vertical stack (default)
 
 ```vue
-<UForm :schema="schema" :state="state" class="space-y-4">
-  <UFormField name="name" label="Name">
+<PForm :schema="schema" :state="state" class="space-y-4">
+  <PFormField name="name" label="Name">
     <PInput v-model="state.name" />
-  </UFormField>
-  <UFormField name="email" label="Email">
+  </PFormField>
+  <PFormField name="email" label="Email">
     <PInput v-model="state.email" />
-  </UFormField>
-</UForm>
+  </PFormField>
+</PForm>
 ```
 
-### Inline fields with UFieldGroup
+### Inline fields with PFieldGroup
 
 ```vue
-<UFieldGroup>
-  <UFormField name="firstName" label="First name">
+<PFieldGroup>
+  <PFormField name="firstName" label="First name">
     <PInput v-model="state.firstName" />
-  </UFormField>
-  <UFormField name="lastName" label="Last name">
+  </PFormField>
+  <PFormField name="lastName" label="Last name">
     <PInput v-model="state.lastName" />
-  </UFormField>
-</UFieldGroup>
+  </PFormField>
+</PFieldGroup>
 ```
 
 ### Grid layout
 
 ```vue
-<UForm :schema="schema" :state="state" class="grid grid-cols-2 gap-4">
-  <UFormField name="firstName" label="First name">
+<PForm :schema="schema" :state="state" class="grid grid-cols-2 gap-4">
+  <PFormField name="firstName" label="First name">
     <PInput v-model="state.firstName" />
-  </UFormField>
-  <UFormField name="lastName" label="Last name">
+  </PFormField>
+  <PFormField name="lastName" label="Last name">
     <PInput v-model="state.lastName" />
-  </UFormField>
-  <UFormField name="email" label="Email" class="col-span-2">
+  </PFormField>
+  <PFormField name="email" label="Email" class="col-span-2">
     <PInput v-model="state.email" type="email" />
-  </UFormField>
-</UForm>
+  </PFormField>
+</PForm>
 ```
 
 ## Common field patterns
@@ -113,23 +113,23 @@ function onSubmit(event: FormSubmitEvent<Schema>) {
 ### Select
 
 ```vue
-<UFormField name="role" label="Role">
+<PFormField name="role" label="Role">
   <PSelect v-model="state.role" :items="['Admin', 'Editor', 'Viewer']" placeholder="Choose role" />
-</UFormField>
+</PFormField>
 ```
 
 ### Checkbox
 
 ```vue
-<UFormField name="terms">
+<PFormField name="terms">
   <PCheckbox v-model="state.terms" label="I agree to the terms and conditions" />
-</UFormField>
+</PFormField>
 ```
 
 ### Radio group
 
 ```vue
-<UFormField name="plan" label="Plan">
+<PFormField name="plan" label="Plan">
   <PRadioGroup
     v-model="state.plan"
     :items="[
@@ -137,53 +137,53 @@ function onSubmit(event: FormSubmitEvent<Schema>) {
       { label: 'Pro', value: 'pro', description: 'For teams' }
     ]"
   />
-</UFormField>
+</PFormField>
 ```
 
 ### Switch
 
 ```vue
-<UFormField name="notifications" label="Email notifications">
+<PFormField name="notifications" label="Email notifications">
   <PSwitch v-model="state.notifications" />
-</UFormField>
+</PFormField>
 ```
 
 ### Textarea
 
 ```vue
-<UFormField
+<PFormField
   name="bio"
   label="Bio"
   description="Brief description for your profile."
 >
   <PTextarea v-model="state.bio" :rows="3" autoresize :maxrows="6" />
-</UFormField>
+</PFormField>
 ```
 
 ### File upload
 
 ```vue
-<UFormField name="avatar" label="Avatar">
+<PFormField name="avatar" label="Avatar">
   <PFileUpload v-model="state.avatar" accept="image/*" />
-</UFormField>
+</PFormField>
 
 <!-- Or as a drop area -->
-<UFormField name="documents" label="Documents">
+<PFormField name="documents" label="Documents">
   <PFileUpload v-model="state.documents" multiple variant="area" />
-</UFormField>
+</PFormField>
 ```
 
 ### Date
 
 ```vue
-<UFormField name="date" label="Date">
+<PFormField name="date" label="Date">
   <PInputDate v-model="state.date" />
-</UFormField>
+</PFormField>
 
 <!-- Date range -->
-<UFormField name="dateRange" label="Date range">
+<PFormField name="dateRange" label="Date range">
   <PInputDate v-model="state.dateRange" range />
-</UFormField>
+</PFormField>
 ```
 
 ## Programmatic validation
@@ -213,15 +213,15 @@ function resetErrors() {
 </script>
 
 <template>
-  <UForm ref="form" :schema="schema" :state="state" @submit="onSubmit">
+  <PForm ref="form" :schema="schema" :state="state" @submit="onSubmit">
     <!-- fields -->
-  </UForm>
+  </PForm>
 </template>
 ```
 
 ## Form in a modal
 
-Use `#footer="{ close }"` scoped slot for cancel/submit actions. Wrap the modal body in `UForm` with a `type="submit"` button in the footer so validation runs on submit.
+Use `#footer="{ close }"` scoped slot for cancel/submit actions. Wrap the modal body in `PForm` with a `type="submit"` button in the footer so validation runs on submit.
 
 ```vue
 <PModal
@@ -231,18 +231,18 @@ Use `#footer="{ close }"` scoped slot for cancel/submit actions. Wrap the modal 
   :ui="{ footer: 'justify-end' }"
 >
   <template #body>
-    <UForm id="profile-form" :schema="schema" :state="state" class="space-y-4" @submit="onSave">
-      <UFormField name="name" label="Name">
+    <PForm id="profile-form" :schema="schema" :state="state" class="space-y-4" @submit="onSave">
+      <PFormField name="name" label="Name">
         <PInput v-model="state.name" />
-      </UFormField>
-      <UFormField name="email" label="Email">
+      </PFormField>
+      <PFormField name="email" label="Email">
         <PInput v-model="state.email" type="email" />
-      </UFormField>
-    </UForm>
+      </PFormField>
+    </PForm>
   </template>
   <template #footer="{ close }">
-    <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
-    <UButton type="submit" form="profile-form" label="Save" />
+    <PButton label="Cancel" color="neutral" variant="outline" @click="close" />
+    <PButton type="submit" form="profile-form" label="Save" />
   </template>
 </PModal>
 ```

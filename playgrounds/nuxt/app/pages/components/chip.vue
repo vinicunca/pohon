@@ -26,16 +26,16 @@ const items = [{
     <PSelect v-model="attrs.position" :items="positions" multiple />
   </Navbar>
   <Matrix v-slot="props" :attrs="attrs">
-    <UChip color="neutral" v-bind="props">
-      <UButton icon="i-lucide-inbox" color="neutral" variant="subtle" />
-    </UChip>
+    <PChip color="neutral" v-bind="props">
+      <PButton icon="i-lucide-inbox" color="neutral" variant="subtle" />
+    </PChip>
 
-    <UChip v-for="{ name, icon, count } in items" :key="name" :text="count" :show="count > 0" v-bind="props">
-      <UButton :icon="icon" color="neutral" variant="subtle" />
-    </UChip>
+    <PChip v-for="{ name, icon, count } in items" :key="name" :text="count" :show="count > 0" v-bind="props">
+      <PButton :icon="icon" color="neutral" variant="subtle" />
+    </PChip>
 
-    <UChip inset text="1" v-bind="props">
-      <UAvatar src="https://github.com/benjamincanac.png" />
-    </UChip>
+    <PChip inset text="1" v-bind="props">
+      <PAvatar src="https://github.com/benjamincanac.png" />
+    </PChip>
   </Matrix>
 </template>

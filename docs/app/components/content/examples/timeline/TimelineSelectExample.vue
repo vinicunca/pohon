@@ -37,7 +37,7 @@ function onSelect(_e: Event, item: TimelineItem) {
 </script>
 
 <template>
-  <UTimeline
+  <PTimeline
     v-model="active"
     :items="items"
     class="w-96"

@@ -30,7 +30,7 @@ const tour = useTour([
 </script>
 
 <template>
-  <UButton @click="tour.start()">Start tour</UButton>
+  <PButton @click="tour.start()">Start tour</PButton>
 
   <PPopover
     :open="tour.open.value"
@@ -39,12 +39,12 @@ const tour = useTour([
   >
     <template #content>
       <!-- your content + buttons -->
-      <UButton :disabled="!tour.hasPrev.value" @click="tour.prev()"
-        >Back</UButton
+      <PButton :disabled="!tour.hasPrev.value" @click="tour.prev()"
+        >Back</PButton
       >
-      <UButton @click="tour.next()">{{
+      <PButton @click="tour.next()">{{
         tour.hasNext.value ? "Next" : "Finish"
-      }}</UButton>
+      }}</PButton>
     </template>
   </PPopover>
 </template>

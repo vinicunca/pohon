@@ -31,7 +31,7 @@ describe('editor', () => {
     const wrapper = await mountSuspended(Editor, {
       props: {
         contentType: 'markdown',
-        modelValue: '# Building Modern Interfaces with Nuxt UI',
+        modelValue: '# Building Modern Interfaces with Pohon UI',
         placeholder: 'Write something...',
       },
     });

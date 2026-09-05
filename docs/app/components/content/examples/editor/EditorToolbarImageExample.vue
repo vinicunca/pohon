@@ -33,13 +33,13 @@ const items = (editor: Editor): EditorToolbarItem[][] => {
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     class="w-full min-h-113"
   >
-    <UEditorToolbar
+    <PEditorToolbar
       :editor="editor"
       :items="items(editor)"
       layout="bubble"
@@ -47,5 +47,5 @@ const items = (editor: Editor): EditorToolbarItem[][] => {
         return editor.isActive('image') && view.hasFocus()
       }"
     />
-  </UEditor>
+  </PEditor>
 </template>

@@ -19,15 +19,15 @@ Use it inside the default slot of the [DashboardGroup](/docs/components/dashboar
 
 ```vue [layouts/dashboard.vue]{3}
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar>
-      <UDashboardSearchButton />
-    </UDashboardSidebar>
+  <PDashboardGroup>
+    <PDashboardSidebar>
+      <PDashboardSearchButton />
+    </PDashboardSidebar>
 
-    <UDashboardSearch />
+    <PDashboardSearch />
 
     <slot />
-  </UDashboardGroup>
+  </PDashboardGroup>
 </template>
 ```
 
@@ -41,7 +41,7 @@ Use the `shortcut` prop to change the shortcut used in [defineShortcuts](/docs/c
 
 ```vue [app.vue]{4}
 <template>
-  <UDashboardSearch
+  <PDashboardSearch
     v-model:search-term="searchTerm"
     shortcut="meta_k"
     :groups="groups"
@@ -66,7 +66,7 @@ You can disable this behavior by setting the `color-mode` prop to `false`:
 
 ```vue [app.vue]{4}
 <template>
-  <UDashboardSearch
+  <PDashboardSearch
     v-model:search-term="searchTerm"
     :color-mode="false"
     :groups="groups"

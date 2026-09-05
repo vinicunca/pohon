@@ -22,7 +22,7 @@ const items = [{
 <template>
   <Navbar />
 
-  <UHeader class="w-full">
+  <PHeader class="w-full">
     <template #title>
       <Logo class="h-6 w-auto" />
     </template>
@@ -30,10 +30,10 @@ const items = [{
     <PNavigationMenu :items="items" />
 
     <template #right>
-      <UColorModeButton />
+      <PColorModeButton />
 
       <PTooltip text="Open on GitHub" :kbds="['meta', 'G']">
-        <UButton
+        <PButton
           color="neutral"
           variant="ghost"
           to="https://github.com/nuxt/ui"
@@ -47,5 +47,5 @@ const items = [{
     <template #body>
       <PNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
     </template>
-  </UHeader>
+  </PHeader>
 </template>

@@ -39,5 +39,5 @@ function onSelect(e: TreeItemSelectEvent<TreeItem>) {
 </script>
 
 <template>
-  <UTree :items="items" @select="onSelect" />
+  <PTree :items="items" @select="onSelect" />
 </template>

@@ -3,7 +3,7 @@ import { h, resolveComponent } from 'vue'
 import { upperFirst } from 'scule'
 import type { TableColumn } from 'pohon-ui'
 
-const UBadge = resolveComponent('UBadge')
+const PBadge = resolveComponent('PBadge')
 
 type Payment = {
   id: string
@@ -71,7 +71,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -118,7 +118,7 @@ const columnVisibility = ref({
         }))"
         :content="{ align: 'end' }"
       >
-        <UButton
+        <PButton
           label="Columns"
           color="neutral"
           variant="outline"
@@ -127,7 +127,7 @@ const columnVisibility = ref({
       </PDropdownMenu>
     </div>
 
-    <UTable
+    <PTable
       ref="table"
       v-model:column-visibility="columnVisibility"
       :data="data"

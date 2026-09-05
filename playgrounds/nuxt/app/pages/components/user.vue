@@ -1,7 +1,7 @@
 <template>
   <Navbar />
 
-  <UUser
+  <PUser
     name="Benjamin Canac"
     description="Software Engineer"
     :avatar="{ src: 'https://github.com/benjamincanac.png' }"

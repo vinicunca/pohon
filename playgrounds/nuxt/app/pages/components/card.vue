@@ -24,7 +24,7 @@ const attrs = reactive({
       <Placeholder class="h-24" />
 
       <template #footer>
-        <UButton label="Save" color="neutral" />
+        <PButton label="Save" color="neutral" />
       </template>
     </PCard>
   </Matrix>

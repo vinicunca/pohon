@@ -53,7 +53,7 @@ function onSelect(_e: Event, item: TimelineItem) {
     <PSwitch v-model="reverse" label="Reverse" />
   </Navbar>
 
-  <UTimeline
+  <PTimeline
     v-model="value"
     :color="color"
     :orientation="orientation"

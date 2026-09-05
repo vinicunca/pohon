@@ -97,7 +97,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <UChatMessages
+  <PChatMessages
     :messages="messages"
     status="submitted"
     :should-scroll-to-bottom="false"
@@ -119,8 +119,8 @@ onUnmounted(() => {
           />
         </div>
 
-        <UChatShimmer :text="displayedText" class="text-sm font-mono" />
+        <PChatShimmer :text="displayedText" class="text-sm font-mono" />
       </div>
     </template>
-  </UChatMessages>
+  </PChatMessages>
 </template>

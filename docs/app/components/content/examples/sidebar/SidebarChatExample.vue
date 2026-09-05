@@ -12,11 +12,11 @@ const input = ref('')
 const initialMessages: UIMessage[] = [{
   id: '1',
   role: 'user',
-  parts: [{ type: 'text', text: 'What is Nuxt UI?' }]
+  parts: [{ type: 'text', text: 'What is Pohon UI?' }]
 }, {
   id: '2',
   role: 'assistant',
-  parts: [{ type: 'text', text: 'Nuxt UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }]
+  parts: [{ type: 'text', text: 'Pohon UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }]
 }]
 
 const { messages, status, error, sendMessage, regenerate, stop } = useChat({
@@ -53,7 +53,7 @@ const ui = {
   <div class="flex flex-1">
     <div class="flex-1 flex flex-col">
       <div class="h-(--ui-header-height) shrink-0 flex items-center justify-end px-4 border-b border-default">
-        <UButton
+        <PButton
           icon="i-lucide-panel-right"
           color="neutral"
           variant="ghost"
@@ -67,7 +67,7 @@ const ui = {
       </div>
     </div>
 
-    <USidebar
+    <PSidebar
       v-model:open="open"
       side="right"
       title="AI Chat"
@@ -75,8 +75,8 @@ const ui = {
       :style="{ '--sidebar-width': '20rem' }"
       :ui="{ container: 'h-full' }"
     >
-      <UTheme :ui="ui">
-        <UChatMessages
+      <PTheme :ui="ui">
+        <PChatMessages
           :messages="messages"
           :status="status"
           compact
@@ -98,11 +98,11 @@ const ui = {
               </template>
             </template>
           </template>
-        </UChatMessages>
-      </UTheme>
+        </PChatMessages>
+      </PTheme>
 
       <template #footer>
-        <UChatPrompt
+        <PChatPrompt
           v-model="input"
           :error="error"
           :autofocus="false"
@@ -110,14 +110,14 @@ const ui = {
           size="sm"
           @submit="onSubmit"
         >
-          <UChatPromptSubmit
+          <PChatPromptSubmit
             size="sm"
             :status="status"
             @stop="stop()"
             @reload="regenerate()"
           />
-        </UChatPrompt>
+        </PChatPrompt>
       </template>
-    </USidebar>
+    </PSidebar>
   </div>
 </template>

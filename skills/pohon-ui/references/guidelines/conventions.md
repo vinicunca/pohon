@@ -1,10 +1,10 @@
 # Conventions
 
-Coding patterns specific to Nuxt UI.
+Coding patterns specific to Pohon UI.
 
 ## Auto-registered modules
 
-Nuxt UI automatically registers `@nuxt/icon`, `@nuxt/fonts`, and `@nuxtjs/color-mode`. Do **not** add them to your `modules` array. Configure them via root-level keys in `nuxt.config.ts`:
+Pohon UI automatically registers `@nuxt/icon`, `@nuxt/fonts`, and `@nuxtjs/color-mode`. Do **not** add them to your `modules` array. Configure them via root-level keys in `nuxt.config.ts`:
 
 ```ts
 // nuxt.config.ts
@@ -35,16 +35,6 @@ export default defineNuxtConfig({
 });
 ```
 
-Add `@source` in your CSS so Tailwind generates classes used in markdown/MDC:
-
-```css
-/* app/assets/css/main.css */
-@import "tailwindcss";
-@import "pohon-ui";
-
-@source "../../../content/**/*";
-```
-
 Use `mapContentNavigation` to transform content navigation for components like `PBreadcrumb`:
 
 ```ts
@@ -56,22 +46,9 @@ const breadcrumb = computed(() =>
 );
 ```
 
-## IDE setup
+## PApp wrapper
 
-Recommended `.vscode/settings.json` for Tailwind IntelliSense autocomplete with Nuxt UI:
-
-```json
-{
-  "files.associations": { "*.css": "tailwindcss" },
-  "editor.quickSuggestions": { "strings": "on" },
-  "tailwindCSS.classAttributes": ["class", "ui"],
-  "tailwindCSS.classFunctions": ["defineAppConfig"]
-}
-```
-
-## UApp wrapper
-
-Always wrap your app in `UApp` — it provides:
+Always wrap your app in `PApp` — it provides:
 
 - Toast container (`useToast`)
 - Tooltip provider
@@ -79,18 +56,18 @@ Always wrap your app in `UApp` — it provides:
 - i18n locale support
 
 ```vue
-<UApp :locale="fr">
+<PApp :locale="fr">
   <NuxtPage /> <!-- or <RouterView /> for Vue -->
-</UApp>
+</PApp>
 ```
 
 ## Icons
 
-Nuxt UI registers `@nuxt/icon` automatically. Format: `i-{collection}-{name}`. Prefer `lucide` collection.
+Pohon UI registers `@nuxt/icon` automatically. Format: `i-{collection}-{name}`. Prefer `lucide` collection.
 
 ```vue
-<UIcon name="i-lucide-sun" class="size-5" />
-<UButton icon="i-lucide-plus" label="Add" />
+<PIcon name="i-lucide-sun" class="size-5" />
+<PButton icon="i-lucide-plus" label="Add" />
 <PAlert icon="i-lucide-info" title="Heads up" />
 ```
 
@@ -179,7 +156,7 @@ const items = [
 ];
 ```
 
-Components supporting nested arrays: `PDropdownMenu`, `UContextMenu`, `PCommandPalette`, `PNavigationMenu`.
+Components supporting nested arrays: `PDropdownMenu`, `PContextMenu`, `PCommandPalette`, `PNavigationMenu`.
 
 ## Composables
 
@@ -244,7 +221,7 @@ defineShortcuts(extractShortcuts(items));
 
 ### Internationalization (i18n)
 
-Nuxt UI supports 50+ locales. Set the locale on `UApp` — all components inherit it.
+Pohon UI supports 50+ locales. Set the locale on `PApp` — all components inherit it.
 
 #### Static locale
 
@@ -254,9 +231,9 @@ import { fr } from "pohon-ui/locale";
 </script>
 
 <template>
-  <UApp :locale="fr">
+  <PApp :locale="fr">
     <NuxtPage />
-  </UApp>
+  </PApp>
 </template>
 ```
 
@@ -321,23 +298,23 @@ useHead({
 </script>
 
 <template>
-  <UApp :locale="locales[locale]">
+  <PApp :locale="locales[locale]">
     <NuxtPage />
-  </UApp>
+  </PApp>
 </template>
 ```
 
-Each locale has a `dir` property (`'ltr'` or `'rtl'`). `UApp` uses it to set directionality on all components. Use `useHead` to propagate `lang` and `dir` to the `<html>` element.
+Each locale has a `dir` property (`'ltr'` or `'rtl'`). `PApp` uses it to set directionality on all components. Use `useHead` to propagate `lang` and `dir` to the `<html>` element.
 
 ## Color mode
 
-Nuxt UI registers `@nuxtjs/color-mode` automatically. Built-in components for switching:
+Pohon UI registers `@nuxtjs/color-mode` automatically. Built-in components for switching:
 
-- `UColorModeButton` — single button toggle (light/dark)
-- `UColorModeSwitch` — toggle switch
-- `UColorModeSelect` — dropdown with system/light/dark options
-- `UColorModeAvatar` — displays different avatar per mode
-- `UColorModeImage` — displays different image per mode
+- `PColorModeButton` — single button toggle (light/dark)
+- `PColorModeSwitch` — toggle switch
+- `PColorModeSelect` — dropdown with system/light/dark options
+- `PColorModeAvatar` — displays different avatar per mode
+- `PColorModeImage` — displays different image per mode
 
 For custom color mode UI, use `useColorMode` with `ClientOnly` to avoid hydration mismatch:
 
@@ -382,7 +359,7 @@ npx nuxi@latest init -t ui/calendar     # Calendar
 
 ## Responsive patterns
 
-- Dashboard sidebar hides on mobile, shows a slideover/drawer via `UDashboardSidebar` `mode` prop
-- `UHeader` body slot is the mobile menu content (shown when hamburger is tapped)
+- Dashboard sidebar hides on mobile, shows a slideover/drawer via `PDashboardSidebar` `mode` prop
+- `PHeader` body slot is the mobile menu content (shown when hamburger is tapped)
 - Most components handle responsiveness automatically — avoid manual breakpoint classes unless needed
-- Use `UPageAside` for sidebars that should hide below `lg` breakpoint
+- Use `PPageAside` for sidebars that should hide below `lg` breakpoint

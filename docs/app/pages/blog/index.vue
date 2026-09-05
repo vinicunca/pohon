@@ -11,10 +11,10 @@ const { data: posts } = await useAsyncData('blog-posts', () =>
 )
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon UI',
   title: page.value.title,
   description: page.value.description,
-  ogTitle: `${page.value.title} - Nuxt UI`,
+  ogTitle: `${page.value.title} - Pohon UI`,
   ogDescription: page.value.description
 })
 
@@ -48,7 +48,7 @@ function formatDate(date: string) {
       </template>
     </PPageHero>
 
-    <UPageBody class="my-0! py-0! border-y border-default">
+    <PPageBody class="my-0! py-0! border-y border-default">
       <PContainer>
         <div class="border-x border-default gap-0!">
           <Motion
@@ -59,7 +59,7 @@ function formatDate(date: string) {
             :transition="{ delay: index * 0.05, type: 'spring', stiffness: 300, damping: 30 }"
             class="group border-b border-default last:border-b-0"
           >
-            <ULink
+            <PLink
               :to="post.path"
               class="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-6 hover:bg-muted/30 transition-all duration-200 gap-4 sm:gap-6"
             >
@@ -80,26 +80,26 @@ function formatDate(date: string) {
 
               <div class="flex items-center justify-between sm:justify-end gap-3 sm:gap-2 shrink-0">
 
-                <UAvatarGroup v-if="post.authors?.length" size="sm" class="sm:size-sm">
-                  <UAvatar
+                <PAvatarGroup v-if="post.authors?.length" size="sm" class="sm:size-sm">
+                  <PAvatar
                     v-for="author in post.authors.slice(0, 3)"
                     :key="author.name"
                     :src="author.avatar?.src"
                     :alt="author.name"
                     size="sm"
                   />
-                </UAvatarGroup>
+                </PAvatarGroup>
 
-                <UIcon
+                <PIcon
                   name="i-lucide-chevron-right"
                   class="size-4 text-muted group-hover:text-highlighted transition-colors duration-200 shrink-0"
                 />
               </div>
-            </ULink>
+            </PLink>
           </Motion>
         </div>
       </PContainer>
-    </UPageBody>
+    </PPageBody>
 
     <PContainer class="relative min-h-24 grow">
       <div aria-hidden="true" class="absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />

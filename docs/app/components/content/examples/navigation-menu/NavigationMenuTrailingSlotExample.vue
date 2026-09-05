@@ -54,11 +54,11 @@ const dropdownItems: DropdownMenuItem[][] = [
     class="w-48"
   >
     <template #personal-label-trailing>
-      <UButton icon="i-lucide-plus" color="neutral" variant="ghost" size="xs" />
+      <PButton icon="i-lucide-plus" color="neutral" variant="ghost" size="xs" />
     </template>
 
     <template #teams-label-trailing>
-      <UButton icon="i-lucide-plus" color="neutral" variant="ghost" size="xs" />
+      <PButton icon="i-lucide-plus" color="neutral" variant="ghost" size="xs" />
     </template>
 
     <template #item-trailing>
@@ -69,7 +69,7 @@ const dropdownItems: DropdownMenuItem[][] = [
           :modal="false"
           size="xs"
         >
-          <UButton
+          <PButton
             as="div"
             icon="i-lucide-ellipsis"
             color="neutral"

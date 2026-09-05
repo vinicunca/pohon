@@ -140,7 +140,7 @@ const value = ref("<h1>Hello World</h1>\n");
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-model="value"
     :extensions="[
       Emoji,
@@ -190,7 +190,7 @@ The `placeholder` prop accepts a string or an object with [PlaceholderOptions](h
 
 ```vue
 <template>
-  <UEditor
+  <PEditor
     :placeholder="{ placeholder: 'Start writing...', mode: 'firstLine' }"
   />
 </template>
@@ -203,7 +203,7 @@ By default, placeholders only appear on top-level empty nodes. To show placehold
 
 ```vue
 <template>
-  <UEditor
+  <PEditor
     :placeholder="{ placeholder: 'Start writing...', includeChildren: true }"
   />
 </template>
@@ -225,7 +225,7 @@ const value = ref("<h1>Hello World</h1>\n");
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-model="value"
     :starter-kit="{
       blockquote: false,
@@ -312,9 +312,9 @@ const items: EditorToolbarItem[] = [
 </script>
 
 <template>
-  <UEditor v-slot="{ editor }" v-model="value">
-    <UEditorToolbar :editor="editor" :items="items" />
-  </UEditor>
+  <PEditor v-slot="{ editor }" v-model="value">
+    <PEditorToolbar :editor="editor" :items="items" />
+  </PEditor>
 </template>
 ```
 
@@ -364,9 +364,9 @@ const items = [
 </script>
 
 <template>
-  <UEditor v-slot="{ editor }" v-model="value" :handlers="customHandlers">
-    <UEditorToolbar :editor="editor" :items="items" />
-  </UEditor>
+  <PEditor v-slot="{ editor }" v-model="value" :handlers="customHandlers">
+    <PEditorToolbar :editor="editor" :items="items" />
+  </PEditor>
 </template>
 ```
 

@@ -65,10 +65,10 @@ export function createOpenApiDocument(options: { version: string, url?: string, 
   return {
     openapi: '3.1.0',
     info: {
-      title: 'Nuxt UI',
+      title: 'Pohon UI',
       summary: 'Documentation, content and metadata endpoints of ui.nuxt.com.',
       description: [
-        'Nuxt UI is a Vue component library (Nuxt optional) with 125+ accessible, Tailwind CSS components.',
+        'Pohon UI is a Vue component library (Nuxt optional) with 125+ accessible, Tailwind CSS components.',
         '',
         'This specification covers the public, read-only endpoints agents can use to read the documentation and its metadata.',
         '',
@@ -85,7 +85,7 @@ export function createOpenApiDocument(options: { version: string, url?: string, 
         identifier: 'MIT'
       },
       contact: {
-        name: 'Nuxt UI',
+        name: 'Pohon UI',
         url: `${url}/docs`
       }
     },
@@ -231,7 +231,7 @@ export function createOpenApiDocument(options: { version: string, url?: string, 
           operationId: 'getLocales',
           tags: ['Data'],
           summary: 'Locales',
-          description: 'Every locale Nuxt UI ships a translation for, mapped to its flag emoji.',
+          description: 'Every locale Pohon UI ships a translation for, mapped to its flag emoji.',
           responses: {
             200: {
               description: 'Map of locale tag to flag emoji, for example `{ "fr-FR": "🇫🇷" }`.',

@@ -25,7 +25,7 @@ const items: TimelineItem[] = [{
 </script>
 
 <template>
-  <UTimeline
+  <PTimeline
     :items="items"
     :default-value="2"
     :ui="{ item: 'even:flex-row-reverse even:-translate-x-[calc(100%-2rem)] rtl:even:translate-x-[calc(100%-2rem)] even:text-end' }"

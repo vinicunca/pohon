@@ -13,17 +13,17 @@ export function useHeader() {
     active: route.path.startsWith('/showcase') || route.path.startsWith('/community') || route.path.startsWith('/blog'),
     children: [{
       label: 'Showcase',
-      description: 'Discover websites built with Nuxt UI.',
+      description: 'Discover websites built with Pohon UI.',
       icon: 'i-lucide-presentation',
       to: '/showcase'
     }, {
       label: 'Community',
-      description: 'Explore projects built around Nuxt UI.',
+      description: 'Explore projects built around Pohon UI.',
       icon: 'i-lucide-globe',
       to: '/community'
     }, {
       label: 'Playground',
-      description: 'Try Nuxt UI components live in your browser.',
+      description: 'Try Pohon UI components live in your browser.',
       icon: 'i-lucide-square-terminal',
       to: '/play',
       target: '_blank'

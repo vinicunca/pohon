@@ -9,7 +9,7 @@ const emit = defineEmits(['close'])
 <template>
   <PModal :title="`This modal was opened programmatically ${count} times`">
     <template #footer>
-      <UButton color="neutral" label="Close" @click="emit('close')" />
+      <PButton color="neutral" label="Close" @click="emit('close')" />
     </template>
   </PModal>
 </template>

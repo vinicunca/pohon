@@ -5,7 +5,7 @@ const domain = ref(domains[0])
 </script>
 
 <template>
-  <UFieldGroup>
+  <PFieldGroup>
     <PInput
       v-model="value"
       placeholder="nuxt"
@@ -22,5 +22,5 @@ const domain = ref(domains[0])
     </PInput>
 
     <PSelectMenu v-model="domain" :items="domains" />
-  </UFieldGroup>
+  </PFieldGroup>
 </template>

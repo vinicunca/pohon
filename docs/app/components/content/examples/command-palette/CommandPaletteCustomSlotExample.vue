@@ -85,15 +85,15 @@ const groups = [
 <template>
   <PCommandPalette :groups="groups" class="flex-1 h-80">
     <template #users-leading="{ item }">
-      <UAvatar :src="`https://github.com/${item.suffix}.png`" size="2xs" loading="lazy" />
+      <PAvatar :src="`https://github.com/${item.suffix}.png`" size="2xs" loading="lazy" />
     </template>
 
     <template #billing-label="{ item }">
       <span class="font-medium text-primary">{{ item.label }}</span>
 
-      <UBadge variant="subtle" size="sm">
+      <PBadge variant="subtle" size="sm">
         50% off
-      </UBadge>
+      </PBadge>
     </template>
   </PCommandPalette>
 </template>

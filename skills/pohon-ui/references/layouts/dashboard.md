@@ -12,16 +12,16 @@ Build admin interfaces with resizable sidebars, multi-panel layouts, and toolbar
 ## Component tree
 
 ```
-UApp
+PApp
 └── NuxtLayout (dashboard)
-    └── UDashboardGroup
-        ├── UDashboardSidebar
+    └── PDashboardGroup
+        ├── PDashboardSidebar
         │   ├── #header (logo, search button)
         │   ├── #default (navigation) — receives { collapsed } slot prop
         │   └── #footer (user menu)
         └── NuxtPage
             └── PDashboardPanel
-                ├── #header → UDashboardNavbar + UDashboardToolbar
+                ├── #header → PDashboardNavbar + PDashboardToolbar
                 ├── #body (scrollable content)
                 └── #footer (optional)
 ```
@@ -57,10 +57,10 @@ const items = computed<NavigationMenuItem[]>(() => [
 </script>
 
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar collapsible resizable>
+  <PDashboardGroup>
+    <PDashboardSidebar collapsible resizable>
       <template #header="{ collapsed }">
-        <UDashboardSearchButton :collapsed="collapsed" />
+        <PDashboardSearchButton :collapsed="collapsed" />
       </template>
 
       <template #default="{ collapsed }">
@@ -72,7 +72,7 @@ const items = computed<NavigationMenuItem[]>(() => [
       </template>
 
       <template #footer="{ collapsed }">
-        <UButton
+        <PButton
           :icon="collapsed ? 'i-lucide-log-out' : undefined"
           :label="collapsed ? undefined : 'Sign out'"
           color="neutral"
@@ -80,10 +80,10 @@ const items = computed<NavigationMenuItem[]>(() => [
           block
         />
       </template>
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
     <slot />
-  </UDashboardGroup>
+  </PDashboardGroup>
 </template>
 ```
 
@@ -97,14 +97,14 @@ definePageMeta({ layout: "dashboard" });
 <template>
   <PDashboardPanel>
     <template #header>
-      <UDashboardNavbar title="Home">
+      <PDashboardNavbar title="Home">
         <template #leading>
-          <UDashboardSidebarCollapse />
+          <PDashboardSidebarCollapse />
         </template>
         <template #right>
-          <UButton icon="i-lucide-plus" label="New" />
+          <PButton icon="i-lucide-plus" label="New" />
         </template>
-      </UDashboardNavbar>
+      </PDashboardNavbar>
     </template>
 
     <template #body>
@@ -150,7 +150,7 @@ Content panel with `#header`, `#body` (scrollable), `#footer`, and `#default` (r
 
 ### DashboardNavbar / DashboardToolbar
 
-Navbar: `#leading`, `#left`, `#default`, `#right` slots + `title` prop. Use `UDashboardSidebarCollapse` in `#leading` to toggle sidebar on mobile.
+Navbar: `#leading`, `#left`, `#default`, `#right` slots + `title` prop. Use `PDashboardSidebarCollapse` in `#leading` to toggle sidebar on mobile.
 Toolbar: same slots, sits below navbar for filters/actions.
 
 ### PNavigationMenu in sidebar
@@ -167,7 +167,7 @@ definePageMeta({ layout: "dashboard" });
 <template>
   <PDashboardPanel id="inbox-list" resizable>
     <template #header>
-      <UDashboardNavbar title="Inbox" />
+      <PDashboardNavbar title="Inbox" />
     </template>
     <template #body>
       <!-- Email list -->
@@ -176,7 +176,7 @@ definePageMeta({ layout: "dashboard" });
 
   <PDashboardPanel id="inbox-detail" class="hidden lg:flex">
     <template #header>
-      <UDashboardNavbar title="Message" />
+      <PDashboardNavbar title="Message" />
     </template>
     <template #body>
       <!-- Email content -->
@@ -190,15 +190,15 @@ definePageMeta({ layout: "dashboard" });
 ```vue
 <PDashboardPanel>
   <template #header>
-    <UDashboardNavbar title="Users" />
-    <UDashboardToolbar>
+    <PDashboardNavbar title="Users" />
+    <PDashboardToolbar>
       <template #left>
         <PInput icon="i-lucide-search" placeholder="Search..." />
       </template>
       <template #right>
         <PSelect :items="['All', 'Active', 'Inactive']" />
       </template>
-    </UDashboardToolbar>
+    </PDashboardToolbar>
   </template>
 </PDashboardPanel>
 ```
@@ -207,32 +207,32 @@ definePageMeta({ layout: "dashboard" });
 
 ```vue [layouts/dashboard.vue]
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar>
+  <PDashboardGroup>
+    <PDashboardSidebar>
       <template #header>
-        <UDashboardSearchButton />
+        <PDashboardSearchButton />
       </template>
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
     <slot />
 
-    <UDashboardSearch :groups="searchGroups" />
-  </UDashboardGroup>
+    <PDashboardSearch :groups="searchGroups" />
+  </PDashboardGroup>
 </template>
 ```
 
 ## Right sidebar
 
 ```vue
-<UDashboardGroup>
-  <UDashboardSidebar collapsible resizable>
+<PDashboardGroup>
+  <PDashboardSidebar collapsible resizable>
     <!-- Left sidebar -->
-  </UDashboardSidebar>
+  </PDashboardSidebar>
 
   <slot />
 
-  <UDashboardSidebar side="right" resizable>
+  <PDashboardSidebar side="right" resizable>
     <!-- Right sidebar -->
-  </UDashboardSidebar>
-</UDashboardGroup>
+  </PDashboardSidebar>
+</PDashboardGroup>
 ```

@@ -68,11 +68,11 @@ const ui = {
 </script>
 
 <template>
-  <UContentSearch v-model:search-term="searchTerm" open :groups="groups">
+  <PContentSearch v-model:search-term="searchTerm" open :groups="groups">
     <template v-if="ai" #content>
-      <UTheme :ui="ui">
-        <UChatPalette>
-          <UChatMessages
+      <PTheme :ui="ui">
+        <PChatPalette>
+          <PChatMessages
             :messages="messages"
             :status="status"
             :user="{ side: 'left', variant: 'naked', avatar: { src: 'https://github.com/benjamincanac.png', loading: 'lazy' as const } }"
@@ -94,10 +94,10 @@ const ui = {
                 </template>
               </template>
             </template>
-          </UChatMessages>
+          </PChatMessages>
 
           <template #prompt>
-            <UChatPrompt
+            <PChatPrompt
               v-model="input"
               icon="i-lucide-search"
               variant="naked"
@@ -106,8 +106,8 @@ const ui = {
               @close="onClose"
             />
           </template>
-        </UChatPalette>
-      </UTheme>
+        </PChatPalette>
+      </PTheme>
     </template>
-  </UContentSearch>
+  </PContentSearch>
 </template>

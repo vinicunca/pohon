@@ -26,9 +26,9 @@ const tour = useTour([
 <template>
   <div class="w-full space-y-4">
     <div class="flex justify-end">
-      <UButton icon="i-lucide-wand-sparkles" @click="tour.start()">
+      <PButton icon="i-lucide-wand-sparkles" @click="tour.start()">
         Start tour
-      </UButton>
+      </PButton>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -79,7 +79,7 @@ const tour = useTour([
             {{ tour.current.value?.body }}
           </p>
           <div class="flex items-center justify-between pt-2">
-            <UButton
+            <PButton
               color="neutral"
               variant="outline"
               size="sm"
@@ -87,10 +87,10 @@ const tour = useTour([
               @click="tour.prev()"
             >
               Back
-            </UButton>
-            <UButton size="sm" @click="tour.next()">
+            </PButton>
+            <PButton size="sm" @click="tour.next()">
               {{ tour.hasNext.value ? 'Next' : 'Finish' }}
-            </UButton>
+            </PButton>
           </div>
         </div>
       </template>

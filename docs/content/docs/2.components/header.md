@@ -37,7 +37,7 @@ In this example, we use the [NavigationMenu](/docs/components/navigation-menu) c
 
 ### Title
 
-Use the `title` prop to change the title of the header. Defaults to `Nuxt UI`.
+Use the `title` prop to change the title of the header. Defaults to `Pohon UI`.
 
 ## ::component-code
 
@@ -45,7 +45,7 @@ hide:
 
 - class
   props:
-  title: 'Nuxt UI'
+  title: 'Pohon UI'
   class: 'w-full'
   class: '!px-0 !pt-0'
 
@@ -253,8 +253,8 @@ const items = computed<NavigationMenuItem[]>(() => [
 </script>
 
 <template>
-  <UApp>
-    <UHeader>
+  <PApp>
+    <PHeader>
       <template #title>
         <Logo class="h-6 w-auto" />
       </template>
@@ -262,9 +262,9 @@ const items = computed<NavigationMenuItem[]>(() => [
       <PNavigationMenu :items="items" />
 
       <template #right>
-        <UColorModeButton />
+        <PColorModeButton />
 
-        <UButton
+        <PButton
           color="neutral"
           variant="ghost"
           to="https://github.com/nuxt/ui"
@@ -281,16 +281,16 @@ const items = computed<NavigationMenuItem[]>(() => [
           class="-mx-2.5"
         />
       </template>
-    </UHeader>
+    </PHeader>
 
-    <UMain>
+    <PMain>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-    </UMain>
+    </PMain>
 
-    <UFooter />
-  </UApp>
+    <PFooter />
+  </PApp>
 </template>
 ```
 

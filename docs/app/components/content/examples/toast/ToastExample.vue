@@ -14,5 +14,5 @@ function addToCalendar() {
 </script>
 
 <template>
-  <UButton label="Add to calendar" color="neutral" variant="outline" icon="i-lucide-plus" @click="addToCalendar" />
+  <PButton label="Add to calendar" color="neutral" variant="outline" icon="i-lucide-plus" @click="addToCalendar" />
 </template>

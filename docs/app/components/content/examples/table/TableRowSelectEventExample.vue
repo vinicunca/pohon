@@ -2,7 +2,7 @@
 import { h, resolveComponent } from 'vue'
 import type { TableColumn, TableRow } from 'pohon-ui'
 
-const UBadge = resolveComponent('UBadge')
+const PBadge = resolveComponent('PBadge')
 const PCheckbox = resolveComponent('PCheckbox')
 
 type Payment = {
@@ -79,7 +79,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -115,7 +115,7 @@ function onSelect(e: Event, row: TableRow<Payment>) {
 <template>
   <div class="flex w-full flex-1 gap-1">
     <div class="flex-1">
-      <UTable
+      <PTable
         ref="table"
         v-model:row-selection="rowSelection"
         :data="data"

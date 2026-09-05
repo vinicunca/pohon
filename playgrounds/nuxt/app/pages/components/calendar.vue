@@ -46,12 +46,12 @@ const range = ref(false)
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs">
-    <UCalendar v-if="props?.type === 'month' && range" v-model="monthRangeValue" range v-bind="props" />
-    <UCalendar v-else-if="props?.type === 'month'" v-model="monthValue" v-bind="props" />
-    <UCalendar v-else-if="props?.type === 'year' && range" v-model="yearRangeValue" range v-bind="props" />
-    <UCalendar v-else-if="props?.type === 'year'" v-model="yearValue" v-bind="props" />
-    <UCalendar v-else-if="range" v-model="rangeValue" range v-bind="props" />
-    <UCalendar v-else-if="multiple" v-model="multipleValue" multiple v-bind="props" />
-    <UCalendar v-else v-model="singleValue" v-bind="props" />
+    <PCalendar v-if="props?.type === 'month' && range" v-model="monthRangeValue" range v-bind="props" />
+    <PCalendar v-else-if="props?.type === 'month'" v-model="monthValue" v-bind="props" />
+    <PCalendar v-else-if="props?.type === 'year' && range" v-model="yearRangeValue" range v-bind="props" />
+    <PCalendar v-else-if="props?.type === 'year'" v-model="yearValue" v-bind="props" />
+    <PCalendar v-else-if="range" v-model="rangeValue" range v-bind="props" />
+    <PCalendar v-else-if="multiple" v-model="multipleValue" multiple v-bind="props" />
+    <PCalendar v-else v-model="singleValue" v-bind="props" />
   </Matrix>
 </template>

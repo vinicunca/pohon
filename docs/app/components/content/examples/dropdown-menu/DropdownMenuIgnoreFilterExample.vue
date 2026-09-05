@@ -37,6 +37,6 @@ function onOpen() {
     :ui="{ content: 'w-48' }"
     @update:open="onOpen"
   >
-    <UButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
+    <PButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
   </PDropdownMenu>
 </template>

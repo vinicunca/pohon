@@ -30,7 +30,7 @@ const columns: TableColumn<(typeof data.value)[number]>[] = [
 </script>
 
 <template>
-  <UTable :data="data" :columns="columns" />
+  <PTable :data="data" :columns="columns" />
 </template>
 ```
 
@@ -76,9 +76,9 @@ const filteredRows = computed(() => {
 <template>
   <PDashboardPanel>
     <template #header>
-      <UDashboardNavbar title="Users" />
+      <PDashboardNavbar title="Users" />
 
-      <UDashboardToolbar>
+      <PDashboardToolbar>
         <template #left>
           <PInput
             v-model="search"
@@ -92,13 +92,13 @@ const filteredRows = computed(() => {
             :items="['All', 'Admin', 'Editor', 'Viewer']"
           />
         </template>
-      </UDashboardToolbar>
+      </PDashboardToolbar>
     </template>
 
     <template #body>
-      <UTable :data="filteredRows" :columns="columns">
+      <PTable :data="filteredRows" :columns="columns">
         <template #status-cell="{ row }">
-          <UBadge
+          <PBadge
             :color="row.original.status === 'Active' ? 'success' : 'neutral'"
             :label="row.original.status"
             variant="subtle"
@@ -125,10 +125,10 @@ const filteredRows = computed(() => {
               ],
             ]"
           >
-            <UButton icon="i-lucide-ellipsis" color="neutral" variant="ghost" />
+            <PButton icon="i-lucide-ellipsis" color="neutral" variant="ghost" />
           </PDropdownMenu>
         </template>
-      </UTable>
+      </PTable>
     </template>
   </PDashboardPanel>
 </template>
@@ -145,7 +145,7 @@ const rowSelection = ref<Record<string, boolean>>({});
 </script>
 
 <template>
-  <UTable
+  <PTable
     ref="table"
     v-model:row-selection="rowSelection"
     :data="data"
@@ -193,7 +193,7 @@ const columns: TableColumn[] = [
 
 ## With pagination
 
-Use `v-model:pagination` on `UTable` with TanStack's `getPaginationRowModel`, then wire `UPagination` to the table API. `UPagination`'s `total` is total **items** (not pages) — it calculates page count from `total / items-per-page`.
+Use `v-model:pagination` on `PTable` with TanStack's `getPaginationRowModel`, then wire `PPagination` to the table API. `PPagination`'s `total` is total **items** (not pages) — it calculates page count from `total / items-per-page`.
 
 ```vue
 <script setup lang="ts">
@@ -208,7 +208,7 @@ const pagination = ref({
 </script>
 
 <template>
-  <UTable
+  <PTable
     ref="table"
     v-model:pagination="pagination"
     :data="data"
@@ -217,7 +217,7 @@ const pagination = ref({
   />
 
   <div class="flex justify-end p-4">
-    <UPagination
+    <PPagination
       :page="(table?.tableApi?.getState().pagination.pageIndex || 0) + 1"
       :items-per-page="table?.tableApi?.getState().pagination.pageSize"
       :total="table?.tableApi?.getFilteredRowModel().rows.length"
@@ -237,7 +237,7 @@ const { data, status } = useLazyFetch("/api/users", { server: false });
 </script>
 
 <template>
-  <UTable
+  <PTable
     :data="data"
     :columns="columns"
     :loading="status === 'pending' || status === 'idle'"
@@ -259,14 +259,14 @@ const { data, status } = await useAsyncData(
 </script>
 
 <template>
-  <UTable
+  <PTable
     :data="data?.items"
     :columns="columns"
     :loading="status === 'pending'"
   />
 
   <div class="flex justify-end p-4">
-    <UPagination
+    <PPagination
       v-model="page"
       :total="data?.total"
       :items-per-page="data?.pageSize"

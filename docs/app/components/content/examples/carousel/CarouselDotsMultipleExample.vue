@@ -10,7 +10,7 @@ const items = [
 </script>
 
 <template>
-  <UCarousel v-slot="{ item }" dots :items="items" :ui="{ item: 'basis-1/3' }">
+  <PCarousel v-slot="{ item }" dots :items="items" :ui="{ item: 'basis-1/3' }">
     <img :src="item" width="320" height="320" class="rounded-lg" loading="lazy">
-  </UCarousel>
+  </PCarousel>
 </template>

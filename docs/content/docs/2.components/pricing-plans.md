@@ -14,9 +14,9 @@ The PricingPlans component provides a flexible layout to display a list of [Pric
 
 ```vue {2,8}
 <template>
-  <UPricingPlans>
-    <UPricingPlan v-for="(plan, index) in plans" :key="index" v-bind="plan" />
-  </UPricingPlans>
+  <PPricingPlans>
+    <PPricingPlan v-for="(plan, index) in plans" :key="index" v-bind="plan" />
+  </PPricingPlans>
 </template>
 ```
 
@@ -202,15 +202,15 @@ const { data: plans } = await useAsyncData("plans", () =>
 </script>
 
 <template>
-  <UPage>
+  <PPage>
     <PPageHero title="Pricing" />
 
-    <UPageBody>
+    <PPageBody>
       <PContainer>
-        <UPricingPlans :plans="plans" />
+        <PPricingPlans :plans="plans" />
       </PContainer>
-    </UPageBody>
-  </UPage>
+    </PPageBody>
+  </PPage>
 </template>
 ```
 

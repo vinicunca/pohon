@@ -25,7 +25,7 @@ const items: NavigationMenuItem[][] = [[{
 </script>
 
 <template>
-  <UDashboardToolbar>
+  <PDashboardToolbar>
     <PNavigationMenu :items="items" highlight class="flex-1" />
-  </UDashboardToolbar>
+  </PDashboardToolbar>
 </template>

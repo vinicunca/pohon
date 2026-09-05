@@ -126,7 +126,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
   <div class="w-full flex flex-col lg:grid lg:grid-cols-10 lg:gap-10">
     <Markdown :value="value" class="lg:col-span-8 max-w-xl mx-auto text-muted" />
 
-    <UContentToc
+    <PContentToc
       :links="links"
       :highlight="highlight"
       :color="color"
@@ -135,10 +135,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
       class="lg:col-span-2 order-first lg:order-last top-0 max-h-[calc(100vh-12rem)]"
     >
       <template #bottom>
-        <USeparator type="dashed" />
+        <PSeparator type="dashed" />
 
         <Placeholder class="h-32" />
       </template>
-    </UContentToc>
+    </PContentToc>
   </div>
 </template>

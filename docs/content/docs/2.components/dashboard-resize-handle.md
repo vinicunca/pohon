@@ -24,20 +24,20 @@ Even though this component is automatically displayed when the `resizable` prop 
 
 ```vue [layouts/dashboard.vue]{4-10}
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar resizable>
+  <PDashboardGroup>
+    <PDashboardSidebar resizable>
       <template #resize-handle="{ onMouseDown, onTouchStart, onDoubleClick }">
-        <UDashboardResizeHandle
+        <PDashboardResizeHandle
           class="after:absolute after:inset-y-0 after:right-0 after:w-px hover:after:bg-(--ui-border-accented) after:transition"
           @mousedown="onMouseDown"
           @touchstart="onTouchStart"
           @dblclick="onDoubleClick"
         />
       </template>
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
     <slot />
-  </UDashboardGroup>
+  </PDashboardGroup>
 </template>
 ```
 
@@ -51,7 +51,7 @@ definePageMeta({
 <template>
   <PDashboardPanel resizable>
     <template #resize-handle="{ onMouseDown, onTouchStart, onDoubleClick }">
-      <UDashboardResizeHandle
+      <PDashboardResizeHandle
         class="after:absolute after:inset-y-0 after:right-0 after:w-px hover:after:bg-(--ui-border-accented) after:transition"
         @mousedown="onMouseDown"
         @touchstart="onTouchStart"

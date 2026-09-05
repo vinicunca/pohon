@@ -13,5 +13,5 @@ const surround = [{
 <template>
   <Navbar />
 
-  <UContentSurround :surround="surround" />
+  <PContentSurround :surround="surround" />
 </template>

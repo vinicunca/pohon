@@ -344,7 +344,7 @@ const { messages, addToolApprovalResponse } = useChat({
 </script>
 
 <template>
-  <UChatTool
+  <PChatTool
     v-if="isToolUIPart(part)"
     :text="getToolName(part)"
     :streaming="isToolStreaming(part)"

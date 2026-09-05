@@ -18,45 +18,45 @@ const orientation = ref('horizontal' as keyof typeof theme.variants.orientation)
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs">
-    <UFieldGroup :orientation="orientation" v-bind="props">
-      <UButton color="neutral" variant="outline">
+    <PFieldGroup :orientation="orientation" v-bind="props">
+      <PButton color="neutral" variant="outline">
         Button
-      </UButton>
-    </UFieldGroup>
+      </PButton>
+    </PFieldGroup>
 
-    <UFieldGroup :orientation="orientation" v-bind="props">
+    <PFieldGroup :orientation="orientation" v-bind="props">
       <PInput placeholder="Search..." />
-    </UFieldGroup>
+    </PFieldGroup>
 
-    <UFieldGroup :orientation="orientation" v-bind="props">
-      <UButton color="neutral" variant="outline">
+    <PFieldGroup :orientation="orientation" v-bind="props">
+      <PButton color="neutral" variant="outline">
         Button
-      </UButton>
-      <UButton color="neutral" variant="subtle">
+      </PButton>
+      <PButton color="neutral" variant="subtle">
         Button
-      </UButton>
-      <UButton color="neutral" variant="outline">
+      </PButton>
+      <PButton color="neutral" variant="outline">
         Button
-      </UButton>
-    </UFieldGroup>
+      </PButton>
+    </PFieldGroup>
 
-    <UFieldGroup :orientation="orientation" v-bind="props">
-      <UButton color="neutral" variant="outline">
+    <PFieldGroup :orientation="orientation" v-bind="props">
+      <PButton color="neutral" variant="outline">
         Button
-      </UButton>
+      </PButton>
       <PInput placeholder="Search..." />
-    </UFieldGroup>
+    </PFieldGroup>
 
-    <UFieldGroup :orientation="orientation" v-bind="props">
+    <PFieldGroup :orientation="orientation" v-bind="props">
       <PInput placeholder="Search..." />
-      <UButton color="neutral" variant="outline">
+      <PButton color="neutral" variant="outline">
         Button
-      </UButton>
-    </UFieldGroup>
+      </PButton>
+    </PFieldGroup>
 
-    <UFieldGroup :orientation="orientation" v-bind="props">
-      <UBadge color="neutral" variant="outline" size="lg" label="https://" />
+    <PFieldGroup :orientation="orientation" v-bind="props">
+      <PBadge color="neutral" variant="outline" size="lg" label="https://" />
       <PInput color="neutral" variant="outline" placeholder="www.example.com" />
-    </UFieldGroup>
+    </PFieldGroup>
   </Matrix>
 </template>

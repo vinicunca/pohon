@@ -64,18 +64,18 @@ const items: NavigationMenuItem[] = [
 </script>
 
 <template>
-  <UApp>
-    <UHeader />
+  <PApp>
+    <PHeader />
 
-    <UMain>
+    <PMain>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-    </UMain>
+    </PMain>
 
-    <USeparator icon="i-simple-icons-nuxtdotjs" type="dashed" class="h-px" />
+    <PSeparator icon="i-simple-icons-nuxtdotjs" type="dashed" class="h-px" />
 
-    <UFooter>
+    <PFooter>
       <template #left>
         <p class="text-muted text-sm">
           Copyright © {{ new Date().getFullYear() }}
@@ -85,7 +85,7 @@ const items: NavigationMenuItem[] = [
       <PNavigationMenu :items="items" variant="link" />
 
       <template #right>
-        <UButton
+        <PButton
           icon="i-simple-icons-discord"
           color="neutral"
           variant="ghost"
@@ -93,7 +93,7 @@ const items: NavigationMenuItem[] = [
           target="_blank"
           aria-label="Discord"
         />
-        <UButton
+        <PButton
           icon="i-simple-icons-x"
           color="neutral"
           variant="ghost"
@@ -101,7 +101,7 @@ const items: NavigationMenuItem[] = [
           target="_blank"
           aria-label="X"
         />
-        <UButton
+        <PButton
           icon="i-simple-icons-github"
           color="neutral"
           variant="ghost"
@@ -110,8 +110,8 @@ const items: NavigationMenuItem[] = [
           aria-label="GitHub"
         />
       </template>
-    </UFooter>
-  </UApp>
+    </PFooter>
+  </PApp>
 </template>
 ```
 

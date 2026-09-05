@@ -5,5 +5,5 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </script>
 
 <template>
-  <UContentNavigation :navigation="navigation" highlight />
+  <PContentNavigation :navigation="navigation" highlight />
 </template>

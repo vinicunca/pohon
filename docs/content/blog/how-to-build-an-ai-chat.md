@@ -1,6 +1,6 @@
 ---
-title: Build an AI Chatbot with Nuxt, Nuxt UI, and AI SDK
-description: Learn how to build a full-featured AI chatbot with streaming responses, multiple models support, and a beautiful UI using Nuxt, Nuxt UI, and Vercel AI SDK.
+title: Build an AI Chatbot with Nuxt, Pohon UI, and AI SDK
+description: Learn how to build a full-featured AI chatbot with streaming responses, multiple models support, and a beautiful UI using Nuxt, Pohon UI, and Vercel AI SDK.
 navigation: false
 image: /assets/blog/building-nuxt-ai-chatbot.png
 authors:
@@ -16,14 +16,14 @@ date: 2025-12-16T10:00:00.000Z
 category: Tutorial
 ---
 
-Building AI-powered applications has never been more accessible. This guide walks through creating a full-featured AI chatbot using Nuxt, Nuxt UI, and the Vercel AI SDK. Each step is explained in detail so you understand how every piece works together.
+Building AI-powered applications has never been more accessible. This guide walks through creating a full-featured AI chatbot using Nuxt, Pohon UI, and the Vercel AI SDK. Each step is explained in detail so you understand how every piece works together.
 
 ## What we're building
 
 By the end of this tutorial, you'll have a fully functional AI chatbot with:
 
 - **Streaming responses** that appear in real-time as the AI generates them
-- **A beautiful chat interface** built with Nuxt UI's purpose-built chat components
+- **A beautiful chat interface** built with Pohon UI's purpose-built chat components
 - **Markdown rendering** for rich AI responses with code highlighting
 - **Multi-model support** allowing users to switch between OpenAI, Anthropic, and Google models
 - **Server-side AI integration** using Nitro API routes and the AI SDK
@@ -50,7 +50,7 @@ cd nuxt-ai-chat
 
 ### Installing dependencies
 
-Install Nuxt UI and the AI-specific dependencies:
+Install Pohon UI and the AI-specific dependencies:
 
 ::code-group{sync="pm"}
 
@@ -93,10 +93,10 @@ export default defineNuxtConfig({
 ::
 
 ::note{to="/docs/typography"}
-`@comark/nuxt` automatically enables Nuxt UI's [prose components](/docs/typography), so Markdown rendered by Comark is styled to match your theme.
+`@comark/nuxt` automatically enables Pohon UI's [prose components](/docs/typography), so Markdown rendered by Comark is styled to match your theme.
 ::
 
-Create the main CSS file to import Tailwind CSS and Nuxt UI:
+Create the main CSS file to import Tailwind CSS and Pohon UI:
 
 ::code-tree-intersection
 
@@ -109,17 +109,17 @@ Create the main CSS file to import Tailwind CSS and Nuxt UI:
 
 ### Setting up the app
 
-Nuxt UI requires wrapping your app with `UApp` for modals, toasts, and overlays to work properly:
+Pohon UI requires wrapping your app with `PApp` for modals, toasts, and overlays to work properly:
 
 ::code-tree-intersection
 
 ```vue [app/app.vue] {2,6}
 <template>
-  <UApp>
-    <UDashboardGroup unit="rem">
+  <PApp>
+    <PDashboardGroup unit="rem">
       <NuxtPage />
-    </UDashboardGroup>
-  </UApp>
+    </PDashboardGroup>
+  </PApp>
 </template>
 ```
 
@@ -451,11 +451,11 @@ export default defineEventHandler(async (event) => {
 
 ## Wiring up the UI
 
-Nuxt UI provides purpose-built components for AI chat interfaces: [`UChatPrompt`](/docs/components/chat-prompt) for the input area and [`UChatMessages`](/docs/components/chat-messages) for displaying the conversation.
+Pohon UI provides purpose-built components for AI chat interfaces: [`PChatPrompt`](/docs/components/chat-prompt) for the input area and [`PChatMessages`](/docs/components/chat-messages) for displaying the conversation.
 
 ### Creating the home page
 
-The home page is where users start a new conversation. The [`UChatPrompt`](/docs/components/chat-prompt) component provides a textarea with auto-resize, keyboard shortcuts, and a submit button:
+The home page is where users start a new conversation. The [`PChatPrompt`](/docs/components/chat-prompt) component provides a textarea with auto-resize, keyboard shortcuts, and a submit button:
 
 ::code-tree-intersection
 
@@ -493,15 +493,15 @@ async function createChat() {
           How can I help you today?
         </h1>
 
-        <UChatPrompt
+        <PChatPrompt
           v-model="input"
           :status="loading ? 'streaming' : 'ready'"
           variant="subtle"
           placeholder="Ask me anything..."
           @submit="createChat"
         >
-          <UChatPromptSubmit color="neutral" />
-        </UChatPrompt>
+          <PChatPromptSubmit color="neutral" />
+        </PChatPrompt>
       </PContainer>
     </template>
   </PDashboardPanel>
@@ -510,7 +510,7 @@ async function createChat() {
 
 ::
 
-The [`UChatPrompt`](/docs/components/chat-prompt) component automatically handles:
+The [`PChatPrompt`](/docs/components/chat-prompt) component automatically handles:
 
 - Form submission when pressing :kbd{value="enter"}
 - Auto-resizing as you type
@@ -628,7 +628,7 @@ onMounted(() => {
   <PDashboardPanel :ui="{ body: 'p-0 sm:p-0' }">
     <template #body>
       <PContainer class="min-h-dvh flex flex-col py-4 sm:py-6">
-        <UChatMessages
+        <PChatMessages
           :messages="messages"
           :status="status"
           should-auto-scroll
@@ -639,7 +639,7 @@ onMounted(() => {
               v-for="(part, index) in message.parts"
               :key="`${message.id}-${part.type}-${index}`"
             >
-              <UChatReasoning
+              <PChatReasoning
                 v-if="isReasoningUIPart(part)"
                 :text="part.text"
                 :streaming="isPartStreaming(part)"
@@ -648,7 +648,7 @@ onMounted(() => {
                   :value="part.text"
                   :streaming="isPartStreaming(part)"
                 />
-              </UChatReasoning>
+              </PChatReasoning>
 
               <template v-else-if="isTextUIPart(part)">
                 <ChatMarkdown
@@ -665,22 +665,22 @@ onMounted(() => {
               </template>
             </template>
           </template>
-        </UChatMessages>
+        </PChatMessages>
 
-        <UChatPrompt
+        <PChatPrompt
           v-model="input"
           :error="error"
           variant="subtle"
           class="sticky bottom-0"
           @submit="handleSubmit"
         >
-          <UChatPromptSubmit
+          <PChatPromptSubmit
             :status="status"
             color="neutral"
             @stop="stop()"
             @reload="regenerate()"
           />
-        </UChatPrompt>
+        </PChatPrompt>
       </PContainer>
     </template>
   </PDashboardPanel>
@@ -704,9 +704,9 @@ The [`useChat`](https://ai-sdk.dev/docs/reference/ai-sdk-ui/use-chat) composable
 
 The `onData` callback receives [custom data events](https://ai-sdk.dev/docs/ai-sdk-ui/streaming-data) from the server (like `data-chat-title`), so you can react to server-side events during streaming.
 
-**UChatMessages Component**
+**PChatMessages Component**
 
-The [`UChatMessages`](/docs/components/chat-messages) component is purpose-built for AI chatbots with:
+The [`PChatMessages`](/docs/components/chat-messages) component is purpose-built for AI chatbots with:
 
 - Auto-scroll to bottom on load
 - Continuous scrolling as messages stream in
@@ -715,11 +715,11 @@ The [`UChatMessages`](/docs/components/chat-messages) component is purpose-built
 
 **Rendering Message Parts**
 
-We iterate over message `parts` using AI SDK helpers like `isTextUIPart` and `isReasoningUIPart`, rendering assistant text with the `<ChatMarkdown>` component we created earlier and reasoning content with [`UChatReasoning`](/docs/components/chat-reasoning). The `isPartStreaming` utility from `pohon-ui/utils/ai` detects if a part is currently being streamed.
+We iterate over message `parts` using AI SDK helpers like `isTextUIPart` and `isReasoningUIPart`, rendering assistant text with the `<ChatMarkdown>` component we created earlier and reasoning content with [`PChatReasoning`](/docs/components/chat-reasoning). The `isPartStreaming` utility from `pohon-ui/utils/ai` detects if a part is currently being streamed.
 
-**UChatPromptSubmit Component**
+**PChatPromptSubmit Component**
 
-The [`UChatPromptSubmit`](/docs/components/chat-prompt-submit) component adapts based on the chat status:
+The [`PChatPromptSubmit`](/docs/components/chat-prompt-submit) component adapts based on the chat status:
 
 - Shows a send button when ready
 - Shows a stop button while streaming
@@ -751,7 +751,7 @@ export default defineEventHandler(async () => {
 
 ### Building the chats history dropdown
 
-The component uses [`PDropdownMenu`](/docs/components/dropdown-menu) with a [`UButton`](/docs/components/button) as trigger. Use [`useFetch`](https://nuxt.com/docs/api/composables/use-fetch) with a `key` to fetch and cache the chat list:
+The component uses [`PDropdownMenu`](/docs/components/dropdown-menu) with a [`PButton`](/docs/components/button) as trigger. Use [`useFetch`](https://nuxt.com/docs/api/composables/use-fetch) with a `key` to fetch and cache the chat list:
 
 ::code-tree-intersection
 
@@ -781,7 +781,7 @@ const items = computed(() => [
 
 <template>
   <PDropdownMenu :items="items" class="m-2">
-    <UButton
+    <PButton
       icon="i-lucide-messages-square"
       variant="ghost"
       label="Chats History"
@@ -836,15 +836,15 @@ async function createChat() {
           How can I help you today?
         </h1>
 
-        <UChatPrompt
+        <PChatPrompt
           v-model="input"
           :status="loading ? 'streaming' : 'ready'"
           variant="subtle"
           placeholder="Ask me anything..."
           @submit="createChat"
         >
-          <UChatPromptSubmit color="neutral" />
-        </UChatPrompt>
+          <PChatPromptSubmit color="neutral" />
+        </PChatPrompt>
       </PContainer>
     </template>
   </PDashboardPanel>
@@ -926,7 +926,7 @@ onMounted(() => {
     </template>
     <template #body>
       <PContainer class="min-h-dvh flex flex-col py-4 sm:py-6">
-        <UChatMessages
+        <PChatMessages
           :messages="messages"
           :status="status"
           should-auto-scroll
@@ -937,7 +937,7 @@ onMounted(() => {
               v-for="(part, index) in message.parts"
               :key="`${message.id}-${part.type}-${index}`"
             >
-              <UChatReasoning
+              <PChatReasoning
                 v-if="isReasoningUIPart(part)"
                 :text="part.text"
                 :streaming="isPartStreaming(part)"
@@ -946,7 +946,7 @@ onMounted(() => {
                   :value="part.text"
                   :streaming="isPartStreaming(part)"
                 />
-              </UChatReasoning>
+              </PChatReasoning>
 
               <template v-else-if="isTextUIPart(part)">
                 <ChatMarkdown
@@ -963,22 +963,22 @@ onMounted(() => {
               </template>
             </template>
           </template>
-        </UChatMessages>
+        </PChatMessages>
 
-        <UChatPrompt
+        <PChatPrompt
           v-model="input"
           :error="error"
           variant="subtle"
           class="sticky bottom-0"
           @submit="handleSubmit"
         >
-          <UChatPromptSubmit
+          <PChatPromptSubmit
             :status="status"
             color="neutral"
             @stop="stop()"
             @reload="regenerate()"
           />
-        </UChatPrompt>
+        </PChatPrompt>
       </PContainer>
     </template>
   </PDashboardPanel>
@@ -1137,7 +1137,7 @@ onMounted(() => {
     </template>
     <template #body>
       <PContainer class="min-h-dvh flex flex-col py-4 sm:py-6">
-        <UChatMessages
+        <PChatMessages
           :messages="messages"
           :status="status"
           should-auto-scroll
@@ -1148,7 +1148,7 @@ onMounted(() => {
               v-for="(part, index) in message.parts"
               :key="`${message.id}-${part.type}-${index}`"
             >
-              <UChatReasoning
+              <PChatReasoning
                 v-if="isReasoningUIPart(part)"
                 :text="part.text"
                 :streaming="isPartStreaming(part)"
@@ -1157,7 +1157,7 @@ onMounted(() => {
                   :value="part.text"
                   :streaming="isPartStreaming(part)"
                 />
-              </UChatReasoning>
+              </PChatReasoning>
 
               <template v-else-if="isTextUIPart(part)">
                 <ChatMarkdown
@@ -1174,9 +1174,9 @@ onMounted(() => {
               </template>
             </template>
           </template>
-        </UChatMessages>
+        </PChatMessages>
 
-        <UChatPrompt
+        <PChatPrompt
           v-model="input"
           :error="error"
           variant="subtle"
@@ -1187,13 +1187,13 @@ onMounted(() => {
             <ModelSelect v-model="model" />
           </template>
 
-          <UChatPromptSubmit
+          <PChatPromptSubmit
             :status="status"
             color="neutral"
             @stop="stop()"
             @reload="regenerate()"
           />
-        </UChatPrompt>
+        </PChatPrompt>
       </PContainer>
     </template>
   </PDashboardPanel>
@@ -1256,17 +1256,17 @@ Learn more about setting up AI Gateway in the **Vercel AI Gateway documentation*
 
 You've built a complete AI chatbot with:
 
-- **A complete chat interface** using Nuxt UI components
+- **A complete chat interface** using Pohon UI components
 - **Real-time streaming responses** with the AI SDK
 - **Streaming Markdown rendering** with Comark for rich content display
 - **Multi-model support** via AI Gateway
 - **Database persistence** with SQLite (local) / Turso (production) and Drizzle ORM
 
-The combination of Nuxt's full-stack capabilities, Nuxt UI's purpose-built chat components, a local SQLite dev database with a production Turso database, and the AI SDK's streaming infrastructure makes building AI applications straightforward and enjoyable.
+The combination of Nuxt's full-stack capabilities, Pohon UI's purpose-built chat components, a local SQLite dev database with a production Turso database, and the AI SDK's streaming infrastructure makes building AI applications straightforward and enjoyable.
 
 **Resources:**
 
-- [Nuxt UI Chat Components](https://ui.nuxt.com/docs/components/chat)
+- [Pohon UI Chat Components](https://ui.nuxt.com/docs/components/chat)
 - [NuxtHub Database](https://hub.nuxt.com/docs/features/database)
 - [AI SDK Documentation](https://ai-sdk.dev)
 - [AI Gateway Documentation](https://vercel.com/docs/ai-gateway)

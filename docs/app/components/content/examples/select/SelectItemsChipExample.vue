@@ -35,7 +35,7 @@ function getChip(value: string) {
 <template>
   <PSelect v-model="value" :items="items" value-key="value" class="w-48">
     <template #leading="{ modelValue, ui }">
-      <UChip
+      <PChip
         v-if="modelValue"
         v-bind="getChip(modelValue)"
         inset

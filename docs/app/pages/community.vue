@@ -5,10 +5,10 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon UI',
   title: page.value.title,
   description: page.value.description,
-  ogTitle: `${page.value.title} - Nuxt UI`,
+  ogTitle: `${page.value.title} - Pohon UI`,
   ogDescription: page.value.description
 })
 
@@ -53,11 +53,11 @@ if (import.meta.server) {
             :ui="{ footer: 'pointer-events-auto z-[1]' }"
           >
             <template #leading>
-              <UAvatar v-bind="item.avatar" :alt="`${item.label} logo`" size="3xl" class="mx-auto" loading="lazy" />
+              <PAvatar v-bind="item.avatar" :alt="`${item.label} logo`" size="3xl" class="mx-auto" loading="lazy" />
             </template>
 
             <template v-if="item.user" #footer>
-              <UButton
+              <PButton
                 :label="item.user.name"
                 :avatar="{
                   ...item.user.avatar,

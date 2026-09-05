@@ -28,7 +28,7 @@ const items: DropdownMenuItem[][] = [
 
 <template>
   <PDropdownMenu :items="items" :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width)' }">
-    <UButton
+    <PButton
       label="Open"
       class="w-46"
       color="neutral"

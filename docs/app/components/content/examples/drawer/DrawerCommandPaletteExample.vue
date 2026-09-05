@@ -26,7 +26,7 @@ function onOpen() {
 
 <template>
   <PDrawer :handle="false" @update:open="onOpen">
-    <UButton
+    <PButton
       label="Search users..."
       color="neutral"
       variant="subtle"

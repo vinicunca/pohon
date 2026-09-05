@@ -62,7 +62,7 @@ if (import.meta.server) {
       }"
     >
       <template #links>
-        <UButton v-for="link of template.links" :key="link.label" color="neutral" variant="outline" v-bind="link" />
+        <PButton v-for="link of template.links" :key="link.label" color="neutral" variant="outline" v-bind="link" />
 
         <PDropdownMenu
           :items="template.open_links"
@@ -70,7 +70,7 @@ if (import.meta.server) {
           :modal="false"
           class="group"
         >
-          <UButton
+          <PButton
             color="neutral"
             variant="outline"
             icon="i-lucide-square-code"
@@ -91,7 +91,7 @@ if (import.meta.server) {
           :modal="false"
           class="group"
         >
-          <UButton
+          <PButton
             color="neutral"
             variant="outline"
             icon="i-lucide-cloud"
@@ -110,7 +110,7 @@ if (import.meta.server) {
 
       <div class="lg:border-x border-default h-full flex items-center lg:bg-muted/20">
         <Motion class="flex-1" :initial="{ opacity: 0, transform: 'translateY(10px)' }" :while-in-view="{ opacity: 1, transform: 'translateY(0px)' }" :in-view-options="{ once: true }" :transition="{ duration: 0.5, delay: 0.2 }">
-          <UColorModeImage
+          <PColorModeImage
             :light="`/assets/templates/${template.framework}/${template.title.toLowerCase()}-light.png`"
             :dark="`/assets/templates/${template.framework}/${template.title.toLowerCase()}-dark.png`"
             class="w-full h-auto border lg:border-y lg:border-x-0 border-default rounded-sm lg:rounded-none"

@@ -42,8 +42,8 @@ const virtualizeOptions = computed(() => {
   <Navbar>
     <PSwitch v-model="virtualize" label="Virtualize" reverse />
 
-    <UFieldGroup>
-      <UButton
+    <PFieldGroup>
+      <PButton
         color="neutral"
         variant="outline"
         active-variant="solid"
@@ -52,7 +52,7 @@ const virtualizeOptions = computed(() => {
         icon="i-lucide-move-vertical"
         @click="orientation = 'vertical'"
       />
-      <UButton
+      <PButton
         color="neutral"
         variant="outline"
         active-variant="solid"
@@ -61,7 +61,7 @@ const virtualizeOptions = computed(() => {
         icon="i-lucide-move-horizontal"
         @click="orientation = 'horizontal'"
       />
-    </UFieldGroup>
+    </PFieldGroup>
 
     <template v-if="virtualize">
       <PInput
@@ -82,7 +82,7 @@ const virtualizeOptions = computed(() => {
     </template>
   </Navbar>
 
-  <UScrollArea
+  <PScrollArea
     v-slot="{ item }"
     :items="items"
     :orientation="orientation"
@@ -97,5 +97,5 @@ const virtualizeOptions = computed(() => {
       loading="lazy"
       class="rounded-md size-full object-cover"
     >
-  </UScrollArea>
+  </PScrollArea>
 </template>

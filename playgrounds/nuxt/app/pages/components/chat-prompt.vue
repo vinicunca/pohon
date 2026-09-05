@@ -24,13 +24,13 @@ function onSubmit() {
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs" class="flex-col" container-class="w-80">
-    <UChatPrompt
+    <PChatPrompt
       v-model="input"
       placeholder="Type your message here..."
       v-bind="props"
       @submit="onSubmit"
     >
-      <UChatPromptSubmit :color="props?.color" />
-    </UChatPrompt>
+      <PChatPromptSubmit :color="props?.color" />
+    </PChatPrompt>
   </Matrix>
 </template>

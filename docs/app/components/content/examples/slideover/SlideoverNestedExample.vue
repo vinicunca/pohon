@@ -5,24 +5,24 @@ const second = ref(false)
 
 <template>
   <PSlideover v-model:open="first" title="First slideover" :ui="{ footer: 'justify-end' }">
-    <UButton color="neutral" variant="subtle" label="Open" />
+    <PButton color="neutral" variant="subtle" label="Open" />
 
     <template #body>
       <Placeholder class="h-full" />
     </template>
 
     <template #footer>
-      <UButton label="Close" color="neutral" variant="outline" @click="first = false" />
+      <PButton label="Close" color="neutral" variant="outline" @click="first = false" />
 
       <PSlideover v-model:open="second" title="Second slideover" :ui="{ footer: 'justify-end' }">
-        <UButton label="Open second" color="neutral" />
+        <PButton label="Open second" color="neutral" />
 
         <template #body>
           <Placeholder class="h-full" />
         </template>
 
         <template #footer>
-          <UButton label="Close" color="neutral" variant="outline" @click="second = false" />
+          <PButton label="Close" color="neutral" variant="outline" @click="second = false" />
         </template>
       </PSlideover>
     </template>

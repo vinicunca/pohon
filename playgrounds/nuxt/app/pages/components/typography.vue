@@ -11,7 +11,7 @@ Every prose component rendered through comark. Use it to check spacing, colors a
 
 ### Paragraphs
 
-Nuxt UI ships **125+ components** built on *Reka UI* and Tailwind CSS. Read the [installation guide](https://ui.nuxt.com/docs/getting-started/installation/nuxt) or run \`npx nuxi module add ui\` to get started.
+Pohon UI ships **125+ components** built on *Reka UI* and Tailwind CSS. Read the [installation guide](https://ui.nuxt.com/docs/getting-started/installation/nuxt) or run \`npx nuxi module add ui\` to get started.
 
 Inline components sit in the flow of a paragraph: press :kbd{value="meta"} :kbd{value="K"} to open the command palette, the latest release is :badge[v4.0.0] and :icon{name="i-simple-icons-nuxtdotjs"} renders as an icon.
 
@@ -39,7 +39,7 @@ Inline components sit in the flow of a paragraph: press :kbd{value="meta"} :kbd{
 2. Import the CSS.
    1. Add \`@import "tailwindcss";\`
    2. Add \`@import "pohon-ui";\`
-3. Wrap your app with \`UApp\`.
+3. Wrap your app with \`PApp\`.
 
 ### Table
 
@@ -51,7 +51,7 @@ Inline components sit in the flow of a paragraph: press :kbd{value="meta"} :kbd{
 
 ## Images and embeds
 
-![Nuxt UI v4](https://nuxt.com/assets/blog/nuxt-ui-v4.png)
+![Pohon UI v4](https://nuxt.com/assets/blog/nuxt-ui-v4.png)
 
 ## Code
 
@@ -142,15 +142,15 @@ bun add pohon-ui
 
 \`\`\`vue [app/app.vue]
 <template>
-  <UApp>
+  <PApp>
     <NuxtPage />
-  </UApp>
+  </PApp>
 </template>
 \`\`\`
 
 \`\`\`vue [app/pages/index.vue]
 <template>
-  <UButton label="Click me" />
+  <PButton label="Click me" />
 </template>
 \`\`\`
 
@@ -181,15 +181,15 @@ export default defineAppConfig({
 
 \`\`\`vue [app/app.vue]
 <template>
-  <UApp>
+  <PApp>
     <NuxtPage />
-  </UApp>
+  </PApp>
 </template>
 \`\`\`
 
 \`\`\`vue [app/pages/index.vue]
 <template>
-  <UButton label="Click me" />
+  <PButton label="Click me" />
 </template>
 \`\`\`
 
@@ -205,8 +205,8 @@ export default defineEventHandler(() => ({ hello: 'world' }))
 
 ::accordion
 
-:::accordion-item{label="Is Nuxt UI free to use?" icon="i-lucide-circle-help"}
-Yes, Nuxt UI is free and open source under the MIT license.
+:::accordion-item{label="Is Pohon UI free to use?" icon="i-lucide-circle-help"}
+Yes, Pohon UI is free and open source under the MIT license.
 :::
 
 :::accordion-item{label="Does it work without Nuxt?" icon="i-lucide-circle-help"}
@@ -321,11 +321,11 @@ Press :kbd{value="meta"} :kbd{value="K"} to open the command palette.
 
 ### Prompt
 
-::prompt{description="Build a dashboard layout with Nuxt UI." icon="i-lucide-layout-dashboard" actions='["cursor", "claude"]'}
-You are a Nuxt UI expert. Help me build a dashboard layout with a collapsible sidebar and a sticky top navbar.
+::prompt{description="Build a dashboard layout with Pohon UI." icon="i-lucide-layout-dashboard" actions='["cursor", "claude"]'}
+You are a Pohon UI expert. Help me build a dashboard layout with a collapsible sidebar and a sticky top navbar.
 
 Requirements:
-- Use \`PDashboardPanel\`, \`UDashboardSidebar\` and \`UDashboardNavbar\`
+- Use \`PDashboardPanel\`, \`PDashboardSidebar\` and \`PDashboardNavbar\`
 - Use semantic color tokens like \`bg-elevated\` and \`text-muted\`
 - The sidebar should include navigation links with icons using \`PNavigationMenu\`
 - The layout must collapse the sidebar on mobile
@@ -335,7 +335,7 @@ Requirements:
 
 ::steps{level="4"}
 
-#### Add the Nuxt UI module in your \`nuxt.config.ts\`
+#### Add the Pohon UI module in your \`nuxt.config.ts\`
 
 \`\`\`ts [nuxt.config.ts]
 export default defineNuxtConfig({

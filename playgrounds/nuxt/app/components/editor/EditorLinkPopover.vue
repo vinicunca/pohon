@@ -89,7 +89,7 @@ function handleKeyDown(event: KeyboardEvent) {
 <template>
   <PPopover v-model:open="open" :ui="{ content: 'p-0.5' }">
     <PTooltip text="Link">
-      <UButton
+      <PButton
         icon="i-lucide-link"
         color="neutral"
         active-color="primary"
@@ -112,7 +112,7 @@ function handleKeyDown(event: KeyboardEvent) {
         @keydown="handleKeyDown"
       >
         <div class="flex items-center mr-0.5">
-          <UButton
+          <PButton
             icon="i-lucide-corner-down-left"
             variant="ghost"
             size="sm"
@@ -121,9 +121,9 @@ function handleKeyDown(event: KeyboardEvent) {
             @click="setLink"
           />
 
-          <USeparator orientation="vertical" class="h-6 mx-1" />
+          <PSeparator orientation="vertical" class="h-6 mx-1" />
 
-          <UButton
+          <PButton
             icon="i-lucide-external-link"
             color="neutral"
             variant="ghost"
@@ -133,7 +133,7 @@ function handleKeyDown(event: KeyboardEvent) {
             @click="openLink"
           />
 
-          <UButton
+          <PButton
             icon="i-lucide-trash"
             color="neutral"
             variant="ghost"

@@ -38,7 +38,7 @@ function onSelect(e: TreeItemSelectEvent<TreeItem>) {
 </script>
 
 <template>
-  <UTree
+  <PTree
     v-model="value"
     :as="{ link: 'div' }"
     :items="items"
@@ -55,5 +55,5 @@ function onSelect(e: TreeItemSelectEvent<TreeItem>) {
         @click.stop
       />
     </template>
-  </UTree>
+  </PTree>
 </template>

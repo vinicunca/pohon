@@ -2,7 +2,7 @@
 
 ## PAuthForm (recommended)
 
-`PAuthForm` provides a complete auth form with fields, providers, validation, and submit — no manual `UForm` + `UFormField` wiring needed. Wrap it in `PPageCard` for a polished look.
+`PAuthForm` provides a complete auth form with fields, providers, validation, and submit — no manual `PForm` + `PFormField` wiring needed. Wrap it in `PPageCard` for a polished look.
 
 ```vue [pages/login.vue]
 <script setup lang="ts">
@@ -71,13 +71,13 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
         @submit="onSubmit"
       >
         <template #password-hint>
-          <ULink to="/forgot-password" class="text-primary font-medium"
-            >Forgot password?</ULink
+          <PLink to="/forgot-password" class="text-primary font-medium"
+            >Forgot password?</PLink
           >
         </template>
         <template #footer>
           Don't have an account?
-          <ULink to="/signup" class="text-primary font-medium">Sign up</ULink>.
+          <PLink to="/signup" class="text-primary font-medium">Sign up</PLink>.
         </template>
       </PAuthForm>
     </PPageCard>
@@ -108,7 +108,7 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
 
 ## Custom auth layout
 
-For layouts where `PAuthForm` is too opinionated, use `PCard` + `UForm` + `UFormField` directly.
+For layouts where `PAuthForm` is too opinionated, use `PCard` + `PForm` + `PFormField` directly.
 
 ```vue [pages/login.vue]
 <script setup lang="ts">
@@ -138,31 +138,31 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         </div>
       </template>
 
-      <UForm
+      <PForm
         :schema="schema"
         :state="state"
         class="space-y-4"
         @submit="onSubmit"
       >
-        <UFormField name="email" label="Email">
+        <PFormField name="email" label="Email">
           <PInput
             v-model="state.email"
             type="email"
             placeholder="you@example.com"
           />
-        </UFormField>
+        </PFormField>
 
-        <UFormField name="password" label="Password">
+        <PFormField name="password" label="Password">
           <template #hint>
             <NuxtLink to="/forgot-password" class="text-sm text-primary"
               >Forgot password?</NuxtLink
             >
           </template>
           <PInput v-model="state.password" type="password" />
-        </UFormField>
+        </PFormField>
 
-        <UButton type="submit" label="Sign in" block />
-      </UForm>
+        <PButton type="submit" label="Sign in" block />
+      </PForm>
 
       <template #footer>
         <p class="text-center text-sm text-muted">
@@ -183,5 +183,5 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 - Use `import * as z from 'zod'` and `z.email()` (Zod 4 syntax)
 - Type the submit handler: `function onSubmit(event: FormSubmitEvent<Schema>)` — access validated data via `event.data`
 - Center auth forms with `flex min-h-dvh items-center justify-center`
-- Place "Forgot password?" link as `#password-hint` slot on `PAuthForm`, or `#hint` slot on `UFormField`
-- Social login buttons: use `providers` prop on `PAuthForm`, or add manually with `<USeparator label="or" />`
+- Place "Forgot password?" link as `#password-hint` slot on `PAuthForm`, or `#hint` slot on `PFormField`
+- Social login buttons: use `providers` prop on `PAuthForm`, or add manually with `<PSeparator label="or" />`

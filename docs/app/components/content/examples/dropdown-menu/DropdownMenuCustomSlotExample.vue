@@ -18,10 +18,10 @@ const items = [
 
 <template>
   <PDropdownMenu :items="items" :ui="{ content: 'w-48' }">
-    <UButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
+    <PButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
 
     <template #profile-trailing>
-      <UIcon name="i-lucide-badge-check" class="shrink-0 size-5 text-primary" />
+      <PIcon name="i-lucide-badge-check" class="shrink-0 size-5 text-primary" />
     </template>
   </PDropdownMenu>
 </template>

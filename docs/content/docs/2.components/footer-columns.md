@@ -20,13 +20,13 @@ Use it in the `top` slot of the [Footer](/docs/components/footer) component:
 
 ```vue {3-7}
 <template>
-  <UFooter>
+  <PFooter>
     <template #top>
       <PContainer>
-        <UFooterColumns />
+        <PFooterColumns />
       </PContainer>
     </template>
-  </UFooter>
+  </PFooter>
 </template>
 ```
 

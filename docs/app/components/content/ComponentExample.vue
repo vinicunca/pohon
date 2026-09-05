@@ -190,7 +190,7 @@ const urlSearchParams = computed(() => {
           <div v-if="props.options?.length || !!slots.options" class="flex gap-4 p-4 border-b border-muted">
             <slot name="options" />
 
-            <UFormField
+            <PFormField
               v-for="option in props.options"
               :key="option.name"
               :label="option.label"
@@ -218,7 +218,7 @@ const urlSearchParams = computed(() => {
                 @update:model-value="set(optionsValues, option.name, $event)"
               >
                 <template v-if="option.name.toLowerCase().endsWith('color')" #leading="{ modelValue, ui }">
-                  <UChip
+                  <PChip
                     inset
                     standalone
                     :color="(modelValue as any)"
@@ -236,7 +236,7 @@ const urlSearchParams = computed(() => {
                 :ui="{ base: 'rounded-sm rounded-l-none min-w-12' }"
                 @update:model-value="set(optionsValues, option.name, $event)"
               />
-            </UFormField>
+            </PFormField>
           </div>
 
           <iframe

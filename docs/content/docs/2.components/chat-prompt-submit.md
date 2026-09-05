@@ -1,6 +1,6 @@
 ---
 title: ChatPromptSubmit
-description: 'A Button for submitting chat prompts with automatic status handling.'
+description: "A Button for submitting chat prompts with automatic status handling."
 category: chat
 links:
   - label: Button
@@ -23,13 +23,15 @@ It extends the [Button](/docs/components/button) component, so you can pass any 
 :u-chat-prompt-submit
 
 #code
+
 ```vue
 <template>
-  <UChatPrompt>
-    <UChatPromptSubmit />
-  </UChatPrompt>
+  <PChatPrompt>
+    <PChatPromptSubmit />
+  </PChatPrompt>
 </template>
 ```
+
 ::
 
 ::note
@@ -44,28 +46,19 @@ When its status is `ready`{lang="ts-type"}, use the `color`, `variant` and `icon
 - `variant="solid"`{lang="ts-type"}
 - `icon="i-lucide-arrow-up"`{lang="ts-type"}
 
-::component-code
----
+## ::component-code
+
 prettier: true
 items:
-  color:
-    - primary
-    - secondary
-    - success
-    - warning
-    - error
-    - neutral
-  variant:
-    - solid
-    - outline
-    - soft
-    - subtle
-    - ghost
+color: - primary - secondary - success - warning - error - neutral
+variant: - solid - outline - soft - subtle - ghost
 props:
-  color: 'primary'
-  variant: 'solid'
-  icon: 'i-lucide-arrow-up'
+color: 'primary'
+variant: 'solid'
+icon: 'i-lucide-arrow-up'
+
 ---
+
 ::
 
 ::framework-only
@@ -92,31 +85,23 @@ When its status is `submitted`{lang="ts-type"}, use the `submitted-color`, `subm
 The `stop` event is emitted when the user clicks on the Button.
 ::
 
-::component-code
----
+## ::component-code
+
 prettier: true
 ignore:
-  - status
-items:
-  submittedColor:
-    - primary
-    - secondary
-    - success
-    - warning
-    - error
-    - neutral
-  submittedVariant:
-    - solid
-    - outline
-    - soft
-    - subtle
-    - ghost
-props:
+
+- status
+  items:
+  submittedColor: - primary - secondary - success - warning - error - neutral
+  submittedVariant: - solid - outline - soft - subtle - ghost
+  props:
   submittedColor: 'neutral'
   submittedVariant: 'subtle'
   submittedIcon: 'i-lucide-square'
   status: 'submitted'
+
 ---
+
 ::
 
 ::framework-only
@@ -143,31 +128,23 @@ When its status is `streaming`{lang="ts-type"}, use the `streaming-color`, `stre
 The `stop` event is emitted when the user clicks on the Button.
 ::
 
-::component-code
----
+## ::component-code
+
 prettier: true
 ignore:
-  - status
-items:
-  streamingColor:
-    - primary
-    - secondary
-    - success
-    - warning
-    - error
-    - neutral
-  streamingVariant:
-    - solid
-    - outline
-    - soft
-    - subtle
-    - ghost
-props:
+
+- status
+  items:
+  streamingColor: - primary - secondary - success - warning - error - neutral
+  streamingVariant: - solid - outline - soft - subtle - ghost
+  props:
   streamingColor: 'neutral'
   streamingVariant: 'subtle'
   streamingIcon: 'i-lucide-square'
   status: 'streaming'
+
 ---
+
 ::
 
 ::framework-only
@@ -194,31 +171,23 @@ When its status is `error`{lang="ts-type"}, use the `error-color`, `error-varian
 The `reload` event is emitted when the user clicks on the Button.
 ::
 
-::component-code
----
+## ::component-code
+
 prettier: true
 ignore:
-  - status
-items:
-  errorColor:
-    - primary
-    - secondary
-    - success
-    - warning
-    - error
-    - neutral
-  errorVariant:
-    - solid
-    - outline
-    - soft
-    - subtle
-    - ghost
-props:
+
+- status
+  items:
+  errorColor: - primary - secondary - success - warning - error - neutral
+  errorVariant: - solid - outline - soft - subtle - ghost
+  props:
   errorColor: 'error'
   errorVariant: 'soft'
   errorIcon: 'i-lucide-rotate-ccw'
   status: 'error'
+
 ---
+
 ::
 
 ::framework-only
@@ -245,7 +214,7 @@ Check the **Chat** overview page for installation instructions, server setup and
 
 :component-props
 
-::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
+::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="\_blank"}
 This component also supports all native `<button>` HTML attributes.
 ::
 

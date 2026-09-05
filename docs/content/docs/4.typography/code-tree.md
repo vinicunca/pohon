@@ -43,9 +43,9 @@ export default defineAppConfig({
 
 ```vue [app/app.vue]
 <template>
-  <UApp>
+  <PApp>
     <NuxtPage />
-  </UApp>
+  </PApp>
 </template>
 ```
 
@@ -194,9 +194,9 @@ export default defineAppConfig({
 
 ```vue [app/app.vue]
 <template>
-  <UApp>
+  <PApp>
     <NuxtPage />
-  </UApp>
+  </PApp>
 </template>
 ```
 

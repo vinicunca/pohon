@@ -12,7 +12,7 @@ const slots = defineSlots<{
 </script>
 
 <template>
-  <UButton
+  <PButton
     size="sm"
     color="neutral"
     variant="outline"
@@ -33,5 +33,5 @@ const slots = defineSlots<{
         />
       </slot>
     </template>
-  </UButton>
+  </PButton>
 </template>

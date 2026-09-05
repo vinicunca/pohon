@@ -21,5 +21,5 @@ const links = [{
 <template>
   <Navbar />
 
-  <UPageLinks title="Community" :links="links" />
+  <PPageLinks title="Community" :links="links" />
 </template>

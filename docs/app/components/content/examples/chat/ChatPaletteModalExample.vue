@@ -9,11 +9,11 @@ import shiki from '@comark/vue/plugins/shiki'
 const initialMessages: UIMessage[] = [{
   id: '1',
   role: 'user',
-  parts: [{ type: 'text', text: 'What is Nuxt UI?' }]
+  parts: [{ type: 'text', text: 'What is Pohon UI?' }]
 }, {
   id: '2',
   role: 'assistant',
-  parts: [{ type: 'text', text: 'Nuxt UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }]
+  parts: [{ type: 'text', text: 'Pohon UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }]
 }]
 const input = ref('')
 
@@ -49,9 +49,9 @@ const ui = {
 <template>
   <PModal open :ui="{ content: 'sm:max-w-3xl sm:h-[28rem]' }">
     <template #content>
-      <UTheme :ui="ui">
-        <UChatPalette>
-          <UChatMessages
+      <PTheme :ui="ui">
+        <PChatPalette>
+          <PChatMessages
             :messages="messages"
             :status="status"
             :user="{ side: 'left', variant: 'naked', avatar: { src: 'https://github.com/benjamincanac.png', loading: 'lazy' as const } }"
@@ -73,10 +73,10 @@ const ui = {
                 </template>
               </template>
             </template>
-          </UChatMessages>
+          </PChatMessages>
 
           <template #prompt>
-            <UChatPrompt
+            <PChatPrompt
               v-model="input"
               icon="i-lucide-search"
               variant="naked"
@@ -84,8 +84,8 @@ const ui = {
               @submit="onSubmit"
             />
           </template>
-        </UChatPalette>
-      </UTheme>
+        </PChatPalette>
+      </PTheme>
     </template>
   </PModal>
 </template>

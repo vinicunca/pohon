@@ -20,13 +20,15 @@ It uses the `useEditorMenu` composable built on top of TipTap's [Suggestion](htt
 It must be used inside an [Editor](/docs/components/editor) component's default slot to have access to the editor instance.
 ::
 
-::component-example
----
+## ::component-example
+
 elevated: true
 collapse: true
 name: 'editor-suggestion-menu-example'
 class: 'p-8'
+
 ---
+
 ::
 
 ### Items
@@ -40,13 +42,15 @@ Use the `items` prop as an array of objects with the following properties:
 - `type?: "label" | "separator"`{lang="ts-type"}
 - `disabled?: boolean`{lang="ts-type"}
 
-::component-example
----
+## ::component-example
+
 elevated: true
 collapse: true
 name: 'editor-suggestion-menu-items-example'
 class: 'p-8'
+
 ---
+
 ::
 
 ::note
@@ -63,9 +67,9 @@ Use the `char` prop to change the trigger character. Defaults to `/`{lang="ts-ty
 
 ```vue
 <template>
-  <UEditor v-slot="{ editor }">
-    <UEditorSuggestionMenu :editor="editor" :items="items" char=">" />
-  </UEditor>
+  <PEditor v-slot="{ editor }">
+    <PEditorSuggestionMenu :editor="editor" :items="items" char=">" />
+  </PEditor>
 </template>
 ```
 
@@ -77,16 +81,16 @@ This is useful when the trigger character should open directly after other chara
 
 ```vue
 <template>
-  <UEditor v-slot="{ editor }">
-    <UEditorSuggestionMenu
+  <PEditor v-slot="{ editor }">
+    <PEditorSuggestionMenu
       :editor="editor"
       :items="items"
       char=":"
       :suggestion="{
-        allowedPrefixes: null
+        allowedPrefixes: null,
       }"
     />
-  </UEditor>
+  </PEditor>
 </template>
 ```
 
@@ -96,16 +100,16 @@ Use the `options` prop to customize the positioning behavior using [Floating UI 
 
 ```vue
 <template>
-  <UEditor v-slot="{ editor }">
-    <UEditorSuggestionMenu
+  <PEditor v-slot="{ editor }">
+    <PEditorSuggestionMenu
       :editor="editor"
       :items="items"
       :options="{
         placement: 'bottom-start',
-        offset: 4
+        offset: 4,
       }"
     />
-  </UEditor>
+  </PEditor>
 </template>
 ```
 

@@ -19,22 +19,22 @@ async function simulateStreaming() {
 
 <template>
   <Navbar>
-    <UButton label="Simulate streaming" color="neutral" variant="outline" @click="simulateStreaming" />
+    <PButton label="Simulate streaming" color="neutral" variant="outline" @click="simulateStreaming" />
   </Navbar>
 
   <div class="w-60 flex flex-col gap-4 items-start">
-    <UChatReasoning
+    <PChatReasoning
       text="The user is asking about Vue components..."
       :duration="12"
       default-open
     />
 
-    <UChatReasoning
+    <PChatReasoning
       text="Let me analyze the code structure..."
       icon="i-lucide-brain"
       :duration="5"
     />
 
-    <UChatReasoning :text="text" :streaming="streaming" icon="i-lucide-brain" chevron="leading" />
+    <PChatReasoning :text="text" :streaming="streaming" icon="i-lucide-brain" chevron="leading" />
   </div>
 </template>

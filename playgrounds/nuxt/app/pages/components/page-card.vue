@@ -33,7 +33,7 @@ const reverse = ref(false)
     <PPageCard
       icon="i-lucide-palette"
       title="Design system"
-      description="Build faster with Nuxt UI's CSS-first design system powered by Tailwind CSS and its semantic color system combined with a runtime configuration."
+      description="Build faster with Pohon UI's CSS-first design system powered by Tailwind CSS and its semantic color system combined with a runtime configuration."
       to="https://ui.nuxt.com/docs/theme/design-system"
       target="_blank"
       :highlight="highlight"

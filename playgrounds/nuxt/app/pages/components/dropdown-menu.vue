@@ -171,10 +171,10 @@ defineShortcuts(extractShortcuts(items.value))
 
   <Matrix v-slot="props" :attrs="attrs">
     <PDropdownMenu :items="items" :arrow="arrow" filter :content="{ side: 'bottom', align: 'start' }" v-bind="props">
-      <UButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
+      <PButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
 
       <template #custom-trailing>
-        <UIcon name="i-lucide-badge-check" class="shrink-0 size-5 text-primary" />
+        <PIcon name="i-lucide-badge-check" class="shrink-0 size-5 text-primary" />
       </template>
     </PDropdownMenu>
   </Matrix>

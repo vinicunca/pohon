@@ -9,7 +9,7 @@ type ThemeSlotOverrides<T> = T extends { slots: infer S extends Record<string, a
 
 /**
  * Flat slot-class override shape: `{ button: { base: '...' }, modal: {...} }`.
- * Powers the `:ui` prop on `<UTheme>`, which remains the recommended way to
+ * Powers the `:ui` prop on `<PTheme>`, which remains the recommended way to
  * scope class overrides without touching component prop defaults.
  */
 export type ThemeUI = {
@@ -17,7 +17,7 @@ export type ThemeUI = {
 };
 
 /**
- * Strict per-component defaults shape used by `<UTheme :props>`. Authored as
+ * Strict per-component defaults shape used by `<PTheme :props>`. Authored as
  * a flat interface with literal keys (rather than a mapped type) so editors —
  * Volar in particular — surface key completions inside template inline
  * objects (`:props="{ button: { … } }"`). Volar reliably iterates interface

@@ -37,14 +37,14 @@ const items: NavigationMenuItem[][] = [[{
 </script>
 
 <template>
-  <UDashboardSidebar collapsible resizable :ui="{ footer: 'border-t border-default' }">
+  <PDashboardSidebar collapsible resizable :ui="{ footer: 'border-t border-default' }">
     <template #header="{ collapsed }">
       <Logo v-if="!collapsed" class="h-5 w-auto shrink-0" />
-      <UIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 text-primary mx-auto" />
+      <PIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 text-primary mx-auto" />
     </template>
 
     <template #default="{ collapsed }">
-      <UButton
+      <PButton
         :label="collapsed ? undefined : 'Search...'"
         icon="i-lucide-search"
         color="neutral"
@@ -54,11 +54,11 @@ const items: NavigationMenuItem[][] = [[{
       >
         <template v-if="!collapsed" #trailing>
           <div class="flex items-center gap-0.5 ms-auto">
-            <UKbd value="meta" variant="subtle" />
-            <UKbd value="K" variant="subtle" />
+            <PKbd value="meta" variant="subtle" />
+            <PKbd value="K" variant="subtle" />
           </div>
         </template>
-      </UButton>
+      </PButton>
 
       <PNavigationMenu
         :collapsed="collapsed"
@@ -75,7 +75,7 @@ const items: NavigationMenuItem[][] = [[{
     </template>
 
     <template #footer="{ collapsed }">
-      <UButton
+      <PButton
         :avatar="{
           src: 'https://github.com/benjamincanac.png',
           loading: 'lazy' as const
@@ -87,5 +87,5 @@ const items: NavigationMenuItem[][] = [[{
         :block="collapsed"
       />
     </template>
-  </UDashboardSidebar>
+  </PDashboardSidebar>
 </template>

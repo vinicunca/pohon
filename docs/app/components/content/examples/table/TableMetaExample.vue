@@ -125,5 +125,5 @@ const meta: TableMeta<Payment> = {
 </script>
 
 <template>
-  <UTable :data="data" :columns="columns" :meta="meta" class="flex-1" />
+  <PTable :data="data" :columns="columns" :meta="meta" class="flex-1" />
 </template>

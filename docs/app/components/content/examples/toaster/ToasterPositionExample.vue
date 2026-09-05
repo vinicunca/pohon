@@ -7,7 +7,7 @@ const appConfig = useAppConfig()
 
 <template>
   <div>
-    <UFormField
+    <PFormField
       label="toaster.position"
       size="sm"
       :ui="{
@@ -25,6 +25,6 @@ const appConfig = useAppConfig()
         class="rounded-sm rounded-l-none min-w-12"
         :search-input="false"
       />
-    </UFormField>
+    </PFormField>
   </div>
 </template>

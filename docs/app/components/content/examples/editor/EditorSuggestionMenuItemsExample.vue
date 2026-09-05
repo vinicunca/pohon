@@ -57,13 +57,13 @@ const items: EditorSuggestionMenuItem[][] = [[{
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     placeholder="Type / for commands..."
     class="w-full min-h-19"
   >
-    <UEditorSuggestionMenu :editor="editor" :items="items" />
-  </UEditor>
+    <PEditorSuggestionMenu :editor="editor" :items="items" />
+  </PEditor>
 </template>

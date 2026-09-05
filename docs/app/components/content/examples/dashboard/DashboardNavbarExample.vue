@@ -11,13 +11,13 @@ const items: TabsItem[] = [{
 </script>
 
 <template>
-  <UDashboardNavbar title="Inbox">
+  <PDashboardNavbar title="Inbox">
     <template #leading>
-      <UDashboardSidebarCollapse />
+      <PDashboardSidebarCollapse />
     </template>
 
     <template #trailing>
-      <UBadge label="4" variant="subtle" />
+      <PBadge label="4" variant="subtle" />
     </template>
 
     <template #right>
@@ -29,5 +29,5 @@ const items: TabsItem[] = [{
         :content="false"
       />
     </template>
-  </UDashboardNavbar>
+  </PDashboardNavbar>
 </template>

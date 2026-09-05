@@ -55,7 +55,7 @@ function onSubmit() {
 </script>
 
 <template>
-  <UChatPrompt
+  <PChatPrompt
     v-model="input"
     class="w-full p-0 gap-0"
     placeholder="Press / to open the command menu"
@@ -66,7 +66,7 @@ function onSubmit() {
     @submit="onSubmit"
   >
     <template v-if="attachments.length" #header>
-      <UButton
+      <PButton
         v-for="(file, index) in attachments"
         :key="index"
         :label="file.name"
@@ -82,7 +82,7 @@ function onSubmit() {
     </template>
 
     <template #body="{ submit, placeholder }">
-      <UEditor
+      <PEditor
         v-slot="{ editor }"
         v-model="input"
         content-type="markdown"
@@ -96,14 +96,14 @@ function onSubmit() {
           addKeyboardShortcuts: () => ({ Enter: () => (submit(), true) })
         })]"
       >
-        <UEditorMentionMenu :editor="editor" char="@" plugin-key="mention" :items="files" :append-to="appendToBody" />
-        <UEditorMentionMenu :editor="editor" char="/" plugin-key="command" :items="commands" :append-to="appendToBody" />
-      </UEditor>
+        <PEditorMentionMenu :editor="editor" char="@" plugin-key="mention" :items="files" :append-to="appendToBody" />
+        <PEditorMentionMenu :editor="editor" char="/" plugin-key="command" :items="commands" :append-to="appendToBody" />
+      </PEditor>
     </template>
 
     <template #footer>
       <div class="flex items-center gap-0.5">
-        <UButton
+        <PButton
           icon="i-lucide-plus"
           color="neutral"
           variant="ghost"
@@ -125,8 +125,8 @@ function onSubmit() {
           square
         />
 
-        <UChatPromptSubmit size="sm" :disabled="!input.trim()" />
+        <PChatPromptSubmit size="sm" :disabled="!input.trim()" />
       </div>
     </template>
-  </UChatPrompt>
+  </PChatPrompt>
 </template>

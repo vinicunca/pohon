@@ -22,7 +22,7 @@ const reverse = ref(false)
   <Matrix v-slot="props" :attrs="attrs" class="flex-col gap-4">
     <PPageCTA
       title="Ready to build your next Nuxt app?"
-      description="Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today."
+      description="Join thousands of developers building with Nuxt and Pohon UI. Get this template and start shipping today."
       :links="[{
         label: 'Start building',
         to: 'https://ui.nuxt.com/docs/getting-started/installation/nuxt',

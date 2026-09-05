@@ -69,7 +69,7 @@ const modelValueWithMappedId = ref<(typeof itemsWithMappedId)[number]>()
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs" container-class="w-60">
-    <UTree
+    <PTree
       v-if="virtualize"
       virtualize
       :items="largeItems"
@@ -78,7 +78,7 @@ const modelValueWithMappedId = ref<(typeof itemsWithMappedId)[number]>()
       class="w-full h-80"
     />
 
-    <UTree
+    <PTree
       v-else
       v-model="modelValues"
       :items="items"
@@ -91,14 +91,14 @@ const modelValueWithMappedId = ref<(typeof itemsWithMappedId)[number]>()
 
   <!-- Typescript tests -->
   <template v-if="false">
-    <UTree :model-value="modelValues" :items="items" multiple />
-    <UTree :default-value="modelValues" :items="items" multiple />
-    <UTree :items="items" multiple @update:model-value="(payload) => payload" />
-    <UTree :model-value="modelValue" :items="items" />
-    <UTree :default-value="modelValue" :items="items" />
-    <UTree :items="items" @update:model-value="(payload) => payload" />
+    <PTree :model-value="modelValues" :items="items" multiple />
+    <PTree :default-value="modelValues" :items="items" multiple />
+    <PTree :items="items" multiple @update:model-value="(payload) => payload" />
+    <PTree :model-value="modelValue" :items="items" />
+    <PTree :default-value="modelValue" :items="items" />
+    <PTree :items="items" @update:model-value="(payload) => payload" />
 
-    <UTree v-model="modelValueWithMappedId" :items="itemsWithMappedId" :get-key="(i) => i.id" />
-    <UTree v-model="modelValueWithMappedId" :items="itemsWithMappedId" label-key="title" />
+    <PTree v-model="modelValueWithMappedId" :items="itemsWithMappedId" :get-key="(i) => i.id" />
+    <PTree v-model="modelValueWithMappedId" :items="itemsWithMappedId" label-key="title" />
   </template>
 </template>

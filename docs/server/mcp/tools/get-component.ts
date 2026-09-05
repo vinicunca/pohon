@@ -6,7 +6,7 @@ import { getAgentDocument } from '#agent-discovery'
 const sectionEnum = z.enum(['usage', 'examples', 'api', 'theme', 'changelog'])
 
 export default defineMcpTool({
-  description: 'Retrieves Nuxt UI component documentation and details. Use the `sections` parameter to fetch only specific parts of the documentation to reduce response size.',
+  description: 'Retrieves Pohon UI component documentation and details. Use the `sections` parameter to fetch only specific parts of the documentation to reduce response size.',
   annotations: {
     readOnlyHint: true,
     destructiveHint: false,

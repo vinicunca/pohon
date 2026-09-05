@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { AvatarProps, TableColumn } from 'pohon-ui'
 
-const UAvatar = resolveComponent('UAvatar')
+const PAvatar = resolveComponent('PAvatar')
 
 type User = {
   id: number
@@ -31,7 +31,7 @@ const columns: TableColumn<User>[] = [{
   header: 'Name',
   cell: ({ row }) => {
     return h('div', { class: 'flex items-center gap-3' }, [
-      h(UAvatar, {
+      h(PAvatar, {
         ...row.original.avatar,
         loading: 'lazy',
         size: 'lg'
@@ -53,7 +53,7 @@ const columns: TableColumn<User>[] = [{
 </script>
 
 <template>
-  <UTable
+  <PTable
     :data="data"
     :columns="columns"
     :loading="status === 'pending' || status === 'idle'"

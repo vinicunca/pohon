@@ -11,12 +11,12 @@ Build a rich text editor with toolbars, slash commands, mentions, and drag-and-d
 ## Component tree
 
 ```
-UEditor
-├── UEditorToolbar (fixed / bubble / floating)
-├── UEditorDragHandle
-├── UEditorSuggestionMenu
-├── UEditorMentionMenu
-└── UEditorEmojiMenu
+PEditor
+├── PEditorToolbar (fixed / bubble / floating)
+├── PEditorDragHandle
+├── PEditorSuggestionMenu
+├── PEditorMentionMenu
+└── PEditorEmojiMenu
 ```
 
 ## Basic editor
@@ -40,10 +40,10 @@ const content = ref({
 </script>
 
 <template>
-  <UEditor v-slot="{ editor }" v-model="content">
-    <UEditorToolbar :editor="editor" />
-    <UEditorSuggestionMenu :editor="editor" />
-    <UEditorMentionMenu
+  <PEditor v-slot="{ editor }" v-model="content">
+    <PEditorToolbar :editor="editor" />
+    <PEditorSuggestionMenu :editor="editor" />
+    <PEditorMentionMenu
       :editor="editor"
       :items="[
         {
@@ -56,9 +56,9 @@ const content = ref({
         },
       ]"
     />
-    <UEditorEmojiMenu :editor="editor" />
-    <UEditorDragHandle :editor="editor" />
-  </UEditor>
+    <PEditorEmojiMenu :editor="editor" />
+    <PEditorDragHandle :editor="editor" />
+  </PEditor>
 </template>
 ```
 
@@ -66,37 +66,37 @@ const content = ref({
 
 ## Key components
 
-- `UEditor` — rich text editor. `v-model` accepts JSON (default), HTML, or Markdown via `content-type` prop. Default slot provides `{ editor, handlers }` — `editor` is the Tiptap instance, `handlers` contains action functions for toolbar/menus.
-- `UEditorToolbar` — toolbar with `layout`: `'fixed'` (default), `'bubble'` (on selection), `'floating'` (on empty lines).
-- `UEditorDragHandle` — block drag-and-drop handle.
-- `UEditorSuggestionMenu` — slash command menu (type `/` to open).
-- `UEditorMentionMenu` — `@` mention menu.
-- `UEditorEmojiMenu` — emoji picker (type `:` to open).
+- `PEditor` — rich text editor. `v-model` accepts JSON (default), HTML, or Markdown via `content-type` prop. Default slot provides `{ editor, handlers }` — `editor` is the Tiptap instance, `handlers` contains action functions for toolbar/menus.
+- `PEditorToolbar` — toolbar with `layout`: `'fixed'` (default), `'bubble'` (on selection), `'floating'` (on empty lines).
+- `PEditorDragHandle` — block drag-and-drop handle.
+- `PEditorSuggestionMenu` — slash command menu (type `/` to open).
+- `PEditorMentionMenu` — `@` mention menu.
+- `PEditorEmojiMenu` — emoji picker (type `:` to open).
 
 ## Toolbar modes
 
 ```vue
 <!-- Fixed (default) — always visible at top -->
-<UEditorToolbar :editor="editor" />
+<PEditorToolbar :editor="editor" />
 
 <!-- Bubble — appears on text selection -->
-<UEditorToolbar :editor="editor" layout="bubble" />
+<PEditorToolbar :editor="editor" layout="bubble" />
 
 <!-- Floating — appears on empty lines -->
-<UEditorToolbar :editor="editor" layout="floating" />
+<PEditorToolbar :editor="editor" layout="floating" />
 ```
 
 ## Content types
 
 ```vue
 <!-- JSON (default) -->
-<UEditor v-model="jsonContent" />
+<PEditor v-model="jsonContent" />
 
 <!-- HTML -->
-<UEditor v-model="htmlContent" content-type="html" />
+<PEditor v-model="htmlContent" content-type="html" />
 
 <!-- Markdown -->
-<UEditor v-model="markdownContent" content-type="markdown" />
+<PEditor v-model="markdownContent" content-type="markdown" />
 ```
 
 ## With document sidebar
@@ -105,10 +105,10 @@ Combine with Dashboard layout for a multi-document editor:
 
 ```vue [layouts/editor.vue]
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar collapsible resizable>
+  <PDashboardGroup>
+    <PDashboardSidebar collapsible resizable>
       <template #header>
-        <UButton icon="i-lucide-plus" label="New document" block />
+        <PButton icon="i-lucide-plus" label="New document" block />
       </template>
 
       <template #default="{ collapsed }">
@@ -124,10 +124,10 @@ Combine with Dashboard layout for a multi-document editor:
           orientation="vertical"
         />
       </template>
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
     <slot />
-  </UDashboardGroup>
+  </PDashboardGroup>
 </template>
 ```
 
@@ -141,20 +141,20 @@ const content = ref({ type: "doc", content: [] });
 <template>
   <PDashboardPanel>
     <template #header>
-      <UDashboardNavbar title="Editor">
+      <PDashboardNavbar title="Editor">
         <template #right>
-          <UButton label="Save" icon="i-lucide-save" />
+          <PButton label="Save" icon="i-lucide-save" />
         </template>
-      </UDashboardNavbar>
+      </PDashboardNavbar>
     </template>
 
     <PContainer class="py-8">
-      <UEditor v-slot="{ editor }" v-model="content">
-        <UEditorToolbar :editor="editor" />
-        <UEditorSuggestionMenu :editor="editor" />
-        <UEditorEmojiMenu :editor="editor" />
-        <UEditorDragHandle :editor="editor" />
-      </UEditor>
+      <PEditor v-slot="{ editor }" v-model="content">
+        <PEditorToolbar :editor="editor" />
+        <PEditorSuggestionMenu :editor="editor" />
+        <PEditorEmojiMenu :editor="editor" />
+        <PEditorDragHandle :editor="editor" />
+      </PEditor>
     </PContainer>
   </PDashboardPanel>
 </template>

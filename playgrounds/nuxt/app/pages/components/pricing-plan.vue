@@ -18,7 +18,7 @@ const orientation = ref('vertical' as keyof typeof theme.variants.orientation)
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs" class="gap-4" :class="orientation === 'horizontal' ? 'flex-col' : ''">
-    <UPricingPlan
+    <PPricingPlan
       title="Solo"
       description="For bootstrappers and indie hackers."
       price="$249"

@@ -81,9 +81,9 @@ function generateMessages() {
 </script>
 
 <template>
-  <UDashboardNavbar class="absolute top-0 inset-x-0 z-5 border-b-0 lg:pointer-events-none">
+  <PDashboardNavbar class="absolute top-0 inset-x-0 z-5 border-b-0 lg:pointer-events-none">
     <template #right>
-      <UButton
+      <PButton
         v-if="!messages.length"
         icon="i-lucide-messages-square"
         label="Generate messages"
@@ -92,7 +92,7 @@ function generateMessages() {
         class="pointer-events-auto"
         @click="generateMessages"
       />
-      <UButton
+      <PButton
         v-if="messages.length"
         icon="i-lucide-list-x"
         color="neutral"
@@ -101,10 +101,10 @@ function generateMessages() {
         @click="clearMessages"
       />
     </template>
-  </UDashboardNavbar>
+  </PDashboardNavbar>
 
   <div class="flex-1 flex flex-col gap-4 sm:gap-6 max-w-xl w-full mx-auto min-h-0">
-    <UChatMessages
+    <PChatMessages
       should-auto-scroll
       :messages="messages"
       :status="status"
@@ -114,7 +114,7 @@ function generateMessages() {
     >
       <template #content="{ message }">
         <template v-for="(part, index) in message.parts" :key="`${message.id}-${part.type}-${index}`">
-          <UChatReasoning
+          <PChatReasoning
             v-if="isReasoningUIPart(part)"
             :text="part.text"
             :streaming="isPartStreaming(part)"
@@ -126,7 +126,7 @@ function generateMessages() {
               :plugins="[shiki()]"
               class="*:first:mt-0 *:last:mb-0"
             />
-          </UChatReasoning>
+          </PChatReasoning>
 
           <template v-else-if="isTextUIPart(part)">
             <Markdown
@@ -141,7 +141,7 @@ function generateMessages() {
             </p>
           </template>
 
-          <UChatTool
+          <PChatTool
             v-else-if="isToolUIPart(part) && getToolName(part) === 'web_search'"
             :text="isToolStreaming(part) ? 'Searching the web...' : 'Searched the web'"
             :suffix="(part.input as { query?: string })?.query"
@@ -168,9 +168,9 @@ function generateMessages() {
                 <span class="text-xs text-dimmed ms-auto shrink-0">{{ getDomain(source.url) }}</span>
               </a>
             </div>
-          </UChatTool>
+          </PChatTool>
 
-          <UChatTool
+          <PChatTool
             v-else-if="isToolUIPart(part) && getToolName(part) === 'send_email'"
             :text="getEmailToolText(part.state)"
             :suffix="(part.input as { to?: string })?.to"
@@ -184,19 +184,19 @@ function generateMessages() {
             ] : undefined"
           >
             <pre class="text-xs whitespace-pre-wrap">{{ JSON.stringify(part.input, null, 2) }}</pre>
-          </UChatTool>
+          </PChatTool>
         </template>
       </template>
-    </UChatMessages>
+    </PChatMessages>
 
-    <UChatPrompt
+    <PChatPrompt
       v-model="input"
       :error="error"
       variant="subtle"
       class="sticky bottom-0"
       @submit="onSubmit"
     >
-      <UChatPromptSubmit :status="status" @stop="stop()" @reload="regenerate()" />
-    </UChatPrompt>
+      <PChatPromptSubmit :status="status" @stop="stop()" @reload="regenerate()" />
+    </PChatPrompt>
   </div>
 </template>

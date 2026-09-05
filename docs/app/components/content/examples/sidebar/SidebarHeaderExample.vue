@@ -19,9 +19,9 @@ const items: NavigationMenuItem[] = [{
 
 <template>
   <div class="flex flex-col flex-1">
-    <UHeader toggle-side="left" :ui="{ container: 'px-4!' }">
+    <PHeader toggle-side="left" :ui="{ container: 'px-4!' }">
       <template #toggle>
-        <UButton
+        <PButton
           icon="i-lucide-panel-left"
           color="neutral"
           variant="ghost"
@@ -29,10 +29,10 @@ const items: NavigationMenuItem[] = [{
           @click="open = !open"
         />
       </template>
-    </UHeader>
+    </PHeader>
 
     <div class="flex flex-1 min-h-0">
-      <USidebar
+      <PSidebar
         v-model:open="open"
         collapsible="icon"
         :ui="{
@@ -45,7 +45,7 @@ const items: NavigationMenuItem[] = [{
           orientation="vertical"
           :ui="{ link: 'p-1.5 overflow-hidden' }"
         />
-      </USidebar>
+      </PSidebar>
 
       <div class="flex-1 p-4">
         <Placeholder class="size-full" />

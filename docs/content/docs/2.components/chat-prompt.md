@@ -100,9 +100,9 @@ async function onSubmit() {
       <PContainer>
         <h1>How can I help you today?</h1>
 
-        <UChatPrompt v-model="input" @submit="onSubmit">
-          <UChatPromptSubmit :status="status" />
-        </UChatPrompt>
+        <PChatPrompt v-model="input" @submit="onSubmit">
+          <PChatPromptSubmit :status="status" />
+        </PChatPrompt>
       </PContainer>
     </template>
   </PDashboardPanel>

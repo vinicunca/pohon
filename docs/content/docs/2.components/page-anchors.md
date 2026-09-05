@@ -122,19 +122,19 @@ const links: PageAnchor[] = [
 </script>
 
 <template>
-  <UPage>
+  <PPage>
     <template #left>
-      <UPageAside>
-        <UPageAnchors :links="links" />
+      <PPageAside>
+        <PPageAnchors :links="links" />
 
-        <USeparator type="dashed" />
+        <PSeparator type="dashed" />
 
-        <UContentNavigation :navigation="navigation" />
-      </UPageAside>
+        <PContentNavigation :navigation="navigation" />
+      </PPageAside>
     </template>
 
     <slot />
-  </UPage>
+  </PPage>
 </template>
 ```
 

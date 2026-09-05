@@ -13,17 +13,17 @@ Build documentation sites with sidebar navigation, table of contents, and surrou
 ## Component tree
 
 ```
-UApp
-├── UHeader
-├── UMain
+PApp
+├── PHeader
+├── PMain
 │   └── NuxtLayout (docs)
-│       └── UPage
-│           ├── #left → UPageAside → UContentNavigation
+│       └── PPage
+│           ├── #left → PPageAside → PContentNavigation
 │           └── NuxtPage
-│               ├── UPageHeader
-│               ├── UPageBody → ContentRenderer + UContentSurround
-│               └── #right → UContentToc
-└── UFooter
+│               ├── PPageHeader
+│               ├── PPageBody → ContentRenderer + PContentSurround
+│               └── #right → PContentToc
+└── PFooter
 ```
 
 ## App shell
@@ -50,8 +50,8 @@ const items = computed<NavigationMenuItem[]>(() => [
 </script>
 
 <template>
-  <UApp>
-    <UHeader>
+  <PApp>
+    <PHeader>
       <template #title>
         <Logo class="h-6 w-auto" />
       </template>
@@ -59,21 +59,21 @@ const items = computed<NavigationMenuItem[]>(() => [
       <PNavigationMenu :items="items" />
 
       <template #right>
-        <UContentSearchButton />
-        <UColorModeButton />
+        <PContentSearchButton />
+        <PColorModeButton />
       </template>
-    </UHeader>
+    </PHeader>
 
-    <UMain>
+    <PMain>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-    </UMain>
+    </PMain>
 
-    <UFooter />
+    <PFooter />
 
-    <UContentSearch :navigation="navigation" />
-  </UApp>
+    <PContentSearch :navigation="navigation" />
+  </PApp>
 </template>
 ```
 
@@ -87,15 +87,15 @@ const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
 </script>
 
 <template>
-  <UPage>
+  <PPage>
     <template #left>
-      <UPageAside>
-        <UContentNavigation :navigation="navigation" />
-      </UPageAside>
+      <PPageAside>
+        <PContentNavigation :navigation="navigation" />
+      </PPageAside>
     </template>
 
     <slot />
-  </UPage>
+  </PPage>
 </template>
 ```
 
@@ -117,40 +117,40 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
 </script>
 
 <template>
-  <UPage>
-    <UPageHeader :title="page.title" :description="page.description" />
+  <PPage>
+    <PPageHeader :title="page.title" :description="page.description" />
 
-    <UPageBody>
+    <PPageBody>
       <ContentRenderer :value="page" />
 
-      <USeparator />
+      <PSeparator />
 
-      <UContentSurround :surround="surround" />
-    </UPageBody>
+      <PContentSurround :surround="surround" />
+    </PPageBody>
 
     <template #right>
-      <UContentToc :links="page.body.toc.links" />
+      <PContentToc :links="page.body.toc.links" />
     </template>
-  </UPage>
+  </PPage>
 </template>
 ```
 
 ### How nesting works
 
-The outer `UPage` in the layout handles the **left sidebar**. The inner `UPage` in the page handles the **right sidebar**. They nest correctly — this is intentional.
+The outer `PPage` in the layout handles the **left sidebar**. The inner `PPage` in the page handles the **right sidebar**. They nest correctly — this is intentional.
 
 ### Common mistakes
 
 - Not providing navigation via `provide`/`inject` — the layout needs it from the app shell.
-- Forgetting `UContentSearch` in app.vue — search won't work without it.
-- Using `UContentSearchButton` without `UContentSearch` — the button opens search, but the search component must exist.
+- Forgetting `PContentSearch` in app.vue — search won't work without it.
+- Using `PContentSearchButton` without `PContentSearch` — the button opens search, but the search component must exist.
 
 ## Key components
 
-- `UPage` — multi-column grid with `#left`, `#default`, `#right` slots
-- `UPageAside` — sticky sidebar wrapper (visible from `lg` breakpoint)
-- `UContentNavigation` — sidebar navigation tree from Nuxt Content
-- `UContentToc` — table of contents from page headings
-- `UContentSurround` — prev/next links
-- `UContentSearch` / `UContentSearchButton` — search command palette
-- `UPageAnchors` — simpler alternative to full TOC
+- `PPage` — multi-column grid with `#left`, `#default`, `#right` slots
+- `PPageAside` — sticky sidebar wrapper (visible from `lg` breakpoint)
+- `PContentNavigation` — sidebar navigation tree from Nuxt Content
+- `PContentToc` — table of contents from page headings
+- `PContentSurround` — prev/next links
+- `PContentSearch` / `PContentSearchButton` — search command palette
+- `PPageAnchors` — simpler alternative to full TOC

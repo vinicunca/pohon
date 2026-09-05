@@ -2,7 +2,7 @@
 import { h, resolveComponent } from 'vue'
 import type { TableColumn } from 'pohon-ui'
 
-const UBadge = resolveComponent('UBadge')
+const PBadge = resolveComponent('PBadge')
 
 type Payment = {
   id: string
@@ -72,7 +72,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'amount',
@@ -107,14 +107,14 @@ const columns: TableColumn<Payment>[] = [{
           The title stays put while the wide table scrolls both axes under one scrollbar.
         </p>
       </div>
-      <UBadge
+      <PBadge
         color="neutral"
         variant="subtle"
         :label="`${data.length} rows`"
       />
     </div>
 
-    <UTable
+    <PTable
       sticky
       :data="data"
       :columns="columns"

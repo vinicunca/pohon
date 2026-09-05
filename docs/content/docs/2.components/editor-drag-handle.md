@@ -39,9 +39,9 @@ Use the `icon` prop to customize the drag handle icon.
 
 ```vue
 <template>
-  <UEditor v-slot="{ editor }">
-    <UEditorDragHandle :editor="editor" icon="i-lucide-move" />
-  </UEditor>
+  <PEditor v-slot="{ editor }">
+    <PEditorDragHandle :editor="editor" icon="i-lucide-move" />
+  </PEditor>
 </template>
 ```
 
@@ -67,14 +67,14 @@ The offset is automatically calculated to center the handle for small blocks and
 
 ```vue
 <template>
-  <UEditor v-slot="{ editor }">
-    <UEditorDragHandle
+  <PEditor v-slot="{ editor }">
+    <PEditorDragHandle
       :editor="editor"
       :options="{
         placement: 'left',
       }"
     />
-  </UEditor>
+  </PEditor>
 </template>
 ```
 

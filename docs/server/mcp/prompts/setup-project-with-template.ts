@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { queryCollection } from '@nuxt/content/server'
 
 export default defineMcpPrompt({
-  description: 'Guide through setting up a new project with a Nuxt UI template',
+  description: 'Guide through setting up a new project with a Pohon UI template',
   inputSchema: {
     projectType: z.string().describe('Type of project (dashboard, landing page, admin panel, etc.)')
   },
@@ -19,7 +19,7 @@ export default defineMcpPrompt({
           role: 'user' as const,
           content: {
             type: 'text' as const,
-            text: `Guide me through setting up a new ${projectType} project with Nuxt UI. Here are available templates: ${JSON.stringify(templates, null, 2)}`
+            text: `Guide me through setting up a new ${projectType} project with Pohon UI. Here are available templates: ${JSON.stringify(templates, null, 2)}`
           }
         }
       ]

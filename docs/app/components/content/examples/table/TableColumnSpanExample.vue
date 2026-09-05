@@ -89,5 +89,5 @@ const columns: TableColumn<Product>[] = [{
 </script>
 
 <template>
-  <UTable :data="data" :columns="columns" class="flex-1" />
+  <PTable :data="data" :columns="columns" class="flex-1" />
 </template>

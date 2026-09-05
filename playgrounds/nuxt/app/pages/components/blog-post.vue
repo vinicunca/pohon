@@ -18,9 +18,9 @@ const orientation = ref('vertical' as keyof typeof theme.variants.orientation)
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs" class="gap-4" :class="orientation === 'horizontal' ? 'flex-col' : ''">
-    <UBlogPost
-      title="Nuxt UI v4"
-      description="Nuxt UI v4 unifies Nuxt UI and Nuxt UI Pro into one powerful, completely free library. With over 110 components, 12 templates, and a comprehensive Figma kit, all of this is available for free."
+    <PBlogPost
+      title="Pohon UI v4"
+      description="Pohon UI v4 unifies Pohon UI and Pohon UI Pro into one powerful, completely free library. With over 110 components, 12 templates, and a comprehensive Figma kit, all of this is available for free."
       image="https://nuxt.com/assets/blog/nuxt-ui-v4.png"
       to="https://nuxt.com/blog/nuxt-ui-v4"
       target="_blank"

@@ -134,8 +134,8 @@ function removeToast() {
   </Navbar>
 
   <div class="flex items-center gap-2">
-    <UButton label="Add new" color="neutral" variant="outline" @click="addToast" />
-    <UButton label="Update last" color="neutral" variant="outline" @click="updateToast" />
-    <UButton label="Remove last" color="neutral" variant="outline" @click="removeToast" />
+    <PButton label="Add new" color="neutral" variant="outline" @click="addToast" />
+    <PButton label="Update last" color="neutral" variant="outline" @click="updateToast" />
+    <PButton label="Remove last" color="neutral" variant="outline" @click="removeToast" />
   </div>
 </template>

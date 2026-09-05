@@ -166,7 +166,7 @@ const globalFilter = ref('')
       />
     </div>
 
-    <UTable
+    <PTable
       ref="table"
       v-model:pagination="pagination"
       v-model:global-filter="globalFilter"
@@ -179,7 +179,7 @@ const globalFilter = ref('')
     />
 
     <div class="flex justify-end border-t border-default pt-4 px-4">
-      <UPagination
+      <PPagination
         :page="(table?.tableApi?.getState().pagination.pageIndex || 0) + 1"
         :items-per-page="table?.tableApi?.getState().pagination.pageSize"
         :total="table?.tableApi?.getFilteredRowModel().rows.length"

@@ -2,7 +2,7 @@
 const cards = ref([
   {
     title: 'Theme',
-    description: 'Learn how to customize Nuxt UI components using Tailwind CSS.',
+    description: 'Learn how to customize Pohon UI components using Tailwind CSS.',
     icon: 'i-lucide-swatch-book',
     to: '/docs/getting-started/theme/design-system',
     class: 'lg:col-span-2',
@@ -15,21 +15,21 @@ const cards = ref([
   },
   {
     title: 'Fonts',
-    description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.',
+    description: 'Pohon UI integrates with Nuxt Fonts to provide plug-and-play font optimization.',
     icon: 'i-lucide-a-large-small',
     to: '/docs/getting-started/integrations/fonts',
     variant: 'soft' as const
   },
   {
     title: 'Color Mode',
-    description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.',
+    description: 'Pohon UI integrates with Nuxt Color Mode to switch between light and dark.',
     icon: 'i-lucide-sun-moon',
     to: '/docs/getting-started/integrations/color-mode',
     variant: 'soft' as const
   },
   {
     title: 'Icons',
-    description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.',
+    description: 'Pohon UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.',
     icon: 'i-lucide-smile',
     to: '/docs/getting-started/integrations/icons',
     image: {
@@ -51,7 +51,7 @@ const cards = ref([
       :key="index"
       v-bind="card"
     >
-      <UColorModeImage
+      <PColorModeImage
         v-if="card.image"
         :light="`${card.image.path}-light.svg`"
         :dark="`${card.image.path}-dark.svg`"

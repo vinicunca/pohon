@@ -45,7 +45,7 @@ const versions = ref([
   <Navbar />
 
   <div ref="container" class="relative w-full h-96 overflow-auto">
-    <UChangelogVersions
+    <PChangelogVersions
       v-if="container"
       :versions="versions"
       :indicator="{

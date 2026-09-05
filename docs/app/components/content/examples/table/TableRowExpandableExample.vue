@@ -2,8 +2,8 @@
 import { h, resolveComponent } from 'vue'
 import type { TableColumn } from 'pohon-ui'
 
-const UButton = resolveComponent('UButton')
-const UBadge = resolveComponent('UBadge')
+const PButton = resolveComponent('PButton')
+const PBadge = resolveComponent('PBadge')
 
 type Payment = {
   id: string
@@ -47,7 +47,7 @@ const data = ref<Payment[]>([{
 
 const columns: TableColumn<Payment>[] = [{
   id: 'expand',
-  cell: ({ row }) => h(UButton, {
+  cell: ({ row }) => h(PButton, {
     'color': 'neutral',
     'variant': 'ghost',
     'icon': 'i-lucide-chevron-down',
@@ -84,7 +84,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -111,7 +111,7 @@ const expanded = ref({ 1: true })
 </script>
 
 <template>
-  <UTable
+  <PTable
     v-model:expanded="expanded"
     :data="data"
     :columns="columns"
@@ -121,5 +121,5 @@ const expanded = ref({ 1: true })
     <template #expanded="{ row }">
       <pre>{{ row.original }}</pre>
     </template>
-  </UTable>
+  </PTable>
 </template>

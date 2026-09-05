@@ -4,19 +4,19 @@
   <div class="flex flex-col gap-4 min-h-0">
     <div>
       <p class="font-semibold text-highlighted">
-        Nuxt UI
+        Pohon UI
       </p>
       <p>An open-source UI component library.</p>
     </div>
 
-    <USeparator icon="i-simple-icons-nuxtdotjs" type="dashed" />
+    <PSeparator icon="i-simple-icons-nuxtdotjs" type="dashed" />
 
     <div class="h-24 flex gap-4 items-center">
       <div class="flex-1 text-center">
         Blog
       </div>
 
-      <USeparator
+      <PSeparator
         :avatar="{ src: 'https://github.com/benjamincanac.png' }"
         decorative
         orientation="vertical"
@@ -26,36 +26,36 @@
         Docs
       </div>
 
-      <USeparator decorative orientation="vertical">
-        <UAvatar size="2xs" src="https://github.com/sandros94.png" />
-      </USeparator>
+      <PSeparator decorative orientation="vertical">
+        <PAvatar size="2xs" src="https://github.com/sandros94.png" />
+      </PSeparator>
 
       <div class="flex-1 text-center">
         Source
       </div>
     </div>
 
-    <USeparator label="As simple as it gets" type="dotted" size="lg" color="primary" />
+    <PSeparator label="As simple as it gets" type="dotted" size="lg" color="primary" />
 
-    <USeparator label="Start" position="start" />
+    <PSeparator label="Start" position="start" />
 
-    <USeparator label="End" position="end" />
+    <PSeparator label="End" position="end" />
 
     <div class="h-24 flex gap-4 items-center">
       <div class="flex-1 text-center">
         Start
       </div>
 
-      <USeparator
+      <PSeparator
         :avatar="{ src: 'https://github.com/benjamincanac.png' }"
         decorative
         orientation="vertical"
         position="start"
       />
 
-      <USeparator decorative orientation="vertical" position="end">
-        <UAvatar size="2xs" src="https://github.com/sandros94.png" />
-      </USeparator>
+      <PSeparator decorative orientation="vertical" position="end">
+        <PAvatar size="2xs" src="https://github.com/sandros94.png" />
+      </PSeparator>
 
       <div class="flex-1 text-center">
         End

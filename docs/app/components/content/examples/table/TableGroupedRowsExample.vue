@@ -4,7 +4,7 @@ import type { TableColumn } from 'pohon-ui'
 import { getGroupedRowModel } from '@tanstack/vue-table'
 import type { GroupingOptions } from '@tanstack/vue-table'
 
-const UBadge = resolveComponent('UBadge')
+const PBadge = resolveComponent('PBadge')
 
 type Account = {
   id: string
@@ -165,7 +165,7 @@ const grouping_options = ref<GroupingOptions>({
 </script>
 
 <template>
-  <UTable
+  <PTable
     :data="data"
     :columns="columns"
     :grouping="['account_id', 'status']"
@@ -182,7 +182,7 @@ const grouping_options = ref<GroupingOptions>({
           :style="{ width: `calc(${row.depth} * 1rem)` }"
         />
 
-        <UButton
+        <PButton
           variant="outline"
           color="neutral"
           class="mr-2"
@@ -193,15 +193,15 @@ const grouping_options = ref<GroupingOptions>({
         <strong v-if="row.groupingColumnId === 'account_id'">{{
           row.original.account.name
         }}</strong>
-        <UBadge
+        <PBadge
           v-else-if="row.groupingColumnId === 'status'"
           :color="getColorByStatus(row.original.status)"
           class="capitalize"
           variant="subtle"
         >
           {{ row.original.status }}
-        </UBadge>
+        </PBadge>
       </div>
     </template>
-  </UTable>
+  </PTable>
 </template>

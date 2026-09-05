@@ -18,12 +18,12 @@ function handleColorChange(event: Event) {
   <Navbar>
     <PSelect v-model="attrs.size" :items="sizes" multiple />
 
-    <UFieldGroup>
-      <UButton color="neutral" variant="outline" square>
+    <PFieldGroup>
+      <PButton color="neutral" variant="outline" square>
         <span :style="{ backgroundColor: colorHex }" class="inline-flex size-5 rounded-sm" />
-      </UButton>
+      </PButton>
       <PInput :model-value="colorHex" @change="handleColorChange" />
-    </UFieldGroup>
+    </PFieldGroup>
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs">

@@ -136,7 +136,7 @@ const testimonials = ref([
 </script>
 
 <template>
-  <UPageColumns>
+  <PPageColumns>
     <PPageCard
       variant="solid"
       to="https://cloudflare.com"
@@ -154,8 +154,8 @@ const testimonials = ref([
       :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
     >
       <template #footer>
-        <UUser v-bind="testimonial.user" size="xl" />
+        <PUser v-bind="testimonial.user" size="xl" />
       </template>
     </PPageCard>
-  </UPageColumns>
+  </PPageColumns>
 </template>

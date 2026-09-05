@@ -125,7 +125,7 @@ import { defu } from 'defu';
 import { isEqual } from 'ohash/utils';
 import { hasProtocol } from 'ufo';
 import { computed, getCurrentInstance, mergeProps, onBeforeUnmount, onMounted } from 'vue';
-import { useAppConfig, useNuxtApp, useRoute } from '#imports';
+import { onNuxtReady, useAppConfig, useNuxtApp, useRoute } from '#imports';
 import { mergeClasses } from '../utils';
 import { isPartiallyEqual } from '../utils/link';
 import { cancelIdleCallback, observeIntersection, requestIdleCallback } from '../utils/prefetch';
@@ -318,6 +318,7 @@ function getPrefetchListeners({ prefetch, shouldPrefetch }: NuxtLinkDefaultSlotP
 
 let idleId: ReturnType<typeof requestIdleCallback>;
 let unobserve: (() => void) | null = null;
+let unmounted = false;
 
 onMounted(() => {
   if (!prefetchApi?.shouldPrefetch?.('visibility')) {
@@ -333,16 +334,26 @@ onMounted(() => {
     return;
   }
 
-  idleId = requestIdleCallback(() => {
-    unobserve = observeIntersection(el, () => {
-      unobserve?.();
-      unobserve = null;
-      onPrefetch();
+  // Like NuxtLink, wait for hydration: the payload plugin only registers its
+  // `link:prefetch` listener `onNuxtReady`, and `prefetch` marks the link as
+  // prefetched even when nobody listens.
+  onNuxtReady(() => {
+    if (unmounted) {
+      return;
+    }
+
+    idleId = requestIdleCallback(() => {
+      unobserve = observeIntersection(el, () => {
+        unobserve?.();
+        unobserve = null;
+        onPrefetch();
+      });
     });
   });
 });
 
 onBeforeUnmount(() => {
+  unmounted = true;
   cancelIdleCallback(idleId);
   unobserve?.();
   unobserve = null;

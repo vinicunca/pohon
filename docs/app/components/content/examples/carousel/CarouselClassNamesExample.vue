@@ -10,7 +10,7 @@ const items = [
 </script>
 
 <template>
-  <UCarousel
+  <PCarousel
     v-slot="{ item }"
     class-names
     arrows
@@ -21,5 +21,5 @@ const items = [
     class="mx-auto max-w-sm"
   >
     <img :src="item" width="264" height="264" class="rounded-lg" loading="lazy">
-  </UCarousel>
+  </PCarousel>
 </template>

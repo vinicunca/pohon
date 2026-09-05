@@ -49,9 +49,9 @@ defineShortcuts(shortcuts)
       </template>
 
       <div class="flex flex-wrap gap-2">
-        <UKbd v-for="{ label } in shortcutsList" :key="label">
+        <PKbd v-for="{ label } in shortcutsList" :key="label">
           {{ label }}
-        </UKbd>
+        </PKbd>
       </div>
     </PCard>
 
@@ -61,7 +61,7 @@ defineShortcuts(shortcuts)
           <h3 class="font-bold">
             Logs ({{ logs.length }})
           </h3>
-          <UButton icon="i-lucide-trash" size="sm" color="neutral" class="-my-1" @click="logs = []" />
+          <PButton icon="i-lucide-trash" size="sm" color="neutral" class="-my-1" @click="logs = []" />
         </div>
       </template>
 

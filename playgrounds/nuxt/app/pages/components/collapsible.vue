@@ -8,7 +8,7 @@ const appConfig = useAppConfig()
   <Navbar />
 
   <PCollapsible class="flex flex-col gap-2 w-48">
-    <UButton
+    <PButton
       class="group"
       icon="i-lucide-lightbulb"
       :trailing-icon="appConfig.ui.icons.chevronDown"

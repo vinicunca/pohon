@@ -16,7 +16,7 @@ useHead({
 
 if (import.meta.server) {
   useSeoMeta({
-    ogSiteName: 'Nuxt UI',
+    ogSiteName: 'Pohon UI',
     ogType: 'website',
     twitterCard: 'summary_large_image'
   })
@@ -36,7 +36,7 @@ provide('navigation', rootNavigation)
 </script>
 
 <template>
-  <UApp :toaster="appConfig.toaster">
+  <PApp :toaster="appConfig.toaster">
     <NuxtLoadingIndicator color="var(--ui-primary)" :height="2" />
 
     <div class="flex">
@@ -64,7 +64,7 @@ provide('navigation', rootNavigation)
         </ClientOnly>
       </template>
     </div>
-  </UApp>
+  </PApp>
 </template>
 
 <style>

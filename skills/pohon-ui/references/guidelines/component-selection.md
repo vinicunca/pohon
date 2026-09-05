@@ -67,8 +67,8 @@ Decision matrices for choosing the right component. When in doubt, use the MCP `
 - Use `PSelect` for short, known lists (country, status, role)
 - Use `PSelectMenu` when the list is long or needs search
 - Use `PInputMenu` when the user might want to type a value that's not in the list
-- Wrap all form inputs in `UFormField` for labels, descriptions, hints, and validation errors
-- Group related inline inputs with `UFieldGroup`
+- Wrap all form inputs in `PFormField` for labels, descriptions, hints, and validation errors
+- Group related inline inputs with `PFieldGroup`
 
 ## Feedback
 
@@ -90,7 +90,7 @@ Decision matrices for choosing the right component. When in doubt, use the MCP `
 
 ## Markdown
 
-When rendering Markdown (for instance with Comark), **prefer Prose components** — they are styled and tuned for Markdown contexts. Generic Nuxt UI components can also be used. `<ComarkRenderer>` (or `<Comark>`) auto-resolves `ProseX` components when `pohon-ui` is installed. In Markdown, the `Prose` prefix can be omitted (`::callout`, `::steps`, etc.).
+When rendering Markdown (for instance with Comark), **prefer Prose components** — they are styled and tuned for Markdown contexts. Generic Pohon UI components can also be used. `<ComarkRenderer>` (or `<Comark>`) auto-resolves `ProseX` components when `pohon-ui` is installed. In Markdown, the `Prose` prefix can be omitted (`::callout`, `::steps`, etc.).
 
 | Need                 | Use                         | Not                           |
 | -------------------- | --------------------------- | ----------------------------- |
@@ -104,7 +104,7 @@ When rendering Markdown (for instance with Comark), **prefer Prose components** 
 ### Rules
 
 - Prose components use native Vue slots — Comark maps named `#slot` blocks directly to `<slot name="..." />`
-- Theme via `appConfig.ui.prose.<name>` using the same override pattern as other Nuxt UI components
+- Theme via `appConfig.ui.prose.<name>` using the same override pattern as other Pohon UI components
 - `Callout` colors: `neutral` (default), `primary`, `secondary`, `info`, `success`, `warning`, `error`
 
 ## Layout containers

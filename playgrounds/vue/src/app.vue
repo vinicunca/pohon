@@ -14,10 +14,10 @@ appConfig.toaster = reactive({
 })
 
 useHead({
-  title: 'Nuxt UI - Playground',
+  title: 'Pohon UI - Playground',
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { name: 'description', content: 'Explore and test all Nuxt UI components in an interactive environment' }
+    { name: 'description', content: 'Explore and test all Pohon UI components in an interactive environment' }
   ],
   htmlAttrs: {
     dir: computed(() => appConfig.dir as 'ltr' | 'rtl')
@@ -31,9 +31,9 @@ provide('components', components)
 
 <template>
   <Suspense>
-    <UApp :toaster="appConfig.toaster" :dir="appConfig.dir">
-      <UDashboardGroup unit="rem" storage="local">
-        <UDashboardSidebar
+    <PApp :toaster="appConfig.toaster" :dir="appConfig.dir">
+      <PDashboardGroup unit="rem" storage="local">
+        <PDashboardSidebar
           class="bg-elevated/25"
           resizable
           collapsible
@@ -47,20 +47,20 @@ provide('components', components)
             <div v-if="!collapsed" class="flex items-center ms-auto">
               <ThemeDropdown />
 
-              <UColorModeButton />
+              <PColorModeButton />
             </div>
           </template>
 
           <template #default="{ collapsed }">
-            <UDashboardSearchButton :collapsed="collapsed" />
+            <PDashboardSearchButton :collapsed="collapsed" />
 
             <PNavigationMenu :collapsed="collapsed" :items="items" orientation="vertical" />
 
-            <USeparator type="dashed" />
+            <PSeparator type="dashed" />
 
             <PNavigationMenu :collapsed="collapsed" :items="components" orientation="vertical" />
           </template>
-        </UDashboardSidebar>
+        </PDashboardSidebar>
 
         <RouterView v-if="route.path.startsWith('/components/sidebar')" />
         <PDashboardPanel
@@ -79,8 +79,8 @@ provide('components', components)
           </template>
         </PDashboardPanel>
 
-        <UDashboardSearch :groups="groups" :fuse="{ resultLimit: 100 }" />
-      </UDashboardGroup>
-    </UApp>
+        <PDashboardSearch :groups="groups" :fuse="{ resultLimit: 100 }" />
+      </PDashboardGroup>
+    </PApp>
   </Suspense>
 </template>

@@ -28,7 +28,7 @@ const items: NavigationMenuItem[] = [{
       side === 'right' && 'flex-row-reverse'
     ]"
   >
-    <USidebar
+    <PSidebar
       v-model:open="open"
       :variant="variant"
       :collapsible="collapsible"
@@ -38,7 +38,7 @@ const items: NavigationMenuItem[] = [{
       }"
     >
       <template #header>
-        <UIcon name="i-logos-nuxt-icon" class="size-8" />
+        <PIcon name="i-logos-nuxt-icon" class="size-8" />
       </template>
 
       <PNavigationMenu
@@ -46,7 +46,7 @@ const items: NavigationMenuItem[] = [{
         orientation="vertical"
         :ui="{ link: 'p-1.5 overflow-hidden' }"
       />
-    </USidebar>
+    </PSidebar>
 
     <div class="flex-1 flex flex-col overflow-hidden lg:peer-data-[variant=floating]:my-4 peer-data-[variant=inset]:m-4 lg:peer-data-[variant=inset]:not-peer-data-[collapsible=offcanvas]:ms-0 peer-data-[variant=inset]:rounded-xl peer-data-[variant=inset]:shadow-sm peer-data-[variant=inset]:ring peer-data-[variant=inset]:ring-default bg-default">
       <div
@@ -56,7 +56,7 @@ const items: NavigationMenuItem[] = [{
           side === 'right' && 'justify-end'
         ]"
       >
-        <UButton
+        <PButton
           :icon="side === 'left' ? 'i-lucide-panel-left' : 'i-lucide-panel-right'"
           color="neutral"
           variant="ghost"

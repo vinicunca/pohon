@@ -4,8 +4,8 @@ import type { TableColumn } from 'pohon-ui'
 import type { Row } from '@tanstack/vue-table'
 import { useClipboard } from '@vueuse/core'
 
-const UButton = resolveComponent('UButton')
-const UBadge = resolveComponent('UBadge')
+const PButton = resolveComponent('PButton')
+const PBadge = resolveComponent('PBadge')
 const PDropdownMenu = resolveComponent('PDropdownMenu')
 
 const toast = useToast()
@@ -77,7 +77,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -112,7 +112,7 @@ const columns: TableColumn<Payment>[] = [{
       },
       'items': getRowItems(row),
       'aria-label': 'Actions dropdown'
-    }, () => h(UButton, {
+    }, () => h(PButton, {
       'icon': 'i-lucide-ellipsis-vertical',
       'color': 'neutral',
       'variant': 'ghost',
@@ -147,5 +147,5 @@ function getRowItems(row: Row<Payment>) {
 </script>
 
 <template>
-  <UTable :data="data" :columns="columns" class="flex-1" />
+  <PTable :data="data" :columns="columns" class="flex-1" />
 </template>

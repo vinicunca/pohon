@@ -43,17 +43,17 @@ You can put this component in the `header` slot of the [DashboardSidebar](/docs/
 
 ```vue [layouts/dashboard.vue]{4-8}
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar collapsible>
+  <PDashboardGroup>
+    <PDashboardSidebar collapsible>
       <template #header="{ collapsed }">
         <Logo v-if="!collapsed" />
 
-        <UDashboardSidebarCollapse variant="subtle" />
+        <PDashboardSidebarCollapse variant="subtle" />
       </template>
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
     <slot />
-  </UDashboardGroup>
+  </PDashboardGroup>
 </template>
 ```
 
@@ -71,11 +71,11 @@ definePageMeta({
 <template>
   <PDashboardPanel>
     <template #header>
-      <UDashboardNavbar title="Home">
+      <PDashboardNavbar title="Home">
         <template #leading>
-          <UDashboardSidebarCollapse variant="subtle" />
+          <PDashboardSidebarCollapse variant="subtle" />
         </template>
-      </UDashboardNavbar>
+      </PDashboardNavbar>
     </template>
   </PDashboardPanel>
 </template>

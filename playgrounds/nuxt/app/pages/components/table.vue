@@ -6,9 +6,9 @@ import type { Column, RowPinningState } from '@tanstack/vue-table'
 import { getPaginationRowModel } from '@tanstack/vue-table'
 import { useClipboard, refDebounced } from '@vueuse/core'
 
-const UButton = resolveComponent('UButton')
+const PButton = resolveComponent('PButton')
 const PCheckbox = resolveComponent('PCheckbox')
-const UBadge = resolveComponent('UBadge')
+const PBadge = resolveComponent('PBadge')
 const PDropdownMenu = resolveComponent('PDropdownMenu')
 
 const toast = useToast()
@@ -84,7 +84,7 @@ const rowPinning = ref<RowPinningState>({ top: [], bottom: [] })
 
 const columns: TableColumn<Payment>[] = [{
   id: 'pin',
-  cell: ({ row }) => h(UButton, {
+  cell: ({ row }) => h(PButton, {
     'icon': row.getIsPinned() ? 'i-lucide-pin-off' : 'i-lucide-pin',
     'color': row.getIsPinned() ? 'primary' : 'neutral',
     'variant': 'ghost',
@@ -143,7 +143,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   },
   size: 102
 }, {
@@ -169,7 +169,7 @@ const columns: TableColumn<Payment>[] = [{
   header: ({ column }) => {
     const isSorted = column.getIsSorted()
 
-    return h(UButton, {
+    return h(PButton, {
       color: 'neutral',
       variant: 'ghost',
       label: 'Email',
@@ -223,7 +223,7 @@ const columns: TableColumn<Payment>[] = [{
       },
       'items': getRowItems(row),
       'aria-label': 'Actions dropdown'
-    }, () => h(UButton, {
+    }, () => h(PButton, {
       'icon': 'i-lucide-ellipsis-vertical',
       'color': 'neutral',
       'variant': 'ghost',
@@ -236,7 +236,7 @@ const columns: TableColumn<Payment>[] = [{
 function getPinnedHeader(column: Column<Payment>, label: string, position: 'left' | 'right') {
   const isPinned = column.getIsPinned()
 
-  return h(UButton, {
+  return h(PButton, {
     color: 'neutral',
     variant: 'ghost',
     label,
@@ -323,8 +323,8 @@ onMounted(() => {
       @update:model-value="table?.tableApi?.getColumn('email')?.setFilterValue($event)"
     />
 
-    <UButton color="neutral" label="Randomize" @click="randomize" />
-    <UButton color="neutral" label="Add element" @click="addElement" />
+    <PButton color="neutral" label="Randomize" @click="randomize" />
+    <PButton color="neutral" label="Add element" @click="addElement" />
 
     <PDropdownMenu
       :items="table?.tableApi?.getAllColumns().filter(column => column.getCanHide()).map(column => ({
@@ -340,7 +340,7 @@ onMounted(() => {
       }))"
       :content="{ align: 'end' }"
     >
-      <UButton
+      <PButton
         label="Columns"
         color="neutral"
         variant="outline"
@@ -351,8 +351,8 @@ onMounted(() => {
   </Navbar>
 
   <div class="flex flex-col flex-1 gap-4 w-full max-h-[calc(100vh-7rem)]">
-    <UContextMenu :items="contextmenuItems">
-      <UTable
+    <PContextMenu :items="contextmenuItems">
+      <PTable
         ref="table"
         :key="String(virtualize)"
         v-model:row-pinning="rowPinning"
@@ -382,8 +382,8 @@ onMounted(() => {
         <template #expanded="{ row }">
           <pre>{{ row.original }}</pre>
         </template>
-      </UTable>
-    </UContextMenu>
+      </PTable>
+    </PContextMenu>
 
     <PPopover :content="{ side: 'top', sideOffset: 16, updatePositionStrategy: 'always' }" :open="popoverOpenDebounced" :reference="reference">
       <template #content>
@@ -400,7 +400,7 @@ onMounted(() => {
       </div>
 
       <div class="flex items-center gap-1.5">
-        <UPagination
+        <PPagination
           :disabled="!!virtualize"
           :page="(table?.tableApi?.getState().pagination.pageIndex ?? 0) + 1"
           :items-per-page="table?.tableApi?.getState().pagination.pageSize ?? 10"

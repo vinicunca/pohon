@@ -20,7 +20,7 @@ const attrs = reactive({
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs">
-    <UEmpty
+    <PEmpty
       icon="i-lucide-file"
       :loading="loading"
       :title="loading ? 'Loading projects' : 'No projects found'"

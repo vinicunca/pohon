@@ -39,17 +39,17 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UForm
+  <PForm
     :state="state"
     :schema="schema"
     class="gap-4 flex flex-col w-60"
     @submit="onSubmit"
   >
-    <UFormField label="Customer" name="customer">
+    <PFormField label="Customer" name="customer">
       <PInput v-model="state.customer" placeholder="Wonka Industries" />
-    </UFormField>
+    </PFormField>
 
-    <UForm
+    <PForm
       v-for="item, count in state.items"
       :key="count"
       :name="`items.${count}`"
@@ -57,27 +57,27 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       class="flex gap-2"
       nested
     >
-      <UFormField :label="!count ? 'Description' : undefined" name="description">
+      <PFormField :label="!count ? 'Description' : undefined" name="description">
         <PInput v-model="item.description" />
-      </UFormField>
-      <UFormField :label="!count ? 'Price' : undefined" name="price" class="w-20">
+      </PFormField>
+      <PFormField :label="!count ? 'Price' : undefined" name="price" class="w-20">
         <PInput v-model="item.price" type="number" />
-      </UFormField>
-    </UForm>
+      </PFormField>
+    </PForm>
 
     <div class="flex gap-2">
-      <UButton color="neutral" variant="subtle" size="sm" @click="addItem()">
+      <PButton color="neutral" variant="subtle" size="sm" @click="addItem()">
         Add Item
-      </UButton>
+      </PButton>
 
-      <UButton color="neutral" variant="ghost" size="sm" @click="removeItem()">
+      <PButton color="neutral" variant="ghost" size="sm" @click="removeItem()">
         Remove Item
-      </UButton>
+      </PButton>
     </div>
     <div>
-      <UButton type="submit">
+      <PButton type="submit">
         Submit
-      </UButton>
+      </PButton>
     </div>
-  </UForm>
+  </PForm>
 </template>

@@ -59,11 +59,11 @@ const sections = [
 <template>
   <Navbar />
 
-  <UPricingTable :tiers="tiers" :sections="sections">
+  <PPricingTable :tiers="tiers" :sections="sections">
     <!-- Customize specific tier title -->
     <template #team-title="{ tier }">
       <div class="flex items-center gap-2">
-        <UIcon name="i-lucide-crown" class="size-4 text-amber-500" />
+        <PIcon name="i-lucide-crown" class="size-4 text-amber-500" />
         {{ tier.title }}
       </div>
     </template>
@@ -71,7 +71,7 @@ const sections = [
     <!-- Customize specific section title -->
     <template #section-security-title="{ section }">
       <div class="flex items-center gap-2">
-        <UIcon name="i-lucide-shield-check" class="size-4 text-green-500" />
+        <PIcon name="i-lucide-shield-check" class="size-4 text-green-500" />
         <span class="font-semibold text-green-700">{{ section.title }}</span>
       </div>
     </template>
@@ -79,9 +79,9 @@ const sections = [
     <!-- Customize specific feature value -->
     <template #feature-developers-value="{ feature, tier }">
       <template v-if="feature.tiers?.[tier.id]">
-        <UBadge :label="String(feature.tiers[tier.id])" color="primary" variant="soft" />
+        <PBadge :label="String(feature.tiers[tier.id])" color="primary" variant="soft" />
       </template>
-      <UIcon v-else name="i-lucide-x" class="size-4 text-muted" />
+      <PIcon v-else name="i-lucide-x" class="size-4 text-muted" />
     </template>
-  </UPricingTable>
+  </PPricingTable>
 </template>

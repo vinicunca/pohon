@@ -16,17 +16,19 @@ links:
 
 Use a [Button](/docs/components/button) or any other component in the default slot of the Tooltip.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 ignore:
-  - text
-props:
+
+- text
+  props:
   text: 'Open on GitHub'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+      <PButton label="Open" color="neutral" variant="subtle" />
+
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -44,15 +46,16 @@ You can check the `App` component `tooltip` prop to see how to configure the Too
 
 Use the `text` prop to set the content of the Tooltip.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 props:
-  text: 'Open on GitHub'
+text: 'Open on GitHub'
 slots:
-  default: |
+default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+    <PButton label="Open" color="neutral" variant="subtle" />
+
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -62,21 +65,21 @@ slots:
 
 Use the `kbds` prop to render [Kbd](/docs/components/kbd) components in the Tooltip.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 ignore:
-  - text
-  - kbds
-props:
+
+- text
+- kbds
+  props:
   text: 'Open on GitHub'
-  kbds:
-    - meta
-    - G
-slots:
+  kbds: - meta - G
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+      <PButton label="Open" color="neutral" variant="subtle" />
+
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -90,18 +93,20 @@ You can use special keys like `meta` that displays as `⌘` on macOS and `Ctrl` 
 
 Use the `delay-duration` prop to change the delay before the Tooltip appears. For example, you can make it appear instantly by setting it to `0`.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 ignore:
-  - text
-props:
+
+- text
+  props:
   delayDuration: 0
   text: 'Open on GitHub'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+      <PButton label="Open" color="neutral" variant="subtle" />
+
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -119,31 +124,26 @@ Use the `content` prop to control how the Tooltip content is rendered, like its 
 This can be configured globally through the `tooltip.content` option in the [`App`](/docs/components/app) component.
 ::
 
-::component-code
----
+## ::component-code
+
 prettier: true
 ignore:
-  - text
-items:
-  content.align:
-    - start
-    - center
-    - end
-  content.side:
-    - right
-    - left
-    - top
-    - bottom
-props:
+
+- text
+  items:
+  content.align: - start - center - end
+  content.side: - right - left - top - bottom
+  props:
   content:
-    align: center
-    side: bottom
-    sideOffset: 8
+  align: center
+  side: bottom
+  sideOffset: 8
   text: 'Open on GitHub'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+      <PButton label="Open" color="neutral" variant="subtle" />
+
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -153,19 +153,21 @@ slots:
 
 Use the `arrow` prop to display an arrow on the Tooltip.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 ignore:
-  - text
-  - arrow
-props:
+
+- text
+- arrow
+  props:
   arrow: true
   text: 'Open on GitHub'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+      <PButton label="Open" color="neutral" variant="subtle" />
+
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -175,18 +177,20 @@ slots:
 
 Use the `disabled` prop to disable the Tooltip.
 
-::component-code
----
+## ::component-code
+
 prettier: true
 ignore:
-  - text
-props:
+
+- text
+  props:
   disabled: true
   text: 'Open on GitHub'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+      <PButton label="Open" color="neutral" variant="subtle" />
+
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -198,10 +202,10 @@ slots:
 
 You can control the open state by using the `default-open` prop or the `v-model:open` directive.
 
-::component-example
----
-name: 'tooltip-open-example'
----
+## ::component-example
+
+## name: 'tooltip-open-example'
+
 ::
 
 ::note
@@ -212,10 +216,10 @@ In this example, leveraging [`defineShortcuts`](/docs/composables/define-shortcu
 
 You can make the Tooltip follow the cursor when hovering over an element using the [`reference`](https://reka-ui.com/docs/components/tooltip#trigger) prop:
 
-::component-example
----
-name: 'tooltip-cursor-example'
----
+## ::component-example
+
+## name: 'tooltip-cursor-example'
+
 ::
 
 ## API

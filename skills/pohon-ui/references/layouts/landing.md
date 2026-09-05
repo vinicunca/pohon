@@ -32,8 +32,8 @@ const items = computed<NavigationMenuItem[]>(() => [
 </script>
 
 <template>
-  <UApp>
-    <UHeader>
+  <PApp>
+    <PHeader>
       <template #title>
         <Logo class="h-6 w-auto" />
       </template>
@@ -41,9 +41,9 @@ const items = computed<NavigationMenuItem[]>(() => [
       <PNavigationMenu :items="items" />
 
       <template #right>
-        <UColorModeButton />
-        <UButton label="Sign in" color="neutral" variant="ghost" />
-        <UButton label="Get started" />
+        <PColorModeButton />
+        <PButton label="Sign in" color="neutral" variant="ghost" />
+        <PButton label="Get started" />
       </template>
 
       <template #body>
@@ -53,20 +53,20 @@ const items = computed<NavigationMenuItem[]>(() => [
           class="-mx-2.5"
         />
       </template>
-    </UHeader>
+    </PHeader>
 
-    <UMain>
+    <PMain>
       <NuxtPage />
-    </UMain>
+    </PMain>
 
-    <UFooter>
+    <PFooter>
       <template #left>
         <p class="text-muted text-sm">
           Copyright © {{ new Date().getFullYear() }}
         </p>
       </template>
       <template #right>
-        <UButton
+        <PButton
           icon="i-simple-icons-github"
           color="neutral"
           variant="ghost"
@@ -74,14 +74,14 @@ const items = computed<NavigationMenuItem[]>(() => [
           target="_blank"
         />
       </template>
-    </UFooter>
-  </UApp>
+    </PFooter>
+  </PApp>
 </template>
 ```
 
 ### Common mistakes
 
-- Forgetting the `#body` slot on `UHeader` — this is the mobile menu content. Without it, mobile users have no navigation.
+- Forgetting the `#body` slot on `PHeader` — this is the mobile menu content. Without it, mobile users have no navigation.
 - Using `variant="solid"` for both header and hero buttons — the header button should be lower weight than the hero CTA.
 
 ## Landing page
@@ -89,7 +89,7 @@ const items = computed<NavigationMenuItem[]>(() => [
 ```vue [pages/index.vue]
 <template>
   <PPageHero
-    title="Build faster with Nuxt UI"
+    title="Build faster with Pohon UI"
     description="A comprehensive Vue UI component library."
     :links="[
       { label: 'Get started', to: '/docs', icon: 'i-lucide-square-play' },
@@ -152,7 +152,7 @@ const items = computed<NavigationMenuItem[]>(() => [
     headline="Pricing"
     title="Simple, transparent pricing"
   >
-    <UPricingPlans
+    <PPricingPlans
       :plans="[
         {
           title: 'Free',
@@ -185,10 +185,10 @@ const items = computed<NavigationMenuItem[]>(() => [
 - `PPageSection` — content section with headline, title, description, and `features` grid. Use `id` for anchor links.
 - `PPageCTA` — call to action block.
 - `PPageGrid` / `PPageCard` — card grid for features, testimonials, etc.
-- `UPageFeature` — individual feature item.
-- `UPageLogos` — logo wall for social proof.
-- `UPricingPlans` / `UPricingTable` — pricing cards and comparison tables.
-- `UFooterColumns` — multi-column footer with link groups (used inside `UFooter`).
+- `PPageFeature` — individual feature item.
+- `PPageLogos` — logo wall for social proof.
+- `PPricingPlans` / `PPricingTable` — pricing cards and comparison tables.
+- `PFooterColumns` — multi-column footer with link groups (used inside `PFooter`).
 
 ## Variations
 
@@ -214,21 +214,21 @@ const { data: posts } = await useAsyncData("posts", () =>
 </script>
 
 <template>
-  <UPage>
+  <PPage>
     <PPageHero title="Blog" description="The latest news and updates." />
-    <UPageBody>
+    <PPageBody>
       <PContainer>
-        <UBlogPosts>
-          <UBlogPost
+        <PBlogPosts>
+          <PBlogPost
             v-for="post in posts"
             :key="post.path"
             v-bind="post"
             :to="post.path"
           />
-        </UBlogPosts>
+        </PBlogPosts>
       </PContainer>
-    </UPageBody>
-  </UPage>
+    </PPageBody>
+  </PPage>
 </template>
 ```
 
@@ -242,19 +242,19 @@ const { data: versions } = await useAsyncData("versions", () =>
 </script>
 
 <template>
-  <UPage>
+  <PPage>
     <PPageHero title="Changelog" />
-    <UPageBody>
+    <PPageBody>
       <PContainer>
-        <UChangelogVersions>
-          <UChangelogVersion
+        <PChangelogVersions>
+          <PChangelogVersion
             v-for="version in versions"
             :key="version.path"
             v-bind="version"
           />
-        </UChangelogVersions>
+        </PChangelogVersions>
       </PContainer>
-    </UPageBody>
-  </UPage>
+    </PPageBody>
+  </PPage>
 </template>
 ```

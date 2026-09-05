@@ -1,6 +1,6 @@
 <template>
   <PCollapsible class="flex flex-col gap-2 w-48">
-    <UButton
+    <PButton
       class="group"
       label="Open"
       color="neutral"

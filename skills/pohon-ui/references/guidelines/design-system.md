@@ -2,7 +2,7 @@
 
 ## Semantic colors
 
-Nuxt UI uses 7 semantic colors. Never use raw Tailwind palette colors in components — always use these semantic names.
+Pohon UI uses 7 semantic colors. Never use raw Tailwind palette colors in components — always use these semantic names.
 
 | Color       | Default | When to use                                         |
 | ----------- | ------- | --------------------------------------------------- |
@@ -164,7 +164,7 @@ Most components accept a `variant` prop. Choose based on visual weight:
 Override theme **slots** on a single instance — wins over global config and variants.
 
 ```vue
-<UButton :ui="{ base: 'font-bold', trailingIcon: 'size-3 rotate-90' }" />
+<PButton :ui="{ base: 'font-bold', trailingIcon: 'size-3 rotate-90' }" />
 <PCard :ui="{ header: 'bg-muted', body: 'p-8' }" />
 ```
 
@@ -179,7 +179,7 @@ Rules for `ui` overrides:
 Override the **root** (or `base`) slot only — simpler than `ui` for single-slot changes.
 
 ```vue
-<UButton class="font-bold" />
+<PButton class="font-bold" />
 ```
 
 ### Finding slot names
@@ -228,7 +228,7 @@ Classes from the `ui` prop, the `class` prop, and global config are merged onto 
 In global config it replaces the slot's own classes, so `variants` and `compoundVariants` still apply on top. In the `ui` and `class` props it runs after the variants, so it replaces the resolved classes, variants included.
 
 ```vue
-<UButton :ui="{ label: () => 'text-base font-bold' }" />
+<PButton :ui="{ label: () => 'text-base font-bold' }" />
 ```
 
 ```ts
@@ -249,10 +249,10 @@ export default defineAppConfig({
 Override theme for a section of the component tree without affecting the rest of the app. Renders no DOM element — uses `provide`/`inject`:
 
 ```vue
-<UTheme :ui="{ button: { slots: { base: 'rounded-full' } } }">
-  <UButton label="Rounded" />
-  <UButton label="Also rounded" />
-</UTheme>
+<PTheme :ui="{ button: { slots: { base: 'rounded-full' } } }">
+  <PButton label="Rounded" />
+  <PButton label="Also rounded" />
+</PTheme>
 ```
 
 ### Global `defaultVariants`
@@ -288,48 +288,6 @@ export default defineNuxtConfig({
 });
 ```
 
-### `theme.prefix`
-
-When using Tailwind CSS with a prefix, configure the same prefix in Nuxt UI so component classes match:
-
-```ts
-// nuxt.config.ts
-export default defineNuxtConfig({
-  ui: {
-    theme: {
-      prefix: "tw",
-    },
-  },
-});
-```
-
-```css
-/* app/assets/css/main.css */
-@import "tailwindcss" prefix(tw);
-@import "pohon-ui";
-```
-
-### Tree-shaking with `experimental.componentDetection`
-
-Enable automatic component detection to only generate CSS for components you actually use:
-
-```ts
-// nuxt.config.ts
-export default defineNuxtConfig({
-  ui: {
-    experimental: {
-      componentDetection: true,
-    },
-  },
-});
-```
-
-For dynamic components (e.g., `<component :is="...">`), pass an array of component names to guarantee they're included:
-
-```ts
-componentDetection: ["Modal", "Dropdown", "Popover"];
-```
-
 ## CSS `@theme` customization
 
 Customize Tailwind design tokens in `main.css`:
@@ -355,7 +313,7 @@ In Nuxt, fonts defined here are automatically loaded by `@nuxt/fonts`.
 
 ## CSS variables
 
-Nuxt UI exposes CSS variables you can override in `main.css`:
+Pohon UI exposes CSS variables you can override in `main.css`:
 
 ```css
 :root {

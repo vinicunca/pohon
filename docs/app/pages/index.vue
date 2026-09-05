@@ -12,7 +12,7 @@ const appConfig = useAppConfig()
 if (import.meta.server) {
   useSchemaOrg([
     defineSoftwareApp({
-      name: 'Nuxt UI',
+      name: 'Pohon UI',
       operatingSystem: 'Web',
       applicationCategory: 'DeveloperApplication',
       offers: { price: 0, priceCurrency: 'USD' }
@@ -23,10 +23,10 @@ if (import.meta.server) {
 useCanonical('/raw/index.md')
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon UI',
   title: page.value.title,
   description: page.value.description,
-  ogTitle: `${page.value.title} - Nuxt UI`,
+  ogTitle: `${page.value.title} - Pohon UI`,
   ogDescription: page.value.description,
   ogImage: joinURL(url, '/og-image.png')
 })
@@ -76,9 +76,9 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
       </template>
 
       <template #links>
-        <UButton v-for="link of page.hero.links" :key="link.label" v-bind="link" size="xl" />
+        <PButton v-for="link of page.hero.links" :key="link.label" v-bind="link" size="xl" />
         <div class="w-full my-6">
-          <USeparator class="w-1/2" type="dashed" />
+          <PSeparator class="w-1/2" type="dashed" />
         </div>
         <div class="flex flex-col gap-4">
           <Motion
@@ -90,7 +90,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
             :transition="{ delay: 0.2 + 0.4 * index }"
             :in-view-options="{ once: true }"
           >
-            <UPageFeature v-bind="feature" class="opacity-0" />
+            <PPageFeature v-bind="feature" class="opacity-0" />
           </Motion>
         </div>
       </template>
@@ -98,7 +98,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
       <LazySkyBg is-index />
 
       <div class="h-[344px] lg:h-full lg:relative w-full lg:min-h-[calc(100vh-var(--ui-header-height)-1px)] overflow-hidden">
-        <UMarquee
+        <PMarquee
           pause-on-hover
           :overlay="false"
           :ui="{
@@ -106,14 +106,14 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
             content: 'lg:w-auto lg:flex-col lg:animate-[marquee-vertical_var(--duration)_linear_infinite] lg:h-fit'
           }"
         >
-          <ULink
+          <PLink
             v-for="component of components?.slice(0, 10)"
             :key="component.path"
             class="relative group/link aspect-video border-default w-[290px] xl:w-[330px] 2xl:w-[320px] 2xl:p-2 2xl:border-y"
             :to="component.path"
             tabindex="-1"
           >
-            <UColorModeImage
+            <PColorModeImage
               :light="`${component.path.replace('/docs/components/', '/components/light/')}.png`"
               :dark="`${component.path.replace('/docs/components/', '/components/dark/')}.png`"
               :alt="`${component.title} preview`"
@@ -123,11 +123,11 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
               class="hover:scale-105 lg:hover:scale-110 transition-transform aspect-video w-full border-x lg:border-x-0 lg:border-y border-default 2xl:border-y-0"
               loading="lazy"
             />
-            <UBadge color="neutral" variant="outline" size="md" :label="component.title" class="hidden lg:block absolute mx-auto top-4 left-6 xl:left-4 group-hover/link:opacity-100 opacity-0 transition-all duration-300 pointer-events-none -translate-y-2 group-hover/link:translate-y-0" />
-          </ULink>
-        </UMarquee>
+            <PBadge color="neutral" variant="outline" size="md" :label="component.title" class="hidden lg:block absolute mx-auto top-4 left-6 xl:left-4 group-hover/link:opacity-100 opacity-0 transition-all duration-300 pointer-events-none -translate-y-2 group-hover/link:translate-y-0" />
+          </PLink>
+        </PMarquee>
 
-        <UMarquee
+        <PMarquee
           pause-on-hover
           reverse
           :overlay="false"
@@ -136,14 +136,14 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
             content: 'lg:w-auto lg:flex-col lg:animate-[marquee-vertical_var(--duration)_linear_infinite] lg:h-fit lg:[animation-direction:reverse]'
           }"
         >
-          <ULink
+          <PLink
             v-for="component of components?.slice(10, 20)"
             :key="component.path"
             class="relative group/link aspect-video border-default w-[290px] xl:w-[330px] 2xl:w-[320px] 2xl:p-2 2xl:border-y"
             :to="component.path"
             tabindex="-1"
           >
-            <UColorModeImage
+            <PColorModeImage
               :light="`${component.path.replace('/docs/components/', '/components/light/')}.png`"
               :dark="`${component.path.replace('/docs/components/', '/components/dark/')}.png`"
               :alt="`${component.title} preview`"
@@ -153,13 +153,13 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
               class="hover:scale-105 lg:hover:scale-110 transition-transform aspect-video w-full border-x lg:border-x-0 lg:border-y border-default 2xl:border-y-0"
               loading="lazy"
             />
-            <UBadge color="neutral" variant="outline" size="md" :label="component.title" class="hidden lg:block absolute mx-auto top-4 left-6 xl:left-4 group-hover/link:opacity-100 opacity-0 transition-all duration-300 pointer-events-none -translate-y-2 group-hover/link:translate-y-0" />
-          </ULink>
-        </UMarquee>
+            <PBadge color="neutral" variant="outline" size="md" :label="component.title" class="hidden lg:block absolute mx-auto top-4 left-6 xl:left-4 group-hover/link:opacity-100 opacity-0 transition-all duration-300 pointer-events-none -translate-y-2 group-hover/link:translate-y-0" />
+          </PLink>
+        </PMarquee>
       </div>
     </PPageHero>
 
-    <USeparator />
+    <PSeparator />
 
     <PPageSection :ui="{ container: 'lg:py-16' }" class="bg-elevated/25">
       <h2 class="sr-only">
@@ -192,12 +192,12 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
               <circle cx="6.53711" cy="37.4551" r="1.5" fill="var(--ui-border-accented)" />
               <circle cx="38.5957" cy="37.4551" r="1.5" fill="var(--ui-border-accented)" />
             </svg>
-            <UIcon :name="feature.icon" class="size-5 shrink-0" />
+            <PIcon :name="feature.icon" class="size-5 shrink-0" />
           </div>
           <div class="flex flex-col">
             <h3 class="font-medium text-highlighted inline-flex items-center gap-x-1">
               {{ feature.title }}
-              <UIcon v-if="feature.to" :name="appConfig.ui.icons.arrowRight" class="size-4 shrink-0 opacity-0 group-hover:opacity-100 transition-all duration-200 -translate-x-1 group-hover:translate-x-0" />
+              <PIcon v-if="feature.to" :name="appConfig.ui.icons.arrowRight" class="size-4 shrink-0 opacity-0 group-hover:opacity-100 transition-all duration-200 -translate-x-1 group-hover:translate-x-0" />
             </h3>
             <p class="text-sm text-muted">
               {{ feature.description }}
@@ -207,7 +207,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
       </ul>
     </PPageSection>
 
-    <USeparator />
+    <PSeparator />
 
     <PPageSection
       :title="page.design_system.title"
@@ -219,7 +219,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
       <MDC :value="page.design_system.code" cache-key="index-design-system-code" />
     </PPageSection>
 
-    <USeparator />
+    <PSeparator />
 
     <PPageSection
       :title="page.css_variables.title"
@@ -232,7 +232,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
       <MDC :value="page.css_variables.code" cache-key="index-css-variables-code" />
     </PPageSection>
 
-    <USeparator />
+    <PSeparator />
 
     <PPageSection
       :title="page.components.title"
@@ -247,7 +247,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
       <MDC :value="page.components.code" cache-key="index-components-code" />
     </PPageSection>
 
-    <USeparator />
+    <PSeparator />
 
     <PPageSection
       :title="page.templates.title"
@@ -257,7 +257,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
       orientation="horizontal"
       class="bg-elevated/25"
     >
-      <UCarousel
+      <PCarousel
         v-slot="{ item }"
         loop
         dots
@@ -284,7 +284,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
             leadingIcon: 'text-highlighted'
           }"
         >
-          <UColorModeImage
+          <PColorModeImage
             :light="`/assets/templates/${item.framework}/${item.title.toLowerCase()}-light.png`"
             :dark="`/assets/templates/${item.framework}/${item.title.toLowerCase()}-dark.png`"
             :alt="`Template ${item.title} screenshot`"
@@ -294,10 +294,10 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
             class="rounded-md w-full aspect-video"
           />
         </PPageCard>
-      </UCarousel>
+      </PCarousel>
     </PPageSection>
 
-    <USeparator />
+    <PSeparator />
 
     <PPageSection
       :title="page.community.title"

@@ -3,7 +3,7 @@ import { h, resolveComponent } from 'vue'
 import type { TableColumn } from 'pohon-ui'
 
 const PCheckbox = resolveComponent('PCheckbox')
-const UBadge = resolveComponent('UBadge')
+const PBadge = resolveComponent('PBadge')
 
 type Payment = {
   id: string
@@ -79,7 +79,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -109,7 +109,7 @@ const rowSelection = ref({ 1: true })
 
 <template>
   <div class="flex-1 w-full">
-    <UTable
+    <PTable
       ref="table"
       v-model:row-selection="rowSelection"
       :data="data"
