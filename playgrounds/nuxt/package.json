@@ -23,6 +23,7 @@
     "@tiptap/extension-text-align": "^3.30.5",
     "@tiptap/pm": "^3.30.5",
     "@tiptap/vue-3": "^3.30.5",
+    "@vinicunca/unocss-preset": "2.2.0",
     "@vueuse/core": "^14.4.0",
     "ai": "^7.0.85",
     "nuxt": "^4.5.2",

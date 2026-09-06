@@ -1,4 +1,5 @@
-import type { Direction } from 'pohon-ui'
+import type { Direction } from 'pohon-ui';
+import { uiTheme } from './designs/design.pohon-theme';
 
 export default defineAppConfig({
   dir: 'ltr' as Direction,
@@ -7,12 +8,14 @@ export default defineAppConfig({
     duration: 5000,
     max: 5,
     expand: true,
-    disableSwipe: false
+    disableSwipe: false,
   },
   ui: {
     colors: {
       primary: 'green',
-      neutral: 'slate'
-    }
-  }
-})
+      neutral: 'slate',
+    },
+
+    ...uiTheme,
+  },
+});

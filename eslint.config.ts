@@ -7,8 +7,6 @@ export default vinicuncaESLint(
     ignores: [
       '.github/**/*.md',
       'skills/**/*.md',
-      // TODO: remove when docs is ready
-      'docs/**',
     ],
     unocss: {
       configPath: 'playgrounds/nuxt/uno.config.ts',
@@ -29,6 +27,13 @@ export default vinicuncaESLint(
       'ts/consistent-type-definitions': 'off',
       'ts/method-signature-style': 'off',
       'pnpm/yaml-enforce-settings': 'off',
+
+      'unocss/order': [
+        'warn',
+        {
+          unoVariables: ['^theme'],
+        },
+      ],
     },
   },
 

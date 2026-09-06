@@ -7,11 +7,17 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ['~/designs/styles/main.css'],
 
   content: {
     experimental: {
       sqliteConnector: 'native',
+    },
+  },
+
+  ui: {
+    theme: {
+      unstyled: true,
     },
   },
 
@@ -23,10 +29,12 @@ export default defineNuxtConfig({
 
   vite: {
     optimizeDeps: {
+      // @keep-sorted
       include: [
         '@ai-sdk/vue',
         '@comark/vue',
         '@comark/vue/plugins/shiki',
+        '@vinicunca/perkakas',
         '@vueuse/core',
         '@vueuse/integrations/useFuse',
         'ai',
@@ -37,6 +45,12 @@ export default defineNuxtConfig({
   },
 
   typescript: {
+    nodeTsConfig: {
+      include: [
+        '../uno.config.ts',
+      ],
+    },
+
     tsConfig: {
       compilerOptions: {
         paths: {

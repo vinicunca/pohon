@@ -1,0 +1,49 @@
+@layer theme {
+  :root {
+    --ui-header-height: 4rem;
+    --ui-radius: 0.25rem;
+    --ui-container: 80rem;
+  }
+
+  :root,
+  :host,
+  .light {
+    --ui-color-text: oklch(37.2% 0.044 257.287);
+    --ui-color-text-dimmed: oklch(70.4% 0.04 256.788);
+    --ui-color-text-muted: oklch(55.4% 0.046 257.417);
+    --ui-color-text-toned: oklch(44.6% 0.043 257.281);
+    --ui-color-text-highlighted: oklch(20.8% 0.042 265.755);
+    --ui-color-text-inverted: #fff;
+
+    --ui-color-bg: #fff;
+    --ui-color-bg-muted: oklch(98.4% 0.003 247.858);
+    --ui-color-bg-elevated: oklch(96.8% 0.007 247.896);
+    --ui-color-bg-accented: oklch(92.9% 0.013 255.508);
+    --ui-color-bg-inverted: oklch(20.8% 0.042 265.755);
+
+    --ui-color-border: oklch(92.9% 0.013 255.508);
+    --ui-color-border-muted: oklch(92.9% 0.013 255.508);
+    --ui-color-border-accented: oklch(86.9% 0.022 252.894);
+    --ui-color-border-inverted: oklch(20.8% 0.042 265.755);
+  }
+
+  .dark {
+    --ui-color-text: oklch(92.9% 0.013 255.508);
+    --ui-color-text-dimmed: oklch(55.4% 0.046 257.417);
+    --ui-color-text-muted: oklch(70.4% 0.04 256.788);
+    --ui-color-text-toned: oklch(86.9% 0.022 252.894);
+    --ui-color-text-highlighted: #fff;
+    --ui-color-text-inverted: oklch(20.8% 0.042 265.755);
+
+    --ui-color-bg: oklch(20.8% 0.042 265.755);
+    --ui-color-bg-muted: oklch(27.9% 0.041 260.031);
+    --ui-color-bg-elevated: oklch(27.9% 0.041 260.031);
+    --ui-color-bg-accented: oklch(37.2% 0.044 257.287);
+    --ui-color-bg-inverted: #fff;
+
+    --ui-color-border: oklch(27.9% 0.041 260.031);
+    --ui-color-border-muted: oklch(37.2% 0.044 257.287);
+    --ui-color-border-accented: oklch(37.2% 0.044 257.287);
+    --ui-color-border-inverted: #fff;
+  }
+}
