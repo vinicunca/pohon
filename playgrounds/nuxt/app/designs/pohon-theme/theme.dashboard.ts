@@ -45,7 +45,7 @@ export const themeDashboardPanel = {
 } satisfies PThemeDashboardPanel;
 
 export const themeDashboardResizeHandle = {
-  base: 'hidden cursor-ew-resize select-none relative touch-none lg:block before:(inset-y-0 absolute z-1 -left-1.5 -right-1.5)',
+  base: 'hidden cursor-ew-resize select-none relative touch-none lg:block before:(content-empty inset-y-0 absolute z-1 -left-1.5 -right-1.5)',
 } satisfies PThemeDashboardResizeHandle;
 
 export const themeDashboardSearchButton = {

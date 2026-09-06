@@ -1,4 +1,6 @@
 import type { AppConfigInput } from 'nuxt/schema';
+import { themeAccordion } from './pohon-theme/theme.accordion';
+import { themeCard } from './pohon-theme/theme.card';
 import {
   themeDashboardGroup,
   themeDashboardNavbar,
@@ -9,10 +11,11 @@ import {
   themeDashboardSidebar,
   themeDashboardToolbar,
 } from './pohon-theme/theme.dashboard';
-// import { BRANDS } from './design.constants';
 
 // @keep-sorted
 export const uiTheme = {
+  accordion: themeAccordion,
+  card: themeCard,
   dashboardGroup: themeDashboardGroup,
   dashboardNavbar: themeDashboardNavbar,
   dashboardPanel: themeDashboardPanel,

@@ -3,12 +3,35 @@ import { defineConfig } from 'unocss';
 
 // @keep-sorted
 export default defineConfig({
+
+  layers: {
+    'pohon': 100,
+    'p-variant': 200,
+  },
+
   outputToCssLayers: {
     allLayers: true,
   },
 
   presets: [
-    presetVinicunca(),
+    presetVinicunca({
+      extendedTheme: {
+        keyframes: {
+          'accordion-down': {
+            from: { height: 0 },
+            to: { height: 'var(--akar-accordion-content-height)' },
+          },
+          'accordion-up': {
+            from: { height: 'var(--akar-accordion-content-height)' },
+            to: { height: 0 },
+          },
+        },
+        animation: {
+          'accordion-down': 'accordion-down 0.2s ease-out',
+          'accordion-up': 'accordion-up 0.2s ease-out',
+        },
+      },
+    }),
   ],
 
   safelist: [
@@ -80,6 +103,29 @@ export default defineConfig({
         DEFAULT: 'var(--ui-color-border)',
         inverted: 'var(--ui-color-border-inverted)',
       },
+
+      primary: 'var(--ui-color-primary)',
+      secondary: 'var(--ui-color-secondary)',
+      success: 'var(--ui-color-success)',
+      info: 'var(--ui-color-info)',
+      warning: 'var(--ui-color-warning)',
+      error: 'var(--ui-color-error)',
     },
   },
+
+  variants: [
+    (matcher) => {
+      if (matcher.startsWith('pohon:')) {
+        return {
+          matcher: matcher.replace('pohon:', 'uno-layer-pohon:'),
+        };
+      }
+
+      if (matcher.startsWith('p-variant:')) {
+        return {
+          matcher: matcher.replace('p-variant:', 'uno-layer-p-variant:'),
+        };
+      }
+    },
+  ],
 });
