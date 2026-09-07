@@ -8,8 +8,8 @@ export const hover = 'hover:not-has-disabled:not-has-focus-visible:not-has-data-
 // `list` puts focus on the control, which is the click target there. `card` and `table`
 // render the root as a label wrapping everything, so focus belongs on the card itself,
 // as it does whenever the control is `sr-only`.
-export const focusControl = (token: string) => `outline-${token}/25 focus-visible:outline-solid focus-visible:outline-3 focus-visible:ring-${token}`;
-export const focusCard = (token: string) => `outline-${token}/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-${token} has-focus-visible:z-[1]`;
+export const focusControl = (color: string) => `outline-${color}/25 focus-visible:outline-solid focus-visible:outline-3 focus-visible:ring-${color}`;
+export const focusCard = (color: string) => `outline-${color}/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-${color} has-focus-visible:z-[1]`;
 
 export const themeCheckbox = {
   slots: {
@@ -33,7 +33,7 @@ export const themeCheckbox = {
     },
     variant: {
       card: {
-        root: `border-border border rounded-lg ${hover}bg-background-elevated/50 transition-colors`,
+        root: 'border-border border rounded-lg hover:[&:not(:has(:disabled,:focus-visible,[data-state=checked]))]:bg-background-elevated/50 transition-colors',
       },
     },
     indicator: {
@@ -84,7 +84,7 @@ export const themeCheckbox = {
     },
     required: {
       true: {
-        label: 'after:color-error after:(ms-0.5 content-[*])',
+        label: 'after:color-error after:(ms-0.5 content-["*"])',
       },
     },
     disabled: {
@@ -120,7 +120,10 @@ export const themeCheckbox = {
     { size: 'md', variant: 'card', class: { root: 'p-3.5' } },
     { size: 'lg', variant: 'card', class: { root: 'p-4' } },
     { size: 'xl', variant: 'card', class: { root: 'p-4.5' } },
-    ...[...BRANDS.map((color) => [color, color]), ['neutral', 'inverted']].map(([color, token]: Array<string>) => ({
+    ...[
+      ...BRANDS.map((color) => [color, color]),
+      ['neutral', 'inverted'],
+    ].map(([color, token]) => ({
       color,
       variant: 'list',
       indicator: ['start', 'end'],
@@ -128,14 +131,20 @@ export const themeCheckbox = {
         base: focusControl(token!),
       },
     })),
-    ...[...BRANDS.map((color) => [color, color]), ['neutral', 'inverted']].map(([color, token]: Array<string>) => ({
+    ...[
+      ...BRANDS.map((color) => [color, color]),
+      ['neutral', 'inverted'],
+    ].map(([color, token]) => ({
       color,
       variant: 'card',
       class: {
         root: focusCard(token!),
       },
     })),
-    ...[...BRANDS.map((color) => [color, color]), ['neutral', 'inverted']].map(([color, token]: Array<string>) => ({
+    ...[
+      ...BRANDS.map((color) => [color, color]),
+      ['neutral', 'inverted'],
+    ].map(([color, token]) => ({
       color,
       variant: 'list',
       indicator: 'hidden',
@@ -169,7 +178,7 @@ export const themeCheckbox = {
       indicator: 'hidden',
       highlight: true,
       class: {
-        root: `not-has-disabled:border-${color} not-has-disabled:has-data-[state=checked]:border-${color}`,
+        root: `[&:not(:has(:disabled))]:border-${color} [&:not(:has(:disabled)):has([data-state=checked])]:border-${color}`,
       },
     })),
     {
@@ -177,7 +186,7 @@ export const themeCheckbox = {
       indicator: 'hidden',
       highlight: true,
       class: {
-        root: 'not-has-disabled:border-border-inverted not-has-disabled:has-data-[state=checked]:border-border-inverted',
+        root: '[&:not(:has(:disabled))]:border-border-inverted [&:not(:has(:disabled)):has([data-state=checked])]:border-border-inverted',
       },
     },
     ...BRANDS.map((color: string) => ({

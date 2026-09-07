@@ -9,7 +9,6 @@ export const themeCheckboxGroup = {
     root: 'relative',
     fieldset: 'flex gap-x-2',
     legend: 'color-text font-medium mb-1 block',
-    item: '',
   },
   variants: {
     orientation: {
@@ -28,7 +27,7 @@ export const themeCheckboxGroup = {
         fieldset: 'flex-wrap',
       },
       table: {
-        item: [`border border-border ${hover}bg-background-elevated/50`, 'transition-colors'],
+        item: 'border border-border hover:[&:not(:has(:disabled,:focus-visible,[data-state=checked]))]:bg-background-elevated/50 transition-colors',
       },
     },
     size: {
@@ -55,7 +54,7 @@ export const themeCheckboxGroup = {
     },
     required: {
       true: {
-        legend: 'after:text-error after:(ms-0.5 content-[*])',
+        legend: 'after:text-error after:(ms-0.5 content-["*"])',
       },
     },
   },
@@ -84,7 +83,7 @@ export const themeCheckboxGroup = {
       variant: 'table',
       class: {
         item: 'first-of-type:rounded-s-lg last-of-type:rounded-e-lg',
-        fieldset: 'gap-0 -space-x-px',
+        fieldset: 'pohon:gap-0 -space-x-px',
       },
     },
     {
@@ -92,7 +91,7 @@ export const themeCheckboxGroup = {
       variant: 'table',
       class: {
         item: 'first-of-type:rounded-t-lg last-of-type:rounded-b-lg',
-        fieldset: 'gap-0 -space-y-px',
+        fieldset: 'pohon:gap-0 -space-y-px',
       },
     },
     ...BRANDS.map((color: string) => ({

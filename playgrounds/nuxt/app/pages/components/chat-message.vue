@@ -1,35 +1,50 @@
 <script setup lang="ts">
-import theme from '#build/ui/chat-message'
+import theme from '#build/ui/chat-message';
 
-const colors = Object.keys(theme.variants.color)
-const variants = Object.keys(theme.variants.variant)
+const colors = Object.keys(theme.variants.color);
+const variants = Object.keys(theme.variants.variant);
 
-const compact = ref(false)
+const compact = ref(false);
 
 const attrs = reactive({
   color: [theme.defaultVariants.color],
-  variant: [theme.defaultVariants.variant]
-})
+  variant: [theme.defaultVariants.variant],
+});
 
 const actions = [
   { label: 'Copy to clipboard', icon: 'i-lucide-copy' },
-  { label: 'Regenerate', icon: 'i-lucide-refresh-cw' }
-]
+  { label: 'Regenerate', icon: 'i-lucide-refresh-cw' },
+];
 </script>
 
 <template>
   <Navbar>
-    <PSwitch v-model="compact" label="Compact" />
-    <PSelect v-model="attrs.color" :items="colors" multiple />
-    <PSelect v-model="attrs.variant" :items="variants" multiple />
+    <PSwitch
+      v-model="compact"
+      label="Compact"
+    />
+    <PSelect
+      v-model="attrs.color"
+      :items="colors"
+      multiple
+    />
+    <PSelect
+      v-model="attrs.variant"
+      :items="variants"
+      multiple
+    />
   </Navbar>
 
-  <Matrix v-slot="props" :attrs="attrs" container-class="max-w-lg">
+  <Matrix
+    v-slot="props"
+    :attrs="attrs"
+    container-class="max-w-lg"
+  >
     <PChatMessage
       id="1"
       role="user"
       side="right"
-      :parts="[{ type: 'text', text: 'Can you help me set up Pohon UI in my project?' }]"
+      :parts="[{ type: 'text', text: 'Can you help me set up Pohon in my project?' }]"
       :avatar="{ src: 'https://github.com/praburangki.png' }"
       :compact="compact"
       v-bind="props"

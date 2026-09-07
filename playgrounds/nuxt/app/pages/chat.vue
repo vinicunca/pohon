@@ -1,202 +1,140 @@
 <script setup lang="ts">
-import { isReasoningUIPart, isTextUIPart, isToolUIPart, getToolName, lastAssistantMessageIsCompleteWithApprovalResponses } from 'ai'
-import { useChat } from '@ai-sdk/vue'
-import { isPartStreaming, isToolStreaming, isToolApprovalPending } from 'pohon-ui/utils/ai'
-import { Markdown } from '@comark/vue'
-import shiki from '@comark/vue/plugins/shiki'
+import type { ChatStatus, UIMessage } from 'ai';
 
-const toast = useToast()
+const colors = ['neutral', 'primary', 'secondary', 'success', 'info', 'warning', 'error'];
+const messageVariants = ['naked', 'solid', 'outline', 'soft', 'subtle'];
+const promptVariants = ['outline', 'soft', 'subtle'];
 
-const input = ref('')
+const messageColor = ref('primary');
+const messageVariant = ref('soft');
+const promptColor = ref('primary');
+const promptVariant = ref('subtle');
+const compact = ref(false);
+const showIndicator = ref(false);
+const toolLoading = ref(false);
+const toolStreaming = ref(false);
+const reasoningStreaming = ref(false);
+const toolOpen = ref(false);
+const reasoningOpen = ref(true);
+const shimmerDuration = ref(2);
+const shimmerSpread = ref(2);
+const animationKey = ref(0);
+const input = ref('');
 
-const { messages, status, error, sendMessage, regenerate, stop, addToolApprovalResponse } = useChat({
-  sendAutomaticallyWhen: lastAssistantMessageIsCompleteWithApprovalResponses,
-  onError(error) {
-    let message = error.message
-    try {
-      if (typeof message === 'string' && message[0] === '{') {
-        message = JSON.parse(message).message || message
-      }
-    } catch { /* keep original */ }
+const messages = computed<UIMessage[]>(() => [
+  { id: 'prompt', role: 'user', parts: [{ type: 'text', text: 'Show me how the selected message treatment feels.' }] },
+  { id: 'reply', role: 'assistant', parts: [{ type: 'text', text: 'Every control on this page is passed directly to a chat component.' }] },
+]);
 
-    toast.add({
-      description: message,
-      icon: 'i-lucide-alert-circle',
-      color: 'error',
-      duration: 0
-    })
-  }
-})
+const status = computed<ChatStatus>(() => showIndicator.value ? 'submitted' : 'ready');
 
-function onSubmit() {
-  if (!input.value.trim()) return
+function replayAnimations() {
+  animationKey.value += 1;
+  showIndicator.value = false;
+  toolLoading.value = false;
+  toolStreaming.value = false;
+  reasoningStreaming.value = false;
+  toolOpen.value = false;
+  reasoningOpen.value = false;
 
-  sendMessage({ text: input.value })
-
-  input.value = ''
+  nextTick(() => {
+    showIndicator.value = true;
+    toolLoading.value = true;
+    toolStreaming.value = true;
+    reasoningStreaming.value = true;
+    toolOpen.value = true;
+    reasoningOpen.value = true;
+  });
 }
 
-function clearMessages() {
-  if (status.value === 'streaming' || status.value === 'submitted') {
-    stop()
-  }
-  messages.value = []
-}
-
-function getEmailToolText(state: string): string {
-  if (isToolApprovalPending({ state })) return 'Send this email?'
-  if (state === 'output-available') return 'Email sent'
-  if (state === 'output-denied') return 'Email cancelled'
-  if (state === 'output-error') return 'Email failed'
-  return 'Preparing email'
-}
-
-function getDomain(url: string): string {
-  try {
-    return new URL(url).hostname.replace(/^www\./, '')
-  } catch {
-    return url
-  }
-}
-
-function getFaviconUrl(url: string): string {
-  return `https://www.google.com/s2/favicons?sz=32&domain=${getDomain(url)}`
-}
-
-function generateMessages() {
-  messages.value = [
-    ...messages.value,
-    {
-      id: '1',
-      parts: [{ type: 'text', text: 'Hello, how are you?' }],
-      role: 'user'
-    },
-    {
-      id: '2',
-      parts: [{ type: 'text', text: 'Fine, and you ?' }],
-      role: 'assistant'
-    }
-  ]
+function submit() {
+  input.value = '';
 }
 </script>
 
 <template>
-  <PDashboardNavbar class="absolute top-0 inset-x-0 z-5 border-b-0 lg:pointer-events-none">
-    <template #right>
-      <PButton
-        v-if="!messages.length"
-        icon="i-lucide-messages-square"
-        label="Generate messages"
-        color="neutral"
-        variant="ghost"
-        class="pointer-events-auto"
-        @click="generateMessages"
-      />
-      <PButton
-        v-if="messages.length"
-        icon="i-lucide-list-x"
-        color="neutral"
-        variant="ghost"
-        class="pointer-events-auto"
-        @click="clearMessages"
-      />
-    </template>
-  </PDashboardNavbar>
+  <Navbar>
+    <PButton label="Replay animations" icon="i-lucide-play" color="neutral" variant="outline" @click="replayAnimations" />
+    <PSwitch v-model="compact" label="Compact" />
+    <PSwitch v-model="showIndicator" label="Typing" />
+  </Navbar>
 
-  <div class="flex-1 flex flex-col gap-4 sm:gap-6 max-w-xl w-full mx-auto min-h-0">
-    <PChatMessages
-      should-auto-scroll
-      :messages="messages"
-      :status="status"
-      :spacing-offset="72"
-      :assistant="{ actions: [{ label: 'Edit', icon: 'i-lucide-pencil', onClick: () => console.log('edit') }] }"
-      :user="{ actions: [{ label: 'Edit', icon: 'i-lucide-pencil', onClick: () => console.log('edit') }], icon: 'i-lucide-user' }"
-    >
-      <template #content="{ message }">
-        <template v-for="(part, index) in message.parts" :key="`${message.id}-${part.type}-${index}`">
-          <PChatReasoning
-            v-if="isReasoningUIPart(part)"
-            :text="part.text"
-            :streaming="isPartStreaming(part)"
-            chevron="leading"
-          >
-            <Markdown
-              :value="part.text"
-              :streaming="isPartStreaming(part)"
-              :plugins="[shiki()]"
-              class="*:first:mt-0 *:last:mb-0"
-            />
-          </PChatReasoning>
+  <div class="grid gap-4 w-full max-w-5xl px-4 py-6 lg:grid-cols-[16rem_minmax(0,1fr)]">
+    <aside class="flex flex-col gap-4">
+      <PFormField label="Message color"><PSelect v-model="messageColor" :items="colors" /></PFormField>
+      <PFormField label="Message variant"><PSelect v-model="messageVariant" :items="messageVariants" /></PFormField>
+      <PFormField label="Prompt color"><PSelect v-model="promptColor" :items="colors" /></PFormField>
+      <PFormField label="Prompt variant"><PSelect v-model="promptVariant" :items="promptVariants" /></PFormField>
+      <PFormField label="Shimmer duration" orientation="horizontal"><PInputNumber v-model="shimmerDuration" :min="0.5" :step="0.5" class="w-24" /></PFormField>
+      <PFormField label="Shimmer spread" orientation="horizontal"><PInputNumber v-model="shimmerSpread" :min="0" :step="1" class="w-24" /></PFormField>
 
-          <template v-else-if="isTextUIPart(part)">
-            <Markdown
-              v-if="message.role === 'assistant'"
-              :value="part.text"
-              :streaming="isPartStreaming(part)"
-              :plugins="[shiki()]"
-              class="*:first:mt-0 *:last:mb-0"
-            />
-            <p v-else-if="message.role === 'user'" class="whitespace-pre-wrap">
-              {{ part.text }}
+      <PSeparator />
+
+      <PSwitch v-model="toolLoading" label="Tool spin" />
+      <PSwitch v-model="toolStreaming" label="Tool shimmer" />
+      <PSwitch v-model="toolOpen" label="Tool collapse" />
+      <PSwitch v-model="reasoningStreaming" label="Reasoning shimmer" />
+      <PSwitch v-model="reasoningOpen" label="Reasoning collapse" />
+    </aside>
+
+    <PChatPalette :key="animationKey" class="min-h-[38rem] ring ring-ring rounded-lg overflow-hidden">
+      <PChatMessages
+        :messages="messages"
+        :status="status"
+        :assistant="{ icon: 'i-lucide-sparkles', color: 'neutral', variant: 'naked' }"
+        :user="{ color: messageColor, variant: messageVariant, side: 'right' }"
+        :compact="compact"
+      >
+        <template #content="{ message }">
+          <template v-if="message.id === 'reply'">
+            <PChatReasoning
+              v-model:open="reasoningOpen"
+              text="Comparing the trigger, shimmer label, chevron rotation, and collapsible content."
+              icon="i-lucide-brain"
+              chevron="leading"
+              :streaming="reasoningStreaming"
+              :shimmer="{ duration: shimmerDuration, spread: shimmerSpread }"
+            >
+              The reasoning surface uses the same collapsible animation as the tool, with a separate shimmer label while streaming.
+            </PChatReasoning>
+
+            <p class="mt-4">
+              Every control is passed directly to a chat component, so you can inspect the classes from <code>theme.chats.ts</code> in context.
             </p>
+
+            <PChatTool
+              v-model:open="toolOpen"
+              class="mt-4"
+              text="Inspect theme classes"
+              suffix="theme.chats.ts"
+              icon="i-lucide-palette"
+              chevron="leading"
+              variant="card"
+              :loading="toolLoading"
+              :streaming="toolStreaming"
+              :shimmer="{ duration: shimmerDuration, spread: shimmerSpread }"
+              :actions="[{ label: 'Approve', color: 'primary' }, { label: 'Deny', color: 'neutral', variant: 'soft' }]"
+            >
+              Toggle this section to inspect the <code>animate-collapsible-up</code> and <code>animate-collapsible-down</code> classes.
+            </PChatTool>
           </template>
-
-          <PChatTool
-            v-else-if="isToolUIPart(part) && getToolName(part) === 'web_search'"
-            :text="isToolStreaming(part) ? 'Searching the web...' : 'Searched the web'"
-            :suffix="(part.input as { query?: string })?.query"
-            :streaming="isToolStreaming(part)"
-            chevron="leading"
-          >
-            <div v-if="part.output && (part.output as any[]).length" class="p-1 border border-border rounded-md max-h-40 overflow-y-auto">
-              <a
-                v-for="source in (part.output as any[])"
-                :key="source.url"
-                :href="source.url"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-2 px-2 py-1 text-sm color-text-muted hover:color-text hover:bg-background-elevated/50 transition-colors min-w-0 rounded-md"
-              >
-                <img
-                  :src="getFaviconUrl(source.url)"
-                  :alt="getDomain(source.url)"
-                  class="size-4 shrink-0 rounded-sm"
-                  loading="lazy"
-                  @error="($event.target as HTMLImageElement).style.display = 'none'"
-                >
-                <span class="truncate">{{ source.title || source.url }}</span>
-                <span class="text-xs color-text-dimmed ms-auto shrink-0">{{ getDomain(source.url) }}</span>
-              </a>
-            </div>
-          </PChatTool>
-
-          <PChatTool
-            v-else-if="isToolUIPart(part) && getToolName(part) === 'send_email'"
-            :text="getEmailToolText(part.state)"
-            :suffix="(part.input as { to?: string })?.to"
-            icon="i-lucide-mail"
-            chevron="leading"
-            variant="card"
-            :streaming="isToolStreaming(part)"
-            :actions="part.state === 'approval-requested' ? [
-              { label: 'Approve', color: 'neutral', onClick: () => addToolApprovalResponse({ id: part.approval!.id, approved: true }) },
-              { label: 'Deny', color: 'neutral', variant: 'soft', onClick: () => addToolApprovalResponse({ id: part.approval!.id, approved: false }) }
-            ] : undefined"
-          >
-            <pre class="text-xs whitespace-pre-wrap">{{ JSON.stringify(part.input, null, 2) }}</pre>
-          </PChatTool>
+          <template v-else>
+            {{ message.parts[0]?.type === 'text' ? message.parts[0].text : '' }}
+          </template>
         </template>
-      </template>
-    </PChatMessages>
+      </PChatMessages>
 
-    <PChatPrompt
-      v-model="input"
-      :error="error"
-      variant="subtle"
-      class="sticky bottom-0"
-      @submit="onSubmit"
-    >
-      <PChatPromptSubmit :status="status" @stop="stop()" @reload="regenerate()" />
-    </PChatPrompt>
+      <template #prompt>
+        <PChatPrompt
+          v-model="input"
+          :color="promptColor"
+          :variant="promptVariant"
+          placeholder="Focus here to inspect the prompt highlight…"
+          @submit="submit"
+        >
+          <PChatPromptSubmit :color="promptColor" />
+        </PChatPrompt>
+      </template>
+    </PChatPalette>
   </div>
 </template>

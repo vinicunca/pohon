@@ -13,6 +13,18 @@ import { themeButton } from './pohon-theme/theme.button';
 import { themeCalendar } from './pohon-theme/theme.calendar';
 import { themeCard } from './pohon-theme/theme.card';
 import { themeCarousel } from './pohon-theme/theme.carousel';
+import { themeChangelogVersion, themeChangelogVersions } from './pohon-theme/theme.changelog-versions';
+import {
+  themeChatMessage,
+  themeChatMessages,
+  themeChatPalette,
+  themeChatPrompt,
+  themeChatReasoning,
+  themeChatShimmer,
+  themeChatTool,
+} from './pohon-theme/theme.chats';
+import { themeCheckbox } from './pohon-theme/theme.checkbox';
+import { themeCheckboxGroup } from './pohon-theme/theme.checkbox-group';
 import { themeChip } from './pohon-theme/theme.chip';
 import {
   themeDashboardGroup,
@@ -42,6 +54,17 @@ export const uiTheme = {
   calendar: themeCalendar,
   card: themeCard,
   carousel: themeCarousel,
+  changelogVersion: themeChangelogVersion,
+  changelogVersions: themeChangelogVersions,
+  chatMessage: themeChatMessage,
+  chatMessages: themeChatMessages,
+  chatPalette: themeChatPalette,
+  chatPrompt: themeChatPrompt,
+  chatReasoning: themeChatReasoning,
+  chatShimmer: themeChatShimmer,
+  chatTool: themeChatTool,
+  checkbox: themeCheckbox,
+  checkboxGroup: themeCheckboxGroup,
   chip: themeChip,
   container: {
     base: 'container',

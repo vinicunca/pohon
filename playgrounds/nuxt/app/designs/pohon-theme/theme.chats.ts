@@ -280,7 +280,7 @@ export const themeChatPrompt = {
   ],
 } satisfies PThemeChatPrompt;
 
-export const themeChatPromptSubmit = {
+export const themeChatPalette = {
   slots: {
     root: 'flex flex-1 flex-col min-h-0 min-w-0 relative',
     prompt: 'border-border px-0 border-t rounded-t-none',
