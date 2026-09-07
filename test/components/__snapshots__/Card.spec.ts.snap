@@ -65,7 +65,7 @@ exports[`card > renders with header slot correctly 1`] = `
 exports[`card > renders with title and description correctly 1`] = `
 "<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
   <div data-slot="header" class="p-4 sm:px-6">
-    <div data-slot="title" class="text-highlighted font-semibold">Title</div>
+    <div data-slot="title" class="text-highlighted font-600">Title</div>
     <div data-slot="description" class="mt-1 text-muted text-sm">Description</div>
   </div>
   <!--v-if-->
@@ -76,7 +76,7 @@ exports[`card > renders with title and description correctly 1`] = `
 exports[`card > renders with title correctly 1`] = `
 "<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
   <div data-slot="header" class="p-4 sm:px-6">
-    <div data-slot="title" class="text-highlighted font-semibold">Title</div>
+    <div data-slot="title" class="text-highlighted font-600">Title</div>
     <!--v-if-->
   </div>
   <!--v-if-->
@@ -87,7 +87,7 @@ exports[`card > renders with title correctly 1`] = `
 exports[`card > renders with title slot correctly 1`] = `
 "<div data-slot="root" class="rounded-lg overflow-hidden bg-default ring ring-default divide-y divide-default">
   <div data-slot="header" class="p-4 sm:px-6">
-    <div data-slot="title" class="text-highlighted font-semibold">Title slot</div>
+    <div data-slot="title" class="text-highlighted font-600">Title slot</div>
     <!--v-if-->
   </div>
   <!--v-if-->

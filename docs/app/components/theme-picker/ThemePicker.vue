@@ -52,7 +52,7 @@ const {
 
     <template #content>
       <fieldset>
-        <legend class="text-[11px] leading-none font-semibold mb-2 select-none flex items-center gap-1">
+        <legend class="text-[11px] leading-none font-600 mb-2 select-none flex items-center gap-1">
           Primary
 
           <PButton
@@ -89,7 +89,7 @@ const {
       </fieldset>
 
       <fieldset>
-        <legend class="text-[11px] leading-none font-semibold mb-2 select-none flex items-center gap-1">
+        <legend class="text-[11px] leading-none font-600 mb-2 select-none flex items-center gap-1">
           Neutral
 
           <PButton
@@ -116,7 +116,7 @@ const {
       </fieldset>
 
       <fieldset>
-        <legend class="text-[11px] leading-none font-semibold mb-2 select-none flex items-center gap-1">
+        <legend class="text-[11px] leading-none font-600 mb-2 select-none flex items-center gap-1">
           Radius
 
           <PButton
@@ -143,7 +143,7 @@ const {
       </fieldset>
 
       <fieldset>
-        <legend class="text-[11px] leading-none font-semibold mb-2 select-none flex items-center gap-1">
+        <legend class="text-[11px] leading-none font-600 mb-2 select-none flex items-center gap-1">
           Font
 
           <PButton
@@ -171,7 +171,7 @@ const {
       </fieldset>
 
       <fieldset>
-        <legend class="text-[11px] leading-none font-semibold mb-2 select-none flex items-center gap-1">
+        <legend class="text-[11px] leading-none font-600 mb-2 select-none flex items-center gap-1">
           Icons
 
           <PButton
@@ -199,7 +199,7 @@ const {
       </fieldset>
 
       <fieldset>
-        <legend class="text-[11px] leading-none font-semibold mb-2 select-none flex items-center gap-1">
+        <legend class="text-[11px] leading-none font-600 mb-2 select-none flex items-center gap-1">
           Color Mode
 
           <PButton
@@ -225,7 +225,7 @@ const {
       </fieldset>
 
       <fieldset v-if="hasCSSChanges || hasConfigChanges">
-        <legend class="text-[11px] leading-none font-semibold mb-2 select-none">
+        <legend class="text-[11px] leading-none font-600 mb-2 select-none">
           Export
         </legend>
 

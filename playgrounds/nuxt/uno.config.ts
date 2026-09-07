@@ -1,8 +1,32 @@
 import { presetVinicunca } from '@vinicunca/unocss-preset';
 import { defineConfig } from 'unocss';
+import { BRANDS } from './app/designs/design.constants';
+
+// eslint-disable-next-line no-template-curly-in-string
+const COLOR_PLACEHOLDER = '${color}';
+const TOKEN_PATTERN = /[^\s`]+/g;
 
 // @keep-sorted
 export default defineConfig({
+  extractors: [
+    /**
+     * In the theme files there are bunch of placeholders like ${color} that we need to extract and add to the safelist.
+     */
+    {
+      name: 'pohon-colors-extractor',
+      extract({ code }) {
+        const matches = code
+          .match(TOKEN_PATTERN)
+          ?.filter((token) => token.includes(COLOR_PLACEHOLDER));
+
+        if (matches !== undefined) {
+          return matches.flatMap((match) => {
+            return BRANDS.map((brand) => match.replace(COLOR_PLACEHOLDER, brand));
+          });
+        }
+      },
+    },
+  ],
 
   layers: {
     'pohon': 100,

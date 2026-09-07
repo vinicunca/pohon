@@ -32,7 +32,7 @@ export default {
     },
     headline: {
       true: {
-        headline: 'font-semibold text-primary flex items-center gap-1.5',
+        headline: 'font-600 text-primary flex items-center gap-1.5',
       },
     },
     title: {

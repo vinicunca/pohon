@@ -86,7 +86,7 @@ exports[`pageLinks > renders with links correctly 1`] = `
 
 exports[`pageLinks > renders with title correctly 1`] = `
 "<nav data-slot="root" class="flex flex-col gap-3">
-  <p data-slot="title" class="text-sm font-semibold flex items-center gap-1.5">Resources</p>
+  <p data-slot="title" class="text-sm font-600 flex items-center gap-1.5">Resources</p>
   <ul data-slot="list" class="flex flex-col gap-2">
     <li data-slot="item" class="relative"><a href="/docs" data-slot="link" class="group text-sm flex items-center gap-1.5 rounded-sm outline-primary/25 focus-visible:outline-3 text-muted hover:text-default transition-colors"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="linkLeadingIcon" class="size-5 shrink-0"></svg><span data-slot="linkLabel" class="truncate">Documentation<!--v-if--></span></a></li>
     <li data-slot="item" class="relative"><a href="https://stackblitz.com/edit/pohon-ui" rel="noopener noreferrer" target="_blank" data-slot="link" class="group text-sm flex items-center gap-1.5 rounded-sm outline-primary/25 focus-visible:outline-3 text-muted hover:text-default transition-colors"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="linkLeadingIcon" class="size-5 shrink-0"></svg><span data-slot="linkLabel" class="truncate">Playground<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="linkLabelExternalIcon" class="size-3 absolute top-0 text-dimmed"></svg></span></a></li>
@@ -98,7 +98,7 @@ exports[`pageLinks > renders with title correctly 1`] = `
 
 exports[`pageLinks > renders with title slot correctly 1`] = `
 "<nav data-slot="root" class="flex flex-col gap-3">
-  <p data-slot="title" class="text-sm font-semibold flex items-center gap-1.5">Title slot</p>
+  <p data-slot="title" class="text-sm font-600 flex items-center gap-1.5">Title slot</p>
   <ul data-slot="list" class="flex flex-col gap-2">
     <li data-slot="item" class="relative"><a href="/docs" data-slot="link" class="group text-sm flex items-center gap-1.5 rounded-sm outline-primary/25 focus-visible:outline-3 text-muted hover:text-default transition-colors"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="linkLeadingIcon" class="size-5 shrink-0"></svg><span data-slot="linkLabel" class="truncate">Documentation<!--v-if--></span></a></li>
     <li data-slot="item" class="relative"><a href="https://stackblitz.com/edit/pohon-ui" rel="noopener noreferrer" target="_blank" data-slot="link" class="group text-sm flex items-center gap-1.5 rounded-sm outline-primary/25 focus-visible:outline-3 text-muted hover:text-default transition-colors"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="linkLeadingIcon" class="size-5 shrink-0"></svg><span data-slot="linkLabel" class="truncate">Playground<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="linkLabelExternalIcon" class="size-3 absolute top-0 text-dimmed"></svg></span></a></li>

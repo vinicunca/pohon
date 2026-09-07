@@ -47,7 +47,7 @@ const columns: TableColumn<Payment>[] = [{
   header: 'ID',
   meta: {
     class: {
-      th: 'text-center font-semibold',
+      th: 'text-center font-600',
       td: 'text-center font-mono'
     }
   }
@@ -79,7 +79,7 @@ const columns: TableColumn<Payment>[] = [{
       failed: 'text-error',
       refunded: 'text-warning'
     }
-    return h('span', { class: `font-semibold capitalize ${colorMap[status as keyof typeof colorMap]}` }, status)
+    return h('span', { class: `font-600 capitalize ${colorMap[status as keyof typeof colorMap]}` }, status)
   }
 }, {
   accessorKey: 'email',
@@ -105,7 +105,7 @@ const columns: TableColumn<Payment>[] = [{
       style: 'currency',
       currency: 'USD'
     }).format(amount)
-    return h('span', { class: 'font-semibold text-success' }, formatted)
+    return h('span', { class: 'font-600 text-success' }, formatted)
   }
 }]
 

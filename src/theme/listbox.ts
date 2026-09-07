@@ -6,7 +6,7 @@ export default (options: Required<ModuleOptions>) => ({
     input: 'border-b border-default',
     content: 'relative overflow-y-auto flex-1 max-h-60 scroll-py-1 focus:outline-none',
     group: 'p-1 isolate',
-    label: 'font-semibold text-highlighted',
+    label: 'font-600 text-highlighted',
     separator: '-mx-1 my-1 h-px bg-border',
     empty: 'text-center text-muted',
     loading: 'flex items-center justify-center text-muted',

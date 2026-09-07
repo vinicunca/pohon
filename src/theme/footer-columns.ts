@@ -6,7 +6,7 @@ export default (options: Required<ModuleOptions>) => ({
     left: 'mb-10 xl:mb-0',
     center: 'flex flex-col lg:grid grid-flow-col auto-cols-fr gap-8 xl:col-span-2',
     right: 'mt-10 xl:mt-0',
-    label: 'text-sm font-semibold',
+    label: 'text-sm font-600',
     list: 'mt-6 space-y-4',
     item: 'relative',
     link: 'group text-sm flex items-center gap-1.5 rounded-sm outline-primary/25 focus-visible:outline-3',

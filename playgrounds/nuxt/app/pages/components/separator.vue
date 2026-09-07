@@ -3,7 +3,7 @@
 
   <div class="flex flex-col gap-4 min-h-0">
     <div>
-      <p class="font-semibold text-highlighted">
+      <p class="font-600 text-highlighted">
         Pohon UI
       </p>
       <p>An open-source UI component library.</p>

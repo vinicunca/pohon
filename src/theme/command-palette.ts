@@ -11,7 +11,7 @@ export default (options: Required<ModuleOptions>) => ({
     viewport: 'relative scroll-py-1 overflow-y-auto flex-1 focus:outline-none',
     group: 'p-1 isolate',
     empty: 'text-center text-muted',
-    label: 'font-semibold text-highlighted',
+    label: 'font-600 text-highlighted',
     item: 'group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75',
     itemLeadingIcon: 'shrink-0',
     itemLeadingAvatar: 'shrink-0',

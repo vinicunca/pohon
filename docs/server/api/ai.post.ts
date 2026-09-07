@@ -269,7 +269,7 @@ CRITICAL rules for component \`ui\` overrides:
 - NEVER use \`rounded-*\` classes in component slot overrides. Border radius is controlled globally by \`--ui-radius\` — hardcoding rounded classes would override the CSS variable and break consistency.
 - Only ADD new classes that aren't already in the component's default theme. Do NOT repeat or duplicate default classes (e.g. \`inline-flex\`, \`items-center\`, \`disabled:cursor-not-allowed\`, \`transition-colors\` on button are already defaults). Use \`getComponentTheme\` to check what's already there.
 - Keep overrides minimal and intentional — only include classes that actually change the look from the default.
-- Tailwind v4 only generates classes that are already used in source files. Arbitrary Tailwind utility classes (e.g. \`tracking-wide\`, \`shadow-2xl\`) may NOT exist in the user's CSS output. Prefer overrides that use classes already present in the component's default theme (e.g. changing \`font-medium\` to \`font-semibold\`) or CSS variables. For the exported code, mention that users may need to safelist any new utility classes.
+- Tailwind v4 only generates classes that are already used in source files. Arbitrary Tailwind utility classes (e.g. \`tracking-wide\`, \`shadow-2xl\`) may NOT exist in the user's CSS output. Prefer overrides that use classes already present in the component's default theme (e.g. changing \`font-medium\` to \`font-600\`) or CSS variables. For the exported code, mention that users may need to safelist any new utility classes.
 
 **When suggesting theme changes, you MUST:**
 1. Call the \`applyTheme\` tool with the settings so changes apply live

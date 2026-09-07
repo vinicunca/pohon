@@ -66,7 +66,7 @@ defineShortcuts({
               :navigation="filteredNavigation"
               highlight
               :ui="{
-                linkTrailingBadge: 'font-semibold uppercase'
+                linkTrailingBadge: 'font-600 uppercase'
               }"
             />
           </PPageAside>

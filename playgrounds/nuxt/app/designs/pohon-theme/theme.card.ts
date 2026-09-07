@@ -7,7 +7,7 @@ export const themeCard = {
   slots: {
     root: 'rounded-lg overflow-hidden',
     header: 'p-4 sm:px-6',
-    title: 'color-text-highlighted font-semibold',
+    title: 'color-text-highlighted font-600',
     description: 'color-text-muted text-sm mt-1',
     body: 'p-4 sm:p-6',
     footer: 'p-4 sm:px-6',

@@ -67,7 +67,7 @@ exports[`pageHeader > renders with description slot correctly 1`] = `
 
 exports[`pageHeader > renders with headline correctly 1`] = `
 "<div data-slot="root" class="relative border-b border-default py-8">
-  <div data-slot="headline" class="mb-2.5 text-sm font-semibold text-primary flex items-center gap-1.5">Headline</div>
+  <div data-slot="headline" class="mb-2.5 text-sm font-600 text-primary flex items-center gap-1.5">Headline</div>
   <div data-slot="container" class="">
     <div data-slot="wrapper" class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
       <!--v-if-->
@@ -80,7 +80,7 @@ exports[`pageHeader > renders with headline correctly 1`] = `
 
 exports[`pageHeader > renders with headline slot correctly 1`] = `
 "<div data-slot="root" class="relative border-b border-default py-8">
-  <div data-slot="headline" class="mb-2.5 text-sm font-semibold text-primary flex items-center gap-1.5">Headline slot</div>
+  <div data-slot="headline" class="mb-2.5 text-sm font-600 text-primary flex items-center gap-1.5">Headline slot</div>
   <div data-slot="container" class="">
     <div data-slot="wrapper" class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
       <!--v-if-->

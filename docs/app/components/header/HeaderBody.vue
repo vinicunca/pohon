@@ -18,6 +18,6 @@ const { navigationByCategory } = useNavigation(navigation!)
       <FrameworkTabs />
     </div>
 
-    <PContentNavigation :navigation="navigationByCategory" highlight :ui="{ linkTrailingBadge: 'font-semibold uppercase' }" />
+    <PContentNavigation :navigation="navigationByCategory" highlight :ui="{ linkTrailingBadge: 'font-600 uppercase' }" />
   </template>
 </template>

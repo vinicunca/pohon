@@ -16,7 +16,7 @@ export default (options: Required<ModuleOptions>) => ({
   variants: {
     active: {
       true: {
-        link: 'font-semibold',
+        link: 'font-600',
       },
       false: {
         link: 'text-muted font-medium',

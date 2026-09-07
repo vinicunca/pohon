@@ -371,7 +371,7 @@ exports[`changelogVersion > renders with title correctly 1`] = `
   <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
     <div data-slot="header" class="">
       <!--v-if-->
-      <h2 data-slot="title" class="relative text-xl text-pretty font-semibold text-highlighted">
+      <h2 data-slot="title" class="relative text-xl text-pretty font-600 text-highlighted">
         <!--v-if-->Title
       </h2>
       <!--v-if-->
@@ -393,7 +393,7 @@ exports[`changelogVersion > renders with title slot correctly 1`] = `
   <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
     <div data-slot="header" class="">
       <!--v-if-->
-      <h2 data-slot="title" class="relative text-xl text-pretty font-semibold text-highlighted">
+      <h2 data-slot="title" class="relative text-xl text-pretty font-600 text-highlighted">
         <!--v-if-->Title slot
       </h2>
       <!--v-if-->
@@ -415,7 +415,7 @@ exports[`changelogVersion > renders with title slot correctly 2`] = `
   <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
     <div data-slot="header" class="">
       <!--v-if-->
-      <h2 data-slot="title" class="relative text-xl text-pretty font-semibold text-highlighted">
+      <h2 data-slot="title" class="relative text-xl text-pretty font-600 text-highlighted">
         <!--v-if-->Title slot
       </h2>
       <!--v-if-->

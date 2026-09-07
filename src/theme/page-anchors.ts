@@ -14,7 +14,7 @@ export default (options: Required<ModuleOptions>) => ({
   variants: {
     active: {
       true: {
-        link: 'text-primary font-semibold',
+        link: 'text-primary font-600',
         linkLeading: 'bg-primary ring-primary text-inverted',
       },
       false: {

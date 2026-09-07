@@ -3,7 +3,7 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'flex flex-col gap-3',
-    title: 'text-sm font-semibold flex items-center gap-1.5',
+    title: 'text-sm font-600 flex items-center gap-1.5',
     list: 'flex flex-col gap-2',
     item: 'relative',
     link: 'group text-sm flex items-center gap-1.5 rounded-sm outline-primary/25 focus-visible:outline-3',

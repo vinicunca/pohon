@@ -100,7 +100,7 @@ onMounted(async () => {
           d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"
         />
       </svg>
-      <PBadge color="info" class="absolute top-[18px] left-[18px] p-1 rounded-sm font-semibold leading-none">
+      <PBadge color="info" class="absolute top-[18px] left-[18px] p-1 rounded-sm font-600 leading-none">
         Hugo
       </PBadge>
     </div>
@@ -115,7 +115,7 @@ onMounted(async () => {
           d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"
         />
       </svg>
-      <PBadge color="success" class="absolute top-[18px] left-[18px] p-1 rounded-sm font-semibold leading-none">
+      <PBadge color="success" class="absolute top-[18px] left-[18px] p-1 rounded-sm font-600 leading-none">
         Sarah
       </PBadge>
     </div>
@@ -220,7 +220,7 @@ onMounted(async () => {
           <PLink v-if="step.to" :to="step.to" :aria-label="`Open ${step.title}`" target="_blank" class="absolute inset-0 z-10" />
           <NuxtImg v-if="step.image" v-bind="step.image" class="rounded-sm" loading="lazy" />
           <div>
-            <h2 class="font-semibold inline-flex items-center gap-x-1">
+            <h2 class="font-600 inline-flex items-center gap-x-1">
               <PBadge :label="index + 1" size="sm" color="neutral" variant="subtle" class="rounded-full tabular-nums" /> {{ step.title }}
             </h2>
             <p class="text-muted text-sm">

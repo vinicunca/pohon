@@ -21,7 +21,7 @@ export const themeDashboardNavbar = {
     root: 'border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6',
     left: 'flex gap-1.5 min-w-0 items-center',
     icon: 'me-1.5 shrink-0 size-5 self-center',
-    title: 'color-text-highlighted font-semibold flex gap-1.5 truncate items-center',
+    title: 'color-text-highlighted font-600 flex gap-1.5 truncate items-center',
     center: 'hidden lg:flex',
     right: 'flex shrink-0 gap-1.5 items-center',
   },

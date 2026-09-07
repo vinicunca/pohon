@@ -68,7 +68,7 @@ const tour = useTour([
       <template #content>
         <div class="p-4 max-w-xs space-y-2">
           <div class="flex items-center justify-between gap-4">
-            <p class="font-semibold text-highlighted">
+            <p class="font-600 text-highlighted">
               {{ tour.current.value?.title }}
             </p>
             <span class="text-xs text-muted tabular-nums">

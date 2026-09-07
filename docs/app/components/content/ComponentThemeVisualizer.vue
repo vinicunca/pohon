@@ -169,7 +169,7 @@ watch(open, (isOpen) => {
       </PTooltip>
 
       <template #content>
-        <div ref="popoverContentRef" class="px-2.5 py-1.5 text-xs font-semibold text-highlighted border-b border-default">
+        <div ref="popoverContentRef" class="px-2.5 py-1.5 text-xs font-600 text-highlighted border-b border-default">
           Theme slots
         </div>
         <div class="p-1">

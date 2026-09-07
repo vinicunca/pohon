@@ -6,7 +6,7 @@ export default (options: Required<ModuleOptions>) => ({
     container: 'pt-4 sm:pt-6 pb-2.5 sm:pb-4.5 lg:py-8 border-b border-dashed border-default lg:border-0 flex flex-col lg:min-h-0',
     top: 'lg:shrink-0',
     bottom: 'hidden lg:flex lg:flex-col lg:shrink-0 gap-6',
-    trigger: 'group text-sm font-semibold flex-1 flex items-center gap-1.5 py-1.5 -mt-1.5 rounded-sm outline-primary/25 focus-visible:outline-3 lg:shrink-0',
+    trigger: 'group text-sm font-600 flex-1 flex items-center gap-1.5 py-1.5 -mt-1.5 rounded-sm outline-primary/25 focus-visible:outline-3 lg:shrink-0',
     title: 'truncate',
     trailing: 'ms-auto inline-flex gap-1.5 items-center',
     trailingIcon: 'size-5 transform transition-transform duration-200 ease-out motion-reduce:transition-none shrink-0 group-data-[state=open]:rotate-180 lg:hidden',

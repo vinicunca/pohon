@@ -309,7 +309,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
       <template #features>
         <li>
           <NuxtLink to="https://npm.chart.dev/pohon-ui" target="_blank" class="min-w-0 group focus-visible:outline-primary">
-            <p class="text-4xl font-semibold truncate text-highlighted group-hover:text-primary transition-colors">
+            <p class="text-4xl font-600 truncate text-highlighted group-hover:text-primary transition-colors">
               {{ format(module?.stats?.downloads ?? 0) }}+
             </p>
             <p class="text-muted text-sm truncate">monthly downloads</p>
@@ -318,7 +318,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
 
         <li>
           <NuxtLink to="https://github.com/nuxt/ui" target="_blank" class="min-w-0 group focus-visible:outline-primary">
-            <p class="text-4xl font-semibold text-highlighted truncate group-hover:text-primary transition-colors">
+            <p class="text-4xl font-600 text-highlighted truncate group-hover:text-primary transition-colors">
               {{ format(module?.stats?.stars ?? 0) }}+
             </p>
             <p class="text-muted text-sm truncate">GitHub stars</p>
@@ -327,7 +327,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
 
         <li>
           <NuxtLink to="https://github.com/nuxt/ui/graphs/contributors" target="_blank" class="min-w-0 group focus-visible:outline-primary">
-            <p class="text-4xl font-semibold text-highlighted truncate group-hover:text-primary transition-colors">
+            <p class="text-4xl font-600 text-highlighted truncate group-hover:text-primary transition-colors">
               300+
             </p>
             <p class="text-muted text-sm truncate">Contributors</p>

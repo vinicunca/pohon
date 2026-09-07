@@ -1023,7 +1023,7 @@ exports[`navigationMenu > renders with orientation vertical correctly 1`] = `
 "<nav data-slot="root" class="relative flex gap-1.5 [&amp;>div]:min-w-0 flex-col" data-orientation="vertical" dir="ltr" data-akar-navigation-menu="">
   <ul data-slot="list" class="isolate min-w-0">
     <li data-state="closed" data-orientation="vertical" data-slot="item" class="min-w-0">
-      <div data-slot="label" class="w-full flex items-center gap-1.5 font-semibold text-xs/5 text-highlighted px-2.5 py-1.5">
+      <div data-slot="label" class="w-full flex items-center gap-1.5 font-600 text-xs/5 text-highlighted px-2.5 py-1.5">
         <!--v-if--><span data-slot="linkLabel" class="truncate">Links<!--v-if--></span>
         <!--v-if-->
       </div>

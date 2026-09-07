@@ -9,7 +9,7 @@ exports[`blogPosts > renders with as correctly 1`] = `
       <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-accented text-default bg-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
         <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm text-toned">Dec 13, 2024</time>
       </div>
-      <h2 data-slot="title" class="text-xl text-pretty font-semibold text-highlighted">Title</h2>
+      <h2 data-slot="title" class="text-xl text-pretty font-600 text-highlighted">Title</h2>
       <div data-slot="description" class="mt-1 text-base text-pretty text-muted">Description</div>
       <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
         <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0"><img src="https://i.pravatar.cc/120?img=1" alt="Author" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
@@ -35,7 +35,7 @@ exports[`blogPosts > renders with class correctly 1`] = `
       <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-accented text-default bg-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
         <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm text-toned">Dec 13, 2024</time>
       </div>
-      <h2 data-slot="title" class="text-xl text-pretty font-semibold text-highlighted">Title</h2>
+      <h2 data-slot="title" class="text-xl text-pretty font-600 text-highlighted">Title</h2>
       <div data-slot="description" class="mt-1 text-base text-pretty text-muted">Description</div>
       <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
         <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0"><img src="https://i.pravatar.cc/120?img=1" alt="Author" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
@@ -63,7 +63,7 @@ exports[`blogPosts > renders with orientation vertical correctly 1`] = `
       <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-accented text-default bg-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
         <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm text-toned">Dec 13, 2024</time>
       </div>
-      <h2 data-slot="title" class="text-xl text-pretty font-semibold text-highlighted">Title</h2>
+      <h2 data-slot="title" class="text-xl text-pretty font-600 text-highlighted">Title</h2>
       <div data-slot="description" class="mt-1 text-base text-pretty text-muted">Description</div>
       <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
         <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0"><img src="https://i.pravatar.cc/120?img=1" alt="Author" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
@@ -89,7 +89,7 @@ exports[`blogPosts > renders with posts correctly 1`] = `
       <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-accented text-default bg-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
         <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm text-toned">Dec 13, 2024</time>
       </div>
-      <h2 data-slot="title" class="text-xl text-pretty font-semibold text-highlighted">Title</h2>
+      <h2 data-slot="title" class="text-xl text-pretty font-600 text-highlighted">Title</h2>
       <div data-slot="description" class="mt-1 text-base text-pretty text-muted">Description</div>
       <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
         <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0"><img src="https://i.pravatar.cc/120?img=1" alt="Author" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>

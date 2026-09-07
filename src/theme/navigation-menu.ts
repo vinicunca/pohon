@@ -4,7 +4,7 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative flex gap-1.5 [&>div]:min-w-0',
     list: 'isolate min-w-0',
-    label: 'w-full flex items-center gap-1.5 font-semibold text-xs/5 text-highlighted px-2.5 py-1.5',
+    label: 'w-full flex items-center gap-1.5 font-600 text-xs/5 text-highlighted px-2.5 py-1.5',
     item: 'min-w-0',
     link: 'group relative w-full flex items-center gap-1.5 font-medium text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none focus-visible:before:outline-3',
     linkLeadingIcon: 'shrink-0 size-5',

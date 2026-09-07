@@ -15,7 +15,7 @@ export default (options: Required<ModuleOptions>) => {
       viewport: 'relative divide-y divide-default scroll-py-1 overflow-y-auto flex-1',
       group: 'p-1 isolate',
       empty: 'text-center text-muted',
-      label: 'font-semibold text-highlighted',
+      label: 'font-600 text-highlighted',
       separator: '-mx-1 my-1 h-px bg-border',
       item: ['group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 text-default data-highlighted:not-data-disabled:text-highlighted data-highlighted:not-data-disabled:before:bg-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
       itemLeadingIcon: ['shrink-0 text-dimmed group-data-highlighted:not-group-data-disabled:text-default', options.theme.transitions && 'transition-colors'],

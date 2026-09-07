@@ -79,7 +79,7 @@ function getEmojiFlag(locale: string): string {
           </PAvatar>
 
           <div class="text-sm">
-            <div class="font-semibold">{{ locale.name }}</div>
+            <div class="font-600">{{ locale.name }}</div>
             <div class="mt-1">Code: <ProseCode class="text-xs">{{ locale.code }}</ProseCode></div>
           </div>
         </div>

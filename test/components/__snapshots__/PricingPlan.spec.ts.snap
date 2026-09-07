@@ -5,13 +5,13 @@ exports[`pricingPlan > renders with as correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -21,7 +21,7 @@ exports[`pricingPlan > renders with as correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -36,7 +36,7 @@ exports[`pricingPlan > renders with badge correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <!--v-if-->
@@ -52,7 +52,7 @@ exports[`pricingPlan > renders with badge object correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <!--v-if-->
@@ -68,12 +68,12 @@ exports[`pricingPlan > renders with badge slot correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div>Badge slot
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div>Badge slot
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -83,7 +83,7 @@ exports[`pricingPlan > renders with badge slot correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -104,7 +104,7 @@ exports[`pricingPlan > renders with billing cycle correctly 1`] = `
     <!--v-if-->
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">&nbsp;</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <!--v-if-->
@@ -124,7 +124,7 @@ exports[`pricingPlan > renders with billing period correctly 1`] = `
     <!--v-if-->
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span>
         <!--v-if-->
       </div>
@@ -140,13 +140,13 @@ exports[`pricingPlan > renders with billing slot correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0">Billing slot</div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -156,7 +156,7 @@ exports[`pricingPlan > renders with billing slot correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -171,7 +171,7 @@ exports[`pricingPlan > renders with body slot correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">Body slot</div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -209,13 +209,13 @@ exports[`pricingPlan > renders with button slot correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -225,7 +225,7 @@ exports[`pricingPlan > renders with button slot correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if-->Button slot<div data-slot="terms" class="text-xs/5 text-muted text-center text-balance">Terms</div>
   </div>
 </div>"
@@ -236,13 +236,13 @@ exports[`pricingPlan > renders with class correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -252,7 +252,7 @@ exports[`pricingPlan > renders with class correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -283,13 +283,13 @@ exports[`pricingPlan > renders with description slot correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description slot</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -299,7 +299,7 @@ exports[`pricingPlan > renders with description slot correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -320,7 +320,7 @@ exports[`pricingPlan > renders with discount correctly 1`] = `
     <!--v-if-->
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <!--v-if-->
     </div>
     <!--v-if-->
@@ -334,13 +334,13 @@ exports[`pricingPlan > renders with discount slot correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">Discount slot</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -350,7 +350,7 @@ exports[`pricingPlan > renders with discount slot correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -405,19 +405,19 @@ exports[`pricingPlan > renders with features slot correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">Features slot</ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -432,13 +432,13 @@ exports[`pricingPlan > renders with footer slot correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -456,13 +456,13 @@ exports[`pricingPlan > renders with header slot correctly 1`] = `
   <div data-slot="header" class="">Header slot</div>
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -472,7 +472,7 @@ exports[`pricingPlan > renders with header slot correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -487,13 +487,13 @@ exports[`pricingPlan > renders with highlight correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -503,7 +503,7 @@ exports[`pricingPlan > renders with highlight correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -518,7 +518,7 @@ exports[`pricingPlan > renders with orientation horizontal correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0 lg:col-span-2 pb-6 lg:pb-0 lg:pr-6 justify-center">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
@@ -530,10 +530,10 @@ exports[`pricingPlan > renders with orientation horizontal correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center lg:justify-center lg:items-center lg:p-6 lg:max-w-xs lg:w-full lg:mx-auto">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
@@ -549,13 +549,13 @@ exports[`pricingPlan > renders with orientation vertical correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -565,7 +565,7 @@ exports[`pricingPlan > renders with orientation vertical correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -586,7 +586,7 @@ exports[`pricingPlan > renders with price correctly 1`] = `
     <!--v-if-->
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <!--v-if-->
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$249</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$249</div>
       <!--v-if-->
     </div>
     <!--v-if-->
@@ -600,13 +600,13 @@ exports[`pricingPlan > renders with price slot correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">Price slot</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">Price slot</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -616,7 +616,7 @@ exports[`pricingPlan > renders with price slot correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -631,13 +631,13 @@ exports[`pricingPlan > renders with scale correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -647,7 +647,7 @@ exports[`pricingPlan > renders with scale correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -670,7 +670,7 @@ exports[`pricingPlan > renders with tagline correctly 1`] = `
     <!--v-if-->
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if-->
     <!--v-if-->
     <!--v-if-->
@@ -683,13 +683,13 @@ exports[`pricingPlan > renders with tagline slot correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -699,7 +699,7 @@ exports[`pricingPlan > renders with tagline slot correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline slot</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline slot</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -735,13 +735,13 @@ exports[`pricingPlan > renders with terms slot correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -751,7 +751,7 @@ exports[`pricingPlan > renders with terms slot correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -766,7 +766,7 @@ exports[`pricingPlan > renders with title correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div>
       <!--v-if-->
     </div>
     <!--v-if-->
@@ -782,13 +782,13 @@ exports[`pricingPlan > renders with title slot correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title slot</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title slot</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -798,7 +798,7 @@ exports[`pricingPlan > renders with title slot correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -813,13 +813,13 @@ exports[`pricingPlan > renders with ui correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -829,7 +829,7 @@ exports[`pricingPlan > renders with ui correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end gap-12">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -844,13 +844,13 @@ exports[`pricingPlan > renders with variant outline correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -860,7 +860,7 @@ exports[`pricingPlan > renders with variant outline correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -875,13 +875,13 @@ exports[`pricingPlan > renders with variant soft correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -891,7 +891,7 @@ exports[`pricingPlan > renders with variant soft correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -906,13 +906,13 @@ exports[`pricingPlan > renders with variant solid correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold text-inverted">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600 text-inverted">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2 text-dimmed">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl text-dimmed">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold text-inverted">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600 text-inverted">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium text-dimmed">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium text-dimmed">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -922,7 +922,7 @@ exports[`pricingPlan > renders with variant solid correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->
@@ -937,13 +937,13 @@ exports[`pricingPlan > renders with variant subtle correctly 1`] = `
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
-      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-semibold">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</div><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
     </div>
     <div data-slot="description" class="text-muted text-base text-pretty mt-2">Description</div>
     <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
       <div data-slot="discount" class="text-muted line-through text-xl sm:text-2xl">$249</div>
-      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-semibold">$199</div>
+      <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$199</div>
       <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="text-toned truncate text-xs font-medium">billed annually</span><span data-slot="billingCycle" class="text-muted truncate text-xs font-medium">/month</span></div>
     </div>
     <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
@@ -953,7 +953,7 @@ exports[`pricingPlan > renders with variant subtle correctly 1`] = `
     </ul>
   </div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
-    <div data-slot="tagline" class="text-base font-semibold text-default">Tagline</div>
+    <div data-slot="tagline" class="text-base font-600 text-default">Tagline</div>
     <!--v-if--><button type="button" data-slot="button" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 w-full justify-center text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
       <!--v-if-->

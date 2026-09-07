@@ -11,7 +11,7 @@ export default (options: Required<ModuleOptions>) => ({
     footer: 'pt-4 mt-auto',
     leading: 'inline-flex items-center mb-2.5',
     leadingIcon: 'size-5 shrink-0 text-primary',
-    title: 'text-base text-pretty font-semibold text-highlighted',
+    title: 'text-base text-pretty font-600 text-highlighted',
     description: 'text-[15px] text-pretty',
   },
   variants: {

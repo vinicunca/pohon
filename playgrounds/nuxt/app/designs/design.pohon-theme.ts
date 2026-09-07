@@ -1,5 +1,9 @@
 import type { AppConfigInput } from 'nuxt/schema';
 import { themeAccordion } from './pohon-theme/theme.accordion';
+import { themeAlert } from './pohon-theme/theme.alert';
+import { themeAuthForm } from './pohon-theme/theme.auth-form';
+import { themeAvatar, themeAvatarGroup } from './pohon-theme/theme.avatar';
+import { themeButton } from './pohon-theme/theme.button';
 import { themeCard } from './pohon-theme/theme.card';
 import {
   themeDashboardGroup,
@@ -15,6 +19,11 @@ import {
 // @keep-sorted
 export const uiTheme = {
   accordion: themeAccordion,
+  alert: themeAlert,
+  authForm: themeAuthForm,
+  avatar: themeAvatar,
+  avatarGroup: themeAvatarGroup,
+  button: themeButton,
   card: themeCard,
   dashboardGroup: themeDashboardGroup,
   dashboardNavbar: themeDashboardNavbar,

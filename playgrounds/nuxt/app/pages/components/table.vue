@@ -119,7 +119,7 @@ const columns: TableColumn<Payment>[] = [{
   header: 'Date',
   meta: {
     class: {
-      td: 'text-center font-semibold',
+      td: 'text-center font-600',
       th: 'text-right text-green-500 w-48'
     }
   },

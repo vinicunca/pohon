@@ -21,7 +21,7 @@ defineProps<{
     </svg>
     <div class="w-full border-b-2 border-solid border-slate-200">
       <div class="mx-34 mt-16 mb-2 py-4">
-        <h1 v-if="title" class="text-3xl font-semibold mb-2 flex gap-1">
+        <h1 v-if="title" class="text-3xl font-600 mb-2 flex gap-1">
           {{ title }}
         </h1>
         <p v-if="description" class="text-2xl text-slate-500" :style="{ lineClamp: 1, textOverflow: 'ellipsis' }">

@@ -57,7 +57,7 @@ exports[`slideover > renders with bottom side correctly 1`] = `
   <!--v-if-->
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title</h2>
       <p id="akar-dialog-description-v-0-0-1" data-slot="description" class="mt-1 text-muted text-sm">Description</p>
     </div><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-default hover:bg-elevated active:bg-elevated outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 absolute top-4 end-4"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -84,7 +84,7 @@ exports[`slideover > renders with bottom side inset correctly 1`] = `
   <!--v-if-->
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title</h2>
       <p id="akar-dialog-description-v-0-0-1" data-slot="description" class="mt-1 text-muted text-sm">Description</p>
     </div><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-default hover:bg-elevated active:bg-elevated outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 absolute top-4 end-4"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -214,7 +214,7 @@ exports[`slideover > renders with description correctly 1`] = `
   <!--v-if-->
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title</h2>
       <p id="akar-dialog-description-v-0-0-1" data-slot="description" class="mt-1 text-muted text-sm">Description</p>
     </div><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-default hover:bg-elevated active:bg-elevated outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 absolute top-4 end-4"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -308,7 +308,7 @@ exports[`slideover > renders with left side correctly 1`] = `
   <!--v-if-->
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title</h2>
       <p id="akar-dialog-description-v-0-0-1" data-slot="description" class="mt-1 text-muted text-sm">Description</p>
     </div><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-default hover:bg-elevated active:bg-elevated outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 absolute top-4 end-4"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -335,7 +335,7 @@ exports[`slideover > renders with left side inset correctly 1`] = `
   <!--v-if-->
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title</h2>
       <p id="akar-dialog-description-v-0-0-1" data-slot="description" class="mt-1 text-muted text-sm">Description</p>
     </div><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-default hover:bg-elevated active:bg-elevated outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 absolute top-4 end-4"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -385,7 +385,7 @@ exports[`slideover > renders with right side correctly 1`] = `
   <!--v-if-->
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title</h2>
       <p id="akar-dialog-description-v-0-0-1" data-slot="description" class="mt-1 text-muted text-sm">Description</p>
     </div><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-default hover:bg-elevated active:bg-elevated outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 absolute top-4 end-4"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -412,7 +412,7 @@ exports[`slideover > renders with right side inset correctly 1`] = `
   <!--v-if-->
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title</h2>
       <p id="akar-dialog-description-v-0-0-1" data-slot="description" class="mt-1 text-muted text-sm">Description</p>
     </div><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-default hover:bg-elevated active:bg-elevated outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 absolute top-4 end-4"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -438,7 +438,7 @@ exports[`slideover > renders with title correctly 1`] = `
 <div data-dismissable-layer="" style="pointer-events: auto;" tabindex="-1" data-side="right" data-slot="content" class="fixed bg-default divide-y divide-default sm:ring ring-default sm:shadow-lg flex flex-col focus:outline-none max-w-md w-full inset-y-0 right-0 data-[state=open]:animate-[slide-in-from-right_200ms_ease-in-out] data-[state=closed]:animate-[slide-out-to-right_200ms_ease-in-out]" id="" role="dialog" aria-describedby="akar-dialog-description-v-0-0-1" aria-labelledby="akar-dialog-title-v-0-0-0" data-state="open"><span aria-hidden="true" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"><!--v-if--><p id="akar-dialog-description-v-0-0-1"></p></span>
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title</h2>
       <!--v-if-->
     </div><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-default hover:bg-elevated active:bg-elevated outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 absolute top-4 end-4"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -464,7 +464,7 @@ exports[`slideover > renders with title slot correctly 1`] = `
 <div data-dismissable-layer="" style="pointer-events: auto;" tabindex="-1" data-side="right" data-slot="content" class="fixed bg-default divide-y divide-default sm:ring ring-default sm:shadow-lg flex flex-col focus:outline-none max-w-md w-full inset-y-0 right-0 data-[state=open]:animate-[slide-in-from-right_200ms_ease-in-out] data-[state=closed]:animate-[slide-out-to-right_200ms_ease-in-out]" id="" role="dialog" aria-describedby="akar-dialog-description-v-0-0-1" aria-labelledby="akar-dialog-title-v-0-0-0" data-state="open"><span aria-hidden="true" style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"><!--v-if--><p id="akar-dialog-description-v-0-0-1"></p></span>
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title slot</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title slot</h2>
       <!--v-if-->
     </div><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-default hover:bg-elevated active:bg-elevated outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 absolute top-4 end-4"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -491,7 +491,7 @@ exports[`slideover > renders with top side correctly 1`] = `
   <!--v-if-->
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title</h2>
       <p id="akar-dialog-description-v-0-0-1" data-slot="description" class="mt-1 text-muted text-sm">Description</p>
     </div><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-default hover:bg-elevated active:bg-elevated outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 absolute top-4 end-4"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -518,7 +518,7 @@ exports[`slideover > renders with top side inset correctly 1`] = `
   <!--v-if-->
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title</h2>
       <p id="akar-dialog-description-v-0-0-1" data-slot="description" class="mt-1 text-muted text-sm">Description</p>
     </div><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-default hover:bg-elevated active:bg-elevated outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 absolute top-4 end-4"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -568,7 +568,7 @@ exports[`slideover > renders without close correctly 1`] = `
   <!--v-if-->
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title</h2>
       <p id="akar-dialog-description-v-0-0-1" data-slot="description" class="mt-1 text-muted text-sm">Description</p>
     </div>
     <!--v-if-->
@@ -593,7 +593,7 @@ exports[`slideover > renders without overlay correctly 1`] = `
   <!--v-if-->
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title</h2>
       <p id="akar-dialog-description-v-0-0-1" data-slot="description" class="mt-1 text-muted text-sm">Description</p>
     </div><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-default hover:bg-elevated active:bg-elevated outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 absolute top-4 end-4"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
@@ -620,7 +620,7 @@ exports[`slideover > renders without transition correctly 1`] = `
   <!--v-if-->
   <div data-slot="header" class="flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)">
     <div data-slot="wrapper" class="">
-      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-semibold">Title</h2>
+      <h2 id="akar-dialog-title-v-0-0-0" data-slot="title" class="text-highlighted font-600">Title</h2>
       <p id="akar-dialog-description-v-0-0-1" data-slot="description" class="mt-1 text-muted text-sm">Description</p>
     </div><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-default hover:bg-elevated active:bg-elevated outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 absolute top-4 end-4"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
