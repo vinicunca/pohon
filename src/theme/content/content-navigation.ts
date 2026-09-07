@@ -70,8 +70,8 @@ export default (options: Required<ModuleOptions>) => ({
     active: false,
     variant: 'pill',
     class: {
-      link: ['hover:text-highlighted hover:before:bg-elevated/50 data-[state=open]:text-highlighted', options.theme.transitions && 'transition-colors before:transition-colors'],
-      linkLeadingIcon: ['group-hover:text-default group-data-[state=open]:text-default', options.theme.transitions && 'transition-colors'],
+      link: ['hover:text-highlighted hover:before:bg-background-elevated/50 data-[state=open]:text-highlighted', options.theme.transitions && 'transition-colors before:transition-colors'],
+      linkLeadingIcon: ['group-hover:color-text group-data-[state=open]:color-text', options.theme.transitions && 'transition-colors'],
     },
   }, ...(options.theme.colors || []).map((color: string) => ({
     color,
@@ -94,7 +94,7 @@ export default (options: Required<ModuleOptions>) => ({
     active: true,
     highlight: false,
     class: {
-      link: 'before:bg-elevated',
+      link: 'before:bg-background-elevated',
     },
   }, {
     variant: 'pill',
@@ -102,7 +102,7 @@ export default (options: Required<ModuleOptions>) => ({
     highlight: true,
     disabled: false,
     class: {
-      link: ['hover:before:bg-elevated/50', options.theme.transitions && 'before:transition-colors'],
+      link: ['hover:before:bg-background-elevated/50', options.theme.transitions && 'before:transition-colors'],
     },
   }, {
     disabled: false,
@@ -110,7 +110,7 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'link',
     class: {
       link: ['hover:text-highlighted data-[state=open]:text-highlighted', options.theme.transitions && 'transition-colors'],
-      linkLeadingIcon: ['group-hover:text-default group-data-[state=open]:text-default', options.theme.transitions && 'transition-colors'],
+      linkLeadingIcon: ['group-hover:color-text group-data-[state=open]:color-text', options.theme.transitions && 'transition-colors'],
     },
   }, ...(options.theme.colors || []).map((color: string) => ({
     color,
@@ -142,7 +142,7 @@ export default (options: Required<ModuleOptions>) => ({
     level: true,
     active: true,
     class: {
-      link: 'after:bg-inverted',
+      link: 'after:bg-background-inverted',
     },
   }],
   defaultVariants: {

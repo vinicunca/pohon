@@ -136,7 +136,7 @@ external:
   side: left
   variant: solid
   avatar:
-  src: https://github.com/benjamincanac.png
+  src: https://github.com/praburangki.png
   loading: lazy
   messages: - id: '6045235a-a435-46b8-989d-2df38ca2eb47'
   role: user

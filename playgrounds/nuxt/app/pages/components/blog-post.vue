@@ -26,10 +26,10 @@ const orientation = ref('vertical' as keyof typeof theme.variants.orientation)
       target="_blank"
       date="2025-09-22"
       :authors="[{
-        name: 'Benjamin Canac',
+        name: 'praburangki',
         description: 'benjamincanac',
         avatar: {
-          src: 'https://github.com/benjamincanac.png'
+          src: 'https://github.com/praburangki.png'
         },
         to: 'https://github.com/benjamincanac',
         target: '_blank'

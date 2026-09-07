@@ -10,9 +10,9 @@ describe('user', () => {
   const orientations = Object.keys(theme.variants.orientation) as any;
 
   const props = {
-    name: 'Benjamin Canac',
+    name: 'praburangki',
     description: 'Software Engineer',
-    avatar: { src: 'https://github.com/benjamincanac.png', alt: 'User avatar' },
+    avatar: { src: 'https://github.com/praburangki.png', alt: 'User avatar' },
   };
 
   renderEach(User, [

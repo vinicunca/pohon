@@ -111,7 +111,7 @@ export default (options: Required<ModuleOptions>) => ({
       color,
       variant: 'solid',
       class: {
-        cellTrigger: `data-selected:bg-${color} data-selected:text-inverted data-today:not-data-selected:text-${color} data-highlighted:bg-${color}/20 hover:not-data-selected:bg-${color}/20`,
+        cellTrigger: `data-selected:bg-${color} data-selected:color-text-inverted data-today:not-data-selected:text-${color} data-highlighted:bg-${color}/20 hover:not-data-selected:bg-${color}/20`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
@@ -139,28 +139,28 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'solid',
       class: {
-        cellTrigger: 'data-selected:bg-inverted data-selected:text-inverted data-today:not-data-selected:text-highlighted data-highlighted:bg-inverted/20 hover:not-data-selected:bg-inverted/10',
+        cellTrigger: 'data-selected:bg-background-inverted data-selected:color-text-inverted data-today:not-data-selected:text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
       },
     },
     {
       color: 'neutral',
       variant: 'outline',
       class: {
-        cellTrigger: 'data-selected:ring data-selected:ring-inset data-selected:ring-accented data-selected:text-default data-selected:bg-default data-selected:focus-visible:ring-inverted data-today:not-data-selected:text-highlighted data-highlighted:bg-inverted/10 hover:not-data-selected:bg-inverted/10',
+        cellTrigger: 'data-selected:ring data-selected:ring-inset data-selected:ring-ring-accented data-selected:color-text data-selected:bg-background data-selected:focus-visible:ring-inverted data-today:not-data-selected:text-highlighted data-highlighted:bg-background-inverted/10 hover:not-data-selected:bg-background-inverted/10',
       },
     },
     {
       color: 'neutral',
       variant: 'soft',
       class: {
-        cellTrigger: 'data-selected:bg-elevated data-selected:text-default data-today:not-data-selected:text-highlighted data-highlighted:bg-inverted/20 hover:not-data-selected:bg-inverted/10',
+        cellTrigger: 'data-selected:bg-background-elevated data-selected:color-text data-today:not-data-selected:text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
       },
     },
     {
       color: 'neutral',
       variant: 'subtle',
       class: {
-        cellTrigger: 'data-selected:bg-elevated data-selected:text-default data-selected:ring data-selected:ring-inset data-selected:ring-accented data-selected:focus-visible:ring-inverted data-today:not-data-selected:text-highlighted data-highlighted:bg-inverted/20 hover:not-data-selected:bg-inverted/10',
+        cellTrigger: 'data-selected:bg-background-elevated data-selected:color-text data-selected:ring data-selected:ring-inset data-selected:ring-ring-accented data-selected:focus-visible:ring-inverted data-today:not-data-selected:text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
       },
     },
     ...Object.entries(daySizes).map(([size, cellTrigger]) => ({

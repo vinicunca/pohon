@@ -11,7 +11,7 @@ export default (options: Required<ModuleOptions>) => ({
     root: 'flex items-center gap-2',
     list: 'relative flex p-1 group',
     indicator: 'absolute transition-[translate,width] duration-200',
-    trigger: ['group relative inline-flex items-center min-w-0 data-[state=inactive]:text-muted hover:data-[state=inactive]:not-disabled:text-default font-medium rounded-md disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
+    trigger: ['group relative inline-flex items-center min-w-0 data-[state=inactive]:text-muted hover:data-[state=inactive]:not-disabled:color-text font-medium rounded-md disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
     leadingIcon: 'shrink-0',
     leadingAvatar: 'shrink-0',
     leadingAvatarSize: '',
@@ -31,7 +31,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     variant: {
       pill: {
-        list: 'bg-elevated rounded-lg',
+        list: 'bg-background-elevated rounded-lg',
         trigger: ['grow', ssr('before:content-[\'\']', 'before:absolute', 'before:inset-0', 'before:rounded-md', 'before:shadow-xs', 'before:-z-10', 'isolate')],
         indicator: 'rounded-md shadow-xs',
       },
@@ -116,14 +116,14 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'pill',
     class: {
       indicator: `bg-${color}`,
-      trigger: [`data-[state=active]:text-inverted outline-${color}/25 focus-visible:outline-3`, ssr(`before:bg-${color}`)],
+      trigger: [`data-[state=active]:color-text-inverted outline-${color}/25 focus-visible:outline-3`, ssr(`before:bg-${color}`)],
     },
   })), {
     color: 'neutral',
     variant: 'pill',
     class: {
-      indicator: 'bg-inverted',
-      trigger: ['data-[state=active]:text-inverted outline-inverted/25 focus-visible:outline-3', ssr('before:bg-inverted')],
+      indicator: 'bg-background-inverted',
+      trigger: ['data-[state=active]:color-text-inverted outline-inverted/25 focus-visible:outline-3', ssr('before:bg-background-inverted')],
     },
   }, ...(options.theme.colors || []).map((color: string) => ({
     color,
@@ -136,8 +136,8 @@ export default (options: Required<ModuleOptions>) => ({
     color: 'neutral',
     variant: 'link',
     class: {
-      indicator: 'bg-inverted',
-      trigger: ['data-[state=active]:text-highlighted outline-inverted/25 focus-visible:outline-3', ssr('after:bg-inverted')],
+      indicator: 'bg-background-inverted',
+      trigger: ['data-[state=active]:text-highlighted outline-inverted/25 focus-visible:outline-3', ssr('after:bg-background-inverted')],
     },
   }],
   defaultVariants: {

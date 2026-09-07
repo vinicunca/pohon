@@ -85,7 +85,7 @@ const valueMultiple = ref([fruits[0]!, vegetables[0]!])
     <PSelectMenu placeholder="Required" required :items="items" v-bind="props" />
     <PSelectMenu placeholder="Search..." icon="i-lucide-search" :items="items" v-bind="props" />
     <PSelectMenu placeholder="Search..." trailing-icon="i-lucide-search" :items="items" v-bind="props" />
-    <PSelectMenu placeholder="Search..." :avatar="{ src: 'https://github.com/benjamincanac.png' }" :items="items" v-bind="props" />
+    <PSelectMenu placeholder="Search..." :avatar="{ src: 'https://github.com/praburangki.png' }" :items="items" v-bind="props" />
     <PSelectMenu placeholder="Loading..." loading :items="items" v-bind="props" />
     <PSelectMenu placeholder="Loading..." loading trailing :items="items" v-bind="props" />
     <PSelectMenu

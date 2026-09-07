@@ -26,7 +26,7 @@ const items = [{
       src: 'https://github.com/J-Michalek.png',
       loading: 'lazy' as const
     }, {
-      src: 'https://github.com/benjamincanac.png',
+      src: 'https://github.com/praburangki.png',
       loading: 'lazy' as const
     }
   ]

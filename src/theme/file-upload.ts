@@ -3,18 +3,18 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative flex flex-col',
-    base: ['w-full flex-1 bg-default border border-default flex flex-col gap-2 items-stretch justify-center rounded-lg focus-visible:outline-3', options.theme.transitions && 'transition-[background]'],
+    base: ['w-full flex-1 bg-background border border-default flex flex-col gap-2 items-stretch justify-center rounded-lg focus-visible:outline-3', options.theme.transitions && 'transition-[background]'],
     wrapper: 'flex flex-col items-center justify-center text-center',
     icon: 'shrink-0',
     avatar: 'shrink-0',
-    label: 'font-medium text-default mt-2',
+    label: 'font-medium color-text mt-2',
     description: 'text-muted mt-1',
     actions: 'flex flex-wrap gap-1.5 shrink-0 mt-4',
     files: '',
     file: 'relative',
     fileLeadingAvatar: 'shrink-0',
     fileWrapper: 'flex flex-col min-w-0',
-    fileName: 'text-default truncate',
+    fileName: 'color-text truncate',
     fileSize: 'text-muted truncate',
     fileTrailingButton: '',
   },
@@ -79,7 +79,7 @@ export default (options: Required<ModuleOptions>) => ({
       outside: '',
     },
     dropzone: {
-      true: 'border-dashed data-[dragging=true]:bg-elevated/25',
+      true: 'border-dashed data-[dragging=true]:bg-background-elevated/25',
     },
     interactive: {
       true: '',
@@ -184,7 +184,7 @@ export default (options: Required<ModuleOptions>) => ({
   }, {
     interactive: true,
     disabled: false,
-    class: 'hover:bg-elevated/25',
+    class: 'hover:bg-background-elevated/25',
   }],
   defaultVariants: {
     color: 'primary',

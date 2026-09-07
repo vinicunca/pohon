@@ -24,7 +24,7 @@ describe('chatMessages', () => {
   renderEach(ChatMessages, [
     // Props
     ['with messages', { props }],
-    ['with user', { props: { ...props, user: { avatar: { src: 'https://github.com/benjamincanac.png' }, variant: 'soft', side: 'right' } } }],
+    ['with user', { props: { ...props, user: { avatar: { src: 'https://github.com/praburangki.png' }, variant: 'soft', side: 'right' } } }],
     ['with assistant', { props: { ...props, assistant: { avatar: { icon: 'i-lucide-bot' } } } }],
     ...statuses.map((status: string) => [`with status ${status}`, { props: { ...props, status } }]),
     ['with compact', { props: { ...props, compact: true } }],

@@ -8,7 +8,7 @@ const items = computed(() => [
     label: 'My account',
     type: 'label' as const,
     avatar: {
-      src: 'https://github.com/benjamincanac.png'
+      src: 'https://github.com/praburangki.png'
     }
   }],
   [{

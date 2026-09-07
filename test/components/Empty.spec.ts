@@ -20,7 +20,7 @@ describe('empty', () => {
     // Props
     ['with as', { props: { as: 'section' } }],
     ['with icon', { props: { icon: 'i-lucide-file' } }],
-    ['with avatar', { props: { avatar: { src: 'https://github.com/benjamincanac.png' } } }],
+    ['with avatar', { props: { avatar: { src: 'https://github.com/praburangki.png' } } }],
     ['with title', { props: { icon: 'i-lucide-file', title: 'Title' } }],
     ['with description', { props: { icon: 'i-lucide-file', title: 'Title', description: 'Description' } }],
     ['with actions', { props: { icon: 'i-lucide-file', title: 'Title', description: 'Description', actions: [{ icon: 'i-lucide-plus', label: 'Add' }] } }],

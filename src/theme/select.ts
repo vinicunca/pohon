@@ -11,14 +11,14 @@ export default (options: Required<ModuleOptions>) => {
       value: 'truncate pointer-events-none',
       placeholder: 'truncate text-dimmed',
       arrow: 'fill-bg stroke-default',
-      content: 'max-h-[min(15rem,var(--akar-select-content-available-height,15rem))] w-(--akar-select-trigger-width) bg-default shadow-lg rounded-md ring ring-default overflow-hidden origin-(--akar-select-content-transform-origin) pointer-events-auto flex flex-col',
+      content: 'max-h-[min(15rem,var(--akar-select-content-available-height,15rem))] w-(--akar-select-trigger-width) bg-background shadow-lg rounded-md ring ring-default overflow-hidden origin-(--akar-select-content-transform-origin) pointer-events-auto flex flex-col',
       viewport: 'relative divide-y divide-default scroll-py-1 overflow-y-auto flex-1',
       group: 'p-1 isolate',
       empty: 'text-center text-muted',
       label: 'font-600 text-highlighted',
       separator: '-mx-1 my-1 h-px bg-border',
-      item: ['group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 text-default data-highlighted:not-data-disabled:text-highlighted data-highlighted:not-data-disabled:before:bg-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-      itemLeadingIcon: ['shrink-0 text-dimmed group-data-highlighted:not-group-data-disabled:text-default', options.theme.transitions && 'transition-colors'],
+      item: ['group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+      itemLeadingIcon: ['shrink-0 text-dimmed group-data-highlighted:not-group-data-disabled:color-text', options.theme.transitions && 'transition-colors'],
       itemLeadingAvatar: 'shrink-0',
       itemLeadingAvatarSize: '',
       itemLeadingChip: 'shrink-0',
@@ -33,8 +33,8 @@ export default (options: Required<ModuleOptions>) => {
       ...fieldGroupVariant,
       variant: (prev: Record<string, string>) => ({
         ...prev,
-        outline: [prev.outline, 'hover:bg-elevated disabled:bg-default'].join(' '),
-        subtle: [prev.subtle, 'hover:bg-accented/75 disabled:bg-elevated'].join(' '),
+        outline: [prev.outline, 'hover:bg-background-elevated disabled:bg-background'].join(' '),
+        subtle: [prev.subtle, 'hover:bg-accented/75 disabled:bg-background-elevated'].join(' '),
       }),
       size: {
         xs: {

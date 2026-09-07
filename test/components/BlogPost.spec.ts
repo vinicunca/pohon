@@ -10,9 +10,9 @@ describe('blogPost', () => {
   const orientations = Object.keys(theme.variants.orientation) as any;
 
   const author1 = {
-    name: 'Benjamin Canac',
+    name: 'praburangki',
     description: 'benjamincanac',
-    avatar: { src: 'https://github.com/benjamincanac.png', alt: 'benjamincanac' },
+    avatar: { src: 'https://github.com/praburangki.png', alt: 'benjamincanac' },
   };
 
   const author2 = {

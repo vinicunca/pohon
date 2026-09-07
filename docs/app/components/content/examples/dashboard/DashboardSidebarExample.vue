@@ -77,7 +77,7 @@ const items: NavigationMenuItem[][] = [[{
     <template #footer="{ collapsed }">
       <PButton
         :avatar="{
-          src: 'https://github.com/benjamincanac.png',
+          src: 'https://github.com/praburangki.png',
           loading: 'lazy' as const
         }"
         :label="collapsed ? undefined : 'Benjamin'"

@@ -6,7 +6,7 @@ import { renderEach } from '../component-render';
 
 describe('pageLogos', () => {
   const items = [
-    { src: 'https://avatars.githubusercontent.com/u/739984?v=4', alt: 'Benjamin Canac' },
+    { src: 'https://avatars.githubusercontent.com/u/739984?v=4', alt: 'praburangki' },
     { src: 'https://avatars.githubusercontent.com/u/71938701?v=4', alt: 'Hugo Richard' },
   ];
   renderEach(PageLogos, [

@@ -19,7 +19,7 @@ const items: DropdownMenuItem[][] = [[{
   children: [
     {
       label: 'benjamincanac',
-      avatar: { src: 'https://github.com/benjamincanac.png', loading: 'lazy' as const }
+      avatar: { src: 'https://github.com/praburangki.png', loading: 'lazy' as const }
     },
     {
       label: 'HugoRCD',

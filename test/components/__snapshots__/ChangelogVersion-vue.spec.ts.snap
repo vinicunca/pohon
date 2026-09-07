@@ -4,7 +4,7 @@ exports[`changelogVersion > renders with actions slot correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -21,7 +21,7 @@ exports[`changelogVersion > renders with as correctly 1`] = `
 "<section data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -36,7 +36,7 @@ exports[`changelogVersion > renders with authors correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -44,10 +44,10 @@ exports[`changelogVersion > renders with authors correctly 1`] = `
     <!--v-if-->
     <div data-slot="footer" class="border-t border-default pt-5 flex items-center justify-between mt-5">
       <div data-slot="authors" class="flex flex-wrap gap-x-4 gap-y-1.5">
-        <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+        <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
           <div data-slot="wrapper" class="">
             <!--v-if-->
-            <p data-slot="name" class="font-medium text-highlighted text-sm">Benjamin Canac</p>
+            <p data-slot="name" class="font-medium text-highlighted text-sm">praburangki</p>
             <p data-slot="description" class="text-muted text-xs">benjamincanac</p>
           </div>
         </div>
@@ -61,7 +61,7 @@ exports[`changelogVersion > renders with authors slot correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -78,13 +78,13 @@ exports[`changelogVersion > renders with badge correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
   <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
     <div data-slot="header" class="">
-      <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md text-inverted bg-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
         <!--v-if--></span>
         <!--v-if-->
       </div>
@@ -101,13 +101,13 @@ exports[`changelogVersion > renders with badge object correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
   <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
     <div data-slot="header" class="">
-      <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary text-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary color-text-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
         <!--v-if--></span>
         <!--v-if-->
       </div>
@@ -124,7 +124,7 @@ exports[`changelogVersion > renders with badge slot correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -146,7 +146,7 @@ exports[`changelogVersion > renders with body slot correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -161,7 +161,7 @@ exports[`changelogVersion > renders with class correctly 1`] = `
 "<article data-slot="root" class="relative absolute">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -175,7 +175,7 @@ exports[`changelogVersion > renders with class correctly 1`] = `
 exports[`changelogVersion > renders with date correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0"><time datetime="2025-01-01T00:00:00.000Z" data-slot="date" class="text-sm/6 text-toned truncate">Jan 1, 2025</time>
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -197,7 +197,7 @@ exports[`changelogVersion > renders with date slot correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -220,7 +220,7 @@ exports[`changelogVersion > renders with description correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -240,7 +240,7 @@ exports[`changelogVersion > renders with description slot correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -260,7 +260,7 @@ exports[`changelogVersion > renders with description slot correctly 2`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -280,7 +280,7 @@ exports[`changelogVersion > renders with footer slot correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -295,7 +295,7 @@ exports[`changelogVersion > renders with header slot correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -310,7 +310,7 @@ exports[`changelogVersion > renders with image correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -332,7 +332,7 @@ exports[`changelogVersion > renders with image slot correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -364,7 +364,7 @@ exports[`changelogVersion > renders with title correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -386,7 +386,7 @@ exports[`changelogVersion > renders with title slot correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -408,7 +408,7 @@ exports[`changelogVersion > renders with title slot correctly 2`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -430,7 +430,7 @@ exports[`changelogVersion > renders with to & image correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -450,7 +450,7 @@ exports[`changelogVersion > renders with to correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>
@@ -465,7 +465,7 @@ exports[`changelogVersion > renders with ui correctly 1`] = `
 "<article data-slot="root" class="relative">
   <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0">
     <!--v-if-->
-    <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+    <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
       <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
     </div>
   </div>

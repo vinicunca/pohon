@@ -13,7 +13,7 @@ provide('components', components)
 <template>
   <PApp>
     <PDashboardGroup unit="rem">
-      <PDashboardSidebar class="bg-elevated/25">
+      <PDashboardSidebar class="bg-background-elevated/25">
         <template #header>
           <NuxtLink to="/" class="text-highlighted">
             <Logo class="h-5 w-auto" />

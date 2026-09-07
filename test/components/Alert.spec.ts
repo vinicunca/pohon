@@ -15,7 +15,7 @@ describe('alert', () => {
     ['with title', { props }],
     ['with description', { props: { ...props, description: 'Description' } }],
     ['with icon', { props: { ...props, icon: 'i-lucide-lightbulb' } }],
-    ['with avatar', { props: { ...props, avatar: { src: 'https://github.com/benjamincanac.png' } } }],
+    ['with avatar', { props: { ...props, avatar: { src: 'https://github.com/praburangki.png' } } }],
     ['with actions', { props: { ...props, actions: [{ label: 'Action' }] } }],
     ['with orientation vertical', { props: { ...props, icon: 'i-lucide-lightbulb', description: 'This is a description', actions: [{ label: 'Action' }], orientation: 'vertical' } }],
     ['with orientation horizontal', { props: { ...props, icon: 'i-lucide-lightbulb', description: 'This is a description', actions: [{ label: 'Action' }], orientation: 'horizontal' } }],
@@ -42,8 +42,8 @@ describe('alert', () => {
         actions: [{ label: 'Action' }],
         close: true,
         avatar: {
-          src: 'https://github.com/benjamincanac.png',
-          alt: 'Benjamin Canac',
+          src: 'https://github.com/praburangki.png',
+          alt: 'praburangki',
         },
       },
     });

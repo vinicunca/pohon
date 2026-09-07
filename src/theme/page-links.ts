@@ -17,7 +17,7 @@ export default (options: Required<ModuleOptions>) => ({
         link: 'text-primary font-medium',
       },
       false: {
-        link: ['text-muted hover:text-default', options.theme.transitions && 'transition-colors'],
+        link: ['text-muted hover:color-text', options.theme.transitions && 'transition-colors'],
       },
     },
   },

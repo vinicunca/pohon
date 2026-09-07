@@ -26,7 +26,7 @@ export default (options: Required<ModuleOptions>) => ({
     itemWrapper: 'flex-1 flex flex-col text-start min-w-0',
     itemLabel: 'truncate space-x-1 text-dimmed',
     itemLabelBase: 'text-highlighted [&>mark]:text-primary [&>mark]:bg-primary/15',
-    itemLabelPrefix: 'text-default',
+    itemLabelPrefix: 'color-text',
     itemLabelSuffix: 'text-dimmed [&>mark]:text-primary [&>mark]:bg-primary/15',
     itemDescription: 'truncate text-muted [&>mark]:text-primary [&>mark]:bg-primary/15',
   },
@@ -118,12 +118,12 @@ export default (options: Required<ModuleOptions>) => ({
     },
     active: {
       true: {
-        item: 'text-highlighted before:bg-elevated',
-        itemLeadingIcon: 'text-default',
+        item: 'text-highlighted before:bg-background-elevated',
+        itemLeadingIcon: 'color-text',
       },
       false: {
-        item: ['text-default data-highlighted:not-data-disabled:text-highlighted data-highlighted:not-data-disabled:before:bg-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-        itemLeadingIcon: ['text-dimmed group-data-highlighted:not-group-data-disabled:text-default', options.theme.transitions && 'transition-colors'],
+        item: ['color-text data-highlighted:not-data-disabled:text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+        itemLeadingIcon: ['text-dimmed group-data-highlighted:not-group-data-disabled:color-text', options.theme.transitions && 'transition-colors'],
       },
     },
     loading: {

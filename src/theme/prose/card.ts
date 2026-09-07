@@ -2,7 +2,7 @@ import type { ModuleOptions } from '../../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    base: ['group relative block my-5 p-4 sm:p-6 border border-default rounded-md bg-default', options.theme.transitions && 'transition-colors'],
+    base: ['group relative block my-5 p-4 sm:p-6 border border-default rounded-md bg-background', options.theme.transitions && 'transition-colors'],
     icon: 'size-6 mb-2 block',
     title: 'text-highlighted font-600',
     description: 'text-[15px] text-muted *:first:mt-0 *:last:mb-0 *:my-1',
@@ -37,7 +37,7 @@ export default (options: Required<ModuleOptions>) => ({
     color: 'neutral',
     to: true,
     class: {
-      base: 'hover:bg-elevated/50 hover:border-inverted outline-inverted/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-inverted',
+      base: 'hover:bg-background-elevated/50 hover:border-inverted outline-inverted/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-inverted',
       externalIcon: 'group-hover:text-highlighted',
     },
   }],

@@ -26,7 +26,7 @@ parts:
   role: 'user'
   id: '1'
   avatar:
-  src: 'https://github.com/benjamincanac.png'
+  src: 'https://github.com/praburangki.png'
   loading: lazy
 
 ---
@@ -192,7 +192,7 @@ ignore:
 - avatar.loading
   props:
   avatar:
-  src: 'https://github.com/benjamincanac.png'
+  src: 'https://github.com/praburangki.png'
   loading: lazy
   variant: 'soft'
   side: 'right'

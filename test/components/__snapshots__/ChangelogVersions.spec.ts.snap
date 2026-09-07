@@ -10,13 +10,13 @@ exports[`changelogVersions > renders with as correctly 1`] = `
     <!---->
     <article data-slot="root" class="relative">
       <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0"><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 text-toned truncate">Dec 13, 2024</time>
-        <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+        <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
           <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
         </div>
       </div>
       <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
         <div data-slot="header" class="">
-          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md text-inverted bg-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
             <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 text-toned truncate lg:hidden">Dec 13, 2024</time>
           </div>
           <h2 data-slot="title" class="relative text-xl text-pretty font-600 text-highlighted">
@@ -29,7 +29,7 @@ exports[`changelogVersions > renders with as correctly 1`] = `
         </div>
         <div data-slot="footer" class="border-t border-default pt-5 flex items-center justify-between mt-5">
           <div data-slot="authors" class="flex flex-wrap gap-x-4 gap-y-1.5">
-            <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+            <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
               <div data-slot="wrapper" class="">
                 <!--v-if-->
                 <p data-slot="name" class="font-medium text-highlighted text-sm">benjamincanac</p>
@@ -54,13 +54,13 @@ exports[`changelogVersions > renders with class correctly 1`] = `
     <!---->
     <article data-slot="root" class="relative">
       <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0"><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 text-toned truncate">Dec 13, 2024</time>
-        <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+        <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
           <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
         </div>
       </div>
       <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
         <div data-slot="header" class="">
-          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md text-inverted bg-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
             <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 text-toned truncate lg:hidden">Dec 13, 2024</time>
           </div>
           <h2 data-slot="title" class="relative text-xl text-pretty font-600 text-highlighted">
@@ -73,7 +73,7 @@ exports[`changelogVersions > renders with class correctly 1`] = `
         </div>
         <div data-slot="footer" class="border-t border-default pt-5 flex items-center justify-between mt-5">
           <div data-slot="authors" class="flex flex-wrap gap-x-4 gap-y-1.5">
-            <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+            <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
               <div data-slot="wrapper" class="">
                 <!--v-if-->
                 <p data-slot="name" class="font-medium text-highlighted text-sm">benjamincanac</p>
@@ -105,13 +105,13 @@ exports[`changelogVersions > renders with indicator slot correctly 1`] = `
     <!---->
     <article data-slot="root" class="relative">
       <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0"><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 text-toned truncate">Dec 13, 2024</time>
-        <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+        <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
           <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
         </div>
       </div>
       <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
         <div data-slot="header" class="">
-          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md text-inverted bg-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
             <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 text-toned truncate lg:hidden">Dec 13, 2024</time>
           </div>
           <h2 data-slot="title" class="relative text-xl text-pretty font-600 text-highlighted">
@@ -124,7 +124,7 @@ exports[`changelogVersions > renders with indicator slot correctly 1`] = `
         </div>
         <div data-slot="footer" class="border-t border-default pt-5 flex items-center justify-between mt-5">
           <div data-slot="authors" class="flex flex-wrap gap-x-4 gap-y-1.5">
-            <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+            <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
               <div data-slot="wrapper" class="">
                 <!--v-if-->
                 <p data-slot="name" class="font-medium text-highlighted text-sm">benjamincanac</p>
@@ -149,13 +149,13 @@ exports[`changelogVersions > renders with ui correctly 1`] = `
     <!---->
     <article data-slot="root" class="relative">
       <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0"><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 text-toned truncate">Dec 13, 2024</time>
-        <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+        <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
           <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
         </div>
       </div>
       <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
         <div data-slot="header" class="">
-          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md text-inverted bg-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
             <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 text-toned truncate lg:hidden">Dec 13, 2024</time>
           </div>
           <h2 data-slot="title" class="relative text-xl text-pretty font-600 text-highlighted">
@@ -168,7 +168,7 @@ exports[`changelogVersions > renders with ui correctly 1`] = `
         </div>
         <div data-slot="footer" class="border-t border-default pt-5 flex items-center justify-between mt-5">
           <div data-slot="authors" class="flex flex-wrap gap-x-4 gap-y-1.5">
-            <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+            <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
               <div data-slot="wrapper" class="">
                 <!--v-if-->
                 <p data-slot="name" class="font-medium text-highlighted text-sm">benjamincanac</p>
@@ -193,13 +193,13 @@ exports[`changelogVersions > renders with versions correctly 1`] = `
     <!---->
     <article data-slot="root" class="relative">
       <div data-slot="indicator" class="absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0"><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 text-toned truncate">Dec 13, 2024</time>
-        <div data-slot="dot" class="size-4 rounded-full bg-default ring ring-default flex items-center justify-center my-1">
+        <div data-slot="dot" class="size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1">
           <div data-slot="dotInner" class="size-2 rounded-full bg-primary"></div>
         </div>
       </div>
       <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
         <div data-slot="header" class="">
-          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md text-inverted bg-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
             <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 text-toned truncate lg:hidden">Dec 13, 2024</time>
           </div>
           <h2 data-slot="title" class="relative text-xl text-pretty font-600 text-highlighted">
@@ -212,7 +212,7 @@ exports[`changelogVersions > renders with versions correctly 1`] = `
         </div>
         <div data-slot="footer" class="border-t border-default pt-5 flex items-center justify-between mt-5">
           <div data-slot="authors" class="flex flex-wrap gap-x-4 gap-y-1.5">
-            <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+            <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
               <div data-slot="wrapper" class="">
                 <!--v-if-->
                 <p data-slot="name" class="font-medium text-highlighted text-sm">benjamincanac</p>
@@ -237,7 +237,7 @@ exports[`changelogVersions > renders without indicator correctly 1`] = `
       <!--v-if-->
       <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
         <div data-slot="header" class="">
-          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md text-inverted bg-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
             <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 text-toned truncate">Dec 13, 2024</time>
           </div>
           <h2 data-slot="title" class="relative text-xl text-pretty font-600 text-highlighted">
@@ -250,7 +250,7 @@ exports[`changelogVersions > renders without indicator correctly 1`] = `
         </div>
         <div data-slot="footer" class="border-t border-default pt-5 flex items-center justify-between mt-5">
           <div data-slot="authors" class="flex flex-wrap gap-x-4 gap-y-1.5">
-            <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-elevated size-8 text-base shrink-0"><img src="https://github.com/benjamincanac.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+            <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
               <div data-slot="wrapper" class="">
                 <!--v-if-->
                 <p data-slot="name" class="font-medium text-highlighted text-sm">benjamincanac</p>

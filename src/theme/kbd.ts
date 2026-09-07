@@ -22,7 +22,7 @@ export default (options: Required<ModuleOptions>) => ({
   compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
     color,
     variant: 'solid',
-    class: `text-inverted bg-${color}`,
+    class: `color-text-inverted bg-${color}`,
   })), ...(options.theme.colors || []).map((color: string) => ({
     color,
     variant: 'outline',
@@ -38,19 +38,19 @@ export default (options: Required<ModuleOptions>) => ({
   })), {
     color: 'neutral',
     variant: 'solid',
-    class: 'text-inverted bg-inverted',
+    class: 'color-text-inverted bg-background-inverted',
   }, {
     color: 'neutral',
     variant: 'outline',
-    class: 'ring ring-inset ring-accented text-default bg-default',
+    class: 'ring ring-inset ring-ring-accented color-text bg-background',
   }, {
     color: 'neutral',
     variant: 'soft',
-    class: 'text-default bg-elevated',
+    class: 'color-text bg-background-elevated',
   }, {
     color: 'neutral',
     variant: 'subtle',
-    class: 'ring ring-inset ring-accented text-default bg-elevated',
+    class: 'ring ring-inset ring-ring-accented color-text bg-background-elevated',
   }],
   defaultVariants: {
     variant: 'outline',

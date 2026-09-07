@@ -93,7 +93,7 @@ export default (options: Required<ModuleOptions>) => ({
       color,
       variant: 'solid',
       class: {
-        content: `bg-${color} text-inverted`,
+        content: `bg-${color} color-text-inverted`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
@@ -128,28 +128,28 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'solid',
       class: {
-        content: 'bg-inverted text-inverted',
+        content: 'bg-background-inverted color-text-inverted',
       },
     },
     {
       color: 'neutral',
       variant: 'outline',
       class: {
-        content: 'bg-default ring ring-default',
+        content: 'bg-background ring ring-default',
       },
     },
     {
       color: 'neutral',
       variant: 'soft',
       class: {
-        content: 'bg-elevated/50',
+        content: 'bg-background-elevated/50',
       },
     },
     {
       color: 'neutral',
       variant: 'subtle',
       class: {
-        content: 'bg-elevated/50 ring ring-default',
+        content: 'bg-background-elevated/50 ring ring-default',
       },
     },
   ],

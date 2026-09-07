@@ -50,7 +50,7 @@ const dropdownItems: DropdownMenuItem[][] = [
   <PNavigationMenu
     orientation="vertical"
     :items="items"
-    :ui="{ link: 'overflow-hidden has-data-[state=open]:before:bg-elevated/50' }"
+    :ui="{ link: 'overflow-hidden has-data-[state=open]:before:bg-background-elevated/50' }"
     class="w-48"
   >
     <template #personal-label-trailing>

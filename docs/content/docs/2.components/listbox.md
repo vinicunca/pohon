@@ -20,57 +20,61 @@ Use the `v-model` directive to control the value of the Listbox or the `default-
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - modelValue.label
-  - modelValue.icon
-  - modelValue.value
-  - items
-external:
-  - items
-  - modelValue
-externalTypes:
-  - ListboxItem[]
-props:
+
+- class
+  ignore:
+- modelValue.label
+- modelValue.icon
+- modelValue.value
+- items
+  external:
+- items
+- modelValue
+  externalTypes:
+- ListboxItem[]
+  props:
   modelValue:
-    label: 'France'
+  label: 'France'
+  icon: 'i-lucide-map-pin'
+  value: 'FR'
+  items:
+  - label: 'France'
     icon: 'i-lucide-map-pin'
     value: 'FR'
-  items:
-    - label: 'France'
-      icon: 'i-lucide-map-pin'
-      value: 'FR'
-    - label: 'Germany'
-      icon: 'i-lucide-map-pin'
-      value: 'DE'
-    - label: 'Italy'
-      icon: 'i-lucide-map-pin'
-      value: 'IT'
-    - label: 'Spain'
-      icon: 'i-lucide-map-pin'
-      value: 'ES'
-    - label: 'Netherlands'
-      icon: 'i-lucide-map-pin'
-      value: 'NL'
-    - label: 'Poland'
-      icon: 'i-lucide-map-pin'
-      value: 'PL'
-    - label: 'Belgium'
-      icon: 'i-lucide-map-pin'
-      value: 'BE'
-    - label: 'Portugal'
-      icon: 'i-lucide-map-pin'
-      value: 'PT'
-    - label: 'Austria'
-      icon: 'i-lucide-map-pin'
-      value: 'AT'
-    - label: 'Sweden'
-      icon: 'i-lucide-map-pin'
-      value: 'SE'
-  class: 'w-full'
+  - label: 'Germany'
+    icon: 'i-lucide-map-pin'
+    value: 'DE'
+  - label: 'Italy'
+    icon: 'i-lucide-map-pin'
+    value: 'IT'
+  - label: 'Spain'
+    icon: 'i-lucide-map-pin'
+    value: 'ES'
+  - label: 'Netherlands'
+    icon: 'i-lucide-map-pin'
+    value: 'NL'
+  - label: 'Poland'
+    icon: 'i-lucide-map-pin'
+    value: 'PL'
+  - label: 'Belgium'
+    icon: 'i-lucide-map-pin'
+    value: 'BE'
+  - label: 'Portugal'
+    icon: 'i-lucide-map-pin'
+    value: 'PT'
+  - label: 'Austria'
+    icon: 'i-lucide-map-pin'
+    value: 'AT'
+  - label: 'Sweden'
+    icon: 'i-lucide-map-pin'
+    value: 'SE'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Items
@@ -90,69 +94,77 @@ Use the `items` prop as an array of objects with the following properties:
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - ListboxItem[]
-props:
+
+- class
+  ignore:
+- items
+  external:
+- items
+  externalTypes:
+- ListboxItem[]
+  props:
   items:
-    - label: 'France'
-      description: 'The Hexagon'
-      icon: 'i-lucide-map-pin'
-      value: 'FR'
-    - label: 'Germany'
-      description: 'The Federal Republic'
-      icon: 'i-lucide-map-pin'
-      value: 'DE'
-    - label: 'Italy'
-      description: 'The Boot'
-      icon: 'i-lucide-map-pin'
-      value: 'IT'
-    - label: 'Spain'
-      description: 'The Bull Skin'
-      icon: 'i-lucide-map-pin'
-      value: 'ES'
-  class: 'w-full'
+  - label: 'France'
+    description: 'The Hexagon'
+    icon: 'i-lucide-map-pin'
+    value: 'FR'
+  - label: 'Germany'
+    description: 'The Federal Republic'
+    icon: 'i-lucide-map-pin'
+    value: 'DE'
+  - label: 'Italy'
+    description: 'The Boot'
+    icon: 'i-lucide-map-pin'
+    value: 'IT'
+  - label: 'Spain'
+    description: 'The Bull Skin'
+    icon: 'i-lucide-map-pin'
+    value: 'ES'
+    class: 'w-full'
+
 ---
+
 ::
 
 You can also pass an array of arrays to the `items` prop to display separated groups of items.
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - ListboxItem[][]
-props:
+
+- class
+  ignore:
+- items
+  external:
+- items
+  externalTypes:
+- ListboxItem[][]
+  props:
   items:
-    - - label: 'France'
-        icon: 'i-lucide-map-pin'
-        value: 'FR'
-      - label: 'Germany'
-        icon: 'i-lucide-map-pin'
-        value: 'DE'
-      - label: 'Italy'
-        icon: 'i-lucide-map-pin'
-        value: 'IT'
-    - - label: 'Brazil'
-        icon: 'i-lucide-map-pin'
-        value: 'BR'
-      - label: 'Argentina'
-        icon: 'i-lucide-map-pin'
-        value: 'AR'
-  class: 'w-full'
+  - - label: 'France'
+      icon: 'i-lucide-map-pin'
+      value: 'FR'
+    - label: 'Germany'
+      icon: 'i-lucide-map-pin'
+      value: 'DE'
+    - label: 'Italy'
+      icon: 'i-lucide-map-pin'
+      value: 'IT'
+  - - label: 'Brazil'
+      icon: 'i-lucide-map-pin'
+      value: 'BR'
+    - label: 'Argentina'
+      icon: 'i-lucide-map-pin'
+      value: 'AR'
+      class: 'w-full'
+
 ---
+
 ::
 
 ### Multiple
@@ -161,33 +173,37 @@ Use the `multiple` prop to allow selecting multiple items. When enabled, the `v-
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - items
-  - multiple
-external:
-  - items
-externalTypes:
-  - ListboxItem[]
-props:
+
+- class
+  ignore:
+- items
+- multiple
+  external:
+- items
+  externalTypes:
+- ListboxItem[]
+  props:
   multiple: true
   items:
-    - label: 'France'
-      icon: 'i-lucide-map-pin'
-      value: 'FR'
-    - label: 'Germany'
-      icon: 'i-lucide-map-pin'
-      value: 'DE'
-    - label: 'Italy'
-      icon: 'i-lucide-map-pin'
-      value: 'IT'
-    - label: 'Spain'
-      icon: 'i-lucide-map-pin'
-      value: 'ES'
-  class: 'w-full'
+  - label: 'France'
+    icon: 'i-lucide-map-pin'
+    value: 'FR'
+  - label: 'Germany'
+    icon: 'i-lucide-map-pin'
+    value: 'DE'
+  - label: 'Italy'
+    icon: 'i-lucide-map-pin'
+    value: 'IT'
+  - label: 'Spain'
+    icon: 'i-lucide-map-pin'
+    value: 'ES'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Value Key
@@ -196,35 +212,39 @@ You can choose to bind a single property of the object rather than the whole obj
 
 ::component-code
 ---
+
 collapse: true
 ignore:
-  - modelValue
-  - valueKey
-  - items
-  - class
-external:
-  - items
-  - modelValue
-externalTypes:
-  - ListboxItem[]
-props:
+
+- modelValue
+- valueKey
+- items
+- class
+  external:
+- items
+- modelValue
+  externalTypes:
+- ListboxItem[]
+  props:
   modelValue: 'FR'
   valueKey: 'value'
   items:
-    - label: 'France'
-      icon: 'i-lucide-map-pin'
-      value: 'FR'
-    - label: 'Germany'
-      icon: 'i-lucide-map-pin'
-      value: 'DE'
-    - label: 'Italy'
-      icon: 'i-lucide-map-pin'
-      value: 'IT'
-    - label: 'Spain'
-      icon: 'i-lucide-map-pin'
-      value: 'ES'
-  class: 'w-full'
+  - label: 'France'
+    icon: 'i-lucide-map-pin'
+    value: 'FR'
+  - label: 'Germany'
+    icon: 'i-lucide-map-pin'
+    value: 'DE'
+  - label: 'Italy'
+    icon: 'i-lucide-map-pin'
+    value: 'IT'
+  - label: 'Spain'
+    icon: 'i-lucide-map-pin'
+    value: 'ES'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Filter
@@ -233,40 +253,44 @@ Use the `filter` prop to display a filter input or pass an object to customize t
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - ListboxItem[]
-props:
+
+- class
+  ignore:
+- items
+  external:
+- items
+  externalTypes:
+- ListboxItem[]
+  props:
   filter:
-    placeholder: 'Filter...'
-    icon: 'i-lucide-search'
+  placeholder: 'Filter...'
+  icon: 'i-lucide-search'
   items:
-    - label: 'France'
-      icon: 'i-lucide-map-pin'
-      value: 'FR'
-    - label: 'Germany'
-      icon: 'i-lucide-map-pin'
-      value: 'DE'
-    - label: 'Italy'
-      icon: 'i-lucide-map-pin'
-      value: 'IT'
-    - label: 'Spain'
-      icon: 'i-lucide-map-pin'
-      value: 'ES'
-    - label: 'Netherlands'
-      icon: 'i-lucide-map-pin'
-      value: 'NL'
-    - label: 'Poland'
-      icon: 'i-lucide-map-pin'
-      value: 'PL'
-  class: 'w-full'
+  - label: 'France'
+    icon: 'i-lucide-map-pin'
+    value: 'FR'
+  - label: 'Germany'
+    icon: 'i-lucide-map-pin'
+    value: 'DE'
+  - label: 'Italy'
+    icon: 'i-lucide-map-pin'
+    value: 'IT'
+  - label: 'Spain'
+    icon: 'i-lucide-map-pin'
+    value: 'ES'
+  - label: 'Netherlands'
+    icon: 'i-lucide-map-pin'
+    value: 'NL'
+  - label: 'Poland'
+    icon: 'i-lucide-map-pin'
+    value: 'PL'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Selected Icon
@@ -275,36 +299,40 @@ Use the `selected-icon` prop to customize the icon when an item is selected. Def
 
 ::component-code
 ---
+
 collapse: true
 ignore:
-  - items
-  - modelValue
-  - valueKey
-  - class
-external:
-  - items
-  - modelValue
-externalTypes:
-  - ListboxItem[]
-props:
+
+- items
+- modelValue
+- valueKey
+- class
+  external:
+- items
+- modelValue
+  externalTypes:
+- ListboxItem[]
+  props:
   modelValue: 'FR'
   selectedIcon: 'i-lucide-flame'
   valueKey: 'value'
   items:
-    - label: 'France'
-      icon: 'i-lucide-map-pin'
-      value: 'FR'
-    - label: 'Germany'
-      icon: 'i-lucide-map-pin'
-      value: 'DE'
-    - label: 'Italy'
-      icon: 'i-lucide-map-pin'
-      value: 'IT'
-    - label: 'Spain'
-      icon: 'i-lucide-map-pin'
-      value: 'ES'
-  class: 'w-full'
+  - label: 'France'
+    icon: 'i-lucide-map-pin'
+    value: 'FR'
+  - label: 'Germany'
+    icon: 'i-lucide-map-pin'
+    value: 'DE'
+  - label: 'Italy'
+    icon: 'i-lucide-map-pin'
+    value: 'IT'
+  - label: 'Spain'
+    icon: 'i-lucide-map-pin'
+    value: 'ES'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Size
@@ -313,32 +341,36 @@ Use the `size` prop to change the size of the Listbox.
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - ListboxItem[]
-props:
+
+- class
+  ignore:
+- items
+  external:
+- items
+  externalTypes:
+- ListboxItem[]
+  props:
   size: xl
   items:
-    - label: 'France'
-      icon: 'i-lucide-map-pin'
-      value: 'FR'
-    - label: 'Germany'
-      icon: 'i-lucide-map-pin'
-      value: 'DE'
-    - label: 'Italy'
-      icon: 'i-lucide-map-pin'
-      value: 'IT'
-    - label: 'Spain'
-      icon: 'i-lucide-map-pin'
-      value: 'ES'
-  class: 'w-full'
+  - label: 'France'
+    icon: 'i-lucide-map-pin'
+    value: 'FR'
+  - label: 'Germany'
+    icon: 'i-lucide-map-pin'
+    value: 'DE'
+  - label: 'Italy'
+    icon: 'i-lucide-map-pin'
+    value: 'IT'
+  - label: 'Spain'
+    icon: 'i-lucide-map-pin'
+    value: 'ES'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Loading
@@ -347,26 +379,30 @@ Use the `loading` prop to display a loading indicator. Use the `loading-icon` pr
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - ListboxItem[]
-props:
+
+- class
+  ignore:
+- items
+  external:
+- items
+  externalTypes:
+- ListboxItem[]
+  props:
   loading: true
   items:
-    - label: 'France'
-      icon: 'i-lucide-map-pin'
-      value: 'FR'
-    - label: 'Germany'
-      icon: 'i-lucide-map-pin'
-      value: 'DE'
-  class: 'w-full'
+  - label: 'France'
+    icon: 'i-lucide-map-pin'
+    value: 'FR'
+  - label: 'Germany'
+    icon: 'i-lucide-map-pin'
+    value: 'DE'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Disabled
@@ -375,32 +411,36 @@ Use the `disabled` prop to prevent any user interaction with the Listbox.
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - ListboxItem[]
-props:
+
+- class
+  ignore:
+- items
+  external:
+- items
+  externalTypes:
+- ListboxItem[]
+  props:
   disabled: true
   items:
-    - label: 'France'
-      icon: 'i-lucide-map-pin'
-      value: 'FR'
-    - label: 'Germany'
-      icon: 'i-lucide-map-pin'
-      value: 'DE'
-    - label: 'Italy'
-      icon: 'i-lucide-map-pin'
-      value: 'IT'
-    - label: 'Spain'
-      icon: 'i-lucide-map-pin'
-      value: 'ES'
-  class: 'w-full'
+  - label: 'France'
+    icon: 'i-lucide-map-pin'
+    value: 'FR'
+  - label: 'Germany'
+    icon: 'i-lucide-map-pin'
+    value: 'DE'
+  - label: 'Italy'
+    icon: 'i-lucide-map-pin'
+    value: 'IT'
+  - label: 'Spain'
+    icon: 'i-lucide-map-pin'
+    value: 'ES'
+    class: 'w-full'
+
 ---
+
 ::
 
 ## Examples
@@ -411,33 +451,37 @@ You can use the `type` property with `separator` to display a separator between 
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - ListboxItem[][]
-props:
+
+- class
+  ignore:
+- items
+  external:
+- items
+  externalTypes:
+- ListboxItem[][]
+  props:
   items:
-    - - type: 'label'
-        label: 'Fruits'
-      - label: 'Apple'
-      - label: 'Banana'
-      - label: 'Blueberry'
-      - label: 'Grapes'
-      - label: 'Pineapple'
-    - - type: 'label'
-        label: 'Vegetables'
-      - label: 'Aubergine'
-      - label: 'Broccoli'
-      - label: 'Carrot'
-      - label: 'Courgette'
-      - label: 'Leek'
-  class: 'w-full'
+  - - type: 'label'
+      label: 'Fruits'
+    - label: 'Apple'
+    - label: 'Banana'
+    - label: 'Blueberry'
+    - label: 'Grapes'
+    - label: 'Pineapple'
+  - - type: 'label'
+      label: 'Vegetables'
+    - label: 'Aubergine'
+    - label: 'Broccoli'
+    - label: 'Carrot'
+    - label: 'Courgette'
+    - label: 'Leek'
+      class: 'w-full'
+
 ---
+
 ::
 
 ::note
@@ -450,31 +494,35 @@ You can use the `icon` property to display an [Icon](/docs/components/icon) insi
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - ListboxItem[]
-props:
+
+- class
+  ignore:
+- items
+  external:
+- items
+  externalTypes:
+- ListboxItem[]
+  props:
   items:
-    - label: 'Backlog'
-      icon: 'i-lucide-circle-help'
-      value: 'backlog'
-    - label: 'Todo'
-      icon: 'i-lucide-circle-plus'
-      value: 'todo'
-    - label: 'In Progress'
-      icon: 'i-lucide-circle-arrow-up'
-      value: 'in_progress'
-    - label: 'Done'
-      icon: 'i-lucide-circle-check'
-      value: 'done'
-  class: 'w-full'
+  - label: 'Backlog'
+    icon: 'i-lucide-circle-help'
+    value: 'backlog'
+  - label: 'Todo'
+    icon: 'i-lucide-circle-plus'
+    value: 'todo'
+  - label: 'In Progress'
+    icon: 'i-lucide-circle-arrow-up'
+    value: 'in_progress'
+  - label: 'Done'
+    icon: 'i-lucide-circle-check'
+    value: 'done'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### With avatar in items
@@ -483,31 +531,35 @@ You can use the `avatar` property to display an [Avatar](/docs/components/avatar
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - ListboxItem[]
-props:
+
+- class
+  ignore:
+- items
+  external:
+- items
+  externalTypes:
+- ListboxItem[]
+  props:
   items:
-    - label: 'benjamincanac'
-      avatar:
-        src: 'https://github.com/benjamincanac.png'
-    - label: 'romhml'
-      avatar:
-        src: 'https://github.com/romhml.png'
-    - label: 'atinux'
-      avatar:
-        src: 'https://github.com/atinux.png'
-    - label: 'HugoRCD'
-      avatar:
-        src: 'https://github.com/HugoRCD.png'
-  class: 'w-full'
+  - label: 'benjamincanac'
+    avatar:
+    src: 'https://github.com/praburangki.png'
+  - label: 'romhml'
+    avatar:
+    src: 'https://github.com/romhml.png'
+  - label: 'atinux'
+    avatar:
+    src: 'https://github.com/atinux.png'
+  - label: 'HugoRCD'
+    avatar:
+    src: 'https://github.com/HugoRCD.png'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### With chip in items
@@ -516,28 +568,32 @@ You can use the `chip` property to display a [Chip](/docs/components/chip) insid
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - ListboxItem[]
-props:
+
+- class
+  ignore:
+- items
+  external:
+- items
+  externalTypes:
+- ListboxItem[]
+  props:
   items:
-    - label: 'bug'
-      chip:
-        color: 'error'
-    - label: 'feature'
-      chip:
-        color: 'success'
-    - label: 'enhancement'
-      chip:
-        color: 'info'
-  class: 'w-full'
+  - label: 'bug'
+    chip:
+    color: 'error'
+  - label: 'feature'
+    chip:
+    color: 'success'
+  - label: 'enhancement'
+    chip:
+    color: 'info'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### With description in items
@@ -546,35 +602,39 @@ You can use the `description` property to display additional text below the labe
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - ListboxItem[]
-props:
+
+- class
+  ignore:
+- items
+  external:
+- items
+  externalTypes:
+- ListboxItem[]
+  props:
   items:
-    - label: 'France'
-      description: 'The Hexagon'
-      icon: 'i-lucide-map-pin'
-      value: 'FR'
-    - label: 'Germany'
-      description: 'The Federal Republic'
-      icon: 'i-lucide-map-pin'
-      value: 'DE'
-    - label: 'Italy'
-      description: 'The Boot'
-      icon: 'i-lucide-map-pin'
-      value: 'IT'
-    - label: 'Spain'
-      description: 'The Bull Skin'
-      icon: 'i-lucide-map-pin'
-      value: 'ES'
-  class: 'w-full'
+  - label: 'France'
+    description: 'The Hexagon'
+    icon: 'i-lucide-map-pin'
+    value: 'FR'
+  - label: 'Germany'
+    description: 'The Federal Republic'
+    icon: 'i-lucide-map-pin'
+    value: 'DE'
+  - label: 'Italy'
+    description: 'The Boot'
+    icon: 'i-lucide-map-pin'
+    value: 'IT'
+  - label: 'Spain'
+    description: 'The Bull Skin'
+    icon: 'i-lucide-map-pin'
+    value: 'ES'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Control selected item(s)
@@ -583,9 +643,11 @@ You can control the selected item by using the `default-value` prop or the `v-mo
 
 ::component-example
 ---
+
 name: 'listbox-model-value-example'
 collapse: true
 ---
+
 ::
 
 ### Control search term
@@ -594,8 +656,10 @@ Use the `v-model:search-term` directive to control the search term.
 
 ::component-example
 ---
+
 name: 'listbox-search-term-example'
 ---
+
 ::
 
 ### With ignore filter
@@ -604,9 +668,11 @@ Set the `ignore-filter` prop to `true` to disable the internal search and use yo
 
 ::component-example
 ---
+
 collapse: true
 name: 'listbox-ignore-filter-example'
 ---
+
 ::
 
 ::note
@@ -619,9 +685,11 @@ Use the `filter-fields` prop with an array of fields to filter on. Defaults to `
 
 ::component-example
 ---
+
 collapse: true
 name: 'listbox-filter-fields-example'
 ---
+
 ::
 
 ### With virtualization
@@ -630,9 +698,11 @@ Use the `virtualize` prop to enable virtualization for large lists as a boolean 
 
 ::component-example
 ---
+
 name: 'listbox-virtualize-example'
 collapse: true
 ---
+
 ::
 
 ### As a transfer list
@@ -641,9 +711,11 @@ You can compose two Listbox components with [Button](/docs/components/button) co
 
 ::component-example
 ---
+
 name: 'listbox-transfer-list-example'
 collapse: true
 ---
+
 ::
 
 ## API

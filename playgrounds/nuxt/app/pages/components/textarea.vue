@@ -30,7 +30,7 @@ const value = ref('Value')
     <PTextarea icon="i-lucide-search" placeholder="Search..." :rows="1" v-bind="props" />
     <PTextarea icon="i-lucide-search" trailing placeholder="Search..." :rows="1" v-bind="props" />
     <PTextarea
-      :avatar="{ src: 'https://github.com/benjamincanac.png' }"
+      :avatar="{ src: 'https://github.com/praburangki.png' }"
       icon="i-lucide-search"
       trailing
       placeholder="Search..."

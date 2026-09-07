@@ -6,9 +6,9 @@ export default (options: Required<ModuleOptions>) => ({
     base: 'min-w-full overflow-clip',
     caption: 'sr-only',
     thead: 'relative',
-    tbody: 'isolate [&>tr]:data-[selectable=true]:hover:bg-elevated/50 [&>tr]:data-[selectable=true]:outline-primary/25 [&>tr]:data-[selectable=true]:focus-visible:outline-3 divide-y divide-default',
+    tbody: 'isolate [&>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&>tr]:data-[selectable=true]:outline-primary/25 [&>tr]:data-[selectable=true]:focus-visible:outline-3 divide-y divide-default',
     tfoot: 'relative',
-    tr: 'data-[selected=true]:bg-elevated/50',
+    tr: 'data-[selected=true]:bg-background-elevated/50',
     th: 'px-4 py-3.5 text-sm text-highlighted text-start font-600 [&:has([role=checkbox])]:pe-0',
     td: 'p-4 text-sm text-muted whitespace-nowrap [&:has([role=checkbox])]:pe-0',
     separator: 'absolute z-1 start-0 w-full h-px bg-(--ui-border-accented)',
@@ -18,20 +18,20 @@ export default (options: Required<ModuleOptions>) => ({
   variants: {
     pinned: {
       true: {
-        th: 'sticky bg-default/75 z-1',
-        td: 'sticky bg-default/75 z-1',
+        th: 'sticky bg-background/75 z-1',
+        td: 'sticky bg-background/75 z-1',
       },
     },
     sticky: {
       true: {
-        thead: 'sticky top-0 inset-x-0 bg-default/75 backdrop-blur-sm z-1',
-        tfoot: 'sticky bottom-0 inset-x-0 bg-default/75 backdrop-blur-sm z-1',
+        thead: 'sticky top-0 inset-x-0 bg-background/75 backdrop-blur-sm z-1',
+        tfoot: 'sticky bottom-0 inset-x-0 bg-background/75 backdrop-blur-sm z-1',
       },
       header: {
-        thead: 'sticky top-0 inset-x-0 bg-default/75 backdrop-blur-sm z-1',
+        thead: 'sticky top-0 inset-x-0 bg-background/75 backdrop-blur-sm z-1',
       },
       footer: {
-        tfoot: 'sticky bottom-0 inset-x-0 bg-default/75 backdrop-blur-sm z-1',
+        tfoot: 'sticky bottom-0 inset-x-0 bg-background/75 backdrop-blur-sm z-1',
       },
     },
     loading: {
@@ -67,7 +67,7 @@ export default (options: Required<ModuleOptions>) => ({
       loading: true,
       loadingColor: 'neutral',
       class: {
-        thead: 'after:bg-inverted',
+        thead: 'after:bg-background-inverted',
       },
     },
     {

@@ -33,8 +33,8 @@ function onClick() {
     <PButton label="Loading auto" loading-auto v-bind="props" @click="onClick" />
     <PButton label="Icon" icon="i-lucide-rocket" v-bind="props" />
     <PButton label="Icon" icon="i-lucide-chevron-down" trailing v-bind="props" />
-    <PButton label="Avatar" :avatar="{ src: 'https://github.com/benjamincanac.png' }" v-bind="props" />
+    <PButton label="Avatar" :avatar="{ src: 'https://github.com/praburangki.png' }" v-bind="props" />
     <PButton icon="i-lucide-rocket" v-bind="props" square />
-    <PButton :avatar="{ src: 'https://github.com/benjamincanac.png' }" v-bind="props" square />
+    <PButton :avatar="{ src: 'https://github.com/praburangki.png' }" v-bind="props" square />
   </Matrix>
 </template>

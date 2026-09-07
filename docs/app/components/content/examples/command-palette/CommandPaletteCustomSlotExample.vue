@@ -30,7 +30,7 @@ const groups = [
     slot: 'users' as const,
     items: [
       {
-        label: 'Benjamin Canac',
+        label: 'praburangki',
         suffix: 'benjamincanac',
         to: 'https://github.com/benjamincanac',
         target: '_blank'

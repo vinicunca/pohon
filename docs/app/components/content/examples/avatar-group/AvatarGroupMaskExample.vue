@@ -1,8 +1,8 @@
 <template>
   <PAvatarGroup :ui="{ base: 'rounded-none squircle' }">
     <PAvatar
-      src="https://github.com/benjamincanac.png"
-      alt="Benjamin Canac"
+      src="https://github.com/praburangki.png"
+      alt="praburangki"
       loading="lazy"
       class="rounded-none squircle"
     />

@@ -22,13 +22,13 @@ export default (options: Required<ModuleOptions>) => ({
     },
     variant: {
       outline: {
-        root: 'bg-default/75 ring ring-default',
+        root: 'bg-background/75 ring ring-default',
       },
       soft: {
-        root: 'bg-elevated/50',
+        root: 'bg-background-elevated/50',
       },
       subtle: {
-        root: 'bg-elevated/50 ring ring-default',
+        root: 'bg-background-elevated/50 ring ring-default',
       },
       naked: {
         root: '',

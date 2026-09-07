@@ -70,10 +70,10 @@ function getItems(state: 'collapsed' | 'expanded') {
 }
 
 const user = ref({
-  name: 'Benjamin Canac',
+  name: 'praburangki',
   avatar: {
-    src: 'https://github.com/benjamincanac.png',
-    alt: 'Benjamin Canac'
+    src: 'https://github.com/praburangki.png',
+    alt: 'praburangki'
   }
 })
 
@@ -138,7 +138,7 @@ defineShortcuts(extractShortcuts(teamsItems.value))
       rail
       :ui="{
         container: 'h-full',
-        inner: 'bg-elevated/25 divide-transparent',
+        inner: 'bg-background-elevated/25 divide-transparent',
         body: 'py-0'
       }"
     >
@@ -154,7 +154,7 @@ defineShortcuts(extractShortcuts(teamsItems.value))
             color="neutral"
             variant="ghost"
             square
-            class="w-full data-[state=open]:bg-elevated overflow-hidden"
+            class="w-full data-[state=open]:bg-background-elevated overflow-hidden"
             :ui="{
               trailingIcon: 'text-dimmed ms-auto'
             }"
@@ -184,7 +184,7 @@ defineShortcuts(extractShortcuts(teamsItems.value))
             color="neutral"
             variant="ghost"
             square
-            class="w-full data-[state=open]:bg-elevated overflow-hidden"
+            class="w-full data-[state=open]:bg-background-elevated overflow-hidden"
             :ui="{
               trailingIcon: 'text-dimmed ms-auto'
             }"

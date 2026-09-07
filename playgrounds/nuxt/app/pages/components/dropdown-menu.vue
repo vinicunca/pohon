@@ -8,7 +8,7 @@ const items = computed(() => [
   [{
     label: 'My account',
     avatar: {
-      src: 'https://github.com/benjamincanac.png'
+      src: 'https://github.com/praburangki.png'
     },
     type: 'label' as const
   }],
@@ -44,7 +44,7 @@ const items = computed(() => [
     },
     children: [{
       label: 'benjamincanac',
-      avatar: { src: 'https://github.com/benjamincanac.png' }
+      avatar: { src: 'https://github.com/praburangki.png' }
     }, {
       label: 'HugoRCD',
       avatar: { src: 'https://github.com/HugoRCD.png' }

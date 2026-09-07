@@ -28,10 +28,10 @@ export default (options: Required<ModuleOptions>) => ({
     childLinkDescription: 'text-muted',
     separator: 'px-2 h-px bg-border',
     viewportWrapper: 'absolute top-full left-0 flex w-full',
-    viewport: 'relative overflow-hidden bg-default shadow-lg rounded-md ring ring-default h-(--akar-navigation-menu-viewport-height) w-full transition-[width,height,left,right] duration-200 origin-[top_center] data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] z-1',
+    viewport: 'relative overflow-hidden bg-background shadow-lg rounded-md ring ring-default h-(--akar-navigation-menu-viewport-height) w-full transition-[width,height,left,right] duration-200 origin-[top_center] data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] z-1',
     content: '',
     indicator: 'absolute left-0 data-[state=visible]:animate-[fade-in_100ms_ease-out] data-[state=hidden]:animate-[fade-out_100ms_ease-in] data-[state=hidden]:opacity-0 bottom-0 z-2 w-(--akar-navigation-menu-indicator-size) translate-x-(--akar-navigation-menu-indicator-position) flex h-2.5 items-end justify-center overflow-hidden transition-[translate,width] duration-200',
-    arrow: 'relative top-[50%] size-2.5 rotate-45 border border-default bg-default z-1 rounded-xs',
+    arrow: 'relative top-[50%] size-2.5 rotate-45 border border-default bg-background z-1 rounded-xs',
   },
   variants: {
     color: {
@@ -81,14 +81,14 @@ export default (options: Required<ModuleOptions>) => ({
     },
     active: {
       true: {
-        childLink: 'before:bg-elevated text-highlighted',
-        childLinkIcon: 'text-default',
+        childLink: 'before:bg-background-elevated text-highlighted',
+        childLinkIcon: 'color-text',
       },
       false: {
         link: 'text-muted',
         linkLeadingIcon: 'text-dimmed',
-        childLink: ['hover:before:bg-elevated/50 text-default hover:text-highlighted', options.theme.transitions && 'transition-colors before:transition-colors'],
-        childLinkIcon: ['text-dimmed group-hover:text-default', options.theme.transitions && 'transition-colors'],
+        childLink: ['hover:before:bg-background-elevated/50 color-text hover:text-highlighted', options.theme.transitions && 'transition-colors before:transition-colors'],
+        childLinkIcon: ['text-dimmed group-hover:color-text', options.theme.transitions && 'transition-colors'],
       },
     },
     disabled: {
@@ -154,8 +154,8 @@ export default (options: Required<ModuleOptions>) => ({
     active: false,
     variant: 'pill',
     class: {
-      link: ['hover:text-highlighted hover:before:bg-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-      linkLeadingIcon: ['group-hover:text-default', options.theme.transitions && 'transition-colors'],
+      link: ['hover:text-highlighted hover:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+      linkLeadingIcon: ['group-hover:color-text', options.theme.transitions && 'transition-colors'],
     },
   }, {
     disabled: false,
@@ -164,7 +164,7 @@ export default (options: Required<ModuleOptions>) => ({
     orientation: 'horizontal',
     class: {
       link: 'data-[state=open]:text-highlighted',
-      linkLeadingIcon: 'group-data-[state=open]:text-default',
+      linkLeadingIcon: 'group-data-[state=open]:color-text',
     },
   }, {
     disabled: false,
@@ -172,7 +172,7 @@ export default (options: Required<ModuleOptions>) => ({
     highlight: true,
     orientation: 'horizontal',
     class: {
-      link: 'data-[state=open]:before:bg-elevated/50',
+      link: 'data-[state=open]:before:bg-background-elevated/50',
     },
   }, {
     disabled: false,
@@ -181,7 +181,7 @@ export default (options: Required<ModuleOptions>) => ({
     active: false,
     orientation: 'horizontal',
     class: {
-      link: 'data-[state=open]:before:bg-elevated/50',
+      link: 'data-[state=open]:before:bg-background-elevated/50',
     },
   }, ...(options.theme.colors || []).map((color: string) => ({
     color,
@@ -204,7 +204,7 @@ export default (options: Required<ModuleOptions>) => ({
     active: true,
     highlight: false,
     class: {
-      link: 'before:bg-elevated',
+      link: 'before:bg-background-elevated',
     },
   }, {
     variant: 'pill',
@@ -212,7 +212,7 @@ export default (options: Required<ModuleOptions>) => ({
     highlight: true,
     disabled: false,
     class: {
-      link: ['hover:before:bg-elevated/50', options.theme.transitions && 'before:transition-colors'],
+      link: ['hover:before:bg-background-elevated/50', options.theme.transitions && 'before:transition-colors'],
     },
   }, {
     disabled: false,
@@ -220,7 +220,7 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'link',
     class: {
       link: ['hover:text-highlighted', options.theme.transitions && 'transition-colors'],
-      linkLeadingIcon: ['group-hover:text-default', options.theme.transitions && 'transition-colors'],
+      linkLeadingIcon: ['group-hover:color-text', options.theme.transitions && 'transition-colors'],
     },
   }, {
     disabled: false,
@@ -229,7 +229,7 @@ export default (options: Required<ModuleOptions>) => ({
     orientation: 'horizontal',
     class: {
       link: 'data-[state=open]:text-highlighted',
-      linkLeadingIcon: 'group-data-[state=open]:text-default',
+      linkLeadingIcon: 'group-data-[state=open]:color-text',
     },
   }, ...(options.theme.colors || []).map((color: string) => ({
     color,
@@ -261,7 +261,7 @@ export default (options: Required<ModuleOptions>) => ({
     level: true,
     active: true,
     class: {
-      link: 'after:bg-inverted',
+      link: 'after:bg-background-inverted',
     },
   }],
   defaultVariants: {

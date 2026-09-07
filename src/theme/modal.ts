@@ -1,7 +1,7 @@
 export default {
   slots: {
     overlay: 'fixed inset-0',
-    content: 'bg-default divide-y divide-default flex flex-col focus:outline-none',
+    content: 'bg-background divide-y divide-default flex flex-col focus:outline-none',
     header: 'flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)',
     wrapper: '',
     body: 'flex-1 p-4 sm:p-6',
@@ -27,7 +27,7 @@ export default {
     },
     overlay: {
       true: {
-        overlay: 'bg-elevated/75',
+        overlay: 'bg-background-elevated/75',
       },
     },
     scrollable: {

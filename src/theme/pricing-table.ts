@@ -27,7 +27,7 @@ export default {
     section: 'mt-6 flex flex-col gap-2',
     sectionTitle: 'font-600 text-sm text-highlighted',
     feature: 'flex items-center justify-between gap-1',
-    featureTitle: 'text-sm text-default',
+    featureTitle: 'text-sm color-text',
     featureValue: 'text-sm text-muted flex justify-center min-w-5',
   },
   variants: {
@@ -43,9 +43,9 @@ export default {
     },
     highlight: {
       true: {
-        tier: 'bg-elevated/50 border-x border-t border-default rounded-t-lg',
-        td: 'bg-elevated/50 border-x border-default',
-        item: 'bg-elevated/50',
+        tier: 'bg-background-elevated/50 border-x border-t border-default rounded-t-lg',
+        td: 'bg-background-elevated/50 border-x border-default',
+        item: 'bg-background-elevated/50',
       },
     },
   },

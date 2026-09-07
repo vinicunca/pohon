@@ -19,7 +19,7 @@ describe('chatMessage', () => {
     ['with parts', { props }],
     ['with content', { props: { ...props, content: 'Hello, how are you?' } }],
     ['with icon', { props: { ...props, icon: 'i-lucide-user' } }],
-    ['with avatar', { props: { ...props, avatar: { src: 'https://github.com/benjamincanac.png' } } }],
+    ['with avatar', { props: { ...props, avatar: { src: 'https://github.com/praburangki.png' } } }],
     ['with role assistant', { props: { ...props, role: 'assistant' } }],
     ['with side right', { props: { ...props, side: 'right' } }],
     ['with compact', { props: { ...props, compact: true } }],
@@ -72,7 +72,7 @@ describe('chatMessage', () => {
       props: {
         ...props,
         icon: 'i-lucide-user',
-        avatar: { src: 'https://github.com/benjamincanac.png' },
+        avatar: { src: 'https://github.com/praburangki.png' },
         variant: 'soft' as const,
         side: 'right' as const,
         actions: [{ icon: 'i-lucide-copy', label: 'Copy' }],

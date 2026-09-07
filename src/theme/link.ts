@@ -14,6 +14,6 @@ export default (options: Required<ModuleOptions>) => ({
   compoundVariants: [{
     active: false,
     disabled: false,
-    class: ['hover:text-default', options.theme.transitions && 'transition-colors'],
+    class: ['hover:color-text', options.theme.transitions && 'transition-colors'],
   }],
 });

@@ -5,8 +5,8 @@ export default (options: Required<ModuleOptions>) => ({
     root: 'flex gap-1.5',
     item: 'group relative flex flex-1 gap-3',
     container: 'relative flex items-center gap-1.5',
-    indicator: 'group-data-[state=completed]:text-inverted group-data-[state=active]:text-inverted text-muted',
-    separator: 'flex-1 rounded-full bg-elevated',
+    indicator: 'group-data-[state=completed]:color-text-inverted group-data-[state=active]:color-text-inverted text-muted',
+    separator: 'flex-1 rounded-full bg-background-elevated',
     wrapper: 'w-full',
     date: 'text-dimmed text-xs/5',
     title: 'font-medium text-highlighted text-sm',
@@ -33,7 +33,7 @@ export default (options: Required<ModuleOptions>) => ({
 
       }])),
       neutral: {
-        indicator: 'group-data-[state=completed]:bg-inverted group-data-[state=active]:bg-inverted',
+        indicator: 'group-data-[state=completed]:bg-background-inverted group-data-[state=active]:bg-background-inverted',
       },
     },
 
@@ -70,13 +70,13 @@ export default (options: Required<ModuleOptions>) => ({
     color: 'neutral',
     reverse: false,
     class: {
-      separator: 'group-data-[state=completed]:bg-inverted',
+      separator: 'group-data-[state=completed]:bg-background-inverted',
     },
   }, {
     color: 'neutral',
     reverse: true,
     class: {
-      separator: 'group-data-[state=active]:bg-inverted group-data-[state=completed]:bg-inverted',
+      separator: 'group-data-[state=active]:bg-background-inverted group-data-[state=completed]:bg-background-inverted',
     },
   }, {
     orientation: 'horizontal',

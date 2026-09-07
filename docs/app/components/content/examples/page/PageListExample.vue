@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const users = ref([
   {
-    name: 'Benjamin Canac',
+    name: 'praburangki',
     description: 'benjamincanac',
     to: 'https://github.com/benjamincanac',
     target: '_blank',
     avatar: {
-      src: 'https://github.com/benjamincanac.png',
+      src: 'https://github.com/praburangki.png',
       alt: 'benjamincanac',
       loading: 'lazy' as const
     }

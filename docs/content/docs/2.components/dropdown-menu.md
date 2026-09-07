@@ -34,7 +34,7 @@ ignore:
   props:
   items: - - label: Benjamin
   avatar:
-  src: 'https://github.com/benjamincanac.png'
+  src: 'https://github.com/praburangki.png'
   loading: lazy
   type: label - - label: Profile
   icon: i-lucide-user - label: Billing
@@ -47,7 +47,7 @@ ignore:
   placeholder: 'Search members...'
   children: - - label: benjamincanac
   avatar:
-  src: 'https://github.com/benjamincanac.png'
+  src: 'https://github.com/praburangki.png'
   loading: lazy - label: HugoRCD
   avatar:
   src: 'https://github.com/HugoRCD.png'
@@ -139,7 +139,7 @@ ignore:
   props:
   items: - - label: Benjamin
   avatar:
-  src: 'https://github.com/benjamincanac.png'
+  src: 'https://github.com/praburangki.png'
   loading: lazy
   type: label - - label: Profile
   icon: i-lucide-user - label: Billing

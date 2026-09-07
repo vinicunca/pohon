@@ -75,7 +75,7 @@ const ui = {
           <PChatMessages
             :messages="messages"
             :status="status"
-            :user="{ side: 'left', variant: 'naked', avatar: { src: 'https://github.com/benjamincanac.png', loading: 'lazy' as const } }"
+            :user="{ side: 'left', variant: 'naked', avatar: { src: 'https://github.com/praburangki.png', loading: 'lazy' as const } }"
             :assistant="{ icon: 'i-lucide-bot' }"
           >
             <template #content="{ message }">

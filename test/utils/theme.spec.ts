@@ -9,8 +9,8 @@ describe('applyUnstyled', () => {
     },
     variants: {
       color: {
-        primary: 'bg-primary text-inverted',
-        neutral: { base: 'bg-inverted', label: 'text-default' },
+        primary: 'bg-primary color-text-inverted',
+        neutral: { base: 'bg-background-inverted', label: 'color-text' },
       },
       size: {
         md: { base: 'px-2.5 text-sm' },
@@ -29,9 +29,9 @@ describe('applyUnstyled', () => {
   it('blanks a top-level base', () => {
     // Single-element components (e.g. Skeleton) have no `slots`, their theme
     // is a top-level `base` string or array.
-    const stringBase = { base: 'animate-pulse rounded-md bg-elevated' };
+    const stringBase = { base: 'animate-pulse rounded-md bg-background-elevated' };
     expect(applyUnstyled(stringBase, true)).toEqual({ base: '' });
-    expect(stringBase.base).toBe('animate-pulse rounded-md bg-elevated');
+    expect(stringBase.base).toBe('animate-pulse rounded-md bg-background-elevated');
 
     expect(applyUnstyled({ base: ['flex', 'transition-colors'] }, true)).toEqual({ base: '' });
   });

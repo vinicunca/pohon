@@ -5,7 +5,7 @@ export default (options: Required<ModuleOptions>) => ({
     root: 'relative flex items-center select-none touch-none',
     track: 'relative bg-accented overflow-hidden rounded-full grow',
     range: 'absolute rounded-full',
-    thumb: 'rounded-full bg-default ring-2 focus-visible:outline-3 focus-visible:outline-offset-2',
+    thumb: 'rounded-full bg-background ring-2 focus-visible:outline-3 focus-visible:outline-offset-2',
   },
   variants: {
     color: {
@@ -14,7 +14,7 @@ export default (options: Required<ModuleOptions>) => ({
         thumb: `ring-${color} outline-${color}/25`,
       }])),
       neutral: {
-        range: 'bg-inverted',
+        range: 'bg-background-inverted',
         thumb: 'ring-inverted outline-inverted/25',
       },
     },

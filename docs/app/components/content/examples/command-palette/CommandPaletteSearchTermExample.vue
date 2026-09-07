@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const users = [
   {
-    label: 'Benjamin Canac',
+    label: 'praburangki',
     suffix: 'benjamincanac',
     to: 'https://github.com/benjamincanac',
     target: '_blank',
     avatar: {
-      src: 'https://github.com/benjamincanac.png',
+      src: 'https://github.com/praburangki.png',
       loading: 'lazy' as const
     }
   },

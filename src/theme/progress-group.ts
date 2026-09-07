@@ -22,9 +22,9 @@ export default (options: Required<ModuleOptions>) => ({
         itemLeadingDot: `bg-${color}`,
       }])),
       neutral: {
-        indicator: 'bg-inverted',
+        indicator: 'bg-background-inverted',
         itemLeadingIcon: 'text-highlighted',
-        itemLeadingDot: 'bg-inverted',
+        itemLeadingDot: 'bg-background-inverted',
       },
     },
     size: {

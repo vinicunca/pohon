@@ -10,18 +10,18 @@ export default {
   variants: {
     variant: {
       solid: {
-        root: 'bg-inverted text-inverted',
-        title: 'text-inverted',
+        root: 'bg-background-inverted color-text-inverted',
+        title: 'color-text-inverted',
         description: 'text-dimmed',
       },
       outline: {
-        root: 'bg-default ring ring-default divide-y divide-default',
+        root: 'bg-background ring ring-default divide-y divide-default',
       },
       soft: {
-        root: 'bg-elevated/50 divide-y divide-default',
+        root: 'bg-background-elevated/50 divide-y divide-default',
       },
       subtle: {
-        root: 'bg-elevated/50 ring ring-default divide-y divide-default',
+        root: 'bg-background-elevated/50 ring ring-default divide-y divide-default',
       },
     },
   },

@@ -78,15 +78,13 @@ export default defineConfig({
         inverted: 'var(--ui-color-text-inverted)',
       },
       background: {
-        'DEFAULT': 'var(--ui-color-bg)',
-        'muted': 'var(--ui-color-bg-muted)',
-        'elevated': 'var(--ui-color-bg-elevated)',
-        'accented': 'var(--ui-color-bg-accented)',
-        'inverted': 'var(--ui-color-bg-inverted)',
-        'border': 'var(--ui-color-border)',
-        'header': 'var(--ui-color-bg-header)',
-        'sidebar': 'var(--ui-color-bg-sidebar)',
-        'sidebar-deep': 'var(--ui-color-bg-sidebar-deep)',
+        DEFAULT: 'var(--ui-color-bg)',
+        muted: 'var(--ui-color-bg-muted)',
+        elevated: 'var(--ui-color-bg-elevated)',
+        accented: 'var(--ui-color-bg-accented)',
+        inverted: 'var(--ui-color-bg-inverted)',
+        border: 'var(--ui-color-border)',
+        header: 'var(--ui-color-bg-header)',
       },
       border: {
         DEFAULT: 'var(--ui-color-border)',
@@ -134,6 +132,24 @@ export default defineConfig({
       info: 'var(--ui-color-info)',
       warning: 'var(--ui-color-warning)',
       error: 'var(--ui-color-error)',
+    },
+
+    containers: {
+      center: true,
+      padding: {
+        'DEFAULT': '1.25rem',
+        'sm': '2rem',
+        'lg': '4rem',
+        'xl': '4rem',
+        '2xl': '4rem',
+      },
+      maxWidth: {
+        'sm': '40rem',
+        'md': '48rem',
+        'lg': '64rem',
+        'xl': '87.5rem',
+        '2xl': '100rem',
+      },
     },
   },
 

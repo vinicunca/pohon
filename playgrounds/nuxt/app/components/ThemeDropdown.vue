@@ -43,7 +43,7 @@ const items = computed<DropdownMenuItem[]>(() => [{
       icon="i-lucide-swatch-book"
       color="neutral"
       variant="ghost"
-      class="data-[state=open]:bg-elevated"
+      class="data-[state=open]:bg-background-elevated"
       aria-label="Switch theme"
     />
 

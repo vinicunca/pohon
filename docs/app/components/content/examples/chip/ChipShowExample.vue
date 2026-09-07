@@ -18,6 +18,6 @@ onMounted(() => {
 
 <template>
   <PChip :color="color" :show="show" inset>
-    <PAvatar src="https://github.com/benjamincanac.png" loading="lazy" />
+    <PAvatar src="https://github.com/praburangki.png" loading="lazy" />
   </PChip>
 </template>

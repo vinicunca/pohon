@@ -326,7 +326,7 @@ You are a Pohon UI expert. Help me build a dashboard layout with a collapsible s
 
 Requirements:
 - Use \`PDashboardPanel\`, \`PDashboardSidebar\` and \`PDashboardNavbar\`
-- Use semantic color tokens like \`bg-elevated\` and \`text-muted\`
+- Use semantic color tokens like \`bg-background-elevated\` and \`text-muted\`
 - The sidebar should include navigation links with icons using \`PNavigationMenu\`
 - The layout must collapse the sidebar on mobile
 ::

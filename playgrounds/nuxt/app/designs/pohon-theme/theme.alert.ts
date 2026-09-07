@@ -11,7 +11,6 @@ export const themeAlert = {
     title: 'text-sm font-medium',
     description: 'text-sm opacity-90',
     icon: 'shrink-0 size-5',
-
     avatar: 'shrink-0',
     avatarSize: '2xl',
     actions: 'flex shrink-0 flex-wrap gap-1.5',

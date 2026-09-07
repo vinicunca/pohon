@@ -3,7 +3,7 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative flex rounded-lg',
-    spotlight: 'absolute inset-0 rounded-[inherit] pointer-events-none bg-default/90',
+    spotlight: 'absolute inset-0 rounded-[inherit] pointer-events-none bg-background/90',
     container: 'relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6',
     wrapper: 'flex flex-col flex-1 items-start',
     header: 'mb-4',
@@ -30,20 +30,20 @@ export default (options: Required<ModuleOptions>) => ({
     },
     variant: {
       solid: {
-        root: 'bg-inverted text-inverted',
-        title: 'text-inverted',
+        root: 'bg-background-inverted color-text-inverted',
+        title: 'color-text-inverted',
         description: 'text-dimmed',
       },
       outline: {
-        root: 'bg-default ring ring-default',
+        root: 'bg-background ring ring-default',
         description: 'text-muted',
       },
       soft: {
-        root: 'bg-elevated/50',
+        root: 'bg-background-elevated/50',
         description: 'text-toned',
       },
       subtle: {
-        root: 'bg-elevated/50 ring ring-default',
+        root: 'bg-background-elevated/50 ring ring-default',
         description: 'text-toned',
       },
       ghost: {
@@ -87,32 +87,32 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'solid',
     to: true,
     class: {
-      root: 'hover:bg-inverted/90',
+      root: 'hover:bg-background-inverted/90',
     },
   }, {
     variant: 'outline',
     to: true,
     class: {
-      root: 'hover:bg-elevated/50',
+      root: 'hover:bg-background-elevated/50',
     },
   }, {
     variant: 'soft',
     to: true,
     class: {
-      root: 'hover:bg-elevated',
+      root: 'hover:bg-background-elevated',
     },
   }, {
     variant: 'subtle',
     to: true,
     class: {
-      root: 'hover:bg-elevated',
+      root: 'hover:bg-background-elevated',
     },
   }, {
     variant: 'subtle',
     to: true,
     highlight: false,
     class: {
-      root: 'hover:ring-accented',
+      root: 'hover:ring-ring-accented',
     },
   }, {
     variant: ['outline', 'subtle'],
@@ -125,7 +125,7 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'ghost',
     to: true,
     class: {
-      root: 'hover:bg-elevated/50',
+      root: 'hover:bg-background-elevated/50',
     },
   }, ...(options.theme.colors || []).map((highlightColor: string) => ({
     highlightColor,
@@ -149,7 +149,7 @@ export default (options: Required<ModuleOptions>) => ({
     spotlightColor: 'neutral',
     spotlight: true,
     class: {
-      root: '[--spotlight-color:var(--ui-bg-inverted)]',
+      root: '[--spotlight-color:var(--ui-bg-background-inverted)]',
     },
   }],
   defaultVariants: {

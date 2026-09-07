@@ -17,7 +17,7 @@
       </div>
 
       <PSeparator
-        :avatar="{ src: 'https://github.com/benjamincanac.png' }"
+        :avatar="{ src: 'https://github.com/praburangki.png' }"
         decorative
         orientation="vertical"
       />
@@ -47,7 +47,7 @@
       </div>
 
       <PSeparator
-        :avatar="{ src: 'https://github.com/benjamincanac.png' }"
+        :avatar="{ src: 'https://github.com/praburangki.png' }"
         decorative
         orientation="vertical"
         position="start"

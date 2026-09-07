@@ -6,7 +6,7 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative',
     fieldset: 'flex gap-x-2',
-    legend: 'mb-1 block font-medium text-default',
+    legend: 'mb-1 block font-medium color-text',
     item: '',
   },
   variants: {
@@ -30,7 +30,7 @@ export default (options: Required<ModuleOptions>) => ({
         fieldset: 'flex-wrap',
       },
       table: {
-        item: [`border border-default ${hover}bg-elevated/50`, options.theme.transitions && 'transition-colors'],
+        item: [`border border-default ${hover}bg-background-elevated/50`, options.theme.transitions && 'transition-colors'],
       },
     },
     size: {
@@ -115,7 +115,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'table',
       class: {
-        item: 'has-data-[state=checked]:bg-elevated has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:z-[1]',
+        item: 'has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:z-[1]',
       },
     },
     {

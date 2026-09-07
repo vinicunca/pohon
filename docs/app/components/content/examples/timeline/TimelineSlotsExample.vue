@@ -21,7 +21,7 @@ const items = [{
   action: 'commented on this',
   description: 'I\'ve made a few changes, let me know what you think! Basically I updated the design, removed unnecessary divs, used Avatar component for the indicator since it supports icon already.',
   avatar: {
-    src: 'https://github.com/benjamincanac.png',
+    src: 'https://github.com/praburangki.png',
     loading: 'lazy' as const
   }
 }, {
@@ -47,7 +47,7 @@ const items = [{
     size="xs"
     :ui="{
       date: 'float-end ms-1',
-      description: 'px-3 py-2 ring ring-default mt-2 rounded-md text-default'
+      description: 'px-3 py-2 ring ring-default mt-2 rounded-md color-text'
     }"
     class="w-96"
   >

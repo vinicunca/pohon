@@ -13,7 +13,7 @@ describe('tabs', () => {
     {
       label: 'Tab1',
       avatar: {
-        src: 'https://github.com/benjamincanac.png',
+        src: 'https://github.com/praburangki.png',
         alt: 'Benjamín Canac',
       },
       content: 'This is the content shown for Tab1',

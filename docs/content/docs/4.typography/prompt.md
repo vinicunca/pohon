@@ -27,7 +27,7 @@ hide:
 
       Requirements:
       - Use `PDashboardPanel`, `PDashboardSidebar`, and `PDashboardNavbar`
-      - Use semantic color tokens like `bg-elevated` and `text-muted` for theming
+      - Use semantic color tokens like `bg-background-elevated` and `text-muted` for theming
       - The sidebar should include navigation links with icons using `PNavigationMenu`
       - The navbar should display a breadcrumb, a search button, and a user dropdown menu
       - The layout must be fully responsive and collapse the sidebar on mobile

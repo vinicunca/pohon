@@ -29,7 +29,7 @@ const value = ref('Model value')
     <PInput placeholder="Required" required v-bind="props" />
     <PInput placeholder="Search..." icon="i-lucide-search" v-bind="props" />
     <PInput placeholder="Search..." icon="i-lucide-search" trailing v-bind="props" />
-    <PInput :avatar="{ src: 'https://github.com/benjamincanac.png' }" icon="i-lucide-search" placeholder="Search..." trailing v-bind="props" />
+    <PInput :avatar="{ src: 'https://github.com/praburangki.png' }" icon="i-lucide-search" placeholder="Search..." trailing v-bind="props" />
     <PInput placeholder="Loading..." loading v-bind="props" />
     <PInput placeholder="Loading..." loading trailing v-bind="props" />
     <PInput placeholder="Loading..." loading icon="i-lucide-search" trailing-icon="i-lucide-chevron-down" v-bind="props" />

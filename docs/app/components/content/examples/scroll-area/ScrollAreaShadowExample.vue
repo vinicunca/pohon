@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-sm bg-elevated/50 rounded-lg">
+  <div class="max-w-sm bg-background-elevated/50 rounded-lg">
     <PScrollArea
       shadow
       class="p-4 h-72"

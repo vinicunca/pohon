@@ -418,9 +418,9 @@ const { data: ast } = useAsyncData(codeKey, async () => {
           <PFormField
             :label="option.label"
             size="sm"
-            class="inline-flex ring ring-accented rounded-sm"
+            class="inline-flex ring ring-ring-accented rounded-sm"
             :ui="{
-              wrapper: 'bg-elevated/50 rounded-l-sm flex border-r border-accented',
+              wrapper: 'bg-background-elevated/50 rounded-l-sm flex border-r border-accented',
               label: 'text-muted px-2 py-1.5',
               container: 'mt-0'
             }"

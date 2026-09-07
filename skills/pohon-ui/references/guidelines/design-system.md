@@ -116,20 +116,20 @@ Use these everywhere instead of raw palette colors:
 
 ### Text
 
-- `text-default` — primary body text
+- `color-text` — primary body text
 - `text-muted` — secondary text (descriptions, hints)
 - `text-toned` — medium-emphasis text (between muted and default)
 - `text-dimmed` — tertiary text (placeholders, disabled)
 - `text-highlighted` — emphasized text (headings, important labels)
-- `text-inverted` — text on inverted backgrounds (pair with `bg-inverted`)
+- `color-text-inverted` — text on inverted backgrounds (pair with `bg-background-inverted`)
 
 ### Backgrounds
 
-- `bg-default` — page background
+- `bg-background` — page background
 - `bg-muted` — subtle backgrounds (hover states, alternating rows)
-- `bg-elevated` — raised surfaces (cards, dropdowns)
+- `bg-background-elevated` — raised surfaces (cards, dropdowns)
 - `bg-accented` — accent backgrounds (active states, selected items)
-- `bg-inverted` — inverse background (dark on light, light on dark)
+- `bg-background-inverted` — inverse background (dark on light, light on dark)
 
 ### Borders
 

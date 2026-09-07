@@ -18,7 +18,7 @@ describe('changelogVersions', () => {
       authors: [{
         name: 'benjamincanac',
         avatar: {
-          src: 'https://github.com/benjamincanac.png',
+          src: 'https://github.com/praburangki.png',
           alt: 'benjamincanac',
         },
       }],

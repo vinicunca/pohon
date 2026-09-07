@@ -28,17 +28,17 @@ export default (options: Required<ModuleOptions>) => ({
     },
     variant: {
       outline: {
-        root: 'bg-default ring ring-default',
+        root: 'bg-background ring ring-default',
         date: 'text-toned',
         description: 'text-muted',
       },
       soft: {
-        root: 'bg-elevated/50',
+        root: 'bg-background-elevated/50',
         date: 'text-muted',
         description: 'text-toned',
       },
       subtle: {
-        root: 'bg-elevated/50 ring ring-default',
+        root: 'bg-background-elevated/50 ring ring-default',
         date: 'text-muted',
         description: 'text-toned',
       },
@@ -69,19 +69,19 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'outline',
     to: true,
     class: {
-      root: 'hover:bg-elevated/50',
+      root: 'hover:bg-background-elevated/50',
     },
   }, {
     variant: 'soft',
     to: true,
     class: {
-      root: 'hover:bg-elevated',
+      root: 'hover:bg-background-elevated',
     },
   }, {
     variant: 'subtle',
     to: true,
     class: {
-      root: 'hover:bg-elevated hover:ring-accented',
+      root: 'hover:bg-background-elevated hover:ring-ring-accented',
     },
   }, {
     variant: ['outline', 'subtle'],
@@ -93,7 +93,7 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'ghost',
     to: true,
     class: {
-      root: 'hover:bg-elevated/50',
+      root: 'hover:bg-background-elevated/50',
       header: ['group-hover/blog-post:shadow-none', options.theme.transitions && 'transition-all'],
     },
   }, {

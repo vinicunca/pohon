@@ -2,9 +2,9 @@
   <Navbar />
 
   <PUser
-    name="Benjamin Canac"
+    name="praburangki"
     description="Software Engineer"
-    :avatar="{ src: 'https://github.com/benjamincanac.png' }"
+    :avatar="{ src: 'https://github.com/praburangki.png' }"
     to="https://github.com/benjamincanac"
     target="_blank"
   />

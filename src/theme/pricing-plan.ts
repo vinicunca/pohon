@@ -19,7 +19,7 @@ export default {
     featureTitle: 'text-muted text-sm truncate',
     badge: '',
     button: '',
-    tagline: 'text-base font-600 text-default',
+    tagline: 'text-base font-600 color-text',
     terms: 'text-xs/5 text-muted text-center text-balance',
   },
   variants: {
@@ -37,23 +37,23 @@ export default {
     },
     variant: {
       solid: {
-        root: 'bg-inverted',
-        title: 'text-inverted',
+        root: 'bg-background-inverted',
+        title: 'color-text-inverted',
         description: 'text-dimmed',
-        price: 'text-inverted',
+        price: 'color-text-inverted',
         discount: 'text-dimmed',
         billingCycle: 'text-dimmed',
         billingPeriod: 'text-dimmed',
         featureTitle: 'text-dimmed',
       },
       outline: {
-        root: 'bg-default ring ring-default',
+        root: 'bg-background ring ring-default',
       },
       soft: {
-        root: 'bg-elevated/50',
+        root: 'bg-background-elevated/50',
       },
       subtle: {
-        root: 'bg-elevated/50 ring ring-default',
+        root: 'bg-background-elevated/50 ring ring-default',
       },
     },
     highlight: {

@@ -26,68 +26,72 @@ Use the `v-model` directive to control the value of the CommandPalette or the `d
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - autofocus
-ignore:
-  - groups
-  - modelValue
-  - class
-external:
-  - groups
-  - modelValue
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- groups
+- modelValue
+- class
+  external:
+- groups
+- modelValue
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   modelValue: {}
   autofocus: false
   groups:
-    - id: 'users'
-      label: 'Users'
-      items:
-        - label: 'Benjamin Canac'
-          suffix: 'benjamincanac'
-          avatar:
-            src: 'https://github.com/benjamincanac.png'
-            loading: lazy
-        - label: 'Romain Hamel'
-          suffix: 'romhml'
-          avatar:
-            src: 'https://github.com/romhml.png'
-            loading: lazy
-        - label: 'Sébastien Chopin'
-          suffix: 'atinux'
-          avatar:
-            src: 'https://github.com/atinux.png'
-            loading: lazy
-        - label: 'Hugo Richard'
-          suffix: 'HugoRCD'
-          avatar:
-            src: 'https://github.com/HugoRCD.png'
-            loading: lazy
-        - label: 'Sandro Circi'
-          suffix: 'sandros94'
-          avatar:
-            src: 'https://github.com/sandros94.png'
-            loading: lazy
-        - label: 'Daniel Roe'
-          suffix: 'danielroe'
-          avatar:
-            src: 'https://github.com/danielroe.png'
-            loading: lazy
-        - label: 'Jakub Michálek'
-          suffix: 'J-Michalek'
-          avatar:
-            src: 'https://github.com/J-Michalek.png'
-            loading: lazy
-        - label: 'Eugen Istoc'
-          suffix: 'genu'
-          avatar:
-            src: 'https://github.com/genu.png'
-            loading: lazy
-  class: 'flex-1 h-80'
+  - id: 'users'
+    label: 'Users'
+    items:
+    - label: 'praburangki'
+      suffix: 'benjamincanac'
+      avatar:
+      src: 'https://github.com/praburangki.png'
+      loading: lazy
+    - label: 'Romain Hamel'
+      suffix: 'romhml'
+      avatar:
+      src: 'https://github.com/romhml.png'
+      loading: lazy
+    - label: 'Sébastien Chopin'
+      suffix: 'atinux'
+      avatar:
+      src: 'https://github.com/atinux.png'
+      loading: lazy
+    - label: 'Hugo Richard'
+      suffix: 'HugoRCD'
+      avatar:
+      src: 'https://github.com/HugoRCD.png'
+      loading: lazy
+    - label: 'Sandro Circi'
+      suffix: 'sandros94'
+      avatar:
+      src: 'https://github.com/sandros94.png'
+      loading: lazy
+    - label: 'Daniel Roe'
+      suffix: 'danielroe'
+      avatar:
+      src: 'https://github.com/danielroe.png'
+      loading: lazy
+    - label: 'Jakub Michálek'
+      suffix: 'J-Michalek'
+      avatar:
+      src: 'https://github.com/J-Michalek.png'
+      loading: lazy
+    - label: 'Eugen Istoc'
+      suffix: 'genu'
+      avatar:
+      src: 'https://github.com/genu.png'
+      loading: lazy
+      class: 'flex-1 h-80'
+
 ---
+
 ::
 
 ::tip{to="#control-selected-items"}
@@ -133,68 +137,72 @@ You can pass any property from the [Link](/docs/components/link#props) component
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - autofocus
-ignore:
-  - groups
-  - modelValue
-  - class
-external:
-  - groups
-  - modelValue
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- groups
+- modelValue
+- class
+  external:
+- groups
+- modelValue
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   modelValue: {}
   autofocus: false
   groups:
-    - id: 'users'
-      label: 'Users'
-      items:
-        - label: 'Benjamin Canac'
-          suffix: 'benjamincanac'
-          avatar:
-            src: 'https://github.com/benjamincanac.png'
-            loading: lazy
-        - label: 'Romain Hamel'
-          suffix: 'romhml'
-          avatar:
-            src: 'https://github.com/romhml.png'
-            loading: lazy
-        - label: 'Sébastien Chopin'
-          suffix: 'atinux'
-          avatar:
-            src: 'https://github.com/atinux.png'
-            loading: lazy
-        - label: 'Hugo Richard'
-          suffix: 'HugoRCD'
-          avatar:
-            src: 'https://github.com/HugoRCD.png'
-            loading: lazy
-        - label: 'Sandro Circi'
-          suffix: 'sandros94'
-          avatar:
-            src: 'https://github.com/sandros94.png'
-            loading: lazy
-        - label: 'Daniel Roe'
-          suffix: 'danielroe'
-          avatar:
-            src: 'https://github.com/danielroe.png'
-            loading: lazy
-        - label: 'Jakub Michálek'
-          suffix: 'J-Michalek'
-          avatar:
-            src: 'https://github.com/J-Michalek.png'
-            loading: lazy
-        - label: 'Eugen Istoc'
-          suffix: 'genu'
-          avatar:
-            src: 'https://github.com/genu.png'
-            loading: lazy
-  class: 'flex-1'
+  - id: 'users'
+    label: 'Users'
+    items:
+    - label: 'praburangki'
+      suffix: 'benjamincanac'
+      avatar:
+      src: 'https://github.com/praburangki.png'
+      loading: lazy
+    - label: 'Romain Hamel'
+      suffix: 'romhml'
+      avatar:
+      src: 'https://github.com/romhml.png'
+      loading: lazy
+    - label: 'Sébastien Chopin'
+      suffix: 'atinux'
+      avatar:
+      src: 'https://github.com/atinux.png'
+      loading: lazy
+    - label: 'Hugo Richard'
+      suffix: 'HugoRCD'
+      avatar:
+      src: 'https://github.com/HugoRCD.png'
+      loading: lazy
+    - label: 'Sandro Circi'
+      suffix: 'sandros94'
+      avatar:
+      src: 'https://github.com/sandros94.png'
+      loading: lazy
+    - label: 'Daniel Roe'
+      suffix: 'danielroe'
+      avatar:
+      src: 'https://github.com/danielroe.png'
+      loading: lazy
+    - label: 'Jakub Michálek'
+      suffix: 'J-Michalek'
+      avatar:
+      src: 'https://github.com/J-Michalek.png'
+      loading: lazy
+    - label: 'Eugen Istoc'
+      suffix: 'genu'
+      avatar:
+      src: 'https://github.com/genu.png'
+      loading: lazy
+      class: 'flex-1'
+
 ---
+
 ::
 
 ::tip{to="#with-children-in-items"}
@@ -207,70 +215,74 @@ Use the `multiple` prop to allow multiple selections.
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - autofocus
-ignore:
-  - groups
-  - modelValue
-  - multiple
-  - class
-external:
-  - groups
-  - modelValue
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- groups
+- modelValue
+- multiple
+- class
+  external:
+- groups
+- modelValue
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   multiple: true
   autofocus: false
   modelValue: []
   groups:
-    - id: 'users'
-      label: 'Users'
-      items:
-        - label: 'Benjamin Canac'
-          suffix: 'benjamincanac'
-          avatar:
-            src: 'https://github.com/benjamincanac.png'
-            loading: lazy
-        - label: 'Romain Hamel'
-          suffix: 'romhml'
-          avatar:
-            src: 'https://github.com/romhml.png'
-            loading: lazy
-        - label: 'Sébastien Chopin'
-          suffix: 'atinux'
-          avatar:
-            src: 'https://github.com/atinux.png'
-            loading: lazy
-        - label: 'Hugo Richard'
-          suffix: 'HugoRCD'
-          avatar:
-            src: 'https://github.com/HugoRCD.png'
-            loading: lazy
-        - label: 'Sandro Circi'
-          suffix: 'sandros94'
-          avatar:
-            src: 'https://github.com/sandros94.png'
-            loading: lazy
-        - label: 'Daniel Roe'
-          suffix: 'danielroe'
-          avatar:
-            src: 'https://github.com/danielroe.png'
-            loading: lazy
-        - label: 'Jakub Michálek'
-          suffix: 'J-Michalek'
-          avatar:
-            src: 'https://github.com/J-Michalek.png'
-            loading: lazy
-        - label: 'Eugen Istoc'
-          suffix: 'genu'
-          avatar:
-            src: 'https://github.com/genu.png'
-            loading: lazy
-  class: 'flex-1'
+  - id: 'users'
+    label: 'Users'
+    items:
+    - label: 'praburangki'
+      suffix: 'benjamincanac'
+      avatar:
+      src: 'https://github.com/praburangki.png'
+      loading: lazy
+    - label: 'Romain Hamel'
+      suffix: 'romhml'
+      avatar:
+      src: 'https://github.com/romhml.png'
+      loading: lazy
+    - label: 'Sébastien Chopin'
+      suffix: 'atinux'
+      avatar:
+      src: 'https://github.com/atinux.png'
+      loading: lazy
+    - label: 'Hugo Richard'
+      suffix: 'HugoRCD'
+      avatar:
+      src: 'https://github.com/HugoRCD.png'
+      loading: lazy
+    - label: 'Sandro Circi'
+      suffix: 'sandros94'
+      avatar:
+      src: 'https://github.com/sandros94.png'
+      loading: lazy
+    - label: 'Daniel Roe'
+      suffix: 'danielroe'
+      avatar:
+      src: 'https://github.com/danielroe.png'
+      loading: lazy
+    - label: 'Jakub Michálek'
+      suffix: 'J-Michalek'
+      avatar:
+      src: 'https://github.com/J-Michalek.png'
+      loading: lazy
+    - label: 'Eugen Istoc'
+      suffix: 'genu'
+      avatar:
+      src: 'https://github.com/genu.png'
+      loading: lazy
+      class: 'flex-1'
+
 ---
+
 ::
 
 ::caution
@@ -283,31 +295,35 @@ Use the `placeholder` prop to change the placeholder text.
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - autofocus
-ignore:
-  - class
-  - groups
-external:
-  - groups
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- class
+- groups
+  external:
+- groups
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   autofocus: false
   placeholder: 'Search an app...'
   groups:
-    - id: 'apps'
-      items:
-        - label: 'Calendar'
-          icon: 'i-lucide-calendar'
-        - label: 'Music'
-          icon: 'i-lucide-music'
-        - label: 'Maps'
-          icon: 'i-lucide-map'
-  class: 'flex-1'
+  - id: 'apps'
+    items:
+    - label: 'Calendar'
+      icon: 'i-lucide-calendar'
+    - label: 'Music'
+      icon: 'i-lucide-music'
+    - label: 'Maps'
+      icon: 'i-lucide-map'
+      class: 'flex-1'
+
 ---
+
 ::
 
 ### Size :badge{label="4.4+" class="align-text-top"}
@@ -316,31 +332,35 @@ Use the `size` prop to change the size of the CommandPalette.
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - autofocus
-ignore:
-  - class
-  - groups
-external:
-  - groups
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- class
+- groups
+  external:
+- groups
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   autofocus: false
   size: 'xl'
   groups:
-    - id: 'apps'
-      items:
-        - label: 'Calendar'
-          icon: 'i-lucide-calendar'
-        - label: 'Music'
-          icon: 'i-lucide-music'
-        - label: 'Maps'
-          icon: 'i-lucide-map'
-  class: 'flex-1'
+  - id: 'apps'
+    items:
+    - label: 'Calendar'
+      icon: 'i-lucide-calendar'
+    - label: 'Music'
+      icon: 'i-lucide-music'
+    - label: 'Maps'
+      icon: 'i-lucide-map'
+      class: 'flex-1'
+
 ---
+
 ::
 
 ### Icon
@@ -349,31 +369,35 @@ Use the `icon` prop to customize the input [Icon](/docs/components/icon). Defaul
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - autofocus
-ignore:
-  - class
-  - groups
-external:
-  - groups
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- class
+- groups
+  external:
+- groups
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   autofocus: false
   icon: 'i-lucide-box'
   groups:
-    - id: 'apps'
-      items:
-        - label: 'Calendar'
-          icon: 'i-lucide-calendar'
-        - label: 'Music'
-          icon: 'i-lucide-music'
-        - label: 'Maps'
-          icon: 'i-lucide-map'
-  class: 'flex-1'
+  - id: 'apps'
+    items:
+    - label: 'Calendar'
+      icon: 'i-lucide-calendar'
+    - label: 'Music'
+      icon: 'i-lucide-music'
+    - label: 'Maps'
+      icon: 'i-lucide-map'
+      class: 'flex-1'
+
 ---
+
 ::
 
 ::framework-only
@@ -394,76 +418,80 @@ Use the `selected-icon` prop to customize the selected item [Icon](/docs/compone
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - autofocus
-ignore:
-  - groups
-  - modelValue
-  - multiple
-  - class
-external:
-  - groups
-  - modelValue
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- groups
+- modelValue
+- multiple
+- class
+  external:
+- groups
+- modelValue
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   multiple: true
   autofocus: false
   modelValue:
-    - label: 'Benjamin Canac'
+  - label: 'praburangki'
+    suffix: 'benjamincanac'
+    avatar:
+    src: 'https://github.com/praburangki.png'
+    loading: lazy
+    selectedIcon: 'i-lucide-circle-check'
+    groups:
+  - id: 'users'
+    label: 'Users'
+    items:
+    - label: 'praburangki'
       suffix: 'benjamincanac'
       avatar:
-        src: 'https://github.com/benjamincanac.png'
-        loading: lazy
-  selectedIcon: 'i-lucide-circle-check'
-  groups:
-    - id: 'users'
-      label: 'Users'
-      items:
-        - label: 'Benjamin Canac'
-          suffix: 'benjamincanac'
-          avatar:
-            src: 'https://github.com/benjamincanac.png'
-            loading: lazy
-        - label: 'Romain Hamel'
-          suffix: 'romhml'
-          avatar:
-            src: 'https://github.com/romhml.png'
-            loading: lazy
-        - label: 'Sébastien Chopin'
-          suffix: 'atinux'
-          avatar:
-            src: 'https://github.com/atinux.png'
-            loading: lazy
-        - label: 'Hugo Richard'
-          suffix: 'HugoRCD'
-          avatar:
-            src: 'https://github.com/HugoRCD.png'
-            loading: lazy
-        - label: 'Sandro Circi'
-          suffix: 'sandros94'
-          avatar:
-            src: 'https://github.com/sandros94.png'
-            loading: lazy
-        - label: 'Daniel Roe'
-          suffix: 'danielroe'
-          avatar:
-            src: 'https://github.com/danielroe.png'
-            loading: lazy
-        - label: 'Jakub Michálek'
-          suffix: 'J-Michalek'
-          avatar:
-            src: 'https://github.com/J-Michalek.png'
-            loading: lazy
-        - label: 'Eugen Istoc'
-          suffix: 'genu'
-          avatar:
-            src: 'https://github.com/genu.png'
-            loading: lazy
-  class: 'flex-1'
+      src: 'https://github.com/praburangki.png'
+      loading: lazy
+    - label: 'Romain Hamel'
+      suffix: 'romhml'
+      avatar:
+      src: 'https://github.com/romhml.png'
+      loading: lazy
+    - label: 'Sébastien Chopin'
+      suffix: 'atinux'
+      avatar:
+      src: 'https://github.com/atinux.png'
+      loading: lazy
+    - label: 'Hugo Richard'
+      suffix: 'HugoRCD'
+      avatar:
+      src: 'https://github.com/HugoRCD.png'
+      loading: lazy
+    - label: 'Sandro Circi'
+      suffix: 'sandros94'
+      avatar:
+      src: 'https://github.com/sandros94.png'
+      loading: lazy
+    - label: 'Daniel Roe'
+      suffix: 'danielroe'
+      avatar:
+      src: 'https://github.com/danielroe.png'
+      loading: lazy
+    - label: 'Jakub Michálek'
+      suffix: 'J-Michalek'
+      avatar:
+      src: 'https://github.com/J-Michalek.png'
+      loading: lazy
+    - label: 'Eugen Istoc'
+      suffix: 'genu'
+      avatar:
+      src: 'https://github.com/genu.png'
+      loading: lazy
+      class: 'flex-1'
+
 ---
+
 ::
 
 ::framework-only
@@ -484,35 +512,39 @@ Use the `trailing-icon` prop to customize the trailing [Icon](/docs/components/i
 
 ::component-code
 ---
+
 collapse: true
 prettier: true
 hide:
-  - autofocus
-ignore:
-  - groups
-  - class
-external:
-  - groups
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- groups
+- class
+  external:
+- groups
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   autofocus: false
   trailingIcon: 'i-lucide-arrow-right'
   groups:
-    - id: 'actions'
-      items:
-        - label: 'Share'
-          icon: 'i-lucide-share'
-          children:
-            - label: 'Email'
-              icon: 'i-lucide-mail'
-            - label: 'Copy'
-              icon: 'i-lucide-copy'
-            - label: 'Link'
-              icon: 'i-lucide-link'
-  class: 'flex-1'
+  - id: 'actions'
+    items:
+    - label: 'Share'
+      icon: 'i-lucide-share'
+      children:
+      - label: 'Email'
+        icon: 'i-lucide-mail'
+      - label: 'Copy'
+        icon: 'i-lucide-copy'
+      - label: 'Link'
+        icon: 'i-lucide-link'
+        class: 'flex-1'
+
 ---
+
 ::
 
 ::framework-only
@@ -533,31 +565,35 @@ Use the `loading` prop to show a loading icon on the CommandPalette.
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - autofocus
-ignore:
-  - class
-  - groups
-external:
-  - groups
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- class
+- groups
+  external:
+- groups
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   autofocus: false
   loading: true
   groups:
-    - id: 'apps'
-      items:
-        - label: 'Calendar'
-          icon: 'i-lucide-calendar'
-        - label: 'Music'
-          icon: 'i-lucide-music'
-        - label: 'Maps'
-          icon: 'i-lucide-map'
-  class: 'flex-1'
+  - id: 'apps'
+    items:
+    - label: 'Calendar'
+      icon: 'i-lucide-calendar'
+    - label: 'Music'
+      icon: 'i-lucide-music'
+    - label: 'Maps'
+      icon: 'i-lucide-map'
+      class: 'flex-1'
+
 ---
+
 ::
 
 ### Loading Icon
@@ -566,32 +602,36 @@ Use the `loading-icon` prop to customize the loading icon. Defaults to `i-lucide
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - autofocus
-ignore:
-  - class
-  - groups
-external:
-  - groups
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- class
+- groups
+  external:
+- groups
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   autofocus: false
   loading: true
   loadingIcon: 'i-lucide-loader'
   groups:
-    - id: 'apps'
-      items:
-        - label: 'Calendar'
-          icon: 'i-lucide-calendar'
-        - label: 'Music'
-          icon: 'i-lucide-music'
-        - label: 'Maps'
-          icon: 'i-lucide-map'
-  class: 'flex-1'
+  - id: 'apps'
+    items:
+    - label: 'Calendar'
+      icon: 'i-lucide-calendar'
+    - label: 'Music'
+      icon: 'i-lucide-music'
+    - label: 'Maps'
+      icon: 'i-lucide-map'
+      class: 'flex-1'
+
 ---
+
 ::
 
 ::framework-only
@@ -616,69 +656,77 @@ An `update:open` event will be emitted when the close button is clicked.
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - autofocus
-ignore:
-  - class
-  - groups
-  - close
-external:
-  - groups
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- class
+- groups
+- close
+  external:
+- groups
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   autofocus: false
   close: true
   groups:
-    - id: 'apps'
-      items:
-        - label: 'Calendar'
-          icon: 'i-lucide-calendar'
-        - label: 'Music'
-          icon: 'i-lucide-music'
-        - label: 'Maps'
-          icon: 'i-lucide-map'
-  class: 'flex-1'
+  - id: 'apps'
+    items:
+    - label: 'Calendar'
+      icon: 'i-lucide-calendar'
+    - label: 'Music'
+      icon: 'i-lucide-music'
+    - label: 'Maps'
+      icon: 'i-lucide-map'
+      class: 'flex-1'
+
 ---
+
 ::
 
 You can pass any property from the [Button](/docs/components/button) component to customize it.
 
 ::component-code
 ---
+
 collapse: true
 prettier: true
 hide:
-  - autofocus
-ignore:
-  - close.color
-  - close.variant
-  - groups
-  - class
-external:
-  - groups
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- close.color
+- close.variant
+- groups
+- class
+  external:
+- groups
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   autofocus: false
   close:
-    color: primary
-    variant: outline
-    class: 'rounded-full'
+  color: primary
+  variant: outline
+  class: 'rounded-full'
   groups:
-    - id: 'apps'
-      items:
-        - label: 'Calendar'
-          icon: 'i-lucide-calendar'
-        - label: 'Music'
-          icon: 'i-lucide-music'
-        - label: 'Maps'
-          icon: 'i-lucide-map'
-  class: 'flex-1'
+  - id: 'apps'
+    items:
+    - label: 'Calendar'
+      icon: 'i-lucide-calendar'
+    - label: 'Music'
+      icon: 'i-lucide-music'
+    - label: 'Maps'
+      icon: 'i-lucide-map'
+      class: 'flex-1'
+
 ---
+
 ::
 
 ### Close Icon
@@ -687,33 +735,37 @@ Use the `close-icon` prop to customize the close button [Icon](/docs/components/
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - autofocus
-ignore:
-  - class
-  - groups
-  - close
-external:
-  - groups
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- class
+- groups
+- close
+  external:
+- groups
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   autofocus: false
   close: true
   closeIcon: 'i-lucide-arrow-right'
   groups:
-    - id: 'apps'
-      items:
-        - label: 'Calendar'
-          icon: 'i-lucide-calendar'
-        - label: 'Music'
-          icon: 'i-lucide-music'
-        - label: 'Maps'
-          icon: 'i-lucide-map'
-  class: 'flex-1'
+  - id: 'apps'
+    items:
+    - label: 'Calendar'
+      icon: 'i-lucide-calendar'
+    - label: 'Music'
+      icon: 'i-lucide-music'
+    - label: 'Maps'
+      icon: 'i-lucide-map'
+      class: 'flex-1'
+
 ---
+
 ::
 
 ::framework-only
@@ -736,37 +788,41 @@ You can pass any property from the [Button](/docs/components/button) component t
 
 ::component-code
 ---
+
 collapse: true
 prettier: true
 hide:
-  - autofocus
-ignore:
-  - back.color
-  - groups
-  - class
-external:
-  - groups
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- back.color
+- groups
+- class
+  external:
+- groups
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   autofocus: false
   back:
-    color: primary
+  color: primary
   groups:
-    - id: 'actions'
-      items:
-        - label: 'Share'
-          icon: 'i-lucide-share'
-          children:
-            - label: 'Email'
-              icon: 'i-lucide-mail'
-            - label: 'Copy'
-              icon: 'i-lucide-copy'
-            - label: 'Link'
-              icon: 'i-lucide-link'
-  class: 'flex-1'
+  - id: 'actions'
+    items:
+    - label: 'Share'
+      icon: 'i-lucide-share'
+      children:
+      - label: 'Email'
+        icon: 'i-lucide-mail'
+      - label: 'Copy'
+        icon: 'i-lucide-copy'
+      - label: 'Link'
+        icon: 'i-lucide-link'
+        class: 'flex-1'
+
 ---
+
 ::
 
 ### Back Icon
@@ -775,36 +831,40 @@ Use the `back-icon` prop to customize the back button [Icon](/docs/components/ic
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - autofocus
-ignore:
-  - class
-  - groups
-  - back
-external:
-  - groups
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- class
+- groups
+- back
+  external:
+- groups
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   autofocus: false
   back: true
   backIcon: 'i-lucide-house'
   groups:
-    - id: 'actions'
-      items:
-        - label: 'Share'
-          icon: 'i-lucide-share'
-          children:
-            - label: 'Email'
-              icon: 'i-lucide-mail'
-            - label: 'Copy'
-              icon: 'i-lucide-copy'
-            - label: 'Link'
-              icon: 'i-lucide-link'
-  class: 'flex-1'
+  - id: 'actions'
+    items:
+    - label: 'Share'
+      icon: 'i-lucide-share'
+      children:
+      - label: 'Email'
+        icon: 'i-lucide-mail'
+      - label: 'Copy'
+        icon: 'i-lucide-copy'
+      - label: 'Link'
+        icon: 'i-lucide-link'
+        class: 'flex-1'
+
 ---
+
 ::
 
 ::framework-only
@@ -825,31 +885,35 @@ Use the `disabled` prop to disable the CommandPalette.
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - autofocus
-ignore:
-  - groups
-  - class
-external:
-  - groups
-externalTypes:
-  - CommandPaletteGroup[]
-class: '!p-0'
-props:
+
+- autofocus
+  ignore:
+- groups
+- class
+  external:
+- groups
+  externalTypes:
+- CommandPaletteGroup[]
+  class: '!p-0'
+  props:
   autofocus: false
   disabled: true
   groups:
-    - id: 'apps'
-      items:
-        - label: 'Calendar'
-          icon: 'i-lucide-calendar'
-        - label: 'Music'
-          icon: 'i-lucide-music'
-        - label: 'Maps'
-          icon: 'i-lucide-map'
-  class: 'flex-1'
+  - id: 'apps'
+    items:
+    - label: 'Calendar'
+      icon: 'i-lucide-calendar'
+    - label: 'Music'
+      icon: 'i-lucide-music'
+    - label: 'Maps'
+      icon: 'i-lucide-map'
+      class: 'flex-1'
+
 ---
+
 ::
 
 ## Examples
@@ -860,12 +924,14 @@ You can control the selected item(s) by using the `default-value` prop or the `v
 
 ::component-example
 ---
+
 collapse: true
 name: 'command-palette-select-example'
 class: '!p-0'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ::tip
@@ -878,12 +944,14 @@ Use the `v-model:search-term` directive to control the search term.
 
 ::component-example
 ---
+
 collapse: true
 name: 'command-palette-search-term-example'
 class: '!p-0'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ::note
@@ -896,21 +964,24 @@ You can create hierarchical menus by using the `children` property in items. Whe
 
 ::component-example
 ---
+
 collapse: true
 prettier: true
 name: 'command-palette-items-children-example'
 class: '!p-0'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ::note
 When navigating into a submenu:
+
 - The search term is reset
 - A back button appears in the input
 - You can go back to the previous group by pressing the :kbd{value="backspace"} key
-::
+  ::
 
 ### With fetched items
 
@@ -918,12 +989,14 @@ You can fetch items from an API and use them in the CommandPalette.
 
 ::component-example
 ---
+
 collapse: true
 name: 'command-palette-fetch-example'
 class: '!p-0'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ::note
@@ -936,12 +1009,14 @@ You can set the `ignoreFilter` field to `true` on a group to disable the interna
 
 ::component-example
 ---
+
 collapse: true
 name: 'command-palette-ignore-filter-example'
 class: '!p-0'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ::note
@@ -954,12 +1029,14 @@ You can use the `postFilter` field on a group to filter items after the search h
 
 ::component-example
 ---
+
 collapse: true
 name: 'command-palette-post-filter-example'
 class: '!p-0'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ::note
@@ -990,12 +1067,14 @@ You can for example set `{ fuseOptions: { includeMatches: true } }`{lang="ts-typ
 
 ::component-example
 ---
+
 collapse: true
 name: 'command-palette-fuse-example'
 class: '!p-0'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ### With virtualization :badge{label="4.1+" class="align-text-top"}
@@ -1008,12 +1087,14 @@ When enabled, all groups are flattened into a single list due to a limitation of
 
 ::component-example
 ---
+
 collapse: true
 name: 'command-palette-virtualize-example'
 class: '!p-0'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ### Within a Popover
@@ -1022,11 +1103,13 @@ You can use the CommandPalette component inside a [Popover](/docs/components/pop
 
 ::component-example
 ---
+
 collapse: true
 name: 'popover-command-palette-example'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ### Within a Modal
@@ -1035,11 +1118,13 @@ You can use the CommandPalette component inside a [Modal](/docs/components/modal
 
 ::component-example
 ---
+
 collapse: true
 name: 'modal-command-palette-example'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ::note
@@ -1052,11 +1137,13 @@ You can use the CommandPalette component inside a [Drawer](/docs/components/draw
 
 ::component-example
 ---
+
 collapse: true
 name: 'drawer-command-palette-example'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ::note
@@ -1069,11 +1156,13 @@ When using the `close` prop, you can listen to the `update:open` event when the 
 
 ::component-example
 ---
+
 collapse: true
 name: 'command-palette-open-example'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ::note
@@ -1086,12 +1175,14 @@ Use the `#footer` slot to add custom content at the bottom of the CommandPalette
 
 ::component-example
 ---
+
 collapse: true
 name: 'command-palette-footer-slot-example'
 class: '!p-0'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ### With custom slot
@@ -1112,12 +1203,14 @@ You will have access to the following slots:
 
 ::component-example
 ---
+
 collapse: true
 name: 'command-palette-custom-slot-example'
 class: '!p-0'
 props:
-  autofocus: false
+autofocus: false
 ---
+
 ::
 
 ::tip{to="#slots"}

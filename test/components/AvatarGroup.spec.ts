@@ -13,7 +13,7 @@ const AvatarGroupWrapper = defineComponent({
     PAvatarGroup: AvatarGroup,
   },
   template: `<PAvatarGroup>
-  <PAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" />
+  <PAvatar src="https://github.com/praburangki.png" alt="praburangki" />
   <PAvatar src="https://github.com/romhml.png" alt="Romain Hamel" />
   <PAvatar src="https://github.com/noook.png" alt="Neil Richter" />
 </PAvatarGroup>`,

@@ -13,7 +13,7 @@ describe('uv class replace', () => {
   const theme = {
     slots: { base: 'inline-flex rounded-md text-sm', label: 'truncate' },
     variants: {
-      color: { primary: { base: 'bg-primary text-inverted' } },
+      color: { primary: { base: 'bg-primary color-text-inverted' } },
       size: { md: { base: 'px-2.5 text-sm' } },
     },
     compoundVariants: [{ color: 'primary', size: 'md', class: { base: 'gap-1.5' } }],

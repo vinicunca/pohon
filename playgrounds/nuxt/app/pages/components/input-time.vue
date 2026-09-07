@@ -37,7 +37,7 @@ const range = shallowRef({
     <PInputTime :hour-cycle="24" v-bind="props" />
     <PInputTime icon="i-lucide-clock" v-bind="props" />
     <PInputTime icon="i-lucide-clock" trailing v-bind="props" />
-    <PInputTime :avatar="{ src: 'https://github.com/benjamincanac.png' }" icon="i-lucide-clock" trailing v-bind="props" />
+    <PInputTime :avatar="{ src: 'https://github.com/praburangki.png' }" icon="i-lucide-clock" trailing v-bind="props" />
     <PInputTime loading v-bind="props" />
     <PInputTime loading trailing v-bind="props" />
     <PInputTime loading icon="i-lucide-clock" trailing-icon="i-lucide-chevron-down" v-bind="props" />

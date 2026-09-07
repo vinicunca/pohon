@@ -11,19 +11,19 @@ describe('avatar', () => {
 
   renderEach(Avatar, [
     // Props
-    ['with src', { props: { src: 'https://github.com/benjamincanac.png' } }],
-    ['with alt', { props: { alt: 'Benjamin Canac' } }],
+    ['with src', { props: { src: 'https://github.com/praburangki.png' } }],
+    ['with alt', { props: { alt: 'praburangki' } }],
     ['with text', { props: { text: '+1' } }],
     ['with icon', { props: { icon: 'i-lucide-image' } }],
     ['with chip', { props: { chip: { text: '1' } } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { src: 'https://github.com/benjamincanac.png', size } }]),
-    ...colors.map((color: string) => [`with color ${color}`, { props: { alt: 'Benjamin Canac', color } }]),
+    ...sizes.map((size: string) => [`with size ${size}`, { props: { src: 'https://github.com/praburangki.png', size } }]),
+    ...colors.map((color: string) => [`with color ${color}`, { props: { alt: 'praburangki', color } }]),
     ['with as', { props: { as: 'section' } }],
-    ['with as (object)', { props: { src: 'https://github.com/benjamincanac.png', as: { root: 'section', img: 'p' } } }],
-    ['with as (partial object)', { props: { src: 'https://github.com/benjamincanac.png', as: { img: 'p' } } }],
-    ['with class', { props: { class: 'bg-default' } }],
+    ['with as (object)', { props: { src: 'https://github.com/praburangki.png', as: { root: 'section', img: 'p' } } }],
+    ['with as (partial object)', { props: { src: 'https://github.com/praburangki.png', as: { img: 'p' } } }],
+    ['with class', { props: { class: 'bg-background' } }],
     ['with ui', { props: { ui: { fallback: 'font-bold' } } }],
-    ['with custom size', { props: { class: 'size-100', src: 'https://github.com/benjamincanac.png' } }],
+    ['with custom size', { props: { class: 'size-100', src: 'https://github.com/praburangki.png' } }],
     // Slots
     ['with default slot', { slots: { default: '🇫🇷' } }],
   ]);
@@ -31,8 +31,8 @@ describe('avatar', () => {
   it('passes accessibility tests', async () => {
     const wrapper = await mountSuspended(Avatar, {
       props: {
-        alt: 'Benjamin Canac',
-        src: 'https://github.com/benjamincanac.png',
+        alt: 'praburangki',
+        src: 'https://github.com/praburangki.png',
       },
     });
 

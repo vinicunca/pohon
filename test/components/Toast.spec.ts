@@ -33,7 +33,7 @@ describe('toast', () => {
     ['with title', { props }],
     ['with description', { props: { ...props, description: 'This is a toast' } }],
     ['with icon', { props: { ...props, icon: 'i-lucide-rocket' } }],
-    ['with avatar', { props: { ...props, avatar: { src: 'https://github.com/benjamincanac.png' } } }],
+    ['with avatar', { props: { ...props, avatar: { src: 'https://github.com/praburangki.png' } } }],
     ['with actions', { props: { ...props, actions: [{ label: 'Action' }] } }],
     ['with orientation vertical', { props: { ...props, icon: 'i-lucide-rocket', description: 'This is a toast', actions: [{ label: 'Action' }], orientation: 'vertical' } }],
     ['with orientation horizontal', { props: { ...props, icon: 'i-lucide-rocket', description: 'This is a toast', actions: [{ label: 'Action' }], orientation: 'horizontal' } }],
@@ -42,7 +42,7 @@ describe('toast', () => {
     ['with type', { props: { ...props, type: 'background' } }],
     ['with color neutral', { props: { ...props, color: 'neutral' } }],
     ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'bg-elevated/50' } }],
+    ['with class', { props: { ...props, class: 'bg-background-elevated/50' } }],
     ['with ui', { props: { ...props, ui: { title: 'font-bold' } } }],
     // Slots
     ['with leading slot', { props, slots: { leading: () => 'Leading slot' } }],
@@ -56,7 +56,7 @@ describe('toast', () => {
       props: {
         title: 'Title',
         description: 'Description',
-        avatar: { src: 'https://github.com/benjamincanac.png', alt: 'Benjamin Canac' },
+        avatar: { src: 'https://github.com/praburangki.png', alt: 'praburangki' },
         actions: [{ label: 'Action' }],
       },
     });

@@ -6,7 +6,7 @@ const items = ref([
     label: 'benjamincanac',
     value: 'benjamincanac',
     avatar: {
-      src: 'https://github.com/benjamincanac.png',
+      src: 'https://github.com/praburangki.png',
       alt: 'benjamincanac',
       loading: 'lazy' as const
     }

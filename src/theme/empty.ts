@@ -39,20 +39,20 @@ export default {
     },
     variant: {
       solid: {
-        root: 'bg-inverted',
-        title: 'text-inverted',
+        root: 'bg-background-inverted',
+        title: 'color-text-inverted',
         description: 'text-dimmed',
       },
       outline: {
-        root: 'bg-default ring ring-default',
+        root: 'bg-background ring ring-default',
         description: 'text-muted',
       },
       soft: {
-        root: 'bg-elevated/50',
+        root: 'bg-background-elevated/50',
         description: 'text-toned',
       },
       subtle: {
-        root: 'bg-elevated/50 ring ring-default',
+        root: 'bg-background-elevated/50 ring ring-default',
         description: 'text-toned',
       },
       naked: {

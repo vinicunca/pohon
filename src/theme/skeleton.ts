@@ -1,3 +1,3 @@
 export default {
-  base: 'animate-pulse rounded-md bg-elevated',
+  base: 'animate-pulse rounded-md bg-background-elevated',
 };

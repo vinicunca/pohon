@@ -17,7 +17,7 @@ const orientation = ref('horizontal' as keyof typeof theme.variants.orientation)
 const items = [{
   label: 'Tab1',
   avatar: {
-    src: 'https://github.com/benjamincanac.png'
+    src: 'https://github.com/praburangki.png'
   },
   content: 'This is the content shown for Tab1'
 }, {

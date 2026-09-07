@@ -36,7 +36,7 @@ const range = shallowRef({
     <PInputDate required v-bind="props" />
     <PInputDate icon="i-lucide-clock" v-bind="props" />
     <PInputDate icon="i-lucide-clock" trailing v-bind="props" />
-    <PInputDate :avatar="{ src: 'https://github.com/benjamincanac.png' }" icon="i-lucide-clock" trailing v-bind="props" />
+    <PInputDate :avatar="{ src: 'https://github.com/praburangki.png' }" icon="i-lucide-clock" trailing v-bind="props" />
     <PInputDate loading v-bind="props" />
     <PInputDate loading trailing v-bind="props" />
     <PInputDate loading icon="i-lucide-clock" trailing-icon="i-lucide-chevron-down" v-bind="props" />

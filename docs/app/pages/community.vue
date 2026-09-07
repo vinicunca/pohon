@@ -68,7 +68,7 @@ if (import.meta.server) {
                 size="sm"
                 color="neutral"
                 variant="outline"
-                class="ring-default group-hover:ring-accented transition bg-transparent"
+                class="ring-default group-hover:ring-ring-accented transition bg-transparent"
               />
             </template>
           </PPageCard>

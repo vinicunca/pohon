@@ -61,7 +61,7 @@ function selectRange(range: typeof ranges[number]) {
             color="neutral"
             variant="ghost"
             class="rounded-none px-4"
-            :class="[isRangeSelected(range) ? 'bg-elevated' : 'hover:bg-elevated/50']"
+            :class="[isRangeSelected(range) ? 'bg-background-elevated' : 'hover:bg-background-elevated/50']"
             truncate
             @click="selectRange(range)"
           />

@@ -9,8 +9,8 @@ describe('breadcrumb', () => {
     {
       label: 'Home',
       avatar: {
-        src: 'https://github.com/benjamincanac.png',
-        alt: 'Benjamin Canac',
+        src: 'https://github.com/praburangki.png',
+        alt: 'praburangki',
       },
       to: '/',
     },

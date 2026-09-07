@@ -48,7 +48,7 @@ const content = ref({
       :items="[
         {
           label: 'Benjamin',
-          avatar: { src: 'https://github.com/benjamincanac.png' },
+          avatar: { src: 'https://github.com/praburangki.png' },
         },
         {
           label: 'Sébastien',

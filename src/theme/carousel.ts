@@ -30,7 +30,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     active: {
       true: {
-        dot: 'data-[state=active]:bg-inverted',
+        dot: 'data-[state=active]:bg-background-inverted',
       },
     },
   },

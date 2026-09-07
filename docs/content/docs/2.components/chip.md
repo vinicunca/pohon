@@ -116,11 +116,11 @@ inset: true
 slots:
 default: |
 
-    <PAvatar src="https://github.com/benjamincanac.png" loading="lazy" />
+    <PAvatar src="https://github.com/praburangki.png" loading="lazy" />
 
 ---
 
-:u-avatar{src="https://github.com/benjamincanac.png" loading="lazy"}
+:u-avatar{src="https://github.com/praburangki.png" loading="lazy"}
 ::
 
 ### Standalone

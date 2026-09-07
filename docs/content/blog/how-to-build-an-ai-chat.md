@@ -8,9 +8,9 @@ authors:
     avatar:
       src: https://github.com/hugorcd.png
     to: https://x.com/hugorcd
-  - name: Benjamin Canac
+  - name: praburangki
     avatar:
-      src: https://github.com/benjamincanac.png
+      src: https://github.com/praburangki.png
     to: https://x.com/benjamincanac
 date: 2025-12-16T10:00:00.000Z
 category: Tutorial

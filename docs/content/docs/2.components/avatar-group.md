@@ -22,13 +22,13 @@ prettier: true
 slots:
 default: |
 
-    <PAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" />
+    <PAvatar src="https://github.com/praburangki.png" alt="praburangki" />
     <PAvatar src="https://github.com/romhml.png" alt="Romain Hamel" />
     <PAvatar src="https://github.com/noook.png" alt="Neil Richter" />
 
 ---
 
-:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
+:u-avatar{src="https://github.com/praburangki.png" alt="praburangki"}
 :u-avatar{src="https://github.com/romhml.png" alt="Romain Hamel"}
 :u-avatar{src="https://github.com/noook.png" alt="Neil Richter"}
 ::
@@ -45,13 +45,13 @@ size: xl
 slots:
 default: |
 
-    <PAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
+    <PAvatar src="https://github.com/praburangki.png" alt="praburangki" loading="lazy" />
     <PAvatar src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy" />
     <PAvatar src="https://github.com/noook.png" alt="Neil Richter" loading="lazy" />
 
 ---
 
-:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/praburangki.png" alt="praburangki" loading="lazy"}
 :u-avatar{src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy"}
 :u-avatar{src="https://github.com/noook.png" alt="Neil Richter" loading="lazy"}
 ::
@@ -68,13 +68,13 @@ max: 2
 slots:
 default: |
 
-    <PAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
+    <PAvatar src="https://github.com/praburangki.png" alt="praburangki" loading="lazy" />
     <PAvatar src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy" />
     <PAvatar src="https://github.com/noook.png" alt="Neil Richter" loading="lazy" />
 
 ---
 
-:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
+:u-avatar{src="https://github.com/praburangki.png" alt="praburangki" loading="lazy"}
 :u-avatar{src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy"}
 :u-avatar{src="https://github.com/noook.png" alt="Neil Richter" loading="lazy"}
 ::
@@ -91,13 +91,13 @@ color: primary
 slots:
 default: |
 
-    <PAvatar alt="Benjamin Canac" />
+    <PAvatar alt="praburangki" />
     <PAvatar alt="Romain Hamel" />
     <PAvatar alt="Neil Richter" />
 
 ---
 
-:u-avatar{alt="Benjamin Canac"}
+:u-avatar{alt="praburangki"}
 :u-avatar{alt="Romain Hamel"}
 :u-avatar{alt="Neil Richter"}
 ::

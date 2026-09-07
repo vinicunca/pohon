@@ -381,7 +381,7 @@ Make sure to add the `data-vaul-drawer-wrapper` directive to a parent element of
 ```vue [app.vue]
 <template>
   <PApp>
-    <div class="bg-default" data-vaul-drawer-wrapper>
+    <div class="bg-background" data-vaul-drawer-wrapper>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
@@ -395,7 +395,7 @@ export default defineNuxtConfig({
   app: {
     rootAttrs: {
       "data-vaul-drawer-wrapper": "",
-      class: "bg-default",
+      class: "bg-background",
     },
   },
 });

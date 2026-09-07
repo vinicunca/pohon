@@ -129,7 +129,7 @@ css_variables:
       description: Use utility classes like text-primary, bg-success, or border-error that automatically adapt to light and dark modes via CSS variables.
       icon: i-lucide-palette
     - title: Text and background tokens
-      description: Complete set of utility classes for text (text-dimmed, text-muted, text-highlighted), backgrounds (bg-default, bg-elevated, bg-accented) and borders.
+      description: Complete set of utility classes for text (text-dimmed, text-muted, text-highlighted), backgrounds (bg-background, bg-background-elevated, bg-accented) and borders.
       icon: i-lucide-layers
     - title: Global layout variables
       description: Customize global styles with --ui-radius for border rounding, --ui-container for layout widths, and --ui-header-height for consistent spacing.
@@ -156,12 +156,12 @@ css_variables:
 
     ```vue [Component.vue]
     <template>
-      <div class="bg-default border border-default rounded-lg p-4">
+      <div class="bg-background border border-default rounded-lg p-4">
         <span class="text-primary">Primary text</span>
 
         <span class="text-dimmed">Dimmed text</span>
 
-        <div class="bg-elevated p-3 rounded-md mt-2">
+        <div class="bg-background-elevated p-3 rounded-md mt-2">
           <span class="text-muted">Elevated background</span>
         </div>
       </div>

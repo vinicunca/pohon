@@ -22,10 +22,10 @@ image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
 date: 2025-03-12
 authors:
 
-- name: Benjamin Canac
+- name: praburangki
   description: '@benjamincanac'
   avatar:
-  src: https://github.com/benjamincanac.png
+  src: https://github.com/praburangki.png
   loading: lazy
   to: https://x.com/benjamincanac
   target: \_blank
@@ -260,10 +260,10 @@ hide:
   description: 'Pohon UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.'
   date: 2025-03-12
   image: 'https://nuxt.com/assets/blog/nuxt-ui-v3.png'
-  authors: - name: Benjamin Canac
+  authors: - name: praburangki
   description: '@benjamincanac'
   avatar:
-  src: https://github.com/benjamincanac.png
+  src: https://github.com/praburangki.png
   loading: lazy
   to: https://x.com/benjamincanac
   target: \_blank - name: Sebastien Chopin

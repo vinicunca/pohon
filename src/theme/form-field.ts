@@ -3,7 +3,7 @@ export default {
     root: '',
     wrapper: '',
     labelWrapper: 'flex content-center items-center justify-between gap-1',
-    label: 'block font-medium text-default',
+    label: 'block font-medium color-text',
     container: 'relative',
     description: 'text-muted',
     error: 'mt-2 text-error',

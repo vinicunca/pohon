@@ -7,7 +7,7 @@ export const THEME_CLASS_MARKERS = [
   'inline-flex',
   'truncate',
   'bg-primary',
-  'text-inverted',
+  'color-text-inverted',
   'text-primary',
   'ring-inset',
   'transition-colors',

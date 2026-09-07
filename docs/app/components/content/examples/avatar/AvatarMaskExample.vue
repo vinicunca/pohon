@@ -1,5 +1,5 @@
 <template>
-  <PAvatar class="rounded-none squircle" src="https://avatars.githubusercontent.com/u/739984?v=4" alt="Benjamin Canac" loading="lazy" />
+  <PAvatar class="rounded-none squircle" src="https://avatars.githubusercontent.com/u/739984?v=4" alt="praburangki" loading="lazy" />
 </template>
 
 <style>

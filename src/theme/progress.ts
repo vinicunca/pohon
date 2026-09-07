@@ -22,7 +22,7 @@ export default (options: Required<ModuleOptions>) => ({
         steps: `text-${color}`,
       }])),
       neutral: {
-        indicator: 'bg-inverted',
+        indicator: 'bg-background-inverted',
         steps: 'text-highlighted',
       },
     },

@@ -102,7 +102,7 @@ options:
   alias: 'avatar'
   label: 'avatar.src'
   default:
-  src: 'https://github.com/benjamincanac.png'
+  src: 'https://github.com/praburangki.png'
   name: 'toast-avatar-example'
 
 ---

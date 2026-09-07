@@ -30,7 +30,7 @@ const actions = [
       role="user"
       side="right"
       :parts="[{ type: 'text', text: 'Can you help me set up Pohon UI in my project?' }]"
-      :avatar="{ src: 'https://github.com/benjamincanac.png' }"
+      :avatar="{ src: 'https://github.com/praburangki.png' }"
       :compact="compact"
       v-bind="props"
     />
@@ -48,7 +48,7 @@ const actions = [
       role="user"
       side="right"
       :parts="[{ type: 'text', text: 'Done! What about theming?' }]"
-      :avatar="{ src: 'https://github.com/benjamincanac.png' }"
+      :avatar="{ src: 'https://github.com/praburangki.png' }"
       :compact="compact"
       v-bind="props"
     />

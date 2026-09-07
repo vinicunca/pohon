@@ -15,7 +15,7 @@ export default (options: Required<ModuleOptions>) => ({
         icon: `text-${color}`,
       }])),
       neutral: {
-        root: 'bg-elevated',
+        root: 'bg-background-elevated',
         fallback: 'text-muted',
         icon: 'text-muted',
       },

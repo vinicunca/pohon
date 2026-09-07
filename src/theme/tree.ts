@@ -60,7 +60,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     selected: {
       true: {
-        link: 'before:bg-elevated',
+        link: 'before:bg-background-elevated',
       },
     },
     disabled: {
@@ -85,7 +85,7 @@ export default (options: Required<ModuleOptions>) => ({
     selected: false,
     disabled: false,
     class: {
-      link: ['hover:text-highlighted hover:before:bg-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+      link: ['hover:text-highlighted hover:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
     },
   }],
   defaultVariants: {

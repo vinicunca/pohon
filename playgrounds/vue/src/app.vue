@@ -34,7 +34,7 @@ provide('components', components)
     <PApp :toaster="appConfig.toaster" :dir="appConfig.dir">
       <PDashboardGroup unit="rem" storage="local">
         <PDashboardSidebar
-          class="bg-elevated/25"
+          class="bg-background-elevated/25"
           resizable
           collapsible
           :toggle="{ size: 'sm', variant: 'outline', class: 'ring-default' }"

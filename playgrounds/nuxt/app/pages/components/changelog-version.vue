@@ -10,7 +10,7 @@
     target="_blank"
     badge="Release"
     :authors="[
-      { name: 'Benjamin Canac', description: 'benjamincanac', avatar: { src: 'https://github.com/benjamincanac.png' }, to: 'https://github.com/benjamincanac', target: '_blank' },
+      { name: 'praburangki', description: 'benjamincanac', avatar: { src: 'https://github.com/praburangki.png' }, to: 'https://github.com/benjamincanac', target: '_blank' },
       { name: 'Sebastien Chopin', description: 'atinux', avatar: { src: 'https://github.com/atinux.png' }, to: 'https://github.com/atinux', target: '_blank' },
       { name: 'Hugo Richard', description: 'hugorcd__', avatar: { src: 'https://github.com/hugorcd.png' }, to: 'https://github.com/hugorcd', target: '_blank' }
     ]"

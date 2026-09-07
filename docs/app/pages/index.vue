@@ -161,7 +161,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
 
     <PSeparator />
 
-    <PPageSection :ui="{ container: 'lg:py-16' }" class="bg-elevated/25">
+    <PPageSection :ui="{ container: 'lg:py-16' }" class="bg-background-elevated/25">
       <h2 class="sr-only">
         Features
       </h2>
@@ -227,7 +227,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
       :features="page.css_variables.features"
       :links="page.css_variables.links"
       orientation="horizontal"
-      class="bg-elevated/25"
+      class="bg-background-elevated/25"
     >
       <MDC :value="page.css_variables.code" cache-key="index-css-variables-code" />
     </PPageSection>
@@ -255,7 +255,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
       :links="page.templates.links"
       :features="page.templates.features"
       orientation="horizontal"
-      class="bg-elevated/25"
+      class="bg-background-elevated/25"
     >
       <PCarousel
         v-slot="{ item }"

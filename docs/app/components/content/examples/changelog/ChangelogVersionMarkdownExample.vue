@@ -56,10 +56,10 @@ const version = {
   target: '_blank',
   content,
   authors: [{
-    name: 'Benjamin Canac',
+    name: 'praburangki',
     avatar: {
-      src: 'https://github.com/benjamincanac.png',
-      alt: 'Benjamin Canac',
+      src: 'https://github.com/praburangki.png',
+      alt: 'praburangki',
       loading: 'lazy' as const
     },
     to: 'https://github.com/benjamincanac',

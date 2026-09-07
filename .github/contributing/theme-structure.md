@@ -13,19 +13,19 @@ For components without dynamic colors:
 ```ts
 export default {
   slots: {
-    root: 'w-full',
-    item: 'border-b border-default last:border-b-0',
-    trigger: 'flex items-center gap-1.5 font-medium text-sm py-3.5',
-    content: 'overflow-hidden',
-    body: 'text-sm pb-3.5'
+    root: "w-full",
+    item: "border-b border-default last:border-b-0",
+    trigger: "flex items-center gap-1.5 font-medium text-sm py-3.5",
+    content: "overflow-hidden",
+    body: "text-sm pb-3.5",
   },
   variants: {
     disabled: {
       true: {
-        trigger: 'cursor-not-allowed opacity-75'
-      }
-    }
-  }
+        trigger: "cursor-not-allowed opacity-75",
+      },
+    },
+  },
 };
 ```
 
@@ -34,64 +34,69 @@ export default {
 For components using theme colors:
 
 ```ts
-import type { ModuleOptions } from '../module';
+import type { ModuleOptions } from "../module";
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    base: ['font-medium inline-flex items-center', options.theme.transitions && 'transition-colors'],
-    label: 'truncate',
-    leadingIcon: 'shrink-0',
-    trailingIcon: 'shrink-0'
+    base: [
+      "font-medium inline-flex items-center",
+      options.theme.transitions && "transition-colors",
+    ],
+    label: "truncate",
+    leadingIcon: "shrink-0",
+    trailingIcon: "shrink-0",
   },
   variants: {
     color: {
       // Dynamic colors from module options
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, ''])),
-      neutral: ''
+      ...Object.fromEntries(
+        (options.theme.colors || []).map((color: string) => [color, ""]),
+      ),
+      neutral: "",
     },
     variant: {
-      solid: '',
-      outline: '',
-      soft: '',
-      subtle: ''
+      solid: "",
+      outline: "",
+      soft: "",
+      subtle: "",
     },
     size: {
-      xs: { base: 'text-xs px-2 py-1', leadingIcon: 'size-3' },
-      sm: { base: 'text-xs px-2.5 py-1.5', leadingIcon: 'size-4' },
-      md: { base: 'text-sm px-2.5 py-1.5', leadingIcon: 'size-5' },
-      lg: { base: 'text-sm px-3 py-2', leadingIcon: 'size-5' },
-      xl: { base: 'text-base px-3 py-2', leadingIcon: 'size-6' }
-    }
+      xs: { base: "text-xs px-2 py-1", leadingIcon: "size-3" },
+      sm: { base: "text-xs px-2.5 py-1.5", leadingIcon: "size-4" },
+      md: { base: "text-sm px-2.5 py-1.5", leadingIcon: "size-5" },
+      lg: { base: "text-sm px-3 py-2", leadingIcon: "size-5" },
+      xl: { base: "text-base px-3 py-2", leadingIcon: "size-6" },
+    },
   },
   compoundVariants: [
     // Color + variant combinations
     ...(options.theme.colors || []).map((color: string) => ({
       color,
-      variant: 'solid',
-      class: `bg-${color} color-text-inverted`
+      variant: "solid",
+      class: `bg-${color} color-text-inverted`,
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
-      variant: 'outline',
-      class: `text-${color} ring ring-inset ring-${color}/50`
+      variant: "outline",
+      class: `text-${color} ring ring-inset ring-${color}/50`,
     })),
     // Neutral variants
     {
-      color: 'neutral',
-      variant: 'solid',
-      class: 'color-text-inverted bg-inverted'
+      color: "neutral",
+      variant: "solid",
+      class: "color-text-inverted bg-background-inverted",
     },
     {
-      color: 'neutral',
-      variant: 'outline',
-      class: 'ring ring-inset ring-ring-accented text-default bg-default'
-    }
+      color: "neutral",
+      variant: "outline",
+      class: "ring ring-inset ring-ring-accented color-text bg-background",
+    },
   ],
   defaultVariants: {
-    color: 'primary',
-    variant: 'solid',
-    size: 'md'
-  }
+    color: "primary",
+    variant: "solid",
+    size: "md",
+  },
 });
 ```
 
@@ -117,29 +122,35 @@ export default (options: Required<ModuleOptions>) => ({
 Always use semantic colors, never Tailwind palette colors:
 
 ### Text Colors
-- `text-default` - Primary text
+
+- `color-text` - Primary text
 - `text-muted` - Secondary text
 - `text-dimmed` - Tertiary/placeholder text
 - `text-highlighted` - Emphasized text
 - `color-text-inverted` - Text on dark backgrounds
 
 ### Background Colors
-- `bg-default` - Primary background
-- `bg-elevated` - Elevated surface (cards, dropdowns)
+
+- `bg-background` - Primary background
+- `bg-background-elevated` - Elevated surface (cards, dropdowns)
 - `bg-background-accented` - Subtle accent background
-- `bg-inverted` - Inverted (dark) background
+- `bg-background-inverted` - Inverted (dark) background
 
 ### Border Colors
+
 - `border-default` - Standard borders
 - `ring-ring` - Focus rings
 - `ring-ring-accented` - Accented rings
 - `divide-divide` - Dividers
 
 ### Theme Colors
+
 Primary colors used with variants:
+
 - `primary`, `secondary`, `success`, `info`, `warning`, `error`, `neutral`
 
 Usage in compoundVariants:
+
 ```ts
 `bg-${color}` // background
 `text-${color}` // text color
@@ -154,8 +165,8 @@ Add transitions based on module options:
 ```ts
 slots: {
   base: [
-    'rounded-md font-medium',
-    options.theme.transitions && 'transition-colors'
+    "rounded-md font-medium",
+    options.theme.transitions && "transition-colors",
   ];
 }
 ```
@@ -163,16 +174,17 @@ slots: {
 ## Animations
 
 Common animation classes:
+
 ```ts
 // Accordion expand/collapse
-content: 'data-[state=open]:animate-[accordion-down_200ms_ease-out] data-[state=closed]:animate-[accordion-up_200ms_ease-out]';
+content: "data-[state=open]:animate-[accordion-down_200ms_ease-out] data-[state=closed]:animate-[accordion-up_200ms_ease-out]";
 
 // Modal fade/scale
-overlay: 'data-[state=open]:animate-[fade-in_200ms_ease-out] data-[state=closed]:animate-[fade-out_200ms_ease-in]';
-content: 'data-[state=open]:animate-[scale-in_200ms_ease-out] data-[state=closed]:animate-[scale-out_200ms_ease-in]';
+overlay: "data-[state=open]:animate-[fade-in_200ms_ease-out] data-[state=closed]:animate-[fade-out_200ms_ease-in]";
+content: "data-[state=open]:animate-[scale-in_200ms_ease-out] data-[state=closed]:animate-[scale-out_200ms_ease-in]";
 
 // Loading spinner
-leadingIcon: 'animate-spin';
+leadingIcon: "animate-spin";
 ```
 
 ## Compound Variants
@@ -183,16 +195,16 @@ Apply styles when multiple conditions match:
 compoundVariants: [
   // Color + variant
   {
-    color: 'primary',
-    variant: 'solid',
-    class: 'bg-primary color-text-inverted'
+    color: "primary",
+    variant: "solid",
+    class: "bg-primary color-text-inverted",
   },
 
   // Size + boolean
   {
-    size: 'sm',
+    size: "sm",
     square: true,
-    class: 'p-1'
+    class: "p-1",
   },
 
   // Multiple slots
@@ -200,28 +212,28 @@ compoundVariants: [
     loading: true,
     leading: true,
     class: {
-      leadingIcon: 'animate-spin'
-    }
+      leadingIcon: "animate-spin",
+    },
   },
 
   // Array of variants
   {
-    color: 'neutral',
-    variant: ['outline', 'subtle'],
-    class: 'focus-visible:ring-2 focus-visible:ring-inverted'
-  }
+    color: "neutral",
+    variant: ["outline", "subtle"],
+    class: "focus-visible:ring-2 focus-visible:ring-inverted",
+  },
 ];
 ```
 
 ## Slot Naming Conventions
 
-| Slot | Usage |
-|------|-------|
-| `root` | Outermost wrapper |
-| `base` | Main interactive element |
-| `leading` / `trailing` | Icon/content containers |
-| `leadingIcon` / `trailingIcon` | Icon elements |
-| `label` | Text label |
-| `content` | Main content area |
-| `overlay` | Background overlay |
-| `header` / `body` / `footer` | Structural sections |
+| Slot                           | Usage                    |
+| ------------------------------ | ------------------------ |
+| `root`                         | Outermost wrapper        |
+| `base`                         | Main interactive element |
+| `leading` / `trailing`         | Icon/content containers  |
+| `leadingIcon` / `trailingIcon` | Icon elements            |
+| `label`                        | Text label               |
+| `content`                      | Main content area        |
+| `overlay`                      | Background overlay       |
+| `header` / `body` / `footer`   | Structural sections      |

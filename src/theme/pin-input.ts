@@ -25,10 +25,10 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
     variant: {
-      outline: 'text-highlighted bg-default ring ring-inset ring-accented',
-      soft: 'text-highlighted bg-elevated/50 hover:bg-elevated focus:bg-elevated disabled:bg-elevated/50',
-      subtle: 'text-highlighted bg-elevated ring ring-inset ring-accented',
-      ghost: 'text-highlighted bg-transparent hover:bg-elevated focus:bg-elevated disabled:bg-transparent dark:disabled:bg-transparent',
+      outline: 'text-highlighted bg-background ring ring-inset ring-ring-accented',
+      soft: 'text-highlighted bg-background-elevated/50 hover:bg-background-elevated focus:bg-background-elevated disabled:bg-background-elevated/50',
+      subtle: 'text-highlighted bg-background-elevated ring ring-inset ring-ring-accented',
+      ghost: 'text-highlighted bg-transparent hover:bg-background-elevated focus:bg-background-elevated disabled:bg-transparent dark:disabled:bg-transparent',
       none: 'text-highlighted bg-transparent focus:outline-none',
     },
     color: {

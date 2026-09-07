@@ -17,10 +17,10 @@ export default (options: Required<ModuleOptions>) => ({
   variants: {
     active: {
       true: {
-        link: 'text-highlighted before:bg-elevated',
+        link: 'text-highlighted before:bg-background-elevated',
       },
       false: {
-        link: ['hover:text-highlighted hover:before:bg-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+        link: ['hover:text-highlighted hover:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
       },
     },
   },

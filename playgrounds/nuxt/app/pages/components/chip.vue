@@ -35,7 +35,7 @@ const items = [{
     </PChip>
 
     <PChip inset text="1" v-bind="props">
-      <PAvatar src="https://github.com/benjamincanac.png" />
+      <PAvatar src="https://github.com/praburangki.png" />
     </PChip>
   </Matrix>
 </template>

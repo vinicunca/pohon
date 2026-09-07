@@ -13,11 +13,11 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative flex items-start',
     container: 'flex items-center',
-    base: 'rounded-sm ring ring-inset ring-accented overflow-hidden focus-visible:outline-none',
-    indicator: 'flex items-center justify-center size-full text-inverted',
+    base: 'rounded-sm ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none',
+    indicator: 'flex items-center justify-center size-full color-text-inverted',
     icon: 'shrink-0',
     wrapper: 'w-full',
-    label: 'block font-medium text-default',
+    label: 'block font-medium color-text',
     description: 'text-muted',
   },
   variants: {
@@ -26,7 +26,7 @@ export default (options: Required<ModuleOptions>) => ({
         indicator: `bg-${color}`,
       }])),
       neutral: {
-        indicator: 'bg-inverted',
+        indicator: 'bg-background-inverted',
       },
     },
     variant: {
@@ -34,7 +34,7 @@ export default (options: Required<ModuleOptions>) => ({
         root: '',
       },
       card: {
-        root: [`border border-default rounded-lg ${hover}bg-elevated/50`, options.theme.transitions && 'transition-colors'],
+        root: [`border border-default rounded-lg ${hover}bg-background-elevated/50`, options.theme.transitions && 'transition-colors'],
       },
     },
     indicator: {
@@ -162,7 +162,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'card',
       class: {
-        root: 'has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:bg-elevated',
+        root: 'has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:bg-background-elevated',
       },
     },
     {

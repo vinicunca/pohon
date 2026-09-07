@@ -2,7 +2,7 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    content: 'min-w-32 max-h-(--akar-context-menu-content-available-height) bg-default shadow-lg rounded-md ring ring-default overflow-hidden data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--akar-context-menu-content-transform-origin) flex flex-col debug-context',
+    content: 'min-w-32 max-h-(--akar-context-menu-content-available-height) bg-background shadow-lg rounded-md ring ring-default overflow-hidden data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--akar-context-menu-content-transform-origin) flex flex-col debug-context',
     viewport: 'relative divide-y divide-default scroll-py-1 overflow-y-auto flex-1',
     group: 'p-1 isolate',
     label: 'w-full flex items-center font-600 text-highlighted',
@@ -27,12 +27,12 @@ export default (options: Required<ModuleOptions>) => ({
     },
     active: {
       true: {
-        item: 'text-highlighted before:bg-elevated',
-        itemLeadingIcon: 'text-default',
+        item: 'text-highlighted before:bg-background-elevated',
+        itemLeadingIcon: 'color-text',
       },
       false: {
-        item: ['text-default data-highlighted:text-highlighted data-[state=open]:text-highlighted data-highlighted:before:bg-elevated/50 data-[state=open]:before:bg-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-        itemLeadingIcon: ['text-dimmed group-data-highlighted:text-default group-data-[state=open]:text-default', options.theme.transitions && 'transition-colors'],
+        item: ['color-text data-highlighted:text-highlighted data-[state=open]:text-highlighted data-highlighted:before:bg-background-elevated/50 data-[state=open]:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+        itemLeadingIcon: ['text-dimmed group-data-highlighted:color-text group-data-[state=open]:color-text', options.theme.transitions && 'transition-colors'],
       },
     },
     loading: {

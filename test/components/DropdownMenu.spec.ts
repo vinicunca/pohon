@@ -18,7 +18,7 @@ describe('dropdownMenu', () => {
     [{
       label: 'My account',
       avatar: {
-        src: 'https://github.com/benjamincanac.png',
+        src: 'https://github.com/praburangki.png',
         alt: 'Benjamín Canac',
       },
       type: 'label',
@@ -102,7 +102,7 @@ describe('dropdownMenu', () => {
       label: 'My account',
       description: 'Account settings',
       avatar: {
-        src: 'https://github.com/benjamincanac.png',
+        src: 'https://github.com/praburangki.png',
       },
       type: 'label',
     }],

@@ -47,7 +47,7 @@ export default (options: Required<ModuleOptions>) => {
       {
         variant: 'outline',
         class: {
-          segment: 'focus:bg-elevated',
+          segment: 'focus:bg-background-elevated',
         },
       },
       {
@@ -65,13 +65,13 @@ export default (options: Required<ModuleOptions>) => {
       {
         variant: 'ghost',
         class: {
-          segment: 'focus:bg-elevated group-hover:focus:bg-accented',
+          segment: 'focus:bg-background-elevated group-hover:focus:bg-accented',
         },
       },
       {
         variant: 'none',
         class: {
-          segment: 'focus:bg-elevated',
+          segment: 'focus:bg-background-elevated',
         },
       },
     ],

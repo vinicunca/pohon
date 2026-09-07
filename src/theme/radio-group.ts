@@ -5,13 +5,13 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative',
     fieldset: 'flex gap-x-2',
-    legend: 'mb-1 block font-medium text-default',
+    legend: 'mb-1 block font-medium color-text',
     item: 'flex items-start',
     container: 'flex items-center',
-    base: 'rounded-full ring ring-inset ring-accented overflow-hidden focus-visible:outline-none',
-    indicator: 'flex items-center justify-center size-full after:bg-default after:rounded-full',
+    base: 'rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none',
+    indicator: 'flex items-center justify-center size-full after:bg-background after:rounded-full',
     wrapper: 'w-full',
-    label: 'block font-medium text-default',
+    label: 'block font-medium color-text',
     icon: 'shrink-0',
     description: 'text-muted',
   },
@@ -21,7 +21,7 @@ export default (options: Required<ModuleOptions>) => ({
         indicator: `bg-${color}`,
       }])),
       neutral: {
-        indicator: 'bg-inverted',
+        indicator: 'bg-background-inverted',
       },
     },
     variant: {
@@ -31,10 +31,10 @@ export default (options: Required<ModuleOptions>) => ({
       },
       card: {
         fieldset: 'flex-wrap',
-        item: [`border border-default rounded-lg ${hover}bg-elevated/50`, options.theme.transitions && 'transition-colors'],
+        item: [`border border-default rounded-lg ${hover}bg-background-elevated/50`, options.theme.transitions && 'transition-colors'],
       },
       table: {
-        item: [`border border-default ${hover}bg-elevated/50`, options.theme.transitions && 'transition-colors'],
+        item: [`border border-default ${hover}bg-background-elevated/50`, options.theme.transitions && 'transition-colors'],
       },
     },
     orientation: {
@@ -193,7 +193,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'card',
       class: {
-        item: 'has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:bg-elevated',
+        item: 'has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:bg-background-elevated',
       },
     },
     ...(options.theme.colors || []).map((color: string) => ({
@@ -207,7 +207,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'table',
       class: {
-        item: 'has-data-[state=checked]:bg-elevated has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:z-[1]',
+        item: 'has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:z-[1]',
       },
     },
     {
