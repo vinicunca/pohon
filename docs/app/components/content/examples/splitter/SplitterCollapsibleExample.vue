@@ -3,7 +3,7 @@ import type { SplitterItem } from 'pohon-ui'
 
 const items: SplitterItem[] = [
   { slot: 'sidebar', sizeUnit: 'px', minSize: 150, defaultSize: 250, collapsible: true, collapsedSize: 48, class: 'bg-background-elevated/50 border border-default rounded-xl' },
-  { slot: 'main', class: 'bg-background-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium' }
+  { slot: 'main', class: 'bg-background-elevated/50 border border-default rounded-xl items-center justify-center color-text-muted font-medium' }
 ]
 </script>
 

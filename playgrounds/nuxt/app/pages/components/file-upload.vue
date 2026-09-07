@@ -101,7 +101,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
             <PButton :label="state.avatar ? 'Change image' : 'Upload image'" color="neutral" @click="open()" />
           </div>
 
-          <p v-if="state.avatar" class="text-xs text-muted mt-1.5">
+          <p v-if="state.avatar" class="text-xs color-text-muted mt-1.5">
             {{ state.avatar.name }}
 
             <PButton

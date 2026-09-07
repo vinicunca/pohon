@@ -169,7 +169,7 @@ watch(open, (isOpen) => {
       </PTooltip>
 
       <template #content>
-        <div ref="popoverContentRef" class="px-2.5 py-1.5 text-xs font-600 text-highlighted border-b border-default">
+        <div ref="popoverContentRef" class="px-2.5 py-1.5 text-xs font-600 color-text-highlighted border-b border-default">
           Theme slots
         </div>
         <div class="p-1">
@@ -182,11 +182,11 @@ watch(open, (isOpen) => {
             @mouseleave="clearHighlight"
           >
             <div class="flex items-center gap-2">
-              <code class="text-xs font-medium" :class="[getSlotRenderLocation(slotName) !== 'none' ? 'text-highlighted' : 'text-muted']">{{ slotName }}</code>
-              <span v-if="getSlotRenderLocation(slotName) === 'portal'" class="text-[10px] text-muted">(in portal)</span>
-              <span v-else-if="getSlotRenderLocation(slotName) === 'none'" class="text-[10px] text-muted">(not rendered)</span>
+              <code class="text-xs font-medium" :class="[getSlotRenderLocation(slotName) !== 'none' ? 'color-text-highlighted' : 'color-text-muted']">{{ slotName }}</code>
+              <span v-if="getSlotRenderLocation(slotName) === 'portal'" class="text-[10px] color-text-muted">(in portal)</span>
+              <span v-else-if="getSlotRenderLocation(slotName) === 'none'" class="text-[10px] color-text-muted">(not rendered)</span>
             </div>
-            <div v-if="getSlotClasses(slotName)" class="mt-0.5 text-[10px] text-muted line-clamp-2 font-mono">
+            <div v-if="getSlotClasses(slotName)" class="mt-0.5 text-[10px] color-text-muted line-clamp-2 font-mono">
               {{ getSlotClasses(slotName) }}
             </div>
           </div>
@@ -206,7 +206,7 @@ watch(open, (isOpen) => {
       >
         <div
           v-if="highlightedSlot"
-          class="absolute -top-6 -left-0.5 px-1.5 py-0.5 text-xs font-medium font-mono bg-primary text-highlighted rounded-sm whitespace-nowrap"
+          class="absolute -top-6 -left-0.5 px-1.5 py-0.5 text-xs font-medium font-mono bg-primary color-text-highlighted rounded-sm whitespace-nowrap"
         >
           {{ highlightedSlot }}
         </div>

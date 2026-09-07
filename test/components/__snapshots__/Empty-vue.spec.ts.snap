@@ -2,9 +2,9 @@
 
 exports[`empty > renders with actions correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Add</span>
@@ -17,9 +17,9 @@ exports[`empty > renders with actions correctly 1`] = `
 
 exports[`empty > renders with actions slot correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0">Actions slot</div>
@@ -49,9 +49,9 @@ exports[`empty > renders with avatar correctly 1`] = `
 
 exports[`empty > renders with body slot correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">Body slot</div>
   <!--v-if-->
@@ -60,9 +60,9 @@ exports[`empty > renders with body slot correctly 1`] = `
 
 exports[`empty > renders with class correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default gap-6">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Add</span>
@@ -75,9 +75,9 @@ exports[`empty > renders with class correctly 1`] = `
 
 exports[`empty > renders with description correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description</div>
   </div>
   <!--v-if-->
   <!--v-if-->
@@ -86,9 +86,9 @@ exports[`empty > renders with description correctly 1`] = `
 
 exports[`empty > renders with description slot correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description slot</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description slot</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Add</span>
@@ -101,9 +101,9 @@ exports[`empty > renders with description slot correctly 1`] = `
 
 exports[`empty > renders with footer slot correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Add</span>
@@ -128,7 +128,7 @@ exports[`empty > renders with header slot correctly 1`] = `
 
 exports[`empty > renders with icon correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
     <!--v-if-->
     <!--v-if-->
   </div>
@@ -139,8 +139,8 @@ exports[`empty > renders with icon correctly 1`] = `
 
 exports[`empty > renders with leading slot correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center">Leading slot<h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center">Leading slot<h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Add</span>
@@ -153,8 +153,8 @@ exports[`empty > renders with leading slot correctly 1`] = `
 
 exports[`empty > renders with loading correctly 1`] = `
 "<div aria-busy="true" data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl [&amp;>[data-slot=icon]]:animate-spin"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl [&amp;>[data-slot=icon]]:animate-spin"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
     <!--v-if-->
   </div>
   <!--v-if-->
@@ -164,8 +164,8 @@ exports[`empty > renders with loading correctly 1`] = `
 
 exports[`empty > renders with loading without icon correctly 1`] = `
 "<div aria-busy="true" data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl [&amp;>[data-slot=icon]]:animate-spin"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl [&amp;>[data-slot=icon]]:animate-spin"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
     <!--v-if-->
   </div>
   <!--v-if-->
@@ -175,8 +175,8 @@ exports[`empty > renders with loading without icon correctly 1`] = `
 
 exports[`empty > renders with loadingIcon correctly 1`] = `
 "<div aria-busy="true" data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl [&amp;>[data-slot=icon]]:animate-spin"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl [&amp;>[data-slot=icon]]:animate-spin"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
     <!--v-if-->
   </div>
   <!--v-if-->
@@ -186,9 +186,9 @@ exports[`empty > renders with loadingIcon correctly 1`] = `
 
 exports[`empty > renders with primary variant naked correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Add</span>
@@ -201,9 +201,9 @@ exports[`empty > renders with primary variant naked correctly 1`] = `
 
 exports[`empty > renders with primary variant outline correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Add</span>
@@ -216,9 +216,9 @@ exports[`empty > renders with primary variant outline correctly 1`] = `
 
 exports[`empty > renders with primary variant soft correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background-elevated/50">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-toned">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-toned">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Add</span>
@@ -231,8 +231,8 @@ exports[`empty > renders with primary variant soft correctly 1`] = `
 
 exports[`empty > renders with primary variant solid correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background-inverted">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base color-text-inverted">Title</h2>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base color-text-inverted">Title</h2>
     <div data-slot="description" class="text-balance text-center text-sm text-dimmed">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
@@ -246,9 +246,9 @@ exports[`empty > renders with primary variant solid correctly 1`] = `
 
 exports[`empty > renders with primary variant subtle correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background-elevated/50 ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-toned">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-toned">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Add</span>
@@ -261,9 +261,9 @@ exports[`empty > renders with primary variant subtle correctly 1`] = `
 
 exports[`empty > renders with size lg correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-11 text-[22px]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-11 text-[22px]"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Add</span>
@@ -276,9 +276,9 @@ exports[`empty > renders with size lg correctly 1`] = `
 
 exports[`empty > renders with size md correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Add</span>
@@ -291,9 +291,9 @@ exports[`empty > renders with size md correctly 1`] = `
 
 exports[`empty > renders with size sm correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-9 text-lg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-sm">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-xs text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-9 text-lg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-sm">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-xs color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><span data-slot="label" class="truncate">Add</span>
@@ -306,9 +306,9 @@ exports[`empty > renders with size sm correctly 1`] = `
 
 exports[`empty > renders with size xl correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-12 text-2xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-lg">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-base text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-12 text-2xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-lg">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-base color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-base gap-2 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-6"></svg><span data-slot="label" class="truncate">Add</span>
@@ -321,9 +321,9 @@ exports[`empty > renders with size xl correctly 1`] = `
 
 exports[`empty > renders with size xs correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-8 text-base"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-sm">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-xs text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-8 text-base"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-sm">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-xs color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2 py-1 text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><span data-slot="label" class="truncate">Add</span>
@@ -336,8 +336,8 @@ exports[`empty > renders with size xs correctly 1`] = `
 
 exports[`empty > renders with title correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
     <!--v-if-->
   </div>
   <!--v-if-->
@@ -347,9 +347,9 @@ exports[`empty > renders with title correctly 1`] = `
 
 exports[`empty > renders with title slot correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title slot</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title slot</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Add</span>
@@ -362,9 +362,9 @@ exports[`empty > renders with title slot correctly 1`] = `
 
 exports[`empty > renders with ui correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-default">
-  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 text-muted"></svg></span>
-    <h2 data-slot="title" class="text-highlighted text-pretty font-medium text-base">Title</h2>
-    <div data-slot="description" class="text-balance text-center text-sm text-muted">Description</div>
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 size-10 text-xl"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 color-text-muted"></svg></span>
+    <h2 data-slot="title" class="color-text-highlighted text-pretty font-medium text-base">Title</h2>
+    <div data-slot="description" class="text-balance text-center text-sm color-text-muted">Description</div>
   </div>
   <div data-slot="body" class="flex flex-col items-center gap-4 max-w-sm">
     <div data-slot="actions" class="flex flex-wrap justify-center gap-2 shrink-0"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Add</span>

@@ -25,7 +25,7 @@ describe('chatTool', () => {
     ['with chevron leading, icon and content', { props: { ...props, chevron: 'leading', icon: 'i-lucide-search' }, slots: { default: () => 'Tool output content' } }],
     ['with chevronIcon', { props: { ...props, chevronIcon: 'i-lucide-arrow-down' } }],
     ['with class', { props: { ...props, class: 'my-5' } }],
-    ['with ui', { props: { ...props, ui: { body: 'text-muted' } } }],
+    ['with ui', { props: { ...props, ui: { body: 'color-text-muted' } } }],
     ['with actions', { props: { ...props, actions: [{ label: 'Approve' }, { label: 'Deny', color: 'neutral' as const, variant: 'soft' as const }] } }],
     ['with actions variant card', { props: { ...props, variant: 'card' as const, actions: [{ label: 'Approve' }, { label: 'Deny' }] } }],
     ['with actions and content', { props: { ...props, actions: [{ label: 'Approve' }, { label: 'Deny' }] }, slots: { default: () => 'Tool output content' } }],

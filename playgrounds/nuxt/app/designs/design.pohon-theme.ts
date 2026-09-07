@@ -7,6 +7,8 @@ import { themeAuthForm } from './pohon-theme/theme.auth-form';
 import { themeAvatar, themeAvatarGroup } from './pohon-theme/theme.avatar';
 import { themeBadge } from './pohon-theme/theme.badge';
 import { themeBanner } from './pohon-theme/theme.banner';
+import { themeBlogPost } from './pohon-theme/theme.blog-post';
+import { themeBreadcrumb } from './pohon-theme/theme.breadcrumb';
 import { themeButton } from './pohon-theme/theme.button';
 import { themeCard } from './pohon-theme/theme.card';
 import { themeChip } from './pohon-theme/theme.chip';
@@ -20,6 +22,7 @@ import {
   themeDashboardSidebar,
   themeDashboardToolbar,
 } from './pohon-theme/theme.dashboard';
+import { themeUser } from './pohon-theme/theme.user';
 
 // @keep-sorted
 export const uiTheme = {
@@ -30,11 +33,12 @@ export const uiTheme = {
   avatarGroup: themeAvatarGroup,
   badge: themeBadge,
   banner: themeBanner,
+  blogPost: themeBlogPost,
+  breadcrumb: themeBreadcrumb,
   button: themeButton,
   card: themeCard,
   chip: themeChip,
   container: {
-    // base: 'w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8',
     base: 'container',
   },
   dashboardGroup: themeDashboardGroup,
@@ -45,4 +49,5 @@ export const uiTheme = {
   dashboardSearchButton: themeDashboardSearchButton,
   dashboardSidebar: themeDashboardSidebar,
   dashboardToolbar: themeDashboardToolbar,
+  user: themeUser,
 } satisfies AppConfigInput['ui'];

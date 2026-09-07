@@ -103,7 +103,7 @@ onUnmounted(() => {
     :should-scroll-to-bottom="false"
   >
     <template #indicator>
-      <div class="flex items-center gap-2 text-muted overflow-hidden">
+      <div class="flex items-center gap-2 color-text-muted overflow-hidden">
         <div
           class="shrink-0 grid size-4"
           :style="{

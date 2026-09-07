@@ -27,7 +27,7 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
   <div class="flex flex-col gap-8">
     <!-- Per-component prop defaults via :props -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-medium text-muted">
+      <p class="text-sm font-medium color-text-muted">
         <code>:props={{ `{ button: { color: '${color}', variant: '${variant}', size: '${size}' } }` }}</code>
       </p>
 
@@ -42,7 +42,7 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
 
     <!-- Explicit prop overrides theme -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-medium text-muted">
+      <p class="text-sm font-medium color-text-muted">
         Explicit props win over <code>:props</code>
       </p>
 
@@ -58,7 +58,7 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
 
     <!-- :ui (slot classes) + :props (prop defaults) together -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-medium text-muted">
+      <p class="text-sm font-medium color-text-muted">
         <code>:ui</code> slot classes + <code>:props</code> prop defaults together
       </p>
 
@@ -75,7 +75,7 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
 
     <!-- Nested PTheme: inner overrides bleed in, other components inherit from outer -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-medium text-muted">
+      <p class="text-sm font-medium color-text-muted">
         Nested <code>&lt;PTheme&gt;</code>: outer sets tooltip globally, inner only overrides button — both compose
       </p>
 
@@ -98,7 +98,7 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
 
     <!-- :props on form components (with and without PFormField wrapping) -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-medium text-muted">
+      <p class="text-sm font-medium color-text-muted">
         <code>:props</code> flows into every form component (with or without <code>&lt;PFormField&gt;</code>)
       </p>
 
@@ -120,7 +120,7 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
 
     <!-- Closer context wins: PFormField/FieldGroup beats :props; error beats both -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-medium text-muted">
+      <p class="text-sm font-medium color-text-muted">
         Closer context wins: <code>&lt;PFormField size="xl"&gt;</code> beats <code>:props</code>; validation error forces <code>error</code> color
       </p>
 
@@ -141,7 +141,7 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
 
     <!-- Baseline: bare components must keep Reka primitives' own defaults -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-medium text-muted">
+      <p class="text-sm font-medium color-text-muted">
         Without <code>&lt;PTheme&gt;</code> (baseline) — bare Tooltip uses Reka's default delay and has no arrow; bare Checkbox matches unstyled defaults
       </p>
 

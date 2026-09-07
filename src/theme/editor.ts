@@ -17,7 +17,7 @@ export default (options: Required<ModuleOptions>) => ({
       // Mentions
       '[&_.mention]:text-primary [&_.mention]:font-medium',
       // Headings - shared styles
-      '[&_:is(h1,h2,h3,h4,h5,h6)]:text-highlighted [&_:is(h1,h2,h3,h4,h5,h6)]:font-bold',
+      '[&_:is(h1,h2,h3,h4,h5,h6)]:color-text-highlighted [&_:is(h1,h2,h3,h4,h5,h6)]:font-bold',
       // Headings - unique styles
       '[&_h1]:text-3xl',
       '[&_h2]:text-2xl',
@@ -37,11 +37,11 @@ export default (options: Required<ModuleOptions>) => ({
       '[&_pre]:text-sm/6 [&_pre]:border [&_pre]:border-muted [&_pre]:bg-muted [&_pre]:rounded-md [&_pre]:px-4 [&_pre]:py-3 [&_pre]:whitespace-pre-wrap [&_pre]:break-words [&_pre]:overflow-x-auto',
       '[&_pre_code]:p-0 [&_pre_code]:text-inherit [&_pre_code]:font-inherit [&_pre_code]:rounded-none [&_pre_code]:inline [&_pre_code]:border-0 [&_pre_code]:bg-transparent',
       // Inline code
-      '[&_code]:px-1.5 [&_code]:py-0.5 [&_code]:text-sm [&_code]:font-mono [&_code]:font-medium [&_code]:rounded-md [&_code]:inline-block [&_code]:border [&_code]:border-muted [&_code]:text-highlighted [&_code]:bg-muted',
+      '[&_code]:px-1.5 [&_code]:py-0.5 [&_code]:text-sm [&_code]:font-mono [&_code]:font-medium [&_code]:rounded-md [&_code]:inline-block [&_code]:border [&_code]:border-muted [&_code]:color-text-highlighted [&_code]:bg-muted',
       // Lists
       '[&_:is(ul,ol)]:ps-6',
       '[&_ul]:list-disc [&_ul]:marker:text-(--ui-border-accented)',
-      '[&_ol]:list-decimal [&_ol]:marker:text-muted',
+      '[&_ol]:list-decimal [&_ol]:marker:color-text-muted',
       '[&_li]:my-1.5 [&_li]:ps-1.5',
       // Images
       '[&_img]:rounded-md [&_img]:block [&_img]:max-w-full [&_img.ProseMirror-selectednode]:outline-2 [&_img.ProseMirror-selectednode]:outline-primary',

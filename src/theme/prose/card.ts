@@ -4,8 +4,8 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     base: ['group relative block my-5 p-4 sm:p-6 border border-default rounded-md bg-background', options.theme.transitions && 'transition-colors'],
     icon: 'size-6 mb-2 block',
-    title: 'text-highlighted font-600',
-    description: 'text-[15px] text-muted *:first:mt-0 *:last:mb-0 *:my-1',
+    title: 'color-text-highlighted font-600',
+    description: 'text-[15px] color-text-muted *:first:mt-0 *:last:mb-0 *:my-1',
     externalIcon: ['size-4 align-top absolute right-2 top-2 text-dimmed pointer-events-none', options.theme.transitions && 'transition-colors'],
   },
   variants: {
@@ -14,7 +14,7 @@ export default (options: Required<ModuleOptions>) => ({
         icon: `text-${color}`,
       }])),
       neutral: {
-        icon: 'text-highlighted',
+        icon: 'color-text-highlighted',
       },
     },
     to: {
@@ -38,7 +38,7 @@ export default (options: Required<ModuleOptions>) => ({
     to: true,
     class: {
       base: 'hover:bg-background-elevated/50 hover:border-inverted outline-inverted/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-inverted',
-      externalIcon: 'group-hover:text-highlighted',
+      externalIcon: 'group-hover:color-text-highlighted',
     },
   }],
   defaultVariants: {

@@ -124,7 +124,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
   </Navbar>
 
   <div class="w-full flex flex-col lg:grid lg:grid-cols-10 lg:gap-10">
-    <Markdown :value="value" class="lg:col-span-8 max-w-xl mx-auto text-muted" />
+    <Markdown :value="value" class="lg:col-span-8 max-w-xl mx-auto color-text-muted" />
 
     <PContentToc
       :links="links"

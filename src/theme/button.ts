@@ -130,7 +130,7 @@ export default (options: Required<ModuleOptions>) => ({
   }, {
     color: 'neutral',
     variant: 'link',
-    class: 'text-muted hover:color-text active:color-text disabled:text-muted aria-disabled:text-muted outline-inverted/25 focus-visible:outline-3',
+    class: 'color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-inverted/25 focus-visible:outline-3',
   }, {
     size: 'xs',
     square: true,

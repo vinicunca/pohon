@@ -65,7 +65,7 @@ defineShortcuts(shortcuts)
         </div>
       </template>
 
-      <div v-if="logs.length === 0" class="text-muted">
+      <div v-if="logs.length === 0" class="color-text-muted">
         Press any shortcut...
       </div>
       <p v-for="(log, index) of logs" :key="index" class="font-mono text-sm">

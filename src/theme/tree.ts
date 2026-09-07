@@ -79,13 +79,13 @@ export default (options: Required<ModuleOptions>) => ({
     color: 'neutral',
     selected: true,
     class: {
-      link: 'text-highlighted',
+      link: 'color-text-highlighted',
     },
   }, {
     selected: false,
     disabled: false,
     class: {
-      link: ['hover:text-highlighted hover:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+      link: ['hover:color-text-highlighted hover:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
     },
   }],
   defaultVariants: {

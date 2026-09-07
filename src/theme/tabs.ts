@@ -11,7 +11,7 @@ export default (options: Required<ModuleOptions>) => ({
     root: 'flex items-center gap-2',
     list: 'relative flex p-1 group',
     indicator: 'absolute transition-[translate,width] duration-200',
-    trigger: ['group relative inline-flex items-center min-w-0 data-[state=inactive]:text-muted hover:data-[state=inactive]:not-disabled:color-text font-medium rounded-md disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
+    trigger: ['group relative inline-flex items-center min-w-0 data-[state=inactive]:color-text-muted hover:data-[state=inactive]:not-disabled:color-text font-medium rounded-md disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
     leadingIcon: 'shrink-0',
     leadingAvatar: 'shrink-0',
     leadingAvatarSize: '',
@@ -137,7 +137,7 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'link',
     class: {
       indicator: 'bg-background-inverted',
-      trigger: ['data-[state=active]:text-highlighted outline-inverted/25 focus-visible:outline-3', ssr('after:bg-background-inverted')],
+      trigger: ['data-[state=active]:color-text-highlighted outline-inverted/25 focus-visible:outline-3', ssr('after:bg-background-inverted')],
     },
   }],
   defaultVariants: {

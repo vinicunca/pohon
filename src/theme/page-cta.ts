@@ -4,8 +4,8 @@ export default {
     container: 'flex flex-col lg:grid px-6 py-12 sm:px-12 sm:py-24 lg:px-16 lg:py-24 gap-8 sm:gap-16',
     wrapper: '',
     header: '',
-    title: 'text-3xl sm:text-4xl text-pretty tracking-tight font-bold text-highlighted',
-    description: 'text-base sm:text-lg text-muted',
+    title: 'text-3xl sm:text-4xl text-pretty tracking-tight font-bold color-text-highlighted',
+    description: 'text-base sm:text-lg color-text-muted',
     body: 'mt-8',
     footer: 'mt-8',
     links: 'flex flex-wrap gap-x-6 gap-y-3',
@@ -36,18 +36,18 @@ export default {
       },
       outline: {
         root: 'bg-background ring ring-default',
-        description: 'text-muted',
+        description: 'color-text-muted',
       },
       soft: {
         root: 'bg-background-elevated/50',
-        description: 'text-toned',
+        description: 'color-text-toned',
       },
       subtle: {
         root: 'bg-background-elevated/50 ring ring-default',
-        description: 'text-toned',
+        description: 'color-text-toned',
       },
       naked: {
-        description: 'text-muted',
+        description: 'color-text-muted',
       },
     },
     title: {

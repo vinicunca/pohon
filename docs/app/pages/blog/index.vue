@@ -65,14 +65,14 @@ function formatDate(date: string) {
             >
               <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 flex-1 min-w-0">
                 <div class="flex-1 min-w-0">
-                  <div class="text-xs text-muted font-mono shrink-0 mb-1">
+                  <div class="text-xs color-text-muted font-mono shrink-0 mb-1">
                     {{ formatDate(post.date) }}
                   </div>
 
-                  <h2 class="font-medium text-highlighted group-hover:text-primary transition-colors duration-200 truncate sm:text-base">
+                  <h2 class="font-medium color-text-highlighted group-hover:text-primary transition-colors duration-200 truncate sm:text-base">
                     {{ post.title }}
                   </h2>
-                  <p class="text-sm text-muted mt-1 line-clamp-2 sm:line-clamp-1">
+                  <p class="text-sm color-text-muted mt-1 line-clamp-2 sm:line-clamp-1">
                     {{ post.description }}
                   </p>
                 </div>
@@ -92,7 +92,7 @@ function formatDate(date: string) {
 
                 <PIcon
                   name="i-lucide-chevron-right"
-                  class="size-4 text-muted group-hover:text-highlighted transition-colors duration-200 shrink-0"
+                  class="size-4 color-text-muted group-hover:color-text-highlighted transition-colors duration-200 shrink-0"
                 />
               </div>
             </PLink>

@@ -18,7 +18,7 @@ export default (options: Required<ModuleOptions>) => ({
     icon: 'shrink-0',
     wrapper: 'w-full',
     label: 'block font-medium color-text',
-    description: 'text-muted',
+    description: 'color-text-muted',
   },
   variants: {
     color: {

@@ -28,10 +28,10 @@ export default (options: Required<ModuleOptions>) => ({
     gridWeekDaysRow: 'mb-1 grid w-full grid-cols-7',
     gridBody: 'grid',
     headCell: 'rounded-md',
-    headCellWeek: 'rounded-md text-muted',
+    headCellWeek: 'rounded-md color-text-muted',
     cell: 'relative text-center',
-    cellTrigger: ['m-0.5 relative flex items-center justify-center whitespace-nowrap focus-visible:outline-3 data-disabled:text-muted data-unavailable:line-through data-unavailable:text-muted data-unavailable:pointer-events-none data-today:font-600', options.theme.transitions && 'transition'],
-    cellWeek: 'relative text-center text-muted',
+    cellTrigger: ['m-0.5 relative flex items-center justify-center whitespace-nowrap focus-visible:outline-3 data-disabled:color-text-muted data-unavailable:line-through data-unavailable:color-text-muted data-unavailable:pointer-events-none data-today:font-600', options.theme.transitions && 'transition'],
+    cellWeek: 'relative text-center color-text-muted',
   },
   variants: {
     color: {
@@ -40,7 +40,7 @@ export default (options: Required<ModuleOptions>) => ({
         cellTrigger: `outline-${color}/25`,
       }])),
       neutral: {
-        headCell: 'text-highlighted',
+        headCell: 'color-text-highlighted',
         cellTrigger: 'outline-inverted/25',
       },
     },
@@ -91,7 +91,7 @@ export default (options: Required<ModuleOptions>) => ({
     view: {
       day: {
         gridRow: 'grid-cols-7 place-items-center',
-        cellTrigger: 'rounded-full data-outside-view:text-muted',
+        cellTrigger: 'rounded-full data-outside-view:color-text-muted',
       },
       month: {
         gridRow: 'grid-cols-4',
@@ -139,28 +139,28 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'solid',
       class: {
-        cellTrigger: 'data-selected:bg-background-inverted data-selected:color-text-inverted data-today:not-data-selected:text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
+        cellTrigger: 'data-selected:bg-background-inverted data-selected:color-text-inverted data-today:not-data-selected:color-text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
       },
     },
     {
       color: 'neutral',
       variant: 'outline',
       class: {
-        cellTrigger: 'data-selected:ring data-selected:ring-inset data-selected:ring-ring-accented data-selected:color-text data-selected:bg-background data-selected:focus-visible:ring-inverted data-today:not-data-selected:text-highlighted data-highlighted:bg-background-inverted/10 hover:not-data-selected:bg-background-inverted/10',
+        cellTrigger: 'data-selected:ring data-selected:ring-inset data-selected:ring-ring-accented data-selected:color-text data-selected:bg-background data-selected:focus-visible:ring-inverted data-today:not-data-selected:color-text-highlighted data-highlighted:bg-background-inverted/10 hover:not-data-selected:bg-background-inverted/10',
       },
     },
     {
       color: 'neutral',
       variant: 'soft',
       class: {
-        cellTrigger: 'data-selected:bg-background-elevated data-selected:color-text data-today:not-data-selected:text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
+        cellTrigger: 'data-selected:bg-background-elevated data-selected:color-text data-today:not-data-selected:color-text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
       },
     },
     {
       color: 'neutral',
       variant: 'subtle',
       class: {
-        cellTrigger: 'data-selected:bg-background-elevated data-selected:color-text data-selected:ring data-selected:ring-inset data-selected:ring-ring-accented data-selected:focus-visible:ring-inverted data-today:not-data-selected:text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
+        cellTrigger: 'data-selected:bg-background-elevated data-selected:color-text data-selected:ring data-selected:ring-inset data-selected:ring-ring-accented data-selected:focus-visible:ring-inverted data-today:not-data-selected:color-text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
       },
     },
     ...Object.entries(daySizes).map(([size, cellTrigger]) => ({

@@ -68,7 +68,7 @@ const icons = {
             container: 'gap-y-4 lg:py-8',
             leading: 'flex justify-center',
             title: 'text-center',
-            description: 'text-center text-muted'
+            description: 'text-center color-text-muted'
           }"
           variant="subtle"
         >
@@ -138,7 +138,7 @@ const icons = {
             container: 'gap-y-2',
             leading: 'flex justify-center',
             title: 'text-center',
-            description: 'text-center text-muted'
+            description: 'text-center color-text-muted'
           }"
         >
           <template #leading>

@@ -2,8 +2,8 @@
 import type { SplitterItem } from 'pohon-ui'
 
 const items: SplitterItem[] = [
-  { slot: 'left', minSize: 20, defaultSize: 30, class: 'items-center justify-center text-muted font-medium' },
-  { slot: 'right', defaultSize: 70, class: 'items-center justify-center text-muted font-medium' }
+  { slot: 'left', minSize: 20, defaultSize: 30, class: 'items-center justify-center color-text-muted font-medium' },
+  { slot: 'right', defaultSize: 70, class: 'items-center justify-center color-text-muted font-medium' }
 ]
 </script>
 

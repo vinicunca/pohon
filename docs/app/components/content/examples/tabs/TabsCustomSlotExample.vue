@@ -28,7 +28,7 @@ const state = reactive({
 <template>
   <PTabs :items="items" variant="link" :ui="{ trigger: 'grow' }" class="gap-4 w-full">
     <template #account="{ item }">
-      <p class="text-muted mb-4">
+      <p class="color-text-muted mb-4">
         {{ item.description }}
       </p>
 
@@ -45,7 +45,7 @@ const state = reactive({
     </template>
 
     <template #password="{ item }">
-      <p class="text-muted mb-4">
+      <p class="color-text-muted mb-4">
         {{ item.description }}
       </p>
 

@@ -3,7 +3,7 @@ export default {
     root: 'relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0',
     header: 'flex flex-col items-center gap-2 max-w-sm text-center',
     avatar: 'shrink-0 mb-2',
-    title: 'text-highlighted text-pretty font-medium',
+    title: 'color-text-highlighted text-pretty font-medium',
     description: 'text-balance text-center',
     body: 'flex flex-col items-center gap-4 max-w-sm',
     actions: 'flex flex-wrap justify-center gap-2 shrink-0',
@@ -45,18 +45,18 @@ export default {
       },
       outline: {
         root: 'bg-background ring ring-default',
-        description: 'text-muted',
+        description: 'color-text-muted',
       },
       soft: {
         root: 'bg-background-elevated/50',
-        description: 'text-toned',
+        description: 'color-text-toned',
       },
       subtle: {
         root: 'bg-background-elevated/50 ring ring-default',
-        description: 'text-toned',
+        description: 'color-text-toned',
       },
       naked: {
-        description: 'text-muted',
+        description: 'color-text-muted',
       },
     },
     loading: {

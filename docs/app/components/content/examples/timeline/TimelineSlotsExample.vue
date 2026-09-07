@@ -53,7 +53,7 @@ const items = [{
   >
     <template #title="{ item }">
       <span>{{ item.username }}</span>
-      <span class="font-normal text-muted">&nbsp;{{ item.action }}</span>
+      <span class="font-normal color-text-muted">&nbsp;{{ item.action }}</span>
     </template>
 
     <template #date="{ item }">

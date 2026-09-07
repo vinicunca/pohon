@@ -84,10 +84,10 @@ watch(matches, () => {
       class="flex items-end justify-between gap-4 p-6 bg-background-elevated/50"
     >
       <div>
-        <h2 class="text-2xl font-bold text-highlighted">
+        <h2 class="text-2xl font-bold color-text-highlighted">
           Members
         </h2>
-        <p class="text-muted">
+        <p class="color-text-muted">
           This header scrolls away with the cards, sharing one scrollbar.
         </p>
       </div>
@@ -115,7 +115,7 @@ watch(matches, () => {
           <template #trailing>
             <span
               id="scroll-area-find-count"
-              class="text-xs text-muted tabular-nums"
+              class="text-xs color-text-muted tabular-nums"
               aria-live="polite"
               role="status"
             >
@@ -159,10 +159,10 @@ watch(matches, () => {
         class="w-72 shrink-0 flex flex-col justify-center gap-4 p-6 bg-background-elevated/50 border-r border-default"
       >
         <div>
-          <h2 class="text-2xl font-bold text-highlighted">
+          <h2 class="text-2xl font-bold color-text-highlighted">
             Members
           </h2>
-          <p class="text-muted">
+          <p class="color-text-muted">
             This header scrolls away with the cards, sharing one scrollbar.
           </p>
         </div>
@@ -197,10 +197,10 @@ watch(matches, () => {
               loading="lazy"
             />
             <div class="min-w-0">
-              <p class="font-medium text-highlighted truncate">
+              <p class="font-medium color-text-highlighted truncate">
                 {{ item.firstName }} {{ item.lastName }}
               </p>
-              <p class="text-sm text-muted truncate">
+              <p class="text-sm color-text-muted truncate">
                 {{ item.email }}
               </p>
             </div>

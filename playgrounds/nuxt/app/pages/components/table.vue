@@ -394,7 +394,7 @@ onMounted(() => {
     </PPopover>
 
     <div class="flex items-center justify-between gap-3">
-      <div class="text-sm text-muted">
+      <div class="text-sm color-text-muted">
         {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length || 0 }} of
         {{ table?.tableApi?.getFilteredRowModel().rows.length || 0 }} row(s) selected.
       </div>

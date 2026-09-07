@@ -421,7 +421,7 @@ const { data: ast } = useAsyncData(codeKey, async () => {
             class="inline-flex ring ring-ring-accented rounded-sm"
             :ui="{
               wrapper: 'bg-background-elevated/50 rounded-l-sm flex border-r border-accented',
-              label: 'text-muted px-2 py-1.5',
+              label: 'color-text-muted px-2 py-1.5',
               container: 'mt-0'
             }"
           >

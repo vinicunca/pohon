@@ -23,7 +23,7 @@ export default (options: Required<ModuleOptions>) => ({
       }])),
       neutral: {
         indicator: 'bg-background-inverted',
-        itemLeadingIcon: 'text-highlighted',
+        itemLeadingIcon: 'color-text-highlighted',
         itemLeadingDot: 'bg-background-inverted',
       },
     },

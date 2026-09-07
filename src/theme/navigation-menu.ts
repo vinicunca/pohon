@@ -4,7 +4,7 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative flex gap-1.5 [&>div]:min-w-0',
     list: 'isolate min-w-0',
-    label: 'w-full flex items-center gap-1.5 font-600 text-xs/5 text-highlighted px-2.5 py-1.5',
+    label: 'w-full flex items-center gap-1.5 font-600 text-xs/5 color-text-highlighted px-2.5 py-1.5',
     item: 'min-w-0',
     link: 'group relative w-full flex items-center gap-1.5 font-medium text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none focus-visible:before:outline-3',
     linkLeadingIcon: 'shrink-0 size-5',
@@ -18,14 +18,14 @@ export default (options: Required<ModuleOptions>) => ({
     linkLabel: 'truncate',
     linkLabelExternalIcon: 'inline-block size-3 align-top text-dimmed',
     childList: 'isolate',
-    childLabel: 'text-xs text-highlighted',
+    childLabel: 'text-xs color-text-highlighted',
     childItem: '',
     childLink: 'group relative size-full flex items-start text-start text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none focus-visible:before:outline-3',
     childLinkWrapper: 'min-w-0',
     childLinkIcon: 'size-5 shrink-0',
     childLinkLabel: 'truncate',
     childLinkLabelExternalIcon: 'inline-block size-3 align-top text-dimmed',
-    childLinkDescription: 'text-muted',
+    childLinkDescription: 'color-text-muted',
     separator: 'px-2 h-px bg-border',
     viewportWrapper: 'absolute top-full left-0 flex w-full',
     viewport: 'relative overflow-hidden bg-background shadow-lg rounded-md ring ring-default h-(--akar-navigation-menu-viewport-height) w-full transition-[width,height,left,right] duration-200 origin-[top_center] data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] z-1',
@@ -81,13 +81,13 @@ export default (options: Required<ModuleOptions>) => ({
     },
     active: {
       true: {
-        childLink: 'before:bg-background-elevated text-highlighted',
+        childLink: 'before:bg-background-elevated color-text-highlighted',
         childLinkIcon: 'color-text',
       },
       false: {
-        link: 'text-muted',
+        link: 'color-text-muted',
         linkLeadingIcon: 'text-dimmed',
-        childLink: ['hover:before:bg-background-elevated/50 color-text hover:text-highlighted', options.theme.transitions && 'transition-colors before:transition-colors'],
+        childLink: ['hover:before:bg-background-elevated/50 color-text hover:color-text-highlighted', options.theme.transitions && 'transition-colors before:transition-colors'],
         childLinkIcon: ['text-dimmed group-hover:color-text', options.theme.transitions && 'transition-colors'],
       },
     },
@@ -154,7 +154,7 @@ export default (options: Required<ModuleOptions>) => ({
     active: false,
     variant: 'pill',
     class: {
-      link: ['hover:text-highlighted hover:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+      link: ['hover:color-text-highlighted hover:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
       linkLeadingIcon: ['group-hover:color-text', options.theme.transitions && 'transition-colors'],
     },
   }, {
@@ -163,7 +163,7 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'pill',
     orientation: 'horizontal',
     class: {
-      link: 'data-[state=open]:text-highlighted',
+      link: 'data-[state=open]:color-text-highlighted',
       linkLeadingIcon: 'group-data-[state=open]:color-text',
     },
   }, {
@@ -196,8 +196,8 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'pill',
     active: true,
     class: {
-      link: 'text-highlighted',
-      linkLeadingIcon: 'text-highlighted group-data-[state=open]:text-highlighted',
+      link: 'color-text-highlighted',
+      linkLeadingIcon: 'color-text-highlighted group-data-[state=open]:color-text-highlighted',
     },
   }, {
     variant: 'pill',
@@ -219,7 +219,7 @@ export default (options: Required<ModuleOptions>) => ({
     active: false,
     variant: 'link',
     class: {
-      link: ['hover:text-highlighted', options.theme.transitions && 'transition-colors'],
+      link: ['hover:color-text-highlighted', options.theme.transitions && 'transition-colors'],
       linkLeadingIcon: ['group-hover:color-text', options.theme.transitions && 'transition-colors'],
     },
   }, {
@@ -228,7 +228,7 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'link',
     orientation: 'horizontal',
     class: {
-      link: 'data-[state=open]:text-highlighted',
+      link: 'data-[state=open]:color-text-highlighted',
       linkLeadingIcon: 'group-data-[state=open]:color-text',
     },
   }, ...(options.theme.colors || []).map((color: string) => ({
@@ -244,8 +244,8 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'link',
     active: true,
     class: {
-      link: 'text-highlighted',
-      linkLeadingIcon: 'text-highlighted group-data-[state=open]:text-highlighted',
+      link: 'color-text-highlighted',
+      linkLeadingIcon: 'color-text-highlighted group-data-[state=open]:color-text-highlighted',
     },
   }, ...(options.theme.colors || []).map((highlightColor: string) => ({
     highlightColor,

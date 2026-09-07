@@ -178,7 +178,7 @@ exports[`checkboxGroup > renders with description correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2 text-sm">
         <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
-        <p data-slot="description" class="text-muted">Description 0</p>
+        <p data-slot="description" class="color-text-muted">Description 0</p>
       </div>
     </div>
     <div data-slot="item" class="relative flex items-start flex-row">
@@ -189,7 +189,7 @@ exports[`checkboxGroup > renders with description correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2 text-sm">
         <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
-        <p data-slot="description" class="text-muted">Description 1</p>
+        <p data-slot="description" class="color-text-muted">Description 1</p>
       </div>
     </div>
     <div data-slot="item" class="relative flex items-start flex-row">
@@ -200,7 +200,7 @@ exports[`checkboxGroup > renders with description correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2 text-sm">
         <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
-        <p data-slot="description" class="text-muted">Description 2</p>
+        <p data-slot="description" class="color-text-muted">Description 2</p>
       </div>
     </div>
   </fieldset>
@@ -220,7 +220,7 @@ exports[`checkboxGroup > renders with description slot correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2 text-sm">
         <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
-        <p data-slot="description" class="text-muted">Description slot</p>
+        <p data-slot="description" class="color-text-muted">Description slot</p>
       </div>
     </div>
     <div data-slot="item" class="relative flex items-start flex-row">
@@ -231,7 +231,7 @@ exports[`checkboxGroup > renders with description slot correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2 text-sm">
         <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
-        <p data-slot="description" class="text-muted">Description slot</p>
+        <p data-slot="description" class="color-text-muted">Description slot</p>
       </div>
     </div>
     <div data-slot="item" class="relative flex items-start flex-row">
@@ -242,7 +242,7 @@ exports[`checkboxGroup > renders with description slot correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2 text-sm">
         <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
-        <p data-slot="description" class="text-muted">Description slot</p>
+        <p data-slot="description" class="color-text-muted">Description slot</p>
       </div>
     </div>
   </fieldset>
@@ -262,7 +262,7 @@ exports[`checkboxGroup > renders with descriptionKey correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2 text-sm">
         <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
-        <p data-slot="description" class="text-muted">1</p>
+        <p data-slot="description" class="color-text-muted">1</p>
       </div>
     </div>
     <div data-slot="item" class="relative flex items-start flex-row">
@@ -273,7 +273,7 @@ exports[`checkboxGroup > renders with descriptionKey correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2 text-sm">
         <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
-        <p data-slot="description" class="text-muted">2</p>
+        <p data-slot="description" class="color-text-muted">2</p>
       </div>
     </div>
     <div data-slot="item" class="relative flex items-start flex-row">
@@ -284,7 +284,7 @@ exports[`checkboxGroup > renders with descriptionKey correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2 text-sm">
         <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
-        <p data-slot="description" class="text-muted">3</p>
+        <p data-slot="description" class="color-text-muted">3</p>
       </div>
     </div>
   </fieldset>

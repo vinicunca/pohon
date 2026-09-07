@@ -72,8 +72,8 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
           class="p-0"
           :ui="{ leadingIcon: 'size-4' }"
         />
-        <span class="text-muted">&middot;</span>
-        <time class="text-muted font-normal">{{ new Date(page.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' }) }}</time>
+        <span class="color-text-muted">&middot;</span>
+        <time class="color-text-muted font-normal">{{ new Date(page.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' }) }}</time>
       </template>
 
       <div v-if="page.authors?.length" class="flex items-center gap-6 mt-6">
@@ -81,13 +81,13 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
           <PLink v-if="author.to" :to="author.to" target="_blank" class="flex items-center gap-3 group">
             <PAvatar :src="author.avatar?.src" :alt="author.name" size="lg" />
             <div class="flex flex-col">
-              <span class="text-sm font-medium text-highlighted">{{ author.name }}</span>
-              <span class="text-xs text-muted group-hover:text-primary transition-colors">@{{ author.to.split('/').pop() }}</span>
+              <span class="text-sm font-medium color-text-highlighted">{{ author.name }}</span>
+              <span class="text-xs color-text-muted group-hover:text-primary transition-colors">@{{ author.to.split('/').pop() }}</span>
             </div>
           </PLink>
           <div v-else class="flex items-center gap-3">
             <PAvatar :src="author.avatar?.src" :alt="author.name" size="lg" />
-            <span class="text-sm font-medium text-highlighted">{{ author.name }}</span>
+            <span class="text-sm font-medium color-text-highlighted">{{ author.name }}</span>
           </div>
         </template>
       </div>

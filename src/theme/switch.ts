@@ -9,7 +9,7 @@ export default (options: Required<ModuleOptions>) => ({
     icon: ['absolute shrink-0 group-data-[state=unchecked]:text-dimmed opacity-0 size-10/12', options.theme.transitions && 'transition-[color,opacity] duration-200'],
     wrapper: 'ms-2',
     label: 'block font-medium color-text',
-    description: 'text-muted',
+    description: 'color-text-muted',
   },
   variants: {
     color: {
@@ -19,7 +19,7 @@ export default (options: Required<ModuleOptions>) => ({
       }])),
       neutral: {
         base: 'data-[state=checked]:bg-background-inverted outline-inverted/25',
-        icon: 'group-data-[state=checked]:text-highlighted',
+        icon: 'group-data-[state=checked]:color-text-highlighted',
       },
     },
     size: {

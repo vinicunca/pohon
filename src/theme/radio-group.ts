@@ -13,7 +13,7 @@ export default (options: Required<ModuleOptions>) => ({
     wrapper: 'w-full',
     label: 'block font-medium color-text',
     icon: 'shrink-0',
-    description: 'text-muted',
+    description: 'color-text-muted',
   },
   variants: {
     color: {

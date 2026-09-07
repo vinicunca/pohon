@@ -5,12 +5,12 @@ export default (options: Required<ModuleOptions>) => ({
     root: 'flex gap-1.5',
     item: 'group relative flex flex-1 gap-3',
     container: 'relative flex items-center gap-1.5',
-    indicator: 'group-data-[state=completed]:color-text-inverted group-data-[state=active]:color-text-inverted text-muted',
+    indicator: 'group-data-[state=completed]:color-text-inverted group-data-[state=active]:color-text-inverted color-text-muted',
     separator: 'flex-1 rounded-full bg-background-elevated',
     wrapper: 'w-full',
     date: 'text-dimmed text-xs/5',
-    title: 'font-medium text-highlighted text-sm',
-    description: 'text-muted text-wrap text-sm',
+    title: 'font-medium color-text-highlighted text-sm',
+    description: 'color-text-muted text-wrap text-sm',
   },
 
   variants: {

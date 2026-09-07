@@ -34,7 +34,7 @@ const items = [
 
 <template>
   <PContextMenu :items="items">
-    <NuxtLink to="/" class="flex items-end gap-2 font-bold text-xl text-highlighted min-w-0 outline-primary/25 focus-visible:outline-3 shrink-0 rounded-md p-1 -ms-1" aria-label="Pohon UI">
+    <NuxtLink to="/" class="flex items-end gap-2 font-bold text-xl color-text-highlighted min-w-0 outline-primary/25 focus-visible:outline-3 shrink-0 rounded-md p-1 -ms-1" aria-label="Pohon UI">
       <Logo ref="logoRef" class="w-auto h-6 shrink-0" />
     </NuxtLink>
   </PContextMenu>

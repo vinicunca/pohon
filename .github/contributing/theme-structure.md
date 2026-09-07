@@ -124,9 +124,9 @@ Always use semantic colors, never Tailwind palette colors:
 ### Text Colors
 
 - `color-text` - Primary text
-- `text-muted` - Secondary text
+- `color-text-muted` - Secondary text
 - `text-dimmed` - Tertiary/placeholder text
-- `text-highlighted` - Emphasized text
+- `color-text-highlighted` - Emphasized text
 - `color-text-inverted` - Text on dark backgrounds
 
 ### Background Colors

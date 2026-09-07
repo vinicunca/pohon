@@ -10,8 +10,8 @@ export default (options: Required<ModuleOptions>) => ({
     footer: 'p-1',
     viewport: 'relative scroll-py-1 overflow-y-auto flex-1 focus:outline-none',
     group: 'p-1 isolate',
-    empty: 'text-center text-muted',
-    label: 'font-600 text-highlighted',
+    empty: 'text-center color-text-muted',
+    label: 'font-600 color-text-highlighted',
     item: 'group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75',
     itemLeadingIcon: 'shrink-0',
     itemLeadingAvatar: 'shrink-0',
@@ -25,10 +25,10 @@ export default (options: Required<ModuleOptions>) => ({
     itemTrailingKbdsSize: '',
     itemWrapper: 'flex-1 flex flex-col text-start min-w-0',
     itemLabel: 'truncate space-x-1 text-dimmed',
-    itemLabelBase: 'text-highlighted [&>mark]:text-primary [&>mark]:bg-primary/15',
+    itemLabelBase: 'color-text-highlighted [&>mark]:text-primary [&>mark]:bg-primary/15',
     itemLabelPrefix: 'color-text',
     itemLabelSuffix: 'text-dimmed [&>mark]:text-primary [&>mark]:bg-primary/15',
-    itemDescription: 'truncate text-muted [&>mark]:text-primary [&>mark]:bg-primary/15',
+    itemDescription: 'truncate color-text-muted [&>mark]:text-primary [&>mark]:bg-primary/15',
   },
   variants: {
     virtualize: {
@@ -118,11 +118,11 @@ export default (options: Required<ModuleOptions>) => ({
     },
     active: {
       true: {
-        item: 'text-highlighted before:bg-background-elevated',
+        item: 'color-text-highlighted before:bg-background-elevated',
         itemLeadingIcon: 'color-text',
       },
       false: {
-        item: ['color-text data-highlighted:not-data-disabled:text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+        item: ['color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
         itemLeadingIcon: ['text-dimmed group-data-highlighted:not-group-data-disabled:color-text', options.theme.transitions && 'transition-colors'],
       },
     },

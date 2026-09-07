@@ -15,21 +15,21 @@ exports[`contentToc > renders with as correctly 1`] = `
         <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -56,21 +56,21 @@ exports[`contentToc > renders with bottom slot correctly 1`] = `
         <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -97,21 +97,21 @@ exports[`contentToc > renders with class correctly 1`] = `
         <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -155,21 +155,21 @@ exports[`contentToc > renders with default slot correctly 1`] = `
         <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -199,21 +199,21 @@ exports[`contentToc > renders with highlight circuit variant correctly 1`] = `
         <li class="min-w-0 -ms-px"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0 -ms-px"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0 -ms-px"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0 -ms-px"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0 -ms-px"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class="ps-px"><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class="ps-px"><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0 -ms-px"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0 -ms-px"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0 -ms-px"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0 -ms-px"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0 -ms-px"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0 -ms-px"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -243,21 +243,21 @@ exports[`contentToc > renders with highlight circuit variant neutral color corre
         <li class="min-w-0 -ms-px"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0 -ms-px"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0 -ms-px"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0 -ms-px"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0 -ms-px"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class="ps-px"><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class="ps-px"><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0 -ms-px"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0 -ms-px"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0 -ms-px"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0 -ms-px"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0 -ms-px"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0 -ms-px"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -287,21 +287,21 @@ exports[`contentToc > renders with highlight correctly 1`] = `
         <li class="min-w-0 -ms-px"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0 -ms-px"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0 -ms-px"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0 -ms-px"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0 -ms-px"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0 -ms-px"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0 -ms-px"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0 -ms-px"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0 -ms-px"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0 -ms-px"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0 -ms-px"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -331,21 +331,21 @@ exports[`contentToc > renders with highlight neutral color correctly 1`] = `
         <li class="min-w-0 -ms-px"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0 -ms-px"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0 -ms-px"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0 -ms-px"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0 -ms-px"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0 -ms-px"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0 -ms-px"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0 -ms-px"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0 -ms-px"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0 -ms-px"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0 -ms-px"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -375,21 +375,21 @@ exports[`contentToc > renders with highlight straight variant correctly 1`] = `
         <li class="min-w-0 -ms-px"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0 -ms-px"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0 -ms-px"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0 -ms-px"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0 -ms-px"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0 -ms-px"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0 -ms-px"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0 -ms-px"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0 -ms-px"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0 -ms-px"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0 -ms-px"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -419,21 +419,21 @@ exports[`contentToc > renders with highlight straight variant neutral color corr
         <li class="min-w-0 -ms-px"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0 -ms-px"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0 -ms-px"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0 -ms-px"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0 -ms-px"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0 -ms-px"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0 -ms-px"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0 -ms-px"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0 -ms-px"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0 -ms-px"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0 -ms-px"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -460,21 +460,21 @@ exports[`contentToc > renders with leading slot correctly 1`] = `
         <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -501,21 +501,21 @@ exports[`contentToc > renders with link slot correctly 1`] = `
         <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary">Link slot</a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors">Link slot</a>
+        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors">Link slot</a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors">Link slot</a>
+        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors">Link slot</a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors">Link slot</a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors">Link slot</a>
           <ul class="ms-3">
-            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors">Link slot</a>
+            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors">Link slot</a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors">Link slot</a>
+            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors">Link slot</a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors">Link slot</a>
+            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors">Link slot</a>
               <!--v-if-->
             </li>
           </ul>
@@ -542,21 +542,21 @@ exports[`contentToc > renders with links correctly 1`] = `
         <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -580,24 +580,24 @@ exports[`contentToc > renders with neutral color correctly 1`] = `
     <div data-slot="content" class="relative data-[state=open]:animate-[collapsible-down_200ms_var(--ease-out)] data-[state=closed]:animate-[collapsible-up_200ms_var(--ease-out)] data-[state=closed]:overflow-hidden focus:outline-none lg:min-h-[min(var(--list-height,8rem),8rem)] lg:overflow-y-auto lg:scrollbar-none hidden lg:flex" style="--list-height: 12.25rem;">
       <!--v-if-->
       <ul class="min-w-0">
-        <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-highlighted"><span data-slot="linkText" class="truncate">Installation</span></a>
+        <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-highlighted"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -624,21 +624,21 @@ exports[`contentToc > renders with title correctly 1`] = `
         <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -665,21 +665,21 @@ exports[`contentToc > renders with top slot correctly 1`] = `
         <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -706,21 +706,21 @@ exports[`contentToc > renders with trailing slot correctly 1`] = `
         <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -747,21 +747,21 @@ exports[`contentToc > renders with trailingIcon correctly 1`] = `
         <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>
@@ -788,21 +788,21 @@ exports[`contentToc > renders with ui correctly 1`] = `
         <li class="min-w-0"><a href="#installation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-primary"><span data-slot="linkText" class="truncate">Installation</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
+        <li class="min-w-0"><a href="#components" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Components</span></a>
           <!--v-if-->
         </li>
-        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
+        <li class="min-w-0"><a href="#typography" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Typography</span></a>
           <!--v-if-->
         </li>
-        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
+        <li class=""><a href="#utils" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">Utils</span></a>
           <ul class="ms-3">
-            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
+            <li class="min-w-0"><a href="#mapcontentnavigation" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">mapContentNavigation</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
+            <li class="min-w-0"><a href="#findpageheadline" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageHeadline</span></a>
               <!--v-if-->
             </li>
-            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
+            <li class="min-w-0"><a href="#findpagebreadcrumb" data-slot="link" class="group relative text-sm flex items-center rounded-sm outline-primary/25 focus-visible:outline-3 py-1 color-text-muted hover:color-text transition-colors"><span data-slot="linkText" class="truncate">findPageBreadcrumb</span></a>
               <!--v-if-->
             </li>
           </ul>

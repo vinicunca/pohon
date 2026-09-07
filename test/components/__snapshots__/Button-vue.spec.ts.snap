@@ -195,7 +195,7 @@ exports[`button > renders with neutral variant ghost correctly 1`] = `
 `;
 
 exports[`button > renders with neutral variant link correctly 1`] = `
-"<button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-muted hover:color-text active:color-text disabled:text-muted aria-disabled:text-muted outline-inverted/25 focus-visible:outline-3">
+"<button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-inverted/25 focus-visible:outline-3">
   <!--v-if--><span data-slot="label" class="truncate">Button</span>
   <!--v-if-->
 </button>"

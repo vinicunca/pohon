@@ -60,7 +60,7 @@ exports[`switch > renders with description correctly 1`] = `
     <!--v-if-->
   </div>
   <div data-slot="wrapper" class="ms-2 text-sm"><label for="v-0" data-slot="label" class="block font-medium color-text">Label</label>
-    <p data-slot="description" class="text-muted">Description</p>
+    <p data-slot="description" class="color-text-muted">Description</p>
   </div>
 </div>"
 `;

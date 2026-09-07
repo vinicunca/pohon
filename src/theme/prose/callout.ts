@@ -15,7 +15,7 @@ export default (options: Required<ModuleOptions>) => ({
       }])),
       neutral: {
         base: 'border border-muted bg-muted color-text',
-        icon: 'text-highlighted',
+        icon: 'color-text-highlighted',
         externalIcon: 'text-dimmed',
       },
     },
@@ -35,7 +35,7 @@ export default (options: Required<ModuleOptions>) => ({
     to: true,
     class: {
       base: 'hover:border-inverted outline-inverted/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-inverted',
-      externalIcon: 'group-hover:text-highlighted',
+      externalIcon: 'group-hover:color-text-highlighted',
     },
   }],
   defaultVariants: {

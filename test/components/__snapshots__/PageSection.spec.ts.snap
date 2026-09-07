@@ -47,7 +47,7 @@ exports[`pageSection > renders with description correctly 1`] = `
         <!--v-if-->
         <!--v-if-->
         <!--v-if-->
-        <div data-slot="description" class="text-base sm:text-lg text-muted text-center text-balance">Description</div>
+        <div data-slot="description" class="text-base sm:text-lg color-text-muted text-center text-balance">Description</div>
       </div>
       <!--v-if-->
       <!--v-if-->
@@ -65,7 +65,7 @@ exports[`pageSection > renders with description slot correctly 1`] = `
         <!--v-if-->
         <!--v-if-->
         <!--v-if-->
-        <div data-slot="description" class="text-base sm:text-lg text-muted text-center text-balance">Description slot</div>
+        <div data-slot="description" class="text-base sm:text-lg color-text-muted text-center text-balance">Description slot</div>
       </div>
       <!--v-if-->
       <!--v-if-->
@@ -83,7 +83,7 @@ exports[`pageSection > renders with features and description correctly 1`] = `
         <!--v-if-->
         <!--v-if-->
         <!--v-if-->
-        <div data-slot="description" class="text-base sm:text-lg text-muted text-center text-balance">Description</div>
+        <div data-slot="description" class="text-base sm:text-lg color-text-muted text-center text-balance">Description</div>
       </div>
       <div data-slot="body" class="mt-8 mt-16">
         <ul data-slot="features" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -91,8 +91,8 @@ exports[`pageSection > renders with features and description correctly 1`] = `
             <div data-slot="leading" class="inline-flex items-center justify-center p-0.5"><span class="iconify i-lucide:check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="leadingIcon"></span></div>
             <div data-slot="wrapper" class="">
               <!--v-if-->
-              <div data-slot="title" class="text-base text-pretty font-600 text-highlighted">Title</div>
-              <div data-slot="description" class="text-[15px] text-pretty text-muted mt-1">Description</div>
+              <div data-slot="title" class="text-base text-pretty font-600 color-text-highlighted">Title</div>
+              <div data-slot="description" class="text-[15px] text-pretty color-text-muted mt-1">Description</div>
             </div>
           </li>
         </ul>
@@ -111,7 +111,7 @@ exports[`pageSection > renders with features and title correctly 1`] = `
       <div data-slot="header" class="">
         <!--v-if-->
         <!--v-if-->
-        <h2 data-slot="title" class="text-3xl sm:text-4xl lg:text-5xl text-pretty tracking-tight font-bold text-highlighted text-center">Title</h2>
+        <h2 data-slot="title" class="text-3xl sm:text-4xl lg:text-5xl text-pretty tracking-tight font-bold color-text-highlighted text-center">Title</h2>
         <!--v-if-->
       </div>
       <div data-slot="body" class="mt-8 mt-16">
@@ -120,8 +120,8 @@ exports[`pageSection > renders with features and title correctly 1`] = `
             <div data-slot="leading" class="inline-flex items-center justify-center p-0.5"><span class="iconify i-lucide:check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="leadingIcon"></span></div>
             <div data-slot="wrapper" class="">
               <!--v-if-->
-              <div data-slot="title" class="text-base text-pretty font-600 text-highlighted">Title</div>
-              <div data-slot="description" class="text-[15px] text-pretty text-muted mt-1">Description</div>
+              <div data-slot="title" class="text-base text-pretty font-600 color-text-highlighted">Title</div>
+              <div data-slot="description" class="text-[15px] text-pretty color-text-muted mt-1">Description</div>
             </div>
           </li>
         </ul>
@@ -144,8 +144,8 @@ exports[`pageSection > renders with features correctly 1`] = `
             <div data-slot="leading" class="inline-flex items-center justify-center p-0.5"><span class="iconify i-lucide:check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="leadingIcon"></span></div>
             <div data-slot="wrapper" class="">
               <!--v-if-->
-              <div data-slot="title" class="text-base text-pretty font-600 text-highlighted">Title</div>
-              <div data-slot="description" class="text-[15px] text-pretty text-muted mt-1">Description</div>
+              <div data-slot="title" class="text-base text-pretty font-600 color-text-highlighted">Title</div>
+              <div data-slot="description" class="text-[15px] text-pretty color-text-muted mt-1">Description</div>
             </div>
           </li>
         </ul>
@@ -281,8 +281,8 @@ exports[`pageSection > renders with links and features correctly 1`] = `
             <div data-slot="leading" class="inline-flex items-center justify-center p-0.5"><span class="iconify i-lucide:check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="leadingIcon"></span></div>
             <div data-slot="wrapper" class="">
               <!--v-if-->
-              <div data-slot="title" class="text-base text-pretty font-600 text-highlighted">Title</div>
-              <div data-slot="description" class="text-[15px] text-pretty text-muted mt-1">Description</div>
+              <div data-slot="title" class="text-base text-pretty font-600 color-text-highlighted">Title</div>
+              <div data-slot="description" class="text-[15px] text-pretty color-text-muted mt-1">Description</div>
             </div>
           </li>
         </ul>
@@ -352,8 +352,8 @@ exports[`pageSection > renders with orientation horizontal features correctly 1`
             <div data-slot="leading" class="inline-flex items-center justify-center p-0.5"><span class="iconify i-lucide:check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="leadingIcon"></span></div>
             <div data-slot="wrapper" class="">
               <!--v-if-->
-              <div data-slot="title" class="text-base text-pretty font-600 text-highlighted">Title</div>
-              <div data-slot="description" class="text-[15px] text-pretty text-muted mt-1">Description</div>
+              <div data-slot="title" class="text-base text-pretty font-600 color-text-highlighted">Title</div>
+              <div data-slot="description" class="text-[15px] text-pretty color-text-muted mt-1">Description</div>
             </div>
           </li>
         </ul>
@@ -405,7 +405,7 @@ exports[`pageSection > renders with title correctly 1`] = `
       <div data-slot="header" class="">
         <!--v-if-->
         <!--v-if-->
-        <h2 data-slot="title" class="text-3xl sm:text-4xl lg:text-5xl text-pretty tracking-tight font-bold text-highlighted text-center">Title</h2>
+        <h2 data-slot="title" class="text-3xl sm:text-4xl lg:text-5xl text-pretty tracking-tight font-bold color-text-highlighted text-center">Title</h2>
         <!--v-if-->
       </div>
       <!--v-if-->
@@ -423,7 +423,7 @@ exports[`pageSection > renders with title slot correctly 1`] = `
       <div data-slot="header" class="">
         <!--v-if-->
         <!--v-if-->
-        <h2 data-slot="title" class="text-3xl sm:text-4xl lg:text-5xl text-pretty tracking-tight font-bold text-highlighted text-center">Title slot</h2>
+        <h2 data-slot="title" class="text-3xl sm:text-4xl lg:text-5xl text-pretty tracking-tight font-bold color-text-highlighted text-center">Title slot</h2>
         <!--v-if-->
       </div>
       <!--v-if-->

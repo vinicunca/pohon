@@ -7,19 +7,19 @@ exports[`pricingPlans > renders with as correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$10</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$10</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -29,19 +29,19 @@ exports[`pricingPlans > renders with as correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$20</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$20</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -51,19 +51,19 @@ exports[`pricingPlans > renders with as correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$30</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$30</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -78,19 +78,19 @@ exports[`pricingPlans > renders with class correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$10</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$10</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -100,19 +100,19 @@ exports[`pricingPlans > renders with class correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$20</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$20</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -122,19 +122,19 @@ exports[`pricingPlans > renders with class correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$30</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$30</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -149,19 +149,19 @@ exports[`pricingPlans > renders with compact and scale correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$10</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$10</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -171,19 +171,19 @@ exports[`pricingPlans > renders with compact and scale correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$20</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$20</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -193,19 +193,19 @@ exports[`pricingPlans > renders with compact and scale correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$30</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$30</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -220,19 +220,19 @@ exports[`pricingPlans > renders with compact correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$10</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$10</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -242,19 +242,19 @@ exports[`pricingPlans > renders with compact correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$20</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$20</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -264,19 +264,19 @@ exports[`pricingPlans > renders with compact correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$30</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$30</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -293,19 +293,19 @@ exports[`pricingPlans > renders with one plan correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$10</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$10</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -320,22 +320,22 @@ exports[`pricingPlans > renders with orientation vertical correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0 lg:col-span-2 pb-6 lg:pb-0 lg:pr-6 justify-center">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <!--v-if-->
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0 lg:grid lg:grid-cols-2 lg:mt-12">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <div data-slot="footer" class="flex flex-col gap-6 items-center lg:justify-center lg:items-center lg:p-6 lg:max-w-xs lg:w-full lg:mx-auto">
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$10</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$10</div>
         <!--v-if-->
       </div>
       <!--v-if-->
@@ -347,22 +347,22 @@ exports[`pricingPlans > renders with orientation vertical correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0 lg:col-span-2 pb-6 lg:pb-0 lg:pr-6 justify-center">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <!--v-if-->
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0 lg:grid lg:grid-cols-2 lg:mt-12">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <div data-slot="footer" class="flex flex-col gap-6 items-center lg:justify-center lg:items-center lg:p-6 lg:max-w-xs lg:w-full lg:mx-auto">
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$20</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$20</div>
         <!--v-if-->
       </div>
       <!--v-if-->
@@ -374,22 +374,22 @@ exports[`pricingPlans > renders with orientation vertical correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0 lg:col-span-2 pb-6 lg:pb-0 lg:pr-6 justify-center">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <!--v-if-->
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0 lg:grid lg:grid-cols-2 lg:mt-12">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <div data-slot="footer" class="flex flex-col gap-6 items-center lg:justify-center lg:items-center lg:p-6 lg:max-w-xs lg:w-full lg:mx-auto">
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$30</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$30</div>
         <!--v-if-->
       </div>
       <!--v-if-->
@@ -406,19 +406,19 @@ exports[`pricingPlans > renders with scale correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$10</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$10</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -428,19 +428,19 @@ exports[`pricingPlans > renders with scale correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$20</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$20</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -450,19 +450,19 @@ exports[`pricingPlans > renders with scale correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$30</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$30</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -477,19 +477,19 @@ exports[`pricingPlans > renders with three plans correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$10</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$10</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -499,19 +499,19 @@ exports[`pricingPlans > renders with three plans correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$20</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$20</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -521,19 +521,19 @@ exports[`pricingPlans > renders with three plans correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Enterprise</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$30</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$30</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -548,19 +548,19 @@ exports[`pricingPlans > renders with two plans correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Basic</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$10</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$10</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->
@@ -570,19 +570,19 @@ exports[`pricingPlans > renders with two plans correctly 1`] = `
     <!--v-if-->
     <div data-slot="body" class="flex flex-col min-w-0">
       <div data-slot="titleWrapper" class="flex items-center gap-3">
-        <div data-slot="title" class="text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
+        <div data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Pro</div>
         <!--v-if-->
       </div>
       <!--v-if-->
       <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
         <!--v-if-->
-        <div data-slot="price" class="text-highlighted text-3xl sm:text-4xl font-600">$20</div>
+        <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$20</div>
         <!--v-if-->
       </div>
       <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 1</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 2</span></li>
-        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="text-muted text-sm truncate">Feature 3</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+        <li data-slot="feature" class="flex items-center gap-2 min-w-0"><span class="iconify i-lucide:circle-check size-5 shrink-0 text-primary" aria-hidden="true" data-slot="featureIcon"></span><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
       </ul>
     </div>
     <!--v-if-->

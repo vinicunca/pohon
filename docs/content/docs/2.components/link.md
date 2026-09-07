@@ -76,7 +76,7 @@ ignore:
   raw: true
   to: /docs/components/link
   activeClass: 'font-bold'
-  inactiveClass: 'text-muted'
+  inactiveClass: 'color-text-muted'
   slots:
   default: Link
 

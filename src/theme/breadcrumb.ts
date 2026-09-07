@@ -11,7 +11,7 @@ export default (options: Required<ModuleOptions>) => ({
     linkLeadingAvatarSize: '2xs',
     linkLabel: 'truncate',
     separator: 'flex',
-    separatorIcon: 'shrink-0 size-5 text-muted',
+    separatorIcon: 'shrink-0 size-5 color-text-muted',
   },
   variants: {
     active: {
@@ -19,7 +19,7 @@ export default (options: Required<ModuleOptions>) => ({
         link: 'font-600',
       },
       false: {
-        link: 'text-muted font-medium',
+        link: 'color-text-muted font-medium',
       },
     },
     disabled: {
@@ -52,7 +52,7 @@ export default (options: Required<ModuleOptions>) => ({
     color: 'neutral',
     active: true,
     class: {
-      link: 'text-highlighted',
+      link: 'color-text-highlighted',
     },
   }],
   defaultVariants: {

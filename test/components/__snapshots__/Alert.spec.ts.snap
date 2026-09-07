@@ -59,7 +59,7 @@ exports[`alert > renders with close correctly 1`] = `
     <!--v-if-->
   </div>
   <div data-slot="actions" class="flex flex-wrap gap-1.5 shrink-0 items-center">
-    <!--v-if--><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-muted hover:color-text active:color-text disabled:text-muted aria-disabled:text-muted outline-inverted/25 focus-visible:outline-3 p-1.5 p-0"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+    <!--v-if--><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-inverted/25 focus-visible:outline-3 p-1.5 p-0"><span class="iconify i-lucide:x shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
       <!--v-if-->
     </button>
@@ -88,7 +88,7 @@ exports[`alert > renders with closeIcon correctly 1`] = `
     <!--v-if-->
   </div>
   <div data-slot="actions" class="flex flex-wrap gap-1.5 shrink-0 items-center">
-    <!--v-if--><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 text-muted hover:color-text active:color-text disabled:text-muted aria-disabled:text-muted outline-inverted/25 focus-visible:outline-3 p-1.5 p-0"><span class="iconify i-lucide:trash shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+    <!--v-if--><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-inverted/25 focus-visible:outline-3 p-1.5 p-0"><span class="iconify i-lucide:trash shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
       <!--v-if-->
       <!--v-if-->
     </button>
@@ -144,7 +144,7 @@ exports[`alert > renders with leading slot correctly 1`] = `
 `;
 
 exports[`alert > renders with neutral variant outline correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative overflow-hidden w-full rounded-lg p-4 flex gap-2.5 items-start text-highlighted bg-background ring ring-inset ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative overflow-hidden w-full rounded-lg p-4 flex gap-2.5 items-start color-text-highlighted bg-background ring ring-inset ring-default">
   <!--v-if-->
   <div data-slot="wrapper" class="min-w-0 flex-1 flex flex-col">
     <div data-slot="title" class="text-sm font-medium">Alert</div>
@@ -156,7 +156,7 @@ exports[`alert > renders with neutral variant outline correctly 1`] = `
 `;
 
 exports[`alert > renders with neutral variant soft correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative overflow-hidden w-full rounded-lg p-4 flex gap-2.5 items-start text-highlighted bg-background-elevated/50">
+"<div data-orientation="vertical" data-slot="root" class="relative overflow-hidden w-full rounded-lg p-4 flex gap-2.5 items-start color-text-highlighted bg-background-elevated/50">
   <!--v-if-->
   <div data-slot="wrapper" class="min-w-0 flex-1 flex flex-col">
     <div data-slot="title" class="text-sm font-medium">Alert</div>
@@ -180,7 +180,7 @@ exports[`alert > renders with neutral variant solid correctly 1`] = `
 `;
 
 exports[`alert > renders with neutral variant subtle correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative overflow-hidden w-full rounded-lg p-4 flex gap-2.5 items-start text-highlighted bg-background-elevated/50 ring ring-inset ring-ring-accented">
+"<div data-orientation="vertical" data-slot="root" class="relative overflow-hidden w-full rounded-lg p-4 flex gap-2.5 items-start color-text-highlighted bg-background-elevated/50 ring ring-inset ring-ring-accented">
   <!--v-if-->
   <div data-slot="wrapper" class="min-w-0 flex-1 flex flex-col">
     <div data-slot="title" class="text-sm font-medium">Alert</div>

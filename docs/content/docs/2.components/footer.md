@@ -77,7 +77,7 @@ const items: NavigationMenuItem[] = [
 
     <PFooter>
       <template #left>
-        <p class="text-muted text-sm">
+        <p class="color-text-muted text-sm">
           Copyright © {{ new Date().getFullYear() }}
         </p>
       </template>

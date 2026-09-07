@@ -4,8 +4,8 @@ export default {
     header: 'flex flex-col text-center',
     leading: 'mb-2',
     leadingIcon: 'size-8 shrink-0 inline-block',
-    title: 'text-xl text-pretty font-600 text-highlighted',
-    description: 'mt-1 text-base text-pretty text-muted',
+    title: 'text-xl text-pretty font-600 color-text-highlighted',
+    description: 'mt-1 text-base text-pretty color-text-muted',
     body: 'gap-y-6 flex flex-col',
     providers: 'space-y-3',
     checkbox: '',
@@ -15,6 +15,6 @@ export default {
     input: 'w-full',
     separator: '',
     form: 'space-y-5',
-    footer: 'text-sm text-center text-muted mt-2',
+    footer: 'text-sm text-center color-text-muted mt-2',
   },
 };

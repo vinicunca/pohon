@@ -81,7 +81,7 @@ const sections = [
       <template v-if="feature.tiers?.[tier.id]">
         <PBadge :label="String(feature.tiers[tier.id])" color="primary" variant="soft" />
       </template>
-      <PIcon v-else name="i-lucide-x" class="size-4 text-muted" />
+      <PIcon v-else name="i-lucide-x" class="size-4 color-text-muted" />
     </template>
   </PPricingTable>
 </template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { SplitterItem } from 'pohon-ui'
 
-const card = 'bg-background-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-600'
+const card = 'bg-background-elevated/50 border border-default rounded-xl items-center justify-center color-text-muted font-600'
 
 const items: SplitterItem[] = [
   { slot: 'a', minSize: 20, class: card },

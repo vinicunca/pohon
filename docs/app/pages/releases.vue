@@ -71,7 +71,7 @@ const { data: versions } = await useFetch('https://ungh.cc/repos/nuxt/ui/release
                 container: 'max-w-xl',
                 header: 'border-b border-default pb-4',
                 title: 'text-3xl',
-                date: 'text-xs/9 text-highlighted font-mono',
+                date: 'text-xs/9 color-text-highlighted font-mono',
                 indicator: 'sticky top-0 pt-16 -mt-16 sm:pt-24 sm:-mt-24 lg:pt-32 lg:-mt-32'
               }"
             >

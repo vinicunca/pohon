@@ -76,7 +76,7 @@ watch(countryCode, () => {
       :style="{ '--dial-code-length': `${dialCode.length + 1.5}ch` }"
       :ui="{
         base: 'ps-(--dial-code-length)',
-        leading: 'pointer-events-none text-base md:text-sm text-muted'
+        leading: 'pointer-events-none text-base md:text-sm color-text-muted'
       }"
     >
       <template #leading>

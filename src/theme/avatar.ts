@@ -16,8 +16,8 @@ export default (options: Required<ModuleOptions>) => ({
       }])),
       neutral: {
         root: 'bg-background-elevated',
-        fallback: 'text-muted',
-        icon: 'text-muted',
+        fallback: 'color-text-muted',
+        icon: 'color-text-muted',
       },
     },
     size: {

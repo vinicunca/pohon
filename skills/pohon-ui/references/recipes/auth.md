@@ -134,7 +134,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <template #header>
         <div class="text-center">
           <h1 class="text-xl font-600 color-text">Welcome back</h1>
-          <p class="mt-1 text-sm text-muted">Sign in to your account</p>
+          <p class="mt-1 text-sm color-text-muted">Sign in to your account</p>
         </div>
       </template>
 
@@ -165,7 +165,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       </PForm>
 
       <template #footer>
-        <p class="text-center text-sm text-muted">
+        <p class="text-center text-sm color-text-muted">
           Don't have an account?
           <NuxtLink to="/signup" class="text-primary font-medium"
             >Sign up</NuxtLink

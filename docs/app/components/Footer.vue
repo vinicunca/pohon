@@ -8,8 +8,8 @@ const { links } = useFooter()
 
   <PFooter>
     <template #left>
-      <NuxtLink to="https://github.com/nuxt/ui" target="_blank" class="text-sm text-muted">
-        Published under <span class="text-highlighted">MIT License</span>
+      <NuxtLink to="https://github.com/nuxt/ui" target="_blank" class="text-sm color-text-muted">
+        Published under <span class="color-text-highlighted">MIT License</span>
       </NuxtLink>
     </template>
 

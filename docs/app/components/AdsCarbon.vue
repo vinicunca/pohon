@@ -34,11 +34,11 @@ onMounted(() => {
   }
 
   .carbon-text {
-    @apply text-sm text-muted transition-colors text-center text-pretty flex pt-2;
+    @apply text-sm color-text-muted transition-colors text-center text-pretty flex pt-2;
   }
 
   .carbon-poweredby {
-    @apply block text-xs text-center text-muted pt-2;
+    @apply block text-xs text-center color-text-muted pt-2;
   }
 
   &:hover {

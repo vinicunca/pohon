@@ -223,7 +223,7 @@ onMounted(async () => {
             <h2 class="font-600 inline-flex items-center gap-x-1">
               <PBadge :label="index + 1" size="sm" color="neutral" variant="subtle" class="rounded-full tabular-nums" /> {{ step.title }}
             </h2>
-            <p class="text-muted text-sm">
+            <p class="color-text-muted text-sm">
               {{ step.description }}
             </p>
           </div>
@@ -246,7 +246,7 @@ onMounted(async () => {
         class="max-w-4xl mx-auto"
         :ui="{
           trigger: 'text-base',
-          body: 'text-base text-muted'
+          body: 'text-base color-text-muted'
         }"
       >
         <template #body="{ item, index }">

@@ -84,7 +84,7 @@ describe('formField', () => {
     ...orientations.map((orientation: string) => [`with orientation ${orientation}`, { props: { label: 'Username', description: 'Enter your username', orientation } }]),
     ['with as', { props: { as: 'section' } }],
     ['with class', { props: { class: 'relative' } }],
-    ['with ui', { props: { ui: { label: 'text-highlighted' } } }],
+    ['with ui', { props: { ui: { label: 'color-text-highlighted' } } }],
     // Slots
     ['with default slot', { slots: { default: () => 'Default slot' } }],
     ['with label slot', { slots: { label: () => 'Label slot' } }],

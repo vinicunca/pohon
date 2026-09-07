@@ -41,7 +41,7 @@ const items = [
     :default-value="['3']"
     :ui="{
       trigger: 'text-base',
-      body: 'text-base text-muted'
+      body: 'text-base color-text-muted'
     }"
   >
     <template #body="{ item }">

@@ -20,7 +20,7 @@ const items: BreadcrumbItem[] = [
 <template>
   <PBreadcrumb :items="items">
     <template #separator>
-      <span class="mx-2 text-muted">/</span>
+      <span class="mx-2 color-text-muted">/</span>
     </template>
   </PBreadcrumb>
 </template>

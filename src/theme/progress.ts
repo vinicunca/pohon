@@ -23,7 +23,7 @@ export default (options: Required<ModuleOptions>) => ({
       }])),
       neutral: {
         indicator: 'bg-background-inverted',
-        steps: 'text-highlighted',
+        steps: 'color-text-highlighted',
       },
     },
     size: {
@@ -61,7 +61,7 @@ export default (options: Required<ModuleOptions>) => ({
         step: 'opacity-100',
       },
       first: {
-        step: 'opacity-100 text-muted',
+        step: 'opacity-100 color-text-muted',
       },
       other: {
         step: 'opacity-0',

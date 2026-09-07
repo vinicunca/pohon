@@ -40,7 +40,7 @@ exports[`formField > renders with description slot correctly 1`] = `
 "<div data-orientation="vertical" data-slot="root" class="text-sm">
   <div data-slot="wrapper" class="">
     <!--v-if-->
-    <p id="v-0-0-description" data-slot="description" class="text-muted">Description slot</p>
+    <p id="v-0-0-description" data-slot="description" class="color-text-muted">Description slot</p>
   </div>
   <div class="relative mt-1">
     <!--v-if-->
@@ -79,7 +79,7 @@ exports[`formField > renders with help correctly 1`] = `
     <!--v-if-->
   </div>
   <div class="">
-    <div id="v-0-0-help" data-slot="help" class="mt-2 text-muted">Username must be unique</div>
+    <div id="v-0-0-help" data-slot="help" class="mt-2 color-text-muted">Username must be unique</div>
   </div>
 </div>"
 `;
@@ -91,7 +91,7 @@ exports[`formField > renders with help slot correctly 1`] = `
     <!--v-if-->
   </div>
   <div class="">
-    <div id="v-0-0-help" data-slot="help" class="mt-2 text-muted">Help slot</div>
+    <div id="v-0-0-help" data-slot="help" class="mt-2 color-text-muted">Help slot</div>
   </div>
 </div>"
 `;
@@ -126,7 +126,7 @@ exports[`formField > renders with label and description correctly 1`] = `
     <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-0-0" data-slot="label" class="block font-medium color-text">Username</label>
       <!--v-if-->
     </div>
-    <p id="v-0-0-description" data-slot="description" class="text-muted">Enter your username</p>
+    <p id="v-0-0-description" data-slot="description" class="color-text-muted">Enter your username</p>
   </div>
   <div class="relative mt-1">
     <!--v-if-->
@@ -154,7 +154,7 @@ exports[`formField > renders with orientation horizontal correctly 1`] = `
     <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-0-0" data-slot="label" class="block font-medium color-text">Username</label>
       <!--v-if-->
     </div>
-    <p id="v-0-0-description" data-slot="description" class="text-muted">Enter your username</p>
+    <p id="v-0-0-description" data-slot="description" class="color-text-muted">Enter your username</p>
   </div>
   <div class="relative">
     <!--v-if-->
@@ -168,7 +168,7 @@ exports[`formField > renders with orientation vertical correctly 1`] = `
     <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-0-0" data-slot="label" class="block font-medium color-text">Username</label>
       <!--v-if-->
     </div>
-    <p id="v-0-0-description" data-slot="description" class="text-muted">Enter your username</p>
+    <p id="v-0-0-description" data-slot="description" class="color-text-muted">Enter your username</p>
   </div>
   <div class="relative mt-1">
     <!--v-if-->
@@ -196,7 +196,7 @@ exports[`formField > renders with size lg correctly 1`] = `
     <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-0-0" data-slot="label" class="block font-medium color-text">Username</label>
       <!--v-if-->
     </div>
-    <p id="v-0-0-description" data-slot="description" class="text-muted">Enter your username</p>
+    <p id="v-0-0-description" data-slot="description" class="color-text-muted">Enter your username</p>
   </div>
   <div class="relative mt-1">
     <!--v-if-->
@@ -210,7 +210,7 @@ exports[`formField > renders with size md correctly 1`] = `
     <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-0-0" data-slot="label" class="block font-medium color-text">Username</label>
       <!--v-if-->
     </div>
-    <p id="v-0-0-description" data-slot="description" class="text-muted">Enter your username</p>
+    <p id="v-0-0-description" data-slot="description" class="color-text-muted">Enter your username</p>
   </div>
   <div class="relative mt-1">
     <!--v-if-->
@@ -224,7 +224,7 @@ exports[`formField > renders with size sm correctly 1`] = `
     <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-0-0" data-slot="label" class="block font-medium color-text">Username</label>
       <!--v-if-->
     </div>
-    <p id="v-0-0-description" data-slot="description" class="text-muted">Enter your username</p>
+    <p id="v-0-0-description" data-slot="description" class="color-text-muted">Enter your username</p>
   </div>
   <div class="relative mt-1">
     <!--v-if-->
@@ -238,7 +238,7 @@ exports[`formField > renders with size xl correctly 1`] = `
     <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-0-0" data-slot="label" class="block font-medium color-text">Username</label>
       <!--v-if-->
     </div>
-    <p id="v-0-0-description" data-slot="description" class="text-muted">Enter your username</p>
+    <p id="v-0-0-description" data-slot="description" class="color-text-muted">Enter your username</p>
   </div>
   <div class="relative mt-1">
     <!--v-if-->
@@ -252,7 +252,7 @@ exports[`formField > renders with size xs correctly 1`] = `
     <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-0-0" data-slot="label" class="block font-medium color-text">Username</label>
       <!--v-if-->
     </div>
-    <p id="v-0-0-description" data-slot="description" class="text-muted">Enter your username</p>
+    <p id="v-0-0-description" data-slot="description" class="color-text-muted">Enter your username</p>
   </div>
   <div class="relative mt-1">
     <!--v-if-->

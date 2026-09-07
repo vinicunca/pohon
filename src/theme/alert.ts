@@ -73,19 +73,19 @@ export default (options: Required<ModuleOptions>) => ({
     color: 'neutral',
     variant: 'outline',
     class: {
-      root: 'text-highlighted bg-background ring ring-inset ring-default',
+      root: 'color-text-highlighted bg-background ring ring-inset ring-default',
     },
   }, {
     color: 'neutral',
     variant: 'soft',
     class: {
-      root: 'text-highlighted bg-background-elevated/50',
+      root: 'color-text-highlighted bg-background-elevated/50',
     },
   }, {
     color: 'neutral',
     variant: 'subtle',
     class: {
-      root: 'text-highlighted bg-background-elevated/50 ring ring-inset ring-ring-accented',
+      root: 'color-text-highlighted bg-background-elevated/50 ring ring-inset ring-ring-accented',
     },
   }],
   defaultVariants: {

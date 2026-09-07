@@ -56,7 +56,7 @@ const items = [{
       v-bind="props"
     >
       <template #custom="{ item }">
-        <span class="text-muted">Custom: {{ item.content }}</span>
+        <span class="color-text-muted">Custom: {{ item.content }}</span>
       </template>
     </PTabs>
   </Matrix>

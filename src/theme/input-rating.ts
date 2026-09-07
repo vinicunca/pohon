@@ -6,7 +6,7 @@ export default (options: Required<ModuleOptions>) => ({
     item: ['relative inline-block cursor-pointer select-none rounded-sm has-focus-visible:outline-3', options.theme.transitions && 'transition'],
     indicator: 'absolute inset-0 overflow-hidden outline-none text-transparent w-(--akar-rating-item-step-width) opacity-(--akar-rating-item-step-opacity) z-(--akar-rating-item-step-z-index)',
     icon: 'block',
-    emptyIcon: 'block w-full h-full text-muted pointer-events-none',
+    emptyIcon: 'block w-full h-full color-text-muted pointer-events-none',
   },
   variants: {
     orientation: {
@@ -45,7 +45,7 @@ export default (options: Required<ModuleOptions>) => ({
         item: `outline-${color}/25`,
       }])),
       neutral: {
-        indicator: 'data-[state=active]:text-highlighted',
+        indicator: 'data-[state=active]:color-text-highlighted',
         item: 'outline-inverted/25',
       },
     },

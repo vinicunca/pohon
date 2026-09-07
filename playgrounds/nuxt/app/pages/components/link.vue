@@ -10,7 +10,7 @@
       <PLink active>
         Button active
       </PLink>
-      <PLink active class="font-medium" active-class="text-highlighted">
+      <PLink active class="font-medium" active-class="color-text-highlighted">
         Button active with class
       </PLink>
       <PLink active disabled>
@@ -36,7 +36,7 @@
       <PLink to="/components/link">
         Link active
       </PLink>
-      <PLink to="/components/link" class="font-medium" active-class="text-highlighted">
+      <PLink to="/components/link" class="font-medium" active-class="color-text-highlighted">
         Link active with class
       </PLink>
       <PLink to="/components/link" disabled>

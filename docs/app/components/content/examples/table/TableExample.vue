@@ -326,7 +326,7 @@ function randomize() {
       </template>
     </PTable>
 
-    <div class="px-4 py-3.5 text-sm text-muted">
+    <div class="px-4 py-3.5 text-sm color-text-muted">
       {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length || 0 }} of
       {{ table?.tableApi?.getFilteredRowModel().rows.length || 0 }} row(s) selected.
     </div>

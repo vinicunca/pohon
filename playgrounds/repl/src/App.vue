@@ -194,7 +194,7 @@ const previewOptions = {
     <div class="h-dvh flex flex-col">
       <PHeader title="Pohon UI Playground" :ui="{ container: 'max-w-none' }">
         <template #left>
-          <Logo class="w-auto h-6 shrink-0 text-highlighted" />
+          <Logo class="w-auto h-6 shrink-0 color-text-highlighted" />
         </template>
 
         <template #right>

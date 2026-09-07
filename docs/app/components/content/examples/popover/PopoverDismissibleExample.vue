@@ -4,7 +4,7 @@
 
     <template #content="{ close }">
       <div class="flex items-center gap-4 mb-4">
-        <h2 class="text-highlighted font-600">
+        <h2 class="color-text-highlighted font-600">
           Popover non-dismissible
         </h2>
 

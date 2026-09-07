@@ -5,7 +5,7 @@ export default (options: Required<ModuleOptions>) => ({
     content: 'min-w-48 max-w-60 max-h-96 bg-background shadow-lg rounded-md ring ring-default overflow-hidden data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--akar-dropdown-menu-content-transform-origin) flex flex-col',
     viewport: 'relative divide-y divide-default scroll-py-1 overflow-y-auto flex-1',
     group: 'p-1 isolate',
-    label: 'w-full flex items-center font-600 text-highlighted',
+    label: 'w-full flex items-center font-600 color-text-highlighted',
     separator: '-mx-1 my-1 h-px bg-border',
     item: 'group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75',
     itemLeadingIcon: 'shrink-0 flex items-center justify-center',
@@ -13,7 +13,7 @@ export default (options: Required<ModuleOptions>) => ({
     itemLeadingAvatarSize: '',
     itemWrapper: 'flex-1 flex flex-col text-start min-w-0',
     itemLabel: 'truncate',
-    itemDescription: 'truncate text-muted',
+    itemDescription: 'truncate color-text-muted',
     itemLabelExternalIcon: 'inline-block size-3 align-top text-dimmed',
   },
   variants: {
@@ -51,11 +51,11 @@ export default (options: Required<ModuleOptions>) => ({
     },
     active: {
       true: {
-        item: 'text-highlighted before:bg-background-elevated/75',
+        item: 'color-text-highlighted before:bg-background-elevated/75',
         itemLeadingIcon: 'color-text',
       },
       false: {
-        item: ['color-text data-highlighted:not-data-disabled:text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+        item: ['color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
         itemLeadingIcon: ['text-dimmed group-data-highlighted:not-group-data-disabled:color-text', options.theme.transitions && 'transition-colors'],
       },
     },

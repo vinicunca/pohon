@@ -11,7 +11,7 @@ export default (options: Required<ModuleOptions>) => ({
     footer: 'pt-4 mt-auto',
     leading: 'inline-flex items-center mb-2.5',
     leadingIcon: 'size-5 shrink-0 text-primary',
-    title: 'text-base text-pretty font-600 text-highlighted',
+    title: 'text-base text-pretty font-600 color-text-highlighted',
     description: 'text-[15px] text-pretty',
   },
   variants: {
@@ -36,22 +36,22 @@ export default (options: Required<ModuleOptions>) => ({
       },
       outline: {
         root: 'bg-background ring ring-default',
-        description: 'text-muted',
+        description: 'color-text-muted',
       },
       soft: {
         root: 'bg-background-elevated/50',
-        description: 'text-toned',
+        description: 'color-text-toned',
       },
       subtle: {
         root: 'bg-background-elevated/50 ring ring-default',
-        description: 'text-toned',
+        description: 'color-text-toned',
       },
       ghost: {
-        description: 'text-muted',
+        description: 'color-text-muted',
       },
       naked: {
         container: 'p-0 sm:p-0',
-        description: 'text-muted',
+        description: 'color-text-muted',
       },
     },
     to: {

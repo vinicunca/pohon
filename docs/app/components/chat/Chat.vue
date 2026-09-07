@@ -365,7 +365,7 @@ defineShortcuts({
         @submit="onSubmit"
       >
         <template #footer>
-          <PLink to="https://vercel.com/ai-gateway" target="_blank" class="inline-flex items-center gap-1 text-xs text-dimmed hover:text-muted">
+          <PLink to="https://vercel.com/ai-gateway" target="_blank" class="inline-flex items-center gap-1 text-xs text-dimmed hover:color-text-muted">
             Powered by <PIcon name="i-simple-icons-vercel" class="size-3" /> AI Gateway
           </PLink>
 

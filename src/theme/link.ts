@@ -5,7 +5,7 @@ export default (options: Required<ModuleOptions>) => ({
   variants: {
     active: {
       true: 'text-primary',
-      false: 'text-muted',
+      false: 'color-text-muted',
     },
     disabled: {
       true: 'cursor-not-allowed opacity-75',

@@ -47,7 +47,7 @@ exports[`pageHeader > renders with description correctly 1`] = `
       <!--v-if-->
       <!--v-if-->
     </div>
-    <div data-slot="description" class="text-lg text-pretty text-muted">Description</div>
+    <div data-slot="description" class="text-lg text-pretty color-text-muted">Description</div>
   </div>
 </div>"
 `;
@@ -60,7 +60,7 @@ exports[`pageHeader > renders with description slot correctly 1`] = `
       <!--v-if-->
       <!--v-if-->
     </div>
-    <div data-slot="description" class="text-lg text-pretty text-muted">Description slot</div>
+    <div data-slot="description" class="text-lg text-pretty color-text-muted">Description slot</div>
   </div>
 </div>"
 `;
@@ -124,7 +124,7 @@ exports[`pageHeader > renders with title correctly 1`] = `
   <!--v-if-->
   <div data-slot="container" class="">
     <div data-slot="wrapper" class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-      <h1 data-slot="title" class="text-3xl sm:text-4xl text-pretty font-bold text-highlighted">Title</h1>
+      <h1 data-slot="title" class="text-3xl sm:text-4xl text-pretty font-bold color-text-highlighted">Title</h1>
       <!--v-if-->
     </div>
     <!--v-if-->
@@ -137,7 +137,7 @@ exports[`pageHeader > renders with title slot correctly 1`] = `
   <!--v-if-->
   <div data-slot="container" class="">
     <div data-slot="wrapper" class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-      <h1 data-slot="title" class="text-3xl sm:text-4xl text-pretty font-bold text-highlighted">Title slot</h1>
+      <h1 data-slot="title" class="text-3xl sm:text-4xl text-pretty font-bold color-text-highlighted">Title slot</h1>
       <!--v-if-->
     </div>
     <!--v-if-->

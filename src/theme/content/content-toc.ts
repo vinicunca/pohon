@@ -36,7 +36,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     active: {
       false: {
-        link: ['text-muted hover:color-text', options.theme.transitions && 'transition-colors'],
+        link: ['color-text-muted hover:color-text', options.theme.transitions && 'transition-colors'],
       },
     },
     highlight: {
@@ -64,7 +64,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       active: true,
       class: {
-        link: 'text-highlighted',
+        link: 'color-text-highlighted',
       },
     },
     {

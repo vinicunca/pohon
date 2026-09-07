@@ -38,7 +38,7 @@ ignore:
   defaultValue: '0'
   class: 'px-4 max-w-lg'
   ui:
-  content: 'text-muted'
+  content: 'color-text-muted'
   items: - label: 'Is Pohon UI free to use?'
   content: 'Yes! Pohon UI is completely free and open source under the MIT license. All 125+ components are available to everyone.' - label: 'Can I use Pohon UI with Vue without Nuxt?'
   content: 'Yes! While optimized for Nuxt, Pohon UI works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.' - label: 'Is Pohon UI production-ready?'

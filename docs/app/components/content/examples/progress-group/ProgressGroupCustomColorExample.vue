@@ -20,7 +20,7 @@ const used = items.reduce((total, item) => total + (item.value ?? 0), 0)
   <PProgressGroup :items="items" :max="max" status class="w-96" :ui="{ status: 'w-full justify-between' }">
     <template #status="{ percent }">
       <p>{{ percent }}% Full</p>
-      <p class="text-muted">
+      <p class="color-text-muted">
         ~{{ used.toFixed(1) }}K / {{ max }}K Tokens
       </p>
     </template>

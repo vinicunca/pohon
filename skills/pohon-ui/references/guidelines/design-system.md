@@ -117,10 +117,10 @@ Use these everywhere instead of raw palette colors:
 ### Text
 
 - `color-text` — primary body text
-- `text-muted` — secondary text (descriptions, hints)
-- `text-toned` — medium-emphasis text (between muted and default)
+- `color-text-muted` — secondary text (descriptions, hints)
+- `color-text-toned` — medium-emphasis text (between muted and default)
 - `text-dimmed` — tertiary text (placeholders, disabled)
-- `text-highlighted` — emphasized text (headings, important labels)
+- `color-text-highlighted` — emphasized text (headings, important labels)
 - `color-text-inverted` — text on inverted backgrounds (pair with `bg-background-inverted`)
 
 ### Backgrounds

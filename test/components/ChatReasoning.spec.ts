@@ -19,7 +19,7 @@ describe('chatReasoning', () => {
     ['with chevron leading', { props: { ...props, chevron: 'leading' } }],
     ['with chevronIcon', { props: { ...props, chevronIcon: 'i-lucide-arrow-down' } }],
     ['with class', { props: { ...props, class: 'my-5' } }],
-    ['with ui', { props: { ...props, ui: { body: 'text-muted' } } }],
+    ['with ui', { props: { ...props, ui: { body: 'color-text-muted' } } }],
     // Slots
     ['with default slot', { props, slots: { default: () => 'Custom reasoning content' } }],
   ]);

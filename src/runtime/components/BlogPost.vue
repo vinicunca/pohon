@@ -138,7 +138,7 @@ const ariaLabel = computed(() => {
       v-if="props.to"
       :aria-label="ariaLabel"
       v-bind="{ 'to': props.to, 'target': props.target, ...$attrs, 'data-slot': undefined }"
-      class="focus:outline-none absolute inset-0"
+      class="inset-0 absolute focus:outline-none"
       raw
     />
 

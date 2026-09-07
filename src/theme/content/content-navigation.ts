@@ -40,13 +40,13 @@ export default (options: Required<ModuleOptions>) => ({
         link: 'font-medium',
       },
       false: {
-        link: 'text-muted',
+        link: 'color-text-muted',
         linkLeadingIcon: 'text-dimmed',
       },
     },
     disabled: {
       true: {
-        trigger: 'data-[state=open]:text-highlighted',
+        trigger: 'data-[state=open]:color-text-highlighted',
       },
     },
     highlight: {
@@ -70,7 +70,7 @@ export default (options: Required<ModuleOptions>) => ({
     active: false,
     variant: 'pill',
     class: {
-      link: ['hover:text-highlighted hover:before:bg-background-elevated/50 data-[state=open]:text-highlighted', options.theme.transitions && 'transition-colors before:transition-colors'],
+      link: ['hover:color-text-highlighted hover:before:bg-background-elevated/50 data-[state=open]:color-text-highlighted', options.theme.transitions && 'transition-colors before:transition-colors'],
       linkLeadingIcon: ['group-hover:color-text group-data-[state=open]:color-text', options.theme.transitions && 'transition-colors'],
     },
   }, ...(options.theme.colors || []).map((color: string) => ({
@@ -86,8 +86,8 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'pill',
     active: true,
     class: {
-      link: 'text-highlighted',
-      linkLeadingIcon: 'text-highlighted group-data-[state=open]:text-highlighted',
+      link: 'color-text-highlighted',
+      linkLeadingIcon: 'color-text-highlighted group-data-[state=open]:color-text-highlighted',
     },
   }, {
     variant: 'pill',
@@ -109,7 +109,7 @@ export default (options: Required<ModuleOptions>) => ({
     active: false,
     variant: 'link',
     class: {
-      link: ['hover:text-highlighted data-[state=open]:text-highlighted', options.theme.transitions && 'transition-colors'],
+      link: ['hover:color-text-highlighted data-[state=open]:color-text-highlighted', options.theme.transitions && 'transition-colors'],
       linkLeadingIcon: ['group-hover:color-text group-data-[state=open]:color-text', options.theme.transitions && 'transition-colors'],
     },
   }, ...(options.theme.colors || []).map((color: string) => ({
@@ -125,8 +125,8 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'link',
     active: true,
     class: {
-      link: 'text-highlighted',
-      linkLeadingIcon: 'text-highlighted group-data-[state=open]:text-highlighted',
+      link: 'color-text-highlighted',
+      linkLeadingIcon: 'color-text-highlighted group-data-[state=open]:color-text-highlighted',
     },
   }, ...(options.theme.colors || []).map((highlightColor: string) => ({
     highlightColor,
