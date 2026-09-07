@@ -115,7 +115,7 @@ export default (options: Required<ModuleOptions>) => ({
       variant: 'card',
       highlight: false,
       class: {
-        root: `${hover}border-accented`,
+        root: `${hover}border-border-accented`,
       },
     },
     { size: 'xs', indicator: 'hidden', class: { icon: 'size-3' } },

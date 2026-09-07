@@ -1,3 +1,3 @@
 export default {
-  base: 'border-s-4 border-accented ps-4 italic',
+  base: 'border-s-4 border-border-accented ps-4 italic',
 };

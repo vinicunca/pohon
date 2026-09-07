@@ -9,7 +9,7 @@ export const themeBlogPost = {
     header: 'w-full aspect-[16/9] pointer-events-none relative overflow-hidden',
     body: 'flex flex-1 flex-col min-w-0',
     image: 'h-full w-full object-cover object-top',
-    title: 'color-text-highlighted text-xl font-semibold text-pretty',
+    title: 'color-text-highlighted text-xl font-600 text-pretty',
     description: 'text-base mt-1 text-pretty',
     authors: 'mt-auto pt-4 flex flex-wrap gap-x-3 gap-y-1.5',
     avatar: '',

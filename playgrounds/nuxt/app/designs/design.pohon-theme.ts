@@ -8,9 +8,12 @@ import { themeAvatar, themeAvatarGroup } from './pohon-theme/theme.avatar';
 import { themeBadge } from './pohon-theme/theme.badge';
 import { themeBanner } from './pohon-theme/theme.banner';
 import { themeBlogPost } from './pohon-theme/theme.blog-post';
+import { themeBlogPosts } from './pohon-theme/theme.blog-posts';
 import { themeBreadcrumb } from './pohon-theme/theme.breadcrumb';
 import { themeButton } from './pohon-theme/theme.button';
+import { themeCalendar } from './pohon-theme/theme.calendar';
 import { themeCard } from './pohon-theme/theme.card';
+import { themeCarousel } from './pohon-theme/theme.carousel';
 import { themeChip } from './pohon-theme/theme.chip';
 import {
   themeDashboardGroup,
@@ -34,9 +37,12 @@ export const uiTheme = {
   badge: themeBadge,
   banner: themeBanner,
   blogPost: themeBlogPost,
+  blogPosts: themeBlogPosts,
   breadcrumb: themeBreadcrumb,
   button: themeButton,
+  calendar: themeCalendar,
   card: themeCard,
+  carousel: themeCarousel,
   chip: themeChip,
   container: {
     base: 'container',

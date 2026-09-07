@@ -420,7 +420,7 @@ const { data: ast } = useAsyncData(codeKey, async () => {
             size="sm"
             class="inline-flex ring ring-ring-accented rounded-sm"
             :ui="{
-              wrapper: 'bg-background-elevated/50 rounded-l-sm flex border-r border-accented',
+              wrapper: 'bg-background-elevated/50 rounded-l-sm flex border-r border-border-accented',
               label: 'color-text-muted px-2 py-1.5',
               container: 'mt-0'
             }"

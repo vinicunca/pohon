@@ -135,7 +135,7 @@ Use these everywhere instead of raw palette colors:
 
 - `border-default` — standard borders
 - `border-muted` — subtle borders (dividers, separators)
-- `border-accented` — accent borders (active states)
+- `border-border-accented` — accent borders (active states)
 - `border-inverted` — inverse borders
 
 ## Variants

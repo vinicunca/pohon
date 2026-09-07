@@ -130,7 +130,7 @@ export default (options: Required<ModuleOptions>) => ({
       variant: ['card', 'table'],
       highlight: false,
       class: {
-        item: `${hover}border-accented`,
+        item: `${hover}border-border-accented`,
       },
     },
     { size: 'xs', indicator: 'hidden', class: { icon: 'size-3' } },

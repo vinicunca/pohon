@@ -30,7 +30,7 @@ export default (options: Required<ModuleOptions>) => ({
       '[&_h2>code]:text-xl/6',
       '[&_h3>code]:text-lg/5',
       // Blockquote & HR
-      '[&_blockquote]:border-s-4 [&_blockquote]:border-accented [&_blockquote]:ps-4 [&_blockquote]:italic',
+      '[&_blockquote]:border-s-4 [&_blockquote]:border-border-accented [&_blockquote]:ps-4 [&_blockquote]:italic',
       '[&_[data-type=horizontalRule]]:my-8 [&_[data-type=horizontalRule]]:py-2',
       '[&_hr]:border-t [&_hr]:border-default',
       // Code blocks

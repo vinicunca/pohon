@@ -370,7 +370,7 @@ onMounted(() => {
           }
         }"
         sticky
-        class="border border-accented rounded-sm"
+        class="border border-border-accented rounded-sm"
         @select="onSelect"
         @contextmenu="onContextmenu"
         @pointermove="(ev: PointerEvent) => {

@@ -123,7 +123,7 @@ function onSelect(e: Event, row: TableRow<Payment>) {
         @select="onSelect"
       />
 
-      <div class="px-4 py-3.5 border-t border-accented text-sm color-text-muted">
+      <div class="px-4 py-3.5 border-t border-border-accented text-sm color-text-muted">
         {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length || 0 }} of
         {{ table?.tableApi?.getFilteredRowModel().rows.length || 0 }} row(s) selected.
       </div>
