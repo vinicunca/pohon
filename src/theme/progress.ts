@@ -3,7 +3,7 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'gap-2',
-    base: 'relative overflow-hidden rounded-full bg-accented',
+    base: 'relative overflow-hidden rounded-full bg-background-accented',
     indicator: 'rounded-full size-full transition-transform duration-280 ease-out motion-reduce:transition-none motion-reduce:data-[state=indeterminate]:animate-pulse',
     status: 'flex color-text-dimmed duration-280 ease-out motion-reduce:transition-none',
     steps: 'grid items-end',

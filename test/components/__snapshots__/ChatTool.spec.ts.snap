@@ -28,7 +28,7 @@ exports[`chatTool > renders with actions correctly 1`] = `
   <div data-slot="actions" data-state="closed" class="flex items-center justify-end gap-1.5 pt-2"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2 py-1 text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
       <!--v-if--><span data-slot="label" class="truncate">Approve</span>
       <!--v-if-->
-    </button><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2 py-1 text-xs gap-1 color-text bg-background-elevated hover:bg-accented/75 active:bg-accented/75 outline-outline-inverted/25 focus-visible:outline-3 disabled:bg-background-elevated aria-disabled:bg-background-elevated">
+    </button><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2 py-1 text-xs gap-1 color-text bg-background-elevated hover:bg-background-accented/75 active:bg-background-accented/75 outline-outline-inverted/25 focus-visible:outline-3 disabled:bg-background-elevated aria-disabled:bg-background-elevated">
       <!--v-if--><span data-slot="label" class="truncate">Deny</span>
       <!--v-if-->
     </button></div>

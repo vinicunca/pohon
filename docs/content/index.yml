@@ -129,7 +129,7 @@ css_variables:
       description: Use utility classes like text-primary, bg-success, or border-error that automatically adapt to light and dark modes via CSS variables.
       icon: i-lucide-palette
     - title: Text and background tokens
-      description: Complete set of utility classes for text (color-text-dimmed, color-text-muted, color-text-highlighted), backgrounds (bg-background, bg-background-elevated, bg-accented) and borders.
+      description: Complete set of utility classes for text (color-text-dimmed, color-text-muted, color-text-highlighted), backgrounds (bg-background, bg-background-elevated, bg-background-accented) and borders.
       icon: i-lucide-layers
     - title: Global layout variables
       description: Customize global styles with --ui-radius for border rounding, --ui-container for layout widths, and --ui-header-height for consistent spacing.

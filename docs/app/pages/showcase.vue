@@ -45,7 +45,7 @@ if (import.meta.server) {
       <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
 
       <div class="border-l border-t border-border">
-        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start justify-center divide-y divide-x divide-default">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start justify-center divide-y divide-x divide-divide">
           <li
             v-for="item in page.items"
             :key="item.name"

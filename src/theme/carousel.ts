@@ -11,7 +11,7 @@ export default (options: Required<ModuleOptions>) => ({
     prev: 'absolute rounded-full',
     next: 'absolute rounded-full',
     dots: 'absolute inset-x-0 -bottom-7 flex flex-wrap items-center justify-center gap-3',
-    dot: ['cursor-pointer size-3 bg-accented rounded-full outline-outline-inverted/25 focus-visible:outline-3', options.theme.transitions && 'transition'],
+    dot: ['cursor-pointer size-3 bg-background-accented rounded-full outline-outline-inverted/25 focus-visible:outline-3', options.theme.transitions && 'transition'],
   },
   variants: {
     orientation: {

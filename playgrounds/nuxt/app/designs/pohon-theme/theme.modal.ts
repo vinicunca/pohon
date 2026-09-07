@@ -2,7 +2,7 @@
 export const themeModal = {
   slots: {
     overlay: 'inset-0 fixed',
-    content: 'bg-background divide-default flex flex-col divide-y focus:outline-none',
+    content: 'bg-background divide-divide flex flex-col divide-y focus:outline-none',
     header: 'p-4 flex gap-1.5 min-h-(--ui-header-height) items-center sm:px-6',
     wrapper: '',
     body: 'p-4 flex-1 sm:p-6',

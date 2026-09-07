@@ -3,7 +3,7 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'gap-2',
-    base: 'flex overflow-hidden rounded-full bg-accented',
+    base: 'flex overflow-hidden rounded-full bg-background-accented',
     segment: 'duration-280 ease-out motion-reduce:transition-none',
     indicator: 'size-full',
     status: 'flex color-text-dimmed duration-280 ease-out motion-reduce:transition-none',

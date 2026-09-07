@@ -26,7 +26,7 @@ export const themePricingPlan = {
   variants: {
     orientation: {
       horizontal: {
-        root: 'divide-default grid-cols-1 justify-between divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0',
+        root: 'divide-divide grid-cols-1 justify-between divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0',
         body: 'pb-6 justify-center lg:pb-0 lg:pe-6 lg:col-span-2',
         footer: 'lg:mx-auto lg:p-6 lg:max-w-xs lg:w-full lg:items-center lg:justify-center',
         features: 'lg:mt-12 lg:grid lg:grid-cols-2',

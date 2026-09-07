@@ -101,7 +101,7 @@ export const themeListbox = {
         content: 'p-1 isolate',
       },
       false: {
-        content: 'divide-default divide-y',
+        content: 'divide-divide divide-y',
       },
     },
     disabled: {

@@ -1,11 +1,12 @@
 // @unocss-include
+import type { PThemeInput } from 'pohon-ui';
 import { BRANDS } from '../design.constants';
 import { fieldGroupVariantWithRoot } from './theme.field-group';
 
 export const themeInput = {
   slots: {
     root: 'inline-flex items-center relative',
-    base: ['w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75', 'transition-colors'],
+    base: 'placeholder:color-text-dimmed appearance-none border-0 rounded-md w-full transition-colors disabled:(opacity-75 cursor-not-allowed)',
     leading: 'flex items-center start-0 inset-y-0 absolute',
     leadingIcon: 'color-text-dimmed shrink-0',
     leadingAvatar: 'shrink-0',
@@ -65,7 +66,7 @@ export const themeInput = {
       none: 'color-text-highlighted bg-transparent focus:outline-none',
     },
     color: {
-      ...Object.fromEntries(BRANDS.map((color: string) => [color, ''])),
+      ...Object.fromEntries(BRANDS.map((color) => [color, ''])),
       neutral: '',
     },
     leading: {
@@ -87,103 +88,121 @@ export const themeInput = {
       file: 'file:color-text-muted file:font-medium file:me-1.5 file:outline-none',
     },
   },
-  compoundVariants: [...BRANDS.map((color: string) => ({
-    color,
-    variant: ['outline', 'subtle'],
-    class: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
-  })), ...BRANDS.map((color: string) => ({
-    color,
-    variant: ['soft', 'ghost'],
-    class: `outline-${color}/25 focus-visible:outline-3`,
-  })), ...BRANDS.map((color: string) => ({
-    color,
-    highlight: true,
-    class: `ring ring-inset ring-${color}`,
-  })), {
-    color: 'neutral',
-    variant: ['outline', 'subtle'],
-    class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
-  }, {
-    color: 'neutral',
-    variant: ['soft', 'ghost'],
-    class: 'outline-outline-inverted/25 focus-visible:outline-3',
-  }, {
-    color: 'neutral',
-    highlight: true,
-    class: 'ring ring-inset ring-ring-inverted',
-  }, {
-    leading: true,
-    size: 'xs',
-    class: 'ps-7',
-  }, {
-    leading: true,
-    size: 'sm',
-    class: 'ps-8',
-  }, {
-    leading: true,
-    size: 'md',
-    class: 'ps-9',
-  }, {
-    leading: true,
-    size: 'lg',
-    class: 'ps-10',
-  }, {
-    leading: true,
-    size: 'xl',
-    class: 'ps-11',
-  }, {
-    trailing: true,
-    size: 'xs',
-    class: 'pe-7',
-  }, {
-    trailing: true,
-    size: 'sm',
-    class: 'pe-8',
-  }, {
-    trailing: true,
-    size: 'md',
-    class: 'pe-9',
-  }, {
-    trailing: true,
-    size: 'lg',
-    class: 'pe-10',
-  }, {
-    trailing: true,
-    size: 'xl',
-    class: 'pe-11',
-  }, {
-    loading: true,
-    leading: true,
-    class: {
-      leadingIcon: 'animate-spin',
+  compoundVariants: [
+    ...BRANDS.map((color) => ({
+      color,
+      variant: ['outline', 'subtle'],
+      class: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
+    })),
+    ...BRANDS.map((color) => ({
+      color,
+      variant: ['soft', 'ghost'],
+      class: `outline-${color}/25 focus-visible:outline-3`,
+    })),
+    ...BRANDS.map((color) => ({
+      color,
+      highlight: true,
+      class: `ring ring-inset pohon:ring-${color}`,
+    })),
+    {
+      color: 'neutral',
+      variant: ['outline', 'subtle'],
+      class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
     },
-  }, {
-    loading: true,
-    leading: false,
-    trailing: true,
-    class: {
-      trailingIcon: 'animate-spin',
+    {
+      color: 'neutral',
+      variant: ['soft', 'ghost'],
+      class: 'outline-outline-inverted/25 focus-visible:outline-3',
     },
-  }, {
-    fixed: false,
-    size: 'xs',
-    class: 'md:text-xs',
-  }, {
-    fixed: false,
-    size: 'sm',
-    class: 'md:text-xs',
-  }, {
-    fixed: false,
-    size: 'md',
-    class: 'md:text-sm',
-  }, {
-    fixed: false,
-    size: 'lg',
-    class: 'md:text-sm',
-  }],
-  defaultVariants: {
-    size: 'md',
-    color: 'primary',
-    variant: 'outline',
-  },
-};
+    {
+      color: 'neutral',
+      highlight: true,
+      class: 'ring ring-inset ring-ring-inverted',
+    },
+    {
+      leading: true,
+      size: 'xs',
+      class: 'ps-7',
+    },
+    {
+      leading: true,
+      size: 'sm',
+      class: 'ps-8',
+    },
+    {
+      leading: true,
+      size: 'md',
+      class: 'ps-9',
+    },
+    {
+      leading: true,
+      size: 'lg',
+      class: 'ps-10',
+    },
+    {
+      leading: true,
+      size: 'xl',
+      class: 'ps-11',
+    },
+    {
+      trailing: true,
+      size: 'xs',
+      class: 'pe-7',
+    },
+    {
+      trailing: true,
+      size: 'sm',
+      class: 'pe-8',
+    },
+    {
+      trailing: true,
+      size: 'md',
+      class: 'pe-9',
+    },
+    {
+      trailing: true,
+      size: 'lg',
+      class: 'pe-10',
+    },
+    {
+      trailing: true,
+      size: 'xl',
+      class: 'pe-11',
+    },
+    {
+      loading: true,
+      leading: true,
+      class: {
+        leadingIcon: 'animate-spin',
+      },
+    },
+    {
+      loading: true,
+      leading: false,
+      trailing: true,
+      class: {
+        trailingIcon: 'animate-spin',
+      },
+    },
+    {
+      fixed: false,
+      size: 'xs',
+      class: 'md:text-xs',
+    },
+    {
+      fixed: false,
+      size: 'sm',
+      class: 'md:text-xs',
+    },
+    {
+      fixed: false,
+      size: 'md',
+      class: 'md:text-sm',
+    },
+    {
+      fixed: false,
+      size: 'lg',
+      class: 'md:text-sm',
+    },
+  ],
+} satisfies PThemeInput;

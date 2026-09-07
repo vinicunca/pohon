@@ -3,7 +3,7 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative flex items-center select-none touch-none',
-    track: 'relative bg-accented overflow-hidden rounded-full grow',
+    track: 'relative bg-background-accented overflow-hidden rounded-full grow',
     range: 'absolute rounded-full',
     thumb: 'rounded-full bg-background ring-2 focus-visible:outline-3 focus-visible:outline-offset-2',
   },

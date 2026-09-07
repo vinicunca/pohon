@@ -6,7 +6,7 @@ export const themeDropdownMenu = {
     content: 'bg-background ring-ring rounded-md flex flex-col max-h-(--reka-dropdown-menu-content-available-height) min-w-32 ring shadow-lg origin-(--reka-dropdown-menu-content-transform-origin) overflow-hidden data-[state=closed]:animate-[scale-out_100ms_var(--ease-out)] data-[state=open]:animate-[scale-in_100ms_var(--ease-out)]',
     input: 'border-border border-b',
     empty: 'color-text-muted text-center',
-    viewport: 'divide-default flex-1 relative overflow-y-auto scroll-py-1 divide-y',
+    viewport: 'divide-divide flex-1 relative overflow-y-auto scroll-py-1 divide-y',
     arrow: 'fill-bg stroke-default',
     group: 'p-1 isolate',
     label: 'color-text-highlighted font-semibold flex w-full items-center',

@@ -2,7 +2,7 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: 'flex flex-col min-h-0 min-w-0 divide-y divide-default',
+    root: 'flex flex-col min-h-0 min-w-0 divide-y divide-divide',
     input: '',
     close: '',
     back: 'p-0',
@@ -36,7 +36,7 @@ export default (options: Required<ModuleOptions>) => ({
         viewport: 'p-1 isolate',
       },
       false: {
-        viewport: 'divide-y divide-default',
+        viewport: 'divide-y divide-divide',
       },
     },
     size: {

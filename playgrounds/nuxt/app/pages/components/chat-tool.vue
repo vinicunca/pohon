@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { ButtonProps } from 'pohon-ui'
+import type { ButtonProps } from 'pohon-ui';
 
-const actions: ButtonProps[] = [
+const actions: Array<ButtonProps> = [
   { label: 'Approve', onClick: () => console.log('approve') },
-  { label: 'Deny', color: 'neutral', variant: 'soft', onClick: () => console.log('deny') }
-]
+  { label: 'Deny', color: 'neutral', variant: 'soft', onClick: () => console.log('deny') },
+];
 </script>
 
 <template>
   <Navbar />
 
-  <div class="w-72 flex flex-col gap-4 items-start">
+  <div class="flex flex-col gap-4 w-72 items-start">
     <PChatTool
       text="Searched components"
       icon="i-lucide-search"

@@ -215,7 +215,7 @@ onMounted(async () => {
         <MDC :value="page.section4.description" unwrap="p" cache-key="figma-section-4-description" />
       </template>
       <div aria-hidden="true" class="absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
-      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start justify-center border border-border border-b-0 sm:divide-x divide-y lg:divide-y-0 divide-default">
+      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start justify-center border border-border border-b-0 sm:divide-x divide-y lg:divide-y-0 divide-divide">
         <li v-for="(step, index) in page?.section4.steps" :key="step.title" class="relative flex flex-col gap-y-4 justify-start group h-full p-4 bg-background" :class="{ 'hover:bg-muted/50': step.to }">
           <PLink v-if="step.to" :to="step.to" :aria-label="`Open ${step.title}`" target="_blank" class="absolute inset-0 z-10" />
           <NuxtImg v-if="step.image" v-bind="step.image" class="rounded-sm" loading="lazy" />

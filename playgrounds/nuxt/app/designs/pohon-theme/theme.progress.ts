@@ -4,7 +4,7 @@ import { BRANDS } from '../design.constants';
 export const themeProgress = {
   slots: {
     root: 'gap-2',
-    base: 'bg-accented rounded-full relative overflow-hidden',
+    base: 'bg-background-accented rounded-full relative overflow-hidden',
     indicator: 'rounded-full size-full transition-transform duration-280 ease-out motion-reduce:transition-none motion-reduce:data-[state=indeterminate]:animate-pulse',
     status: 'color-text-dimmed flex duration-280 ease-out motion-reduce:transition-none',
     steps: 'grid items-end',

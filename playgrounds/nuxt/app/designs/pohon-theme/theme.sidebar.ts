@@ -4,7 +4,7 @@ export const themeSidebar = {
     root: 'peer [--sidebar-width-icon:4rem] [--sidebar-width:16rem]',
     gap: 'bg-transparent w-(--sidebar-width) relative',
     container: 'w-(--sidebar-width) hidden inset-y-0 fixed z-10 h-svh lg:flex',
-    inner: 'divide-default flex flex-col size-full overflow-hidden divide-y',
+    inner: 'divide-divide flex flex-col size-full overflow-hidden divide-y',
     header: 'px-4 flex gap-1.5 min-h-(--ui-header-height) items-center overflow-hidden',
     wrapper: 'flex-1 min-w-0',
     title: 'color-text-highlighted font-semibold truncate',

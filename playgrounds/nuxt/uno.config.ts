@@ -129,10 +129,12 @@ export default defineConfig({
       },
       stroke: {
         DEFAULT: 'var(--ui-color-border)',
+        bg: 'var(--ui-color-bg)',
         inverted: 'var(--ui-color-border-inverted)',
       },
       fill: {
         DEFAULT: 'var(--ui-color-border)',
+        bg: 'var(--ui-color-bg)',
         inverted: 'var(--ui-color-border-inverted)',
       },
 

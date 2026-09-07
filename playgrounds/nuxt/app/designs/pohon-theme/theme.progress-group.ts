@@ -4,7 +4,7 @@ import { BRANDS } from '../design.constants';
 export const themeProgressGroup = {
   slots: {
     root: 'gap-2',
-    base: 'bg-accented rounded-full flex overflow-hidden',
+    base: 'bg-background-accented rounded-full flex overflow-hidden',
     segment: 'duration-280 ease-out motion-reduce:transition-none',
     indicator: 'size-full',
     status: 'color-text-dimmed flex duration-280 ease-out motion-reduce:transition-none',

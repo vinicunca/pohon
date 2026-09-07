@@ -10,14 +10,14 @@ export const fieldGroupVariantWithRoot = {
   fieldGroup: {
     horizontal: {
       root: 'group has-focus-visible:z-[1]',
-      base: 'group-not-only:group-first:rounded-e-none group-not-only:group-last:rounded-s-none group-not-last:group-not-first:rounded-none'
+      base: 'group-not-[*:only-child]:group-first:rounded-e-none group-not-[*:only-child]:group-last:rounded-s-none group-not-last:group-not-first:rounded-none',
     },
     vertical: {
       root: 'group has-focus-visible:z-[1]',
-      base: 'group-not-only:group-first:rounded-b-none group-not-only:group-last:rounded-t-none group-not-last:group-not-first:rounded-none'
-    }
-  }
-}
+      base: 'group-not-[*:only-child]:group-first:rounded-b-none group-not-[*:only-child]:group-last:rounded-t-none group-not-last:group-not-first:rounded-none',
+    },
+  },
+};
 
 export const themeFieldGroup = {
   base: 'relative',
@@ -27,11 +27,11 @@ export const themeFieldGroup = {
       sm: '',
       md: '',
       lg: '',
-      xl: ''
+      xl: '',
     },
     orientation: {
       horizontal: 'inline-flex -space-x-px',
-      vertical: 'flex flex-col -space-y-px'
-    }
-  }
+      vertical: 'flex flex-col -space-y-px',
+    },
+  },
 };

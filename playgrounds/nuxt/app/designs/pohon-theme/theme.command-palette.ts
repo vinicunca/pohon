@@ -1,7 +1,7 @@
 // @unocss-include
 export const themeCommandPalette = {
   slots: {
-    root: 'divide-default flex flex-col min-h-0 min-w-0 divide-y',
+    root: 'divide-divide flex flex-col min-h-0 min-w-0 divide-y',
     input: '',
     close: '',
     back: 'p-0',
@@ -35,7 +35,7 @@ export const themeCommandPalette = {
         viewport: 'p-1 isolate',
       },
       false: {
-        viewport: 'divide-default divide-y',
+        viewport: 'divide-divide divide-y',
       },
     },
     size: {

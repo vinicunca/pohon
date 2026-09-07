@@ -3,7 +3,7 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative flex items-start',
-    base: ['inline-flex items-center shrink-0 rounded-full border-2 border-transparent focus-visible:outline-3 data-[state=unchecked]:bg-accented', options.theme.transitions && 'transition-[background] duration-280'],
+    base: ['inline-flex items-center shrink-0 rounded-full border-2 border-transparent focus-visible:outline-3 data-[state=unchecked]:bg-background-accented', options.theme.transitions && 'transition-[background] duration-280'],
     container: 'flex items-center',
     thumb: 'group pointer-events-none rounded-full bg-background shadow-lg ring-0 transition-transform duration-280 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:rtl:-translate-x-0 flex items-center justify-center',
     icon: ['absolute shrink-0 group-data-[state=unchecked]:color-text-dimmed opacity-0 size-10/12', options.theme.transitions && 'transition-[color,opacity] duration-280'],
@@ -74,7 +74,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     required: {
       true: {
-        label: 'after:content-[\'*\'] after:ms-0.5 after:text-error',
+        label: 'after:content-[\'*\'] after:ms-0.5 after:color-error',
       },
     },
     disabled: {

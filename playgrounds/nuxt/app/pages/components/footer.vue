@@ -49,7 +49,7 @@ const columns = [{
 <template>
   <Navbar />
 
-  <PFooter class="w-full border-t border-border divide-y divide-default min-h-0">
+  <PFooter class="w-full border-t border-border divide-y divide-divide min-h-0">
     <template #top>
       <PContainer>
         <PFooterColumns :columns="columns">

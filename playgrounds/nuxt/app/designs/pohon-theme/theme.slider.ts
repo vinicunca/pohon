@@ -4,7 +4,7 @@ import { BRANDS } from '../design.constants';
 export const themeSlider = {
   slots: {
     root: 'flex select-none items-center relative touch-none',
-    track: 'bg-accented rounded-full grow relative overflow-hidden',
+    track: 'bg-background-accented rounded-full grow relative overflow-hidden',
     range: 'rounded-full absolute',
     thumb: 'bg-background rounded-full ring-2 focus-visible:outline-3 focus-visible:outline-offset-2',
   },

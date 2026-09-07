@@ -6,7 +6,7 @@ export const themeInputDate = defuFn({
     slots: {
       root: () => undefined,
       base: () => ['group relative inline-flex items-center rounded-md select-none', 'transition-colors'],
-      segment: ['rounded-sm text-center outline-hidden data-placeholder:color-text-dimmed data-[segment=literal]:color-text-muted data-invalid:text-error data-disabled:cursor-not-allowed data-disabled:opacity-75', 'transition-colors'],
+      segment: ['rounded-sm text-center outline-hidden data-placeholder:color-text-dimmed data-[segment=literal]:color-text-muted data-invalid:color-error data-disabled:cursor-not-allowed data-disabled:opacity-75', 'transition-colors'],
       separatorIcon: 'shrink-0 size-4 color-text-muted'
     },
     variants: {
@@ -48,17 +48,17 @@ export const themeInputDate = defuFn({
     }, {
       variant: 'soft',
       class: {
-        segment: 'focus:bg-accented/50 group-hover:focus:bg-accented'
+        segment: 'focus:bg-background-accented/50 group-hover:focus:bg-background-accented'
       }
     }, {
       variant: 'subtle',
       class: {
-        segment: 'focus:bg-accented'
+        segment: 'focus:bg-background-accented'
       }
     }, {
       variant: 'ghost',
       class: {
-        segment: 'focus:bg-background-elevated group-hover:focus:bg-accented'
+        segment: 'focus:bg-background-elevated group-hover:focus:bg-background-accented'
       }
     }, {
       variant: 'none',

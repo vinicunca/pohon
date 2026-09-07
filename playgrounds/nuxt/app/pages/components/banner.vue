@@ -1,19 +1,28 @@
 <script setup lang="ts">
-import theme from '#build/ui/banner'
+import theme from '#build/ui/banner';
 
-const colors = Object.keys(theme.variants.color)
+const colors = Object.keys(theme.variants.color);
 
 const attrs = reactive({
-  color: [theme.defaultVariants.color]
-})
+  color: [theme.defaultVariants.color],
+});
 </script>
 
 <template>
   <Navbar>
-    <PSelect v-model="attrs.color" :items="colors" multiple />
+    <PSelect
+      v-model="attrs.color"
+      :items="colors"
+      multiple
+    />
   </Navbar>
 
-  <Matrix v-slot="props" :attrs="attrs" class="flex-col w-full" container-class="w-full">
+  <Matrix
+    v-slot="props"
+    :attrs="attrs"
+    class="flex-col w-full"
+    container-class="w-full"
+  >
     <PBanner
       id="banner"
       title="Pohon UI v4 is officially released!"
@@ -26,7 +35,7 @@ const attrs = reactive({
         trailingIcon: 'i-lucide-arrow-right',
         to: 'https://nuxt.com/blog/nuxt-ui-v4',
         target: '_blank',
-        class: 'ring-0'
+        class: 'ring-0',
       }]"
       v-bind="props"
     />

@@ -276,7 +276,7 @@ exports[`checkbox > renders with required correctly 1`] = `
     <!--v-if-->
   </div>
   <div data-slot="wrapper" class="w-full ms-2 text-sm">
-    <!--v-if--><label for="v-0-0" data-slot="label" class="block font-medium color-text after:content-['*'] after:ms-0.5 after:text-error">Label</label>
+    <!--v-if--><label for="v-0-0" data-slot="label" class="block font-medium color-text after:content-['*'] after:ms-0.5 after:color-error">Label</label>
     <!--v-if-->
   </div>
 </div>"

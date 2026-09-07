@@ -1396,7 +1396,7 @@ exports[`checkboxGroup > renders with primary variant table highlight correctly 
 exports[`checkboxGroup > renders with required correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-col flex-wrap gap-y-1">
-    <legend data-slot="legend" class="mb-1 block font-medium color-text text-sm after:content-['*'] after:ms-0.5 after:text-error">Legend</legend>
+    <legend data-slot="legend" class="mb-1 block font-medium color-text text-sm after:content-['*'] after:ms-0.5 after:color-error">Legend</legend>
     <div data-slot="item" class="relative flex items-start flex-row">
       <div data-slot="container" class="flex items-center h-5"><button data-slot="base" class="rounded-sm ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 outline-primary/25 focus-visible:outline-solid focus-visible:outline-3 focus-visible:ring-primary" id="v-0:1" role="checkbox" type="button" aria-checked="false" aria-required="false" data-state="unchecked" data-akar-collection-item="" tabindex="-1" data-orientation="vertical">
           <!---->

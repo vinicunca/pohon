@@ -54,7 +54,7 @@ export const themeCheckboxGroup = {
     },
     required: {
       true: {
-        legend: 'after:text-error after:(ms-0.5 content-["*"])',
+        legend: 'after:color-error after:(ms-0.5 content-["*"])',
       },
     },
   },

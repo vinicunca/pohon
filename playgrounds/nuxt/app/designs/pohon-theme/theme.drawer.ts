@@ -3,7 +3,7 @@ export const themeDrawer = {
   slots: {
     overlay: 'bg-background-elevated/75 inset-0 fixed',
     content: 'bg-background ring-ring flex ring fixed focus:outline-none',
-    handle: ['shrink-0 !bg-accented', 'transition-opacity ease-out'],
+    handle: ['shrink-0 !bg-background-accented', 'transition-opacity ease-out'],
     container: 'p-4 flex flex-col gap-4 w-full overflow-y-auto',
     header: 'flex gap-1.5 min-h-8 items-center',
     wrapper: 'flex-1 min-w-0',

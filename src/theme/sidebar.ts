@@ -5,7 +5,7 @@ export default (options: Required<ModuleOptions>) => ({
     root: 'peer [--sidebar-width:16rem] [--sidebar-width-icon:4rem]',
     gap: 'relative w-(--sidebar-width) bg-transparent',
     container: 'fixed inset-y-0 z-10 hidden h-svh w-(--sidebar-width) lg:flex',
-    inner: 'flex size-full flex-col overflow-hidden divide-y divide-default',
+    inner: 'flex size-full flex-col overflow-hidden divide-y divide-divide',
     header: 'flex items-center gap-1.5 overflow-hidden px-4 min-h-(--ui-header-height)',
     wrapper: 'min-w-0 flex-1',
     title: 'color-text-highlighted font-600 truncate',

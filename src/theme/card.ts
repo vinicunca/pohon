@@ -15,13 +15,13 @@ export default {
         description: 'color-text-dimmed',
       },
       outline: {
-        root: 'bg-background ring ring-ring divide-y divide-default',
+        root: 'bg-background ring ring-ring divide-y divide-divide',
       },
       soft: {
-        root: 'bg-background-elevated/50 divide-y divide-default',
+        root: 'bg-background-elevated/50 divide-y divide-divide',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-ring divide-y divide-default',
+        root: 'bg-background-elevated/50 ring ring-ring divide-y divide-divide',
       },
     },
   },

@@ -128,7 +128,7 @@ Use these everywhere instead of raw palette colors:
 - `bg-background` — page background
 - `bg-muted` — subtle backgrounds (hover states, alternating rows)
 - `bg-background-elevated` — raised surfaces (cards, dropdowns)
-- `bg-accented` — accent backgrounds (active states, selected items)
+- `bg-background-accented` — accent backgrounds (active states, selected items)
 - `bg-background-inverted` — inverse background (dark on light, light on dark)
 
 ### Borders
@@ -207,7 +207,7 @@ export default defineAppConfig({
         {
           color: "neutral",
           variant: "outline",
-          class: "ring-ring hover:bg-accented",
+          class: "ring-ring hover:bg-background-accented",
         },
       ],
       defaultVariants: {

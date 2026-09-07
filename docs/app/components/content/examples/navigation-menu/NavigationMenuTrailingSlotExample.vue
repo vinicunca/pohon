@@ -75,7 +75,7 @@ const dropdownItems: DropdownMenuItem[][] = [
             color="neutral"
             variant="ghost"
             size="xs"
-            class="color-text-muted hover:color-text-highlighted hover:bg-accented/50 data-[state=open]:bg-accented/50 mr-1.5"
+            class="color-text-muted hover:color-text-highlighted hover:bg-background-accented/50 data-[state=open]:bg-background-accented/50 mr-1.5"
           />
         </PDropdownMenu>
       </div>

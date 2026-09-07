@@ -9,7 +9,7 @@ export default (options: Required<ModuleOptions>) => ({
     trigger: 'rounded-full font-medium text-center align-middle flex items-center justify-center font-600 group-data-[state=completed]:color-text-inverted group-data-[state=active]:color-text-inverted color-text-muted bg-background-elevated focus-visible:outline-3',
     indicator: 'flex items-center justify-center size-full',
     icon: 'shrink-0',
-    separator: 'absolute rounded-full group-data-[disabled]:opacity-75 bg-accented',
+    separator: 'absolute rounded-full group-data-[disabled]:opacity-75 bg-background-accented',
     wrapper: '',
     title: 'font-medium color-text',
     description: 'color-text-muted text-wrap',

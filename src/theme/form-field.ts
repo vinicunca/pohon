@@ -6,7 +6,7 @@ export default {
     label: 'block font-medium color-text',
     container: 'relative',
     description: 'color-text-muted',
-    error: 'mt-2 text-error',
+    error: 'mt-2 color-error',
     hint: 'color-text-muted',
     help: 'mt-2 color-text-muted',
   },
@@ -20,7 +20,7 @@ export default {
     },
     required: {
       true: {
-        label: 'after:content-[\'*\'] after:ms-0.5 after:text-error',
+        label: 'after:content-[\'*\'] after:ms-0.5 after:color-error',
       },
     },
     orientation: {

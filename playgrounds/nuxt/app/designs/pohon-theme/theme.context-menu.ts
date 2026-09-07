@@ -4,7 +4,7 @@ import { BRANDS } from '../design.constants';
 export const themeContextMenu = {
   slots: {
     content: 'bg-background ring-ring rounded-md flex flex-col max-h-(--reka-context-menu-content-available-height) min-w-32 ring shadow-lg origin-(--reka-context-menu-content-transform-origin) overflow-hidden data-[state=closed]:animate-[scale-out_100ms_var(--ease-out)] data-[state=open]:animate-[scale-in_100ms_var(--ease-out)]',
-    viewport: 'divide-default flex-1 relative overflow-y-auto scroll-py-1 divide-y',
+    viewport: 'divide-divide flex-1 relative overflow-y-auto scroll-py-1 divide-y',
     group: 'p-1 isolate',
     label: 'color-text-highlighted font-semibold flex w-full items-center',
     separator: 'bg-border my-1 h-px -mx-1',

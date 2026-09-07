@@ -5,7 +5,7 @@ export default (options: Required<ModuleOptions>) => ({
     content: 'min-w-32 max-h-(--akar-dropdown-menu-content-available-height) bg-background shadow-lg rounded-md ring ring-ring overflow-hidden data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--akar-dropdown-menu-content-transform-origin) flex flex-col',
     input: 'border-b border-border',
     empty: 'text-center color-text-muted',
-    viewport: 'relative divide-y divide-default scroll-py-1 overflow-y-auto flex-1',
+    viewport: 'relative divide-y divide-divide scroll-py-1 overflow-y-auto flex-1',
     arrow: 'fill-bg stroke-default',
     group: 'p-1 isolate',
     label: 'w-full flex items-center font-600 color-text-highlighted',

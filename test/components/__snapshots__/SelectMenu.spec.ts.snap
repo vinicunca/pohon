@@ -16,7 +16,7 @@ exports[`selectMenu > renders with ariaLabel correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -64,7 +64,7 @@ exports[`selectMenu > renders with arrow correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -132,7 +132,7 @@ exports[`selectMenu > renders with by correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="true" data-state="checked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -180,7 +180,7 @@ exports[`selectMenu > renders with class correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -230,7 +230,7 @@ exports[`selectMenu > renders with clear and clearIcon correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="true" data-state="checked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -280,7 +280,7 @@ exports[`selectMenu > renders with clear correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="true" data-state="checked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -328,7 +328,7 @@ exports[`selectMenu > renders with create-item-label slot correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span data-slot="itemLabel" class="truncate">Create item slot</span></div>
@@ -361,7 +361,7 @@ exports[`selectMenu > renders with default slot correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -409,7 +409,7 @@ exports[`selectMenu > renders with defaultValue correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="true" data-state="checked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -457,7 +457,7 @@ exports[`selectMenu > renders with descriptionKey correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -505,7 +505,7 @@ exports[`selectMenu > renders with disabled correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" disabled="" data-disabled="" data-state="unchecked"><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -560,7 +560,7 @@ exports[`selectMenu > renders with id correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -608,7 +608,7 @@ exports[`selectMenu > renders with item slot correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted="">Item slot</div>
@@ -646,7 +646,7 @@ exports[`selectMenu > renders with item-description slot correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span><span data-slot="itemDescription" class="truncate color-text-muted">Item description slot</span></span><span data-slot="itemTrailing" class="ms-auto inline-flex gap-1.5 items-center"><!--v-if--></span></div>
@@ -684,7 +684,7 @@ exports[`selectMenu > renders with item-label slot correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Item label slot</span>
@@ -732,7 +732,7 @@ exports[`selectMenu > renders with item-leading slot correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted="">Item leading slot<span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -780,7 +780,7 @@ exports[`selectMenu > renders with item-trailing slot correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -828,7 +828,7 @@ exports[`selectMenu > renders with items correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -876,7 +876,7 @@ exports[`selectMenu > renders with items with description correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span><span data-slot="itemDescription" class="truncate color-text-muted">Description</span></span><span data-slot="itemTrailing" class="ms-auto inline-flex gap-1.5 items-center"><!--v-if--></span></div>
@@ -914,7 +914,7 @@ exports[`selectMenu > renders with labelKey correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">backlog</span>
@@ -967,7 +967,7 @@ exports[`selectMenu > renders with leading slot correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1059,7 +1059,7 @@ exports[`selectMenu > renders with modelValue correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="true" data-state="checked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1107,7 +1107,7 @@ exports[`selectMenu > renders with multiple and modelValue correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="true" data-state="checked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1155,7 +1155,7 @@ exports[`selectMenu > renders with multiple correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1203,7 +1203,7 @@ exports[`selectMenu > renders with name correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1251,7 +1251,7 @@ exports[`selectMenu > renders with neutral variant ghost correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1299,7 +1299,7 @@ exports[`selectMenu > renders with neutral variant ghost highlight correctly 1`]
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1347,7 +1347,7 @@ exports[`selectMenu > renders with neutral variant none correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1395,7 +1395,7 @@ exports[`selectMenu > renders with neutral variant none highlight correctly 1`] 
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1443,7 +1443,7 @@ exports[`selectMenu > renders with neutral variant outline correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1491,7 +1491,7 @@ exports[`selectMenu > renders with neutral variant outline highlight correctly 1
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1539,7 +1539,7 @@ exports[`selectMenu > renders with neutral variant soft correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1587,7 +1587,7 @@ exports[`selectMenu > renders with neutral variant soft highlight correctly 1`] 
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1620,7 +1620,7 @@ exports[`selectMenu > renders with neutral variant soft highlight correctly 1`] 
 `;
 
 exports[`selectMenu > renders with neutral variant subtle correctly 1`] = `
-"<button type="button" tabindex="0" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" dir="ltr" style="pointer-events: auto;" data-slot="base" class="relative group rounded-md inline-flex items-center disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background-elevated ring ring-inset ring-ring-accented hover:bg-accented/75 disabled:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted pe-9 md:text-sm">
+"<button type="button" tabindex="0" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" dir="ltr" style="pointer-events: auto;" data-slot="base" class="relative group rounded-md inline-flex items-center disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background-elevated ring ring-inset ring-ring-accented hover:bg-background-accented/75 disabled:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted pe-9 md:text-sm">
   <!--v-if--><span data-slot="placeholder" class="truncate color-text-dimmed">&nbsp;</span><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><span class="iconify i-lucide:chevron-down shrink-0 color-text-dimmed size-5" aria-hidden="true" data-slot="trailingIcon"></span></span>
 </button>
 <!--teleport start-->
@@ -1635,7 +1635,7 @@ exports[`selectMenu > renders with neutral variant subtle correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1668,7 +1668,7 @@ exports[`selectMenu > renders with neutral variant subtle correctly 1`] = `
 `;
 
 exports[`selectMenu > renders with neutral variant subtle highlight correctly 1`] = `
-"<button type="button" tabindex="0" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" dir="ltr" style="pointer-events: auto;" data-slot="base" class="relative group rounded-md inline-flex items-center disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background-elevated ring ring-inset ring-ring-accented hover:bg-accented/75 disabled:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted ring ring-inset ring-ring-inverted pe-9 md:text-sm">
+"<button type="button" tabindex="0" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" dir="ltr" style="pointer-events: auto;" data-slot="base" class="relative group rounded-md inline-flex items-center disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background-elevated ring ring-inset ring-ring-accented hover:bg-background-accented/75 disabled:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted ring ring-inset ring-ring-inverted pe-9 md:text-sm">
   <!--v-if--><span data-slot="placeholder" class="truncate color-text-dimmed">&nbsp;</span><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><span class="iconify i-lucide:chevron-down shrink-0 color-text-dimmed size-5" aria-hidden="true" data-slot="trailingIcon"></span></span>
 </button>
 <!--teleport start-->
@@ -1683,7 +1683,7 @@ exports[`selectMenu > renders with neutral variant subtle highlight correctly 1`
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1731,7 +1731,7 @@ exports[`selectMenu > renders with placeholder correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1779,7 +1779,7 @@ exports[`selectMenu > renders with primary variant ghost correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1827,7 +1827,7 @@ exports[`selectMenu > renders with primary variant ghost highlight correctly 1`]
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1875,7 +1875,7 @@ exports[`selectMenu > renders with primary variant none correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1923,7 +1923,7 @@ exports[`selectMenu > renders with primary variant none highlight correctly 1`] 
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -1971,7 +1971,7 @@ exports[`selectMenu > renders with primary variant outline correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2019,7 +2019,7 @@ exports[`selectMenu > renders with primary variant outline highlight correctly 1
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2067,7 +2067,7 @@ exports[`selectMenu > renders with primary variant soft correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2115,7 +2115,7 @@ exports[`selectMenu > renders with primary variant soft highlight correctly 1`] 
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2148,7 +2148,7 @@ exports[`selectMenu > renders with primary variant soft highlight correctly 1`] 
 `;
 
 exports[`selectMenu > renders with primary variant subtle correctly 1`] = `
-"<button type="button" tabindex="0" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" dir="ltr" style="pointer-events: auto;" data-slot="base" class="relative group rounded-md inline-flex items-center disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background-elevated ring ring-inset ring-ring-accented hover:bg-accented/75 disabled:bg-background-elevated outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm">
+"<button type="button" tabindex="0" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" dir="ltr" style="pointer-events: auto;" data-slot="base" class="relative group rounded-md inline-flex items-center disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background-elevated ring ring-inset ring-ring-accented hover:bg-background-accented/75 disabled:bg-background-elevated outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm">
   <!--v-if--><span data-slot="placeholder" class="truncate color-text-dimmed">&nbsp;</span><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><span class="iconify i-lucide:chevron-down shrink-0 color-text-dimmed size-5" aria-hidden="true" data-slot="trailingIcon"></span></span>
 </button>
 <!--teleport start-->
@@ -2163,7 +2163,7 @@ exports[`selectMenu > renders with primary variant subtle correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2196,7 +2196,7 @@ exports[`selectMenu > renders with primary variant subtle correctly 1`] = `
 `;
 
 exports[`selectMenu > renders with primary variant subtle highlight correctly 1`] = `
-"<button type="button" tabindex="0" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" dir="ltr" style="pointer-events: auto;" data-slot="base" class="relative group rounded-md inline-flex items-center disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background-elevated ring ring-inset ring-ring-accented hover:bg-accented/75 disabled:bg-background-elevated outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary ring ring-inset ring-primary pe-9 md:text-sm">
+"<button type="button" tabindex="0" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="true" aria-controls="" data-state="open" aria-disabled="false" dir="ltr" style="pointer-events: auto;" data-slot="base" class="relative group rounded-md inline-flex items-center disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background-elevated ring ring-inset ring-ring-accented hover:bg-background-accented/75 disabled:bg-background-elevated outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary ring ring-inset ring-primary pe-9 md:text-sm">
   <!--v-if--><span data-slot="placeholder" class="truncate color-text-dimmed">&nbsp;</span><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><span class="iconify i-lucide:chevron-down shrink-0 color-text-dimmed size-5" aria-hidden="true" data-slot="trailingIcon"></span></span>
 </button>
 <!--teleport start-->
@@ -2211,7 +2211,7 @@ exports[`selectMenu > renders with primary variant subtle highlight correctly 1`
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2259,7 +2259,7 @@ exports[`selectMenu > renders with required correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2306,7 +2306,7 @@ exports[`selectMenu > renders with searchInput icon correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2354,7 +2354,7 @@ exports[`selectMenu > renders with searchInput placeholder correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2402,7 +2402,7 @@ exports[`selectMenu > renders with selectedIcon correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2450,7 +2450,7 @@ exports[`selectMenu > renders with size lg correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-2 text-sm gap-2" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2498,7 +2498,7 @@ exports[`selectMenu > renders with size md correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2546,7 +2546,7 @@ exports[`selectMenu > renders with size sm correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-xs gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-4" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2594,7 +2594,7 @@ exports[`selectMenu > renders with size xl correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-2 text-base gap-2" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-6" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2642,7 +2642,7 @@ exports[`selectMenu > renders with size xs correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1 text-xs gap-1" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-4" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2699,7 +2699,7 @@ exports[`selectMenu > renders with trailing slot correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2756,7 +2756,7 @@ exports[`selectMenu > renders with trailingIcon correctly 2`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2804,7 +2804,7 @@ exports[`selectMenu > renders with ui correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate p-2">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2852,7 +2852,7 @@ exports[`selectMenu > renders with valueKey correctly 1`] = `
         <!--v-if-->
       </div>
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="-1" aria-selected="true" data-state="checked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>
@@ -2929,7 +2929,7 @@ exports[`selectMenu > renders without searchInput correctly 1`] = `
     <div tabindex="-1" data-slot="focusScope" class="flex flex-col min-h-0">
       <!--v-if-->
       <!--v-if-->
-      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-default">
+      <div role="presentation" data-slot="viewport" class="relative scroll-py-1 overflow-y-auto flex-1 divide-y divide-divide">
         <!--v-if-->
         <div role="group" aria-labelledby="" id="akar-combobox-group-v-0-0-1" data-slot="group" class="p-1 isolate">
           <div id="akar-combobox-item-v-0-0-3" data-slot="item" class="group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50 transition-colors before:transition-colors p-1.5 text-sm gap-1.5" data-akar-collection-item="" role="option" tabindex="0" aria-selected="false" data-state="unchecked" data-highlighted=""><span class="iconify i-lucide:circle-help shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text transition-colors size-5" aria-hidden="true" data-slot="itemLeadingIcon"></span><span data-slot="itemWrapper" class="flex-1 flex flex-col min-w-0"><span data-slot="itemLabel" class="truncate">Backlog</span>

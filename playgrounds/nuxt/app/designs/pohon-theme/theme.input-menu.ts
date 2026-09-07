@@ -28,7 +28,7 @@ export const themeInputMenu = defuFn({
     itemDescription: 'truncate color-text-muted',
     tagsItem: 'px-1.5 py-0.5 rounded-sm font-medium inline-flex items-center gap-0.5 ring ring-inset ring-ring-accented bg-background-elevated color-text data-disabled:cursor-not-allowed data-disabled:opacity-75',
     tagsItemText: 'truncate',
-    tagsItemDelete: ['inline-flex items-center rounded-xs color-text-dimmed hover:color-text hover:bg-accented/75 disabled:pointer-events-none', 'transition-colors'],
+    tagsItemDelete: ['inline-flex items-center rounded-xs color-text-dimmed hover:color-text hover:bg-background-accented/75 disabled:pointer-events-none', 'transition-colors'],
     tagsItemDeleteIcon: 'shrink-0',
     tagsInput: 'flex-1 border-0 bg-transparent placeholder:color-text-dimmed focus:outline-none disabled:cursor-not-allowed disabled:opacity-75',
   },
@@ -38,7 +38,7 @@ export const themeInputMenu = defuFn({
         viewport: 'p-1 isolate',
       },
       false: {
-        viewport: 'divide-y divide-default',
+        viewport: 'divide-y divide-divide',
       },
     },
     multiple: {

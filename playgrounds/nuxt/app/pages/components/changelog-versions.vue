@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const container = ref<HTMLElement>()
+const container = ref<HTMLElement>();
 
 const versions = ref([
   {
@@ -11,8 +11,8 @@ const versions = ref([
     to: 'https://nuxt.com/blog/v3-17',
     target: '_blank',
     ui: {
-      container: 'max-w-lg'
-    }
+      container: 'max-w-lg',
+    },
   },
   {
     title: 'Nuxt 3.16',
@@ -23,8 +23,8 @@ const versions = ref([
     to: 'https://nuxt.com/blog/v3-16',
     target: '_blank',
     ui: {
-      container: 'max-w-lg'
-    }
+      container: 'max-w-lg',
+    },
   },
   {
     title: 'Nuxt 3.15',
@@ -35,21 +35,24 @@ const versions = ref([
     to: 'https://nuxt.com/blog/v3-15',
     target: '_blank',
     ui: {
-      container: 'max-w-lg'
-    }
-  }
-])
+      container: 'max-w-lg',
+    },
+  },
+]);
 </script>
 
 <template>
   <Navbar />
 
-  <div ref="container" class="relative w-full h-96 overflow-auto">
+  <div
+    ref="container"
+    class="h-96 w-full relative overflow-auto"
+  >
     <PChangelogVersions
       v-if="container"
       :versions="versions"
       :indicator="{
-        container
+        container,
       }"
     />
   </div>

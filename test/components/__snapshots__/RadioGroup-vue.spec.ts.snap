@@ -1418,7 +1418,7 @@ exports[`radioGroup > renders with primary variant table highlight correctly 1`]
 exports[`radioGroup > renders with required correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="true">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-wrap flex-col gap-y-1">
-    <legend data-slot="legend" class="mb-1 block font-medium color-text text-sm after:content-['*'] after:ms-0.5 after:text-error">Legend</legend>
+    <legend data-slot="legend" class="mb-1 block font-medium color-text text-sm after:content-['*'] after:ms-0.5 after:color-error">Legend</legend>
     <div data-slot="item" class="flex items-start flex-row text-sm">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="true" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 outline-primary/25 focus-visible:outline-solid focus-visible:outline-3 focus-visible:ring-primary" value="1" aria-label="1">
           <!---->

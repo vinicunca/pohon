@@ -19,7 +19,7 @@ exports[`authForm > renders with as correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -65,7 +65,7 @@ exports[`authForm > renders with class correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -115,7 +115,7 @@ exports[`authForm > renders with description correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -165,7 +165,7 @@ exports[`authForm > renders with description slot correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -211,7 +211,7 @@ exports[`authForm > renders with disabled correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -257,7 +257,7 @@ exports[`authForm > renders with fields correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -303,7 +303,7 @@ exports[`authForm > renders with footer slot correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -349,7 +349,7 @@ exports[`authForm > renders with header slot correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -399,7 +399,7 @@ exports[`authForm > renders with icon correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -449,7 +449,7 @@ exports[`authForm > renders with leading slot correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -495,7 +495,7 @@ exports[`authForm > renders with loading correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -525,7 +525,7 @@ exports[`authForm > renders with providers correctly 1`] = `
 "<div data-slot="root" class="w-full space-y-6">
   <!--v-if-->
   <div data-slot="body" class="gap-y-6 flex flex-col">
-    <div data-slot="providers" class="space-y-3"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center ring ring-inset ring-ring-accented color-text bg-background-elevated hover:bg-accented/75 active:bg-accented/75 disabled:bg-background-elevated aria-disabled:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Google</span>
+    <div data-slot="providers" class="space-y-3"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center ring ring-inset ring-ring-accented color-text bg-background-elevated hover:bg-background-accented/75 active:bg-background-accented/75 disabled:bg-background-elevated aria-disabled:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Google</span>
         <!--v-if-->
       </button></div>
     <!---->
@@ -549,7 +549,7 @@ exports[`authForm > renders with providers correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -595,7 +595,7 @@ exports[`authForm > renders with providers slot correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -641,7 +641,7 @@ exports[`authForm > renders with separator correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -687,7 +687,7 @@ exports[`authForm > renders with submit correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -733,7 +733,7 @@ exports[`authForm > renders with submit slot correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -780,7 +780,7 @@ exports[`authForm > renders with title correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -830,7 +830,7 @@ exports[`authForm > renders with title slot correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -876,7 +876,7 @@ exports[`authForm > renders with ui correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
@@ -922,7 +922,7 @@ exports[`authForm > renders with validation slot correctly 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div id="v-1-error" data-slot="error" class="mt-2 text-error">Invalid email format</div>
+          <div id="v-1-error" data-slot="error" class="mt-2 color-error">Invalid email format</div>
         </div>
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">

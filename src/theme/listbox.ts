@@ -100,7 +100,7 @@ export default (options: Required<ModuleOptions>) => ({
         content: 'p-1 isolate',
       },
       false: {
-        content: 'divide-y divide-default',
+        content: 'divide-y divide-divide',
       },
     },
     disabled: {

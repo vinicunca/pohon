@@ -401,7 +401,7 @@ exports[`form > custom validation works > with error 1`] = `
         <!--v-if-->
         <!--v-if-->
       </div>
-      <div id="v-1-error" data-slot="error" class="mt-2 text-error">Must be at least 8 characters</div>
+      <div id="v-1-error" data-slot="error" class="mt-2 color-error">Must be at least 8 characters</div>
     </div>
   </div>
 </form>"
@@ -463,7 +463,7 @@ exports[`form > joi validation works > with error 1`] = `
         <!--v-if-->
         <!--v-if-->
       </div>
-      <div id="v-1-error" data-slot="error" class="mt-2 text-error">Must be at least 8 characters</div>
+      <div id="v-1-error" data-slot="error" class="mt-2 color-error">Must be at least 8 characters</div>
     </div>
   </div>
 </form>"
@@ -541,7 +541,7 @@ exports[`form > superstruct validation works > with error 1`] = `
         <!--v-if-->
         <!--v-if-->
       </div>
-      <div id="v-1-error" data-slot="error" class="mt-2 text-error">Must be at least 8 characters</div>
+      <div id="v-1-error" data-slot="error" class="mt-2 color-error">Must be at least 8 characters</div>
     </div>
   </div>
 </form>"
@@ -603,7 +603,7 @@ exports[`form > valibot validation works > with error 1`] = `
         <!--v-if-->
         <!--v-if-->
       </div>
-      <div id="v-1-error" data-slot="error" class="mt-2 text-error">Must be at least 8 characters</div>
+      <div id="v-1-error" data-slot="error" class="mt-2 color-error">Must be at least 8 characters</div>
     </div>
   </div>
 </form>"
@@ -665,7 +665,7 @@ exports[`form > yup validation works > with error 1`] = `
         <!--v-if-->
         <!--v-if-->
       </div>
-      <div id="v-1-error" data-slot="error" class="mt-2 text-error">Must be at least 8 characters</div>
+      <div id="v-1-error" data-slot="error" class="mt-2 color-error">Must be at least 8 characters</div>
     </div>
   </div>
 </form>"
@@ -727,7 +727,7 @@ exports[`form > zod validation works > with error 1`] = `
         <!--v-if-->
         <!--v-if-->
       </div>
-      <div id="v-1-error" data-slot="error" class="mt-2 text-error">Must be at least 8 characters</div>
+      <div id="v-1-error" data-slot="error" class="mt-2 color-error">Must be at least 8 characters</div>
     </div>
   </div>
 </form>"

@@ -16,7 +16,7 @@ exports[`avatar > renders with chip correctly 1`] = `"<span data-slot="root" cla
 
 exports[`avatar > renders with class correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base bg-background"><span data-slot="fallback" class="font-medium truncate color-text-muted">&nbsp;</span></span>"`;
 
-exports[`avatar > renders with color error correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-error/10 size-8 text-base"><span data-slot="fallback" class="font-medium truncate text-error">BC</span></span>"`;
+exports[`avatar > renders with color error correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-error/10 size-8 text-base"><span data-slot="fallback" class="font-medium truncate color-error">BC</span></span>"`;
 
 exports[`avatar > renders with color info correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-info/10 size-8 text-base"><span data-slot="fallback" class="font-medium truncate text-info">BC</span></span>"`;
 

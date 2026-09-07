@@ -26,6 +26,8 @@ import {
 import { themeCheckbox } from './pohon-theme/theme.checkbox';
 import { themeCheckboxGroup } from './pohon-theme/theme.checkbox-group';
 import { themeChip } from './pohon-theme/theme.chip';
+import { themeCollapsible } from './pohon-theme/theme.collapsible';
+import { themeColorPicker } from './pohon-theme/theme.color-picker';
 import {
   themeDashboardGroup,
   themeDashboardNavbar,
@@ -36,6 +38,9 @@ import {
   themeDashboardSidebar,
   themeDashboardToolbar,
 } from './pohon-theme/theme.dashboard';
+import { themeInput } from './pohon-theme/theme.input';
+import { themeSelect } from './pohon-theme/theme.select';
+import { themeSwitch } from './pohon-theme/theme.switch';
 import { themeUser } from './pohon-theme/theme.user';
 
 // @keep-sorted
@@ -66,6 +71,8 @@ export const uiTheme = {
   checkbox: themeCheckbox,
   checkboxGroup: themeCheckboxGroup,
   chip: themeChip,
+  collapsible: themeCollapsible,
+  colorPicker: themeColorPicker,
   container: {
     base: 'container',
   },
@@ -77,5 +84,8 @@ export const uiTheme = {
   dashboardSearchButton: themeDashboardSearchButton,
   dashboardSidebar: themeDashboardSidebar,
   dashboardToolbar: themeDashboardToolbar,
+  input: themeInput,
+  select: themeSelect,
+  switch: themeSwitch,
   user: themeUser,
 } satisfies AppConfigInput['ui'];

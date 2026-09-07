@@ -76,7 +76,7 @@ const columns: TableColumn<Payment>[] = [{
     const status = row.getValue('status') as string
     const colorMap = {
       paid: 'text-success',
-      failed: 'text-error',
+      failed: 'color-error',
       refunded: 'text-warning'
     }
     return h('span', { class: `font-600 capitalize ${colorMap[status as keyof typeof colorMap]}` }, status)

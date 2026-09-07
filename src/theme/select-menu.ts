@@ -17,7 +17,7 @@ export default (options: Required<ModuleOptions>) => {
           viewport: 'p-1 isolate',
         },
         false: {
-          viewport: 'divide-y divide-default',
+          viewport: 'divide-y divide-divide',
         },
       },
     },
