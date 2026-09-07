@@ -1,4 +1,6 @@
 // @unocss-include
+import type { PThemeCommandPalette } from 'pohon-ui';
+
 export const themeCommandPalette = {
   slots: {
     root: 'divide-divide flex flex-col min-h-0 min-w-0 divide-y',
@@ -11,7 +13,7 @@ export const themeCommandPalette = {
     group: 'p-1 isolate',
     empty: 'color-text-muted text-center',
     label: 'color-text-highlighted font-semibold',
-    item: 'group data-disabled:cursor-not-allowed data-disabled:opacity-75 outline-none flex w-full select-none items-start relative before:rounded-md before:inset-px before:absolute before:z-[-1]',
+    item: 'group outline-none flex w-full select-none items-start relative before:(rounded-md content-empty inset-px absolute -z-1) data-[disabled]:(opacity-75 cursor-not-allowed)',
     itemLeadingIcon: 'shrink-0',
     itemLeadingAvatar: 'shrink-0',
     itemLeadingAvatarSize: '',
@@ -19,7 +21,7 @@ export const themeCommandPalette = {
     itemLeadingChipSize: '',
     itemTrailing: 'ms-auto inline-flex items-center',
     itemTrailingIcon: 'shrink-0',
-    itemTrailingHighlightedIcon: 'color-text-dimmed group-data-highlighted:inline-flex shrink-0 hidden',
+    itemTrailingHighlightedIcon: 'color-text-dimmed shrink-0 hidden group-data-[highlighted]:inline-flex',
     itemTrailingKbds: 'shrink-0 hidden items-center lg:inline-flex',
     itemTrailingKbdsSize: '',
     itemWrapper: 'text-start flex flex-1 flex-col min-w-0',
@@ -121,8 +123,8 @@ export const themeCommandPalette = {
         itemLeadingIcon: 'color-text',
       },
       false: {
-        item: ['color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', 'transition-colors before:transition-colors'],
-        itemLeadingIcon: ['color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text', 'transition-colors'],
+        item: 'color-text data-[highlighted]:not-[[data-disabled]]:color-text-highlighted data-[highlighted]:not-[[data-disabled]]:before:bg-background-elevated/50 transition-colors before:transition-colors',
+        itemLeadingIcon: 'color-text-dimmed [.group[data-highlighted]:not([data-disabled])_&]:color-text transition-colors',
       },
     },
     loading: {
@@ -131,7 +133,4 @@ export const themeCommandPalette = {
       },
     },
   },
-  defaultVariants: {
-    size: 'md',
-  },
-};
+} satisfies PThemeCommandPalette;

@@ -1,8 +1,11 @@
 // @unocss-include
+import type { PThemeSelect } from 'pohon-ui';
 import { defuFn } from 'defu';
 import { fieldGroupVariant } from './theme.field-group';
 import { themeInput } from './theme.input';
 
+// `defuFn` keeps merger callbacks (e.g. `variant: (prev) => …`) in the inferred
+// type, so `satisfies PThemeSelect` fails — assert the runtime-merged shape.
 export const themeSelect = defuFn(
   {
     slots: {
@@ -102,4 +105,4 @@ export const themeSelect = defuFn(
     },
   },
   themeInput,
-);
+) as PThemeSelect;
