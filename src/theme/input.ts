@@ -4,13 +4,13 @@ import { fieldGroupVariantWithRoot } from './field-group';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative inline-flex items-center',
-    base: ['w-full rounded-md border-0 appearance-none placeholder:text-dimmed disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
+    base: ['w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
     leading: 'absolute inset-y-0 start-0 flex items-center',
-    leadingIcon: 'shrink-0 text-dimmed',
+    leadingIcon: 'shrink-0 color-text-dimmed',
     leadingAvatar: 'shrink-0',
     leadingAvatarSize: '',
     trailing: 'absolute inset-y-0 end-0 flex items-center',
-    trailingIcon: 'shrink-0 text-dimmed',
+    trailingIcon: 'shrink-0 color-text-dimmed',
   },
   variants: {
     ...fieldGroupVariantWithRoot,
@@ -101,15 +101,15 @@ export default (options: Required<ModuleOptions>) => ({
   })), {
     color: 'neutral',
     variant: ['outline', 'subtle'],
-    class: 'outline-inverted/25 focus-visible:outline-3 focus-visible:ring-inverted',
+    class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
   }, {
     color: 'neutral',
     variant: ['soft', 'ghost'],
-    class: 'outline-inverted/25 focus-visible:outline-3',
+    class: 'outline-outline-inverted/25 focus-visible:outline-3',
   }, {
     color: 'neutral',
     highlight: true,
-    class: 'ring ring-inset ring-inverted',
+    class: 'ring ring-inset ring-ring-inverted',
   }, {
     leading: true,
     size: 'xs',

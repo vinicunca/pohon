@@ -177,7 +177,7 @@ defineShortcuts({
       <PButton label="Open drawer" color="neutral" variant="outline" />
 
       <template #content>
-        <ReuseTemplate class="border-t border-default mt-4" />
+        <ReuseTemplate class="border-t border-border mt-4" />
       </template>
     </PDrawer>
 
@@ -214,7 +214,7 @@ defineShortcuts({
     >
       <template #footer>
         <div class="flex items-center justify-between gap-2">
-          <PIcon name="i-simple-icons-nuxtdotjs" class="size-5 text-dimmed ml-1" />
+          <PIcon name="i-simple-icons-nuxtdotjs" class="size-5 color-text-dimmed ml-1" />
           <div class="flex items-center gap-1">
             <PButton color="neutral" variant="ghost" label="Open" size="xs">
               <template #trailing>

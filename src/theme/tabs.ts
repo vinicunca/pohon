@@ -10,7 +10,7 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'flex items-center gap-2',
     list: 'relative flex p-1 group',
-    indicator: 'absolute transition-[translate,width] duration-200',
+    indicator: 'absolute transition-[translate,width] duration-280',
     trigger: ['group relative inline-flex items-center min-w-0 data-[state=inactive]:color-text-muted hover:data-[state=inactive]:not-disabled:color-text font-medium rounded-md disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
     leadingIcon: 'shrink-0',
     leadingAvatar: 'shrink-0',
@@ -26,7 +26,7 @@ export default (options: Required<ModuleOptions>) => ({
         content: `outline-${color}/25`,
       }])),
       neutral: {
-        content: 'outline-inverted/25',
+        content: 'outline-outline-inverted/25',
       },
     },
     variant: {
@@ -36,7 +36,7 @@ export default (options: Required<ModuleOptions>) => ({
         indicator: 'rounded-md shadow-xs',
       },
       link: {
-        list: 'border-default',
+        list: 'border-border',
         indicator: 'rounded-full',
         trigger: ssr('after:content-[\'\']', 'after:absolute', 'after:rounded-full'),
       },
@@ -123,7 +123,7 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'pill',
     class: {
       indicator: 'bg-background-inverted',
-      trigger: ['data-[state=active]:color-text-inverted outline-inverted/25 focus-visible:outline-3', ssr('before:bg-background-inverted')],
+      trigger: ['data-[state=active]:color-text-inverted outline-outline-inverted/25 focus-visible:outline-3', ssr('before:bg-background-inverted')],
     },
   }, ...(options.theme.colors || []).map((color: string) => ({
     color,
@@ -137,7 +137,7 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'link',
     class: {
       indicator: 'bg-background-inverted',
-      trigger: ['data-[state=active]:color-text-highlighted outline-inverted/25 focus-visible:outline-3', ssr('after:bg-background-inverted')],
+      trigger: ['data-[state=active]:color-text-highlighted outline-outline-inverted/25 focus-visible:outline-3', ssr('after:bg-background-inverted')],
     },
   }],
   defaultVariants: {

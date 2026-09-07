@@ -9,14 +9,14 @@ export default (options: Required<ModuleOptions>) => {
       trailing: 'group absolute inset-y-0 end-0 flex items-center disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none',
       trailingClear: 'p-0',
       arrow: 'fill-bg stroke-default',
-      content: 'max-h-[min(15rem,var(--akar-combobox-content-available-height,15rem))] w-(--akar-combobox-trigger-width) bg-background shadow-lg rounded-md ring ring-default overflow-hidden data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--akar-combobox-content-transform-origin) pointer-events-auto flex flex-col',
+      content: 'max-h-[min(15rem,var(--akar-combobox-content-available-height,15rem))] w-(--akar-combobox-trigger-width) bg-background shadow-lg rounded-md ring ring-ring overflow-hidden data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--akar-combobox-content-transform-origin) pointer-events-auto flex flex-col',
       viewport: 'relative scroll-py-1 overflow-y-auto flex-1',
       group: 'p-1 isolate',
       empty: 'text-center color-text-muted',
       label: 'font-600 color-text-highlighted',
       separator: '-mx-1 my-1 h-px bg-border',
       item: ['group relative w-full flex items-start gap-1.5 p-1.5 text-sm select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-      itemLeadingIcon: ['shrink-0 text-dimmed group-data-highlighted:not-group-data-disabled:color-text', options.theme.transitions && 'transition-colors'],
+      itemLeadingIcon: ['shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text', options.theme.transitions && 'transition-colors'],
       itemLeadingAvatar: 'shrink-0',
       itemLeadingAvatarSize: '',
       itemLeadingChip: 'shrink-0',
@@ -28,9 +28,9 @@ export default (options: Required<ModuleOptions>) => {
       itemDescription: 'truncate color-text-muted',
       tagsItem: 'px-1.5 py-0.5 rounded-sm font-medium inline-flex items-center gap-0.5 ring ring-inset ring-ring-accented bg-background-elevated color-text data-disabled:cursor-not-allowed data-disabled:opacity-75',
       tagsItemText: 'truncate',
-      tagsItemDelete: ['inline-flex items-center rounded-xs text-dimmed hover:color-text hover:bg-accented/75 disabled:pointer-events-none', options.theme.transitions && 'transition-colors'],
+      tagsItemDelete: ['inline-flex items-center rounded-xs color-text-dimmed hover:color-text hover:bg-accented/75 disabled:pointer-events-none', options.theme.transitions && 'transition-colors'],
       tagsItemDeleteIcon: 'shrink-0',
-      tagsInput: 'flex-1 border-0 bg-transparent placeholder:text-dimmed focus:outline-none disabled:cursor-not-allowed disabled:opacity-75',
+      tagsInput: 'flex-1 border-0 bg-transparent placeholder:color-text-dimmed focus:outline-none disabled:cursor-not-allowed disabled:opacity-75',
     },
     variants: {
       virtualize: {
@@ -46,7 +46,7 @@ export default (options: Required<ModuleOptions>) => {
           root: 'flex-wrap',
         },
         false: {
-          base: 'w-full border-0 placeholder:text-dimmed disabled:cursor-not-allowed disabled:opacity-75',
+          base: 'w-full border-0 placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75',
         },
       },
       size: {
@@ -129,7 +129,7 @@ export default (options: Required<ModuleOptions>) => {
       color: 'neutral',
       multiple: true,
       variant: ['outline', 'subtle'],
-      class: 'has-focus-visible:outline-3 has-focus-visible:ring-inverted',
+      class: 'has-focus-visible:outline-3 has-focus-visible:ring-ring-inverted',
     }],
   }, input(options));
 };

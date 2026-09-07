@@ -22,7 +22,7 @@ export default {
         content: 'inset-0',
       },
       false: {
-        content: 'w-[calc(100vw-2rem)] max-w-lg rounded-lg shadow-lg ring ring-default',
+        content: 'w-[calc(100vw-2rem)] max-w-lg rounded-lg shadow-lg ring ring-ring',
       },
     },
     overlay: {

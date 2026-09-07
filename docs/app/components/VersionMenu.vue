@@ -41,7 +41,7 @@ const items = computed(() => {
       class="-mb-[6px] font-600 rounded-full truncate"
       :class="[open && 'bg-primary/15']"
       :ui="{
-        trailingIcon: ['transition-transform duration-200', open ? 'rotate-180' : undefined].filter(Boolean).join(' ')
+        trailingIcon: ['transition-transform duration-280', open ? 'rotate-180' : undefined].filter(Boolean).join(' ')
       }"
     />
   </PDropdownMenu>

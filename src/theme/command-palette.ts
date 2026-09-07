@@ -20,14 +20,14 @@ export default (options: Required<ModuleOptions>) => ({
     itemLeadingChipSize: '',
     itemTrailing: 'ms-auto inline-flex items-center',
     itemTrailingIcon: 'shrink-0',
-    itemTrailingHighlightedIcon: 'shrink-0 text-dimmed hidden group-data-highlighted:inline-flex',
+    itemTrailingHighlightedIcon: 'shrink-0 color-text-dimmed hidden group-data-highlighted:inline-flex',
     itemTrailingKbds: 'hidden lg:inline-flex items-center shrink-0',
     itemTrailingKbdsSize: '',
     itemWrapper: 'flex-1 flex flex-col text-start min-w-0',
-    itemLabel: 'truncate space-x-1 text-dimmed',
+    itemLabel: 'truncate space-x-1 color-text-dimmed',
     itemLabelBase: 'color-text-highlighted [&>mark]:text-primary [&>mark]:bg-primary/15',
     itemLabelPrefix: 'color-text',
-    itemLabelSuffix: 'text-dimmed [&>mark]:text-primary [&>mark]:bg-primary/15',
+    itemLabelSuffix: 'color-text-dimmed [&>mark]:text-primary [&>mark]:bg-primary/15',
     itemDescription: 'truncate color-text-muted [&>mark]:text-primary [&>mark]:bg-primary/15',
   },
   variants: {
@@ -123,7 +123,7 @@ export default (options: Required<ModuleOptions>) => ({
       },
       false: {
         item: ['color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-        itemLeadingIcon: ['text-dimmed group-data-highlighted:not-group-data-disabled:color-text', options.theme.transitions && 'transition-colors'],
+        itemLeadingIcon: ['color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text', options.theme.transitions && 'transition-colors'],
       },
     },
     loading: {

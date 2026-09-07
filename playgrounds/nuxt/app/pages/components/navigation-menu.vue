@@ -125,7 +125,7 @@ const items = [
       :highlight="highlight"
       :highlight-color="highlightColor"
       v-bind="props"
-      :class="highlight && 'data-[orientation=horizontal]:border-b border-default'"
+      :class="highlight && 'data-[orientation=horizontal]:border-b border-border'"
       class="data-[orientation=vertical]:data-[collapsed=false]:w-48"
     />
   </Matrix>

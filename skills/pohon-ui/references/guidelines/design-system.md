@@ -119,7 +119,7 @@ Use these everywhere instead of raw palette colors:
 - `color-text` — primary body text
 - `color-text-muted` — secondary text (descriptions, hints)
 - `color-text-toned` — medium-emphasis text (between muted and default)
-- `text-dimmed` — tertiary text (placeholders, disabled)
+- `color-text-dimmed` — tertiary text (placeholders, disabled)
 - `color-text-highlighted` — emphasized text (headings, important labels)
 - `color-text-inverted` — text on inverted backgrounds (pair with `bg-background-inverted`)
 
@@ -133,10 +133,10 @@ Use these everywhere instead of raw palette colors:
 
 ### Borders
 
-- `border-default` — standard borders
+- `border-border` — standard borders
 - `border-muted` — subtle borders (dividers, separators)
 - `border-border-accented` — accent borders (active states)
-- `border-inverted` — inverse borders
+- `border-border-inverted` — inverse borders
 
 ## Variants
 
@@ -207,7 +207,7 @@ export default defineAppConfig({
         {
           color: "neutral",
           variant: "outline",
-          class: "ring-default hover:bg-accented",
+          class: "ring-ring hover:bg-accented",
         },
       ],
       defaultVariants: {

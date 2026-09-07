@@ -148,7 +148,7 @@ function generateMessages() {
             :streaming="isToolStreaming(part)"
             chevron="leading"
           >
-            <div v-if="part.output && (part.output as any[]).length" class="p-1 border border-default rounded-md max-h-40 overflow-y-auto">
+            <div v-if="part.output && (part.output as any[]).length" class="p-1 border border-border rounded-md max-h-40 overflow-y-auto">
               <a
                 v-for="source in (part.output as any[])"
                 :key="source.url"
@@ -165,7 +165,7 @@ function generateMessages() {
                   @error="($event.target as HTMLImageElement).style.display = 'none'"
                 >
                 <span class="truncate">{{ source.title || source.url }}</span>
-                <span class="text-xs text-dimmed ms-auto shrink-0">{{ getDomain(source.url) }}</span>
+                <span class="text-xs color-text-dimmed ms-auto shrink-0">{{ getDomain(source.url) }}</span>
               </a>
             </div>
           </PChatTool>

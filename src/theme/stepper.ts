@@ -75,7 +75,7 @@ export default (options: Required<ModuleOptions>) => ({
         separator: `group-data-[state=completed]:bg-${color}`,
       }])),
       neutral: {
-        trigger: 'group-data-[state=completed]:bg-background-inverted group-data-[state=active]:bg-background-inverted outline-inverted/25',
+        trigger: 'group-data-[state=completed]:bg-background-inverted group-data-[state=active]:bg-background-inverted outline-outline-inverted/25',
         separator: 'group-data-[state=completed]:bg-background-inverted',
       },
     },

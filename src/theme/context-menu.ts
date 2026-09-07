@@ -2,7 +2,7 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    content: 'min-w-32 max-h-(--akar-context-menu-content-available-height) bg-background shadow-lg rounded-md ring ring-default overflow-hidden data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--akar-context-menu-content-transform-origin) flex flex-col debug-context',
+    content: 'min-w-32 max-h-(--akar-context-menu-content-available-height) bg-background shadow-lg rounded-md ring ring-ring overflow-hidden data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--akar-context-menu-content-transform-origin) flex flex-col debug-context',
     viewport: 'relative divide-y divide-default scroll-py-1 overflow-y-auto flex-1',
     group: 'p-1 isolate',
     label: 'w-full flex items-center font-600 color-text-highlighted',
@@ -18,7 +18,7 @@ export default (options: Required<ModuleOptions>) => ({
     itemWrapper: 'flex-1 flex flex-col text-start min-w-0',
     itemLabel: 'truncate',
     itemDescription: 'truncate color-text-muted',
-    itemLabelExternalIcon: 'inline-block size-3 align-top text-dimmed',
+    itemLabelExternalIcon: 'inline-block size-3 align-top color-text-dimmed',
   },
   variants: {
     color: {
@@ -32,7 +32,7 @@ export default (options: Required<ModuleOptions>) => ({
       },
       false: {
         item: ['color-text data-highlighted:color-text-highlighted data-[state=open]:color-text-highlighted data-highlighted:before:bg-background-elevated/50 data-[state=open]:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-        itemLeadingIcon: ['text-dimmed group-data-highlighted:color-text group-data-[state=open]:color-text', options.theme.transitions && 'transition-colors'],
+        itemLeadingIcon: ['color-text-dimmed group-data-highlighted:color-text group-data-[state=open]:color-text', options.theme.transitions && 'transition-colors'],
       },
     },
     loading: {

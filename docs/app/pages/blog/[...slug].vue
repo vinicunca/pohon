@@ -108,13 +108,13 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
           <ProseCodeTree
             v-if="activePath"
             :model-value="activePath"
-            class="lg:h-full my-0 rounded-none border-y-0 border-r-0 border-default"
+            class="lg:h-full my-0 rounded-none border-y-0 border-r-0 border-border"
             :items="items"
             expand-all
-            :ui="{ list: 'border-default', content: '[&>div>pre]:bg-muted/50 [&>div>pre]:border-default [&>div>pre]:rounded-none' }"
+            :ui="{ list: 'border-border', content: '[&>div>pre]:bg-muted/50 [&>div>pre]:border-border [&>div>pre]:rounded-none' }"
           />
-          <div v-else class="size-full border-l border-default flex items-center justify-center">
-            <PIcon :name="appConfig.ui.icons.arrowDown" class="size-12 text-dimmed animate-bounce" />
+          <div v-else class="size-full border-l border-border flex items-center justify-center">
+            <PIcon :name="appConfig.ui.icons.arrowDown" class="size-12 color-text-dimmed animate-bounce" />
           </div>
         </nav>
       </div>

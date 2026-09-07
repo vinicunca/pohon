@@ -6,7 +6,7 @@ export default (options: Required<ModuleOptions>) => ({
     content: 'data-[state=open]:animate-[accordion-down_200ms_ease-out] data-[state=closed]:animate-[accordion-up_200ms_ease-out] data-[state=closed]:overflow-hidden focus:outline-none',
     list: 'isolate -mx-2.5 -mt-1.5',
     item: '',
-    listWithChildren: 'ms-5 border-s border-default',
+    listWithChildren: 'ms-5 border-s border-border',
     itemWithChildren: 'flex flex-col data-[state=open]:mb-1.5',
     trigger: 'font-600',
     link: 'group relative w-full px-2.5 py-1.5 before:inset-y-px before:inset-x-0 flex items-center gap-1.5 text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none focus-visible:before:outline-3',
@@ -14,9 +14,9 @@ export default (options: Required<ModuleOptions>) => ({
     linkTrailing: 'ms-auto inline-flex gap-1.5 items-center',
     linkTrailingBadge: 'shrink-0',
     linkTrailingBadgeSize: 'sm',
-    linkTrailingIcon: 'size-5 transform transition-transform duration-200 shrink-0 group-data-[state=open]:rotate-180',
+    linkTrailingIcon: 'size-5 transform transition-transform duration-280 shrink-0 group-data-[state=open]:rotate-180',
     linkTitle: 'truncate',
-    linkTitleExternalIcon: 'size-3 align-top text-dimmed',
+    linkTitleExternalIcon: 'size-3 align-top color-text-dimmed',
   },
   variants: {
     color: {
@@ -24,7 +24,7 @@ export default (options: Required<ModuleOptions>) => ({
         link: `before:outline-${color}/25`,
       }])),
       neutral: {
-        link: 'before:outline-inverted/25',
+        link: 'before:outline-outline-inverted/25',
       },
     },
     highlightColor: {
@@ -41,7 +41,7 @@ export default (options: Required<ModuleOptions>) => ({
       },
       false: {
         link: 'color-text-muted',
-        linkLeadingIcon: 'text-dimmed',
+        linkLeadingIcon: 'color-text-dimmed',
       },
     },
     disabled: {

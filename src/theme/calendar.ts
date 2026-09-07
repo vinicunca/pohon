@@ -41,7 +41,7 @@ export default (options: Required<ModuleOptions>) => ({
       }])),
       neutral: {
         headCell: 'color-text-highlighted',
-        cellTrigger: 'outline-inverted/25',
+        cellTrigger: 'outline-outline-inverted/25',
       },
     },
     variant: {
@@ -146,7 +146,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'outline',
       class: {
-        cellTrigger: 'data-selected:ring data-selected:ring-inset data-selected:ring-ring-accented data-selected:color-text data-selected:bg-background data-selected:focus-visible:ring-inverted data-today:not-data-selected:color-text-highlighted data-highlighted:bg-background-inverted/10 hover:not-data-selected:bg-background-inverted/10',
+        cellTrigger: 'data-selected:ring data-selected:ring-inset data-selected:ring-ring-accented data-selected:color-text data-selected:bg-background data-selected:focus-visible:ring-ring-inverted data-today:not-data-selected:color-text-highlighted data-highlighted:bg-background-inverted/10 hover:not-data-selected:bg-background-inverted/10',
       },
     },
     {
@@ -160,7 +160,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'subtle',
       class: {
-        cellTrigger: 'data-selected:bg-background-elevated data-selected:color-text data-selected:ring data-selected:ring-inset data-selected:ring-ring-accented data-selected:focus-visible:ring-inverted data-today:not-data-selected:color-text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
+        cellTrigger: 'data-selected:bg-background-elevated data-selected:color-text data-selected:ring data-selected:ring-inset data-selected:ring-ring-accented data-selected:focus-visible:ring-ring-inverted data-today:not-data-selected:color-text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
       },
     },
     ...Object.entries(daySizes).map(([size, cellTrigger]) => ({

@@ -14,7 +14,7 @@ For components without dynamic colors:
 export default {
   slots: {
     root: "w-full",
-    item: "border-b border-default last:border-b-0",
+    item: "border-b border-border last:border-b-0",
     trigger: "flex items-center gap-1.5 font-medium text-sm py-3.5",
     content: "overflow-hidden",
     body: "text-sm pb-3.5",
@@ -125,7 +125,7 @@ Always use semantic colors, never Tailwind palette colors:
 
 - `color-text` - Primary text
 - `color-text-muted` - Secondary text
-- `text-dimmed` - Tertiary/placeholder text
+- `color-text-dimmed` - Tertiary/placeholder text
 - `color-text-highlighted` - Emphasized text
 - `color-text-inverted` - Text on dark backgrounds
 
@@ -138,7 +138,7 @@ Always use semantic colors, never Tailwind palette colors:
 
 ### Border Colors
 
-- `border-default` - Standard borders
+- `border-border` - Standard borders
 - `ring-ring` - Focus rings
 - `ring-ring-accented` - Accented rings
 - `divide-divide` - Dividers
@@ -220,7 +220,7 @@ compoundVariants: [
   {
     color: "neutral",
     variant: ["outline", "subtle"],
-    class: "focus-visible:ring-2 focus-visible:ring-inverted",
+    class: "focus-visible:ring-2 focus-visible:ring-ring-inverted",
   },
 ];
 ```

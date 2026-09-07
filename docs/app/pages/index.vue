@@ -102,14 +102,14 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
           pause-on-hover
           :overlay="false"
           :ui="{
-            root: '[--gap:--spacing(4)] [--duration:40s] border-default absolute w-full left-0 border-y lg:border-x lg:border-y-0 lg:w-[calc(50%-6px)] 2xl:max-w-[320px] lg:flex-col',
+            root: '[--gap:--spacing(4)] [--duration:40s] border-border absolute w-full left-0 border-y lg:border-x lg:border-y-0 lg:w-[calc(50%-6px)] 2xl:max-w-[320px] lg:flex-col',
             content: 'lg:w-auto lg:flex-col lg:animate-[marquee-vertical_var(--duration)_linear_infinite] lg:h-fit'
           }"
         >
           <PLink
             v-for="component of components?.slice(0, 10)"
             :key="component.path"
-            class="relative group/link aspect-video border-default w-[290px] xl:w-[330px] 2xl:w-[320px] 2xl:p-2 2xl:border-y"
+            class="relative group/link aspect-video border-border w-[290px] xl:w-[330px] 2xl:w-[320px] 2xl:p-2 2xl:border-y"
             :to="component.path"
             tabindex="-1"
           >
@@ -120,7 +120,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
               width="290"
               height="163"
               format="webp"
-              class="hover:scale-105 lg:hover:scale-110 transition-transform aspect-video w-full border-x lg:border-x-0 lg:border-y border-default 2xl:border-y-0"
+              class="hover:scale-105 lg:hover:scale-110 transition-transform aspect-video w-full border-x lg:border-x-0 lg:border-y border-border 2xl:border-y-0"
               loading="lazy"
             />
             <PBadge color="neutral" variant="outline" size="md" :label="component.title" class="hidden lg:block absolute mx-auto top-4 left-6 xl:left-4 group-hover/link:opacity-100 opacity-0 transition-all duration-300 pointer-events-none -translate-y-2 group-hover/link:translate-y-0" />
@@ -132,14 +132,14 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
           reverse
           :overlay="false"
           :ui="{
-            root: '[--gap:--spacing(4)] [--duration:40s] border-default absolute w-full mt-[180px] left-0 border-y lg:mt-auto lg:left-auto lg:border-y-0 lg:border-x lg:w-[calc(50%-6px)] 2xl:max-w-[320px] lg:right-0 lg:flex-col',
+            root: '[--gap:--spacing(4)] [--duration:40s] border-border absolute w-full mt-[180px] left-0 border-y lg:mt-auto lg:left-auto lg:border-y-0 lg:border-x lg:w-[calc(50%-6px)] 2xl:max-w-[320px] lg:right-0 lg:flex-col',
             content: 'lg:w-auto lg:flex-col lg:animate-[marquee-vertical_var(--duration)_linear_infinite] lg:h-fit lg:[animation-direction:reverse]'
           }"
         >
           <PLink
             v-for="component of components?.slice(10, 20)"
             :key="component.path"
-            class="relative group/link aspect-video border-default w-[290px] xl:w-[330px] 2xl:w-[320px] 2xl:p-2 2xl:border-y"
+            class="relative group/link aspect-video border-border w-[290px] xl:w-[330px] 2xl:w-[320px] 2xl:p-2 2xl:border-y"
             :to="component.path"
             tabindex="-1"
           >
@@ -150,7 +150,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
               width="290"
               height="163"
               format="webp"
-              class="hover:scale-105 lg:hover:scale-110 transition-transform aspect-video w-full border-x lg:border-x-0 lg:border-y border-default 2xl:border-y-0"
+              class="hover:scale-105 lg:hover:scale-110 transition-transform aspect-video w-full border-x lg:border-x-0 lg:border-y border-border 2xl:border-y-0"
               loading="lazy"
             />
             <PBadge color="neutral" variant="outline" size="md" :label="component.title" class="hidden lg:block absolute mx-auto top-4 left-6 xl:left-4 group-hover/link:opacity-100 opacity-0 transition-all duration-300 pointer-events-none -translate-y-2 group-hover/link:translate-y-0" />
@@ -197,7 +197,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
           <div class="flex flex-col">
             <h3 class="font-medium color-text-highlighted inline-flex items-center gap-x-1">
               {{ feature.title }}
-              <PIcon v-if="feature.to" :name="appConfig.ui.icons.arrowRight" class="size-4 shrink-0 opacity-0 group-hover:opacity-100 transition-all duration-200 -translate-x-1 group-hover:translate-x-0" />
+              <PIcon v-if="feature.to" :name="appConfig.ui.icons.arrowRight" class="size-4 shrink-0 opacity-0 group-hover:opacity-100 transition-all duration-280 -translate-x-1 group-hover:translate-x-0" />
             </h3>
             <p class="text-sm color-text-muted">
               {{ feature.description }}

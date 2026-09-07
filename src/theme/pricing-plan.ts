@@ -39,21 +39,21 @@ export default {
       solid: {
         root: 'bg-background-inverted',
         title: 'color-text-inverted',
-        description: 'text-dimmed',
+        description: 'color-text-dimmed',
         price: 'color-text-inverted',
-        discount: 'text-dimmed',
-        billingCycle: 'text-dimmed',
-        billingPeriod: 'text-dimmed',
-        featureTitle: 'text-dimmed',
+        discount: 'color-text-dimmed',
+        billingCycle: 'color-text-dimmed',
+        billingPeriod: 'color-text-dimmed',
+        featureTitle: 'color-text-dimmed',
       },
       outline: {
-        root: 'bg-background ring ring-default',
+        root: 'bg-background ring ring-ring',
       },
       soft: {
         root: 'bg-background-elevated/50',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-default',
+        root: 'bg-background-elevated/50 ring ring-ring',
       },
     },
     highlight: {

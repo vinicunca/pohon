@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`pageCard > renders with as correctly 1`] = `
-"<section data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<section data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <!--v-if-->
@@ -11,7 +11,7 @@ exports[`pageCard > renders with as correctly 1`] = `
 `;
 
 exports[`pageCard > renders with body slot correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -26,7 +26,7 @@ exports[`pageCard > renders with body slot correctly 1`] = `
 `;
 
 exports[`pageCard > renders with class correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default rounded-xl">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring rounded-xl">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -44,7 +44,7 @@ exports[`pageCard > renders with class correctly 1`] = `
 `;
 
 exports[`pageCard > renders with default slot correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -62,7 +62,7 @@ exports[`pageCard > renders with default slot correctly 1`] = `
 `;
 
 exports[`pageCard > renders with description correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -80,7 +80,7 @@ exports[`pageCard > renders with description correctly 1`] = `
 `;
 
 exports[`pageCard > renders with description slot correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -98,7 +98,7 @@ exports[`pageCard > renders with description slot correctly 1`] = `
 `;
 
 exports[`pageCard > renders with footer slot correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -116,7 +116,7 @@ exports[`pageCard > renders with footer slot correctly 1`] = `
 `;
 
 exports[`pageCard > renders with header slot correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -134,7 +134,7 @@ exports[`pageCard > renders with header slot correctly 1`] = `
 `;
 
 exports[`pageCard > renders with highlight color error correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default ring-2 ring-error">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring ring-2 ring-error">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -152,7 +152,7 @@ exports[`pageCard > renders with highlight color error correctly 1`] = `
 `;
 
 exports[`pageCard > renders with highlight color info correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default ring-2 ring-info">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring ring-2 ring-info">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -170,7 +170,7 @@ exports[`pageCard > renders with highlight color info correctly 1`] = `
 `;
 
 exports[`pageCard > renders with highlight color neutral correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default ring-2 ring-inverted">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring ring-2 ring-ring-inverted">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -188,7 +188,7 @@ exports[`pageCard > renders with highlight color neutral correctly 1`] = `
 `;
 
 exports[`pageCard > renders with highlight color neutral correctly 2`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default ring-2 ring-inverted">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring ring-2 ring-ring-inverted">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -206,7 +206,7 @@ exports[`pageCard > renders with highlight color neutral correctly 2`] = `
 `;
 
 exports[`pageCard > renders with highlight color primary correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default ring-2 ring-primary">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring ring-2 ring-primary">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -224,7 +224,7 @@ exports[`pageCard > renders with highlight color primary correctly 1`] = `
 `;
 
 exports[`pageCard > renders with highlight color secondary correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default ring-2 ring-secondary">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring ring-2 ring-secondary">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -242,7 +242,7 @@ exports[`pageCard > renders with highlight color secondary correctly 1`] = `
 `;
 
 exports[`pageCard > renders with highlight color success correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default ring-2 ring-success">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring ring-2 ring-success">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -260,7 +260,7 @@ exports[`pageCard > renders with highlight color success correctly 1`] = `
 `;
 
 exports[`pageCard > renders with highlight color warning correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default ring-2 ring-warning">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring ring-2 ring-warning">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -278,7 +278,7 @@ exports[`pageCard > renders with highlight color warning correctly 1`] = `
 `;
 
 exports[`pageCard > renders with highlight correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default ring-2 ring-primary">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring ring-2 ring-primary">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -296,7 +296,7 @@ exports[`pageCard > renders with highlight correctly 1`] = `
 `;
 
 exports[`pageCard > renders with icon correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -311,7 +311,7 @@ exports[`pageCard > renders with icon correctly 1`] = `
 `;
 
 exports[`pageCard > renders with leading slot correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -329,7 +329,7 @@ exports[`pageCard > renders with leading slot correctly 1`] = `
 `;
 
 exports[`pageCard > renders with orientation horizontal correctly 1`] = `
-"<div data-orientation="horizontal" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="horizontal" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6 lg:grid-cols-2 lg:items-center">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -347,7 +347,7 @@ exports[`pageCard > renders with orientation horizontal correctly 1`] = `
 `;
 
 exports[`pageCard > renders with orientation horizontal reverse correctly 1`] = `
-"<div data-orientation="horizontal" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="horizontal" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6 lg:grid-cols-2 lg:items-center">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start order-last">
@@ -365,7 +365,7 @@ exports[`pageCard > renders with orientation horizontal reverse correctly 1`] = 
 `;
 
 exports[`pageCard > renders with orientation vertical correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -383,7 +383,7 @@ exports[`pageCard > renders with orientation vertical correctly 1`] = `
 `;
 
 exports[`pageCard > renders with orientation vertical reverse correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start order-last">
@@ -401,7 +401,7 @@ exports[`pageCard > renders with orientation vertical reverse correctly 1`] = `
 `;
 
 exports[`pageCard > renders with spotlight color error correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <div data-slot="spotlight" class="absolute inset-0 rounded-[inherit] pointer-events-none bg-background/90"></div>
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -419,7 +419,7 @@ exports[`pageCard > renders with spotlight color error correctly 1`] = `
 `;
 
 exports[`pageCard > renders with spotlight color info correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <div data-slot="spotlight" class="absolute inset-0 rounded-[inherit] pointer-events-none bg-background/90"></div>
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -437,7 +437,7 @@ exports[`pageCard > renders with spotlight color info correctly 1`] = `
 `;
 
 exports[`pageCard > renders with spotlight color neutral correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <div data-slot="spotlight" class="absolute inset-0 rounded-[inherit] pointer-events-none bg-background/90"></div>
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -455,7 +455,7 @@ exports[`pageCard > renders with spotlight color neutral correctly 1`] = `
 `;
 
 exports[`pageCard > renders with spotlight color neutral correctly 2`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <div data-slot="spotlight" class="absolute inset-0 rounded-[inherit] pointer-events-none bg-background/90"></div>
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -473,7 +473,7 @@ exports[`pageCard > renders with spotlight color neutral correctly 2`] = `
 `;
 
 exports[`pageCard > renders with spotlight color primary correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <div data-slot="spotlight" class="absolute inset-0 rounded-[inherit] pointer-events-none bg-background/90"></div>
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -491,7 +491,7 @@ exports[`pageCard > renders with spotlight color primary correctly 1`] = `
 `;
 
 exports[`pageCard > renders with spotlight color secondary correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <div data-slot="spotlight" class="absolute inset-0 rounded-[inherit] pointer-events-none bg-background/90"></div>
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -509,7 +509,7 @@ exports[`pageCard > renders with spotlight color secondary correctly 1`] = `
 `;
 
 exports[`pageCard > renders with spotlight color success correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <div data-slot="spotlight" class="absolute inset-0 rounded-[inherit] pointer-events-none bg-background/90"></div>
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -527,7 +527,7 @@ exports[`pageCard > renders with spotlight color success correctly 1`] = `
 `;
 
 exports[`pageCard > renders with spotlight color warning correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <div data-slot="spotlight" class="absolute inset-0 rounded-[inherit] pointer-events-none bg-background/90"></div>
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -545,7 +545,7 @@ exports[`pageCard > renders with spotlight color warning correctly 1`] = `
 `;
 
 exports[`pageCard > renders with spotlight correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <div data-slot="spotlight" class="absolute inset-0 rounded-[inherit] pointer-events-none bg-background/90"></div>
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -563,7 +563,7 @@ exports[`pageCard > renders with spotlight correctly 1`] = `
 `;
 
 exports[`pageCard > renders with title correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -581,7 +581,7 @@ exports[`pageCard > renders with title correctly 1`] = `
 `;
 
 exports[`pageCard > renders with title slot correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -599,7 +599,7 @@ exports[`pageCard > renders with title slot correctly 1`] = `
 `;
 
 exports[`pageCard > renders with to correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <!--v-if-->
@@ -608,7 +608,7 @@ exports[`pageCard > renders with to correctly 1`] = `
 `;
 
 exports[`pageCard > renders with ui correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -732,7 +732,7 @@ exports[`pageCard > renders with variant naked to correctly 1`] = `
 `;
 
 exports[`pageCard > renders with variant outline correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -750,7 +750,7 @@ exports[`pageCard > renders with variant outline correctly 1`] = `
 `;
 
 exports[`pageCard > renders with variant outline highlight correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default ring-2 ring-primary">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring ring-2 ring-primary">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -768,7 +768,7 @@ exports[`pageCard > renders with variant outline highlight correctly 1`] = `
 `;
 
 exports[`pageCard > renders with variant outline to correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-default outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -846,7 +846,7 @@ exports[`pageCard > renders with variant solid correctly 1`] = `
       <div data-slot="leading" class="inline-flex items-center mb-2.5"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="size-5 shrink-0 text-primary"></svg></div>
       <div data-slot="body" class="flex-1">
         <div data-slot="title" class="text-base text-pretty font-600 color-text-highlighted color-text-inverted">Title</div>
-        <div data-slot="description" class="text-[15px] text-pretty text-dimmed mt-1">Description</div>
+        <div data-slot="description" class="text-[15px] text-pretty color-text-dimmed mt-1">Description</div>
       </div>
       <!--v-if-->
     </div>
@@ -864,7 +864,7 @@ exports[`pageCard > renders with variant solid highlight correctly 1`] = `
       <div data-slot="leading" class="inline-flex items-center mb-2.5"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="size-5 shrink-0 text-primary"></svg></div>
       <div data-slot="body" class="flex-1">
         <div data-slot="title" class="text-base text-pretty font-600 color-text-highlighted color-text-inverted">Title</div>
-        <div data-slot="description" class="text-[15px] text-pretty text-dimmed mt-1">Description</div>
+        <div data-slot="description" class="text-[15px] text-pretty color-text-dimmed mt-1">Description</div>
       </div>
       <!--v-if-->
     </div>
@@ -882,7 +882,7 @@ exports[`pageCard > renders with variant solid to correctly 1`] = `
       <div data-slot="leading" class="inline-flex items-center mb-2.5"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="size-5 shrink-0 text-primary"></svg></div>
       <div data-slot="body" class="flex-1">
         <div data-slot="title" class="text-base text-pretty font-600 color-text-highlighted color-text-inverted">Title</div>
-        <div data-slot="description" class="text-[15px] text-pretty text-dimmed mt-1">Description</div>
+        <div data-slot="description" class="text-[15px] text-pretty color-text-dimmed mt-1">Description</div>
       </div>
       <!--v-if-->
     </div>
@@ -891,7 +891,7 @@ exports[`pageCard > renders with variant solid to correctly 1`] = `
 `;
 
 exports[`pageCard > renders with variant subtle correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background-elevated/50 ring ring-default">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background-elevated/50 ring ring-ring">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -909,7 +909,7 @@ exports[`pageCard > renders with variant subtle correctly 1`] = `
 `;
 
 exports[`pageCard > renders with variant subtle highlight correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background-elevated/50 ring ring-default ring-2 ring-primary">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background-elevated/50 ring ring-ring ring-2 ring-primary">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">
@@ -927,7 +927,7 @@ exports[`pageCard > renders with variant subtle highlight correctly 1`] = `
 `;
 
 exports[`pageCard > renders with variant subtle to correctly 1`] = `
-"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background-elevated/50 ring ring-default outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated hover:ring-ring-accented has-[>a:focus-visible]:ring-primary">
+"<div data-orientation="vertical" data-slot="root" class="relative flex rounded-lg bg-background-elevated/50 ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated hover:ring-ring-accented has-[>a:focus-visible]:ring-primary">
   <!--v-if-->
   <div data-slot="container" class="relative flex flex-col flex-1 lg:grid gap-x-8 gap-y-4 p-4 sm:p-6">
     <div data-slot="wrapper" class="flex flex-col flex-1 items-start">

@@ -73,7 +73,7 @@ export default (options: Required<ModuleOptions>) => ({
     color: 'neutral',
     variant: 'outline',
     class: {
-      root: 'color-text-highlighted bg-background ring ring-inset ring-default',
+      root: 'color-text-highlighted bg-background ring ring-inset ring-ring',
     },
   }, {
     color: 'neutral',

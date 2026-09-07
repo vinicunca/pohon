@@ -6,12 +6,12 @@ export default (options: Required<ModuleOptions>) => ({
     trigger: ['group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0', options.theme.transitions && 'transition-colors'],
     leading: 'relative size-4 shrink-0',
     leadingIcon: 'size-4 shrink-0',
-    chevronIcon: 'size-4 shrink-0 group-data-[state=open]:rotate-180 transition-transform duration-200',
+    chevronIcon: 'size-4 shrink-0 group-data-[state=open]:rotate-180 transition-transform duration-280',
     label: 'truncate',
-    suffix: 'text-dimmed ms-1',
-    trailingIcon: 'size-4 shrink-0 group-data-[state=open]:rotate-180 transition-transform duration-200',
+    suffix: 'color-text-dimmed ms-1',
+    trailingIcon: 'size-4 shrink-0 group-data-[state=open]:rotate-180 transition-transform duration-280',
     content: 'data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden',
-    body: 'text-sm text-dimmed whitespace-pre-wrap',
+    body: 'text-sm color-text-dimmed whitespace-pre-wrap',
     actions: 'flex items-center justify-end gap-1.5',
   },
   variants: {
@@ -22,11 +22,11 @@ export default (options: Required<ModuleOptions>) => ({
         actions: 'pt-2',
       },
       card: {
-        root: 'rounded-md ring ring-default overflow-hidden outline-primary/25 has-focus-visible:outline-3 has-focus-visible:ring-primary',
+        root: 'rounded-md ring ring-ring overflow-hidden outline-primary/25 has-focus-visible:outline-3 has-focus-visible:ring-primary',
         trigger: 'px-2 py-1 focus:outline-none',
         trailingIcon: 'ms-auto',
-        body: 'border-t border-default p-2 max-h-[200px] overflow-y-auto focus:outline-none',
-        actions: 'border-t border-default p-2',
+        body: 'border-t border-border p-2 max-h-[200px] overflow-y-auto focus:outline-none',
+        actions: 'border-t border-border p-2',
       },
     },
     chevron: {
@@ -40,8 +40,8 @@ export default (options: Required<ModuleOptions>) => ({
     },
     alone: {
       false: {
-        leadingIcon: ['absolute inset-0 group-hover:opacity-0 group-data-[state=open]:opacity-0', options.theme.transitions && 'transition-opacity duration-200'],
-        chevronIcon: ['absolute inset-0 opacity-0 group-hover:opacity-100 group-data-[state=open]:opacity-100', options.theme.transitions && 'transition-[rotate,opacity] duration-200'],
+        leadingIcon: ['absolute inset-0 group-hover:opacity-0 group-data-[state=open]:opacity-0', options.theme.transitions && 'transition-opacity duration-280'],
+        chevronIcon: ['absolute inset-0 opacity-0 group-hover:opacity-100 group-data-[state=open]:opacity-100', options.theme.transitions && 'transition-[rotate,opacity] duration-280'],
       },
     },
   },

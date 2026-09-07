@@ -46,7 +46,7 @@ export default (options: Required<ModuleOptions>) => ({
       }])),
       neutral: {
         indicator: 'data-[state=active]:color-text-highlighted',
-        item: 'outline-inverted/25',
+        item: 'outline-outline-inverted/25',
       },
     },
     readonly: {

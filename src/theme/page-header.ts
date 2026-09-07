@@ -1,6 +1,6 @@
 export default {
   slots: {
-    root: 'relative border-b border-default py-8',
+    root: 'relative border-b border-border py-8',
     container: '',
     wrapper: 'flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4',
     headline: 'mb-2.5 text-sm font-600 text-primary flex items-center gap-1.5',

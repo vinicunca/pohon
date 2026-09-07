@@ -28,7 +28,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     variant: {
       outline: {
-        root: 'bg-background ring ring-default',
+        root: 'bg-background ring ring-ring',
         date: 'color-text-toned',
         description: 'color-text-muted',
       },
@@ -38,7 +38,7 @@ export default (options: Required<ModuleOptions>) => ({
         description: 'color-text-toned',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-default',
+        root: 'bg-background-elevated/50 ring ring-ring',
         date: 'color-text-muted',
         description: 'color-text-toned',
       },
@@ -57,8 +57,8 @@ export default (options: Required<ModuleOptions>) => ({
     to: {
       true: {
         root: ['outline-primary/25 has-[>a:focus-visible]:outline-3', options.theme.transitions && 'transition'],
-        image: 'transform transition-transform duration-200 group-hover/blog-post:scale-110',
-        avatar: 'inline-flex transform transition-transform duration-200 hover:scale-115 rounded-full outline-primary/25 focus-visible:outline-3',
+        image: 'transform transition-transform duration-280 group-hover/blog-post:scale-110',
+        avatar: 'inline-flex transform transition-transform duration-280 hover:scale-115 rounded-full outline-primary/25 focus-visible:outline-3',
       },
     },
     image: {

@@ -36,8 +36,8 @@ defineShortcuts({
     class="absolute top-0 inset-x-0 z-5 bg-background"
   >
     <template #toggle>
-      <PDashboardSidebarToggle size="sm" variant="outline" class="ring-default" />
-      <PDashboardSidebarCollapse size="sm" variant="outline" class="ring-default" />
+      <PDashboardSidebarToggle size="sm" variant="outline" class="ring-ring" />
+      <PDashboardSidebarCollapse size="sm" variant="outline" class="ring-ring" />
     </template>
 
     <template #leading>
@@ -47,7 +47,7 @@ defineShortcuts({
           color="neutral"
           variant="outline"
           :disabled="index === 0"
-          class="ring-default"
+          class="ring-ring"
           aria-label="Previous component"
           @click="navigate(index - 1)"
         />
@@ -56,7 +56,7 @@ defineShortcuts({
           color="neutral"
           variant="outline"
           :disabled="index === (components?.length ?? 0) - 1"
-          class="ring-default"
+          class="ring-ring"
           aria-label="Next component"
           @click="navigate(index + 1)"
         />

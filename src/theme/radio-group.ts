@@ -31,10 +31,10 @@ export default (options: Required<ModuleOptions>) => ({
       },
       card: {
         fieldset: 'flex-wrap',
-        item: [`border border-default rounded-lg ${hover}bg-background-elevated/50`, options.theme.transitions && 'transition-colors'],
+        item: [`border border-border rounded-lg ${hover}bg-background-elevated/50`, options.theme.transitions && 'transition-colors'],
       },
       table: {
-        item: [`border border-default ${hover}bg-background-elevated/50`, options.theme.transitions && 'transition-colors'],
+        item: [`border border-border ${hover}bg-background-elevated/50`, options.theme.transitions && 'transition-colors'],
       },
     },
     orientation: {
@@ -193,7 +193,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'card',
       class: {
-        item: 'has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:bg-background-elevated',
+        item: 'has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated',
       },
     },
     ...(options.theme.colors || []).map((color: string) => ({
@@ -207,7 +207,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'table',
       class: {
-        item: 'has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:z-[1]',
+        item: 'has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-[1]',
       },
     },
     {
@@ -230,7 +230,7 @@ export default (options: Required<ModuleOptions>) => ({
       indicator: 'hidden',
       highlight: true,
       class: {
-        item: 'not-has-disabled:border-inverted not-has-disabled:has-data-[state=checked]:border-inverted',
+        item: 'not-has-disabled:border-border-inverted not-has-disabled:has-data-[state=checked]:border-border-inverted',
       },
     },
     ...(options.theme.colors || []).map((color: string) => ({
@@ -244,7 +244,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       highlight: true,
       class: {
-        base: 'ring-inverted',
+        base: 'ring-ring-inverted',
       },
     },
   ],

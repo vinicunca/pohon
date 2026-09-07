@@ -69,9 +69,9 @@ ignore:
   minSize: 15
   maxSize: 40
   defaultSize: 25
-  class: 'bg-background-elevated/50 border border-default rounded-xl items-center justify-center color-text-muted font-medium' - slot: 'main'
+  class: 'bg-background-elevated/50 border border-border rounded-xl items-center justify-center color-text-muted font-medium' - slot: 'main'
   defaultSize: 75
-  class: 'bg-background-elevated/50 border border-default rounded-xl items-center justify-center color-text-muted font-medium'
+  class: 'bg-background-elevated/50 border border-border rounded-xl items-center justify-center color-text-muted font-medium'
   slots:
   sidebar: Sidebar
   main: Main
@@ -106,8 +106,8 @@ ignore:
   id: 'splitter-orientation'
   orientation: 'vertical'
   items: - slot: 'first'
-  class: 'bg-background-elevated/50 border border-default rounded-xl items-center justify-center color-text-muted font-medium' - slot: 'second'
-  class: 'bg-background-elevated/50 border border-default rounded-xl items-center justify-center color-text-muted font-medium'
+  class: 'bg-background-elevated/50 border border-border rounded-xl items-center justify-center color-text-muted font-medium' - slot: 'second'
+  class: 'bg-background-elevated/50 border border-border rounded-xl items-center justify-center color-text-muted font-medium'
   slots:
   first: First
   second: Second

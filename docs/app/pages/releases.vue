@@ -46,7 +46,7 @@ const { data: versions } = await useFetch('https://ungh.cc/repos/nuxt/ui/release
       :title="page.hero.title"
       :description="page.hero.description"
       :links="page.hero.links"
-      class="md:border-b border-default"
+      class="md:border-b border-border"
       :ui="{ container: 'relative py-10 sm:py-16 lg:py-24' }"
     >
       <template #top>
@@ -55,11 +55,11 @@ const { data: versions } = await useFetch('https://ungh.cc/repos/nuxt/ui/release
 
       <LazyStarsBg />
 
-      <div aria-hidden="true" class="hidden md:block absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div aria-hidden="true" class="hidden md:block absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
     </PPageHero>
 
     <PPageSection :ui="{ container: '!py-0' }">
-      <div class="py-4 md:py-8 lg:py-16 md:border-x border-default">
+      <div class="py-4 md:py-8 lg:py-16 md:border-x border-border">
         <PContainer class="max-w-5xl">
           <PChangelogVersions>
             <PChangelogVersion
@@ -69,7 +69,7 @@ const { data: versions } = await useFetch('https://ungh.cc/repos/nuxt/ui/release
               :ui="{
                 root: 'flex items-start',
                 container: 'max-w-xl',
-                header: 'border-b border-default pb-4',
+                header: 'border-b border-border pb-4',
                 title: 'text-3xl',
                 date: 'text-xs/9 color-text-highlighted font-mono',
                 indicator: 'sticky top-0 pt-16 -mt-16 sm:pt-24 sm:-mt-24 lg:pt-32 lg:-mt-32'

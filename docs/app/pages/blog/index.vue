@@ -37,7 +37,7 @@ function formatDate(date: string) {
     <PPageHero :ui="{ container: 'relative py-10 sm:py-16 lg:py-24' }">
       <LazyStarsBg />
 
-      <div aria-hidden="true" class="absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div aria-hidden="true" class="absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
 
       <template #title>
         <MDC :value="page.hero.title" unwrap="p" cache-key="blog-hero-title" />
@@ -48,20 +48,20 @@ function formatDate(date: string) {
       </template>
     </PPageHero>
 
-    <PPageBody class="my-0! py-0! border-y border-default">
+    <PPageBody class="my-0! py-0! border-y border-border">
       <PContainer>
-        <div class="border-x border-default gap-0!">
+        <div class="border-x border-border gap-0!">
           <Motion
             v-for="(post, index) in posts"
             :key="post.path"
             :initial="{ opacity: 0, x: -20 }"
             :animate="{ opacity: 1, x: 0 }"
             :transition="{ delay: index * 0.05, type: 'spring', stiffness: 300, damping: 30 }"
-            class="group border-b border-default last:border-b-0"
+            class="group border-b border-border last:border-b-0"
           >
             <PLink
               :to="post.path"
-              class="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-6 hover:bg-muted/30 transition-all duration-200 gap-4 sm:gap-6"
+              class="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-6 hover:bg-muted/30 transition-all duration-280 gap-4 sm:gap-6"
             >
               <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 flex-1 min-w-0">
                 <div class="flex-1 min-w-0">
@@ -69,7 +69,7 @@ function formatDate(date: string) {
                     {{ formatDate(post.date) }}
                   </div>
 
-                  <h2 class="font-medium color-text-highlighted group-hover:text-primary transition-colors duration-200 truncate sm:text-base">
+                  <h2 class="font-medium color-text-highlighted group-hover:text-primary transition-colors duration-280 truncate sm:text-base">
                     {{ post.title }}
                   </h2>
                   <p class="text-sm color-text-muted mt-1 line-clamp-2 sm:line-clamp-1">
@@ -92,7 +92,7 @@ function formatDate(date: string) {
 
                 <PIcon
                   name="i-lucide-chevron-right"
-                  class="size-4 color-text-muted group-hover:color-text-highlighted transition-colors duration-200 shrink-0"
+                  class="size-4 color-text-muted group-hover:color-text-highlighted transition-colors duration-280 shrink-0"
                 />
               </div>
             </PLink>
@@ -102,7 +102,7 @@ function formatDate(date: string) {
     </PPageBody>
 
     <PContainer class="relative min-h-24 grow">
-      <div aria-hidden="true" class="absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div aria-hidden="true" class="absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
     </PContainer>
   </main>
 </template>

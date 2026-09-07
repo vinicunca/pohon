@@ -56,7 +56,7 @@ const disabled = ref(false)
       <FormExampleNestedList />
     </div>
 
-    <div class="border border-default rounded-lg">
+    <div class="border border-border rounded-lg">
       <div class="py-2 px-4 flex gap-4 items-center">
         <PFormField label="Validate on" class="flex items-center gap-2">
           <PSelectMenu v-model="validateOn" :items="['input', 'change', 'blur']" multiple class="w-48" />
@@ -64,7 +64,7 @@ const disabled = ref(false)
         <PCheckbox v-model="disabled" label="Disabled" />
       </div>
 
-      <FormExampleElements :validate-on="validateOn" :disabled="disabled" class="border-t border-default p-4" />
+      <FormExampleElements :validate-on="validateOn" :disabled="disabled" class="border-t border-border p-4" />
     </div>
   </div>
 </template>

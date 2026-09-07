@@ -16,7 +16,7 @@ const appConfig = useAppConfig()
       variant="outline"
       label="Open"
       block
-      :ui="{ trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200' }"
+      :ui="{ trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-280' }"
     />
 
     <template #content>

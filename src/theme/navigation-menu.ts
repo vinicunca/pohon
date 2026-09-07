@@ -14,9 +14,9 @@ export default (options: Required<ModuleOptions>) => ({
     linkTrailing: 'group ms-auto inline-flex gap-1.5 items-center',
     linkTrailingBadge: 'shrink-0',
     linkTrailingBadgeSize: 'sm',
-    linkTrailingIcon: 'size-5 transform shrink-0 group-data-[state=open]:rotate-180 transition-transform duration-200',
+    linkTrailingIcon: 'size-5 transform shrink-0 group-data-[state=open]:rotate-180 transition-transform duration-280',
     linkLabel: 'truncate',
-    linkLabelExternalIcon: 'inline-block size-3 align-top text-dimmed',
+    linkLabelExternalIcon: 'inline-block size-3 align-top color-text-dimmed',
     childList: 'isolate',
     childLabel: 'text-xs color-text-highlighted',
     childItem: '',
@@ -24,14 +24,14 @@ export default (options: Required<ModuleOptions>) => ({
     childLinkWrapper: 'min-w-0',
     childLinkIcon: 'size-5 shrink-0',
     childLinkLabel: 'truncate',
-    childLinkLabelExternalIcon: 'inline-block size-3 align-top text-dimmed',
+    childLinkLabelExternalIcon: 'inline-block size-3 align-top color-text-dimmed',
     childLinkDescription: 'color-text-muted',
     separator: 'px-2 h-px bg-border',
     viewportWrapper: 'absolute top-full left-0 flex w-full',
-    viewport: 'relative overflow-hidden bg-background shadow-lg rounded-md ring ring-default h-(--akar-navigation-menu-viewport-height) w-full transition-[width,height,left,right] duration-200 origin-[top_center] data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] z-1',
+    viewport: 'relative overflow-hidden bg-background shadow-lg rounded-md ring ring-ring h-(--akar-navigation-menu-viewport-height) w-full transition-[width,height,left,right] duration-280 origin-[top_center] data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] z-1',
     content: '',
-    indicator: 'absolute left-0 data-[state=visible]:animate-[fade-in_100ms_ease-out] data-[state=hidden]:animate-[fade-out_100ms_ease-in] data-[state=hidden]:opacity-0 bottom-0 z-2 w-(--akar-navigation-menu-indicator-size) translate-x-(--akar-navigation-menu-indicator-position) flex h-2.5 items-end justify-center overflow-hidden transition-[translate,width] duration-200',
-    arrow: 'relative top-[50%] size-2.5 rotate-45 border border-default bg-background z-1 rounded-xs',
+    indicator: 'absolute left-0 data-[state=visible]:animate-[fade-in_100ms_ease-out] data-[state=hidden]:animate-[fade-out_100ms_ease-in] data-[state=hidden]:opacity-0 bottom-0 z-2 w-(--akar-navigation-menu-indicator-size) translate-x-(--akar-navigation-menu-indicator-position) flex h-2.5 items-end justify-center overflow-hidden transition-[translate,width] duration-280',
+    arrow: 'relative top-[50%] size-2.5 rotate-45 border border-border bg-background z-1 rounded-xs',
   },
   variants: {
     color: {
@@ -40,8 +40,8 @@ export default (options: Required<ModuleOptions>) => ({
         childLink: `before:outline-${color}/25`,
       }])),
       neutral: {
-        link: 'before:outline-inverted/25',
-        childLink: 'before:outline-inverted/25',
+        link: 'before:outline-outline-inverted/25',
+        childLink: 'before:outline-outline-inverted/25',
       },
     },
     highlightColor: {
@@ -86,9 +86,9 @@ export default (options: Required<ModuleOptions>) => ({
       },
       false: {
         link: 'color-text-muted',
-        linkLeadingIcon: 'text-dimmed',
+        linkLeadingIcon: 'color-text-dimmed',
         childLink: ['hover:before:bg-background-elevated/50 color-text hover:color-text-highlighted', options.theme.transitions && 'transition-colors before:transition-colors'],
-        childLinkIcon: ['text-dimmed group-hover:color-text', options.theme.transitions && 'transition-colors'],
+        childLinkIcon: ['color-text-dimmed group-hover:color-text', options.theme.transitions && 'transition-colors'],
       },
     },
     disabled: {
@@ -123,7 +123,7 @@ export default (options: Required<ModuleOptions>) => ({
     orientation: 'vertical',
     collapsed: false,
     class: {
-      childList: 'ms-5 border-s border-default',
+      childList: 'ms-5 border-s border-border',
       childItem: 'ps-1.5 -ms-px',
       content: 'data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden',
     },

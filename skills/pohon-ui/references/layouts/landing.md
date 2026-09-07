@@ -105,7 +105,7 @@ const items = computed<NavigationMenuItem[]>(() => [
     <img
       src="/hero-image.png"
       alt="App screenshot"
-      class="rounded-lg shadow-2xl ring ring-default"
+      class="rounded-lg shadow-2xl ring ring-ring"
     />
   </PPageHero>
 

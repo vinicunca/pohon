@@ -164,7 +164,7 @@ exports[`chatMessage > renders with neutral variant outline correctly 1`] = `
   <div data-slot="container" class="relative flex items-start gap-3 pb-8">
     <!--v-if-->
     <div data-slot="body" class="min-w-0">
-      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-background ring ring-default">Hello, how are you?</div>
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-background ring ring-ring">Hello, how are you?</div>
       <!--v-if-->
     </div>
   </div>
@@ -203,7 +203,7 @@ exports[`chatMessage > renders with neutral variant subtle correctly 1`] = `
   <div data-slot="container" class="relative flex items-start gap-3 pb-8">
     <!--v-if-->
     <div data-slot="body" class="min-w-0">
-      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-background-elevated/50 ring ring-default">Hello, how are you?</div>
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-background-elevated/50 ring ring-ring">Hello, how are you?</div>
       <!--v-if-->
     </div>
   </div>

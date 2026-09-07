@@ -32,10 +32,10 @@ export default (options: Required<ModuleOptions>) => ({
       solid: {
         root: 'bg-background-inverted color-text-inverted',
         title: 'color-text-inverted',
-        description: 'text-dimmed',
+        description: 'color-text-dimmed',
       },
       outline: {
-        root: 'bg-background ring ring-default',
+        root: 'bg-background ring ring-ring',
         description: 'color-text-muted',
       },
       soft: {
@@ -43,7 +43,7 @@ export default (options: Required<ModuleOptions>) => ({
         description: 'color-text-toned',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-default',
+        root: 'bg-background-elevated/50 ring ring-ring',
         description: 'color-text-toned',
       },
       ghost: {
@@ -137,7 +137,7 @@ export default (options: Required<ModuleOptions>) => ({
     highlightColor: 'neutral',
     highlight: true,
     class: {
-      root: 'ring-inverted',
+      root: 'ring-ring-inverted',
     },
   }, ...(options.theme.colors || []).map((spotlightColor: string) => ({
     spotlightColor,

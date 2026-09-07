@@ -13,7 +13,7 @@ export default (options: Required<ModuleOptions>) => ({
   variants: {
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, { border: `border-${color}` }])),
-      neutral: { border: 'border-default' },
+      neutral: { border: 'border-border' },
     },
     orientation: {
       horizontal: {

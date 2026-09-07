@@ -12,16 +12,16 @@ export default {
       solid: {
         root: 'bg-background-inverted color-text-inverted',
         title: 'color-text-inverted',
-        description: 'text-dimmed',
+        description: 'color-text-dimmed',
       },
       outline: {
-        root: 'bg-background ring ring-default divide-y divide-default',
+        root: 'bg-background ring ring-ring divide-y divide-default',
       },
       soft: {
         root: 'bg-background-elevated/50 divide-y divide-default',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-default divide-y divide-default',
+        root: 'bg-background-elevated/50 ring ring-ring divide-y divide-default',
       },
     },
   },

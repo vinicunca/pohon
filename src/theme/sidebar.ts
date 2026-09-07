@@ -19,18 +19,18 @@ export default (options: Required<ModuleOptions>) => ({
   variants: {
     transition: {
       true: {
-        gap: 'transition-[width] duration-200 ease-out',
-        container: 'transition-[left,right,width] duration-200 ease-out',
+        gap: 'transition-[width] duration-280 ease-out',
+        container: 'transition-[left,right,width] duration-280 ease-out',
         rail: 'transition-all ease-out',
       },
     },
     side: {
       left: {
-        container: 'left-0 border-e border-default',
+        container: 'left-0 border-e border-border',
         rail: 'end-0 translate-x-1/2',
       },
       right: {
-        container: 'right-0 border-s border-default',
+        container: 'right-0 border-s border-border',
         rail: '-start-px -translate-x-1/2',
       },
     },
@@ -54,7 +54,7 @@ export default (options: Required<ModuleOptions>) => ({
       sidebar: {},
       floating: {
         container: 'p-4 border-transparent',
-        inner: 'rounded-lg ring ring-default shadow-lg',
+        inner: 'rounded-lg ring ring-ring shadow-lg',
         rail: 'inset-y-4',
       },
       inset: {
@@ -80,13 +80,13 @@ export default (options: Required<ModuleOptions>) => ({
     side: 'left',
     collapsible: 'none',
     class: {
-      root: 'border-e border-default',
+      root: 'border-e border-border',
     },
   }, {
     side: 'right',
     collapsible: 'none',
     class: {
-      root: 'border-s border-default',
+      root: 'border-s border-border',
     },
   }, {
     side: 'left',

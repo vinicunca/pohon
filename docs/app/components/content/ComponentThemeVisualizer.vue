@@ -160,7 +160,7 @@ watch(open, (isOpen) => {
           variant="outline"
           size="sm"
           square
-          class="absolute -top-[13px] -right-[13px] z-1 rounded-full lg:opacity-0 lg:group-hover/component:opacity-100 ring-muted transition-opacity duration-200"
+          class="absolute -top-[13px] -right-[13px] z-1 rounded-full lg:opacity-0 lg:group-hover/component:opacity-100 ring-muted transition-opacity duration-280"
           :class="[open && 'lg:opacity-100 bg-background-elevated']"
           tabindex="-1"
         >
@@ -169,7 +169,7 @@ watch(open, (isOpen) => {
       </PTooltip>
 
       <template #content>
-        <div ref="popoverContentRef" class="px-2.5 py-1.5 text-xs font-600 color-text-highlighted border-b border-default">
+        <div ref="popoverContentRef" class="px-2.5 py-1.5 text-xs font-600 color-text-highlighted border-b border-border">
           Theme slots
         </div>
         <div class="p-1">

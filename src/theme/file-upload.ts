@@ -3,7 +3,7 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative flex flex-col',
-    base: ['w-full flex-1 bg-background border border-default flex flex-col gap-2 items-stretch justify-center rounded-lg focus-visible:outline-3', options.theme.transitions && 'transition-[background]'],
+    base: ['w-full flex-1 bg-background border border-border flex flex-col gap-2 items-stretch justify-center rounded-lg focus-visible:outline-3', options.theme.transitions && 'transition-[background]'],
     wrapper: 'flex flex-col items-center justify-center text-center',
     icon: 'shrink-0',
     avatar: 'shrink-0',
@@ -65,7 +65,7 @@ export default (options: Required<ModuleOptions>) => ({
       list: {
         root: 'gap-2 items-start',
         files: 'flex flex-col w-full gap-2',
-        file: 'min-w-0 flex items-center border border-default rounded-md w-full',
+        file: 'min-w-0 flex items-center border border-border rounded-md w-full',
         fileTrailingButton: 'ms-auto',
       },
       grid: {
@@ -103,11 +103,11 @@ export default (options: Required<ModuleOptions>) => ({
     class: `border-${color}`,
   })), {
     color: 'neutral',
-    class: 'outline-inverted/25 focus-visible:outline-3 focus-visible:border-inverted',
+    class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:border-border-inverted',
   }, {
     color: 'neutral',
     highlight: true,
-    class: 'border-inverted',
+    class: 'border-border-inverted',
   }, {
     size: 'xs',
     layout: 'list',

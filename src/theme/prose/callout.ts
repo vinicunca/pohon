@@ -16,7 +16,7 @@ export default (options: Required<ModuleOptions>) => ({
       neutral: {
         base: 'border border-muted bg-muted color-text',
         icon: 'color-text-highlighted',
-        externalIcon: 'text-dimmed',
+        externalIcon: 'color-text-dimmed',
       },
     },
     to: {
@@ -34,7 +34,7 @@ export default (options: Required<ModuleOptions>) => ({
     color: 'neutral',
     to: true,
     class: {
-      base: 'hover:border-inverted outline-inverted/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-inverted',
+      base: 'hover:border-border-inverted outline-outline-inverted/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-border-inverted',
       externalIcon: 'group-hover:color-text-highlighted',
     },
   }],

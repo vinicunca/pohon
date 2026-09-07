@@ -57,15 +57,15 @@ const groups = [
   <PCommandPalette :groups="groups" class="flex-1 h-80">
     <template #footer>
       <div class="flex items-center justify-between gap-2">
-        <PIcon name="i-simple-icons-nuxtdotjs" class="size-5 text-dimmed ml-1" />
+        <PIcon name="i-simple-icons-nuxtdotjs" class="size-5 color-text-dimmed ml-1" />
         <div class="flex items-center gap-1">
-          <PButton color="neutral" variant="ghost" label="Open Command" class="text-dimmed" size="xs">
+          <PButton color="neutral" variant="ghost" label="Open Command" class="color-text-dimmed" size="xs">
             <template #trailing>
               <PKbd value="enter" />
             </template>
           </PButton>
           <PSeparator orientation="vertical" class="h-4" />
-          <PButton color="neutral" variant="ghost" label="Actions" class="text-dimmed" size="xs">
+          <PButton color="neutral" variant="ghost" label="Actions" class="color-text-dimmed" size="xs">
             <template #trailing>
               <PKbd value="meta" />
               <PKbd value="k" />

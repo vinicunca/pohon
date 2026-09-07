@@ -13,9 +13,9 @@ export default (options: Required<ModuleOptions>) => ({
     imageWrapper: 'relative overflow-hidden rounded-lg aspect-[16/9] mt-5 group/changelog-version-image',
     image: 'object-cover object-top w-full h-full',
     authors: 'flex flex-wrap gap-x-4 gap-y-1.5',
-    footer: 'border-t border-default pt-5 flex items-center justify-between',
+    footer: 'border-t border-border pt-5 flex items-center justify-between',
     indicator: 'absolute start-0 top-0 w-32 hidden lg:flex items-center justify-end gap-3 min-w-0',
-    dot: 'size-4 rounded-full bg-background ring ring-default flex items-center justify-center my-1',
+    dot: 'size-4 rounded-full bg-background ring ring-ring flex items-center justify-center my-1',
     dotInner: 'size-2 rounded-full bg-primary',
   },
   variants: {
@@ -32,7 +32,7 @@ export default (options: Required<ModuleOptions>) => ({
     to: {
       true: {
         title: ['outline-primary/25 has-focus-visible:outline-3 rounded-xs', options.theme.transitions && 'transition'],
-        image: 'transform transition-transform duration-200 group-hover/changelog-version-image:scale-105 group-has-focus-visible/changelog-version-image:scale-105',
+        image: 'transform transition-transform duration-280 group-hover/changelog-version-image:scale-105 group-has-focus-visible/changelog-version-image:scale-105',
       },
     },
     hidden: {

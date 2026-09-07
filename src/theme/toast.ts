@@ -2,7 +2,7 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: 'relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-default p-4 flex gap-2.5',
+    root: 'relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5',
     wrapper: 'w-0 flex-1 flex flex-col',
     title: 'text-sm font-medium color-text-highlighted',
     description: 'text-sm color-text-muted',
@@ -20,7 +20,7 @@ export default (options: Required<ModuleOptions>) => ({
         icon: `text-${color}`,
       }])),
       neutral: {
-        root: 'outline-inverted/25 focus-visible:outline-3 focus-visible:ring-inverted',
+        root: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
         icon: 'color-text-highlighted',
       },
     },

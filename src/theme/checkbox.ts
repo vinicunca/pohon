@@ -34,7 +34,7 @@ export default (options: Required<ModuleOptions>) => ({
         root: '',
       },
       card: {
-        root: [`border border-default rounded-lg ${hover}bg-background-elevated/50`, options.theme.transitions && 'transition-colors'],
+        root: [`border border-border rounded-lg ${hover}bg-background-elevated/50`, options.theme.transitions && 'transition-colors'],
       },
     },
     indicator: {
@@ -162,7 +162,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'card',
       class: {
-        root: 'has-data-[state=checked]:border-inverted/50 has-data-[state=checked]:bg-background-elevated',
+        root: 'has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated',
       },
     },
     {
@@ -185,7 +185,7 @@ export default (options: Required<ModuleOptions>) => ({
       indicator: 'hidden',
       highlight: true,
       class: {
-        root: 'not-has-disabled:border-inverted not-has-disabled:has-data-[state=checked]:border-inverted',
+        root: 'not-has-disabled:border-border-inverted not-has-disabled:has-data-[state=checked]:border-border-inverted',
       },
     },
     ...(options.theme.colors || []).map((color: string) => ({
@@ -199,7 +199,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       highlight: true,
       class: {
-        base: 'ring-inverted',
+        base: 'ring-ring-inverted',
       },
     },
   ],

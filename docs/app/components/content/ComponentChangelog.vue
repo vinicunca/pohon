@@ -119,7 +119,7 @@ function normalizeCommitMessage(commit: Commit) {
         <PBadge variant="subtle" :label="item.tag" />
       </PLink>
 
-      <time v-if="item.published_at" :datetime="item.published_at" class="text-xs text-dimmed font-normal">
+      <time v-if="item.published_at" :datetime="item.published_at" class="text-xs color-text-dimmed font-normal">
         {{ useTimeAgo(new Date(item.published_at)) }}
       </time>
     </template>

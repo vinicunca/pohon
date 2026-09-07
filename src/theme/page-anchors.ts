@@ -9,7 +9,7 @@ export default (options: Required<ModuleOptions>) => ({
     linkLeading: 'rounded-md p-1 inline-flex ring-inset ring',
     linkLeadingIcon: 'size-4 shrink-0',
     linkLabel: 'truncate',
-    linkLabelExternalIcon: 'size-3 absolute top-0 text-dimmed',
+    linkLabelExternalIcon: 'size-3 absolute top-0 color-text-dimmed',
   },
   variants: {
     active: {
@@ -19,7 +19,7 @@ export default (options: Required<ModuleOptions>) => ({
       },
       false: {
         link: ['color-text-muted hover:color-text font-medium', options.theme.transitions && 'transition-colors'],
-        linkLeading: ['bg-background-elevated/50 ring-ring-accented text-dimmed group-hover:bg-primary group-hover:ring-primary group-hover:color-text-inverted', options.theme.transitions && 'transition'],
+        linkLeading: ['bg-background-elevated/50 ring-ring-accented color-text-dimmed group-hover:bg-primary group-hover:ring-primary group-hover:color-text-inverted', options.theme.transitions && 'transition'],
       },
     },
   },

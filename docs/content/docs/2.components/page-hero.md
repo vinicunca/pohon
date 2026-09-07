@@ -1,6 +1,6 @@
 ---
 title: PageHero
-description: 'A responsive hero for your pages.'
+description: "A responsive hero for your pages."
 category: page
 links:
   - label: GitHub
@@ -16,13 +16,14 @@ The PageHero component wraps your content in a [Container](/docs/components/cont
 
 :::u-page-hero
 ---
+
 title: 'Ultimate Vue UI library'
 description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
 ---
 
 ::::u-page-card{variant="subtle" class="rounded-lg"}
 
-![App screenshot](/blocks/image4.png){width="960" height="540" class="rounded-sm shadow-2xl ring ring-default"}
+![App screenshot](/blocks/image4.png){width="960" height="540" class="rounded-sm shadow-2xl ring ring-ring"}
 
 ::::
 
@@ -36,9 +37,11 @@ Use the `title` prop to set the title of the hero.
 
 ::component-code
 ---
+
 props:
-  title: 'Ultimate Vue UI library'
+title: 'Ultimate Vue UI library'
 ---
+
 ::
 
 ### Description
@@ -47,13 +50,17 @@ Use the `description` prop to set the description of the hero.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   title: 'Ultimate Vue UI library'
   description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
+
 ---
+
 ::
 
 ### Headline
@@ -62,15 +69,19 @@ Use the `headline` prop to set the headline of the hero.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-  - description
-props:
+
+- title
+- description
+  props:
   title: 'Ultimate Vue UI library'
   description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
   headline: 'New release'
+
 ---
+
 ::
 
 ### Links
@@ -79,28 +90,32 @@ Use the `links` prop to display a list of [Button](/docs/components/button) unde
 
 ::component-code
 ---
+
 prettier: true
 external:
-  - links
-externalTypes:
-  - ButtonProps[]
-ignore:
-  - title
-  - description
-  - links
-props:
+
+- links
+  externalTypes:
+- ButtonProps[]
+  ignore:
+- title
+- description
+- links
+  props:
   title: 'Ultimate Vue UI library'
   description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
   links:
-    - label: 'Get started'
-      to: '/docs/getting-started'
-      icon: 'i-lucide-square-play'
-    - label: 'Learn more'
-      to: '/docs/getting-started/theme/design-system'
-      color: 'neutral'
-      variant: 'subtle'
-      trailingIcon: 'i-lucide-arrow-right'
+  - label: 'Get started'
+    to: '/docs/getting-started'
+    icon: 'i-lucide-square-play'
+  - label: 'Learn more'
+    to: '/docs/getting-started/theme/design-system'
+    color: 'neutral'
+    variant: 'subtle'
+    trailingIcon: 'i-lucide-arrow-right'
+
 ---
+
 ::
 
 ### Orientation
@@ -109,37 +124,40 @@ Use the `orientation` prop to change the orientation with the default slot. Defa
 
 ::component-code
 ---
+
 prettier: true
 external:
-  - links
-externalTypes:
-  - ButtonProps[]
-ignore:
-  - title
-  - description
-  - headline
-  - links
-props:
+
+- links
+  externalTypes:
+- ButtonProps[]
+  ignore:
+- title
+- description
+- headline
+- links
+  props:
   title: 'Ultimate Vue UI library'
   description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
   headline: 'New release'
   orientation: horizontal
   links:
-    - label: 'Get started'
-      to: '/docs/getting-started'
-      icon: 'i-lucide-square-play'
-    - label: 'Learn more'
-      to: '/docs/getting-started/theme/design-system'
-      color: 'neutral'
-      variant: 'subtle'
-      trailingIcon: 'i-lucide-arrow-right'
-slots:
-  default: |
+  - label: 'Get started'
+    to: '/docs/getting-started'
+    icon: 'i-lucide-square-play'
+  - label: 'Learn more'
+    to: '/docs/getting-started/theme/design-system'
+    color: 'neutral'
+    variant: 'subtle'
+    trailingIcon: 'i-lucide-arrow-right'
+    slots:
+    default: |
 
-    <img src="/blocks/image4.png" alt="App screenshot" class="rounded-lg shadow-2xl ring ring-default" />
+  <img src="/blocks/image4.png" alt="App screenshot" class="rounded-lg shadow-2xl ring ring-ring" />
+
 ---
 
-![App screenshot](/blocks/image4.png){class="rounded-lg shadow-2xl ring ring-default"}
+![App screenshot](/blocks/image4.png){class="rounded-lg shadow-2xl ring ring-ring"}
 ::
 
 ### Reverse
@@ -148,38 +166,41 @@ Use the `reverse` prop to reverse the orientation of the default slot.
 
 ::component-code
 ---
+
 prettier: true
 external:
-  - links
-externalTypes:
-  - ButtonProps[]
-ignore:
-  - title
-  - description
-  - headline
-  - links
-props:
+
+- links
+  externalTypes:
+- ButtonProps[]
+  ignore:
+- title
+- description
+- headline
+- links
+  props:
   title: 'Ultimate Vue UI library'
   description: 'A Nuxt/Vue-integrated UI library providing a rich set of fully-styled, accessible and highly customizable components for building modern web applications.'
   headline: 'New release'
   orientation: horizontal
   reverse: true
   links:
-    - label: 'Get started'
-      to: '/docs/getting-started'
-      icon: 'i-lucide-square-play'
-    - label: 'Learn more'
-      to: '/docs/getting-started/theme/design-system'
-      color: 'neutral'
-      variant: 'subtle'
-      trailingIcon: 'i-lucide-arrow-right'
-slots:
-  default: |
+  - label: 'Get started'
+    to: '/docs/getting-started'
+    icon: 'i-lucide-square-play'
+  - label: 'Learn more'
+    to: '/docs/getting-started/theme/design-system'
+    color: 'neutral'
+    variant: 'subtle'
+    trailingIcon: 'i-lucide-arrow-right'
+    slots:
+    default: |
 
-    <img src="/blocks/image4.png" alt="App screenshot" class="rounded-lg shadow-2xl ring ring-default" />
+  <img src="/blocks/image4.png" alt="App screenshot" class="rounded-lg shadow-2xl ring ring-ring" />
+
 ---
 
-![App screenshot](/blocks/image4.png){class="rounded-lg shadow-2xl ring ring-default"}
+![App screenshot](/blocks/image4.png){class="rounded-lg shadow-2xl ring ring-ring"}
 ::
 
 ## API

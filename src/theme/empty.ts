@@ -41,10 +41,10 @@ export default {
       solid: {
         root: 'bg-background-inverted',
         title: 'color-text-inverted',
-        description: 'text-dimmed',
+        description: 'color-text-dimmed',
       },
       outline: {
-        root: 'bg-background ring ring-default',
+        root: 'bg-background ring ring-ring',
         description: 'color-text-muted',
       },
       soft: {
@@ -52,7 +52,7 @@ export default {
         description: 'color-text-toned',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-default',
+        root: 'bg-background-elevated/50 ring ring-ring',
         description: 'color-text-toned',
       },
       naked: {

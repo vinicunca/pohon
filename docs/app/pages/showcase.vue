@@ -38,18 +38,18 @@ if (import.meta.server) {
 
       <LazyStarsBg />
 
-      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
     </PPageHero>
 
     <PPageSection :ui="{ container: '!pt-0 relative' }">
-      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
 
-      <div class="border-l border-t border-default">
+      <div class="border-l border-t border-border">
         <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start justify-center divide-y divide-x divide-default">
           <li
             v-for="item in page.items"
             :key="item.name"
-            class="group relative flex items-center justify-center flex-1 size-full p-2 last:border-r last:border-b border-default overflow-hidden"
+            class="group relative flex items-center justify-center flex-1 size-full p-2 last:border-r last:border-b border-border overflow-hidden"
           >
             <NuxtLink class="inset-0 absolute" :to="item.url" target="_blank">
               <span class="sr-only">Go to {{ item.name }}</span>
@@ -63,10 +63,10 @@ if (import.meta.server) {
               :modifiers="{
                 position: 'top'
               }"
-              class="aspect-video size-full opacity-75 group-hover:opacity-100 group-hover:scale-110 duration-200 transition-[scale,opacity] pointer-events-none"
+              class="aspect-video size-full opacity-75 group-hover:opacity-100 group-hover:scale-110 duration-280 transition-[scale,opacity] pointer-events-none"
             />
 
-            <div class="absolute flex items-center px-2.5 py-0.75 gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none bg-black/90 rounded-full">
+            <div class="absolute flex items-center px-2.5 py-0.75 gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-280 pointer-events-none bg-black/90 rounded-full">
               <span class="text-sm text-white font-medium">
                 {{ item.name }}
               </span>

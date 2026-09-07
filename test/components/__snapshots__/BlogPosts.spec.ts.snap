@@ -2,7 +2,7 @@
 
 exports[`blogPosts > renders with as correctly 1`] = `
 "<section data-orientation="horizontal" class="flex flex-col gap-8 lg:gap-y-16 sm:grid sm:grid-cols-2 lg:grid-cols-3">
-  <article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-default">
+  <article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring">
     <!--v-if-->
     <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img alt="Image alt" src="https://picsum.photos/640/360" data-slot="image" class="object-cover object-top w-full h-full"></div>
     <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
@@ -28,7 +28,7 @@ exports[`blogPosts > renders with as correctly 1`] = `
 
 exports[`blogPosts > renders with class correctly 1`] = `
 "<div data-orientation="horizontal" class="flex flex-col gap-8 lg:gap-y-16 sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12">
-  <article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-default">
+  <article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring">
     <!--v-if-->
     <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img alt="Image alt" src="https://picsum.photos/640/360" data-slot="image" class="object-cover object-top w-full h-full"></div>
     <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
@@ -56,7 +56,7 @@ exports[`blogPosts > renders with default slot correctly 1`] = `"<div data-orien
 
 exports[`blogPosts > renders with orientation vertical correctly 1`] = `
 "<div data-orientation="vertical" class="flex flex-col gap-8 lg:gap-y-16">
-  <article data-orientation="horizontal" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden lg:grid lg:grid-cols-2 lg:items-center gap-x-8 bg-background ring ring-default">
+  <article data-orientation="horizontal" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden lg:grid lg:grid-cols-2 lg:items-center gap-x-8 bg-background ring ring-ring">
     <!--v-if-->
     <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img alt="Image alt" src="https://picsum.photos/640/360" data-slot="image" class="object-cover object-top w-full h-full"></div>
     <div data-slot="body" class="min-w-0 flex-1 flex flex-col justify-center p-4 sm:p-6 lg:px-0">
@@ -82,7 +82,7 @@ exports[`blogPosts > renders with orientation vertical correctly 1`] = `
 
 exports[`blogPosts > renders with posts correctly 1`] = `
 "<div data-orientation="horizontal" class="flex flex-col gap-8 lg:gap-y-16 sm:grid sm:grid-cols-2 lg:grid-cols-3">
-  <article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-default">
+  <article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring">
     <!--v-if-->
     <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img alt="Image alt" src="https://picsum.photos/640/360" data-slot="image" class="object-cover object-top w-full h-full"></div>
     <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">

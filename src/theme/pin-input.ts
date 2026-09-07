@@ -3,8 +3,8 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative inline-flex items-center gap-1.5',
-    base: ['rounded-md border-0 placeholder:text-dimmed text-center disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
-    separator: 'text-dimmed flex items-center justify-center',
+    base: ['rounded-md border-0 placeholder:color-text-dimmed text-center disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
+    separator: 'color-text-dimmed flex items-center justify-center',
   },
   variants: {
     size: {
@@ -57,15 +57,15 @@ export default (options: Required<ModuleOptions>) => ({
   })), {
     color: 'neutral',
     variant: ['outline', 'subtle'],
-    class: 'outline-inverted/25 focus-visible:outline-3 focus-visible:ring-inverted',
+    class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
   }, {
     color: 'neutral',
     variant: ['soft', 'ghost'],
-    class: 'outline-inverted/25 focus-visible:outline-3',
+    class: 'outline-outline-inverted/25 focus-visible:outline-3',
   }, {
     color: 'neutral',
     highlight: true,
-    class: 'ring ring-inset ring-inverted',
+    class: 'ring ring-inset ring-ring-inverted',
   }, {
     fixed: false,
     size: 'xs',

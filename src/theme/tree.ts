@@ -4,13 +4,13 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative isolate',
     item: 'w-full',
-    listWithChildren: 'border-s border-default',
+    listWithChildren: 'border-s border-border',
     itemWithChildren: 'ps-1.5 -ms-px',
     link: 'relative group w-full flex items-center text-sm select-none before:absolute before:inset-y-px before:inset-x-0 before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none focus-visible:before:outline-3',
     linkLeadingIcon: 'shrink-0 relative',
     linkLabel: 'truncate',
     linkTrailing: 'ms-auto inline-flex gap-1.5 items-center',
-    linkTrailingIcon: 'shrink-0 transform transition-transform duration-200 group-data-expanded:rotate-180',
+    linkTrailingIcon: 'shrink-0 transform transition-transform duration-280 group-data-expanded:rotate-180',
   },
   variants: {
     virtualize: {
@@ -23,7 +23,7 @@ export default (options: Required<ModuleOptions>) => ({
         link: `before:outline-${color}/25`,
       }])),
       neutral: {
-        link: 'before:outline-inverted/25',
+        link: 'before:outline-outline-inverted/25',
       },
     },
     size: {

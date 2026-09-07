@@ -2,8 +2,8 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: 'flex flex-col min-h-0 min-w-0 ring ring-inset ring-default rounded-lg overflow-hidden',
-    input: 'border-b border-default',
+    root: 'flex flex-col min-h-0 min-w-0 ring ring-inset ring-ring rounded-lg overflow-hidden',
+    input: 'border-b border-border',
     content: 'relative overflow-y-auto flex-1 max-h-60 scroll-py-1 focus:outline-none',
     group: 'p-1 isolate',
     label: 'font-600 color-text-highlighted',
@@ -12,7 +12,7 @@ export default (options: Required<ModuleOptions>) => ({
     loading: 'flex items-center justify-center color-text-muted',
     loadingIcon: 'animate-spin shrink-0',
     item: ['group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-    itemLeadingIcon: ['shrink-0 text-dimmed group-data-highlighted:not-group-data-disabled:color-text', options.theme.transitions && 'transition-colors'],
+    itemLeadingIcon: ['shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text', options.theme.transitions && 'transition-colors'],
     itemLeadingAvatar: 'shrink-0',
     itemLeadingAvatarSize: '',
     itemLeadingChip: 'shrink-0',
@@ -92,7 +92,7 @@ export default (options: Required<ModuleOptions>) => ({
         root: `outline-${color}/25 has-focus-visible:outline-3 has-focus-visible:ring-${color}`,
       }])),
       neutral: {
-        root: 'outline-inverted/25 has-focus-visible:outline-3 has-focus-visible:ring-inverted',
+        root: 'outline-outline-inverted/25 has-focus-visible:outline-3 has-focus-visible:ring-ring-inverted',
       },
     },
     virtualize: {
@@ -122,7 +122,7 @@ export default (options: Required<ModuleOptions>) => ({
     color: 'neutral',
     highlight: true,
     class: {
-      root: 'ring ring-inset ring-inverted',
+      root: 'ring ring-inset ring-ring-inverted',
     },
   }],
   defaultVariants: {

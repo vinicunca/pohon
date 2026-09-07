@@ -173,7 +173,7 @@ const items = Array.from({ length: 6 }).map((_, index) => ({
         v-slot="{ item }"
         v-bind="bind"
         :items="items"
-        :ui="{ container: 'transition-[height] duration-200' }"
+        :ui="{ container: 'transition-[height] duration-280' }"
         class="mx-auto max-w-md w-full"
       >
         <img
@@ -201,7 +201,7 @@ const items = Array.from({ length: 6 }).map((_, index) => ({
           v-slot="{ item }"
           v-bind="bind"
           :items="items"
-          :ui="{ item: 'basis-1/3' }"
+          :ui="{ item: 'pohon:basis-1/3' }"
           class="mx-auto max-w-xs w-full"
         >
           <img

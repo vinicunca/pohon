@@ -44,7 +44,7 @@ function getCategoryClass(cell: Cell<Product, unknown>) {
     return 'hidden'
   }
 
-  return 'font-medium align-middle border-r border-default'
+  return 'font-medium align-middle border-r border-border'
 }
 
 const columns: TableColumn<Product>[] = [{

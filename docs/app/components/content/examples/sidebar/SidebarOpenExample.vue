@@ -32,7 +32,7 @@ const items: NavigationMenuItem[] = [{
     </PSidebar>
 
     <div class="flex-1 flex flex-col">
-      <div class="h-(--ui-header-height) shrink-0 flex items-center px-4 border-b border-default">
+      <div class="h-(--ui-header-height) shrink-0 flex items-center px-4 border-b border-border">
         <PButton
           icon="i-lucide-panel-left"
           color="neutral"

@@ -8,10 +8,10 @@ export default {
   variants: {
     layout: {
       bubble: {
-        base: 'bg-background border border-default rounded-lg p-1',
+        base: 'bg-background border border-border rounded-lg p-1',
       },
       floating: {
-        base: 'bg-background border border-default rounded-lg p-1',
+        base: 'bg-background border border-border rounded-lg p-1',
       },
       fixed: {
         base: '',

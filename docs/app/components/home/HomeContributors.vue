@@ -65,7 +65,7 @@ const { width } = useElementSize(el)
             :src="`https://ipx.nuxt.com/s_56x56/gh_avatar/${contributor.username}`"
             :srcset="`https://ipx.nuxt.com/s_112x112/gh_avatar/${contributor.username} 2x`"
             :alt="contributor.username"
-            class="ring-2 ring-default lg:hover:ring-inverted transition rounded-full size-7"
+            class="ring-2 ring-ring lg:hover:ring-ring-inverted transition rounded-full size-7"
             loading="lazy"
           >
         </NuxtLink>
