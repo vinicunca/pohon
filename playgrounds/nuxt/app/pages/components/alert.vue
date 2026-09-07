@@ -10,13 +10,15 @@ const attrs = reactive({
 });
 
 function actions(color: string) {
-  return [{
-    label: 'Action',
-    color: color as any,
-    onClick() {
-      console.log('Action clicked');
+  return [
+    {
+      label: 'Action',
+      color: color as any,
+      onClick() {
+        console.log('Action clicked');
+      },
     },
-  }];
+  ];
 }
 
 function multipleActions(color: string) {

@@ -14,7 +14,7 @@ export const themeAlert = {
     avatar: 'shrink-0',
     avatarSize: '2xl',
     actions: 'flex shrink-0 flex-wrap gap-1.5',
-    close: 'pohon:color-text-inverted pohon:p-0',
+    close: 'pohon:p-0',
   },
 
   variants: {
@@ -28,6 +28,7 @@ export const themeAlert = {
         actions: 'mt-2.5 items-start',
       },
     },
+
     title: {
       true: {
         description: 'mt-1',
@@ -40,6 +41,7 @@ export const themeAlert = {
       variant: 'solid',
       class: {
         root: `bg-${color} color-text-inverted`,
+        close: 'pohon:color-text-inverted',
       },
     })),
     ...BRANDS.map((color) => ({

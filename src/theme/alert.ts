@@ -39,55 +39,64 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
   },
-  compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'solid',
-    class: {
-      root: `bg-${color} color-text-inverted`,
+  compoundVariants: [
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'solid',
+      class: {
+        root: `bg-${color} color-text-inverted`,
+      },
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'outline',
+      class: {
+        root: `text-${color} ring ring-inset ring-${color}/25`,
+      },
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'soft',
+      class: {
+        root: `bg-${color}/10 text-${color}`,
+      },
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'subtle',
+      class: {
+        root: `bg-${color}/10 text-${color} ring ring-inset ring-${color}/25`,
+      },
+    })),
+    {
+      color: 'neutral',
+      variant: 'solid',
+      class: {
+        root: 'color-text-inverted bg-background-inverted',
+      },
     },
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'outline',
-    class: {
-      root: `text-${color} ring ring-inset ring-${color}/25`,
+    {
+      color: 'neutral',
+      variant: 'outline',
+      class: {
+        root: 'color-text-highlighted bg-background ring ring-inset ring-ring',
+      },
     },
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'soft',
-    class: {
-      root: `bg-${color}/10 text-${color}`,
+    {
+      color: 'neutral',
+      variant: 'soft',
+      class: {
+        root: 'color-text-highlighted bg-background-elevated/50',
+      },
     },
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'subtle',
-    class: {
-      root: `bg-${color}/10 text-${color} ring ring-inset ring-${color}/25`,
+    {
+      color: 'neutral',
+      variant: 'subtle',
+      class: {
+        root: 'color-text-highlighted bg-background-elevated/50 ring ring-inset ring-ring-accented',
+      },
     },
-  })), {
-    color: 'neutral',
-    variant: 'solid',
-    class: {
-      root: 'color-text-inverted bg-background-inverted',
-    },
-  }, {
-    color: 'neutral',
-    variant: 'outline',
-    class: {
-      root: 'color-text-highlighted bg-background ring ring-inset ring-ring',
-    },
-  }, {
-    color: 'neutral',
-    variant: 'soft',
-    class: {
-      root: 'color-text-highlighted bg-background-elevated/50',
-    },
-  }, {
-    color: 'neutral',
-    variant: 'subtle',
-    class: {
-      root: 'color-text-highlighted bg-background-elevated/50 ring ring-inset ring-ring-accented',
-    },
-  }],
+  ],
   defaultVariants: {
     color: 'primary',
     variant: 'solid',
