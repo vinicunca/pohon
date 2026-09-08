@@ -14,7 +14,7 @@ const value = ref<ListboxItem>(items[2]!)
 </script>
 
 <template>
-  <UListbox
+  <PListbox
     v-model="value"
     :items="items"
     class="w-full"

@@ -1,4 +1,6 @@
 // @unocss-include
+
+import type { PThemeInputNumber } from 'pohon-ui';
 import { BRANDS } from '../design.constants';
 import { fieldGroupVariantWithRoot } from './theme.field-group';
 import { themeInput } from './theme.input';
@@ -6,14 +8,15 @@ import { themeInput } from './theme.input';
 export const themeInputNumber = {
   slots: {
     root: 'inline-flex items-center relative',
-    base: ['w-full rounded-md border-0 placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75', 'transition-colors'],
+    base: 'placeholder:color-text-dimmed border-0 rounded-md w-full transition-colors disabled:(opacity-75 cursor-not-allowed)',
     increment: 'flex items-center absolute',
     decrement: 'flex items-center absolute',
   },
   variants: {
     ...fieldGroupVariantWithRoot,
+
     color: {
-      ...Object.fromEntries(BRANDS.map((color: string) => [color, ''])),
+      ...Object.fromEntries(BRANDS.map((color) => [color, ''])),
       neutral: '',
     },
     size: {
@@ -56,94 +59,111 @@ export const themeInputNumber = {
       false: '',
     },
   },
-  compoundVariants: [...BRANDS.map((color: string) => ({
-    color,
-    variant: ['outline', 'subtle'],
-    class: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
-  })), ...BRANDS.map((color: string) => ({
-    color,
-    variant: ['soft', 'ghost'],
-    class: `outline-${color}/25 focus-visible:outline-3`,
-  })), ...BRANDS.map((color: string) => ({
-    color,
-    highlight: true,
-    class: `ring ring-inset ring-${color}`,
-  })), {
-    color: 'neutral',
-    variant: ['outline', 'subtle'],
-    class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
-  }, {
-    color: 'neutral',
-    variant: ['soft', 'ghost'],
-    class: 'outline-outline-inverted/25 focus-visible:outline-3',
-  }, {
-    color: 'neutral',
-    highlight: true,
-    class: 'ring ring-inset ring-ring-inverted',
-  }, {
-    orientation: 'horizontal',
-    decrement: false,
-    class: 'text-start',
-  }, {
-    decrement: true,
-    size: 'xs',
-    class: 'ps-7',
-  }, {
-    decrement: true,
-    size: 'sm',
-    class: 'ps-8',
-  }, {
-    decrement: true,
-    size: 'md',
-    class: 'ps-9',
-  }, {
-    decrement: true,
-    size: 'lg',
-    class: 'ps-10',
-  }, {
-    decrement: true,
-    size: 'xl',
-    class: 'ps-11',
-  }, {
-    increment: true,
-    size: 'xs',
-    class: 'pe-7',
-  }, {
-    increment: true,
-    size: 'sm',
-    class: 'pe-8',
-  }, {
-    increment: true,
-    size: 'md',
-    class: 'pe-9',
-  }, {
-    increment: true,
-    size: 'lg',
-    class: 'pe-10',
-  }, {
-    increment: true,
-    size: 'xl',
-    class: 'pe-11',
-  }, {
-    fixed: false,
-    size: 'xs',
-    class: 'md:text-xs',
-  }, {
-    fixed: false,
-    size: 'sm',
-    class: 'md:text-xs',
-  }, {
-    fixed: false,
-    size: 'md',
-    class: 'md:text-sm',
-  }, {
-    fixed: false,
-    size: 'lg',
-    class: 'md:text-sm',
-  }],
-  defaultVariants: {
-    size: 'md',
-    color: 'primary',
-    variant: 'outline',
-  },
-};
+  compoundVariants: [
+    ...BRANDS.map((color) => ({
+      color,
+      variant: ['outline', 'subtle'],
+      class: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
+    })),
+    ...BRANDS.map((color) => ({
+      color,
+      variant: ['soft', 'ghost'],
+      class: `outline-${color}/25 focus-visible:outline-3`,
+    })),
+    ...BRANDS.map((color) => ({
+      color,
+      highlight: true,
+      class: `ring ring-inset pohon:ring-${color}`,
+    })),
+    {
+      color: 'neutral',
+      variant: ['outline', 'subtle'],
+      class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
+    },
+    {
+      color: 'neutral',
+      variant: ['soft', 'ghost'],
+      class: 'outline-outline-inverted/25 focus-visible:outline-3',
+    },
+    {
+      color: 'neutral',
+      highlight: true,
+      class: 'ring ring-inset ring-ring-inverted',
+    },
+    {
+      orientation: 'horizontal',
+      decrement: false,
+      class: 'text-start',
+    },
+    {
+      decrement: true,
+      size: 'xs',
+      class: 'ps-7',
+    },
+    {
+      decrement: true,
+      size: 'sm',
+      class: 'ps-8',
+    },
+    {
+      decrement: true,
+      size: 'md',
+      class: 'ps-9',
+    },
+    {
+      decrement: true,
+      size: 'lg',
+      class: 'ps-10',
+    },
+    {
+      decrement: true,
+      size: 'xl',
+      class: 'ps-11',
+    },
+    {
+      increment: true,
+      size: 'xs',
+      class: 'pe-7',
+    },
+    {
+      increment: true,
+      size: 'sm',
+      class: 'pe-8',
+    },
+    {
+      increment: true,
+      size: 'md',
+      class: 'pe-9',
+    },
+    {
+      increment: true,
+      size: 'lg',
+      class: 'pe-10',
+    },
+    {
+      increment: true,
+      size: 'xl',
+      class: 'pe-11',
+    },
+    {
+      fixed: false,
+      size: 'xs',
+      class: 'md:text-xs',
+    },
+    {
+      fixed: false,
+      size: 'sm',
+      class: 'md:text-xs',
+    },
+    {
+      fixed: false,
+      size: 'md',
+      class: 'md:text-sm',
+    },
+    {
+      fixed: false,
+      size: 'lg',
+      class: 'md:text-sm',
+    },
+  ],
+} satisfies PThemeInputNumber;

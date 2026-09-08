@@ -11,7 +11,7 @@ const value = ref<ListboxItem[]>([])
 </script>
 
 <template>
-  <UListbox
+  <PListbox
     v-model="value"
     :items="items"
     multiple

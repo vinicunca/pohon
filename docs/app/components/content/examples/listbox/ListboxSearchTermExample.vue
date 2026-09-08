@@ -12,5 +12,5 @@ const value = ref()
 </script>
 
 <template>
-  <UListbox v-model="value" v-model:search-term="searchTerm" filter :items="items" class="w-full" />
+  <PListbox v-model="value" v-model:search-term="searchTerm" filter :items="items" class="w-full" />
 </template>

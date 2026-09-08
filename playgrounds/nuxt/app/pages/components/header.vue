@@ -1,22 +1,22 @@
 <script setup lang="ts">
 const items = [{
   label: 'Docs',
-  icon: 'i-lucide-book-open'
+  icon: 'i-lucide-book-open',
 }, {
   label: 'Components',
   icon: 'i-lucide-box',
-  active: true
+  active: true,
 }, {
   label: 'Figma',
   icon: 'i-simple-icons-figma',
   to: 'https://go.nuxt.com/figma-ui',
-  target: '_blank'
+  target: '_blank',
 }, {
   label: 'Releases',
   icon: 'i-lucide-rocket',
   to: 'https://github.com/nuxt/ui/releases',
-  target: '_blank'
-}]
+  target: '_blank',
+}];
 </script>
 
 <template>
@@ -32,7 +32,10 @@ const items = [{
     <template #right>
       <PColorModeButton />
 
-      <PTooltip text="Open on GitHub" :kbds="['meta', 'G']">
+      <PTooltip
+        text="Open on GitHub"
+        :kbds="['meta', 'G']"
+      >
         <PButton
           color="neutral"
           variant="ghost"
@@ -45,7 +48,11 @@ const items = [{
     </template>
 
     <template #body>
-      <PNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+      <PNavigationMenu
+        :items="items"
+        orientation="vertical"
+        class="-mx-2.5"
+      />
     </template>
   </PHeader>
 </template>

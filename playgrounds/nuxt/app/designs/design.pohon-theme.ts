@@ -48,7 +48,12 @@ import { themeFieldGroup } from './pohon-theme/theme.field-group';
 import { themeFileUpload } from './pohon-theme/theme.file-upload';
 import { themeFooter, themeFooterColumns } from './pohon-theme/theme.footer';
 import { themeFormField } from './pohon-theme/theme.form-field';
+import { themeHeader } from './pohon-theme/theme.header';
 import { themeInput } from './pohon-theme/theme.input';
+import { themeInputDate } from './pohon-theme/theme.input-date';
+import { themeInputMenu } from './pohon-theme/theme.input-menu';
+import { themeInputNumber } from './pohon-theme/theme.input-number';
+import { themeInputRating } from './pohon-theme/theme.input-rating';
 import { themeKbd } from './pohon-theme/theme.kbd';
 import { themeNavigationMenu } from './pohon-theme/theme.navigation-menu';
 import { themeSelect } from './pohon-theme/theme.select';
@@ -107,7 +112,12 @@ export const uiTheme = {
   footer: themeFooter,
   footerColumns: themeFooterColumns,
   formField: themeFormField,
+  header: themeHeader,
   input: themeInput,
+  inputDate: themeInputDate,
+  inputMenu: themeInputMenu,
+  inputNumber: themeInputNumber,
+  inputRating: themeInputRating,
   kbd: themeKbd,
   navigationMenu: themeNavigationMenu,
   select: themeSelect,

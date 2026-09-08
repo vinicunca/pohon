@@ -1,11 +1,13 @@
 // @unocss-include
+
+import type { PThemeInputRating } from 'pohon-ui';
 import { BRANDS } from '../design.constants';
 
 export const themeInputRating = {
   slots: {
     root: '',
-    item: ['relative inline-block cursor-pointer select-none rounded-sm has-focus-visible:outline-3', 'transition'],
-    indicator: 'text-transparent outline-none opacity-(--akar-rating-item-step-opacity) w-(--akar-rating-item-step-width) inset-0 absolute z-(--akar-rating-item-step-z-index) overflow-hidden',
+    item: 'rounded-sm inline-block cursor-pointer select-none transition relative has-focus-visible:outline-3',
+    indicator: 'text-transparent outline-none opacity-$akar-rating-item-step-opacity w-$akar-rating-item-step-width inset-0 absolute z-$akar-rating-item-step-z-index overflow-hidden',
     icon: 'block',
     emptyIcon: 'color-text-muted h-full w-full block pointer-events-none',
   },
@@ -41,7 +43,7 @@ export const themeInputRating = {
       },
     },
     color: {
-      ...Object.fromEntries(BRANDS.map((color: string) => [color, {
+      ...Object.fromEntries(BRANDS.map((color) => [color, {
         indicator: `data-[state=active]:color-${color}`,
         item: `outline-${color}/25`,
       }])),
@@ -65,15 +67,13 @@ export const themeInputRating = {
       false: {},
     },
   },
-  compoundVariants: [{
-    readonly: false,
-    disabled: false,
-    class: {
-      item: 'hover:scale-110',
+  compoundVariants: [
+    {
+      readonly: false,
+      disabled: false,
+      class: {
+        item: 'hover:scale-110',
+      },
     },
-  }],
-  defaultVariants: {
-    color: 'primary',
-    size: 'md',
-  },
-};
+  ],
+} satisfies PThemeInputRating;

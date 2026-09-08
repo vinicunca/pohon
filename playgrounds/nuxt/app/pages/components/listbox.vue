@@ -42,7 +42,7 @@ const items = [
   </Navbar>
 
   <Matrix v-slot="props" :attrs="attrs" container-class="w-48">
-    <UListbox
+    <PListbox
       v-model="value"
       autofocus
       :items="virtualize ? virtualItems : items"

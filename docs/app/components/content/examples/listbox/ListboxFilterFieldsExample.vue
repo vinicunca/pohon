@@ -18,7 +18,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <UListbox
+  <PListbox
     :items="users || []"
     :loading="status === 'pending'"
     :filter-fields="['label', 'email']"
@@ -32,5 +32,5 @@ onMounted(() => {
         {{ item.email }}
       </span>
     </template>
-  </UListbox>
+  </PListbox>
 </template>

@@ -261,6 +261,7 @@ export type PThemeHeader = UvConfig<typeof ui>['header'];
 export type PThemeInputDate = UvConfig<typeof ui>['inputDate'];
 export type PThemeInputMenu = UvConfig<typeof ui>['inputMenu'];
 export type PThemeInputNumber = UvConfig<typeof ui>['inputNumber'];
+export type PThemeInputRating = UvConfig<typeof ui>['inputRating'];
 export type PThemeInputTags = UvConfig<typeof ui>['inputTags'];
 export type PThemeInputTime = UvConfig<typeof ui>['inputTime'];
 export type PThemeInput = UvConfig<typeof ui>['input'];
