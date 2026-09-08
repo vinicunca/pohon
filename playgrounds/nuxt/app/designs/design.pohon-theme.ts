@@ -54,7 +54,11 @@ import { themeInputDate } from './pohon-theme/theme.input-date';
 import { themeInputMenu } from './pohon-theme/theme.input-menu';
 import { themeInputNumber } from './pohon-theme/theme.input-number';
 import { themeInputRating } from './pohon-theme/theme.input-rating';
+import { themeInputTags } from './pohon-theme/theme.input-tags';
+import { themeInputTime } from './pohon-theme/theme.input-time';
 import { themeKbd } from './pohon-theme/theme.kbd';
+import { themeLink } from './pohon-theme/theme.link';
+import { themeListbox } from './pohon-theme/theme.listbox';
 import { themeNavigationMenu } from './pohon-theme/theme.navigation-menu';
 import { themeSelect } from './pohon-theme/theme.select';
 import { themeSwitch } from './pohon-theme/theme.switch';
@@ -118,7 +122,11 @@ export const uiTheme = {
   inputMenu: themeInputMenu,
   inputNumber: themeInputNumber,
   inputRating: themeInputRating,
+  inputTags: themeInputTags,
+  inputTime: themeInputTime,
   kbd: themeKbd,
+  link: themeLink,
+  listbox: themeListbox,
   navigationMenu: themeNavigationMenu,
   select: themeSelect,
   switch: themeSwitch,

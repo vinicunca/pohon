@@ -52,7 +52,7 @@ const locale = ref("en");
 </script>
 
 <template>
-  <ULocaleSelect v-model="locale" :locales="[en, es, fr]" />
+  <PLocaleSelect v-model="locale" :locales="[en, es, fr]" />
 </template>
 ```
 
@@ -71,7 +71,7 @@ const { locale, setLocale } = useI18n();
 </script>
 
 <template>
-  <ULocaleSelect
+  <PLocaleSelect
     :model-value="locale"
     :locales="Object.values(locales)"
     @update:model-value="setLocale($event)"
@@ -94,7 +94,7 @@ const { locale, setLocale } = useI18n();
 </script>
 
 <template>
-  <ULocaleSelect
+  <PLocaleSelect
     :model-value="locale"
     :locales="Object.values(locales)"
     @update:model-value="setLocale($event)"

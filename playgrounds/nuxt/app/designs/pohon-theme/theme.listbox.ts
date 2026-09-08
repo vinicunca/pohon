@@ -12,8 +12,8 @@ export const themeListbox = {
     empty: 'color-text-muted text-center',
     loading: 'color-text-muted flex items-center justify-center',
     loadingIcon: 'shrink-0 animate-spin',
-    item: ['group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', 'transition-colors before:transition-colors'],
-    itemLeadingIcon: ['shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text', 'transition-colors'],
+    item: 'group color-text data-[highlighted]:not-[[data-disabled]]:color-text-highlighted data-[highlighted]:not-[[data-disabled]]:before:bg-background-elevated/50 outline-none flex w-full select-none transition-colors items-start relative before:(rounded-md content-empty transition-colors inset-px absolute -z-1) data-[disabled]:(opacity-75 cursor-not-allowed)',
+    itemLeadingIcon: 'color-text-dimmed [.group[data-highlighted]:not([data-disabled])_&]:color-text shrink-0 transition-colors',
     itemLeadingAvatar: 'shrink-0',
     itemLeadingAvatarSize: '',
     itemLeadingChip: 'shrink-0',
@@ -113,21 +113,20 @@ export const themeListbox = {
       true: '',
     },
   },
-  compoundVariants: [...BRANDS.map((color: string) => ({
-    color,
-    highlight: true,
-    class: {
-      root: `ring ring-inset ring-${color}`,
+  compoundVariants: [
+    ...BRANDS.map((color: string) => ({
+      color,
+      highlight: true,
+      class: {
+        root: `ring ring-inset ring-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      highlight: true,
+      class: {
+        root: 'ring ring-inset ring-ring-inverted',
+      },
     },
-  })), {
-    color: 'neutral',
-    highlight: true,
-    class: {
-      root: 'ring ring-inset ring-ring-inverted',
-    },
-  }],
-  defaultVariants: {
-    color: 'primary',
-    size: 'md',
-  },
+  ],
 };
