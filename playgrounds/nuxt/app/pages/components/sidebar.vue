@@ -1,44 +1,49 @@
 <script setup lang="ts">
-import type { UIMessage } from 'ai'
-import { useChat } from '@ai-sdk/vue'
-import theme from '#build/ui/sidebar'
+import type { UIMessage } from 'ai';
+import { useChat } from '@ai-sdk/vue';
+import theme from '#build/ui/sidebar';
 
-const variants = Object.keys(theme.variants.variant)
+const variants = Object.keys(theme.variants.variant);
 
-const input = ref('')
-const openLeft = ref(false)
-const openRight = ref(true)
+const input = ref('');
+const openLeft = ref(false);
+const openRight = ref(true);
 
-const variant = ref('sidebar' as keyof typeof theme.variants.variant)
+const variant = ref('sidebar' as keyof typeof theme.variants.variant);
 
-const initialMessages: UIMessage[] = [{
+const initialMessages: Array<UIMessage> = [{
   id: '1',
   role: 'user',
-  parts: [{ type: 'text', text: 'What is Pohon UI?' }]
+  parts: [{ type: 'text', text: 'What is Pohon UI?' }],
 }, {
   id: '2',
   role: 'assistant',
-  parts: [{ type: 'text', text: 'Pohon UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }]
-}]
+  parts: [{ type: 'text', text: 'Pohon UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }],
+}];
 
 const { messages, status, error, sendMessage, regenerate, stop } = useChat({
   messages: initialMessages,
   onError(error) {
-    console.error(error)
-  }
-})
+    console.error(error);
+  },
+});
 
 function onSubmit() {
-  if (!input.value.trim()) return
+  if (!input.value.trim()) {
+    return;
+  }
 
-  sendMessage({ text: input.value })
+  sendMessage({ text: input.value });
 
-  input.value = ''
+  input.value = '';
 }
 </script>
 
 <template>
-  <div class="flex flex-1" :class="[variant === 'inset' && 'bg-neutral-50 dark:bg-neutral-950']">
+  <div
+    class="flex flex-1"
+    :class="[variant === 'inset' && 'bg-neutral-50 dark:bg-neutral-950']"
+  >
     <PSidebar
       v-model:open="openLeft"
       side="left"
@@ -49,7 +54,10 @@ function onSubmit() {
       :ui="{ container: 'relative', body: 'py-2' }"
     >
       <template #title="{ state }">
-        <Logo class="h-5 w-auto" :collapsed="state === 'collapsed'" />
+        <Logo
+          class="h-5 w-auto"
+          :collapsed="state === 'collapsed'"
+        />
       </template>
 
       <PNavigationMenu
@@ -59,9 +67,12 @@ function onSubmit() {
       />
     </PSidebar>
 
-    <div class="flex-1 flex flex-col overflow-hidden lg:peer-data-[variant=floating]:my-4 peer-data-[variant=inset]:m-4 lg:peer-data-[variant=inset]:mx-0 peer-data-[variant=inset]:rounded-xl peer-data-[variant=inset]:shadow-sm peer-data-[variant=inset]:ring peer-data-[variant=inset]:ring-ring bg-background">
-      <Navbar class="relative w-full">
-        <PSelect v-model="variant" :items="variants" />
+    <div class="bg-background flex flex-1 flex-col overflow-hidden peer-data-[variant=inset]:m-4 peer-data-[variant=inset]:rounded-xl peer-data-[variant=inset]:ring peer-data-[variant=inset]:ring-ring peer-data-[variant=inset]:shadow-sm lg:peer-data-[variant=floating]:my-4 lg:peer-data-[variant=inset]:mx-0">
+      <Navbar class="w-full relative">
+        <PSelect
+          v-model="variant"
+          :items="variants"
+        />
 
         <PButton
           icon="i-lucide-panel-left"
@@ -81,7 +92,7 @@ function onSubmit() {
         />
       </Navbar>
 
-      <div class="flex-1 p-4 sm:px-6">
+      <div class="p-4 flex-1 sm:px-6">
         <PSkeleton class="size-full animate-pulse" />
       </div>
     </div>
@@ -110,7 +121,12 @@ function onSubmit() {
           size="sm"
           @submit="onSubmit"
         >
-          <PChatPromptSubmit size="sm" :status="status" @stop="stop()" @reload="regenerate()" />
+          <PChatPromptSubmit
+            size="sm"
+            :status="status"
+            @stop="stop()"
+            @reload="regenerate()"
+          />
         </PChatPrompt>
       </template>
     </PSidebar>

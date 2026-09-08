@@ -82,7 +82,15 @@ import { themePricingTable } from './pohon-theme/theme.pricing-table';
 import { themeProgress } from './pohon-theme/theme.progress';
 import { themeProgressGroup } from './pohon-theme/theme.progress-group';
 import { themeRadioGroup } from './pohon-theme/theme.radio-group';
+import { themeScrollArea } from './pohon-theme/theme.scroll-area';
 import { themeSelect } from './pohon-theme/theme.select';
+import { themeSelectMenu } from './pohon-theme/theme.select-menu';
+import { themeSeparator } from './pohon-theme/theme.separator';
+import { themeSidebar } from './pohon-theme/theme.sidebar';
+import { themeSlideover } from './pohon-theme/theme.slideover';
+import { themeSlider } from './pohon-theme/theme.slider';
+import { themeSplitter } from './pohon-theme/theme.splitter';
+import { themeStepper } from './pohon-theme/theme.stepper';
 import { themeSwitch } from './pohon-theme/theme.switch';
 import { themeUser } from './pohon-theme/theme.user';
 
@@ -182,7 +190,18 @@ export const uiTheme = {
   progress: themeProgress,
   progressGroup: themeProgressGroup,
   radioGroup: themeRadioGroup,
+  scrollArea: themeScrollArea,
   select: themeSelect,
+  selectMenu: themeSelectMenu,
+  separator: themeSeparator,
+  sidebar: themeSidebar,
+  skeleton: {
+    base: 'rounded-md bg-background-elevated animate-pulse',
+  },
+  slideover: themeSlideover,
+  slider: themeSlider,
+  splitter: themeSplitter,
+  stepper: themeStepper,
   switch: themeSwitch,
   user: themeUser,
 } satisfies AppConfigInput['ui'];

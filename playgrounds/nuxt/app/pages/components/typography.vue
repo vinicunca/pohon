@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Markdown } from '@comark/vue'
-import shiki from '@comark/vue/plugins/shiki'
+import { Markdown } from '@comark/vue';
+import shiki from '@comark/vue/plugins/shiki';
 
 const markdown = ref(`
 # Typography
@@ -381,11 +381,14 @@ Callouts add eye catching context to your content.
 :::
 
 ::
-`)
+`);
 </script>
 
 <template>
-  <div class="p-8 max-w-2xl mx-auto">
-    <Markdown :value="markdown" :plugins="[shiki()]" />
+  <div class="mx-auto p-8 max-w-2xl">
+    <Markdown
+      :value="markdown"
+      :plugins="[shiki()]"
+    />
   </div>
 </template>

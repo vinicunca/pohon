@@ -1,42 +1,42 @@
 <script setup lang="ts">
-import { h, resolveComponent } from 'vue'
-import { upperFirst } from 'scule'
-import type { TableColumn, TableRow } from 'pohon-ui'
-import type { Column, RowPinningState } from '@tanstack/vue-table'
-import { getPaginationRowModel } from '@tanstack/vue-table'
-import { useClipboard, refDebounced } from '@vueuse/core'
+import type { Column, RowPinningState } from '@tanstack/vue-table';
+import type { TableColumn, TableRow } from 'pohon-ui';
+import { getPaginationRowModel } from '@tanstack/vue-table';
+import { refDebounced, useClipboard } from '@vueuse/core';
+import { upperFirst } from 'scule';
+import { h, resolveComponent } from 'vue';
 
-const PButton = resolveComponent('PButton')
-const PCheckbox = resolveComponent('PCheckbox')
-const PBadge = resolveComponent('PBadge')
-const PDropdownMenu = resolveComponent('PDropdownMenu')
+const PButton = resolveComponent('PButton');
+const PCheckbox = resolveComponent('PCheckbox');
+const PBadge = resolveComponent('PBadge');
+const PDropdownMenu = resolveComponent('PDropdownMenu');
 
-const toast = useToast()
-const { copy } = useClipboard()
+const toast = useToast();
+const { copy } = useClipboard();
 
 type Payment = {
-  id: string
-  date: string
-  status: 'paid' | 'failed' | 'refunded'
-  firstName: string
-  lastName: string
-  email: string
-  amount: number
-}
+  id: string;
+  date: string;
+  status: 'paid' | 'failed' | 'refunded';
+  firstName: string;
+  lastName: string;
+  email: string;
+  amount: number;
+};
 
-const table = useTemplateRef('table')
+const table = useTemplateRef('table');
 
-const virtualize = ref(false)
+const virtualize = ref(false);
 
-const statuses: Payment['status'][] = ['paid', 'failed', 'refunded']
-const domains = ['gmail.com', 'outlook.com', 'yahoo.com', 'company.com', 'mail.com']
-const firstNames = ['john', 'jane', 'alex', 'sarah', 'mike', 'emma', 'david', 'lisa', 'chris', 'anna']
-const lastNames = ['smith', 'johnson', 'williams', 'brown', 'jones', 'garcia', 'miller', 'davis', 'rodriguez', 'martinez']
+const statuses: Array<Payment['status']> = ['paid', 'failed', 'refunded'];
+const domains = ['gmail.com', 'outlook.com', 'yahoo.com', 'company.com', 'mail.com'];
+const firstNames = ['john', 'jane', 'alex', 'sarah', 'mike', 'emma', 'david', 'lisa', 'chris', 'anna'];
+const lastNames = ['smith', 'johnson', 'williams', 'brown', 'jones', 'garcia', 'miller', 'davis', 'rodriguez', 'martinez'];
 
 function makeData(id: number | string, index?: number): Payment {
-  const i = index ?? Number(id)
-  const firstName = firstNames[i % firstNames.length]!
-  const lastName = lastNames[i % lastNames.length]!
+  const i = index ?? Number(id);
+  const firstName = firstNames[i % firstNames.length]!;
+  const lastName = lastNames[i % lastNames.length]!;
 
   return {
     id: id.toString(),
@@ -45,83 +45,83 @@ function makeData(id: number | string, index?: number): Payment {
     lastName,
     status: statuses[i % statuses.length]!,
     email: `${firstName}.${lastName}${i > 100 ? Math.floor(i / 10) : ''}@${domains[i % domains.length]}`,
-    amount: Math.floor(Math.random() * 900) + 100
-  }
+    amount: Math.floor(Math.random() * 900) + 100,
+  };
 }
 
-const data = useState<Payment[]>('data', () => Array.from({ length: 1000 }, (_, i) => makeData(45800 - i, i)))
+const data = useState<Array<Payment>>('data', () => Array.from({ length: 1000 }, (_, i) => makeData(45800 - i, i)));
 
 function getRowItems(row: TableRow<Payment>) {
   return [{
     type: 'label' as const,
-    label: 'Actions'
+    label: 'Actions',
   }, {
     label: 'Copy payment ID',
     onSelect() {
-      copy(row.original.id)
+      copy(row.original.id);
 
       toast.add({
         title: 'Payment ID copied to clipboard!',
         color: 'success',
-        icon: 'i-lucide-circle-check'
-      })
-    }
+        icon: 'i-lucide-circle-check',
+      });
+    },
   }, {
     label: row.getIsExpanded() ? 'Collapse' : 'Expand',
     onSelect() {
-      row.toggleExpanded()
-    }
+      row.toggleExpanded();
+    },
   }, {
-    type: 'separator' as const
+    type: 'separator' as const,
   }, {
-    label: 'View customer'
+    label: 'View customer',
   }, {
-    label: 'View payment details'
-  }]
+    label: 'View payment details',
+  }];
 }
 
-const rowPinning = ref<RowPinningState>({ top: [], bottom: [] })
+const rowPinning = ref<RowPinningState>({ top: [], bottom: [] });
 
-const columns: TableColumn<Payment>[] = [{
+const columns: Array<TableColumn<Payment>> = [{
   id: 'pin',
   cell: ({ row }) => h(PButton, {
     'icon': row.getIsPinned() ? 'i-lucide-pin-off' : 'i-lucide-pin',
     'color': row.getIsPinned() ? 'primary' : 'neutral',
     'variant': 'ghost',
     'aria-label': row.getIsPinned() ? 'Unpin row' : 'Pin row to top',
-    'onClick': () => row.pin(row.getIsPinned() ? false : 'top')
+    'onClick': () => row.pin(row.getIsPinned() ? false : 'top'),
   }),
   enableSorting: false,
   enableHiding: false,
-  size: 64
+  size: 64,
 }, {
   id: 'select',
   header: ({ table }) => h(PCheckbox, {
     'modelValue': table.getIsSomePageRowsSelected() ? 'indeterminate' : table.getIsAllPageRowsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => table.toggleAllPageRowsSelected(!!value),
-    'aria-label': 'Select all'
+    'aria-label': 'Select all',
   }),
   cell: ({ row }) => h(PCheckbox, {
     'modelValue': row.getIsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => row.toggleSelected(!!value),
-    'aria-label': 'Select row'
+    'aria-label': 'Select row',
   }),
   enableSorting: false,
   enableHiding: false,
-  size: 32
+  size: 32,
 }, {
   accessorKey: 'id',
   header: ({ column }) => getPinnedHeader(column, '#', 'left'),
   cell: ({ row }) => `#${row.getValue('id')}`,
-  size: 84
+  size: 84,
 }, {
   accessorKey: 'date',
   header: 'Date',
   meta: {
     class: {
       td: 'text-center font-600',
-      th: 'text-right text-green-500 w-48'
-    }
+      th: 'text-right text-green-500 w-48',
+    },
   },
   cell: ({ row }) => {
     return new Date(row.getValue('date')).toLocaleString('en-US', {
@@ -130,9 +130,9 @@ const columns: TableColumn<Payment>[] = [{
       hour: '2-digit',
       minute: '2-digit',
       hour12: false,
-      timeZone: 'UTC'
-    })
-  }
+      timeZone: 'UTC',
+    });
+  },
 }, {
   accessorKey: 'status',
   header: ({ column }) => getPinnedHeader(column, 'Status', 'left'),
@@ -140,34 +140,34 @@ const columns: TableColumn<Payment>[] = [{
     const color = ({
       paid: 'success' as const,
       failed: 'error' as const,
-      refunded: 'neutral' as const
-    })[row.getValue('status') as string]
+      refunded: 'neutral' as const,
+    })[row.getValue('status') as string];
 
-    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'));
   },
-  size: 102
+  size: 102,
 }, {
   accessorKey: 'firstName',
   header: ({ column }) => getPinnedHeader(column, 'First Name', 'left'),
   meta: {
     class: {
-      td: 'capitalize'
-    }
+      td: 'capitalize',
+    },
   },
-  size: 128
+  size: 128,
 }, {
   accessorKey: 'lastName',
   header: ({ column }) => getPinnedHeader(column, 'Last Name', 'left'),
   meta: {
     class: {
-      td: 'capitalize'
-    }
+      td: 'capitalize',
+    },
   },
-  size: 128
+  size: 128,
 }, {
   accessorKey: 'email',
   header: ({ column }) => {
-    const isSorted = column.getIsSorted()
+    const isSorted = column.getIsSorted();
 
     return h(PButton, {
       color: 'neutral',
@@ -175,66 +175,66 @@ const columns: TableColumn<Payment>[] = [{
       label: 'Email',
       icon: isSorted ? (isSorted === 'asc' ? 'i-lucide-arrow-up-narrow-wide' : 'i-lucide-arrow-down-wide-narrow') : 'i-lucide-arrow-up-down',
       class: '-mx-2.5',
-      onClick: () => column.toggleSorting(column.getIsSorted() === 'asc')
-    })
+      onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
+    });
   },
   meta: {
     class: {
-      td: 'lowercase'
-    }
-  }
+      td: 'lowercase',
+    },
+  },
 }, {
   accessorKey: 'amount',
   header: ({ column }) => getPinnedHeader(column, 'Amount', 'right'),
   meta: {
     class: {
       th: 'text-right',
-      td: 'text-right font-500'
-    }
+      td: 'text-right font-500',
+    },
   },
   footer: ({ column }) => {
-    const total = column.getFacetedRowModel().rows.reduce((acc: number, row: TableRow<Payment>) => acc + Number.parseFloat(row.getValue('amount')), 0)
+    const total = column.getFacetedRowModel().rows.reduce((acc: number, row: TableRow<Payment>) => acc + Number.parseFloat(row.getValue('amount')), 0);
     const formatted = new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'EUR'
-    }).format(total)
-    return `Total: ${formatted}`
+      currency: 'EUR',
+    }).format(total);
+    return `Total: ${formatted}`;
   },
   cell: ({ row }) => {
-    const amount = Number.parseFloat(row.getValue('amount'))
+    const amount = Number.parseFloat(row.getValue('amount'));
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'EUR'
-    }).format(amount)
+      currency: 'EUR',
+    }).format(amount);
   },
-  size: 117
+  size: 117,
 }, {
   id: 'actions',
   enableHiding: false,
   meta: {
     class: {
-      td: 'text-right'
-    }
+      td: 'text-right',
+    },
   },
   cell: ({ row }) => {
     return h(PDropdownMenu, {
       'content': {
-        align: 'end'
+        align: 'end',
       },
       'items': getRowItems(row),
-      'aria-label': 'Actions dropdown'
+      'aria-label': 'Actions dropdown',
     }, () => h(PButton, {
       'icon': 'i-lucide-ellipsis-vertical',
       'color': 'neutral',
       'variant': 'ghost',
-      'aria-label': 'Actions dropdown'
-    }))
+      'aria-label': 'Actions dropdown',
+    }));
   },
-  size: 64
-}]
+  size: 64,
+}];
 
 function getPinnedHeader(column: Column<Payment>, label: string, position: 'left' | 'right') {
-  const isPinned = column.getIsPinned()
+  const isPinned = column.getIsPinned();
 
   return h(PButton, {
     color: 'neutral',
@@ -243,48 +243,48 @@ function getPinnedHeader(column: Column<Payment>, label: string, position: 'left
     icon: isPinned ? 'i-lucide-pin-off' : 'i-lucide-pin',
     class: '-mx-2.5',
     onClick() {
-      column.pin(isPinned === position ? false : position)
-    }
-  })
+      column.pin(isPinned === position ? false : position);
+    },
+  });
 }
 
-const loading = ref(true)
+const loading = ref(true);
 const columnPinning = ref({
   left: ['pin', 'select'],
-  right: ['actions']
-})
+  right: ['actions'],
+});
 
 const pagination = ref({
   pageIndex: 0,
-  pageSize: 50
-})
+  pageSize: 50,
+});
 
 function addElement() {
-  const maxId = Math.max(...data.value.map(item => Number(item.id)))
-  data.value.unshift(makeData(maxId + 1))
+  const maxId = Math.max(...data.value.map((item) => Number(item.id)));
+  data.value.unshift(makeData(maxId + 1));
 }
 
 function randomize() {
-  data.value.sort(() => Math.random() - 0.5)
+  data.value.sort(() => Math.random() - 0.5);
 }
 
-const rowSelection = ref<Record<string, boolean>>({})
+const rowSelection = ref<Record<string, boolean>>({});
 
 function onSelect(e: Event, row: TableRow<Payment>) {
-  row.toggleSelected(!row.getIsSelected())
+  row.toggleSelected(!row.getIsSelected());
 }
 
-const contextmenuRow = ref<TableRow<Payment> | null>(null)
-const contextmenuItems = computed(() => contextmenuRow.value ? getRowItems(contextmenuRow.value) : [])
+const contextmenuRow = ref<TableRow<Payment> | null>(null);
+const contextmenuItems = computed(() => contextmenuRow.value ? getRowItems(contextmenuRow.value) : []);
 
 function onContextmenu(e: Event, row: TableRow<Payment>) {
-  contextmenuRow.value = row
+  contextmenuRow.value = row;
 }
 
-const popoverOpen = ref(false)
-const popoverOpenDebounced = refDebounced(popoverOpen, 1)
-const popoverAnchor = ref({ x: 0, y: 0 })
-const popoverRow = ref<TableRow<Payment> | null>(null)
+const popoverOpen = ref(false);
+const popoverOpenDebounced = refDebounced(popoverOpen, 1);
+const popoverAnchor = ref({ x: 0, y: 0 });
+const popoverRow = ref<TableRow<Payment> | null>(null);
 
 const reference = computed(() => ({
   getBoundingClientRect: () =>
@@ -295,26 +295,29 @@ const reference = computed(() => ({
       right: popoverAnchor.value.x,
       top: popoverAnchor.value.y,
       bottom: popoverAnchor.value.y,
-      ...popoverAnchor.value
-    } as DOMRect)
-}))
+      ...popoverAnchor.value,
+    } as DOMRect),
+}));
 
 function onHover(_e: Event, row: TableRow<Payment> | null) {
-  popoverRow.value = row
+  popoverRow.value = row;
 
-  popoverOpen.value = !!row
+  popoverOpen.value = !!row;
 }
 
 onMounted(() => {
   setTimeout(() => {
-    loading.value = false
-  }, 1300)
-})
+    loading.value = false;
+  }, 1300);
+});
 </script>
 
 <template>
   <Navbar>
-    <PSwitch v-model="virtualize" label="Virtualize" />
+    <PSwitch
+      v-model="virtualize"
+      label="Virtualize"
+    />
 
     <PInput
       :model-value="(table?.tableApi?.getColumn('email')?.getFilterValue() as string)"
@@ -323,8 +326,16 @@ onMounted(() => {
       @update:model-value="table?.tableApi?.getColumn('email')?.setFilterValue($event)"
     />
 
-    <PButton color="neutral" label="Randomize" @click="randomize" />
-    <PButton color="neutral" label="Add element" @click="addElement" />
+    <PButton
+      color="neutral"
+      label="Randomize"
+      @click="randomize"
+    />
+    <PButton
+      color="neutral"
+      label="Add element"
+      @click="addElement"
+    />
 
     <PDropdownMenu
       :items="table?.tableApi?.getAllColumns().filter(column => column.getCanHide()).map(column => ({
@@ -336,7 +347,7 @@ onMounted(() => {
         },
         onSelect(e: Event) {
           e.preventDefault()
-        }
+        },
       }))"
       :content="{ align: 'end' }"
     >
@@ -350,7 +361,7 @@ onMounted(() => {
     </PDropdownMenu>
   </Navbar>
 
-  <div class="flex flex-col flex-1 gap-4 w-full max-h-[calc(100vh-7rem)]">
+  <div class="flex flex-1 flex-col gap-4 max-h-[calc(100vh-7rem)] w-full">
     <PContextMenu :items="contextmenuItems">
       <PTable
         ref="table"
@@ -366,8 +377,8 @@ onMounted(() => {
           data,
           pagination,
           paginationOptions: {
-            getPaginationRowModel: getPaginationRowModel()
-          }
+            getPaginationRowModel: getPaginationRowModel(),
+          },
         }"
         sticky
         class="border border-border-accented rounded-sm"
@@ -385,7 +396,11 @@ onMounted(() => {
       </PTable>
     </PContextMenu>
 
-    <PPopover :content="{ side: 'top', sideOffset: 16, updatePositionStrategy: 'always' }" :open="popoverOpenDebounced" :reference="reference">
+    <PPopover
+      :content="{ side: 'top', sideOffset: 16, updatePositionStrategy: 'always' }"
+      :open="popoverOpenDebounced"
+      :reference="reference"
+    >
       <template #content>
         <div class="p-4">
           {{ popoverRow?.original?.id }}
@@ -393,13 +408,13 @@ onMounted(() => {
       </template>
     </PPopover>
 
-    <div class="flex items-center justify-between gap-3">
+    <div class="flex gap-3 items-center justify-between">
       <div class="text-sm color-text-muted">
         {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length || 0 }} of
         {{ table?.tableApi?.getFilteredRowModel().rows.length || 0 }} row(s) selected.
       </div>
 
-      <div class="flex items-center gap-1.5">
+      <div class="flex gap-1.5 items-center">
         <PPagination
           :disabled="!!virtualize"
           :page="(table?.tableApi?.getState().pagination.pageIndex ?? 0) + 1"

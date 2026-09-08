@@ -1,56 +1,75 @@
 <script lang="ts" setup>
-import type { TimelineItem } from 'pohon-ui'
-import theme from '#build/ui/timeline'
+import type { TimelineItem } from 'pohon-ui';
+import theme from '#build/ui/timeline';
 
-const sizes = Object.keys(theme.variants.size)
-const colors = Object.keys(theme.variants.color)
-const orientations = Object.keys(theme.variants.orientation)
+const sizes = Object.keys(theme.variants.size);
+const colors = Object.keys(theme.variants.color);
+const orientations = Object.keys(theme.variants.orientation);
 
-const color = ref(theme.defaultVariants.color)
-const size = ref(theme.defaultVariants.size)
-const orientation = ref('vertical' as keyof typeof theme.variants.orientation)
-const reverse = ref(false)
+const color = ref(theme.defaultVariants.color);
+const size = ref(theme.defaultVariants.size);
+const orientation = ref('vertical' as keyof typeof theme.variants.orientation);
+const reverse = ref(false);
 
 const items = [{
   date: 'Mar 15, 2025',
   title: 'Project Kickoff',
   description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.',
   icon: 'i-lucide-rocket',
-  value: 'kickoff'
+  value: 'kickoff',
 }, {
   date: 'Mar 22, 2025',
   title: 'Design Phase',
   description: 'User research and design workshops. Created wireframes and prototypes for user testing',
   icon: 'i-lucide-palette',
-  value: 'design'
+  value: 'design',
 }, {
   date: 'Mar 29, 2025',
   title: 'Development Sprint',
   description: 'Frontend and backend development. Implemented core features and integrated with APIs.',
   icon: 'i-lucide-code',
-  value: 'development'
+  value: 'development',
 }, {
   date: 'Apr 5, 2025',
   title: 'Testing & Deployment',
   description: 'QA testing and performance optimization. Deployed the application to production.',
   icon: 'i-lucide-check-circle',
-  value: 'deployment'
-}] satisfies TimelineItem[]
+  value: 'deployment',
+}] satisfies Array<TimelineItem>;
 
-const value = ref('kickoff')
+const value = ref('kickoff');
 
 function onSelect(_e: Event, item: TimelineItem) {
-  value.value = item.value as string
+  value.value = item.value as string;
 }
 </script>
 
 <template>
   <Navbar>
-    <PSelect v-model="color" :items="colors" placeholder="Color" />
-    <PSelect v-model="size" :items="sizes" placeholder="Size" />
-    <PSelect v-model="orientation" :items="orientations" placeholder="Orientation" />
-    <PSelect v-model="value" :items="items.map(item => item.value)" placeholder="Value" />
-    <PSwitch v-model="reverse" label="Reverse" />
+    <PSelect
+      v-model="color"
+      :items="colors"
+      placeholder="Color"
+    />
+    <PSelect
+      v-model="size"
+      :items="sizes"
+      placeholder="Size"
+    />
+    <PSelect
+      v-model="orientation"
+      :items="orientations"
+      placeholder="Orientation"
+    />
+    <PSelect
+      v-model="value"
+      :items="items.map(item => item.value)"
+      placeholder="Value"
+    />
+    <PSwitch
+      v-model="reverse"
+      label="Reverse"
+    />
   </Navbar>
 
   <PTimeline
@@ -60,7 +79,7 @@ function onSelect(_e: Event, item: TimelineItem) {
     :size="size"
     :items="items"
     :reverse="reverse"
-    class="data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-96 min-h-0"
+    class="min-h-0 data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-96"
     @select="onSelect"
   />
 </template>

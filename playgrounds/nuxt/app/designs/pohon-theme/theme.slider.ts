@@ -1,12 +1,14 @@
 // @unocss-include
+
+import type { PThemeSlider } from 'pohon-ui';
 import { BRANDS } from '../design.constants';
 
 export const themeSlider = {
   slots: {
     root: 'flex select-none items-center relative touch-none',
-    track: 'bg-background-accented rounded-full grow relative overflow-hidden',
+    track: 'rounded-full bg-background-accented grow relative overflow-hidden',
     range: 'rounded-full absolute',
-    thumb: 'bg-background rounded-full ring-2 focus-visible:outline-3 focus-visible:outline-offset-2',
+    thumb: 'rounded-full bg-background ring-2 focus-visible:(outline-3 outline-offset-2)',
   },
   variants: {
     color: {
@@ -16,7 +18,7 @@ export const themeSlider = {
       }])),
       neutral: {
         range: 'bg-background-inverted',
-        thumb: 'ring-ring-inverted outline-outline-inverted/25',
+        thumb: 'outline-outline-inverted/25 ring-ring-inverted',
       },
     },
     size: {
@@ -52,69 +54,76 @@ export const themeSlider = {
       },
     },
   },
-  compoundVariants: [{
-    orientation: 'horizontal',
-    size: 'xs',
-    class: {
-      track: 'h-[6px]',
+  compoundVariants: [
+    {
+      orientation: 'horizontal',
+      size: 'xs',
+      class: {
+        track: 'h-[6px]',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: 'sm',
-    class: {
-      track: 'h-[7px]',
+    {
+      orientation: 'horizontal',
+      size: 'sm',
+      class: {
+        track: 'h-[7px]',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: 'md',
-    class: {
-      track: 'h-[8px]',
+    {
+      orientation: 'horizontal',
+      size: 'md',
+      class: {
+        track: 'h-[8px]',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: 'lg',
-    class: {
-      track: 'h-[9px]',
+    {
+      orientation: 'horizontal',
+      size: 'lg',
+      class: {
+        track: 'h-[9px]',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: 'xl',
-    class: {
-      track: 'h-[10px]',
+    {
+      orientation: 'horizontal',
+      size: 'xl',
+      class: {
+        track: 'h-[10px]',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'xs',
-    class: {
-      track: 'w-[6px]',
+    {
+      orientation: 'vertical',
+      size: 'xs',
+      class: {
+        track: 'w-[6px]',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'sm',
-    class: {
-      track: 'w-[7px]',
+    {
+      orientation: 'vertical',
+      size: 'sm',
+      class: {
+        track: 'w-[7px]',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'md',
-    class: {
-      track: 'w-[8px]',
+    {
+      orientation: 'vertical',
+      size: 'md',
+      class: {
+        track: 'w-[8px]',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'lg',
-    class: {
-      track: 'w-[9px]',
+    {
+      orientation: 'vertical',
+      size: 'lg',
+      class: {
+        track: 'w-[9px]',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'xl',
-    class: {
-      track: 'w-[10px]',
+    {
+      orientation: 'vertical',
+      size: 'xl',
+      class: {
+        track: 'w-[10px]',
+      },
     },
-  }],
-  defaultVariants: {
-    size: 'md',
-    color: 'primary',
-  },
-};
+  ],
+} satisfies PThemeSlider;

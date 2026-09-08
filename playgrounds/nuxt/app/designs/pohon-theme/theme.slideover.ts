@@ -1,14 +1,16 @@
 // @unocss-include
+import type { PThemeSlideover } from 'pohon-ui';
+
 export const themeSlideover = {
   slots: {
     overlay: 'bg-background-elevated/75 inset-0 fixed',
-    content: 'bg-background divide-divide ring-ring flex flex-col fixed divide-y focus:outline-none sm:ring sm:shadow-lg',
-    header: 'p-4 flex gap-1.5 min-h-(--ui-header-height) items-center sm:px-6',
+    content: 'bg-background flex flex-col ring-ring fixed divide-divide divide-y focus:outline-none sm:(ring shadow-lg)',
+    header: 'p-4 flex gap-1.5 min-h-$ui-header-height items-center sm:px-6',
     wrapper: '',
     body: 'p-4 flex-1 overflow-y-auto sm:p-6',
     footer: 'p-4 flex gap-1.5 items-center sm:px-6',
     title: 'color-text-highlighted font-600',
-    description: 'color-text-muted text-sm mt-1',
+    description: 'text-sm color-text-muted mt-1',
     close: 'end-4 top-4 absolute',
   },
   variants: {
@@ -33,81 +35,94 @@ export const themeSlideover = {
     },
     transition: {
       true: {
-        overlay: 'data-[state=closed]:animate-[fade-out_200ms_var(--ease-out)] data-[state=open]:animate-[fade-in_200ms_var(--ease-out)]',
+        overlay: 'data-[state=closed]:(animate-out fade-out-0) data-[state=open]:(animate-in fade-in-0)',
       },
     },
   },
-  compoundVariants: [{
-    side: 'top',
-    inset: true,
-    class: {
-      content: 'max-h-[calc(100%-2rem)] inset-x-4 top-4',
+  compoundVariants: [
+    {
+      side: 'top',
+      inset: true,
+      class: {
+        content: 'max-h-[calc(100%-2rem)] inset-x-4 top-4',
+      },
     },
-  }, {
-    side: 'top',
-    inset: false,
-    class: {
-      content: 'max-h-full inset-x-0 top-0',
+    {
+      side: 'top',
+      inset: false,
+      class: {
+        content: 'max-h-full inset-x-0 top-0',
+      },
     },
-  }, {
-    side: 'right',
-    inset: true,
-    class: {
-      content: 'w-[calc(100%-2rem)] inset-y-4 right-4',
+    {
+      side: 'right',
+      inset: true,
+      class: {
+        content: 'w-[calc(100%-2rem)] inset-y-4 right-4',
+      },
     },
-  }, {
-    side: 'right',
-    inset: false,
-    class: {
-      content: 'w-full inset-y-0 right-0',
+    {
+      side: 'right',
+      inset: false,
+      class: {
+        content: 'w-full inset-y-0 right-0',
+      },
     },
-  }, {
-    side: 'bottom',
-    inset: true,
-    class: {
-      content: 'max-h-[calc(100%-2rem)] inset-x-4 bottom-4',
+    {
+      side: 'bottom',
+      inset: true,
+      class: {
+        content: 'max-h-[calc(100%-2rem)] inset-x-4 bottom-4',
+      },
     },
-  }, {
-    side: 'bottom',
-    inset: false,
-    class: {
-      content: 'max-h-full inset-x-0 bottom-0',
+    {
+      side: 'bottom',
+      inset: false,
+      class: {
+        content: 'max-h-full inset-x-0 bottom-0',
+      },
     },
-  }, {
-    side: 'left',
-    inset: true,
-    class: {
-      content: 'w-[calc(100%-2rem)] inset-y-4 left-4',
+    {
+      side: 'left',
+      inset: true,
+      class: {
+        content: 'w-[calc(100%-2rem)] inset-y-4 left-4',
+      },
     },
-  }, {
-    side: 'left',
-    inset: false,
-    class: {
-      content: 'w-full inset-y-0 left-0',
+    {
+      side: 'left',
+      inset: false,
+      class: {
+        content: 'w-full inset-y-0 left-0',
+      },
     },
-  }, {
-    transition: true,
-    side: 'top',
-    class: {
-      content: 'data-[state=open]:animate-[slide-in-from-top_200ms_var(--ease-out)] data-[state=closed]:animate-[slide-out-to-top_200ms_var(--ease-out)]',
+    {
+      transition: true,
+      side: 'top',
+      class: {
+        content: 'data-[state=open]:(animate-in slide-in-from-top) data-[state=closed]:(animate-out slide-out-to-top)',
+      },
     },
-  }, {
-    transition: true,
-    side: 'right',
-    class: {
-      content: 'data-[state=open]:animate-[slide-in-from-right_200ms_var(--ease-out)] data-[state=closed]:animate-[slide-out-to-right_200ms_var(--ease-out)]',
+    {
+      transition: true,
+      side: 'right',
+      class: {
+        content: 'data-[state=open]:(animate-in slide-in-from-right) data-[state=closed]:(animate-out slide-out-to-right)',
+      },
     },
-  }, {
-    transition: true,
-    side: 'bottom',
-    class: {
-      content: 'data-[state=open]:animate-[slide-in-from-bottom_200ms_var(--ease-out)] data-[state=closed]:animate-[slide-out-to-bottom_200ms_var(--ease-out)]',
+    {
+      transition: true,
+      side: 'bottom',
+      class: {
+        content: 'data-[state=open]:(animate-in slide-in-from-bottom) data-[state=closed]:(animate-out slide-out-to-bottom)',
+      },
     },
-  }, {
-    transition: true,
-    side: 'left',
-    class: {
-      content: 'data-[state=open]:animate-[slide-in-from-left_200ms_var(--ease-out)] data-[state=closed]:animate-[slide-out-to-left_200ms_var(--ease-out)]',
+    {
+      transition: true,
+      side: 'left',
+      class: {
+        content: 'data-[state=open]:(animate-in slide-in-left) data-[state=closed]:(animate-out slide-out-left)',
+      },
     },
-  }],
-};
+  ],
+} satisfies PThemeSlideover;

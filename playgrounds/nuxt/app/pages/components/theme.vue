@@ -1,64 +1,89 @@
 <script setup lang="ts">
-import theme from '#build/ui/button'
+import theme from '#build/ui/button';
 
-const colors = Object.keys(theme.variants.color)
-const variants = Object.keys(theme.variants.variant)
-const sizes = Object.keys(theme.variants.size)
+const colors = Object.keys(theme.variants.color);
+const variants = Object.keys(theme.variants.variant);
+const sizes = Object.keys(theme.variants.size);
 
-const color = ref<keyof typeof theme.variants.color>('warning')
-const variant = ref<keyof typeof theme.variants.variant>('soft')
-const size = ref<keyof typeof theme.variants.size>('lg')
+const color = ref<keyof typeof theme.variants.color>('warning');
+const variant = ref<keyof typeof theme.variants.variant>('soft');
+const size = ref<keyof typeof theme.variants.size>('lg');
 
-const checkbox = ref<boolean>(false)
-const radio = ref<string>('1')
-const select = ref<string>('')
-const input = ref<string>('')
-const radioItems = ['1', '2', '3']
-const selectItems = ['Apple', 'Banana', 'Cherry']
+const checkbox = ref<boolean>(false);
+const radio = ref<string>('1');
+const select = ref<string>('');
+const input = ref<string>('');
+const radioItems = ['1', '2', '3'];
+const selectItems = ['Apple', 'Banana', 'Cherry'];
 </script>
 
 <template>
   <Navbar>
-    <PSelect v-model="color" :items="colors" />
-    <PSelect v-model="variant" :items="variants" />
-    <PSelect v-model="size" :items="sizes" />
+    <PSelect
+      v-model="color"
+      :items="colors"
+    />
+    <PSelect
+      v-model="variant"
+      :items="variants"
+    />
+    <PSelect
+      v-model="size"
+      :items="sizes"
+    />
   </Navbar>
 
   <div class="flex flex-col gap-8">
     <!-- Per-component prop defaults via :props -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-500 color-text-muted">
+      <p class="text-sm color-text-muted font-500">
         <code>:props={{ `{ button: { color: '${color}', variant: '${variant}', size: '${size}' } }` }}</code>
       </p>
 
       <PTheme :props="{ button: { color, variant, size } }">
-        <div class="flex items-center gap-2">
+        <div class="flex gap-2 items-center">
           <PButton label="Themed" />
-          <PButton label="Themed with icon" icon="i-lucide-rocket" />
-          <PButton label="Themed square" icon="i-lucide-star" square />
+          <PButton
+            label="Themed with icon"
+            icon="i-lucide-rocket"
+          />
+          <PButton
+            label="Themed square"
+            icon="i-lucide-star"
+            square
+          />
         </div>
       </PTheme>
     </div>
 
     <!-- Explicit prop overrides theme -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-500 color-text-muted">
+      <p class="text-sm color-text-muted font-500">
         Explicit props win over <code>:props</code>
       </p>
 
       <PTheme :props="{ button: { color, variant, size } }">
-        <div class="flex items-center gap-2">
+        <div class="flex gap-2 items-center">
           <PButton label="Theme only" />
-          <PButton label="color=primary" color="primary" />
-          <PButton label="variant=solid" variant="solid" />
-          <PButton label="size=xs" size="xs" />
+          <PButton
+            label="color=primary"
+            color="primary"
+          />
+          <PButton
+            label="variant=solid"
+            variant="solid"
+          />
+          <PButton
+            label="size=xs"
+            size="xs"
+          />
         </div>
       </PTheme>
     </div>
 
     <!-- :ui (slot classes) + :props (prop defaults) together -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-500 color-text-muted">
+      <p class="text-sm color-text-muted font-500">
         <code>:ui</code> slot classes + <code>:props</code> prop defaults together
       </p>
 
@@ -66,21 +91,24 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
         :props="{ button: { color, variant } }"
         :ui="{ button: { base: 'font-700 rounded-full' } }"
       >
-        <div class="flex items-center gap-2">
+        <div class="flex gap-2 items-center">
           <PButton label="Styled + themed" />
-          <PButton label="With icon" icon="i-lucide-zap" />
+          <PButton
+            label="With icon"
+            icon="i-lucide-zap"
+          />
         </div>
       </PTheme>
     </div>
 
     <!-- Nested PTheme: inner overrides bleed in, other components inherit from outer -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-500 color-text-muted">
+      <p class="text-sm color-text-muted font-500">
         Nested <code>&lt;PTheme&gt;</code>: outer sets tooltip globally, inner only overrides button — both compose
       </p>
 
       <PTheme :props="{ button: { color, variant, size }, tooltip: { delayDuration: 0, arrow: true } }">
-        <div class="flex items-center gap-2">
+        <div class="flex gap-2 items-center">
           <PTooltip text="Outer tooltip (instant + arrow)">
             <PButton label="Outer" />
           </PTooltip>
@@ -98,21 +126,34 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
 
     <!-- :props on form components (with and without PFormField wrapping) -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-500 color-text-muted">
+      <p class="text-sm color-text-muted font-500">
         <code>:props</code> flows into every form component (with or without <code>&lt;PFormField&gt;</code>)
       </p>
 
       <PTheme :props="{ input: { size, color }, pinInput: { size, color }, checkbox: { size, color }, switch: { size, color }, radioGroup: { color, orientation: 'horizontal' }, select: { color, variant: 'subtle' } }">
         <div class="flex flex-col gap-4">
-          <div class="flex items-center gap-4">
-            <PInput v-model="input" placeholder="Bare input" />
+          <div class="flex gap-4 items-center">
+            <PInput
+              v-model="input"
+              placeholder="Bare input"
+            />
             <PPinInput :length="3" />
-            <PCheckbox v-model="checkbox" label="Bare checkbox" />
+            <PCheckbox
+              v-model="checkbox"
+              label="Bare checkbox"
+            />
             <PSwitch label="Bare switch" />
           </div>
-          <div class="flex items-center gap-6">
-            <PRadioGroup v-model="radio" :items="radioItems" />
-            <PSelect v-model="select" :items="selectItems" placeholder="Themed select" />
+          <div class="flex gap-6 items-center">
+            <PRadioGroup
+              v-model="radio"
+              :items="radioItems"
+            />
+            <PSelect
+              v-model="select"
+              :items="selectItems"
+              placeholder="Themed select"
+            />
           </div>
         </div>
       </PTheme>
@@ -120,20 +161,35 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
 
     <!-- Closer context wins: PFormField/FieldGroup beats :props; error beats both -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-500 color-text-muted">
+      <p class="text-sm color-text-muted font-500">
         Closer context wins: <code>&lt;PFormField size="xl"&gt;</code> beats <code>:props</code>; validation error forces <code>error</code> color
       </p>
 
       <PTheme :props="{ input: { size, color } }">
         <div class="flex flex-col gap-3">
           <PFormField label="Bare (theme size applies)">
-            <PInput v-model="input" placeholder="theme size" />
+            <PInput
+              v-model="input"
+              placeholder="theme size"
+            />
           </PFormField>
-          <PFormField label="FormField size=xl wins" size="xl">
-            <PInput v-model="input" placeholder="formfield size" />
+          <PFormField
+            label="FormField size=xl wins"
+            size="xl"
+          >
+            <PInput
+              v-model="input"
+              placeholder="formfield size"
+            />
           </PFormField>
-          <PFormField label="With error: error color wins" error="Required">
-            <PInput v-model="input" placeholder="error color" />
+          <PFormField
+            label="With error: error color wins"
+            error="Required"
+          >
+            <PInput
+              v-model="input"
+              placeholder="error color"
+            />
           </PFormField>
         </div>
       </PTheme>
@@ -141,15 +197,21 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
 
     <!-- Baseline: bare components must keep Reka primitives' own defaults -->
     <div class="flex flex-col gap-2">
-      <p class="text-sm font-500 color-text-muted">
+      <p class="text-sm color-text-muted font-500">
         Without <code>&lt;PTheme&gt;</code> (baseline) — bare Tooltip uses Reka's default delay and has no arrow; bare Checkbox matches unstyled defaults
       </p>
 
-      <div class="flex items-center gap-4">
+      <div class="flex gap-4 items-center">
         <PButton label="Default" />
-        <PButton label="Default with icon" icon="i-lucide-rocket" />
+        <PButton
+          label="Default with icon"
+          icon="i-lucide-rocket"
+        />
         <PTooltip text="Default delay, no arrow">
-          <PButton label="Hover (baseline)" variant="outline" />
+          <PButton
+            label="Hover (baseline)"
+            variant="outline"
+          />
         </PTooltip>
         <PCheckbox label="Bare checkbox" />
       </div>

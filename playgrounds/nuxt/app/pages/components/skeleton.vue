@@ -1,8 +1,8 @@
 <template>
   <Navbar />
 
-  <div class="flex items-center gap-4">
-    <PSkeleton class="size-12 rounded-full" />
+  <div class="flex gap-4 items-center">
+    <PSkeleton class="size-12 pohon:rounded-full" />
 
     <div class="space-y-2">
       <PSkeleton class="h-4 w-[250px]" />

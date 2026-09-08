@@ -1,47 +1,70 @@
 <script setup lang="ts">
-import theme from '#build/ui/tabs'
+import theme from '#build/ui/tabs';
 
-const colors = Object.keys(theme.variants.color)
-const variants = Object.keys(theme.variants.variant)
-const orientations = Object.keys(theme.variants.orientation)
-const sizes = Object.keys(theme.variants.size)
+const colors = Object.keys(theme.variants.color);
+const variants = Object.keys(theme.variants.variant);
+const orientations = Object.keys(theme.variants.orientation);
+const sizes = Object.keys(theme.variants.size);
 
 const attrs = reactive({
   color: [theme.defaultVariants.color],
   variant: [theme.defaultVariants.variant],
-  size: [theme.defaultVariants.size]
-})
+  size: [theme.defaultVariants.size],
+});
 
-const orientation = ref('horizontal' as keyof typeof theme.variants.orientation)
+const orientation = ref('horizontal' as keyof typeof theme.variants.orientation);
 
 const items = [{
   label: 'Tab1',
   avatar: {
-    src: 'https://github.com/praburangki.png'
+    src: 'https://github.com/praburangki.png',
   },
-  content: 'This is the content shown for Tab1'
+  content: 'This is the content shown for Tab1',
 }, {
   label: 'Tab2',
   icon: 'i-lucide-user',
-  content: 'And, this is the content for Tab2'
+  content: 'And, this is the content for Tab2',
 }, {
   label: 'Tab3',
   icon: 'i-lucide-bell',
   content: 'Finally, this is the content for Tab3',
   slot: 'custom' as const,
-  badge: '300'
-}]
+  badge: '300',
+}];
 </script>
 
 <template>
   <Navbar>
-    <PSelect v-model="attrs.color" :items="colors" placeholder="Color" multiple />
-    <PSelect v-model="attrs.variant" :items="variants" placeholder="Variant" multiple />
-    <PSelect v-model="attrs.size" :items="sizes" placeholder="Size" multiple />
-    <PSelect v-model="orientation" :items="orientations" placeholder="Orientation" />
+    <PSelect
+      v-model="attrs.color"
+      :items="colors"
+      placeholder="Color"
+      multiple
+    />
+    <PSelect
+      v-model="attrs.variant"
+      :items="variants"
+      placeholder="Variant"
+      multiple
+    />
+    <PSelect
+      v-model="attrs.size"
+      :items="sizes"
+      placeholder="Size"
+      multiple
+    />
+    <PSelect
+      v-model="orientation"
+      :items="orientations"
+      placeholder="Orientation"
+    />
   </Navbar>
 
-  <Matrix v-slot="props" :attrs="attrs" container-class="gap-4">
+  <Matrix
+    v-slot="props"
+    :attrs="attrs"
+    container-class="gap-4"
+  >
     <PTabs
       :orientation="orientation"
       :items="[{ label: 'Monthly' }, { label: 'Yearly' }]"

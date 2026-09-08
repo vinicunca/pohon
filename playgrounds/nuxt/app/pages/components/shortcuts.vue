@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { ShortcutsConfig } from 'pohon-ui/composables'
+import type { ShortcutsConfig } from 'pohon-ui/composables';
 
-const logs = ref<string[]>([])
+const logs = ref<Array<string>>([]);
 
 // Shortcuts to test the shift+punctuation fix
 const shortcutsList = [
@@ -20,55 +20,77 @@ const shortcutsList = [
   { key: 'shift_a', label: '⇧A' },
 
   // Chained shortcuts
-  { key: 'g-i', label: 'G→I' }
-]
+  { key: 'g-i', label: 'G→I' },
+];
 
 const shortcuts = computed<ShortcutsConfig>(() => {
   return shortcutsList.reduce<ShortcutsConfig>((acc, { key, label }) => {
     acc[key] = () => {
-      logs.value.unshift(`${label} (${key})`)
-    }
-    return acc
-  }, {})
-})
+      logs.value.unshift(`${label} (${key})`);
+    };
+    return acc;
+  }, {});
+});
 
-defineShortcuts(shortcuts)
+defineShortcuts(shortcuts);
 </script>
 
 <template>
   <Navbar />
 
-  <div class="size-full flex flex-col justify-stretch items-stretch gap-4">
+  <div class="flex flex-col gap-4 size-full items-stretch justify-stretch">
     <PCard :ui="{ header: 'flex items-center justify-between' }">
       <template #header>
         <h3 class="font-700">
           Test shortcuts
         </h3>
 
-        <PInput placeholder="Input to test usingInput behavior" class="w-60" />
+        <PInput
+          placeholder="Input to test usingInput behavior"
+          class="w-60"
+        />
       </template>
 
       <div class="flex flex-wrap gap-2">
-        <PKbd v-for="{ label } in shortcutsList" :key="label">
+        <PKbd
+          v-for="{ label } in shortcutsList"
+          :key="label"
+        >
           {{ label }}
         </PKbd>
       </div>
     </PCard>
 
-    <PCard :ui="{ body: 'h-[200px] overflow-y-auto' }" class="flex-1">
+    <PCard
+      :ui="{ body: 'h-[200px] overflow-y-auto' }"
+      class="flex-1"
+    >
       <template #header>
-        <div class="flex items-center justify-between gap-4">
+        <div class="flex gap-4 items-center justify-between">
           <h3 class="font-700">
             Logs ({{ logs.length }})
           </h3>
-          <PButton icon="i-lucide-trash" size="sm" color="neutral" class="-my-1" @click="logs = []" />
+          <PButton
+            icon="i-lucide-trash"
+            size="sm"
+            color="neutral"
+            class="-my-1"
+            @click="logs = []"
+          />
         </div>
       </template>
 
-      <div v-if="logs.length === 0" class="color-text-muted">
+      <div
+        v-if="logs.length === 0"
+        class="color-text-muted"
+      >
         Press any shortcut...
       </div>
-      <p v-for="(log, index) of logs" :key="index" class="font-mono text-sm">
+      <p
+        v-for="(log, index) of logs"
+        :key="index"
+        class="text-sm font-mono"
+      >
         {{ log }}
       </p>
     </PCard>
