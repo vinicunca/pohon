@@ -12,7 +12,7 @@ export const themePageCard = {
     footer: 'mt-auto pt-4',
     leading: 'mb-2.5 inline-flex items-center',
     leadingIcon: 'text-primary shrink-0 size-5',
-    title: 'color-text-highlighted text-base font-semibold text-pretty',
+    title: 'color-text-highlighted text-base font-600 text-pretty',
     description: 'text-[15px] text-pretty',
   },
   variants: {

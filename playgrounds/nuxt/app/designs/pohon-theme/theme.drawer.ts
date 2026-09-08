@@ -1,13 +1,16 @@
 // @unocss-include
+import type { PThemeDrawer } from 'pohon-ui';
+
 export const themeDrawer = {
   slots: {
     overlay: 'bg-background-elevated/75 inset-0 fixed',
     content: 'bg-background ring-ring flex ring fixed focus:outline-none',
-    handle: ['shrink-0 !bg-background-accented', 'transition-opacity ease-out'],
+    // TODO: remove the important when vaul is replaced by the built in drawer
+    handle: '!bg-background-accented shrink-0 transition-opacity ease-out',
     container: 'p-4 flex flex-col gap-4 w-full overflow-y-auto',
     header: 'flex gap-1.5 min-h-8 items-center',
     wrapper: 'flex-1 min-w-0',
-    title: 'color-text-highlighted font-semibold',
+    title: 'color-text-highlighted font-600',
     description: 'color-text-muted text-sm mt-1',
     actions: 'ms-auto flex shrink-0 gap-1.5 items-center',
     body: 'flex-1',
@@ -22,6 +25,7 @@ export const themeDrawer = {
       },
       right: {
         content: 'flex-row rtl:flex-row-reverse',
+        // TODO: remove the important when vaul is replaced by the built in drawer
         handle: '!ml-4',
       },
       bottom: {
@@ -30,6 +34,7 @@ export const themeDrawer = {
       },
       left: {
         content: 'flex-row-reverse rtl:flex-row',
+        // TODO: remove the important when vaul is replaced by the built in drawer
         handle: '!mr-4',
       },
     },
@@ -42,77 +47,92 @@ export const themeDrawer = {
       true: '',
     },
   },
-  compoundVariants: [{
-    direction: ['top', 'bottom'],
-    class: {
-      content: 'h-auto max-h-[96%]',
-      handle: '!w-12 !h-1.5 mx-auto',
+  compoundVariants: [
+    {
+      direction: ['top', 'bottom'],
+      class: {
+        content: 'h-auto max-h-[96%]',
+        // TODO: remove the important when vaul is replaced by the built in drawer
+        handle: 'mx-auto !h-1.5 !w-12',
+      },
     },
-  }, {
-    direction: ['top', 'bottom'],
-    snapPoints: true,
-    class: {
-      content: 'h-full',
+    {
+      direction: ['top', 'bottom'],
+      snapPoints: true,
+      class: {
+        content: 'h-full',
+      },
     },
-  }, {
-    direction: ['right', 'left'],
-    class: {
-      content: 'w-auto max-w-[calc(100%-2rem)]',
-      handle: '!h-12 !w-1.5 mt-auto mb-auto',
+    {
+      direction: ['right', 'left'],
+      class: {
+        content: 'w-auto max-w-[calc(100%-2rem)]',
+        // TODO: remove the important when vaul is replaced by the built in drawer
+        handle: '!h-12 !w-1.5 my-auto',
+      },
     },
-  }, {
-    direction: ['right', 'left'],
-    snapPoints: true,
-    class: {
-      content: 'w-full',
+    {
+      direction: ['right', 'left'],
+      snapPoints: true,
+      class: {
+        content: 'w-full',
+      },
     },
-  }, {
-    direction: 'top',
-    inset: true,
-    class: {
-      content: 'inset-x-4 top-4',
+    {
+      direction: 'top',
+      inset: true,
+      class: {
+        content: 'inset-x-4 top-4',
+      },
     },
-  }, {
-    direction: 'top',
-    inset: false,
-    class: {
-      content: 'inset-x-0 top-0 rounded-b-lg',
+    {
+      direction: 'top',
+      inset: false,
+      class: {
+        content: 'inset-x-0 top-0 rounded-b-lg',
+      },
     },
-  }, {
-    direction: 'bottom',
-    inset: true,
-    class: {
-      content: 'inset-x-4 bottom-4',
+    {
+      direction: 'bottom',
+      inset: true,
+      class: {
+        content: 'inset-x-4 bottom-4',
+      },
     },
-  }, {
-    direction: 'bottom',
-    inset: false,
-    class: {
-      content: 'inset-x-0 bottom-0 rounded-t-lg',
+    {
+      direction: 'bottom',
+      inset: false,
+      class: {
+        content: 'inset-x-0 bottom-0 rounded-t-lg',
+      },
     },
-  }, {
-    direction: 'left',
-    inset: true,
-    class: {
-      content: 'inset-y-4 left-4',
+    {
+      direction: 'left',
+      inset: true,
+      class: {
+        content: 'inset-y-4 left-4',
+      },
     },
-  }, {
-    direction: 'left',
-    inset: false,
-    class: {
-      content: 'inset-y-0 left-0 rounded-r-lg',
+    {
+      direction: 'left',
+      inset: false,
+      class: {
+        content: 'inset-y-0 left-0 rounded-r-lg',
+      },
     },
-  }, {
-    direction: 'right',
-    inset: true,
-    class: {
-      content: 'inset-y-4 right-4',
+    {
+      direction: 'right',
+      inset: true,
+      class: {
+        content: 'inset-y-4 right-4',
+      },
     },
-  }, {
-    direction: 'right',
-    inset: false,
-    class: {
-      content: 'inset-y-0 right-0 rounded-l-lg',
+    {
+      direction: 'right',
+      inset: false,
+      class: {
+        content: 'inset-y-0 right-0 rounded-l-lg',
+      },
     },
-  }],
-};
+  ],
+} satisfies PThemeDrawer;

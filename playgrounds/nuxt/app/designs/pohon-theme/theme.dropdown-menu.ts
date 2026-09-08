@@ -9,7 +9,7 @@ export const themeDropdownMenu = {
     viewport: 'divide-divide flex-1 relative overflow-y-auto scroll-py-1 divide-y',
     arrow: 'fill-bg stroke-default',
     group: 'p-1 isolate',
-    label: 'color-text-highlighted font-semibold flex w-full items-center',
+    label: 'color-text-highlighted font-600 flex w-full items-center',
     separator: 'bg-border my-1 h-px -mx-1',
     item: 'group data-disabled:cursor-not-allowed data-disabled:opacity-75 outline-none flex w-full select-none items-start relative before:rounded-md before:inset-px before:absolute before:z-[-1]',
     itemLeadingIcon: 'shrink-0',

@@ -13,7 +13,7 @@ export const themePageAnchors = {
   variants: {
     active: {
       true: {
-        link: 'text-primary font-semibold',
+        link: 'text-primary font-600',
         linkLeading: 'bg-primary ring-primary color-text-inverted'
       },
       false: {

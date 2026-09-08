@@ -29,6 +29,7 @@ import { themeChip } from './pohon-theme/theme.chip';
 import { themeCollapsible } from './pohon-theme/theme.collapsible';
 import { themeColorPicker } from './pohon-theme/theme.color-picker';
 import { themeCommandPalette } from './pohon-theme/theme.command-palette';
+import { themeContextMenu } from './pohon-theme/theme.context-menu';
 import {
   themeDashboardGroup,
   themeDashboardNavbar,
@@ -39,6 +40,7 @@ import {
   themeDashboardSidebar,
   themeDashboardToolbar,
 } from './pohon-theme/theme.dashboard';
+import { themeDrawer } from './pohon-theme/theme.drawer';
 import { themeInput } from './pohon-theme/theme.input';
 import { themeKbd } from './pohon-theme/theme.kbd';
 import { themeSelect } from './pohon-theme/theme.select';
@@ -79,6 +81,7 @@ export const uiTheme = {
   container: {
     base: 'container',
   },
+  contextMenu: themeContextMenu,
   dashboardGroup: themeDashboardGroup,
   dashboardNavbar: themeDashboardNavbar,
   dashboardPanel: themeDashboardPanel,
@@ -87,6 +90,7 @@ export const uiTheme = {
   dashboardSearchButton: themeDashboardSearchButton,
   dashboardSidebar: themeDashboardSidebar,
   dashboardToolbar: themeDashboardToolbar,
+  drawer: themeDrawer,
   input: themeInput,
   kbd: themeKbd,
   select: themeSelect,

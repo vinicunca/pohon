@@ -7,7 +7,7 @@ export const themeModal = {
     wrapper: '',
     body: 'p-4 flex-1 sm:p-6',
     footer: 'p-4 flex gap-1.5 items-center sm:px-6',
-    title: 'color-text-highlighted font-semibold',
+    title: 'color-text-highlighted font-600',
     description: 'color-text-muted text-sm mt-1',
     close: 'end-4 top-4 absolute',
   },

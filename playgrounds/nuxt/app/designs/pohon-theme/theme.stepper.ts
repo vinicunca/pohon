@@ -7,7 +7,7 @@ export const themeStepper = {
     header: 'flex',
     item: 'group text-center w-full relative',
     container: 'relative',
-    trigger: 'group-data-[state=completed]:color-text-inverted group-data-[state=active]:color-text-inverted color-text-muted bg-background-elevated font-medium font-semibold text-center align-middle rounded-full flex items-center justify-center focus-visible:outline-3',
+    trigger: 'group-data-[state=completed]:color-text-inverted group-data-[state=active]:color-text-inverted color-text-muted bg-background-elevated font-medium font-600 text-center align-middle rounded-full flex items-center justify-center focus-visible:outline-3',
     indicator: 'flex size-full items-center justify-center',
     icon: 'shrink-0',
     separator: 'bg-background-accented rounded-full absolute group-data-[disabled]:opacity-75',

@@ -7,7 +7,7 @@ export const themeSidebar = {
     inner: 'divide-divide flex flex-col size-full overflow-hidden divide-y',
     header: 'px-4 flex gap-1.5 min-h-(--ui-header-height) items-center overflow-hidden',
     wrapper: 'flex-1 min-w-0',
-    title: 'color-text-highlighted font-semibold truncate',
+    title: 'color-text-highlighted font-600 truncate',
     description: 'color-text-muted text-sm truncate',
     actions: 'flex shrink-0 gap-1.5 items-center',
     close: '',

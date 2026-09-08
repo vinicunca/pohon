@@ -5,7 +5,7 @@ export const themeNavigationMenu = {
   slots: {
     root: 'flex gap-1.5 relative [&>div]:min-w-0',
     list: 'min-w-0 isolate',
-    label: 'color-text-highlighted text-xs/5 font-semibold px-2.5 py-1.5 flex gap-1.5 w-full items-center',
+    label: 'color-text-highlighted text-xs/5 font-600 px-2.5 py-1.5 flex gap-1.5 w-full items-center',
     item: 'min-w-0',
     link: 'group text-sm font-medium flex gap-1.5 w-full items-center relative focus-visible:outline-none focus:outline-none before:rounded-md before:absolute before:z-[-1] focus-visible:before:outline-3',
     linkLeadingIcon: 'shrink-0 size-5',

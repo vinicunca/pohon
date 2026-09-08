@@ -18,7 +18,7 @@ export const themeSelect = defuFn(
       viewport: 'divide-divide flex-1 relative overflow-y-auto scroll-py-1 divide-y',
       group: 'p-1 isolate',
       empty: 'color-text-muted text-center',
-      label: 'color-text-highlighted font-semibold',
+      label: 'color-text-highlighted font-600',
       separator: 'bg-border my-1 h-px -mx-1',
       item: 'group color-text data-[highlighted]:not-[[data-disabled]]:color-text-highlighted data-[highlighted]:not-[[data-disabled]]:before:bg-background-elevated/50 outline-none flex w-full select-none transition-colors items-start relative before:(rounded-md content-empty transition-colors inset-px absolute -z-1) data-[disabled]:(opacity-75 cursor-not-allowed)',
       itemLeadingIcon: 'color-text-dimmed [.group[data-highlighted]:not([data-disabled])_&]:color-text shrink-0 transition-colors',

@@ -12,7 +12,7 @@ export const themeCommandPalette = {
     viewport: 'flex-1 relative overflow-y-auto scroll-py-1 focus:outline-none',
     group: 'p-1 isolate',
     empty: 'color-text-muted text-center',
-    label: 'color-text-highlighted font-semibold',
+    label: 'color-text-highlighted font-600',
     item: 'group outline-none flex w-full select-none items-start relative before:(rounded-md content-empty inset-px absolute -z-1) data-[disabled]:(opacity-75 cursor-not-allowed)',
     itemLeadingIcon: 'shrink-0',
     itemLeadingAvatar: 'shrink-0',

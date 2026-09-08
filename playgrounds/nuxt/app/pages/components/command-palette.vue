@@ -1,36 +1,36 @@
 <script setup lang="ts">
+import type { User } from '~/types';
 // import { createReusableTemplate, refDebounced } from '@vueuse/core'
-import { createReusableTemplate } from '@vueuse/core'
-import type { User } from '~/types'
-import theme from '#build/ui/command-palette'
+import { createReusableTemplate } from '@vueuse/core';
+import theme from '#build/ui/command-palette';
 
-const [DefineTemplate, ReuseTemplate] = createReusableTemplate()
-const toast = useToast()
+const [DefineTemplate, ReuseTemplate] = createReusableTemplate();
+const toast = useToast();
 
-const open = ref(false)
-const searchTerm = ref('')
+const open = ref(false);
+const searchTerm = ref('');
 // const searchTermDebounced = refDebounced(searchTerm, 200)
-const selected = ref([])
-const virtualize = ref(false)
-const preserveGroupOrder = ref(false)
+const selected = ref([]);
+const virtualize = ref(false);
+const preserveGroupOrder = ref(false);
 
-const sizes = Object.keys(theme.variants.size)
-const size = ref(theme.defaultVariants.size)
+const sizes = Object.keys(theme.variants.size);
+const size = ref(theme.defaultVariants.size);
 
 const { data: users, status } = await useFetch('https://jsonplaceholder.typicode.com/users', {
   // params: { q: searchTermDebounced },
-  transform: (data: User[]) => {
-    return data?.map(user => ({ id: user.id, label: user.name, suffix: user.email, avatar: { src: `https://i.pravatar.cc/120?img=${user.id}` } })) || []
+  transform: (data: Array<User>) => {
+    return data?.map((user) => ({ id: user.id, label: user.name, suffix: user.email, avatar: { src: `https://i.pravatar.cc/120?img=${user.id}` } })) || [];
   },
-  lazy: true
-})
+  lazy: true,
+});
 
-const loading = ref(false)
+const loading = ref(false);
 
 const groups = computed(() => [{
   id: 'users',
   label: searchTerm.value ? `Users matching “${searchTerm.value}”...` : 'Users',
-  items: users.value || []
+  items: users.value || [],
 }, {
   id: 'actions',
   items: [{
@@ -39,47 +39,47 @@ const groups = computed(() => [{
     icon: 'i-lucide-file-plus',
     loading: loading.value,
     onSelect(e: Event) {
-      e.preventDefault()
+      e.preventDefault();
 
-      toast.add({ title: 'New file added!' })
+      toast.add({ title: 'New file added!' });
 
-      loading.value = true
+      loading.value = true;
 
       setTimeout(() => {
-        loading.value = false
-      }, 2000)
+        loading.value = false;
+      }, 2000);
     },
-    kbds: ['meta', 'N']
+    kbds: ['meta', 'N'],
   }, {
     label: 'Add new folder',
     suffix: 'Create a new folder in the current directory or workspace.',
     icon: 'i-lucide-folder-plus',
     onSelect(e: Event) {
-      e.preventDefault()
+      e.preventDefault();
 
-      toast.add({ title: 'New folder added!' })
+      toast.add({ title: 'New folder added!' });
     },
-    kbds: ['meta', 'F']
+    kbds: ['meta', 'F'],
   }, {
     label: 'Add hashtag',
     suffix: 'Add a hashtag to the current item.',
     icon: 'i-lucide-hash',
     onSelect(e: Event) {
-      e.preventDefault()
+      e.preventDefault();
 
-      toast.add({ title: 'Hashtag added!' })
+      toast.add({ title: 'Hashtag added!' });
     },
-    kbds: ['meta', 'H']
+    kbds: ['meta', 'H'],
   }, {
     label: 'Add label',
     suffix: 'Add a label to the current item.',
     icon: 'i-lucide-tag',
     onSelect(e: Event) {
-      e.preventDefault()
+      e.preventDefault();
 
-      toast.add({ title: 'Label added!' })
+      toast.add({ title: 'Label added!' });
     },
-    kbds: ['meta', 'L']
+    kbds: ['meta', 'L'],
   }, {
     label: 'More actions',
     description: 'More actions to perform on the current item.',
@@ -90,19 +90,19 @@ const groups = computed(() => [{
       suffix: 'Create a new file in the current directory or workspace.',
       icon: 'i-lucide-file-plus',
       onSelect(e: Event) {
-        e.preventDefault()
+        e.preventDefault();
 
-        toast.add({ title: 'New file added!' })
-      }
+        toast.add({ title: 'New file added!' });
+      },
     }, {
       label: 'Create new folder',
       suffix: 'Create a new folder in the current directory or workspace.',
       icon: 'i-lucide-folder-plus',
       onSelect(e: Event) {
-        e.preventDefault()
+        e.preventDefault();
 
-        toast.add({ title: 'New folder added!' })
-      }
+        toast.add({ title: 'New folder added!' });
+      },
     }, {
       label: 'Share',
       placeholder: 'Search share options...',
@@ -112,77 +112,103 @@ const groups = computed(() => [{
         suffix: 'Share with everyone in the current directory or workspace.',
         icon: 'i-lucide-share',
         onSelect(e: Event) {
-          e.preventDefault()
+          e.preventDefault();
 
-          toast.add({ title: 'Shared with everyone!' })
-        }
+          toast.add({ title: 'Shared with everyone!' });
+        },
       }, {
         label: 'Share with team',
         suffix: 'Share with the team in the current directory or workspace.',
         icon: 'i-lucide-users',
         onSelect(e: Event) {
-          e.preventDefault()
+          e.preventDefault();
 
-          toast.add({ title: 'Shared with team!' })
-        }
-      }]
-    }]
-  }]
-}])
+          toast.add({ title: 'Shared with team!' });
+        },
+      }],
+    }],
+  }],
+}]);
 
 const labels = [{
   label: 'bug',
   chip: {
-    color: 'error' as const
-  }
+    color: 'error' as const,
+  },
 }, {
   label: 'feature',
   chip: {
-    color: 'success' as const
-  }
+    color: 'success' as const,
+  },
 }, {
   label: 'enhancement',
   chip: {
-    color: 'info' as const
-  }
-}]
-const label = ref()
+    color: 'info' as const,
+  },
+}];
+const label = ref();
 
 // function onSelect(item: typeof groups.value[number]['items'][number]) {
 function onSelect(item: any) {
-  console.log('Selected', item)
+  console.log('Selected', item);
 }
 
 defineShortcuts({
-  meta_k: () => open.value = !open.value,
-  ...extractShortcuts(groups.value)
-})
+  meta_k: () => {
+    open.value = !open.value;
+  },
+  ...extractShortcuts(groups.value),
+});
 </script>
 
 <template>
   <Navbar>
-    <PSwitch v-model="virtualize" label="Virtualize" />
-    <PSwitch v-model="preserveGroupOrder" label="Preserve order" />
-    <PSelect v-model="size" :items="sizes" />
+    <PSwitch
+      v-model="virtualize"
+      label="Virtualize"
+    />
+    <PSwitch
+      v-model="preserveGroupOrder"
+      label="Preserve order"
+    />
+    <PSelect
+      v-model="size"
+      :items="sizes"
+    />
 
     <PModal v-model:open="open">
-      <PButton label="Open modal" color="neutral" variant="outline" />
+      <PButton
+        label="Open modal"
+        color="neutral"
+        variant="outline"
+      />
 
       <template #content>
-        <ReuseTemplate :close="true" @update:open="open = $event" />
+        <ReuseTemplate
+          :close="true"
+          @update:open="open = $event"
+        />
       </template>
     </PModal>
 
     <PDrawer should-scale-background>
-      <PButton label="Open drawer" color="neutral" variant="outline" />
+      <PButton
+        label="Open drawer"
+        color="neutral"
+        variant="outline"
+      />
 
       <template #content>
-        <ReuseTemplate class="border-t border-border mt-4" />
+        <ReuseTemplate class="border-border mt-4 border-t" />
       </template>
     </PDrawer>
 
     <PPopover :content="{ side: 'right', align: 'start' }">
-      <PButton label="Select label (popover)" color="neutral" variant="outline" />
+      <PButton
+        label="Select label (popover)"
+        color="neutral"
+        variant="outline"
+      />
 
       <template #content>
         <PCommandPalette
@@ -204,8 +230,8 @@ defineShortcuts({
       :groups="groups"
       :fuse="{
         fuseOptions: {
-          includeMatches: true
-        }
+          includeMatches: true,
+        },
       }"
       multiple
       :preserve-group-order="preserveGroupOrder"
@@ -213,18 +239,34 @@ defineShortcuts({
       @update:model-value="onSelect"
     >
       <template #footer>
-        <div class="flex items-center justify-between gap-2">
-          <PIcon name="i-simple-icons-nuxtdotjs" class="size-5 color-text-dimmed ml-1" />
-          <div class="flex items-center gap-1">
-            <PButton color="neutral" variant="ghost" label="Open" size="xs">
+        <div class="flex gap-2 items-center justify-between">
+          <PIcon
+            name="i-simple-icons-nuxtdotjs"
+            class="color-text-dimmed ml-1 size-5"
+          />
+          <div class="flex gap-1 items-center">
+            <PButton
+              color="neutral"
+              variant="ghost"
+              label="Open"
+              size="xs"
+            >
               <template #trailing>
                 <PKbd value="enter" />
               </template>
             </PButton>
 
-            <PSeparator orientation="vertical" class="h-4" />
+            <PSeparator
+              orientation="vertical"
+              class="h-4"
+            />
 
-            <PButton color="neutral" variant="ghost" label="Actions" size="xs">
+            <PButton
+              color="neutral"
+              variant="ghost"
+              label="Actions"
+              size="xs"
+            >
               <template #trailing>
                 <PKbd value="meta" />
                 <PKbd value="k" />
@@ -236,7 +278,10 @@ defineShortcuts({
     </PCommandPalette>
   </DefineTemplate>
 
-  <PCard :ui="{ body: '!p-0' }" class="w-xl">
+  <PCard
+    :ui="{ body: '!p-0' }"
+    class="w-xl"
+  >
     <PCommandPalette
       v-if="virtualize"
       virtualize

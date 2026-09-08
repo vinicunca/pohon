@@ -7,7 +7,7 @@ export const themeChangelogVersion = {
     container: 'mx-auto flex flex-col max-w-2xl',
     meta: 'mb-2 flex gap-3 items-center',
     date: 'color-text-toned text-sm/6 truncate',
-    title: 'color-text-highlighted text-xl font-semibold text-pretty relative',
+    title: 'color-text-highlighted text-xl font-600 text-pretty relative',
     description: 'color-text-muted text-base mt-1 text-pretty',
     imageWrapper: 'group/changelog-version-image mt-5 rounded-lg aspect-[16/9] relative overflow-hidden',
     image: 'h-full w-full object-cover object-top',

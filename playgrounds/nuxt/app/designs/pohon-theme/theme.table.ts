@@ -10,7 +10,7 @@ export const themeTable = {
     tbody: '[&>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&>tr]:data-[selectable=true]:outline-primary/25 divide-divide isolate divide-y [&>tr]:data-[selectable=true]:focus-visible:outline-3',
     tfoot: 'relative',
     tr: 'data-[selected=true]:bg-background-elevated/50',
-    th: 'color-text-highlighted text-sm font-semibold px-4 py-3.5 text-start [&:has([role=checkbox])]:pe-0',
+    th: 'color-text-highlighted text-sm font-600 px-4 py-3.5 text-start [&:has([role=checkbox])]:pe-0',
     td: 'color-text-muted text-sm p-4 whitespace-nowrap [&:has([role=checkbox])]:pe-0',
     separator: 'bg---ui-border-accented h-px w-full start-0 absolute z-1',
     empty: 'color-text-muted text-sm py-6 text-center',

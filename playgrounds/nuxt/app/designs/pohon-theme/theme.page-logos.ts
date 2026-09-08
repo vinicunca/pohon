@@ -2,7 +2,7 @@
 export const themePageLogos = {
   slots: {
     root: 'relative overflow-hidden',
-    title: 'color-text-highlighted text-lg font-semibold text-center',
+    title: 'color-text-highlighted text-lg font-600 text-center',
     logos: 'mt-10',
     logo: 'shrink-0 size-10',
   },

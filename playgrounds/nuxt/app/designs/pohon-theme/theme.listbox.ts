@@ -7,7 +7,7 @@ export const themeListbox = {
     input: 'border-border border-b',
     content: 'flex-1 max-h-60 relative overflow-y-auto scroll-py-1 focus:outline-none',
     group: 'p-1 isolate',
-    label: 'color-text-highlighted font-semibold',
+    label: 'color-text-highlighted font-600',
     separator: 'bg-border my-1 h-px -mx-1',
     empty: 'color-text-muted text-center',
     loading: 'color-text-muted flex items-center justify-center',

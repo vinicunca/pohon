@@ -39,7 +39,7 @@ export const themePageSection = {
     },
     headline: {
       true: {
-        headline: 'text-primary font-semibold flex gap-1.5 items-center',
+        headline: 'text-primary font-600 flex gap-1.5 items-center',
       },
     },
     title: {
