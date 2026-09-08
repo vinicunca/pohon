@@ -279,7 +279,7 @@ export function useEditorMenu<T = any>(options: EditorMenuOptions<T>) {
     });
   };
 
-  // Create the menu component using plain divs (not Reka UI components)
+  // Create the menu component using plain divs (not Akar components)
   // to prevent focus stealing and allow typing to pass through to the editor
   const MenuComponent = {
     props: {

@@ -195,10 +195,10 @@ const selectItems = ['Apple', 'Banana', 'Cherry'];
       </PTheme>
     </div>
 
-    <!-- Baseline: bare components must keep Reka primitives' own defaults -->
+    <!-- Baseline: bare components must keep Akar primitives' own defaults -->
     <div class="flex flex-col gap-2">
       <p class="text-sm color-text-muted font-500">
-        Without <code>&lt;PTheme&gt;</code> (baseline) — bare Tooltip uses Reka's default delay and has no arrow; bare Checkbox matches unstyled defaults
+        Without <code>&lt;PTheme&gt;</code> (baseline) — bare Tooltip uses Akar's default delay and has no arrow; bare Checkbox matches unstyled defaults
       </p>
 
       <div class="flex gap-4 items-center">

@@ -117,7 +117,7 @@ const items = computed<NavigationMenuItem[]>(() => [
     :features="[
       {
         title: 'Accessible',
-        description: 'Built on Reka UI with full ARIA support.',
+        description: 'Built on Akar with full ARIA support.',
         icon: 'i-lucide-accessibility',
       },
       {

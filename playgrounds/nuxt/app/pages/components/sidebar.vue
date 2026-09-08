@@ -18,7 +18,7 @@ const initialMessages: Array<UIMessage> = [{
 }, {
   id: '2',
   role: 'assistant',
-  parts: [{ type: 'text', text: 'Pohon UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }],
+  parts: [{ type: 'text', text: 'Pohon UI is a Vue component library built on Akar, UnoCSS, and UnoCSS Variants. It provides 125+ accessible components for building modern web apps.' }],
 }];
 
 const { messages, status, error, sendMessage, regenerate, stop } = useChat({

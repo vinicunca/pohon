@@ -71,13 +71,13 @@ describe('slider', () => {
       expect(thumbs[0]!.attributes('aria-label')).toBe('Thumb');
     });
 
-    it('keeps Reka UI default labels for two thumbs', async () => {
+    it('keeps Akar default labels for two thumbs', async () => {
       const { thumbs } = await renderThumbs({ props: { modelValue: [0, 10] } });
 
       expect(thumbs.map((thumb) => thumb.attributes('aria-label'))).toStrictEqual(['Minimum', 'Maximum']);
     });
 
-    it('keeps Reka UI default labels for three or more thumbs', async () => {
+    it('keeps Akar default labels for three or more thumbs', async () => {
       const { thumbs } = await renderThumbs({ props: { modelValue: [0, 10, 20] } });
 
       expect(thumbs.map((thumb) => thumb.attributes('aria-label'))).toStrictEqual(['Value 1 of 3', 'Value 2 of 3', 'Value 3 of 3']);

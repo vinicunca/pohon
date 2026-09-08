@@ -436,11 +436,11 @@ describe('theme', () => {
     expect(classes).toContain('rounded-full');
   });
 
-  // Boolean values supplied via `:props` must reach a Reka primitive root through
+  // Boolean values supplied via `:props` must reach a Akar primitive root through
   // `useForwardProps`. This is the path where Vue's auto-casting of unset Boolean
   // props would otherwise turn the proxy result into `false` and silently swallow
   // the theme value — the test pins down that the proxy + forwarder cooperate.
-  it(':props forwards a boolean to a reka primitive root (tooltip arrow)', async () => {
+  it(':props forwards a boolean to a akar primitive root (tooltip arrow)', async () => {
     const wrapper = await mountSuspended({
       components: { Theme, TooltipProvider, Tooltip },
       template: `

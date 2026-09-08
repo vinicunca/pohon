@@ -11,7 +11,7 @@ Every prose component rendered through comark. Use it to check spacing, colors a
 
 ### Paragraphs
 
-Pohon UI ships **125+ components** built on *Reka UI* and Tailwind CSS. Read the [installation guide](https://ui.nuxt.com/docs/getting-started/installation/nuxt) or run \`npx nuxi module add ui\` to get started.
+Pohon UI ships **125+ components** built on *Akar* and UnoCSS. Read the [installation guide](https://ui.nuxt.com/docs/getting-started/installation/nuxt) or run \`npx nuxi module add ui\` to get started.
 
 Inline components sit in the flow of a paragraph: press :kbd{value="meta"} :kbd{value="K"} to open the command palette, the latest release is :badge[v4.0.0] and :icon{name="i-simple-icons-nuxtdotjs"} renders as an icon.
 

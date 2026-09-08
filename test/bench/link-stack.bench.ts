@@ -10,7 +10,7 @@ import Link from '../../src/runtime/vue/overrides/vue-router/Link.vue';
 // attributable. Every case is wrapped in the same parent whose `cls` prop
 // toggles, re-rendering the target subtree:
 //   plain <button>                 — Vue baseline
-//   Primitive                      — reka render primitive
+//   Primitive                      — akar render primitive
 //   PLinkBase                      — LinkBase -> Primitive
 //   PLink (default slot)           — Link -> LinkBase -> Primitive, class via uv
 //   PLink custom + PLinkBase       — the exact pattern Button/NavigationMenu use
