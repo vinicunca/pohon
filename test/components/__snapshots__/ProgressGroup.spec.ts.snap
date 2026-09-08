@@ -123,7 +123,7 @@ exports[`progressGroup > renders with item class correctly 1`] = `
     </div>
   </div>
   <ul data-slot="list" class="flex flex-col gap-1 text-sm">
-    <li data-slot="item" class="flex items-center gap-1.5 min-w-0 font-bold"><span data-slot="itemLeadingDot" class="shrink-0 rounded-full bg-primary size-2"></span><span data-slot="itemLabel" class="truncate">System</span><span data-slot="itemTrailing" class="ms-auto shrink-0 color-text-dimmed">19% </span></li>
+    <li data-slot="item" class="flex items-center gap-1.5 min-w-0 font-700"><span data-slot="itemLeadingDot" class="shrink-0 rounded-full bg-primary size-2"></span><span data-slot="itemLabel" class="truncate">System</span><span data-slot="itemTrailing" class="ms-auto shrink-0 color-text-dimmed">19% </span></li>
   </ul>
 </div>"
 `;
@@ -177,7 +177,7 @@ exports[`progressGroup > renders with item ui correctly 1`] = `
     </div>
   </div>
   <ul data-slot="list" class="flex flex-col gap-1 text-sm">
-    <li data-slot="item" class="flex items-center gap-1.5 min-w-0"><span data-slot="itemLeadingDot" class="shrink-0 rounded-full bg-primary size-2"></span><span data-slot="itemLabel" class="truncate font-bold">System</span><span data-slot="itemTrailing" class="ms-auto shrink-0 color-text-dimmed">19% </span></li>
+    <li data-slot="item" class="flex items-center gap-1.5 min-w-0"><span data-slot="itemLeadingDot" class="shrink-0 rounded-full bg-primary size-2"></span><span data-slot="itemLabel" class="truncate font-700">System</span><span data-slot="itemTrailing" class="ms-auto shrink-0 color-text-dimmed">19% </span></li>
   </ul>
 </div>"
 `;

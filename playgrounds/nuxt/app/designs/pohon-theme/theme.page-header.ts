@@ -1,12 +1,14 @@
 // @unocss-include
+import type { PThemePageHeader } from 'pohon-ui';
+
 export const themePageHeader = {
   slots: {
-    root: 'border-border py-8 border-b relative',
+    root: 'py-8 border-b border-border relative',
     container: '',
-    wrapper: 'flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between',
-    headline: 'color-primary text-sm font-600 mb-2.5 flex gap-1.5 items-center',
-    title: 'color-text-highlighted text-3xl font-bold text-pretty sm:text-4xl',
-    description: 'color-text-muted text-lg text-pretty',
+    wrapper: 'flex flex-col gap-4 lg:(flex-row items-center justify-between)',
+    headline: 'text-sm color-primary font-600 mb-2.5 flex gap-1.5 items-center',
+    title: 'text-3xl color-text-highlighted font-700 text-pretty sm:text-4xl',
+    description: 'text-lg color-text-muted text-pretty',
     links: 'flex flex-wrap gap-1.5 items-center',
   },
   variants: {
@@ -16,4 +18,4 @@ export const themePageHeader = {
       },
     },
   },
-};
+} satisfies PThemePageHeader;

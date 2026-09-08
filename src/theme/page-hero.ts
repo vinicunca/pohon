@@ -5,7 +5,7 @@ export default {
     wrapper: '',
     header: '',
     headline: 'mb-4',
-    title: 'text-5xl sm:text-7xl text-pretty tracking-tight font-bold color-text-highlighted',
+    title: 'text-5xl sm:text-7xl text-pretty tracking-tight font-700 color-text-highlighted',
     description: 'text-lg sm:text-xl/8 color-text-muted',
     body: 'mt-10',
     footer: 'mt-10',

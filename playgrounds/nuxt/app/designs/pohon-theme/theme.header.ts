@@ -9,7 +9,7 @@ export const themeHeader = {
     left: 'flex gap-1.5 items-center lg:flex-1',
     center: 'hidden lg:flex',
     right: 'flex gap-1.5 items-center justify-end lg:flex-1',
-    title: 'color-text-highlighted text-xl font-bold flex shrink-0 gap-1.5 items-end',
+    title: 'color-text-highlighted text-xl font-700 flex shrink-0 gap-1.5 items-end',
     toggle: 'lg:hidden',
     content: 'lg:hidden',
     overlay: 'lg:hidden',

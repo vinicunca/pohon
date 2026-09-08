@@ -36,7 +36,7 @@ describe('pageCard', () => {
     ...spotlightColors.map((spotlightColor: string) => [`with spotlight color ${spotlightColor}`, { props: { ...props, spotlight: true, spotlightColor } }]),
     ['with spotlight color neutral', { props: { ...props, spotlight: true, spotlightColor: 'neutral' } }],
     ['with class', { props: { ...props, class: 'rounded-xl' } }],
-    ['with ui', { props: { ...props, ui: { title: 'font-bold' } } }],
+    ['with ui', { props: { ...props, ui: { title: 'font-700' } } }],
     // Slots
     ['with header slot', { props, slots: { header: () => 'Header slot' } }],
     ['with body slot', { props, slots: { body: () => 'Body slot' } }],

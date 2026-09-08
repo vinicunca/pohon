@@ -1,12 +1,14 @@
 // @unocss-include
+import type { PThemePageFeature } from 'pohon-ui';
+
 export const themePageFeature = {
   slots: {
     root: 'rounded-sm relative',
     wrapper: '',
     leading: 'inline-flex items-center justify-center',
     leadingIcon: 'color-primary shrink-0 size-5',
-    title: 'color-text-highlighted text-base font-600 text-pretty',
-    description: 'color-text-muted text-[15px] text-pretty',
+    title: 'text-base color-text-highlighted font-600 text-pretty',
+    description: 'text-[15px] color-text-muted text-pretty',
   },
   variants: {
     orientation: {
@@ -20,7 +22,7 @@ export const themePageFeature = {
     },
     to: {
       true: {
-        root: ['outline-primary/25 has-focus-visible:outline-3', 'transition'],
+        root: 'outline-primary/25 transition has-focus-visible:outline-3',
       },
     },
     title: {
@@ -29,4 +31,4 @@ export const themePageFeature = {
       },
     },
   },
-};
+} satisfies PThemePageFeature;

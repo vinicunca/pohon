@@ -602,7 +602,7 @@ exports[`toast > renders with ui correctly 1`] = `
     <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
-        <div data-slot="title" class="text-sm font-500 color-text-highlighted font-bold">Toast</div>
+        <div data-slot="title" class="text-sm font-500 color-text-highlighted font-700">Toast</div>
         <!--v-if-->
         <!--v-if-->
       </div>

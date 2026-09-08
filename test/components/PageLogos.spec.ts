@@ -16,7 +16,7 @@ describe('pageLogos', () => {
     ['with title', { props: { title: 'Title' } }],
     ['with items', { props: { items } }],
     ['with marquee', { props: { marquee: true, items } }],
-    ['with ui', { props: { ui: { title: 'font-bold text-xl' } } }],
+    ['with ui', { props: { ui: { title: 'font-700 text-xl' } } }],
     // Slots
     ['with default slot', { slots: { default: () => 'Default slot' } }],
     ['with default slot', { slots: { default: () => 'Default slot' } }],

@@ -1,12 +1,15 @@
 // @unocss-include
+
+import type { PThemePageCta } from 'pohon-ui';
+
 export const themePageCta = {
   slots: {
     root: 'rounded-xl relative overflow-hidden isolate',
-    container: 'px-6 py-12 flex flex-col gap-8 lg:px-16 lg:py-24 sm:px-12 sm:py-24 sm:gap-16 lg:grid',
+    container: 'px-6 py-12 flex flex-col gap-8 lg:(px-16 py-24 grid) sm:(px-12 py-24 gap-16)',
     wrapper: '',
     header: '',
-    title: 'color-text-highlighted text-3xl tracking-tight font-bold text-pretty sm:text-4xl',
-    description: 'color-text-muted text-base sm:text-lg',
+    title: 'text-3xl color-text-highlighted tracking-tight font-700 text-pretty sm:text-4xl',
+    description: 'text-base color-text-muted sm:text-lg',
     body: 'mt-8',
     footer: 'mt-8',
     links: 'flex flex-wrap gap-x-6 gap-y-3',
@@ -14,7 +17,7 @@ export const themePageCta = {
   variants: {
     orientation: {
       horizontal: {
-        container: 'lg:grid-cols-2 lg:items-center',
+        container: 'lg:(grid-cols-2 items-center)',
         description: 'text-pretty',
       },
       vertical: {
@@ -31,12 +34,12 @@ export const themePageCta = {
     },
     variant: {
       solid: {
-        root: 'bg-background-inverted color-text-inverted',
+        root: 'color-text-inverted bg-background-inverted',
         title: 'color-text-inverted',
         description: 'color-text-dimmed',
       },
       outline: {
-        root: 'bg-background ring-ring ring',
+        root: 'bg-background ring ring-ring',
         description: 'color-text-muted',
       },
       soft: {
@@ -44,7 +47,7 @@ export const themePageCta = {
         description: 'color-text-toned',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring-ring ring',
+        root: 'bg-background-elevated/50 ring ring-ring',
         description: 'color-text-toned',
       },
       naked: {
@@ -57,7 +60,4 @@ export const themePageCta = {
       },
     },
   },
-  defaultVariants: {
-    variant: 'outline',
-  },
-};
+} satisfies PThemePageCta;

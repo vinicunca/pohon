@@ -246,7 +246,7 @@ You can also use the `active-class` and `inactive-class` props to customize the 
 
 props:
 active: true
-activeClass: 'font-bold'
+activeClass: 'font-700'
 inactiveClass: 'font-light'
 slots:
 default: Button
@@ -265,7 +265,7 @@ export default defineAppConfig({
       variants: {
         active: {
           true: {
-            base: "font-bold",
+            base: "font-700",
           },
         },
       },
@@ -356,7 +356,7 @@ Use the `class` prop to override the base styles of the Button.
 ---
 
 props:
-class: 'font-bold rounded-full'
+class: 'font-700 rounded-full'
 slots:
 default: Button
 ---

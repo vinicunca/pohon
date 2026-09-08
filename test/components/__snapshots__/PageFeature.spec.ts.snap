@@ -134,7 +134,7 @@ exports[`pageFeature > renders with ui correctly 1`] = `
   <div data-slot="leading" class="inline-flex items-center justify-center p-0.5"><span class="iconify i-lucide:house size-5 shrink-0 color-primary" aria-hidden="true" data-slot="leadingIcon"></span></div>
   <div data-slot="wrapper" class="">
     <!--v-if-->
-    <div data-slot="title" class="text-base text-pretty font-600 color-text-highlighted font-bold">Title</div>
+    <div data-slot="title" class="text-base text-pretty font-600 color-text-highlighted font-700">Title</div>
     <div data-slot="description" class="text-[15px] text-pretty color-text-muted mt-1">Description</div>
   </div>
 </div>"

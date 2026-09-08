@@ -1,11 +1,13 @@
 // @unocss-include
+import type { PThemePageAside } from 'pohon-ui';
+
 export const themePageAside = {
   slots: {
-    root: 'hidden overflow-y-auto lg:block lg:max-h-[calc(100vh-var(--ui-header-height))] lg:sticky lg:top-(--ui-header-height) py-8 lg:ps-4 lg:-ms-4 lg:pe-6.5',
+    root: 'py-8 hidden overflow-y-auto lg:(pe-6.5 ps-4 max-h-[calc(100vh-var(--ui-header-height))] block top-$ui-header-height sticky -ms-4)',
     container: 'relative',
-    top: 'sticky -top-8 -mt-8 pointer-events-none z-1',
-    topHeader: 'h-8 bg-background -mx-4 px-4',
-    topBody: 'bg-background relative pointer-events-auto flex flex-col -mx-4 px-4',
-    topFooter: 'h-8 bg-gradient-to-b from-default -mx-4 px-4'
-  }
-};
+    top: 'pointer-events-none sticky z-1 -mt-8 -top-8',
+    topHeader: 'px-4 bg-background h-8 -mx-4',
+    topBody: 'px-4 bg-background flex flex-col pointer-events-auto relative -mx-4',
+    topFooter: 'px-4 h-8 from-background bg-gradient-to-b -mx-4',
+  },
+} satisfies PThemePageAside;

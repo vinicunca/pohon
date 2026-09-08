@@ -59,7 +59,21 @@ import { themeInputTime } from './pohon-theme/theme.input-time';
 import { themeKbd } from './pohon-theme/theme.kbd';
 import { themeLink } from './pohon-theme/theme.link';
 import { themeListbox } from './pohon-theme/theme.listbox';
+import { themeMarquee } from './pohon-theme/theme.marquee';
+import { themeModal } from './pohon-theme/theme.modal';
 import { themeNavigationMenu } from './pohon-theme/theme.navigation-menu';
+import { themePage } from './pohon-theme/theme.page';
+import { themePageAnchors } from './pohon-theme/theme.page-anchors';
+import { themePageAside } from './pohon-theme/theme.page-aside';
+import { themePageCard } from './pohon-theme/theme.page-card';
+import { themePageCta } from './pohon-theme/theme.page-cta';
+import { themePageFeature } from './pohon-theme/theme.page-feature';
+import { themePageHeader } from './pohon-theme/theme.page-header';
+import { themePageHero } from './pohon-theme/theme.page-hero';
+import { themePageLinks } from './pohon-theme/theme.page-links';
+import { themePageList } from './pohon-theme/theme.page-list';
+import { themePageLogos } from './pohon-theme/theme.page-logos';
+import { themePageSection } from './pohon-theme/theme.page-section';
 import { themeSelect } from './pohon-theme/theme.select';
 import { themeSwitch } from './pohon-theme/theme.switch';
 import { themeUser } from './pohon-theme/theme.user';
@@ -127,7 +141,30 @@ export const uiTheme = {
   kbd: themeKbd,
   link: themeLink,
   listbox: themeListbox,
+  marquee: themeMarquee,
+  modal: themeModal,
   navigationMenu: themeNavigationMenu,
+  page: themePage,
+  pageAnchors: themePageAnchors,
+  pageAside: themePageAside,
+  pageBody: {
+    base: 'mt-8 pb-24 space-y-12',
+  },
+  pageCard: themePageCard,
+  pageColumns: {
+    base: 'relative columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8 *:break-inside-avoid-column *:will-change-transform',
+  },
+  pageCTA: themePageCta,
+  pageFeature: themePageFeature,
+  pageGrid: {
+    base: 'gap-8 grid grid-cols-1 relative lg:grid-cols-3 sm:grid-cols-2',
+  },
+  pageHeader: themePageHeader,
+  pageHero: themePageHero,
+  pageLinks: themePageLinks,
+  pageList: themePageList,
+  pageLogos: themePageLogos,
+  pageSection: themePageSection,
   select: themeSelect,
   switch: themeSwitch,
   user: themeUser,

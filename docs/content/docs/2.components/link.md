@@ -75,7 +75,7 @@ ignore:
   props:
   raw: true
   to: /docs/components/link
-  activeClass: 'font-bold'
+  activeClass: 'font-700'
   inactiveClass: 'color-text-muted'
   slots:
   default: Link

@@ -40,7 +40,7 @@ describe('stepper', () => {
     ['without linear', { props: { ...props, linear: false } }],
     ['with as', { props: { ...props, as: 'section' } }],
     ['with class', { props: { ...props, class: 'gap-8' } }],
-    ['with ui', { props: { ...props, ui: { title: 'font-bold' } } }],
+    ['with ui', { props: { ...props, ui: { title: 'font-700' } } }],
     // Slots
     ['with default slot', { props, slots: { default: () => 'Default slot' } }],
     ['with indicator slot', { props, slots: { indicator: () => 'Indicator slot' } }],

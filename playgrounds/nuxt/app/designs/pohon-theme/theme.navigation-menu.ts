@@ -23,7 +23,7 @@ export const themeNavigationMenu = {
     childList: 'isolate',
     childLabel: 'color-text-highlighted text-xs',
     childItem: '',
-    childLink: 'group text-sm text-start flex size-full items-start relative focus-visible:outline-none focus:outline-none before:(rounded-md content-empty absolute z-1) focus-visible:before:outline-3',
+    childLink: 'group text-sm text-start flex size-full items-start relative focus-visible:outline-none focus:outline-none before:(rounded-md content-empty absolute -z-1) focus-visible:before:outline-3',
     childLinkWrapper: 'min-w-0',
     childLinkIcon: 'shrink-0 size-5',
     childLinkLabel: 'truncate',
@@ -79,7 +79,7 @@ export const themeNavigationMenu = {
         content: 'data-[motion^=from-]:(animate-in fade-in) data-[motion^=to-]:(animate-out fade-out) data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52',
       },
       vertical: {
-        viewport: 'left-$akar-navigation-menu-viewport-left) sm:w-$akar-navigation-menu-viewport-width rtl:left-auto rtl:right-[calc(100%-var(--akar-navigation-menu-viewport-left)-var(--akar-navigation-menu-viewport-width))]',
+        viewport: 'left-$akar-navigation-menu-viewport-left sm:w-$akar-navigation-menu-viewport-width rtl:left-auto rtl:right-[calc(100%-var(--akar-navigation-menu-viewport-left)-var(--akar-navigation-menu-viewport-width))]',
       },
     },
     active: {
@@ -122,7 +122,7 @@ export const themeNavigationMenu = {
       contentOrientation: 'vertical',
       class: {
         childList: 'gap-1',
-        content: 'w-60',
+        content: 'pohon:w-60',
       },
     },
     {

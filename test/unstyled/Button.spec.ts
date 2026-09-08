@@ -48,10 +48,10 @@ describe('button (unstyled)', () => {
 
   it('applies ui slot classes without theme defaults', async () => {
     const wrapper = await mountSuspended(Button, {
-      props: { label: 'Button', ui: { label: 'font-bold' } },
+      props: { label: 'Button', ui: { label: 'font-700' } },
     });
 
     expectNoThemeClasses(wrapper.find('[data-slot="base"]').attributes('class'));
-    expect(classTokens(wrapper.find('[data-slot="label"]').attributes('class'))).toEqual(['font-bold']);
+    expect(classTokens(wrapper.find('[data-slot="label"]').attributes('class'))).toEqual(['font-700']);
   });
 });

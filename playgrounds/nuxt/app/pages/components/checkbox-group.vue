@@ -118,7 +118,7 @@ const itemsWithIcon = [
       v-bind="props"
     >
       <template #legend>
-        <span class="font-bold italic">
+        <span class="font-700 italic">
           With slots
         </span>
       </template>

@@ -7,7 +7,7 @@ export default {
     leading: 'flex items-center mb-6',
     leadingIcon: 'size-10 shrink-0 color-primary',
     headline: 'mb-3',
-    title: 'text-3xl sm:text-4xl lg:text-5xl text-pretty tracking-tight font-bold color-text-highlighted',
+    title: 'text-3xl sm:text-4xl lg:text-5xl text-pretty tracking-tight font-700 color-text-highlighted',
     description: 'text-base sm:text-lg color-text-muted',
     body: 'mt-8',
     features: 'grid',

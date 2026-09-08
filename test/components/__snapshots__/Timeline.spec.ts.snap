@@ -1444,7 +1444,7 @@ exports[`timeline > renders with ui correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-500 color-text-highlighted text-sm font-bold">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm font-700">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -1454,7 +1454,7 @@ exports[`timeline > renders with ui correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-500 color-text-highlighted text-sm font-bold">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm font-700">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -1464,7 +1464,7 @@ exports[`timeline > renders with ui correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-500 color-text-highlighted text-sm font-bold">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm font-700">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -1474,7 +1474,7 @@ exports[`timeline > renders with ui correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-500 color-text-highlighted text-sm font-bold">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm font-700">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>

@@ -1,4 +1,6 @@
 // @unocss-include
+import type { PThemePageHero } from 'pohon-ui';
+
 export const themePageHero = {
   slots: {
     root: 'relative isolate',
@@ -6,8 +8,8 @@ export const themePageHero = {
     wrapper: '',
     header: '',
     headline: 'mb-4',
-    title: 'color-text-highlighted text-5xl tracking-tight font-bold text-pretty sm:text-7xl',
-    description: 'color-text-muted text-lg sm:text-xl/8',
+    title: 'text-5xl color-text-highlighted tracking-tight font-700 text-pretty sm:text-7xl',
+    description: 'text-lg color-text-muted sm:text-xl/8',
     body: 'mt-10',
     footer: 'mt-10',
     links: 'flex flex-wrap gap-x-6 gap-y-3',
@@ -42,4 +44,4 @@ export const themePageHero = {
       },
     },
   },
-};
+} satisfies PThemePageHero;

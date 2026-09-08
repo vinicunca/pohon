@@ -100,7 +100,7 @@ const columns: TableColumn<Payment>[] = [{
       class="sticky left-0 z-10 flex items-end justify-between gap-4 p-6 bg-background-elevated/50"
     >
       <div>
-        <h2 class="text-2xl font-bold color-text-highlighted">
+        <h2 class="text-2xl font-700 color-text-highlighted">
           Payments
         </h2>
         <p class="color-text-muted">

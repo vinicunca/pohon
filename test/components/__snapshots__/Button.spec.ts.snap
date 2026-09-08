@@ -43,7 +43,7 @@ exports[`button > renders with active variant subtle correctly 1`] = `
 `;
 
 exports[`button > renders with activeClass correctly 1`] = `
-"<button type="button" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors font-bold px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+"<button type="button" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors font-700 px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
   <!--v-if--><span data-slot="label" class="truncate">Button</span>
   <!--v-if-->
 </button>"
@@ -84,7 +84,7 @@ exports[`button > renders with block correctly 1`] = `
 `;
 
 exports[`button > renders with class correctly 1`] = `
-"<button type="button" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 rounded-full font-bold">
+"<button type="button" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 rounded-full font-700">
   <!--v-if--><span data-slot="label" class="truncate">Button</span>
   <!--v-if-->
 </button>"
@@ -336,7 +336,7 @@ exports[`button > renders with trailingIcon correctly 1`] = `
 
 exports[`button > renders with ui correctly 1`] = `
 "<button type="button" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
-  <!--v-if--><span data-slot="label" class="truncate font-bold">Button</span>
+  <!--v-if--><span data-slot="label" class="truncate font-700">Button</span>
   <!--v-if-->
 </button>"
 `;

@@ -1,19 +1,21 @@
 // @unocss-include
+
+import type { PThemeListbox } from 'pohon-ui';
 import { BRANDS } from '../design.constants';
 
 export const themeListbox = {
   slots: {
-    root: 'ring-ring rounded-lg flex flex-col min-h-0 min-w-0 ring ring-inset overflow-hidden',
-    input: 'border-border border-b',
+    root: 'rounded-lg flex flex-col min-h-0 min-w-0 ring ring-ring ring-inset overflow-hidden',
+    input: 'border-b border-border',
     content: 'flex-1 max-h-60 relative overflow-y-auto scroll-py-1 focus:outline-none',
     group: 'p-1 isolate',
     label: 'color-text-highlighted font-600',
-    separator: 'bg-border my-1 h-px -mx-1',
+    separator: 'my-1 bg-border h-px -mx-1',
     empty: 'color-text-muted text-center',
     loading: 'color-text-muted flex items-center justify-center',
     loadingIcon: 'shrink-0 animate-spin',
-    item: 'group color-text data-[highlighted]:not-[[data-disabled]]:color-text-highlighted data-[highlighted]:not-[[data-disabled]]:before:bg-background-elevated/50 outline-none flex w-full select-none transition-colors items-start relative before:(rounded-md content-empty transition-colors inset-px absolute -z-1) data-[disabled]:(opacity-75 cursor-not-allowed)',
-    itemLeadingIcon: 'color-text-dimmed [.group[data-highlighted]:not([data-disabled])_&]:color-text shrink-0 transition-colors',
+    item: 'group color-text outline-none flex w-full select-none transition-colors items-start relative before:(rounded-md content-empty transition-colors inset-px absolute -z-1) data-[disabled]:(opacity-75 cursor-not-allowed) data-[highlighted]:not-[[data-disabled]]:color-text-highlighted data-[highlighted]:not-[[data-disabled]]:before:bg-background-elevated/50',
+    itemLeadingIcon: 'color-text-dimmed shrink-0 transition-colors [.group[data-highlighted]:not([data-disabled])_&]:color-text',
     itemLeadingAvatar: 'shrink-0',
     itemLeadingAvatarSize: '',
     itemLeadingChip: 'shrink-0',
@@ -93,7 +95,7 @@ export const themeListbox = {
         root: `outline-${color}/25 has-focus-visible:outline-3 has-focus-visible:ring-${color}`,
       }])),
       neutral: {
-        root: 'outline-outline-inverted/25 has-focus-visible:ring-ring-inverted has-focus-visible:outline-3',
+        root: 'outline-outline-inverted/25 has-focus-visible:outline-3 has-focus-visible:ring-ring-inverted',
       },
     },
     virtualize: {
@@ -129,4 +131,4 @@ export const themeListbox = {
       },
     },
   ],
-};
+} satisfies PThemeListbox;

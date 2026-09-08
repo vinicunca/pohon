@@ -57,7 +57,7 @@ const itemsWithIcon = [
     <PRadioGroup :items="items" legend="Legend" required :orientation="orientation" v-bind="props" />
     <PRadioGroup :items="items" :orientation="orientation" v-bind="props">
       <template #legend>
-        <span class="italic font-bold">
+        <span class="italic font-700">
           With slots
         </span>
       </template>

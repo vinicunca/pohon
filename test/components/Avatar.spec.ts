@@ -22,7 +22,7 @@ describe('avatar', () => {
     ['with as (object)', { props: { src: 'https://github.com/praburangki.png', as: { root: 'section', img: 'p' } } }],
     ['with as (partial object)', { props: { src: 'https://github.com/praburangki.png', as: { img: 'p' } } }],
     ['with class', { props: { class: 'bg-background' } }],
-    ['with ui', { props: { ui: { fallback: 'font-bold' } } }],
+    ['with ui', { props: { ui: { fallback: 'font-700' } } }],
     ['with custom size', { props: { class: 'size-100', src: 'https://github.com/praburangki.png' } }],
     // Slots
     ['with default slot', { slots: { default: '🇫🇷' } }],

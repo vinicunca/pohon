@@ -223,7 +223,7 @@ exports[`user > renders with ui correctly 1`] = `
 "<div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="User avatar" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
   <div data-slot="wrapper" class="">
     <!--v-if-->
-    <p data-slot="name" class="font-500 color-text-highlighted text-sm font-bold">praburangki</p>
+    <p data-slot="name" class="font-500 color-text-highlighted text-sm font-700">praburangki</p>
     <p data-slot="description" class="color-text-muted text-xs">Software Engineer</p>
   </div>
 </div>"

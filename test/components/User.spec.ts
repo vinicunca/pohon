@@ -26,7 +26,7 @@ describe('user', () => {
     ...orientations.map((orientation: string) => [`with orientation ${orientation}`, { props: { ...props, orientation } }]),
     ['with as', { props: { ...props, as: 'section' } }],
     ['with class', { props: { ...props, class: 'absolute' } }],
-    ['with ui', { props: { ...props, ui: { name: 'font-bold' } } }],
+    ['with ui', { props: { ...props, ui: { name: 'font-700' } } }],
     // Slots
     ['with avatar slot', { props, slots: { avatar: () => 'Avatar slot' } }],
     ['with name slot', { props, slots: { name: () => 'Name slot' } }],

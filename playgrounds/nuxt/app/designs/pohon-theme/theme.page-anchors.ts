@@ -1,25 +1,28 @@
 // @unocss-include
+
+import type { PThemePageAnchors } from 'pohon-ui';
+
 export const themePageAnchors = {
   slots: {
     root: '',
     list: '',
     item: 'relative',
-    link: 'group text-sm flex items-center gap-1.5 py-1 rounded-sm outline-primary/25 focus-visible:outline-3',
-    linkLeading: 'rounded-md p-1 inline-flex ring-inset ring',
-    linkLeadingIcon: 'size-4 shrink-0',
+    link: 'group text-sm py-1 outline-primary/25 rounded-sm flex gap-1.5 items-center focus-visible:outline-3',
+    linkLeading: 'p-1 rounded-md inline-flex ring ring-inset',
+    linkLeadingIcon: 'shrink-0 size-4',
     linkLabel: 'truncate',
-    linkLabelExternalIcon: 'size-3 absolute top-0 color-text-dimmed'
+    linkLabelExternalIcon: 'color-text-dimmed size-3 top-0 absolute',
   },
   variants: {
     active: {
       true: {
         link: 'color-primary font-600',
-        linkLeading: 'bg-primary ring-primary color-text-inverted'
+        linkLeading: 'color-text-inverted bg-primary ring-primary',
       },
       false: {
-        link: ['color-text-muted hover:color-text font-500', 'transition-colors'],
-        linkLeading: ['bg-background-elevated/50 ring-ring-accented color-text-dimmed group-hover:bg-primary group-hover:ring-primary group-hover:color-text-inverted', 'transition']
-      }
-    }
-  }
-};
+        link: 'color-text-muted font-500 transition-colors hover:color-text',
+        linkLeading: 'color-text-dimmed bg-background-elevated/50 ring-ring-accented transition group-hover:(color-text-inverted bg-primary ring-primary)',
+      },
+    },
+  },
+} satisfies PThemePageAnchors;

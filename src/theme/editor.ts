@@ -17,7 +17,7 @@ export default (options: Required<ModuleOptions>) => ({
       // Mentions
       '[&_.mention]:color-primary [&_.mention]:font-500',
       // Headings - shared styles
-      '[&_:is(h1,h2,h3,h4,h5,h6)]:color-text-highlighted [&_:is(h1,h2,h3,h4,h5,h6)]:font-bold',
+      '[&_:is(h1,h2,h3,h4,h5,h6)]:color-text-highlighted [&_:is(h1,h2,h3,h4,h5,h6)]:font-700',
       // Headings - unique styles
       '[&_h1]:text-3xl',
       '[&_h2]:text-2xl',
@@ -26,7 +26,7 @@ export default (options: Required<ModuleOptions>) => ({
       '[&_h5]:text-base',
       '[&_h6]:text-base',
       // Code inside headings
-      '[&_:is(h1,h2,h3,h4,h5,h6)>code]:border-dashed [&_:is(h1,h2,h3,h4,h5,h6)>code]:font-bold',
+      '[&_:is(h1,h2,h3,h4,h5,h6)>code]:border-dashed [&_:is(h1,h2,h3,h4,h5,h6)>code]:font-700',
       '[&_h2>code]:text-xl/6',
       '[&_h3>code]:text-lg/5',
       // Blockquote & HR

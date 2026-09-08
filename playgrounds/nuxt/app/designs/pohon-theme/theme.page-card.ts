@@ -1,10 +1,12 @@
 // @unocss-include
+
+import type { PThemePageCard } from 'pohon-ui';
 import { BRANDS } from '../design.constants';
 
 export const themePageCard = {
   slots: {
     root: 'rounded-lg flex relative',
-    spotlight: 'bg-background/90 rounded-inherit pointer-events-none inset-0 absolute',
+    spotlight: 'rounded-inherit bg-background/90 pointer-events-none inset-0 absolute',
     container: 'p-4 flex flex-1 flex-col gap-x-8 gap-y-4 relative sm:p-6 lg:grid',
     wrapper: 'flex flex-1 flex-col items-start',
     header: 'mb-4',
@@ -12,7 +14,7 @@ export const themePageCard = {
     footer: 'mt-auto pt-4',
     leading: 'mb-2.5 inline-flex items-center',
     leadingIcon: 'color-primary shrink-0 size-5',
-    title: 'color-text-highlighted text-base font-600 text-pretty',
+    title: 'text-base color-text-highlighted font-600 text-pretty',
     description: 'text-[15px] text-pretty',
   },
   variants: {
@@ -31,12 +33,12 @@ export const themePageCard = {
     },
     variant: {
       solid: {
-        root: 'bg-background-inverted color-text-inverted',
+        root: 'color-text-inverted bg-background-inverted',
         title: 'color-text-inverted',
         description: 'color-text-dimmed',
       },
       outline: {
-        root: 'bg-background ring-ring ring',
+        root: 'bg-background ring ring-ring',
         description: 'color-text-muted',
       },
       soft: {
@@ -44,7 +46,7 @@ export const themePageCard = {
         description: 'color-text-toned',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring-ring ring',
+        root: 'bg-background-elevated/50 ring ring-ring',
         description: 'color-text-toned',
       },
       ghost: {
@@ -57,7 +59,7 @@ export const themePageCard = {
     },
     to: {
       true: {
-        root: ['outline-primary/25 has-[>a:focus-visible]:outline-3', 'transition'],
+        root: 'outline-primary/25 transition has-[>a:focus-visible]:outline-3',
       },
     },
     title: {
@@ -76,7 +78,7 @@ export const themePageCard = {
     },
     spotlight: {
       true: {
-        root: '[--spotlight-size:400px] before:rounded-inherit before:bg-[radial-gradient(var(--spotlight-size)_var(--spotlight-size)_at_calc(var(--spotlight-x,0px))_calc(var(--spotlight-y,0px)),var(--spotlight-color),transparent_70%)] before:pointer-events-none before:absolute before:-inset-px',
+        root: '[--spotlight-size:400px] before:(rounded-inherit bg-[radial-gradient(var(--spotlight-size)_var(--spotlight-size)_at_calc(var(--spotlight-x,0px))_calc(var(--spotlight-y,0px)),var(--spotlight-color),transparent_70%)] pointer-events-none content-empty absolute -inset-px)',
       },
     },
     spotlightColor: {
@@ -84,78 +86,85 @@ export const themePageCard = {
       neutral: '',
     },
   },
-  compoundVariants: [{
-    variant: 'solid',
-    to: true,
-    class: {
-      root: 'hover:bg-background-inverted/90',
+  compoundVariants: [
+    {
+      variant: 'solid',
+      to: true,
+      class: {
+        root: 'hover:bg-background-inverted/90',
+      },
     },
-  }, {
-    variant: 'outline',
-    to: true,
-    class: {
-      root: 'hover:bg-background-elevated/50',
+    {
+      variant: 'outline',
+      to: true,
+      class: {
+        root: 'hover:bg-background-elevated/50',
+      },
     },
-  }, {
-    variant: 'soft',
-    to: true,
-    class: {
-      root: 'hover:bg-background-elevated',
+    {
+      variant: 'soft',
+      to: true,
+      class: {
+        root: 'hover:bg-background-elevated',
+      },
     },
-  }, {
-    variant: 'subtle',
-    to: true,
-    class: {
-      root: 'hover:bg-background-elevated',
+    {
+      variant: 'subtle',
+      to: true,
+      class: {
+        root: 'hover:bg-background-elevated',
+      },
     },
-  }, {
-    variant: 'subtle',
-    to: true,
-    highlight: false,
-    class: {
-      root: 'hover:ring-ring-accented',
+    {
+      variant: 'subtle',
+      to: true,
+      highlight: false,
+      class: {
+        root: 'hover:ring-ring-accented',
+      },
     },
-  }, {
-    variant: ['outline', 'subtle'],
-    to: true,
-    highlight: false,
-    class: {
-      root: 'has-[>a:focus-visible]:ring-primary',
+    {
+      variant: ['outline', 'subtle'],
+      to: true,
+      highlight: false,
+      class: {
+        root: 'has-[>a:focus-visible]:ring-primary',
+      },
     },
-  }, {
-    variant: 'ghost',
-    to: true,
-    class: {
-      root: 'hover:bg-background-elevated/50',
+    {
+      variant: 'ghost',
+      to: true,
+      class: {
+        root: 'hover:bg-background-elevated/50',
+      },
     },
-  }, ...BRANDS.map((highlightColor: string) => ({
-    highlightColor,
-    highlight: true,
-    class: {
-      root: `ring-${highlightColor}`,
+    ...BRANDS.map((highlightColor: string) => ({
+      highlightColor,
+      highlight: true,
+      class: {
+        root: `ring-${highlightColor}`,
+      },
+    })),
+    {
+      highlightColor: 'neutral',
+      highlight: true,
+      class: {
+        root: 'ring-ring-inverted',
+      },
     },
-  })), {
-    highlightColor: 'neutral',
-    highlight: true,
-    class: {
-      root: 'ring-ring-inverted',
+    ...BRANDS.map((spotlightColor: string) => ({
+      spotlightColor,
+      spotlight: true,
+      class: {
+        root: `[--spotlight-color:var(--ui-${spotlightColor})]`,
+      },
+    })),
+    {
+      spotlightColor: 'neutral',
+      spotlight: true,
+      class: {
+        root: '[--spotlight-color:var(--ui-bg-inverted)]',
+      },
     },
-  }, ...BRANDS.map((spotlightColor: string) => ({
-    spotlightColor,
-    spotlight: true,
-    class: {
-      root: `[--spotlight-color:var(--ui-${spotlightColor})]`,
-    },
-  })), {
-    spotlightColor: 'neutral',
-    spotlight: true,
-    class: {
-      root: '[--spotlight-color:var(--ui-bg-inverted)]',
-    },
-  }],
-  defaultVariants: {
-    variant: 'outline',
-    highlightColor: 'primary',
-    spotlightColor: 'primary',
-  },
-};
+  ],
+} satisfies PThemePageCard;

@@ -37,7 +37,7 @@ describe('breadcrumb', () => {
     ['with color neutral', { props: { ...props, color: 'neutral' } }],
     ['with as', { props: { ...props, as: 'div' } }],
     ['with class', { props: { ...props, class: 'w-48' } }],
-    ['with ui', { props: { ...props, ui: { link: 'font-bold' } } }],
+    ['with ui', { props: { ...props, ui: { link: 'font-700' } } }],
     // Slots
     ['with item slot', { props, slots: { item: () => 'Item slot' } }],
     ['with item-leading slot', { props, slots: { 'item-leading': () => 'Item leading slot' } }],

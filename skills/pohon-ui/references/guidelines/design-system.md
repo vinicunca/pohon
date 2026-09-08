@@ -164,7 +164,7 @@ Most components accept a `variant` prop. Choose based on visual weight:
 Override theme **slots** on a single instance — wins over global config and variants.
 
 ```vue
-<PButton :ui="{ base: 'font-bold', trailingIcon: 'size-3 rotate-90' }" />
+<PButton :ui="{ base: 'font-700', trailingIcon: 'size-3 rotate-90' }" />
 <PCard :ui="{ header: 'bg-muted', body: 'p-8' }" />
 ```
 
@@ -179,7 +179,7 @@ Rules for `ui` overrides:
 Override the **root** (or `base`) slot only — simpler than `ui` for single-slot changes.
 
 ```vue
-<PButton class="font-bold" />
+<PButton class="font-700" />
 ```
 
 ### Finding slot names
@@ -201,7 +201,7 @@ export default defineAppConfig({
   ui: {
     button: {
       slots: {
-        base: "font-bold",
+        base: "font-700",
       },
       compoundVariants: [
         {
@@ -228,7 +228,7 @@ Classes from the `ui` prop, the `class` prop, and global config are merged onto 
 In global config it replaces the slot's own classes, so `variants` and `compoundVariants` still apply on top. In the `ui` and `class` props it runs after the variants, so it replaces the resolved classes, variants included.
 
 ```vue
-<PButton :ui="{ label: () => 'text-base font-bold' }" />
+<PButton :ui="{ label: () => 'text-base font-700' }" />
 ```
 
 ```ts
@@ -237,7 +237,7 @@ export default defineAppConfig({
   ui: {
     button: {
       slots: {
-        label: () => "text-base font-bold",
+        label: () => "text-base font-700",
       },
     },
   },

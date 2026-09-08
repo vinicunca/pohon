@@ -64,7 +64,7 @@ const selectItems = ['Apple', 'Banana', 'Cherry']
 
       <PTheme
         :props="{ button: { color, variant } }"
-        :ui="{ button: { base: 'font-bold rounded-full' } }"
+        :ui="{ button: { base: 'font-700 rounded-full' } }"
       >
         <div class="flex items-center gap-2">
           <PButton label="Styled + themed" />

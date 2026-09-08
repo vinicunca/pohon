@@ -16,7 +16,7 @@ describe('card', () => {
     ['with title and description', { props: { title: 'Title', description: 'Description' } }],
     ...variants.map((variant: string) => [`with variant ${variant}`, { props: { variant } }]),
     ['with class', { props: { class: 'rounded-xl' } }],
-    ['with ui', { props: { ui: { body: 'font-bold' } } }],
+    ['with ui', { props: { ui: { body: 'font-700' } } }],
     // Slots
     ['with default slot', { slots: { default: () => 'Default slot' } }],
     ['with header slot', { slots: { header: () => 'Header slot' } }],

@@ -25,7 +25,7 @@ const value = ref<File[]>([])
 
     <template #files-top="{ open, files }">
       <div v-if="files?.length" class="mb-2 flex items-center justify-between">
-        <p class="font-bold">
+        <p class="font-700">
           Files ({{ files?.length }})
         </p>
 

@@ -37,10 +37,10 @@ describe('button', () => {
     ['with block', { props: { label: 'Button', block: true } }],
     ['with square', { props: { label: 'Button', square: true } }],
     ['with as', { props: { label: 'Button', as: 'div' } }],
-    ['with class', { props: { label: 'Button', class: 'rounded-full font-bold' } }],
-    ['with activeClass', { props: { label: 'Button', active: true, activeClass: 'font-bold' } }],
+    ['with class', { props: { label: 'Button', class: 'rounded-full font-700' } }],
+    ['with activeClass', { props: { label: 'Button', active: true, activeClass: 'font-700' } }],
     ['with inactiveClass', { props: { label: 'Button', active: false, inactiveClass: 'font-light' } }],
-    ['with ui', { props: { label: 'Button', ui: { label: 'font-bold' } } }],
+    ['with ui', { props: { label: 'Button', ui: { label: 'font-700' } } }],
     // Slots
     ['with default slot', { slots: { default: () => 'Default slot' } }],
     ['with leading slot', { slots: { leading: () => 'Leading slot' } }],
@@ -128,7 +128,7 @@ describe('button', () => {
     const wrapper = await mountSuspended(Button, {
       props: {
         label: 'Button',
-        ui: { label: () => 'text-3xl font-bold' },
+        ui: { label: () => 'text-3xl font-700' },
       },
     });
 

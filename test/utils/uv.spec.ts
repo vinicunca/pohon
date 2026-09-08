@@ -26,7 +26,7 @@ describe('uv class replace', () => {
 
   it('keeps merging plain string classes (no regression)', () => {
     const ui = build();
-    expect(ui.label({ class: 'font-bold' })).toBe('truncate font-bold');
+    expect(ui.label({ class: 'font-700' })).toBe('truncate font-700');
     const base = ui.base({ class: 'text-lg' });
     expect(base).toContain('text-lg');
   });
@@ -40,7 +40,7 @@ describe('uv class replace', () => {
   });
 
   it('replaces a slot via a function in `:ui` and drops the defaults', () => {
-    expect(build().label({ class: () => 'text-3xl font-bold' })).toBe('text-3xl font-bold');
+    expect(build().label({ class: () => 'text-3xl font-700' })).toBe('text-3xl font-700');
   });
 
   it('passes the resolved default classes to the replacer', () => {
@@ -99,7 +99,7 @@ describe('uv class replace', () => {
   });
 
   it('merges call-time classes onto a construction-time replacement', () => {
-    expect(buildWith({ label: () => 'text-xl' }).label({ class: 'font-bold' })).toBe('text-xl font-bold');
+    expect(buildWith({ label: () => 'text-xl' }).label({ class: 'font-700' })).toBe('text-xl font-700');
   });
 
   it('lets a call-time `:ui` replacer win over an `app.config.ui` one', () => {
@@ -124,9 +124,9 @@ describe('uv class replace (slotless component)', () => {
   const build = () => uvBase({ extend: uvBase({ base: 'inline-flex rounded-md px-4' }) });
 
   it('still merges plain classes', () => {
-    const result = build()({ class: 'font-bold' });
+    const result = build()({ class: 'font-700' });
     expect(result).toContain('inline-flex');
-    expect(result).toContain('font-bold');
+    expect(result).toContain('font-700');
   });
 
   it('replaces the base through a function in `:ui` / `class`', () => {
@@ -153,7 +153,7 @@ describe('uv class replace (slotless component)', () => {
     const ui = uvBase({
       extend: {
         base: 'inline-flex px-4',
-        variants: { active: { true: 'font-bold' } },
+        variants: { active: { true: 'font-700' } },
       },
       base: () => 'block',
     });
@@ -161,7 +161,7 @@ describe('uv class replace (slotless component)', () => {
     const result = ui({ active: true });
     expect(result).toContain('block');
     expect(result).not.toContain('inline-flex');
-    expect(result).toContain('font-bold');
+    expect(result).toContain('font-700');
   });
 });
 
@@ -170,7 +170,7 @@ describe('uv slot memoization', () => {
     slots: { base: 'inline-flex text-sm', label: 'truncate' },
     variants: {
       active: {
-        true: { base: 'font-bold' },
+        true: { base: 'font-700' },
         false: { base: 'font-light' },
       },
     },
@@ -197,11 +197,11 @@ describe('uv slot memoization', () => {
     const ui = build();
     const [props, counter] = countingProps(true);
 
-    expect(ui.base(props)).toContain('font-bold');
+    expect(ui.base(props)).toContain('font-700');
     const miss = counter.reads;
 
     counter.reads = 0;
-    expect(ui.base(props)).toContain('font-bold');
+    expect(ui.base(props)).toContain('font-700');
     expect(counter.reads).toBeLessThan(miss);
   });
 
@@ -223,13 +223,13 @@ describe('uv slot memoization', () => {
     const ui = build();
     const first = ui.base({ active: true, class: 'p-2' });
     expect(ui.base({ active: true, class: 'p-2' })).toBe(first);
-    expect(first).toContain('font-bold');
+    expect(first).toContain('font-700');
     expect(first).toContain('p-2');
   });
 
   it('never shares entries across distinct args', () => {
     const ui = build();
-    expect(ui.base({ active: true })).toContain('font-bold');
+    expect(ui.base({ active: true })).toContain('font-700');
     expect(ui.base({ active: false })).toContain('font-light');
     expect(ui.base({ active: true, class: 'p-2' })).toContain('p-2');
     expect(ui.base({ active: true })).not.toContain('p-2');
@@ -252,16 +252,16 @@ describe('uv slot memoization', () => {
     // Both serialize to `"null"`, but uv resolves `null` to the default variant
     // while NaN falls through the `key || "false"` lookup.
     expect(ui.base({ active: Number.NaN })).toContain('font-light');
-    expect(ui.base({ active: null })).toContain('font-bold');
+    expect(ui.base({ active: null })).toContain('font-700');
   });
 
   it('does not poison the cache through clsx object classes', () => {
     const ui = build();
     // Object classes bail out of the memo but still resolve...
-    expect(ui.label({ class: { 'font-bold': true, 'opacity-50': false } })).toBe('truncate font-bold');
+    expect(ui.label({ class: { 'font-700': true, 'opacity-50': false } })).toBe('truncate font-700');
     // ...and cached plain calls before/after stay independent.
     expect(ui.label({})).toBe('truncate');
-    expect(ui.label({ class: { 'font-bold': false } })).toBe('truncate');
+    expect(ui.label({ class: { 'font-700': false } })).toBe('truncate');
   });
 
   it('does not poison the cache through replacers', () => {
@@ -309,8 +309,8 @@ describe('uv slot memoization', () => {
   it('does not key inputs carrying inherited enumerable props as plain ones', () => {
     const ui = build();
     // Inherited `class` is read by uv but invisible to `JSON.stringify`: without
-    // the plain-object guard this would cache a `font-bold` result under `{}`.
-    expect(ui.label(Object.create({ class: 'font-bold' }))).toBe('truncate font-bold');
+    // the plain-object guard this would cache a `font-700` result under `{}`.
+    expect(ui.label(Object.create({ class: 'font-700' }))).toBe('truncate font-700');
     expect(ui.label({})).toBe('truncate');
   });
 });

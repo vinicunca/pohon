@@ -58,4 +58,4 @@ exports[`avatar > renders with src correctly 1`] = `"<span data-slot="root" clas
 
 exports[`avatar > renders with text correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-text-muted">+1</span></span>"`;
 
-exports[`avatar > renders with ui correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-text-muted font-bold">&nbsp;</span></span>"`;
+exports[`avatar > renders with ui correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-text-muted font-700">&nbsp;</span></span>"`;

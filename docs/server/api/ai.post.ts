@@ -220,7 +220,7 @@ ui: {
     neutral: 'zinc'
   },
   button: {
-    slots: { base: 'font-bold' },
+    slots: { base: 'font-700' },
     defaultVariants: { size: 'lg' }
   }
 }

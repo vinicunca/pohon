@@ -57,12 +57,27 @@ export default defineConfig({
             from: { height: 'var(--akar-collapsible-content-height)' },
             to: { height: 0 },
           },
+          'marquee': {
+            from: { transform: 'translate3d(0, 0, 0)' },
+            to: { transform: 'translate3d(calc(-100% - var(--gap)), 0, 0)' },
+          },
+          'marquee-rtl': {
+            from: { transform: 'translate3d(0, 0, 0)' },
+            to: { transform: 'translate3d(calc(100% + var(--gap)), 0, 0)' },
+          },
+          'marquee-vertical': {
+            from: { transform: 'translate3d(0, 0, 0)' },
+            to: { transform: 'translate3d(0, calc(-100% - var(--gap)), 0)' },
+          },
         },
         animation: {
           'accordion-down': 'accordion-down 0.2s ease-out',
           'accordion-up': 'accordion-up 0.2s ease-out',
           'collapsible-down': 'collapsible-down 0.2s ease-in-out',
           'collapsible-up': 'collapsible-up 0.2s ease-in-out',
+          'marquee': 'marquee var(--duration) linear infinite',
+          'marquee-rtl': 'marquee-rtl var(--duration) linear infinite',
+          'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
         },
       },
     }),

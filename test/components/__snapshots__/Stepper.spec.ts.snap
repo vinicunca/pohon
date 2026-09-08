@@ -833,7 +833,7 @@ exports[`stepper > renders with ui correctly 1`] = `
         <div data-orientation="horizontal" role="none" data-state="active" data-slot="separator" class="absolute rounded-full group-data-[disabled]:opacity-75 bg-background-accented top-[calc(50%-2px)] h-0.5 group-data-[state=completed]:bg-primary start-[calc(50%+28px)] end-[calc(-50%+28px)]"></div>
       </div>
       <div data-slot="wrapper" class="mt-1 mt-2.5">
-        <div id="akar-stepper-item-title-v-0-0-0" data-slot="title" class="font-500 color-text text-sm font-bold">Address</div>
+        <div id="akar-stepper-item-title-v-0-0-0" data-slot="title" class="font-500 color-text text-sm font-700">Address</div>
         <div id="akar-stepper-item-description-v-0-0-1" data-slot="description" class="color-text-muted text-wrap text-sm">Add your address here</div>
       </div>
     </div>
@@ -842,7 +842,7 @@ exports[`stepper > renders with ui correctly 1`] = `
         <div data-orientation="horizontal" role="none" data-state="inactive" data-slot="separator" class="absolute rounded-full group-data-[disabled]:opacity-75 bg-background-accented top-[calc(50%-2px)] h-0.5 group-data-[state=completed]:bg-primary start-[calc(50%+28px)] end-[calc(-50%+28px)]"></div>
       </div>
       <div data-slot="wrapper" class="mt-1 mt-2.5">
-        <div id="akar-stepper-item-title-v-0-0-2" data-slot="title" class="font-500 color-text text-sm font-bold">Shipping</div>
+        <div id="akar-stepper-item-title-v-0-0-2" data-slot="title" class="font-500 color-text text-sm font-700">Shipping</div>
         <div id="akar-stepper-item-description-v-0-0-3" data-slot="description" class="color-text-muted text-wrap text-sm">Set your preferred shipping method</div>
       </div>
     </div>
@@ -851,7 +851,7 @@ exports[`stepper > renders with ui correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="mt-1 mt-2.5">
-        <div id="akar-stepper-item-title-v-0-0-4" data-slot="title" class="font-500 color-text text-sm font-bold">Checkout</div>
+        <div id="akar-stepper-item-title-v-0-0-4" data-slot="title" class="font-500 color-text text-sm font-700">Checkout</div>
         <div id="akar-stepper-item-description-v-0-0-5" data-slot="description" class="color-text-muted text-wrap text-sm">Confirm your order</div>
       </div>
     </div>

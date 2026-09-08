@@ -53,7 +53,7 @@ describe('timeline', () => {
     ...sizes.map((size: string) => [`with size ${size} vertical`, { props: { ...props, size, orientation: 'vertical' } }]),
     ['with as', { props: { ...props, as: 'section' } }],
     ['with class', { props: { ...props, class: 'gap-8' } }],
-    ['with ui', { props: { ...props, ui: { title: 'font-bold' } } }],
+    ['with ui', { props: { ...props, ui: { title: 'font-700' } } }],
     ['with reverse', { props: { ...props, reverse: true } }],
     ['with reverse and modelValue', { props: { ...props, reverse: true, modelValue: 'design' } }],
     ['with reverse and defaultValue', { props: { ...props, reverse: true, defaultValue: 'design' } }],

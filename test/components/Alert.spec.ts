@@ -25,7 +25,7 @@ describe('alert', () => {
     ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { ...props, variant, color: 'neutral' } }]),
     ['with as', { props: { ...props, as: 'article' } }],
     ['with class', { props: { ...props, class: 'w-48' } }],
-    ['with ui', { props: { ...props, ui: { title: 'font-bold' } } }],
+    ['with ui', { props: { ...props, ui: { title: 'font-700' } } }],
     // Slots
     ['with leading slot', { props, slots: { title: () => 'Leading slot' } }],
     ['with title slot', { props, slots: { title: () => 'Title slot' } }],

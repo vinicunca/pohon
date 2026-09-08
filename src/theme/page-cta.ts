@@ -4,7 +4,7 @@ export default {
     container: 'flex flex-col lg:grid px-6 py-12 sm:px-12 sm:py-24 lg:px-16 lg:py-24 gap-8 sm:gap-16',
     wrapper: '',
     header: '',
-    title: 'text-3xl sm:text-4xl text-pretty tracking-tight font-bold color-text-highlighted',
+    title: 'text-3xl sm:text-4xl text-pretty tracking-tight font-700 color-text-highlighted',
     description: 'text-base sm:text-lg color-text-muted',
     body: 'mt-8',
     footer: 'mt-8',

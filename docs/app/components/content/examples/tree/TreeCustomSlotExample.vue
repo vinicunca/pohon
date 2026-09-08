@@ -32,7 +32,7 @@ const items = [
 <template>
   <PTree :items="items">
     <template #app="{ item }">
-      <p class="italic font-bold">
+      <p class="italic font-700">
         {{ item.label }}
       </p>
     </template>

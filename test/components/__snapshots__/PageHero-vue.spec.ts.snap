@@ -197,7 +197,7 @@ exports[`pageHero > renders with title correctly 1`] = `
     <div data-slot="wrapper" class="text-center">
       <div data-slot="header" class="">
         <!--v-if-->
-        <h1 data-slot="title" class="text-5xl sm:text-7xl text-pretty tracking-tight font-bold color-text-highlighted">Title</h1>
+        <h1 data-slot="title" class="text-5xl sm:text-7xl text-pretty tracking-tight font-700 color-text-highlighted">Title</h1>
         <!--v-if-->
       </div>
       <!--v-if-->
@@ -214,7 +214,7 @@ exports[`pageHero > renders with title slot correctly 1`] = `
     <div data-slot="wrapper" class="text-center">
       <div data-slot="header" class="">
         <!--v-if-->
-        <h1 data-slot="title" class="text-5xl sm:text-7xl text-pretty tracking-tight font-bold color-text-highlighted">Title slot</h1>
+        <h1 data-slot="title" class="text-5xl sm:text-7xl text-pretty tracking-tight font-700 color-text-highlighted">Title slot</h1>
         <!--v-if-->
       </div>
       <!--v-if-->

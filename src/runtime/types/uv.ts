@@ -8,7 +8,7 @@ import type { ClassValue, UvCompoundVariants, UvDefaultVariants, UvVariants } fr
  * it runs after variant resolution, so it receives the fully resolved class
  * string and replaces it, keeping only the plain classes passed alongside the
  * replacer (e.g. `[() => 'text-xl', 'opacity-50']` resolves to both).
- * @example title: defaults => 'text-xl font-bold'
+ * @example title: defaults => 'text-xl font-700'
  */
 export type SlotClassReplacer = (defaults: string) => ClassValue;
 

@@ -41,7 +41,7 @@ defineShortcuts(shortcuts)
   <div class="size-full flex flex-col justify-stretch items-stretch gap-4">
     <PCard :ui="{ header: 'flex items-center justify-between' }">
       <template #header>
-        <h3 class="font-bold">
+        <h3 class="font-700">
           Test shortcuts
         </h3>
 
@@ -58,7 +58,7 @@ defineShortcuts(shortcuts)
     <PCard :ui="{ body: 'h-[200px] overflow-y-auto' }" class="flex-1">
       <template #header>
         <div class="flex items-center justify-between gap-4">
-          <h3 class="font-bold">
+          <h3 class="font-700">
             Logs ({{ logs.length }})
           </h3>
           <PButton icon="i-lucide-trash" size="sm" color="neutral" class="-my-1" @click="logs = []" />

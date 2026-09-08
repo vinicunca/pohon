@@ -63,7 +63,7 @@ describe('tree', () => {
     ['with neutral color', { props: { ...props, color: 'neutral' } }],
     ['with as', { props: { ...props, as: 'div' } }],
     ['with class', { props: { ...props, class: 'absolute' } }],
-    ['with ui', { props: { ...props, ui: { link: 'font-bold' } } }],
+    ['with ui', { props: { ...props, ui: { link: 'font-700' } } }],
     // Slots
     ['with default slot', { props, slots: { default: () => 'default slot' } }],
     ['with item-wrapper slot', { props, slots: { 'item-wrapper': () => 'wrapper slot' } }],

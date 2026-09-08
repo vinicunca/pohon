@@ -36,8 +36,8 @@ describe('progressGroup', () => {
     ['with as', { props: { ...props, as: 'section' } }],
     ['with class', { props: { ...props, class: 'w-48' } }],
     ['with ui', { props: { ...props, ui: { base: 'bg-background' } } }],
-    ['with item ui', { props: { items: [{ label: 'System', value: 24, ui: { itemLabel: 'font-bold' } }], max: 128 } }],
-    ['with item class', { props: { items: [{ label: 'System', value: 24, class: 'font-bold' }], max: 128 } }],
+    ['with item ui', { props: { items: [{ label: 'System', value: 24, ui: { itemLabel: 'font-700' } }], max: 128 } }],
+    ['with item class', { props: { items: [{ label: 'System', value: 24, class: 'font-700' }], max: 128 } }],
     ['with item slot', { props: { items: [{ label: 'System', value: 24, slot: 'custom' }], max: 128 }, slots: { custom: () => 'Custom slot' } }],
     // Slots
     ['with status slot', { props: { ...props, status: true }, slots: { status: () => 'Status slot' } }],

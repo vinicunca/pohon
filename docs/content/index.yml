@@ -196,7 +196,7 @@ components:
       ui: {
         button: {
           slots: {
-            base: 'font-bold'
+            base: 'font-700'
           },
           variants: {
             size: {

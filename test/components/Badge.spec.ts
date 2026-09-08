@@ -25,8 +25,8 @@ describe('badge', () => {
     ['with avatar and trailingIcon', { props: { avatar: { src: 'https://github.com/praburangki.png' }, trailingIcon: 'i-lucide-arrow-right' } }],
     ['with square', { props: { label: 'Badge', square: true } }],
     ['with as', { props: { label: 'Badge', as: 'div' } }],
-    ['with class', { props: { label: 'Badge', class: 'rounded-full font-bold' } }],
-    ['with ui', { props: { label: 'Badge', ui: { label: 'font-bold' } } }],
+    ['with class', { props: { label: 'Badge', class: 'rounded-full font-700' } }],
+    ['with ui', { props: { label: 'Badge', ui: { label: 'font-700' } } }],
     // Slots
     ['with default slot', { slots: { default: () => 'Default slot' } }],
     ['with leading slot', { slots: { leading: () => 'Leading slot' } }],

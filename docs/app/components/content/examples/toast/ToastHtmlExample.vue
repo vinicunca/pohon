@@ -5,12 +5,12 @@ function showToast() {
   toast.add({
     title: h('span', {}, [
       'Item ',
-      h('span', { class: 'color-primary font-bold' }, '#15'),
+      h('span', { class: 'color-primary font-700' }, '#15'),
       ' deleted'
     ]),
     description: h('span', {}, [
       'You have successfully deleted the item from your ',
-      h('span', { class: 'font-bold' }, 'account'),
+      h('span', { class: 'font-700' }, 'account'),
       '.'
     ]),
     icon: 'i-lucide-trash-2'

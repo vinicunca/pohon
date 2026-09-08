@@ -23,7 +23,7 @@ describe('pageFeature', () => {
     ['with to', { props: { to: 'https://github.com/benjamincanac' } }],
     ...orientations.map((orientation: string) => [`with orientation ${orientation}`, { props: { ...props, orientation } }]),
     ['with class', { props: { ...props, class: 'rounded-xl' } }],
-    ['with ui', { props: { ...props, ui: { title: 'font-bold' } } }],
+    ['with ui', { props: { ...props, ui: { title: 'font-700' } } }],
     // Slots
     ['with leading slot', { props, slots: { leading: () => 'Leading slot' } }],
     ['with title slot', { props, slots: { title: () => 'Title slot' } }],

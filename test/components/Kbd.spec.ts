@@ -16,7 +16,7 @@ describe('kbd', () => {
     ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { value: 'K', variant } }]),
     ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { value: 'K', variant, color: 'neutral' } }]),
     ['with as', { props: { value: 'K', as: 'span' } }],
-    ['with class', { props: { value: 'K', class: 'font-bold' } }],
+    ['with class', { props: { value: 'K', class: 'font-700' } }],
     // Slots
     ['with default slot', { slots: { default: () => 'Default slot' } }],
   ]);
