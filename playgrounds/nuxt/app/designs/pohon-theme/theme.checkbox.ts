@@ -2,9 +2,6 @@ import type { PThemeCheckbox } from 'pohon-ui';
 // @unocss-include
 import { BRANDS } from '../design.constants';
 
-// Shared with `checkbox-group` and `radio-group`, which style the same states on their own slots.
-export const hover = 'hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:';
-
 // `list` puts focus on the control, which is the click target there. `card` and `table`
 // render the root as a label wrapping everything, so focus belongs on the card itself,
 // as it does whenever the control is `sr-only`.
@@ -107,7 +104,7 @@ export const themeCheckbox = {
       variant: 'card',
       highlight: false,
       class: {
-        root: `${hover}border-accented`,
+        root: 'hover:[&:not(:has(:disabled,:focus-visible,[data-state=checked]))]:border-border-accented',
       },
     },
     { size: 'xs', indicator: 'hidden', class: { icon: 'size-3' } },

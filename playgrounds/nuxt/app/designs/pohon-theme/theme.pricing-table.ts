@@ -1,35 +1,37 @@
 // @unocss-include
+import type { PThemePricingTable } from 'pohon-ui';
+
 export const themePricingTable = {
   slots: {
     root: 'w-full relative',
     table: 'h-fit w-full hidden border-separate border-spacing-x-0 table-fixed md:table',
     list: 'flex flex-col gap-6 w-full md:hidden',
-    item: 'border-border p-6 border rounded-lg flex flex-col',
+    item: 'p-6 border border-border rounded-lg flex flex-col',
     caption: 'sr-only',
     thead: '',
     tbody: '',
     tr: '',
-    th: 'border-border font-normal py-4 text-start border-b',
-    td: 'border-border px-6 py-4 text-center border-b',
+    th: 'font-normal py-4 text-start border-b border-border',
+    td: 'px-6 py-4 text-center border-b border-border',
     tier: 'font-normal p-6 text-start align-top h-full',
     tierWrapper: 'flex flex-col md:h-full',
     tierTitleWrapper: 'flex gap-3 items-center',
-    tierTitle: 'color-text-highlighted text-lg font-600',
-    tierDescription: 'color-text-muted text-sm font-normal mt-1',
+    tierTitle: 'text-lg color-text-highlighted font-600',
+    tierDescription: 'text-sm color-text-muted font-normal mt-1',
     tierBadge: 'truncate',
     tierPriceWrapper: 'mt-4 flex gap-1 items-center',
-    tierPrice: 'color-text-highlighted text-3xl font-600 sm:text-4xl',
-    tierDiscount: 'color-text-muted text-xl line-through sm:text-2xl',
+    tierPrice: 'text-3xl color-text-highlighted font-600 sm:text-4xl',
+    tierDiscount: 'text-xl color-text-muted line-through sm:text-2xl',
     tierBilling: 'flex flex-col min-w-0 justify-between',
-    tierBillingPeriod: 'color-text-toned text-xs font-500 truncate',
-    tierBillingCycle: 'color-text-muted text-xs font-500 truncate',
+    tierBillingPeriod: 'text-xs color-text-toned font-500 truncate',
+    tierBillingCycle: 'text-xs color-text-muted font-500 truncate',
     tierButton: 'mt-6 md:mt-auto md:pt-6',
     tierFeatureIcon: 'shrink-0 size-5',
     section: 'mt-6 flex flex-col gap-2',
-    sectionTitle: 'color-text-highlighted text-sm font-600',
+    sectionTitle: 'text-sm color-text-highlighted font-600',
     feature: 'flex gap-1 items-center justify-between',
-    featureTitle: 'color-text text-sm',
-    featureValue: 'color-text-muted text-sm flex min-w-5 justify-center',
+    featureTitle: 'text-sm color-text',
+    featureValue: 'text-sm color-text-muted flex min-w-5 justify-center',
   },
   variants: {
     section: {
@@ -44,10 +46,10 @@ export const themePricingTable = {
     },
     highlight: {
       true: {
-        tier: 'bg-background-elevated/50 border-border border-x border-t rounded-t-lg',
-        td: 'bg-background-elevated/50 border-border border-x',
+        tier: 'border-x border-t border-border rounded-t-lg bg-background-elevated/50',
+        td: 'border-x border-border bg-background-elevated/50',
         item: 'bg-background-elevated/50',
       },
     },
   },
-};
+} satisfies PThemePricingTable;

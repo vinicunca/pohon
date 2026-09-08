@@ -2,7 +2,7 @@
 import type { PThemeCheckboxGroup } from 'pohon-ui';
 import { BRANDS } from '../design.constants';
 // `table` is defined here rather than in checkbox.ts, so its focus ring is too
-import { focusCard, hover } from './theme.checkbox';
+import { focusCard } from './theme.checkbox';
 
 export const themeCheckboxGroup = {
   slots: {
@@ -70,7 +70,7 @@ export const themeCheckboxGroup = {
       variant: 'table',
       highlight: false,
       class: {
-        item: `${hover}border-accented`,
+        item: 'hover:[&:not(:has(:disabled,:focus-visible,[data-state=checked]))]:border-border-accented',
       },
     },
     { size: 'xs', variant: 'table', class: { item: 'p-2.5' } },

@@ -69,6 +69,99 @@ export default defineConfig({
             from: { transform: 'translate3d(0, 0, 0)' },
             to: { transform: 'translate3d(0, calc(-100% - var(--gap)), 0)' },
           },
+          'elastic': {
+            '0%, 100%': {
+              width: '50%',
+              left: '25%',
+            },
+            '50%': {
+              width: '100%',
+              left: '0%',
+            },
+          },
+          'elastic-vertical': {
+            '0%, 100%': {
+              height: '50%',
+              top: '25%',
+            },
+            '50%': {
+              height: '100%',
+              top: '0%',
+            },
+          },
+          'carousel': {
+            '0%, 100%': {
+              width: '50%',
+            },
+            '0%': {
+              transform: 'translateX(-100%)',
+            },
+            '100%': {
+              transform: 'translateX(200%)',
+            },
+          },
+          'carousel-rtl': {
+            '0%, 100%': {
+              width: '50%',
+            },
+            '0%': {
+              transform: 'translateX(100%)',
+            },
+            '100%': {
+              transform: 'translateX(-200%)',
+            },
+          },
+          'carousel-inverse': {
+            '0%, 100%': { width: '50%' },
+            '0%': { transform: 'translateX(200%)' },
+            '100%': { transform: 'translateX(-100%)' },
+          },
+          'carousel-inverse-rtl': {
+            '0%, 100%': { width: '50%' },
+            '0%': { transform: 'translateX(-200%)' },
+            '100%': { transform: 'translateX(100%)' },
+          },
+          'carousel-vertical': {
+            '0%, 100%': {
+              height: '50%',
+            },
+            '0%': {
+              transform: 'translateY(-100%)',
+            },
+            '100%': {
+              transform: 'translateY(200%)',
+            },
+          },
+          'carousel-inverse-vertical': {
+            '0%, 100%': {
+              height: '50%',
+            },
+            '0%': {
+              transform: 'translateY(200%)',
+            },
+            '100%': {
+              transform: 'translateY(-100%)',
+            },
+          },
+          'swing': {
+            '0%, 100%': {
+              width: '50%',
+              transform: 'translateX(-25%)',
+            },
+            '50%': {
+              transform: 'translateX(125%)',
+            },
+          },
+
+          'swing-vertical': {
+            '0%, 100%': {
+              height: '50%',
+              transform: 'translateY(-25%)',
+            },
+            '50%': {
+              transform: 'translateY(125%)',
+            },
+          },
         },
         animation: {
           'accordion-down': 'accordion-down 0.2s ease-out',
@@ -78,6 +171,16 @@ export default defineConfig({
           'marquee': 'marquee var(--duration) linear infinite',
           'marquee-rtl': 'marquee-rtl var(--duration) linear infinite',
           'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+          'elastic': 'elastic 2s ease-in-out infinite',
+          'elastic-vertical': 'elastic-vertical 2s ease-in-out infinite',
+          'swing': 'swing 2s ease-in-out infinite',
+          'swing-vertical': 'swing-vertical 2s ease-in-out infinite',
+          'carousel': 'carousel 2s linear infinite',
+          'carousel-rtl': 'carousel-rtl 2s linear infinite',
+          'carousel-inverse': 'carousel-inverse 2s linear infinite',
+          'carousel-inverse-rtl': 'carousel-inverse-rtl 2s linear infinite',
+          'carousel-vertical': 'carousel-vertical 2s linear infinite',
+          'carousel-inverse-vertical': 'carousel-inverse-vertical 2s linear infinite',
         },
       },
     }),

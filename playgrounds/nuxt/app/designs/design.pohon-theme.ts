@@ -74,6 +74,14 @@ import { themePageLinks } from './pohon-theme/theme.page-links';
 import { themePageList } from './pohon-theme/theme.page-list';
 import { themePageLogos } from './pohon-theme/theme.page-logos';
 import { themePageSection } from './pohon-theme/theme.page-section';
+import { themePagination } from './pohon-theme/theme.pagination';
+import { themePinInput } from './pohon-theme/theme.pin-input';
+import { themePopover } from './pohon-theme/theme.popover';
+import { themePricingPlan, themePricingPlans } from './pohon-theme/theme.pricing-plans';
+import { themePricingTable } from './pohon-theme/theme.pricing-table';
+import { themeProgress } from './pohon-theme/theme.progress';
+import { themeProgressGroup } from './pohon-theme/theme.progress-group';
+import { themeRadioGroup } from './pohon-theme/theme.radio-group';
 import { themeSelect } from './pohon-theme/theme.select';
 import { themeSwitch } from './pohon-theme/theme.switch';
 import { themeUser } from './pohon-theme/theme.user';
@@ -165,6 +173,15 @@ export const uiTheme = {
   pageList: themePageList,
   pageLogos: themePageLogos,
   pageSection: themePageSection,
+  pagination: themePagination,
+  pinInput: themePinInput,
+  popover: themePopover,
+  pricingPlan: themePricingPlan,
+  pricingPlans: themePricingPlans,
+  pricingTable: themePricingTable,
+  progress: themeProgress,
+  progressGroup: themeProgressGroup,
+  radioGroup: themeRadioGroup,
   select: themeSelect,
   switch: themeSwitch,
   user: themeUser,

@@ -1,10 +1,12 @@
 // @unocss-include
+
+import type { PThemePinInput } from 'pohon-ui';
 import { BRANDS } from '../design.constants';
 
 export const themePinInput = {
   slots: {
     root: 'inline-flex gap-1.5 items-center relative',
-    base: ['rounded-md border-0 placeholder:color-text-dimmed text-center disabled:cursor-not-allowed disabled:opacity-75', 'transition-colors'],
+    base: 'text-center border-0 rounded-md transition-colors placeholder:color-text-dimmed disabled:(opacity-75 cursor-not-allowed)',
     separator: 'color-text-dimmed flex items-center justify-center',
   },
   variants: {
@@ -26,10 +28,10 @@ export const themePinInput = {
       },
     },
     variant: {
-      outline: 'color-text-highlighted bg-background ring-ring-accented ring ring-inset',
-      soft: 'color-text-highlighted bg-background-elevated/50 hover:bg-background-elevated focus:bg-background-elevated disabled:bg-background-elevated/50',
-      subtle: 'color-text-highlighted bg-background-elevated ring-ring-accented ring ring-inset',
-      ghost: 'color-text-highlighted hover:bg-background-elevated focus:bg-background-elevated bg-transparent disabled:bg-transparent dark:disabled:bg-transparent',
+      outline: 'color-text-highlighted bg-background ring ring-ring-accented ring-inset',
+      soft: 'color-text-highlighted bg-background-elevated/50 disabled:bg-background-elevated/50 focus:bg-background-elevated hover:bg-background-elevated',
+      subtle: 'color-text-highlighted bg-background-elevated ring ring-ring-accented ring-inset',
+      ghost: 'color-text-highlighted bg-transparent disabled:bg-transparent focus:bg-background-elevated hover:bg-background-elevated dark:disabled:bg-transparent',
       none: 'color-text-highlighted bg-transparent focus:outline-none',
     },
     color: {
@@ -43,50 +45,56 @@ export const themePinInput = {
       false: '',
     },
   },
-  compoundVariants: [...BRANDS.map((color: string) => ({
-    color,
-    variant: ['outline', 'subtle'],
-    class: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
-  })), ...BRANDS.map((color: string) => ({
-    color,
-    variant: ['soft', 'ghost'],
-    class: `outline-${color}/25 focus-visible:outline-3`,
-  })), ...BRANDS.map((color: string) => ({
-    color,
-    highlight: true,
-    class: `ring ring-inset ring-${color}`,
-  })), {
-    color: 'neutral',
-    variant: ['outline', 'subtle'],
-    class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
-  }, {
-    color: 'neutral',
-    variant: ['soft', 'ghost'],
-    class: 'outline-outline-inverted/25 focus-visible:outline-3',
-  }, {
-    color: 'neutral',
-    highlight: true,
-    class: 'ring ring-inset ring-ring-inverted',
-  }, {
-    fixed: false,
-    size: 'xs',
-    class: 'md:text-xs',
-  }, {
-    fixed: false,
-    size: 'sm',
-    class: 'md:text-xs',
-  }, {
-    fixed: false,
-    size: 'md',
-    class: 'md:text-sm',
-  }, {
-    fixed: false,
-    size: 'lg',
-    class: 'md:text-sm',
-  }],
-  defaultVariants: {
-    size: 'md',
-    color: 'primary',
-    variant: 'outline',
-  },
-};
+  compoundVariants: [
+    ...BRANDS.map((color: string) => ({
+      color,
+      variant: ['outline', 'subtle'],
+      class: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
+    })),
+    ...BRANDS.map((color: string) => ({
+      color,
+      variant: ['soft', 'ghost'],
+      class: `outline-${color}/25 focus-visible:outline-3`,
+    })),
+    ...BRANDS.map((color: string) => ({
+      color,
+      highlight: true,
+      class: `ring ring-inset pohon:ring-${color}`,
+    })),
+    {
+      color: 'neutral',
+      variant: ['outline', 'subtle'],
+      class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
+    },
+    {
+      color: 'neutral',
+      variant: ['soft', 'ghost'],
+      class: 'outline-outline-inverted/25 focus-visible:outline-3',
+    },
+    {
+      color: 'neutral',
+      highlight: true,
+      class: 'ring ring-inset ring-ring-inverted',
+    },
+    {
+      fixed: false,
+      size: 'xs',
+      class: 'md:text-xs',
+    },
+    {
+      fixed: false,
+      size: 'sm',
+      class: 'md:text-xs',
+    },
+    {
+      fixed: false,
+      size: 'md',
+      class: 'md:text-sm',
+    },
+    {
+      fixed: false,
+      size: 'lg',
+      class: 'md:text-sm',
+    },
+  ],
+} satisfies PThemePinInput;

@@ -1,63 +1,65 @@
 // @unocss-include
+import type { PThemeRadioGroup } from 'pohon-ui';
 import { BRANDS } from '../design.constants';
-import { focusCard, focusControl, hover } from './theme.checkbox';
+import { focusCard, focusControl } from './theme.checkbox';
+
 export const themeRadioGroup = {
   slots: {
     root: 'relative',
     fieldset: 'flex gap-x-2',
-    legend: 'mb-1 block font-500 color-text',
+    legend: 'color-text font-500 mb-1 block',
     item: 'flex items-start',
     container: 'flex items-center',
-    base: 'rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none',
-    indicator: 'flex items-center justify-center size-full after:bg-background after:rounded-full',
+    base: 'rounded-full ring ring-ring-accented ring-inset overflow-hidden focus-visible:outline-none',
+    indicator: 'flex size-full items-center justify-center after:(content-empty rounded-full bg-background)',
     wrapper: 'w-full',
-    label: 'block font-500 color-text',
+    label: 'color-text font-500 block',
     icon: 'shrink-0',
-    description: 'color-text-muted'
+    description: 'color-text-muted',
   },
   variants: {
     color: {
       ...Object.fromEntries(BRANDS.map((color: string) => [color, {
-        indicator: `bg-${color}`
+        indicator: `bg-${color}`,
       }])),
       neutral: {
-        indicator: 'bg-background-inverted'
-      }
+        indicator: 'bg-background-inverted',
+      },
     },
     variant: {
       list: {
         fieldset: 'flex-wrap',
-        item: ''
+        item: '',
       },
       card: {
         fieldset: 'flex-wrap',
-        item: [`border border-border rounded-lg ${hover}bg-background-elevated/50`, 'transition-colors']
+        item: 'border border-border rounded-lg transition-colors hover:[&:not(:has(:disabled,:focus-visible,[data-state=checked]))]:bg-background-elevated/50',
       },
       table: {
-        item: [`border border-border ${hover}bg-background-elevated/50`, 'transition-colors']
-      }
+        item: 'border border-border transition-colors hover:[&:not(:has(:disabled,:focus-visible,[data-state=checked]))]:bg-background-elevated/50',
+      },
     },
     orientation: {
       horizontal: {
-        fieldset: 'flex-row'
+        fieldset: 'flex-row',
       },
       vertical: {
-        fieldset: 'flex-col'
-      }
+        fieldset: 'flex-col',
+      },
     },
     indicator: {
       start: {
         item: 'flex-row',
-        wrapper: 'ms-2'
+        wrapper: 'ms-2',
       },
       end: {
         item: 'flex-row-reverse',
-        wrapper: 'me-2'
+        wrapper: 'me-2',
       },
       hidden: {
         base: 'sr-only',
-        wrapper: 'flex flex-col items-center gap-1 text-center'
-      }
+        wrapper: 'text-center flex flex-col gap-1 items-center',
+      },
     },
     size: {
       xs: {
@@ -66,7 +68,7 @@ export const themeRadioGroup = {
         base: 'size-3',
         item: 'text-xs',
         container: 'h-4',
-        indicator: 'after:size-1'
+        indicator: 'after:size-1',
       },
       sm: {
         fieldset: 'gap-y-0.5',
@@ -74,7 +76,7 @@ export const themeRadioGroup = {
         base: 'size-3.5',
         item: 'text-xs',
         container: 'h-4',
-        indicator: 'after:size-1'
+        indicator: 'after:size-1',
       },
       md: {
         fieldset: 'gap-y-1',
@@ -82,7 +84,7 @@ export const themeRadioGroup = {
         base: 'size-4',
         item: 'text-sm',
         container: 'h-5',
-        indicator: 'after:size-1.5'
+        indicator: 'after:size-1.5',
       },
       lg: {
         fieldset: 'gap-y-1',
@@ -90,7 +92,7 @@ export const themeRadioGroup = {
         base: 'size-4.5',
         item: 'text-sm',
         container: 'h-5',
-        indicator: 'after:size-1.5'
+        indicator: 'after:size-1.5',
       },
       xl: {
         fieldset: 'gap-y-1.5',
@@ -98,40 +100,40 @@ export const themeRadioGroup = {
         base: 'size-5',
         item: 'text-base',
         container: 'h-6',
-        indicator: 'after:size-2'
-      }
+        indicator: 'after:size-2',
+      },
     },
     highlight: {
       true: '',
-      false: ''
+      false: '',
     },
     disabled: {
       true: {
         item: 'opacity-75',
         base: 'cursor-not-allowed',
         label: 'cursor-not-allowed',
-        description: 'cursor-not-allowed'
-      }
+        description: 'cursor-not-allowed',
+      },
     },
     required: {
       true: {
-        legend: 'after:content-[\'*\'] after:ms-0.5 after:color-error'
-      }
-    }
+        legend: 'after:(color-error ms-0.5 content-["*"])',
+      },
+    },
   },
   compoundVariants: [
     {
       indicator: 'hidden',
       class: {
-        container: 'h-auto'
-      }
+        container: 'h-auto',
+      },
     },
     {
       variant: ['card', 'table'],
       highlight: false,
       class: {
-        item: `${hover}border-accented`
-      }
+        item: 'hover:[&:not(:has(:disabled,:focus-visible,[data-state=checked]))]:border-border-accented',
+      },
     },
     { size: 'xs', indicator: 'hidden', class: { icon: 'size-3' } },
     { size: 'sm', indicator: 'hidden', class: { icon: 'size-3.5' } },
@@ -148,111 +150,113 @@ export const themeRadioGroup = {
       variant: 'table',
       class: {
         item: 'first-of-type:rounded-s-lg last-of-type:rounded-e-lg',
-        fieldset: 'gap-0 -space-x-px'
-      }
+        fieldset: 'gap-0 -space-x-px',
+      },
     },
     {
       orientation: 'vertical',
       variant: 'table',
       class: {
         item: 'first-of-type:rounded-t-lg last-of-type:rounded-b-lg',
-        fieldset: 'gap-0 -space-y-px'
-      }
+        fieldset: 'gap-0 -space-y-px',
+      },
     },
-    ...[...BRANDS.map((color: string) => [color, color]), ['neutral', 'inverted']].map(([color, token]: string[]) => ({
+    ...[
+      ...BRANDS.map((color: string) => [color, color]),
+      ['neutral', 'inverted'],
+    ].map(([color, token]: Array<string>) => ({
       color,
       variant: 'list',
       indicator: ['start', 'end'],
       class: {
-        base: focusControl(token!)
-      }
+        base: focusControl(token!),
+      },
     })),
-    ...[...BRANDS.map((color: string) => [color, color]), ['neutral', 'inverted']].map(([color, token]: string[]) => ({
+    ...[
+      ...BRANDS.map((color: string) => [color, color]),
+      ['neutral', 'inverted'],
+    ].map(([color, token]: Array<string>) => ({
       color,
       variant: ['card', 'table'],
       class: {
-        item: focusCard(token!)
-      }
+        item: focusCard(token!),
+      },
     })),
-    ...[...BRANDS.map((color: string) => [color, color]), ['neutral', 'inverted']].map(([color, token]: string[]) => ({
+    ...[
+      ...BRANDS.map((color: string) => [color, color]),
+      ['neutral', 'inverted'],
+    ].map(([color, token]: Array<string>) => ({
       color,
       variant: 'list',
       indicator: 'hidden',
       class: {
-        item: focusCard(token!)
-      }
+        item: focusCard(token!),
+      },
     })),
     ...BRANDS.map((color: string) => ({
       color,
       variant: 'card',
       class: {
-        item: `has-data-[state=checked]:border-${color}/50 has-data-[state=checked]:bg-${color}/10`
-      }
+        item: `has-data-[state=checked]:border-${color}/50 has-data-[state=checked]:bg-${color}/10`,
+      },
     })),
     {
       color: 'neutral',
       variant: 'card',
       class: {
-        item: 'has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated'
-      }
+        item: 'has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated',
+      },
     },
     ...BRANDS.map((color: string) => ({
       color,
       variant: 'table',
       class: {
-        item: `has-data-[state=checked]:bg-${color}/10 has-data-[state=checked]:border-${color}/50 has-data-[state=checked]:z-1`
-      }
+        item: `has-data-[state=checked]:bg-${color}/10 has-data-[state=checked]:border-${color}/50 has-data-[state=checked]:z-1`,
+      },
     })),
     {
       color: 'neutral',
       variant: 'table',
       class: {
-        item: 'has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-1'
-      }
+        item: 'has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-1',
+      },
     },
     {
       variant: ['card', 'table'],
       disabled: true,
       class: {
-        item: 'cursor-not-allowed'
-      }
+        item: 'cursor-not-allowed',
+      },
     },
     ...BRANDS.map((color: string) => ({
       color,
       indicator: 'hidden',
       highlight: true,
       class: {
-        item: `not-has-disabled:border-${color} not-has-disabled:has-data-[state=checked]:border-${color}`
-      }
+        item: `[&:not(:has(:disabled))]:border-${color} [&:not(:has(:disabled)):has([data-state=checked])]:border-${color}`,
+      },
     })),
     {
       color: 'neutral',
       indicator: 'hidden',
       highlight: true,
       class: {
-        item: 'not-has-disabled:border-border-inverted not-has-disabled:has-data-[state=checked]:border-border-inverted'
-      }
+        item: '[&:not(:has(:disabled))]:border-border-inverted [&:not(:has(:disabled)):has([data-state=checked])]:border-border-inverted',
+      },
     },
     ...BRANDS.map((color: string) => ({
       color,
       highlight: true,
       class: {
-        base: `ring-${color}`
-      }
+        base: `ring-${color}`,
+      },
     })),
     {
       color: 'neutral',
       highlight: true,
       class: {
-        base: 'ring-ring-inverted'
-      }
-    }
+        base: 'ring-ring-inverted',
+      },
+    },
   ],
-  defaultVariants: {
-    highlight: false,
-    size: 'md',
-    color: 'primary',
-    variant: 'list',
-    indicator: 'start'
-  }
-};
+} satisfies PThemeRadioGroup;

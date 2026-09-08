@@ -1,49 +1,66 @@
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
-import theme from '#build/ui/progress-group'
-import type { ProgressGroupItem } from 'pohon-ui'
+import type { ProgressGroupItem } from 'pohon-ui';
+import { reactive, ref } from 'vue';
+import theme from '#build/ui/progress-group';
 
-const colors = Object.keys(theme.variants.color)
-const sizes = Object.keys(theme.variants.size)
-const orientations = Object.keys(theme.variants.orientation)
+const colors = Object.keys(theme.variants.color);
+const sizes = Object.keys(theme.variants.size);
+const orientations = Object.keys(theme.variants.orientation);
 
 const attrs = reactive({
   color: [theme.defaultVariants.color],
-  size: [theme.defaultVariants.size]
-})
+  size: [theme.defaultVariants.size],
+});
 
-const orientation = ref('horizontal' as keyof typeof theme.variants.orientation)
+const orientation = ref('horizontal' as keyof typeof theme.variants.orientation);
 
-const items = ref<ProgressGroupItem[]>([
+const items = ref<Array<ProgressGroupItem>>([
   { label: 'System', value: 24, color: 'neutral', icon: 'i-lucide-cog' },
   { label: 'Apps', value: 8, color: 'error', icon: 'i-lucide-app-window' },
   { label: 'Documents', value: 12, color: 'warning', icon: 'i-lucide-file' },
-  { label: 'Multimedia', value: 42, color: 'success', icon: 'i-lucide-film' }
-])
+  { label: 'Multimedia', value: 42, color: 'success', icon: 'i-lucide-film' },
+]);
 
-const plain = ref<ProgressGroupItem[]>([
+const plain = ref<Array<ProgressGroupItem>>([
   { label: 'Read', value: 42 },
-  { label: 'Write', value: 18 }
-])
+  { label: 'Write', value: 18 },
+]);
 
-const custom = ref<ProgressGroupItem[]>([
-  { label: 'Read', value: 42, color: 'var(--color-violet-400)' },
-  { label: 'Write', value: 18, color: '#22c55e' }
-])
+// color-violet-400
+const custom = ref<Array<ProgressGroupItem>>([
+  { label: 'Read', value: 42, color: 'var(--colors-violet-400)' },
+  { label: 'Write', value: 18, color: '#22c55e' },
+]);
 
 function shuffle() {
   for (const item of items.value) {
-    item.value = Math.round(Math.random() * 32)
+    item.value = Math.round(Math.random() * 32);
   }
 }
 </script>
 
 <template>
   <Navbar>
-    <PSelect v-model="attrs.color" :items="colors" multiple />
-    <PSelect v-model="attrs.size" :items="sizes" multiple />
-    <PSelect v-model="orientation" :items="orientations" />
-    <PButton label="Shuffle" color="neutral" variant="subtle" @click="shuffle" />
+    <PSelect
+      v-model="attrs.color"
+      :items="colors"
+      multiple
+    />
+    <PSelect
+      v-model="attrs.size"
+      :items="sizes"
+      multiple
+    />
+    <PSelect
+      v-model="orientation"
+      :items="orientations"
+    />
+    <PButton
+      label="Shuffle"
+      color="neutral"
+      variant="subtle"
+      @click="shuffle"
+    />
   </Navbar>
 
   <Matrix
@@ -52,8 +69,22 @@ function shuffle() {
     :container-props="{ 'data-orientation': orientation }"
     container-class="gap-4 data-[orientation=horizontal]:w-64 data-[orientation=vertical]:h-64 data-[orientation=vertical]:flex-row"
   >
-    <PProgressGroup :items="items" :max="128" status :orientation="orientation" v-bind="props" />
-    <PProgressGroup :items="plain" :orientation="orientation" v-bind="props" />
-    <PProgressGroup :items="custom" :orientation="orientation" v-bind="props" />
+    <PProgressGroup
+      :items="items"
+      :max="128"
+      status
+      :orientation="orientation"
+      v-bind="props"
+    />
+    <PProgressGroup
+      :items="plain"
+      :orientation="orientation"
+      v-bind="props"
+    />
+    <PProgressGroup
+      :items="custom"
+      :orientation="orientation"
+      v-bind="props"
+    />
   </Matrix>
 </template>

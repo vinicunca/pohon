@@ -4,7 +4,7 @@ import { BRANDS } from '../design.constants';
 export const themeProgressGroup = {
   slots: {
     root: 'gap-2',
-    base: 'bg-background-accented rounded-full flex overflow-hidden',
+    base: 'rounded-full bg-background-accented flex overflow-hidden',
     segment: 'duration-280 ease-out motion-reduce:transition-none',
     indicator: 'size-full',
     status: 'color-text-dimmed flex duration-280 ease-out motion-reduce:transition-none',
@@ -87,65 +87,76 @@ export const themeProgressGroup = {
       },
     },
   },
-  compoundVariants: [{
-    orientation: 'horizontal',
-    size: '2xs',
-    class: 'h-px',
-  }, {
-    orientation: 'horizontal',
-    size: 'xs',
-    class: 'h-0.5',
-  }, {
-    orientation: 'horizontal',
-    size: 'sm',
-    class: 'h-1',
-  }, {
-    orientation: 'horizontal',
-    size: 'md',
-    class: 'h-2',
-  }, {
-    orientation: 'horizontal',
-    size: 'lg',
-    class: 'h-3',
-  }, {
-    orientation: 'horizontal',
-    size: 'xl',
-    class: 'h-4',
-  }, {
-    orientation: 'horizontal',
-    size: '2xl',
-    class: 'h-5',
-  }, {
-    orientation: 'vertical',
-    size: '2xs',
-    class: 'w-px',
-  }, {
-    orientation: 'vertical',
-    size: 'xs',
-    class: 'w-0.5',
-  }, {
-    orientation: 'vertical',
-    size: 'sm',
-    class: 'w-1',
-  }, {
-    orientation: 'vertical',
-    size: 'md',
-    class: 'w-2',
-  }, {
-    orientation: 'vertical',
-    size: 'lg',
-    class: 'w-3',
-  }, {
-    orientation: 'vertical',
-    size: 'xl',
-    class: 'w-4',
-  }, {
-    orientation: 'vertical',
-    size: '2xl',
-    class: 'w-5',
-  }],
-  defaultVariants: {
-    color: 'primary',
-    size: 'md',
-  },
+  compoundVariants: [
+    {
+      orientation: 'horizontal',
+      size: '2xs',
+      class: 'h-px',
+    },
+    {
+      orientation: 'horizontal',
+      size: 'xs',
+      class: 'h-0.5',
+    },
+    {
+      orientation: 'horizontal',
+      size: 'sm',
+      class: 'h-1',
+    },
+    {
+      orientation: 'horizontal',
+      size: 'md',
+      class: 'h-2',
+    },
+    {
+      orientation: 'horizontal',
+      size: 'lg',
+      class: 'h-3',
+    },
+    {
+      orientation: 'horizontal',
+      size: 'xl',
+      class: 'h-4',
+    },
+    {
+      orientation: 'horizontal',
+      size: '2xl',
+      class: 'h-5',
+    },
+    {
+      orientation: 'vertical',
+      size: '2xs',
+      class: 'w-px',
+    },
+    {
+      orientation: 'vertical',
+      size: 'xs',
+      class: 'w-0.5',
+    },
+    {
+      orientation: 'vertical',
+      size: 'sm',
+      class: 'w-1',
+    },
+    {
+      orientation: 'vertical',
+      size: 'md',
+      class: 'w-2',
+    },
+    {
+      orientation: 'vertical',
+      size: 'lg',
+      class: 'w-3',
+    },
+    {
+      orientation: 'vertical',
+      size: 'xl',
+      class: 'w-4',
+    },
+    {
+      orientation: 'vertical',
+      size: '2xl',
+      class: 'w-5',
+    },
+  ],
 };
