@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent } from 'vue';
 
-const LazyModalExample = defineAsyncComponent(() => import('../../components/ModalExample.vue'))
+const LazyModalExample = defineAsyncComponent(() => import('../../components/ModalExample.vue'));
 
-const open = ref(false)
-const count = ref(0)
-const overlay = useOverlay()
-const toast = useToast()
+const open = ref(false);
+const count = ref(0);
+const overlay = useOverlay();
+const toast = useToast();
 
 const modal = overlay.create(LazyModalExample, {
   props: {
-    count: count.value
-  }
-})
+    count: count.value,
+  },
+});
 
 function openModal() {
-  count.value++
+  count.value++;
 
-  modal.open({ count: count.value })
+  modal.open({ count: count.value });
 }
 
 function showToast() {
@@ -25,8 +25,8 @@ function showToast() {
     title: 'Toast displayed!',
     description: 'This toast was triggered from the modal.',
     color: 'success',
-    icon: 'i-lucide-check-circle'
-  })
+    icon: 'i-lucide-check-circle',
+  });
 }
 </script>
 
@@ -35,7 +35,11 @@ function showToast() {
 
   <div class="flex flex-col gap-2 min-h-0">
     <PModal title="First modal">
-      <PButton color="neutral" variant="outline" label="Open with nested" />
+      <PButton
+        color="neutral"
+        variant="outline"
+        label="Open with nested"
+      />
 
       <template #footer>
         <PModal title="Second modal">
@@ -44,67 +48,178 @@ function showToast() {
       </template>
     </PModal>
 
-    <PModal v-model:open="open" title="Modal with v-model" description="This can be useful to control the state of the modal yourself." />
+    <PModal
+      v-model:open="open"
+      title="Modal with v-model"
+      description="This can be useful to control the state of the modal yourself."
+    />
 
-    <PButton label="Open with v-model" color="neutral" variant="subtle" @click="open = true" />
+    <PButton
+      label="Open with v-model"
+      color="neutral"
+      variant="subtle"
+      @click="open = true"
+    />
 
-    <PModal title="Modal without overlay" description="This modal has `overlay: false` prop." :overlay="false">
-      <PButton label="Open without overlay" color="neutral" variant="outline" />
+    <PModal
+      title="Modal without overlay"
+      description="This modal has `overlay: false` prop."
+      :overlay="false"
+    >
+      <PButton
+        label="Open without overlay"
+        color="neutral"
+        variant="outline"
+      />
     </PModal>
 
-    <PModal title="Modal without modal & overlay" description="This modal has `modal: false` and `overlay: false` to interact with outside content." :overlay="false" :modal="false">
-      <PButton label="Open without modal" color="neutral" variant="subtle" />
+    <PModal
+      title="Modal without modal & overlay"
+      description="This modal has `modal: false` and `overlay: false` to interact with outside content."
+      :overlay="false"
+      :modal="false"
+    >
+      <PButton
+        label="Open without modal"
+        color="neutral"
+        variant="subtle"
+      />
     </PModal>
 
-    <PModal title="Modal without transition" description="This modal has `transition: false` prop." :transition="false">
-      <PButton label="Open without transition" color="neutral" variant="outline" />
+    <PModal
+      title="Modal without transition"
+      description="This modal has `transition: false` prop."
+      :transition="false"
+    >
+      <PButton
+        label="Open without transition"
+        color="neutral"
+        variant="outline"
+      />
     </PModal>
 
-    <PModal title="Modal without portal" description="This modal has `portal: false` prop." :portal="false">
-      <PButton label="Open without portal" color="neutral" variant="subtle" />
+    <PModal
+      title="Modal without portal"
+      description="This modal has `portal: false` prop."
+      :portal="false"
+    >
+      <PButton
+        label="Open without portal"
+        color="neutral"
+        variant="subtle"
+      />
     </PModal>
 
-    <PModal title="Modal fullscreen" description="This modal has `fullscreen: true` prop." fullscreen>
-      <PButton label="Open fullscreen" color="neutral" variant="outline" />
+    <PModal
+      title="Modal fullscreen"
+      description="This modal has `fullscreen: true` prop."
+      fullscreen
+    >
+      <PButton
+        label="Open fullscreen"
+        color="neutral"
+        variant="outline"
+      />
     </PModal>
 
-    <PModal title="Modal scrollable" description="This modal has `scrollable: true` prop. Content scrolls within the overlay, preventing accidental closes on scrollbar clicks." scrollable>
-      <PButton color="neutral" variant="subtle" label="Open scrollable" />
+    <PModal
+      title="Modal scrollable"
+      description="This modal has `scrollable: true` prop. Content scrolls within the overlay, preventing accidental closes on scrollbar clicks."
+      scrollable
+    >
+      <PButton
+        color="neutral"
+        variant="subtle"
+        label="Open scrollable"
+      />
 
       <template #body>
         <Placeholder class="h-[300vh] w-full" />
       </template>
 
       <template #footer>
-        <PButton label="Submit" color="primary" />
-        <PButton label="Cancel" color="neutral" variant="ghost" />
+        <PButton
+          label="Submit"
+          color="primary"
+        />
+        <PButton
+          label="Cancel"
+          color="neutral"
+          variant="ghost"
+        />
       </template>
     </PModal>
 
-    <PModal title="Modal prevent close" description="This modal has `dismissible: false` prop so it won't close when clicking outside." :dismissible="false" :modal="false" :overlay="false">
-      <PButton label="Open unclosable" color="neutral" variant="outline" />
+    <PModal
+      title="Modal prevent close"
+      description="This modal has `dismissible: false` prop so it won't close when clicking outside."
+      :dismissible="false"
+      :modal="false"
+      :overlay="false"
+    >
+      <PButton
+        label="Open unclosable"
+        color="neutral"
+        variant="outline"
+      />
     </PModal>
 
-    <PModal title="Modal without close button" description="This modal has `close: false` prop." :close="false">
-      <PButton label="Open without close button" color="neutral" variant="subtle" />
+    <PModal
+      title="Modal without close button"
+      description="This modal has `close: false` prop."
+      :close="false"
+    >
+      <PButton
+        label="Open without close button"
+        color="neutral"
+        variant="subtle"
+      />
     </PModal>
 
-    <PModal title="Modal with custom close button" description="The `close` prop inherits from the Button props." :close="{ color: 'primary', variant: 'solid', size: 'xs' }" :ui="{ close: 'top-3.5 rounded-full' }">
-      <PButton label="Open with custom close button" color="neutral" variant="outline" />
+    <PModal
+      title="Modal with custom close button"
+      description="The `close` prop inherits from the Button props."
+      :close="{ color: 'primary', variant: 'solid', size: 'xs' }"
+      :ui="{ close: 'top-3.5 rounded-full' }"
+    >
+      <PButton
+        label="Open with custom close button"
+        color="neutral"
+        variant="outline"
+      />
     </PModal>
 
-    <PButton label="Open programmatically" color="neutral" variant="subtle" @click="openModal" />
+    <PButton
+      label="Open programmatically"
+      color="neutral"
+      variant="subtle"
+      @click="openModal"
+    />
 
     <PModal title="First modal">
-      <PButton color="neutral" variant="outline" label="Close with scoped slot close" />
+      <PButton
+        color="neutral"
+        variant="outline"
+        label="Close with scoped slot close"
+      />
 
       <template #footer="{ close }">
-        <PButton label="Close with scoped slot close" @click="close" />
+        <PButton
+          label="Close with scoped slot close"
+          @click="close"
+        />
       </template>
     </PModal>
 
-    <PModal title="Modal with toast" description="Touch bug repro: tap 'Show Toast' multiple times, modal closes unexpectedly on touch devices.">
-      <PButton label="Open with toast" color="neutral" variant="subtle" />
+    <PModal
+      title="Modal with toast"
+      description="Touch bug repro: tap 'Show Toast' multiple times, modal closes unexpectedly on touch devices."
+    >
+      <PButton
+        label="Open with toast"
+        color="neutral"
+        variant="subtle"
+      />
 
       <template #body>
         <PButton

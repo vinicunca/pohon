@@ -36,7 +36,7 @@ export const themePageCta = {
       solid: {
         root: 'color-text-inverted bg-background-inverted',
         title: 'color-text-inverted',
-        description: 'color-text-dimmed',
+        description: 'pohon:color-text-dimmed',
       },
       outline: {
         root: 'bg-background ring ring-ring',

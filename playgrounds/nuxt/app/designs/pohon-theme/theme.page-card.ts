@@ -20,7 +20,7 @@ export const themePageCard = {
   variants: {
     orientation: {
       horizontal: {
-        container: 'lg:grid-cols-2 lg:items-center',
+        container: 'lg:(grid-cols-2 items-center)',
       },
       vertical: {
         container: '',
@@ -53,7 +53,7 @@ export const themePageCard = {
         description: 'color-text-muted',
       },
       naked: {
-        container: 'p-0 sm:p-0',
+        container: 'pohon:(p-0 sm:p-0)',
         description: 'color-text-muted',
       },
     },
@@ -142,7 +142,7 @@ export const themePageCard = {
       highlightColor,
       highlight: true,
       class: {
-        root: `ring-${highlightColor}`,
+        root: `pohon:ring-${highlightColor}`,
       },
     })),
     {

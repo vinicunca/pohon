@@ -1,16 +1,22 @@
 <script setup lang="ts">
-import theme from '#build/ui/page-hero'
+import theme from '#build/ui/page-hero';
 
-const orientations = Object.keys(theme.variants.orientation)
+const orientations = Object.keys(theme.variants.orientation);
 
-const orientation = ref('vertical' as keyof typeof theme.variants.orientation)
-const reverse = ref(false)
+const orientation = ref('vertical' as keyof typeof theme.variants.orientation);
+const reverse = ref(false);
 </script>
 
 <template>
   <Navbar>
-    <PSelect v-model="orientation" :items="orientations" />
-    <PSwitch v-model="reverse" label="Reverse" />
+    <PSelect
+      v-model="orientation"
+      :items="orientations"
+    />
+    <PSwitch
+      v-model="reverse"
+      label="Reverse"
+    />
   </Navbar>
 
   <PPageSection
@@ -24,6 +30,9 @@ const reverse = ref(false)
     :reverse="reverse"
     class="min-h-0"
   >
-    <Placeholder v-if="orientation === 'horizontal'" class="size-full min-h-96" />
+    <Placeholder
+      v-if="orientation === 'horizontal'"
+      class="size-full min-h-96"
+    />
   </PPageSection>
 </template>

@@ -1,14 +1,17 @@
 <script setup lang="ts">
-import theme from '#build/ui/page-feature'
+import theme from '#build/ui/page-feature';
 
-const orientations = Object.keys(theme.variants.orientation)
+const orientations = Object.keys(theme.variants.orientation);
 
-const orientation = ref('horizontal' as keyof typeof theme.variants.orientation)
+const orientation = ref('horizontal' as keyof typeof theme.variants.orientation);
 </script>
 
 <template>
   <Navbar>
-    <PSelect v-model="orientation" :items="orientations" />
+    <PSelect
+      v-model="orientation"
+      :items="orientations"
+    />
   </Navbar>
 
   <PPageFeature

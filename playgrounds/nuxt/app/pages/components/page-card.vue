@@ -1,35 +1,61 @@
 <script setup lang="ts">
-import theme from '#build/ui/page-card'
+import theme from '#build/ui/page-card';
 
-const colors = Object.keys(theme.variants.highlightColor)
-const variants = Object.keys(theme.variants.variant)
-const orientations = Object.keys(theme.variants.orientation)
+const colors = Object.keys(theme.variants.highlightColor);
+const variants = Object.keys(theme.variants.variant);
+const orientations = Object.keys(theme.variants.orientation);
 
 const attrs = reactive({
-  variant: [theme.defaultVariants.variant]
-})
+  variant: [theme.defaultVariants.variant],
+});
 
-const highlight = ref(false)
-const highlightColor = ref(theme.defaultVariants.highlightColor)
-const spotlight = ref(false)
-const spotlightColor = ref(theme.defaultVariants.spotlightColor)
+const highlight = ref(false);
+const highlightColor = ref(theme.defaultVariants.highlightColor);
+const spotlight = ref(false);
+const spotlightColor = ref(theme.defaultVariants.spotlightColor);
 
-const orientation = ref('vertical' as keyof typeof theme.variants.orientation)
-const reverse = ref(false)
+const orientation = ref('vertical' as keyof typeof theme.variants.orientation);
+const reverse = ref(false);
 </script>
 
 <template>
   <Navbar>
-    <PSelect v-model="attrs.variant" :items="variants" multiple />
-    <PSwitch v-model="highlight" label="Highlight" />
-    <PSelect v-model="highlightColor" :items="colors" />
-    <PSwitch v-model="spotlight" label="Spotlight" />
-    <PSelect v-model="spotlightColor" :items="colors" />
-    <PSelect v-model="orientation" :items="orientations" />
-    <PSwitch v-model="reverse" label="Reverse" />
+    <PSelect
+      v-model="attrs.variant"
+      :items="variants"
+      multiple
+    />
+    <PSwitch
+      v-model="highlight"
+      label="Highlight"
+    />
+    <PSelect
+      v-model="highlightColor"
+      :items="colors"
+    />
+    <PSwitch
+      v-model="spotlight"
+      label="Spotlight"
+    />
+    <PSelect
+      v-model="spotlightColor"
+      :items="colors"
+    />
+    <PSelect
+      v-model="orientation"
+      :items="orientations"
+    />
+    <PSwitch
+      v-model="reverse"
+      label="Reverse"
+    />
   </Navbar>
 
-  <Matrix v-slot="props" :attrs="attrs" class="flex-col gap-4">
+  <Matrix
+    v-slot="props"
+    :attrs="attrs"
+    class="flex-col gap-4"
+  >
     <PPageCard
       icon="i-lucide-palette"
       title="Design system"

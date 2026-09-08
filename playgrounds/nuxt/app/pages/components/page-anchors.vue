@@ -1,15 +1,15 @@
 <script setup lang="ts">
 const links = [{
   label: 'Documentation',
-  icon: 'i-lucide-book-open'
+  icon: 'i-lucide-book-open',
 }, {
   label: 'Components',
   icon: 'i-lucide-box',
-  active: true
+  active: true,
 }, {
   label: 'Templates',
-  icon: 'i-lucide-presentation'
-}]
+  icon: 'i-lucide-presentation',
+}];
 </script>
 
 <template>
