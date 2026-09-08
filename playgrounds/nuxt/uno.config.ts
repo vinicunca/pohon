@@ -162,6 +162,23 @@ export default defineConfig({
               transform: 'translateY(125%)',
             },
           },
+
+          'toast-collapsed-closed': {
+            from: { transform: 'var(--transform)' },
+            to: { transform: 'translateY(calc((var(--before) - var(--height)) * var(--gap))) scale(var(--scale))' },
+          },
+          'toast-closed': {
+            from: { transform: 'var(--transform)' },
+            to: { transform: 'translateY(calc((var(--offset) - var(--height)) * var(--translate-factor)))' },
+          },
+          'toast-pulse-a': {
+            '0%, 100%': { opacity: '1' },
+            '50%': { opacity: '1.04' },
+          },
+          'toast-pulse-b': {
+            '0%, 100%': { opacity: '1' },
+            '50%': { opacity: '1.04' },
+          },
         },
         animation: {
           'accordion-down': 'accordion-down 0.2s ease-out',
@@ -181,6 +198,10 @@ export default defineConfig({
           'carousel-inverse-rtl': 'carousel-inverse-rtl 2s linear infinite',
           'carousel-vertical': 'carousel-vertical 2s linear infinite',
           'carousel-inverse-vertical': 'carousel-inverse-vertical 2s linear infinite',
+          'toast-collapsed-closed': 'toast-collapsed-closed 200ms ease-in-out',
+          'toast-closed': 'toast-closed 200ms ease-in-out',
+          'toast-pulse-a': 'toast-pulse-a 300ms ease-out',
+          'toast-pulse-b': 'toast-pulse-b 300ms ease-out',
         },
       },
     }),
@@ -294,6 +315,16 @@ export default defineConfig({
       if (matcher.startsWith('p-variant:')) {
         return {
           matcher: matcher.replace('p-variant:', 'uno-layer-p-variant:'),
+        };
+      }
+
+      const prefix = 'list-no-indicator:';
+
+      if (matcher.startsWith(prefix)) {
+        return {
+          matcher: matcher.slice(prefix.length),
+          selector: (s) =>
+            `[data-slot=list]:not(:has([data-slot=indicator])) ${s}`,
         };
       }
     },

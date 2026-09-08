@@ -3,8 +3,8 @@ import type { PThemeToaster } from 'pohon-ui';
 
 export const themeToaster = {
   slots: {
-    viewport: 'flex flex-col w-[calc(100%-2rem)] fixed z-[100] focus:outline-none data-[expanded=true]:h-(--height) sm:w-96',
-    base: 'transform---transform transition-[transform,translate,height] pointer-events-auto duration-280 ease-out inset-x-0 absolute z-(--index) data-[swipe=move]:transition-none motion-reduce:transition-none data-[state=closed]:animate-[toast-closed_200ms_var(--ease-out)] data-[expanded=false]:data-[front=false]:h-(--front-height) data-[front=false]:*:transition-opacity data-[front=false]:*:duration-100 data-[expanded=false]:data-[front=false]:*:opacity-0 data-[state=closed]:data-[expanded=false]:data-[front=false]:animate-[toast-collapsed-closed_200ms_var(--ease-out)] motion-safe:data-[state=open]:data-[pulsing=even]:animate-[toast-pulse-b_200ms_var(--ease-out)] motion-safe:data-[state=open]:data-[pulsing=odd]:animate-[toast-pulse-a_200ms_var(--ease-out)]',
+    viewport: 'flex flex-col w-[calc(100%-2rem)] fixed z-[100] focus:outline-none data-[expanded=true]:h-$height sm:w-96',
+    base: 'data-[state=closed]:animate-toast-closed data-[state=closed]:data-[expanded=false]:data-[front=false]:animate-toast-collapsed-closed motion-safe:data-[state=open]:data-[pulsing=even]:animate-toast-pulse-b motion-safe:data-[state=open]:data-[pulsing=odd]:animate-toast-pulse-a pointer-events-auto transition-[transform,height]-280 ease-out [transform:var(--transform)] inset-x-0 z-$index data-[swipe=move]:transition-none motion-reduce:transition-none data-[expanded=false]:data-[front=false]:h-$front-height data-[front=false]:*:transition-opacity data-[front=false]:*:duration-100 pohon:absolute data-[expanded=false]:data-[front=false]:*:opacity-0',
   },
   variants: {
     position: {
@@ -28,10 +28,10 @@ export const themeToaster = {
       },
     },
     swipeDirection: {
-      up: 'data-[swipe=end]:animate-[toast-slide-up_200ms_var(--ease-out)]',
-      right: 'data-[swipe=end]:animate-[toast-slide-right_200ms_var(--ease-out)]',
-      down: 'data-[swipe=end]:animate-[toast-slide-down_200ms_var(--ease-out)]',
-      left: 'data-[swipe=end]:animate-[toast-slide-left_200ms_var(--ease-out)]',
+      up: 'pohon:data-[swipe=end]:(animate-out slide-out-top)',
+      right: 'pohon:data-[swipe=end]:(animate-out slide-out-right)',
+      down: 'pohon:data-[swipe=end]:(animate-out slide-out-bottom)',
+      left: 'pohon:data-[swipe=end]:(animate-out slide-out-left)',
     },
   },
   compoundVariants: [
@@ -39,23 +39,23 @@ export const themeToaster = {
       position: ['top-left', 'top-center', 'top-right'],
       class: {
         viewport: 'top-4',
-        base: 'top-0 data-[state=open]:animate-[toast-slide-in-from-top_200ms_var(--ease-out)]',
+        base: 'top-0 data-[state=open]:(animate-in animate-duration-280 slide-in-from-top)',
       },
     },
     {
       position: ['bottom-left', 'bottom-center', 'bottom-right'],
       class: {
         viewport: 'bottom-4',
-        base: 'bottom-0 data-[state=open]:animate-[toast-slide-in-from-bottom_200ms_var(--ease-out)]',
+        base: 'bottom-0 data-[state=open]:(animate-in animate-duration-280 slide-in-from-bottom)',
       },
     },
     {
       swipeDirection: ['left', 'right'],
-      class: 'data-[swipe=move]:translate-x-(--akar-toast-swipe-move-x) data-[swipe=end]:translate-x-(--akar-toast-swipe-end-x) data-[swipe=cancel]:translate-x-0',
+      class: 'data-[swipe=move]:translate-x-$akar-toast-swipe-move-x data-[swipe=end]:translate-x-$akar-toast-swipe-end-x data-[swipe=cancel]:translate-x-0',
     },
     {
       swipeDirection: ['up', 'down'],
-      class: 'data-[swipe=move]:translate-y-(--akar-toast-swipe-move-y) data-[swipe=end]:translate-y-(--akar-toast-swipe-end-y) data-[swipe=cancel]:translate-y-0',
+      class: 'data-[swipe=move]:translate-y-$akar-toast-swipe-move-y data-[swipe=end]:translate-y-$akar-toast-swipe-end-y data-[swipe=cancel]:translate-y-0',
     },
   ],
 } satisfies PThemeToaster;

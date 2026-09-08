@@ -92,6 +92,14 @@ import { themeSlider } from './pohon-theme/theme.slider';
 import { themeSplitter } from './pohon-theme/theme.splitter';
 import { themeStepper } from './pohon-theme/theme.stepper';
 import { themeSwitch } from './pohon-theme/theme.switch';
+import { themeTable } from './pohon-theme/theme.table';
+import { themeTabs } from './pohon-theme/theme.tabs';
+import { themeTextarea } from './pohon-theme/theme.textarea';
+import { themeTimeline } from './pohon-theme/theme.timeline';
+import { themeToast } from './pohon-theme/theme.toast';
+import { themeToaster } from './pohon-theme/theme.toaster';
+import { themeTooltip } from './pohon-theme/theme.tooltip';
+import { themeTree } from './pohon-theme/theme.tree';
 import { themeUser } from './pohon-theme/theme.user';
 
 // @keep-sorted
@@ -203,5 +211,13 @@ export const uiTheme = {
   splitter: themeSplitter,
   stepper: themeStepper,
   switch: themeSwitch,
+  table: themeTable,
+  tabs: themeTabs,
+  textarea: themeTextarea,
+  timeline: themeTimeline,
+  toast: themeToast,
+  toaster: themeToaster,
+  tooltip: themeTooltip,
+  tree: themeTree,
   user: themeUser,
 } satisfies AppConfigInput['ui'];

@@ -1,17 +1,18 @@
 // @unocss-include
 import { BRANDS } from '../design.constants';
+
 // Active-tab highlight shown before akar's `TabsIndicator` mounts (SSR / pre-hydration).
 // akar only renders the real indicator on the client (it needs DOM measurements), so we gate
 // a CSS-only pseudo-element fallback on the active trigger by the *absence* of the indicator
 // element — the instant akar's measured indicator appears, this selector stops matching.
-const ssr = (...classes: Array<string>) => classes.map((c) => `in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:${c}`).join(' ');
+// use this variant class: `list-no-indicator:data-[state=active]:`
 
 export const themeTabs = {
   slots: {
     root: 'flex gap-2 items-center',
     list: 'group p-1 flex relative',
-    indicator: 'transition-[transform,width] duration-280 ease-out absolute motion-reduce:transition-none',
-    trigger: ['group relative inline-flex items-center min-w-0 data-[state=inactive]:color-text-muted hover:data-[state=inactive]:not-disabled:color-text font-500 rounded-md disabled:cursor-not-allowed disabled:opacity-75', 'transition-colors'],
+    indicator: 'transition-[transform,width]-280 ease-out absolute motion-reduce:transition-none',
+    trigger: 'group font-500 rounded-md inline-flex min-w-0 transition-colors items-center relative data-[state=inactive]:color-text-muted disabled:(opacity-75 cursor-not-allowed) hover:data-[state=inactive]:not-disabled:color-text',
     leadingIcon: 'shrink-0',
     leadingAvatar: 'shrink-0',
     leadingAvatarSize: '',
@@ -31,26 +32,26 @@ export const themeTabs = {
     },
     variant: {
       pill: {
-        list: 'bg-background-elevated rounded-lg',
-        trigger: ['grow', ssr('before:content-[\'\']', 'before:absolute', 'before:inset-0', 'before:rounded-md', 'before:shadow-xs', 'before:-z-10', 'isolate')],
+        list: 'rounded-lg bg-background-elevated',
+        trigger: 'list-no-indicator:data-[state=active]:isolate list-no-indicator:data-[state=active]:before:content-empty list-no-indicator:data-[state=active]:before:absolute list-no-indicator:data-[state=active]:before:inset-0 list-no-indicator:data-[state=active]:before:rounded-md list-no-indicator:data-[state=active]:before:shadow-xs list-no-indicator:data-[state=active]:before:-z-10 grow',
         indicator: 'rounded-md shadow-xs',
       },
       link: {
         list: 'border-border',
         indicator: 'rounded-full',
-        trigger: ssr('after:content-[\'\']', 'after:absolute', 'after:rounded-full'),
+        trigger: 'list-no-indicator:data-[state=active]:after:content-empty list-no-indicator:data-[state=active]:after:absolute list-no-indicator:data-[state=active]:after:rounded-full',
       },
     },
     orientation: {
       horizontal: {
         root: 'flex-col',
         list: 'w-full',
-        indicator: 'w-(--akar-tabs-indicator-size) translate-x-(--akar-tabs-indicator-position) left-0',
+        indicator: 'w-$akar-tabs-indicator-size translate-x-$akar-tabs-indicator-position left-0',
         trigger: 'justify-center',
       },
       vertical: {
         list: 'flex-col',
-        indicator: 'h-(--akar-tabs-indicator-size) translate-y-(--akar-tabs-indicator-position) top-0',
+        indicator: 'h-$akar-tabs-indicator-size translate-y-$akar-tabs-indicator-position top-0',
       },
     },
     size: {
@@ -95,7 +96,7 @@ export const themeTabs = {
       class: {
         list: 'border-b -mb-px',
         indicator: '-bottom-px h-px',
-        trigger: ssr('after:inset-x-0', 'after:-bottom-[calc(var(--spacing)+1px)]', 'after:h-px'),
+        trigger: 'list-no-indicator:data-[state=active]:after:inset-x-0 list-no-indicator:data-[state=active]:after:-bottom-[calc(var(--spacing)+1px)] list-no-indicator:data-[state=active]:after:h-px',
       },
     },
     {
@@ -113,7 +114,7 @@ export const themeTabs = {
       class: {
         list: 'border-s -ms-px',
         indicator: '-start-px w-px',
-        trigger: ssr('after:inset-y-0', 'after:-start-[calc(var(--spacing)+1px)]', 'after:w-px'),
+        trigger: 'list-no-indicator:data-[state=active]:after:inset-y-0 list-no-indicator:data-[state=active]:after:-start-[calc(var(--spacing)+1px)] list-no-indicator:data-[state=active]:after:w-px',
       },
     },
     ...BRANDS.map((color: string) => ({
@@ -121,7 +122,10 @@ export const themeTabs = {
       variant: 'pill',
       class: {
         indicator: `bg-${color}`,
-        trigger: [`data-[state=active]:color-text-inverted outline-${color}/25 focus-visible:outline-3`, ssr(`before:bg-${color}`)],
+        trigger: [
+          `data-[state=active]:color-text-inverted outline-${color}/25 focus-visible:outline-3`,
+          `list-no-indicator:data-[state=active]:before:bg-${color}`,
+        ],
       },
     })),
     {
@@ -129,7 +133,10 @@ export const themeTabs = {
       variant: 'pill',
       class: {
         indicator: 'bg-background-inverted',
-        trigger: ['data-[state=active]:color-text-inverted outline-outline-inverted/25 focus-visible:outline-3', ssr('before:bg-background-inverted')],
+        trigger: [
+          'data-[state=active]:color-text-inverted outline-outline-inverted/25 focus-visible:outline-3',
+          'list-no-indicator:data-[state=active]:before:bg-background-inverted',
+        ],
       },
     },
     ...BRANDS.map((color: string) => ({
@@ -137,7 +144,10 @@ export const themeTabs = {
       variant: 'link',
       class: {
         indicator: `bg-${color}`,
-        trigger: [`data-[state=active]:color-${color} outline-${color}/25 focus-visible:outline-3`, ssr(`after:bg-${color}`)],
+        trigger: [
+          `data-[state=active]:color-${color} outline-${color}/25 focus-visible:outline-3`,
+          `list-no-indicator:data-[state=active]:after:bg-${color}`,
+        ],
       },
     })),
     {
@@ -145,7 +155,10 @@ export const themeTabs = {
       variant: 'link',
       class: {
         indicator: 'bg-background-inverted',
-        trigger: ['data-[state=active]:color-text-highlighted outline-outline-inverted/25 focus-visible:outline-3', ssr('after:bg-background-inverted')],
+        trigger: [
+          'data-[state=active]:color-text-highlighted outline-outline-inverted/25 focus-visible:outline-3',
+          'list-no-indicator:data-[state=active]:after:bg-background-inverted',
+        ],
       },
     },
   ],

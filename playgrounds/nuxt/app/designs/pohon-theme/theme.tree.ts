@@ -6,13 +6,13 @@ export const themeTree = {
   slots: {
     root: 'relative isolate',
     item: 'w-full',
-    listWithChildren: 'border-border border-s',
+    listWithChildren: 'border-s border-border',
     itemWithChildren: 'ps-1.5 -ms-px',
-    link: 'group text-sm flex w-full select-none items-center relative focus-visible:outline-none focus:outline-none before:(rounded-md inset-x-0 inset-y-px absolute z-[-1]) focus-visible:before:outline-3',
+    link: 'group text-sm flex w-full select-none items-center relative focus-visible:outline-none focus:outline-none before:(rounded-md content-empty inset-x-0 inset-y-px absolute -z-1) focus-visible:before:outline-3',
     linkLeadingIcon: 'shrink-0 relative',
     linkLabel: 'truncate',
     linkTrailing: 'ms-auto inline-flex gap-1.5 items-center',
-    linkTrailingIcon: 'shrink-0 transform transition-transform duration-280 ease-out group-[data-expanded]:rotate-180 motion-reduce:transition-none',
+    linkTrailingIcon: 'shrink-0 transition-transform-280 ease-out group-data-[expanded]:rotate-180 motion-reduce:transition-none',
   },
   variants: {
     virtualize: {
