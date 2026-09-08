@@ -86,7 +86,7 @@ export interface InputNumberSlots {
 </script>
 
 <script setup lang="ts" generic="T extends InputNumberValue = InputNumberValue, Mod extends Pick<ModelModifiers, 'optional'> = Pick<ModelModifiers, 'optional'>">
-import { reactivePick, useVModel } from '@vueuse/core';
+import { reactivePick } from '@vueuse/core';
 import { NumberFieldDecrement, NumberFieldIncrement, NumberFieldInput, NumberFieldRoot } from 'akar';
 import { computed, onMounted, onScopeDispose, toRef, useTemplateRef } from 'vue';
 import { useAppConfig } from '#imports';
@@ -114,12 +114,10 @@ defineSlots<InputNumberSlots>();
 
 const props = useComponentProps<InputNumberProps<T, Mod>>('inputNumber', _props);
 
-const modelValue = useVModel<InputNumberProps<T, Mod>, 'modelValue', 'update:modelValue'>(props, 'modelValue', emits, { defaultValue: props.defaultValue });
-
 const { t } = useLocale();
 const appConfig = useAppConfig() as InputNumber['AppConfig'];
 
-const rootProps = useForwardProps(reactivePick(props, 'as', 'stepSnapping', 'formatOptions', 'disableWheelChange', 'invertWheelChange', 'required', 'readonly', 'focusOnChange', 'locale'), emits);
+const rootProps = useForwardProps(reactivePick(props, 'as', 'stepSnapping', 'formatOptions', 'disableWheelChange', 'invertWheelChange', 'required', 'readonly', 'focusOnChange', 'locale'));
 
 const {
   emitFormBlur,
@@ -162,8 +160,15 @@ const inputRef = useTemplateRef('inputRef');
 
 function onUpdate(value: ApplyModifiers<T, Mod> | undefined) {
   if (props.modelModifiers?.optional) {
-    modelValue.value = value = value ?? undefined;
+    value = value ?? undefined;
   }
+
+  // In controlled mode akar emits on every write, even when nothing changed (blur, Enter, stepping at a bound).
+  if (value === props.modelValue || (value == null && props.modelValue == null)) {
+    return;
+  }
+
+  emits('update:modelValue', value as ApplyModifiers<T, Mod>);
 
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
   const event = new Event('change', { target: { value } });
@@ -204,7 +209,7 @@ defineExpose({
     v-bind="rootProps"
     :id="id"
     :default-value="props.defaultValue"
-    :model-value="modelValue"
+    :model-value="props.modelValue"
     :min="props.min"
     :max="props.max"
     :step="props.step"

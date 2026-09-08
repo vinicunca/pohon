@@ -9,8 +9,8 @@
     "build": "pnpm bundle && vite build"
   },
   "dependencies": {
-    "pohon-ui": "workspace:*",
     "@vue/repl": "^4.7.2",
+    "pohon-ui": "workspace:*",
     "vue": "^3.5.42"
   },
   "devDependencies": {

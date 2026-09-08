@@ -57,6 +57,7 @@ export default defineNuxtConfig({
           // The docs examples imported in `pages/components/form.vue` resolve
           // `pohon-ui` from `docs/`, which the isolated CI install can't reach.
           'pohon-ui': ['../node_modules/pohon-ui/dist/module.d.mts'],
+          'zod': ['../node_modules/zod'],
         },
       },
     },
