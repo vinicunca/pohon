@@ -119,7 +119,7 @@ describe('table', () => {
       meta: {
         class: {
           th: 'text-right',
-          td: 'text-right font-medium',
+          td: 'text-right font-500',
         },
       },
       footer: ({ column }) => {

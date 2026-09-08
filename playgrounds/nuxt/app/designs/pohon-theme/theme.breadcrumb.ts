@@ -52,7 +52,7 @@ export const themeBreadcrumb = {
       color,
       active: true,
       class: {
-        link: `text-${color}`,
+        link: `color-${color}`,
       },
     })),
     {

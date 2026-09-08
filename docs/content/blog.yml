@@ -4,6 +4,6 @@ seo:
 title: Blog
 description: Tutorials, guides, and insights to help you build beautiful applications with Pohon UI.
 hero:
-  title: Nuxt [UI]{.text-primary} Blog
+  title: Nuxt [UI]{.color-primary} Blog
   description: Tutorials, guides, and insights to help you build beautiful applications with Pohon UI.
 navigation: false

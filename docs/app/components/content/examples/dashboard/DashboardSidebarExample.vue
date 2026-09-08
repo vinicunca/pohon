@@ -40,7 +40,7 @@ const items: NavigationMenuItem[][] = [[{
   <PDashboardSidebar collapsible resizable :ui="{ footer: 'border-t border-border' }">
     <template #header="{ collapsed }">
       <Logo v-if="!collapsed" class="h-5 w-auto shrink-0" />
-      <PIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 text-primary mx-auto" />
+      <PIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 color-primary mx-auto" />
     </template>
 
     <template #default="{ collapsed }">

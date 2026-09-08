@@ -66,7 +66,7 @@ if (import.meta.server) {
 
         <PDropdownMenu
           :items="template.open_links"
-          :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-auto' }"
+          :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width) min-w-auto' }"
           :modal="false"
           class="group"
         >
@@ -87,7 +87,7 @@ if (import.meta.server) {
             ...template.deploy_links,
             { label: 'Other', icon: 'i-lucide-globe', to: 'https://nuxt.com/deploy', target: '_blank' }
           ]"
-          :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-auto' }"
+          :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width) min-w-auto' }"
           :modal="false"
           class="group"
         >

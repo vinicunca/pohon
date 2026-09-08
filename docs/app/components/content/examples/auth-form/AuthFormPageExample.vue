@@ -60,16 +60,16 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
         @submit="onSubmit"
       >
         <template #description>
-          Don't have an account? <PLink to="#" class="text-primary font-medium">Sign up</PLink>.
+          Don't have an account? <PLink to="#" class="color-primary font-500">Sign up</PLink>.
         </template>
         <template #password-hint>
-          <PLink to="#" class="text-primary font-medium" tabindex="-1">Forgot password?</PLink>
+          <PLink to="#" class="color-primary font-500" tabindex="-1">Forgot password?</PLink>
         </template>
         <template #validation>
           <PAlert color="error" icon="i-lucide-info" title="Error signing in" />
         </template>
         <template #footer>
-          By signing in, you agree to our <PLink to="#" class="text-primary font-medium">Terms of Service</PLink>.
+          By signing in, you agree to our <PLink to="#" class="color-primary font-500">Terms of Service</PLink>.
         </template>
       </PAuthForm>
     </PPageCard>

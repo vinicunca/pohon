@@ -182,7 +182,7 @@ watch(open, (isOpen) => {
             @mouseleave="clearHighlight"
           >
             <div class="flex items-center gap-2">
-              <code class="text-xs font-medium" :class="[getSlotRenderLocation(slotName) !== 'none' ? 'color-text-highlighted' : 'color-text-muted']">{{ slotName }}</code>
+              <code class="text-xs font-500" :class="[getSlotRenderLocation(slotName) !== 'none' ? 'color-text-highlighted' : 'color-text-muted']">{{ slotName }}</code>
               <span v-if="getSlotRenderLocation(slotName) === 'portal'" class="text-[10px] color-text-muted">(in portal)</span>
               <span v-else-if="getSlotRenderLocation(slotName) === 'none'" class="text-[10px] color-text-muted">(not rendered)</span>
             </div>
@@ -206,7 +206,7 @@ watch(open, (isOpen) => {
       >
         <div
           v-if="highlightedSlot"
-          class="absolute -top-6 -left-0.5 px-1.5 py-0.5 text-xs font-medium font-mono bg-primary color-text-highlighted rounded-sm whitespace-nowrap"
+          class="absolute -top-6 -left-0.5 px-1.5 py-0.5 text-xs font-500 font-mono bg-primary color-text-highlighted rounded-sm whitespace-nowrap"
         >
           {{ highlightedSlot }}
         </div>

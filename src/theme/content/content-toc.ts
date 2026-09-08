@@ -57,7 +57,7 @@ export default (options: Required<ModuleOptions>) => ({
       color,
       active: true,
       class: {
-        link: `text-${color}`,
+        link: `color-${color}`,
       },
     })),
     {

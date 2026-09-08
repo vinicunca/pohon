@@ -28,7 +28,7 @@ const items = [
     </template>
 
     <template #refresh-trailing>
-      <PIcon v-if="loading" name="i-lucide-loader-circle" class="shrink-0 size-5 text-primary animate-spin" />
+      <PIcon v-if="loading" name="i-lucide-loader-circle" class="shrink-0 size-5 color-primary animate-spin" />
     </template>
   </PContextMenu>
 </template>

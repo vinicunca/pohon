@@ -8,7 +8,7 @@ export const themeCheckboxGroup = {
   slots: {
     root: 'relative',
     fieldset: 'flex gap-x-2',
-    legend: 'color-text font-medium mb-1 block',
+    legend: 'color-text font-500 mb-1 block',
   },
   variants: {
     orientation: {
@@ -98,14 +98,14 @@ export const themeCheckboxGroup = {
       color,
       variant: 'table',
       class: {
-        item: `has-data-[state=checked]:bg-${color}/10 has-data-[state=checked]:border-${color}/50 has-data-[state=checked]:z-[1]`,
+        item: `has-data-[state=checked]:bg-${color}/10 has-data-[state=checked]:border-${color}/50 has-data-[state=checked]:z-1`,
       },
     })),
     {
       color: 'neutral',
       variant: 'table',
       class: {
-        item: 'has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-[1]',
+        item: 'has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-1',
       },
     },
     {

@@ -4,7 +4,7 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5',
     wrapper: 'w-0 flex-1 flex flex-col',
-    title: 'text-sm font-medium color-text-highlighted',
+    title: 'text-sm font-500 color-text-highlighted',
     description: 'text-sm color-text-muted',
     icon: 'shrink-0 size-5',
     avatar: 'shrink-0',
@@ -17,7 +17,7 @@ export default (options: Required<ModuleOptions>) => ({
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
         root: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
-        icon: `text-${color}`,
+        icon: `color-${color}`,
       }])),
       neutral: {
         root: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',

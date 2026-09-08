@@ -100,28 +100,28 @@ export default (options: Required<ModuleOptions>) => ({
       color,
       variant: 'outline',
       class: {
-        content: `text-${color} ring ring-${color}/25`,
+        content: `color-${color} ring ring-${color}/25`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'soft',
       class: {
-        content: `bg-${color}/10 text-${color}`,
+        content: `bg-${color}/10 color-${color}`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'subtle',
       class: {
-        content: `bg-${color}/10 text-${color} ring ring-${color}/25`,
+        content: `bg-${color}/10 color-${color} ring ring-${color}/25`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'naked',
       class: {
-        content: `text-${color}`,
+        content: `color-${color}`,
       },
     })),
     {

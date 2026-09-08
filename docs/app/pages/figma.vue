@@ -232,7 +232,7 @@ onMounted(async () => {
     </PPageSection>
     <PPageSection v-bind="page.features2" :ui="{ container: 'py-16 sm:py-16 lg:py-16', features: 'mt-0' }" class="border-y border-border" />
 
-    <PPageCTA v-if="page.customers" :title="page.customers.title" :ui="{ title: '!text-base font-medium', container: 'sm:py-12 sm:gap-8' }" variant="outline" class="rounded-none">
+    <PPageCTA v-if="page.customers" :title="page.customers.title" :ui="{ title: '!text-base font-500', container: 'sm:py-12 sm:gap-8' }" variant="outline" class="rounded-none">
       <PMarquee pause-on-hover :ui="{ root: '[--duration:40s]' }">
         <img v-for="(logo, index) in page.customers.items" :key="index" v-bind="logo" class="h-6 shrink-0 max-w-[140px] filter invert dark:invert-0" loading="lazy">
       </PMarquee>

@@ -12,7 +12,7 @@ const items: ProgressGroupItem[] = [
 <template>
   <PProgressGroup :items="items" :max="128" class="w-96">
     <template #item-label="{ item }">
-      <span class="font-medium">{{ item.label }}</span>
+      <span class="font-500">{{ item.label }}</span>
     </template>
 
     <template #item-trailing="{ item }">

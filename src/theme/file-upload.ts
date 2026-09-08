@@ -7,7 +7,7 @@ export default (options: Required<ModuleOptions>) => ({
     wrapper: 'flex flex-col items-center justify-center text-center',
     icon: 'shrink-0',
     avatar: 'shrink-0',
-    label: 'font-medium color-text mt-2',
+    label: 'font-500 color-text mt-2',
     description: 'color-text-muted mt-1',
     actions: 'flex flex-wrap gap-1.5 shrink-0 mt-4',
     files: '',
@@ -71,7 +71,7 @@ export default (options: Required<ModuleOptions>) => ({
       grid: {
         fileWrapper: 'hidden',
         fileLeadingAvatar: 'size-full rounded-lg',
-        fileTrailingButton: 'absolute -top-1.5 -end-1.5 p-0 rounded-full border-2 border-bg',
+        fileTrailingButton: 'absolute -top-1.5 -end-1.5 p-0 rounded-full border-2 border-border-bg',
       },
     },
     position: {

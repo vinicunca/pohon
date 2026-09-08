@@ -3,7 +3,7 @@ import { fieldGroupVariant } from './field-group';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    base: 'font-medium inline-flex items-center',
+    base: 'font-500 inline-flex items-center',
     label: 'truncate',
     leadingIcon: 'shrink-0',
     leadingAvatar: 'shrink-0',
@@ -65,15 +65,15 @@ export default (options: Required<ModuleOptions>) => ({
   })), ...(options.theme.colors || []).map((color: string) => ({
     color,
     variant: 'outline',
-    class: `text-${color} ring ring-inset ring-${color}/50`,
+    class: `color-${color} ring ring-inset ring-${color}/50`,
   })), ...(options.theme.colors || []).map((color: string) => ({
     color,
     variant: 'soft',
-    class: `bg-${color}/10 text-${color}`,
+    class: `bg-${color}/10 color-${color}`,
   })), ...(options.theme.colors || []).map((color: string) => ({
     color,
     variant: 'subtle',
-    class: `bg-${color}/10 text-${color} ring ring-inset ring-${color}/25`,
+    class: `bg-${color}/10 color-${color} ring ring-inset ring-${color}/25`,
   })), {
     color: 'neutral',
     variant: 'solid',

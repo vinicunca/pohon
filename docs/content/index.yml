@@ -126,7 +126,7 @@ css_variables:
       trailingIcon: i-lucide-arrow-right
   features:
     - title: Semantic color utilities
-      description: Use utility classes like text-primary, bg-success, or border-error that automatically adapt to light and dark modes via CSS variables.
+      description: Use utility classes like color-primary, bg-success, or border-error that automatically adapt to light and dark modes via CSS variables.
       icon: i-lucide-palette
     - title: Text and background tokens
       description: Complete set of utility classes for text (color-text-dimmed, color-text-muted, color-text-highlighted), backgrounds (bg-background, bg-background-elevated, bg-background-accented) and borders.
@@ -157,7 +157,7 @@ css_variables:
     ```vue [Component.vue]
     <template>
       <div class="bg-background border border-border rounded-lg p-4">
-        <span class="text-primary">Primary text</span>
+        <span class="color-primary">Primary text</span>
 
         <span class="color-text-dimmed">Dimmed text</span>
 

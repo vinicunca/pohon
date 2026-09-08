@@ -10,14 +10,14 @@ export const themeSwitch = {
     thumb: 'group bg-background rounded-full flex pointer-events-none ring-0 shadow-lg transition-transform-280 ease-out items-center justify-center data-[state=unchecked]:translate-x-0 motion-reduce:transition-none data-[state=unchecked]:rtl:-translate-x-0',
     icon: 'absolute shrink-0 group-data-[state=unchecked]:color-text-dimmed opacity-0 size-10/12 transition-[color,opacity]-280 ease-out',
     wrapper: 'ms-2',
-    label: 'color-text font-medium block',
+    label: 'color-text font-500 block',
     description: 'color-text-muted',
   },
   variants: {
     color: {
       ...Object.fromEntries(BRANDS.map((color: string) => [color, {
         base: `data-[state=checked]:bg-${color} outline-${color}/25`,
-        icon: `group-data-[state=checked]:text-${color}`,
+        icon: `group-data-[state=checked]:color-${color}`,
       }])),
       neutral: {
         base: 'data-[state=checked]:bg-background-inverted outline-outline-inverted/25',

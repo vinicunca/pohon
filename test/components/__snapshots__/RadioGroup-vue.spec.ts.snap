@@ -11,7 +11,7 @@ exports[`radioGroup > renders with ariaLabel correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -22,7 +22,7 @@ exports[`radioGroup > renders with ariaLabel correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -33,7 +33,7 @@ exports[`radioGroup > renders with ariaLabel correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -53,7 +53,7 @@ exports[`radioGroup > renders with as correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -64,7 +64,7 @@ exports[`radioGroup > renders with as correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -75,7 +75,7 @@ exports[`radioGroup > renders with as correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -95,7 +95,7 @@ exports[`radioGroup > renders with class correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -106,7 +106,7 @@ exports[`radioGroup > renders with class correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -117,7 +117,7 @@ exports[`radioGroup > renders with class correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -135,7 +135,7 @@ exports[`radioGroup > renders with defaultValue correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -146,7 +146,7 @@ exports[`radioGroup > renders with defaultValue correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -157,7 +157,7 @@ exports[`radioGroup > renders with defaultValue correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -177,7 +177,7 @@ exports[`radioGroup > renders with description correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <p data-slot="description" class="color-text-muted">Description 0</p>
       </div>
     </div>
@@ -188,7 +188,7 @@ exports[`radioGroup > renders with description correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <p data-slot="description" class="color-text-muted">Description 1</p>
       </div>
     </div>
@@ -199,7 +199,7 @@ exports[`radioGroup > renders with description correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <p data-slot="description" class="color-text-muted">Description 2</p>
       </div>
     </div>
@@ -219,7 +219,7 @@ exports[`radioGroup > renders with description slot correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Description slot</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Description slot</label>
         <!--v-if-->
       </div>
     </div>
@@ -230,7 +230,7 @@ exports[`radioGroup > renders with description slot correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Description slot</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Description slot</label>
         <!--v-if-->
       </div>
     </div>
@@ -241,7 +241,7 @@ exports[`radioGroup > renders with description slot correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Description slot</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Description slot</label>
         <!--v-if-->
       </div>
     </div>
@@ -261,7 +261,7 @@ exports[`radioGroup > renders with descriptionKey correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <p data-slot="description" class="color-text-muted">1</p>
       </div>
     </div>
@@ -272,7 +272,7 @@ exports[`radioGroup > renders with descriptionKey correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <p data-slot="description" class="color-text-muted">2</p>
       </div>
     </div>
@@ -283,7 +283,7 @@ exports[`radioGroup > renders with descriptionKey correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <p data-slot="description" class="color-text-muted">3</p>
       </div>
     </div>
@@ -303,7 +303,7 @@ exports[`radioGroup > renders with disabled correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text cursor-not-allowed">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text cursor-not-allowed">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -314,7 +314,7 @@ exports[`radioGroup > renders with disabled correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text cursor-not-allowed">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text cursor-not-allowed">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -325,7 +325,7 @@ exports[`radioGroup > renders with disabled correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text cursor-not-allowed">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text cursor-not-allowed">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -337,16 +337,16 @@ exports[`radioGroup > renders with disabled correctly 1`] = `
 exports[`radioGroup > renders with highlight indicator hidden correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-wrap flex-col gap-y-1">
-    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10 not-has-disabled:border-primary not-has-disabled:has-data-[state=checked]:border-primary">
+    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10 not-has-disabled:border-primary not-has-disabled:has-data-[state=checked]:border-primary">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4 ring-primary" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-primary after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center">
         <!--v-if-->
-        <p for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</p>
+        <p for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10 not-has-disabled:border-primary not-has-disabled:has-data-[state=checked]:border-primary">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10 not-has-disabled:border-primary not-has-disabled:has-data-[state=checked]:border-primary">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4 ring-primary" value="2" aria-label="2">
           <!---->
         </button>
@@ -354,10 +354,10 @@ exports[`radioGroup > renders with highlight indicator hidden correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center">
         <!--v-if-->
-        <p for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</p>
+        <p for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10 not-has-disabled:border-primary not-has-disabled:has-data-[state=checked]:border-primary">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10 not-has-disabled:border-primary not-has-disabled:has-data-[state=checked]:border-primary">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4 ring-primary" value="3" aria-label="3">
           <!---->
         </button>
@@ -365,7 +365,7 @@ exports[`radioGroup > renders with highlight indicator hidden correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center">
         <!--v-if-->
-        <p for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</p>
+        <p for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</p>
         <!--v-if-->
       </div>
     </label>
@@ -377,16 +377,16 @@ exports[`radioGroup > renders with highlight indicator hidden correctly 1`] = `
 exports[`radioGroup > renders with horizontal variant card correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="horizontal" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="horizontal" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-wrap flex-row gap-y-1">
-    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
+    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="horizontal" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-primary after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</p>
+        <p for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="horizontal" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="2" aria-label="2">
           <!---->
         </button>
@@ -394,10 +394,10 @@ exports[`radioGroup > renders with horizontal variant card correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</p>
+        <p for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="horizontal" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="3" aria-label="3">
           <!---->
         </button>
@@ -405,7 +405,7 @@ exports[`radioGroup > renders with horizontal variant card correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</p>
+        <p for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</p>
         <!--v-if-->
       </div>
     </label>
@@ -423,7 +423,7 @@ exports[`radioGroup > renders with horizontal variant list correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -434,7 +434,7 @@ exports[`radioGroup > renders with horizontal variant list correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -445,7 +445,7 @@ exports[`radioGroup > renders with horizontal variant list correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -457,16 +457,16 @@ exports[`radioGroup > renders with horizontal variant list correctly 1`] = `
 exports[`radioGroup > renders with horizontal variant table correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="horizontal" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="horizontal" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-row gap-y-1 gap-0 -space-x-px">
-    <!--v-if--><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-s-lg last-of-type:rounded-e-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-[1]">
+    <!--v-if--><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-s-lg last-of-type:rounded-e-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="horizontal" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-primary after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</p>
+        <p for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-s-lg last-of-type:rounded-e-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-[1]">
+    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-s-lg last-of-type:rounded-e-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="horizontal" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="2" aria-label="2">
           <!---->
         </button>
@@ -474,10 +474,10 @@ exports[`radioGroup > renders with horizontal variant table correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</p>
+        <p for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-s-lg last-of-type:rounded-e-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-[1]">
+    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-s-lg last-of-type:rounded-e-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="horizontal" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="3" aria-label="3">
           <!---->
         </button>
@@ -485,7 +485,7 @@ exports[`radioGroup > renders with horizontal variant table correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</p>
+        <p for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</p>
         <!--v-if-->
       </div>
     </label>
@@ -497,32 +497,32 @@ exports[`radioGroup > renders with horizontal variant table correctly 1`] = `
 exports[`radioGroup > renders with icon card correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-wrap flex-col gap-y-1">
-    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
+    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-primary after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 size-4"></svg>
-        <p for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</p>
+        <p for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4" value="2" aria-label="2">
           <!---->
         </button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 size-4"></svg>
-        <p for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</p>
+        <p for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4" value="3" aria-label="3">
           <!---->
         </button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 size-4"></svg>
-        <p for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</p>
+        <p for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</p>
         <!--v-if-->
       </div>
     </label>
@@ -535,33 +535,33 @@ exports[`radioGroup > renders with icon correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-wrap flex-col gap-y-1">
     <!--v-if-->
-    <div data-slot="item" class="flex items-start text-sm outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1]">
+    <div data-slot="item" class="flex items-start text-sm outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4" value="1" aria-label="1">
           <!---->
         </button>
         <!--v-if-->
       </div>
-      <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 size-4"></svg><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+      <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 size-4"></svg><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
-    <div data-slot="item" class="flex items-start text-sm outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1]">
+    <div data-slot="item" class="flex items-start text-sm outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4" value="2" aria-label="2">
           <!---->
         </button>
         <!--v-if-->
       </div>
-      <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 size-4"></svg><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+      <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 size-4"></svg><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
-    <div data-slot="item" class="flex items-start text-sm outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1]">
+    <div data-slot="item" class="flex items-start text-sm outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4" value="3" aria-label="3">
           <!---->
         </button>
         <!--v-if-->
       </div>
-      <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 size-4"></svg><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+      <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 size-4"></svg><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -573,32 +573,32 @@ exports[`radioGroup > renders with icon correctly 1`] = `
 exports[`radioGroup > renders with icon table correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-col gap-y-1 gap-0 -space-y-px">
-    <!--v-if--><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-[1]">
+    <!--v-if--><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-primary after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 size-4"></svg>
-        <p for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</p>
+        <p for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-[1]">
+    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4" value="2" aria-label="2">
           <!---->
         </button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 size-4"></svg>
-        <p for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</p>
+        <p for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-[1]">
+    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4" value="3" aria-label="3">
           <!---->
         </button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="shrink-0 size-4"></svg>
-        <p for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</p>
+        <p for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</p>
         <!--v-if-->
       </div>
     </label>
@@ -616,7 +616,7 @@ exports[`radioGroup > renders with indicator end correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full me-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -627,7 +627,7 @@ exports[`radioGroup > renders with indicator end correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full me-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -638,7 +638,7 @@ exports[`radioGroup > renders with indicator end correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full me-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -651,34 +651,34 @@ exports[`radioGroup > renders with indicator hidden correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-wrap flex-col gap-y-1">
     <!--v-if-->
-    <div data-slot="item" class="flex items-start text-sm outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1]">
+    <div data-slot="item" class="flex items-start text-sm outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-primary after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
-    <div data-slot="item" class="flex items-start text-sm outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1]">
+    <div data-slot="item" class="flex items-start text-sm outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4" value="2" aria-label="2">
           <!---->
         </button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
-    <div data-slot="item" class="flex items-start text-sm outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1]">
+    <div data-slot="item" class="flex items-start text-sm outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1">
       <div data-slot="container" class="flex items-center h-5 h-auto"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none sr-only size-4" value="3" aria-label="3">
           <!---->
         </button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full flex flex-col items-center gap-1 text-center">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -696,7 +696,7 @@ exports[`radioGroup > renders with indicator start correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -707,7 +707,7 @@ exports[`radioGroup > renders with indicator start correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -718,7 +718,7 @@ exports[`radioGroup > renders with indicator start correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -738,7 +738,7 @@ exports[`radioGroup > renders with items correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -749,7 +749,7 @@ exports[`radioGroup > renders with items correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -760,7 +760,7 @@ exports[`radioGroup > renders with items correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -780,7 +780,7 @@ exports[`radioGroup > renders with label slot correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Label slot</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Label slot</label>
         <!--v-if-->
       </div>
     </div>
@@ -791,7 +791,7 @@ exports[`radioGroup > renders with label slot correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Label slot</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Label slot</label>
         <!--v-if-->
       </div>
     </div>
@@ -802,7 +802,7 @@ exports[`radioGroup > renders with label slot correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Label slot</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Label slot</label>
         <!--v-if-->
       </div>
     </div>
@@ -822,7 +822,7 @@ exports[`radioGroup > renders with labelKey correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">1</label>
         <!--v-if-->
       </div>
     </div>
@@ -833,7 +833,7 @@ exports[`radioGroup > renders with labelKey correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">2</label>
         <!--v-if-->
       </div>
     </div>
@@ -844,7 +844,7 @@ exports[`radioGroup > renders with labelKey correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">3</label>
         <!--v-if-->
       </div>
     </div>
@@ -864,7 +864,7 @@ exports[`radioGroup > renders with legend slot correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Legend slot</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Legend slot</label>
         <!--v-if-->
       </div>
     </div>
@@ -875,7 +875,7 @@ exports[`radioGroup > renders with legend slot correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Legend slot</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Legend slot</label>
         <!--v-if-->
       </div>
     </div>
@@ -886,7 +886,7 @@ exports[`radioGroup > renders with legend slot correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Legend slot</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Legend slot</label>
         <!--v-if-->
       </div>
     </div>
@@ -904,7 +904,7 @@ exports[`radioGroup > renders with modelValue correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -915,7 +915,7 @@ exports[`radioGroup > renders with modelValue correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -926,7 +926,7 @@ exports[`radioGroup > renders with modelValue correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -938,16 +938,16 @@ exports[`radioGroup > renders with modelValue correctly 1`] = `
 exports[`radioGroup > renders with neutral variant card correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-wrap flex-col gap-y-1">
-    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-[1] has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated">
+    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-1 has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-background-inverted after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</p>
+        <p for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-[1] has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-1 has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="2" aria-label="2">
           <!---->
         </button>
@@ -955,10 +955,10 @@ exports[`radioGroup > renders with neutral variant card correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</p>
+        <p for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-[1] has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-1 has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="3" aria-label="3">
           <!---->
         </button>
@@ -966,7 +966,7 @@ exports[`radioGroup > renders with neutral variant card correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</p>
+        <p for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</p>
         <!--v-if-->
       </div>
     </label>
@@ -978,16 +978,16 @@ exports[`radioGroup > renders with neutral variant card correctly 1`] = `
 exports[`radioGroup > renders with neutral variant card highlight correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-wrap flex-col gap-y-1">
-    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-[1] has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated">
+    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-1 has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 ring-ring-inverted" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-background-inverted after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</p>
+        <p for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-[1] has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-1 has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 ring-ring-inverted" value="2" aria-label="2">
           <!---->
         </button>
@@ -995,10 +995,10 @@ exports[`radioGroup > renders with neutral variant card highlight correctly 1`] 
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</p>
+        <p for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-[1] has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-1 has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:bg-background-elevated">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 ring-ring-inverted" value="3" aria-label="3">
           <!---->
         </button>
@@ -1006,7 +1006,7 @@ exports[`radioGroup > renders with neutral variant card highlight correctly 1`] 
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</p>
+        <p for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</p>
         <!--v-if-->
       </div>
     </label>
@@ -1024,7 +1024,7 @@ exports[`radioGroup > renders with neutral variant list correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -1035,7 +1035,7 @@ exports[`radioGroup > renders with neutral variant list correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -1046,7 +1046,7 @@ exports[`radioGroup > renders with neutral variant list correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -1064,7 +1064,7 @@ exports[`radioGroup > renders with neutral variant list highlight correctly 1`] 
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -1075,7 +1075,7 @@ exports[`radioGroup > renders with neutral variant list highlight correctly 1`] 
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -1086,7 +1086,7 @@ exports[`radioGroup > renders with neutral variant list highlight correctly 1`] 
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -1098,16 +1098,16 @@ exports[`radioGroup > renders with neutral variant list highlight correctly 1`] 
 exports[`radioGroup > renders with neutral variant table correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-col gap-y-1 gap-0 -space-y-px">
-    <!--v-if--><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-[1] has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-[1]">
+    <!--v-if--><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-1 has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-background-inverted after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</p>
+        <p for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-[1] has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-[1]">
+    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-1 has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="2" aria-label="2">
           <!---->
         </button>
@@ -1115,10 +1115,10 @@ exports[`radioGroup > renders with neutral variant table correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</p>
+        <p for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-[1] has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-[1]">
+    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-1 has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="3" aria-label="3">
           <!---->
         </button>
@@ -1126,7 +1126,7 @@ exports[`radioGroup > renders with neutral variant table correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</p>
+        <p for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</p>
         <!--v-if-->
       </div>
     </label>
@@ -1138,16 +1138,16 @@ exports[`radioGroup > renders with neutral variant table correctly 1`] = `
 exports[`radioGroup > renders with neutral variant table highlight correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-col gap-y-1 gap-0 -space-y-px">
-    <!--v-if--><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-[1] has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-[1]">
+    <!--v-if--><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-1 has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 ring-ring-inverted" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-background-inverted after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</p>
+        <p for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-[1] has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-[1]">
+    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-1 has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 ring-ring-inverted" value="2" aria-label="2">
           <!---->
         </button>
@@ -1155,10 +1155,10 @@ exports[`radioGroup > renders with neutral variant table highlight correctly 1`]
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</p>
+        <p for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-[1] has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-[1]">
+    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-outline-inverted/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-border-inverted has-focus-visible:z-1 has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 ring-ring-inverted" value="3" aria-label="3">
           <!---->
         </button>
@@ -1166,7 +1166,7 @@ exports[`radioGroup > renders with neutral variant table highlight correctly 1`]
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</p>
+        <p for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</p>
         <!--v-if-->
       </div>
     </label>
@@ -1178,16 +1178,16 @@ exports[`radioGroup > renders with neutral variant table highlight correctly 1`]
 exports[`radioGroup > renders with primary variant card correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-wrap flex-col gap-y-1">
-    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
+    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-primary after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</p>
+        <p for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="2" aria-label="2">
           <!---->
         </button>
@@ -1195,10 +1195,10 @@ exports[`radioGroup > renders with primary variant card correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</p>
+        <p for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="3" aria-label="3">
           <!---->
         </button>
@@ -1206,7 +1206,7 @@ exports[`radioGroup > renders with primary variant card correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</p>
+        <p for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</p>
         <!--v-if-->
       </div>
     </label>
@@ -1218,16 +1218,16 @@ exports[`radioGroup > renders with primary variant card correctly 1`] = `
 exports[`radioGroup > renders with primary variant card highlight correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-wrap flex-col gap-y-1">
-    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
+    <!--v-if--><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 ring-primary" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-primary after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</p>
+        <p for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 ring-primary" value="2" aria-label="2">
           <!---->
         </button>
@@ -1235,10 +1235,10 @@ exports[`radioGroup > renders with primary variant card highlight correctly 1`] 
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</p>
+        <p for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
+    </label><label data-slot="item" class="flex items-start border border-border rounded-lg hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:bg-primary/10">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 ring-primary" value="3" aria-label="3">
           <!---->
         </button>
@@ -1246,7 +1246,7 @@ exports[`radioGroup > renders with primary variant card highlight correctly 1`] 
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</p>
+        <p for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</p>
         <!--v-if-->
       </div>
     </label>
@@ -1264,7 +1264,7 @@ exports[`radioGroup > renders with primary variant list correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -1275,7 +1275,7 @@ exports[`radioGroup > renders with primary variant list correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -1286,7 +1286,7 @@ exports[`radioGroup > renders with primary variant list correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -1304,7 +1304,7 @@ exports[`radioGroup > renders with primary variant list highlight correctly 1`] 
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -1315,7 +1315,7 @@ exports[`radioGroup > renders with primary variant list highlight correctly 1`] 
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -1326,7 +1326,7 @@ exports[`radioGroup > renders with primary variant list highlight correctly 1`] 
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -1338,16 +1338,16 @@ exports[`radioGroup > renders with primary variant list highlight correctly 1`] 
 exports[`radioGroup > renders with primary variant table correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-col gap-y-1 gap-0 -space-y-px">
-    <!--v-if--><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-[1]">
+    <!--v-if--><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-primary after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</p>
+        <p for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-[1]">
+    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="2" aria-label="2">
           <!---->
         </button>
@@ -1355,10 +1355,10 @@ exports[`radioGroup > renders with primary variant table correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</p>
+        <p for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-[1]">
+    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:border-border-accented p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4" value="3" aria-label="3">
           <!---->
         </button>
@@ -1366,7 +1366,7 @@ exports[`radioGroup > renders with primary variant table correctly 1`] = `
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</p>
+        <p for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</p>
         <!--v-if-->
       </div>
     </label>
@@ -1378,16 +1378,16 @@ exports[`radioGroup > renders with primary variant table correctly 1`] = `
 exports[`radioGroup > renders with primary variant table highlight correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="false">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-col gap-y-1 gap-0 -space-y-px">
-    <!--v-if--><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-[1]">
+    <!--v-if--><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:1" role="radio" type="button" aria-checked="true" data-state="checked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-active="" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 ring-primary" value="1" aria-label="1"><span data-state="checked" data-slot="indicator" class="flex items-center justify-center size-full after:bg-background after:rounded-full bg-primary after:size-1.5"></span></button>
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</p>
+        <p for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-[1]">
+    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:2" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 ring-primary" value="2" aria-label="2">
           <!---->
         </button>
@@ -1395,10 +1395,10 @@ exports[`radioGroup > renders with primary variant table highlight correctly 1`]
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</p>
+        <p for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</p>
         <!--v-if-->
       </div>
-    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-[1] has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-[1]">
+    </label><label data-slot="item" class="flex items-start border border-border hover:not-has-disabled:not-has-focus-visible:not-has-data-[state=checked]:bg-background-elevated/50 transition-colors flex-row text-sm p-3.5 first-of-type:rounded-t-lg last-of-type:rounded-b-lg outline-primary/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-primary has-focus-visible:z-1 has-data-[state=checked]:bg-primary/10 has-data-[state=checked]:border-primary/50 has-data-[state=checked]:z-1">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:3" role="radio" type="button" aria-checked="false" data-state="unchecked" required="false" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 ring-primary" value="3" aria-label="3">
           <!---->
         </button>
@@ -1406,7 +1406,7 @@ exports[`radioGroup > renders with primary variant table highlight correctly 1`]
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
         <!--v-if-->
-        <p for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</p>
+        <p for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</p>
         <!--v-if-->
       </div>
     </label>
@@ -1418,7 +1418,7 @@ exports[`radioGroup > renders with primary variant table highlight correctly 1`]
 exports[`radioGroup > renders with required correctly 1`] = `
 "<div id="v-0" data-slot="root" class="relative" tabindex="0" data-orientation="vertical" dir="ltr" style="outline-color: none; outline-style: none; outline-width: initial;" role="radiogroup" aria-orientation="vertical" aria-required="true">
   <fieldset data-slot="fieldset" class="flex gap-x-2 flex-wrap flex-col gap-y-1">
-    <legend data-slot="legend" class="mb-1 block font-medium color-text text-sm after:content-['*'] after:ms-0.5 after:color-error">Legend</legend>
+    <legend data-slot="legend" class="mb-1 block font-500 color-text text-sm after:content-['*'] after:ms-0.5 after:color-error">Legend</legend>
     <div data-slot="item" class="flex items-start flex-row text-sm">
       <div data-slot="container" class="flex items-center h-5"><button id="v-0:1" role="radio" type="button" aria-checked="false" data-state="unchecked" required="true" data-akar-collection-item="" tabindex="-1" data-orientation="vertical" data-slot="base" class="rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none size-4 outline-primary/25 focus-visible:outline-solid focus-visible:outline-3 focus-visible:ring-primary" value="1" aria-label="1">
           <!---->
@@ -1426,7 +1426,7 @@ exports[`radioGroup > renders with required correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -1437,7 +1437,7 @@ exports[`radioGroup > renders with required correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -1448,7 +1448,7 @@ exports[`radioGroup > renders with required correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -1466,7 +1466,7 @@ exports[`radioGroup > renders with size lg correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -1477,7 +1477,7 @@ exports[`radioGroup > renders with size lg correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -1488,7 +1488,7 @@ exports[`radioGroup > renders with size lg correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -1506,7 +1506,7 @@ exports[`radioGroup > renders with size md correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -1517,7 +1517,7 @@ exports[`radioGroup > renders with size md correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -1528,7 +1528,7 @@ exports[`radioGroup > renders with size md correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -1546,7 +1546,7 @@ exports[`radioGroup > renders with size sm correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -1557,7 +1557,7 @@ exports[`radioGroup > renders with size sm correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -1568,7 +1568,7 @@ exports[`radioGroup > renders with size sm correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -1586,7 +1586,7 @@ exports[`radioGroup > renders with size xl correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -1597,7 +1597,7 @@ exports[`radioGroup > renders with size xl correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -1608,7 +1608,7 @@ exports[`radioGroup > renders with size xl correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -1626,7 +1626,7 @@ exports[`radioGroup > renders with size xs correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -1637,7 +1637,7 @@ exports[`radioGroup > renders with size xs correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -1648,7 +1648,7 @@ exports[`radioGroup > renders with size xs correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -1668,7 +1668,7 @@ exports[`radioGroup > renders with ui correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2 ms-4">
-        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -1679,7 +1679,7 @@ exports[`radioGroup > renders with ui correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2 ms-4">
-        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -1690,7 +1690,7 @@ exports[`radioGroup > renders with ui correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2 ms-4">
-        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>
@@ -1708,7 +1708,7 @@ exports[`radioGroup > renders with valueKey correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:Option 1" data-slot="label" class="block font-medium color-text">Option 1</label>
+        <!--v-if--><label for="v-0:Option 1" data-slot="label" class="block font-500 color-text">Option 1</label>
         <!--v-if-->
       </div>
     </div>
@@ -1719,7 +1719,7 @@ exports[`radioGroup > renders with valueKey correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:Option 2" data-slot="label" class="block font-medium color-text">Option 2</label>
+        <!--v-if--><label for="v-0:Option 2" data-slot="label" class="block font-500 color-text">Option 2</label>
         <!--v-if-->
       </div>
     </div>
@@ -1730,7 +1730,7 @@ exports[`radioGroup > renders with valueKey correctly 1`] = `
         <!--v-if-->
       </div>
       <div data-slot="wrapper" class="w-full ms-2">
-        <!--v-if--><label for="v-0:Option 3" data-slot="label" class="block font-medium color-text">Option 3</label>
+        <!--v-if--><label for="v-0:Option 3" data-slot="label" class="block font-500 color-text">Option 3</label>
         <!--v-if-->
       </div>
     </div>

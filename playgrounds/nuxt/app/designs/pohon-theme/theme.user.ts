@@ -6,7 +6,7 @@ import type {
 export const themeUser = {
   slots: {
     root: 'group/user relative',
-    name: 'font-medium',
+    name: 'font-500',
     description: 'color-text-muted',
     avatar: 'shrink-0',
   },

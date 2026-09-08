@@ -30,7 +30,7 @@ exports[`chatMessage > renders with avatar correctly 1`] = `
 "<article data-role="user" data-slot="root" class="group/message relative w-full scroll-mt-4 sm:scroll-mt-6">
   <!--v-if-->
   <div data-slot="container" class="relative flex items-start gap-3 pb-8">
-    <div data-slot="leading" class="inline-flex items-center justify-center min-h-6"><span data-slot="leadingAvatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span></div>
+    <div data-slot="leading" class="inline-flex items-center justify-center min-h-6"><span data-slot="leadingAvatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span></div>
     <div data-slot="body" class="min-w-0 w-full">
       <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 w-full">Hello, how are you?</div>
       <!--v-if-->
@@ -229,7 +229,7 @@ exports[`chatMessage > renders with primary variant naked correctly 1`] = `
   <div data-slot="container" class="relative flex items-start gap-3 pb-8">
     <!--v-if-->
     <div data-slot="body" class="min-w-0 w-full">
-      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 w-full text-primary">Hello, how are you?</div>
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 w-full color-primary">Hello, how are you?</div>
       <!--v-if-->
     </div>
   </div>
@@ -242,7 +242,7 @@ exports[`chatMessage > renders with primary variant outline correctly 1`] = `
   <div data-slot="container" class="relative flex items-start gap-3 pb-8">
     <!--v-if-->
     <div data-slot="body" class="min-w-0">
-      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 text-primary ring ring-primary/25">Hello, how are you?</div>
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 color-primary ring ring-primary/25">Hello, how are you?</div>
       <!--v-if-->
     </div>
   </div>
@@ -255,7 +255,7 @@ exports[`chatMessage > renders with primary variant soft correctly 1`] = `
   <div data-slot="container" class="relative flex items-start gap-3 pb-8">
     <!--v-if-->
     <div data-slot="body" class="min-w-0">
-      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-primary/10 text-primary">Hello, how are you?</div>
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-primary/10 color-primary">Hello, how are you?</div>
       <!--v-if-->
     </div>
   </div>
@@ -281,7 +281,7 @@ exports[`chatMessage > renders with primary variant subtle correctly 1`] = `
   <div data-slot="container" class="relative flex items-start gap-3 pb-8">
     <!--v-if-->
     <div data-slot="body" class="min-w-0">
-      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-primary/10 text-primary ring ring-primary/25">Hello, how are you?</div>
+      <div data-slot="content" class="relative text-pretty wrap-break-word *:first:mt-0 *:last:mb-0 space-y-4 px-4 py-3 rounded-lg min-h-12 bg-primary/10 color-primary ring ring-primary/25">Hello, how are you?</div>
       <!--v-if-->
     </div>
   </div>

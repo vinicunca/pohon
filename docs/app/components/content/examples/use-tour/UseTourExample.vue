@@ -33,7 +33,7 @@ const tour = useTour([
 
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
       <div ref="dashboard" class="p-4 rounded-lg border border-border bg-background-elevated/50">
-        <p class="font-medium color-text-highlighted">
+        <p class="font-500 color-text-highlighted">
           Dashboard
         </p>
         <p class="text-sm color-text-muted">
@@ -41,7 +41,7 @@ const tour = useTour([
         </p>
       </div>
       <div ref="profile" class="p-4 rounded-lg border border-border bg-background-elevated/50">
-        <p class="font-medium color-text-highlighted">
+        <p class="font-500 color-text-highlighted">
           Profile
         </p>
         <p class="text-sm color-text-muted">
@@ -49,7 +49,7 @@ const tour = useTour([
         </p>
       </div>
       <div ref="settings" class="p-4 rounded-lg border border-border bg-background-elevated/50">
-        <p class="font-medium color-text-highlighted">
+        <p class="font-500 color-text-highlighted">
           Settings
         </p>
         <p class="text-sm color-text-muted">

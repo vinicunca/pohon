@@ -10,7 +10,7 @@
       <PLink active>
         Button active
       </PLink>
-      <PLink active class="font-medium" active-class="color-text-highlighted">
+      <PLink active class="font-500" active-class="color-text-highlighted">
         Button active with class
       </PLink>
       <PLink active disabled>
@@ -20,7 +20,7 @@
       <PLink>
         Button inactive
       </PLink>
-      <PLink class="font-medium" inactive-class="hover:text-primary">
+      <PLink class="font-500" inactive-class="hover:color-primary">
         Button inactive with class
       </PLink>
       <PLink disabled>
@@ -36,7 +36,7 @@
       <PLink to="/components/link">
         Link active
       </PLink>
-      <PLink to="/components/link" class="font-medium" active-class="color-text-highlighted">
+      <PLink to="/components/link" class="font-500" active-class="color-text-highlighted">
         Link active with class
       </PLink>
       <PLink to="/components/link" disabled>
@@ -46,7 +46,7 @@
       <PLink to="/components/button">
         Link inactive
       </PLink>
-      <PLink to="/components/button" class="font-medium" inactive-class="hover:text-primary">
+      <PLink to="/components/button" class="font-500" inactive-class="hover:color-primary">
         Link inactive with class
       </PLink>
       <PLink to="/components/button" disabled>

@@ -565,7 +565,7 @@ name: 'dropdown-menu-filter-fields-example'
 
 ### With trigger content width
 
-You can expand the content to the full width of its button by adding the `w-(--reka-dropdown-menu-trigger-width)` class on the `ui.content` slot.
+You can expand the content to the full width of its button by adding the `w-(--akar-dropdown-menu-trigger-width)` class on the `ui.content` slot.
 
 ## ::component-example
 
@@ -584,7 +584,7 @@ export default defineAppConfig({
   ui: {
     dropdownMenu: {
       slots: {
-        content: 'w-(--reka-dropdown-menu-trigger-width)'
+        content: 'w-(--akar-dropdown-menu-trigger-width)'
       }
     }
   }

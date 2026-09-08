@@ -83,7 +83,7 @@ export default (options: Required<ModuleOptions>) => ({
       false: '',
     },
     type: {
-      file: 'file:me-1.5 file:font-medium file:color-text-muted file:outline-none',
+      file: 'file:me-1.5 file:font-500 file:color-text-muted file:outline-none',
     },
   },
   compoundVariants: [...(options.theme.colors || []).map((color: string) => ({

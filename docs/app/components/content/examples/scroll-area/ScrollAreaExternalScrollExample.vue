@@ -197,7 +197,7 @@ watch(matches, () => {
               loading="lazy"
             />
             <div class="min-w-0">
-              <p class="font-medium color-text-highlighted truncate">
+              <p class="font-500 color-text-highlighted truncate">
                 {{ item.firstName }} {{ item.lastName }}
               </p>
               <p class="text-sm color-text-muted truncate">

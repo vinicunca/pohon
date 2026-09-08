@@ -7,7 +7,7 @@ import { BRANDS } from '../design.constants';
 export const themeChip = {
   slots: {
     root: 'inline-flex shrink-0 items-center justify-center relative',
-    base: 'ring-background color-text-inverted font-medium rounded-full flex whitespace-nowrap ring items-center justify-center',
+    base: 'ring-background color-text-inverted font-500 rounded-full flex whitespace-nowrap ring items-center justify-center',
   },
   variants: {
     color: {

@@ -146,7 +146,7 @@ defineShortcuts(extractShortcuts(teamsItems.value))
         <PDropdownMenu
           :items="teamsItems"
           :content="{ align: 'start', collisionPadding: 12 }"
-          :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-48' }"
+          :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width) min-w-48' }"
         >
           <PButton
             v-bind="selectedTeam"
@@ -175,7 +175,7 @@ defineShortcuts(extractShortcuts(teamsItems.value))
         <PDropdownMenu
           :items="userItems"
           :content="{ align: 'center', collisionPadding: 12 }"
-          :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-48' }"
+          :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width) min-w-48' }"
         >
           <PButton
             v-bind="user"

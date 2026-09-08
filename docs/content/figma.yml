@@ -22,7 +22,7 @@ features1:
       description: Access all components, blocks, and templates in one comprehensive kit.
       icon: i-lucide-files
 cta1:
-  title: Everything you need in a [single file]{class="text-primary"}.
+  title: Everything you need in a [single file]{class="color-primary"}.
   description: Design and development in perfect sync with our comprehensive [Pohon UI design kit](https://go.nuxt.com/figma-ui). Developers can implement designs faster, while designers work with production-ready components.
 section1:
   title: Customize in a few clicks to fit your needs

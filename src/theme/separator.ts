@@ -4,7 +4,7 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'flex items-center align-center text-center',
     border: '',
-    container: 'font-medium color-text flex',
+    container: 'font-500 color-text flex',
     icon: 'shrink-0 size-5',
     avatar: 'shrink-0',
     avatarSize: '2xs',

@@ -27,7 +27,7 @@ const items: DropdownMenuItem[][] = [
 </script>
 
 <template>
-  <PDropdownMenu :items="items" :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width)' }">
+  <PDropdownMenu :items="items" :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width)' }">
     <PButton
       label="Open"
       class="w-46"

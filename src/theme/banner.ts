@@ -8,7 +8,7 @@ export default (options: Required<ModuleOptions>) => ({
     center: 'flex items-center gap-1.5 min-w-0',
     right: 'lg:flex-1 flex items-center justify-end',
     icon: 'size-5 shrink-0 color-text-inverted pointer-events-none',
-    title: 'text-sm color-text-inverted font-medium truncate',
+    title: 'text-sm color-text-inverted font-500 truncate',
     actions: 'flex gap-1.5 shrink-0 isolate',
     close: 'color-text-inverted hover:bg-background/10 focus-visible:bg-background/10 -me-1.5 lg:me-0',
   },

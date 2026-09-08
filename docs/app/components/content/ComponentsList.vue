@@ -27,7 +27,7 @@ const { data: components } = await useAsyncData(`components-${props.category}`, 
         header: 'mb-0',
         container: 'p-0 lg:p-0',
         body: 'p-4',
-        title: 'text-[15px] font-medium',
+        title: 'text-[15px] font-500',
         description: 'line-clamp-2 mt-0.5'
       }"
     >

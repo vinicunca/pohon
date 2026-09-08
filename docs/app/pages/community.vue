@@ -50,7 +50,7 @@ if (import.meta.server) {
             :to="item.to"
             target="_blank"
             class="rounded-none group"
-            :ui="{ footer: 'pointer-events-auto z-[1]' }"
+            :ui="{ footer: 'pointer-events-auto z-1' }"
           >
             <template #leading>
               <PAvatar v-bind="item.avatar" :alt="`${item.label} logo`" size="3xl" class="mx-auto" loading="lazy" />

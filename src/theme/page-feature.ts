@@ -5,7 +5,7 @@ export default (options: Required<ModuleOptions>) => ({
     root: 'relative rounded-sm',
     wrapper: '',
     leading: 'inline-flex items-center justify-center',
-    leadingIcon: 'size-5 shrink-0 text-primary',
+    leadingIcon: 'size-5 shrink-0 color-primary',
     title: 'text-base text-pretty font-600 color-text-highlighted',
     description: 'text-[15px] text-pretty color-text-muted',
   },

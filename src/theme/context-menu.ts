@@ -92,15 +92,15 @@ export default (options: Required<ModuleOptions>) => ({
     color,
     active: false,
     class: {
-      item: `text-${color} data-highlighted:text-${color} data-highlighted:before:bg-${color}/10 data-[state=open]:before:bg-${color}/10`,
-      itemLeadingIcon: `text-${color}/75 group-data-highlighted:text-${color} group-data-[state=open]:text-${color}`,
+      item: `color-${color} data-highlighted:color-${color} data-highlighted:before:bg-${color}/10 data-[state=open]:before:bg-${color}/10`,
+      itemLeadingIcon: `color-${color}/75 group-data-highlighted:color-${color} group-data-[state=open]:color-${color}`,
     },
   })), ...(options.theme.colors || []).map((color: string) => ({
     color,
     active: true,
     class: {
-      item: `text-${color} before:bg-${color}/10`,
-      itemLeadingIcon: `text-${color}`,
+      item: `color-${color} before:bg-${color}/10`,
+      itemLeadingIcon: `color-${color}`,
     },
   }))],
   defaultVariants: {

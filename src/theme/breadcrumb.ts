@@ -19,7 +19,7 @@ export default (options: Required<ModuleOptions>) => ({
         link: 'font-600',
       },
       false: {
-        link: 'color-text-muted font-medium',
+        link: 'color-text-muted font-500',
       },
     },
     disabled: {
@@ -46,7 +46,7 @@ export default (options: Required<ModuleOptions>) => ({
     color,
     active: true,
     class: {
-      link: `text-${color}`,
+      link: `color-${color}`,
     },
   })), {
     color: 'neutral',

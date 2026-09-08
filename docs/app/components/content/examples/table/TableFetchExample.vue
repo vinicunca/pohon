@@ -37,7 +37,7 @@ const columns: TableColumn<User>[] = [{
         size: 'lg'
       }),
       h('div', undefined, [
-        h('p', { class: 'font-medium color-text-highlighted' }, row.original.name),
+        h('p', { class: 'font-500 color-text-highlighted' }, row.original.name),
         h('p', { class: '' }, `@${row.original.username}`)
       ])
     ])

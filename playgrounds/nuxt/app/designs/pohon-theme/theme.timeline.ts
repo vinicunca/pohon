@@ -11,7 +11,7 @@ export const themeTimeline = {
     separator: 'bg-background-elevated rounded-full flex-1',
     wrapper: 'w-full',
     date: 'color-text-dimmed text-xs/5',
-    title: 'color-text-highlighted text-sm font-medium',
+    title: 'color-text-highlighted text-sm font-500',
     description: 'color-text-muted text-sm text-wrap',
   },
 

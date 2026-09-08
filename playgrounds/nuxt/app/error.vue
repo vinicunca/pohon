@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import type { NuxtError } from '#app'
-
-const { components, groups, items } = useNavigation()
+import type { NuxtError } from '#app';
 
 defineProps<{
-  error: NuxtError
-}>()
+  error: NuxtError;
+}>();
 
-provide('components', components)
+const { components, groups, items } = useNavigation();
+
+provide('components', components);
 </script>
 
 <template>
@@ -15,11 +15,14 @@ provide('components', components)
     <PDashboardGroup unit="rem">
       <PDashboardSidebar class="bg-background-elevated/25">
         <template #header>
-          <NuxtLink to="/" class="color-text-highlighted">
+          <NuxtLink
+            to="/"
+            class="color-text-highlighted"
+          >
             <Logo class="h-5 w-auto" />
           </NuxtLink>
 
-          <div class="flex items-center ms-auto">
+          <div class="ms-auto flex items-center">
             <ThemeDropdown />
 
             <PColorModeButton />
@@ -28,11 +31,17 @@ provide('components', components)
 
         <PDashboardSearchButton />
 
-        <PNavigationMenu :items="items" orientation="vertical" />
+        <PNavigationMenu
+          :items="items"
+          orientation="vertical"
+        />
 
         <PSeparator type="dashed" />
 
-        <PNavigationMenu :items="components" orientation="vertical" />
+        <PNavigationMenu
+          :items="components"
+          orientation="vertical"
+        />
       </PDashboardSidebar>
 
       <PDashboardPanel>

@@ -9,7 +9,7 @@ export default (options: Required<ModuleOptions>) => ({
     separator: 'flex-1 rounded-full bg-background-elevated',
     wrapper: 'w-full',
     date: 'color-text-dimmed text-xs/5',
-    title: 'font-medium color-text-highlighted text-sm',
+    title: 'font-500 color-text-highlighted text-sm',
     description: 'color-text-muted text-wrap text-sm',
   },
 

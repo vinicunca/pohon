@@ -101,28 +101,28 @@ export const themeChatMessage = {
       color,
       variant: 'outline',
       class: {
-        content: `text-${color} ring ring-${color}/25`,
+        content: `color-${color} ring ring-${color}/25`,
       },
     })),
     ...BRANDS.map((color) => ({
       color,
       variant: 'soft',
       class: {
-        content: `bg-${color}/10 text-${color}`,
+        content: `bg-${color}/10 color-${color}`,
       },
     })),
     ...BRANDS.map((color) => ({
       color,
       variant: 'subtle',
       class: {
-        content: `bg-${color}/10 text-${color} ring ring-${color}/25`,
+        content: `bg-${color}/10 color-${color} ring ring-${color}/25`,
       },
     })),
     ...BRANDS.map((color) => ({
       color,
       variant: 'naked',
       class: {
-        content: `text-${color}`,
+        content: `color-${color}`,
       },
     })),
     {

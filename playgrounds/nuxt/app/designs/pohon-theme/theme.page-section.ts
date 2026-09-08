@@ -6,7 +6,7 @@ export const themePageSection = {
     wrapper: '',
     header: '',
     leading: 'mb-6 flex items-center',
-    leadingIcon: 'text-primary shrink-0 size-10',
+    leadingIcon: 'color-primary shrink-0 size-10',
     headline: 'mb-3',
     title: 'color-text-highlighted text-3xl tracking-tight font-bold text-pretty lg:text-5xl sm:text-4xl',
     description: 'color-text-muted text-base sm:text-lg',
@@ -39,7 +39,7 @@ export const themePageSection = {
     },
     headline: {
       true: {
-        headline: 'text-primary font-600 flex gap-1.5 items-center',
+        headline: 'color-primary font-600 flex gap-1.5 items-center',
       },
     },
     title: {

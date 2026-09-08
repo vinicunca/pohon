@@ -13,7 +13,7 @@ export const themePageLinks = {
   variants: {
     active: {
       true: {
-        link: 'text-primary font-medium'
+        link: 'color-primary font-500'
       },
       false: {
         link: ['color-text-muted hover:color-text', 'transition-colors']

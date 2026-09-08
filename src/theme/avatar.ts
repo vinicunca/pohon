@@ -3,16 +3,16 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle',
-    image: 'h-full w-full rounded-[inherit] object-cover',
-    fallback: 'font-medium truncate',
+    image: 'h-full w-full rounded-inherit object-cover',
+    fallback: 'font-500 truncate',
     icon: 'shrink-0',
   },
   variants: {
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
         root: `bg-${color}/10`,
-        fallback: `text-${color}`,
-        icon: `text-${color}`,
+        fallback: `color-${color}`,
+        icon: `color-${color}`,
       }])),
       neutral: {
         root: 'bg-background-elevated',

@@ -5,7 +5,7 @@ export const themeInputRating = {
   slots: {
     root: '',
     item: ['relative inline-block cursor-pointer select-none rounded-sm has-focus-visible:outline-3', 'transition'],
-    indicator: 'text-transparent outline-none opacity-(--reka-rating-item-step-opacity) w-(--reka-rating-item-step-width) inset-0 absolute z-(--reka-rating-item-step-z-index) overflow-hidden',
+    indicator: 'text-transparent outline-none opacity-(--akar-rating-item-step-opacity) w-(--akar-rating-item-step-width) inset-0 absolute z-(--akar-rating-item-step-z-index) overflow-hidden',
     icon: 'block',
     emptyIcon: 'color-text-muted h-full w-full block pointer-events-none',
   },
@@ -42,7 +42,7 @@ export const themeInputRating = {
     },
     color: {
       ...Object.fromEntries(BRANDS.map((color: string) => [color, {
-        indicator: `data-[state=active]:text-${color}`,
+        indicator: `data-[state=active]:color-${color}`,
         item: `outline-${color}/25`,
       }])),
       neutral: {

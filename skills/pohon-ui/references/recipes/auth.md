@@ -71,13 +71,13 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
         @submit="onSubmit"
       >
         <template #password-hint>
-          <PLink to="/forgot-password" class="text-primary font-medium"
+          <PLink to="/forgot-password" class="color-primary font-500"
             >Forgot password?</PLink
           >
         </template>
         <template #footer>
           Don't have an account?
-          <PLink to="/signup" class="text-primary font-medium">Sign up</PLink>.
+          <PLink to="/signup" class="color-primary font-500">Sign up</PLink>.
         </template>
       </PAuthForm>
     </PPageCard>
@@ -154,7 +154,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
         <PFormField name="password" label="Password">
           <template #hint>
-            <NuxtLink to="/forgot-password" class="text-sm text-primary"
+            <NuxtLink to="/forgot-password" class="text-sm color-primary"
               >Forgot password?</NuxtLink
             >
           </template>
@@ -167,7 +167,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <template #footer>
         <p class="text-center text-sm color-text-muted">
           Don't have an account?
-          <NuxtLink to="/signup" class="text-primary font-medium"
+          <NuxtLink to="/signup" class="color-primary font-500"
             >Sign up</NuxtLink
           >
         </p>

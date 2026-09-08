@@ -80,7 +80,7 @@ const columns: TableColumn<Payment>[] = [{
   meta: {
     class: {
       th: 'text-right',
-      td: 'text-right font-medium'
+      td: 'text-right font-500'
     }
   },
   cell: ({ row }) => new Intl.NumberFormat('en-US', {

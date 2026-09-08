@@ -26,7 +26,7 @@ export default (options: Required<ModuleOptions>) => {
       itemWrapper: 'flex-1 flex flex-col min-w-0',
       itemLabel: 'truncate',
       itemDescription: 'truncate color-text-muted',
-      tagsItem: 'px-1.5 py-0.5 rounded-sm font-medium inline-flex items-center gap-0.5 ring ring-inset ring-ring-accented bg-background-elevated color-text data-disabled:cursor-not-allowed data-disabled:opacity-75',
+      tagsItem: 'px-1.5 py-0.5 rounded-sm font-500 inline-flex items-center gap-0.5 ring ring-inset ring-ring-accented bg-background-elevated color-text data-disabled:cursor-not-allowed data-disabled:opacity-75',
       tagsItemText: 'truncate',
       tagsItemDelete: ['inline-flex items-center rounded-xs color-text-dimmed hover:color-text hover:bg-background-accented/75 disabled:pointer-events-none', options.theme.transitions && 'transition-colors'],
       tagsItemDeleteIcon: 'shrink-0',

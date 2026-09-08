@@ -85,7 +85,7 @@ export const themeInput = {
       false: '',
     },
     type: {
-      file: 'file:color-text-muted file:font-medium file:me-1.5 file:outline-none',
+      file: 'file:color-text-muted file:font-500 file:me-1.5 file:outline-none',
     },
   },
   compoundVariants: [

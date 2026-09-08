@@ -5,13 +5,13 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative',
     fieldset: 'flex gap-x-2',
-    legend: 'mb-1 block font-medium color-text',
+    legend: 'mb-1 block font-500 color-text',
     item: 'flex items-start',
     container: 'flex items-center',
     base: 'rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none',
     indicator: 'flex items-center justify-center size-full after:bg-background after:rounded-full',
     wrapper: 'w-full',
-    label: 'block font-medium color-text',
+    label: 'block font-500 color-text',
     icon: 'shrink-0',
     description: 'color-text-muted',
   },
@@ -200,14 +200,14 @@ export default (options: Required<ModuleOptions>) => ({
       color,
       variant: 'table',
       class: {
-        item: `has-data-[state=checked]:bg-${color}/10 has-data-[state=checked]:border-${color}/50 has-data-[state=checked]:z-[1]`,
+        item: `has-data-[state=checked]:bg-${color}/10 has-data-[state=checked]:border-${color}/50 has-data-[state=checked]:z-1`,
       },
     })),
     {
       color: 'neutral',
       variant: 'table',
       class: {
-        item: 'has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-[1]',
+        item: 'has-data-[state=checked]:bg-background-elevated has-data-[state=checked]:border-border-inverted/50 has-data-[state=checked]:z-1',
       },
     },
     {

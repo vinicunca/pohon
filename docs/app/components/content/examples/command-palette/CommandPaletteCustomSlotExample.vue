@@ -89,7 +89,7 @@ const groups = [
     </template>
 
     <template #billing-label="{ item }">
-      <span class="font-medium text-primary">{{ item.label }}</span>
+      <span class="font-500 color-primary">{{ item.label }}</span>
 
       <PBadge variant="subtle" size="sm">
         50% off

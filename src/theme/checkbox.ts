@@ -7,7 +7,7 @@ export const hover = 'hover:not-has-disabled:not-has-focus-visible:not-has-data-
 // render the root as a label wrapping everything, so focus belongs on the card itself,
 // as it does whenever the control is `sr-only`.
 export const focusControl = (token: string) => `outline-${token}/25 focus-visible:outline-solid focus-visible:outline-3 focus-visible:ring-${token}`;
-export const focusCard = (token: string) => `outline-${token}/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-${token} has-focus-visible:z-[1]`;
+export const focusCard = (token: string) => `outline-${token}/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-${token} has-focus-visible:z-1`;
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
@@ -17,7 +17,7 @@ export default (options: Required<ModuleOptions>) => ({
     indicator: 'flex items-center justify-center size-full color-text-inverted',
     icon: 'shrink-0',
     wrapper: 'w-full',
-    label: 'block font-medium color-text',
+    label: 'block font-500 color-text',
     description: 'color-text-muted',
   },
   variants: {

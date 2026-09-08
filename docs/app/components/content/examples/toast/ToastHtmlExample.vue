@@ -5,7 +5,7 @@ function showToast() {
   toast.add({
     title: h('span', {}, [
       'Item ',
-      h('span', { class: 'text-primary font-bold' }, '#15'),
+      h('span', { class: 'color-primary font-bold' }, '#15'),
       ' deleted'
     ]),
     description: h('span', {}, [

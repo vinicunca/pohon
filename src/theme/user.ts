@@ -4,7 +4,7 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative group/user',
     wrapper: '',
-    name: 'font-medium',
+    name: 'font-500',
     description: 'color-text-muted',
     avatar: 'shrink-0',
   },

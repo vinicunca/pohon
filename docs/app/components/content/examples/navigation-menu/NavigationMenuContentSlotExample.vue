@@ -63,7 +63,7 @@ const items = [
   <PNavigationMenu
     :items="items"
     :ui="{
-      viewport: 'sm:w-(--reka-navigation-menu-viewport-width)',
+      viewport: 'sm:w-(--akar-navigation-menu-viewport-width)',
       content: 'sm:w-auto',
       childList: 'sm:w-96',
       childLinkDescription: 'text-balance line-clamp-2'
@@ -78,7 +78,7 @@ const items = [
 
         <li v-for="child in item.children" :key="child.label">
           <PLink class="text-sm text-left rounded-md p-3 transition-colors hover:bg-background-elevated/50">
-            <p class="font-medium color-text-highlighted">
+            <p class="font-500 color-text-highlighted">
               {{ child.label }}
             </p>
             <p class="color-text-muted line-clamp-2">

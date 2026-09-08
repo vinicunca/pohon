@@ -20,8 +20,8 @@ export default {
     tierPrice: 'color-text-highlighted text-3xl sm:text-4xl font-600',
     tierDiscount: 'color-text-muted line-through text-xl sm:text-2xl',
     tierBilling: 'flex flex-col justify-between min-w-0',
-    tierBillingPeriod: 'color-text-toned truncate text-xs font-medium',
-    tierBillingCycle: 'color-text-muted truncate text-xs font-medium',
+    tierBillingPeriod: 'color-text-toned truncate text-xs font-500',
+    tierBillingCycle: 'color-text-muted truncate text-xs font-500',
     tierButton: 'mt-6 md:mt-auto md:pt-6',
     tierFeatureIcon: 'size-5 shrink-0',
     section: 'mt-6 flex flex-col gap-2',
@@ -38,7 +38,7 @@ export default {
     },
     active: {
       true: {
-        tierFeatureIcon: 'text-primary',
+        tierFeatureIcon: 'color-primary',
       },
     },
     highlight: {

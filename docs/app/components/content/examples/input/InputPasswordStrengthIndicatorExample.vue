@@ -68,7 +68,7 @@ const text = computed(() => {
       size="sm"
     />
 
-    <p id="password-strength" class="text-sm font-medium">
+    <p id="password-strength" class="text-sm font-500">
       {{ text }}. Must contain:
     </p>
 

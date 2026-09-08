@@ -7,7 +7,7 @@ import { fieldGroupVariant } from './theme.field-group';
 
 export const themeBadge = {
   slots: {
-    base: 'font-medium inline-flex items-center',
+    base: 'font-500 inline-flex items-center',
     label: 'truncate',
     leadingIcon: 'shrink-0',
     leadingAvatar: 'shrink-0',
@@ -59,17 +59,17 @@ export const themeBadge = {
     ...BRANDS.map((color) => ({
       color,
       variant: 'outline',
-      class: `text-${color} ring ring-inset ring-${color}/50`,
+      class: `color-${color} ring ring-inset ring-${color}/50`,
     })),
     ...BRANDS.map((color) => ({
       color,
       variant: 'soft',
-      class: `bg-${color}/10 text-${color}`,
+      class: `bg-${color}/10 color-${color}`,
     })),
     ...BRANDS.map((color) => ({
       color,
       variant: 'subtle',
-      class: `bg-${color}/10 text-${color} ring ring-inset ring-${color}/25`,
+      class: `bg-${color}/10 color-${color} ring ring-inset ring-${color}/25`,
     })),
     {
       color: 'neutral',

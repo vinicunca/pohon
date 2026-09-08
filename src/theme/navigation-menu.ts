@@ -6,7 +6,7 @@ export default (options: Required<ModuleOptions>) => ({
     list: 'isolate min-w-0',
     label: 'w-full flex items-center gap-1.5 font-600 text-xs/5 color-text-highlighted px-2.5 py-1.5',
     item: 'min-w-0',
-    link: 'group relative w-full flex items-center gap-1.5 font-medium text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none focus-visible:before:outline-3',
+    link: 'group relative w-full flex items-center gap-1.5 font-500 text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none focus-visible:before:outline-3',
     linkLeadingIcon: 'shrink-0 size-5',
     linkLeadingAvatar: 'shrink-0',
     linkLeadingAvatarSize: '2xs',
@@ -60,7 +60,7 @@ export default (options: Required<ModuleOptions>) => ({
         link: 'px-2.5 py-1.5 before:inset-x-px before:inset-y-0',
         childList: 'grid p-2',
         childLink: 'px-3 py-2 gap-2 before:inset-x-px before:inset-y-0',
-        childLinkLabel: 'font-medium',
+        childLinkLabel: 'font-500',
         content: 'absolute top-0 left-0 w-full max-h-[70vh] overflow-y-auto',
       },
       vertical: {
@@ -188,8 +188,8 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'pill',
     active: true,
     class: {
-      link: `text-${color}`,
-      linkLeadingIcon: `text-${color} group-data-[state=open]:text-${color}`,
+      link: `color-${color}`,
+      linkLeadingIcon: `color-${color} group-data-[state=open]:color-${color}`,
     },
   })), {
     color: 'neutral',
@@ -236,8 +236,8 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'link',
     active: true,
     class: {
-      link: `text-${color}`,
-      linkLeadingIcon: `text-${color} group-data-[state=open]:text-${color}`,
+      link: `color-${color}`,
+      linkLeadingIcon: `color-${color} group-data-[state=open]:color-${color}`,
     },
   })), {
     color: 'neutral',

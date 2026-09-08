@@ -1195,7 +1195,7 @@ name: 'navigation-menu-content-slot-example'
 ::
 
 ::note
-In this example, we add the `sm:w-(--reka-navigation-menu-viewport-width)` class on the `viewport` to have a dynamic width. This requires to set a width on the content's first child.
+In this example, we add the `sm:w-(--akar-navigation-menu-viewport-width)` class on the `viewport` to have a dynamic width. This requires to set a width on the content's first child.
 ::
 
 ## API

@@ -41,7 +41,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        indicator: `data-[state=active]:text-${color}`,
+        indicator: `data-[state=active]:color-${color}`,
         item: `outline-${color}/25`,
       }])),
       neutral: {

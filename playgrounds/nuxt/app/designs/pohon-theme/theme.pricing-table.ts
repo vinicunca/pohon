@@ -21,8 +21,8 @@ export const themePricingTable = {
     tierPrice: 'color-text-highlighted text-3xl font-600 sm:text-4xl',
     tierDiscount: 'color-text-muted text-xl line-through sm:text-2xl',
     tierBilling: 'flex flex-col min-w-0 justify-between',
-    tierBillingPeriod: 'color-text-toned text-xs font-medium truncate',
-    tierBillingCycle: 'color-text-muted text-xs font-medium truncate',
+    tierBillingPeriod: 'color-text-toned text-xs font-500 truncate',
+    tierBillingCycle: 'color-text-muted text-xs font-500 truncate',
     tierButton: 'mt-6 md:mt-auto md:pt-6',
     tierFeatureIcon: 'shrink-0 size-5',
     section: 'mt-6 flex flex-col gap-2',
@@ -39,7 +39,7 @@ export const themePricingTable = {
     },
     active: {
       true: {
-        tierFeatureIcon: 'text-primary',
+        tierFeatureIcon: 'color-primary',
       },
     },
     highlight: {

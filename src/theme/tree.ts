@@ -73,7 +73,7 @@ export default (options: Required<ModuleOptions>) => ({
     color,
     selected: true,
     class: {
-      link: `text-${color}`,
+      link: `color-${color}`,
     },
   })), {
     color: 'neutral',

@@ -67,7 +67,7 @@ if (import.meta.server) {
             />
 
             <div class="absolute flex items-center px-2.5 py-0.75 gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-280 pointer-events-none bg-black/90 rounded-full">
-              <span class="text-sm text-white font-medium">
+              <span class="text-sm text-white font-500">
                 {{ item.name }}
               </span>
               <PIcon :name="appConfig.ui.icons.external" class="size-4 shrink-0 text-white" />

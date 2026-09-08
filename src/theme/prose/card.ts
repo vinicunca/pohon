@@ -11,7 +11,7 @@ export default (options: Required<ModuleOptions>) => ({
   variants: {
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        icon: `text-${color}`,
+        icon: `color-${color}`,
       }])),
       neutral: {
         icon: 'color-text-highlighted',
@@ -31,7 +31,7 @@ export default (options: Required<ModuleOptions>) => ({
     to: true,
     class: {
       base: `hover:bg-${color}/10 hover:border-${color} outline-${color}/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-${color}`,
-      externalIcon: `group-hover:text-${color}`,
+      externalIcon: `group-hover:color-${color}`,
     },
   })), {
     color: 'neutral',

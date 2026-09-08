@@ -69,7 +69,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
       }"
     >
       <template #title>
-        The Intuitive <br> <span class="text-primary">Vue UI Library</span>
+        The Intuitive <br> <span class="color-primary">Vue UI Library</span>
       </template>
       <template #description>
         {{ page.hero.description }}
@@ -195,7 +195,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
             <PIcon :name="feature.icon" class="size-5 shrink-0" />
           </div>
           <div class="flex flex-col">
-            <h3 class="font-medium color-text-highlighted inline-flex items-center gap-x-1">
+            <h3 class="font-500 color-text-highlighted inline-flex items-center gap-x-1">
               {{ feature.title }}
               <PIcon v-if="feature.to" :name="appConfig.ui.icons.arrowRight" class="size-4 shrink-0 opacity-0 group-hover:opacity-100 transition-all duration-280 -translate-x-1 group-hover:translate-x-0" />
             </h3>
@@ -309,7 +309,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
       <template #features>
         <li>
           <NuxtLink to="https://npm.chart.dev/pohon-ui" target="_blank" class="min-w-0 group focus-visible:outline-primary">
-            <p class="text-4xl font-600 truncate color-text-highlighted group-hover:text-primary transition-colors">
+            <p class="text-4xl font-600 truncate color-text-highlighted group-hover:color-primary transition-colors">
               {{ format(module?.stats?.downloads ?? 0) }}+
             </p>
             <p class="color-text-muted text-sm truncate">monthly downloads</p>
@@ -318,7 +318,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
 
         <li>
           <NuxtLink to="https://github.com/nuxt/ui" target="_blank" class="min-w-0 group focus-visible:outline-primary">
-            <p class="text-4xl font-600 color-text-highlighted truncate group-hover:text-primary transition-colors">
+            <p class="text-4xl font-600 color-text-highlighted truncate group-hover:color-primary transition-colors">
               {{ format(module?.stats?.stars ?? 0) }}+
             </p>
             <p class="color-text-muted text-sm truncate">GitHub stars</p>
@@ -327,7 +327,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
 
         <li>
           <NuxtLink to="https://github.com/nuxt/ui/graphs/contributors" target="_blank" class="min-w-0 group focus-visible:outline-primary">
-            <p class="text-4xl font-600 color-text-highlighted truncate group-hover:text-primary transition-colors">
+            <p class="text-4xl font-600 color-text-highlighted truncate group-hover:color-primary transition-colors">
               300+
             </p>
             <p class="color-text-muted text-sm truncate">Contributors</p>

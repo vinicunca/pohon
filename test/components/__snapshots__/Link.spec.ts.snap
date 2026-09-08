@@ -1,10 +1,10 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`link > renders with activeClass correctly 1`] = `"<button type="button" class="outline-primary/25 focus-visible:outline-3 rounded-md text-primary color-text-highlighted"></button>"`;
+exports[`link > renders with activeClass correctly 1`] = `"<button type="button" class="outline-primary/25 focus-visible:outline-3 rounded-md color-primary color-text-highlighted"></button>"`;
 
 exports[`link > renders with as correctly 1`] = `"<div class="outline-primary/25 focus-visible:outline-3 rounded-md color-text-muted hover:color-text transition-colors"></div>"`;
 
-exports[`link > renders with class correctly 1`] = `"<button type="button" class="outline-primary/25 focus-visible:outline-3 rounded-md color-text-muted hover:color-text transition-colors font-medium"></button>"`;
+exports[`link > renders with class correctly 1`] = `"<button type="button" class="outline-primary/25 focus-visible:outline-3 rounded-md color-text-muted hover:color-text transition-colors font-500"></button>"`;
 
 exports[`link > renders with default slot correctly 1`] = `"<button type="button" class="outline-primary/25 focus-visible:outline-3 rounded-md color-text-muted hover:color-text transition-colors">Default slot</button>"`;
 

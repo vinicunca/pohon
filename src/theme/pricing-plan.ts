@@ -11,11 +11,11 @@ export default {
     price: 'color-text-highlighted text-3xl sm:text-4xl font-600',
     discount: 'color-text-muted line-through text-xl sm:text-2xl',
     billing: 'flex flex-col justify-between min-w-0',
-    billingPeriod: 'color-text-toned truncate text-xs font-medium',
-    billingCycle: 'color-text-muted truncate text-xs font-medium',
+    billingPeriod: 'color-text-toned truncate text-xs font-500',
+    billingCycle: 'color-text-muted truncate text-xs font-500',
     features: 'flex flex-col gap-3 flex-1 mt-6 grow-0',
     feature: 'flex items-center gap-2 min-w-0',
-    featureIcon: 'size-5 shrink-0 text-primary',
+    featureIcon: 'size-5 shrink-0 color-primary',
     featureTitle: 'color-text-muted text-sm truncate',
     badge: '',
     button: '',
@@ -63,7 +63,7 @@ export default {
     },
     scale: {
       true: {
-        root: 'lg:scale-[1.1] lg:z-[1]',
+        root: 'lg:scale-[1.1] lg:z-1',
       },
     },
   },

@@ -1,17 +1,19 @@
 // @unocss-include
+
+import type { PThemeDropdownMenu } from 'pohon-ui';
 import { BRANDS } from '../design.constants';
 
 export const themeDropdownMenu = {
   slots: {
-    content: 'bg-background ring-ring rounded-md flex flex-col max-h-(--reka-dropdown-menu-content-available-height) min-w-32 ring shadow-lg origin-(--reka-dropdown-menu-content-transform-origin) overflow-hidden data-[state=closed]:animate-[scale-out_100ms_var(--ease-out)] data-[state=open]:animate-[scale-in_100ms_var(--ease-out)]',
+    content: 'bg-background ring-ring rounded-md flex flex-col max-h-$akar-dropdown-menu-content-available-height min-w-32 ring shadow-lg origin-$akar-dropdown-menu-content-transform-origin overflow-hidden data-[state=closed]:(animate-out fade-out-0 zoom-out-95) data-[state=open]:(animate-in fade-in-0 zoom-in-95) data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
     input: 'border-border border-b',
     empty: 'color-text-muted text-center',
     viewport: 'divide-divide flex-1 relative overflow-y-auto scroll-py-1 divide-y',
-    arrow: 'fill-bg stroke-default',
+    arrow: 'fill-fill-bg stroke-stroke',
     group: 'p-1 isolate',
     label: 'color-text-highlighted font-600 flex w-full items-center',
     separator: 'bg-border my-1 h-px -mx-1',
-    item: 'group data-disabled:cursor-not-allowed data-disabled:opacity-75 outline-none flex w-full select-none items-start relative before:rounded-md before:inset-px before:absolute before:z-[-1]',
+    item: 'group outline-none flex w-full select-none items-start relative before:(rounded-md content-empty inset-px absolute -z-1) data-[disabled]:(opacity-75 cursor-not-allowed)',
     itemLeadingIcon: 'shrink-0',
     itemLeadingAvatar: 'shrink-0',
     itemLeadingAvatarSize: '',
@@ -35,8 +37,8 @@ export const themeDropdownMenu = {
         itemLeadingIcon: 'color-text',
       },
       false: {
-        item: ['color-text data-highlighted:color-text-highlighted data-[state=open]:color-text-highlighted data-highlighted:before:bg-background-elevated/50 data-[state=open]:before:bg-background-elevated/50', 'transition-colors before:transition-colors'],
-        itemLeadingIcon: ['color-text-dimmed group-data-highlighted:color-text group-data-[state=open]:color-text', 'transition-colors'],
+        item: ['color-text data-[highlighted]:color-text-highlighted data-[state=open]:color-text-highlighted data-[highlighted]:before:bg-background-elevated/50 data-[state=open]:before:bg-background-elevated/50', 'transition-colors before:transition-colors'],
+        itemLeadingIcon: 'color-text-dimmed group-data-[highlighted]:color-text group-data-[state=open]:color-text transition-colors before:transition-colors',
       },
     },
     loading: {
@@ -97,22 +99,22 @@ export const themeDropdownMenu = {
       },
     },
   },
-  compoundVariants: [...BRANDS.map((color: string) => ({
-    color,
-    active: false,
-    class: {
-      item: `text-${color} data-highlighted:text-${color} data-highlighted:before:bg-${color}/10 data-[state=open]:before:bg-${color}/10`,
-      itemLeadingIcon: `text-${color}/75 group-data-highlighted:text-${color} group-data-[state=open]:text-${color}`,
-    },
-  })), ...BRANDS.map((color: string) => ({
-    color,
-    active: true,
-    class: {
-      item: `text-${color} before:bg-${color}/10`,
-      itemLeadingIcon: `text-${color}`,
-    },
-  }))],
-  defaultVariants: {
-    size: 'md',
-  },
-};
+  compoundVariants: [
+    ...BRANDS.map((color: string) => ({
+      color,
+      active: false,
+      class: {
+        item: `color-${color} data-highlighted:color-${color} data-highlighted:before:bg-${color}/10 data-[state=open]:before:bg-${color}/10`,
+        itemLeadingIcon: `color-${color}/75 group-data-highlighted:color-${color} group-data-[state=open]:color-${color}`,
+      },
+    })),
+    ...BRANDS.map((color: string) => ({
+      color,
+      active: true,
+      class: {
+        item: `color-${color} before:bg-${color}/10`,
+        itemLeadingIcon: `color-${color}`,
+      },
+    })),
+  ],
+} satisfies PThemeDropdownMenu;

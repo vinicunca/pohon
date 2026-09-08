@@ -13,11 +13,11 @@ export const themePageAnchors = {
   variants: {
     active: {
       true: {
-        link: 'text-primary font-600',
+        link: 'color-primary font-600',
         linkLeading: 'bg-primary ring-primary color-text-inverted'
       },
       false: {
-        link: ['color-text-muted hover:color-text font-medium', 'transition-colors'],
+        link: ['color-text-muted hover:color-text font-500', 'transition-colors'],
         linkLeading: ['bg-background-elevated/50 ring-ring-accented color-text-dimmed group-hover:bg-primary group-hover:ring-primary group-hover:color-text-inverted', 'transition']
       }
     }

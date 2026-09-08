@@ -4,16 +4,16 @@ exports[`blogPost > renders with as correctly 1`] = `
 "<section data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -32,10 +32,10 @@ exports[`blogPost > renders with author correctly 1`] = `
     <!--v-if-->
     <!--v-if-->
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -55,7 +55,7 @@ exports[`blogPost > renders with authors correctly 1`] = `
     <!--v-if-->
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
       <div data-slot="root" class="inline-flex flex-row-reverse justify-end">
-        <!--v-if--><button type="button" data-slot="base" class="relative rounded-full ring-bg first:me-0 ring-2 -me-1.5"><span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base"><img src="https://github.com/atinux.png" alt="atinux" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span></button><button type="button" data-slot="base" class="relative rounded-full ring-bg first:me-0 ring-2 -me-1.5"><span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span></button>
+        <!--v-if--><button type="button" data-slot="base" class="relative rounded-full ring-bg first:me-0 ring-2 -me-1.5"><span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base"><img src="https://github.com/atinux.png" alt="atinux" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span></button><button type="button" data-slot="base" class="relative rounded-full ring-bg first:me-0 ring-2 -me-1.5"><span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span></button>
       </div>
     </div>
   </div>
@@ -67,7 +67,7 @@ exports[`blogPost > renders with authors slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
@@ -83,7 +83,7 @@ exports[`blogPost > renders with badge correctly 1`] = `
   <!--v-if-->
   <!--v-if-->
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
       <!--v-if-->
     </div>
@@ -100,7 +100,7 @@ exports[`blogPost > renders with badge object correctly 1`] = `
   <!--v-if-->
   <!--v-if-->
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 text-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary/10 color-primary ring ring-inset ring-primary/25"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span>
       <!--v-if-->
     </div>
@@ -120,10 +120,10 @@ exports[`blogPost > renders with badge slot correctly 1`] = `
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -145,16 +145,16 @@ exports[`blogPost > renders with class correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary absolute"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -184,16 +184,16 @@ exports[`blogPost > renders with date slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Date slot</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -221,16 +221,16 @@ exports[`blogPost > renders with description slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description slot</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -244,16 +244,16 @@ exports[`blogPost > renders with footer slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -267,16 +267,16 @@ exports[`blogPost > renders with header slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none">Header slot</div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -304,16 +304,16 @@ exports[`blogPost > renders with orientation horizontal correctly 1`] = `
 "<article data-orientation="horizontal" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden lg:grid lg:grid-cols-2 lg:items-center gap-x-8 bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col justify-center p-4 sm:p-6 lg:px-0">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -327,16 +327,16 @@ exports[`blogPost > renders with orientation vertical correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -364,16 +364,16 @@ exports[`blogPost > renders with title slot correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title slot" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title slot</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -413,16 +413,16 @@ exports[`blogPost > renders with ui correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -436,16 +436,16 @@ exports[`blogPost > renders with variant ghost correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none shadow-lg rounded-lg group-hover/blog-post:shadow-none transition-all group-hover/blog-post:rounded-b-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -459,16 +459,16 @@ exports[`blogPost > renders with variant naked correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col p-0 sm:p-0 outline-primary/25 has-[>a:focus-visible]:outline-3 transition"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none shadow-lg rounded-lg"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -482,16 +482,16 @@ exports[`blogPost > renders with variant outline correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated/50 has-[>a:focus-visible]:ring-primary"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-toned">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-muted">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -505,16 +505,16 @@ exports[`blogPost > renders with variant soft correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background-elevated/50 outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-muted">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-toned">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>
@@ -528,16 +528,16 @@ exports[`blogPost > renders with variant subtle correctly 1`] = `
 "<article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background-elevated/50 ring ring-ring outline-primary/25 has-[>a:focus-visible]:outline-3 transition hover:bg-background-elevated hover:ring-ring-accented has-[>a:focus-visible]:ring-primary"><a href="https://github.com/benjamincanac" rel="noopener noreferrer" aria-label="Title" class="focus:outline-none absolute inset-0"></a>
   <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img src="https://picsum.photos/640/360" alt="Title" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/blog-post:scale-110"></div>
   <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-medium inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+    <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md ring ring-inset ring-ring-accented color-text bg-background-elevated"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
       <!--v-if--></span><time datetime="2024-01-01T00:00:00.000Z" data-slot="date" class="text-sm color-text-muted">Jan 1, 2024</time>
     </div>
     <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
     <div data-slot="description" class="mt-1 text-base text-pretty color-text-toned">Description</div>
     <div data-slot="authors" class="pt-4 mt-auto flex flex-wrap gap-x-3 gap-y-1.5">
-      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-[inherit] object-cover"></span>
+      <div data-orientation="horizontal" data-slot="root" class="relative group/user flex items-center gap-2"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0"><img src="https://github.com/praburangki.png" alt="benjamincanac" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
         <div data-slot="wrapper" class="">
           <!--v-if-->
-          <p data-slot="name" class="font-medium color-text-highlighted text-sm">praburangki</p>
+          <p data-slot="name" class="font-500 color-text-highlighted text-sm">praburangki</p>
           <p data-slot="description" class="color-text-muted text-xs">benjamincanac</p>
         </div>
       </div>

@@ -95,7 +95,7 @@ const columns: TableColumn<Payment>[] = [{
   header: 'Amount',
   meta: {
     class: {
-      th: 'text-right font-bold text-primary',
+      th: 'text-right font-bold color-primary',
       td: 'text-right font-mono'
     }
   },

@@ -1,10 +1,12 @@
+import type { PThemeEmpty } from 'pohon-ui';
+
 // @unocss-include
 export const themeEmpty = {
   slots: {
     root: 'p-4 rounded-lg flex flex-col gap-4 min-w-0 items-center justify-center relative lg:p-8 sm:p-6',
     header: 'text-center flex flex-col gap-2 max-w-sm items-center',
     avatar: 'mb-2 shrink-0',
-    title: 'color-text-highlighted font-medium text-pretty',
+    title: 'color-text-highlighted font-500 text-pretty',
     description: 'text-center text-balance',
     body: 'flex flex-col gap-4 max-w-sm items-center',
     actions: 'flex shrink-0 flex-wrap gap-2 justify-center',
@@ -13,27 +15,27 @@ export const themeEmpty = {
   variants: {
     size: {
       xs: {
-        avatar: 'text-base size-8',
+        avatar: 'pohon:size-8 text-base',
         title: 'text-sm',
         description: 'text-xs',
       },
       sm: {
-        avatar: 'text-lg size-9',
+        avatar: 'pohon:size-9 text-lg',
         title: 'text-sm',
         description: 'text-xs',
       },
       md: {
-        avatar: 'text-xl size-10',
+        avatar: 'pohon:size-10 text-xl',
         title: 'text-base',
         description: 'text-sm',
       },
       lg: {
-        avatar: 'text-[22px] size-11',
+        avatar: 'pohon:size-11 text-[22px]',
         title: 'text-base',
         description: 'text-sm',
       },
       xl: {
-        avatar: 'text-2xl size-12',
+        avatar: 'pohon:size-12 text-2xl',
         title: 'text-lg',
         description: 'text-base',
       },
@@ -66,8 +68,4 @@ export const themeEmpty = {
       },
     },
   },
-  defaultVariants: {
-    variant: 'outline',
-    size: 'md',
-  },
-};
+} satisfies PThemeEmpty;

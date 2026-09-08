@@ -8,16 +8,16 @@ import { BRANDS } from '../design.constants';
 export const themeAvatar = {
   slots: {
     root: 'align-middle rounded-full inline-flex shrink-0 select-none items-center justify-center',
-    image: 'rounded-[inherit] h-full w-full object-cover',
-    fallback: 'font-medium truncate',
+    image: 'rounded-inherit h-full w-full object-cover',
+    fallback: 'font-500 truncate',
     icon: 'shrink-0',
   },
   variants: {
     color: {
       ...Object.fromEntries((BRANDS).map((color) => [color, {
         root: `bg-${color}/10`,
-        fallback: `text-${color}`,
-        icon: `text-${color}`,
+        fallback: `color-${color}`,
+        icon: `color-${color}`,
       }])),
       neutral: {
         root: 'bg-background-elevated',

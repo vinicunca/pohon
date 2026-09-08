@@ -2,62 +2,74 @@
 const items = [{
   label: 'Figma Kit',
   to: 'https://go.nuxt.com/figma-ui',
-  target: '_blank'
+  target: '_blank',
 }, {
   label: 'Playground',
   to: 'https://stackblitz.com/edit/nuxt-ui',
-  target: '_blank'
+  target: '_blank',
 }, {
   label: 'Releases',
   to: 'https://github.com/nuxt/ui/releases',
-  target: '_blank'
-}]
+  target: '_blank',
+}];
 
 const columns = [{
   label: 'Community',
   children: [{
     label: 'Nuxters',
     to: 'https://nuxters.nuxt.com',
-    target: '_blank'
+    target: '_blank',
   }, {
     label: 'Video Courses',
     to: 'https://masteringnuxt.com/nuxt3?ref=nuxt',
-    target: '_blank'
+    target: '_blank',
   }, {
     label: 'Nuxt on GitHub',
     to: 'https://github.com/nuxt',
-    target: '_blank'
-  }]
+    target: '_blank',
+  }],
 }, {
   label: 'Solutions',
   children: [{
     label: 'Nuxt Content',
     to: 'https://content.nuxt.com/',
-    target: '_blank'
+    target: '_blank',
   }, {
     label: 'Nuxt Image',
     to: 'https://image.nuxt.com/',
-    target: '_blank'
+    target: '_blank',
   }, {
     label: 'Pohon UI',
     to: 'https://ui.nuxt.com/',
-    target: '_blank'
-  }]
-}]
+    target: '_blank',
+  }],
+}];
 </script>
 
 <template>
   <Navbar />
 
-  <PFooter class="w-full border-t border-border divide-y divide-divide min-h-0">
+  <PFooter class="border-border divide-divide border-t min-h-0 w-full divide-y">
     <template #top>
       <PContainer>
         <PFooterColumns :columns="columns">
           <template #right>
-            <PFormField name="email" label="Subscribe to our newsletter" size="lg">
-              <PInput type="email" class="w-full">
+            <PFormField
+              name="email"
+              label="Subscribe to our newsletter"
+              size="lg"
+            >
+              <PInput
+                type="email"
+                class="w-full"
+              >
                 <template #trailing>
-                  <PButton type="submit" size="xs" color="neutral" label="Subscribe" />
+                  <PButton
+                    type="submit"
+                    size="xs"
+                    color="neutral"
+                    label="Subscribe"
+                  />
                 </template>
               </PInput>
             </PFormField>
@@ -72,7 +84,10 @@ const columns = [{
       </p>
     </template>
 
-    <PNavigationMenu :items="items" variant="link" />
+    <PNavigationMenu
+      :items="items"
+      variant="link"
+    />
 
     <template #right>
       <PButton

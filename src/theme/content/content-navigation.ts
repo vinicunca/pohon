@@ -37,7 +37,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     active: {
       true: {
-        link: 'font-medium',
+        link: 'font-500',
       },
       false: {
         link: 'color-text-muted',
@@ -78,8 +78,8 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'pill',
     active: true,
     class: {
-      link: `text-${color}`,
-      linkLeadingIcon: `text-${color} group-data-[state=open]:text-${color}`,
+      link: `color-${color}`,
+      linkLeadingIcon: `color-${color} group-data-[state=open]:color-${color}`,
     },
   })), {
     color: 'neutral',
@@ -117,8 +117,8 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'link',
     active: true,
     class: {
-      link: `text-${color}`,
-      linkLeadingIcon: `text-${color} group-data-[state=open]:text-${color}`,
+      link: `color-${color}`,
+      linkLeadingIcon: `color-${color} group-data-[state=open]:color-${color}`,
     },
   })), {
     color: 'neutral',

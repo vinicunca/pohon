@@ -12,11 +12,11 @@ export const themePricingPlan = {
     price: 'color-text-highlighted text-3xl font-600 sm:text-4xl',
     discount: 'color-text-muted text-xl line-through sm:text-2xl',
     billing: 'flex flex-col min-w-0 justify-between',
-    billingPeriod: 'color-text-toned text-xs font-medium truncate',
-    billingCycle: 'color-text-muted text-xs font-medium truncate',
+    billingPeriod: 'color-text-toned text-xs font-500 truncate',
+    billingCycle: 'color-text-muted text-xs font-500 truncate',
     features: 'mt-6 flex flex-1 grow-0 flex-col gap-3',
     feature: 'flex gap-2 min-w-0 items-center',
-    featureIcon: 'text-primary shrink-0 size-5',
+    featureIcon: 'color-primary shrink-0 size-5',
     featureTitle: 'color-text-muted text-sm truncate',
     badge: '',
     button: '',
@@ -64,7 +64,7 @@ export const themePricingPlan = {
     },
     scale: {
       true: {
-        root: 'lg:scale-[1.1] lg:z-[1]',
+        root: 'lg:scale-[1.1] lg:z-1',
       },
     },
   },

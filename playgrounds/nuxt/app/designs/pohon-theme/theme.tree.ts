@@ -79,7 +79,7 @@ export const themeTree = {
       color,
       selected: true,
       class: {
-        link: `text-${color}`,
+        link: `color-${color}`,
       },
     })),
     {

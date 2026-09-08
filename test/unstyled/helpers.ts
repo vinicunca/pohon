@@ -3,12 +3,12 @@ import { expect } from 'vitest';
 /** Theme utilities that must not appear when `theme.unstyled` is enabled. */
 export const THEME_CLASS_MARKERS = [
   'rounded-md',
-  'font-medium',
+  'font-500',
   'inline-flex',
   'truncate',
   'bg-primary',
   'color-text-inverted',
-  'text-primary',
+  'color-primary',
   'ring-inset',
   'transition-colors',
   'px-2.5',

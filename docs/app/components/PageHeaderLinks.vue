@@ -65,7 +65,7 @@ async function copyPage() {
       color="neutral"
       variant="outline"
       :ui="{
-        leadingIcon: [copied ? 'text-primary' : 'text-neutral', 'size-3.5']
+        leadingIcon: [copied ? 'color-primary' : 'text-neutral', 'size-3.5']
       }"
       @click="copyPage"
     />

@@ -3,7 +3,7 @@ export default {
     root: 'relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0',
     header: 'flex flex-col items-center gap-2 max-w-sm text-center',
     avatar: 'shrink-0 mb-2',
-    title: 'color-text-highlighted text-pretty font-medium',
+    title: 'color-text-highlighted text-pretty font-500',
     description: 'text-balance text-center',
     body: 'flex flex-col items-center gap-4 max-w-sm',
     actions: 'flex flex-wrap justify-center gap-2 shrink-0',

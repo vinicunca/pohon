@@ -11,7 +11,7 @@ export default (options: Required<ModuleOptions>) => ({
     root: 'flex items-center gap-2',
     list: 'relative flex p-1 group',
     indicator: 'absolute transition-[translate,width] duration-280',
-    trigger: ['group relative inline-flex items-center min-w-0 data-[state=inactive]:color-text-muted hover:data-[state=inactive]:not-disabled:color-text font-medium rounded-md disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
+    trigger: ['group relative inline-flex items-center min-w-0 data-[state=inactive]:color-text-muted hover:data-[state=inactive]:not-disabled:color-text font-500 rounded-md disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
     leadingIcon: 'shrink-0',
     leadingAvatar: 'shrink-0',
     leadingAvatarSize: '',
@@ -130,7 +130,7 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'link',
     class: {
       indicator: `bg-${color}`,
-      trigger: [`data-[state=active]:text-${color} outline-${color}/25 focus-visible:outline-3`, ssr(`after:bg-${color}`)],
+      trigger: [`data-[state=active]:color-${color} outline-${color}/25 focus-visible:outline-3`, ssr(`after:bg-${color}`)],
     },
   })), {
     color: 'neutral',

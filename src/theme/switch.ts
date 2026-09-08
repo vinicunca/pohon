@@ -8,14 +8,14 @@ export default (options: Required<ModuleOptions>) => ({
     thumb: 'group pointer-events-none rounded-full bg-background shadow-lg ring-0 transition-transform duration-280 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:rtl:-translate-x-0 flex items-center justify-center',
     icon: ['absolute shrink-0 group-data-[state=unchecked]:color-text-dimmed opacity-0 size-10/12', options.theme.transitions && 'transition-[color,opacity] duration-280'],
     wrapper: 'ms-2',
-    label: 'block font-medium color-text',
+    label: 'block font-500 color-text',
     description: 'color-text-muted',
   },
   variants: {
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
         base: `data-[state=checked]:bg-${color} outline-${color}/25`,
-        icon: `group-data-[state=checked]:text-${color}`,
+        icon: `group-data-[state=checked]:color-${color}`,
       }])),
       neutral: {
         base: 'data-[state=checked]:bg-background-inverted outline-outline-inverted/25',

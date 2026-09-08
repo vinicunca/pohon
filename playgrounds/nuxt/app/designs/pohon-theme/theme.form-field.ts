@@ -1,14 +1,18 @@
-export default {
+// @unocss-include
+
+import type { PThemeFormField } from 'pohon-ui';
+
+export const themeFormField = {
   slots: {
     root: '',
     wrapper: '',
-    labelWrapper: 'flex content-center items-center justify-between gap-1',
-    label: 'block font-500 color-text',
+    labelWrapper: 'flex gap-1 content-center items-center justify-between',
+    label: 'color-text font-medium block',
     container: 'relative',
     description: 'color-text-muted',
-    error: 'mt-2 color-error',
+    error: 'color-error mt-2',
     hint: 'color-text-muted',
-    help: 'mt-2 color-text-muted',
+    help: 'color-text-muted mt-2',
   },
   variants: {
     size: {
@@ -20,7 +24,7 @@ export default {
     },
     required: {
       true: {
-        label: 'after:content-[\'*\'] after:ms-0.5 after:color-error',
+        label: 'after:color-error after:(ms-0.5 content-["*"])',
       },
     },
     orientation: {
@@ -28,11 +32,8 @@ export default {
         container: 'mt-1',
       },
       horizontal: {
-        root: 'flex justify-between place-items-baseline gap-2',
+        root: 'flex gap-2 justify-between place-items-baseline',
       },
     },
   },
-  defaultVariants: {
-    size: 'md',
-  },
-};
+} satisfies PThemeFormField;

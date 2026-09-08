@@ -26,10 +26,10 @@ export const themeCommandPalette = {
     itemTrailingKbdsSize: '',
     itemWrapper: 'text-start flex flex-1 flex-col min-w-0',
     itemLabel: 'color-text-dimmed truncate space-x-1',
-    itemLabelBase: 'color-text-highlighted [&>mark]:text-primary [&>mark]:bg-primary/15',
+    itemLabelBase: 'color-text-highlighted [&>mark]:color-primary [&>mark]:bg-primary/15',
     itemLabelPrefix: 'color-text',
-    itemLabelSuffix: 'color-text-dimmed [&>mark]:text-primary [&>mark]:bg-primary/15',
-    itemDescription: 'color-text-muted [&>mark]:text-primary [&>mark]:bg-primary/15 truncate',
+    itemLabelSuffix: 'color-text-dimmed [&>mark]:color-primary [&>mark]:bg-primary/15',
+    itemDescription: 'color-text-muted [&>mark]:color-primary [&>mark]:bg-primary/15 truncate',
   },
   variants: {
     virtualize: {

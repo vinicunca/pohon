@@ -1,7 +1,7 @@
 import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
-  base: 'inline-flex items-center justify-center px-1 rounded-sm font-medium font-sans uppercase',
+  base: 'inline-flex items-center justify-center px-1 rounded-sm font-500 font-sans uppercase',
   variants: {
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, ''])),
@@ -26,15 +26,15 @@ export default (options: Required<ModuleOptions>) => ({
   })), ...(options.theme.colors || []).map((color: string) => ({
     color,
     variant: 'outline',
-    class: `ring ring-inset ring-${color}/50 text-${color}`,
+    class: `ring ring-inset ring-${color}/50 color-${color}`,
   })), ...(options.theme.colors || []).map((color: string) => ({
     color,
     variant: 'soft',
-    class: `text-${color} bg-${color}/10`,
+    class: `color-${color} bg-${color}/10`,
   })), ...(options.theme.colors || []).map((color: string) => ({
     color,
     variant: 'subtle',
-    class: `text-${color} ring ring-inset ring-${color}/25 bg-${color}/10`,
+    class: `color-${color} ring ring-inset ring-${color}/25 bg-${color}/10`,
   })), {
     color: 'neutral',
     variant: 'solid',

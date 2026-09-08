@@ -1,7 +1,7 @@
 title: Official Pohon UI Templates
 description: 'Explore ready-made templates powered by our Vue components. These templates are fully responsive, accessible, and easy to customize, so you can launch your project quickly and effortlessly.'
 hero:
-  title: Ship [faster]{.text-primary} with :br Pohon UI Templates
+  title: Ship [faster]{.color-primary} with :br Pohon UI Templates
   description: 'Explore ready-made templates powered by our Vue components. These templates are fully responsive, accessible, and easy to customize, so you can launch your project quickly and effortlessly.'
 navigation: false
 items:

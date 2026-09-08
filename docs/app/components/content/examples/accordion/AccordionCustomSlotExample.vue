@@ -24,7 +24,7 @@ const items = [
 <template>
   <PAccordion :items="items">
     <template #colors="{ item }">
-      <p class="text-sm pb-3.5 text-primary">
+      <p class="text-sm pb-3.5 color-primary">
         {{ item.content }}
       </p>
     </template>

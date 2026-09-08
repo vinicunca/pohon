@@ -69,7 +69,7 @@ function formatDate(date: string) {
                     {{ formatDate(post.date) }}
                   </div>
 
-                  <h2 class="font-medium color-text-highlighted group-hover:text-primary transition-colors duration-280 truncate sm:text-base">
+                  <h2 class="font-500 color-text-highlighted group-hover:color-primary transition-colors duration-280 truncate sm:text-base">
                     {{ post.title }}
                   </h2>
                   <p class="text-sm color-text-muted mt-1 line-clamp-2 sm:line-clamp-1">

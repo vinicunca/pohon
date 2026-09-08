@@ -4,7 +4,7 @@ import type { PThemeKbd } from 'pohon-ui';
 import { BRANDS } from '../design.constants';
 
 export const themeKbd = {
-  base: 'font-medium font-sans px-1 rounded-sm inline-flex uppercase items-center justify-center',
+  base: 'font-500 font-sans px-1 rounded-sm inline-flex uppercase items-center justify-center',
   variants: {
     color: {
       ...Object.fromEntries(BRANDS.map((color) => [color, ''])),
@@ -31,17 +31,17 @@ export const themeKbd = {
     ...BRANDS.map((color) => ({
       color,
       variant: 'outline',
-      class: `ring ring-inset ring-${color}/50 text-${color}`,
+      class: `ring ring-inset ring-${color}/50 color-${color}`,
     })),
     ...BRANDS.map((color) => ({
       color,
       variant: 'soft',
-      class: `text-${color} bg-${color}/10`,
+      class: `color-${color} bg-${color}/10`,
     })),
     ...BRANDS.map((color) => ({
       color,
       variant: 'subtle',
-      class: `text-${color} ring ring-inset ring-${color}/25 bg-${color}/10`,
+      class: `color-${color} ring ring-inset ring-${color}/25 bg-${color}/10`,
     })),
     {
       color: 'neutral',

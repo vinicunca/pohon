@@ -22,7 +22,7 @@ export default (options: Required<ModuleOptions>) => ({
     header: 'flex items-center justify-between',
     body: 'flex flex-col space-y-4 pt-4 sm:flex-row sm:space-x-4 sm:space-y-0',
     heading: 'flex-1 min-w-0 text-center',
-    headingLabel: 'font-medium block truncate p-1.5',
+    headingLabel: 'font-500 block truncate p-1.5',
     grid: 'w-full border-collapse select-none space-y-1 focus:outline-none',
     gridRow: 'grid',
     gridWeekDaysRow: 'mb-1 grid w-full grid-cols-7',
@@ -36,7 +36,7 @@ export default (options: Required<ModuleOptions>) => ({
   variants: {
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        headCell: `text-${color}`,
+        headCell: `color-${color}`,
         cellTrigger: `outline-${color}/25`,
       }])),
       neutral: {
@@ -111,28 +111,28 @@ export default (options: Required<ModuleOptions>) => ({
       color,
       variant: 'solid',
       class: {
-        cellTrigger: `data-selected:bg-${color} data-selected:color-text-inverted data-today:not-data-selected:text-${color} data-highlighted:bg-${color}/20 hover:not-data-selected:bg-${color}/20`,
+        cellTrigger: `data-selected:bg-${color} data-selected:color-text-inverted data-today:not-data-selected:color-${color} data-highlighted:bg-${color}/20 hover:not-data-selected:bg-${color}/20`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'outline',
       class: {
-        cellTrigger: `data-selected:ring data-selected:ring-inset data-selected:ring-${color}/50 data-selected:text-${color} data-selected:focus-visible:ring-${color} data-today:not-data-selected:text-${color} data-highlighted:bg-${color}/10 hover:not-data-selected:bg-${color}/10`,
+        cellTrigger: `data-selected:ring data-selected:ring-inset data-selected:ring-${color}/50 data-selected:color-${color} data-selected:focus-visible:ring-${color} data-today:not-data-selected:color-${color} data-highlighted:bg-${color}/10 hover:not-data-selected:bg-${color}/10`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'soft',
       class: {
-        cellTrigger: `data-selected:bg-${color}/10 data-selected:text-${color} data-today:not-data-selected:text-${color} data-highlighted:bg-${color}/20 hover:not-data-selected:bg-${color}/20`,
+        cellTrigger: `data-selected:bg-${color}/10 data-selected:color-${color} data-today:not-data-selected:color-${color} data-highlighted:bg-${color}/20 hover:not-data-selected:bg-${color}/20`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'subtle',
       class: {
-        cellTrigger: `data-selected:bg-${color}/10 data-selected:text-${color} data-selected:ring data-selected:ring-inset data-selected:ring-${color}/25 data-selected:focus-visible:ring-${color} data-today:not-data-selected:text-${color} data-highlighted:bg-${color}/20 hover:not-data-selected:bg-${color}/20`,
+        cellTrigger: `data-selected:bg-${color}/10 data-selected:color-${color} data-selected:ring data-selected:ring-inset data-selected:ring-${color}/25 data-selected:focus-visible:ring-${color} data-today:not-data-selected:color-${color} data-highlighted:bg-${color}/20 hover:not-data-selected:bg-${color}/20`,
       },
     })),
     {

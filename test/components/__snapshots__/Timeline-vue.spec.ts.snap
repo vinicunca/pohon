@@ -8,7 +8,7 @@ exports[`timeline > renders with as correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -18,7 +18,7 @@ exports[`timeline > renders with as correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -28,7 +28,7 @@ exports[`timeline > renders with as correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -38,7 +38,7 @@ exports[`timeline > renders with as correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -53,7 +53,7 @@ exports[`timeline > renders with class correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -63,7 +63,7 @@ exports[`timeline > renders with class correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -73,7 +73,7 @@ exports[`timeline > renders with class correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -83,7 +83,7 @@ exports[`timeline > renders with class correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -98,7 +98,7 @@ exports[`timeline > renders with custom-wrapper slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -108,7 +108,7 @@ exports[`timeline > renders with custom-wrapper slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -124,7 +124,7 @@ exports[`timeline > renders with custom-wrapper slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -139,7 +139,7 @@ exports[`timeline > renders with date slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Date slot</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -149,7 +149,7 @@ exports[`timeline > renders with date slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Date slot</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -159,7 +159,7 @@ exports[`timeline > renders with date slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -169,7 +169,7 @@ exports[`timeline > renders with date slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Date slot</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -184,7 +184,7 @@ exports[`timeline > renders with defaultValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -194,7 +194,7 @@ exports[`timeline > renders with defaultValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -204,7 +204,7 @@ exports[`timeline > renders with defaultValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -214,7 +214,7 @@ exports[`timeline > renders with defaultValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -229,7 +229,7 @@ exports[`timeline > renders with description slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Description slot</div>
     </div>
   </div>
@@ -239,7 +239,7 @@ exports[`timeline > renders with description slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Description slot</div>
     </div>
   </div>
@@ -249,7 +249,7 @@ exports[`timeline > renders with description slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -259,7 +259,7 @@ exports[`timeline > renders with description slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Description slot</div>
     </div>
   </div>
@@ -274,7 +274,7 @@ exports[`timeline > renders with indicator slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -284,7 +284,7 @@ exports[`timeline > renders with indicator slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -294,7 +294,7 @@ exports[`timeline > renders with indicator slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -304,7 +304,7 @@ exports[`timeline > renders with indicator slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -319,7 +319,7 @@ exports[`timeline > renders with items correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -329,7 +329,7 @@ exports[`timeline > renders with items correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -339,7 +339,7 @@ exports[`timeline > renders with items correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -349,7 +349,7 @@ exports[`timeline > renders with items correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -364,7 +364,7 @@ exports[`timeline > renders with modelValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -374,7 +374,7 @@ exports[`timeline > renders with modelValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -384,7 +384,7 @@ exports[`timeline > renders with modelValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -394,7 +394,7 @@ exports[`timeline > renders with modelValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -409,7 +409,7 @@ exports[`timeline > renders with neutral color correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -419,7 +419,7 @@ exports[`timeline > renders with neutral color correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -429,7 +429,7 @@ exports[`timeline > renders with neutral color correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -439,7 +439,7 @@ exports[`timeline > renders with neutral color correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -454,7 +454,7 @@ exports[`timeline > renders with reverse and defaultValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -464,7 +464,7 @@ exports[`timeline > renders with reverse and defaultValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -474,7 +474,7 @@ exports[`timeline > renders with reverse and defaultValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -484,7 +484,7 @@ exports[`timeline > renders with reverse and defaultValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -499,7 +499,7 @@ exports[`timeline > renders with reverse and modelValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -509,7 +509,7 @@ exports[`timeline > renders with reverse and modelValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -519,7 +519,7 @@ exports[`timeline > renders with reverse and modelValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -529,7 +529,7 @@ exports[`timeline > renders with reverse and modelValue correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -544,7 +544,7 @@ exports[`timeline > renders with reverse correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -554,7 +554,7 @@ exports[`timeline > renders with reverse correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -564,7 +564,7 @@ exports[`timeline > renders with reverse correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -574,7 +574,7 @@ exports[`timeline > renders with reverse correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -589,7 +589,7 @@ exports[`timeline > renders with size 2xl horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3 pb-8">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -599,7 +599,7 @@ exports[`timeline > renders with size 2xl horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3 pb-8">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -609,7 +609,7 @@ exports[`timeline > renders with size 2xl horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3 pb-8">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -619,7 +619,7 @@ exports[`timeline > renders with size 2xl horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3 pb-8">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -634,7 +634,7 @@ exports[`timeline > renders with size 2xl vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3 pb-8">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -644,7 +644,7 @@ exports[`timeline > renders with size 2xl vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3 pb-8">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -654,7 +654,7 @@ exports[`timeline > renders with size 2xl vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3 pb-8">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -664,7 +664,7 @@ exports[`timeline > renders with size 2xl vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3 pb-8">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -679,7 +679,7 @@ exports[`timeline > renders with size 2xs horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full pb-5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -689,7 +689,7 @@ exports[`timeline > renders with size 2xs horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full pb-5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -699,7 +699,7 @@ exports[`timeline > renders with size 2xs horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full pb-5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -709,7 +709,7 @@ exports[`timeline > renders with size 2xs horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full pb-5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -724,7 +724,7 @@ exports[`timeline > renders with size 2xs vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full pb-5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -734,7 +734,7 @@ exports[`timeline > renders with size 2xs vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full pb-5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -744,7 +744,7 @@ exports[`timeline > renders with size 2xs vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full pb-5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -754,7 +754,7 @@ exports[`timeline > renders with size 2xs vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full pb-5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -769,7 +769,7 @@ exports[`timeline > renders with size 3xl horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3.5 pb-8.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -779,7 +779,7 @@ exports[`timeline > renders with size 3xl horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3.5 pb-8.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -789,7 +789,7 @@ exports[`timeline > renders with size 3xl horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3.5 pb-8.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -799,7 +799,7 @@ exports[`timeline > renders with size 3xl horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3.5 pb-8.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -814,7 +814,7 @@ exports[`timeline > renders with size 3xl vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3.5 pb-8.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -824,7 +824,7 @@ exports[`timeline > renders with size 3xl vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3.5 pb-8.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -834,7 +834,7 @@ exports[`timeline > renders with size 3xl vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3.5 pb-8.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -844,7 +844,7 @@ exports[`timeline > renders with size 3xl vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-3.5 pb-8.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -859,7 +859,7 @@ exports[`timeline > renders with size 3xs horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full -mt-0.5 pb-4.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -869,7 +869,7 @@ exports[`timeline > renders with size 3xs horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full -mt-0.5 pb-4.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -879,7 +879,7 @@ exports[`timeline > renders with size 3xs horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full -mt-0.5 pb-4.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -889,7 +889,7 @@ exports[`timeline > renders with size 3xs horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full -mt-0.5 pb-4.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -904,7 +904,7 @@ exports[`timeline > renders with size 3xs vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full -mt-0.5 pb-4.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -914,7 +914,7 @@ exports[`timeline > renders with size 3xs vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full -mt-0.5 pb-4.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -924,7 +924,7 @@ exports[`timeline > renders with size 3xs vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full -mt-0.5 pb-4.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -934,7 +934,7 @@ exports[`timeline > renders with size 3xs vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full -mt-0.5 pb-4.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -949,7 +949,7 @@ exports[`timeline > renders with size lg horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2 pb-7">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -959,7 +959,7 @@ exports[`timeline > renders with size lg horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2 pb-7">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -969,7 +969,7 @@ exports[`timeline > renders with size lg horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2 pb-7">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -979,7 +979,7 @@ exports[`timeline > renders with size lg horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2 pb-7">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -994,7 +994,7 @@ exports[`timeline > renders with size lg vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2 pb-7">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -1004,7 +1004,7 @@ exports[`timeline > renders with size lg vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2 pb-7">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -1014,7 +1014,7 @@ exports[`timeline > renders with size lg vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2 pb-7">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -1024,7 +1024,7 @@ exports[`timeline > renders with size lg vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2 pb-7">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -1039,7 +1039,7 @@ exports[`timeline > renders with size md horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -1049,7 +1049,7 @@ exports[`timeline > renders with size md horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -1059,7 +1059,7 @@ exports[`timeline > renders with size md horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -1069,7 +1069,7 @@ exports[`timeline > renders with size md horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -1084,7 +1084,7 @@ exports[`timeline > renders with size md vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -1094,7 +1094,7 @@ exports[`timeline > renders with size md vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -1104,7 +1104,7 @@ exports[`timeline > renders with size md vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -1114,7 +1114,7 @@ exports[`timeline > renders with size md vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -1129,7 +1129,7 @@ exports[`timeline > renders with size sm horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1 pb-6">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -1139,7 +1139,7 @@ exports[`timeline > renders with size sm horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1 pb-6">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -1149,7 +1149,7 @@ exports[`timeline > renders with size sm horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1 pb-6">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -1159,7 +1159,7 @@ exports[`timeline > renders with size sm horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1 pb-6">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -1174,7 +1174,7 @@ exports[`timeline > renders with size sm vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1 pb-6">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -1184,7 +1184,7 @@ exports[`timeline > renders with size sm vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1 pb-6">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -1194,7 +1194,7 @@ exports[`timeline > renders with size sm vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1 pb-6">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -1204,7 +1204,7 @@ exports[`timeline > renders with size sm vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1 pb-6">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -1219,7 +1219,7 @@ exports[`timeline > renders with size xl horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2.5 pb-7.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -1229,7 +1229,7 @@ exports[`timeline > renders with size xl horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2.5 pb-7.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -1239,7 +1239,7 @@ exports[`timeline > renders with size xl horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2.5 pb-7.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -1249,7 +1249,7 @@ exports[`timeline > renders with size xl horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2.5 pb-7.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -1264,7 +1264,7 @@ exports[`timeline > renders with size xl vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2.5 pb-7.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -1274,7 +1274,7 @@ exports[`timeline > renders with size xl vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2.5 pb-7.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -1284,7 +1284,7 @@ exports[`timeline > renders with size xl vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2.5 pb-7.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -1294,7 +1294,7 @@ exports[`timeline > renders with size xl vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-2.5 pb-7.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -1309,7 +1309,7 @@ exports[`timeline > renders with size xs horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-0.5 pb-5.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -1319,7 +1319,7 @@ exports[`timeline > renders with size xs horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-0.5 pb-5.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -1329,7 +1329,7 @@ exports[`timeline > renders with size xs horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-0.5 pb-5.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -1339,7 +1339,7 @@ exports[`timeline > renders with size xs horizontal correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-0.5 pb-5.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -1354,7 +1354,7 @@ exports[`timeline > renders with size xs vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-0.5 pb-5.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -1364,7 +1364,7 @@ exports[`timeline > renders with size xs vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-0.5 pb-5.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -1374,7 +1374,7 @@ exports[`timeline > renders with size xs vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-0.5 pb-5.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -1384,7 +1384,7 @@ exports[`timeline > renders with size xs vertical correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-0.5 pb-5.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -1399,7 +1399,7 @@ exports[`timeline > renders with title slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Title slot</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Title slot</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -1409,7 +1409,7 @@ exports[`timeline > renders with title slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Title slot</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Title slot</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -1419,7 +1419,7 @@ exports[`timeline > renders with title slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -1429,7 +1429,7 @@ exports[`timeline > renders with title slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Title slot</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Title slot</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -1444,7 +1444,7 @@ exports[`timeline > renders with ui correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm font-bold">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm font-bold">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -1454,7 +1454,7 @@ exports[`timeline > renders with ui correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm font-bold">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm font-bold">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -1464,7 +1464,7 @@ exports[`timeline > renders with ui correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm font-bold">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm font-bold">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -1474,7 +1474,7 @@ exports[`timeline > renders with ui correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm font-bold">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm font-bold">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -1489,7 +1489,7 @@ exports[`timeline > renders with valueKey correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 15, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Project Kickoff</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Project Kickoff</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Kicked off the project with team alignment. Set up project milestones and allocated resources.</div>
     </div>
   </div>
@@ -1499,7 +1499,7 @@ exports[`timeline > renders with valueKey correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 22, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Design Phase</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Design Phase</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">User research and design workshops. Created wireframes and prototypes for user testing</div>
     </div>
   </div>
@@ -1509,7 +1509,7 @@ exports[`timeline > renders with valueKey correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>
@@ -1519,7 +1519,7 @@ exports[`timeline > renders with valueKey correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Apr 5, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Testing &amp; Deployment</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Testing &amp; Deployment</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">QA testing and performance optimization. Deployed the application to production.</div>
     </div>
   </div>
@@ -1546,7 +1546,7 @@ exports[`timeline > renders with wrapper slot correctly 1`] = `
     </div>
     <div data-slot="wrapper" class="w-full mt-1.5 pb-6.5">
       <div data-slot="date" class="color-text-dimmed text-xs/5">Mar 29, 2025</div>
-      <div data-slot="title" class="font-medium color-text-highlighted text-sm">Development Sprint</div>
+      <div data-slot="title" class="font-500 color-text-highlighted text-sm">Development Sprint</div>
       <div data-slot="description" class="color-text-muted text-wrap text-sm">Frontend and backend development. Implemented core features and integrated with APIs.</div>
     </div>
   </div>

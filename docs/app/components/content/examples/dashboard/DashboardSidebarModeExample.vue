@@ -23,7 +23,7 @@ const items: NavigationMenuItem[] = [{
     <PDashboardSidebar :mode="mode">
       <template #header="{ collapsed }">
         <Logo v-if="!collapsed" class="h-5 w-auto" />
-        <PIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 text-primary mx-auto" />
+        <PIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 color-primary mx-auto" />
       </template>
 
       <PNavigationMenu

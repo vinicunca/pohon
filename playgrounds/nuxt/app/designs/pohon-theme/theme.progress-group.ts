@@ -19,7 +19,7 @@ export const themeProgressGroup = {
     color: {
       ...Object.fromEntries(BRANDS.map((color: string) => [color, {
         indicator: `bg-${color}`,
-        itemLeadingIcon: `text-${color}`,
+        itemLeadingIcon: `color-${color}`,
         itemLeadingDot: `bg-${color}`,
       }])),
       neutral: {

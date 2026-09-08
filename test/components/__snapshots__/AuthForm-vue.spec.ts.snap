@@ -9,7 +9,7 @@ exports[`authForm > renders with as correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -24,19 +24,19 @@ exports[`authForm > renders with as correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -55,7 +55,7 @@ exports[`authForm > renders with class correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -70,19 +70,19 @@ exports[`authForm > renders with class correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -105,7 +105,7 @@ exports[`authForm > renders with description correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -120,19 +120,19 @@ exports[`authForm > renders with description correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -155,7 +155,7 @@ exports[`authForm > renders with description slot correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -170,19 +170,19 @@ exports[`authForm > renders with description slot correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -201,7 +201,7 @@ exports[`authForm > renders with disabled correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -216,19 +216,19 @@ exports[`authForm > renders with disabled correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" disabled="" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -247,7 +247,7 @@ exports[`authForm > renders with fields correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -262,19 +262,19 @@ exports[`authForm > renders with fields correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -293,7 +293,7 @@ exports[`authForm > renders with footer slot correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -308,19 +308,19 @@ exports[`authForm > renders with footer slot correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -339,7 +339,7 @@ exports[`authForm > renders with header slot correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -354,19 +354,19 @@ exports[`authForm > renders with header slot correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -389,7 +389,7 @@ exports[`authForm > renders with icon correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -404,19 +404,19 @@ exports[`authForm > renders with icon correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -439,7 +439,7 @@ exports[`authForm > renders with leading slot correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -454,19 +454,19 @@ exports[`authForm > renders with leading slot correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -485,7 +485,7 @@ exports[`authForm > renders with loading correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -500,19 +500,19 @@ exports[`authForm > renders with loading correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" disabled="" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5 animate-spin"></svg><span data-slot="label" class="truncate">Continue</span>
+      <!--v-if--><button type="submit" disabled="" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5 animate-spin"></svg><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
     </form>
@@ -525,21 +525,21 @@ exports[`authForm > renders with providers correctly 1`] = `
 "<div data-slot="root" class="w-full space-y-6">
   <!--v-if-->
   <div data-slot="body" class="gap-y-6 flex flex-col">
-    <div data-slot="providers" class="space-y-3"><button type="button" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center ring ring-inset ring-ring-accented color-text bg-background-elevated hover:bg-background-accented/75 active:bg-background-accented/75 disabled:bg-background-elevated aria-disabled:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Google</span>
+    <div data-slot="providers" class="space-y-3"><button type="button" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center ring ring-inset ring-ring-accented color-text bg-background-elevated hover:bg-background-accented/75 active:bg-background-accented/75 disabled:bg-background-elevated aria-disabled:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg><span data-slot="label" class="truncate">Google</span>
         <!--v-if-->
       </button></div>
     <!---->
     <div data-orientation="horizontal" role="separator" data-slot="separator" class="flex items-center align-center text-center w-full flex-row">
       <!--v-if-->
       <div data-slot="border" class="border-border w-full border-solid border-t"></div>
-      <div data-slot="container" class="font-medium color-text flex whitespace-nowrap mx-3"><span data-slot="label" class="text-sm">or</span></div>
+      <div data-slot="container" class="font-500 color-text flex whitespace-nowrap mx-3"><span data-slot="label" class="text-sm">or</span></div>
       <div data-slot="border" class="border-border w-full border-solid border-t"></div>
       <!--v-if-->
     </div>
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -554,19 +554,19 @@ exports[`authForm > renders with providers correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -585,7 +585,7 @@ exports[`authForm > renders with providers slot correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -600,19 +600,19 @@ exports[`authForm > renders with providers slot correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -631,7 +631,7 @@ exports[`authForm > renders with separator correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -646,19 +646,19 @@ exports[`authForm > renders with separator correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -677,7 +677,7 @@ exports[`authForm > renders with submit correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -692,19 +692,19 @@ exports[`authForm > renders with submit correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Submit</span>
         <!--v-if-->
       </button>
@@ -723,7 +723,7 @@ exports[`authForm > renders with submit slot correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -738,14 +738,14 @@ exports[`authForm > renders with submit slot correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
@@ -770,7 +770,7 @@ exports[`authForm > renders with title correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -785,19 +785,19 @@ exports[`authForm > renders with title correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -820,7 +820,7 @@ exports[`authForm > renders with title slot correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -835,19 +835,19 @@ exports[`authForm > renders with title slot correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -866,7 +866,7 @@ exports[`authForm > renders with ui correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -881,19 +881,19 @@ exports[`authForm > renders with ui correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
       </div>
-      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      <!--v-if--><button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>
@@ -912,7 +912,7 @@ exports[`authForm > renders with validation slot correctly 1`] = `
     <form id="v-0" method="post" class="space-y-5" data-slot="form">
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-medium color-text">Email</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-1" data-slot="label" class="block font-500 color-text">Email</label>
             <!--v-if-->
           </div>
           <!--v-if-->
@@ -927,18 +927,18 @@ exports[`authForm > renders with validation slot correctly 1`] = `
       </div>
       <div data-orientation="vertical" data-slot="root" class="text-sm">
         <div data-slot="wrapper" class="">
-          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-medium color-text">Password</label>
+          <div data-slot="labelWrapper" class="flex content-center items-center justify-between gap-1"><label for="v-2" data-slot="label" class="block font-500 color-text">Password</label>
             <!--v-if-->
           </div>
           <!--v-if-->
         </div>
         <div class="relative mt-1">
           <div data-slot="password" class="relative inline-flex items-center w-full"><input id="v-2" type="password" name="password" class="w-full rounded-md border-0 appearance-none placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75 transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-ring-accented outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" autocomplete="off" data-slot="base" aria-invalid="false">
-            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
+            <!--v-if--><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><button type="button" data-slot="base" aria-label="Show password" aria-pressed="false" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-xs gap-1.5 color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3 p-1.5" aria-controls="v-2"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-4"></svg><!--v-if--><!--v-if--></button></span>
           </div>
           <!--v-if-->
         </div>
-      </div>Validation<button type="submit" data-slot="base" class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+      </div>Validation<button type="submit" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
         <!--v-if--><span data-slot="label" class="truncate">Continue</span>
         <!--v-if-->
       </button>

@@ -6,7 +6,7 @@ const open = ref(false)
   <PPopover
     v-model:open="open"
     :dismissible="false"
-    :ui="{ content: 'w-(--reka-popper-anchor-width) p-4' }"
+    :ui="{ content: 'w-(--akar-popper-anchor-width) p-4' }"
   >
     <template #anchor>
       <PInput placeholder="Focus to open" @focus="open = true" @blur="open = false" />

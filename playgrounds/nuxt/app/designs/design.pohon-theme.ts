@@ -41,8 +41,16 @@ import {
   themeDashboardToolbar,
 } from './pohon-theme/theme.dashboard';
 import { themeDrawer } from './pohon-theme/theme.drawer';
+import { themeDropdownMenu } from './pohon-theme/theme.dropdown-menu';
+import { themeEmpty } from './pohon-theme/theme.empty';
+import { themeError } from './pohon-theme/theme.error';
+import { themeFieldGroup } from './pohon-theme/theme.field-group';
+import { themeFileUpload } from './pohon-theme/theme.file-upload';
+import { themeFooter, themeFooterColumns } from './pohon-theme/theme.footer';
+import { themeFormField } from './pohon-theme/theme.form-field';
 import { themeInput } from './pohon-theme/theme.input';
 import { themeKbd } from './pohon-theme/theme.kbd';
+import { themeNavigationMenu } from './pohon-theme/theme.navigation-menu';
 import { themeSelect } from './pohon-theme/theme.select';
 import { themeSwitch } from './pohon-theme/theme.switch';
 import { themeUser } from './pohon-theme/theme.user';
@@ -91,8 +99,17 @@ export const uiTheme = {
   dashboardSidebar: themeDashboardSidebar,
   dashboardToolbar: themeDashboardToolbar,
   drawer: themeDrawer,
+  dropdownMenu: themeDropdownMenu,
+  empty: themeEmpty,
+  error: themeError,
+  fieldGroup: themeFieldGroup,
+  fileUpload: themeFileUpload,
+  footer: themeFooter,
+  footerColumns: themeFooterColumns,
+  formField: themeFormField,
   input: themeInput,
   kbd: themeKbd,
+  navigationMenu: themeNavigationMenu,
   select: themeSelect,
   switch: themeSwitch,
   user: themeUser,

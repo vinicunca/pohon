@@ -15,7 +15,7 @@ export default {
   slots: {
     root: "w-full",
     item: "border-b border-border last:border-b-0",
-    trigger: "flex items-center gap-1.5 font-medium text-sm py-3.5",
+    trigger: "flex items-center gap-1.5 font-500 text-sm py-3.5",
     content: "overflow-hidden",
     body: "text-sm pb-3.5",
   },
@@ -39,7 +39,7 @@ import type { ModuleOptions } from "../module";
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     base: [
-      "font-medium inline-flex items-center",
+      "font-500 inline-flex items-center",
       options.theme.transitions && "transition-colors",
     ],
     label: "truncate",
@@ -78,7 +78,7 @@ export default (options: Required<ModuleOptions>) => ({
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: "outline",
-      class: `text-${color} ring ring-inset ring-${color}/50`,
+      class: `color-${color} ring ring-inset ring-${color}/50`,
     })),
     // Neutral variants
     {
@@ -153,7 +153,7 @@ Usage in compoundVariants:
 
 ```ts
 `bg-${color}` // background
-`text-${color}` // text color
+`color-${color}` // text color
 `ring-${color}` // ring/border
 `ring-${color}/50`; // with opacity
 ```
@@ -165,7 +165,7 @@ Add transitions based on module options:
 ```ts
 slots: {
   base: [
-    "rounded-md font-medium",
+    "rounded-md font-500",
     options.theme.transitions && "transition-colors",
   ];
 }

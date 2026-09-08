@@ -4,14 +4,14 @@ import { BRANDS } from '../design.constants';
 export const themePageCard = {
   slots: {
     root: 'rounded-lg flex relative',
-    spotlight: 'bg-background/90 rounded-[inherit] pointer-events-none inset-0 absolute',
+    spotlight: 'bg-background/90 rounded-inherit pointer-events-none inset-0 absolute',
     container: 'p-4 flex flex-1 flex-col gap-x-8 gap-y-4 relative sm:p-6 lg:grid',
     wrapper: 'flex flex-1 flex-col items-start',
     header: 'mb-4',
     body: 'flex-1',
     footer: 'mt-auto pt-4',
     leading: 'mb-2.5 inline-flex items-center',
-    leadingIcon: 'text-primary shrink-0 size-5',
+    leadingIcon: 'color-primary shrink-0 size-5',
     title: 'color-text-highlighted text-base font-600 text-pretty',
     description: 'text-[15px] text-pretty',
   },
@@ -76,7 +76,7 @@ export const themePageCard = {
     },
     spotlight: {
       true: {
-        root: '[--spotlight-size:400px] before:rounded-[inherit] before:bg-[radial-gradient(var(--spotlight-size)_var(--spotlight-size)_at_calc(var(--spotlight-x,0px))_calc(var(--spotlight-y,0px)),var(--spotlight-color),transparent_70%)] before:pointer-events-none before:absolute before:-inset-px',
+        root: '[--spotlight-size:400px] before:rounded-inherit before:bg-[radial-gradient(var(--spotlight-size)_var(--spotlight-size)_at_calc(var(--spotlight-x,0px))_calc(var(--spotlight-y,0px)),var(--spotlight-color),transparent_70%)] before:pointer-events-none before:absolute before:-inset-px',
       },
     },
     spotlightColor: {

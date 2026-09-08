@@ -9,7 +9,7 @@ export const hover = 'hover:not-has-disabled:not-has-focus-visible:not-has-data-
 // render the root as a label wrapping everything, so focus belongs on the card itself,
 // as it does whenever the control is `sr-only`.
 export const focusControl = (color: string) => `outline-${color}/25 focus-visible:outline-solid focus-visible:outline-3 focus-visible:ring-${color}`;
-export const focusCard = (color: string) => `outline-${color}/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-${color} has-focus-visible:z-[1]`;
+export const focusCard = (color: string) => `outline-${color}/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-${color} has-focus-visible:z-1`;
 
 export const themeCheckbox = {
   slots: {
@@ -19,7 +19,7 @@ export const themeCheckbox = {
     indicator: 'color-text-inverted flex size-full items-center justify-center',
     icon: 'shrink-0',
     wrapper: 'w-full',
-    label: 'color-text font-medium block',
+    label: 'color-text font-500 block',
     description: 'color-text-muted',
   },
   variants: {

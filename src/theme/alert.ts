@@ -4,7 +4,7 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative overflow-hidden w-full rounded-lg p-4 flex gap-2.5',
     wrapper: 'min-w-0 flex-1 flex flex-col',
-    title: 'text-sm font-medium',
+    title: 'text-sm font-500',
     description: 'text-sm opacity-90',
     icon: 'shrink-0 size-5',
     avatar: 'shrink-0',
@@ -51,21 +51,21 @@ export default (options: Required<ModuleOptions>) => ({
       color,
       variant: 'outline',
       class: {
-        root: `text-${color} ring ring-inset ring-${color}/25`,
+        root: `color-${color} ring ring-inset ring-${color}/25`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'soft',
       class: {
-        root: `bg-${color}/10 text-${color}`,
+        root: `bg-${color}/10 color-${color}`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'subtle',
       class: {
-        root: `bg-${color}/10 text-${color} ring ring-inset ring-${color}/25`,
+        root: `bg-${color}/10 color-${color} ring ring-inset ring-${color}/25`,
       },
     })),
     {

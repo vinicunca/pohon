@@ -11,7 +11,7 @@ export const themeTabs = {
     root: 'flex gap-2 items-center',
     list: 'group p-1 flex relative',
     indicator: 'transition-[transform,width] duration-280 ease-out absolute motion-reduce:transition-none',
-    trigger: ['group relative inline-flex items-center min-w-0 data-[state=inactive]:color-text-muted hover:data-[state=inactive]:not-disabled:color-text font-medium rounded-md disabled:cursor-not-allowed disabled:opacity-75', 'transition-colors'],
+    trigger: ['group relative inline-flex items-center min-w-0 data-[state=inactive]:color-text-muted hover:data-[state=inactive]:not-disabled:color-text font-500 rounded-md disabled:cursor-not-allowed disabled:opacity-75', 'transition-colors'],
     leadingIcon: 'shrink-0',
     leadingAvatar: 'shrink-0',
     leadingAvatarSize: '',
@@ -45,12 +45,12 @@ export const themeTabs = {
       horizontal: {
         root: 'flex-col',
         list: 'w-full',
-        indicator: 'w-(--reka-tabs-indicator-size) translate-x-(--reka-tabs-indicator-position) left-0',
+        indicator: 'w-(--akar-tabs-indicator-size) translate-x-(--akar-tabs-indicator-position) left-0',
         trigger: 'justify-center',
       },
       vertical: {
         list: 'flex-col',
-        indicator: 'h-(--reka-tabs-indicator-size) translate-y-(--reka-tabs-indicator-position) top-0',
+        indicator: 'h-(--akar-tabs-indicator-size) translate-y-(--akar-tabs-indicator-position) top-0',
       },
     },
     size: {
@@ -137,7 +137,7 @@ export const themeTabs = {
       variant: 'link',
       class: {
         indicator: `bg-${color}`,
-        trigger: [`data-[state=active]:text-${color} outline-${color}/25 focus-visible:outline-3`, ssr(`after:bg-${color}`)],
+        trigger: [`data-[state=active]:color-${color} outline-${color}/25 focus-visible:outline-3`, ssr(`after:bg-${color}`)],
       },
     })),
     {

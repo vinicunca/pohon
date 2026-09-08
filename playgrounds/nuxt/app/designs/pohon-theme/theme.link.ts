@@ -3,7 +3,7 @@ export const themeLink = {
   base: 'outline-primary/25 focus-visible:outline-3 rounded-md',
   variants: {
     active: {
-      true: 'text-primary',
+      true: 'color-primary',
       false: 'color-text-muted'
     },
     disabled: {

@@ -25,7 +25,7 @@ export const themeCalendar = {
     header: 'flex items-center justify-between',
     body: 'pt-4 flex flex-col space-y-4 sm:(flex-row space-x-4 space-y-0)',
     heading: 'text-center flex-1 min-w-0',
-    headingLabel: 'font-medium p-1.5 block truncate',
+    headingLabel: 'font-500 p-1.5 block truncate',
     grid: 'w-full select-none border-collapse space-y-1 focus:outline-none',
     gridRow: 'grid',
     gridWeekDaysRow: 'mb-1 grid grid-cols-7 w-full',
@@ -39,7 +39,7 @@ export const themeCalendar = {
   variants: {
     color: {
       ...Object.fromEntries(BRANDS.map((color) => [color, {
-        headCell: `text-${color}`,
+        headCell: `color-${color}`,
         cellTrigger: `outline-${color}/25`,
       }])),
       neutral: {

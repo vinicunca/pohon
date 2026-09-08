@@ -8,7 +8,7 @@ export const themeAlert = {
   slots: {
     root: 'p-4 rounded-lg flex gap-2.5 w-full relative overflow-hidden',
     wrapper: 'flex flex-1 flex-col min-w-0',
-    title: 'text-sm font-medium',
+    title: 'text-sm font-500',
     description: 'text-sm opacity-90',
     icon: 'shrink-0 size-5',
     avatar: 'shrink-0',
@@ -48,21 +48,21 @@ export const themeAlert = {
       color,
       variant: 'outline',
       class: {
-        root: `text-${color} ring ring-inset ring-${color}/25`,
+        root: `color-${color} ring ring-inset ring-${color}/25`,
       },
     })),
     ...BRANDS.map((color) => ({
       color,
       variant: 'soft',
       class: {
-        root: `bg-${color}/10 text-${color}`,
+        root: `bg-${color}/10 color-${color}`,
       },
     })),
     ...BRANDS.map((color) => ({
       color,
       variant: 'subtle',
       class: {
-        root: `bg-${color}/10 text-${color} ring ring-inset ring-${color}/25`,
+        root: `bg-${color}/10 color-${color} ring ring-inset ring-${color}/25`,
       },
     })),
     {

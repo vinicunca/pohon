@@ -20,7 +20,7 @@ export const themeProgress = {
     color: {
       ...Object.fromEntries(BRANDS.map((color: string) => [color, {
         indicator: `bg-${color}`,
-        steps: `text-${color}`,
+        steps: `color-${color}`,
       }])),
       neutral: {
         indicator: 'bg-background-inverted',
