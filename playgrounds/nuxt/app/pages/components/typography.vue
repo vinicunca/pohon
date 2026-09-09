@@ -11,7 +11,7 @@ Every prose component rendered through comark. Use it to check spacing, colors a
 
 ### Paragraphs
 
-Pohon UI ships **125+ components** built on *Akar* and UnoCSS. Read the [installation guide](https://ui.nuxt.com/docs/getting-started/installation/nuxt) or run \`npx nuxi module add ui\` to get started.
+Pohon UI ships **125+ components** built on *Akar* and UnoCSS. Read the [installation guide](https://pohon.vinicunca.dev/docs/getting-started/installation/nuxt) or run \`npx nuxi module add ui\` to get started.
 
 Inline components sit in the flow of a paragraph: press :kbd{value="meta"} :kbd{value="K"} to open the command palette, the latest release is :badge[v4.0.0] and :icon{name="i-simple-icons-nuxtdotjs"} renders as an icon.
 
@@ -28,7 +28,7 @@ Inline components sit in the flow of a paragraph: press :kbd{value="meta"} :kbd{
 ### Unordered list
 
 - Components are tree shaken by default.
-- Themes are built with Tailwind Variants.
+- Themes are built with UnoCSS Variants.
   - Slots map to \`data-slot\` attributes.
   - Variants are typed end to end.
 - Every component ships with tests.
@@ -231,7 +231,7 @@ Yes, it ships with tests, regular releases and active maintenance.
 This is a \`callout\` with full **markdown** support.
 ::
 
-::callout{icon="i-lucide-rocket" color="info" to="https://ui.nuxt.com/docs/getting-started/installation/nuxt" target="_blank"}
+::callout{icon="i-lucide-rocket" color="info" to="https://pohon.vinicunca.dev/docs/getting-started/installation/nuxt" target="_blank"}
 Learn how to install \`pohon-ui\` in your project.
 ::
 
@@ -343,7 +343,7 @@ export default defineNuxtConfig({
 })
 \`\`\`
 
-#### Import Tailwind CSS in your CSS
+#### Import UnoCSS in your CSS
 
 \`\`\`css [app/assets/css/main.css]
 @import "tailwindcss";

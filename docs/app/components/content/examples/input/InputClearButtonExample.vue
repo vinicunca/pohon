@@ -9,7 +9,7 @@ const value = ref('Click to clear')
     :ui="{ trailing: 'pe-1' }"
   >
     <template v-if="value?.length" #trailing>
-      <UButton
+      <PButton
         color="neutral"
         variant="link"
         size="sm"

@@ -6,11 +6,11 @@ const chip = computed(() => ({ backgroundColor: color.value }))
 
 <template>
   <UPopover>
-    <UButton label="Choose color" color="neutral" variant="outline">
+    <PButton label="Choose color" color="neutral" variant="outline">
       <template #leading>
         <span :style="chip" class="size-3 rounded-full" />
       </template>
-    </UButton>
+    </PButton>
 
     <template #content>
       <UColorPicker v-model="color" class="p-2" />

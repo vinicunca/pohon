@@ -122,7 +122,7 @@ const items = computed<NavigationMenuItem[]>(() => [
       },
       {
         title: 'Customizable',
-        description: 'Tailwind Variants theming with full control.',
+        description: 'UnoCSS Variants theming with full control.',
         icon: 'i-lucide-palette',
       },
       {

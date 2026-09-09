@@ -8,7 +8,7 @@ keywords:
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Link.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Link.vue
 ---
 
 ## Usage
@@ -32,12 +32,14 @@ The `Link` components renders an `<a>` tag when a `to` prop is provided, otherwi
 
 ::component-code
 ---
+
 props:
-  to: ''
-  as: 'button'
+to: ''
+as: 'button'
 slots:
-  default: Link
+default: Link
 ---
+
 ::
 
 ::note
@@ -50,11 +52,13 @@ By default, the link has default active and inactive styles, check out the [#the
 
 ::component-code
 ---
+
 props:
-  to: /docs/components/link
+to: /docs/components/link
 slots:
-  default: Link
+default: Link
 ---
+
 ::
 
 ::note
@@ -65,31 +69,32 @@ You can override this behavior by using the `raw` prop and provide your own styl
 
 ::component-code
 ---
+
 ignore:
-  - raw
-props:
+
+- raw
+  props:
   raw: true
   to: /docs/components/link
   activeClass: 'font-bold'
   inactiveClass: 'text-muted'
-slots:
+  slots:
   default: Link
+
 ---
 
 Link
 ::
 
 ::callout{icon="i-simple-icons-visualstudiocode"}
-If you're using the [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension for VSCode and wish to get autocompletion for the `active-class` and `inactive-class` props, you can add the following settings to your `.vscode/settings.json`:
+If you're using the [UnoCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension for VSCode and wish to get autocompletion for the `active-class` and `inactive-class` props, you can add the following settings to your `.vscode/settings.json`:
 
 ```json [.vscode/settings.json]
 {
-  "tailwindCSS.classAttributes": [
-    "active-class",
-    "inactive-class"
-  ]
+  "tailwindCSS.classAttributes": ["active-class", "inactive-class"]
 }
 ```
+
 ::
 
 ### Locale :badge{label="4.7+" class="align-text-top"}
@@ -108,7 +113,7 @@ You can still manually use `localePath()` or `localeRoute()` if needed.
 ::
 
 ::note{to="/docs/getting-started/integrations/i18n/nuxt#dynamic-locale"}
-Learn more about Internationalization in Nuxt UI.
+Learn more about Internationalization in Pohon.
 ::
 
 ## API
@@ -117,9 +122,13 @@ Learn more about Internationalization in Nuxt UI.
 
 ::component-props
 ---
+
 ignore:
-  - custom
+
+- custom
+
 ---
+
 ::
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes" target="_blank"}

@@ -130,7 +130,7 @@ watch(open, async (isOpen) => {
             @focus="($event.target as HTMLInputElement).select()"
           />
 
-          <UButton
+          <PButton
             :icon="linkCopied ? appConfig.ui.icons.copyCheck : appConfig.ui.icons.copy"
             label="Copy link"
             color="neutral"
@@ -141,7 +141,7 @@ watch(open, async (isOpen) => {
 
       <div class="flex flex-col gap-3 p-4 sm:p-6">
         <div class="flex items-center gap-2">
-          <UButton
+          <PButton
             v-for="entry in panes"
             :key="entry.key"
             color="neutral"
@@ -154,10 +154,10 @@ watch(open, async (isOpen) => {
             <template #leading>
               <ProseCodeIcon :filename="entry.filename" class="size-5 shrink-0" />
             </template>
-          </UButton>
+          </PButton>
 
           <div class="ms-auto flex items-center gap-2">
-            <UButton
+            <PButton
               :icon="fileCopied ? appConfig.ui.icons.copyCheck : appConfig.ui.icons.copy"
               label="Copy"
               color="neutral"
@@ -166,7 +166,7 @@ watch(open, async (isOpen) => {
               @click="copyFile"
             />
 
-            <UButton
+            <PButton
               :icon="studioIcons.download"
               label="Download"
               color="neutral"

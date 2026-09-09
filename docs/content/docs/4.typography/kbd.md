@@ -1,12 +1,12 @@
 ---
 title: ProseKbd
-description: 'Display keyboard shortcuts and key combinations with proper styling.'
+description: "Display keyboard shortcuts and key combinations with proper styling."
 category: components
 navigation.title: Kbd
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Kbd.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/prose/Kbd.vue
 ---
 
 ## Usage

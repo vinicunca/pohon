@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Markdown } from '@comark/vue'
 import shiki from '@comark/vue/plugins/shiki'
-import type { ContentNavigationLink, ContentSurroundLink, DropdownMenuItem, PageLink } from '@nuxt/ui'
+import type { ContentNavigationLink, ContentSurroundLink, DropdownMenuItem, PageLink } from 'pohon-ui'
 
 const appConfig = useAppConfig()
 const studioIcons = useStudioIcons()
@@ -73,7 +73,7 @@ const tocLinks = [
 const communityLinks: PageLink[] = [
   { label: 'Edit this page', icon: appConfig.ui.icons.external },
   { label: 'Star on GitHub', icon: appConfig.ui.icons.star },
-  { label: 'Nuxt UI docs', icon: studioIcons.bookOpen }
+  { label: 'Pohon docs', icon: studioIcons.bookOpen }
 ]
 
 /**
@@ -82,14 +82,14 @@ const communityLinks: PageLink[] = [
  * markdown onto the same Prose components, so the callout props, the code
  * block filenames and the heading ids all come out of the markdown itself.
  */
-const content = `This is only a basic example of what you can achieve with [Nuxt UI](https://ui.nuxt.com), you can tweak it to match your needs. The template uses several Nuxt modules underneath like [\`@nuxt/content\`](https://content.nuxt.com) for the content and [\`nuxt-og-image\`](https://nuxtseo.com/og-image/getting-started/installation) for social previews.
+const content = `This is only a basic example of what you can achieve with [Pohon](https://pohon.vinicunca.dev), you can tweak it to match your needs. The template uses several Nuxt modules underneath like [\`@nuxt/content\`](https://content.nuxt.com) for the content and [\`nuxt-og-image\`](https://nuxtseo.com/og-image/getting-started/installation) for social previews.
 
 ::tip
 ---
 target: _blank
-to: https://ui.nuxt.com/getting-started/installation
+to: https://pohon.vinicunca.dev/getting-started/installation
 ---
-Learn more on how to take the most out of Nuxt UI!
+Learn more on how to take the most out of Pohon!
 ::
 
 ## Writing content
@@ -98,7 +98,7 @@ You can just start writing \`.md\` or \`.yml\` files in the [\`content/\`](https
 
 ## App Configuration
 
-In addition to \`@nuxt/ui\` configuration through the \`app.config.ts\`, this template lets you customize the \`Header\`, \`Footer\` and the \`Table of contents\` components.
+In addition to \`pohon-ui\` configuration through the \`app.config.ts\`, this template lets you customize the \`Header\`, \`Footer\` and the \`Table of contents\` components.
 
 ### Header
 
@@ -122,7 +122,7 @@ export default defineAppConfig({
     // Customize links
     links: [{
       'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt-ui-templates/docs',
+      'to': 'https://github.com/vinicunca/pohon-ui-templates/docs',
       'target': '_blank',
       'aria-label': 'GitHub'
     }]
@@ -136,7 +136,7 @@ export default defineAppConfig({
 export default defineAppConfig({
   footer: {
     // Update bottom left credits
-    credits: \`Built with Nuxt UI • © \${new Date().getFullYear()}\`,
+    credits: \`Built with Pohon • © \${new Date().getFullYear()}\`,
     // Show or hide the color mode button
     colorMode: false,
     // Customize links
@@ -152,9 +152,9 @@ export default defineAppConfig({
       'aria-label': 'Nuxt on X'
     }, {
       'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt/ui',
+      'to': 'https://github.com/vinicunca/pohon',
       'target': '_blank',
-      'aria-label': 'Nuxt UI on GitHub'
+      'aria-label': 'Pohon on GitHub'
     }]
   },
 })
@@ -172,16 +172,16 @@ export default defineAppConfig({
       // Title of the bottom table of contents
       title: 'Community',
       // URL of your repository content folder
-      edit: 'https://github.com/nuxt-ui-templates/docs/edit/main/content',
+      edit: 'https://github.com/vinicunca/pohon-ui-templates/docs/edit/main/content',
       links: [{
         icon: 'i-lucide-star',
         label: 'Star on GitHub',
-        to: 'https://github.com/nuxt/ui',
+        to: 'https://github.com/vinicunca/pohon',
         target: '_blank'
       }, {
         icon: 'i-lucide-book-open',
-        label: 'Nuxt UI docs',
-        to: 'https://ui.nuxt.com/getting-started/installation',
+        label: 'Pohon docs',
+        to: 'https://pohon.vinicunca.dev/getting-started/installation',
         target: '_blank'
       }]
     }
@@ -202,7 +202,7 @@ export default defineAppConfig({
       </template>
 
       <!-- UContentSearchButton opens the content search modal: fake the expanded look. -->
-      <UButton
+      <PButton
         :icon="appConfig.ui.icons.search"
         label="Search documentation..."
         color="neutral"
@@ -216,17 +216,17 @@ export default defineAppConfig({
             <UKbd value="K" />
           </div>
         </template>
-      </UButton>
+      </PButton>
 
       <template #right>
         <!-- Static: the studio toolbar owns color mode. -->
-        <UButton color="neutral" variant="ghost" aria-label="Color mode">
+        <PButton color="neutral" variant="ghost" aria-label="Color mode">
           <template #leading="{ ui }">
             <UIcon :name="appConfig.ui.icons.dark" :class="ui.leadingIcon({ class: 'hidden dark:inline-block' })" />
             <UIcon :name="appConfig.ui.icons.light" :class="ui.leadingIcon({ class: 'dark:hidden' })" />
           </template>
-        </UButton>
-        <UButton :icon="studioIcons.github" aria-label="GitHub" color="neutral" variant="ghost" />
+        </PButton>
+        <PButton :icon="studioIcons.github" aria-label="GitHub" color="neutral" variant="ghost" />
       </template>
     </UHeader>
 
@@ -246,7 +246,7 @@ export default defineAppConfig({
           >
             <template #links>
               <UFieldGroup>
-                <UButton
+                <PButton
                   label="Copy page"
                   :icon="appConfig.ui.icons.copy"
                   color="neutral"
@@ -258,7 +258,7 @@ export default defineAppConfig({
                   :content="{ align: 'end', side: 'bottom', sideOffset: 8 }"
                   :ui="{ content: 'w-48' }"
                 >
-                  <UButton
+                  <PButton
                     :icon="appConfig.ui.icons.chevronDown"
                     size="sm"
                     color="neutral"
@@ -321,14 +321,14 @@ export default defineAppConfig({
     <UFooter>
       <template #left>
         <p class="text-sm text-muted">
-          Built with Nuxt UI • © 2026
+          Built with Pohon • © 2026
         </p>
       </template>
 
       <template #right>
-        <UButton icon="i-simple-icons-discord" aria-label="Discord" color="neutral" variant="ghost" />
-        <UButton icon="i-simple-icons-x" aria-label="X" color="neutral" variant="ghost" />
-        <UButton :icon="studioIcons.github" aria-label="GitHub" color="neutral" variant="ghost" />
+        <PButton icon="i-simple-icons-discord" aria-label="Discord" color="neutral" variant="ghost" />
+        <PButton icon="i-simple-icons-x" aria-label="X" color="neutral" variant="ghost" />
+        <PButton :icon="studioIcons.github" aria-label="GitHub" color="neutral" variant="ghost" />
       </template>
     </UFooter>
   </div>

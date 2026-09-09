@@ -1,28 +1,28 @@
 /**
- * Normalizes component names by removing Nuxt UI prefixes
+ * Normalizes component names by removing Pohon prefixes
  *
  * @param componentName - The component name to normalize
- * @returns The normalized component name without U/u- prefixes
+ * @returns The normalized component name without P/p- prefixes
  *
  * @example
- * normalizeComponentName('UButton') // 'Button'
- * normalizeComponentName('UUser') // 'User'
- * normalizeComponentName('u-button') // 'button'
- * normalizeComponentName('u-user') // 'user'
+ * normalizeComponentName('PButton') // 'Button'
+ * normalizeComponentName('PUser') // 'User'
+ * normalizeComponentName('p-button') // 'button'
+ * normalizeComponentName('p-user') // 'user'
  * normalizeComponentName('Button') // 'Button'
  * normalizeComponentName('User') // 'User'
  */
 export function normalizeComponentName(componentName: string): string {
-  let normalizedName = componentName
+  let normalizedName = componentName;
 
-  // Check if starts with 'U' followed by an uppercase letter (indicating PascalCase)
-  if (normalizedName.startsWith('U') && normalizedName.length > 1 && normalizedName[1] === normalizedName[1]?.toUpperCase()) {
-    normalizedName = normalizedName.slice(1)
+  // Check if starts with 'P' followed by an uppercase letter (indicating PascalCase)
+  if (normalizedName.startsWith('P') && normalizedName.length > 1 && normalizedName[1] === normalizedName[1]?.toUpperCase()) {
+    normalizedName = normalizedName.slice(1);
 
-    // Handle u-button -> button, u-user -> user (kebab-case with u- prefix)
-  } else if (normalizedName.toLowerCase().startsWith('u-')) {
-    normalizedName = normalizedName.slice(2)
+    // Handle p-button -> button, p-user -> user (kebab-case with p- prefix)
+  } else if (normalizedName.toLowerCase().startsWith('p-')) {
+    normalizedName = normalizedName.slice(2);
   }
 
-  return normalizedName
+  return normalizedName;
 }

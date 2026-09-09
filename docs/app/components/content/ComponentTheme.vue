@@ -78,7 +78,7 @@ const component = computed(() => {
 const themeLink = computed(() => {
   const slug = name.startsWith('content') ? `content/${name}` : name
 
-  return `https://github.com/nuxt/ui/blob/v4/src/theme/${slug}.ts`
+  return `https://github.com/vinicunca/pohon/blob/v4/src/theme/${slug}.ts`
 })
 
 const { data: ast } = useAsyncData(`component-theme-${camelName}-${hash({ props })}`, async () => {
@@ -96,7 +96,7 @@ export default defineAppConfig(${json5.stringify(component.value, null, 2).repla
 \`\`\`ts [vite.config.ts]
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import ui from '@nuxt/ui/vite'
+import ui from 'pohon-ui/vite'
 
 export default defineConfig({
   plugins: [

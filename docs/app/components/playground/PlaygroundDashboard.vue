@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DropdownMenuItem } from '@nuxt/ui'
+import type { DropdownMenuItem } from 'pohon-ui'
 
 const toast = useToast()
 const appConfig = useAppConfig()
@@ -37,7 +37,7 @@ const progress = ref(75)
         </UBadge>
 
         <UDropdownMenu :items="items" :ui="{ content: 'w-44' }">
-          <UButton
+          <PButton
             :icon="appConfig.ui.icons.ellipsis"
             color="neutral"
             variant="ghost"

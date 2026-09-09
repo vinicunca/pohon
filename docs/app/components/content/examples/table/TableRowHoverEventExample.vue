@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn, TableRow } from '@nuxt/ui'
+import type { TableColumn, TableRow } from 'pohon-ui'
 
 const UBadge = resolveComponent('UBadge')
 const UCheckbox = resolveComponent('UCheckbox')
@@ -134,7 +134,7 @@ function onHover(_e: Event, row: TableRow<Payment> | null) {
 
 <template>
   <div class="flex w-full flex-1 gap-1">
-    <UTable
+    <PTable
       :data="data"
       :columns="columns"
       class="flex-1"

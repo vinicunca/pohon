@@ -528,7 +528,7 @@ function resetEffects() {
 
               <div class="flex items-center">
                 <UTooltip text="Copy oklch">
-                  <UButton
+                  <PButton
                     size="xs"
                     color="neutral"
                     square
@@ -541,7 +541,7 @@ function resetEffects() {
                 </UTooltip>
 
                 <UTooltip :text="swatchDetail.pinned ? 'Unpin colour' : 'Pin this colour exactly'">
-                  <UButton
+                  <PButton
                     size="xs"
                     color="neutral"
                     square

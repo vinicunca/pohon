@@ -12,7 +12,7 @@ links:
     to: https://reka-ui.com/docs/components/dialog
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Modal.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Modal.vue
 ---
 
 ## Usage
@@ -23,18 +23,20 @@ Then, use the `#content` slot to add the content displayed when the Modal is ope
 
 ::component-code
 ---
+
 prettier: true
 slots:
-  default: |
+default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+    <PButton label="Open" color="neutral" variant="subtle" />
 
-  content: |
+content: |
 
     <Placeholder class="h-48 m-4" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #content
 :placeholder{class="h-48 m-4"}
@@ -48,20 +50,22 @@ Use the `title` prop to set the title of the Modal's header.
 
 ::component-code
 ---
+
 prettier: true
 props:
-  title: 'Modal with title'
+title: 'Modal with title'
 slots:
-  default: |
+default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+    <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-48" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-48"}
@@ -73,23 +77,26 @@ Use the `description` prop to set the description of the Modal's header.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   title: 'Modal with description'
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-48" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-48"}
@@ -103,28 +110,31 @@ You can pass any property from the [Button](/docs/components/button) component t
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-  - close.color
-  - close.variant
-props:
+
+- title
+- close.color
+- close.variant
+  props:
   title: 'Modal with close button'
   close:
-    color: primary
-    variant: outline
-    class: 'rounded-full'
-slots:
+  color: primary
+  variant: outline
+  class: 'rounded-full'
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-48" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-48"}
@@ -140,23 +150,26 @@ Use the `close-icon` prop to customize the close button [Icon](/docs/components/
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   title: 'Modal with close button'
   closeIcon: 'i-lucide-arrow-right'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-48" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-48"}
@@ -180,23 +193,26 @@ Use the `transition` prop to control whether the Modal is animated or not. Defau
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   transition: false
   title: 'Modal without transition'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-48" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-48"}
@@ -208,23 +224,26 @@ Use the `overlay` prop to control whether the Modal has an overlay or not. Defau
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   overlay: false
   title: 'Modal without overlay'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-48" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-48"}
@@ -240,23 +259,26 @@ When `modal` is set to `false`, the overlay is automatically disabled and outsid
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   modal: false
   title: 'Modal interactive'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-48" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-48"}
@@ -276,24 +298,27 @@ You can combine `modal: false` with `dismissible: false` to make the Modal's bac
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   dismissible: false
   modal: true
   title: 'Modal non-dismissible'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-48" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-48"}
@@ -309,24 +334,27 @@ As the overlay is needed for scrolling, `modal: false` is not compatible and `ov
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   scrollable: true
   overlay: true
   title: 'Modal scrollable'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-full" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-screen"}
@@ -342,24 +370,27 @@ Use the `fullscreen` prop to make the Modal fullscreen.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-  - fullscreen
-props:
+
+- title
+- fullscreen
+  props:
   fullscreen: true
   title: 'Modal fullscreen'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-full" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-full"}
@@ -371,23 +402,26 @@ Use the `unmount-on-hide` prop to prevent the Modal's content from being unmount
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   unmountOnHide: false
   title: 'Modal'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-48" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-48"}
@@ -409,8 +443,10 @@ You can control the open state by using the `default-open` prop or the `v-model:
 
 ::component-example
 ---
+
 name: 'modal-open-example'
 ---
+
 ::
 
 ::note
@@ -426,17 +462,19 @@ This lets you move the trigger outside of the Modal or remove it entirely.
 You can use the [`useOverlay`](/docs/composables/use-overlay) composable to open a Modal programmatically.
 
 ::warning
-Make sure to wrap your app with the [`App`](/docs/components/app) component which uses the [`OverlayProvider`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/OverlayProvider.vue) component.
+Make sure to wrap your app with the [`App`](/docs/components/app) component which uses the [`OverlayProvider`](https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/OverlayProvider.vue) component.
 ::
 
 First, create a modal component that will be opened programmatically:
 
 ::component-example
 ---
+
 prettier: true
 name: 'modal-example'
 preview: false
 ---
+
 ::
 
 ::note
@@ -447,8 +485,10 @@ Then, use it in your app:
 
 ::component-example
 ---
+
 name: 'modal-programmatic-example'
 ---
+
 ::
 
 ::tip
@@ -461,8 +501,10 @@ You can nest modals within each other.
 
 ::component-example
 ---
+
 name: 'modal-nested-example'
 ---
+
 ::
 
 ### With footer slot
@@ -471,8 +513,10 @@ Use the `#footer` slot to add content after the Modal's body.
 
 ::component-example
 ---
+
 name: 'modal-footer-slot-example'
 ---
+
 ::
 
 ### With command palette
@@ -481,9 +525,11 @@ You can use a [CommandPalette](/docs/components/command-palette) component insid
 
 ::component-example
 ---
+
 collapse: true
 name: 'modal-command-palette-example'
 ---
+
 ::
 
 ::note

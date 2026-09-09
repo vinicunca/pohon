@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from 'pohon-ui'
 
 const state = ref<'approval-requested' | 'output-available' | 'output-denied'>('approval-requested')
 const result = ref('')
@@ -64,7 +64,7 @@ onUnmounted(() => {
       <pre language="bash" v-text="output" />
     </UChatTool>
 
-    <UButton
+    <PButton
       v-if="state !== 'approval-requested'"
       label="Reset"
       color="neutral"

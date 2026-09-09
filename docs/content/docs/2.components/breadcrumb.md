@@ -6,7 +6,7 @@ keywords:
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Breadcrumb.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Breadcrumb.vue
 ---
 
 ## Usage
@@ -15,25 +15,29 @@ Use the Breadcrumb component to show the current page's location in your site's 
 
 ::component-code
 ---
+
 collapse: true
 ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - BreadcrumbItem[]
-props:
+
+- items
+  external:
+- items
+  externalTypes:
+- BreadcrumbItem[]
+  props:
   items:
-    - label: 'Docs'
-      icon: 'i-lucide-book-open'
-      to: '/docs'
-    - label: 'Components'
-      icon: 'i-lucide-box'
-      to: '/docs/components'
-    - label: 'Breadcrumb'
-      icon: 'i-lucide-link'
-      to: '/docs/components/breadcrumb'
+  - label: 'Docs'
+    icon: 'i-lucide-book-open'
+    to: '/docs'
+  - label: 'Components'
+    icon: 'i-lucide-box'
+    to: '/docs/components'
+  - label: 'Breadcrumb'
+    icon: 'i-lucide-link'
+    to: '/docs/components/breadcrumb'
+
 ---
+
 ::
 
 ### Items
@@ -51,24 +55,28 @@ You can pass any property from the [Link](/docs/components/link#props) component
 
 ::component-code
 ---
+
 ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - BreadcrumbItem[]
-props:
+
+- items
+  external:
+- items
+  externalTypes:
+- BreadcrumbItem[]
+  props:
   items:
-    - label: 'Docs'
-      icon: 'i-lucide-book-open'
-      to: '/docs'
-    - label: 'Components'
-      icon: 'i-lucide-box'
-      to: '/docs/components'
-    - label: 'Breadcrumb'
-      icon: 'i-lucide-link'
-      to: '/docs/components/breadcrumb'
+  - label: 'Docs'
+    icon: 'i-lucide-book-open'
+    to: '/docs'
+  - label: 'Components'
+    icon: 'i-lucide-box'
+    to: '/docs/components'
+  - label: 'Breadcrumb'
+    icon: 'i-lucide-link'
+    to: '/docs/components/breadcrumb'
+
 ---
+
 ::
 
 ::note
@@ -81,25 +89,29 @@ Use the `separator-icon` prop to customize the [Icon](/docs/components/icon) bet
 
 ::component-code
 ---
+
 ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - BreadcrumbItem[]
-props:
+
+- items
+  external:
+- items
+  externalTypes:
+- BreadcrumbItem[]
+  props:
   separatorIcon: 'i-lucide-arrow-right'
   items:
-    - label: 'Docs'
-      icon: 'i-lucide-book-open'
-      to: '/docs'
-    - label: 'Components'
-      icon: 'i-lucide-box'
-      to: '/docs/components'
-    - label: 'Breadcrumb'
-      icon: 'i-lucide-link'
-      to: '/docs/components/breadcrumb'
+  - label: 'Docs'
+    icon: 'i-lucide-book-open'
+    to: '/docs'
+  - label: 'Components'
+    icon: 'i-lucide-box'
+    to: '/docs/components'
+  - label: 'Breadcrumb'
+    icon: 'i-lucide-link'
+    to: '/docs/components/breadcrumb'
+
 ---
+
 ::
 
 ::framework-only
@@ -120,25 +132,29 @@ Use the `color` prop to change the color of the active Breadcrumb.
 
 ::component-code
 ---
+
 ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - BreadcrumbItem[]
-props:
+
+- items
+  external:
+- items
+  externalTypes:
+- BreadcrumbItem[]
+  props:
   color: 'secondary'
   items:
-    - label: 'Docs'
-      icon: 'i-lucide-book-open'
-      to: '/docs'
-    - label: 'Components'
-      icon: 'i-lucide-box'
-      to: '/docs/components'
-    - label: 'Breadcrumb'
-      icon: 'i-lucide-link'
-      to: '/docs/components/breadcrumb'
+  - label: 'Docs'
+    icon: 'i-lucide-book-open'
+    to: '/docs'
+  - label: 'Components'
+    icon: 'i-lucide-box'
+    to: '/docs/components'
+  - label: 'Breadcrumb'
+    icon: 'i-lucide-link'
+    to: '/docs/components/breadcrumb'
+
 ---
+
 ::
 
 ## Examples

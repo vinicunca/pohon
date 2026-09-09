@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from '@nuxt/ui'
+import type { TableColumn } from 'pohon-ui'
 
 const UBadge = resolveComponent('UBadge')
 
@@ -114,7 +114,7 @@ const columns: TableColumn<Payment>[] = [{
       />
     </div>
 
-    <UTable
+    <PTable
       sticky
       :data="data"
       :columns="columns"

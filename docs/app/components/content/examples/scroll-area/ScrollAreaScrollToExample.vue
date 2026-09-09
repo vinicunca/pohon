@@ -42,15 +42,15 @@ function scrollToItem(index: number) {
     </UScrollArea>
 
     <UFieldGroup size="sm" class="px-4 py-3 border-t border-muted w-full">
-      <UButton icon="i-lucide-arrow-up-to-line" color="neutral" variant="outline" @click="scrollToTop">
+      <PButton icon="i-lucide-arrow-up-to-line" color="neutral" variant="outline" @click="scrollToTop">
         Top
-      </UButton>
-      <UButton icon="i-lucide-arrow-down-to-line" color="neutral" variant="outline" @click="scrollToBottom">
+      </PButton>
+      <PButton icon="i-lucide-arrow-down-to-line" color="neutral" variant="outline" @click="scrollToBottom">
         Bottom
-      </UButton>
-      <UButton icon="i-lucide-navigation" color="neutral" variant="outline" @click="scrollToItem(targetIndex || 500)">
+      </PButton>
+      <PButton icon="i-lucide-navigation" color="neutral" variant="outline" @click="scrollToItem(targetIndex || 500)">
         Go to {{ targetIndex || 500 }}
-      </UButton>
+      </PButton>
     </UFieldGroup>
   </div>
 </template>

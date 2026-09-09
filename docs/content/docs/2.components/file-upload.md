@@ -1,6 +1,6 @@
 ---
 title: FileUpload
-description: 'An input element to upload files.'
+description: "An input element to upload files."
 category: form
 keywords:
   - dropzone
@@ -9,7 +9,7 @@ keywords:
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FileUpload.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/FileUpload.vue
 ---
 
 ## Usage
@@ -18,15 +18,19 @@ Use the `v-model` directive to control the value of the FileUpload.
 
 ::component-code
 ---
+
 ignore:
-  - modelValue
-  - class
-external:
-  - modelValue
-props:
+
+- modelValue
+- class
+  external:
+- modelValue
+  props:
   modelValue: null
   class: 'w-96 min-h-48'
+
 ---
+
 ::
 
 ### Multiple
@@ -35,12 +39,16 @@ Use the `multiple` prop to allow multiple files to be selected.
 
 ::component-code
 ---
+
 ignore:
-  - class
-props:
+
+- class
+  props:
   multiple: true
   class: 'w-96 min-h-48'
+
 ---
+
 ::
 
 ### Dropzone
@@ -49,12 +57,16 @@ Use the `dropzone` prop to enable/disable the droppable area. Defaults to `true`
 
 ::component-code
 ---
+
 ignore:
-  - class
-props:
+
+- class
+  props:
   dropzone: false
   class: 'w-96 min-h-48'
+
 ---
+
 ::
 
 ### Interactive
@@ -67,12 +79,16 @@ This can be useful when adding a `Button` component in the `#actions` slot.
 
 ::component-code
 ---
+
 ignore:
-  - class
-props:
+
+- class
+  props:
   interactive: false
   class: 'w-96 min-h-48'
+
 ---
+
 ::
 
 ### Accept
@@ -81,13 +97,17 @@ Use the `accept` prop to specify the allowed file types for the input. Provide a
 
 ::component-code
 ---
+
 ignore:
-  - accept
-  - class
-props:
+
+- accept
+- class
+  props:
   accept: 'image/*'
   class: 'w-96 min-h-48'
+
 ---
+
 ::
 
 ### Label
@@ -96,13 +116,17 @@ Use the `label` prop to set the label of the FileUpload.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - class
-props:
+
+- class
+  props:
   label: 'Drop your image here'
   class: 'w-96 min-h-48'
+
 ---
+
 ::
 
 ### Description
@@ -111,15 +135,19 @@ Use the `description` prop to set the description of the FileUpload.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - label
-  - class
-props:
+
+- label
+- class
+  props:
   label: 'Drop your image here'
   description: 'SVG, PNG, JPG or GIF (max. 2MB)'
   class: 'w-96 min-h-48'
+
 ---
+
 ::
 
 ### Icon
@@ -128,17 +156,21 @@ Use the `icon` prop to set the icon of the FileUpload. Defaults to `i-lucide-upl
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - label
-  - description
-  - class
-props:
+
+- label
+- description
+- class
+  props:
   icon: 'i-lucide-image'
   label: 'Drop your image here'
   description: 'SVG, PNG, JPG or GIF (max. 2MB)'
   class: 'w-96 min-h-48'
+
 ---
+
 ::
 
 ::framework-only
@@ -159,18 +191,22 @@ Use the `color` prop to change the color of the FileUpload.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - label
-  - description
-  - class
-props:
+
+- label
+- description
+- class
+  props:
   color: neutral
   highlight: true
   label: 'Drop your image here'
   description: 'SVG, PNG, JPG or GIF (max. 2MB)'
   class: 'w-96 min-h-48'
+
 ---
+
 ::
 
 ::note
@@ -183,11 +219,15 @@ Use the `variant` prop to change the variant of the FileUpload.
 
 ::component-code
 ---
+
 ignore:
-  - class
-props:
+
+- class
+  props:
   variant: button
+
 ---
+
 ::
 
 ### Size
@@ -196,17 +236,21 @@ Use the `size` prop to change the size of the FileUpload.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - label
-  - description
-  - class
-props:
+
+- label
+- description
+- class
+  props:
   size: xl
   variant: area
   label: 'Drop your image here'
   description: 'SVG, PNG, JPG or GIF (max. 2MB)'
+
 ---
+
 ::
 
 ### Layout
@@ -219,22 +263,26 @@ This prop only works when `variant` is `area`.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - label
-  - description
-  - multiple
-  - class
-  - ui.base
-props:
+
+- label
+- description
+- multiple
+- class
+- ui.base
+  props:
   layout: list
   multiple: true
   label: 'Drop your images here'
   description: 'SVG, PNG, JPG or GIF (max. 2MB)'
   class: 'w-96'
   ui:
-    base: 'min-h-48'
+  base: 'min-h-48'
+
 ---
+
 ::
 
 ### Position
@@ -247,15 +295,17 @@ This prop only works when `variant` is `area` and when `layout` is `list`.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - label
-  - description
-  - multiple
-  - layout
-  - class
-  - ui.base
-props:
+
+- label
+- description
+- multiple
+- layout
+- class
+- ui.base
+  props:
   position: inside
   layout: list
   multiple: true
@@ -263,8 +313,10 @@ props:
   description: 'SVG, PNG, JPG or GIF (max. 2MB)'
   class: 'w-96'
   ui:
-    base: 'min-h-48'
+  base: 'min-h-48'
+
 ---
+
 ::
 
 ## Examples
@@ -275,10 +327,12 @@ You can use the FileUpload within a [Form](/docs/components/form) and [FormField
 
 ::component-example
 ---
+
 prettier: true
 collapse: true
 name: 'file-upload-form-validation-example'
 ---
+
 ::
 
 ### With default slot
@@ -287,10 +341,12 @@ You can use the default slot to make your own FileUpload component.
 
 ::component-example
 ---
+
 prettier: true
 collapse: true
 name: 'file-upload-default-slot-example'
 ---
+
 ::
 
 ### With files-bottom slot
@@ -299,10 +355,12 @@ You can use the `files-bottom` slot to add a [Button](/docs/components/button) u
 
 ::component-example
 ---
+
 prettier: true
 collapse: true
 name: 'file-upload-files-bottom-slot-example'
 ---
+
 ::
 
 ::note{to="#interactive"}
@@ -315,10 +373,12 @@ You can use the `files-top` slot to add a [Button](/docs/components/button) abov
 
 ::component-example
 ---
+
 prettier: true
 collapse: true
 name: 'file-upload-files-top-slot-example'
 ---
+
 ::
 
 ## API
@@ -343,10 +403,10 @@ This component also supports all native `<input>` HTML attributes.
 
 When accessing the component via a template ref, you can use the following:
 
-| Name | Type |
-| ---- | ---- |
-| `inputRef`{lang="ts-type"} | `Ref<HTMLInputElement \| null>`{lang="ts-type"} |
-| `dropzoneRef`{lang="ts-type"} | `Ref<HTMLDivElement \| null>`{lang="ts-type"} |
+| Name                          | Type                                            |
+| ----------------------------- | ----------------------------------------------- |
+| `inputRef`{lang="ts-type"}    | `Ref<HTMLInputElement \| null>`{lang="ts-type"} |
+| `dropzoneRef`{lang="ts-type"} | `Ref<HTMLDivElement \| null>`{lang="ts-type"}   |
 
 ## Theme
 

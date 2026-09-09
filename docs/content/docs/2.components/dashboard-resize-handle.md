@@ -1,11 +1,11 @@
 ---
 title: DashboardResizeHandle
-description: 'A handle to resize a sidebar or panel.'
+description: "A handle to resize a sidebar or panel."
 category: dashboard
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardResizeHandle.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/DashboardResizeHandle.vue
 ---
 
 ## Usage
@@ -44,8 +44,8 @@ Even though this component is automatically displayed when the `resizable` prop 
 ```vue [pages/index.vue]{9-15}
 <script setup lang="ts">
 definePageMeta({
-  layout: 'dashboard'
-})
+  layout: "dashboard",
+});
 </script>
 
 <template>

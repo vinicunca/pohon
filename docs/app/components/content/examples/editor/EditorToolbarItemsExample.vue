@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorToolbarItem } from '@nuxt/ui'
+import type { EditorToolbarItem } from 'pohon-ui'
 import { TextAlign } from '@tiptap/extension-text-align'
 
 const value = ref(`This toolbar showcases **all available formatting options** using built-in handlers. Try the different controls to see them in action!

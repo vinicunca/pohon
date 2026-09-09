@@ -5,10 +5,10 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon',
   title: page.value.title,
   description: page.value.description,
-  ogTitle: `${page.value.title} - Nuxt UI`,
+  ogTitle: `${page.value.title} - Pohon`,
   ogDescription: page.value.description
 })
 
@@ -57,7 +57,7 @@ if (import.meta.server) {
             </template>
 
             <template v-if="item.user" #footer>
-              <UButton
+              <PButton
                 :label="item.user.name"
                 :avatar="{
                   ...item.user.avatar,

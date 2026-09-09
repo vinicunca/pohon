@@ -37,7 +37,7 @@ export interface DashboardSearchProps<T extends CommandPaletteItem = CommandPale
    */
   shortcut?: string;
   /**
-   * Options for [useFuse](https://vueuse.org/integrations/useFuse) passed to the [CommandPalette](https://ui.nuxt.com/docs/components/command-palette).
+   * Options for [useFuse](https://vueuse.org/integrations/useFuse) passed to the [CommandPalette](https://pohon.vinicunca.dev/docs/components/command-palette).
    * @defaultValue {
       fuseOptions: {
         ignoreLocation: true,

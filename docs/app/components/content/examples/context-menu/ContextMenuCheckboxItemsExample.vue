@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ContextMenuItem } from '@nuxt/ui'
+import type { ContextMenuItem } from 'pohon-ui'
 
 const showSidebar = ref(true)
 const showToolbar = ref(false)

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { resolveComponent } from 'vue'
-import type { TableColumn } from '@nuxt/ui'
+import type { TableColumn } from 'pohon-ui'
 import { getGroupedRowModel } from '@tanstack/vue-table'
 import type { GroupingOptions } from '@tanstack/vue-table'
 
@@ -165,7 +165,7 @@ const grouping_options = ref<GroupingOptions>({
 </script>
 
 <template>
-  <UTable
+  <PTable
     :data="data"
     :columns="columns"
     :grouping="['account_id', 'status']"
@@ -182,7 +182,7 @@ const grouping_options = ref<GroupingOptions>({
           :style="{ width: `calc(${row.depth} * 1rem)` }"
         />
 
-        <UButton
+        <PButton
           variant="outline"
           color="neutral"
           class="mr-2"
@@ -203,5 +203,5 @@ const grouping_options = ref<GroupingOptions>({
         </UBadge>
       </div>
     </template>
-  </UTable>
+  </PTable>
 </template>

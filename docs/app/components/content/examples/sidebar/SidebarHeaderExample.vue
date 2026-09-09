@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem } from 'pohon-ui'
 
 const open = ref(true)
 
@@ -21,7 +21,7 @@ const items: NavigationMenuItem[] = [{
   <div class="flex flex-col flex-1">
     <UHeader toggle-side="left" :ui="{ container: 'px-4!' }">
       <template #toggle>
-        <UButton
+        <PButton
           icon="i-lucide-panel-left"
           color="neutral"
           variant="ghost"

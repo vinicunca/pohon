@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { StepperItem } from '@nuxt/ui'
+import type { StepperItem } from 'pohon-ui'
 
 const items: StepperItem[] = [
   {
@@ -30,21 +30,21 @@ const stepper = useTemplateRef('stepper')
     </UStepper>
 
     <div class="flex gap-2 justify-between mt-4">
-      <UButton
+      <PButton
         leading-icon="i-lucide-arrow-left"
         :disabled="!stepper?.hasPrev"
         @click="stepper?.prev()"
       >
         Prev
-      </UButton>
+      </PButton>
 
-      <UButton
+      <PButton
         trailing-icon="i-lucide-arrow-right"
         :disabled="!stepper?.hasNext"
         @click="stepper?.next()"
       >
         Next
-      </UButton>
+      </PButton>
     </div>
   </div>
 </template>

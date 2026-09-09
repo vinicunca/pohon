@@ -1,6 +1,6 @@
 ---
 title: ChatPromptSubmit
-description: 'A Button for submitting chat prompts with automatic status handling.'
+description: "A Button for submitting chat prompts with automatic status handling."
 category: chat
 links:
   - label: Button
@@ -8,7 +8,7 @@ links:
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPromptSubmit.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/ChatPromptSubmit.vue
 ---
 
 ## Usage
@@ -23,6 +23,7 @@ It extends the [Button](/docs/components/button) component, so you can pass any 
 :u-chat-prompt-submit
 
 #code
+
 ```vue
 <template>
   <UChatPrompt>
@@ -30,6 +31,7 @@ It extends the [Button](/docs/components/button) component, so you can pass any 
   </UChatPrompt>
 </template>
 ```
+
 ::
 
 ::note
@@ -46,26 +48,17 @@ When its status is `ready`{lang="ts-type"}, use the `color`, `variant` and `icon
 
 ::component-code
 ---
+
 prettier: true
 items:
-  color:
-    - primary
-    - secondary
-    - success
-    - warning
-    - error
-    - neutral
-  variant:
-    - solid
-    - outline
-    - soft
-    - subtle
-    - ghost
+color: - primary - secondary - success - warning - error - neutral
+variant: - solid - outline - soft - subtle - ghost
 props:
-  color: 'primary'
-  variant: 'solid'
-  icon: 'i-lucide-arrow-up'
+color: 'primary'
+variant: 'solid'
+icon: 'i-lucide-arrow-up'
 ---
+
 ::
 
 ::framework-only
@@ -94,29 +87,33 @@ The `stop` event is emitted when the user clicks on the Button.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - status
-items:
+
+- status
+  items:
   submittedColor:
-    - primary
-    - secondary
-    - success
-    - warning
-    - error
-    - neutral
-  submittedVariant:
-    - solid
-    - outline
-    - soft
-    - subtle
-    - ghost
-props:
-  submittedColor: 'neutral'
-  submittedVariant: 'subtle'
-  submittedIcon: 'i-lucide-square'
-  status: 'submitted'
+  - primary
+  - secondary
+  - success
+  - warning
+  - error
+  - neutral
+    submittedVariant:
+  - solid
+  - outline
+  - soft
+  - subtle
+  - ghost
+    props:
+    submittedColor: 'neutral'
+    submittedVariant: 'subtle'
+    submittedIcon: 'i-lucide-square'
+    status: 'submitted'
+
 ---
+
 ::
 
 ::framework-only
@@ -145,29 +142,33 @@ The `stop` event is emitted when the user clicks on the Button.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - status
-items:
+
+- status
+  items:
   streamingColor:
-    - primary
-    - secondary
-    - success
-    - warning
-    - error
-    - neutral
-  streamingVariant:
-    - solid
-    - outline
-    - soft
-    - subtle
-    - ghost
-props:
-  streamingColor: 'neutral'
-  streamingVariant: 'subtle'
-  streamingIcon: 'i-lucide-square'
-  status: 'streaming'
+  - primary
+  - secondary
+  - success
+  - warning
+  - error
+  - neutral
+    streamingVariant:
+  - solid
+  - outline
+  - soft
+  - subtle
+  - ghost
+    props:
+    streamingColor: 'neutral'
+    streamingVariant: 'subtle'
+    streamingIcon: 'i-lucide-square'
+    status: 'streaming'
+
 ---
+
 ::
 
 ::framework-only
@@ -196,29 +197,33 @@ The `reload` event is emitted when the user clicks on the Button.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - status
-items:
+
+- status
+  items:
   errorColor:
-    - primary
-    - secondary
-    - success
-    - warning
-    - error
-    - neutral
-  errorVariant:
-    - solid
-    - outline
-    - soft
-    - subtle
-    - ghost
-props:
-  errorColor: 'error'
-  errorVariant: 'soft'
-  errorIcon: 'i-lucide-rotate-ccw'
-  status: 'error'
+  - primary
+  - secondary
+  - success
+  - warning
+  - error
+  - neutral
+    errorVariant:
+  - solid
+  - outline
+  - soft
+  - subtle
+  - ghost
+    props:
+    errorColor: 'error'
+    errorVariant: 'soft'
+    errorIcon: 'i-lucide-rotate-ccw'
+    status: 'error'
+
 ---
+
 ::
 
 ::framework-only

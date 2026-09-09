@@ -2,10 +2,10 @@
 import { isTextUIPart } from 'ai'
 import type { UIMessage } from 'ai'
 import { useChat } from '@ai-sdk/vue'
-import { isPartStreaming } from '@nuxt/ui/utils/ai'
+import { isPartStreaming } from 'pohon-ui/utils/ai'
 import { Markdown } from '@comark/vue'
 import shiki from '@comark/vue/plugins/shiki'
-import type { DropdownMenuItem, NavigationMenuItem } from '@nuxt/ui'
+import type { DropdownMenuItem, NavigationMenuItem } from 'pohon-ui'
 
 const appConfig = useAppConfig()
 const studioIcons = useStudioIcons()
@@ -15,7 +15,7 @@ const input = ref('')
 const initialMessages: UIMessage[] = [{
   id: '1',
   role: 'user',
-  parts: [{ type: 'text', text: 'I want to build a dashboard with Nuxt UI. Where should I start?' }]
+  parts: [{ type: 'text', text: 'I want to build a dashboard with Pohon. Where should I start?' }]
 }, {
   id: '2',
   role: 'assistant',
@@ -69,10 +69,10 @@ const userItems: DropdownMenuItem[][] = [
 
 const historyItems: NavigationMenuItem[] = [
   { label: 'Today', type: 'label' },
-  { label: 'Building a dashboard with Nuxt UI', active: true },
+  { label: 'Building a dashboard with Pohon', active: true },
   { label: 'Theming buttons and badges' },
   { label: 'Yesterday', type: 'label' },
-  { label: 'Form validation with UForm' },
+  { label: 'Form validation with PForm' },
   { label: 'Sidebar layout questions' },
   { label: 'Last week', type: 'label' },
   { label: 'Migrating an app to v4' },
@@ -160,7 +160,7 @@ const ui = {
         >
           <template #item-trailing="{ item }">
             <UDropdownMenu v-if="item.type !== 'label'" :items="chatActions" :content="{ align: 'end' }">
-              <UButton
+              <PButton
                 as="div"
                 :icon="appConfig.ui.icons.ellipsis"
                 color="neutral"
@@ -182,7 +182,7 @@ const ui = {
           :content="{ align: 'center', collisionPadding: 12 }"
           :ui="{ content: collapsed ? 'w-48' : 'w-(--reka-dropdown-menu-trigger-width)' }"
         >
-          <UButton
+          <PButton
             :label="collapsed ? undefined : 'Benjamin Canac'"
             :avatar="{ src: 'https://github.com/benjamincanac.png', alt: 'Benjamin Canac' }"
             :trailing-icon="collapsed ? undefined : studioIcons.sort"
@@ -211,8 +211,8 @@ const ui = {
 
             <template #title>
               <UDropdownMenu :items="chatActions" :content="{ align: 'start' }">
-                <UButton
-                  label="Building a dashboard with Nuxt UI"
+                <PButton
+                  label="Building a dashboard with Pohon"
                   :trailing-icon="appConfig.ui.icons.chevronDown"
                   color="neutral"
                   variant="ghost"
@@ -224,7 +224,7 @@ const ui = {
 
             <template #right>
               <UTooltip text="Share chat">
-                <UButton :icon="studioIcons.share" color="neutral" variant="ghost" square aria-label="Share chat" />
+                <PButton :icon="studioIcons.share" color="neutral" variant="ghost" square aria-label="Share chat" />
               </UTooltip>
             </template>
           </UDashboardNavbar>
@@ -265,7 +265,7 @@ const ui = {
               :error="error"
               color="neutral"
               variant="subtle"
-              placeholder="Ask anything about Nuxt UI..."
+              placeholder="Ask anything about Pohon..."
               class="sticky bottom-0 rounded-b-none z-10"
               :ui="{ base: 'px-1.5' }"
               @submit="onSubmit"
@@ -273,7 +273,7 @@ const ui = {
               <template #footer>
                 <div class="flex items-center gap-1">
                   <UTooltip text="Attach file" :content="{ side: 'top' }">
-                    <UButton
+                    <PButton
                       :icon="studioIcons.paperclip"
                       color="neutral"
                       variant="ghost"

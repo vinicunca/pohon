@@ -133,7 +133,7 @@ onMounted(async () => {
       <template #description>
         <MDC :value="page.hero.description" unwrap="p" cache-key="figma-hero-description" />
       </template>
-      <!-- <img src="/figma/nuxt-ui-figma.png" alt="Screnshot of the Nuxt UI Figma design kit" class="w-full h-auto border border-default border-b-0"> -->
+      <!-- <img src="/figma/nuxt-ui-figma.png" alt="Screnshot of the Pohon Figma design kit" class="w-full h-auto border border-default border-b-0"> -->
       <div class="relative">
         <video
           ref="video"
@@ -144,7 +144,7 @@ onMounted(async () => {
           :class="{ grayscale: !played }"
         />
         <div v-if="!played" class="group cursor-pointer absolute inset-0 flex items-center justify-center backdrop-blur-xs" @click="video?.play(); played = true">
-          <UButton
+          <PButton
             :icon="studioIcons.play"
             size="xl"
             color="neutral"
@@ -156,7 +156,7 @@ onMounted(async () => {
             }"
           >
             Watch 1 min demo
-          </UButton>
+          </PButton>
         </div>
       </div>
 

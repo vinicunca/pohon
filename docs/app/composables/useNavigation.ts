@@ -1,6 +1,6 @@
 import type { ContentNavigationItem } from '@nuxt/content'
 import { findPageChildren, findPageBreadcrumb } from '@nuxt/content/utils'
-import { mapContentNavigation } from '@nuxt/ui/utils/content'
+import { mapContentNavigation } from 'pohon-ui/utils/content'
 
 const categories = {
   components: [{

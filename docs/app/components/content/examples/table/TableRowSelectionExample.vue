@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from '@nuxt/ui'
+import type { TableColumn } from 'pohon-ui'
 
 const UCheckbox = resolveComponent('UCheckbox')
 const UBadge = resolveComponent('UBadge')
@@ -109,7 +109,7 @@ const rowSelection = ref({ 1: true })
 
 <template>
   <div class="flex-1 w-full">
-    <UTable
+    <PTable
       ref="table"
       v-model:row-selection="rowSelection"
       :data="data"

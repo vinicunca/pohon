@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { refDebounced } from '@vueuse/core'
-import type { AvatarProps } from '@nuxt/ui'
+import type { AvatarProps } from 'pohon-ui'
 
 const searchTerm = ref('')
 const searchTermDebounced = refDebounced(searchTerm, 200)

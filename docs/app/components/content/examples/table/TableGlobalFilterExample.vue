@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from '@nuxt/ui'
+import type { TableColumn } from 'pohon-ui'
 
 const UBadge = resolveComponent('UBadge')
 
@@ -106,7 +106,7 @@ const globalFilter = ref('45')
       />
     </div>
 
-    <UTable
+    <PTable
       ref="table"
       v-model:global-filter="globalFilter"
       :data="data"

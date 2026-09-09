@@ -34,28 +34,28 @@ const { style } = useScrollShadow(toolbarRef, { orientation: 'horizontal' })
     :class="vertical ? 'flex flex-col gap-3' : 'flex items-center gap-x-1.5 min-w-0 overflow-x-auto p-1 -m-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden'"
     :style="style"
   >
-    <UFormField label="Preset" :ui="fieldUi">
+    <PFormField label="Preset" :ui="fieldUi">
       <ThemeStudioToolbarPreset :vertical="vertical" />
-    </UFormField>
+    </PFormField>
 
-    <UFormField label="Colors" :ui="fieldUi">
+    <PFormField label="Colors" :ui="fieldUi">
       <ThemeStudioToolbarColors :vertical="vertical" />
-    </UFormField>
+    </PFormField>
 
-    <UFormField label="Text" :ui="fieldUi">
+    <PFormField label="Text" :ui="fieldUi">
       <ThemeStudioToolbarFont :vertical="vertical" />
-    </UFormField>
+    </PFormField>
 
-    <UFormField label="Icons" :ui="fieldUi">
+    <PFormField label="Icons" :ui="fieldUi">
       <ThemeStudioToolbarIcons :vertical="vertical" />
-    </UFormField>
+    </PFormField>
 
-    <UFormField label="Radius" :ui="fieldUi">
+    <PFormField label="Radius" :ui="fieldUi">
       <ThemeStudioToolbarRadius :vertical="vertical" />
-    </UFormField>
+    </PFormField>
 
-    <UFormField label="Defaults" :ui="fieldUi">
+    <PFormField label="Defaults" :ui="fieldUi">
       <ThemeStudioToolbarDefaults :vertical="vertical" />
-    </UFormField>
+    </PFormField>
   </div>
 </template>

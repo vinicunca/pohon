@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TabsItem } from '@nuxt/ui'
+import type { TabsItem } from 'pohon-ui'
 
 const items = [
   {
@@ -32,16 +32,16 @@ const state = reactive({
         {{ item.description }}
       </p>
 
-      <UForm :state="state" class="flex flex-col gap-4">
-        <UFormField label="Name" name="name">
+      <PForm :state="state" class="flex flex-col gap-4">
+        <PFormField label="Name" name="name">
           <UInput v-model="state.name" class="w-full" />
-        </UFormField>
-        <UFormField label="Username" name="username">
+        </PFormField>
+        <PFormField label="Username" name="username">
           <UInput v-model="state.username" class="w-full" />
-        </UFormField>
+        </PFormField>
 
-        <UButton label="Save changes" type="submit" variant="soft" class="self-end" />
-      </UForm>
+        <PButton label="Save changes" type="submit" variant="soft" class="self-end" />
+      </PForm>
     </template>
 
     <template #password="{ item }">
@@ -49,19 +49,19 @@ const state = reactive({
         {{ item.description }}
       </p>
 
-      <UForm :state="state" class="flex flex-col gap-4">
-        <UFormField label="Current Password" name="current" required>
+      <PForm :state="state" class="flex flex-col gap-4">
+        <PFormField label="Current Password" name="current" required>
           <UInput v-model="state.currentPassword" type="password" required class="w-full" />
-        </UFormField>
-        <UFormField label="New Password" name="new" required>
+        </PFormField>
+        <PFormField label="New Password" name="new" required>
           <UInput v-model="state.newPassword" type="password" required class="w-full" />
-        </UFormField>
-        <UFormField label="Confirm Password" name="confirm" required>
+        </PFormField>
+        <PFormField label="Confirm Password" name="confirm" required>
           <UInput v-model="state.confirmPassword" type="password" required class="w-full" />
-        </UFormField>
+        </PFormField>
 
-        <UButton label="Change password" type="submit" variant="soft" class="self-end" />
-      </UForm>
+        <PButton label="Change password" type="submit" variant="soft" class="self-end" />
+      </PForm>
     </template>
   </UTabs>
 </template>

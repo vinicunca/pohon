@@ -64,7 +64,7 @@ if (import.meta.server) {
       }"
     >
       <template #links>
-        <UButton v-for="link of template.links" :key="link.label" color="neutral" variant="outline" v-bind="link" />
+        <PButton v-for="link of template.links" :key="link.label" color="neutral" variant="outline" v-bind="link" />
 
         <UDropdownMenu
           :items="template.open_links"
@@ -72,7 +72,7 @@ if (import.meta.server) {
           :modal="false"
           class="group"
         >
-          <UButton
+          <PButton
             color="neutral"
             variant="outline"
             icon="i-lucide-square-code"
@@ -93,7 +93,7 @@ if (import.meta.server) {
           :modal="false"
           class="group"
         >
-          <UButton
+          <PButton
             color="neutral"
             variant="outline"
             icon="i-lucide-cloud"

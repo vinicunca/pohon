@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DropdownMenuItem } from '@nuxt/ui'
+import type { DropdownMenuItem } from 'pohon-ui'
 
 const items: DropdownMenuItem[] = [
   {
@@ -29,10 +29,10 @@ const items: DropdownMenuItem[] = [
 
 <template>
   <UFieldGroup>
-    <UButton color="neutral" variant="subtle" label="Settings" />
+    <PButton color="neutral" variant="subtle" label="Settings" />
 
     <UDropdownMenu :items="items">
-      <UButton
+      <PButton
         color="neutral"
         variant="outline"
         icon="i-lucide-chevron-down"

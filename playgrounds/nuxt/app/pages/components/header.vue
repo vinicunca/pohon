@@ -14,7 +14,7 @@ const items = [{
 }, {
   label: 'Releases',
   icon: 'i-lucide-rocket',
-  to: 'https://github.com/nuxt/ui/releases',
+  to: 'https://github.com/vinicunca/pohon/releases',
   target: '_blank',
 }];
 </script>
@@ -39,7 +39,7 @@ const items = [{
         <PButton
           color="neutral"
           variant="ghost"
-          to="https://github.com/nuxt/ui"
+          to="https://github.com/vinicunca/pohon"
           target="_blank"
           icon="i-simple-icons-github"
           aria-label="GitHub"

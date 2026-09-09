@@ -1,6 +1,6 @@
 <script setup lang="ts">
 /** Rolls a random theme, the die tumbling through faces as it goes. */
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from 'pohon-ui'
 
 const props = withDefaults(defineProps<ButtonProps & {
   /** A full-width labelled row, for the mobile menu where the other controls stack. */
@@ -77,7 +77,7 @@ if (!props.vertical) {
 
 <template>
   <UTooltip text="Random theme" :disabled="vertical" :kbds="['r']">
-    <UButton
+    <PButton
       :icon="diceFace"
       :label="vertical ? 'Random theme' : undefined"
       color="neutral"
@@ -137,7 +137,7 @@ if (!props.vertical) {
   100% { transform: scale(1); }
 }
 
-/* the icon span renders inside UButton, scoped rules need :deep() */
+/* the icon span renders inside PButton, scoped rules need :deep() */
 :deep(.dice-rolling) {
   animation: dice-roll 675ms linear forwards;
 }

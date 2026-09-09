@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ListboxItem } from '@nuxt/ui'
+import type { ListboxItem } from 'pohon-ui'
 
 const items: ListboxItem[] = [
   { label: 'France', icon: 'i-lucide-map-pin', value: 'FR' },
@@ -44,14 +44,14 @@ function removeSelected() {
     </div>
 
     <div class="flex flex-col items-center justify-center gap-1">
-      <UButton
+      <PButton
         icon="i-lucide-chevron-right"
         color="neutral"
         variant="outline"
         :disabled="!sourceSelection.length"
         @click="transferSelected"
       />
-      <UButton
+      <PButton
         icon="i-lucide-chevron-left"
         color="neutral"
         variant="outline"

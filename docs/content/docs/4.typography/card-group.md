@@ -1,12 +1,12 @@
 ---
 title: ProseCardGroup
-description: 'Organize multiple cards in responsive grid layouts for better content presentation.'
+description: "Organize multiple cards in responsive grid layouts for better content presentation."
 category: components
 navigation.title: CardGroup
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CardGroup.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/prose/CardGroup.vue
 ---
 
 ## Usage
@@ -19,47 +19,55 @@ Wrap your `card` components with the `card-group` component to group them togeth
 
 ::card
 ---
+
 title: Dashboard
 icon: i-simple-icons-github
-to: https://github.com/nuxt-ui-templates/dashboard
+to: https://github.com/vinicunca/pohon-ui-templates/dashboard
 target: _blank
 ---
+
 A dashboard with multi-column layout.
 ::
 
 ::card
 ---
+
 title: SaaS
 icon: i-simple-icons-github
-to: https://github.com/nuxt-ui-templates/saas
+to: https://github.com/vinicunca/pohon-ui-templates/saas
 target: _blank
 ---
+
 A template with landing, pricing, docs and blog.
 ::
 
 ::card
 ---
+
 title: Docs
 icon: i-simple-icons-github
-to: https://github.com/nuxt-ui-templates/docs
+to: https://github.com/vinicunca/pohon-ui-templates/docs
 target: _blank
 ---
+
 A documentation with `@nuxt/content`.
 ::
 
 ::card
 ---
+
 title: Landing
 icon: i-simple-icons-github
-to: https://github.com/nuxt-ui-templates/landing
+to: https://github.com/vinicunca/pohon-ui-templates/landing
 target: _blank
 ---
+
 A landing page you can use as starting point.
 ::
 
 :::
 
-#code
+# code
 
 ```mdc
 ::card-group
@@ -68,7 +76,7 @@ A landing page you can use as starting point.
 ---
 title: Dashboard
 icon: i-simple-icons-github
-to: https://github.com/nuxt-ui-templates/dashboard
+to: https://github.com/vinicunca/pohon-ui-templates/dashboard
 target: _blank
 ---
 A dashboard with multi-column layout.
@@ -78,7 +86,7 @@ A dashboard with multi-column layout.
 ---
 title: SaaS
 icon: i-simple-icons-github
-to: https://github.com/nuxt-ui-templates/saas
+to: https://github.com/vinicunca/pohon-ui-templates/saas
 target: _blank
 ---
 A template with landing, pricing, docs and blog.
@@ -88,7 +96,7 @@ A template with landing, pricing, docs and blog.
 ---
 title: Docs
 icon: i-simple-icons-github
-to: https://github.com/nuxt-ui-templates/docs
+to: https://github.com/vinicunca/pohon-ui-templates/docs
 target: _blank
 ---
 A documentation with `@nuxt/content`.
@@ -98,7 +106,7 @@ A documentation with `@nuxt/content`.
 ---
 title: Landing
 icon: i-simple-icons-github
-to: https://github.com/nuxt-ui-templates/landing
+to: https://github.com/vinicunca/pohon-ui-templates/landing
 target: _blank
 ---
 A landing page you can use as starting point.

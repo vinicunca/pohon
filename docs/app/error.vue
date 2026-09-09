@@ -47,13 +47,13 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon',
   title: String(props.error.statusCode)
 })
 
 if (import.meta.server) {
   useSeoMeta({
-    ogSiteName: 'Nuxt UI',
+    ogSiteName: 'Pohon',
     twitterCard: 'summary_large_image'
   })
 }
@@ -66,7 +66,7 @@ provide('navigation', rootNavigation)
 </script>
 
 <template>
-  <UApp>
+  <PApp>
     <NuxtLoadingIndicator color="var(--ui-primary)" :height="2" />
 
     <div class="flex">
@@ -86,5 +86,5 @@ provide('navigation', rootNavigation)
         <Search :navigation="navigationByFramework" />
       </ClientOnly>
     </div>
-  </UApp>
+  </PApp>
 </template>

@@ -52,7 +52,7 @@ const actions = [
     <PChatMessage
       id="2"
       role="assistant"
-      :parts="[{ type: 'text', text: 'Sure! First, install the package with `npx nuxi@latest module add ui`. Then make sure Tailwind CSS v4 is set up in your project.' }]"
+      :parts="[{ type: 'text', text: 'Sure! First, install the package with `npx nuxi@latest module add ui`. Then make sure UnoCSS v4 is set up in your project.' }]"
       icon="i-lucide-bot"
       :actions="actions"
       :compact="compact"

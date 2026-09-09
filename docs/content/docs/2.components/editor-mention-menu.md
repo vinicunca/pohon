@@ -5,7 +5,7 @@ category: editor
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorMentionMenu.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/EditorMentionMenu.vue
 ---
 
 ## Usage
@@ -22,11 +22,13 @@ It must be used inside an [Editor](/docs/components/editor) component's default 
 
 ::component-example
 ---
+
 elevated: true
 collapse: true
 name: 'editor-mention-menu-example'
 class: 'p-8'
 ---
+
 ::
 
 ::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/extensions/nodes/mention" target="_blank"}
@@ -45,11 +47,13 @@ Use the `items` prop as an array of objects with the following properties:
 
 ::component-example
 ---
+
 elevated: true
 collapse: true
 name: 'editor-mention-menu-items-example'
 class: 'p-8'
 ---
+
 ::
 
 ::note
@@ -74,11 +78,21 @@ You can use multiple `EditorMentionMenu` components on the same editor with diff
 ```vue
 <template>
   <UEditor v-slot="{ editor }">
-    <UEditorMentionMenu :editor="editor" :items="users" plugin-key="mentionMenu" />
-    <UEditorMentionMenu :editor="editor" :items="tags" char="#" plugin-key="tagMenu" />
+    <UEditorMentionMenu
+      :editor="editor"
+      :items="users"
+      plugin-key="mentionMenu"
+    />
+    <UEditorMentionMenu
+      :editor="editor"
+      :items="tags"
+      char="#"
+      plugin-key="tagMenu"
+    />
   </UEditor>
 </template>
 ```
+
 ::
 
 ### Suggestion :badge{label="4.7+" class="align-text-top"}
@@ -95,7 +109,7 @@ This is useful when the trigger character should open directly after other chara
       :items="items"
       char="#"
       :suggestion="{
-        allowedPrefixes: null
+        allowedPrefixes: null,
       }"
     />
   </UEditor>
@@ -114,7 +128,7 @@ Use the `options` prop to customize the positioning behavior using [Floating UI 
       :items="items"
       :options="{
         placement: 'bottom-start',
-        offset: 4
+        offset: 4,
       }"
     />
   </UEditor>
@@ -129,11 +143,13 @@ You can set the `ignore-filter` prop to `true` to disable the internal search an
 
 ::component-example
 ---
+
 elevated: true
 collapse: true
 name: 'editor-mention-menu-ignore-filter-example'
 class: 'p-8'
 ---
+
 ::
 
 ::note

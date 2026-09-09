@@ -1,11 +1,11 @@
 ---
 title: PageCard
-description: 'A pre-styled card component that displays a title, description and optional link.'
+description: "A pre-styled card component that displays a title, description and optional link."
 category: page
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageCard.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/PageCard.vue
 ---
 
 ## Usage
@@ -16,13 +16,14 @@ The PageCard component provides a flexible way to display content in a card with
 
 ::u-page-card
 ---
-title: 'Tailwind CSS'
-description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+
+title: 'UnoCSS'
+description: 'Pohon integrates with latest UnoCSS, bringing significant improvements.'
 icon: 'i-simple-icons-tailwindcss'
 class: 'w-96'
 ---
 
-:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="UnoCSS" class="w-full"}
 ::
 
 ::
@@ -37,12 +38,16 @@ Use the `title` prop to set the title of the card.
 
 ::component-code
 ---
+
 hide:
-  - class
-props:
-  title: 'Tailwind CSS'
+
+- class
+  props:
+  title: 'UnoCSS'
   class: 'w-96'
+
 ---
+
 ::
 
 ### Description
@@ -51,16 +56,20 @@ Use the `description` prop to set the description of the card.
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-props:
-  title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+
+- class
+  ignore:
+- title
+  props:
+  title: 'UnoCSS'
+  description: 'Pohon integrates with latest UnoCSS, bringing significant improvements.'
   class: 'w-96'
+
 ---
+
 ::
 
 ### Icon
@@ -69,18 +78,22 @@ Use the `icon` prop to set the icon of the card.
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-  - description
-props:
-  title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+
+- class
+  ignore:
+- title
+- description
+  props:
+  title: 'UnoCSS'
+  description: 'Pohon integrates with latest UnoCSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   class: 'w-96'
+
 ---
+
 ::
 
 ### Link
@@ -89,22 +102,26 @@ You can pass any property from the [`<NuxtLink>`](https://nuxt.com/docs/api/comp
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-  - description
-  - icon
-  - target
-props:
-  title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+
+- class
+  ignore:
+- title
+- description
+- icon
+- target
+  props:
+  title: 'UnoCSS'
+  description: 'Pohon integrates with latest UnoCSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   to: 'https://tailwindcss.com/blog/tailwindcss-v4'
   target: _blank
   class: 'w-96'
+
 ---
+
 ::
 
 ### Variant
@@ -113,24 +130,28 @@ Use the `variant` prop to change the style of the card.
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-  - description
-  - icon
-  - to
-  - target
-props:
-  title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+
+- class
+  ignore:
+- title
+- description
+- icon
+- to
+- target
+  props:
+  title: 'UnoCSS'
+  description: 'Pohon integrates with latest UnoCSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   to: 'https://tailwindcss.com/blog/tailwindcss-v4'
   target: _blank
   variant: soft
   class: 'w-96'
+
 ---
+
 ::
 
 ::tip
@@ -143,23 +164,26 @@ Use the `orientation` prop to change the orientation with the default slot. Defa
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-  - description
-  - icon
-props:
-  title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+
+- title
+- description
+- icon
+  props:
+  title: 'UnoCSS'
+  description: 'Pohon integrates with latest UnoCSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   orientation: horizontal
-slots:
+  slots:
   default: |
 
-    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
+  <img src="/tailwindcss-v4.svg" alt="UnoCSS" class="w-full" />
+
 ---
 
-:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="UnoCSS" class="w-full"}
 ::
 
 ### Reverse
@@ -168,24 +192,27 @@ Use the `reverse` prop to reverse the orientation of the default slot.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-  - description
-  - icon
-props:
-  title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+
+- title
+- description
+- icon
+  props:
+  title: 'UnoCSS'
+  description: 'Pohon integrates with latest UnoCSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   orientation: horizontal
   reverse: true
-slots:
+  slots:
   default: |
 
-    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
+  <img src="/tailwindcss-v4.svg" alt="UnoCSS" class="w-full" />
+
 ---
 
-:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="UnoCSS" class="w-full"}
 ::
 
 ### Highlight
@@ -194,28 +221,31 @@ Use the `highlight` and `highlight-color` props to display a highlighted border 
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-  - description
-  - icon
-  - orientation
-props:
-  title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+
+- class
+  ignore:
+- title
+- description
+- icon
+- orientation
+  props:
+  title: 'UnoCSS'
+  description: 'Pohon integrates with latest UnoCSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   orientation: horizontal
   highlight: true
   highlightColor: 'primary'
-slots:
+  slots:
   default: |
 
-    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
+  <img src="/tailwindcss-v4.svg" alt="UnoCSS" class="w-full" />
+
 ---
 
-:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="UnoCSS" class="w-full"}
 ::
 
 ### Spotlight
@@ -228,28 +258,31 @@ The spotlight effect will take over hover effects when using a `to` prop. It's b
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-  - description
-  - icon
-  - orientation
-props:
-  title: 'Tailwind CSS'
-  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
+
+- class
+  ignore:
+- title
+- description
+- icon
+- orientation
+  props:
+  title: 'UnoCSS'
+  description: 'Pohon integrates with latest UnoCSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   orientation: horizontal
   spotlight: true
   spotlightColor: 'primary'
-slots:
+  slots:
   default: |
 
-    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
+  <img src="/tailwindcss-v4.svg" alt="UnoCSS" class="w-full" />
+
 ---
 
-:img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
+:img{src="/tailwindcss-v4.svg" alt="UnoCSS" class="w-full"}
 ::
 
 ::tip
@@ -257,9 +290,13 @@ You can also customize the color and size by using the `--spotlight-color` and `
 
 ```vue
 <template>
-  <UPageCard spotlight class="[--spotlight-color:var(--ui-error)] [--spotlight-size:200px]" />
+  <UPageCard
+    spotlight
+    class="[--spotlight-color:var(--ui-error)] [--spotlight-size:200px]"
+  />
 </template>
 ```
+
 ::
 
 ## Examples
@@ -270,8 +307,10 @@ Use the [User](/docs/components/user) component in the `header` or `footer` slot
 
 ::component-example
 ---
+
 name: 'page-card-testimonial-example'
 ---
+
 ::
 
 ::tip{to="/docs/components/page-columns"}

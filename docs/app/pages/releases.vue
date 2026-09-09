@@ -5,10 +5,10 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon',
   title: page.value.title,
   description: page.value.description,
-  ogTitle: `${page.value.title} - Nuxt UI`,
+  ogTitle: `${page.value.title} - Pohon`,
   ogDescription: page.value.description
 })
 
@@ -21,7 +21,7 @@ if (import.meta.server) {
   })
 }
 
-const { data: versions } = await useFetch('https://ungh.cc/repos/nuxt/ui/releases', {
+const { data: versions } = await useFetch('https://ungh.cc/repos/pohon-ui/releases', {
   transform: (data: {
     releases: {
       name?: string

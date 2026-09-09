@@ -5,8 +5,8 @@ const appConfig = useAppConfig()
 <template>
   <UBanner
     id="nuxt-ui-v4"
-    title="Nuxt UI v4 is officially released!"
-    to="https://github.com/nuxt/ui/releases/tag/v4.0.0"
+    title="Pohon v4 is officially released!"
+    to="https://github.com/vinicunca/pohon/releases/tag/v4.0.0"
     icon="i-lucide-rocket"
     close
     :actions="[{

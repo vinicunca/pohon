@@ -3,7 +3,7 @@ const { icon, icons } = useTheme()
 </script>
 
 <template>
-  <UFormField label="Icons preset">
+  <PFormField label="Icons preset">
     <USelect
       v-model="icon"
       color="neutral"
@@ -11,5 +11,5 @@ const { icon, icons } = useTheme()
       :items="icons"
       class="w-50"
     />
-  </UFormField>
+  </PFormField>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TableColumn } from '@nuxt/ui'
+import type { TableColumn } from 'pohon-ui'
 import { useSortable } from '@vueuse/integrations/useSortable'
 
 type Payment = {
@@ -74,7 +74,7 @@ useSortable('.my-table-tbody', data, {
 </script>
 
 <template>
-  <UTable
+  <PTable
     ref="table"
     :data="data"
     :columns="columns"

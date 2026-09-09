@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { upperFirst } from 'scule'
-import type { DropdownMenuItem } from '@nuxt/ui'
+import type { DropdownMenuItem } from 'pohon-ui'
 import type { ThemeDoc } from '../../utils/theme/engine/types'
 import { DEFAULT_PRESET_ID } from '../../utils/theme/engine/types'
 import { studioIcons as stockIcons } from '../../utils/theme/icons'
@@ -229,7 +229,7 @@ watch(open, (isOpen) => {
     :ui="{ content: 'w-56 min-w-36 max-h-98', label: 'text-xs' }"
   >
     <UTooltip :text="name" ignore-non-keyboard-focus>
-      <UButton
+      <PButton
         :icon="triggerIcon"
         color="neutral"
         variant="ghost"

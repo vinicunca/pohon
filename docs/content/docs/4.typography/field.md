@@ -1,12 +1,12 @@
 ---
 title: ProseField
-description: 'Document API parameters, props, and configuration options clearly.'
+description: "Document API parameters, props, and configuration options clearly."
 category: components
 navigation.title: Field
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Field.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/prose/Field.vue
 ---
 
 ## Usage

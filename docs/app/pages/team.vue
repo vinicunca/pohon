@@ -5,10 +5,10 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon',
   title: page.value.title,
   description: page.value.description,
-  ogTitle: `${page.value.title} - Nuxt UI`,
+  ogTitle: `${page.value.title} - Pohon`,
   ogDescription: page.value.description
 })
 
@@ -86,7 +86,7 @@ const icons = computed<Record<string, string>>(() => ({
           </template>
 
           <div class="flex items-center justify-center gap-1">
-            <UButton
+            <PButton
               v-for="(link, key) in user.socialAccounts"
               :key="key"
               color="neutral"
@@ -97,7 +97,7 @@ const icons = computed<Record<string, string>>(() => ({
               target="_blank"
               size="sm"
             />
-            <UButton
+            <PButton
               :to="`https://github.com/${user.login}`"
               color="neutral"
               variant="link"
@@ -105,7 +105,7 @@ const icons = computed<Record<string, string>>(() => ({
               :icon="icons.github"
               target="_blank"
             />
-            <UButton
+            <PButton
               v-if="user.websiteUrl"
               :to="user.websiteUrl"
               color="neutral"
@@ -116,7 +116,7 @@ const icons = computed<Record<string, string>>(() => ({
             />
           </div>
           <div v-if="user.sponsorsListing" class="flex items-center justify-center">
-            <UButton
+            <PButton
               :to="user.sponsorsListing"
               target="_blank"
               color="neutral"
@@ -156,7 +156,7 @@ const icons = computed<Record<string, string>>(() => ({
           </template>
 
           <div class="flex items-center justify-center gap-1">
-            <UButton
+            <PButton
               :to="`https://github.com/${contributor.username}`"
               color="neutral"
               variant="link"

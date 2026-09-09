@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { upperFirst } from 'scule'
-import type { DropdownMenuItem } from '@nuxt/ui'
-import { mapEditorItems } from '@nuxt/ui/utils/editor'
+import type { DropdownMenuItem } from 'pohon-ui'
+import { mapEditorItems } from 'pohon-ui/utils/editor'
 import type { Editor, JSONContent } from '@tiptap/vue-3'
 
 const value = ref(`Hover over the left side to see both drag handle and menu button.
@@ -101,7 +101,7 @@ const items = (editor: Editor): DropdownMenuItem[][] => {
         :ui="{ content: 'w-48', label: 'text-xs' }"
         @update:open="editor.chain().setMeta('lockDragHandle', $event).run()"
       >
-        <UButton
+        <PButton
           icon="i-lucide-grip-vertical"
           color="neutral"
           variant="ghost"

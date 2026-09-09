@@ -1,12 +1,12 @@
 title: Community
-description: Explore amazing projects built around Nuxt UI by the community.
+description: Explore amazing projects built around Pohon by the community.
 navigation: false
 hero:
   title: Community
-  description: Explore amazing projects built around Nuxt UI by the community.
+  description: Explore amazing projects built around Pohon by the community.
 items:
   - label: 'Compodium'
-    description: 'Preview, customize, and generate Nuxt UI component code directly within Nuxt DevTools for faster development.'
+    description: 'Preview, customize, and generate Pohon component code directly within Nuxt DevTools for faster development.'
     avatar:
       src: 'https://compodium.dev/favicon.svg'
       ui:
@@ -20,7 +20,7 @@ items:
       avatar:
         src: 'https://github.com/romhml.png'
   - label: 'Raycast Extension'
-    description: 'Quickly search, browse, and copy Nuxt UI component code snippets without leaving your editor.'
+    description: 'Quickly search, browse, and copy Pohon component code snippets without leaving your editor.'
     avatar:
       src: 'https://github.com/raycast.png'
     to: 'https://www.raycast.com/HugoRCD/nuxt'
@@ -32,7 +32,7 @@ items:
       avatar:
         src: 'https://github.com/HugoRCD.png'
   - label: 'Figma to Code'
-    description: 'Transform your Figma designs into production-ready Nuxt UI components with one click.'
+    description: 'Transform your Figma designs into production-ready Pohon components with one click.'
     avatar:
       icon: 'i-logos-figma'
     to: 'https://github.com/Justineo/tempad-dev-plugin-nuxt-ui'
@@ -44,7 +44,7 @@ items:
       avatar:
         src: 'https://github.com/Justineo.png'
   - label: 'Nuxt Auto Form'
-    description: 'Auto-generate Nuxt UI forms from your Zod 4 schemas with zero boilerplate.'
+    description: 'Auto-generate Pohon forms from your Zod 4 schemas with zero boilerplate.'
     avatar:
       src: 'https://nuxt-auto-form.norbiros.dev/logo.png'
       ui:
@@ -58,7 +58,7 @@ items:
       avatar:
         src: 'https://github.com/Norbiros.png'
   - label: 'Nuxt Charts'
-    description: 'Build interactive, responsive charts and data visualizations seamlessly integrated with Nuxt UI.'
+    description: 'Build interactive, responsive charts and data visualizations seamlessly integrated with Pohon.'
     avatar:
       src: 'https://nuxtcharts.com/favicons/favicon-96x96.png'
       ui:
@@ -72,7 +72,7 @@ items:
       avatar:
         src: 'https://github.com/dennisadriaans.png'
   - label: 'Nuxt QRCode'
-    description: 'Generate and read QR codes with Nuxt, a perfect addition to your Nuxt UI projects.'
+    description: 'Generate and read QR codes with Nuxt, a perfect addition to your Pohon projects.'
     avatar:
       src: 'https://qrcode.s94.dev/favicon.svg'
       ui:
@@ -86,7 +86,7 @@ items:
       avatar:
         src: 'https://github.com/sandros94.png'
   - label: 'UnoCSS Preset'
-    description: 'The preset that makes using UnoCSS with Nuxt UI effortless.'
+    description: 'The preset that makes using UnoCSS with Pohon effortless.'
     avatar:
       src: 'https://unocss-preset-nuxt-ui.netlify.app/logo.svg'
       ui:
@@ -100,7 +100,7 @@ items:
       avatar:
         src: 'https://github.com/lehuuphuc.png'
   - label: 'json-render'
-    description: 'Pre-built Nuxt UI components for json-render that render AI-generated interfaces from your LLM in real time.'
+    description: 'Pre-built Pohon components for json-render that render AI-generated interfaces from your LLM in real time.'
     avatar:
       src: 'https://json-render.dev/favicon.ico'
     to: 'https://json-render-nuxt-ui.brainchimps.com'

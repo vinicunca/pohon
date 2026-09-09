@@ -1,12 +1,12 @@
 ---
 title: ProseTabs
-description: 'Organize related content in interactive tabbed interfaces.'
+description: "Organize related content in interactive tabbed interfaces."
 category: components
 navigation.title: Tabs
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Tabs.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/prose/Tabs.vue
 ---
 
 ## Usage
@@ -79,9 +79,13 @@ Lorem velit voluptate ex reprehenderit ullamco et culpa.
 
 ::component-theme{prose}
 ---
+
 extra:
-  - tabsItem
+
+- tabsItem
+
 ---
+
 ::
 
 ## Changelog

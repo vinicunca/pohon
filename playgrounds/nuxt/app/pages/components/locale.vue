@@ -5,7 +5,7 @@ const locale = ref('en');
 </script>
 
 <template>
-  <Navbar to="https://ui.nuxt.com/docs/getting-started/integrations/i18n" />
+  <Navbar to="https://pohon.vinicunca.dev/docs/getting-started/integrations/i18n" />
 
   <PLocaleSelect
     v-model="locale"

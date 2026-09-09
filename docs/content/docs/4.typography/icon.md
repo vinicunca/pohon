@@ -1,12 +1,12 @@
 ---
 title: ProseIcon
-description: 'Display icons from popular icon libraries to enhance your content.'
+description: "Display icons from popular icon libraries to enhance your content."
 category: components
 navigation.title: Icon
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Icon.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/prose/Icon.vue
 ---
 
 ## Usage

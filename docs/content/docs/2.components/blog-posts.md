@@ -1,11 +1,11 @@
 ---
 title: BlogPosts
-description: 'Display a list of blog posts in a responsive grid layout.'
+description: "Display a list of blog posts in a responsive grid layout."
 category: page
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/BlogPosts.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/BlogPosts.vue
 ---
 
 ## Usage
@@ -15,11 +15,7 @@ The BlogPosts component provides a flexible layout to display a list of [BlogPos
 ```vue {2,8}
 <template>
   <UBlogPosts>
-    <UBlogPost
-      v-for="(post, index) in posts"
-      :key="index"
-      v-bind="post"
-    />
+    <UBlogPost v-for="(post, index) in posts" :key="index" v-bind="post" />
   </UBlogPosts>
 </template>
 ```
@@ -30,28 +26,32 @@ Use the `posts` prop as an array of objects with the properties of the [BlogPost
 
 ::component-code
 ---
+
 collapse: true
 ignore:
-  - posts
-external:
-  - posts
-externalTypes:
-  - BlogPostProps[]
-props:
+
+- posts
+  external:
+- posts
+  externalTypes:
+- BlogPostProps[]
+  props:
   posts:
-    - title: Nuxt Icon v1
-      description: 'Discover Nuxt Icon v1!'
-      image: https://nuxt.com/assets/blog/nuxt-icon/cover.png
-      date: 2024-11-25
-    - title: Nuxt 3.14
-      description: 'Nuxt 3.14 is out!'
-      image: https://nuxt.com/assets/blog/v3.14.png
-      date: 2024-11-04
-    - title: Nuxt 3.13
-      description: 'Nuxt 3.13 is out!'
-      image: https://nuxt.com/assets/blog/v3.13.png
-      date: 2024-08-22
+  - title: Nuxt Icon v1
+    description: 'Discover Nuxt Icon v1!'
+    image: https://nuxt.com/assets/blog/nuxt-icon/cover.png
+    date: 2024-11-25
+  - title: Nuxt 3.14
+    description: 'Nuxt 3.14 is out!'
+    image: https://nuxt.com/assets/blog/v3.14.png
+    date: 2024-11-04
+  - title: Nuxt 3.13
+    description: 'Nuxt 3.13 is out!'
+    image: https://nuxt.com/assets/blog/v3.13.png
+    date: 2024-08-22
+
 ---
+
 ::
 
 ### Orientation
@@ -60,29 +60,33 @@ Use the `orientation` prop to change the orientation of the BlogPosts. Defaults 
 
 ::component-code
 ---
+
 collapse: true
 ignore:
-  - posts
-external:
-  - posts
-externalTypes:
-  - BlogPostProps[]
-props:
+
+- posts
+  external:
+- posts
+  externalTypes:
+- BlogPostProps[]
+  props:
   orientation: vertical
   posts:
-    - title: Nuxt Icon v1
-      description: 'Discover Nuxt Icon v1!'
-      image: https://nuxt.com/assets/blog/nuxt-icon/cover.png
-      date: 2024-11-25
-    - title: Nuxt 3.14
-      description: 'Nuxt 3.14 is out!'
-      image: https://nuxt.com/assets/blog/v3.14.png
-      date: 2024-11-04
-    - title: Nuxt 3.13
-      description: 'Nuxt 3.13 is out!'
-      image: https://nuxt.com/assets/blog/v3.13.png
-      date: 2024-08-22
+  - title: Nuxt Icon v1
+    description: 'Discover Nuxt Icon v1!'
+    image: https://nuxt.com/assets/blog/nuxt-icon/cover.png
+    date: 2024-11-25
+  - title: Nuxt 3.14
+    description: 'Nuxt 3.14 is out!'
+    image: https://nuxt.com/assets/blog/v3.14.png
+    date: 2024-11-04
+  - title: Nuxt 3.13
+    description: 'Nuxt 3.13 is out!'
+    image: https://nuxt.com/assets/blog/v3.13.png
+    date: 2024-08-22
+
 ---
+
 ::
 
 ::tip
@@ -101,7 +105,9 @@ Use the BlogPosts component in a page to create a blog page:
 
 ```vue [pages/blog/index.vue]{11-18}
 <script setup lang="ts">
-const { data: posts } = await useAsyncData('posts', () => queryCollection('posts').all())
+const { data: posts } = await useAsyncData("posts", () =>
+  queryCollection("posts").all(),
+);
 </script>
 
 <template>

@@ -11,7 +11,7 @@ links:
     to: https://reka-ui.com/docs/components/dialog
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Slideover.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Slideover.vue
 ---
 
 ## Usage
@@ -22,18 +22,20 @@ Then, use the `#content` slot to add the content displayed when the Slideover is
 
 ::component-code
 ---
+
 prettier: true
 slots:
-  default: |
+default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+    <PButton label="Open" color="neutral" variant="subtle" />
 
-  content: |
+content: |
 
     <Placeholder class="h-full m-4" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #content
 :placeholder{class="h-full m-4"}
@@ -47,20 +49,22 @@ Use the `title` prop to set the title of the Slideover's header.
 
 ::component-code
 ---
+
 prettier: true
 props:
-  title: 'Slideover with title'
+title: 'Slideover with title'
 slots:
-  default: |
+default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+    <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-full" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-full"}
@@ -72,23 +76,26 @@ Use the `description` prop to set the description of the Slideover's header.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   title: 'Slideover with description'
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-full" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-full"}
@@ -102,28 +109,31 @@ You can pass any property from the [Button](/docs/components/button) component t
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-  - close.color
-  - close.variant
-props:
+
+- title
+- close.color
+- close.variant
+  props:
   title: 'Slideover with close button'
   close:
-    color: primary
-    variant: outline
-    class: 'rounded-full'
-slots:
+  color: primary
+  variant: outline
+  class: 'rounded-full'
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-full" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-full"}
@@ -139,23 +149,26 @@ Use the `close-icon` prop to customize the close button [Icon](/docs/components/
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   title: 'Slideover with close button'
   closeIcon: 'i-lucide-arrow-right'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-full" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-full"}
@@ -179,23 +192,26 @@ Use the `side` prop to set the side of the screen where the Slideover will slide
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   side: 'left'
   title: 'Slideover with side'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-full min-h-48" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-full min-h-48"}
@@ -207,24 +223,27 @@ Use the `inset` prop to inset the Slideover from the edges.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   side: 'right'
   inset: true
   title: 'Slideover with inset'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="min-w-96 min-h-96 size-full" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="min-w-96 min-h-96 size-full"}
@@ -236,23 +255,26 @@ Use the `transition` prop to control whether the Slideover is animated or not. D
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   transition: false
   title: 'Slideover without transition'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-full" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-full"}
@@ -264,23 +286,26 @@ Use the `overlay` prop to control whether the Slideover has an overlay or not. D
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   overlay: false
   title: 'Slideover without overlay'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-full" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-full"}
@@ -296,23 +321,26 @@ When `modal` is set to `false`, the overlay is automatically disabled and outsid
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   modal: false
   title: 'Slideover interactive'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-full" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-full"}
@@ -332,24 +360,27 @@ You can combine `modal: false` with `dismissible: false` to make the Slideover's
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   dismissible: false
   modal: true
   title: 'Slideover non-dismissible'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-full" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-full"}
@@ -361,23 +392,26 @@ Use the `unmount-on-hide` prop to prevent the Slideover's content from being unm
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-props:
+
+- title
+  props:
   unmountOnHide: false
   title: 'Slideover'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" />
+  <PButton label="Open" color="neutral" variant="subtle" />
 
-  body: |
+body: |
 
     <Placeholder class="h-full" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle"}
+:p-button{label="Open" color="neutral" variant="subtle"}
 
 #body
 :placeholder{class="h-full"}
@@ -399,8 +433,10 @@ You can control the open state by using the `default-open` prop or the `v-model:
 
 ::component-example
 ---
+
 name: 'slideover-open-example'
 ---
+
 ::
 
 ::note
@@ -416,17 +452,19 @@ This lets you move the trigger outside of the Slideover or remove it entirely.
 You can use the [`useOverlay`](/docs/composables/use-overlay) composable to open a Slideover programmatically.
 
 ::warning
-Make sure to wrap your app with the [`App`](/docs/components/app) component which uses the [`OverlayProvider`](https://github.com/nuxt/ui/blob/v4/src/runtime/components/OverlayProvider.vue) component.
+Make sure to wrap your app with the [`App`](/docs/components/app) component which uses the [`OverlayProvider`](https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/OverlayProvider.vue) component.
 ::
 
 First, create a slideover component that will be opened programmatically:
 
 ::component-example
 ---
+
 prettier: true
 name: 'slideover-example'
 preview: false
 ---
+
 ::
 
 ::note
@@ -437,8 +475,10 @@ Then, use it in your app:
 
 ::component-example
 ---
+
 name: 'slideover-programmatic-example'
 ---
+
 ::
 
 ::tip
@@ -451,8 +491,10 @@ You can nest slideovers within each other.
 
 ::component-example
 ---
+
 name: 'slideover-nested-example'
 ---
+
 ::
 
 ### With footer slot
@@ -461,8 +503,10 @@ Use the `#footer` slot to add content after the Slideover's body.
 
 ::component-example
 ---
+
 name: 'slideover-footer-slot-example'
 ---
+
 ::
 
 ## API

@@ -2,7 +2,7 @@ import { queryCollection } from '@nuxt/content/server'
 
 export default defineMcpResource({
   uri: 'resource://nuxt-ui/components',
-  description: 'Complete list of available Nuxt UI v4 components with metadata and categories',
+  description: 'Complete list of available Pohon v4 components with metadata and categories',
   cache: '1h',
   async handler(uri: URL) {
     const event = useEvent()

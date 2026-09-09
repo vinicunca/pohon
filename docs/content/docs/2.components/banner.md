@@ -1,5 +1,5 @@
 ---
-description: 'Display a banner at the top of your website to inform users about important information.'
+description: "Display a banner at the top of your website to inform users about important information."
 category: element
 keywords:
   - announcement bar
@@ -7,7 +7,7 @@ keywords:
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Banner.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Banner.vue
 ---
 
 ## Usage
@@ -18,11 +18,13 @@ Use the `title` prop to display a title on the Banner.
 
 ::component-code
 ---
+
 prettier: true
 class: '!p-0'
 props:
-  title: 'This is a banner with an important message.'
+title: 'This is a banner with an important message.'
 ---
+
 ::
 
 ### Icon
@@ -31,14 +33,18 @@ Use the `icon` prop to display an icon on the Banner.
 
 ::component-code
 ---
+
 prettier: true
 class: '!p-0'
 ignore:
-  - title
-props:
+
+- title
+  props:
   icon: i-lucide-info
   title: 'This is a banner with an icon.'
+
 ---
+
 ::
 
 ### Color
@@ -47,16 +53,20 @@ Use the `color` prop to change the color of the Banner.
 
 ::component-code
 ---
+
 prettier: true
 class: '!p-0'
 ignore:
-  - icon
-  - title
-props:
+
+- icon
+- title
+  props:
   color: 'neutral'
   icon: i-lucide-info
   title: 'This is a banner with an icon.'
+
 ---
+
 ::
 
 ### Close
@@ -69,11 +79,13 @@ A `close` event will be emitted when the close button is clicked.
 
 ::component-example
 ---
+
 iframe:
-  style: 'height: 48px;'
+style: 'height: 48px;'
 overflowHidden: true
 name: 'banner-example'
 ---
+
 #code
 
 ```vue
@@ -98,14 +110,16 @@ Use the `close-icon` prop to customize the close button [Icon](/docs/components/
 
 ::component-example
 ---
+
 iframe:
-  style: 'height: 48px;'
+style: 'height: 48px;'
 overflowHidden: true
 name: 'banner-example'
 props:
-  title: 'This is a closable banner with a custom close icon.'
-  closeIcon: 'i-lucide-x-circle'
+title: 'This is a closable banner with a custom close icon.'
+closeIcon: 'i-lucide-x-circle'
 ---
+
 #code
 
 ```vue
@@ -138,24 +152,28 @@ Use the `actions` prop to add some [Button](/docs/components/button) actions to 
 
 ::component-code
 ---
+
 prettier: true
 class: '!p-0'
 ignore:
-  - title
-  - actions
-  - variant
-external:
-  - actions
-externalTypes:
-  - ButtonProps[]
-props:
+
+- title
+- actions
+- variant
+  external:
+- actions
+  externalTypes:
+- ButtonProps[]
+  props:
   title: 'This is a banner with actions.'
   actions:
-    - label: Action 1
-      variant: outline
-    - label: Action 2
-      trailingIcon: i-lucide-arrow-right
+  - label: Action 1
+    variant: outline
+  - label: Action 2
+    trailingIcon: i-lucide-arrow-right
+
 ---
+
 ::
 
 ::note
@@ -168,18 +186,22 @@ You can pass any property from the [`<NuxtLink>`](https://nuxt.com/docs/api/comp
 
 ::component-code
 ---
+
 prettier: true
 class: '!p-0'
 overflowHidden: true
 ignore:
-  - title
-  - target
-props:
+
+- title
+- target
+  props:
   to: 'https://nuxtlabs.com/'
   target: '_blank'
   title: 'NuxtLabs is joining Vercel!'
   color: 'primary'
+
 ---
+
 ::
 
 ::note
@@ -194,8 +216,8 @@ Use the Banner component in your `app.vue` or in a layout:
 
 ```vue [app.vue]{3}
 <template>
-  <UApp>
-    <UBanner icon="i-lucide-construction" title="Nuxt UI v4 has been released!" />
+  <PApp>
+    <UBanner icon="i-lucide-construction" title="Pohon v4 has been released!" />
 
     <UHeader />
 
@@ -206,7 +228,7 @@ Use the Banner component in your `app.vue` or in a layout:
     </UMain>
 
     <UFooter />
-  </UApp>
+  </PApp>
 </template>
 ```
 

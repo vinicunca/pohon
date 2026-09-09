@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const studioIcons = useStudioIcons()
-import type { CommandPaletteGroup, CommandPaletteItem } from '@nuxt/ui'
+import type { CommandPaletteGroup, CommandPaletteItem } from 'pohon-ui'
 
 const toast = useToast()
 

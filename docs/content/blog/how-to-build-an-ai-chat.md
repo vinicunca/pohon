@@ -1,6 +1,6 @@
 ---
-title: Build an AI Chatbot with Nuxt, Nuxt UI, and AI SDK
-description: Learn how to build a full-featured AI chatbot with streaming responses, multiple models support, and a beautiful UI using Nuxt, Nuxt UI, and Vercel AI SDK.
+title: Build an AI Chatbot with Nuxt, Pohon, and AI SDK
+description: Learn how to build a full-featured AI chatbot with streaming responses, multiple models support, and a beautiful UI using Nuxt, Pohon, and Vercel AI SDK.
 navigation: false
 image: /assets/blog/building-nuxt-ai-chatbot.png
 authors:
@@ -16,20 +16,20 @@ date: 2025-12-16T10:00:00.000Z
 category: Tutorial
 ---
 
-Building AI-powered applications has never been more accessible. This guide walks through creating a full-featured AI chatbot using Nuxt, Nuxt UI, and the Vercel AI SDK. Each step is explained in detail so you understand how every piece works together.
+Building AI-powered applications has never been more accessible. This guide walks through creating a full-featured AI chatbot using Nuxt, Pohon, and the Vercel AI SDK. Each step is explained in detail so you understand how every piece works together.
 
 ## What we're building
 
 By the end of this tutorial, you'll have a fully functional AI chatbot with:
 
 - **Streaming responses** that appear in real-time as the AI generates them
-- **A beautiful chat interface** built with Nuxt UI's purpose-built chat components
+- **A beautiful chat interface** built with Pohon's purpose-built chat components
 - **Markdown rendering** for rich AI responses with code highlighting
 - **Multi-model support** allowing users to switch between OpenAI, Anthropic, and Google models
 - **Server-side AI integration** using Nitro API routes and the AI SDK
 
 ::callout{icon="i-simple-icons-github"}
-Check out the [`Nuxt`](https://github.com/nuxt-ui-templates/chat) and [`Vue`](https://github.com/nuxt-ui-templates/chat-vue) AI Chat templates on GitHub for production-ready implementations with authentication, database persistence, and more.
+Check out the [`Nuxt`](https://github.com/vinicunca/pohon-ui-templates/chat) and [`Vue`](https://github.com/vinicunca/pohon-ui-templates/chat-vue) AI Chat templates on GitHub for production-ready implementations with authentication, database persistence, and more.
 ::
 
 ## Prerequisites
@@ -50,24 +50,26 @@ cd nuxt-ai-chat
 
 ### Installing dependencies
 
-Install Nuxt UI and the AI-specific dependencies:
+Install Pohon and the AI-specific dependencies:
 
 ::code-group{sync="pm"}
+
 ```bash [pnpm]
-pnpm add @nuxt/ui tailwindcss @comark/nuxt @shikijs/langs @nuxthub/core drizzle-orm drizzle-kit @libsql/client ai @ai-sdk/vue zod
+pnpm add pohon-ui tailwindcss @comark/nuxt @shikijs/langs @nuxthub/core drizzle-orm drizzle-kit @libsql/client ai @ai-sdk/vue zod
 ```
 
 ```bash [yarn]
-yarn add @nuxt/ui tailwindcss @comark/nuxt @shikijs/langs @nuxthub/core drizzle-orm drizzle-kit @libsql/client ai @ai-sdk/vue zod
+yarn add pohon-ui tailwindcss @comark/nuxt @shikijs/langs @nuxthub/core drizzle-orm drizzle-kit @libsql/client ai @ai-sdk/vue zod
 ```
 
 ```bash [npm]
-npm install @nuxt/ui tailwindcss @comark/nuxt @shikijs/langs @nuxthub/core drizzle-orm drizzle-kit @libsql/client ai @ai-sdk/vue zod
+npm install pohon-ui tailwindcss @comark/nuxt @shikijs/langs @nuxthub/core drizzle-orm drizzle-kit @libsql/client ai @ai-sdk/vue zod
 ```
 
 ```bash [bun]
-bun add @nuxt/ui tailwindcss @comark/nuxt @shikijs/langs @nuxthub/core drizzle-orm drizzle-kit @libsql/client ai @ai-sdk/vue zod
+bun add pohon-ui tailwindcss @comark/nuxt @shikijs/langs @nuxthub/core drizzle-orm drizzle-kit @libsql/client ai @ai-sdk/vue zod
 ```
+
 ::
 
 ### Configuration
@@ -75,58 +77,62 @@ bun add @nuxt/ui tailwindcss @comark/nuxt @shikijs/langs @nuxthub/core drizzle-o
 Update your `nuxt.config.ts` to register the modules:
 
 ::code-tree-intersection
+
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/ui',
-    '@comark/nuxt',
-    '@nuxthub/core'
-  ],
+  modules: ["pohon-ui", "@comark/nuxt", "@nuxthub/core"],
 
   hub: {
-    db: 'sqlite'
+    db: "sqlite",
   },
 
-  css: ['~/assets/css/main.css'],
-})
+  css: ["~/assets/css/main.css"],
+});
 ```
+
 ::
 
 ::note{to="/docs/typography"}
-`@comark/nuxt` automatically enables Nuxt UI's [prose components](/docs/typography), so Markdown rendered by Comark is styled to match your theme.
+`@comark/nuxt` automatically enables Pohon's [prose components](/docs/typography), so Markdown rendered by Comark is styled to match your theme.
 ::
 
-Create the main CSS file to import Tailwind CSS and Nuxt UI:
+Create the main CSS file to import UnoCSS and Pohon:
 
 ::code-tree-intersection
+
 ```css [app/assets/css/main.css]
 @import "tailwindcss";
-@import "@nuxt/ui";
+@import "pohon-ui";
 ```
+
 ::
 
 ### Setting up the app
 
-Nuxt UI requires wrapping your app with `UApp` for modals, toasts, and overlays to work properly:
+Pohon requires wrapping your app with `PApp` for modals, toasts, and overlays to work properly:
 
 ::code-tree-intersection
+
 ```vue [app/app.vue] {2,6}
 <template>
-  <UApp>
+  <PApp>
     <UDashboardGroup unit="rem">
       <NuxtPage />
     </UDashboardGroup>
-  </UApp>
+  </PApp>
 </template>
 ```
+
 ::
 
 Create a `.env` file with your AI Gateway API key:
 
 ::code-tree-intersection
+
 ```bash [.env]
 AI_GATEWAY_API_KEY=your-api-key-here
 ```
+
 ::
 
 ::note
@@ -141,35 +147,47 @@ With [Vercel AI Gateway](https://vercel.com/docs/ai-gateway), you don't need ind
 :::code-collapse
 
 ```ts [server/db/schema.ts]
-import { sqliteTable, text, integer, index } from 'drizzle-orm/sqlite-core'
-import { relations } from 'drizzle-orm'
+import { sqliteTable, text, integer, index } from "drizzle-orm/sqlite-core";
+import { relations } from "drizzle-orm";
 
-export const chats = sqliteTable('chats', {
-  id: text().primaryKey().$defaultFn(() => crypto.randomUUID()),
+export const chats = sqliteTable("chats", {
+  id: text()
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
   title: text(),
-  createdAt: integer({ mode: 'timestamp' }).notNull().$defaultFn(() => new Date())
-})
+  createdAt: integer({ mode: "timestamp" })
+    .notNull()
+    .$defaultFn(() => new Date()),
+});
 
 export const chatsRelations = relations(chats, ({ many }) => ({
-  messages: many(messages)
-}))
+  messages: many(messages),
+}));
 
-export const messages = sqliteTable('messages', {
-  id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
-  chatId: text('chat_id').notNull().references(() => chats.id, { onDelete: 'cascade' }),
-  role: text('role', { enum: ['user', 'assistant', 'system'] }).notNull(),
-  parts: text('parts', { mode: 'json' }),
-  createdAt: integer({ mode: 'timestamp' }).notNull().$defaultFn(() => new Date()),
-}, table => [
-  index('messages_chat_id_idx').on(table.chatId)
-])
+export const messages = sqliteTable(
+  "messages",
+  {
+    id: text("id")
+      .primaryKey()
+      .$defaultFn(() => crypto.randomUUID()),
+    chatId: text("chat_id")
+      .notNull()
+      .references(() => chats.id, { onDelete: "cascade" }),
+    role: text("role", { enum: ["user", "assistant", "system"] }).notNull(),
+    parts: text("parts", { mode: "json" }),
+    createdAt: integer({ mode: "timestamp" })
+      .notNull()
+      .$defaultFn(() => new Date()),
+  },
+  (table) => [index("messages_chat_id_idx").on(table.chatId)],
+);
 
 export const messagesRelations = relations(messages, ({ one }) => ({
   chat: one(chats, {
     fields: [messages.chatId],
-    references: [chats.id]
-  })
-}))
+    references: [chats.id],
+  }),
+}));
 ```
 
 :::
@@ -194,30 +212,35 @@ This section covers integrating AI on the server. The following API endpoints ha
 First, create the endpoint that initializes a new chat and saves the first message to the database. This uses the [`UIMessage`](https://ai-sdk.dev/docs/reference/ai-sdk-core/ui-message) type from the AI SDK:
 
 ::code-tree-intersection
+
 ```ts [server/api/chats.post.ts]
-import { defineEventHandler, readValidatedBody } from 'h3'
-import type { UIMessage } from 'ai'
-import { db, schema } from 'hub:db'
-import { z } from 'zod'
+import { defineEventHandler, readValidatedBody } from "h3";
+import type { UIMessage } from "ai";
+import { db, schema } from "hub:db";
+import { z } from "zod";
 
 export default defineEventHandler(async (event) => {
-  const { message } = await readValidatedBody(event, z.object({
-    message: z.custom<UIMessage>()
-  }).parse)
+  const { message } = await readValidatedBody(
+    event,
+    z.object({
+      message: z.custom<UIMessage>(),
+    }).parse,
+  );
 
   // Create a new chat
-  const [chat] = await db.insert(schema.chats).values({}).returning()
+  const [chat] = await db.insert(schema.chats).values({}).returning();
 
   // Save the first user message
   await db.insert(schema.messages).values({
     chatId: chat.id,
-    role: 'user',
-    parts: message.parts
-  })
+    role: "user",
+    parts: message.parts,
+  });
 
-  return chat
-})
+  return chat;
+});
 ```
+
 ::
 
 ### Streaming AI responses
@@ -228,47 +251,61 @@ Next, create the endpoint that handles the AI conversation. This endpoint uses [
 :::code-collapse
 
 ```ts [server/api/chats/[id].post.ts]
-import { createError, defineEventHandler, getValidatedRouterParams, readValidatedBody } from 'h3'
-import { eq } from 'drizzle-orm'
-import { db, schema } from 'hub:db'
-import { z } from 'zod'
+import {
+  createError,
+  defineEventHandler,
+  getValidatedRouterParams,
+  readValidatedBody,
+} from "h3";
+import { eq } from "drizzle-orm";
+import { db, schema } from "hub:db";
+import { z } from "zod";
 import {
   convertToModelMessages,
   createUIMessageStream,
   createUIMessageStreamResponse,
   generateText,
   streamText,
-  toUIMessageStream
-} from 'ai'
-import type { UIMessage } from 'ai'
+  toUIMessageStream,
+} from "ai";
+import type { UIMessage } from "ai";
 
-const DEFAULT_MODEL = 'anthropic/claude-haiku-4.5'
+const DEFAULT_MODEL = "anthropic/claude-haiku-4.5";
 
 const MODELS = [
-  { value: 'openai/gpt-5-nano', label: 'GPT-5 Nano' },
-  { value: 'anthropic/claude-haiku-4.5', label: 'Claude Haiku 4.5' },
-  { value: 'google/gemini-3-flash', label: 'Gemini 3 Flash' }
-]
+  { value: "openai/gpt-5-nano", label: "GPT-5 Nano" },
+  { value: "anthropic/claude-haiku-4.5", label: "Claude Haiku 4.5" },
+  { value: "google/gemini-3-flash", label: "Gemini 3 Flash" },
+];
 
 export default defineEventHandler(async (event) => {
-  const { id } = await getValidatedRouterParams(event, z.object({
-    id: z.string()
-  }).parse)
+  const { id } = await getValidatedRouterParams(
+    event,
+    z.object({
+      id: z.string(),
+    }).parse,
+  );
 
-  const { model = DEFAULT_MODEL, messages } = await readValidatedBody(event, z.object({
-    model: z.string().refine(value => MODELS.some(m => m.value === value), {
-      message: 'Invalid model'
-    }).optional(),
-    messages: z.array(z.custom<UIMessage>())
-  }).parse)
+  const { model = DEFAULT_MODEL, messages } = await readValidatedBody(
+    event,
+    z.object({
+      model: z
+        .string()
+        .refine((value) => MODELS.some((m) => m.value === value), {
+          message: "Invalid model",
+        })
+        .optional(),
+      messages: z.array(z.custom<UIMessage>()),
+    }).parse,
+  );
 
   // Fetch the chat from the database
   const chat = await db.query.chats.findFirst({
-    where: (chat, { eq }) => eq(chat.id, id as string)
-  })
+    where: (chat, { eq }) => eq(chat.id, id as string),
+  });
 
   if (!chat) {
-    throw createError({ statusCode: 404, statusMessage: 'Chat not found' })
+    throw createError({ statusCode: 404, statusMessage: "Chat not found" });
   }
 
   // Generate a title for the chat if it doesn't have one
@@ -276,20 +313,20 @@ export default defineEventHandler(async (event) => {
     const { text: title } = await generateText({
       model: DEFAULT_MODEL,
       instructions: `Generate a short title (max 30 characters) based on the user's message. No quotes or punctuation.`,
-      prompt: JSON.stringify(messages[0])
-    })
+      prompt: JSON.stringify(messages[0]),
+    });
 
-    await db.update(schema.chats).set({ title }).where(eq(schema.chats.id, id))
+    await db.update(schema.chats).set({ title }).where(eq(schema.chats.id, id));
   }
 
   // Save the user message if it's a follow-up
-  const lastMessage = messages[messages.length - 1]
-  if (lastMessage?.role === 'user' && messages.length > 1) {
+  const lastMessage = messages[messages.length - 1];
+  if (lastMessage?.role === "user" && messages.length > 1) {
     await db.insert(schema.messages).values({
       chatId: id,
-      role: 'user',
-      parts: lastMessage.parts
-    })
+      role: "user",
+      parts: lastMessage.parts,
+    });
   }
 
   // Create the streaming response
@@ -302,46 +339,48 @@ export default defineEventHandler(async (event) => {
         providerOptions: {
           anthropic: {
             thinking: {
-              type: 'enabled',
-              budgetTokens: 2048
-            }
+              type: "enabled",
+              budgetTokens: 2048,
+            },
           },
           google: {
             thinkingConfig: {
               includeThoughts: true,
-              thinkingLevel: 'low'
-            }
+              thinkingLevel: "low",
+            },
           },
           openai: {
-            reasoningEffort: 'low',
-            reasoningSummary: 'detailed'
-          }
-        }
-      })
+            reasoningEffort: "low",
+            reasoningSummary: "detailed",
+          },
+        },
+      });
 
       // Notify the client that a title was generated
       if (!chat.title) {
         writer.write({
-          type: 'data-chat-title',
-          data: { message: 'Title generated' },
-          transient: true
-        })
+          type: "data-chat-title",
+          data: { message: "Title generated" },
+          transient: true,
+        });
       }
 
-      writer.merge(toUIMessageStream({ stream: result.stream }))
+      writer.merge(toUIMessageStream({ stream: result.stream }));
     },
     onEnd: async ({ messages }) => {
       // Save the assistant's response to the database
-      await db.insert(schema.messages).values(messages.map(message => ({
-        chatId: chat.id,
-        role: message.role as 'user' | 'assistant',
-        parts: message.parts
-      })))
-    }
-  })
+      await db.insert(schema.messages).values(
+        messages.map((message) => ({
+          chatId: chat.id,
+          role: message.role as "user" | "assistant",
+          parts: message.parts,
+        })),
+      );
+    },
+  });
 
-  return createUIMessageStreamResponse({ stream })
-})
+  return createUIMessageStreamResponse({ stream });
+});
 ```
 
 :::
@@ -360,6 +399,7 @@ When a chat doesn't have a title yet, we use [`generateText`](https://ai-sdk.dev
 **Streaming with streamText**
 
 The [`streamText`](https://ai-sdk.dev/docs/reference/ai-sdk-core/stream-text) function generates a streaming response from the AI model. Key options include:
+
 - `model`: The AI model to use
 - `instructions`: Guidance that shapes the AI's behavior
 - `messages`: The conversation history
@@ -375,67 +415,73 @@ The `writer.write()` method allows sending custom data events to the client (lik
 Add an endpoint to fetch existing chat data from your database:
 
 ::code-tree-intersection
+
 ```ts [server/api/chats/[id].get.ts]
-import { createError, defineEventHandler, getValidatedRouterParams } from 'h3'
-import { asc, eq } from 'drizzle-orm'
-import { db, schema } from 'hub:db'
-import { z } from 'zod'
+import { createError, defineEventHandler, getValidatedRouterParams } from "h3";
+import { asc, eq } from "drizzle-orm";
+import { db, schema } from "hub:db";
+import { z } from "zod";
 
 export default defineEventHandler(async (event) => {
-  const { id } = await getValidatedRouterParams(event, z.object({
-    id: z.string()
-  }).parse)
+  const { id } = await getValidatedRouterParams(
+    event,
+    z.object({
+      id: z.string(),
+    }).parse,
+  );
 
   const chat = await db.query.chats.findFirst({
-    where: (eq(schema.chats.id, id)),
+    where: eq(schema.chats.id, id),
     with: {
       messages: {
-        orderBy: () => asc(schema.messages.createdAt)
-      }
-    }
-  })
+        orderBy: () => asc(schema.messages.createdAt),
+      },
+    },
+  });
 
   if (!chat) {
-    throw createError({ statusCode: 404, statusMessage: 'Chat not found' })
+    throw createError({ statusCode: 404, statusMessage: "Chat not found" });
   }
 
-  return chat
-})
+  return chat;
+});
 ```
+
 ::
 
 ## Wiring up the UI
 
-Nuxt UI provides purpose-built components for AI chat interfaces: [`UChatPrompt`](/docs/components/chat-prompt) for the input area and [`UChatMessages`](/docs/components/chat-messages) for displaying the conversation.
+Pohon provides purpose-built components for AI chat interfaces: [`UChatPrompt`](/docs/components/chat-prompt) for the input area and [`UChatMessages`](/docs/components/chat-messages) for displaying the conversation.
 
 ### Creating the home page
 
 The home page is where users start a new conversation. The [`UChatPrompt`](/docs/components/chat-prompt) component provides a textarea with auto-resize, keyboard shortcuts, and a submit button:
 
 ::code-tree-intersection
+
 ```vue [app/pages/index.vue] {34-42}
 <script setup lang="ts">
-const input = ref('')
-const loading = ref(false)
+const input = ref("");
+const loading = ref(false);
 
 async function createChat() {
-  if (!input.value.trim()) return
+  if (!input.value.trim()) return;
 
-  loading.value = true
+  loading.value = true;
 
   // Create a new chat on the server
-  const chat = await $fetch('/api/chats', {
-    method: 'POST',
+  const chat = await $fetch("/api/chats", {
+    method: "POST",
     body: {
       message: {
-        role: 'user',
-        parts: [{ type: 'text', text: input.value }]
-      }
-    }
-  })
+        role: "user",
+        parts: [{ type: "text", text: input.value }],
+      },
+    },
+  });
 
   // Navigate to the chat page
-  navigateTo(`/chat/${chat.id}`)
+  navigateTo(`/chat/${chat.id}`);
 }
 </script>
 
@@ -461,9 +507,11 @@ async function createChat() {
   </UDashboardPanel>
 </template>
 ```
+
 ::
 
 The [`UChatPrompt`](/docs/components/chat-prompt) component automatically handles:
+
 - Form submission when pressing :kbd{value="enter"}
 - Auto-resizing as you type
 - A loading state when `status` is set to `streaming`
@@ -474,23 +522,25 @@ The [`UChatPrompt`](/docs/components/chat-prompt) component automatically handle
 AI models often respond with Markdown formatting (code blocks, lists, bold text, etc.). Before building the chat page, create a custom [`Comark`](https://comark.dev) component that will handle streaming Markdown rendering. Using [`defineMarkdownComponent`](https://comark.dev/rendering/vue#code-markdown-code-definemarkdowncomponent-code), you can enable the `shiki` plugin for syntax highlighting in code blocks and register additional [Shiki](https://shiki.style) languages beyond the defaults (TypeScript, JavaScript, Vue, Shell, JSON, YAML, Markdown):
 
 ::code-tree-intersection
+
 ```ts [app/components/chat/Markdown.ts]
-import shiki from '@comark/nuxt/plugins/shiki'
-import python from '@shikijs/langs/python'
-import sql from '@shikijs/langs/sql'
-import go from '@shikijs/langs/go'
-import rust from '@shikijs/langs/rust'
+import shiki from "@comark/nuxt/plugins/shiki";
+import python from "@shikijs/langs/python";
+import sql from "@shikijs/langs/sql";
+import go from "@shikijs/langs/go";
+import rust from "@shikijs/langs/rust";
 
 export default defineMarkdownComponent({
-  name: 'ChatMarkdown',
+  name: "ChatMarkdown",
   plugins: [
     shiki({
-      languages: [python, sql, go, rust]
-    })
+      languages: [python, sql, go, rust],
+    }),
   ],
-  class: '*:first:mt-0 *:last:mb-0'
-})
+  class: "*:first:mt-0 *:last:mb-0",
+});
 ```
+
 ::
 
 This creates a `<ChatMarkdown>` component we'll use in the chat page to render assistant messages and reasoning content.
@@ -516,58 +566,62 @@ The chat page is where the actual conversation happens. It integrates the AI SDK
 
 ```vue [app/pages/chat/[id].vue] {2-4,19-38}
 <script setup lang="ts">
-import { DefaultChatTransport, isReasoningUIPart, isTextUIPart } from 'ai'
-import { useChat } from '@ai-sdk/vue'
-import { isPartStreaming } from '@nuxt/ui/utils/ai'
+import { DefaultChatTransport, isReasoningUIPart, isTextUIPart } from "ai";
+import { useChat } from "@ai-sdk/vue";
+import { isPartStreaming } from "pohon-ui/utils/ai";
 
-const route = useRoute()
-const toast = useToast()
+const route = useRoute();
+const toast = useToast();
 
 // Fetch existing chat data
-const { data: chatData } = await useFetch(`/api/chats/${route.params.id}`)
+const { data: chatData } = await useFetch(`/api/chats/${route.params.id}`);
 
 if (!chatData.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Chat not found', fatal: true })
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Chat not found",
+    fatal: true,
+  });
 }
 
-const input = ref('')
+const input = ref("");
 
 // Initialize the useChat composable from AI SDK
 const { messages, status, error, sendMessage, regenerate, stop } = useChat({
   id: chatData.value.id,
   messages: chatData.value.messages,
   transport: new DefaultChatTransport({
-    api: `/api/chats/${chatData.value.id}`
+    api: `/api/chats/${chatData.value.id}`,
   }),
   onData(dataPart) {
     // Refresh the chat list when a title is generated
-    if (dataPart.type === 'data-chat-title') {
-      refreshNuxtData('chats')
+    if (dataPart.type === "data-chat-title") {
+      refreshNuxtData("chats");
     }
   },
   onError(error) {
     toast.add({
-      title: 'Error',
+      title: "Error",
       description: error.message,
-      color: 'error'
-    })
-  }
-})
+      color: "error",
+    });
+  },
+});
 
 function handleSubmit(e: Event) {
-  e.preventDefault()
+  e.preventDefault();
   if (input.value.trim()) {
-    sendMessage({ text: input.value })
-    input.value = ''
+    sendMessage({ text: input.value });
+    input.value = "";
   }
 }
 
 // Auto-generate response for first message
 onMounted(() => {
   if (chatData.value?.messages.length === 1) {
-    regenerate()
+    regenerate();
   }
-})
+});
 </script>
 
 <template>
@@ -581,7 +635,10 @@ onMounted(() => {
           class="flex-1"
         >
           <template #content="{ message }">
-            <template v-for="(part, index) in message.parts" :key="`${message.id}-${part.type}-${index}`">
+            <template
+              v-for="(part, index) in message.parts"
+              :key="`${message.id}-${part.type}-${index}`"
+            >
               <UChatReasoning
                 v-if="isReasoningUIPart(part)"
                 :text="part.text"
@@ -599,7 +656,10 @@ onMounted(() => {
                   :value="part.text"
                   :streaming="isPartStreaming(part)"
                 />
-                <p v-else-if="message.role === 'user'" class="whitespace-pre-wrap">
+                <p
+                  v-else-if="message.role === 'user'"
+                  class="whitespace-pre-wrap"
+                >
                   {{ part.text }}
                 </p>
               </template>
@@ -635,6 +695,7 @@ Here's a breakdown of the key parts:
 **The `useChat` composable**
 
 The [`useChat`](https://ai-sdk.dev/docs/reference/ai-sdk-ui/use-chat) composable from `@ai-sdk/vue` manages the entire conversation state. It handles:
+
 - Message history with `messages`
 - Connection status with `status` (`ready`, `submitted`, `streaming`, `error`)
 - Sending messages with `sendMessage()`
@@ -646,6 +707,7 @@ The `onData` callback receives [custom data events](https://ai-sdk.dev/docs/ai-s
 **UChatMessages Component**
 
 The [`UChatMessages`](/docs/components/chat-messages) component is purpose-built for AI chatbots with:
+
 - Auto-scroll to bottom on load
 - Continuous scrolling as messages stream in
 - A loading indicator while the assistant processes
@@ -653,11 +715,12 @@ The [`UChatMessages`](/docs/components/chat-messages) component is purpose-built
 
 **Rendering Message Parts**
 
-We iterate over message `parts` using AI SDK helpers like `isTextUIPart` and `isReasoningUIPart`, rendering assistant text with the `<ChatMarkdown>` component we created earlier and reasoning content with [`UChatReasoning`](/docs/components/chat-reasoning). The `isPartStreaming` utility from `@nuxt/ui/utils/ai` detects if a part is currently being streamed.
+We iterate over message `parts` using AI SDK helpers like `isTextUIPart` and `isReasoningUIPart`, rendering assistant text with the `<ChatMarkdown>` component we created earlier and reasoning content with [`UChatReasoning`](/docs/components/chat-reasoning). The `isPartStreaming` utility from `pohon-ui/utils/ai` detects if a part is currently being streamed.
 
 **UChatPromptSubmit Component**
 
 The [`UChatPromptSubmit`](/docs/components/chat-prompt-submit) component adapts based on the chat status:
+
 - Shows a send button when ready
 - Shows a stop button while streaming
 - Shows a reload button after an error
@@ -671,51 +734,54 @@ This section adds a dropdown menu to list previous chats and navigate between th
 First, create an endpoint to fetch all chats:
 
 ::code-tree-intersection
+
 ```ts [server/api/chats.get.ts]
-import { defineEventHandler } from 'h3'
-import { db, schema } from 'hub:db'
-import { desc } from 'drizzle-orm'
+import { defineEventHandler } from "h3";
+import { db, schema } from "hub:db";
+import { desc } from "drizzle-orm";
 
 export default defineEventHandler(async () => {
   return await db.query.chats.findMany({
-    orderBy: () => desc(schema.chats.createdAt)
-  })
-})
+    orderBy: () => desc(schema.chats.createdAt),
+  });
+});
 ```
+
 ::
 
 ### Building the chats history dropdown
 
-The component uses [`UDropdownMenu`](/docs/components/dropdown-menu) with a [`UButton`](/docs/components/button) as trigger. Use [`useFetch`](https://nuxt.com/docs/api/composables/use-fetch) with a `key` to fetch and cache the chat list:
+The component uses [`UDropdownMenu`](/docs/components/dropdown-menu) with a [`PButton`](/docs/components/button) as trigger. Use [`useFetch`](https://nuxt.com/docs/api/composables/use-fetch) with a `key` to fetch and cache the chat list:
 
 ::code-tree-intersection
+
 ```vue [app/components/ChatsHistory.vue]
 <script setup lang="ts">
-const route = useRoute()
+const route = useRoute();
 
-const { data: chats } = await useFetch('/api/chats', {
-  key: 'chats',
-  default: () => []
-})
+const { data: chats } = await useFetch("/api/chats", {
+  key: "chats",
+  default: () => [],
+});
 
 const items = computed(() => [
   {
-    label: 'New chat',
-    to: '/',
-    icon: 'i-lucide-plus-square',
-    active: route.name === 'index'
+    label: "New chat",
+    to: "/",
+    icon: "i-lucide-plus-square",
+    active: route.name === "index",
   },
-  ...chats.value.map(chat => ({
-    label: chat.title || 'Untitled',
+  ...chats.value.map((chat) => ({
+    label: chat.title || "Untitled",
     to: `/chat/${chat.id}`,
-    active: route.params.id === chat.id
-  }))
-])
+    active: route.params.id === chat.id,
+  })),
+]);
 </script>
 
 <template>
   <UDropdownMenu :items="items" class="m-2">
-    <UButton
+    <PButton
       icon="i-lucide-messages-square"
       variant="ghost"
       label="Chats History"
@@ -725,6 +791,7 @@ const items = computed(() => [
   </UDropdownMenu>
 </template>
 ```
+
 ::
 
 ## Integrating history in the home page
@@ -734,27 +801,27 @@ const items = computed(() => [
 
 ```vue [app/pages/index.vue] {28-30}
 <script setup lang="ts">
-const input = ref('')
-const loading = ref(false)
+const input = ref("");
+const loading = ref(false);
 
 async function createChat() {
-  if (!input.value.trim()) return
+  if (!input.value.trim()) return;
 
-  loading.value = true
+  loading.value = true;
 
   // Create a new chat on the server
-  const chat = await $fetch('/api/chats', {
-    method: 'POST',
+  const chat = await $fetch("/api/chats", {
+    method: "POST",
     body: {
       message: {
-        role: 'user',
-        parts: [{ type: 'text', text: input.value }]
-      }
-    }
-  })
+        role: "user",
+        parts: [{ type: "text", text: input.value }],
+      },
+    },
+  });
 
   // Navigate to the chat page
-  navigateTo(`/chat/${chat.id}`)
+  navigateTo(`/chat/${chat.id}`);
 }
 </script>
 
@@ -794,58 +861,62 @@ async function createChat() {
 
 ```vue [app/pages/chat/[id].vue] {62-64}
 <script setup lang="ts">
-import { DefaultChatTransport, isReasoningUIPart, isTextUIPart } from 'ai'
-import { useChat } from '@ai-sdk/vue'
-import { isPartStreaming } from '@nuxt/ui/utils/ai'
+import { DefaultChatTransport, isReasoningUIPart, isTextUIPart } from "ai";
+import { useChat } from "@ai-sdk/vue";
+import { isPartStreaming } from "pohon-ui/utils/ai";
 
-const route = useRoute()
-const toast = useToast()
+const route = useRoute();
+const toast = useToast();
 
 // Fetch existing chat data
-const { data: chatData } = await useFetch(`/api/chats/${route.params.id}`)
+const { data: chatData } = await useFetch(`/api/chats/${route.params.id}`);
 
 if (!chatData.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Chat not found', fatal: true })
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Chat not found",
+    fatal: true,
+  });
 }
 
-const input = ref('')
+const input = ref("");
 
 // Initialize the useChat composable from AI SDK
 const { messages, status, error, sendMessage, regenerate, stop } = useChat({
   id: chatData.value.id,
   messages: chatData.value.messages,
   transport: new DefaultChatTransport({
-    api: `/api/chats/${chatData.value.id}`
+    api: `/api/chats/${chatData.value.id}`,
   }),
   onData(dataPart) {
     // Refresh the chat list when a title is generated
-    if (dataPart.type === 'data-chat-title') {
-      refreshNuxtData('chats')
+    if (dataPart.type === "data-chat-title") {
+      refreshNuxtData("chats");
     }
   },
   onError(error) {
     toast.add({
-      title: 'Error',
+      title: "Error",
       description: error.message,
-      color: 'error'
-    })
-  }
-})
+      color: "error",
+    });
+  },
+});
 
 function handleSubmit(e: Event) {
-  e.preventDefault()
+  e.preventDefault();
   if (input.value.trim()) {
-    sendMessage({ text: input.value })
-    input.value = ''
+    sendMessage({ text: input.value });
+    input.value = "";
   }
 }
 
 // Auto-generate response for first message
 onMounted(() => {
   if (chatData.value?.messages.length === 1) {
-    regenerate()
+    regenerate();
   }
-})
+});
 </script>
 
 <template>
@@ -862,7 +933,10 @@ onMounted(() => {
           class="flex-1"
         >
           <template #content="{ message }">
-            <template v-for="(part, index) in message.parts" :key="`${message.id}-${part.type}-${index}`">
+            <template
+              v-for="(part, index) in message.parts"
+              :key="`${message.id}-${part.type}-${index}`"
+            >
               <UChatReasoning
                 v-if="isReasoningUIPart(part)"
                 :text="part.text"
@@ -880,7 +954,10 @@ onMounted(() => {
                   :value="part.text"
                   :streaming="isPartStreaming(part)"
                 />
-                <p v-else-if="message.role === 'user'" class="whitespace-pre-wrap">
+                <p
+                  v-else-if="message.role === 'user'"
+                  class="whitespace-pre-wrap"
+                >
                   {{ part.text }}
                 </p>
               </template>
@@ -922,24 +999,38 @@ One of the benefits of using [AI Gateway](https://vercel.com/docs/ai-gateway) is
 Define the available models and persist the user's selection using [`useCookie`](https://nuxt.com/docs/api/composables/use-cookie):
 
 ::code-tree-intersection
+
 ```ts [app/composables/useModels.ts]
 export function useModels() {
   const models = [
-    { label: 'GPT-5 Nano', value: 'openai/gpt-5-nano', icon: 'i-simple-icons-openai' },
-    { label: 'Claude Haiku 4.5', value: 'anthropic/claude-haiku-4.5', icon: 'i-simple-icons-anthropic' },
-    { label: 'Gemini 3 Flash', value: 'google/gemini-3-flash', icon: 'i-simple-icons-google' }
-  ]
+    {
+      label: "GPT-5 Nano",
+      value: "openai/gpt-5-nano",
+      icon: "i-simple-icons-openai",
+    },
+    {
+      label: "Claude Haiku 4.5",
+      value: "anthropic/claude-haiku-4.5",
+      icon: "i-simple-icons-anthropic",
+    },
+    {
+      label: "Gemini 3 Flash",
+      value: "google/gemini-3-flash",
+      icon: "i-simple-icons-google",
+    },
+  ];
 
-  const model = useCookie<string>('ai-model', {
-    default: () => 'anthropic/claude-haiku-4.5'
-  })
+  const model = useCookie<string>("ai-model", {
+    default: () => "anthropic/claude-haiku-4.5",
+  });
 
   return {
     models,
-    model
-  }
+    model,
+  };
 }
 ```
+
 ::
 
 ### Building the model selector
@@ -947,15 +1038,16 @@ export function useModels() {
 Create a [`USelectMenu`](/docs/components/select-menu) component that displays the available models:
 
 ::code-tree-intersection
+
 ```vue [app/components/ModelSelect.vue]
 <script setup lang="ts">
-const model = defineModel<string>({ required: true })
+const model = defineModel<string>({ required: true });
 
-const { models } = useModels()
+const { models } = useModels();
 
 const selectedModel = computed(() =>
-  models.find(m => m.value === model.value)
-)
+  models.find((m) => m.value === model.value),
+);
 </script>
 
 <template>
@@ -968,6 +1060,7 @@ const selectedModel = computed(() =>
   />
 </template>
 ```
+
 ::
 
 ### Integrating with the chat
@@ -979,21 +1072,25 @@ Update the chat page to include the model selector and pass the selected model t
 
 ```vue [app/pages/chat/[id].vue] {8,24-26,94-96}
 <script setup lang="ts">
-import { DefaultChatTransport, isReasoningUIPart, isTextUIPart } from 'ai'
-import { useChat } from '@ai-sdk/vue'
-import { isPartStreaming } from '@nuxt/ui/utils/ai'
+import { DefaultChatTransport, isReasoningUIPart, isTextUIPart } from "ai";
+import { useChat } from "@ai-sdk/vue";
+import { isPartStreaming } from "pohon-ui/utils/ai";
 
-const route = useRoute()
-const toast = useToast()
-const { model } = useModels()
+const route = useRoute();
+const toast = useToast();
+const { model } = useModels();
 
-const { data: chatData } = await useFetch(`/api/chats/${route.params.id}`)
+const { data: chatData } = await useFetch(`/api/chats/${route.params.id}`);
 
 if (!chatData.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Chat not found', fatal: true })
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Chat not found",
+    fatal: true,
+  });
 }
 
-const input = ref('')
+const input = ref("");
 
 const { messages, status, error, sendMessage, regenerate, stop } = useChat({
   id: chatData.value.id,
@@ -1001,36 +1098,36 @@ const { messages, status, error, sendMessage, regenerate, stop } = useChat({
   transport: new DefaultChatTransport({
     api: `/api/chats/${chatData.value.id}`,
     body: {
-      model: model.value // Pass the selected model
-    }
+      model: model.value, // Pass the selected model
+    },
   }),
   onData(dataPart) {
-    if (dataPart.type === 'data-chat-title') {
-      refreshNuxtData('chats')
+    if (dataPart.type === "data-chat-title") {
+      refreshNuxtData("chats");
     }
   },
   onError(error) {
     toast.add({
-      title: 'Error',
+      title: "Error",
       description: error.message,
-      color: 'error'
-    })
-  }
-})
+      color: "error",
+    });
+  },
+});
 
 function handleSubmit(e: Event) {
-  e.preventDefault()
+  e.preventDefault();
   if (input.value.trim()) {
-    sendMessage({ text: input.value })
-    input.value = ''
+    sendMessage({ text: input.value });
+    input.value = "";
   }
 }
 
 onMounted(() => {
   if (chatData.value?.messages.length === 1) {
-    regenerate()
+    regenerate();
   }
-})
+});
 </script>
 
 <template>
@@ -1047,7 +1144,10 @@ onMounted(() => {
           class="flex-1"
         >
           <template #content="{ message }">
-            <template v-for="(part, index) in message.parts" :key="`${message.id}-${part.type}-${index}`">
+            <template
+              v-for="(part, index) in message.parts"
+              :key="`${message.id}-${part.type}-${index}`"
+            >
               <UChatReasoning
                 v-if="isReasoningUIPart(part)"
                 :text="part.text"
@@ -1065,7 +1165,10 @@ onMounted(() => {
                   :value="part.text"
                   :streaming="isPartStreaming(part)"
                 />
-                <p v-else-if="message.role === 'user'" class="whitespace-pre-wrap">
+                <p
+                  v-else-if="message.role === 'user'"
+                  class="whitespace-pre-wrap"
+                >
                   {{ part.text }}
                 </p>
               </template>
@@ -1113,19 +1216,19 @@ Add authentication with [nuxt-auth-utils](https://github.com/atinux/nuxt-auth-ut
 Extend your chatbot with [AI SDK tools](https://ai-sdk.dev/docs/ai-sdk-core/tools-and-tool-calling) that can fetch real-time data, generate charts, or interact with external APIs:
 
 ```ts
-import { tool } from 'ai'
-import { z } from 'zod'
+import { tool } from "ai";
+import { z } from "zod";
 
 const weatherTool = tool({
-  description: 'Get the current weather for a location',
+  description: "Get the current weather for a location",
   parameters: z.object({
-    location: z.string().describe('The city name')
+    location: z.string().describe("The city name"),
   }),
   execute: async ({ location }) => {
     // Fetch weather data from an API
-    return { location, temperature: 22, condition: 'Sunny' }
-  }
-})
+    return { location, temperature: 22, condition: "Sunny" };
+  },
+});
 ```
 
 ## Deploying to Vercel
@@ -1153,21 +1256,21 @@ Learn more about setting up AI Gateway in the **Vercel AI Gateway documentation*
 
 You've built a complete AI chatbot with:
 
-- **A complete chat interface** using Nuxt UI components
+- **A complete chat interface** using Pohon components
 - **Real-time streaming responses** with the AI SDK
 - **Streaming Markdown rendering** with Comark for rich content display
 - **Multi-model support** via AI Gateway
 - **Database persistence** with SQLite (local) / Turso (production) and Drizzle ORM
 
-The combination of Nuxt's full-stack capabilities, Nuxt UI's purpose-built chat components, a local SQLite dev database with a production Turso database, and the AI SDK's streaming infrastructure makes building AI applications straightforward and enjoyable.
+The combination of Nuxt's full-stack capabilities, Pohon's purpose-built chat components, a local SQLite dev database with a production Turso database, and the AI SDK's streaming infrastructure makes building AI applications straightforward and enjoyable.
 
 **Resources:**
 
-- [Nuxt UI Chat Components](https://ui.nuxt.com/docs/components/chat)
+- [Pohon Chat Components](https://pohon.vinicunca.dev/docs/components/chat)
 - [NuxtHub Database](https://hub.nuxt.com/docs/features/database)
 - [AI SDK Documentation](https://ai-sdk.dev)
 - [AI Gateway Documentation](https://vercel.com/docs/ai-gateway)
-- [Nuxt AI Chat Template](https://github.com/nuxt-ui-templates/chat)
-- [Vue AI Chat Template](https://github.com/nuxt-ui-templates/chat-vue)
+- [Nuxt AI Chat Template](https://github.com/vinicunca/pohon-ui-templates/chat)
+- [Vue AI Chat Template](https://github.com/vinicunca/pohon-ui-templates/chat-vue)
 
 We're excited to see what you'll build!

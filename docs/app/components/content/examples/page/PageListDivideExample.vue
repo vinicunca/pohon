@@ -101,7 +101,7 @@ const users = ref([
       :target="user.target"
     >
       <template #body>
-        <UUser :name="user.name" :description="user.description" :avatar="user.avatar" size="xl" />
+        <PUser :name="user.name" :description="user.description" :avatar="user.avatar" size="xl" />
       </template>
     </UPageCard>
   </UPageList>

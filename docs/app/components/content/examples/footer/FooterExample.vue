@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem } from 'pohon-ui'
 
 const items: NavigationMenuItem[] = [{
   label: 'Figma Kit',
@@ -11,7 +11,7 @@ const items: NavigationMenuItem[] = [{
   target: '_blank'
 }, {
   label: 'Releases',
-  to: 'https://github.com/nuxt/ui/releases',
+  to: 'https://github.com/vinicunca/pohon/releases',
   target: '_blank'
 }]
 </script>
@@ -27,7 +27,7 @@ const items: NavigationMenuItem[] = [{
     <UNavigationMenu :items="items" variant="link" />
 
     <template #right>
-      <UButton
+      <PButton
         icon="i-simple-icons-discord"
         color="neutral"
         variant="ghost"
@@ -35,7 +35,7 @@ const items: NavigationMenuItem[] = [{
         target="_blank"
         aria-label="Discord"
       />
-      <UButton
+      <PButton
         icon="i-simple-icons-x"
         color="neutral"
         variant="ghost"
@@ -43,7 +43,7 @@ const items: NavigationMenuItem[] = [{
         target="_blank"
         aria-label="X"
       />
-      <UButton
+      <PButton
         icon="i-simple-icons-github"
         color="neutral"
         variant="ghost"

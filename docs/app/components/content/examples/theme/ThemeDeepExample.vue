@@ -11,7 +11,7 @@ import MyButton from './MyButton.vue'
     }"
   >
     <UCard :ui="{ body: 'flex items-center gap-2 sm:flex-row flex-col' }">
-      <UButton label="Direct child" />
+      <PButton label="Direct child" />
       <MyButton />
     </UCard>
   </UTheme>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ChipProps } from '@nuxt/ui'
+import type { ChipProps } from 'pohon-ui'
 import { camelCase, upperFirst } from 'scule'
 import { hash } from 'ohash'
 import { useElementSize } from '@vueuse/core'
@@ -190,7 +190,7 @@ const urlSearchParams = computed(() => {
           <div v-if="props.options?.length || !!slots.options" class="flex gap-4 p-4 border-b border-muted">
             <slot name="options" />
 
-            <UFormField
+            <PFormField
               v-for="option in props.options"
               :key="option.name"
               :label="option.label"
@@ -236,7 +236,7 @@ const urlSearchParams = computed(() => {
                 :ui="{ base: 'rounded-sm rounded-l-none min-w-12' }"
                 @update:model-value="set(optionsValues, option.name, $event)"
               />
-            </UFormField>
+            </PFormField>
           </div>
 
           <iframe

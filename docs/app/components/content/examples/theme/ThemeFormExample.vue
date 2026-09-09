@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as z from 'zod'
-import type { FormSubmitEvent } from '@nuxt/ui'
+import type { FormSubmitEvent } from 'pohon-ui'
 
 const schema = z.object({
   name: z.string().min(2, 'Too short'),
@@ -36,24 +36,24 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       }
     }"
   >
-    <UForm :schema="schema" :state="state" class="space-y-4 w-full" @submit="onSubmit">
-      <UFormField label="Name" name="name" description="Your public display name.">
+    <PForm :schema="schema" :state="state" class="space-y-4 w-full" @submit="onSubmit">
+      <PFormField label="Name" name="name" description="Your public display name.">
         <UInput v-model="state.name" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField label="Email" name="email" description="Used for notifications.">
+      <PFormField label="Email" name="email" description="Used for notifications.">
         <UInput v-model="state.email" type="email" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField label="Bio" name="bio" description="A short description about yourself.">
+      <PFormField label="Bio" name="bio" description="A short description about yourself.">
         <UTextarea v-model="state.bio" placeholder="Tell us about yourself" />
-      </UFormField>
+      </PFormField>
 
       <div class="flex justify-end">
-        <UButton type="submit">
+        <PButton type="submit">
           Save changes
-        </UButton>
+        </PButton>
       </div>
-    </UForm>
+    </PForm>
   </UTheme>
 </template>

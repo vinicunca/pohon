@@ -32,7 +32,7 @@ const defaultSize = computed({
 // `variant` shows through as the fallback.
 const variantItems = (values: string[]) => values.map(value => ({ label: upperFirst(value), value }))
 
-/** Variant names UButton can render itself, the rest (none) fall back. */
+/** Variant names PButton can render itself, the rest (none) fall back. */
 const RENDERABLE_VARIANTS = ['solid', 'outline', 'soft', 'subtle', 'ghost', 'link']
 
 /** Variant grid popovers close on pick, one open flag per group. */
@@ -159,7 +159,7 @@ const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y 
               :ui="{ content: 'p-1 grid grid-cols-2 gap-1 w-(--reka-popover-trigger-width)' }"
               class="flex-1"
             >
-              <UButton
+              <PButton
                 size="sm"
                 color="neutral"
                 variant="subtle"
@@ -176,10 +176,10 @@ const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y 
               >
                 <!-- the tag belongs in the grid, where it names the stock option -->
                 {{ field.items.find(item => item.value === (groupVariants[field.key].value === 'default' ? field.stock : groupVariants[field.key].value))?.label }}
-              </UButton>
+              </PButton>
 
               <template #content>
-                <UButton
+                <PButton
                   v-for="item in field.items"
                   :key="item.value"
                   size="sm"
@@ -193,7 +193,7 @@ const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y 
                 >
                   <!-- opacity, not a color: text-dimmed would fight the variant's own text color -->
                   <span class="truncate">{{ item.label }}<span v-if="item.value === field.stock" class="opacity-70 font-normal">&nbsp;(Default)</span></span>
-                </UButton>
+                </PButton>
               </template>
             </UPopover>
           </ThemeStudioRow>

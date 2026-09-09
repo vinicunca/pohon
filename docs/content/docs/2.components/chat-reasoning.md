@@ -8,7 +8,7 @@ links:
     to: https://reka-ui.com/docs/components/collapsible
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatReasoning.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/ChatReasoning.vue
 ---
 
 ## Usage
@@ -17,11 +17,13 @@ The ChatReasoning component renders a collapsible block that displays AI reasoni
 
 ::component-example
 ---
+
 collapse: true
 prettier: true
 name: 'chat-reasoning-example'
 class: 'h-[252px]'
 ---
+
 ::
 
 ::note{to="/docs/composables/use-scroll-shadow"}
@@ -34,13 +36,17 @@ Use the `text` prop to set the reasoning content. The text is displayed inside t
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-props:
+
+- class
+  props:
   text: 'The user is asking about Vue components...'
   class: 'w-60'
+
 ---
+
 ::
 
 ### Streaming
@@ -49,20 +55,24 @@ Use the `streaming` prop to indicate active reasoning. The component auto-opens 
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - text
-props:
+
+- class
+  ignore:
+- text
+  props:
   streaming: true
   text: 'The user is asking about Vue components...'
   class: 'w-60'
+
 ---
+
 ::
 
 ::tip
-Use the `isPartStreaming` utility from `@nuxt/ui/utils/ai` to determine if a part is currently being streamed.
+Use the `isPartStreaming` utility from `pohon-ui/utils/ai` to determine if a part is currently being streamed.
 ::
 
 ### Shimmer
@@ -71,19 +81,23 @@ When streaming, the trigger label uses the [`ChatShimmer`](/docs/components/chat
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - text
-props:
+
+- class
+  ignore:
+- text
+  props:
   streaming: true
   text: 'The user is asking about Vue components...'
   shimmer:
-    duration: 2
-    spread: 2
+  duration: 2
+  spread: 2
   class: 'w-60'
+
 ---
+
 ::
 
 ### Icon
@@ -92,16 +106,20 @@ Use the `icon` prop to display an [Icon](/docs/components/icon) component next t
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - text
-props:
+
+- class
+  ignore:
+- text
+  props:
   icon: i-lucide-brain
   text: 'The user is asking about Vue components...'
   class: 'w-60'
+
 ---
+
 ::
 
 ### Chevron
@@ -114,17 +132,21 @@ When `chevron` is set to `leading` with an `icon`, the icon swaps with the chevr
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - text
-props:
+
+- class
+  ignore:
+- text
+  props:
   chevron: leading
   icon: i-lucide-brain
   text: 'The user is asking about Vue components...'
   class: 'w-60'
+
 ---
+
 ::
 
 ### Chevron Icon
@@ -133,16 +155,20 @@ Use the `chevron-icon` prop to customize the chevron [Icon](/docs/components/ico
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - text
-props:
+
+- class
+  ignore:
+- text
+  props:
   chevronIcon: 'i-lucide-arrow-down'
   text: 'The user is asking about Vue components...'
   class: 'w-60'
+
 ---
+
 ::
 
 ::framework-only

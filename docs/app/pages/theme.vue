@@ -77,13 +77,13 @@ useHead({
 const { url } = useSiteConfig()
 
 const title = 'Theme'
-const description = 'Customize Nuxt UI live: colors, radius, fonts and icons, then export only what you changed.'
+const description = 'Customize Pohon live: colors, radius, fonts and icons, then export only what you changed.'
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon',
   title,
   description,
-  ogTitle: `${title} - Nuxt UI`,
+  ogTitle: `${title} - Pohon`,
   ogDescription: description,
   // A static file rather than defineOgImage: the page renders per request
   // for ?doc= (nuxt.config routeRules) and ogImage.zeroRuntime only builds
@@ -125,7 +125,7 @@ const shareOpen = ref(false)
 
       <template #right>
         <UTooltip text="Ask AI" :kbds="['meta', 'I']" ignore-non-keyboard-focus>
-          <UButton
+          <PButton
             color="neutral"
             variant="outline"
             label="Ask AI"
@@ -135,7 +135,7 @@ const shareOpen = ref(false)
           />
         </UTooltip>
 
-        <UButton
+        <PButton
           color="neutral"
           variant="solid"
           label="Export"
@@ -157,22 +157,22 @@ const shareOpen = ref(false)
            the menu is the only way to reach the views and the controls -->
       <template #body>
         <div class="flex flex-col gap-3">
-          <UFormField label="View" :ui="{ root: 'text-xs', container: 'mt-1' }">
+          <PFormField label="View" :ui="{ root: 'text-xs', container: 'mt-1' }">
             <ThemeStudioViewSwitcher vertical class="w-full" />
-          </UFormField>
+          </PFormField>
 
           <ThemeStudioToolbar vertical />
 
-          <UFormField label="Color mode" :ui="{ root: 'text-xs', container: 'mt-1' }">
+          <PFormField label="Color mode" :ui="{ root: 'text-xs', container: 'mt-1' }">
             <ThemeStudioColorModeTabs size="sm" class="w-full" />
-          </UFormField>
+          </PFormField>
 
           <USeparator class="my-5" />
 
           <ThemeStudioShuffleButton variant="outline" vertical />
           <ThemeStudioResetButton variant="outline" vertical />
 
-          <UButton
+          <PButton
             :icon="studioIcons.export"
             color="neutral"
             label="Export theme"
@@ -210,7 +210,7 @@ const shareOpen = ref(false)
              height of the plain controls between them. -->
         <div class="flex items-center gap-0.5 p-0.5 rounded-lg ring ring-default bg-elevated/50">
           <UTooltip text="Undo" :kbds="['meta', 'Z']">
-            <UButton
+            <PButton
               :icon="studioIcons.undo"
               color="neutral"
               variant="ghost"
@@ -222,7 +222,7 @@ const shareOpen = ref(false)
           </UTooltip>
 
           <UTooltip text="Redo" :kbds="['meta', 'shift', 'Z']">
-            <UButton
+            <PButton
               :icon="studioIcons.redo"
               color="neutral"
               variant="ghost"

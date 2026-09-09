@@ -1,42 +1,42 @@
 ---
 title: ProseCodeCollapse
-description: 'Make long code blocks collapsible to save space and improve readability.'
+description: "Make long code blocks collapsible to save space and improve readability."
 category: components
 navigation.title: CodeCollapse
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeCollapse.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/prose/CodeCollapse.vue
 ---
 
 ## Usage
 
 Wrap your code-block with a `code-collapse` component to display a collapsible code block.
 
-::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
+::code-preview{class="[&>div]:_:my-0 [&>div]:_:w-full"}
 
 ::code-collapse{class="[&>div]:my-0"}
 
 ```css [app/assets/css/main.css]
 @import "tailwindcss";
-@import "@nuxt/ui";
+@import "pohon-ui";
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
+  --font-sans: "Public Sans", sans-serif;
 
   --breakpoint-3xl: 1920px;
 
-  --color-green-50: #EFFDF5;
-  --color-green-100: #D9FBE8;
-  --color-green-200: #B3F5D1;
-  --color-green-300: #75EDAE;
-  --color-green-400: #00DC82;
-  --color-green-500: #00C16A;
-  --color-green-600: #00A155;
-  --color-green-700: #007F45;
+  --color-green-50: #effdf5;
+  --color-green-100: #d9fbe8;
+  --color-green-200: #b3f5d1;
+  --color-green-300: #75edae;
+  --color-green-400: #00dc82;
+  --color-green-500: #00c16a;
+  --color-green-600: #00a155;
+  --color-green-700: #007f45;
   --color-green-800: #016538;
-  --color-green-900: #0A5331;
-  --color-green-950: #052E16;
+  --color-green-900: #0a5331;
+  --color-green-950: #052e16;
 }
 ```
 
@@ -49,7 +49,7 @@ Wrap your code-block with a `code-collapse` component to display a collapsible c
 
 ```css [app/assets/css/main.css]
 @import "tailwindcss";
-@import "@nuxt/ui";
+@import "pohon-ui";
 
 @theme static {
   --font-sans: 'Public Sans', sans-serif;

@@ -13,7 +13,7 @@ const { copy, copied } = useClipboard()
   >
     <template v-if="value?.length" #trailing>
       <UTooltip text="Copy to clipboard" :content="{ side: 'right' }">
-        <UButton
+        <PButton
           :color="copied ? 'success' : 'neutral'"
           variant="link"
           size="sm"

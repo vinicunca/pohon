@@ -4,7 +4,7 @@ category: layout
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Theme.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Theme.vue
 ---
 
 ## Usage
@@ -33,8 +33,10 @@ Use the `ui` prop to override slot classes of descendant components. Keys are co
 
 ::component-example
 ---
+
 name: 'theme-ui-example'
 ---
+
 ::
 
 ### Prop defaults :badge{label="4.8+" class="align-text-top"}
@@ -43,12 +45,14 @@ Use the `props` prop to override the default value of any prop on descendant com
 
 ::component-example
 ---
+
 name: 'theme-props-example'
 ---
+
 ::
 
 ::tip
-Explicit props on a component (e.g. `<UButton color="primary" />`) always win over `<UTheme :props>`. Theme defaults only apply when the prop wasn't passed explicitly.
+Explicit props on a component (e.g. `<PButton color="primary" />`) always win over `<UTheme :props>`. Theme defaults only apply when the prop wasn't passed explicitly.
 ::
 
 ## Examples
@@ -59,8 +63,10 @@ Use different keys in `ui` or `props` to theme multiple component types at once.
 
 ::component-example
 ---
+
 name: 'theme-multiple-example'
 ---
+
 ::
 
 ### Nested themes
@@ -69,8 +75,10 @@ Nest multiple Theme components to compose overrides. The innermost Theme takes p
 
 ::component-example
 ---
+
 name: 'theme-nested-example'
 ---
+
 ::
 
 ### Explicit priority
@@ -79,8 +87,10 @@ Explicitly setting any prop (including `ui`) on an individual component always t
 
 ::component-example
 ---
+
 name: 'theme-priority-example'
 ---
+
 ::
 
 ### Deep propagation
@@ -89,12 +99,14 @@ The overrides are available to all descendant components regardless of how deepl
 
 ::component-example
 ---
+
 name: 'theme-deep-example'
 ---
+
 ::
 
 ::note
-In this example, `MyButton` is a custom component that renders a `UButton` internally. The theme overrides still apply because they propagate through the entire component tree.
+In this example, `MyButton` is a custom component that renders a `PButton` internally. The theme overrides still apply because they propagate through the entire component tree.
 ::
 
 ### Form components
@@ -103,12 +115,14 @@ Use the Theme component to apply consistent styling across a group of form compo
 
 ::component-example
 ---
+
 name: 'theme-form-example'
 ---
+
 ::
 
 ::tip
-`<UFormField>`, `<UFieldGroup>` and `<UAvatarGroup>` keep precedence over `<UTheme :props>` for `size`, `color` and `highlight`. Validation errors also force the `error` color over any theme value.
+`<PFormField>`, `<UFieldGroup>` and `<UAvatarGroup>` keep precedence over `<UTheme :props>` for `size`, `color` and `highlight`. Validation errors also force the `error` color over any theme value.
 ::
 
 ### Prose components
@@ -117,8 +131,10 @@ Use the `prose` namespace to theme typography components. Keys are nested under 
 
 ::component-example
 ---
+
 name: 'theme-prose-example'
 ---
+
 ::
 
 ## API

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem } from 'pohon-ui'
 
 const appConfig = useAppConfig()
 const studioIcons = useStudioIcons()
 
-// Replicates the Nuxt UI Portfolio template home page: floating pill nav,
+// Replicates the Pohon Portfolio template home page: floating pill nav,
 // avatar hero with polaroid marquee, about + work experience columns,
 // blog list, testimonial carousel, FAQ tabs and footer.
 const navItems: NavigationMenuItem[] = [
@@ -44,7 +44,7 @@ const about = {
 const experience = [{
   date: '2025 - Present',
   position: 'Public Contributor for',
-  company: { name: 'Nuxt UI', logo: 'i-simple-icons-nuxtdotjs' }
+  company: { name: 'Pohon', logo: 'i-simple-icons-nuxtdotjs' }
 }, {
   date: '2024 - Present',
   position: 'Founder of',
@@ -149,7 +149,7 @@ onUnmounted(() => clearTimeout(appearTimeout))
       >
         <template #list-trailing>
           <!-- Static: the studio toolbar owns color mode. -->
-          <UButton
+          <PButton
             color="neutral"
             variant="ghost"
             size="sm"
@@ -160,7 +160,7 @@ onUnmounted(() => clearTimeout(appearTimeout))
               <UIcon :name="appConfig.ui.icons.dark" :class="ui.leadingIcon({ class: 'hidden dark:inline-block' })" />
               <UIcon :name="appConfig.ui.icons.light" :class="ui.leadingIcon({ class: 'dark:hidden' })" />
             </template>
-          </UButton>
+          </PButton>
         </template>
       </UNavigationMenu>
     </div>
@@ -189,19 +189,19 @@ onUnmounted(() => clearTimeout(appearTimeout))
 
         <template #links>
           <div class="flex items-center gap-2">
-            <UButton :icon="studioIcons.github" label="View Github" color="neutral" to="https://github.com/mikenewbon/" target="_blank" />
-            <UButton color="success" variant="ghost" class="gap-2" label="Always online">
+            <PButton :icon="studioIcons.github" label="View Github" color="neutral" to="https://github.com/mikenewbon/" target="_blank" />
+            <PButton color="success" variant="ghost" class="gap-2" label="Always online">
               <template #leading>
                 <span class="relative flex size-2">
                   <span class="absolute inline-flex size-full rounded-full opacity-75 bg-success animate-ping" />
                   <span class="relative inline-flex size-2 scale-90 rounded-full bg-success" />
                 </span>
               </template>
-            </UButton>
+            </PButton>
           </div>
 
           <div class="gap-x-4 inline-flex mt-4">
-            <UButton
+            <PButton
               v-for="(link, index) of socialLinks"
               :key="index"
               v-bind="{ size: 'md', color: 'neutral', variant: 'ghost', ...link }"
@@ -293,14 +293,14 @@ onUnmounted(() => clearTimeout(appearTimeout))
             }"
           >
             <template #footer>
-              <UButton size="xs" variant="link" class="px-0 gap-0" label="Read Article">
+              <PButton size="xs" variant="link" class="px-0 gap-0" label="Read Article">
                 <template #trailing>
                   <UIcon
                     :name="appConfig.ui.icons.arrowRight"
                     class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
                   />
                 </template>
-              </UButton>
+              </PButton>
             </template>
           </UBlogPost>
         </UBlogPosts>
@@ -324,7 +324,7 @@ onUnmounted(() => clearTimeout(appearTimeout))
               description: 'text-base! text-balance before:content-[open-quote] before:text-5xl lg:before:text-7xl before:inline-block before:text-dimmed before:absolute before:-ml-6 lg:before:-ml-10 before:-mt-2 lg:before:-mt-4 after:content-[close-quote] after:text-5xl lg:after:text-7xl after:inline-block after:text-dimmed after:absolute after:mt-1 lg:after:mt-0 after:ml-1 lg:after:ml-2'
             }"
           >
-            <UUser
+            <PUser
               v-bind="item.author"
               :avatar="{ alt: item.author.name }"
               size="xl"
@@ -372,11 +372,11 @@ onUnmounted(() => clearTimeout(appearTimeout))
 
       <UFooter class="z-10 bg-default" :ui="{ left: 'text-muted text-xs' }">
         <template #left>
-          Built with Nuxt UI • © 2026
+          Built with Pohon • © 2026
         </template>
 
         <template #right>
-          <UButton
+          <PButton
             v-for="(link, index) of socialLinks"
             :key="index"
             v-bind="{ size: 'xs', color: 'neutral', variant: 'ghost', ...link }"

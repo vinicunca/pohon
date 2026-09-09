@@ -12,7 +12,7 @@
     }"
   >
     <div class="flex items-center gap-2">
-      <UButton label="Button" />
+      <PButton label="Button" />
       <UInput placeholder="Search..." />
       <USelect placeholder="Select" :items="['Item 1', 'Item 2', 'Item 3']" />
     </div>

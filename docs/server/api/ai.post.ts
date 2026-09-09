@@ -1,66 +1,68 @@
-import type { UIMessage, InferUITools, Tool } from 'ai'
-import { ToolLoopAgent, createAgentUIStreamResponse, tool, dynamicTool, jsonSchema, smoothStream, isStepCount, consumeStream, APICallError } from 'ai'
-import type { AnthropicLanguageModelOptions } from '@ai-sdk/anthropic'
-import type { GatewayProviderOptions } from '@ai-sdk/gateway'
-import { z } from 'zod'
-import { tools as mcpToolDefinitions } from '#nuxt-mcp-toolkit/tools.mjs'
-import * as theme from '../../.nuxt/ui'
-import { themeIcons } from '../../app/utils/theme/icons'
-import { cssVariableDefaults } from '../../app/utils/theme/tokens'
+import type { AnthropicLanguageModelOptions } from '@ai-sdk/anthropic';
+import type { GatewayProviderOptions } from '@ai-sdk/gateway';
+import type { InferUITools, Tool, UIMessage } from 'ai';
+import { APICallError, consumeStream, createAgentUIStreamResponse, dynamicTool, isStepCount, jsonSchema, smoothStream, tool, ToolLoopAgent } from 'ai';
+import { z } from 'zod';
+import { tools as mcpToolDefinitions } from '#nuxt-mcp-toolkit/tools.mjs';
+import * as theme from '../../.nuxt/ui';
 // The presets file itself, not the engine barrel: its only import is a type,
 // so this costs nothing beyond the preset data.
-import { presets } from '../../app/utils/theme/engine/presets'
+import { presets } from '../../app/utils/theme/engine/presets';
+import { themeIcons } from '../../app/utils/theme/icons';
+import { cssVariableDefaults } from '../../app/utils/theme/tokens';
 
-const componentNames = Object.keys(theme)
+const componentNames = Object.keys(theme);
 
 function mcpToolsToAiTools() {
-  const aiTools: Record<string, Tool> = {}
+  const aiTools: Record<string, Tool> = {};
 
-  for (const def of mcpToolDefinitions as any[]) {
-    const filename = def._meta?.filename as string | undefined
+  for (const def of mcpToolDefinitions as Array<any>) {
+    const filename = def._meta?.filename as string | undefined;
     const name = def.name || (filename
       ? filename.replace(/\.(ts|js|mts|mjs)$/, '').replace(/([a-z0-9])([A-Z])/g, '$1-$2').replace(/[_\s]+/g, '-').toLowerCase()
-      : null)
-    if (!name) continue
+      : null);
+    if (!name) {
+      continue;
+    }
 
     const schema = def.inputSchema
       ? z.toJSONSchema(z.object(def.inputSchema)) as Record<string, unknown>
-      : { type: 'object' as const, properties: {} }
+      : { type: 'object' as const, properties: {} };
 
     aiTools[name] = dynamicTool({
       description: def.description || '',
       inputSchema: jsonSchema(schema),
       execute: async (args: any) => {
         try {
-          return await def.handler(args, {})
+          return await def.handler(args, {});
         } catch (error: any) {
-          return { error: error.statusCode ? `[${error.statusCode}] ${error.message}` : error.message || String(error) }
+          return { error: error.statusCode ? `[${error.statusCode}] ${error.message}` : error.message || String(error) };
         }
-      }
-    })
+      },
+    });
   }
 
-  return aiTools
+  return aiTools;
 }
 
 export interface ApplyThemeSettings {
-  primary?: string
-  neutral?: string
-  secondary?: string
-  success?: string
-  info?: string
-  warning?: string
-  error?: string
-  radius?: number
+  primary?: string;
+  neutral?: string;
+  secondary?: string;
+  success?: string;
+  info?: string;
+  warning?: string;
+  error?: string;
+  radius?: number;
   /** Tailwind's three stacks. Headings follow serif, code follows mono. */
-  fontSans?: string
-  fontSerif?: string
-  fontMono?: string
-  blackAsPrimary?: boolean
-  icons?: string
-  customColors?: Record<string, Record<string, string>>
-  cssVariables?: { light?: Record<string, string>, dark?: Record<string, string> }
-  ui?: Record<string, any>
+  fontSans?: string;
+  fontSerif?: string;
+  fontMono?: string;
+  blackAsPrimary?: boolean;
+  icons?: string;
+  customColors?: Record<string, Record<string, string>>;
+  cssVariables?: { light?: Record<string, string>; dark?: Record<string, string> };
+  ui?: Record<string, any>;
 }
 
 // Written as a raw JSON Schema rather than zod on purpose: the SDK's zod conversion rewrites
@@ -90,8 +92,8 @@ const applyTheme = tool({
         description: 'Custom color palettes with shades 50-950 as oklch(L% C H) values (e.g. oklch(62.3% 0.214 259.815)); hex also accepted',
         additionalProperties: {
           type: 'object',
-          additionalProperties: { type: 'string' }
-        }
+          additionalProperties: { type: 'string' },
+        },
       },
       cssVariables: {
         type: 'object',
@@ -100,54 +102,54 @@ const applyTheme = tool({
           light: {
             type: 'object',
             description: 'CSS variables for light mode (.light). Keys: --ui-text, --ui-bg, --ui-border, --ui-primary, etc. Values: var(--ui-color-<name>-<shade>), hex, white, black.',
-            additionalProperties: { type: 'string' }
+            additionalProperties: { type: 'string' },
           },
           dark: {
             type: 'object',
             description: 'CSS variables for dark mode (.dark). Same variable names as light.',
-            additionalProperties: { type: 'string' }
-          }
-        }
+            additionalProperties: { type: 'string' },
+          },
+        },
       },
       ui: {
         type: 'object',
         description: 'Component-level theme overrides. MUST include ALL component customizations here so they are applied live. Keys are camelCase component names (e.g. button, badge, popover). Values have slots, defaultVariants, variants, compoundVariants.',
-        additionalProperties: true
-      }
-    }
+        additionalProperties: true,
+      },
+    },
   }),
-  execute: async settings => ({ applied: true, ...settings })
-})
+  execute: async (settings) => ({ applied: true, ...settings }),
+});
 
 const resetTheme = tool({
   description: 'Reset the theme back to defaults (primary: green, neutral: slate, radius: 0.25rem, font: Public Sans). Call this when users ask to reset, revert, or restore the default theme.',
   inputSchema: z.object({}),
-  execute: async () => ({ reset: true })
-})
+  execute: async () => ({ reset: true }),
+});
 
-const presetIds = presets.map(preset => preset.id) as [string, ...string[]]
+const presetIds = presets.map((preset) => preset.id) as [string, ...Array<string>];
 
 const applyPreset = tool({
-  description: `Apply one of the docs' built-in theme presets, whole and live. Use this ONLY when the user names a preset or asks for "the <name> look"; for any other theme request (a described aesthetic, a colour, a mood) design it yourself with \`applyTheme\` instead. A preset carries a full palette, token shades and component defaults that an \`applyTheme\` payload cannot express, so never try to rebuild one by hand. You can call \`applyTheme\` afterwards to tweak a preset you just applied. Available presets: ${presets.map(preset => `${preset.id} (${preset.name}: ${preset.description})`).join('; ')}.`,
+  description: `Apply one of the docs' built-in theme presets, whole and live. Use this ONLY when the user names a preset or asks for "the <name> look"; for any other theme request (a described aesthetic, a colour, a mood) design it yourself with \`applyTheme\` instead. A preset carries a full palette, token shades and component defaults that an \`applyTheme\` payload cannot express, so never try to rebuild one by hand. You can call \`applyTheme\` afterwards to tweak a preset you just applied. Available presets: ${presets.map((preset) => `${preset.id} (${preset.name}: ${preset.description})`).join('; ')}.`,
   inputSchema: z.object({
-    preset: z.enum(presetIds).describe('Id of the preset to apply.')
+    preset: z.enum(presetIds).describe('Id of the preset to apply.'),
   }),
-  execute: async ({ preset }) => ({ applied: true, preset })
-})
+  execute: async ({ preset }) => ({ applied: true, preset }),
+});
 
 const getComponentTheme = tool({
-  description: 'Get the theme definition (slots, variants, compoundVariants, defaultVariants) for a specific Nuxt UI component. Call this when you need to know the available slots and customization options to suggest component-level theming.',
+  description: 'Get the theme definition (slots, variants, compoundVariants, defaultVariants) for a specific Pohon component. Call this when you need to know the available slots and customization options to suggest component-level theming.',
   inputSchema: z.object({
-    componentName: z.string().describe(`Component name in camelCase. Available: ${componentNames.join(', ')}`)
+    componentName: z.string().describe(`Component name in camelCase. Available: ${componentNames.join(', ')}`),
   }),
   execute: async ({ componentName }) => {
-    const componentTheme = (theme as Record<string, unknown>)[componentName]
+    const componentTheme = (theme as Record<string, unknown>)[componentName];
     if (!componentTheme) {
-      return { error: `Component "${componentName}" not found`, availableComponents: componentNames }
+      return { error: `Component "${componentName}" not found`, availableComponents: componentNames };
     }
-    return { componentName, theme: componentTheme }
-  }
-})
+    return { componentName, theme: componentTheme };
+  },
+});
 
 const getThemeGuide = tool({
   description: 'Get detailed instructions for applying live theme changes. Call this ONLY when you are about to use applyTheme (e.g. user says "make it blue", "create a dark theme"). Do NOT call for documentation questions about theming — search docs instead.',
@@ -167,7 +169,7 @@ There are two types of customization:
 
 **1. CSS Variables (main.css)**
 
-The main.css file uses Tailwind CSS directives to configure design tokens:
+The main.css file uses UnoCSS directives to configure design tokens:
 
 *Fonts* — use the \`@theme\` directive. Any Google Font works, \`@nuxt/fonts\` will automatically load and optimize it:
 \`\`\`css
@@ -302,7 +304,7 @@ CRITICAL rules for component \`ui\` overrides:
 
 \`\`\`css
 @import "tailwindcss";
-@import "@nuxt/ui";
+@import "pohon-ui";
 
 @theme {
   --font-sans: 'FontName', sans-serif; /* only if the body font changed */
@@ -349,7 +351,7 @@ For **Vue** — \`vite.config.ts\`:
 \`\`\`typescript
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import ui from '@nuxt/ui/vite'
+import ui from 'pohon-ui/vite'
 
 export default defineConfig({
   plugins: [
@@ -363,9 +365,9 @@ export default defineConfig({
 })
 \`\`\`
 
-NEVER recommend \`appConfig.theme.*\` properties (like \`blackAsPrimary\`, \`radius\`, \`font\`) — those are internal to the docs site. Users should use CSS variables in main.css for radius, fonts, and monochrome primary.`
-  })
-})
+NEVER recommend \`appConfig.theme.*\` properties (like \`blackAsPrimary\`, \`radius\`, \`font\`) — those are internal to the docs site. Users should use CSS variables in main.css for radius, fonts, and monochrome primary.`,
+  }),
+});
 
 const tools = {
   ...mcpToolsToAiTools(),
@@ -373,22 +375,22 @@ const tools = {
   applyTheme,
   applyPreset,
   resetTheme,
-  getComponentTheme
-}
+  getComponentTheme,
+};
 
-export type DocsChatTools = InferUITools<typeof tools>
-export type DocsChatMessage = UIMessage<unknown, never, DocsChatTools>
+export type DocsChatTools = InferUITools<typeof tools>;
+export type DocsChatMessage = UIMessage<unknown, never, DocsChatTools>;
 
 function buildInstructions(framework: 'nuxt' | 'vue') {
-  return `You are a helpful assistant for Nuxt UI, a UI library for Nuxt and Vue. Nuxt UI includes \`@nuxt/fonts\` and \`@nuxt/icon\` as built-in dependencies — never tell users to install them separately. Use your knowledge base tools to search for relevant information before answering questions.
+  return `You are a helpful assistant for Pohon, a UI library for Nuxt and Vue. Pohon includes \`@nuxt/fonts\` and \`@nuxt/icon\` as built-in dependencies — never tell users to install them separately. Use your knowledge base tools to search for relevant information before answering questions.
 
-The user is using **${framework === 'vue' ? 'Vue' : 'Nuxt'}**. Tailor your answers accordingly — ${framework === 'vue' ? 'use the Vite plugin setup, Vue Router, and vite.config.ts instead of Nuxt-specific features like modules or app.config.ts. IMPORTANT: The Vite plugin auto-imports components and Nuxt UI composables, but Vue core APIs and VueUse must be explicitly imported — always include these in code examples (e.g. `import { ref, computed } from \'vue\'`, `import { useColorMode } from \'@vueuse/core\'`).' : 'use Nuxt modules, auto-imports, app.config.ts, and other Nuxt-specific features. Nuxt auto-imports Vue APIs (ref, computed, etc.), composables, and components — do not include these imports in code examples.'}
+The user is using **${framework === 'vue' ? 'Vue' : 'Nuxt'}**. Tailor your answers accordingly — ${framework === 'vue' ? 'use the Vite plugin setup, Vue Router, and vite.config.ts instead of Nuxt-specific features like modules or app.config.ts. IMPORTANT: The Vite plugin auto-imports components and Pohon composables, but Vue core APIs and VueUse must be explicitly imported — always include these in code examples (e.g. `import { ref, computed } from \'vue\'`, `import { useColorMode } from \'@vueuse/core\'`).' : 'use Nuxt modules, auto-imports, app.config.ts, and other Nuxt-specific features. Nuxt auto-imports Vue APIs (ref, computed, etc.), composables, and components — do not include these imports in code examples.'}
 
 Guidelines:
-- For documentation questions, ALWAYS use tools to search for information. Never rely on pre-trained knowledge for Nuxt UI APIs, props, or usage.
+- For documentation questions, ALWAYS use tools to search for information. Never rely on pre-trained knowledge for Pohon APIs, props, or usage.
 - For questions about how to customize themes (e.g. "how do I customize colors?", "how does theming work?"), search the documentation like any other docs question.
 - When users ask you to APPLY a theme change live (e.g. "make it blue", "create a sakura theme", "change the font"), call \`getThemeGuide\` first for detailed instructions, then use \`applyTheme\` / \`resetTheme\`. Use your own judgment on aesthetics, color theory, and design — no need to search docs for that. Be decisive: pick colors/fonts/radius confidently and apply them. Only when the user names one of the built-in presets, or asks for "the <name> look", use \`applyPreset\` instead: a described aesthetic is yours to design, not a preset to match.
-- If a question is unrelated to Nuxt UI (e.g. general coding, off-topic), briefly answer if you can, but don't waste tool calls searching docs for it.
+- If a question is unrelated to Pohon (e.g. general coding, off-topic), briefly answer if you can, but don't waste tool calls searching docs for it.
 - If no relevant information is found after searching, respond with "Sorry, I couldn't find information about that in the documentation."
 - Be concise and direct in your responses.
 
@@ -411,28 +413,28 @@ Guidelines:
 - When multiple relevant items are found, list them clearly using bullet points.
 - You have up to 5 tool calls to find the answer, so be strategic: start broad, then get specific if needed.
 - Format responses in a conversational way, not as documentation sections.
-    `
+    `;
 }
 
 // Static per framework so the cached prompt prefix stays stable across requests.
 const instructions = {
   nuxt: buildInstructions('nuxt'),
-  vue: buildInstructions('vue')
-}
+  vue: buildInstructions('vue'),
+};
 
 const anthropicOptions = {
   thinking: {
     type: 'adaptive',
-    display: 'summarized'
+    display: 'summarized',
   },
-  effort: 'low'
-} satisfies AnthropicLanguageModelOptions
+  effort: 'low',
+} satisfies AnthropicLanguageModelOptions;
 
 export default defineEventHandler(async (event) => {
-  const { messages, framework, currentPage } = await readBody(event)
+  const { messages, framework, currentPage } = await readBody(event);
 
   if (!messages || !Array.isArray(messages)) {
-    throw createError({ statusCode: 400, message: 'Invalid or missing messages array.' })
+    throw createError({ statusCode: 400, message: 'Invalid or missing messages array.' });
   }
 
   // `currentPage` reaches the model as a marker on the last user message, so it is an
@@ -444,23 +446,23 @@ export default defineEventHandler(async (event) => {
     && !/[\r\n]/.test(currentPage)
     && /^\/docs\/[\w/-]*$/.test(currentPage)
     ? currentPage
-    : null
+    : null;
 
   // Page context belongs to the turn it was sent with, not to the thread: it is appended
   // here and never persisted client-side, so a stale path can't leak into a later answer.
   const uiMessages = messages.map((message: UIMessage, index: number) => {
     if (!safeCurrentPage || index !== messages.length - 1 || message.role !== 'user') {
-      return message
+      return message;
     }
 
     return {
       ...message,
-      parts: [...(message.parts || []), { type: 'text' as const, text: `[Context: the user is currently viewing ${safeCurrentPage}]` }]
-    }
-  })
+      parts: [...(message.parts || []), { type: 'text' as const, text: `[Context: the user is currently viewing ${safeCurrentPage}]` }],
+    };
+  });
 
-  const abortController = new AbortController()
-  event.node.req.on('close', () => abortController.abort())
+  const abortController = new AbortController();
+  event.node.req.on('close', () => abortController.abort());
 
   const agent = new ToolLoopAgent({
     model: 'anthropic/claude-sonnet-5',
@@ -475,10 +477,10 @@ export default defineEventHandler(async (event) => {
         user: getChatUser(event),
         tags: ['docs-chat'],
         // Same tier as the primary so the adaptive thinking options stay supported.
-        models: ['anthropic/claude-sonnet-4.6']
-      } satisfies GatewayProviderOptions
-    }
-  })
+        models: ['anthropic/claude-sonnet-4.6'],
+      } satisfies GatewayProviderOptions,
+    },
+  });
 
   return createAgentUIStreamResponse({
     agent,
@@ -489,19 +491,19 @@ export default defineEventHandler(async (event) => {
     onError: (error) => {
       // Provider errors carry the outgoing prompt in `requestBodyValues` and the raw
       // `responseBody`, so log identifying fields only and keep chat content out of the logs.
-      const statusCode = APICallError.isInstance(error) ? error.statusCode : undefined
+      const statusCode = APICallError.isInstance(error) ? error.statusCode : undefined;
 
       console.error('[api/ai] stream error:', {
         name: error instanceof Error ? error.name : 'UnknownError',
         message: error instanceof Error ? error.message : String(error),
-        statusCode
-      })
+        statusCode,
+      });
 
       if (statusCode === 429) {
-        return 'You have reached the message limit for now. Please try again later.'
+        return 'You have reached the message limit for now. Please try again later.';
       }
 
-      return 'An error occurred.'
-    }
-  })
-})
+      return 'An error occurred.';
+    },
+  });
+});

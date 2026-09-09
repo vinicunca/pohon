@@ -14,7 +14,7 @@ const value = ref<File[]>([])
     class="w-96 min-h-48"
   >
     <template #actions="{ open }">
-      <UButton
+      <PButton
         label="Select images"
         icon="i-lucide-upload"
         color="neutral"
@@ -29,7 +29,7 @@ const value = ref<File[]>([])
           Files ({{ files?.length }})
         </p>
 
-        <UButton
+        <PButton
           icon="i-lucide-plus"
           label="Add more"
           color="neutral"

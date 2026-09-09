@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { InputMenuItem } from '@nuxt/ui'
+import type { InputMenuItem } from 'pohon-ui'
 
 const items: InputMenuItem[] = Array(1000).fill(0).map((_, i) => ({
   label: `item-${i}`,

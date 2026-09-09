@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AccordionItem } from '@nuxt/ui'
+import type { AccordionItem } from 'pohon-ui'
 
 const items: AccordionItem[] = [
   {

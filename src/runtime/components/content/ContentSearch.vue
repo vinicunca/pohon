@@ -79,7 +79,7 @@ export interface ContentSearchProps<T extends ContentSearchLink = ContentSearchL
    */
   input?: boolean | Omit<InputProps, 'modelValue' | 'defaultValue'>;
   /**
-   * Keyboard shortcut to open the search (used by [`defineShortcuts`](https://ui.nuxt.com/docs/composables/define-shortcuts))
+   * Keyboard shortcut to open the search (used by [`defineShortcuts`](https://pohon.vinicunca.dev/docs/composables/define-shortcuts))
    * @defaultValue 'meta_k'
    */
   shortcut?: string;
@@ -88,7 +88,7 @@ export interface ContentSearchProps<T extends ContentSearchLink = ContentSearchL
   navigation?: Array<ContentNavigationItem>;
   files?: Array<ContentSearchFile>;
   /**
-   * Options for [useFuse](https://vueuse.org/integrations/useFuse) passed to the [CommandPalette](https://ui.nuxt.com/docs/components/command-palette).
+   * Options for [useFuse](https://vueuse.org/integrations/useFuse) passed to the [CommandPalette](https://pohon.vinicunca.dev/docs/components/command-palette).
    * @defaultValue {
       fuseOptions: {
         ignoreLocation: true,

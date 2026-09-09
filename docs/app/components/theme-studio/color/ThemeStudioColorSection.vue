@@ -48,7 +48,7 @@ const editorContent = { side: 'right' as const, align: 'start' as const, alignOf
     <template #actions>
       <UPopover v-model:open="shadeEditor" :content="editorContent" :ui="{ content: editorPanel }">
         <UTooltip text="Adjust shades" ignore-non-keyboard-focus>
-          <UButton
+          <PButton
             :icon="studioIcons.options"
             color="neutral"
             variant="ghost"
@@ -90,7 +90,7 @@ const editorContent = { side: 'right' as const, align: 'start' as const, alignOf
 
       <UPopover v-model:open="paletteEditor" :content="editorContent" :ui="{ content: editorPanel }">
         <UTooltip text="Edit palette" ignore-non-keyboard-focus>
-          <UButton
+          <PButton
             :icon="studioIcons.curve"
             color="neutral"
             variant="ghost"

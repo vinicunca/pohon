@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SplitterItem } from '@nuxt/ui'
+import type { SplitterItem } from 'pohon-ui'
 
 const items: SplitterItem[] = [
   { slot: 'left', minSize: 20, defaultSize: 30, class: 'items-center justify-center text-muted font-medium' },

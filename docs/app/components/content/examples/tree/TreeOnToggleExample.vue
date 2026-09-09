@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { TreeItemToggleEvent } from 'reka-ui'
-import type { TreeItem } from '@nuxt/ui'
+import type { TreeItem } from 'pohon-ui'
 
 const items: TreeItem[] = [
   {

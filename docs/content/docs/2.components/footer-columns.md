@@ -1,6 +1,6 @@
 ---
 title: FooterColumns
-description: 'A list of links as columns to display in your Footer.'
+description: "A list of links as columns to display in your Footer."
 category: navigation
 keywords:
   - footer links
@@ -9,7 +9,7 @@ keywords:
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/FooterColumns.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/FooterColumns.vue
 ---
 
 ## Usage
@@ -48,12 +48,14 @@ You can pass any property from the [Link](/docs/components/link#props) component
 
 ::component-example
 ---
+
 prettier: true
 name: 'footer-columns-example'
 class: 'p-8'
 props:
-  class: 'w-full'
+class: 'w-full'
 ---
+
 ::
 
 ## API

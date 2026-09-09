@@ -14,7 +14,7 @@ const value = ref<File[]>([])
     class="w-96 min-h-48"
   >
     <template #actions="{ open }">
-      <UButton
+      <PButton
         label="Select images"
         icon="i-lucide-upload"
         color="neutral"
@@ -24,7 +24,7 @@ const value = ref<File[]>([])
     </template>
 
     <template #files-bottom="{ removeFile, files }">
-      <UButton
+      <PButton
         v-if="files?.length"
         label="Remove all files"
         color="neutral"

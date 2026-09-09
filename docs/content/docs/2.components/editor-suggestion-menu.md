@@ -5,7 +5,7 @@ category: editor
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorSuggestionMenu.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/EditorSuggestionMenu.vue
 ---
 
 ## Usage
@@ -22,11 +22,13 @@ It must be used inside an [Editor](/docs/components/editor) component's default 
 
 ::component-example
 ---
+
 elevated: true
 collapse: true
 name: 'editor-suggestion-menu-example'
 class: 'p-8'
 ---
+
 ::
 
 ### Items
@@ -42,11 +44,13 @@ Use the `items` prop as an array of objects with the following properties:
 
 ::component-example
 ---
+
 elevated: true
 collapse: true
 name: 'editor-suggestion-menu-items-example'
 class: 'p-8'
 ---
+
 ::
 
 ::note
@@ -83,7 +87,7 @@ This is useful when the trigger character should open directly after other chara
       :items="items"
       char=":"
       :suggestion="{
-        allowedPrefixes: null
+        allowedPrefixes: null,
       }"
     />
   </UEditor>
@@ -102,7 +106,7 @@ Use the `options` prop to customize the positioning behavior using [Floating UI 
       :items="items"
       :options="{
         placement: 'bottom-start',
-        offset: 4
+        offset: 4,
       }"
     />
   </UEditor>

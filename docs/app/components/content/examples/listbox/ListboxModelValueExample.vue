@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ListboxItem } from '@nuxt/ui'
+import type { ListboxItem } from 'pohon-ui'
 
 const items: ListboxItem[] = [
   { label: 'France', icon: 'i-lucide-map-pin', value: 'FR' },

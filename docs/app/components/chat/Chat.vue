@@ -2,7 +2,7 @@
 import type { ToolUIPart, DynamicToolUIPart } from 'ai'
 import { DefaultChatTransport, isToolUIPart, isReasoningUIPart, isTextUIPart, getToolName } from 'ai'
 import { useChat as useAIChat } from '@ai-sdk/vue'
-import { isPartStreaming, isToolStreaming } from '@nuxt/ui/utils/ai'
+import { isPartStreaming, isToolStreaming } from 'pohon-ui/utils/ai'
 import type { DocsChatMessage, DocsChatTools } from '~~/server/api/ai.post'
 
 const input = ref('')
@@ -267,7 +267,7 @@ function clearMessages() {
            chat's changes (component overrides included) may not map to any
            section, and "back to stock" is what this button always meant -->
       <UTooltip v-if="hasThemeChanges" text="Reset theme">
-        <UButton
+        <PButton
           :icon="studioIcons.reset"
           color="neutral"
           variant="ghost"
@@ -277,7 +277,7 @@ function clearMessages() {
       </UTooltip>
 
       <UTooltip v-if="canClear" text="Clear messages">
-        <UButton
+        <PButton
           icon="i-lucide-list-x"
           color="neutral"
           variant="ghost"
@@ -288,7 +288,7 @@ function clearMessages() {
 
     <template #close>
       <UTooltip text="Close" :kbds="['meta', 'i']">
-        <UButton
+        <PButton
           icon="i-lucide-panel-right-close"
           color="neutral"
           variant="ghost"

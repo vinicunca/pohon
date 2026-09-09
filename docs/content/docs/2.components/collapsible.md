@@ -10,7 +10,7 @@ links:
     to: https://reka-ui.com/docs/components/collapsible
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Collapsible.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Collapsible.vue
 ---
 
 ## Usage
@@ -21,22 +21,25 @@ Then, use the `#content` slot to add the content displayed when the Collapsible 
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - class
-props:
+
+- class
+  props:
   class: 'flex flex-col gap-2 w-48'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
+  <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  content: |
+content: |
 
     <Placeholder class="h-48" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
 #content
 :placeholder{class="h-48"}
@@ -48,23 +51,26 @@ Use the `unmount-on-hide` prop to prevent the content from being unmounted when 
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - class
-props:
+
+- class
+  props:
   unmountOnHide: false
   class: 'flex flex-col gap-2 w-48'
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
+  <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  content: |
+content: |
 
     <Placeholder class="h-48" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
 #content
 :placeholder{class="h-48"}
@@ -80,23 +86,26 @@ Use the `disabled` prop to disable the Collapsible.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - class
-props:
+
+- class
+  props:
   class: 'flex flex-col gap-2 w-48'
   disabled: true
-slots:
+  slots:
   default: |
 
-    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
+  <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-  content: |
+content: |
 
     <Placeholder class="h-48" />
+
 ---
 
-:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
+:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
 
 #content
 :placeholder{class="h-48"}
@@ -110,8 +119,10 @@ You can control the open state by using the `default-open` prop or the `v-model:
 
 ::component-example
 ---
+
 name: 'collapsible-open-example'
 ---
+
 ::
 
 ::note
@@ -128,8 +139,10 @@ Here is an example with a rotating icon in the Button that indicates the open st
 
 ::component-example
 ---
+
 name: 'collapsible-icon-example'
 ---
+
 ::
 
 ## API

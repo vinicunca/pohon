@@ -1,52 +1,51 @@
 ---
 title: ProseCodeTree
-description: 'Visualize file and folder structures with syntax-highlighted code.'
+description: "Visualize file and folder structures with syntax-highlighted code."
 category: components
 navigation.title: CodeTree
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeTree.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/prose/CodeTree.vue
 ---
 
 ## Usage
 
 Wrap your code blocks with a `code-tree` component in any particular order to display a tree view of your files.
 
-::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
+::code-preview{class="[&>div]:_:my-0 [&>div]:_:w-full"}
 
 ::code-tree{defaultValue="app/app.config.ts"}
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
-  modules: ['@nuxt/ui'],
+  modules: ["pohon-ui"],
 
-  css: ['~/assets/css/main.css']
-})
-
+  css: ["~/assets/css/main.css"],
+});
 ```
 
 ```css [app/assets/css/main.css]
 @import "tailwindcss";
-@import "@nuxt/ui";
+@import "pohon-ui";
 ```
 
 ```ts [app/app.config.ts]
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'sky',
-      colors: 'slate'
-    }
-  }
-})
+      primary: "sky",
+      colors: "slate",
+    },
+  },
+});
 ```
 
 ```vue [app/app.vue]
 <template>
-  <UApp>
+  <PApp>
     <NuxtPage />
-  </UApp>
+  </PApp>
 </template>
 ```
 
@@ -65,7 +64,7 @@ export default defineAppConfig({
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.0",
-    "@nuxt/ui": "^4.0.0",
+    "pohon-ui": "^4.0.0",
     "nuxt": "^4.0.0"
   },
   "devDependencies": {
@@ -170,7 +169,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
-  modules: ['@nuxt/ui'],
+  modules: ['pohon-ui'],
 
   css: ['~/assets/css/main.css']
 })
@@ -179,7 +178,7 @@ export default defineNuxtConfig({
 
 ```css [app/assets/css/main.css]
 @import "tailwindcss";
-@import "@nuxt/ui";
+@import "pohon-ui";
 ```
 
 ```ts [app/app.config.ts]
@@ -195,9 +194,9 @@ export default defineAppConfig({
 
 ```vue [app/app.vue]
 <template>
-  <UApp>
+  <PApp>
     <NuxtPage />
-  </UApp>
+  </PApp>
 </template>
 ```
 
@@ -216,7 +215,7 @@ export default defineAppConfig({
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.0",
-    "@nuxt/ui": "^4.0.0",
+    "pohon-ui": "^4.0.0",
     "nuxt": "^4.0.0"
   },
   "devDependencies": {

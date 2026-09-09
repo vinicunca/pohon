@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PopoverProps, TabsItem } from '@nuxt/ui'
+import type { PopoverProps, TabsItem } from 'pohon-ui'
 import { keepPanels } from '../../../utils/theme/studio'
 
 /**

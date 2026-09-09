@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { BreadcrumbItem } from '@nuxt/ui'
+import type { BreadcrumbItem } from 'pohon-ui'
 
 const items: BreadcrumbItem[] = [
   {

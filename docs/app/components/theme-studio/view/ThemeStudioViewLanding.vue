@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem } from 'pohon-ui'
 
 const appConfig = useAppConfig()
 const studioIcons = useStudioIcons()
@@ -137,8 +137,8 @@ const vReveal = {
       <UNavigationMenu :items="navItems" variant="link" />
 
       <template #right>
-        <UButton label="Sign in" color="neutral" variant="ghost" class="hidden sm:inline-flex" />
-        <UButton label="Get started" color="neutral" />
+        <PButton label="Sign in" color="neutral" variant="ghost" class="hidden sm:inline-flex" />
+        <PButton label="Get started" color="neutral" />
       </template>
     </UHeader>
 
@@ -189,8 +189,8 @@ const vReveal = {
 
       <template #links>
         <div class="landing-enter flex flex-wrap justify-center gap-6" style="animation-delay: 650ms">
-          <UButton label="Start for free" variant="solid" size="xl" class="landing-btn-glow" />
-          <UButton label="View demo" color="neutral" variant="soft" size="xl" />
+          <PButton label="Start for free" variant="solid" size="xl" class="landing-btn-glow" />
+          <PButton label="View demo" color="neutral" variant="soft" size="xl" />
         </div>
       </template>
 
@@ -324,9 +324,9 @@ const vReveal = {
 
       <template #links>
         <div v-reveal="200" class="flex flex-col items-center justify-center gap-6">
-          <UButton label="Start for free" variant="solid" size="xl" class="landing-btn-glow" />
+          <PButton label="Start for free" variant="solid" size="xl" class="landing-btn-glow" />
 
-          <UButton
+          <PButton
             label="npx telemetry init"
             :trailing-icon="copied ? appConfig.ui.icons.copyCheck : appConfig.ui.icons.copy"
             color="neutral"
@@ -344,12 +344,12 @@ const vReveal = {
     <UFooter :ui="{ container: 'border-t border-default', right: 'gap-x-0 flex-wrap justify-end' }">
       <template #left>
         <p class="text-sm text-dimmed">
-          Built with Nuxt UI • © 2026
+          Built with Pohon • © 2026
         </p>
       </template>
 
       <template #right>
-        <UButton
+        <PButton
           v-for="link in footerLinks"
           :key="link"
           :label="link"

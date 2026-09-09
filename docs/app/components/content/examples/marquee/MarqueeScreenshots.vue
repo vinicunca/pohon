@@ -7,7 +7,7 @@
         :src="`/blocks/image${i}.png`"
         width="460"
         height="258"
-        :alt="`Nuxt UI Screenshot ${i}`"
+        :alt="`Pohon Screenshot ${i}`"
         loading="lazy"
         class="aspect-video border border-default rounded-lg bg-white"
       >
@@ -19,7 +19,7 @@
         :src="`/blocks/image${i}.png`"
         width="460"
         height="258"
-        :alt="`Nuxt UI Screenshot ${i}`"
+        :alt="`Pohon Screenshot ${i}`"
         loading="lazy"
         class="aspect-video border border-default rounded-lg bg-white"
       >
@@ -31,7 +31,7 @@
         :src="`/blocks/image${i}.png`"
         width="460"
         height="258"
-        :alt="`Nuxt UI Screenshot ${i}`"
+        :alt="`Pohon Screenshot ${i}`"
         loading="lazy"
         class="aspect-video border border-default rounded-lg bg-white"
       >

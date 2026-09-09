@@ -94,9 +94,9 @@ const groupedByRelease = computed<ReleaseGroup[]>(() => {
 })
 
 function normalizeCommitMessage(commit: Commit) {
-  const prefix = `[\`${commit.sha.slice(0, 5)}\`](https://github.com/nuxt/ui/commit/${commit.sha})`
+  const prefix = `[\`${commit.sha.slice(0, 5)}\`](https://github.com/vinicunca/pohon/commit/${commit.sha})`
   const content = commit.message
-    .replace(/#(\d+)/g, '<a href=\'https://github.com/nuxt/ui/issues/$1\'>#$1</a>')
+    .replace(/#(\d+)/g, '<a href=\'https://github.com/vinicunca/pohon/issues/$1\'>#$1</a>')
     .replace(/`(.*?)`/g, '<code class="text-xs">$1</code>')
 
   return `${prefix} — ${content}`

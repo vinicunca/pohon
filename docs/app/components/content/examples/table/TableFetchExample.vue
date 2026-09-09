@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AvatarProps, TableColumn } from '@nuxt/ui'
+import type { AvatarProps, TableColumn } from 'pohon-ui'
 
 const UAvatar = resolveComponent('UAvatar')
 
@@ -53,7 +53,7 @@ const columns: TableColumn<User>[] = [{
 </script>
 
 <template>
-  <UTable
+  <PTable
     :data="data"
     :columns="columns"
     :loading="status === 'pending' || status === 'idle'"

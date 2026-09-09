@@ -21,8 +21,8 @@ const studioIcons = useStudioIcons()
     </div>
 
     <div class="flex items-center justify-end gap-2 border-t border-default p-3">
-      <UButton label="Dismiss" color="neutral" variant="ghost" />
-      <UButton
+      <PButton label="Dismiss" color="neutral" variant="ghost" />
+      <PButton
         label="Learn more"
         color="neutral"
         variant="subtle"

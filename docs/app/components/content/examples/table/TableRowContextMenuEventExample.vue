@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { ContextMenuItem, TableColumn, TableRow } from '@nuxt/ui'
+import type { ContextMenuItem, TableColumn, TableRow } from 'pohon-ui'
 import { useClipboard } from '@vueuse/core'
 
 const UBadge = resolveComponent('UBadge')
@@ -148,7 +148,7 @@ function onContextmenu(_e: Event, row: TableRow<Payment>) {
 
 <template>
   <UContextMenu :items="items">
-    <UTable
+    <PTable
       :data="data"
       :columns="columns"
       class="flex-1"
@@ -157,6 +157,6 @@ function onContextmenu(_e: Event, row: TableRow<Payment>) {
       <template #expanded="{ row }">
         <pre>{{ row.original }}</pre>
       </template>
-    </UTable>
+    </PTable>
   </UContextMenu>
 </template>

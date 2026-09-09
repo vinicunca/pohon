@@ -3,7 +3,7 @@ const retries = ref(0)
 </script>
 
 <template>
-  <UFormField label="Retries" help="Specify number of attempts" required>
+  <PFormField label="Retries" help="Specify number of attempts" required>
     <UInputNumber v-model="retries" placeholder="Enter retries" />
-  </UFormField>
+  </PFormField>
 </template>

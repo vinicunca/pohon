@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { getPaginationRowModel } from '@tanstack/vue-table'
-import type { TableColumn } from '@nuxt/ui'
+import type { TableColumn } from 'pohon-ui'
 
 const table = useTemplateRef('table')
 
@@ -166,7 +166,7 @@ const globalFilter = ref('')
       />
     </div>
 
-    <UTable
+    <PTable
       ref="table"
       v-model:pagination="pagination"
       v-model:global-filter="globalFilter"

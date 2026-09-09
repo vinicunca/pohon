@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { object, string } from 'yup'
 import type { InferType } from 'yup'
-import type { FormSubmitEvent } from '@nuxt/ui'
+import type { FormSubmitEvent } from 'pohon-ui'
 
 const schema = object({
   email: string().email('Invalid email').required('Required'),
@@ -25,17 +25,17 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
-    <UFormField label="Email" name="email">
+  <PForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
+    <PFormField label="Email" name="email">
       <UInput v-model="state.email" />
-    </UFormField>
+    </PFormField>
 
-    <UFormField label="Password" name="password">
+    <PFormField label="Password" name="password">
       <UInput v-model="state.password" type="password" />
-    </UFormField>
+    </PFormField>
 
-    <UButton type="submit">
+    <PButton type="submit">
       Submit
-    </UButton>
-  </UForm>
+    </PButton>
+  </PForm>
 </template>

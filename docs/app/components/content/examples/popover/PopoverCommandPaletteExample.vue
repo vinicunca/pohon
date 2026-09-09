@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CommandPaletteItem } from '@nuxt/ui'
+import type { CommandPaletteItem } from 'pohon-ui'
 
 const items = ref([
   {
@@ -30,7 +30,7 @@ const label = ref([])
 
 <template>
   <UPopover :content="{ side: 'right', align: 'start' }">
-    <UButton
+    <PButton
       icon="i-lucide-tag"
       label="Select labels"
       color="neutral"

@@ -66,7 +66,7 @@ onMounted(() => {
       orientation="horizontal"
       class="rounded-none"
     >
-      <UUser
+      <PUser
         :name="`${item.firstName} ${item.lastName}`"
         :description="item.email"
         :avatar="{ src: item.image, alt: item.firstName, loading: 'lazy' as const }"

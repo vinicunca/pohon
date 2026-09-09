@@ -1,12 +1,12 @@
 ---
 title: ProseCard
-description: 'Create highlighted content blocks with optional links and navigation.'
+description: "Create highlighted content blocks with optional links and navigation."
 category: components
 navigation.title: Card
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Card.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/prose/Card.vue
 ---
 
 ## Usage
@@ -17,19 +17,22 @@ Use the `title`, `icon` and `color` props to customize it. You can also pass any
 
 ::component-code{slug="card" prose}
 ---
+
 hide:
-  - class
-ignore:
-  - target
-props:
+
+- class
+  ignore:
+- target
+  props:
   class: 'my-0 w-96'
   title: Startup
   icon: i-lucide-users
   color: primary
   to: 'https://nuxt.lemonsqueezy.com'
   target: '_blank'
-slots:
+  slots:
   default: Best suited for small teams, startups and agencies with up to 5 developers.
+
 ---
 
 Best suited for small teams, startups and agencies with up to 5 developers.

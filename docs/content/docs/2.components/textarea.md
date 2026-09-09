@@ -6,7 +6,7 @@ keywords:
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Textarea.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Textarea.vue
 ---
 
 ## Usage
@@ -15,13 +15,17 @@ Use the `v-model` directive to control the value of the Textarea.
 
 ::component-code
 ---
+
 ignore:
-  - modelValue
-external:
-  - modelValue
-props:
+
+- modelValue
+  external:
+- modelValue
+  props:
   modelValue: ''
+
 ---
+
 ::
 
 ### Rows
@@ -30,9 +34,11 @@ Use the `rows` prop to set the number of rows. Defaults to `3`.
 
 ::component-code
 ---
+
 props:
-  rows: 12
+rows: 12
 ---
+
 ::
 
 ### Placeholder
@@ -41,9 +47,11 @@ Use the `placeholder` prop to set a placeholder text.
 
 ::component-code
 ---
+
 props:
-  placeholder: 'Type something...'
+placeholder: 'Type something...'
 ---
+
 ::
 
 ### Autoresize
@@ -52,29 +60,37 @@ Use the `autoresize` prop to enable autoresizing the height of the Textarea.
 
 ::component-code
 ---
+
 ignore:
-  - modelValue
-external:
-  - modelValue
-props:
+
+- modelValue
+  external:
+- modelValue
+  props:
   modelValue: 'This is a long text that will autoresize the height of the Textarea.'
   autoresize: true
+
 ---
+
 ::
 
 Use the `maxrows` prop to set the maximum number of rows when autoresizing. If set to `0`, the Textarea will grow indefinitely.
 
 ::component-code
 ---
+
 ignore:
-  - modelValue
-external:
-  - modelValue
-props:
+
+- modelValue
+  external:
+- modelValue
+  props:
   modelValue: 'This is a long text that will autoresize the height of the Textarea with a maximum of 4 rows.'
   maxrows: 4
   autoresize: true
+
 ---
+
 ::
 
 ### Color
@@ -83,13 +99,17 @@ Use the `color` prop to change the ring color when the Textarea is focused.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   color: neutral
   highlight: true
   placeholder: 'Type something...'
+
 ---
+
 ::
 
 ::note
@@ -102,14 +122,18 @@ Use the `variant` prop to change the variant of the Textarea.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   color: neutral
   variant: subtle
   highlight: false
   placeholder: 'Type something...'
+
 ---
+
 ::
 
 ### Size
@@ -118,12 +142,16 @@ Use the `size` prop to change the size of the Textarea.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   size: xl
   placeholder: 'Type something...'
+
 ---
+
 ::
 
 ### Icon
@@ -132,31 +160,39 @@ Use the `icon` prop to show an [Icon](/docs/components/icon) inside the Textarea
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   icon: 'i-lucide-search'
   size: md
   variant: outline
   placeholder: 'Search...'
   rows: 1
+
 ---
+
 ::
 
 Use the `leading` and `trailing` props to set the icon position or the `leading-icon` and `trailing-icon` props to set a different icon for each position.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   trailingIcon: i-lucide-at-sign
   placeholder: 'Enter your email'
   size: md
   rows: 1
+
 ---
+
 ::
 
 ### Avatar
@@ -165,19 +201,23 @@ Use the `avatar` prop to show an [Avatar](/docs/components/avatar) inside the Te
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - placeholder
-  - avatar.loading
-props:
+
+- placeholder
+- avatar.loading
+  props:
   avatar:
-    src: 'https://github.com/nuxt.png'
-    loading: lazy
+  src: 'https://github.com/nuxt.png'
+  loading: lazy
   size: md
   variant: outline
   placeholder: 'Search...'
   rows: 1
+
 ---
+
 ::
 
 ### Loading
@@ -186,14 +226,18 @@ Use the `loading` prop to show a loading icon on the Textarea.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   loading: true
   trailing: false
   placeholder: 'Search...'
   rows: 1
+
 ---
+
 ::
 
 ### Loading Icon
@@ -202,14 +246,18 @@ Use the `loading-icon` prop to customize the loading icon. Defaults to `i-lucide
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   loading: true
   loadingIcon: 'i-lucide-loader'
   placeholder: 'Search...'
   rows: 1
+
 ---
+
 ::
 
 ::framework-only
@@ -230,12 +278,16 @@ Use the `disabled` prop to disable the Textarea.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   disabled: true
   placeholder: 'Type something...'
+
 ---
+
 ::
 
 ## API
@@ -260,10 +312,10 @@ This component also supports all native `<textarea>` HTML attributes.
 
 When accessing the component via a template ref, you can use the following:
 
-| Name | Type |
-| ---- | ---- |
+| Name                          | Type                                               |
+| ----------------------------- | -------------------------------------------------- |
 | `textareaRef`{lang="ts-type"} | `Ref<HTMLTextAreaElement \| null>`{lang="ts-type"} |
-| `autoResize`{lang="ts-type"} | `() => void`{lang="ts-type"} |
+| `autoResize`{lang="ts-type"}  | `() => void`{lang="ts-type"}                       |
 
 ## Theme
 

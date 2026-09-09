@@ -1,10 +1,10 @@
 ---
-description: 'A responsive footer for your site links and legal notices.'
+description: "A responsive footer for your site links and legal notices."
 category: layout
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Footer.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Footer.vue
 ---
 
 ## Usage
@@ -15,13 +15,15 @@ Use the `left`, `default` and `right` slots to customize the footer.
 
 ::component-example
 ---
+
 prettier: true
 collapse: true
 name: 'footer-example'
 class: '!p-0'
 props:
-  class: 'w-full'
+class: 'w-full'
 ---
+
 ::
 
 ::note
@@ -40,25 +42,29 @@ Use the Footer component in your `app.vue` or in a layout:
 
 ```vue [app.vue]{32-67}
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem } from "pohon-ui";
 
-const items: NavigationMenuItem[] = [{
-  label: 'Figma Kit',
-  to: 'https://go.nuxt.com/figma-ui',
-  target: '_blank'
-}, {
-  label: 'Playground',
-  to: 'https://stackblitz.com/edit/nuxt-ui',
-  target: '_blank'
-}, {
-  label: 'Releases',
-  to: 'https://github.com/nuxt/ui/releases',
-  target: '_blank'
-}]
+const items: NavigationMenuItem[] = [
+  {
+    label: "Figma Kit",
+    to: "https://go.nuxt.com/figma-ui",
+    target: "_blank",
+  },
+  {
+    label: "Playground",
+    to: "https://stackblitz.com/edit/nuxt-ui",
+    target: "_blank",
+  },
+  {
+    label: "Releases",
+    to: "https://github.com/vinicunca/pohon/releases",
+    target: "_blank",
+  },
+];
 </script>
 
 <template>
-  <UApp>
+  <PApp>
     <UHeader />
 
     <UMain>
@@ -79,7 +85,7 @@ const items: NavigationMenuItem[] = [{
       <UNavigationMenu :items="items" variant="link" />
 
       <template #right>
-        <UButton
+        <PButton
           icon="i-simple-icons-discord"
           color="neutral"
           variant="ghost"
@@ -87,7 +93,7 @@ const items: NavigationMenuItem[] = [{
           target="_blank"
           aria-label="Discord"
         />
-        <UButton
+        <PButton
           icon="i-simple-icons-x"
           color="neutral"
           variant="ghost"
@@ -95,7 +101,7 @@ const items: NavigationMenuItem[] = [{
           target="_blank"
           aria-label="X"
         />
-        <UButton
+        <PButton
           icon="i-simple-icons-github"
           color="neutral"
           variant="ghost"
@@ -105,7 +111,7 @@ const items: NavigationMenuItem[] = [{
         />
       </template>
     </UFooter>
-  </UApp>
+  </PApp>
 </template>
 ```
 

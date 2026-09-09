@@ -58,7 +58,7 @@ useHead({
 
 if (import.meta.server) {
   useSeoMeta({
-    ogSiteName: 'Nuxt UI',
+    ogSiteName: 'Pohon',
     ogType: 'website',
     twitterCard: 'summary_large_image'
   })
@@ -80,7 +80,7 @@ const showLayout = computed(() => !route.path.startsWith('/examples') && !route.
 </script>
 
 <template>
-  <UApp :toaster="appConfig.toaster">
+  <PApp :toaster="appConfig.toaster">
     <NuxtLoadingIndicator color="var(--ui-primary)" :height="2" />
 
     <div class="flex">
@@ -111,7 +111,7 @@ const showLayout = computed(() => !route.path.startsWith('/examples') && !route.
         </ClientOnly>
       </template>
     </div>
-  </UApp>
+  </PApp>
 </template>
 
 <style>

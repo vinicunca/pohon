@@ -1,11 +1,11 @@
 ---
 title: DashboardPanel
-description: 'A resizable panel to display in a dashboard.'
+description: "A resizable panel to display in a dashboard."
 category: dashboard
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardPanel.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/DashboardPanel.vue
 ---
 
 ## Usage
@@ -17,8 +17,8 @@ Use it inside the default slot of the [DashboardGroup](/docs/components/dashboar
 ```vue [pages/index.vue]{8,10}
 <script setup lang="ts">
 definePageMeta({
-  layout: 'dashboard'
-})
+  layout: "dashboard",
+});
 </script>
 
 <template>
@@ -40,15 +40,17 @@ Use the `header`, `body` and `footer` slots to customize the panel or the defaul
 
 ::component-example
 ---
+
 collapse: true
 name: 'dashboard-panel-example'
 class: '!p-0 !justify-start'
 props:
-  minSize: 22
-  defaultSize: 35
-  maxSize: 40
-  class: '!min-h-96 h-136'
+minSize: 22
+defaultSize: 35
+maxSize: 40
+class: '!min-h-96 h-136'
 ---
+
 ::
 
 ::note
@@ -61,22 +63,25 @@ Use the `resizable` prop to make the panel resizable.
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - minSize
-  - defaultSize
-  - maxSize
-  - class
-props:
+
+- minSize
+- defaultSize
+- maxSize
+- class
+  props:
   resizable: true
   minSize: 22
   defaultSize: 35
   maxSize: 40
   class: '!min-h-96'
-slots:
+  slots:
   body: |
 
-    <Placeholder class="h-96" />
+  <Placeholder class="h-96" />
+
 class: '!p-0 !justify-start'
 ---
 
@@ -86,25 +91,28 @@ class: '!p-0 !justify-start'
 
 ### Size
 
-Use the `min-size`,  `max-size` and `default-size` props to customize the size of the panel.
+Use the `min-size`, `max-size` and `default-size` props to customize the size of the panel.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - resizable
-hide:
-  - class
-props:
+
+- resizable
+  hide:
+- class
+  props:
   resizable: true
   minSize: 22
   defaultSize: 35
   maxSize: 40
   class: '!min-h-96'
-slots:
+  slots:
   body: |
 
-    <Placeholder class="h-96" />
+  <Placeholder class="h-96" />
+
 class: '!p-0 !justify-start'
 ---
 

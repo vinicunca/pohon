@@ -1,4 +1,4 @@
-import { useFilter } from '@nuxt/ui/composables'
+import { useFilter } from 'pohon-ui/composables'
 
 export interface GoogleFont {
   name: string

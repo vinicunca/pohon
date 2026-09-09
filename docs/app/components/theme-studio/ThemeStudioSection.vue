@@ -53,7 +53,7 @@ const hasHeader = computed(() => !!(props.label || props.helpTo || showReset.val
       <span class="flex-1 min-w-0 text-xs/7 font-semibold truncate text-highlighted">{{ label }}</span>
 
       <UTooltip v-if="helpTo" text="Docs" ignore-non-keyboard-focus>
-        <UButton
+        <PButton
           :to="helpTo"
           size="sm"
           color="neutral"
@@ -64,7 +64,7 @@ const hasHeader = computed(() => !!(props.label || props.helpTo || showReset.val
       </UTooltip>
 
       <UTooltip v-if="showReset && dirty" text="Reset to preset" ignore-non-keyboard-focus>
-        <UButton
+        <PButton
           size="sm"
           color="primary"
           variant="ghost"

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
 import { upperFirst } from 'scule'
-import type { TableColumn } from '@nuxt/ui'
+import type { TableColumn } from 'pohon-ui'
 
 const UBadge = resolveComponent('UBadge')
 
@@ -118,7 +118,7 @@ const columnVisibility = ref({
         }))"
         :content="{ align: 'end' }"
       >
-        <UButton
+        <PButton
           label="Columns"
           color="neutral"
           variant="outline"
@@ -127,7 +127,7 @@ const columnVisibility = ref({
       </UDropdownMenu>
     </div>
 
-    <UTable
+    <PTable
       ref="table"
       v-model:column-visibility="columnVisibility"
       :data="data"

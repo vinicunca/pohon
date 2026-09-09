@@ -1,11 +1,11 @@
 ---
 title: PageAside
-description: 'A sticky aside to display your page navigation.'
+description: "A sticky aside to display your page navigation."
 category: page
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageAside.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/PageAside.vue
 ---
 
 ## Usage
@@ -40,9 +40,9 @@ Use the PageAside component in a layout to display the navigation:
 
 ```vue [layouts/docs.vue]{9-13}
 <script setup lang="ts">
-import type { ContentNavigationItem } from '@nuxt/content'
+import type { ContentNavigationItem } from "@nuxt/content";
 
-const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
+const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
 </script>
 
 <template>

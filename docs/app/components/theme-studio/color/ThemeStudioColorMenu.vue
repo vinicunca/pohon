@@ -55,7 +55,7 @@ function isSelected(color: string) {
     :content="{ side: 'bottom', align: 'center' }"
     :ui="{ content: 'p-2 grid grid-cols-3 gap-1 w-[calc(var(--reka-popover-trigger-width)+1rem)]' }"
   >
-    <UButton
+    <PButton
       color="neutral"
       variant="subtle"
       size="sm"
@@ -75,10 +75,10 @@ function isSelected(color: string) {
           :ui="{ base: ['ring-0', swatchColor ? 'bg-(--swatch-color)' : 'bg-black dark:bg-white'] }"
         />
       </template>
-    </UButton>
+    </PButton>
 
     <template #content>
-      <UButton
+      <PButton
         v-if="alias === 'primary'"
         label="Black"
         size="sm"
@@ -93,9 +93,9 @@ function isSelected(color: string) {
         <template #leading>
           <span class="inline-block h-2 w-3 shrink-0 rounded-full bg-black dark:bg-white" />
         </template>
-      </UButton>
+      </PButton>
 
-      <UButton
+      <PButton
         v-for="color in colors"
         :key="color"
         :label="paletteLabel(color)"
@@ -117,7 +117,7 @@ function isSelected(color: string) {
             }"
           />
         </template>
-      </UButton>
+      </PButton>
     </template>
   </UPopover>
 </template>

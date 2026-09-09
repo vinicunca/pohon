@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CommandPaletteItem } from '@nuxt/ui'
+import type { CommandPaletteItem } from 'pohon-ui'
 
 const items: CommandPaletteItem[] = Array(1000)
   .fill(0)

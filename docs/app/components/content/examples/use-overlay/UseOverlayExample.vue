@@ -7,5 +7,5 @@ const modal = overlay.create(LazyUseOverlayModalExample)
 </script>
 
 <template>
-  <UButton label="Open modal" @click="modal.open()" />
+  <PButton label="Open modal" @click="modal.open()" />
 </template>

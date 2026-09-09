@@ -9,7 +9,7 @@ const items = [{
   target: '_blank',
 }, {
   label: 'Releases',
-  to: 'https://github.com/nuxt/ui/releases',
+  to: 'https://github.com/vinicunca/pohon/releases',
   target: '_blank',
 }];
 
@@ -40,7 +40,7 @@ const columns = [{
     target: '_blank',
   }, {
     label: 'Pohon UI',
-    to: 'https://ui.nuxt.com/',
+    to: 'https://pohon.vinicunca.dev/',
     target: '_blank',
   }],
 }];

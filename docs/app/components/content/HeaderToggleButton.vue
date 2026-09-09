@@ -31,7 +31,7 @@ const state = computed(() => props.open ? 'close' : 'normal')
 </script>
 
 <template>
-  <UButton
+  <PButton
     size="sm"
     variant="ghost"
     color="neutral"
@@ -81,5 +81,5 @@ const state = computed(() => props.open ? 'close' : 'normal')
         class="outline-hidden"
       />
     </svg>
-  </UButton>
+  </PButton>
 </template>

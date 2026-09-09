@@ -1,12 +1,12 @@
 ---
 title: ProseBadge
-description: 'Display version numbers, status labels, and tags within your content.'
+description: "Display version numbers, status labels, and tags within your content."
 category: components
 navigation.title: Badge
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Badge.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/prose/Badge.vue
 ---
 
 ## Usage

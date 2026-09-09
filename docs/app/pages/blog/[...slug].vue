@@ -17,9 +17,9 @@ const title = page.value.seo?.title || page.value.title
 const description = page.value.seo?.description || page.value.description
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon',
   title,
-  ogTitle: `${title} - Nuxt UI`,
+  ogTitle: `${title} - Pohon`,
   description,
   ogDescription: description
 })
@@ -64,7 +64,7 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
   <UPage v-if="page" :ui="{ center: 'lg:col-span-5 px-4 sm:px-6 lg:pl-8 lg:pr-0', right: 'lg:col-span-5' }" class="lg:gap-8">
     <UPageHeader :title="page.title" :description="page.description" :ui="{ title: 'relative flex items-center' }">
       <template #headline>
-        <UButton
+        <PButton
           :icon="appConfig.ui.icons.arrowLeft"
           label="Back to blog"
           to="/blog"

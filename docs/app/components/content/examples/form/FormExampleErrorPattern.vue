@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as z from 'zod'
-import type { FormSubmitEvent } from '@nuxt/ui'
+import type { FormSubmitEvent } from 'pohon-ui'
 
 const schema = z.object({
   email: z.email('Invalid email'),
@@ -22,17 +22,17 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
-    <UFormField label="Email" name="email">
+  <PForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
+    <PFormField label="Email" name="email">
       <UInput v-model="state.email" />
-    </UFormField>
+    </PFormField>
 
-    <UFormField label="Tags" name="tags" :error-pattern="/^tags\..+/">
+    <PFormField label="Tags" name="tags" :error-pattern="/^tags\..+/">
       <UInputTags v-model="state.tags" />
-    </UFormField>
+    </PFormField>
 
-    <UButton type="submit">
+    <PButton type="submit">
       Submit
-    </UButton>
-  </UForm>
+    </PButton>
+  </PForm>
 </template>

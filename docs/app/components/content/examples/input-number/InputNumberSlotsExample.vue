@@ -5,11 +5,11 @@ const value = ref(5)
 <template>
   <UInputNumber v-model="value">
     <template #decrement>
-      <UButton size="xs" icon="i-lucide-minus" />
+      <PButton size="xs" icon="i-lucide-minus" />
     </template>
 
     <template #increment>
-      <UButton size="xs" icon="i-lucide-plus" />
+      <PButton size="xs" icon="i-lucide-plus" />
     </template>
   </UInputNumber>
 </template>

@@ -28,11 +28,11 @@ export default defineNitroPlugin((nitroApp) => {
       renderLlmsSection(WHEN_TO_USE_SECTION, href => rawUrl(event, href)),
       `## About
 
-Nuxt UI is a free and open source Vue UI library powered by [Reka UI](https://reka-ui.com/) and [Tailwind CSS](https://tailwindcss.com/). It works with both Nuxt and plain Vue applications.
+Pohon is a free and open source Vue UI library powered by [Akar](https://reka-ui.com/) and [UnoCSS](https://tailwindcss.com/). It works with both Nuxt and plain Vue applications.
 
 - 125+ accessible, production-ready components
-- Built on Reka UI (WAI-ARIA compliant primitives)
-- Tailwind CSS theming with CSS variables and Tailwind Variants
+- Built on Akar (WAI-ARIA compliant primitives)
+- UnoCSS theming with CSS variables and UnoCSS Variants
 - TypeScript support with full auto-completion
 - Server-side rendering (SSR) compatible
 - Dark mode support and 50+ languages via i18n
@@ -50,7 +50,7 @@ Nuxt UI is a free and open source Vue UI library powered by [Reka UI](https://re
       `## Links
 
 - Website: <${SITE_URL}>
-- GitHub: <https://github.com/nuxt/ui>
+- GitHub: <https://github.com/vinicunca/pohon>
 - Discord: <https://discord.gg/ps2h6QT>
 - X (Twitter): <https://x.com/nuxt_js>`
     ].join('\n\n'))

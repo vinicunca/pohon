@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from '@nuxt/ui'
+import type { TableColumn } from 'pohon-ui'
 
-const UButton = resolveComponent('UButton')
+const PButton = resolveComponent('PButton')
 const UBadge = resolveComponent('UBadge')
 
 type Payment = {
@@ -47,7 +47,7 @@ const data = ref<Payment[]>([{
 
 const columns: TableColumn<Payment>[] = [{
   id: 'expand',
-  cell: ({ row }) => h(UButton, {
+  cell: ({ row }) => h(PButton, {
     'color': 'neutral',
     'variant': 'ghost',
     'icon': 'i-lucide-chevron-down',
@@ -111,7 +111,7 @@ const expanded = ref({ 1: true })
 </script>
 
 <template>
-  <UTable
+  <PTable
     v-model:expanded="expanded"
     :data="data"
     :columns="columns"
@@ -121,5 +121,5 @@ const expanded = ref({ 1: true })
     <template #expanded="{ row }">
       <pre>{{ row.original }}</pre>
     </template>
-  </UTable>
+  </PTable>
 </template>

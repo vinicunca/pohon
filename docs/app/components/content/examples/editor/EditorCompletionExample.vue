@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorCustomHandlers, EditorToolbarItem } from '@nuxt/ui'
+import type { EditorCustomHandlers, EditorToolbarItem } from 'pohon-ui'
 import { useEditorCompletion } from './EditorUseCompletion'
 
 const editorRef = useTemplateRef('editorRef')

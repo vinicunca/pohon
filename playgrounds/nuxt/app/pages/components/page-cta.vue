@@ -39,13 +39,13 @@ const reverse = ref(false);
       description="Join thousands of developers building with Nuxt and Pohon UI. Get this template and start shipping today."
       :links="[{
         label: 'Start building',
-        to: 'https://ui.nuxt.com/docs/getting-started/installation/nuxt',
+        to: 'https://pohon.vinicunca.dev/docs/getting-started/installation/nuxt',
         target: '_blank',
         trailingIcon: 'i-lucide-arrow-right',
         color: 'neutral',
       }, {
         label: 'View on GitHub',
-        to: 'https://github.com/nuxt/ui',
+        to: 'https://github.com/vinicunca/pohon',
         target: '_blank',
         icon: 'simple-icons:github',
         color: 'neutral',

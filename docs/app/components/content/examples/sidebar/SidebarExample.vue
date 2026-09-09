@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DropdownMenuItem, NavigationMenuItem } from '@nuxt/ui'
+import type { DropdownMenuItem, NavigationMenuItem } from 'pohon-ui'
 
 const open = ref(true)
 
@@ -120,7 +120,7 @@ const userItems = computed<DropdownMenuItem[][]>(() => ([[{
 }], [{
   label: 'GitHub',
   icon: 'i-simple-icons-github',
-  to: 'https://github.com/nuxt/ui',
+  to: 'https://github.com/vinicunca/pohon',
   target: '_blank'
 }, {
   label: 'Log out',
@@ -148,7 +148,7 @@ defineShortcuts(extractShortcuts(teamsItems.value))
           :content="{ align: 'start', collisionPadding: 12 }"
           :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-48' }"
         >
-          <UButton
+          <PButton
             v-bind="selectedTeam"
             trailing-icon="i-lucide-chevrons-up-down"
             color="neutral"
@@ -177,7 +177,7 @@ defineShortcuts(extractShortcuts(teamsItems.value))
           :content="{ align: 'center', collisionPadding: 12 }"
           :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-48' }"
         >
-          <UButton
+          <PButton
             v-bind="user"
             :label="user?.name"
             trailing-icon="i-lucide-chevrons-up-down"
@@ -195,7 +195,7 @@ defineShortcuts(extractShortcuts(teamsItems.value))
 
     <div class="flex-1 flex flex-col">
       <div class="h-(--ui-header-height) shrink-0 flex items-center px-4 border-b border-default">
-        <UButton
+        <PButton
           icon="i-lucide-panel-left"
           color="neutral"
           variant="ghost"

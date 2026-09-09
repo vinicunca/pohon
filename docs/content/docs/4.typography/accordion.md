@@ -1,12 +1,12 @@
 ---
 title: ProseAccordion
-description: 'Create expandable content sections for better information organization.'
+description: "Create expandable content sections for better information organization."
 category: components
 navigation.title: Accordion
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/Accordion.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/prose/Accordion.vue
 ---
 
 ## Usage
@@ -17,20 +17,23 @@ Use the `accordion` and `accordion-item` components to display an [Accordion](/d
 
 :::accordion
 ---
+
 defaultValue:
-  - '1'
+
+- '1'
+
 ---
 
-::accordion-item{label="Is Nuxt UI free to use?" icon="i-lucide-circle-help"}
-Yes! Nuxt UI is completely free and open source under the MIT license. All 125+ components are available to everyone.
+::accordion-item{label="Is Pohon free to use?" icon="i-lucide-circle-help"}
+Yes! Pohon is completely free and open source under the MIT license. All 125+ components are available to everyone.
 ::
 
-::accordion-item{label="Can I use Nuxt UI with Vue without Nuxt?" icon="i-lucide-circle-help"}
-Yes! While optimized for Nuxt, Nuxt UI works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.
+::accordion-item{label="Can I use Pohon with Vue without Nuxt?" icon="i-lucide-circle-help"}
+Yes! While optimized for Nuxt, Pohon works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.
 ::
 
-::accordion-item{label="Is Nuxt UI production-ready?" icon="i-lucide-circle-help"}
-Yes! Nuxt UI is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.
+::accordion-item{label="Is Pohon production-ready?" icon="i-lucide-circle-help"}
+Yes! Pohon is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.
 ::
 
 :::
@@ -44,16 +47,16 @@ defaultValue:
   - '1'
 ---
 
-::accordion-item{label="Is Nuxt UI free to use?" icon="i-lucide-circle-help"}
-Yes! Nuxt UI is completely free and open source under the MIT license. All 125+ components are available to everyone.
+::accordion-item{label="Is Pohon free to use?" icon="i-lucide-circle-help"}
+Yes! Pohon is completely free and open source under the MIT license. All 125+ components are available to everyone.
 ::
 
-::accordion-item{label="Can I use Nuxt UI with Vue without Nuxt?" icon="i-lucide-circle-help"}
-Yes! While optimized for Nuxt, Nuxt UI works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.
+::accordion-item{label="Can I use Pohon with Vue without Nuxt?" icon="i-lucide-circle-help"}
+Yes! While optimized for Nuxt, Pohon works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.
 ::
 
-::accordion-item{label="Is Nuxt UI production-ready?" icon="i-lucide-circle-help"}
-Yes! Nuxt UI is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.
+::accordion-item{label="Is Pohon production-ready?" icon="i-lucide-circle-help"}
+Yes! Pohon is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.
 ::
 
 ::
@@ -75,9 +78,13 @@ Yes! Nuxt UI is used in production by thousands of applications with extensive t
 
 ::component-theme{prose}
 ---
+
 extra:
-  - accordionItem
+
+- accordionItem
+
 ---
+
 ::
 
 ## Changelog

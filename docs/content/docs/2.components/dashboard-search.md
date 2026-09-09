@@ -1,6 +1,6 @@
 ---
 title: DashboardSearch
-description: 'A ready-to-use CommandPalette to add to your dashboard.'
+description: "A ready-to-use CommandPalette to add to your dashboard."
 category: dashboard
 links:
   - label: CommandPalette
@@ -8,7 +8,7 @@ links:
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSearch.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/DashboardSearch.vue
 ---
 
 ## Usage
@@ -57,8 +57,8 @@ By default, a group of commands will be added to the command palette so you can 
 ```vue [pages/index.vue]
 <script setup lang="ts">
 definePageMeta({
-  colorMode: 'dark'
-})
+  colorMode: "dark",
+});
 </script>
 ```
 
@@ -93,8 +93,8 @@ You can disable this behavior by setting the `color-mode` prop to `false`:
 
 When accessing the component via a template ref, you can use the following:
 
-| Name | Type |
-| ---- | ---- |
+| Name                                | Type                                                                |
+| ----------------------------------- | ------------------------------------------------------------------- |
 | `commandPaletteRef`{lang="ts-type"} | `Ref<InstanceType<typeof UCommandPalette> \| null>`{lang="ts-type"} |
 
 ## Theme

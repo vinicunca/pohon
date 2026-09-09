@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { SHADE_LADDER } from '../../utils/theme/engine'
-import type { ChipProps } from '@nuxt/ui'
+import type { ChipProps } from 'pohon-ui'
 
 /** Every settings row in every panel: label, then the control, on one 28px line. */
 export interface RowSelectItem {
@@ -123,7 +123,7 @@ const showTextLabel = computed(() => !props.icon && !shade.value)
 </script>
 
 <template>
-  <UFormField
+  <PFormField
     :label="showTextLabel ? label : undefined"
     orientation="horizontal"
     size="xs"
@@ -196,7 +196,7 @@ const showTextLabel = computed(() => !props.icon && !shade.value)
         @change="commitReadout"
       />
 
-      <UButton
+      <PButton
         v-if="resettable && dirty"
         :icon="studioIcons.reset"
         size="xs"
@@ -242,5 +242,5 @@ const showTextLabel = computed(() => !props.icon && !shade.value)
     </USelect>
 
     <slot v-else />
-  </UFormField>
+  </PFormField>
 </template>

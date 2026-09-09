@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { StepperItem } from '@nuxt/ui'
+import type { StepperItem } from 'pohon-ui'
 
 const items = [
   {

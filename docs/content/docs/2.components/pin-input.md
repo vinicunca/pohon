@@ -12,7 +12,7 @@ links:
     to: https://reka-ui.com/docs/components/pin-input
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PinInput.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/PinInput.vue
 ---
 
 ## Usage
@@ -21,26 +21,34 @@ Use the `v-model` directive to control the value of the PinInput.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - modelValue
-external:
-  - modelValue
-props:
+
+- modelValue
+  external:
+- modelValue
+  props:
   modelValue: []
+
 ---
+
 ::
 
 Use the `default-value` prop to set the initial value when you do not need to control its state.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   defaultValue: ['1','2','3']
+
 ---
+
 ::
 
 ### Type
@@ -49,13 +57,13 @@ Use the `type` prop to change the input type. Defaults to `text`.
 
 ::component-code
 ---
+
 items:
-  type:
-    - text
-    - number
+type: - text - number
 props:
-  type: 'number'
+type: 'number'
 ---
+
 ::
 
 ::note
@@ -68,14 +76,18 @@ Use the `mask` prop to treat the input like a password.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - placeholder
-  - defaultValue
-props:
+
+- placeholder
+- defaultValue
+  props:
   mask: true
   defaultValue: ['1','2','3','4','5']
+
 ---
+
 ::
 
 ### OTP
@@ -84,9 +96,11 @@ Use the `otp` prop to enable One-Time Password functionality. When enabled, mobi
 
 ::component-code
 ---
+
 props:
-  otp: true
+otp: true
 ---
+
 ::
 
 ### Placeholder
@@ -95,9 +109,11 @@ Use the `placeholder` prop to set a placeholder text.
 
 ::component-code
 ---
+
 props:
-  placeholder: '○'
+placeholder: '○'
 ---
+
 ::
 
 ### Length
@@ -106,12 +122,16 @@ Use the `length` prop to change the amount of inputs.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   length: 6
   placeholder: '○'
+
 ---
+
 ::
 
 ### Separator :badge{label="4.9+" class="align-text-top"}
@@ -120,29 +140,37 @@ Use the `separator` prop to insert a separator between groups of inputs. Pass a 
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   length: 6
   separator: 3
   placeholder: '○'
+
 ---
+
 ::
 
 You can also pass an array of positions to insert separators after specific inputs.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - placeholder
-  - length
-  - separator
-props:
+
+- placeholder
+- length
+- separator
+  props:
   length: 7
   separator: [3, 4]
   placeholder: '○'
+
 ---
+
 ::
 
 ### Color
@@ -151,13 +179,17 @@ Use the `color` prop to change the ring color when the PinInput is focused.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   color: neutral
   highlight: true
   placeholder: '○'
+
 ---
+
 ::
 
 ::note
@@ -170,14 +202,18 @@ Use the `variant` prop to change the variant of the PinInput.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   color: neutral
   variant: subtle
   highlight: false
   placeholder: '○'
+
 ---
+
 ::
 
 ### Size
@@ -186,12 +222,16 @@ Use the `size` prop to change the size of the PinInput.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   size: xl
   placeholder: '○'
+
 ---
+
 ::
 
 ### Disabled
@@ -200,12 +240,16 @@ Use the `disabled` prop to disable the PinInput.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   disabled: true
   placeholder: '○'
+
 ---
+
 ::
 
 ## Examples
@@ -216,8 +260,10 @@ Use the `separator` slot to customize the separator appearance.
 
 ::component-example
 ---
+
 name: 'pin-input-separator-slot-example'
 ---
+
 ::
 
 ## API
@@ -238,8 +284,8 @@ name: 'pin-input-separator-slot-example'
 
 When accessing the component via a template ref, you can use the following:
 
-| Name | Type |
-| ---- | ---- |
+| Name                        | Type                                             |
+| --------------------------- | ------------------------------------------------ |
 | `inputsRef`{lang="ts-type"} | `Ref<ComponentPublicInstance[]>`{lang="ts-type"} |
 
 ## Theme

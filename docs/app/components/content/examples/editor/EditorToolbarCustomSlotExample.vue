@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { EditorToolbarItem } from '@nuxt/ui'
+import type { EditorToolbarItem } from 'pohon-ui'
 import EditorLinkPopover from './EditorLinkPopover.vue'
 
 const value = ref(`Select text and click the link button to add a link with the custom popover.
 
-You can also edit existing links like [this one](https://ui.nuxt.com).`)
+You can also edit existing links like [this one](https://pohon.vinicunca.dev).`)
 
 const toolbarItems = [[{
   kind: 'mark',

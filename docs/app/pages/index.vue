@@ -12,7 +12,7 @@ const appConfig = useAppConfig()
 if (import.meta.server) {
   useSchemaOrg([
     defineSoftwareApp({
-      name: 'Nuxt UI',
+      name: 'Pohon',
       operatingSystem: 'Web',
       applicationCategory: 'DeveloperApplication',
       offers: { price: 0, priceCurrency: 'USD' }
@@ -23,10 +23,10 @@ if (import.meta.server) {
 useCanonical('/raw/index.md')
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon',
   title: page.value.title,
   description: page.value.description,
-  ogTitle: `${page.value.title} - Nuxt UI`,
+  ogTitle: `${page.value.title} - Pohon`,
   ogDescription: page.value.description,
   ogImage: joinURL(url, '/og-image.png')
 })
@@ -76,7 +76,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
       </template>
 
       <template #links>
-        <UButton v-for="link of page.hero.links" :key="link.label" v-bind="link" size="xl" />
+        <PButton v-for="link of page.hero.links" :key="link.label" v-bind="link" size="xl" />
         <div class="w-full my-6">
           <USeparator class="w-1/2" type="dashed" />
         </div>
@@ -308,7 +308,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
     >
       <template #features>
         <li>
-          <NuxtLink to="https://npm.chart.dev/@nuxt/ui" target="_blank" class="min-w-0 group focus-visible:outline-primary">
+          <NuxtLink to="https://npm.chart.dev/pohon-ui" target="_blank" class="min-w-0 group focus-visible:outline-primary">
             <p class="text-4xl font-semibold truncate text-highlighted group-hover:text-primary transition-colors">
               {{ format(module?.stats?.downloads ?? 0) }}+
             </p>
@@ -317,7 +317,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
         </li>
 
         <li>
-          <NuxtLink to="https://github.com/nuxt/ui" target="_blank" class="min-w-0 group focus-visible:outline-primary">
+          <NuxtLink to="https://github.com/vinicunca/pohon" target="_blank" class="min-w-0 group focus-visible:outline-primary">
             <p class="text-4xl font-semibold text-highlighted truncate group-hover:text-primary transition-colors">
               {{ format(module?.stats?.stars ?? 0) }}+
             </p>
@@ -326,7 +326,7 @@ useIntersectionObserver(contributorsRef, ([entry]) => {
         </li>
 
         <li>
-          <NuxtLink to="https://github.com/nuxt/ui/graphs/contributors" target="_blank" class="min-w-0 group focus-visible:outline-primary">
+          <NuxtLink to="https://github.com/vinicunca/pohon/graphs/contributors" target="_blank" class="min-w-0 group focus-visible:outline-primary">
             <p class="text-4xl font-semibold text-highlighted truncate group-hover:text-primary transition-colors">
               300+
             </p>

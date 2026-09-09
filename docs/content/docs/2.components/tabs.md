@@ -11,7 +11,7 @@ links:
     to: https://reka-ui.com/docs/components/tabs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Tabs.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Tabs.vue
 ---
 
 ## Usage
@@ -20,12 +20,14 @@ Use the Tabs component to display a list of items in tabs.
 
 ::component-example
 ---
+
 collapse: true
 prettier: true
 name: 'tabs-example'
 props:
-  class: 'w-full'
+class: 'w-full'
 ---
+
 ::
 
 ### Items
@@ -45,23 +47,27 @@ Use the `items` prop as an array of objects with the following properties:
 
 ::component-code
 ---
+
 ignore:
-  - items
-  - class
-external:
-  - items
-externalTypes:
-  - TabsItem[]
-props:
+
+- items
+- class
+  external:
+- items
+  externalTypes:
+- TabsItem[]
+  props:
   items:
-    - label: Account
-      icon: 'i-lucide-user'
-      content: 'This is the account content.'
-    - label: Password
-      icon: 'i-lucide-lock'
-      content: 'This is the password content.'
-  class: 'w-full'
+  - label: Account
+    icon: 'i-lucide-user'
+    content: 'This is the account content.'
+  - label: Password
+    icon: 'i-lucide-lock'
+    content: 'This is the password content.'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Content
@@ -70,25 +76,29 @@ Set the `content` prop to `false` to render the triggers without any panels. Def
 
 ::component-code
 ---
+
 ignore:
-  - content
-  - items
-  - class
-external:
-  - items
-externalTypes:
-  - TabsItem[]
-props:
+
+- content
+- items
+- class
+  external:
+- items
+  externalTypes:
+- TabsItem[]
+  props:
   content: false
   items:
-    - label: Account
-      icon: 'i-lucide-user'
-      content: 'This is the account content.'
-    - label: Password
-      icon: 'i-lucide-lock'
-      content: 'This is the password content.'
-  class: 'w-full'
+  - label: Account
+    icon: 'i-lucide-user'
+    content: 'This is the account content.'
+  - label: Password
+    icon: 'i-lucide-lock'
+    content: 'This is the password content.'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Unmount
@@ -97,25 +107,29 @@ Use the `unmount-on-hide` prop to prevent the content from being unmounted when 
 
 ::component-code
 ---
+
 ignore:
-  - content
-  - items
-  - class
-external:
-  - items
-externalTypes:
-  - TabsItem[]
-props:
+
+- content
+- items
+- class
+  external:
+- items
+  externalTypes:
+- TabsItem[]
+  props:
   unmountOnHide: false
   items:
-    - label: Account
-      icon: 'i-lucide-user'
-      content: 'This is the account content.'
-    - label: Password
-      icon: 'i-lucide-lock'
-      content: 'This is the password content.'
-  class: 'w-full'
+  - label: Account
+    icon: 'i-lucide-user'
+    content: 'This is the account content.'
+  - label: Password
+    icon: 'i-lucide-lock'
+    content: 'This is the password content.'
+    class: 'w-full'
+
 ---
+
 ::
 
 ::note
@@ -128,22 +142,26 @@ Use the `color` prop to change the color of the Tabs.
 
 ::component-code
 ---
+
 ignore:
-  - content
-  - items
-  - class
-external:
-  - items
-externalTypes:
-  - TabsItem[]
-props:
+
+- content
+- items
+- class
+  external:
+- items
+  externalTypes:
+- TabsItem[]
+  props:
   color: neutral
   content: false
   items:
-    - label: Account
-    - label: Password
-  class: 'w-full'
+  - label: Account
+  - label: Password
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Variant
@@ -152,23 +170,27 @@ Use the `variant` prop to change the variant of the Tabs.
 
 ::component-code
 ---
+
 ignore:
-  - content
-  - items
-  - class
-external:
-  - items
-externalTypes:
-  - TabsItem[]
-props:
+
+- content
+- items
+- class
+  external:
+- items
+  externalTypes:
+- TabsItem[]
+  props:
   color: neutral
   variant: link
   content: false
   items:
-    - label: Account
-    - label: Password
-  class: 'w-full'
+  - label: Account
+  - label: Password
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Size
@@ -177,23 +199,27 @@ Use the `size` prop to change the size of the Tabs.
 
 ::component-code
 ---
+
 ignore:
-  - content
-  - items
-  - class
-external:
-  - items
-externalTypes:
-  - TabsItem[]
-props:
+
+- content
+- items
+- class
+  external:
+- items
+  externalTypes:
+- TabsItem[]
+  props:
   size: md
   variant: pill
   content: false
   items:
-    - label: Account
-    - label: Password
-  class: 'w-full'
+  - label: Account
+  - label: Password
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Orientation
@@ -202,23 +228,27 @@ Use the `orientation` prop to change the orientation of the Tabs. Defaults to `h
 
 ::component-code
 ---
+
 ignore:
-  - content
-  - items
-  - class
-external:
-  - items
-externalTypes:
-  - TabsItem[]
-props:
+
+- content
+- items
+- class
+  external:
+- items
+  externalTypes:
+- TabsItem[]
+  props:
   orientation: vertical
   variant: pill
   content: false
   items:
-    - label: Account
-    - label: Password
-  class: 'w-full'
+  - label: Account
+  - label: Password
+    class: 'w-full'
+
 ---
+
 ::
 
 ## Examples
@@ -251,9 +281,11 @@ Use the `ui` prop to transform the Tabs into a mobile-style bottom tab bar with 
 
 ::component-example
 ---
+
 collapse: true
 name: 'tabs-bottom-tab-bar-example'
 ---
+
 ::
 
 ### With custom slot
@@ -266,9 +298,11 @@ You will have access to the following slots:
 
 ::component-example
 ---
+
 collapse: true
 name: 'tabs-custom-slot-example'
 ---
+
 ::
 
 ## API
@@ -289,8 +323,8 @@ name: 'tabs-custom-slot-example'
 
 When accessing the component via a template ref, you can use the following:
 
-| Name | Type |
-| ---- | ---- |
+| Name                          | Type                                             |
+| ----------------------------- | ------------------------------------------------ |
 | `triggersRef`{lang="ts-type"} | `Ref<ComponentPublicInstance[]>`{lang="ts-type"} |
 
 ## Theme

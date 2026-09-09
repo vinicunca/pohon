@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TreeItem } from '@nuxt/ui'
+import type { TreeItem } from 'pohon-ui'
 import { useSortable } from '@vueuse/integrations/useSortable'
 
 const items = shallowRef<TreeItem[]>([

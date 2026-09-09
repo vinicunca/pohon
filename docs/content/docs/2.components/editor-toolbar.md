@@ -5,12 +5,13 @@ category: editor
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorToolbar.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/EditorToolbar.vue
 ---
 
 ## Usage
 
 The EditorToolbar component displays a toolbar of formatting buttons that automatically sync their active state with the editor content. It supports three layout modes using the `@tiptap/vue-3/menus` package:
+
 - `fixed`{lang="ts-type"} (always visible)
 - `bubble`{lang="ts-type"} (appears on text selection)
 - `floating`{lang="ts-type"} (appears on empty lines)
@@ -21,11 +22,13 @@ It must be used inside an [Editor](/docs/components/editor) component's default 
 
 ::component-example
 ---
+
 elevated: true
 collapse: true
 name: 'editor-toolbar-example'
 class: 'p-8'
 ---
+
 ::
 
 ::callout{icon="i-custom-tiptap"}
@@ -57,11 +60,13 @@ You can pass any property from the [Button](/docs/components/button#props) compo
 
 ::component-example
 ---
+
 elevated: true
 collapse: true
 name: 'editor-toolbar-items-example'
 class: 'p-8'
 ---
+
 ::
 
 ::note
@@ -78,19 +83,23 @@ Use the `layout` prop to change how the toolbar is displayed. Defaults to `fixed
 
 ::component-example
 ---
+
 elevated: true
 collapse: true
 name: 'editor-toolbar-layout-example'
 class: 'p-8'
 options:
-  - name: layout
-    label: Layout
-    default: bubble
-    items:
-      - fixed
-      - bubble
-      - floating
+
+- name: layout
+  label: Layout
+  default: bubble
+  items:
+  - fixed
+  - bubble
+  - floating
+
 ---
+
 ::
 
 ### Options
@@ -108,7 +117,7 @@ When using `bubble`{lang="ts-type"} or `floating`{lang="ts-type"} layouts, use t
         placement: 'top',
         offset: 8,
         flip: { padding: 8 },
-        shift: { padding: 8 }
+        shift: { padding: 8 },
       }"
     />
   </UEditor>
@@ -126,12 +135,14 @@ When using `bubble`{lang="ts-type"} or `floating`{lang="ts-type"} layouts, use t
       :editor="editor"
       :items="items"
       layout="bubble"
-      :should-show="({ view, state }) => {
-        const { selection } = state
-        const { from, to } = selection
-        const text = state.doc.textBetween(from, to)
-        return view.hasFocus() && !selection.empty && text.length > 10
-      }"
+      :should-show="
+        ({ view, state }) => {
+          const { selection } = state;
+          const { from, to } = selection;
+          const text = state.doc.textBetween(from, to);
+          return view.hasFocus() && !selection.empty && text.length > 10;
+        }
+      "
     />
   </UEditor>
 </template>
@@ -145,11 +156,13 @@ Use the `should-show` prop to create context-specific toolbars that appear only 
 
 ::component-example
 ---
+
 elevated: true
 collapse: true
 name: 'editor-toolbar-image-example'
 class: 'p-8'
 ---
+
 ::
 
 ### With link popover
@@ -160,21 +173,25 @@ This example demonstrates how to create a custom link popover using the `slot` p
 
 ::component-example
 ---
+
 preview: false
 collapse: true
 name: 'editor-link-popover'
 ---
+
 ::
 
 2. Use the custom component in the toolbar with a named slot:
 
 ::component-example
 ---
+
 elevated: true
 collapse: true
 name: 'editor-toolbar-custom-slot-example'
 class: 'p-8'
 ---
+
 ::
 
 ## API

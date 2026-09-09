@@ -1,7 +1,7 @@
-title: Official Nuxt UI Templates
+title: Official Pohon Templates
 description: 'Explore ready-made templates powered by our Vue components. These templates are fully responsive, accessible, and easy to customize, so you can launch your project quickly and effortlessly.'
 hero:
-  title: Ship [faster]{.text-primary} with :br Nuxt UI Templates
+  title: Ship [faster]{.text-primary} with :br Pohon Templates
   description: 'Explore ready-made templates powered by our Vue components. These templates are fully responsive, accessible, and easy to customize, so you can launch your project quickly and effortlessly.'
 navigation: false
 items:
@@ -22,7 +22,7 @@ items:
         target: _blank
         icon: i-simple-icons-vercel
       - label: Netlify
-        to: https://app.netlify.com/start/deploy?repository=https://github.com/nuxt-ui-templates/calendar
+        to: https://app.netlify.com/start/deploy?repository=https://github.com/vinicunca/pohon-ui-templates/calendar
         target: _blank
         icon: i-simple-icons-netlify
     links:
@@ -32,11 +32,11 @@ items:
         icon: i-lucide-link
     open_links:
       - label: GitHub
-        to: https://github.com/nuxt-ui-templates/calendar
+        to: https://github.com/vinicunca/pohon-ui-templates/calendar
         target: _blank
         icon: i-simple-icons-github
       - label: v0
-        to: https://v0.app/chat/api/open?url=https://github.com/nuxt-ui-templates/calendar
+        to: https://v0.app/chat/api/open?url=https://github.com/vinicunca/pohon-ui-templates/calendar
         target: _blank
         icon: i-simple-icons-v0
   - title: 'Editor'
@@ -56,7 +56,7 @@ items:
         target: _blank
         icon: i-simple-icons-vercel
       - label: Netlify
-        to: https://app.netlify.com/start/deploy?repository=https://github.com/nuxt-ui-templates/editor
+        to: https://app.netlify.com/start/deploy?repository=https://github.com/vinicunca/pohon-ui-templates/editor
         target: _blank
         icon: i-simple-icons-netlify
     links:
@@ -66,11 +66,11 @@ items:
         icon: i-lucide-link
     open_links:
       - label: GitHub
-        to: https://github.com/nuxt-ui-templates/editor
+        to: https://github.com/vinicunca/pohon-ui-templates/editor
         target: _blank
         icon: i-simple-icons-github
       - label: v0
-        to: https://v0.app/chat/api/open?url=https://github.com/nuxt-ui-templates/editor
+        to: https://v0.app/chat/api/open?url=https://github.com/vinicunca/pohon-ui-templates/editor
         target: _blank
         icon: i-simple-icons-v0
   - title: 'Changelog'
@@ -90,7 +90,7 @@ items:
         target: _blank
         icon: i-simple-icons-vercel
       - label: Netlify
-        to: https://app.netlify.com/start/deploy?repository=https://github.com/nuxt-ui-templates/changelog
+        to: https://app.netlify.com/start/deploy?repository=https://github.com/vinicunca/pohon-ui-templates/changelog
         target: _blank
         icon: i-simple-icons-netlify
     links:
@@ -100,11 +100,11 @@ items:
         icon: i-lucide-link
     open_links:
       - label: GitHub
-        to: https://github.com/nuxt-ui-templates/changelog
+        to: https://github.com/vinicunca/pohon-ui-templates/changelog
         target: _blank
         icon: i-simple-icons-github
       - label: v0
-        to: https://v0.app/chat/api/open?url=https://github.com/nuxt-ui-templates/changelog
+        to: https://v0.app/chat/api/open?url=https://github.com/vinicunca/pohon-ui-templates/changelog
         target: _blank
         icon: i-simple-icons-v0
   - title: 'Portfolio'
@@ -124,7 +124,7 @@ items:
         target: _blank
         icon: i-simple-icons-vercel
       - label: Netlify
-        to: https://app.netlify.com/start/deploy?repository=https://github.com/nuxt-ui-templates/portfolio
+        to: https://app.netlify.com/start/deploy?repository=https://github.com/vinicunca/pohon-ui-templates/portfolio
         target: _blank
         icon: i-simple-icons-netlify
     links:
@@ -134,11 +134,11 @@ items:
         icon: i-lucide-link
     open_links:
       - label: GitHub
-        to: https://github.com/nuxt-ui-templates/portfolio
+        to: https://github.com/vinicunca/pohon-ui-templates/portfolio
         target: _blank
         icon: i-simple-icons-github
       - label: v0
-        to: https://v0.app/chat/api/open?url=https://github.com/nuxt-ui-templates/portfolio
+        to: https://v0.app/chat/api/open?url=https://github.com/vinicunca/pohon-ui-templates/portfolio
         target: _blank
         icon: i-simple-icons-v0
   - title: 'Chat'
@@ -158,7 +158,7 @@ items:
         target: _blank
         icon: i-simple-icons-vercel
       - label: Netlify
-        to: https://app.netlify.com/start/deploy?repository=https://github.com/nuxt-ui-templates/chat
+        to: https://app.netlify.com/start/deploy?repository=https://github.com/vinicunca/pohon-ui-templates/chat
         target: _blank
         icon: i-simple-icons-netlify
     links:
@@ -168,11 +168,11 @@ items:
         icon: i-lucide-link
     open_links:
       - label: GitHub
-        to: https://github.com/nuxt-ui-templates/chat
+        to: https://github.com/vinicunca/pohon-ui-templates/chat
         target: _blank
         icon: i-simple-icons-github
       - label: v0
-        to: https://v0.app/chat/api/open?url=https://github.com/nuxt-ui-templates/chat
+        to: https://v0.app/chat/api/open?url=https://github.com/vinicunca/pohon-ui-templates/chat
         target: _blank
         icon: i-simple-icons-v0
   - title: 'Chat'
@@ -192,7 +192,7 @@ items:
         target: _blank
         icon: i-simple-icons-vercel
       - label: Netlify
-        to: https://app.netlify.com/start/deploy?repository=https://github.com/nuxt-ui-templates/chat-vue
+        to: https://app.netlify.com/start/deploy?repository=https://github.com/vinicunca/pohon-ui-templates/chat-vue
         target: _blank
         icon: i-simple-icons-netlify
     links:
@@ -202,11 +202,11 @@ items:
         icon: i-lucide-link
     open_links:
       - label: GitHub
-        to: https://github.com/nuxt-ui-templates/chat-vue
+        to: https://github.com/vinicunca/pohon-ui-templates/chat-vue
         target: _blank
         icon: i-simple-icons-github
       - label: v0
-        to: https://v0.app/chat/api/open?url=https://github.com/nuxt-ui-templates/chat-vue
+        to: https://v0.app/chat/api/open?url=https://github.com/vinicunca/pohon-ui-templates/chat-vue
         target: _blank
         icon: i-simple-icons-v0
   - title: 'Dashboard'
@@ -226,7 +226,7 @@ items:
         target: _blank
         icon: i-simple-icons-vercel
       - label: Netlify
-        to: https://app.netlify.com/start/deploy?repository=https://github.com/nuxt-ui-templates/dashboard
+        to: https://app.netlify.com/start/deploy?repository=https://github.com/vinicunca/pohon-ui-templates/dashboard
         target: _blank
         icon: i-simple-icons-netlify
     links:
@@ -236,11 +236,11 @@ items:
         icon: i-lucide-link
     open_links:
       - label: GitHub
-        to: https://github.com/nuxt-ui-templates/dashboard
+        to: https://github.com/vinicunca/pohon-ui-templates/dashboard
         target: _blank
         icon: i-simple-icons-github
       - label: v0
-        to: https://v0.app/chat/api/open?url=https://github.com/nuxt-ui-templates/dashboard
+        to: https://v0.app/chat/api/open?url=https://github.com/vinicunca/pohon-ui-templates/dashboard
         target: _blank
         icon: i-simple-icons-v0
   - title: 'Dashboard'
@@ -258,7 +258,7 @@ items:
         target: _blank
         icon: i-simple-icons-vercel
       - label: Netlify
-        to: https://app.netlify.com/start/deploy?repository=https://github.com/nuxt-ui-templates/dashboard-vue
+        to: https://app.netlify.com/start/deploy?repository=https://github.com/vinicunca/pohon-ui-templates/dashboard-vue
         target: _blank
         icon: i-simple-icons-netlify
     links:
@@ -268,11 +268,11 @@ items:
         icon: i-lucide-link
     open_links:
       - label: GitHub
-        to: https://github.com/nuxt-ui-templates/dashboard-vue
+        to: https://github.com/vinicunca/pohon-ui-templates/dashboard-vue
         target: _blank
         icon: i-simple-icons-github
       - label: v0
-        to: https://v0.app/chat/api/open?url=https://github.com/nuxt-ui-templates/dashboard-vue
+        to: https://v0.app/chat/api/open?url=https://github.com/vinicunca/pohon-ui-templates/dashboard-vue
         target: _blank
         icon: i-simple-icons-v0
   - title: 'SaaS'
@@ -292,7 +292,7 @@ items:
         target: _blank
         icon: i-simple-icons-vercel
       - label: Netlify
-        to: https://app.netlify.com/start/deploy?repository=https://github.com/nuxt-ui-templates/saas
+        to: https://app.netlify.com/start/deploy?repository=https://github.com/vinicunca/pohon-ui-templates/saas
         target: _blank
         icon: i-simple-icons-netlify
     links:
@@ -302,11 +302,11 @@ items:
         icon: i-lucide-link
     open_links:
       - label: GitHub
-        to: https://github.com/nuxt-ui-templates/saas
+        to: https://github.com/vinicunca/pohon-ui-templates/saas
         target: _blank
         icon: i-simple-icons-github
       - label: v0
-        to: https://v0.app/chat/api/open?url=https://github.com/nuxt-ui-templates/saas
+        to: https://v0.app/chat/api/open?url=https://github.com/vinicunca/pohon-ui-templates/saas
         target: _blank
         icon: i-simple-icons-v0
   - title: 'Landing'
@@ -326,7 +326,7 @@ items:
         target: _blank
         icon: i-simple-icons-vercel
       - label: Netlify
-        to: https://app.netlify.com/start/deploy?repository=https://github.com/nuxt-ui-templates/landing
+        to: https://app.netlify.com/start/deploy?repository=https://github.com/vinicunca/pohon-ui-templates/landing
         target: _blank
         icon: i-simple-icons-netlify
     links:
@@ -336,11 +336,11 @@ items:
         icon: i-lucide-link
     open_links:
       - label: GitHub
-        to: https://github.com/nuxt-ui-templates/landing
+        to: https://github.com/vinicunca/pohon-ui-templates/landing
         target: _blank
         icon: i-simple-icons-github
       - label: v0
-        to: https://v0.app/chat/api/open?url=https://github.com/nuxt-ui-templates/landing
+        to: https://v0.app/chat/api/open?url=https://github.com/vinicunca/pohon-ui-templates/landing
         target: _blank
         icon: i-simple-icons-v0
   - title: 'Docs'
@@ -360,7 +360,7 @@ items:
         target: _blank
         icon: i-simple-icons-vercel
       - label: Netlify
-        to: https://app.netlify.com/start/deploy?repository=https://github.com/nuxt-ui-templates/docs
+        to: https://app.netlify.com/start/deploy?repository=https://github.com/vinicunca/pohon-ui-templates/docs
         target: _blank
         icon: i-simple-icons-netlify
     links:
@@ -370,15 +370,15 @@ items:
         icon: i-lucide-link
     open_links:
       - label: GitHub
-        to: https://github.com/nuxt-ui-templates/docs
+        to: https://github.com/vinicunca/pohon-ui-templates/docs
         target: _blank
         icon: i-simple-icons-github
       - label: v0
-        to: https://v0.app/chat/api/open?url=https://github.com/nuxt-ui-templates/docs
+        to: https://v0.app/chat/api/open?url=https://github.com/vinicunca/pohon-ui-templates/docs
         target: _blank
         icon: i-simple-icons-v0
   - title: 'Starter'
-    description: "A minimal template to get started with Nuxt UI."
+    description: "A minimal template to get started with Pohon."
     icon: i-lucide-flower
     framework: nuxt
     features:
@@ -392,7 +392,7 @@ items:
         target: _blank
         icon: i-simple-icons-vercel
       - label: Netlify
-        to: https://app.netlify.com/start/deploy?repository=https://github.com/nuxt-ui-templates/starter
+        to: https://app.netlify.com/start/deploy?repository=https://github.com/vinicunca/pohon-ui-templates/starter
         target: _blank
         icon: i-simple-icons-netlify
     links:
@@ -402,15 +402,15 @@ items:
         icon: i-lucide-link
     open_links:
       - label: GitHub
-        to: https://github.com/nuxt-ui-templates/starter
+        to: https://github.com/vinicunca/pohon-ui-templates/starter
         target: _blank
         icon: i-simple-icons-github
       - label: v0
-        to: https://v0.app/chat/api/open?url=https://github.com/nuxt-ui-templates/starter
+        to: https://v0.app/chat/api/open?url=https://github.com/vinicunca/pohon-ui-templates/starter
         target: _blank
         icon: i-simple-icons-v0
   - title: 'Starter'
-    description: "A minimal template to get started with Nuxt UI."
+    description: "A minimal template to get started with Pohon."
     icon: i-lucide-flower
     framework: vue
     features:
@@ -424,7 +424,7 @@ items:
         target: _blank
         icon: i-simple-icons-vercel
       - label: Netlify
-        to: https://app.netlify.com/start/deploy?repository=https://github.com/nuxt-ui-templates/starter-vue
+        to: https://app.netlify.com/start/deploy?repository=https://github.com/vinicunca/pohon-ui-templates/starter-vue
         target: _blank
         icon: i-simple-icons-netlify
     links:
@@ -434,10 +434,10 @@ items:
         icon: i-lucide-link
     open_links:
       - label: GitHub
-        to: https://github.com/nuxt-ui-templates/starter-vue
+        to: https://github.com/vinicunca/pohon-ui-templates/starter-vue
         target: _blank
         icon: i-simple-icons-github
       - label: v0
-        to: https://v0.app/chat/api/open?url=https://github.com/nuxt-ui-templates/starter-vue
+        to: https://v0.app/chat/api/open?url=https://github.com/vinicunca/pohon-ui-templates/starter-vue
         target: _blank
         icon: i-simple-icons-v0

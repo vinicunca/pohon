@@ -19,7 +19,7 @@ const appConfig = useAppConfig()
 </script>
 
 <template>
-  <UButton
+  <PButton
     :label="label"
     :icon="icon"
     :trailing-icon="appConfig.ui.icons.chevronDown"
@@ -36,5 +36,5 @@ const appConfig = useAppConfig()
     <template v-if="$slots.leading" #leading>
       <slot name="leading" />
     </template>
-  </UButton>
+  </PButton>
 </template>

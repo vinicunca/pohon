@@ -154,7 +154,7 @@ const testimonials = ref([
       :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
     >
       <template #footer>
-        <UUser v-bind="testimonial.user" size="xl" />
+        <PUser v-bind="testimonial.user" size="xl" />
       </template>
     </UPageCard>
   </UPageColumns>

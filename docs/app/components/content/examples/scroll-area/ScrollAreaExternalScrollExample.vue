@@ -123,7 +123,7 @@ watch(matches, () => {
             </span>
           </template>
         </UInput>
-        <UButton
+        <PButton
           :icon="isHorizontal ? 'i-lucide-chevron-left' : 'i-lucide-chevron-up'"
           color="neutral"
           variant="outline"
@@ -131,7 +131,7 @@ watch(matches, () => {
           :disabled="!matches.length"
           @click="step(-1)"
         />
-        <UButton
+        <PButton
           :icon="isHorizontal ? 'i-lucide-chevron-right' : 'i-lucide-chevron-down'"
           color="neutral"
           variant="outline"
@@ -141,7 +141,7 @@ watch(matches, () => {
         />
       </UFieldGroup>
 
-      <UButton
+      <PButton
         :icon="isHorizontal ? 'i-lucide-arrow-left-to-line' : 'i-lucide-arrow-up-to-line'"
         color="neutral"
         variant="outline"

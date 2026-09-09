@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TabsProps } from '@nuxt/ui'
+import type { TabsProps } from 'pohon-ui'
 
 /**
  * Light, dark and system as an icon-only segmented control, the picker the

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TableColumn } from '@nuxt/ui'
+import type { TableColumn } from 'pohon-ui'
 import type { Cell } from '@tanstack/vue-table'
 
 type Product = {
@@ -89,5 +89,5 @@ const columns: TableColumn<Product>[] = [{
 </script>
 
 <template>
-  <UTable :data="data" :columns="columns" class="flex-1" />
+  <PTable :data="data" :columns="columns" class="flex-1" />
 </template>

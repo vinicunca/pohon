@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as z from 'zod'
-import type { FormSubmitEvent } from '@nuxt/ui'
+import type { FormSubmitEvent } from 'pohon-ui'
 
 const MAX_FILE_SIZE = 2 * 1024 * 1024 // 2MB
 const MIN_DIMENSIONS = { width: 200, height: 200 }
@@ -63,11 +63,11 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UForm :schema="schema" :state="state" class="space-y-4 w-96" @submit="onSubmit">
-    <UFormField name="image" label="Image" description="JPG, GIF or PNG. 2MB Max.">
+  <PForm :schema="schema" :state="state" class="space-y-4 w-96" @submit="onSubmit">
+    <PFormField name="image" label="Image" description="JPG, GIF or PNG. 2MB Max.">
       <UFileUpload v-model="state.image" accept="image/*" class="min-h-48" />
-    </UFormField>
+    </PFormField>
 
-    <UButton type="submit" label="Submit" color="neutral" />
-  </UForm>
+    <PButton type="submit" label="Submit" color="neutral" />
+  </PForm>
 </template>

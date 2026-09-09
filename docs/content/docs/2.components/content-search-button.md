@@ -1,6 +1,6 @@
 ---
 title: ContentSearchButton
-description: 'A pre-styled Button to open the ContentSearch modal.'
+description: "A pre-styled Button to open the ContentSearch modal."
 category: content
 framework: nuxt
 links:
@@ -9,7 +9,7 @@ links:
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/content/ContentSearchButton.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/content/ContentSearchButton.vue
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
@@ -26,11 +26,15 @@ It extends the [Button](/docs/components/button) component, so you can pass any 
 
 ::component-code{prefix="content"}
 ---
+
 ignore:
-  - variant
-props:
+
+- variant
+  props:
   variant: 'subtle'
+
 ---
+
 ::
 
 ::note{to="#collapsed"}
@@ -43,10 +47,12 @@ Use the `collapsed` prop to show the button's label and [kbds](#kbds). Defaults 
 
 ::component-code{prefix="content"}
 ---
+
 prettier: true
 props:
-  collapsed: false
+collapsed: false
 ---
+
 ::
 
 ### Kbds
@@ -55,15 +61,19 @@ Use the `kbds` prop to display keyboard keys in the button. Defaults to `['meta'
 
 ::component-code{prefix="content"}
 ---
+
 prettier: true
 ignore:
-  - kbds
-props:
+
+- kbds
+  props:
   collapsed: false
   kbds:
-    - 'alt'
-    - 'O'
+  - 'alt'
+  - 'O'
+
 ---
+
 ::
 
 ## API

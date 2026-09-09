@@ -10,7 +10,7 @@ const props = defineProps<{
 
 <template>
   <UTooltip text="Open in playground" :content="{ side: 'right' }">
-    <UButton
+    <PButton
       :to="props.to"
       target="_blank"
       :icon="studioIcons.play"

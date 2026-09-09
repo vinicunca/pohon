@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from '@nuxt/ui'
+import type { TableColumn } from 'pohon-ui'
 import type { RowPinningState } from '@tanstack/table-core'
 
-const UButton = resolveComponent('UButton')
+const PButton = resolveComponent('PButton')
 const UBadge = resolveComponent('UBadge')
 
 type Payment = {
@@ -78,7 +78,7 @@ const data = ref<Payment[]>([{
 
 const columns: TableColumn<Payment>[] = [{
   id: 'pin',
-  cell: ({ row }) => h(UButton, {
+  cell: ({ row }) => h(PButton, {
     'icon': 'i-lucide-star',
     'color': row.getIsPinned() ? 'primary' : 'neutral',
     'variant': 'ghost',
@@ -141,7 +141,7 @@ const rowPinning = ref<RowPinningState>({ top: ['4599', '4597'], bottom: [] })
 </script>
 
 <template>
-  <UTable
+  <PTable
     v-model:row-pinning="rowPinning"
     :data="data"
     :columns="columns"

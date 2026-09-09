@@ -2,7 +2,7 @@
 import { Markdown } from '@comark/vue'
 import shiki from '@comark/vue/plugins/shiki'
 
-// Replicates the official Nuxt UI Changelog template (nuxt-ui-templates/changelog)
+// Replicates the official Pohon Changelog template (nuxt-ui-templates/changelog)
 // in a single self-contained preview: app.vue's split layout with the sticky
 // intro panel + SkyBg on the left, and pages/index.vue's UChangelogVersions
 // feed on the right. Release notes are inlined since the template fetches them
@@ -68,15 +68,15 @@ const versions: Release[] = [{
 
 ## 🚀 Features
 
-- **ChangelogVersions:** new component to compose release notes ([#6712](https://github.com/nuxt/ui/pull/6712)) ([a1b2c3d](https://github.com/nuxt/ui/commit/a1b2c3d))
-- **Table:** add column pinning and row expansion ([#6698](https://github.com/nuxt/ui/pull/6698)) ([4f9e2b1](https://github.com/nuxt/ui/commit/4f9e2b1))
-- **ColorPicker:** support custom swatch sizes ([#6704](https://github.com/nuxt/ui/pull/6704)) ([8c3d5a7](https://github.com/nuxt/ui/commit/8c3d5a7))
-- **Slider:** expose a slot to render content next to the value ([#6689](https://github.com/nuxt/ui/pull/6689)) ([2e7f014](https://github.com/nuxt/ui/commit/2e7f014))
+- **ChangelogVersions:** new component to compose release notes ([#6712](https://github.com/vinicunca/pohon/pull/6712)) ([a1b2c3d](https://github.com/vinicunca/pohon/commit/a1b2c3d))
+- **Table:** add column pinning and row expansion ([#6698](https://github.com/vinicunca/pohon/pull/6698)) ([4f9e2b1](https://github.com/vinicunca/pohon/commit/4f9e2b1))
+- **ColorPicker:** support custom swatch sizes ([#6704](https://github.com/vinicunca/pohon/pull/6704)) ([8c3d5a7](https://github.com/vinicunca/pohon/commit/8c3d5a7))
+- **Slider:** expose a slot to render content next to the value ([#6689](https://github.com/vinicunca/pohon/pull/6689)) ([2e7f014](https://github.com/vinicunca/pohon/commit/2e7f014))
 
 ## 🐛 Bug Fixes
 
-- **Modal:** prevent overlay flicker when nesting inside a drawer ([#6741](https://github.com/nuxt/ui/pull/6741)) ([b5a8c92](https://github.com/nuxt/ui/commit/b5a8c92))
-- **Carousel:** respect reduced motion preferences during autoplay ([#6736](https://github.com/nuxt/ui/pull/6736)) ([d1f4e63](https://github.com/nuxt/ui/commit/d1f4e63))
+- **Modal:** prevent overlay flicker when nesting inside a drawer ([#6741](https://github.com/vinicunca/pohon/pull/6741)) ([b5a8c92](https://github.com/vinicunca/pohon/commit/b5a8c92))
+- **Carousel:** respect reduced motion preferences during autoplay ([#6736](https://github.com/vinicunca/pohon/pull/6736)) ([d1f4e63](https://github.com/vinicunca/pohon/commit/d1f4e63))
 
 ## ❤️ Contributors
 
@@ -92,15 +92,15 @@ const versions: Release[] = [{
 
 ## 🚀 Features
 
-- **Form:** nested field support with dot notation paths ([#6612](https://github.com/nuxt/ui/pull/6612)) ([7a2c8f5](https://github.com/nuxt/ui/commit/7a2c8f5))
-- **CommandPalette:** new prop to render items lazily in large lists ([#6598](https://github.com/nuxt/ui/pull/6598)) ([c9b3e17](https://github.com/nuxt/ui/commit/c9b3e17))
-- **Calendar:** allow custom day cells through a slot ([#6603](https://github.com/nuxt/ui/pull/6603)) ([f0d7a24](https://github.com/nuxt/ui/commit/f0d7a24))
+- **Form:** nested field support with dot notation paths ([#6612](https://github.com/vinicunca/pohon/pull/6612)) ([7a2c8f5](https://github.com/vinicunca/pohon/commit/7a2c8f5))
+- **CommandPalette:** new prop to render items lazily in large lists ([#6598](https://github.com/vinicunca/pohon/pull/6598)) ([c9b3e17](https://github.com/vinicunca/pohon/commit/c9b3e17))
+- **Calendar:** allow custom day cells through a slot ([#6603](https://github.com/vinicunca/pohon/pull/6603)) ([f0d7a24](https://github.com/vinicunca/pohon/commit/f0d7a24))
 
 ## 🐛 Bug Fixes
 
-- **ContentSearch:** keep focus within the panel when tabbing from the search input ([#6640](https://github.com/nuxt/ui/pull/6640)) ([3b8e5c1](https://github.com/nuxt/ui/commit/3b8e5c1))
-- **Input:** fix RTL alignment of trailing icons ([#6631](https://github.com/nuxt/ui/pull/6631)) ([9e4a7d2](https://github.com/nuxt/ui/commit/9e4a7d2))
-- **Toast:** avoid duplicate announcements of titles by screen readers ([#6627](https://github.com/nuxt/ui/pull/6627)) ([6c1f938](https://github.com/nuxt/ui/commit/6c1f938))
+- **ContentSearch:** keep focus within the panel when tabbing from the search input ([#6640](https://github.com/vinicunca/pohon/pull/6640)) ([3b8e5c1](https://github.com/vinicunca/pohon/commit/3b8e5c1))
+- **Input:** fix RTL alignment of trailing icons ([#6631](https://github.com/vinicunca/pohon/pull/6631)) ([9e4a7d2](https://github.com/vinicunca/pohon/commit/9e4a7d2))
+- **Toast:** avoid duplicate announcements of titles by screen readers ([#6627](https://github.com/vinicunca/pohon/pull/6627)) ([6c1f938](https://github.com/vinicunca/pohon/commit/6c1f938))
 
 ## ❤️ Contributors
 
@@ -115,9 +115,9 @@ const versions: Release[] = [{
 
 ## 🐛 Bug Fixes
 
-- Restore auto-import of prose components in docs projects ([#6521](https://github.com/nuxt/ui/pull/6521)) ([e2d9b40](https://github.com/nuxt/ui/commit/e2d9b40))
-- **Skeleton:** fix hydration mismatch when used with SSR color mode ([#6517](https://github.com/nuxt/ui/pull/6517)) ([a7c3f81](https://github.com/nuxt/ui/commit/a7c3f81))
-- **Button:** correct padding of the compact size ([#6509](https://github.com/nuxt/ui/pull/6509)) ([5f8e2a6](https://github.com/nuxt/ui/commit/5f8e2a6))
+- Restore auto-import of prose components in docs projects ([#6521](https://github.com/vinicunca/pohon/pull/6521)) ([e2d9b40](https://github.com/vinicunca/pohon/commit/e2d9b40))
+- **Skeleton:** fix hydration mismatch when used with SSR color mode ([#6517](https://github.com/vinicunca/pohon/pull/6517)) ([a7c3f81](https://github.com/vinicunca/pohon/commit/a7c3f81))
+- **Button:** correct padding of the compact size ([#6509](https://github.com/vinicunca/pohon/pull/6509)) ([5f8e2a6](https://github.com/vinicunca/pohon/commit/5f8e2a6))
 
 ## ❤️ Contributors
 
@@ -127,7 +127,7 @@ const versions: Release[] = [{
   tag: 'v4.0.0',
   title: 'v4.0.0',
   date: '2026-03-24T14:00:00Z',
-  body: `Nuxt UI v4 unifies Nuxt UI and Nuxt UI Pro into a single free and open source library: 110+ components, Tailwind CSS v4, and a brand new theming system built on design tokens.
+  body: `Pohon v4 unifies Pohon and Pohon Pro into a single free and open source library: 110+ components, UnoCSS v4, and a brand new theming system built on design tokens.
 
 ## ✨ Highlights
 
@@ -149,13 +149,13 @@ export default defineAppConfig({
 
 ## 🚀 Features
 
-- All Pro components are now free and open source ([#6301](https://github.com/nuxt/ui/pull/6301)) ([1a4f7e9](https://github.com/nuxt/ui/commit/1a4f7e9))
-- **theme:** semantic color aliases with light and dark values ([#6288](https://github.com/nuxt/ui/pull/6288)) ([8d2b6c3](https://github.com/nuxt/ui/commit/8d2b6c3))
-- **ui:** per-slot overrides on the rewritten Tailwind Variants theming ([#6294](https://github.com/nuxt/ui/pull/6294)) ([c7e0f52](https://github.com/nuxt/ui/commit/c7e0f52))
+- All Pro components are now free and open source ([#6301](https://github.com/vinicunca/pohon/pull/6301)) ([1a4f7e9](https://github.com/vinicunca/pohon/commit/1a4f7e9))
+- **theme:** semantic color aliases with light and dark values ([#6288](https://github.com/vinicunca/pohon/pull/6288)) ([8d2b6c3](https://github.com/vinicunca/pohon/commit/8d2b6c3))
+- **ui:** per-slot overrides on the rewritten UnoCSS Variants theming ([#6294](https://github.com/vinicunca/pohon/pull/6294)) ([c7e0f52](https://github.com/vinicunca/pohon/commit/c7e0f52))
 
 ## 🔥 Performances
 
-- Drop the runtime config file in favour of CSS-first configuration ([#6310](https://github.com/nuxt/ui/pull/6310)) ([b3a9d18](https://github.com/nuxt/ui/commit/b3a9d18))
+- Drop the runtime config file in favour of CSS-first configuration ([#6310](https://github.com/vinicunca/pohon/pull/6310)) ([b3a9d18](https://github.com/vinicunca/pohon/commit/b3a9d18))
 
 ## ❤️ Contributors
 
@@ -192,7 +192,7 @@ onMounted(() => {
        color mode button sits outside it, the way the template's is fixed. -->
   <div class="relative h-full">
     <!-- Static: the studio toolbar owns color mode. -->
-    <UButton
+    <PButton
       color="neutral"
       variant="ghost"
       aria-label="Color mode"
@@ -202,13 +202,13 @@ onMounted(() => {
         <UIcon :name="appConfig.ui.icons.dark" :class="ui.leadingIcon({ class: 'hidden dark:inline-block' })" />
         <UIcon :name="appConfig.ui.icons.light" :class="ui.leadingIcon({ class: 'dark:hidden' })" />
       </template>
-    </UButton>
+    </PButton>
 
     <div class="h-full overflow-y-auto bg-default">
       <div class="min-h-full xl:grid xl:grid-cols-2">
         <UPageSection
           title="Release Notes"
-          description="Display GitHub release notes as a beautiful changelog for any repository with this Nuxt UI template."
+          description="Display GitHub release notes as a beautiful changelog for any repository with this Pohon template."
           orientation="vertical"
           :links="introLinks"
           :ui="{

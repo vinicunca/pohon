@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AvatarProps } from '@nuxt/ui'
+import type { AvatarProps } from 'pohon-ui'
 import type { ThemeDoc } from '../../../utils/theme/engine'
 import { themeIcons } from '../../../utils/theme/icons'
 import { themeChipStyle, loadFontPreviews, PRESET_ICONS } from '../../../utils/theme/studio'

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorSuggestionMenuItem } from '@nuxt/ui'
+import type { EditorSuggestionMenuItem } from 'pohon-ui'
 
 const value = ref(`Click the plus button to open the suggestion menu and add new blocks.
 
@@ -37,7 +37,7 @@ const suggestionItems: EditorSuggestionMenuItem[][] = [[{
     <UEditorSuggestionMenu :editor="editor" :items="suggestionItems" />
 
     <UEditorDragHandle v-slot="{ ui, onClick }" :editor="editor">
-      <UButton
+      <PButton
         icon="i-lucide-plus"
         color="neutral"
         variant="ghost"
@@ -51,7 +51,7 @@ const suggestionItems: EditorSuggestionMenuItem[][] = [[{
         }"
       />
 
-      <UButton
+      <PButton
         icon="i-lucide-grip-vertical"
         color="neutral"
         variant="ghost"

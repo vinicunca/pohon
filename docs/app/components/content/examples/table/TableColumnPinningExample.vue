@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from '@nuxt/ui'
+import type { TableColumn } from 'pohon-ui'
 import type { Column } from '@tanstack/vue-table'
 
 const UBadge = resolveComponent('UBadge')
-const UButton = resolveComponent('UButton')
+const PButton = resolveComponent('PButton')
 
 type Payment = {
   id: string
@@ -94,7 +94,7 @@ const columns: TableColumn<Payment>[] = [{
 function getHeader(column: Column<Payment>, label: string, position: 'left' | 'right') {
   const isPinned = column.getIsPinned()
 
-  return h(UButton, {
+  return h(PButton, {
     color: 'neutral',
     variant: 'ghost',
     label,
@@ -113,7 +113,7 @@ const columnPinning = ref({
 </script>
 
 <template>
-  <UTable
+  <PTable
     v-model:column-pinning="columnPinning"
     :data="data"
     :columns="columns"

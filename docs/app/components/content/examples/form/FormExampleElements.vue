@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as z from 'zod'
-import type { FormSubmitEvent } from '@nuxt/ui'
+import type { FormSubmitEvent } from 'pohon-ui'
 
 const schema = z.object({
   input: z.string({ message: 'Please enter your email' }).min(10, 'Must be at least 10 characters'),
@@ -81,114 +81,114 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UForm ref="form" :state="state" :schema="schema" class="w-full" @submit="onSubmit">
+  <PForm ref="form" :state="state" :schema="schema" class="w-full" @submit="onSubmit">
     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <UFormField label="Input" name="input">
+      <PFormField label="Input" name="input">
         <UInput v-model="state.input" placeholder="you@example.com" class="w-full" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="inputNumber" label="InputNumber">
+      <PFormField name="inputNumber" label="InputNumber">
         <UInputNumber v-model="state.inputNumber" placeholder="Enter a number" class="w-full" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="pin" label="PinInput" :error-pattern="/(pin)\..*/">
+      <PFormField name="pin" label="PinInput" :error-pattern="/(pin)\..*/">
         <UPinInput v-model="state.pin" placeholder="○" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="inputDate" label="InputDate">
+      <PFormField name="inputDate" label="InputDate">
         <UInputDate v-model="state.inputDate" class="w-full" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="inputTime" label="InputTime">
+      <PFormField name="inputTime" label="InputTime">
         <UInputTime v-model="state.inputTime" class="w-full" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="inputTags" label="InputTags">
+      <PFormField name="inputTags" label="InputTags">
         <UInputTags v-model="state.inputTags" placeholder="Add a tag..." class="w-full" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="inputMenu" label="InputMenu">
+      <PFormField name="inputMenu" label="InputMenu">
         <UInputMenu v-model="state.inputMenu" :items="items" placeholder="Search an option..." class="w-full" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="inputMenuMultiple" label="InputMenu (Multiple)">
+      <PFormField name="inputMenuMultiple" label="InputMenu (Multiple)">
         <UInputMenu v-model="state.inputMenuMultiple" multiple :items="items" placeholder="Search options..." class="w-full" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField label="Textarea" name="textarea">
+      <PFormField label="Textarea" name="textarea">
         <UTextarea v-model="state.textarea" placeholder="Write your message..." class="w-full" :rows="1" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="select" label="Select">
+      <PFormField name="select" label="Select">
         <USelect v-model="state.select" :items="items" placeholder="Choose an option" class="w-full" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="selectMultiple" label="Select (Multiple)">
+      <PFormField name="selectMultiple" label="Select (Multiple)">
         <USelect v-model="state.selectMultiple" multiple :items="items" placeholder="Choose options" class="w-full" />
-      </UFormField>
+      </PFormField>
 
       <div class="hidden md:block" />
 
-      <UFormField name="selectMenu" label="SelectMenu">
+      <PFormField name="selectMenu" label="SelectMenu">
         <USelectMenu v-model="state.selectMenu" :items="items" placeholder="Search an option..." class="w-full" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="selectMenuMultiple" label="SelectMenu (Multiple)">
+      <PFormField name="selectMenuMultiple" label="SelectMenu (Multiple)">
         <USelectMenu v-model="state.selectMenuMultiple" multiple :items="items" placeholder="Search options..." class="w-full" />
-      </UFormField>
+      </PFormField>
 
       <div class="hidden md:block" />
 
-      <UFormField name="listbox" label="Listbox">
+      <PFormField name="listbox" label="Listbox">
         <UListbox v-model="state.listbox" :items="items" class="w-full" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="listboxMultiple" label="Listbox (Multiple)">
+      <PFormField name="listboxMultiple" label="Listbox (Multiple)">
         <UListbox v-model="state.listboxMultiple" :items="items" multiple class="w-full" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="file" label="FileUpload">
+      <PFormField name="file" label="FileUpload">
         <UFileUpload
           v-model="state.file"
           label="Drop your image here"
           description="PNG (max. 1MB)"
           class="w-full"
         />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="checkbox" label="Checkbox">
+      <PFormField name="checkbox" label="Checkbox">
         <UCheckbox v-model="state.checkbox" label="Check me" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="switch" label="Switch">
+      <PFormField name="switch" label="Switch">
         <USwitch v-model="state.switch" label="Switch me" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="slider" label="Slider">
+      <PFormField name="slider" label="Slider">
         <USlider v-model="state.slider" class="mt-2.5" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="rating" label="InputRating">
+      <PFormField name="rating" label="InputRating">
         <UInputRating v-model="state.rating" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="checkboxGroup">
+      <PFormField name="checkboxGroup">
         <UCheckboxGroup v-model="state.checkboxGroup" legend="CheckboxGroup" :items="items" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField name="radioGroup">
+      <PFormField name="radioGroup">
         <URadioGroup v-model="state.radioGroup" legend="RadioGroup" :items="items" />
-      </UFormField>
+      </PFormField>
     </div>
 
     <div class="flex gap-2 mt-8">
-      <UButton type="submit">
+      <PButton type="submit">
         Submit
-      </UButton>
+      </PButton>
 
-      <UButton variant="outline" @click="form?.clear()">
+      <PButton variant="outline" @click="form?.clear()">
         Clear
-      </UButton>
+      </PButton>
     </div>
-  </UForm>
+  </PForm>
 </template>

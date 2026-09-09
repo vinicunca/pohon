@@ -1,34 +1,34 @@
 <script setup lang="ts">
 const items = [
   {
-    label: 'Is Nuxt UI free to use?',
+    label: 'Is Pohon free to use?',
     icon: 'i-lucide-circle-help',
-    content: 'Yes! Nuxt UI is completely free and open source under the MIT license. All 125+ components are available to everyone.'
+    content: 'Yes! Pohon is completely free and open source under the MIT license. All 125+ components are available to everyone.'
   },
   {
-    label: 'Can I use Nuxt UI with Vue without Nuxt?',
+    label: 'Can I use Pohon with Vue without Nuxt?',
     icon: 'i-lucide-circle-help',
-    content: 'Yes! While optimized for Nuxt, Nuxt UI works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.'
+    content: 'Yes! While optimized for Nuxt, Pohon works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.'
   },
   {
-    label: 'Will Nuxt UI work with other CSS frameworks like UnoCSS?',
+    label: 'Will Pohon work with other CSS frameworks like UnoCSS?',
     icon: 'i-lucide-circle-help',
-    content: 'No. Nuxt UI is designed exclusively for Tailwind CSS. UnoCSS support would require significant architecture changes due to different class naming conventions.'
+    content: 'No. Pohon is designed exclusively for UnoCSS. UnoCSS support would require significant architecture changes due to different class naming conventions.'
   },
   {
-    label: 'How does Nuxt UI handle accessibility?',
+    label: 'How does Pohon handle accessibility?',
     icon: 'i-lucide-circle-help',
-    content: 'Through [Reka UI](https://reka-ui.com/docs/overview/accessibility) integration, Nuxt UI provides automatic ARIA attributes, keyboard navigation, focus management, and screen reader support. While offering a strong foundation, testing in your specific use case remains important.'
+    content: 'Through [Akar](https://reka-ui.com/docs/overview/accessibility) integration, Pohon provides automatic ARIA attributes, keyboard navigation, focus management, and screen reader support. While offering a strong foundation, testing in your specific use case remains important.'
   },
   {
-    label: 'How is Nuxt UI tested?',
+    label: 'How is Pohon tested?',
     icon: 'i-lucide-circle-help',
-    content: 'Nuxt UI ensures reliability with 1000+ Vitest tests covering core functionality and accessibility.'
+    content: 'Pohon ensures reliability with 1000+ Vitest tests covering core functionality and accessibility.'
   },
   {
-    label: 'Is Nuxt UI production-ready?',
+    label: 'Is Pohon production-ready?',
     icon: 'i-lucide-circle-help',
-    content: 'Yes! Nuxt UI is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.'
+    content: 'Yes! Pohon is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.'
   }
 ]
 </script>

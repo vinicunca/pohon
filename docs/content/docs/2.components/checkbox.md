@@ -11,7 +11,7 @@ links:
     to: https://reka-ui.com/docs/components/checkbox
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Checkbox.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Checkbox.vue
 ---
 
 ## Usage
@@ -20,24 +20,32 @@ Use the `v-model` directive to control the checked state of the Checkbox.
 
 ::component-code
 ---
+
 ignore:
-  - modelValue
-external:
-  - modelValue
-props:
+
+- modelValue
+  external:
+- modelValue
+  props:
   modelValue: true
+
 ---
+
 ::
 
 Use the `default-value` prop to set the initial value when you do not need to control its state.
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   defaultValue: true
+
 ---
+
 ::
 
 ### Indeterminate
@@ -46,11 +54,15 @@ Use the `indeterminate` value in the `v-model` directive or `default-value` prop
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   defaultValue: 'indeterminate'
+
 ---
+
 ::
 
 ### Indeterminate Icon
@@ -59,12 +71,16 @@ Use the `indeterminate-icon` prop to customize the indeterminate icon. Defaults 
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   defaultValue: 'indeterminate'
   indeterminateIcon: 'i-lucide-plus'
+
 ---
+
 ::
 
 ::framework-only
@@ -85,21 +101,27 @@ Use the `label` prop to set the label of the Checkbox.
 
 ::component-code
 ---
+
 props:
-  label: Check me
+label: Check me
 ---
+
 ::
 
 When using the `required` prop, an asterisk is added next to the label.
 
 ::component-code
 ---
+
 ignore:
-  - label
-props:
+
+- label
+  props:
   required: true
   label: Check me
+
 ---
+
 ::
 
 ### Description
@@ -108,12 +130,16 @@ Use the `description` prop to set the description of the Checkbox.
 
 ::component-code
 ---
+
 ignore:
-  - label
-props:
+
+- label
+  props:
   label: Check me
   description: 'This is a checkbox.'
+
 ---
+
 ::
 
 ### Icon
@@ -122,14 +148,18 @@ Use the `icon` prop to set the icon of the Checkbox when it is checked. Defaults
 
 ::component-code
 ---
+
 ignore:
-  - label
-  - defaultValue
-props:
+
+- label
+- defaultValue
+  props:
   icon: 'i-lucide-heart'
   defaultValue: true
   label: Check me
+
 ---
+
 ::
 
 ::framework-only
@@ -150,14 +180,18 @@ Use the `color` prop to change the color of the Checkbox.
 
 ::component-code
 ---
+
 ignore:
-  - label
-  - defaultValue
-props:
+
+- label
+- defaultValue
+  props:
   color: neutral
   defaultValue: true
   label: Check me
+
 ---
+
 ::
 
 ### Variant
@@ -166,15 +200,19 @@ Use the `variant` prop to change the variant of the Checkbox.
 
 ::component-code
 ---
+
 ignore:
-  - label
-  - defaultValue
-props:
+
+- label
+- defaultValue
+  props:
   color: 'primary'
   variant: 'card'
   defaultValue: true
   label: Check me
+
 ---
+
 ::
 
 ### Size
@@ -183,15 +221,19 @@ Use the `size` prop to change the size of the Checkbox.
 
 ::component-code
 ---
+
 ignore:
-  - label
-  - defaultValue
-props:
+
+- label
+- defaultValue
+  props:
   size: xl
   variant: list
   defaultValue: true
   label: Check me
+
 ---
+
 ::
 
 ### Indicator
@@ -204,18 +246,22 @@ When `indicator` is `hidden`, the icon is displayed above the label instead.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - label
-  - icon
-  - defaultValue
-props:
+
+- label
+- icon
+- defaultValue
+  props:
   indicator: 'hidden'
   variant: 'card'
   icon: 'i-lucide-heart'
   defaultValue: true
   label: Check me
+
 ---
+
 ::
 
 ### Disabled
@@ -224,12 +270,16 @@ Use the `disabled` prop to disable the Checkbox.
 
 ::component-code
 ---
+
 ignore:
-  - label
-props:
+
+- label
+  props:
   disabled: true
   label: Check me
+
 ---
+
 ::
 
 ## API

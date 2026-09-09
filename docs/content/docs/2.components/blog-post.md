@@ -1,11 +1,11 @@
 ---
 title: BlogPost
-description: 'A customizable article to display in a blog page.'
+description: "A customizable article to display in a blog page."
 category: page
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/BlogPost.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/BlogPost.vue
 ---
 
 ## Usage
@@ -16,22 +16,26 @@ The BlogPost component provides a flexible way to display an `<article>` element
 
 ::u-blog-post
 ---
+
 title: 'Introducing Nuxt Icon v1'
 description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
 image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
 date: 2024-11-25
 authors:
-  - name: Anthony Fu
-    description: antfu7
-    avatar:
-      src: https://github.com/antfu.png
-      loading: lazy
-    to: https://github.com/antfu
-    target: _blank
-to: 'https://nuxt.com/blog/nuxt-icon-v1-0'
-target: '_blank'
-class: 'w-96'
+
+- name: Anthony Fu
+  description: antfu7
+  avatar:
+  src: https://github.com/antfu.png
+  loading: lazy
+  to: https://github.com/antfu
+  target: _blank
+  to: 'https://nuxt.com/blog/nuxt-icon-v1-0'
+  target: '_blank'
+  class: 'w-96'
+
 ---
+
 ::
 
 ::
@@ -46,13 +50,17 @@ Use the `title` prop to display the title of the BlogPost.
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-props:
+
+- class
+  props:
   title: 'Introducing Nuxt Icon v1'
   class: 'w-96'
+
 ---
+
 ::
 
 ### Description
@@ -61,16 +69,20 @@ Use the `description` prop to display the description of the BlogPost.
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-props:
+
+- class
+  ignore:
+- title
+  props:
   title: 'Introducing Nuxt Icon v1'
   description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
   class: 'w-96'
+
 ---
+
 ::
 
 ### Date
@@ -83,18 +95,22 @@ The date is automatically formatted to the [current locale](/docs/getting-starte
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-  - description
-props:
+
+- class
+  ignore:
+- title
+- description
+  props:
   title: 'Introducing Nuxt Icon v1'
   description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
   date: 2024-11-25
   class: 'w-96'
+
 ---
+
 ::
 
 ### Badge
@@ -103,42 +119,50 @@ Use the `badge` prop to display a [Badge](/docs/components/badge) in the BlogPos
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-  - description
-props:
+
+- class
+  ignore:
+- title
+- description
+  props:
   title: 'Introducing Nuxt Icon v1'
   description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
   badge: 'Release'
   class: 'w-96'
+
 ---
+
 ::
 
 You can pass any property from the [Badge](/docs/components/badge#props) component to customize it.
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-  - description
-  - badge.label
-  - badge.color
-  - badge.variant
-props:
+
+- class
+  ignore:
+- title
+- description
+- badge.label
+- badge.color
+- badge.variant
+  props:
   title: 'Introducing Nuxt Icon v1'
   description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
   badge:
-    label: 'Release'
-    color: primary
-    variant: solid
+  label: 'Release'
+  color: primary
+  variant: solid
   class: 'w-96'
+
 ---
+
 ::
 
 ### Image
@@ -151,20 +175,24 @@ If [`@nuxt/image`](https://image.nuxt.com/get-started/installation) is installed
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-  - description
-  - date
-props:
+
+- class
+  ignore:
+- title
+- description
+- date
+  props:
   title: 'Introducing Nuxt Icon v1'
   description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
   image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
   date: 2024-11-25
   class: 'w-96'
+
 ---
+
 ::
 
 ### Authors
@@ -182,75 +210,83 @@ You can pass any property from the [Link](/docs/components/link#props) component
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-external:
-  - authors
-externalTypes:
-  - UserProps[]
-ignore:
-  - title
-  - description
-  - date
-  - image
-  - authors
-props:
+
+- class
+  external:
+- authors
+  externalTypes:
+- UserProps[]
+  ignore:
+- title
+- description
+- date
+- image
+- authors
+  props:
   title: 'Introducing Nuxt Icon v1'
   description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
   image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
   date: 2024-11-25
   authors:
-    - name: Anthony Fu
-      description: antfu7
-      avatar:
-        src: https://github.com/antfu.png
-        loading: lazy
-      to: https://github.com/antfu
-      target: _blank
-  class: 'w-96'
+  - name: Anthony Fu
+    description: antfu7
+    avatar:
+    src: https://github.com/antfu.png
+    loading: lazy
+    to: https://github.com/antfu
+    target: _blank
+    class: 'w-96'
+
 ---
+
 ::
 
 When the `authors` prop has more than one item, the [AvatarGroup](/docs/components/avatar-group) component is used.
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-external:
-  - authors
-externalTypes:
-  - UserProps[]
-ignore:
-  - title
-  - description
-  - date
-  - image
-  - authors
-props:
+
+- class
+  external:
+- authors
+  externalTypes:
+- UserProps[]
+  ignore:
+- title
+- description
+- date
+- image
+- authors
+  props:
   title: 'Introducing Nuxt Icon v1'
   description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
   image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
   date: 2024-11-25
   authors:
-    - name: Anthony Fu
-      description: antfu7
-      avatar:
-        src: https://github.com/antfu.png
-        loading: lazy
-      to: https://github.com/antfu
-      target: _blank
-    - name: Benjamin Canac
-      description: benjamincanac
-      avatar:
-        src: https://github.com/benjamincanac.png
-        loading: lazy
-      to: https://github.com/benjamincanac
-      target: _blank
-  class: 'w-96'
+  - name: Anthony Fu
+    description: antfu7
+    avatar:
+    src: https://github.com/antfu.png
+    loading: lazy
+    to: https://github.com/antfu
+    target: _blank
+  - name: Benjamin Canac
+    description: benjamincanac
+    avatar:
+    src: https://github.com/benjamincanac.png
+    loading: lazy
+    to: https://github.com/benjamincanac
+    target: _blank
+    class: 'w-96'
+
 ---
+
 ::
 
 ### Link
@@ -259,16 +295,18 @@ You can pass any property from the [`<NuxtLink>`](https://nuxt.com/docs/api/comp
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-  - description
-  - date
-  - image
-  - target
-props:
+
+- class
+  ignore:
+- title
+- description
+- date
+- image
+- target
+  props:
   title: 'Introducing Nuxt Icon v1'
   description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
   image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
@@ -276,7 +314,9 @@ props:
   to: 'https://nuxt.com/blog/nuxt-icon-v1-0'
   target: _blank
   class: 'w-96'
+
 ---
+
 ::
 
 ### Variant
@@ -285,17 +325,19 @@ Use the `variant` prop to change the style of the BlogPost.
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-  - description
-  - date
-  - image
-  - to
-  - target
-props:
+
+- class
+  ignore:
+- title
+- description
+- date
+- image
+- to
+- target
+  props:
   title: 'Introducing Nuxt Icon v1'
   description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
   image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
@@ -304,7 +346,9 @@ props:
   target: _blank
   variant: naked
   class: 'w-96'
+
 ---
+
 ::
 
 ::note
@@ -317,17 +361,19 @@ Use the `orientation` prop to change the BlogPost orientation. Defaults to `vert
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-ignore:
-  - title
-  - description
-  - date
-  - image
-  - to
-  - target
-props:
+
+- class
+  ignore:
+- title
+- description
+- date
+- image
+- to
+- target
+  props:
   title: 'Introducing Nuxt Icon v1'
   description: 'Discover Nuxt Icon v1 - a modern, versatile, and customizable icon solution for your Nuxt projects.'
   image: 'https://nuxt.com/assets/blog/nuxt-icon/cover.png'
@@ -336,7 +382,9 @@ props:
   target: _blank
   orientation: horizontal
   variant: outline
+
 ---
+
 ::
 
 ## API

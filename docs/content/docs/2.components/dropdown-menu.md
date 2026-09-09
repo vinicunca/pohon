@@ -12,7 +12,7 @@ links:
     to: https://reka-ui.com/docs/components/dropdown-menu
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DropdownMenu.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/DropdownMenu.vue
 ---
 
 ## Usage
@@ -21,112 +21,115 @@ Use a [Button](/docs/components/button) or any other component in the default sl
 
 ::component-code
 ---
+
 prettier: true
 collapse: true
 ignore:
-  - items
-  - ui.content
-external:
-  - items
-externalTypes:
-  - DropdownMenuItem[][]
-props:
+
+- items
+- ui.content
+  external:
+- items
+  externalTypes:
+- DropdownMenuItem[][]
+  props:
   items:
-    - - label: Benjamin
-        avatar:
+  - - label: Benjamin
+      avatar:
+      src: 'https://github.com/benjamincanac.png'
+      loading: lazy
+      type: label
+  - - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+      kbds:
+      - ','
+    - label: Keyboard shortcuts
+      icon: i-lucide-monitor
+  - - label: Team
+      icon: i-lucide-users
+      filter:
+      placeholder: 'Search members...'
+      children:
+      - - label: benjamincanac
+          avatar:
           src: 'https://github.com/benjamincanac.png'
           loading: lazy
-        type: label
-    - - label: Profile
-        icon: i-lucide-user
-      - label: Billing
-        icon: i-lucide-credit-card
-      - label: Settings
-        icon: i-lucide-cog
-        kbds:
-          - ','
-      - label: Keyboard shortcuts
-        icon: i-lucide-monitor
-    - - label: Team
-        icon: i-lucide-users
-        filter:
-          placeholder: 'Search members...'
-        children:
-          - - label: benjamincanac
-              avatar:
-                src: 'https://github.com/benjamincanac.png'
-                loading: lazy
-            - label: HugoRCD
-              avatar:
-                src: 'https://github.com/HugoRCD.png'
-                loading: lazy
-            - label: romhml
-              avatar:
-                src: 'https://github.com/romhml.png'
-                loading: lazy
-            - label: sandros94
-              avatar:
-                src: 'https://github.com/sandros94.png'
-                loading: lazy
-            - label: hywax
-              avatar:
-                src: 'https://github.com/hywax.png'
-                loading: lazy
-            - label: J-Michalek
-              avatar:
-                src: 'https://github.com/J-Michalek.png'
-                loading: lazy
-            - label: genu
-              avatar:
-                src: 'https://github.com/genu.png'
-                loading: lazy
-      - label: Invite users
-        icon: i-lucide-user-plus
-        children:
-          - - label: Email
-              icon: i-lucide-mail
-            - label: Message
-              icon: i-lucide-message-square
-          - - label: More
-              icon: i-lucide-circle-plus
-              children:
-                - label: Import from Slack
-                  icon: i-simple-icons-slack
-                  to: 'https://slack.com'
-                  target: _blank
-                - label: Import from Trello
-                  icon: i-simple-icons-trello
-                - label: Import from Asana
-                  icon: i-simple-icons-asana
-      - label: New team
-        icon: i-lucide-plus
-        kbds:
-          - meta
-          - n
-    - - label: GitHub
-        icon: i-simple-icons-github
-        to: 'https://github.com/nuxt/ui'
-        target: _blank
-      - label: Support
-        icon: i-lucide-life-buoy
-        to: '/docs/components/dropdown-menu'
-      - label: API
-        icon: i-lucide-cloud
-        disabled: true
-    - - label: Logout
-        icon: i-lucide-log-out
-        color: error
-        kbds:
-          - shift
-          - meta
-          - q
-slots:
-  default: |
+        - label: HugoRCD
+          avatar:
+          src: 'https://github.com/HugoRCD.png'
+          loading: lazy
+        - label: romhml
+          avatar:
+          src: 'https://github.com/romhml.png'
+          loading: lazy
+        - label: sandros94
+          avatar:
+          src: 'https://github.com/sandros94.png'
+          loading: lazy
+        - label: hywax
+          avatar:
+          src: 'https://github.com/hywax.png'
+          loading: lazy
+        - label: J-Michalek
+          avatar:
+          src: 'https://github.com/J-Michalek.png'
+          loading: lazy
+        - label: genu
+          avatar:
+          src: 'https://github.com/genu.png'
+          loading: lazy
+    - label: Invite users
+      icon: i-lucide-user-plus
+      children:
+      - - label: Email
+          icon: i-lucide-mail
+        - label: Message
+          icon: i-lucide-message-square
+      - - label: More
+          icon: i-lucide-circle-plus
+          children:
+          - label: Import from Slack
+            icon: i-simple-icons-slack
+            to: 'https://slack.com'
+            target: _blank
+          - label: Import from Trello
+            icon: i-simple-icons-trello
+          - label: Import from Asana
+            icon: i-simple-icons-asana
+    - label: New team
+      icon: i-lucide-plus
+      kbds:
+      - meta
+      - n
+  - - label: GitHub
+      icon: i-simple-icons-github
+      to: 'https://github.com/vinicunca/pohon'
+      target: _blank
+    - label: Support
+      icon: i-lucide-life-buoy
+      to: '/docs/components/dropdown-menu'
+    - label: API
+      icon: i-lucide-cloud
+      disabled: true
+  - - label: Logout
+      icon: i-lucide-log-out
+      color: error
+      kbds:
+      - shift
+      - meta
+      - q
+        slots:
+        default: |
 
-    <UButton icon="i-lucide-menu" color="neutral" variant="outline" />
+  <PButton icon="i-lucide-menu" color="neutral" variant="outline" />
+
 ---
 
-:u-button{icon="i-lucide-menu" color="neutral" variant="outline"}
+:p-button{icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ### Items
@@ -155,82 +158,85 @@ You can pass any property from the [Link](/docs/components/link#props) component
 
 ::component-code
 ---
+
 prettier: true
 collapse: true
 ignore:
-  - items
-  - ui.content
-external:
-  - items
-externalTypes:
-  - DropdownMenuItem[][]
-props:
-  items:
-    - - label: Benjamin
-        avatar:
-          src: 'https://github.com/benjamincanac.png'
-          loading: lazy
-        type: label
-    - - label: Profile
-        icon: i-lucide-user
-      - label: Billing
-        icon: i-lucide-credit-card
-      - label: Settings
-        icon: i-lucide-cog
-        kbds:
-          - ','
-      - label: Keyboard shortcuts
-        icon: i-lucide-monitor
-    - - label: Team
-        icon: i-lucide-users
-      - label: Invite users
-        icon: i-lucide-user-plus
-        children:
-          - - label: Email
-              icon: i-lucide-mail
-            - label: Message
-              icon: i-lucide-message-square
-          - - label: More
-              icon: i-lucide-circle-plus
-              children:
-                - label: Import from Slack
-                  icon: i-simple-icons-slack
-                  to: 'https://slack.com'
-                  target: _blank
-                - label: Import from Trello
-                  icon: i-simple-icons-trello
-                - label: Import from Asana
-                  icon: i-simple-icons-asana
-      - label: New team
-        icon: i-lucide-plus
-        kbds:
-          - meta
-          - n
-    - - label: GitHub
-        icon: i-simple-icons-github
-        to: 'https://github.com/nuxt/ui'
-        target: _blank
-      - label: Support
-        icon: i-lucide-life-buoy
-        to: '/docs/components/dropdown-menu'
-      - label: API
-        icon: i-lucide-cloud
-        disabled: true
-    - - label: Logout
-        icon: i-lucide-log-out
-        kbds:
-          - shift
-          - meta
-          - q
-  ui:
-    content: 'w-48'
-slots:
-  default: |
 
-    <UButton icon="i-lucide-menu" color="neutral" variant="outline" />
+- items
+- ui.content
+  external:
+- items
+  externalTypes:
+- DropdownMenuItem[][]
+  props:
+  items:
+  - - label: Benjamin
+      avatar:
+      src: 'https://github.com/benjamincanac.png'
+      loading: lazy
+      type: label
+  - - label: Profile
+      icon: i-lucide-user
+    - label: Billing
+      icon: i-lucide-credit-card
+    - label: Settings
+      icon: i-lucide-cog
+      kbds:
+      - ','
+    - label: Keyboard shortcuts
+      icon: i-lucide-monitor
+  - - label: Team
+      icon: i-lucide-users
+    - label: Invite users
+      icon: i-lucide-user-plus
+      children:
+      - - label: Email
+          icon: i-lucide-mail
+        - label: Message
+          icon: i-lucide-message-square
+      - - label: More
+          icon: i-lucide-circle-plus
+          children:
+          - label: Import from Slack
+            icon: i-simple-icons-slack
+            to: 'https://slack.com'
+            target: _blank
+          - label: Import from Trello
+            icon: i-simple-icons-trello
+          - label: Import from Asana
+            icon: i-simple-icons-asana
+    - label: New team
+      icon: i-lucide-plus
+      kbds:
+      - meta
+      - n
+  - - label: GitHub
+      icon: i-simple-icons-github
+      to: 'https://github.com/vinicunca/pohon'
+      target: _blank
+    - label: Support
+      icon: i-lucide-life-buoy
+      to: '/docs/components/dropdown-menu'
+    - label: API
+      icon: i-lucide-cloud
+      disabled: true
+  - - label: Logout
+      icon: i-lucide-log-out
+      kbds:
+      - shift
+      - meta
+      - q
+        ui:
+        content: 'w-48'
+        slots:
+        default: |
+
+  <PButton icon="i-lucide-menu" color="neutral" variant="outline" />
+
 ---
 
-:u-button{icon="i-lucide-menu" color="neutral" variant="outline"}
+:p-button{icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ::note
@@ -247,46 +253,49 @@ Use the `content` prop to control how the DropdownMenu content is rendered, like
 
 ::component-code
 ---
+
 prettier: true
 collapse: true
 ignore:
-  - items
-  - ui.content
-external:
-  - items
-externalTypes:
-  - DropdownMenuItem[]
-items:
-  content.align:
-    - start
-    - center
-    - end
-  content.side:
-    - right
-    - left
-    - top
-    - bottom
-props:
+
+- items
+- ui.content
+  external:
+- items
+  externalTypes:
+- DropdownMenuItem[]
   items:
-    - label: Profile
-      icon: i-lucide-user
-    - label: Billing
-      icon: i-lucide-credit-card
-    - label: Settings
-      icon: i-lucide-cog
-  content:
+  content.align:
+  - start
+  - center
+  - end
+    content.side:
+  - right
+  - left
+  - top
+  - bottom
+    props:
+    items:
+  - label: Profile
+    icon: i-lucide-user
+  - label: Billing
+    icon: i-lucide-credit-card
+  - label: Settings
+    icon: i-lucide-cog
+    content:
     align: start
     side: bottom
     sideOffset: 8
-  ui:
+    ui:
     content: 'w-48'
-slots:
-  default: |
+    slots:
+    default: |
 
-    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+  <PButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+
 ---
 
-:u-button{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:p-button{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ### Filter :badge{label="4.6+" class="align-text-top"}
@@ -305,44 +314,47 @@ You can pass any property from the [Input](/docs/components/input) component to 
 
 ::component-code
 ---
+
 prettier: true
 collapse: true
 ignore:
-  - items
-  - filter.icon
-  - content.align
-  - ui.content
-external:
-  - items
-externalTypes:
-  - DropdownMenuItem[]
-props:
-  filter:
-    icon: i-lucide-search
-  items:
-    - label: Profile
-      icon: i-lucide-user
-    - label: Billing
-      icon: i-lucide-credit-card
-    - label: Settings
-      icon: i-lucide-cog
-    - label: Team
-      icon: i-lucide-users
-    - label: Invite users
-      icon: i-lucide-user-plus
-    - label: New team
-      icon: i-lucide-plus
-  content:
-    align: start
-  ui:
-    content: 'w-48'
-slots:
-  default: |
 
-    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+- items
+- filter.icon
+- content.align
+- ui.content
+  external:
+- items
+  externalTypes:
+- DropdownMenuItem[]
+  props:
+  filter:
+  icon: i-lucide-search
+  items:
+  - label: Profile
+    icon: i-lucide-user
+  - label: Billing
+    icon: i-lucide-credit-card
+  - label: Settings
+    icon: i-lucide-cog
+  - label: Team
+    icon: i-lucide-users
+  - label: Invite users
+    icon: i-lucide-user-plus
+  - label: New team
+    icon: i-lucide-plus
+    content:
+    align: start
+    ui:
+    content: 'w-48'
+    slots:
+    default: |
+
+  <PButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+
 ---
 
-:u-button{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:p-button{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ::tip{to="#with-filter-items"}
@@ -355,34 +367,37 @@ Use the `arrow` prop to display an arrow on the DropdownMenu.
 
 ::component-code
 ---
+
 prettier: true
 collapse: true
 ignore:
-  - arrow
-  - items
-  - ui.content
-external:
-  - items
-externalTypes:
-  - DropdownMenuItem[]
-props:
+
+- arrow
+- items
+- ui.content
+  external:
+- items
+  externalTypes:
+- DropdownMenuItem[]
+  props:
   arrow: true
   items:
-    - label: Profile
-      icon: i-lucide-user
-    - label: Billing
-      icon: i-lucide-credit-card
-    - label: Settings
-      icon: i-lucide-cog
-  ui:
+  - label: Profile
+    icon: i-lucide-user
+  - label: Billing
+    icon: i-lucide-credit-card
+  - label: Settings
+    icon: i-lucide-cog
+    ui:
     content: 'w-48'
-slots:
-  default: |
+    slots:
+    default: |
 
-    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+  <PButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+
 ---
 
-:u-button{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:p-button{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ### Size
@@ -391,36 +406,39 @@ Use the `size` prop to control the size of the DropdownMenu.
 
 ::component-code
 ---
+
 prettier: true
 collapse: true
 ignore:
-  - items
-  - content.align
-  - ui.content
-external:
-  - items
-externalTypes:
-  - DropdownMenuItem[]
-props:
+
+- items
+- content.align
+- ui.content
+  external:
+- items
+  externalTypes:
+- DropdownMenuItem[]
+  props:
   size: xl
   items:
-    - label: Profile
-      icon: i-lucide-user
-    - label: Billing
-      icon: i-lucide-credit-card
-    - label: Settings
-      icon: i-lucide-cog
-  content:
+  - label: Profile
+    icon: i-lucide-user
+  - label: Billing
+    icon: i-lucide-credit-card
+  - label: Settings
+    icon: i-lucide-cog
+    content:
     align: start
-  ui:
+    ui:
     content: 'w-48'
-slots:
-  default: |
+    slots:
+    default: |
 
-    <UButton size="xl" label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+  <PButton size="xl" label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+
 ---
 
-:u-button{size="xl" label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:p-button{size="xl" label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ::warning
@@ -437,33 +455,36 @@ Use the `modal` prop to control whether the DropdownMenu blocks interaction with
 
 ::component-code
 ---
+
 prettier: true
 collapse: true
 ignore:
-  - items
-  - ui.content
-external:
-  - items
-externalTypes:
-  - DropdownMenuItem[]
-props:
+
+- items
+- ui.content
+  external:
+- items
+  externalTypes:
+- DropdownMenuItem[]
+  props:
   modal: false
   items:
-    - label: Profile
-      icon: i-lucide-user
-    - label: Billing
-      icon: i-lucide-credit-card
-    - label: Settings
-      icon: i-lucide-cog
-  ui:
+  - label: Profile
+    icon: i-lucide-user
+  - label: Billing
+    icon: i-lucide-credit-card
+  - label: Settings
+    icon: i-lucide-cog
+    ui:
     content: 'w-48'
-slots:
-  default: |
+    slots:
+    default: |
 
-    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+  <PButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+
 ---
 
-:u-button{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:p-button{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ### Disabled
@@ -472,33 +493,36 @@ Use the `disabled` prop to disable the DropdownMenu.
 
 ::component-code
 ---
+
 prettier: true
 collapse: true
 ignore:
-  - items
-  - ui.content
-external:
-  - items
-externalTypes:
-  - DropdownMenuItem[]
-props:
+
+- items
+- ui.content
+  external:
+- items
+  externalTypes:
+- DropdownMenuItem[]
+  props:
   disabled: true
   items:
-    - label: Profile
-      icon: i-lucide-user
-    - label: Billing
-      icon: i-lucide-credit-card
-    - label: Settings
-      icon: i-lucide-cog
-  ui:
+  - label: Profile
+    icon: i-lucide-user
+  - label: Billing
+    icon: i-lucide-credit-card
+  - label: Settings
+    icon: i-lucide-cog
+    ui:
     content: 'w-48'
-slots:
-  default: |
+    slots:
+    default: |
 
-    <UButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+  <PButton label="Open" icon="i-lucide-menu" color="neutral" variant="outline" />
+
 ---
 
-:u-button{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
+:p-button{label="Open" icon="i-lucide-menu" color="neutral" variant="outline"}
 ::
 
 ## Examples
@@ -509,9 +533,11 @@ You can use the `type` property with `checkbox` and use the `checked` / `onUpdat
 
 ::component-example
 ---
+
 collapse: true
 name: 'dropdown-menu-checkbox-items-example'
 ---
+
 ::
 
 ::note
@@ -524,9 +550,11 @@ You can use the `color` property to highlight certain items with a color.
 
 ::component-example
 ---
+
 collapse: true
 name: 'dropdown-menu-color-items-example'
 ---
+
 ::
 
 ### With filter items :badge{label="4.6+" class="align-text-top"}
@@ -535,9 +563,11 @@ You can use the `filter` property on items with `children` to display a filter i
 
 ::component-example
 ---
+
 collapse: true
 name: 'dropdown-menu-filter-items-example'
 ---
+
 ::
 
 ### Control open state
@@ -546,9 +576,11 @@ You can control the open state by using the `default-open` prop or the `v-model:
 
 ::component-example
 ---
+
 collapse: true
 name: 'dropdown-menu-open-example'
 ---
+
 ::
 
 ::note
@@ -568,9 +600,11 @@ You will have access to the following slots:
 
 ::component-example
 ---
+
 collapse: true
 name: 'dropdown-menu-custom-slot-example'
 ---
+
 ::
 
 ::tip{to="#slots"}
@@ -583,9 +617,11 @@ You can use the `slot` property with a `#{{ slot }}-trailing` slot to render a [
 
 ::component-example
 ---
+
 collapse: true
 name: 'dropdown-menu-switch-items-example'
 ---
+
 ::
 
 ### With ignore filter :badge{label="4.6+" class="align-text-top"}
@@ -594,9 +630,11 @@ When using the `filter` prop or the `filter` field on items with `children`, you
 
 ::component-example
 ---
+
 collapse: true
 name: 'dropdown-menu-ignore-filter-example'
 ---
+
 ::
 
 ::note
@@ -609,9 +647,11 @@ When using the `filter` prop or the `filter` field on items with `children`, you
 
 ::component-example
 ---
+
 collapse: true
 name: 'dropdown-menu-filter-fields-example'
 ---
+
 ::
 
 ### With trigger content width
@@ -620,9 +660,11 @@ You can expand the content to the full width of its button by adding the `w-(--r
 
 ::component-example
 ---
+
 collapse: true
 name: 'dropdown-menu-content-width-example'
 ---
+
 ::
 
 ::tip
@@ -639,6 +681,7 @@ export default defineAppConfig({
   }
 })
 ```
+
 ::
 
 ### Extract shortcuts
@@ -647,36 +690,42 @@ Use the [extractShortcuts](/docs/composables/extract-shortcuts) utility to autom
 
 ```vue
 <script setup lang="ts">
-import type { DropdownMenuItem } from '@nuxt/ui'
+import type { DropdownMenuItem } from "pohon-ui";
 
-const items: DropdownMenuItem[] = [{
-  label: 'Invite users',
-  icon: 'i-lucide-user-plus',
-  children: [{
-    label: 'Invite by email',
-    icon: 'i-lucide-send-horizontal',
-    kbds: ['meta', 'e'],
+const items: DropdownMenuItem[] = [
+  {
+    label: "Invite users",
+    icon: "i-lucide-user-plus",
+    children: [
+      {
+        label: "Invite by email",
+        icon: "i-lucide-send-horizontal",
+        kbds: ["meta", "e"],
+        onSelect() {
+          console.log("Invite by email clicked");
+        },
+      },
+      {
+        label: "Invite by link",
+        icon: "i-lucide-link",
+        kbds: ["meta", "i"],
+        onSelect() {
+          console.log("Invite by link clicked");
+        },
+      },
+    ],
+  },
+  {
+    label: "New team",
+    icon: "i-lucide-plus",
+    kbds: ["meta", "n"],
     onSelect() {
-      console.log('Invite by email clicked')
-    }
-  }, {
-    label: 'Invite by link',
-    icon: 'i-lucide-link',
-    kbds: ['meta', 'i'],
-    onSelect() {
-      console.log('Invite by link clicked')
-    }
-  }]
-}, {
-  label: 'New team',
-  icon: 'i-lucide-plus',
-  kbds: ['meta', 'n'],
-  onSelect() {
-    console.log('New team clicked')
-  }
-}]
+      console.log("New team clicked");
+    },
+  },
+];
 
-defineShortcuts(extractShortcuts(items))
+defineShortcuts(extractShortcuts(items));
 </script>
 ```
 

@@ -20,7 +20,7 @@ import { themeIcons } from '../icons'
 export function generateCSS(doc: ThemeDoc, framework: string = 'nuxt'): string {
   const lines = [
     '@import "tailwindcss";',
-    '@import "@nuxt/ui";'
+    '@import "pohon-ui";'
   ]
 
   // Nuxt resolves the `--font-*` variables below through @nuxt/fonts and
@@ -180,7 +180,7 @@ export function generateConfig(doc: ThemeDoc, framework: string = 'nuxt'): strin
     return [
       'import { defineConfig } from \'vite\'',
       'import vue from \'@vitejs/plugin-vue\'',
-      'import ui from \'@nuxt/ui/vite\'',
+      'import ui from \'pohon-ui/vite\'',
       '',
       `export default defineConfig({`,
       '  plugins: [',

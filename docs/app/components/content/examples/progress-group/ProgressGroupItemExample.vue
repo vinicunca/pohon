@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ProgressGroupItem } from '@nuxt/ui'
+import type { ProgressGroupItem } from 'pohon-ui'
 
 const items: ProgressGroupItem[] = [
   { label: 'System', value: 24, color: 'neutral' },

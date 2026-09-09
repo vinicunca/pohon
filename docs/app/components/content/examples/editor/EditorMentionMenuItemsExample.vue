@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorMentionMenuItem } from '@nuxt/ui'
+import type { EditorMentionMenuItem } from 'pohon-ui'
 
 const value = ref(`Type @ to mention a user.
 

@@ -32,27 +32,27 @@ const steps = ref('')
         </p>
       </div>
 
-      <UFormField label="Title">
+      <PFormField label="Title">
         <UInput v-model="title" placeholder="Brief description of the issue" class="w-full" />
-      </UFormField>
+      </PFormField>
 
       <div class="grid grid-cols-2 gap-3">
-        <UFormField label="Severity">
+        <PFormField label="Severity">
           <USelect v-model="severity" :items="severities" class="w-full" />
-        </UFormField>
-        <UFormField label="Component">
+        </PFormField>
+        <PFormField label="Component">
           <USelect v-model="component" :items="components" class="w-full" />
-        </UFormField>
+        </PFormField>
       </div>
 
-      <UFormField label="Steps to reproduce">
+      <PFormField label="Steps to reproduce">
         <UTextarea v-model="steps" :rows="3" placeholder="1. Go to… 2. Click on… 3. See error" class="w-full" />
-      </UFormField>
+      </PFormField>
     </div>
 
     <div class="flex items-center justify-between border-t border-default p-3">
-      <UButton label="Attach file" :icon="studioIcons.paperclip" color="neutral" variant="ghost" />
-      <UButton label="Submit bug" @click="toast.add({ title: 'Bug reported' })" />
+      <PButton label="Attach file" :icon="studioIcons.paperclip" color="neutral" variant="ghost" />
+      <PButton label="Submit bug" @click="toast.add({ title: 'Bug reported' })" />
     </div>
   </div>
 </template>

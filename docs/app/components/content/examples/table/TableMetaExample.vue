@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TableColumn } from '@nuxt/ui'
+import type { TableColumn } from 'pohon-ui'
 import type { TableMeta, Row } from '@tanstack/vue-table'
 
 type Payment = {
@@ -125,5 +125,5 @@ const meta: TableMeta<Payment> = {
 </script>
 
 <template>
-  <UTable :data="data" :columns="columns" :meta="meta" class="flex-1" />
+  <PTable :data="data" :columns="columns" :meta="meta" class="flex-1" />
 </template>

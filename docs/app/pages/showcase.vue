@@ -7,10 +7,10 @@ if (!page.value) {
 const appConfig = useAppConfig()
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI',
+  titleTemplate: '%s - Pohon',
   title: page.value.title,
   description: page.value.description,
-  ogTitle: `${page.value.title} - Nuxt UI`,
+  ogTitle: `${page.value.title} - Pohon`,
   ogDescription: page.value.description
 })
 

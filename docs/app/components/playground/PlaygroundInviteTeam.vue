@@ -38,7 +38,7 @@ const link = 'https://app.nuxt.com/invite/x8f2k'
 
       <UInput :model-value="link" readonly class="w-full">
         <template #trailing>
-          <UButton
+          <PButton
             :icon="appConfig.ui.icons.copy"
             color="neutral"
             variant="link"
@@ -51,7 +51,7 @@ const link = 'https://app.nuxt.com/invite/x8f2k'
     </div>
 
     <div class="flex justify-end border-t border-default p-3">
-      <UButton label="Send invites" @click="toast.add({ title: 'Invites sent' })" />
+      <PButton label="Send invites" @click="toast.add({ title: 'Invites sent' })" />
     </div>
   </div>
 </template>

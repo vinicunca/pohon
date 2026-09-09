@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SelectItem } from '@nuxt/ui'
+import type { SelectItem } from 'pohon-ui'
 
 const input = ref('')
 const model = ref('claude-opus-4.6')
@@ -18,7 +18,7 @@ function onSubmit() {
 <template>
   <UChatPrompt v-model="input" class="w-full" @submit="onSubmit">
     <template #footer>
-      <UButton icon="i-lucide-plus" color="neutral" variant="ghost" size="sm" />
+      <PButton icon="i-lucide-plus" color="neutral" variant="ghost" size="sm" />
 
       <div class="flex items-center gap-1.5">
         <USelect

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorSuggestionMenuItem } from '@nuxt/ui'
+import type { EditorSuggestionMenuItem } from 'pohon-ui'
 
 const value = ref(`Type / to see a list of commands.
 

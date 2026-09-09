@@ -1,6 +1,6 @@
 ---
 title: DashboardSidebarCollapse
-description: 'A Button to collapse the sidebar on desktop.'
+description: "A Button to collapse the sidebar on desktop."
 category: dashboard
 links:
   - label: Button
@@ -8,7 +8,7 @@ links:
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSidebarCollapse.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/DashboardSidebarCollapse.vue
 ---
 
 ## Usage
@@ -21,11 +21,15 @@ It extends the [Button](/docs/components/button) component, so you can pass any 
 
 ::component-code
 ---
+
 ignore:
-  - variant
-props:
+
+- variant
+  props:
   variant: 'subtle'
+
 ---
+
 ::
 
 ::note
@@ -61,8 +65,8 @@ You can put this component in the `leading` slot of the [DashboardNavbar](/docs/
 ```vue [pages/index.vue]{11-13}
 <script setup lang="ts">
 definePageMeta({
-  layout: 'dashboard'
-})
+  layout: "dashboard",
+});
 </script>
 
 <template>

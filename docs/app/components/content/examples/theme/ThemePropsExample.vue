@@ -7,10 +7,10 @@
   >
     <div class="flex items-center gap-2">
       <UTooltip text="Inherits delayDuration from theme">
-        <UButton label="Hover me" />
+        <PButton label="Hover me" />
       </UTooltip>
-      <UButton label="With icon" icon="i-lucide-rocket" />
-      <UButton label="Square" icon="i-lucide-star" square />
+      <PButton label="With icon" icon="i-lucide-rocket" />
+      <PButton label="Square" icon="i-lucide-star" square />
     </div>
   </UTheme>
 </template>

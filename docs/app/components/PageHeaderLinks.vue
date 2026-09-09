@@ -8,7 +8,7 @@ const appConfig = useAppConfig()
 const studioIcons = useStudioIcons()
 
 const mdPath = computed(() => `${site.url}/raw${route.path}.md`)
-const aiPrompt = computed(() => `I'm looking at this Nuxt UI documentation: ${mdPath.value}\nHelp me understand how to use it. Be ready to explain concepts, give examples, or help debug based on it.`)
+const aiPrompt = computed(() => `I'm looking at this Pohon documentation: ${mdPath.value}\nHelp me understand how to use it. Be ready to explain concepts, give examples, or help debug based on it.`)
 
 const items = computed(() => [
   {
@@ -60,7 +60,7 @@ async function copyPage() {
 
 <template>
   <UFieldGroup>
-    <UButton
+    <PButton
       label="Copy page"
       :icon="copied ? appConfig.ui.icons.copyCheck : appConfig.ui.icons.copy"
       color="neutral"
@@ -81,7 +81,7 @@ async function copyPage() {
         content: 'w-48'
       }"
     >
-      <UButton
+      <PButton
         :icon="appConfig.ui.icons.chevronDown"
         size="sm"
         color="neutral"

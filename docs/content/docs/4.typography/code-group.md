@@ -1,36 +1,36 @@
 ---
 title: ProseCodeGroup
-description: 'Group multiple code examples in tabbed interfaces for easy comparison.'
+description: "Group multiple code examples in tabbed interfaces for easy comparison."
 category: components
 navigation.title: CodeGroup
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodeGroup.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/prose/CodeGroup.vue
 ---
 
 ## Usage
 
 Wrap your code blocks around a `code-group` component to group them together in tabs.
 
-::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
+::code-preview{class="[&>div]:_:my-0 [&>div]:_:w-full"}
 
 :::code-group
 
 ```bash [pnpm]
-pnpm add @nuxt/ui
+pnpm add pohon-ui
 ```
 
 ```bash [yarn]
-yarn add @nuxt/ui
+yarn add pohon-ui
 ```
 
 ```bash [npm]
-npm install @nuxt/ui
+npm install pohon-ui
 ```
 
 ```bash [bun]
-bun add @nuxt/ui
+bun add pohon-ui
 ```
 
 :::
@@ -41,19 +41,19 @@ bun add @nuxt/ui
 ::code-group
 
 ```bash [pnpm]
-pnpm add @nuxt/ui
+pnpm add pohon-ui
 ```
 
 ```bash [yarn]
-yarn add @nuxt/ui
+yarn add pohon-ui
 ```
 
 ```bash [npm]
-npm install @nuxt/ui
+npm install pohon-ui
 ```
 
 ```bash [bun]
-bun add @nuxt/ui
+bun add pohon-ui
 ```
 
 ::

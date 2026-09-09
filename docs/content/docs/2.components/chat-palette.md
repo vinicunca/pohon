@@ -1,11 +1,11 @@
 ---
 title: ChatPalette
-description: 'A chat palette to create a chatbot interface inside an overlay.'
+description: "A chat palette to create a chatbot interface inside an overlay."
 category: chat
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatPalette.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/ChatPalette.vue
 ---
 
 ## Usage
@@ -36,13 +36,15 @@ You can use the ChatPalette component inside a [Modal](/docs/components/modal)'s
 
 ::component-example
 ---
+
 collapse: true
 iframe:
-  height: 500px;
+height: 500px;
 iframeMobile: true
 overflowHidden: true
 name: 'chat-palette-modal-example'
 ---
+
 ::
 
 ### Within ContentSearch
@@ -51,15 +53,16 @@ You can use the ChatPalette component conditionally inside [ContentSearch](/docs
 
 ::component-example
 ---
+
 collapse: true
 iframe:
-  height: 500px;
+height: 500px;
 iframeMobile: true
 overflowHidden: true
 name: 'chat-palette-content-search-example'
 ---
-::
 
+::
 
 ## API
 

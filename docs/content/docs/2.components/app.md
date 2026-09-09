@@ -4,12 +4,12 @@ category: layout
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/App.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/App.vue
 ---
 
 ## Usage
 
-This component implements Reka UI [ConfigProvider](https://reka-ui.com/docs/utilities/config-provider) to provide global configuration to all components:
+This component implements Akar [ConfigProvider](https://reka-ui.com/docs/utilities/config-provider) to provide global configuration to all components:
 
 - Enables all primitives to inherit global reading direction.
 - Enables changing the behavior of scroll body when setting body lock.
@@ -21,9 +21,9 @@ Wrap your entire application with the App component in your `app.vue` file:
 
 ```vue [app.vue]
 <template>
-  <UApp>
+  <PApp>
     <NuxtPage />
-  </UApp>
+  </PApp>
 </template>
 ```
 

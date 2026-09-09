@@ -5,7 +5,7 @@ category: editor
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/EditorDragHandle.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/EditorDragHandle.vue
 ---
 
 ## Usage
@@ -20,11 +20,13 @@ It extends the [Button](/docs/components/button) component, so you can pass any 
 
 ::component-example
 ---
+
 collapse: true
 elevated: true
 name: 'editor-drag-handle-example'
 class: 'p-8'
 ---
+
 ::
 
 ::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/extensions/functionality/drag-handle-vue" target="_blank"}
@@ -69,7 +71,7 @@ The offset is automatically calculated to center the handle for small blocks and
     <UEditorDragHandle
       :editor="editor"
       :options="{
-        placement: 'left'
+        placement: 'left',
       }"
     />
   </UEditor>
@@ -86,15 +88,17 @@ Listen to the `@node-change` event to track the currently hovered node and its p
 
 ::component-example
 ---
+
 elevated: true
 collapse: true
 name: 'editor-drag-handle-dropdown-menu-example'
 class: 'p-8'
 ---
+
 ::
 
 ::note
-This example uses the `mapEditorItems` utility from `@nuxt/ui/utils/editor` to automatically map handler kinds (like `duplicate`, `delete`, `moveUp`, etc.) to their corresponding editor commands with proper state management.
+This example uses the `mapEditorItems` utility from `pohon-ui/utils/editor` to automatically map handler kinds (like `duplicate`, `delete`, `moveUp`, etc.) to their corresponding editor commands with proper state management.
 ::
 
 ### With suggestion menu
@@ -105,11 +109,13 @@ Call the `onClick` slot function to get the current node position, then use `han
 
 ::component-example
 ---
+
 elevated: true
 collapse: true
 name: 'editor-drag-handle-suggestion-menu-example'
 class: '!p-0'
 ---
+
 ::
 
 ## API

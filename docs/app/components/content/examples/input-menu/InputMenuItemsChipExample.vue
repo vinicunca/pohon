@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { InputMenuItem, ChipProps } from '@nuxt/ui'
+import type { InputMenuItem, ChipProps } from 'pohon-ui'
 
 const items = ref([
   {

@@ -215,7 +215,7 @@ const previewOptions = {
             <PButton
               color="neutral"
               variant="ghost"
-              to="https://github.com/nuxt/ui"
+              to="https://github.com/vinicunca/pohon"
               target="_blank"
               icon="i-simple-icons:github"
               aria-label="GitHub"

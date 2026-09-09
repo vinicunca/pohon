@@ -23,17 +23,17 @@ const to = ref('savings')
         </p>
       </div>
 
-      <UFormField label="Amount">
+      <PFormField label="Amount">
         <UInputNumber v-model="amount" :format-options="{ style: 'currency', currency: 'USD' }" class="w-full" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField label="From">
+      <PFormField label="From">
         <USelect v-model="from" :items="accounts" class="w-full" />
-      </UFormField>
+      </PFormField>
 
-      <UFormField label="To">
+      <PFormField label="To">
         <USelect v-model="to" :items="accounts" class="w-full" />
-      </UFormField>
+      </PFormField>
 
       <div class="space-y-1.5 text-sm">
         <div class="flex justify-between">
@@ -48,7 +48,7 @@ const to = ref('savings')
     </div>
 
     <div class="flex justify-end border-t border-default p-3">
-      <UButton label="Confirm transfer" @click="toast.add({ title: 'Transfer confirmed' })" />
+      <PButton label="Confirm transfer" @click="toast.add({ title: 'Transfer confirmed' })" />
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AvatarProps } from '@nuxt/ui'
+import type { AvatarProps } from 'pohon-ui'
 
 const { data: users, status, execute } = await useLazyFetch('https://jsonplaceholder.typicode.com/users', {
   key: 'typicode-users',

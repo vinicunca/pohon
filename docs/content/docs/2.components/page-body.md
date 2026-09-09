@@ -1,11 +1,11 @@
 ---
 title: PageBody
-description: 'The main content of your page.'
+description: "The main content of your page."
 category: page
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/PageBody.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/PageBody.vue
 ---
 
 ## Usage
@@ -34,21 +34,21 @@ While these examples use [Nuxt Content](https://content.nuxt.com), the component
 
 Use the PageBody component in a page to display the content of the page:
 
-```vue [pages/\[...slug\\].vue]{21-27}
+```vue [pages/[...slug\].vue]{21-27}
 <script setup lang="ts">
-const route = useRoute()
+const route = useRoute();
 
 definePageMeta({
-  layout: 'docs'
-})
+  layout: "docs",
+});
 
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('docs').path(route.path).first()
-})
+  return queryCollection("docs").path(route.path).first();
+});
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
-  return queryCollectionItemSurroundings('content', route.path)
-})
+  return queryCollectionItemSurroundings("content", route.path);
+});
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AccordionItem } from '@nuxt/ui'
+import type { AccordionItem } from 'pohon-ui'
 
 const items: AccordionItem[] = [
   {
@@ -10,7 +10,7 @@ const items: AccordionItem[] = [
   {
     label: 'Colors',
     icon: 'i-lucide-swatch-book',
-    content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+    content: 'Choose a primary and a neutral color from your UnoCSS theme.'
   },
   {
     label: 'Components',

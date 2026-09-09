@@ -187,7 +187,7 @@ Override the **root** (or `base`) slot only — simpler than `ui` for single-slo
 Read the generated theme file for any component:
 
 - **Nuxt**: `.nuxt/ui/<component>.ts`
-- **Vue**: `node_modules/.nuxt-ui/ui/<component>.ts`
+- **Vue**: `node_modules/.pohon-ui/ui/<component>.ts`
 
 These files show every available slot name, variant combination, and default class.
 
@@ -219,7 +219,7 @@ export default defineAppConfig({
 });
 ```
 
-Tailwind Variants uses `tailwind-merge` under the hood — conflicting classes are resolved automatically.
+UnoCSS Variants uses `tailwind-merge` under the hood — conflicting classes are resolved automatically.
 
 ### Replace instead of merge
 

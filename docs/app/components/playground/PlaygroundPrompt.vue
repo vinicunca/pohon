@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DropdownMenuItem } from '@nuxt/ui'
+import type { DropdownMenuItem } from 'pohon-ui'
 
 const appConfig = useAppConfig()
 const studioIcons = useStudioIcons()
@@ -74,7 +74,7 @@ const items = computed<DropdownMenuItem[][]>(() => [
       icon: appConfig.ui.icons.folder,
       children: [
         { label: 'New project', icon: appConfig.ui.icons.plus },
-        { label: 'Nuxt UI', icon: appConfig.ui.icons.folder }
+        { label: 'Pohon', icon: appConfig.ui.icons.folder }
       ]
     }
   ],
@@ -164,7 +164,7 @@ function onSubmit() {
       <div class="flex items-center justify-between gap-2 w-full">
         <div class="flex items-center gap-1">
           <UDropdownMenu :items="items" :content="{ align: 'start', side: 'top' }" :ui="{ content: 'w-60' }" size="sm">
-            <UButton
+            <PButton
               :icon="appConfig.ui.icons.plus"
               color="neutral"
               variant="ghost"
@@ -179,7 +179,7 @@ function onSubmit() {
           </UDropdownMenu>
 
           <UDropdownMenu :items="modelItems" :content="{ align: 'start', side: 'top' }" :ui="{ content: 'w-72' }" size="sm">
-            <UButton
+            <PButton
               color="neutral"
               variant="ghost"
               size="sm"
@@ -188,7 +188,7 @@ function onSubmit() {
               :ui="{ trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200' }"
             >
               {{ activeModel?.label }} <span class="text-dimmed">{{ effort }}</span>
-            </UButton>
+            </PButton>
 
             <template #effort-trailing="{ ui }">
               <span class="text-dimmed">{{ effort }}</span>
@@ -198,7 +198,7 @@ function onSubmit() {
         </div>
 
         <div class="flex items-center gap-1">
-          <UButton
+          <PButton
             :icon="studioIcons.mic"
             color="neutral"
             variant="ghost"
@@ -206,7 +206,7 @@ function onSubmit() {
             square
             aria-label="Dictate"
           />
-          <UButton
+          <PButton
             icon="i-lucide-audio-lines"
             color="neutral"
             variant="ghost"
@@ -214,7 +214,7 @@ function onSubmit() {
             square
             aria-label="Voice mode"
           />
-          <UButton
+          <PButton
             :icon="appConfig.ui.icons.arrowUp"
             color="primary"
             size="sm"

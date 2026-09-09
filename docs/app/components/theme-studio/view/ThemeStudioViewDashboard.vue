@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
 import { CalendarDate, DateFormatter } from '@internationalized/date'
-import type { DropdownMenuItem, NavigationMenuItem, TableColumn } from '@nuxt/ui'
+import type { DropdownMenuItem, NavigationMenuItem, TableColumn } from 'pohon-ui'
 
 const UAvatar = resolveComponent('UAvatar')
 const UBadge = resolveComponent('UBadge')
-const UButton = resolveComponent('UButton')
+const PButton = resolveComponent('PButton')
 const UCheckbox = resolveComponent('UCheckbox')
 const UDropdownMenu = resolveComponent('UDropdownMenu')
 
@@ -389,7 +389,7 @@ const customerColumns: TableColumn<Customer>[] = [{
 }, {
   accessorKey: 'email',
   // the template's one sortable column, so it reads as a button
-  header: ({ column }) => h(UButton, {
+  header: ({ column }) => h(PButton, {
     color: 'neutral',
     variant: 'ghost',
     label: 'Email',
@@ -418,13 +418,13 @@ const customerColumns: TableColumn<Customer>[] = [{
     return h('div', { class: 'text-right' }, h(
       UDropdownMenu,
       { content: { align: 'end' }, items: customerRowItems },
-      () => h(UButton, { icon: appConfig.ui.icons.ellipsis, color: 'neutral', variant: 'ghost', class: 'ml-auto' })
+      () => h(PButton, { icon: appConfig.ui.icons.ellipsis, color: 'neutral', variant: 'ghost', class: 'ml-auto' })
     ))
   }
 }]
 
 // Settings, mirrors app/pages/settings.vue + settings/index.vue + settings/notifications.vue,
-// trimmed to two sections without zod/UForm validation.
+// trimmed to two sections without zod/PForm validation.
 const settingsLinks = computed<NavigationMenuItem[][]>(() => [[{
   label: 'General',
   icon: studioIcons.user,
@@ -476,7 +476,7 @@ const notificationSections = [{
   ]
 }, {
   title: 'Account updates',
-  description: 'Receive updates about Nuxt UI.',
+  description: 'Receive updates about Pohon.',
   fields: [
     { name: 'weekly_digest', label: 'Weekly digest', description: 'Receive a weekly digest of news.' },
     { name: 'product_updates', label: 'Product updates', description: 'Receive a monthly email with all new features and updates.' }
@@ -541,7 +541,7 @@ const pageTitles: Record<Page, string> = {
           :content="{ align: 'center', collisionPadding: 12 }"
           :ui="{ content: collapsed ? 'w-40' : 'w-(--reka-dropdown-menu-trigger-width)' }"
         >
-          <UButton
+          <PButton
             v-bind="{
               ...selectedTeam,
               label: collapsed ? undefined : selectedTeam.label,
@@ -584,7 +584,7 @@ const pageTitles: Record<Page, string> = {
           :content="{ align: 'center', collisionPadding: 12 }"
           :ui="{ content: collapsed ? 'w-48' : 'w-(--reka-dropdown-menu-trigger-width)' }"
         >
-          <UButton
+          <PButton
             v-bind="{
               ...user,
               label: collapsed ? undefined : user.name,
@@ -664,7 +664,7 @@ const pageTitles: Record<Page, string> = {
       <UDashboardPanel v-if="selectedMail" id="theme-studio-inbox-mail" :ui="{ root: 'min-h-0' }">
         <UDashboardNavbar :title="selectedMail.subject" :toggle="false">
           <template #leading>
-            <UButton
+            <PButton
               :icon="appConfig.ui.icons.close"
               color="neutral"
               variant="ghost"
@@ -676,15 +676,15 @@ const pageTitles: Record<Page, string> = {
 
           <template #right>
             <UTooltip text="Archive">
-              <UButton :icon="studioIcons.inbox" color="neutral" variant="ghost" aria-label="Archive" />
+              <PButton :icon="studioIcons.inbox" color="neutral" variant="ghost" aria-label="Archive" />
             </UTooltip>
 
             <UTooltip text="Reply">
-              <UButton :icon="studioIcons.reply" color="neutral" variant="ghost" aria-label="Reply" />
+              <PButton :icon="studioIcons.reply" color="neutral" variant="ghost" aria-label="Reply" />
             </UTooltip>
 
             <UDropdownMenu :items="mailDropdownItems">
-              <UButton :icon="appConfig.ui.icons.ellipsis" color="neutral" variant="ghost" aria-label="More actions" />
+              <PButton :icon="appConfig.ui.icons.ellipsis" color="neutral" variant="ghost" aria-label="More actions" />
             </UDropdownMenu>
           </template>
         </UDashboardNavbar>
@@ -738,12 +738,12 @@ const pageTitles: Record<Page, string> = {
 
               <div class="flex items-center justify-between">
                 <UTooltip text="Attach file">
-                  <UButton color="neutral" variant="ghost" :icon="studioIcons.paperclip" aria-label="Attach file" />
+                  <PButton color="neutral" variant="ghost" :icon="studioIcons.paperclip" aria-label="Attach file" />
                 </UTooltip>
 
                 <div class="flex items-center gap-2">
-                  <UButton color="neutral" variant="ghost" label="Save draft" />
-                  <UButton type="submit" color="neutral" label="Send" :icon="studioIcons.send" />
+                  <PButton color="neutral" variant="ghost" label="Save draft" />
+                  <PButton type="submit" color="neutral" label="Send" :icon="studioIcons.send" />
                 </div>
               </div>
             </form>
@@ -764,20 +764,20 @@ const pageTitles: Record<Page, string> = {
 
           <template #right>
             <UTooltip text="Notifications" :shortcuts="['N']">
-              <UButton color="neutral" variant="ghost" square aria-label="Notifications">
+              <PButton color="neutral" variant="ghost" square aria-label="Notifications">
                 <UChip color="error" inset>
                   <UIcon :name="studioIcons.bell" class="size-5 shrink-0" />
                 </UChip>
-              </UButton>
+              </PButton>
             </UTooltip>
 
-            <UButton
+            <PButton
               v-if="page === 'customers'"
               label="New customer"
               :icon="appConfig.ui.icons.plus"
             />
             <UDropdownMenu v-else :items="newItems">
-              <UButton :icon="appConfig.ui.icons.plus" class="rounded-full" aria-label="New" />
+              <PButton :icon="appConfig.ui.icons.plus" class="rounded-full" aria-label="New" />
             </UDropdownMenu>
           </template>
         </UDashboardNavbar>
@@ -785,7 +785,7 @@ const pageTitles: Record<Page, string> = {
         <UDashboardToolbar v-if="page === 'home'">
           <template #left>
             <UPopover :content="{ align: 'start' }">
-              <UButton
+              <PButton
                 color="neutral"
                 variant="ghost"
                 :icon="studioIcons.calendar"
@@ -799,12 +799,12 @@ const pageTitles: Record<Page, string> = {
                     class="shrink-0 text-dimmed size-5 group-data-[state=open]:rotate-180 transition-transform duration-200"
                   />
                 </template>
-              </UButton>
+              </PButton>
 
               <template #content>
                 <div class="flex items-stretch sm:divide-x divide-default">
                   <div class="hidden sm:flex flex-col justify-center">
-                    <UButton
+                    <PButton
                       v-for="range in dateRanges"
                       :key="range.label"
                       :label="range.label"
@@ -907,7 +907,7 @@ const pageTitles: Record<Page, string> = {
             </div>
           </UCard>
 
-          <UTable
+          <PTable
             :data="sales"
             :columns="salesColumns"
             class="shrink-0"
@@ -931,7 +931,7 @@ const pageTitles: Record<Page, string> = {
             />
 
             <div class="flex flex-wrap items-center gap-1.5">
-              <UButton
+              <PButton
                 v-if="selectedCustomersCount"
                 label="Delete"
                 color="error"
@@ -941,7 +941,7 @@ const pageTitles: Record<Page, string> = {
                 <template #trailing>
                   <UKbd>{{ selectedCustomersCount }}</UKbd>
                 </template>
-              </UButton>
+              </PButton>
 
               <USelect
                 v-model="customerStatusFilter"
@@ -952,7 +952,7 @@ const pageTitles: Record<Page, string> = {
               />
 
               <UDropdownMenu :items="customerDisplayItems" :content="{ align: 'end' }" :ui="{ itemLabel: 'capitalize' }">
-                <UButton
+                <PButton
                   label="Display"
                   color="neutral"
                   variant="outline"
@@ -962,7 +962,7 @@ const pageTitles: Record<Page, string> = {
             </div>
           </div>
 
-          <UTable
+          <PTable
             v-model:row-selection="customerRowSelection"
             v-model:column-visibility="customerColumnVisibility"
             :data="paginatedCustomers"
@@ -998,14 +998,14 @@ const pageTitles: Record<Page, string> = {
               variant="naked"
               orientation="horizontal"
             >
-              <UButton label="Save changes" color="neutral" class="w-fit lg:ms-auto" />
+              <PButton label="Save changes" color="neutral" class="w-fit lg:ms-auto" />
             </UPageCard>
 
             <UPageCard variant="subtle">
               <template v-for="(field, index) in profileFields" :key="field.name">
                 <USeparator v-if="index > 0" />
 
-                <UFormField
+                <PFormField
                   :name="field.name"
                   :label="field.label"
                   :description="field.description"
@@ -1013,10 +1013,10 @@ const pageTitles: Record<Page, string> = {
                   class="flex max-sm:flex-col justify-between items-start gap-4"
                 >
                   <UInput v-model="profile[field.name]" autocomplete="off" />
-                </UFormField>
+                </PFormField>
               </template>
               <USeparator />
-              <UFormField
+              <PFormField
                 name="bio"
                 label="Bio"
                 description="Brief description for your profile."
@@ -1024,7 +1024,7 @@ const pageTitles: Record<Page, string> = {
                 :ui="{ container: 'w-full' }"
               >
                 <UTextarea v-model="profile.bio" :rows="4" autoresize class="w-full" />
-              </UFormField>
+              </PFormField>
             </UPageCard>
           </template>
 
@@ -1038,7 +1038,7 @@ const pageTitles: Record<Page, string> = {
               />
 
               <UPageCard variant="subtle" :ui="{ container: 'divide-y divide-default' }">
-                <UFormField
+                <PFormField
                   v-for="field in section.fields"
                   :key="field.name"
                   :name="field.name"
@@ -1047,7 +1047,7 @@ const pageTitles: Record<Page, string> = {
                   class="flex items-center justify-between not-last:pb-4 gap-2"
                 >
                   <USwitch v-model="notificationsState[field.name]" />
-                </UFormField>
+                </PFormField>
               </UPageCard>
             </div>
           </template>
@@ -1072,7 +1072,7 @@ const pageTitles: Record<Page, string> = {
                   class="w-full"
                 />
 
-                <UButton label="Update" class="w-fit" />
+                <PButton label="Update" class="w-fit" />
               </div>
             </UPageCard>
 
@@ -1082,7 +1082,7 @@ const pageTitles: Record<Page, string> = {
               class="bg-linear-to-tl from-error/10 from-5% to-default"
             >
               <template #footer>
-                <UButton label="Delete account" color="error" />
+                <PButton label="Delete account" color="error" />
               </template>
             </UPageCard>
           </template>

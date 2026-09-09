@@ -4,7 +4,7 @@ const appConfig = useAppConfig()
 
 <template>
   <div>
-    <UFormField
+    <PFormField
       label="toaster.duration"
       size="sm"
       :ui="{
@@ -20,6 +20,6 @@ const appConfig = useAppConfig()
         variant="soft"
         :ui="{ base: 'rounded-sm rounded-l-none min-w-12' }"
       />
-    </UFormField>
+    </PFormField>
   </div>
 </template>

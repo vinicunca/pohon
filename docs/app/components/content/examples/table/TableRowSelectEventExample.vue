@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn, TableRow } from '@nuxt/ui'
+import type { TableColumn, TableRow } from 'pohon-ui'
 
 const UBadge = resolveComponent('UBadge')
 const UCheckbox = resolveComponent('UCheckbox')
@@ -115,7 +115,7 @@ function onSelect(e: Event, row: TableRow<Payment>) {
 <template>
   <div class="flex w-full flex-1 gap-1">
     <div class="flex-1">
-      <UTable
+      <PTable
         ref="table"
         v-model:row-selection="rowSelection"
         :data="data"

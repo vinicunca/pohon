@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from '@nuxt/ui'
+import type { TableColumn } from 'pohon-ui'
 import type { Row } from '@tanstack/vue-table'
 import { useClipboard } from '@vueuse/core'
 
-const UButton = resolveComponent('UButton')
+const PButton = resolveComponent('PButton')
 const UBadge = resolveComponent('UBadge')
 const UDropdownMenu = resolveComponent('UDropdownMenu')
 
@@ -112,7 +112,7 @@ const columns: TableColumn<Payment>[] = [{
       },
       'items': getRowItems(row),
       'aria-label': 'Actions dropdown'
-    }, () => h(UButton, {
+    }, () => h(PButton, {
       'icon': 'i-lucide-ellipsis-vertical',
       'color': 'neutral',
       'variant': 'ghost',
@@ -147,5 +147,5 @@ function getRowItems(row: Row<Payment>) {
 </script>
 
 <template>
-  <UTable :data="data" :columns="columns" class="flex-1" />
+  <PTable :data="data" :columns="columns" class="flex-1" />
 </template>

@@ -87,7 +87,7 @@ const items = [
   }, {
     label: 'GitHub',
     icon: 'i-simple-icons-github',
-    to: 'https://github.com/nuxt/ui',
+    to: 'https://github.com/vinicunca/pohon',
     target: '_blank',
     tooltip: {
       text: 'Open on GitHub',

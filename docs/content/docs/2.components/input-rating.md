@@ -11,7 +11,7 @@ links:
     to: https://reka-ui.com/docs/components/rating
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/InputRating.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/InputRating.vue
 ---
 
 ## Usage
@@ -20,22 +20,30 @@ Use the `v-model` directive to control the rating value of the InputRating compo
 
 ::component-code
 ---
+
 external:
-  - modelValue
-props:
+
+- modelValue
+  props:
   modelValue: 3
+
 ---
+
 ::
 
 Use the `default-value` prop to set the initial value when you do not need to control its state.
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   defaultValue: 3
+
 ---
+
 ::
 
 ### Step
@@ -44,12 +52,16 @@ Use the `step` prop to control the granularity of each star. Set it to `0.5` to 
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   step: 0.5
   defaultValue: 3.5
+
 ---
+
 ::
 
 ### Length
@@ -58,13 +70,17 @@ Use the `length` prop to set the number of stars. Defaults to `5`.
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   length: 10
   step: 0.5
   defaultValue: 7.5
+
 ---
+
 ::
 
 ### Clearable
@@ -73,12 +89,16 @@ Use the `clearable` prop to allow users to clear the rating by clicking on the c
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   clearable: true
   defaultValue: 3
+
 ---
+
 ::
 
 ### Hoverable
@@ -87,12 +107,16 @@ Use the `hoverable` prop to control whether the rating previews the value when h
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   hoverable: true
   defaultValue: 3
+
 ---
+
 ::
 
 ### Icon
@@ -101,12 +125,16 @@ Use the `icon` prop to customize the icon used for stars. Defaults to `i-lucide-
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   icon: 'i-lucide-heart'
   defaultValue: 4
+
 ---
+
 ::
 
 ::framework-only
@@ -127,13 +155,17 @@ Use the `empty-icon` prop to customize the icon used for empty stars. If not pro
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   emptyIcon: 'i-ph-star'
   icon: 'i-ph-star-fill'
   defaultValue: 3
+
 ---
+
 ::
 
 ### Color
@@ -142,12 +174,16 @@ Use the `color` prop to change the color of the filled stars.
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   color: neutral
   defaultValue: 4
+
 ---
+
 ::
 
 ### Size
@@ -156,19 +192,23 @@ Use the `size` prop to change the size of the stars.
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-items:
+
+- defaultValue
+  items:
   size:
-    - xs
-    - sm
-    - md
-    - lg
-    - xl
-props:
-  size: xl
-  defaultValue: 4
+  - xs
+  - sm
+  - md
+  - lg
+  - xl
+    props:
+    size: xl
+    defaultValue: 4
+
 ---
+
 ::
 
 ### Orientation
@@ -177,12 +217,16 @@ Use the `orientation` prop to change the orientation of the rating. Defaults to 
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   orientation: vertical
   defaultValue: 4
+
 ---
+
 ::
 
 ### Disabled
@@ -191,12 +235,16 @@ Use the `disabled` prop to disable the InputRating component. When disabled, the
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   disabled: true
   defaultValue: 3
+
 ---
+
 ::
 
 ### Readonly
@@ -205,12 +253,16 @@ Use the `readonly` prop to display a rating without allowing user interaction. U
 
 ::component-code
 ---
+
 ignore:
-  - defaultValue
-props:
+
+- defaultValue
+  props:
   readonly: true
   defaultValue: 4.5
+
 ---
+
 ::
 
 ## API

@@ -66,9 +66,9 @@ const frameworkSuffix = !prefix && page.value?.framework === 'vue' ? ' for Vue' 
 const description = page.value?.seo?.description ? page.value.seo.description : page.value?.description
 
 useSeoMeta({
-  titleTemplate: `${prefix}%s ${suffix}- Nuxt UI${frameworkSuffix}`,
+  titleTemplate: `${prefix}%s ${suffix}- Pohon${frameworkSuffix}`,
   title,
-  ogTitle: `${prefix}${title} ${suffix}- Nuxt UI${frameworkSuffix}`,
+  ogTitle: `${prefix}${title} ${suffix}- Pohon${frameworkSuffix}`,
   description,
   ogDescription: description
 })
@@ -86,7 +86,7 @@ if (import.meta.server) {
     defineOgImage('Docs.takumi', {
       title: page.value.title,
       description: page.value.description,
-      headline: breadcrumb.value?.[breadcrumb.value.length - 1]?.label || 'Nuxt UI',
+      headline: breadcrumb.value?.[breadcrumb.value.length - 1]?.label || 'Pohon',
       framework: page.value?.framework
     })
   }
@@ -115,7 +115,7 @@ const studioIcons = useStudioIcons()
 const links = computed(() => [{
   icon: studioIcons.pencil,
   label: 'Edit this page',
-  to: `https://github.com/nuxt/ui/edit/v4/docs/content/${page?.value?.stem}.md`,
+  to: `https://github.com/vinicunca/pohon/edit/v4/docs/content/${page?.value?.stem}.md`,
   target: '_blank'
 }, {
   icon: studioIcons.assistant,
@@ -154,7 +154,7 @@ const links = computed(() => [{
       </template>
 
       <template #links>
-        <UButton
+        <PButton
           v-for="link in page.links"
           :key="link.label"
           color="neutral"
@@ -165,7 +165,7 @@ const links = computed(() => [{
           <template v-if="link.avatar" #leading>
             <UAvatar v-bind="link.avatar" size="2xs" :alt="`${link.label} avatar`" />
           </template>
-        </UButton>
+        </PButton>
         <PageHeaderLinks />
       </template>
     </UPageHeader>

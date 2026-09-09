@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem, SidebarProps } from '@nuxt/ui'
+import type { NavigationMenuItem, SidebarProps } from 'pohon-ui'
 
 // Ignore the props for the example
 defineProps<Pick<SidebarProps, 'variant' | 'collapsible' | 'side'>>()
@@ -56,7 +56,7 @@ const items: NavigationMenuItem[] = [{
           side === 'right' && 'justify-end'
         ]"
       >
-        <UButton
+        <PButton
           :icon="side === 'left' ? 'i-lucide-panel-left' : 'i-lucide-panel-right'"
           color="neutral"
           variant="ghost"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SelectItem } from '@nuxt/ui'
+import type { SelectItem } from 'pohon-ui'
 
 const items = ref([
   {

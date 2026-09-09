@@ -2,18 +2,18 @@
 import { isTextUIPart } from 'ai'
 import type { UIMessage } from 'ai'
 import { useChat } from '@ai-sdk/vue'
-import { isPartStreaming } from '@nuxt/ui/utils/ai'
+import { isPartStreaming } from 'pohon-ui/utils/ai'
 import { Markdown } from '@comark/vue'
 import shiki from '@comark/vue/plugins/shiki'
 
 const initialMessages: UIMessage[] = [{
   id: '1',
   role: 'user',
-  parts: [{ type: 'text', text: 'What is Nuxt UI?' }]
+  parts: [{ type: 'text', text: 'What is Pohon?' }]
 }, {
   id: '2',
   role: 'assistant',
-  parts: [{ type: 'text', text: 'Nuxt UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }]
+  parts: [{ type: 'text', text: 'Pohon is a Vue component library built on Akar, UnoCSS, and UnoCSS Variants. It provides 125+ accessible components for building modern web apps.' }]
 }]
 const input = ref('')
 

@@ -6,7 +6,7 @@ keywords:
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Input.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Input.vue
 ---
 
 ## Usage
@@ -15,13 +15,17 @@ Use the `v-model` directive to control the value of the Input.
 
 ::component-code
 ---
+
 ignore:
-  - modelValue
-external:
-  - modelValue
-props:
+
+- modelValue
+  external:
+- modelValue
+  props:
   modelValue: ''
+
 ---
+
 ::
 
 ### Type
@@ -32,16 +36,13 @@ Some types have been implemented in their own components such as [Checkbox](/doc
 
 ::component-code
 ---
+
 items:
-  type:
-    - text
-    - number
-    - password
-    - search
-    - file
+type: - text - number - password - search - file
 props:
-  type: 'file'
+type: 'file'
 ---
+
 ::
 
 ::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types" target="_blank"}
@@ -54,9 +55,11 @@ Use the `placeholder` prop to set a placeholder text.
 
 ::component-code
 ---
+
 props:
-  placeholder: 'Search...'
+placeholder: 'Search...'
 ---
+
 ::
 
 ### Color
@@ -65,13 +68,17 @@ Use the `color` prop to change the ring color when the Input is focused.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   color: neutral
   highlight: true
   placeholder: 'Search...'
+
 ---
+
 ::
 
 ::note
@@ -84,14 +91,18 @@ Use the `variant` prop to change the variant of the Input.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   color: neutral
   variant: subtle
   highlight: false
   placeholder: 'Search...'
+
 ---
+
 ::
 
 ### Size
@@ -100,12 +111,16 @@ Use the `size` prop to change the size of the Input.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   size: xl
   placeholder: 'Search...'
+
 ---
+
 ::
 
 ### Icon
@@ -114,29 +129,37 @@ Use the `icon` prop to show an [Icon](/docs/components/icon) inside the Input.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   icon: 'i-lucide-search'
   size: md
   variant: outline
   placeholder: 'Search...'
+
 ---
+
 ::
 
 Use the `leading` and `trailing` props to set the icon position or the `leading-icon` and `trailing-icon` props to set a different icon for each position.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   trailingIcon: i-lucide-at-sign
   placeholder: 'Enter your email'
   size: md
+
 ---
+
 ::
 
 ### Avatar
@@ -145,18 +168,22 @@ Use the `avatar` prop to show an [Avatar](/docs/components/avatar) inside the In
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - placeholder
-  - avatar.loading
-props:
+
+- placeholder
+- avatar.loading
+  props:
   avatar:
-    src: 'https://github.com/nuxt.png'
-    loading: lazy
+  src: 'https://github.com/nuxt.png'
+  loading: lazy
   size: md
   variant: outline
   placeholder: 'Search...'
+
 ---
+
 ::
 
 ### Loading
@@ -165,13 +192,17 @@ Use the `loading` prop to show a loading icon on the Input.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   loading: true
   trailing: false
   placeholder: 'Search...'
+
 ---
+
 ::
 
 ### Loading Icon
@@ -180,13 +211,17 @@ Use the `loading-icon` prop to customize the loading icon. Defaults to `i-lucide
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   loading: true
   loadingIcon: 'i-lucide-loader'
   placeholder: 'Search...'
+
 ---
+
 ::
 
 ::framework-only
@@ -207,12 +242,16 @@ Use the `disabled` prop to disable the Input.
 
 ::component-code
 ---
+
 ignore:
-  - placeholder
-props:
+
+- placeholder
+  props:
   disabled: true
   placeholder: 'Search...'
+
 ---
+
 ::
 
 ## Examples
@@ -223,8 +262,10 @@ You can put a [Button](/docs/components/button) inside the `#trailing` slot to c
 
 ::component-example
 ---
+
 name: 'input-clear-button-example'
 ---
+
 ::
 
 ### With copy button
@@ -233,8 +274,10 @@ You can put a [Button](/docs/components/button) inside the `#trailing` slot to c
 
 ::component-example
 ---
+
 name: 'input-copy-button-example'
 ---
+
 ::
 
 ### With password toggle
@@ -243,8 +286,10 @@ You can put a [Button](/docs/components/button) inside the `#trailing` slot to t
 
 ::component-example
 ---
+
 name: 'input-password-toggle-example'
 ---
+
 ::
 
 ### With password strength indicator
@@ -253,9 +298,11 @@ You can use the [Progress](/docs/components/progress) component to display the p
 
 ::component-example
 ---
+
 collapse: true
 name: 'input-password-strength-indicator-example'
 ---
+
 ::
 
 ### With character limit
@@ -264,8 +311,10 @@ You can use the `#trailing` slot to add a character limit to the Input.
 
 ::component-example
 ---
+
 name: 'input-character-limit-example'
 ---
+
 ::
 
 ### With keyboard shortcut
@@ -274,8 +323,10 @@ You can use the [Kbd](/docs/components/kbd) component inside the `#trailing` slo
 
 ::component-example
 ---
+
 name: 'input-kbd-example'
 ---
+
 ::
 
 ::note{to="/docs/composables/define-shortcuts"}
@@ -288,8 +339,10 @@ There's no built-in support for masks, but you can use libraries like [maska](ht
 
 ::component-example
 ---
+
 name: 'input-mask-example'
 ---
+
 ::
 
 ### With floating label
@@ -298,8 +351,10 @@ You can use the `#default` slot to add a floating label to the Input.
 
 ::component-example
 ---
+
 name: 'input-floating-label-example'
 ---
+
 ::
 
 ### Within a FormField
@@ -308,8 +363,10 @@ You can use the Input within a [FormField](/docs/components/form-field) componen
 
 ::component-example
 ---
+
 name: 'input-form-field-example'
 ---
+
 ::
 
 ::tip{to="/docs/components/form"}
@@ -322,8 +379,10 @@ You can use the Input within a [FieldGroup](/docs/components/field-group) compon
 
 ::component-example
 ---
+
 name: 'input-field-group-example'
 ---
+
 ::
 
 ### As a phone number input
@@ -332,9 +391,11 @@ You can use the Input within a [FieldGroup](/docs/components/field-group) compon
 
 ::component-example
 ---
+
 collapse: true
 name: 'input-phone-number-example'
 ---
+
 ::
 
 ## API
@@ -359,8 +420,8 @@ This component also supports all native `<input>` HTML attributes.
 
 When accessing the component via a template ref, you can use the following:
 
-| Name | Type |
-| ---- | ---- |
+| Name                       | Type                                            |
+| -------------------------- | ----------------------------------------------- |
 | `inputRef`{lang="ts-type"} | `Ref<HTMLInputElement \| null>`{lang="ts-type"} |
 
 ## Theme

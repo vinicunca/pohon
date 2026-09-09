@@ -12,7 +12,7 @@ links:
     to: https://reka-ui.com/docs/components/accordion
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Accordion.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Accordion.vue
 ---
 
 ## Usage
@@ -21,31 +21,35 @@ Use the Accordion component to display a list of collapsible items.
 
 ::component-code
 ---
+
 collapse: true
 ignore:
-  - items
-  - ui.content
-external:
-  - items
-externalTypes:
-  - AccordionItem[]
-hide:
-  - class
-  - ui
-  - defaultValue
-props:
+
+- items
+- ui.content
+  external:
+- items
+  externalTypes:
+- AccordionItem[]
+  hide:
+- class
+- ui
+- defaultValue
+  props:
   defaultValue: '0'
   class: 'px-4 max-w-lg'
   ui:
-    content: 'text-muted'
+  content: 'text-muted'
   items:
-    - label: 'Is Nuxt UI free to use?'
-      content: 'Yes! Nuxt UI is completely free and open source under the MIT license. All 125+ components are available to everyone.'
-    - label: 'Can I use Nuxt UI with Vue without Nuxt?'
-      content: 'Yes! While optimized for Nuxt, Nuxt UI works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.'
-    - label: 'Is Nuxt UI production-ready?'
-      content: 'Yes! Nuxt UI is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.'
+  - label: 'Is Pohon free to use?'
+    content: 'Yes! Pohon is completely free and open source under the MIT license. All 125+ components are available to everyone.'
+  - label: 'Can I use Pohon with Vue without Nuxt?'
+    content: 'Yes! While optimized for Nuxt, Pohon works perfectly with standalone Vue projects via our Vite plugin. You can follow the [installation guide](/docs/getting-started/installation/vue) to get started.'
+  - label: 'Is Pohon production-ready?'
+    content: 'Yes! Pohon is used in production by thousands of applications with extensive tests, regular updates, and active maintenance.'
+
 ---
+
 ::
 
 ### Items
@@ -64,27 +68,31 @@ Use the `items` prop as an array of objects with the following properties:
 
 ::component-code
 ---
+
 ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - AccordionItem[]
-hide:
-  - class
-props:
+
+- items
+  external:
+- items
+  externalTypes:
+- AccordionItem[]
+  hide:
+- class
+  props:
   class: 'px-4'
   items:
-    - label: 'Icons'
-      icon: 'i-lucide-smile'
-      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
-    - label: 'Colors'
-      icon: 'i-lucide-swatch-book'
-      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
-    - label: 'Components'
-      icon: 'i-lucide-box'
-      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+  - label: 'Icons'
+    icon: 'i-lucide-smile'
+    content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+  - label: 'Colors'
+    icon: 'i-lucide-swatch-book'
+    content: 'Choose a primary and a neutral color from your UnoCSS theme.'
+  - label: 'Components'
+    icon: 'i-lucide-box'
+    content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+
 ---
+
 ::
 
 ### Multiple
@@ -93,29 +101,33 @@ Set the `type` prop to `multiple` to allow multiple items to be active at the sa
 
 ::component-code
 ---
+
 ignore:
-  - type
-  - items
-external:
-  - items
-externalTypes:
-  - AccordionItem[]
-hide:
-  - class
-props:
+
+- type
+- items
+  external:
+- items
+  externalTypes:
+- AccordionItem[]
+  hide:
+- class
+  props:
   class: 'px-4'
   type: 'multiple'
   items:
-    - label: 'Icons'
-      icon: 'i-lucide-smile'
-      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
-    - label: 'Colors'
-      icon: 'i-lucide-swatch-book'
-      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
-    - label: 'Components'
-      icon: 'i-lucide-box'
-      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+  - label: 'Icons'
+    icon: 'i-lucide-smile'
+    content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+  - label: 'Colors'
+    icon: 'i-lucide-swatch-book'
+    content: 'Choose a primary and a neutral color from your UnoCSS theme.'
+  - label: 'Components'
+    icon: 'i-lucide-box'
+    content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+
 ---
+
 ::
 
 ### Collapsible
@@ -124,29 +136,33 @@ When `type` is `single`, you can set the `collapsible` prop to `false` to preven
 
 ::component-code
 ---
+
 ignore:
-  - collapsible
-  - items
-external:
-  - items
-externalTypes:
-  - AccordionItem[]
-hide:
-  - class
-props:
+
+- collapsible
+- items
+  external:
+- items
+  externalTypes:
+- AccordionItem[]
+  hide:
+- class
+  props:
   class: 'px-4'
   collapsible: false
   items:
-    - label: 'Icons'
-      icon: 'i-lucide-smile'
-      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
-    - label: 'Colors'
-      icon: 'i-lucide-swatch-book'
-      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
-    - label: 'Components'
-      icon: 'i-lucide-box'
-      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+  - label: 'Icons'
+    icon: 'i-lucide-smile'
+    content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+  - label: 'Colors'
+    icon: 'i-lucide-swatch-book'
+    content: 'Choose a primary and a neutral color from your UnoCSS theme.'
+  - label: 'Components'
+    icon: 'i-lucide-box'
+    content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+
 ---
+
 ::
 
 ### Unmount
@@ -155,28 +171,32 @@ Use the `unmount-on-hide` prop to prevent the content from being unmounted when 
 
 ::component-code
 ---
+
 ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - AccordionItem[]
-hide:
-  - class
-props:
+
+- items
+  external:
+- items
+  externalTypes:
+- AccordionItem[]
+  hide:
+- class
+  props:
   class: 'px-4'
   unmountOnHide: false
   items:
-    - label: 'Icons'
-      icon: 'i-lucide-smile'
-      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
-    - label: 'Colors'
-      icon: 'i-lucide-swatch-book'
-      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
-    - label: 'Components'
-      icon: 'i-lucide-box'
-      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+  - label: 'Icons'
+    icon: 'i-lucide-smile'
+    content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+  - label: 'Colors'
+    icon: 'i-lucide-swatch-book'
+    content: 'Choose a primary and a neutral color from your UnoCSS theme.'
+  - label: 'Components'
+    icon: 'i-lucide-box'
+    content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+
 ---
+
 ::
 
 ::note
@@ -191,29 +211,33 @@ You can also disable a specific item by using the `disabled` property in the ite
 
 ::component-code
 ---
+
 ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - AccordionItem[]
-hide:
-  - class
-props:
+
+- items
+  external:
+- items
+  externalTypes:
+- AccordionItem[]
+  hide:
+- class
+  props:
   class: 'px-4'
   disabled: true
   items:
-    - label: 'Icons'
-      icon: 'i-lucide-smile'
-      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
-    - label: 'Colors'
-      icon: 'i-lucide-swatch-book'
-      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
-      disabled: true
-    - label: 'Components'
-      icon: 'i-lucide-box'
-      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+  - label: 'Icons'
+    icon: 'i-lucide-smile'
+    content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+  - label: 'Colors'
+    icon: 'i-lucide-swatch-book'
+    content: 'Choose a primary and a neutral color from your UnoCSS theme.'
+    disabled: true
+  - label: 'Components'
+    icon: 'i-lucide-box'
+    content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+
 ---
+
 ::
 
 ### Trailing Icon
@@ -226,29 +250,33 @@ You can also set an icon for a specific item by using the `trailingIcon` propert
 
 ::component-code
 ---
+
 ignore:
-  - items
-external:
-  - items
-externalTypes:
-  - AccordionItem[]
-hide:
-  - class
-props:
+
+- items
+  external:
+- items
+  externalTypes:
+- AccordionItem[]
+  hide:
+- class
+  props:
   class: 'px-4'
   trailingIcon: 'i-lucide-arrow-down'
   items:
-    - label: 'Icons'
-      icon: 'i-lucide-smile'
-      content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
-      trailingIcon: 'i-lucide-plus'
-    - label: 'Colors'
-      icon: 'i-lucide-swatch-book'
-      content: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
-    - label: 'Components'
-      icon: 'i-lucide-box'
-      content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+  - label: 'Icons'
+    icon: 'i-lucide-smile'
+    content: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+    trailingIcon: 'i-lucide-plus'
+  - label: 'Colors'
+    icon: 'i-lucide-swatch-book'
+    content: 'Choose a primary and a neutral color from your UnoCSS theme.'
+  - label: 'Components'
+    icon: 'i-lucide-box'
+    content: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+
 ---
+
 ::
 
 ::framework-only
@@ -271,10 +299,12 @@ You can control the active item by using the `default-value` prop or the `v-mode
 
 ::component-example
 ---
+
 name: 'accordion-model-value-example'
 props:
-  class: 'px-4'
+class: 'px-4'
 ---
+
 ::
 
 ::tip
@@ -291,8 +321,10 @@ Use the [`useSortable`](https://vueuse.org/integrations/useSortable/) composable
 
 ::component-example
 ---
+
 name: 'accordion-drag-and-drop-example'
 ---
+
 ::
 
 ### With body slot
@@ -301,10 +333,12 @@ Use the `#body` slot to customize the body of each item.
 
 ::component-example
 ---
+
 name: 'accordion-body-slot-example'
 props:
-  class: 'px-4'
+class: 'px-4'
 ---
+
 ::
 
 ::tip
@@ -317,10 +351,12 @@ Use the `#content` slot to customize the content of each item.
 
 ::component-example
 ---
+
 name: 'accordion-content-slot-example'
 props:
-  class: 'px-4'
+class: 'px-4'
 ---
+
 ::
 
 ### With custom slot
@@ -334,10 +370,12 @@ You will have access to the following slots:
 
 ::component-example
 ---
+
 name: 'accordion-custom-slot-example'
 props:
-  class: 'px-4'
+class: 'px-4'
 ---
+
 ::
 
 ### With markdown content
@@ -346,10 +384,12 @@ You can use the [MDC](https://github.com/nuxt-content/mdc?tab=readme-ov-file#mdc
 
 ::component-example
 ---
+
 collapse: true
 name: 'accordion-markdown-example'
 class: 'px-8'
 ---
+
 ::
 
 ## API

@@ -1,11 +1,11 @@
 ---
 title: DashboardToolbar
-description: 'A toolbar to display under the navbar in a dashboard.'
+description: "A toolbar to display under the navbar in a dashboard."
 category: dashboard
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardToolbar.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/DashboardToolbar.vue
 ---
 
 ## Usage
@@ -17,8 +17,8 @@ Use it inside the `header` slot of the [DashboardPanel](/docs/components/dashboa
 ```vue [pages/index.vue]{9-13}
 <script setup lang="ts">
 definePageMeta({
-  layout: 'dashboard'
-})
+  layout: "dashboard",
+});
 </script>
 
 <template>
@@ -36,12 +36,14 @@ Use the `left`, `default` and `right` slots to customize the toolbar.
 
 ::component-example
 ---
+
 prettier: true
 name: 'dashboard-toolbar-example'
 class: '!px-0 !pt-0'
 props:
-  class: 'w-full'
+class: 'w-full'
 ---
+
 ::
 
 ::note

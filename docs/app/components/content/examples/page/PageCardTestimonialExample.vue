@@ -16,7 +16,7 @@ const testimonial = ref({
 <template>
   <UPageCard :description="testimonial.quote" class="w-60">
     <template #footer>
-      <UUser v-bind="testimonial.user" />
+      <PUser v-bind="testimonial.user" />
     </template>
   </UPageCard>
 </template>

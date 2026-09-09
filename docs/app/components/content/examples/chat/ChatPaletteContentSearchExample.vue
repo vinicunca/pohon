@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { isTextUIPart } from 'ai'
 import { useChat } from '@ai-sdk/vue'
-import { isPartStreaming } from '@nuxt/ui/utils/ai'
+import { isPartStreaming } from 'pohon-ui/utils/ai'
 import { Markdown } from '@comark/vue'
 import shiki from '@comark/vue/plugins/shiki'
 

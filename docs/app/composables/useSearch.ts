@@ -98,7 +98,7 @@ export function useSearch() {
     label: 'GitHub',
     description: 'Check out the repository on GitHub.',
     icon: 'i-simple-icons-github',
-    to: 'https://github.com/nuxt/ui/releases',
+    to: 'https://github.com/vinicunca/pohon/releases',
     target: '_blank'
   }])
 

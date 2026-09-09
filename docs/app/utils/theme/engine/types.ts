@@ -45,7 +45,7 @@ export interface ThemePalette {
 
 /**
  * A theme is a sparse document, only explicit overrides, everything absent
- * inherits Nuxt UI defaults, so serializing it *is* the minimal export.
+ * inherits Pohon defaults, so serializing it *is* the minimal export.
  */
 export interface ThemeDoc {
   version: 1
@@ -381,7 +381,7 @@ export function isDefaultStyle(style: StyleOptions = {}): boolean {
 /* ------------------------------------------------------ library defaults -- */
 
 /**
- * The semantic token defaults as @nuxt/ui ships them (src/runtime/index.css).
+ * The semantic token defaults as pohon-ui ships them (src/runtime/index.css).
  * Exports diff against THESE, not the docs site's diverging baseline, an
  * exported theme must reproduce the preview on a stock library install.
  */
@@ -470,7 +470,7 @@ export function resolveShade(doc: ThemeDoc, palette: string, shade: Shade): stri
 
 /* -------------------------------------------------------------- defaults -- */
 
-/** A document with no overrides means "stock Nuxt UI". */
+/** A document with no overrides means "stock Pohon". */
 export function isDefaultTheme(doc: ThemeDoc): boolean {
   return !doc.palettes && !doc.colors && !doc.blackAsPrimary && !doc.tokens
     && doc.radius === undefined && doc.fontSize === undefined

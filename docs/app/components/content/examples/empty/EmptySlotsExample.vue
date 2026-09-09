@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { UserProps } from '@nuxt/ui'
+import type { UserProps } from 'pohon-ui'
 
 const members: UserProps[] = [
   {
@@ -77,7 +77,7 @@ const members: UserProps[] = [
           :to="member.to"
           :ui="{ container: 'sm:p-4' }"
         >
-          <UUser
+          <PUser
             :avatar="member.avatar"
             :name="member.name"
             :description="member.description"

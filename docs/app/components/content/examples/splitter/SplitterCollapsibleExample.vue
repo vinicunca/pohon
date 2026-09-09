@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SplitterItem } from '@nuxt/ui'
+import type { SplitterItem } from 'pohon-ui'
 
 const items: SplitterItem[] = [
   { slot: 'sidebar', sizeUnit: 'px', minSize: 150, defaultSize: 250, collapsible: true, collapsedSize: 48, class: 'bg-elevated/50 border border-default rounded-xl' },
@@ -12,7 +12,7 @@ const items: SplitterItem[] = [
     <USplitter id="splitter-collapsible-example" :items="items">
       <template #sidebar="{ collapsed, collapse, expand }">
         <div class="flex-1 flex items-center justify-center p-2">
-          <UButton
+          <PButton
             :icon="collapsed ? 'i-lucide-panel-left-open' : 'i-lucide-panel-left-close'"
             :label="collapsed ? undefined : 'Collapse'"
             :aria-label="collapsed ? 'Expand' : undefined"

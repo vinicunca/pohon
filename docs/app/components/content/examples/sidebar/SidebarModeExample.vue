@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem, SidebarProps } from '@nuxt/ui'
+import type { NavigationMenuItem, SidebarProps } from 'pohon-ui'
 
 // Ignore the props for the example
 defineProps<Pick<SidebarProps, 'mode'>>()
@@ -32,7 +32,7 @@ const items: NavigationMenuItem[] = [{
 
     <div class="flex-1 flex flex-col">
       <div class="h-(--ui-header-height) shrink-0 flex items-center px-4 border-b border-default">
-        <UButton
+        <PButton
           icon="i-lucide-panel-left"
           color="neutral"
           variant="ghost"

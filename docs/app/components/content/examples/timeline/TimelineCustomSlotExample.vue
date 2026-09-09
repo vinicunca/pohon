@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TimelineItem } from '@nuxt/ui'
+import type { TimelineItem } from 'pohon-ui'
 
 const items = [{
   date: 'Mar 15, 2025',

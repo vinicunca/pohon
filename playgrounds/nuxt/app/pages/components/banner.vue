@@ -26,7 +26,7 @@ const attrs = reactive({
     <PBanner
       id="banner"
       title="Pohon UI v4 is officially released!"
-      to="https://github.com/nuxt/ui/releases/tag/v4.0.0"
+      to="https://github.com/vinicunca/pohon/releases/tag/v4.0.0"
       icon="i-lucide-rocket"
       :actions="[{
         label: 'Read the post',

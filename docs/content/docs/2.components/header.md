@@ -1,10 +1,10 @@
 ---
-description: 'A responsive header for your site navigation.'
+description: "A responsive header for your site navigation."
 category: layout
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Header.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Header.vue
 ---
 
 ## Usage
@@ -19,14 +19,16 @@ Use the `left`, `default` and `right` slots to customize the header and the `bod
 
 ::component-example
 ---
+
 collapse: true
 prettier: true
 name: 'header-example'
 class: '!px-0 !pt-0'
 overflowHidden: true
 props:
-  class: 'w-full'
+class: 'w-full'
 ---
+
 ::
 
 ::note
@@ -35,17 +37,21 @@ In this example, we use the [NavigationMenu](/docs/components/navigation-menu) c
 
 ### Title
 
-Use the `title` prop to change the title of the header. Defaults to `Nuxt UI`.
+Use the `title` prop to change the title of the header. Defaults to `Pohon`.
 
 ::component-code
 ---
+
 hide:
-  - class
-props:
-  title: 'Nuxt UI'
+
+- class
+  props:
+  title: 'Pohon'
   class: 'w-full'
-class: '!px-0 !pt-0'
+  class: '!px-0 !pt-0'
+
 ---
+
 ::
 
 You can also use the `title` slot to add your own logo.
@@ -56,16 +62,19 @@ You should still add the `title` prop to replace the default `aria-label` of the
 
 ::component-code
 ---
+
 prettier: true
 overflowHidden: true
 hide:
-  - class
-props:
+
+- class
+  props:
   class: 'w-full'
-slots:
+  slots:
   title: |
 
-    <Logo class="h-6 w-auto" />
+  <Logo class="h-6 w-auto" />
+
 class: '!px-0 !pt-0'
 ---
 
@@ -79,32 +88,39 @@ Use the `to` prop to change the link of the title. Defaults to `/`.
 
 ::component-code
 ---
+
 hide:
-  - class
-class: '!px-0 !pt-0'
-props:
+
+- class
+  class: '!px-0 !pt-0'
+  props:
   to: '/docs'
   class: 'w-full'
+
 ---
+
 ::
 
 You can also use the `left` slot to override the link entirely.
 
 ::component-code
 ---
+
 prettier: true
 overflowHidden: true
 hide:
-  - class
-class: '!px-0 !pt-0'
-props:
+
+- class
+  class: '!px-0 !pt-0'
+  props:
   class: 'w-full'
-slots:
+  slots:
   left: |
 
-    <NuxtLink to="/docs">
-      <Logo class="h-6 w-auto" />
-    </NuxtLink>
+  <NuxtLink to="/docs">
+    <Logo class="h-6 w-auto" />
+  </NuxtLink>
+
 ---
 
 #left
@@ -125,23 +141,27 @@ You can use the `menu` prop to customize the menu of the header, it will adapt d
 
 ::component-example
 ---
+
 collapse: true
 iframe:
-  height: 300px;
+height: 300px;
 iframeMobile: true
 overflowHidden: true
 name: 'header-menu-example'
 options:
-  - name: 'mode'
-    label: 'mode'
-    default: 'drawer'
-    items:
-      - modal
-      - slideover
-      - drawer
-props:
-  class: 'w-full'
+
+- name: 'mode'
+  label: 'mode'
+  default: 'drawer'
+  items:
+  - modal
+  - slideover
+  - drawer
+    props:
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Toggle
@@ -152,15 +172,17 @@ You can pass any property from the [Button](/docs/components/button) component t
 
 ::component-example
 ---
+
 collapse: true
 iframe:
-  height: 300px;
+height: 300px;
 iframeMobile: true
 overflowHidden: true
 name: 'header-toggle-example'
 props:
-  class: 'w-full'
+class: 'w-full'
 ---
+
 ::
 
 ### Toggle Side
@@ -169,15 +191,17 @@ Use the `toggle-side` prop to change the side of the toggle button. Defaults to 
 
 ::component-example
 ---
+
 collapse: true
 iframe:
-  height: 300px;
+height: 300px;
 iframeMobile: true
 overflowHidden: true
 name: 'header-toggle-side-example'
 props:
-  class: 'w-full'
+class: 'w-full'
 ---
+
 ::
 
 ## Examples
@@ -188,15 +212,17 @@ Use the `#toggle` slot to replace the default toggle button with a custom animat
 
 ::component-example
 ---
+
 collapse: true
 iframe:
-  height: 300px;
+height: 300px;
 iframeMobile: true
 overflowHidden: true
 name: 'header-toggle-animated-example'
 props:
-  class: 'w-full'
+class: 'w-full'
 ---
+
 ::
 
 ### Within `app.vue`
@@ -205,31 +231,36 @@ Use the Header component in your `app.vue` or in a layout:
 
 ```vue [app.vue]{28-51}
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem } from "pohon-ui";
 
-const route = useRoute()
+const route = useRoute();
 
-const items = computed<NavigationMenuItem[]>(() => [{
-  label: 'Docs',
-  to: '/docs/getting-started',
-  active: route.path.startsWith('/docs/getting-started')
-}, {
-  label: 'Components',
-  to: '/docs/components',
-  active: route.path.startsWith('/docs/components')
-}, {
-  label: 'Figma',
-  to: 'https://go.nuxt.com/figma-ui',
-  target: '_blank'
-}, {
-  label: 'Releases',
-  to: 'https://github.com/nuxt/ui/releases',
-  target: '_blank'
-}])
+const items = computed<NavigationMenuItem[]>(() => [
+  {
+    label: "Docs",
+    to: "/docs/getting-started",
+    active: route.path.startsWith("/docs/getting-started"),
+  },
+  {
+    label: "Components",
+    to: "/docs/components",
+    active: route.path.startsWith("/docs/components"),
+  },
+  {
+    label: "Figma",
+    to: "https://go.nuxt.com/figma-ui",
+    target: "_blank",
+  },
+  {
+    label: "Releases",
+    to: "https://github.com/vinicunca/pohon/releases",
+    target: "_blank",
+  },
+]);
 </script>
 
 <template>
-  <UApp>
+  <PApp>
     <UHeader>
       <template #title>
         <Logo class="h-6 w-auto" />
@@ -240,10 +271,10 @@ const items = computed<NavigationMenuItem[]>(() => [{
       <template #right>
         <UColorModeButton />
 
-        <UButton
+        <PButton
           color="neutral"
           variant="ghost"
-          to="https://github.com/nuxt/ui"
+          to="https://github.com/vinicunca/pohon"
           target="_blank"
           icon="i-simple-icons-github"
           aria-label="GitHub"
@@ -251,7 +282,11 @@ const items = computed<NavigationMenuItem[]>(() => [{
       </template>
 
       <template #body>
-        <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+        <UNavigationMenu
+          :items="items"
+          orientation="vertical"
+          class="-mx-2.5"
+        />
       </template>
     </UHeader>
 
@@ -262,7 +297,7 @@ const items = computed<NavigationMenuItem[]>(() => [{
     </UMain>
 
     <UFooter />
-  </UApp>
+  </PApp>
 </template>
 ```
 

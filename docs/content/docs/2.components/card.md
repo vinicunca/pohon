@@ -8,7 +8,7 @@ keywords:
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Card.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Card.vue
 ---
 
 ## Usage
@@ -17,23 +17,26 @@ Use the `header`, `default` and `footer` slots to add content to the Card.
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-props:
+
+- class
+  props:
   class: 'w-full'
-slots:
+  slots:
   header: |
 
-    <Placeholder class="h-8" />
+  <Placeholder class="h-8" />
 
-  default: |
+default: |
 
     <Placeholder class="h-32" />
 
-  footer: |
+footer: |
 
     <Placeholder class="h-8" />
+
 ---
 
 #header
@@ -52,16 +55,19 @@ Use the `title` prop to set the title of the Card's header.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - class
-props:
+
+- class
+  props:
   title: 'Card with title'
   class: 'w-full'
-slots:
+  slots:
   default: |
 
-    <Placeholder class="h-32" />
+  <Placeholder class="h-32" />
+
 ---
 
 #default
@@ -74,18 +80,21 @@ Use the `description` prop to set the description of the Card's header.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - title
-  - class
-props:
+
+- title
+- class
+  props:
   title: 'Card with description'
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   class: 'w-full'
-slots:
+  slots:
   default: |
 
-    <Placeholder class="h-32" />
+  <Placeholder class="h-32" />
+
 ---
 
 #default
@@ -98,24 +107,27 @@ Use the `variant` prop to change the variant of the Card.
 
 ::component-code
 ---
+
 prettier: true
 hide:
-  - class
-props:
+
+- class
+  props:
   variant: subtle
   class: 'w-full'
-slots:
+  slots:
   header: |
 
-    <Placeholder class="h-8" />
+  <Placeholder class="h-8" />
 
-  default: |
+default: |
 
     <Placeholder class="h-32" />
 
-  footer: |
+footer: |
 
     <Placeholder class="h-8" />
+
 ---
 
 #header

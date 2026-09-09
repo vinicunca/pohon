@@ -1,19 +1,19 @@
 ---
 title: ProseCodePreview
-description: 'Display code examples with a preview and their source for clearer documentation.'
+description: "Display code examples with a preview and their source for clearer documentation."
 category: components
 navigation.title: CodePreview
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/prose/CodePreview.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/prose/CodePreview.vue
 ---
 
 ## Usage
 
 Wrap any content with the `code-preview` component to display a live preview alongside its source code using the `code` slot.
 
-::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full" label="Preview"}
+::code-preview{class="[&>div]:_:my-0 [&>div]:_:w-full" label="Preview"}
 
 ::code-preview{class="[&>div]:*:my-0"}
 `inline code`

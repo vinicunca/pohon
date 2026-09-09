@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem, DropdownMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem, DropdownMenuItem } from 'pohon-ui'
 
 const items = [
   {
@@ -42,7 +42,7 @@ const items = [
   {
     label: 'GitHub',
     icon: 'i-simple-icons-github',
-    to: 'https://github.com/nuxt/ui',
+    to: 'https://github.com/vinicunca/pohon',
     target: '_blank',
     slot: 'github' as const
   }
@@ -53,7 +53,7 @@ const items = [
   <UNavigationMenu :items="items" class="w-full justify-center">
     <template #more="{ item }">
       <UDropdownMenu :content="item.content" :items="item.items">
-        <UButton icon="i-lucide-ellipsis" color="neutral" variant="link" />
+        <PButton icon="i-lucide-ellipsis" color="neutral" variant="link" />
       </UDropdownMenu>
     </template>
 

@@ -13,7 +13,7 @@ const modelValue = shallowRef({
   <UInputDate ref="inputDate" v-model="modelValue" range>
     <template #trailing>
       <UPopover :reference="inputDate?.inputsRef[0]?.$el">
-        <UButton
+        <PButton
           color="neutral"
           variant="link"
           size="sm"

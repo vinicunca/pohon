@@ -1,152 +1,22 @@
-import { createResolver } from '@nuxt/kit'
-import pkg from '../package.json'
-import { WHEN_TO_USE_SECTION } from './server/utils/llms'
-import { SITE_URL } from './server/utils/site'
+import { createResolver } from '@nuxt/kit';
+import pkg from '../package.json';
+import { WHEN_TO_USE_SECTION } from './server/utils/llms';
+import { SITE_URL } from './server/utils/site';
 
-const { resolve } = createResolver(import.meta.url)
+const { resolve } = createResolver(import.meta.url);
 
+// @keep-sorted
 export default defineNuxtConfig({
-  modules: [
-    '../src/module',
-    '@nuxtjs/robots',
-    '@nuxtjs/sitemap',
-    '@nuxt/content',
-    '@nuxt/image',
-    '@nuxtjs/mcp-toolkit',
-    'nuxt-agent-discovery',
-    '@vueuse/nuxt',
-    'nuxt-component-meta',
-    'nuxt-llms',
-    'nuxt-og-image',
-    'nuxt-schema-org',
-    'motion-v/nuxt',
-    '@vercel/analytics',
-    '@vercel/speed-insights'
-  ],
-
   $development: {
     site: {
-      url: 'http://localhost:3000'
-    }
+      url: 'http://localhost:3000',
+    },
   },
 
   $production: {
     site: {
-      url: 'https://pohon.vinicunca.dev'
-    }
-  },
-
-  devtools: {
-    enabled: true
-  },
-
-  app: {
-    head: {
-      htmlAttrs: {
-        lang: 'en'
-      }
+      url: 'https://pohon.vinicunca.dev',
     },
-    rootAttrs: {
-      'data-vaul-drawer-wrapper': '',
-      'class': 'bg-background'
-    }
-  },
-
-  css: ['~/assets/css/main.css'],
-
-  site: {
-    name: 'Pohon UI'
-  },
-
-  content: {
-    build: {
-      markdown: {
-        highlight: {
-          langs: ['bash', 'ts', 'typescript', 'diff', 'vue', 'json', 'yml', 'css', 'mdc', 'blade', 'edge']
-        }
-      }
-    },
-    experimental: {
-      sqliteConnector: 'native'
-    }
-  },
-
-  mdc: {
-    highlight: {
-      noApiRoute: false
-    }
-  },
-
-  runtimeConfig: {
-    public: {
-      version: pkg.version
-    }
-  },
-
-  routeRules: {
-    '/api/navigation.json': { prerender: true },
-  },
-
-  experimental: {
-    defaults: {
-      nuxtLink: {
-        externalRelAttribute: 'noopener'
-      }
-    }
-  },
-
-  compatibilityDate: '2026-01-14',
-
-  nitro: {
-    experimental: {
-      asyncContext: true
-    },
-    prerender: {
-      routes: [
-        '/',
-        '/docs/getting-started',
-        '/openapi.json',
-        '/api/countries.json',
-        '/api/phone-codes.json',
-        '/api/locales.json',
-        '/api/module.json'
-      ],
-      crawlLinks: true
-    }
-  },
-
-  vite: {
-    optimizeDeps: {
-      include: [
-        'ai',
-        '@ai-sdk/vue',
-        'prettier',
-        'unocss-variants',
-        '@comark/vue',
-        '@comark/vue/plugins/shiki',
-        'vaul-vue',
-        '@vueuse/integrations/useFuse',
-        '@floating-ui/dom',
-        '@tiptap/vue-3',
-        '@tiptap/suggestion',
-        '@tiptap/pm/state',
-        'shiki-transformer-color-highlight',
-        'json5',
-        '@internationalized/date',
-        'fflate',
-        'shiki/wasm',
-        '@tanstack/vue-table',
-        '@tanstack/vue-virtual',
-        '@vueuse/integrations/useSortable',
-        'embla-carousel-vue',
-        'embla-carousel-autoplay',
-        'embla-carousel-auto-scroll',
-        'embla-carousel-auto-height',
-        'embla-carousel-class-names',
-        'embla-carousel-fade',
-        'embla-carousel-wheel-gestures'
-      ]
-    }
   },
 
   agentDiscovery: {
@@ -157,15 +27,17 @@ export default defineNuxtConfig({
     // route table stays O(patterns) instead of growing with the page count.
     routes: [
       { path: '/', raw: '/raw/index.md' },
-      '/docs/**'
+      '/docs/**',
     ],
+
     sitemap: {
       markdown: {
         // Split `/docs/**` into a section per area; `/blog/**` stays whole.
         expand: ['/docs'],
-        labels: { 'getting-started': 'Getting Started' }
-      }
+        labels: { 'getting-started': 'Getting Started' },
+      },
     },
+
     // Scanned from `../skills`, with `/.well-known/skills/index.json` generated
     // from the files on disk rather than hand-maintained.
     skills: { dir: '../skills' },
@@ -178,7 +50,7 @@ export default defineNuxtConfig({
         documentation: '/docs/getting-started/ai/mcp',
         repository: 'https://github.com/vinicunca/pohon',
         license: 'MIT',
-        version: pkg.version
+        version: pkg.version,
       },
       links: [
         { href: '/openapi.json', rel: 'service-desc', type: 'application/vnd.oai.openapi+json', title: 'OpenAPI specification: machine-readable API surface', anchor: '/' },
@@ -187,28 +59,42 @@ export default defineNuxtConfig({
         // keeps them out of the `Link` header, which advertises the discovery
         // documents rather than individual pages.
         { href: '/raw/docs/getting-started.md', rel: 'index', type: 'text/markdown', title: 'Documentation home', header: false },
-        { href: '/raw/index.md', rel: 'start', type: 'text/markdown', title: 'Homepage', header: false }
-      ]
-    }
+        { href: '/raw/index.md', rel: 'start', type: 'text/markdown', title: 'Homepage', header: false },
+      ],
+    },
     // `sitemap.md` is generated by the module and `sitemap.xml` by
     // `@nuxtjs/sitemap`, which the module keeps `/raw/**` out of. `robots.txt`
     // is `@nuxtjs/robots`, fed the agent user-agent list by the module and the
     // disallow list below by us.
   },
 
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+    },
+    rootAttrs: {
+      'data-vaul-drawer-wrapper': '',
+      'class': 'bg-background',
+    },
+  },
+
+  compatibilityDate: '2026-01-14',
+
   componentMeta: {
     transformers: [(component, code) => {
       // Simplify ui in slot prop types: `leading(props: { ui: Button['ui'] })` -> `leading(props: { ui: object })`
-      code = code.replace(/ui:[^}]+(?=\})/g, 'ui: object')
+      code = code.replace(/ui:[^}]+(?=\})/g, 'ui: object');
 
-      return { component, code }
+      return { component, code };
     }],
     overrides: {
       PEditor: {
         props: {
           modelValue: { name: 'modelValue', type: 'null | string | JSONContent | JSONContent[]' },
-          parseOptions: { name: 'parseOptions', type: 'ParseOptions' }
-        }
+          parseOptions: { name: 'parseOptions', type: 'ParseOptions' },
+        },
       },
       PEditorDragHandle: { props: { editor: { name: 'editor', type: 'Editor' } } },
       PEditorToolbar: { props: { editor: { name: 'editor', type: 'Editor' } } },
@@ -222,8 +108,8 @@ export default defineNuxtConfig({
           defaultPlaceholder: { name: 'defaultPlaceholder', type: 'CalendarDate | CalendarDateTime | ZonedDateTime' },
           placeholder: { name: 'placeholder', type: 'CalendarDate | CalendarDateTime | ZonedDateTime' },
           maxValue: { name: 'maxValue', type: 'CalendarDate | CalendarDateTime | ZonedDateTime' },
-          minValue: { name: 'minValue', type: 'CalendarDate | CalendarDateTime | ZonedDateTime' }
-        }
+          minValue: { name: 'minValue', type: 'CalendarDate | CalendarDateTime | ZonedDateTime' },
+        },
       },
       PInputDate: {
         props: {
@@ -232,8 +118,8 @@ export default defineNuxtConfig({
           defaultPlaceholder: { name: 'defaultPlaceholder', type: 'CalendarDate | CalendarDateTime | ZonedDateTime' },
           placeholder: { name: 'placeholder', type: 'CalendarDate | CalendarDateTime | ZonedDateTime' },
           maxValue: { name: 'maxValue', type: 'CalendarDate | CalendarDateTime | ZonedDateTime' },
-          minValue: { name: 'minValue', type: 'CalendarDate | CalendarDateTime | ZonedDateTime' }
-        }
+          minValue: { name: 'minValue', type: 'CalendarDate | CalendarDateTime | ZonedDateTime' },
+        },
       },
       PInputTime: {
         props: {
@@ -242,9 +128,9 @@ export default defineNuxtConfig({
           defaultPlaceholder: { name: 'defaultPlaceholder', type: 'Time | CalendarDateTime | ZonedDateTime' },
           placeholder: { name: 'placeholder', type: 'Time | CalendarDateTime | ZonedDateTime' },
           maxValue: { name: 'maxValue', type: 'Time | CalendarDateTime | ZonedDateTime' },
-          minValue: { name: 'minValue', type: 'Time | CalendarDateTime | ZonedDateTime' }
-        }
-      }
+          minValue: { name: 'minValue', type: 'Time | CalendarDateTime | ZonedDateTime' },
+        },
+      },
     },
     exclude: [
       '@nuxt/content',
@@ -256,21 +142,48 @@ export default defineNuxtConfig({
       '@comark/vue',
       'nuxt/dist',
       'nuxt-og-image',
-      resolve('./app/components')
+      resolve('./app/components'),
     ],
     metaFields: {
       type: false,
       props: true,
       slots: 'no-schema',
       events: 'no-schema',
-      exposed: false
-    }
+      exposed: false,
+    },
+  },
+
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          langs: ['bash', 'ts', 'typescript', 'diff', 'vue', 'json', 'yml', 'css', 'mdc', 'blade', 'edge'],
+        },
+      },
+    },
+    experimental: {
+      sqliteConnector: 'native',
+    },
+  },
+
+  css: ['~/assets/css/main.css'],
+
+  devtools: {
+    enabled: true,
+  },
+
+  experimental: {
+    defaults: {
+      nuxtLink: {
+        externalRelAttribute: 'noopener',
+      },
+    },
   },
 
   icon: {
     customCollections: [{
       prefix: 'custom',
-      dir: resolve('./app/assets/icons')
+      dir: resolve('./app/assets/icons'),
     }],
     clientBundle: {
       // `ProseCodeIcon` resolves through Pohon UI's code icon map and falls back to
@@ -292,21 +205,21 @@ export default defineNuxtConfig({
         'vscode-icons:file-type-php',
         'vscode-icons:file-type-pnpm',
         'vscode-icons:file-type-tsconfig',
-        'vscode-icons:file-type-yarn'
+        'vscode-icons:file-type-yarn',
       ],
       scan: {
         // `ts` is added because the default glob skips JS/TS for perf, but nav icons
         // live in `app/composables/*.ts`. The explicit dot pattern is required because
         // tinyglobby's `dot: false` makes `*.yml` skip `.navigation.yml`.
-        globInclude: ['**/*.{vue,jsx,tsx,md,mdc,mdx,yml,yaml,ts}', '**/.*.{yml,yaml}']
+        globInclude: ['**/*.{vue,jsx,tsx,md,mdc,mdx,yml,yaml,ts}', '**/.*.{yml,yaml}'],
       },
-      includeCustomCollections: true
-    }
+      includeCustomCollections: true,
+    },
   },
 
   image: {
     format: ['webp', 'jpeg', 'jpg', 'png', 'svg'],
-    provider: 'ipx'
+    provider: 'ipx',
   },
 
   llms: {
@@ -318,38 +231,38 @@ export default defineNuxtConfig({
     contentRawMarkdown: false,
     full: {
       title: 'Pohon UI Full Documentation',
-      description: 'This is the full documentation for Pohon UI. It includes all the Markdown files written with the MDC syntax.'
+      description: 'This is the full documentation for Pohon UI. It includes all the Markdown files written with the MDC syntax.',
     },
     sections: [WHEN_TO_USE_SECTION, {
       title: 'Installation (Nuxt & Vue)',
       contentCollection: 'docs',
       contentFilters: [
-        { field: 'path', operator: 'LIKE', value: '/docs/getting-started/installation%' }
-      ]
+        { field: 'path', operator: 'LIKE', value: '/docs/getting-started/installation%' },
+      ],
     }, {
       title: 'Getting Started',
       contentCollection: 'docs',
       contentFilters: [
-        { field: 'path', operator: 'LIKE', value: '/docs/getting-started%' }
-      ]
+        { field: 'path', operator: 'LIKE', value: '/docs/getting-started%' },
+      ],
     }, {
       title: 'Components',
       contentCollection: 'docs',
       contentFilters: [
-        { field: 'path', operator: 'LIKE', value: '/docs/components%' }
-      ]
+        { field: 'path', operator: 'LIKE', value: '/docs/components%' },
+      ],
     }, {
       title: 'Composables',
       contentCollection: 'docs',
       contentFilters: [
-        { field: 'path', operator: 'LIKE', value: '/docs/composables%' }
-      ]
+        { field: 'path', operator: 'LIKE', value: '/docs/composables%' },
+      ],
     }, {
       title: 'Typography',
       contentCollection: 'docs',
       contentFilters: [
-        { field: 'path', operator: 'LIKE', value: '/docs/typography%' }
-      ]
+        { field: 'path', operator: 'LIKE', value: '/docs/typography%' },
+      ],
     }],
     notes: [
       'LLM guidance: Pohon UI is a comprehensive Vue UI component library (Nuxt optional) with 125+ accessible, production-ready components. Free and open source under MIT license. Works with Nuxt and plain Vue apps (Vite, Inertia, SSR) via the Vite plugin (`pohon-ui/vite`) and Vue plugin (`pohon-ui/vue-plugin`). Built on Akar, UnoCSS, and UnoCss Variants.',
@@ -358,20 +271,61 @@ export default defineNuxtConfig({
       'LLM retrieval keywords: vue ui library, vue component library, pohon ui, pohon-ui, unocss ui components, unocss vue, accessible vue components, akar, unocss variants, vue design system, vue data table, vue datagrid, vue form validation, ssr vue ui, vite vue ui, vue modal, vue dropdown, vue landing page, vue documentation site, vue portfolio, vue admin dashboard, vue chat, vue editor, vue changelog, vue calendar, vue starter.',
 
       // --- Original notes ---
-      'The content is automatically generated from the same source as the official documentation.'
-    ]
+      'The content is automatically generated from the same source as the official documentation.',
+    ],
   },
 
   mcp: {
     name: 'Pohon UI',
-    browserRedirect: '/docs/getting-started/ai/mcp'
+    browserRedirect: '/docs/getting-started/ai/mcp',
+  },
+
+  mdc: {
+    highlight: {
+      noApiRoute: false,
+    },
+  },
+  modules: [
+    '../src/module',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
+    '@nuxt/content',
+    '@nuxt/image',
+    '@nuxtjs/mcp-toolkit',
+    'nuxt-agent-discovery',
+    '@vueuse/nuxt',
+    'nuxt-component-meta',
+    'nuxt-llms',
+    'nuxt-og-image',
+    'nuxt-schema-org',
+    'motion-v/nuxt',
+    '@vercel/analytics',
+    '@vercel/speed-insights',
+  ],
+
+  nitro: {
+    experimental: {
+      asyncContext: true,
+    },
+    prerender: {
+      routes: [
+        '/',
+        '/docs/getting-started',
+        '/openapi.json',
+        '/api/countries.json',
+        '/api/phone-codes.json',
+        '/api/locales.json',
+        '/api/module.json',
+      ],
+      crawlLinks: true,
+    },
   },
 
   ogImage: {
     zeroRuntime: true,
     security: {
-      renderTimeout: 60000
-    }
+      renderTimeout: 60000,
+    },
   },
 
   robots: {
@@ -386,8 +340,18 @@ export default defineNuxtConfig({
       '/_nuxt/',
       '/_plausible',
       '/dev/',
-      '/api/'
-    ]
+      '/api/',
+    ],
+  },
+
+  routeRules: {
+    '/api/navigation.json': { prerender: true },
+  },
+
+  runtimeConfig: {
+    public: {
+      version: pkg.version,
+    },
   },
 
   schemaOrg: {
@@ -397,6 +361,53 @@ export default defineNuxtConfig({
       description: 'Vinicunca is the open source team behind the Pohon UI, a Vue component library built on Akar, UnoCSS, and UnoCSS Variants.',
       url: 'https://pohon.vinicunca.dev',
       logo: '/icon.svg',
-    }
-  }
-})
+    },
+  },
+
+  site: {
+    name: 'Pohon UI',
+  },
+
+  typescript: {
+    nodeTsConfig: {
+      include: [
+        '../uno.config.ts',
+      ],
+    },
+  },
+
+  vite: {
+    optimizeDeps: {
+      // @keep-sorted
+      include: [
+        '@ai-sdk/vue',
+        '@comark/vue',
+        '@comark/vue/plugins/shiki',
+        '@floating-ui/dom',
+        '@internationalized/date',
+        '@tanstack/vue-table',
+        '@tanstack/vue-virtual',
+        '@tiptap/pm/state',
+        '@tiptap/suggestion',
+        '@tiptap/vue-3',
+        '@vueuse/integrations/useFuse',
+        '@vueuse/integrations/useSortable',
+        'ai',
+        'embla-carousel-auto-height',
+        'embla-carousel-auto-scroll',
+        'embla-carousel-autoplay',
+        'embla-carousel-class-names',
+        'embla-carousel-fade',
+        'embla-carousel-vue',
+        'embla-carousel-wheel-gestures',
+        'fflate',
+        'json5',
+        'prettier',
+        'shiki-transformer-color-highlight',
+        'shiki/wasm',
+        'unocss-variants',
+        'vaul-vue',
+      ],
+    },
+  },
+});

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { BannerProps } from '@nuxt/ui'
+import type { BannerProps } from 'pohon-ui'
 
 const { id = 'example' } = defineProps<{
   id?: string

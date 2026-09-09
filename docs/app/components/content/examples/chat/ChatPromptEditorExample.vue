@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Extension } from '@tiptap/core'
-import type { EditorMentionMenuItem, SelectItem } from '@nuxt/ui'
+import type { EditorMentionMenuItem, SelectItem } from 'pohon-ui'
 
 const input = ref('')
 const mode = ref('auto')
@@ -66,7 +66,7 @@ function onSubmit() {
     @submit="onSubmit"
   >
     <template v-if="attachments.length" #header>
-      <UButton
+      <PButton
         v-for="(file, index) in attachments"
         :key="index"
         :label="file.name"
@@ -103,7 +103,7 @@ function onSubmit() {
 
     <template #footer>
       <div class="flex items-center gap-0.5">
-        <UButton
+        <PButton
           icon="i-lucide-plus"
           color="neutral"
           variant="ghost"

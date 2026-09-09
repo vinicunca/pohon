@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem } from 'pohon-ui'
 
 const items: NavigationMenuItem[][] = [[{
   label: 'Home',
@@ -26,12 +26,12 @@ const items: NavigationMenuItem[][] = [[{
 }], [{
   label: 'Feedback',
   icon: 'i-lucide-message-circle',
-  to: 'https://github.com/nuxt-ui-templates/dashboard',
+  to: 'https://github.com/vinicunca/pohon-ui-templates/dashboard',
   target: '_blank'
 }, {
   label: 'Help & Support',
   icon: 'i-lucide-info',
-  to: 'https://github.com/nuxt/ui',
+  to: 'https://github.com/vinicunca/pohon',
   target: '_blank'
 }]]
 </script>
@@ -44,7 +44,7 @@ const items: NavigationMenuItem[][] = [[{
     </template>
 
     <template #default="{ collapsed }">
-      <UButton
+      <PButton
         :label="collapsed ? undefined : 'Search...'"
         icon="i-lucide-search"
         color="neutral"
@@ -58,7 +58,7 @@ const items: NavigationMenuItem[][] = [[{
             <UKbd value="K" variant="subtle" />
           </div>
         </template>
-      </UButton>
+      </PButton>
 
       <UNavigationMenu
         :collapsed="collapsed"
@@ -75,7 +75,7 @@ const items: NavigationMenuItem[][] = [[{
     </template>
 
     <template #footer="{ collapsed }">
-      <UButton
+      <PButton
         :avatar="{
           src: 'https://github.com/benjamincanac.png',
           loading: 'lazy' as const

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorToolbarItem } from '@nuxt/ui'
+import type { EditorToolbarItem } from 'pohon-ui'
 
 const value = ref(`# Toolbar
 

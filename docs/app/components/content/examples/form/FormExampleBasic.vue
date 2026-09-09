@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { FormError, FormSubmitEvent } from '@nuxt/ui'
+import type { FormError, FormSubmitEvent } from 'pohon-ui'
 
 const state = reactive({
   email: undefined,
@@ -23,17 +23,17 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UForm :validate="validate" :state="state" class="space-y-4" @submit="onSubmit">
-    <UFormField label="Email" name="email">
+  <PForm :validate="validate" :state="state" class="space-y-4" @submit="onSubmit">
+    <PFormField label="Email" name="email">
       <UInput v-model="state.email" />
-    </UFormField>
+    </PFormField>
 
-    <UFormField label="Password" name="password">
+    <PFormField label="Password" name="password">
       <UInput v-model="state.password" type="password" />
-    </UFormField>
+    </PFormField>
 
-    <UButton type="submit">
+    <PButton type="submit">
       Submit
-    </UButton>
-  </UForm>
+    </PButton>
+  </PForm>
 </template>

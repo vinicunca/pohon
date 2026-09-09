@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import * as locales from '@nuxt/ui/locale'
+import * as locales from 'pohon-ui/locale'
 
 const props = withDefaults(defineProps<{
   default?: string
@@ -85,7 +85,7 @@ function getEmojiFlag(locale: string): string {
         </div>
       </div>
     </div>
-    <ProseNote to="https://github.com/nuxt/ui/tree/v4/src/runtime/locale" target="_blank">
+    <ProseNote to="https://github.com/vinicunca/pohon/tree/v4/src/runtime/locale" target="_blank">
       If you need additional languages, you can contribute by creating a PR to add a new locale in <ProseCode>src/runtime/locale/</ProseCode>.
     </ProseNote>
     <ProseTip>

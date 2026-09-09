@@ -9,7 +9,7 @@ keywords:
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/AvatarGroup.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/AvatarGroup.vue
 ---
 
 ## Usage
@@ -18,14 +18,17 @@ Wrap multiple [Avatar](/docs/components/avatar) within an AvatarGroup to stack t
 
 ::component-code
 ---
+
 prettier: true
 slots:
-  default: |
+default: |
 
     <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" />
     <UAvatar src="https://github.com/romhml.png" alt="Romain Hamel" />
     <UAvatar src="https://github.com/noook.png" alt="Neil Richter" />
+
 ---
+
 :u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
 :u-avatar{src="https://github.com/romhml.png" alt="Romain Hamel"}
 :u-avatar{src="https://github.com/noook.png" alt="Neil Richter"}
@@ -37,16 +40,19 @@ Use the `size` prop to change the size of all the avatars.
 
 ::component-code
 ---
+
 prettier: true
 props:
-  size: xl
+size: xl
 slots:
-  default: |
+default: |
 
     <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
     <UAvatar src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy" />
     <UAvatar src="https://github.com/noook.png" alt="Neil Richter" loading="lazy" />
+
 ---
+
 :u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
 :u-avatar{src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy"}
 :u-avatar{src="https://github.com/noook.png" alt="Neil Richter" loading="lazy"}
@@ -58,16 +64,19 @@ Use the `max` prop to limit the number of avatars displayed. The rest is display
 
 ::component-code
 ---
+
 prettier: true
 props:
-  max: 2
+max: 2
 slots:
-  default: |
+default: |
 
     <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
     <UAvatar src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy" />
     <UAvatar src="https://github.com/noook.png" alt="Neil Richter" loading="lazy" />
+
 ---
+
 :u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
 :u-avatar{src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy"}
 :u-avatar{src="https://github.com/noook.png" alt="Neil Richter" loading="lazy"}
@@ -79,16 +88,19 @@ Use the `color` prop to change the color of all the avatars.
 
 ::component-code
 ---
+
 prettier: true
 props:
-  color: primary
+color: primary
 slots:
-  default: |
+default: |
 
     <UAvatar alt="Benjamin Canac" />
     <UAvatar alt="Romain Hamel" />
     <UAvatar alt="Neil Richter" />
+
 ---
+
 :u-avatar{alt="Benjamin Canac"}
 :u-avatar{alt="Romain Hamel"}
 :u-avatar{alt="Neil Richter"}

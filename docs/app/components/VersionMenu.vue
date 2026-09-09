@@ -33,7 +33,7 @@ const items = computed(() => {
     :ui="{ content: 'min-w-fit' }"
     size="xs"
   >
-    <UButton
+    <PButton
       :label="`v${config.version}`"
       variant="subtle"
       :trailing-icon="appConfig.ui.icons.chevronDown"

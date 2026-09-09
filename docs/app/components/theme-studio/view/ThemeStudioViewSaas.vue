@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem } from 'pohon-ui'
 
 const appConfig = useAppConfig()
 const studioIcons = useStudioIcons()
@@ -24,12 +24,12 @@ const heroLinks = [{
 }]
 
 const sections = [{
-  title: 'Powered by Nuxt UI Components',
+  title: 'Powered by Pohon Components',
   description: 'Access a complete component library with beautifully styled, accessible and customizable Vue components. Everything you need to build professional SaaS applications.',
   reverse: false,
   features: [{
     title: '100+ UI Components',
-    description: 'From buttons to modals, data tables to forms - all styled with Tailwind CSS and accessible out of the box.',
+    description: 'From buttons to modals, data tables to forms - all styled with UnoCSS and accessible out of the box.',
     icon: studioIcons.package
   }, {
     title: 'Authentication Ready',
@@ -61,11 +61,11 @@ const sections = [{
 
 const features = [{
   title: 'Beautiful design system',
-  description: 'Semantic color aliases, comprehensive design tokens and Tailwind Variants for consistent styling.',
+  description: 'Semantic color aliases, comprehensive design tokens and UnoCSS Variants for consistent styling.',
   icon: studioIcons.palette
 }, {
   title: 'Accessible by default',
-  description: 'Built on Reka UI for robust accessibility. WCAG compliant components that work for everyone.',
+  description: 'Built on Akar for robust accessibility. WCAG compliant components that work for everyone.',
   icon: studioIcons.a11y
 }, {
   title: 'Developer experience',
@@ -140,7 +140,7 @@ const faqItems = [
 ]
 
 const testimonials = [{
-  quote: 'Nuxt UI transformed how we build. The component quality is exceptional - everything just works with perfect TypeScript support, accessibility and dark mode built in.',
+  quote: 'Pohon transformed how we build. The component quality is exceptional - everything just works with perfect TypeScript support, accessibility and dark mode built in.',
   user: { name: 'Sarah Chen', description: 'CTO at TechScale' }
 }, {
   quote: 'We shipped our MVP in 2 weeks instead of 2 months. The authentication flows and form components saved us countless hours of development time.',
@@ -149,10 +149,10 @@ const testimonials = [{
   quote: 'The design system with AppConfig is brilliant. We maintain brand consistency across all our products while leveraging the full component library.',
   user: { name: 'David Kumar', description: 'Security Director at SecureStack' }
 }, {
-  quote: 'Perfect Lighthouse scores out of the box. Our Core Web Vitals improved dramatically just by switching to Nuxt UI components.',
+  quote: 'Perfect Lighthouse scores out of the box. Our Core Web Vitals improved dramatically just by switching to Pohon components.',
   user: { name: 'Emily Zhang', description: 'Lead Architect at ScaleForce' }
 }, {
-  quote: 'The Tailwind Variants system makes customization so intuitive. We can override any component style while keeping the functionality intact.',
+  quote: 'The UnoCSS Variants system makes customization so intuitive. We can override any component style while keeping the functionality intact.',
   user: { name: 'James Wilson', description: 'DevOps Lead at CloudPro' }
 }, {
   quote: 'From the SaaS template to production in days. The pre-built layouts, navigation and content structure accelerated our launch.',
@@ -255,19 +255,19 @@ onMounted(() => {
 
       <template #right>
         <!-- Static: the studio toolbar owns color mode. -->
-        <UButton color="neutral" variant="ghost" aria-label="Color mode">
+        <PButton color="neutral" variant="ghost" aria-label="Color mode">
           <template #leading="{ ui }">
             <UIcon :name="appConfig.ui.icons.dark" :class="ui.leadingIcon({ class: 'hidden dark:inline-block' })" />
             <UIcon :name="appConfig.ui.icons.light" :class="ui.leadingIcon({ class: 'dark:hidden' })" />
           </template>
-        </UButton>
-        <UButton label="Sign in" color="neutral" variant="outline" class="hidden lg:inline-flex" />
-        <UButton label="Sign up" color="neutral" :trailing-icon="appConfig.ui.icons.arrowRight" />
+        </PButton>
+        <PButton label="Sign in" color="neutral" variant="outline" class="hidden lg:inline-flex" />
+        <PButton label="Sign up" color="neutral" :trailing-icon="appConfig.ui.icons.arrowRight" />
       </template>
     </UHeader>
 
     <UPageHero
-      description="Build production-ready SaaS applications with Nuxt UI's powerful components, authentication flows, and enterprise features. The same component library trusted by the entire Nuxt ecosystem."
+      description="Build production-ready SaaS applications with Pohon's powerful components, authentication flows, and enterprise features. The same component library trusted by the entire Nuxt ecosystem."
       :links="heroLinks"
     >
       <template #top>
@@ -322,7 +322,7 @@ onMounted(() => {
       <UPageCard variant="subtle" class="rounded-2xl">
         <div class="relative aspect-video w-full rounded-xl overflow-hidden bg-elevated flex items-center justify-center">
           <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 0%, color-mix(in srgb, var(--ui-primary) 15%, transparent), transparent 70%)" />
-          <UButton
+          <PButton
             :icon="studioIcons.play"
             size="xl"
             color="neutral"
@@ -367,7 +367,7 @@ onMounted(() => {
 
     <UPageSection
       title="Everything You Need to Ship"
-      description="Stop building from scratch. Focus on your unique features while Nuxt UI handles the foundations with battle-tested components and patterns."
+      description="Stop building from scratch. Focus on your unique features while Pohon handles the foundations with battle-tested components and patterns."
     >
       <UPageGrid>
         <UPageCard
@@ -381,8 +381,8 @@ onMounted(() => {
 
     <UPageSection
       headline="Trusted by Developers"
-      title="Join Thousands Building with Nuxt UI"
-      description="See why developers choose Nuxt UI to ship their SaaS applications faster and with more confidence."
+      title="Join Thousands Building with Pohon"
+      description="See why developers choose Pohon to ship their SaaS applications faster and with more confidence."
     >
       <UPageColumns class="lg:columns-2 xl:columns-3">
         <UPageCard
@@ -393,7 +393,7 @@ onMounted(() => {
           :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
         >
           <template #footer>
-            <UUser
+            <PUser
               v-bind="testimonial.user"
               :avatar="{ alt: testimonial.user.name }"
               size="lg"
@@ -445,7 +445,7 @@ onMounted(() => {
 
     <UPageCTA
       title="Ready to build an amazing SaaS?"
-      description="Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today."
+      description="Join thousands of developers building with Nuxt and Pohon. Get this template and start shipping today."
       :links="ctaLinks"
       variant="naked"
       class="overflow-hidden"
@@ -505,13 +505,13 @@ onMounted(() => {
         <UContainer>
           <UFooterColumns :columns="footerColumns">
             <template #right>
-              <UFormField name="email" label="Subscribe to our newsletter" size="lg">
+              <PFormField name="email" label="Subscribe to our newsletter" size="lg">
                 <UInput v-model="email" type="email" placeholder="Enter your email" class="w-full">
                   <template #trailing>
-                    <UButton size="xs" color="neutral" label="Subscribe" />
+                    <PButton size="xs" color="neutral" label="Subscribe" />
                   </template>
                 </UInput>
-              </UFormField>
+              </PFormField>
             </template>
           </UFooterColumns>
         </UContainer>
@@ -519,13 +519,13 @@ onMounted(() => {
 
       <template #left>
         <p class="text-muted text-sm">
-          Built with Nuxt UI • © 2026
+          Built with Pohon • © 2026
         </p>
       </template>
 
       <template #right>
-        <UButton :icon="studioIcons.github" aria-label="GitHub" color="neutral" variant="ghost" />
-        <UButton icon="i-simple-icons-x" aria-label="X" color="neutral" variant="ghost" />
+        <PButton :icon="studioIcons.github" aria-label="GitHub" color="neutral" variant="ghost" />
+        <PButton icon="i-simple-icons-x" aria-label="X" color="neutral" variant="ghost" />
       </template>
     </UFooter>
   </div>

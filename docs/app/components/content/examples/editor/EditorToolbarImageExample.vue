@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Editor } from '@tiptap/vue-3'
-import type { EditorToolbarItem } from '@nuxt/ui'
+import type { EditorToolbarItem } from 'pohon-ui'
 
 const value = ref(`Click on the image below to see the image-specific toolbar:
 

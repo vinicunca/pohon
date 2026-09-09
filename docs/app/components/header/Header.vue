@@ -39,7 +39,7 @@ function toggleChat() {
       </UTooltip>
 
       <UTooltip text="Ask AI" :kbds="['meta', 'I']" ignore-non-keyboard-focus>
-        <UButton
+        <PButton
           color="neutral"
           variant="ghost"
           :icon="studioIcons.assistant"
@@ -53,10 +53,10 @@ function toggleChat() {
       <LazyThemeStudioPresetPicker hydrate-on-idle />
 
       <UTooltip text="Open on GitHub" class="hidden lg:flex" ignore-non-keyboard-focus>
-        <UButton
+        <PButton
           color="neutral"
           variant="ghost"
-          to="https://github.com/nuxt/ui"
+          to="https://github.com/vinicunca/pohon"
           target="_blank"
           icon="i-simple-icons-github"
           aria-label="GitHub"

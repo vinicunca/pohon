@@ -12,7 +12,7 @@ links:
     icon: i-simple-icons-iconify
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Icon.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Icon.vue
 ---
 
 ## Usage
@@ -21,10 +21,12 @@ Use the `name` prop to display an icon.
 
 ::component-code
 ---
+
 props:
-  name: 'i-lucide-lightbulb'
-  class: 'size-5'
+name: 'i-lucide-lightbulb'
+class: 'size-5'
 ---
+
 ::
 
 ::note
@@ -46,15 +48,17 @@ You can also pass a Vue component into the `name` prop:
 
 ::component-example
 ---
+
 name: 'icon-svg-example'
 ---
+
 ::
 
 You can define your icon components yourself, or use [`unplugin-icons`](https://github.com/unplugin/unplugin-icons) to import them directly from SVG files:
 
 ```vue
 <script setup lang="ts">
-import IconLightbulb from '~icons/lucide/lightbulb'
+import IconLightbulb from "~icons/lucide/lightbulb";
 </script>
 
 <template>

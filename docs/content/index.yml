@@ -1,8 +1,8 @@
 title: The Intuitive Vue UI Library
-description: A comprehensive Vue UI component library (Nuxt optional) with 125+ accessible, Tailwind CSS components for building modern web applications. Works with Nuxt and plain Vue apps (Vite, Inertia, SSR).
+description: A comprehensive Vue UI component library (Nuxt optional) with 125+ accessible, UnoCSS components for building modern web applications. Works with Nuxt and plain Vue apps (Vite, Inertia, SSR).
 hero:
   title: The Intuitive Vue UI Library
-  description: A comprehensive Vue UI component library (Nuxt optional) with 125+ accessible, Tailwind CSS components for building modern web applications. Works with Nuxt and plain Vue apps (Vite, Inertia, SSR).
+  description: A comprehensive Vue UI component library (Nuxt optional) with 125+ accessible, UnoCSS components for building modern web applications. Works with Nuxt and plain Vue apps (Vite, Inertia, SSR).
   links:
     - label: Get started
       to: /docs/getting-started/installation/nuxt
@@ -17,17 +17,17 @@ hero:
       trailingIcon: i-lucide-arrow-right
   features:
     - icon: i-logos-tailwindcss-icon
-      title: Styled with Tailwind CSS
+      title: Styled with UnoCSS
       description: Beautifully styled by default, overwrite any style you want.
     - icon: i-custom-reka-ui
-      title: Accessible with Reka UI
+      title: Accessible with Akar
       description: Robust accessibility out of the box.
     - icon: i-logos-typescript-icon
       title: Type-safe with TypeScript
       description: Auto-complete and type safety for all components.
 features:
   - title: Build for the modern web
-    description: A complete design system powered by Tailwind CSS and Reka UI for top performance and accessibility.
+    description: A complete design system powered by UnoCSS and Akar for top performance and accessibility.
     icon: i-lucide-rocket
     to: /docs/getting-started
   - title: Large icon sets
@@ -52,7 +52,7 @@ features:
     to: /docs/getting-started/integrations/content
 design_system:
   title: Flexible design system
-  description: Build faster with Nuxt UI's CSS-first design system powered by Tailwind CSS and its semantic color system combined with a runtime configuration.
+  description: Build faster with Pohon's CSS-first design system powered by UnoCSS and its semantic color system combined with a runtime configuration.
   links:
     - label: Customize design system
       to: /docs/getting-started/theme/design-system
@@ -74,7 +74,7 @@ design_system:
 
     ```css [app/assets/css/main.css]
     @import "tailwindcss";
-    @import "@nuxt/ui";
+    @import "pohon-ui";
 
     @theme static {
       --font-sans: 'Public Sans', system-ui, sans-serif;
@@ -139,7 +139,7 @@ css_variables:
 
     ```css [app/assets/css/main.css]
     @import "tailwindcss";
-    @import "@nuxt/ui";
+    @import "pohon-ui";
 
     :root {
       --ui-primary: black;
@@ -171,7 +171,7 @@ css_variables:
     ::
 components:
   title: Tailor components to your needs
-  description: Use the Tailwind Variants API with slots, variants, and compound variants for powerful component theming with intelligent class merging.
+  description: Use the UnoCSS Variants API with slots, variants, and compound variants for powerful component theming with intelligent class merging.
   links:
     - label: Customize components
       to: /docs/getting-started/theme/components
@@ -179,7 +179,7 @@ components:
       color: neutral
       trailingIcon: i-lucide-arrow-right
   features:
-    - title: Tailwind Variants API
+    - title: UnoCSS Variants API
       description: Components use slots for flexible styling, variants for prop-based styles, and compound variants for complex conditional styling with intelligent class merging.
       icon: i-lucide-layout-grid
     - title: Global theme configuration
@@ -215,7 +215,7 @@ components:
 
     ```vue [Button.vue]
     <template>
-      <UButton
+      <PButton
         label="Button"
         size="md"
         variant="outline"
@@ -246,15 +246,15 @@ templates:
       description: Templates available for both Nuxt and Vue applications with framework-specific optimizations, choose the one that best fits your project needs.
       icon: i-simple-icons-vuedotjs
     - title: Fully customizable
-      description: Built on top of Nuxt UI components with complete source code access, easily customize colors, fonts, layouts, and components to match your brand identity.
+      description: Built on top of Pohon components with complete source code access, easily customize colors, fonts, layouts, and components to match your brand identity.
       icon: i-lucide-palette
 community:
-  title: Join the Nuxt UI community
-  description: Join our thriving open-source community to contribute code, report issues, suggest features, or help with documentation. Every contribution makes Nuxt UI better for everyone in the ecosystem.
+  title: Join the Pohon community
+  description: Join our thriving open-source community to contribute code, report issues, suggest features, or help with documentation. Every contribution makes Pohon better for everyone in the ecosystem.
   links:
     - label: Star on GitHub
       color: neutral
-      to: https://github.com/nuxt/ui
+      to: https://github.com/vinicunca/pohon
       target: _blank
       icon: i-lucide-star
     - label: Meet the team

@@ -1,6 +1,6 @@
 ---
 title: DashboardSidebarToggle
-description: 'A Button to toggle the sidebar on mobile.'
+description: "A Button to toggle the sidebar on mobile."
 category: dashboard
 links:
   - label: Button
@@ -8,7 +8,7 @@ links:
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/DashboardSidebarToggle.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/DashboardSidebarToggle.vue
 ---
 
 ## Usage
@@ -19,25 +19,33 @@ It is automatically displayed on mobile to toggle the sidebar, **you don't have 
 
 ::component-code
 ---
+
 hide:
-  - class
-props:
+
+- class
+  props:
   class: 'lg:flex'
+
 ---
+
 ::
 
 It extends the [Button](/docs/components/button) component, so you can pass any property such as `color`, `variant`, `size`, etc.
 
 ::component-code
 ---
+
 hide:
-  - class
-ignore:
-  - variant
-props:
+
+- class
+  ignore:
+- variant
+  props:
   variant: 'subtle'
   class: 'lg:flex'
+
 ---
+
 ::
 
 ::note
@@ -69,8 +77,8 @@ Even though this component is automatically displayed on mobile, you can use the
 ```vue [pages/index.vue]{11-13}
 <script setup lang="ts">
 definePageMeta({
-  layout: 'dashboard'
-})
+  layout: "dashboard",
+});
 </script>
 
 <template>

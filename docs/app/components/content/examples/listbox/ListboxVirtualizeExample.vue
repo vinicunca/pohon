@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ListboxItem } from '@nuxt/ui'
+import type { ListboxItem } from 'pohon-ui'
 
 const items: ListboxItem[] = Array.from({ length: 1000 }, (_, i) => ({
   label: `Item ${i + 1}`,

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorEmojiMenuItem } from '@nuxt/ui'
+import type { EditorEmojiMenuItem } from 'pohon-ui'
 import { Emoji, gitHubEmojis } from '@tiptap/extension-emoji'
 
 const value = ref(`# Emoji Menu

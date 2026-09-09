@@ -51,7 +51,7 @@ function findSlotElement(slotName: string): { element: Element, inPortal: boolea
     return { element: containerSlot, inPortal: false }
   }
 
-  // Then check in Reka UI portals (excluding our own popover's portal)
+  // Then check in Akar portals (excluding our own popover's portal)
   for (const child of document.body.children) {
     const hasRekaAttr = Array.from(child.attributes).some(attr => attr.name.startsWith('data-reka-'))
     if (hasRekaAttr) {
@@ -155,7 +155,7 @@ watch(open, (isOpen) => {
       :dismissible="false"
     >
       <UTooltip text="Inspect theme slots" :disabled="open" :content="{ side: 'right' }">
-        <UButton
+        <PButton
           color="neutral"
           variant="outline"
           size="sm"
@@ -165,7 +165,7 @@ watch(open, (isOpen) => {
           tabindex="-1"
         >
           <ComponentThemeVisualizerIcon :open="open" />
-        </UButton>
+        </PButton>
       </UTooltip>
 
       <template #content>

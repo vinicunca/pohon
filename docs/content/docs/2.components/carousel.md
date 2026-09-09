@@ -12,7 +12,7 @@ links:
     icon: i-custom-embla-carousel
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Carousel.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Carousel.vue
 ---
 
 ## Usage
@@ -21,11 +21,13 @@ Use the Carousel component to display a list of items in a carousel.
 
 ::component-example
 ---
+
 collapse: true
 overflowHidden: true
 name: 'carousel-example'
 class: '!p-0'
 ---
+
 ::
 
 ::note
@@ -38,9 +40,11 @@ Use the `items` prop as an array and render each item using the default slot:
 
 ::component-example
 ---
+
 name: 'carousel-items-example'
 class: 'p-8'
 ---
+
 ::
 
 You can also pass an array of objects with the following properties:
@@ -52,9 +56,11 @@ You can control how many items are visible by using the [`basis`](https://tailwi
 
 ::component-example
 ---
+
 name: 'carousel-items-multiple-example'
 class: 'p-8 px-16'
 ---
+
 ::
 
 ### Orientation
@@ -67,9 +73,11 @@ Use your mouse to drag the carousel vertically on desktop.
 
 ::component-example
 ---
+
 name: 'carousel-orientation-example'
 class: 'p-8'
 ---
+
 ::
 
 ::caution
@@ -82,9 +90,11 @@ Use the `arrows` prop to display prev and next buttons.
 
 ::component-example
 ---
+
 name: 'carousel-arrows-example'
 class: 'p-8'
 ---
+
 ::
 
 ### Prev / Next
@@ -93,9 +103,11 @@ Use the `prev` and `next` props to customize the prev and next buttons with any 
 
 ::component-example
 ---
+
 name: 'carousel-prev-next-example'
 class: 'p-8'
 ---
+
 ::
 
 ### Prev / Next Icons
@@ -104,16 +116,20 @@ Use the `prev-icon` and `next-icon` props to customize the buttons [Icon](/docs/
 
 ::component-example
 ---
+
 name: 'carousel-prev-next-icon-example'
 class: 'p-8'
 options:
-  - name: 'prevIcon'
-    label: 'prevIcon'
-    default: 'i-lucide-chevron-left'
-  - name: 'nextIcon'
-    label: 'nextIcon'
-    default: 'i-lucide-chevron-right'
+
+- name: 'prevIcon'
+  label: 'prevIcon'
+  default: 'i-lucide-chevron-left'
+- name: 'nextIcon'
+  label: 'nextIcon'
+  default: 'i-lucide-chevron-right'
+
 ---
+
 ::
 
 ::framework-only
@@ -134,18 +150,22 @@ Use the `dots` prop to display a list of dots to scroll to a specific slide.
 
 ::component-example
 ---
+
 name: 'carousel-dots-example'
 class: 'p-8 pb-12'
 ---
+
 ::
 
 The number of dots is based on the number of slides displayed in the view:
 
 ::component-example
 ---
+
 name: 'carousel-dots-multiple-example'
 class: 'p-8 px-16 pb-12'
 ---
+
 ::
 
 ## Plugins
@@ -160,9 +180,11 @@ Use the `autoplay` prop as a boolean or an object to configure the [Autoplay plu
 
 ::component-example
 ---
+
 name: 'carousel-autoplay-example'
 class: 'p-8 px-16 pb-12'
 ---
+
 ::
 
 ::note
@@ -177,9 +199,11 @@ Use the `auto-scroll` prop as a boolean or an object to configure the [Auto Scro
 
 ::component-example
 ---
+
 name: 'carousel-auto-scroll-example'
 class: 'p-8 px-16 pb-12'
 ---
+
 ::
 
 ::note
@@ -194,9 +218,11 @@ Use the `auto-height` prop as a boolean or an object to configure the [Auto Heig
 
 ::component-example
 ---
+
 name: 'carousel-auto-height-example'
 class: 'p-8 pt-16'
 ---
+
 ::
 
 ::note
@@ -211,9 +237,11 @@ Use the `class-names` prop as a boolean or an object to configure the [Class Nam
 
 ::component-example
 ---
+
 name: 'carousel-class-names-example'
 class: 'p-8'
 ---
+
 ::
 
 ::note
@@ -228,9 +256,11 @@ Use the `fade` prop as a boolean or an object to configure the [Fade plugin](htt
 
 ::component-example
 ---
+
 name: 'carousel-fade-example'
 class: 'p-8 pb-12'
 ---
+
 ::
 
 ### Wheel Gestures
@@ -245,9 +275,11 @@ Use your mouse wheel to scroll the carousel.
 
 ::component-example
 ---
+
 name: 'carousel-wheel-gestures-example'
 class: 'p-8 px-16'
 ---
+
 ::
 
 ## Examples
@@ -258,9 +290,11 @@ You can use the [`scrollTo`](https://www.embla-carousel.com/docs/v8/api/methods#
 
 ::component-example
 ---
+
 name: 'carousel-thumbnails-example'
 class: 'p-8 px-16'
 ---
+
 ::
 
 ## API
@@ -283,7 +317,7 @@ You can access the typed component instance using [`useTemplateRef`](https://vue
 
 ```vue
 <script setup lang="ts">
-const carousel = useTemplateRef('carousel')
+const carousel = useTemplateRef("carousel");
 </script>
 
 <template>
@@ -293,9 +327,9 @@ const carousel = useTemplateRef('carousel')
 
 This will give you access to the following:
 
-| Name | Type |
-| ---- | ---- |
-| `emblaRef`{lang="ts-type"} | `Ref<HTMLElement \| null>`{lang="ts-type"} |
+| Name                       | Type                                                                                                              |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `emblaRef`{lang="ts-type"} | `Ref<HTMLElement \| null>`{lang="ts-type"}                                                                        |
 | `emblaApi`{lang="ts-type"} | [`Ref<EmblaCarouselType \| null>`{lang="ts-type"}](https://www.embla-carousel.com/docs/v8/api/methods#typescript) |
 
 ## Theme

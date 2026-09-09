@@ -25,7 +25,7 @@ const reverse = ref(false);
     headline="Pohon UI v4 is here!"
     :orientation="orientation"
     :reverse="reverse"
-    :links="[{ label: 'Get started', icon: 'i-lucide-square-play', to: 'https://ui.nuxt.com/docs/getting-started' }, { label: 'Explore components', trailingIcon: 'i-lucide-arrow-right', to: 'https://ui.nuxt.com/docs/components', color: 'neutral', variant: 'subtle' }]"
+    :links="[{ label: 'Get started', icon: 'i-lucide-square-play', to: 'https://pohon.vinicunca.dev/docs/getting-started' }, { label: 'Explore components', trailingIcon: 'i-lucide-arrow-right', to: 'https://pohon.vinicunca.dev/docs/components', color: 'neutral', variant: 'subtle' }]"
     class="min-h-0"
   >
     <Placeholder

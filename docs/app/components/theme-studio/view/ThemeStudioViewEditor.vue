@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { DropdownMenuItem, EditorEmojiMenuItem, EditorMentionMenuItem, EditorSuggestionMenuItem, EditorToolbarItem } from '@nuxt/ui'
+import type { DropdownMenuItem, EditorEmojiMenuItem, EditorMentionMenuItem, EditorSuggestionMenuItem, EditorToolbarItem } from 'pohon-ui'
 import type { Editor, JSONContent } from '@tiptap/vue-3'
 import { Emoji, gitHubEmojis } from '@tiptap/extension-emoji'
 import { upperFirst } from 'scule'
-import { mapEditorItems } from '@nuxt/ui/utils/editor'
+import { mapEditorItems } from 'pohon-ui/utils/editor'
 import EditorLinkPopover from '../../content/examples/editor/EditorLinkPopover.vue'
 
 const appConfig = useAppConfig()
 const studioIcons = useStudioIcons()
 
 /**
- * Self-contained replica of the official Nuxt UI Editor template
+ * Self-contained replica of the official Pohon Editor template
  * (github.com/nuxt-ui-templates/editor): header chrome with a fixed
  * toolbar, a bubble toolbar on selection, slash commands and a drag
  * handle over a markdown document. Collaboration, AI completions,
@@ -284,14 +284,14 @@ function dragHandleItems(editor: Editor): DropdownMenuItem[][] {
             <USeparator orientation="vertical" class="h-7 shrink-0" />
 
             <!-- Static: the studio toolbar owns color mode. -->
-            <UButton color="neutral" variant="ghost" size="sm" aria-label="Color mode">
+            <PButton color="neutral" variant="ghost" size="sm" aria-label="Color mode">
               <template #leading="{ ui }">
                 <UIcon :name="appConfig.ui.icons.dark" :class="ui.leadingIcon({ class: 'hidden dark:inline-block' })" />
                 <UIcon :name="appConfig.ui.icons.light" :class="ui.leadingIcon({ class: 'dark:hidden' })" />
               </template>
-            </UButton>
+            </PButton>
 
-            <UButton :icon="studioIcons.github" color="neutral" variant="ghost" size="sm" aria-label="GitHub" />
+            <PButton :icon="studioIcons.github" color="neutral" variant="ghost" size="sm" aria-label="GitHub" />
           </template>
         </UHeader>
 
@@ -318,7 +318,7 @@ function dragHandleItems(editor: Editor): DropdownMenuItem[][] {
         <UEditorEmojiMenu :editor="editor" :items="emojiItems" :append-to="appendToBody" />
 
         <UEditorDragHandle v-slot="{ ui, onClick }" :editor="editor" @node-change="selectedNode = $event">
-          <UButton
+          <PButton
             :icon="appConfig.ui.icons.plus"
             color="neutral"
             variant="ghost"
@@ -340,7 +340,7 @@ function dragHandleItems(editor: Editor): DropdownMenuItem[][] {
             :ui="{ content: 'w-48', label: 'text-xs' }"
             @update:open="editor.chain().setMeta('lockDragHandle', $event).run()"
           >
-            <UButton
+            <PButton
               color="neutral"
               variant="ghost"
               active-variant="soft"

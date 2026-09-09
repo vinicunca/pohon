@@ -12,17 +12,17 @@ const items = [
   },
   {
     id: '/docs/getting-started#reka-ui',
-    label: 'Reka UI',
+    label: 'Akar',
     level: 3
   },
   {
     id: '/docs/getting-started#tailwind-css',
-    label: 'Tailwind CSS',
+    label: 'UnoCSS',
     level: 3
   },
   {
     id: '/docs/getting-started#tailwind-variants',
-    label: 'Tailwind Variants',
+    label: 'UnoCSS Variants',
     level: 3
   },
   {

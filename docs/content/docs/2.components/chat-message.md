@@ -1,11 +1,11 @@
 ---
 title: ChatMessage
-description: 'Display a chat message with icon, avatar, and actions.'
+description: "Display a chat message with icon, avatar, and actions."
 category: chat
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/ChatMessage.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/ChatMessage.vue
 ---
 
 ## Usage
@@ -16,18 +16,22 @@ The ChatMessage component renders an `<article>` element for a `user` or `assist
 
 ::u-chat-message
 ---
+
 parts:
-  - type: 'text'
-    id: '1'
-    text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
-side: 'right'
-variant: 'soft'
-role: 'user'
-id: '1'
-avatar:
+
+- type: 'text'
+  id: '1'
+  text: 'Hello! Tell me more about building AI chatbots with Pohon.'
+  side: 'right'
+  variant: 'soft'
+  role: 'user'
+  id: '1'
+  avatar:
   src: 'https://github.com/benjamincanac.png'
   loading: lazy
+
 ---
+
 ::
 
 ::
@@ -42,19 +46,23 @@ Use the `parts` prop to display the message content using the AI SDK format.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - parts
-  - role
-  - id
-props:
+
+- parts
+- role
+- id
+  props:
   parts:
-    - type: 'text'
-      id: '1'
-      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
-  role: 'user'
-  id: '1'
+  - type: 'text'
+    id: '1'
+    text: 'Hello! Tell me more about building AI chatbots with Pohon.'
+    role: 'user'
+    id: '1'
+
 ---
+
 ::
 
 ::note
@@ -67,20 +75,24 @@ Use the `side` prop to display the message on the left or right.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - parts
-  - role
-  - id
-props:
+
+- parts
+- role
+- id
+  props:
   side: 'right'
   parts:
-    - type: 'text'
-      id: '1'
-      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
-  role: 'user'
-  id: '1'
+  - type: 'text'
+    id: '1'
+    text: 'Hello! Tell me more about building AI chatbots with Pohon.'
+    role: 'user'
+    id: '1'
+
 ---
+
 ::
 
 ::note
@@ -93,20 +105,24 @@ Use the `variant` prop to change style of the message.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - parts
-  - role
-  - id
-props:
+
+- parts
+- role
+- id
+  props:
   variant: 'soft'
   parts:
-    - type: 'text'
-      id: '1'
-      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
-  role: 'user'
-  id: '1'
+  - type: 'text'
+    id: '1'
+    text: 'Hello! Tell me more about building AI chatbots with Pohon.'
+    role: 'user'
+    id: '1'
+
 ---
+
 ::
 
 ::note
@@ -119,21 +135,25 @@ Use the `color` prop to change the color of the message.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - parts
-  - role
-  - id
-props:
+
+- parts
+- role
+- id
+  props:
   variant: 'soft'
   color: 'primary'
   parts:
-    - type: 'text'
-      id: '1'
-      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
-  role: 'user'
-  id: '1'
+  - type: 'text'
+    id: '1'
+    text: 'Hello! Tell me more about building AI chatbots with Pohon.'
+    role: 'user'
+    id: '1'
+
 ---
+
 ::
 
 ### Icon
@@ -142,24 +162,28 @@ Use the `icon` prop to display an [Icon](/docs/components/icon) component next t
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - parts
-  - side
-  - variant
-  - role
-  - id
-props:
+
+- parts
+- side
+- variant
+- role
+- id
+  props:
   icon: i-lucide-user
   variant: 'soft'
   side: 'right'
   parts:
-    - type: 'text'
-      id: '1'
-      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
-  role: 'user'
-  id: '1'
+  - type: 'text'
+    id: '1'
+    text: 'Hello! Tell me more about building AI chatbots with Pohon.'
+    role: 'user'
+    id: '1'
+
 ---
+
 ::
 
 ### Avatar
@@ -168,48 +192,56 @@ Use the `avatar` prop to display an [Avatar](/docs/components/avatar) component 
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - parts
-  - side
-  - variant
-  - role
-  - id
-  - avatar.loading
-props:
+
+- parts
+- side
+- variant
+- role
+- id
+- avatar.loading
+  props:
   avatar:
-    src: 'https://github.com/benjamincanac.png'
-    loading: lazy
+  src: 'https://github.com/benjamincanac.png'
+  loading: lazy
   variant: 'soft'
   side: 'right'
   parts:
-    - type: 'text'
-      id: '1'
-      text: 'Hello! Tell me more about building AI chatbots with Nuxt UI.'
-  role: 'user'
-  id: '1'
+  - type: 'text'
+    id: '1'
+    text: 'Hello! Tell me more about building AI chatbots with Pohon.'
+    role: 'user'
+    id: '1'
+
 ---
+
 ::
 
 You can also use the `avatar.icon` prop to display an icon as the avatar.
 
 ::component-code
 ---
+
 prettier: true
 ignore:
-  - parts
-  - role
-  - id
-props:
+
+- parts
+- role
+- id
+  props:
   avatar:
-    icon: i-lucide-bot
+  icon: i-lucide-bot
   parts:
-    - type: 'text'
-      id: '1'
-      text: 'Nuxt UI offers several features for building AI chatbots including the ChatMessage, ChatMessages, and ChatPrompt components. Best practices include using the Chat class from AI SDK, implementing proper message styling with variants, and utilizing the built-in actions for message interactions. The components are fully customizable with theming support and responsive design.'
-  role: 'assistant'
-  id: '1'
+  - type: 'text'
+    id: '1'
+    text: 'Pohon offers several features for building AI chatbots including the ChatMessage, ChatMessages, and ChatPrompt components. Best practices include using the Chat class from AI SDK, implementing proper message styling with variants, and utilizing the built-in actions for message interactions. The components are fully customizable with theming support and responsive design.'
+    role: 'assistant'
+    id: '1'
+
 ---
+
 ::
 
 ### Actions
@@ -218,27 +250,31 @@ Use the `actions` prop to display actions below the message that will be display
 
 ::component-code
 ---
+
 prettier: true
 external:
-  - actions
-externalTypes:
-  - ButtonProps[]
-ignore:
-  - parts
-  - actions
-  - role
-  - id
-props:
+
+- actions
+  externalTypes:
+- ButtonProps[]
+  ignore:
+- parts
+- actions
+- role
+- id
+  props:
   actions:
-    - label: 'Copy to clipboard'
-      icon: i-lucide-copy
-  parts:
-    - type: 'text'
-      id: '1'
-      text: 'Nuxt UI offers several features for building AI chatbots including the ChatMessage, ChatMessages, and ChatPrompt components. Best practices include using the Chat class from AI SDK, implementing proper message styling with variants, and utilizing the built-in actions for message interactions. The components are fully customizable with theming support and responsive design.'
-  role: 'user'
-  id: '1'
+  - label: 'Copy to clipboard'
+    icon: i-lucide-copy
+    parts:
+  - type: 'text'
+    id: '1'
+    text: 'Pohon offers several features for building AI chatbots including the ChatMessage, ChatMessages, and ChatPrompt components. Best practices include using the Chat class from AI SDK, implementing proper message styling with variants, and utilizing the built-in actions for message interactions. The components are fully customizable with theming support and responsive design.'
+    role: 'user'
+    id: '1'
+
 ---
+
 ::
 
 ## Examples

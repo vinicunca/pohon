@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ContentNavigationItem } from '@nuxt/content'
-import { mapContentNavigation } from '@nuxt/ui/utils/content'
+import { mapContentNavigation } from 'pohon-ui/utils/content'
 
 const route = useRoute()
 

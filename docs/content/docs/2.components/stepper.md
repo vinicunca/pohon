@@ -9,7 +9,7 @@ links:
     to: https://reka-ui.com/docs/components/stepper
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Stepper.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Stepper.vue
 ---
 
 ## Usage
@@ -18,28 +18,32 @@ Use the Stepper component to display a list of items in a stepper.
 
 ::component-code
 ---
+
 collapse: true
 hide:
-  - class
-ignore:
-  - items
-  - class
-external:
-  - items
-externalTypes:
-  - StepperItem[]
-props:
+
+- class
+  ignore:
+- items
+- class
+  external:
+- items
+  externalTypes:
+- StepperItem[]
+  props:
   items:
-    - title: 'Address'
-      description: 'Add your address here'
-      icon: 'i-lucide-house'
-    - title: 'Shipping'
-      description: 'Set your preferred shipping method'
-      icon: 'i-lucide-truck'
-    - title: 'Checkout'
-      description: 'Confirm your order'
-  class: 'w-full'
+  - title: 'Address'
+    description: 'Add your address here'
+    icon: 'i-lucide-house'
+  - title: 'Shipping'
+    description: 'Set your preferred shipping method'
+    icon: 'i-lucide-truck'
+  - title: 'Checkout'
+    description: 'Confirm your order'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Items
@@ -58,25 +62,29 @@ Use the `items` prop as an array of objects with the following properties:
 
 ::component-code
 ---
+
 ignore:
-  - items
-  - class
-external:
-  - items
-externalTypes:
-  - StepperItem[]
-props:
+
+- items
+- class
+  external:
+- items
+  externalTypes:
+- StepperItem[]
+  props:
   items:
-    - title: 'Address'
-      description: 'Add your address here'
-      icon: 'i-lucide-house'
-    - title: 'Shipping'
-      description: 'Set your preferred shipping method'
-      icon: 'i-lucide-truck'
-    - title: 'Checkout'
-      description: 'Confirm your order'
-  class: 'w-full'
+  - title: 'Address'
+    description: 'Add your address here'
+    icon: 'i-lucide-house'
+  - title: 'Shipping'
+    description: 'Set your preferred shipping method'
+    icon: 'i-lucide-truck'
+  - title: 'Checkout'
+    description: 'Confirm your order'
+    class: 'w-full'
+
 ---
+
 ::
 
 ::note
@@ -89,27 +97,31 @@ Use the `color` prop to change the color of the Stepper.
 
 ::component-code
 ---
+
 ignore:
-  - content
-  - items
-  - class
-external:
-  - items
-externalTypes:
-  - StepperItem[]
-props:
+
+- content
+- items
+- class
+  external:
+- items
+  externalTypes:
+- StepperItem[]
+  props:
   color: neutral
   items:
-    - title: 'Address'
-      description: 'Add your address here'
-      icon: 'i-lucide-house'
-    - title: 'Shipping'
-      description: 'Set your preferred shipping method'
-      icon: 'i-lucide-truck'
-    - title: 'Checkout'
-      description: 'Confirm your order'
-  class: 'w-full'
+  - title: 'Address'
+    description: 'Add your address here'
+    icon: 'i-lucide-house'
+  - title: 'Shipping'
+    description: 'Set your preferred shipping method'
+    icon: 'i-lucide-truck'
+  - title: 'Checkout'
+    description: 'Confirm your order'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Size
@@ -118,27 +130,31 @@ Use the `size` prop to change the size of the Stepper.
 
 ::component-code
 ---
+
 ignore:
-  - content
-  - items
-  - class
-external:
-  - items
-externalTypes:
-  - StepperItem[]
-props:
+
+- content
+- items
+- class
+  external:
+- items
+  externalTypes:
+- StepperItem[]
+  props:
   size: xl
   items:
-    - title: 'Address'
-      description: 'Add your address here'
-      icon: 'i-lucide-house'
-    - title: 'Shipping'
-      description: 'Set your preferred shipping method'
-      icon: 'i-lucide-truck'
-    - title: 'Checkout'
-      description: 'Confirm your order'
-  class: 'w-full'
+  - title: 'Address'
+    description: 'Add your address here'
+    icon: 'i-lucide-house'
+  - title: 'Shipping'
+    description: 'Set your preferred shipping method'
+    icon: 'i-lucide-truck'
+  - title: 'Checkout'
+    description: 'Confirm your order'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Orientation
@@ -147,27 +163,31 @@ Use the `orientation` prop to change the orientation of the Stepper. Defaults to
 
 ::component-code
 ---
+
 ignore:
-  - content
-  - items
-  - class
-external:
-  - items
-externalTypes:
-  - StepperItem[]
-props:
+
+- content
+- items
+- class
+  external:
+- items
+  externalTypes:
+- StepperItem[]
+  props:
   orientation: vertical
   items:
-    - title: 'Address'
-      description: 'Add your address here'
-      icon: 'i-lucide-house'
-    - title: 'Shipping'
-      description: 'Set your preferred shipping method'
-      icon: 'i-lucide-truck'
-    - title: 'Checkout'
-      description: 'Confirm your order'
-  class: 'w-full'
+  - title: 'Address'
+    description: 'Add your address here'
+    icon: 'i-lucide-house'
+  - title: 'Shipping'
+    description: 'Set your preferred shipping method'
+    icon: 'i-lucide-truck'
+  - title: 'Checkout'
+    description: 'Confirm your order'
+    class: 'w-full'
+
 ---
+
 ::
 
 ### Disabled
@@ -176,26 +196,30 @@ Use the `disabled` prop to disable navigation through the steps.
 
 ::component-code
 ---
+
 ignore:
-  - content
-  - items
-  - class
-external:
-  - items
-externalTypes:
-  - StepperItem[]
-props:
+
+- content
+- items
+- class
+  external:
+- items
+  externalTypes:
+- StepperItem[]
+  props:
   disabled: true
   items:
-    - title: 'Address'
-      description: 'Add your address here'
-      icon: 'i-lucide-house'
-    - title: 'Shipping'
-      description: 'Set your preferred shipping method'
-      icon: 'i-lucide-truck'
-    - title: 'Checkout'
-      description: 'Confirm your order'
+  - title: 'Address'
+    description: 'Add your address here'
+    icon: 'i-lucide-house'
+  - title: 'Shipping'
+    description: 'Set your preferred shipping method'
+    icon: 'i-lucide-truck'
+  - title: 'Checkout'
+    description: 'Confirm your order'
+
 ---
+
 ::
 
 ::note{to="#with-controls"}
@@ -256,7 +280,7 @@ You can access the typed component instance using [`useTemplateRef`](https://vue
 
 ```vue
 <script setup lang="ts">
-const stepper = useTemplateRef('stepper')
+const stepper = useTemplateRef("stepper");
 </script>
 
 <template>
@@ -266,10 +290,10 @@ const stepper = useTemplateRef('stepper')
 
 This will give you access to the following:
 
-| Name | Type |
-| ---- | ---- |
-| `next`{lang="ts-type"} | `() => void`{lang="ts-type"} |
-| `prev`{lang="ts-type"} | `() => void`{lang="ts-type"} |
+| Name                      | Type                           |
+| ------------------------- | ------------------------------ |
+| `next`{lang="ts-type"}    | `() => void`{lang="ts-type"}   |
+| `prev`{lang="ts-type"}    | `() => void`{lang="ts-type"}   |
 | `hasNext`{lang="ts-type"} | `Ref<boolean>`{lang="ts-type"} |
 | `hasPrev`{lang="ts-type"} | `Ref<boolean>`{lang="ts-type"} |
 

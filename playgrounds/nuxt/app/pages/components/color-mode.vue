@@ -1,5 +1,5 @@
 <template>
-  <Navbar to="https://ui.nuxt.com/docs/getting-started/integrations/color-mode" />
+  <Navbar to="https://pohon.vinicunca.dev/docs/getting-started/integrations/color-mode" />
 
   <div class="flex flex-col gap-4 items-center">
     <div class="flex gap-2 items-center">

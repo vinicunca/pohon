@@ -58,8 +58,8 @@ bun add pohon-ui tailwindcss
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
-  modules: ['pohon-ui'],
-  css: ['~/assets/css/main.css']
+  modules: ["pohon-ui"],
+  css: ["~/assets/css/main.css"],
 });
 ```
 
@@ -77,38 +77,35 @@ Learn more in the [installation guide](https://pohon.vinicunca.dev/docs/getting-
 1. Add the Pohon UI Vite plugin in your `vite.config.ts`:
 
 ```ts [vite.config.ts]
-import vue from '@vitejs/plugin-vue';
-import ui from 'pohon-ui/vite';
-import { defineConfig } from 'vite';
+import vue from "@vitejs/plugin-vue";
+import ui from "pohon-ui/vite";
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    ui()
-  ]
+  plugins: [vue(), ui()],
 });
 ```
 
 2. Use the Pohon UI Vue plugin in your `main.ts`:
 
 ```ts [src/main.ts]
-import ui from 'pohon-ui/vue-plugin';
-import { createApp } from 'vue';
-import { createRouter, createWebHistory } from 'vue-router';
-import App from './App.vue';
-import './assets/css/main.css';
+import ui from "pohon-ui/vue-plugin";
+import { createApp } from "vue";
+import { createRouter, createWebHistory } from "vue-router";
+import App from "./App.vue";
+import "./assets/css/main.css";
 
 const app = createApp(App);
 
 const router = createRouter({
   routes: [],
-  history: createWebHistory()
+  history: createWebHistory(),
 });
 
 app.use(router);
 app.use(ui);
 
-app.mount('#app');
+app.mount("#app");
 ```
 
 3. Import UnoCSS and Pohon UI in your CSS:
@@ -149,14 +146,12 @@ Follow the docs to [set up your local development environment](https://pohon.vin
 Licensed under the [MIT license](https://github.com/vinicunca/pohon/blob/main/LICENSE.md).
 
 <!-- Badges -->
+
 [npm-version-src]: https://img.shields.io/npm/v/pohon-ui.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-version-href]: https://npmjs.com/package/pohon-ui
-
 [npm-downloads-src]: https://img.shields.io/npm/dm/pohon-ui.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-downloads-href]: https://npm.chart.dev/pohon-ui
-
-[license-src]: https://img.shields.io/github/license/nuxt/ui.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-src]: https://img.shields.io/github/license/pohon-ui.svg?style=flat&colorA=18181B&colorB=28CF8D
 [license-href]: https://github.com/vinicunca/pohon/blob/main/LICENSE.md
-
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt
 [nuxt-href]: https://nuxt.com

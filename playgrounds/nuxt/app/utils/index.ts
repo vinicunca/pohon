@@ -1,5 +1,5 @@
-import { splitByCase, upperFirst } from 'scule'
+import { toTitleCase } from '@vinicunca/perkakas';
 
 export function upperName(name: string) {
-  return splitByCase(name).map(p => upperFirst(p)).join('')
+  return toTitleCase(name);
 }

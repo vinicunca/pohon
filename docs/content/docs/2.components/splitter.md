@@ -7,7 +7,7 @@ links:
     to: https://reka-ui.com/docs/components/splitter
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Splitter.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Splitter.vue
 navigation.badge: New
 ---
 
@@ -17,9 +17,11 @@ Use the Splitter component to display a list of resizable panels separated by dr
 
 ::component-example
 ---
+
 collapse: true
 name: 'splitter-example'
 ---
+
 ::
 
 ::note
@@ -50,30 +52,33 @@ When rendering on the server, set the `id` prop and give `defaultSize` to all it
 
 ::component-code
 ---
+
 collapse: true
 class: 'h-96'
 prettier: true
 ignore:
-  - items
-  - id
-external:
-  - items
-externalTypes:
-  - SplitterItem[]
-props:
+
+- items
+- id
+  external:
+- items
+  externalTypes:
+- SplitterItem[]
+  props:
   id: 'splitter-items'
   items:
-    - slot: 'sidebar'
-      minSize: 15
-      maxSize: 40
-      defaultSize: 25
-      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
-    - slot: 'main'
-      defaultSize: 75
-      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
-slots:
-  sidebar: Sidebar
-  main: Main
+  - slot: 'sidebar'
+    minSize: 15
+    maxSize: 40
+    defaultSize: 25
+    class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+  - slot: 'main'
+    defaultSize: 75
+    class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+    slots:
+    sidebar: Sidebar
+    main: Main
+
 ---
 
 #sidebar
@@ -89,27 +94,30 @@ Use the `orientation` prop to change the direction of the splitter. Defaults to 
 
 ::component-code
 ---
+
 collapse: true
 class: 'h-96'
 prettier: true
 ignore:
-  - items
-  - id
-external:
-  - items
-externalTypes:
-  - SplitterItem[]
-props:
+
+- items
+- id
+  external:
+- items
+  externalTypes:
+- SplitterItem[]
+  props:
   id: 'splitter-orientation'
   orientation: 'vertical'
   items:
-    - slot: 'first'
-      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
-    - slot: 'second'
-      class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
-slots:
-  first: First
-  second: Second
+  - slot: 'first'
+    class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+  - slot: 'second'
+    class: 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
+    slots:
+    first: First
+    second: Second
+
 ---
 
 #first
@@ -127,9 +135,11 @@ Set `collapsible: true` on an item to let it collapse past its `minSize`, and us
 
 ::component-example
 ---
+
 collapse: true
 name: 'splitter-collapsible-example'
 ---
+
 ::
 
 ### With nested splitters
@@ -138,9 +148,11 @@ Nest a `Splitter` inside a panel to build two-dimensional, IDE-style layouts.
 
 ::component-example
 ---
+
 collapse: true
 name: 'splitter-nested-example'
 ---
+
 ::
 
 ### With custom handle
@@ -149,9 +161,11 @@ The handle is invisible by default. Use the `ui` prop to restyle it, for example
 
 ::component-example
 ---
+
 collapse: true
 name: 'splitter-custom-handle-example'
 ---
+
 ::
 
 ### With persistence

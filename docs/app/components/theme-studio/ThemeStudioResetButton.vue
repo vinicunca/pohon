@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui'
+import type { ButtonProps } from 'pohon-ui'
 
 withDefaults(defineProps<ButtonProps & {
   vertical?: boolean
@@ -13,7 +13,7 @@ const { canReset, resetLabel, resetToBaseline } = useThemeStudioToolbar()
 
 <template>
   <UTooltip :text="resetLabel" :disabled="vertical">
-    <UButton
+    <PButton
       :icon="studioIcons.reset"
       :label="vertical ? resetLabel : undefined"
       color="neutral"

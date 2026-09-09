@@ -1,10 +1,10 @@
 ---
-description: 'A grid layout for your pages with left and right columns.'
+description: "A grid layout for your pages with left and right columns."
 category: page
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/nuxt/ui/blob/v4/src/runtime/components/Page.vue
+    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Page.vue
 ---
 
 ## Usage
@@ -37,9 +37,9 @@ Use the Page component in a layout with the `left` slot to display a navigation:
 
 ```vue [layouts/docs.vue] {9-13}
 <script setup lang="ts">
-import type { ContentNavigationItem } from '@nuxt/content'
+import type { ContentNavigationItem } from "@nuxt/content";
 
-const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
+const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
 </script>
 
 <template>
@@ -63,21 +63,21 @@ In this example, we use the `ContentNavigation` component to display the navigat
 
 Use the Page component in a page with the `right` slot to display a table of contents:
 
-```vue [pages/\[...slug\\].vue]{29-31}
+```vue [pages/[...slug\].vue]{29-31}
 <script setup lang="ts">
-const route = useRoute()
+const route = useRoute();
 
 definePageMeta({
-  layout: 'docs'
-})
+  layout: "docs",
+});
 
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('docs').path(route.path).first()
-})
+  return queryCollection("docs").path(route.path).first();
+});
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
-  return queryCollectionItemSurroundings('content', route.path)
-})
+  return queryCollectionItemSurroundings("content", route.path);
+});
 </script>
 
 <template>

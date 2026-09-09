@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TreeItem } from '@nuxt/ui'
+import type { TreeItem } from 'pohon-ui'
 
 const items: TreeItem[] = Array(1000).fill(0).map((_, i) => ({
   label: `Item ${i + 1}`,
