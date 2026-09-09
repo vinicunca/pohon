@@ -1,5 +1,29 @@
 # Changelog
 
+## [2.0.0-rc7.8](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.7...v2.0.0-rc7.8) (2026-09-09)
+
+### Features
+
+* **CheckboxGroup/RadioGroup:** support icon in items ([c348bae](https://github.com/vinicunca/pohon/commit/c348bae2632c1365b1503bce907b3fb12e232327))
+* **ProgressGroup:** new component ([7f91721](https://github.com/vinicunca/pohon/commit/7f9172184925a585814ec50c2b5a50720b693456))
+* **Splitter:** new component ([6a46779](https://github.com/vinicunca/pohon/commit/6a4677910bc99db3004d2f90e155de3d9f61ce54))
+
+### Bug Fixes
+
+* **ChatMessages:** add missing color to user and assistant props ([755fc76](https://github.com/vinicunca/pohon/commit/755fc760f560c24b0371787beb7af188adf7475b))
+* **Checkbox/RadioGroup:** add flex-wrap on list and card variants ([e1a999a](https://github.com/vinicunca/pohon/commit/e1a999a3986d1b53461b0d5271300d9c9257ac1f))
+* **components:** resolve theme props consistently in form controls ([76e7ce7](https://github.com/vinicunca/pohon/commit/76e7ce7eb505e06bf5f09e1161793963802afbe4))
+* **Form:** omit method attribute on nested forms ([36a70d2](https://github.com/vinicunca/pohon/commit/36a70d249bfe35976084f328e4d147920065f349))
+* **Icon:** render bundled icons during SSR in Vue ([9c6f29b](https://github.com/vinicunca/pohon/commit/9c6f29bcf1847b5d312df7e857669274985c626d))
+* **InputNumber:** work uncontrolled with only a default value ([02eeed3](https://github.com/vinicunca/pohon/commit/02eeed3ce0913d5709264957c49ab3f64730ee9e))
+* **Link:** restore prefetching with Nuxt 4.5 custom slot ([4fe91cb](https://github.com/vinicunca/pohon/commit/4fe91cb6fff601a0277a7bf1b1a7b4f9902a04d0))
+* **NavigationMenu:** avoid duplicate accordion trigger on items without to ([066bceb](https://github.com/vinicunca/pohon/commit/066bcebf7312ef862d5fabe83fdd503aa561b907))
+* **ProseCodeTree:** invoke default slot from render ([c04b527](https://github.com/vinicunca/pohon/commit/c04b52719eaa762f51d23d6ad380b0a5993acda9))
+* **SelectMenu:** prevent search input focus on open with autofocus: false ([fc4326f](https://github.com/vinicunca/pohon/commit/fc4326f0a220de8fff7274e0bd60f91193f3117f))
+* **Slider:** bind form aria attributes on thumbs instead of root ([2328e04](https://github.com/vinicunca/pohon/commit/2328e040a68538d0579c28542ed3432aaa55dd08))
+* **Slider:** forward aria attributes to the thumb ([2a20064](https://github.com/vinicunca/pohon/commit/2a20064b603ead414f6463b2f1100039c9a00308))
+* test snapshot ([6801a25](https://github.com/vinicunca/pohon/commit/6801a25c7ecd4b151f617b1e4d9b8c43f44fca43))
+
 ## [2.0.0-rc7.7](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.6...v2.0.0-rc7.7) (2026-08-13)
 
 ### Features
