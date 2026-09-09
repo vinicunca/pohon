@@ -9,7 +9,7 @@ keywords:
 links:
   - label: Dialog
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/dialog
+    to: https://akar.vinicunca.dev/docs/components/dialog
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Modal.vue
@@ -361,7 +361,7 @@ body: |
 ::
 
 ::caution
-There's a [known issue](https://reka-ui.com/docs/components/dialog#scrollable-overlay) where clicking on the scrollbar may unintentionally close the dialog on some operating systems.
+There's a [known issue](https://akar.vinicunca.dev/docs/components/dialog#scrollable-overlay) where clicking on the scrollbar may unintentionally close the dialog on some operating systems.
 ::
 
 ### Fullscreen

@@ -8,7 +8,7 @@ keywords:
 links:
   - label: RadioGroup
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/radio-group
+    to: https://akar.vinicunca.dev/docs/components/radio-group
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/RadioGroup.vue

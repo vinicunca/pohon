@@ -9,7 +9,7 @@ keywords:
 links:
   - label: Accordion
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/accordion
+    to: https://akar.vinicunca.dev/docs/components/accordion
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Accordion.vue

@@ -10,7 +10,7 @@ Read the blog post announcement: https://nuxt.com/blog/nuxt-ui-v3
 
 ### 🧩 Akar: A New Foundation
 
-We've transitioned from [Headless UI](https://headlessui.com/) to [Akar](https://reka-ui.com/) as our core component foundation, bringing:
+We've transitioned from [Headless UI](https://headlessui.com/) to [Akar](https://akar.vinicunca.dev/) as our core component foundation, bringing:
 
 - **Expanded Component Library**: Access to 55+ primitives, significantly expanding our component offerings
 - **Future-Proof Development**: Benefit from Akar's growing popularity and continuous improvements
@@ -18,7 +18,7 @@ We've transitioned from [Headless UI](https://headlessui.com/) to [Akar](https:/
 
 ### 🚀 UnoCSS Integration
 
-Pohon now leverages the latest [UnoCSS](https://tailwindcss.com), delivering:
+Pohon now leverages the latest [UnoCSS](https://unocss.dev), delivering:
 
 - **Exceptional Performance**: Full builds up to 5× faster, with incremental builds over 100× faster
 - **Streamlined Toolchain**: Built-in import handling, vendor prefixing, and syntax transforms with zero additional tooling

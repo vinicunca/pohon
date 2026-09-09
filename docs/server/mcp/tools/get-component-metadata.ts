@@ -1,5 +1,5 @@
 import { queryCollection } from '@nuxt/content/server';
-import { kebabCase } from 'scule';
+import { toKebabCase } from '@vinicunca/perkakas';
 import { z } from 'zod';
 
 export default defineMcpTool({
@@ -27,7 +27,7 @@ export default defineMcpTool({
     const normalizedName = normalizeComponentName(componentName);
 
     // Convert to kebab-case for path lookup
-    const kebabName = kebabCase(normalizedName);
+    const kebabName = toKebabCase(normalizedName);
 
     // Get basic component info without documentation content
     const page = await queryCollection(event, 'docs')

@@ -1,5 +1,5 @@
 import { queryCollection } from '@nuxt/content/server';
-import { kebabCase } from 'scule';
+import { toKebabCase } from '@vinicunca/perkakas';
 import { z } from 'zod';
 import { normalizeComponentName } from '~~/server/utils/normalizeComponentName';
 
@@ -16,7 +16,7 @@ export default defineMcpPrompt({
     const normalizedName = normalizeComponentName(componentName);
 
     // Convert to kebab-case for path lookup
-    const kebabName = kebabCase(normalizedName);
+    const kebabName = toKebabCase(normalizedName);
 
     // Get component documentation
     const page = await queryCollection(event, 'docs')

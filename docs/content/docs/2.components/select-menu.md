@@ -9,7 +9,7 @@ keywords:
 links:
   - label: Combobox
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/combobox
+    to: https://akar.vinicunca.dev/docs/components/combobox
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/SelectMenu.vue
@@ -47,7 +47,7 @@ hide:
 ::
 
 ::tip
-Use this over a [`Select`](/docs/components/select) to take advantage of Akar's [`Combobox`](https://reka-ui.com/docs/components/combobox) component that offers search capabilities and multiple selection.
+Use this over a [`Select`](/docs/components/select) to take advantage of Akar's [`Combobox`](https://akar.vinicunca.dev/docs/components/combobox) component that offers search capabilities and multiple selection.
 ::
 
 ::note

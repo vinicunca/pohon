@@ -8,7 +8,7 @@ keywords:
 links:
   - label: Progress
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/progress
+    to: https://akar.vinicunca.dev/docs/components/progress
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Progress.vue

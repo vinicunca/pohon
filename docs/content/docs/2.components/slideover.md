@@ -8,7 +8,7 @@ keywords:
 links:
   - label: Dialog
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/dialog
+    to: https://akar.vinicunca.dev/docs/components/dialog
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Slideover.vue

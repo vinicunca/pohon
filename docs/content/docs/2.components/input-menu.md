@@ -9,10 +9,10 @@ keywords:
 links:
   - label: Combobox
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/combobox
+    to: https://akar.vinicunca.dev/docs/components/combobox
   - label: Autocomplete
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/autocomplete
+    to: https://akar.vinicunca.dev/docs/components/autocomplete
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/InputMenu.vue
@@ -46,7 +46,7 @@ ignore:
 ::
 
 ::tip
-Use this over an [`Input`](/docs/components/input) to take advantage of Akar's [`Combobox`](https://reka-ui.com/docs/components/combobox) component that offers autocomplete capabilities.
+Use this over an [`Input`](/docs/components/input) to take advantage of Akar's [`Combobox`](https://akar.vinicunca.dev/docs/components/combobox) component that offers autocomplete capabilities.
 ::
 
 ::note

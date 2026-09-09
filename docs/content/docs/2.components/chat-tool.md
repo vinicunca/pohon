@@ -5,7 +5,7 @@ category: chat
 links:
   - label: Collapsible
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/collapsible
+    to: https://akar.vinicunca.dev/docs/components/collapsible
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/ChatTool.vue

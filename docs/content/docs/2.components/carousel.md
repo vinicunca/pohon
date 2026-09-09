@@ -52,7 +52,7 @@ You can also pass an array of objects with the following properties:
 - `class?: any`{lang="ts-type"}
 - `ui?: { item?: ClassNameValue }`{lang="ts-type"}
 
-You can control how many items are visible by using the [`basis`](https://tailwindcss.com/docs/flex-basis) / [`width`](https://tailwindcss.com/docs/width) utility classes on the `item`:
+You can control how many items are visible by using the [`basis`](https://unocss.dev/docs/flex-basis) / [`width`](https://unocss.dev/docs/width) utility classes on the `item`:
 
 ::component-example
 ---

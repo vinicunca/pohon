@@ -8,7 +8,7 @@ keywords:
 links:
   - label: Listbox
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/listbox
+    to: https://akar.vinicunca.dev/docs/components/listbox
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Listbox.vue

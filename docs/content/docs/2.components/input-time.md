@@ -9,10 +9,10 @@ keywords:
 links:
   - label: TimeField
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/time-field
+    to: https://akar.vinicunca.dev/docs/components/time-field
   - label: TimeRangeField
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/time-range-field
+    to: https://akar.vinicunca.dev/docs/components/time-range-field
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/InputTime.vue

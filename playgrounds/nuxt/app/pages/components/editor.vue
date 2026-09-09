@@ -13,7 +13,7 @@ const editorRef = useTemplateRef('editorRef');
 const content = ref(`# Pohon UI: A Modern UI Library
 
 Welcome to **Pohon UI**, a comprehensive UI library for *Nuxt 3* applications.
-Built with [UnoCSS](https://tailwindcss.com) and [Akar](https://akar.vinicunca.dev), it provides a complete set of components for building beautiful interfaces.
+Built with [UnoCSS](https://unocss.dev) and [Akar](https://akar.vinicunca.dev), it provides a complete set of components for building beautiful interfaces.
 
 ![Image](https://pohon.vinicunca.dev/placeholder.jpeg)
 

@@ -8,7 +8,7 @@ keywords:
 links:
   - label: Tree
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/tree
+    to: https://akar.vinicunca.dev/docs/components/tree
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Tree.vue

@@ -54,7 +54,7 @@ export interface ApplyThemeSettings {
   warning?: string;
   error?: string;
   radius?: number;
-  /** Tailwind's three stacks. Headings follow serif, code follows mono. */
+  /** Uno's three stacks. Headings follow serif, code follows mono. */
   fontSans?: string;
   fontSerif?: string;
   fontMono?: string;
@@ -82,9 +82,9 @@ const applyTheme = tool({
       warning: { type: 'string', description: 'Warning color name' },
       error: { type: 'string', description: 'Error color name' },
       radius: { type: 'number', description: 'Border radius in rem: 0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75' },
-      fontSans: { type: 'string', description: 'Body font family (tailwind\'s --font-sans), the one every element inherits. Any Google Font works, and it does not have to be a sans (e.g. Public Sans, DM Sans, Geist, Inter, Poppins, Outfit, Playfair Display).' },
-      fontSerif: { type: 'string', description: 'Heading font family (tailwind\'s --font-serif; h1–h6 follow it). Any Google Font. Omit to keep headings on the body font.' },
-      fontMono: { type: 'string', description: 'Code font family (tailwind\'s --font-mono; code, kbd, pre and samp follow it). Any Google Font.' },
+      fontSans: { type: 'string', description: 'Body font family (uno\'s --font-sans), the one every element inherits. Any Google Font works, and it does not have to be a sans (e.g. Public Sans, DM Sans, Geist, Inter, Poppins, Outfit, Playfair Display).' },
+      fontSerif: { type: 'string', description: 'Heading font family (uno\'s --font-serif; h1–h6 follow it). Any Google Font. Omit to keep headings on the body font.' },
+      fontMono: { type: 'string', description: 'Code font family (uno\'s --font-mono; code, kbd, pre and samp follow it). Any Google Font.' },
       blackAsPrimary: { type: 'boolean', description: 'Use solid black/white as primary color for a monochrome look' },
       icons: { type: 'string', description: 'Icon set for live preview: lucide (default), bootstrap, heroicons, iconoir, material, phosphor, pixelarticons, remix or tabler. For exported code, any Iconify icon set can be suggested.' },
       customColors: {
@@ -158,7 +158,7 @@ const getThemeGuide = tool({
     guide: `When users ask to change the theme, customize colors, or modify the appearance, use the \`applyTheme\` tool to apply changes live on this docs site. Only include properties that changed.
 
 When users ask for a complete theme, to change "all colors", or describe a broad aesthetic (e.g. "sakura-inspired theme"), you MUST set ALL of: primary, neutral, secondary, success, info, warning, error, radius, and fontSans. You can change the icon set (lucide, bootstrap, heroicons, iconoir, material, phosphor, pixelarticons, remix or tabler) if it really enhances the theme, but prefer keeping lucide as the default — it works well with most themes. You can optionally include component-level \`ui\` overrides for a more polished result — if you do, look up the component theme first with \`getComponentTheme\` and prefer \`defaultVariants\` (e.g. button size or variant) over slot class overrides. Create a cohesive design system, not just random colors:
-- Pick a **primary** that embodies the theme's identity. If no standard Tailwind color fits, use \`customColors\` to define a bespoke palette with all shades 50-950 as \`oklch(L% C H)\` values, tailwind v4's native format, e.g. \`oklch(62.3% 0.214 259.815)\`. This is encouraged for creative/unique themes.
+- Pick a **primary** that embodies the theme's identity. If no standard Uno color fits, use \`customColors\` to define a bespoke palette with all shades 50-950 as \`oklch(L% C H)\` values, uno's native format, e.g. \`oklch(62.3% 0.214 259.815)\`. This is encouraged for creative/unique themes.
 - Pick a **secondary** that complements the primary (analogous or contrasting on the color wheel). Can also be a custom palette.
 - Pick **success/info/warning/error** that feel harmonious with the palette while staying semantically meaningful (success = green-ish, error = red-ish, warning = amber/yellow-ish, info = blue/cyan-ish). You can shift hues — e.g. \`lime\` for success in a nature theme, \`rose\` for error in a warm theme — but keep them recognizable.
 - For monochrome/black-and-white themes, keep semantic colors meaningful. Only primary, secondary, and neutral should go monochrome. Use \`blackAsPrimary: true\` for monochrome primary.
@@ -249,7 +249,7 @@ ui: {
 For Nuxt, wrap in \`defineAppConfig({ ui: { ... } })\`. For Vue, pass as \`ui({ ui: { ... } })\` in the Vite plugin.
 
 **Color options:**
-- Standard Tailwind: red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose
+- Standard Uno: red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose
 - Neutral palettes (pick one that matches the aesthetic):
   - **slate** — cool blue-gray, professional, default
   - **gray** — true neutral, clean, no color tint
@@ -296,14 +296,14 @@ CRITICAL rules for component \`ui\` overrides:
 - NEVER use \`rounded-*\` classes in component slot overrides. Border radius is controlled globally by \`--ui-radius\` — hardcoding rounded classes would override the CSS variable and break consistency.
 - Only ADD new classes that aren't already in the component's default theme. Do NOT repeat or duplicate default classes (e.g. \`inline-flex\`, \`items-center\`, \`disabled:cursor-not-allowed\`, \`transition-colors\` on button are already defaults). Use \`getComponentTheme\` to check what's already there.
 - Keep overrides minimal and intentional — only include classes that actually change the look from the default.
-- Tailwind v4 only generates classes that are already used in source files. Arbitrary Tailwind utility classes (e.g. \`tracking-wide\`, \`shadow-2xl\`) may NOT exist in the user's CSS output. Prefer overrides that use classes already present in the component's default theme (e.g. changing \`font-medium\` to \`font-semibold\`) or CSS variables. For the exported code, mention that users may need to safelist any new utility classes.
+- Uno only generates classes that are already used in source files. Arbitrary Uno utility classes (e.g. \`tracking-wide\`, \`shadow-2xl\`) may NOT exist in the user's CSS output. Prefer overrides that use classes already present in the component's default theme (e.g. changing \`font-medium\` to \`font-semibold\`) or CSS variables. For the exported code, mention that users may need to safelist any new utility classes.
 
 **When suggesting theme changes, you MUST:**
 1. Call the \`applyTheme\` tool with the settings so changes apply live
 2. Show the full **main.css** code block so users can copy it. Use this structure:
 
 \`\`\`css
-@import "tailwindcss";
+@import "unocss";
 @import "pohon-ui";
 
 @theme {
@@ -312,7 +312,7 @@ CRITICAL rules for component \`ui\` overrides:
   --font-mono: 'FontName', monospace;  /* only if the code font changed */
 }
 
-/* ONLY when --font-serif is set: nothing in tailwind consumes it, so headings
+/* ONLY when --font-serif is set: nothing in uno consumes it, so headings
    need this one rule. Omit the whole block otherwise, or every heading falls
    back to Georgia. --font-sans and --font-mono need no rule at all. */
 @layer base {

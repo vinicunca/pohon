@@ -9,7 +9,7 @@ keywords:
 links:
   - label: NavigationMenu
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/navigation-menu
+    to: https://akar.vinicunca.dev/docs/components/navigation-menu
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/NavigationMenu.vue

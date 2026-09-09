@@ -1,8 +1,8 @@
-import { streamText, convertToModelMessages, toUIMessageStream, createUIMessageStreamResponse } from 'ai'
-import type { GatewayProviderOptions } from '@ai-sdk/gateway'
+import type { GatewayProviderOptions } from '@ai-sdk/gateway';
+import { convertToModelMessages, createUIMessageStreamResponse, streamText, toUIMessageStream } from 'ai';
 
 export default defineEventHandler(async (event) => {
-  const { messages } = await readBody(event)
+  const { messages } = await readBody(event);
 
   const result = streamText({
     model: 'anthropic/claude-haiku-4.5',
@@ -12,11 +12,11 @@ export default defineEventHandler(async (event) => {
       gateway: {
         caching: 'auto',
         user: getChatUser(event),
-        tags: ['docs-chat-example']
-      } satisfies GatewayProviderOptions
-    }
-  })
+        tags: ['docs-chat-example'],
+      } satisfies GatewayProviderOptions,
+    },
+  });
 
-  const stream = toUIMessageStream({ stream: result.stream })
-  return createUIMessageStreamResponse({ stream })
-})
+  const stream = toUIMessageStream({ stream: result.stream });
+  return createUIMessageStreamResponse({ stream });
+});

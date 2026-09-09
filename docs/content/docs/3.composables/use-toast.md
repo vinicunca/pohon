@@ -20,7 +20,7 @@ name: 'use-toast-example'
 - When removing a toast, there's a 200ms delay before it's actually removed from the state, allowing for exit animations.
 
 ::warning
-Make sure to wrap your app with the [`App`](/docs/components/app) component which uses our [`Toaster`](https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Toaster.vue) component which uses the [`ToastProvider`](https://reka-ui.com/docs/components/toast#provider) component from Akar.
+Make sure to wrap your app with the [`App`](/docs/components/app) component which uses our [`Toaster`](https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Toaster.vue) component which uses the [`ToastProvider`](https://akar.vinicunca.dev/docs/components/toast#provider) component from Akar.
 ::
 
 ::tip{to="/docs/components/toast"}

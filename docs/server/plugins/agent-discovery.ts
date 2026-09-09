@@ -1,5 +1,5 @@
-import { queryCollection } from '@nuxt/content/server'
-import { rawUrl } from '#agent-discovery'
+import { queryCollection } from '@nuxt/content/server';
+import { rawUrl } from '#agent-discovery';
 
 /**
  * What `nuxt-agent-discovery` cannot know on its own.
@@ -10,8 +10,8 @@ import { rawUrl } from '#agent-discovery'
  */
 export default defineNitroPlugin((nitroApp) => {
   nitroApp.hooks.hook('agent-discovery:document', async (event, page) => {
-    await transformMDC(event, page as any)
-  })
+    await transformMDC(event, page as any);
+  });
 
   // The homepage is a Vue page, so the module has no document to build
   // `/raw/index.md` from. Its metadata lives in the `index` collection and the
@@ -19,16 +19,16 @@ export default defineNitroPlugin((nitroApp) => {
   // the frontmatter, the canonical links, the resources block and the trailer
   // all come from the module.
   nitroApp.hooks.hook('agent-discovery:index', async (event, index) => {
-    const page = await queryCollection(event, 'index').first() as any
+    const page = await queryCollection(event, 'index').first() as any;
 
-    index.title = page?.title || index.title
-    index.description = page?.description
+    index.title = page?.title || index.title;
+    index.description = page?.description;
 
     index.body.push([
-      renderLlmsSection(WHEN_TO_USE_SECTION, href => rawUrl(event, href)),
+      renderLlmsSection(WHEN_TO_USE_SECTION, (href) => rawUrl(event, href)),
       `## About
 
-Pohon is a free and open source Vue UI library powered by [Akar](https://reka-ui.com/) and [UnoCSS](https://tailwindcss.com/). It works with both Nuxt and plain Vue applications.
+Pohon is a free and open source Vue UI library powered by [Akar](https://akar.vinicunca.dev/) and [UnoCSS](https://unocss.dev/). It works with both Nuxt and plain Vue applications.
 
 - 125+ accessible, production-ready components
 - Built on Akar (WAI-ARIA compliant primitives)
@@ -50,9 +50,7 @@ Pohon is a free and open source Vue UI library powered by [Akar](https://reka-ui
       `## Links
 
 - Website: <${SITE_URL}>
-- GitHub: <https://github.com/vinicunca/pohon>
-- Discord: <https://discord.gg/ps2h6QT>
-- X (Twitter): <https://x.com/nuxt_js>`
-    ].join('\n\n'))
-  })
-})
+- GitHub: <https://github.com/vinicunca/pohon>`,
+    ].join('\n\n'));
+  });
+});

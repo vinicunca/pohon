@@ -8,7 +8,7 @@ keywords:
 links:
   - label: Tabs
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/tabs
+    to: https://akar.vinicunca.dev/docs/components/tabs
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Tabs.vue

@@ -8,7 +8,7 @@ keywords:
 links:
   - label: Separator
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/separator
+    to: https://akar.vinicunca.dev/docs/components/separator
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Separator.vue

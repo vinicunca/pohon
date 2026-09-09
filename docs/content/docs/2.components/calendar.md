@@ -8,7 +8,7 @@ keywords:
 links:
   - label: Calendar
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/calendar
+    to: https://akar.vinicunca.dev/docs/components/calendar
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Calendar.vue
@@ -128,9 +128,9 @@ ignore:
 - modelValue
   external:
 - modelValue
-  props:
-    multiple: true
-    modelValue: [[2022, 2, 4], [2022, 2, 6], [2022, 2, 8]]
+    props:
+      multiple: true
+      modelValue: [[2022, 2, 4], [2022, 2, 6], [2022, 2, 8]]
 
 ---
 

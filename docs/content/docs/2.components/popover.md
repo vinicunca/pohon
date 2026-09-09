@@ -7,10 +7,10 @@ keywords:
 links:
   - label: HoverCard
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/hover-card
+    to: https://akar.vinicunca.dev/docs/components/hover-card
   - label: Popover
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/popover
+    to: https://akar.vinicunca.dev/docs/components/popover
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Popover.vue
@@ -78,7 +78,7 @@ content: |
 ::
 
 ::note
-When using the `hover` mode, the Akar [`HoverCard`](https://reka-ui.com/docs/components/hover-card) component is used instead of the [`Popover`](https://reka-ui.com/docs/components/popover).
+When using the `hover` mode, the Akar [`HoverCard`](https://akar.vinicunca.dev/docs/components/hover-card) component is used instead of the [`Popover`](https://akar.vinicunca.dev/docs/components/popover).
 ::
 
 ### Delay
@@ -255,7 +255,7 @@ name: 'popover-command-palette-example'
 
 ### With following cursor
 
-You can make the Popover follow the cursor when hovering over an element using the [`reference`](https://reka-ui.com/docs/components/tooltip#trigger) prop:
+You can make the Popover follow the cursor when hovering over an element using the [`reference`](https://akar.vinicunca.dev/docs/components/tooltip#trigger) prop:
 
 ::component-example
 ---
@@ -293,7 +293,7 @@ name: 'popover-anchor-slot-example'
 :component-slots
 
 ::note
-The `close` function is only available when `mode` is set to `click` because Akar exposes this for [`Popover`](https://reka-ui.com/docs/components/popover#close-using-slot-props) but not for [`HoverCard`](https://reka-ui.com/docs/components/hover-card).
+The `close` function is only available when `mode` is set to `click` because Akar exposes this for [`Popover`](https://akar.vinicunca.dev/docs/components/popover#close-using-slot-props) but not for [`HoverCard`](https://akar.vinicunca.dev/docs/components/hover-card).
 ::
 
 ### Emits

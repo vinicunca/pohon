@@ -6,7 +6,7 @@ keywords:
 links:
   - label: Tooltip
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/tooltip
+    to: https://akar.vinicunca.dev/docs/components/tooltip
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Tooltip.vue
@@ -36,7 +36,7 @@ ignore:
 ::
 
 ::warning
-Make sure to wrap your app with the [`App`](/docs/components/app) component which uses the [`TooltipProvider`](https://reka-ui.com/docs/components/tooltip#provider) component from Akar.
+Make sure to wrap your app with the [`App`](/docs/components/app) component which uses the [`TooltipProvider`](https://akar.vinicunca.dev/docs/components/tooltip#provider) component from Akar.
 ::
 
 ::tip{to="/docs/components/app#props"}
@@ -232,7 +232,7 @@ In this example, leveraging [`defineShortcuts`](/docs/composables/define-shortcu
 
 ### With following cursor
 
-You can make the Tooltip follow the cursor when hovering over an element using the [`reference`](https://reka-ui.com/docs/components/tooltip#trigger) prop:
+You can make the Tooltip follow the cursor when hovering over an element using the [`reference`](https://akar.vinicunca.dev/docs/components/tooltip#trigger) prop:
 
 ::component-example
 ---

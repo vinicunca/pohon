@@ -7,7 +7,7 @@ keywords:
 links:
   - label: Select
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/select
+    to: https://akar.vinicunca.dev/docs/components/select
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Select.vue

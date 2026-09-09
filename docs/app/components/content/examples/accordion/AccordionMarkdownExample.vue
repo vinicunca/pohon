@@ -18,7 +18,7 @@ const items = [
   {
     label: 'How does Pohon handle accessibility?',
     icon: 'i-lucide-circle-help',
-    content: 'Through [Akar](https://reka-ui.com/docs/overview/accessibility) integration, Pohon provides automatic ARIA attributes, keyboard navigation, focus management, and screen reader support. While offering a strong foundation, testing in your specific use case remains important.'
+    content: 'Through [Akar](https://akar.vinicunca.dev/docs/overview/accessibility) integration, Pohon provides automatic ARIA attributes, keyboard navigation, focus management, and screen reader support. While offering a strong foundation, testing in your specific use case remains important.'
   },
   {
     label: 'How is Pohon tested?',

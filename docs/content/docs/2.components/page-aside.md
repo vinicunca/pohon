@@ -10,7 +10,7 @@ links:
 
 ## Usage
 
-The PageAside component is a sticky `<aside>` element that is only displayed starting from the [`lg` breakpoint](https://tailwindcss.com/docs/breakpoints).
+The PageAside component is a sticky `<aside>` element that is only displayed starting from the [`lg` breakpoint](https://unocss.dev/docs/breakpoints).
 
 ::tip{to="/docs/getting-started/theme/css-variables#header"}
 The PageAside component uses the `--ui-header-height` CSS variable to position itself correctly below the `Header`.

@@ -4,7 +4,7 @@ category: layout
 links:
   - label: Splitter
     icon: i-custom-reka-ui
-    to: https://reka-ui.com/docs/components/splitter
+    to: https://akar.vinicunca.dev/docs/components/splitter
   - label: GitHub
     icon: i-simple-icons-github
     to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Splitter.vue

@@ -116,7 +116,7 @@ hide:
   title: 'UnoCSS'
   description: 'Pohon integrates with latest UnoCSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  to: 'https://tailwindcss.com/blog/tailwindcss-v4'
+  to: 'https://unocss.dev/blog/tailwindcss-v4'
   target: _blank
   class: 'w-96'
 
@@ -145,7 +145,7 @@ hide:
   title: 'UnoCSS'
   description: 'Pohon integrates with latest UnoCSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
-  to: 'https://tailwindcss.com/blog/tailwindcss-v4'
+  to: 'https://unocss.dev/blog/tailwindcss-v4'
   target: _blank
   variant: soft
   class: 'w-96'
