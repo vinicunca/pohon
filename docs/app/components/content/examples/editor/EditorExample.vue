@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { EditorCustomHandlers, EditorToolbarItem, EditorSuggestionMenuItem, EditorMentionMenuItem, EditorEmojiMenuItem, DropdownMenuItem } from 'pohon-ui'
+import type { EditorCustomHandlers, EditorToolbarItem, EditorSuggestionMenuItem, EditorMentionMenuItem, EditorEmojiMenuItem, DropdownMenuItem } from '@nuxt/ui'
 import type { Editor, JSONContent } from '@tiptap/vue-3'
 import { upperFirst } from 'scule'
-import { mapEditorItems } from 'pohon-ui/utils/editor'
+import { mapEditorItems } from '@nuxt/ui/utils/editor'
 import { Emoji, gitHubEmojis } from '@tiptap/extension-emoji'
 import { TextAlign } from '@tiptap/extension-text-align'
 import { CodeBlockShiki } from 'tiptap-extension-code-block-shiki'
@@ -12,9 +12,9 @@ import EditorLinkPopover from './EditorLinkPopover.vue'
 
 const editorRef = useTemplateRef('editorRef')
 
-const value = ref(`# Building Modern Interfaces with Pohon UI
+const value = ref(`# Building Modern Interfaces with Nuxt UI
 
-Welcome to the **Pohon UI Editor** — a powerful rich text editing experience built on [TipTap](https://tiptap.dev). This editor combines *flexibility* with ease of use, making content creation a breeze.
+Welcome to the **Nuxt UI Editor** — a powerful rich text editing experience built on [TipTap](https://tiptap.dev). This editor combines *flexibility* with ease of use, making content creation a breeze.
 
 ![Placeholder](/placeholder.jpeg)
 
@@ -39,7 +39,7 @@ Try out these powerful capabilities:
 1. **Custom Extensions** — Add your own TipTap extensions seamlessly
 2. **Multiple Content Types** — Support for JSON, HTML, and Markdown
 3. **Customizable Toolbars** — Fixed, bubble, and floating layouts
-4. **Theme Integration** — Fully styled with Pohon UI theme system
+4. **Theme Integration** — Fully styled with Nuxt UI theme system
 
 #### Code Blocks
 
@@ -47,13 +47,13 @@ Perfect for technical documentation:
 
 \`\`\`vue
 <template>
-  <PEditor v-model="value" content-type="markdown" />
+  <UEditor v-model="value" content-type="markdown" />
 </template>
 \`\`\`
 
 ---
 
-Whether you're building a blog, documentation site, or content management system, the Pohon UI Editor provides everything you need for a professional editing experience. Visit [ui.nuxt.com](https://ui.nuxt.com) to explore more components.`)
+Whether you're building a blog, documentation site, or content management system, the Nuxt UI Editor provides everything you need for a professional editing experience. Visit [ui.nuxt.com](https://ui.nuxt.com) to explore more components.`)
 
 const { extension: completionExtension, handlers: aiHandlers, isLoading: aiLoading } = useEditorCompletion(editorRef)
 
@@ -565,7 +565,7 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
 </script>
 
 <template>
-  <PEditor
+  <UEditor
     ref="editorRef"
     v-slot="{ editor, handlers }"
     v-model="value"
@@ -588,13 +588,13 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
     :ui="{ base: 'p-8 sm:px-16 py-13.5' }"
     class="w-full"
   >
-    <PEditorToolbar :editor="editor" :items="fixedToolbarItems" class="border-b border-muted sticky top-0 inset-x-0 px-8 sm:px-16 py-2 z-50 bg-background overflow-x-auto">
+    <UEditorToolbar :editor="editor" :items="fixedToolbarItems" class="border-b border-muted sticky top-0 inset-x-0 px-8 sm:px-16 py-2 z-50 bg-default overflow-x-auto">
       <template #link>
         <EditorLinkPopover :editor="editor" auto-open />
       </template>
-    </PEditorToolbar>
+    </UEditorToolbar>
 
-    <PEditorToolbar
+    <UEditorToolbar
       :editor="editor"
       :items="bubbleToolbarItems"
       layout="bubble"
@@ -609,9 +609,9 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
       <template #link>
         <EditorLinkPopover :editor="editor" />
       </template>
-    </PEditorToolbar>
+    </UEditorToolbar>
 
-    <PEditorToolbar
+    <UEditorToolbar
       :editor="editor"
       :items="imageToolbarItems(editor)"
       layout="bubble"
@@ -620,14 +620,14 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
       }"
     />
 
-    <PEditorSuggestionMenu :editor="editor" :items="suggestionItems" />
+    <UEditorSuggestionMenu :editor="editor" :items="suggestionItems" />
 
-    <PEditorMentionMenu :editor="editor" :items="mentionItems" />
+    <UEditorMentionMenu :editor="editor" :items="mentionItems" />
 
-    <PEditorEmojiMenu :editor="editor" :items="emojiItems" />
+    <UEditorEmojiMenu :editor="editor" :items="emojiItems" />
 
-    <PEditorDragHandle v-slot="{ ui, onClick }" :editor="editor" @node-change="selectedNode = $event">
-      <PButton
+    <UEditorDragHandle v-slot="{ ui, onClick }" :editor="editor" @node-change="selectedNode = $event">
+      <UButton
         icon="i-lucide-plus"
         color="neutral"
         variant="ghost"
@@ -641,7 +641,7 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
         }"
       />
 
-      <PDropdownMenu
+      <UDropdownMenu
         v-slot="{ open }"
         :modal="false"
         :items="handleItems(editor)"
@@ -649,7 +649,7 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
         :ui="{ content: 'w-48', label: 'text-xs' }"
         @update:open="editor.chain().setMeta('lockDragHandle', $event).run()"
       >
-        <PButton
+        <UButton
           color="neutral"
           variant="ghost"
           active-variant="soft"
@@ -658,9 +658,9 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
           :active="open"
           :class="ui.handle()"
         />
-      </PDropdownMenu>
-    </PEditorDragHandle>
-  </PEditor>
+      </UDropdownMenu>
+    </UEditorDragHandle>
+  </UEditor>
 </template>
 
 <style>

@@ -12,5 +12,5 @@ function to(page: number) {
 </script>
 
 <template>
-  <PPagination v-model:page="page" :total="100" :to="to" :sibling-count="1" show-edges />
+  <UPagination v-model:page="page" :total="100" :to="to" :sibling-count="1" show-edges />
 </template>

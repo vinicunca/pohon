@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { BreadcrumbItem } from 'pohon-ui'
+import type { BreadcrumbItem } from '@nuxt/ui'
 
 const items = [
   {
@@ -34,11 +34,11 @@ const items = [
 </script>
 
 <template>
-  <PBreadcrumb :items="items">
+  <UBreadcrumb :items="items">
     <template #dropdown="{ item }">
-      <PDropdownMenu :items="item.children">
-        <PButton :icon="item.icon" color="neutral" variant="link" class="p-0.5" />
-      </PDropdownMenu>
+      <UDropdownMenu :items="item.children">
+        <UButton :icon="item.icon" color="neutral" variant="link" class="p-0.5" />
+      </UDropdownMenu>
     </template>
-  </PBreadcrumb>
+  </UBreadcrumb>
 </template>

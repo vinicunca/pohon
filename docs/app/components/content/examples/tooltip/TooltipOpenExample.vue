@@ -7,7 +7,7 @@ defineShortcuts({
 </script>
 
 <template>
-  <PTooltip v-model:open="open" text="Open on GitHub">
-    <PButton label="Open" color="neutral" variant="subtle" />
-  </PTooltip>
+  <UTooltip v-model:open="open" text="Open on GitHub">
+    <UButton label="Open" color="neutral" variant="subtle" />
+  </UTooltip>
 </template>

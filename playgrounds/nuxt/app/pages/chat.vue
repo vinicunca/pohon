@@ -21,7 +21,7 @@ const shimmerSpread = ref(2);
 const animationKey = ref(0);
 const input = ref('');
 
-const messages = computed<UIMessage[]>(() => [
+const messages = computed<Array<UIMessage>>(() => [
   { id: 'prompt', role: 'user', parts: [{ type: 'text', text: 'Show me how the selected message treatment feels.' }] },
   { id: 'reply', role: 'assistant', parts: [{ type: 'text', text: 'Every control on this page is passed directly to a chat component.' }] },
 ]);
@@ -54,30 +54,100 @@ function submit() {
 
 <template>
   <Navbar>
-    <PButton label="Replay animations" icon="i-lucide-play" color="neutral" variant="outline" @click="replayAnimations" />
-    <PSwitch v-model="compact" label="Compact" />
-    <PSwitch v-model="showIndicator" label="Typing" />
+    <PButton
+      label="Replay animations"
+      icon="i-lucide-play"
+      color="neutral"
+      variant="outline"
+      @click="replayAnimations"
+    />
+    <PSwitch
+      v-model="compact"
+      label="Compact"
+    />
+    <PSwitch
+      v-model="showIndicator"
+      label="Typing"
+    />
   </Navbar>
 
-  <div class="grid gap-4 w-full max-w-5xl px-4 py-6 lg:grid-cols-[16rem_minmax(0,1fr)]">
+  <div class="px-4 py-6 gap-4 grid max-w-5xl w-full lg:grid-cols-[16rem_minmax(0,1fr)]">
     <aside class="flex flex-col gap-4">
-      <PFormField label="Message color"><PSelect v-model="messageColor" :items="colors" /></PFormField>
-      <PFormField label="Message variant"><PSelect v-model="messageVariant" :items="messageVariants" /></PFormField>
-      <PFormField label="Prompt color"><PSelect v-model="promptColor" :items="colors" /></PFormField>
-      <PFormField label="Prompt variant"><PSelect v-model="promptVariant" :items="promptVariants" /></PFormField>
-      <PFormField label="Shimmer duration" orientation="horizontal"><PInputNumber v-model="shimmerDuration" :min="0.5" :step="0.5" class="w-24" /></PFormField>
-      <PFormField label="Shimmer spread" orientation="horizontal"><PInputNumber v-model="shimmerSpread" :min="0" :step="1" class="w-24" /></PFormField>
+      <PFormField label="Message color">
+        <PSelect
+          v-model="messageColor"
+          :items="colors"
+        />
+      </PFormField>
+      <PFormField label="Message variant">
+        <PSelect
+          v-model="messageVariant"
+          :items="messageVariants"
+        />
+      </PFormField>
+      <PFormField label="Prompt color">
+        <PSelect
+          v-model="promptColor"
+          :items="colors"
+        />
+      </PFormField>
+      <PFormField label="Prompt variant">
+        <PSelect
+          v-model="promptVariant"
+          :items="promptVariants"
+        />
+      </PFormField>
+      <PFormField
+        label="Shimmer duration"
+        orientation="horizontal"
+      >
+        <PInputNumber
+          v-model="shimmerDuration"
+          :min="0.5"
+          :step="0.5"
+          class="w-24"
+        />
+      </PFormField>
+      <PFormField
+        label="Shimmer spread"
+        orientation="horizontal"
+      >
+        <PInputNumber
+          v-model="shimmerSpread"
+          :min="0"
+          :step="1"
+          class="w-24"
+        />
+      </PFormField>
 
       <PSeparator />
 
-      <PSwitch v-model="toolLoading" label="Tool spin" />
-      <PSwitch v-model="toolStreaming" label="Tool shimmer" />
-      <PSwitch v-model="toolOpen" label="Tool collapse" />
-      <PSwitch v-model="reasoningStreaming" label="Reasoning shimmer" />
-      <PSwitch v-model="reasoningOpen" label="Reasoning collapse" />
+      <PSwitch
+        v-model="toolLoading"
+        label="Tool spin"
+      />
+      <PSwitch
+        v-model="toolStreaming"
+        label="Tool shimmer"
+      />
+      <PSwitch
+        v-model="toolOpen"
+        label="Tool collapse"
+      />
+      <PSwitch
+        v-model="reasoningStreaming"
+        label="Reasoning shimmer"
+      />
+      <PSwitch
+        v-model="reasoningOpen"
+        label="Reasoning collapse"
+      />
     </aside>
 
-    <PChatPalette :key="animationKey" class="min-h-[38rem] ring ring-ring rounded-lg overflow-hidden">
+    <PChatPalette
+      :key="animationKey"
+      class="rounded-lg min-h-[38rem] ring ring-ring overflow-hidden"
+    >
       <PChatMessages
         :messages="messages"
         :status="status"

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { SplitterItem } from 'pohon-ui'
+import type { SplitterItem } from '@nuxt/ui'
 
-const card = 'bg-background-elevated/50 border border-border rounded-xl items-center justify-center color-text-muted font-500'
+const card = 'bg-elevated/50 border border-default rounded-xl items-center justify-center text-muted font-medium'
 
 const items: SplitterItem[] = [
   { slot: 'left', minSize: 15, defaultSize: 25, class: card },
@@ -12,7 +12,7 @@ const items: SplitterItem[] = [
 
 <template>
   <div class="w-full h-96">
-    <PSplitter id="splitter-example" :items="items">
+    <USplitter id="splitter-example" :items="items">
       <template #left>
         Left
       </template>
@@ -24,6 +24,6 @@ const items: SplitterItem[] = [
       <template #right>
         Right
       </template>
-    </PSplitter>
+    </USplitter>
   </div>
 </template>

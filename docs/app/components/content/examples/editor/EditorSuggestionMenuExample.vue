@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorSuggestionMenuItem } from 'pohon-ui'
+import type { EditorSuggestionMenuItem } from '@nuxt/ui'
 
 const value = ref(`# Suggestion Menu
 
@@ -60,13 +60,13 @@ const appendToBody = import.meta.client ? () => document.body : undefined
 </script>
 
 <template>
-  <PEditor
+  <UEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     placeholder="Type / for commands..."
     class="w-full min-h-21"
   >
-    <PEditorSuggestionMenu :editor="editor" :items="items" :append-to="appendToBody" />
-  </PEditor>
+    <UEditorSuggestionMenu :editor="editor" :items="items" :append-to="appendToBody" />
+  </UEditor>
 </template>

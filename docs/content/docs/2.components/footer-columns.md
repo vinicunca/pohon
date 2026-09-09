@@ -1,6 +1,6 @@
 ---
 title: FooterColumns
-description: "A list of links as columns to display in your Footer."
+description: 'A list of links as columns to display in your Footer.'
 category: navigation
 keywords:
   - footer links
@@ -20,13 +20,13 @@ Use it in the `top` slot of the [Footer](/docs/components/footer) component:
 
 ```vue {3-7}
 <template>
-  <PFooter>
+  <UFooter>
     <template #top>
-      <PContainer>
-        <PFooterColumns />
-      </PContainer>
+      <UContainer>
+        <UFooterColumns />
+      </UContainer>
     </template>
-  </PFooter>
+  </UFooter>
 </template>
 ```
 
@@ -46,16 +46,14 @@ Each column contains a `children` array of objects that define the links. Each l
 
 You can pass any property from the [Link](/docs/components/link#props) component such as `to`, `target`, etc.
 
-## ::component-example
-
+::component-example
+---
 prettier: true
 name: 'footer-columns-example'
 class: 'p-8'
 props:
-class: 'w-full'
-
+  class: 'w-full'
 ---
-
 ::
 
 ## API

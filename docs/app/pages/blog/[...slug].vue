@@ -17,9 +17,9 @@ const title = page.value.seo?.title || page.value.title
 const description = page.value.seo?.description || page.value.description
 
 useSeoMeta({
-  titleTemplate: '%s - Pohon UI',
+  titleTemplate: '%s - Nuxt UI',
   title,
-  ogTitle: `${title} - Pohon UI`,
+  ogTitle: `${title} - Nuxt UI`,
   description,
   ogDescription: description
 })
@@ -61,10 +61,10 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
 </script>
 
 <template>
-  <PPage v-if="page" :ui="{ center: 'lg:col-span-5 px-4 sm:px-6 lg:pl-8 lg:pr-0', right: 'lg:col-span-5' }" class="lg:gap-8">
-    <PPageHeader :title="page.title" :description="page.description" :ui="{ title: 'relative flex items-center' }">
+  <UPage v-if="page" :ui="{ center: 'lg:col-span-5 px-4 sm:px-6 lg:pl-8 lg:pr-0', right: 'lg:col-span-5' }" class="lg:gap-8">
+    <UPageHeader :title="page.title" :description="page.description" :ui="{ title: 'relative flex items-center' }">
       <template #headline>
-        <PButton
+        <UButton
           :icon="appConfig.ui.icons.arrowLeft"
           label="Back to blog"
           to="/blog"
@@ -72,34 +72,34 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
           class="p-0"
           :ui="{ leadingIcon: 'size-4' }"
         />
-        <span class="color-text-muted">&middot;</span>
-        <time class="color-text-muted font-normal">{{ new Date(page.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' }) }}</time>
+        <span class="text-muted">&middot;</span>
+        <time class="text-muted font-normal">{{ new Date(page.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' }) }}</time>
       </template>
 
       <div v-if="page.authors?.length" class="flex items-center gap-6 mt-6">
         <template v-for="author in page.authors" :key="author.name">
-          <PLink v-if="author.to" :to="author.to" target="_blank" class="flex items-center gap-3 group">
-            <PAvatar :src="author.avatar?.src" :alt="author.name" size="lg" />
+          <ULink v-if="author.to" :to="author.to" target="_blank" class="flex items-center gap-3 group">
+            <UAvatar :src="author.avatar?.src" :alt="author.name" size="lg" />
             <div class="flex flex-col">
-              <span class="text-sm font-500 color-text-highlighted">{{ author.name }}</span>
-              <span class="text-xs color-text-muted group-hover:color-primary transition-colors">@{{ author.to.split('/').pop() }}</span>
+              <span class="text-sm font-medium text-highlighted">{{ author.name }}</span>
+              <span class="text-xs text-muted group-hover:text-primary transition-colors">@{{ author.to.split('/').pop() }}</span>
             </div>
-          </PLink>
+          </ULink>
           <div v-else class="flex items-center gap-3">
-            <PAvatar :src="author.avatar?.src" :alt="author.name" size="lg" />
-            <span class="text-sm font-500 color-text-highlighted">{{ author.name }}</span>
+            <UAvatar :src="author.avatar?.src" :alt="author.name" size="lg" />
+            <span class="text-sm font-medium text-highlighted">{{ author.name }}</span>
           </div>
         </template>
       </div>
-    </PPageHeader>
+    </UPageHeader>
 
-    <PPageBody>
+    <UPageBody>
       <ContentRenderer v-if="page.body" :value="page" />
-    </PPageBody>
+    </UPageBody>
 
     <template #right>
       <div>
-        <PContentToc
+        <UContentToc
           :links="page.body.toc?.links"
           class="z-2 lg:hidden mx-0!"
         />
@@ -108,16 +108,16 @@ const items = computed(() => Object.entries(tree.value).map(([key, value]) => ({
           <ProseCodeTree
             v-if="activePath"
             :model-value="activePath"
-            class="lg:h-full my-0 rounded-none border-y-0 border-r-0 border-border"
+            class="lg:h-full my-0 rounded-none border-y-0 border-r-0 border-default"
             :items="items"
             expand-all
-            :ui="{ list: 'border-border', content: '[&>div>pre]:bg-muted/50 [&>div>pre]:border-border [&>div>pre]:rounded-none' }"
+            :ui="{ list: 'border-default', content: '[&>div>pre]:bg-muted/50 [&>div>pre]:border-default [&>div>pre]:rounded-none' }"
           />
-          <div v-else class="size-full border-l border-border flex items-center justify-center">
-            <PIcon :name="appConfig.ui.icons.arrowDown" class="size-12 color-text-dimmed animate-bounce" />
+          <div v-else class="size-full border-l border-default flex items-center justify-center">
+            <UIcon :name="appConfig.ui.icons.arrowDown" class="size-12 text-dimmed animate-bounce" />
           </div>
         </nav>
       </div>
     </template>
-  </PPage>
+  </UPage>
 </template>

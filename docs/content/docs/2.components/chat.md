@@ -9,7 +9,7 @@ links:
     target: _blank
 ---
 
-Pohon UI provides a set of components designed to build AI-powered chat interfaces. They integrate seamlessly with the [Vercel AI SDK](https://ai-sdk.dev/) for streaming responses, reasoning, tool calling, and more.
+Nuxt UI provides a set of components designed to build AI-powered chat interfaces. They integrate seamlessly with the [Vercel AI SDK](https://ai-sdk.dev/) for streaming responses, reasoning, tool calling, and more.
 
 ::callout{icon="i-simple-icons-github"}
 Check out the [`Nuxt`](https://github.com/nuxt-ui-templates/chat) and [`Vue`](https://github.com/nuxt-ui-templates/chat-vue) AI Chat templates on GitHub for production-ready implementations.
@@ -17,16 +17,16 @@ Check out the [`Nuxt`](https://github.com/nuxt-ui-templates/chat) and [`Vue`](ht
 
 ## Components
 
-| Component                                               | Description                                                     |
-| ------------------------------------------------------- | --------------------------------------------------------------- |
-| [ChatMessages](/docs/components/chat-messages)          | Scrollable message list with auto-scroll and loading indicator. |
-| [ChatMessage](/docs/components/chat-message)            | Individual message bubble with avatar, actions, and slots.      |
-| [ChatPrompt](/docs/components/chat-prompt)              | Enhanced textarea for submitting prompts.                       |
-| [ChatPromptSubmit](/docs/components/chat-prompt-submit) | Submit button with automatic status handling.                   |
-| [ChatReasoning](/docs/components/chat-reasoning)        | Collapsible block for AI reasoning / thinking process.          |
-| [ChatTool](/docs/components/chat-tool)                  | Collapsible block for AI tool invocation status.                |
-| [ChatShimmer](/docs/components/chat-shimmer)            | Text shimmer animation for streaming states.                    |
-| [ChatPalette](/docs/components/chat-palette)            | Layout wrapper for embedding chat in modals or drawers.         |
+| Component | Description |
+| --- | --- |
+| [ChatMessages](/docs/components/chat-messages) | Scrollable message list with auto-scroll and loading indicator. |
+| [ChatMessage](/docs/components/chat-message) | Individual message bubble with avatar, actions, and slots. |
+| [ChatPrompt](/docs/components/chat-prompt) | Enhanced textarea for submitting prompts. |
+| [ChatPromptSubmit](/docs/components/chat-prompt-submit) | Submit button with automatic status handling. |
+| [ChatReasoning](/docs/components/chat-reasoning) | Collapsible block for AI reasoning / thinking process. |
+| [ChatTool](/docs/components/chat-tool) | Collapsible block for AI tool invocation status. |
+| [ChatShimmer](/docs/components/chat-shimmer) | Text shimmer animation for streaming states. |
+| [ChatPalette](/docs/components/chat-palette) | Layout wrapper for embedding chat in modals or drawers. |
 
 ## Installation
 
@@ -62,12 +62,15 @@ Add `@comark/nuxt` to your modules:
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
-  modules: ["pohon-ui", "@comark/nuxt"],
-});
+  modules: [
+    '@nuxt/ui',
+    '@comark/nuxt'
+  ]
+})
 ```
 
 ::::note
-[`@comark/nuxt`](https://comark.dev/rendering/nuxt) provides the `Markdown` component used to render AI responses as streaming Markdown, it incrementally renders tokens as they arrive, avoiding the flicker and re-parsing that traditional Markdown renderers cause. It also automatically enables Pohon UI's [prose components](/docs/typography) so your content is styled to match your theme.
+[`@comark/nuxt`](https://comark.dev/rendering/nuxt) provides the `Markdown` component used to render AI responses as streaming Markdown, it incrementally renders tokens as they arrive, avoiding the flicker and re-parsing that traditional Markdown renderers cause. It also automatically enables Nuxt UI's [prose components](/docs/typography) so your content is styled to match your theme.
 ::::
 
 :::
@@ -97,23 +100,22 @@ bun add ai @ai-sdk/gateway @ai-sdk/vue @comark/vue
 
 ::::note
 [`@comark/vue`](https://comark.dev/rendering/vue) provides the `Markdown` component used to render AI responses as streaming Markdown, it incrementally renders tokens as they arrive, avoiding the flicker and re-parsing that traditional Markdown renderers cause.
-<br><br>To use Pohon UI's [prose components](/docs/typography) with Comark, enable the `prose` option in your `vite.config.ts`:
+<br><br>To use Nuxt UI's [prose components](/docs/typography) with Comark, enable the `prose` option in your `vite.config.ts`:
 
 ```ts [vite.config.ts] {9}
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import ui from "pohon-ui/vite";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import ui from '@nuxt/ui/vite'
 
 export default defineConfig({
   plugins: [
     vue(),
     ui({
-      prose: true,
-    }),
-  ],
-});
+      prose: true
+    })
+  ]
+})
 ```
-
 ::::
 
 :::
@@ -125,27 +127,22 @@ export default defineConfig({
 Create a server API endpoint to handle chat requests using [`streamText`](https://ai-sdk.dev/docs/reference/ai-sdk-core/stream-text). You can use the [Vercel AI Gateway](https://vercel.com/ai-gateway) to access AI models through a centralized endpoint:
 
 ```ts [server/api/chat.post.ts]
-import {
-  streamText,
-  convertToModelMessages,
-  toUIMessageStream,
-  createUIMessageStreamResponse,
-} from "ai";
-import { gateway } from "@ai-sdk/gateway";
+import { streamText, convertToModelMessages, toUIMessageStream, createUIMessageStreamResponse } from 'ai'
+import { gateway } from '@ai-sdk/gateway'
 
 export default defineEventHandler(async (event) => {
-  const { messages } = await readBody(event);
+  const { messages } = await readBody(event)
 
   const result = streamText({
-    model: gateway("anthropic/claude-sonnet-5"),
+    model: gateway('anthropic/claude-sonnet-5'),
     maxOutputTokens: 10000,
-    instructions: "You are a helpful assistant.",
-    messages: await convertToModelMessages(messages),
-  });
+    instructions: 'You are a helpful assistant.',
+    messages: await convertToModelMessages(messages)
+  })
 
-  const stream = toUIMessageStream({ stream: result.stream });
-  return createUIMessageStreamResponse({ stream });
-});
+  const stream = toUIMessageStream({ stream: result.stream })
+  return createUIMessageStreamResponse({ stream })
+})
 ```
 
 ### Reasoning
@@ -153,45 +150,40 @@ export default defineEventHandler(async (event) => {
 To enable [reasoning](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot#reasoning), configure `providerOptions` for your provider ([Anthropic](https://ai-sdk.dev/providers/ai-sdk-providers/anthropic#reasoning), [Google](https://ai-sdk.dev/providers/ai-sdk-providers/google#thinking), [OpenAI](https://ai-sdk.dev/providers/ai-sdk-providers/openai#reasoning)):
 
 ```ts [server/api/chat.post.ts]
-import {
-  streamText,
-  convertToModelMessages,
-  toUIMessageStream,
-  createUIMessageStreamResponse,
-} from "ai";
-import { gateway } from "@ai-sdk/gateway";
+import { streamText, convertToModelMessages, toUIMessageStream, createUIMessageStreamResponse } from 'ai'
+import { gateway } from '@ai-sdk/gateway'
 
 export default defineEventHandler(async (event) => {
-  const { messages } = await readBody(event);
+  const { messages } = await readBody(event)
 
   const result = streamText({
-    model: gateway("anthropic/claude-sonnet-5"),
+    model: gateway('anthropic/claude-sonnet-5'),
     maxOutputTokens: 10000,
-    instructions: "You are a helpful assistant.",
+    instructions: 'You are a helpful assistant.',
     messages: await convertToModelMessages(messages),
     providerOptions: {
       anthropic: {
         thinking: {
-          type: "adaptive",
+          type: 'adaptive'
         },
-        effort: "low",
+        effort: 'low'
       },
       google: {
         thinkingConfig: {
           includeThoughts: true,
-          thinkingLevel: "low",
-        },
+          thinkingLevel: 'low'
+        }
       },
       openai: {
-        reasoningEffort: "low",
-        reasoningSummary: "detailed",
-      },
-    },
-  });
+        reasoningEffort: 'low',
+        reasoningSummary: 'detailed'
+      }
+    }
+  })
 
-  const stream = toUIMessageStream({ stream: result.stream });
-  return createUIMessageStreamResponse({ stream });
-});
+  const stream = toUIMessageStream({ stream: result.stream })
+  return createUIMessageStreamResponse({ stream })
+})
 ```
 
 ### Web Search
@@ -201,84 +193,69 @@ Some providers offer built-in web search tools: [Anthropic](https://ai-sdk.dev/p
 ::code-group
 
 ```ts [Anthropic]
-import {
-  streamText,
-  convertToModelMessages,
-  toUIMessageStream,
-  createUIMessageStreamResponse,
-} from "ai";
-import { anthropic } from "@ai-sdk/anthropic";
-import { gateway } from "@ai-sdk/gateway";
+import { streamText, convertToModelMessages, toUIMessageStream, createUIMessageStreamResponse } from 'ai'
+import { anthropic } from '@ai-sdk/anthropic'
+import { gateway } from '@ai-sdk/gateway'
 
 export default defineEventHandler(async (event) => {
-  const { messages } = await readBody(event);
+  const { messages } = await readBody(event)
 
   const result = streamText({
-    model: gateway("anthropic/claude-sonnet-5"),
-    instructions: "You are a helpful assistant.",
+    model: gateway('anthropic/claude-sonnet-5'),
+    instructions: 'You are a helpful assistant.',
     messages: await convertToModelMessages(messages),
     tools: {
-      web_search: anthropic.tools.webSearch_20250305({}),
-    },
-  });
+      web_search: anthropic.tools.webSearch_20250305({})
+    }
+  })
 
-  const stream = toUIMessageStream({ stream: result.stream });
-  return createUIMessageStreamResponse({ stream });
-});
+  const stream = toUIMessageStream({ stream: result.stream })
+  return createUIMessageStreamResponse({ stream })
+})
 ```
 
 ```ts [Google]
-import {
-  streamText,
-  convertToModelMessages,
-  toUIMessageStream,
-  createUIMessageStreamResponse,
-} from "ai";
-import { google } from "@ai-sdk/google";
-import { gateway } from "@ai-sdk/gateway";
+import { streamText, convertToModelMessages, toUIMessageStream, createUIMessageStreamResponse } from 'ai'
+import { google } from '@ai-sdk/google'
+import { gateway } from '@ai-sdk/gateway'
 
 export default defineEventHandler(async (event) => {
-  const { messages } = await readBody(event);
+  const { messages } = await readBody(event)
 
   const result = streamText({
-    model: gateway("google/gemini-3-flash"),
-    instructions: "You are a helpful assistant.",
+    model: gateway('google/gemini-3-flash'),
+    instructions: 'You are a helpful assistant.',
     messages: await convertToModelMessages(messages),
     tools: {
-      google_search: google.tools.googleSearch({}),
-    },
-  });
+      google_search: google.tools.googleSearch({})
+    }
+  })
 
-  const stream = toUIMessageStream({ stream: result.stream });
-  return createUIMessageStreamResponse({ stream });
-});
+  const stream = toUIMessageStream({ stream: result.stream })
+  return createUIMessageStreamResponse({ stream })
+})
 ```
 
 ```ts [OpenAI]
-import {
-  streamText,
-  convertToModelMessages,
-  toUIMessageStream,
-  createUIMessageStreamResponse,
-} from "ai";
-import { openai } from "@ai-sdk/openai";
-import { gateway } from "@ai-sdk/gateway";
+import { streamText, convertToModelMessages, toUIMessageStream, createUIMessageStreamResponse } from 'ai'
+import { openai } from '@ai-sdk/openai'
+import { gateway } from '@ai-sdk/gateway'
 
 export default defineEventHandler(async (event) => {
-  const { messages } = await readBody(event);
+  const { messages } = await readBody(event)
 
   const result = streamText({
-    model: gateway("openai/gpt-5-nano"),
-    instructions: "You are a helpful assistant.",
+    model: gateway('openai/gpt-5-nano'),
+    instructions: 'You are a helpful assistant.',
     messages: await convertToModelMessages(messages),
     tools: {
-      web_search: openai.tools.webSearch({}),
-    },
-  });
+      web_search: openai.tools.webSearch({})
+    }
+  })
 
-  const stream = toUIMessageStream({ stream: result.stream });
-  return createUIMessageStreamResponse({ stream });
-});
+  const stream = toUIMessageStream({ stream: result.stream })
+  return createUIMessageStreamResponse({ stream })
+})
 ```
 
 ::
@@ -308,50 +285,43 @@ yarn add @ai-sdk/mcp
 Then, configure your server endpoint to use MCP tools:
 
 ```ts [server/api/chat.post.ts]
-import {
-  streamText,
-  convertToModelMessages,
-  isStepCount,
-  toUIMessageStream,
-  createUIMessageStreamResponse,
-} from "ai";
-import { createMCPClient } from "@ai-sdk/mcp";
-import { gateway } from "@ai-sdk/gateway";
+import { streamText, convertToModelMessages, isStepCount, toUIMessageStream, createUIMessageStreamResponse } from 'ai'
+import { createMCPClient } from '@ai-sdk/mcp'
+import { gateway } from '@ai-sdk/gateway'
 
 export default defineEventHandler(async (event) => {
-  const { messages } = await readBody(event);
+  const { messages } = await readBody(event)
 
   const httpClient = await createMCPClient({
-    transport: { type: "http", url: "https://your-app.com/mcp" },
-  });
+    transport: { type: 'http', url: 'https://your-app.com/mcp' }
+  })
   try {
-    const tools = await httpClient.tools();
+    const tools = await httpClient.tools()
 
     const result = streamText({
-      model: gateway("anthropic/claude-sonnet-5"),
+      model: gateway('anthropic/claude-sonnet-5'),
       maxOutputTokens: 10000,
-      instructions:
-        "You are a helpful assistant. Use your tools to search for relevant information before answering questions.",
+      instructions: 'You are a helpful assistant. Use your tools to search for relevant information before answering questions.',
       messages: await convertToModelMessages(messages),
       stopWhen: isStepCount(6),
       tools,
       onEnd: async () => {
-        await httpClient.close();
+        await httpClient.close()
       },
       onError: async (error) => {
-        console.error(error);
-        await httpClient.close();
-      },
-    });
+        console.error(error)
+        await httpClient.close()
+      }
+    })
 
-    const stream = toUIMessageStream({ stream: result.stream });
-    return createUIMessageStreamResponse({ stream });
+    const stream = toUIMessageStream({ stream: result.stream })
+    return createUIMessageStreamResponse({ stream })
   } catch (error) {
     // Close the MCP client if setup fails before streaming starts
-    await httpClient.close();
-    throw error;
+    await httpClient.close()
+    throw error
   }
-});
+})
 ```
 
 ### Tool Approval
@@ -359,39 +329,33 @@ export default defineEventHandler(async (event) => {
 Require a user confirmation before a tool runs with the [`toolApproval`](https://ai-sdk.dev/docs/agents/tool-approvals) option. The tool part pauses in the `approval-requested` state until the user responds:
 
 ```ts [server/api/chat.post.ts]
-import {
-  streamText,
-  convertToModelMessages,
-  toUIMessageStream,
-  createUIMessageStreamResponse,
-  tool,
-} from "ai";
-import { gateway } from "@ai-sdk/gateway";
-import { z } from "zod";
+import { streamText, convertToModelMessages, toUIMessageStream, createUIMessageStreamResponse, tool } from 'ai'
+import { gateway } from '@ai-sdk/gateway'
+import { z } from 'zod'
 
 export default defineEventHandler(async (event) => {
-  const { messages } = await readBody(event);
+  const { messages } = await readBody(event)
 
   const result = streamText({
-    model: gateway("anthropic/claude-sonnet-5"),
+    model: gateway('anthropic/claude-sonnet-5'),
     maxOutputTokens: 10000,
-    instructions: "You are a helpful assistant.",
+    instructions: 'You are a helpful assistant.',
     messages: await convertToModelMessages(messages),
     tools: {
       deleteFile: tool({
-        description: "Delete a file from the project",
+        description: 'Delete a file from the project',
         inputSchema: z.object({ path: z.string() }),
-        execute: async ({ path }) => ({ deleted: path }),
-      }),
+        execute: async ({ path }) => ({ deleted: path })
+      })
     },
     toolApproval: {
-      deleteFile: "user-approval",
-    },
-  });
+      deleteFile: 'user-approval'
+    }
+  })
 
-  const stream = toUIMessageStream({ stream: result.stream });
-  return createUIMessageStreamResponse({ stream });
-});
+  const stream = toUIMessageStream({ stream: result.stream })
+  return createUIMessageStreamResponse({ stream })
+})
 ```
 
 ## Client Setup
@@ -400,52 +364,40 @@ Use the `useChat` composable from `@ai-sdk/vue` to manage chat state and connect
 
 ::framework-only
 #nuxt
-
 ```vue
 <script setup lang="ts">
-import {
-  isReasoningUIPart,
-  isTextUIPart,
-  isToolUIPart,
-  getToolName,
-  lastAssistantMessageIsCompleteWithApprovalResponses,
-} from "ai";
-import { useChat } from "@ai-sdk/vue";
-import { isPartStreaming, isToolStreaming } from "pohon-ui/utils/ai";
-import shiki from "@comark/nuxt/plugins/shiki";
+import { isReasoningUIPart, isTextUIPart, isToolUIPart, getToolName, lastAssistantMessageIsCompleteWithApprovalResponses } from 'ai'
+import { useChat } from '@ai-sdk/vue'
+import { isPartStreaming, isToolStreaming } from '@nuxt/ui/utils/ai'
+import shiki from '@comark/nuxt/plugins/shiki'
 
-const input = ref("");
+const input = ref('')
 
-const {
-  messages,
-  status,
-  error,
-  sendMessage,
-  regenerate,
-  stop,
-  addToolApprovalResponse,
-} = useChat({
+const { messages, status, error, sendMessage, regenerate, stop, addToolApprovalResponse } = useChat({
   sendAutomaticallyWhen: lastAssistantMessageIsCompleteWithApprovalResponses,
   onError(error) {
-    console.error(error);
-  },
-});
+    console.error(error)
+  }
+})
 
 function onSubmit() {
-  sendMessage({ text: input.value });
+  sendMessage({ text: input.value })
 
-  input.value = "";
+  input.value = ''
 }
 </script>
 
 <template>
-  <PChatMessages :messages="messages" :status="status">
+  <UChatMessages
+    :messages="messages"
+    :status="status"
+  >
     <template #content="{ message }">
       <template
         v-for="(part, index) in message.parts"
         :key="`${message.id}-${part.type}-${index}`"
       >
-        <PChatReasoning
+        <UChatReasoning
           v-if="isReasoningUIPart(part)"
           :text="part.text"
           :streaming="isPartStreaming(part)"
@@ -456,36 +408,16 @@ function onSubmit() {
             :plugins="[shiki()]"
             class="*:first:mt-0 *:last:mb-0"
           />
-        </PChatReasoning>
+        </UChatReasoning>
 
-        <PChatTool
+        <UChatTool
           v-else-if="isToolUIPart(part)"
           :text="getToolName(part)"
           :streaming="isToolStreaming(part)"
-          :actions="
-            part.state === 'approval-requested'
-              ? [
-                  {
-                    label: 'Approve',
-                    onClick: () =>
-                      addToolApprovalResponse({
-                        id: part.approval.id,
-                        approved: true,
-                      }),
-                  },
-                  {
-                    label: 'Deny',
-                    color: 'neutral',
-                    variant: 'ghost',
-                    onClick: () =>
-                      addToolApprovalResponse({
-                        id: part.approval.id,
-                        approved: false,
-                      }),
-                  },
-                ]
-              : undefined
-          "
+          :actions="part.state === 'approval-requested' ? [
+            { label: 'Approve', onClick: () => addToolApprovalResponse({ id: part.approval.id, approved: true }) },
+            { label: 'Deny', color: 'neutral', variant: 'ghost', onClick: () => addToolApprovalResponse({ id: part.approval.id, approved: false }) }
+          ] : undefined"
         />
 
         <template v-else-if="isTextUIPart(part)">
@@ -502,63 +434,59 @@ function onSubmit() {
         </template>
       </template>
     </template>
-  </PChatMessages>
+  </UChatMessages>
 
-  <PChatPrompt v-model="input" :error="error" @submit="onSubmit">
-    <PChatPromptSubmit :status="status" @stop="stop()" @reload="regenerate()" />
-  </PChatPrompt>
+  <UChatPrompt
+    v-model="input"
+    :error="error"
+    @submit="onSubmit"
+  >
+    <UChatPromptSubmit
+      :status="status"
+      @stop="stop()"
+      @reload="regenerate()"
+    />
+  </UChatPrompt>
 </template>
 ```
 
 #vue
-
 ```vue
 <script setup lang="ts">
-import { ref } from "vue";
-import {
-  isReasoningUIPart,
-  isTextUIPart,
-  isToolUIPart,
-  getToolName,
-  lastAssistantMessageIsCompleteWithApprovalResponses,
-} from "ai";
-import { useChat } from "@ai-sdk/vue";
-import { isPartStreaming, isToolStreaming } from "pohon-ui/utils/ai";
-import { Markdown } from "@comark/vue";
-import shiki from "@comark/vue/plugins/shiki";
+import { ref } from 'vue'
+import { isReasoningUIPart, isTextUIPart, isToolUIPart, getToolName, lastAssistantMessageIsCompleteWithApprovalResponses } from 'ai'
+import { useChat } from '@ai-sdk/vue'
+import { isPartStreaming, isToolStreaming } from '@nuxt/ui/utils/ai'
+import { Markdown } from '@comark/vue'
+import shiki from '@comark/vue/plugins/shiki'
 
-const input = ref("");
+const input = ref('')
 
-const {
-  messages,
-  status,
-  error,
-  sendMessage,
-  regenerate,
-  stop,
-  addToolApprovalResponse,
-} = useChat({
+const { messages, status, error, sendMessage, regenerate, stop, addToolApprovalResponse } = useChat({
   sendAutomaticallyWhen: lastAssistantMessageIsCompleteWithApprovalResponses,
   onError(error) {
-    console.error(error);
-  },
-});
+    console.error(error)
+  }
+})
 
 function onSubmit() {
-  sendMessage({ text: input.value });
+  sendMessage({ text: input.value })
 
-  input.value = "";
+  input.value = ''
 }
 </script>
 
 <template>
-  <PChatMessages :messages="messages" :status="status">
+  <UChatMessages
+    :messages="messages"
+    :status="status"
+  >
     <template #content="{ message }">
       <template
         v-for="(part, index) in message.parts"
         :key="`${message.id}-${part.type}-${index}`"
       >
-        <PChatReasoning
+        <UChatReasoning
           v-if="isReasoningUIPart(part)"
           :text="part.text"
           :streaming="isPartStreaming(part)"
@@ -569,36 +497,16 @@ function onSubmit() {
             :plugins="[shiki()]"
             class="*:first:mt-0 *:last:mb-0"
           />
-        </PChatReasoning>
+        </UChatReasoning>
 
-        <PChatTool
+        <UChatTool
           v-else-if="isToolUIPart(part)"
           :text="getToolName(part)"
           :streaming="isToolStreaming(part)"
-          :actions="
-            part.state === 'approval-requested'
-              ? [
-                  {
-                    label: 'Approve',
-                    onClick: () =>
-                      addToolApprovalResponse({
-                        id: part.approval.id,
-                        approved: true,
-                      }),
-                  },
-                  {
-                    label: 'Deny',
-                    color: 'neutral',
-                    variant: 'ghost',
-                    onClick: () =>
-                      addToolApprovalResponse({
-                        id: part.approval.id,
-                        approved: false,
-                      }),
-                  },
-                ]
-              : undefined
-          "
+          :actions="part.state === 'approval-requested' ? [
+            { label: 'Approve', onClick: () => addToolApprovalResponse({ id: part.approval.id, approved: true }) },
+            { label: 'Deny', color: 'neutral', variant: 'ghost', onClick: () => addToolApprovalResponse({ id: part.approval.id, approved: false }) }
+          ] : undefined"
         />
 
         <template v-else-if="isTextUIPart(part)">
@@ -615,11 +523,19 @@ function onSubmit() {
         </template>
       </template>
     </template>
-  </PChatMessages>
+  </UChatMessages>
 
-  <PChatPrompt v-model="input" :error="error" @submit="onSubmit">
-    <PChatPromptSubmit :status="status" @stop="stop()" @reload="regenerate()" />
-  </PChatPrompt>
+  <UChatPrompt
+    v-model="input"
+    :error="error"
+    @submit="onSubmit"
+  >
+    <UChatPromptSubmit
+      :status="status"
+      @stop="stop()"
+      @reload="regenerate()"
+    />
+  </UChatPrompt>
 </template>
 ```
 
@@ -630,34 +546,30 @@ For reusable Comark configuration (plugins, class, etc.), use [`defineMarkdownCo
 
 ::framework-only
 #nuxt
-:::div{class="\*:my-0"}
-
+:::div{class="*:my-0"}
 ```ts [components/chat/Markdown.ts]
-import shiki from "@comark/nuxt/plugins/shiki";
+import shiki from '@comark/nuxt/plugins/shiki'
 
 export default defineMarkdownComponent({
-  name: "ChatMarkdown",
+  name: 'ChatMarkdown',
   plugins: [shiki()],
-  class: "*:first:mt-0 *:last:mb-0",
-});
+  class: '*:first:mt-0 *:last:mb-0'
+})
 ```
-
 :::
 
 #vue
-:::div{class="\*:my-0"}
-
+:::div{class="*:my-0"}
 ```ts [components/chat/Markdown.ts]
-import { defineMarkdownComponent } from "@comark/vue";
-import shiki from "@comark/vue/plugins/shiki";
+import { defineMarkdownComponent } from '@comark/vue'
+import shiki from '@comark/vue/plugins/shiki'
 
 export default defineMarkdownComponent({
-  name: "ChatMarkdown",
+  name: 'ChatMarkdown',
   plugins: [shiki()],
-  class: "*:first:mt-0 *:last:mb-0",
-});
+  class: '*:first:mt-0 *:last:mb-0'
+})
 ```
-
 :::
 ::
 
@@ -675,7 +587,6 @@ html.dark .shiki span {
   text-decoration: var(--shiki-dark-text-decoration) !important;
 }
 ```
-
 ::
 
 ::note{to="/blog/how-to-build-an-ai-chat"}

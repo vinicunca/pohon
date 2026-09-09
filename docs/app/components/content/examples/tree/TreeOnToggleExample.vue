@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { TreeItemToggleEvent } from 'reka-ui'
-import type { TreeItem } from 'pohon-ui'
+import type { TreeItem } from '@nuxt/ui'
 
 const items: TreeItem[] = [
   {
@@ -39,5 +39,5 @@ function onToggle(e: TreeItemToggleEvent<TreeItem>) {
 </script>
 
 <template>
-  <PTree :items="items" @toggle="onToggle" />
+  <UTree :items="items" @toggle="onToggle" />
 </template>

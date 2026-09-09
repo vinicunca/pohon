@@ -1,5 +1,5 @@
 ---
-description: "Display a banner at the top of your website to inform users about important information."
+description: 'Display a banner at the top of your website to inform users about important information.'
 category: element
 keywords:
   - announcement bar
@@ -16,55 +16,47 @@ links:
 
 Use the `title` prop to display a title on the Banner.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 class: '!p-0'
 props:
-title: 'This is a banner with an important message.'
-
+  title: 'This is a banner with an important message.'
 ---
-
 ::
 
 ### Icon
 
 Use the `icon` prop to display an icon on the Banner.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 class: '!p-0'
 ignore:
-
-- title
-  props:
+  - title
+props:
   icon: i-lucide-info
   title: 'This is a banner with an icon.'
-
 ---
-
 ::
 
 ### Color
 
 Use the `color` prop to change the color of the Banner.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 class: '!p-0'
 ignore:
-
-- icon
-- title
-  props:
+  - icon
+  - title
+props:
   color: 'neutral'
   icon: i-lucide-info
   title: 'This is a banner with an icon.'
-
 ---
-
 ::
 
 ### Close
@@ -75,20 +67,18 @@ Use the `close` prop to display a [Button](/docs/components/button) to dismiss t
 A `close` event will be emitted when the close button is clicked.
 ::
 
-## ::component-example
-
+::component-example
+---
 iframe:
-style: 'height: 48px;'
+  style: 'height: 48px;'
 overflowHidden: true
 name: 'banner-example'
-
 ---
-
 #code
 
 ```vue
 <template>
-  <PBanner id="example" title="This is a closable banner." close />
+  <UBanner id="example" title="This is a closable banner." close />
 </template>
 ```
 
@@ -106,23 +96,21 @@ To persist the dismissed state across page reloads, you must specify an `id` pro
 
 Use the `close-icon` prop to customize the close button [Icon](/docs/components/icon). Defaults to `i-lucide-x`.
 
-## ::component-example
-
+::component-example
+---
 iframe:
-style: 'height: 48px;'
+  style: 'height: 48px;'
 overflowHidden: true
 name: 'banner-example'
 props:
-title: 'This is a closable banner with a custom close icon.'
-closeIcon: 'i-lucide-x-circle'
-
+  title: 'This is a closable banner with a custom close icon.'
+  closeIcon: 'i-lucide-x-circle'
 ---
-
 #code
 
 ```vue
 <template>
-  <PBanner
+  <UBanner
     title="This is a closable banner with a custom close icon."
     close
     close-icon="i-lucide-x-circle"
@@ -148,27 +136,26 @@ You can customize this icon globally in your `vite.config.ts` under `ui.icons.cl
 
 Use the `actions` prop to add some [Button](/docs/components/button) actions to the Banner.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 class: '!p-0'
 ignore:
-
-- title
-- actions
-- variant
-  external:
-- actions
-  externalTypes:
-- ButtonProps[]
-  props:
+  - title
+  - actions
+  - variant
+external:
+  - actions
+externalTypes:
+  - ButtonProps[]
+props:
   title: 'This is a banner with actions.'
-  actions: - label: Action 1
-  variant: outline - label: Action 2
-  trailingIcon: i-lucide-arrow-right
-
+  actions:
+    - label: Action 1
+      variant: outline
+    - label: Action 2
+      trailingIcon: i-lucide-arrow-right
 ---
-
 ::
 
 ::note
@@ -179,23 +166,20 @@ The action buttons default to `color="neutral"` and `size="xs"`. You can customi
 
 You can pass any property from the [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) component such as `to`, `target`, `rel`, etc.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 class: '!p-0'
 overflowHidden: true
 ignore:
-
-- title
-- target
-  props:
+  - title
+  - target
+props:
   to: 'https://nuxtlabs.com/'
-  target: '\_blank'
+  target: '_blank'
   title: 'NuxtLabs is joining Vercel!'
   color: 'primary'
-
 ---
-
 ::
 
 ::note
@@ -210,22 +194,19 @@ Use the Banner component in your `app.vue` or in a layout:
 
 ```vue [app.vue]{3}
 <template>
-  <PApp>
-    <PBanner
-      icon="i-lucide-construction"
-      title="Pohon UI v4 has been released!"
-    />
+  <UApp>
+    <UBanner icon="i-lucide-construction" title="Nuxt UI v4 has been released!" />
 
-    <PHeader />
+    <UHeader />
 
-    <PMain>
+    <UMain>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-    </PMain>
+    </UMain>
 
-    <PFooter />
-  </PApp>
+    <UFooter />
+  </UApp>
 </template>
 ```
 

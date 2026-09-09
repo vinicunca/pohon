@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorToolbarItem } from 'pohon-ui'
+import type { EditorToolbarItem } from '@nuxt/ui'
 
 const value = ref(`# Toolbar
 
@@ -61,12 +61,12 @@ const items: EditorToolbarItem[][] = [[{
 </script>
 
 <template>
-  <PEditor
+  <UEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     class="w-full min-h-21"
   >
-    <PEditorToolbar :editor="editor" :items="items" layout="bubble" />
-  </PEditor>
+    <UEditorToolbar :editor="editor" :items="items" layout="bubble" />
+  </UEditor>
 </template>

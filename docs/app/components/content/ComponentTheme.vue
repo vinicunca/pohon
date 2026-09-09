@@ -96,7 +96,7 @@ export default defineAppConfig(${json5.stringify(component.value, null, 2).repla
 \`\`\`ts [vite.config.ts]
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import ui from 'pohon-ui/vite'
+import ui from '@nuxt/ui/vite'
 
 export default defineConfig({
   plugins: [

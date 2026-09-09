@@ -6,10 +6,10 @@ const date = shallowRef(today(getLocalTimeZone()))
 
 <template>
   <div class="flex flex-col gap-4">
-    <PCalendar v-model="date" />
+    <UCalendar v-model="date" />
 
-    <PButton color="neutral" variant="outline" class="justify-center" @click="date = today(getLocalTimeZone())">
+    <UButton color="neutral" variant="outline" class="justify-center" @click="date = today(getLocalTimeZone())">
       Today
-    </PButton>
+    </UButton>
   </div>
 </template>

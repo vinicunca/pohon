@@ -31,7 +31,7 @@ watchDebounced(searchTerm, (term) => {
 </script>
 
 <template>
-  <PContentSearch
+  <UContentSearch
     v-model:search-term="searchTerm"
     :links="links"
     :groups="groups"

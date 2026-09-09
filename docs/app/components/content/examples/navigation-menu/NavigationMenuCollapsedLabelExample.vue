@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from 'pohon-ui'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items: NavigationMenuItem[] = [
   {
@@ -23,7 +23,7 @@ const items: NavigationMenuItem[] = [
 </script>
 
 <template>
-  <PNavigationMenu
+  <UNavigationMenu
     collapsed
     orientation="vertical"
     :items="items"

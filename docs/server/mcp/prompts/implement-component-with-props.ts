@@ -6,7 +6,7 @@ import { normalizeComponentName } from '~~/server/utils/normalizeComponentName'
 export default defineMcpPrompt({
   description: 'Generate complete component implementation with proper props and styling',
   inputSchema: {
-    componentName: z.string().describe('The Pohon UI component name (PascalCase)'),
+    componentName: z.string().describe('The Nuxt UI component name (PascalCase)'),
     requirements: z.string().optional().describe('Specific requirements or customizations needed')
   },
   async handler({ componentName, requirements }) {
@@ -32,7 +32,7 @@ export default defineMcpPrompt({
             role: 'user' as const,
             content: {
               type: 'text' as const,
-              text: `Component '${componentName}' not found in documentation. Please use a valid Pohon UI component name.`
+              text: `Component '${componentName}' not found in documentation. Please use a valid Nuxt UI component name.`
             }
           }
         ]

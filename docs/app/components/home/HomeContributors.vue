@@ -20,7 +20,7 @@ const { width } = useElementSize(el)
 
 <template>
   <div
-    class="isolate rounded-full relative circle w-full aspect-square p-8 sm:p-12 md:p-14 lg:p-10 xl:p-16 before:absolute before:inset-px before:bg-background before:rounded-full z-(--level)"
+    class="isolate rounded-full relative circle w-full aspect-square p-8 sm:p-12 md:p-14 lg:p-10 xl:p-16 before:absolute before:inset-px before:bg-default before:rounded-full z-(--level)"
     :class="{ 'animation-paused': paused }"
     :style="{
       '--duration': `${((level + 1) * 8)}s`,
@@ -43,7 +43,7 @@ const { width } = useElementSize(el)
         '--offset': `${width / 2}px`
       }"
     >
-      <PTooltip
+      <UTooltip
         v-for="(contributor, index) in contributors"
         :key="contributor.username"
         :text="contributor.username"
@@ -65,11 +65,11 @@ const { width } = useElementSize(el)
             :src="`https://ipx.nuxt.com/s_56x56/gh_avatar/${contributor.username}`"
             :srcset="`https://ipx.nuxt.com/s_112x112/gh_avatar/${contributor.username} 2x`"
             :alt="contributor.username"
-            class="ring-2 ring-ring lg:hover:ring-ring-inverted transition rounded-full size-7"
+            class="ring-2 ring-default lg:hover:ring-inverted transition rounded-full size-7"
             loading="lazy"
           >
         </NuxtLink>
-      </PTooltip>
+      </UTooltip>
     </div>
   </div>
 </template>

@@ -14,16 +14,14 @@ links:
 
 Wrap any component with a Chip to display an indicator.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 slots:
-default: |
+  default: |
 
-    <PButton icon="i-lucide-mail" color="neutral" variant="subtle" />
-
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-
 :u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
@@ -31,18 +29,16 @@ default: |
 
 Use the `color` prop to change the color of the Chip.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 props:
-color: neutral
+  color: neutral
 slots:
-default: |
+  default: |
 
-    <PButton icon="i-lucide-mail" color="neutral" variant="subtle" />
-
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-
 :u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
@@ -50,18 +46,16 @@ default: |
 
 Use the `size` prop to change the size of the Chip.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 props:
-size: 3xl
+  size: 3xl
 slots:
-default: |
+  default: |
 
-    <PButton icon="i-lucide-mail" color="neutral" variant="subtle" />
-
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-
 :u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
@@ -69,19 +63,17 @@ default: |
 
 Use the `text` prop to set the text of the Chip.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 props:
-text: 5
-size: 3xl
+  text: 5
+  size: 3xl
 slots:
-default: |
+  default: |
 
-    <PButton icon="i-lucide-mail" color="neutral" variant="subtle" />
-
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-
 :u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
@@ -89,18 +81,16 @@ default: |
 
 Use the `position` prop to change the position of the Chip.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 props:
-position: 'bottom-left'
+  position: 'bottom-left'
 slots:
-default: |
+  default: |
 
-    <PButton icon="i-lucide-mail" color="neutral" variant="subtle" />
-
+    <UButton icon="i-lucide-mail" color="neutral" variant="subtle" />
 ---
-
 :u-button{icon="i-lucide-mail" color="neutral" variant="subtle"}
 ::
 
@@ -108,33 +98,29 @@ default: |
 
 Use the `inset` prop to display the Chip inside the component. This is useful when dealing with rounded components.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 props:
-inset: true
+  inset: true
 slots:
-default: |
+  default: |
 
-    <PAvatar src="https://github.com/praburangki.png" loading="lazy" />
-
+    <UAvatar src="https://github.com/benjamincanac.png" loading="lazy" />
 ---
-
-:u-avatar{src="https://github.com/praburangki.png" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" loading="lazy"}
 ::
 
 ### Standalone
 
 Use the `standalone` prop alongside the `inset` prop to display the Chip inline.
 
-## ::component-code
-
-props:
-standalone: true
-inset: true
-
+::component-code
 ---
-
+props:
+  standalone: true
+  inset: true
+---
 ::
 
 ::note

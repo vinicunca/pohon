@@ -22,7 +22,7 @@ function onOpen() {
 </script>
 
 <template>
-  <PSelect
+  <USelect
     v-model="value"
     :items="users"
     placeholder="Select user"
@@ -34,9 +34,9 @@ function onOpen() {
     <template #item-label="{ item }">
       {{ item.label }}
 
-      <span class="color-text-muted">
+      <span class="text-muted">
         {{ item.email }}
       </span>
     </template>
-  </PSelect>
+  </USelect>
 </template>

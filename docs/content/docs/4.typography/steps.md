@@ -1,6 +1,6 @@
 ---
 title: ProseSteps
-description: "Transform headings into numbered step-by-step guides and tutorials."
+description: 'Transform headings into numbered step-by-step guides and tutorials.'
 category: components
 navigation.title: Steps
 links:
@@ -15,15 +15,15 @@ Wrap your headings with the Steps component to display a list of steps.
 
 Use the `level` prop to define which heading will be used for the steps.
 
-:::code-preview{class="[&>div]:\*:w-full"}
+:::code-preview{class="[&>div]:*:w-full"}
 ::steps{level="4"}
 
-#### Add the Pohon UI module in your `nuxt.config.ts`
+#### Add the Nuxt UI module in your `nuxt.config.ts`
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
-  modules: ["pohon-ui"],
-});
+  modules: ['@nuxt/ui']
+})
 ```
 
 #### Import Tailwind CSS in your CSS
@@ -45,11 +45,11 @@ npm run dev
 ````mdc
 ::steps{level="4"}
 
-#### Add the Pohon UI module in your `nuxt.config.ts`
+#### Add the Nuxt UI module in your `nuxt.config.ts`
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
-  modules: ['pohon-ui']
+  modules: ['@nuxt/ui']
 })
 ```
 

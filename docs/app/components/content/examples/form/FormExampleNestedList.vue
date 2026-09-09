@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as z from 'zod'
-import type { FormSubmitEvent } from 'pohon-ui'
+import type { FormSubmitEvent } from '@nuxt/ui'
 
 const schema = z.object({
   customer: z.string().min(2)
@@ -39,17 +39,17 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <PForm
+  <UForm
     :state="state"
     :schema="schema"
     class="gap-4 flex flex-col w-60"
     @submit="onSubmit"
   >
-    <PFormField label="Customer" name="customer">
-      <PInput v-model="state.customer" placeholder="Wonka Industries" />
-    </PFormField>
+    <UFormField label="Customer" name="customer">
+      <UInput v-model="state.customer" placeholder="Wonka Industries" />
+    </UFormField>
 
-    <PForm
+    <UForm
       v-for="item, count in state.items"
       :key="count"
       :name="`items.${count}`"
@@ -57,27 +57,27 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       class="flex gap-2"
       nested
     >
-      <PFormField :label="!count ? 'Description' : undefined" name="description">
-        <PInput v-model="item.description" />
-      </PFormField>
-      <PFormField :label="!count ? 'Price' : undefined" name="price" class="w-20">
-        <PInput v-model="item.price" type="number" />
-      </PFormField>
-    </PForm>
+      <UFormField :label="!count ? 'Description' : undefined" name="description">
+        <UInput v-model="item.description" />
+      </UFormField>
+      <UFormField :label="!count ? 'Price' : undefined" name="price" class="w-20">
+        <UInput v-model="item.price" type="number" />
+      </UFormField>
+    </UForm>
 
     <div class="flex gap-2">
-      <PButton color="neutral" variant="subtle" size="sm" @click="addItem()">
+      <UButton color="neutral" variant="subtle" size="sm" @click="addItem()">
         Add Item
-      </PButton>
+      </UButton>
 
-      <PButton color="neutral" variant="ghost" size="sm" @click="removeItem()">
+      <UButton color="neutral" variant="ghost" size="sm" @click="removeItem()">
         Remove Item
-      </PButton>
+      </UButton>
     </div>
     <div>
-      <PButton type="submit">
+      <UButton type="submit">
         Submit
-      </PButton>
+      </UButton>
     </div>
-  </PForm>
+  </UForm>
 </template>

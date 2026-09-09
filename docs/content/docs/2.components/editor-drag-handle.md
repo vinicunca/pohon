@@ -18,18 +18,16 @@ It must be used inside an [Editor](/docs/components/editor) component's default 
 
 It extends the [Button](/docs/components/button) component, so you can pass any property such as `color`, `variant`, `size`, etc.
 
-## ::component-example
-
+::component-example
+---
 collapse: true
 elevated: true
 name: 'editor-drag-handle-example'
 class: 'p-8'
-
 ---
-
 ::
 
-::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/extensions/functionality/drag-handle-vue" target="\_blank"}
+::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/extensions/functionality/drag-handle-vue" target="_blank"}
 Learn more about the Drag Handle extension in the TipTap documentation.
 ::
 
@@ -39,9 +37,9 @@ Use the `icon` prop to customize the drag handle icon.
 
 ```vue
 <template>
-  <PEditor v-slot="{ editor }">
-    <PEditorDragHandle :editor="editor" icon="i-lucide-move" />
-  </PEditor>
+  <UEditor v-slot="{ editor }">
+    <UEditorDragHandle :editor="editor" icon="i-lucide-move" />
+  </UEditor>
 </template>
 ```
 
@@ -67,14 +65,14 @@ The offset is automatically calculated to center the handle for small blocks and
 
 ```vue
 <template>
-  <PEditor v-slot="{ editor }">
-    <PEditorDragHandle
+  <UEditor v-slot="{ editor }">
+    <UEditorDragHandle
       :editor="editor"
       :options="{
-        placement: 'left',
+        placement: 'left'
       }"
     />
-  </PEditor>
+  </UEditor>
 </template>
 ```
 
@@ -86,19 +84,17 @@ Use the default slot to add a [DropdownMenu](/docs/components/dropdown-menu) wit
 
 Listen to the `@node-change` event to track the currently hovered node and its position, then use `editor.chain().setMeta('lockDragHandle', open).run()`{lang="ts-type"} to lock the handle position while the menu is open.
 
-## ::component-example
-
+::component-example
+---
 elevated: true
 collapse: true
 name: 'editor-drag-handle-dropdown-menu-example'
 class: 'p-8'
-
 ---
-
 ::
 
 ::note
-This example uses the `mapEditorItems` utility from `pohon-ui/utils/editor` to automatically map handler kinds (like `duplicate`, `delete`, `moveUp`, etc.) to their corresponding editor commands with proper state management.
+This example uses the `mapEditorItems` utility from `@nuxt/ui/utils/editor` to automatically map handler kinds (like `duplicate`, `delete`, `moveUp`, etc.) to their corresponding editor commands with proper state management.
 ::
 
 ### With suggestion menu
@@ -107,15 +103,13 @@ Use the default slot to add a [Button](/docs/components/button) next to the drag
 
 Call the `onClick` slot function to get the current node position, then use `handlers.suggestion?.execute(editor, { pos: node?.pos }).run()`{lang="ts-type"} to insert new blocks at that position.
 
-## ::component-example
-
+::component-example
+---
 elevated: true
 collapse: true
 name: 'editor-drag-handle-suggestion-menu-example'
 class: '!p-0'
-
 ---
-
 ::
 
 ## API

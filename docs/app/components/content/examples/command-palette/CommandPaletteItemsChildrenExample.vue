@@ -115,5 +115,5 @@ const groups = [{
 </script>
 
 <template>
-  <PCommandPalette :groups="groups" class="flex-1" />
+  <UCommandPalette :groups="groups" class="flex-1" />
 </template>

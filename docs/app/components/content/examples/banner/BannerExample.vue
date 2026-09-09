@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { BannerProps } from 'pohon-ui'
+import type { BannerProps } from '@nuxt/ui'
 
 const { id = 'example' } = defineProps<{
   id?: string
@@ -22,7 +22,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <PBanner
+  <UBanner
     :id="id"
     :title="title || 'This is a closable banner'"
     :color="color"

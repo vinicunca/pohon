@@ -4,11 +4,11 @@ const value = ref('Backlog')
 </script>
 
 <template>
-  <PInputMenu
+  <UInputMenu
     v-model="value"
     :items="items"
     :ui="{
-      trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-280'
+      trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200'
     }"
   />
 </template>

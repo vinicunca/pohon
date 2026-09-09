@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from 'pohon-ui'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items: NavigationMenuItem[] = [{
   label: 'Home',
@@ -21,16 +21,16 @@ defineShortcuts({
 </script>
 
 <template>
-  <PDashboardSidebar v-model:collapsed="collapsed" collapsible>
+  <UDashboardSidebar v-model:collapsed="collapsed" collapsible>
     <template #header>
       <Logo v-if="!collapsed" class="h-5 w-auto" />
-      <PIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 color-primary mx-auto" />
+      <UIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 text-primary mx-auto" />
     </template>
 
-    <PNavigationMenu
+    <UNavigationMenu
       :collapsed="collapsed"
       :items="items"
       orientation="vertical"
     />
-  </PDashboardSidebar>
+  </UDashboardSidebar>
 </template>

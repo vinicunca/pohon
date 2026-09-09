@@ -9,13 +9,13 @@ defineShortcuts({
 </script>
 
 <template>
-  <PInput
+  <UInput
     ref="input"
     icon="i-lucide-search"
     placeholder="Search..."
   >
     <template #trailing>
-      <PKbd value="/" />
+      <UKbd value="/" />
     </template>
-  </PInput>
+  </UInput>
 </template>

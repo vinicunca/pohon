@@ -23,7 +23,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <PListbox
+  <UListbox
     v-model:search-term="searchTerm"
     :items="users || []"
     :filter="{

@@ -136,8 +136,8 @@ const testimonials = ref([
 </script>
 
 <template>
-  <PPageColumns>
-    <PPageCard
+  <UPageColumns>
+    <UPageCard
       variant="solid"
       to="https://cloudflare.com"
       icon="i-logos-cloudflare-icon"
@@ -146,7 +146,7 @@ const testimonials = ref([
       :ui="{ leadingIcon: 'size-10' }"
     />
 
-    <PPageCard
+    <UPageCard
       v-for="(testimonial, index) in testimonials"
       :key="index"
       variant="subtle"
@@ -154,8 +154,8 @@ const testimonials = ref([
       :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
     >
       <template #footer>
-        <PUser v-bind="testimonial.user" size="xl" />
+        <UUser v-bind="testimonial.user" size="xl" />
       </template>
-    </PPageCard>
-  </PPageColumns>
+    </UPageCard>
+  </UPageColumns>
 </template>

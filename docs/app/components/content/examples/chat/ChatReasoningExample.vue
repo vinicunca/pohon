@@ -20,7 +20,7 @@ onMounted(simulateStreaming)
 </script>
 
 <template>
-  <PChatReasoning
+  <UChatReasoning
     :text="text"
     :streaming="streaming"
     class="w-60"

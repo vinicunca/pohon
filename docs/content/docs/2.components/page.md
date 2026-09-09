@@ -1,5 +1,5 @@
 ---
-description: "A grid layout for your pages with left and right columns."
+description: 'A grid layout for your pages with left and right columns.'
 category: page
 links:
   - label: GitHub
@@ -13,11 +13,11 @@ The Page component helps you create layouts with optional left and right columns
 
 ```vue {2,6}
 <template>
-  <PPage>
+  <UPage>
     <template #left />
 
     <template #right />
-  </PPage>
+  </UPage>
 </template>
 ```
 
@@ -37,21 +37,21 @@ Use the Page component in a layout with the `left` slot to display a navigation:
 
 ```vue [layouts/docs.vue] {9-13}
 <script setup lang="ts">
-import type { ContentNavigationItem } from "@nuxt/content";
+import type { ContentNavigationItem } from '@nuxt/content'
 
-const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </script>
 
 <template>
-  <PPage>
+  <UPage>
     <template #left>
-      <PPageAside>
-        <PContentNavigation :navigation="navigation" />
-      </PPageAside>
+      <UPageAside>
+        <UContentNavigation :navigation="navigation" />
+      </UPageAside>
     </template>
 
     <slot />
-  </PPage>
+  </UPage>
 </template>
 ```
 
@@ -63,39 +63,39 @@ In this example, we use the `ContentNavigation` component to display the navigat
 
 Use the Page component in a page with the `right` slot to display a table of contents:
 
-```vue [pages/[...slug].vue]{29-31}
+```vue [pages/\[...slug\\].vue]{29-31}
 <script setup lang="ts">
-const route = useRoute();
+const route = useRoute()
 
 definePageMeta({
-  layout: "docs",
-});
+  layout: 'docs'
+})
 
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection("docs").path(route.path).first();
-});
+  return queryCollection('docs').path(route.path).first()
+})
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
-  return queryCollectionItemSurroundings("content", route.path);
-});
+  return queryCollectionItemSurroundings('content', route.path)
+})
 </script>
 
 <template>
-  <PPage>
-    <PPageHeader :title="page.title" :description="page.description" />
+  <UPage>
+    <UPageHeader :title="page.title" :description="page.description" />
 
-    <PPageBody>
+    <UPageBody>
       <ContentRenderer :value="page" />
 
-      <PSeparator />
+      <USeparator />
 
-      <PContentSurround :surround="surround" />
-    </PPageBody>
+      <UContentSurround :surround="surround" />
+    </UPageBody>
 
     <template #right>
-      <PContentToc :links="page.body.toc.links" />
+      <UContentToc :links="page.body.toc.links" />
     </template>
-  </PPage>
+  </UPage>
 </template>
 ```
 

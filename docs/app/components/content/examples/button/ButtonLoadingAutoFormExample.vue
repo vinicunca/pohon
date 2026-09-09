@@ -12,12 +12,12 @@ async function validate(data: Partial<typeof state>) {
 </script>
 
 <template>
-  <PForm :state="state" :validate="validate" @submit="onSubmit">
-    <PFormField name="fullName" label="Full name">
-      <PInput v-model="state.fullName" />
-    </PFormField>
-    <PButton type="submit" class="mt-2" loading-auto>
+  <UForm :state="state" :validate="validate" @submit="onSubmit">
+    <UFormField name="fullName" label="Full name">
+      <UInput v-model="state.fullName" />
+    </UFormField>
+    <UButton type="submit" class="mt-2" loading-auto>
       Submit
-    </PButton>
-  </PForm>
+    </UButton>
+  </UForm>
 </template>

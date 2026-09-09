@@ -89,9 +89,9 @@ function handleKeyDown(event: KeyboardEvent) {
 </script>
 
 <template>
-  <PPopover v-model:open="open" :ui="{ content: 'p-0.5' }">
-    <PTooltip text="Link">
-      <PButton
+  <UPopover v-model:open="open" :ui="{ content: 'p-0.5' }">
+    <UTooltip text="Link">
+      <UButton
         icon="i-lucide-link"
         color="neutral"
         active-color="primary"
@@ -101,10 +101,10 @@ function handleKeyDown(event: KeyboardEvent) {
         :active="active"
         :disabled="disabled"
       />
-    </PTooltip>
+    </UTooltip>
 
     <template #content>
-      <PInput
+      <UInput
         v-model="url"
         autofocus
         name="url"
@@ -114,7 +114,7 @@ function handleKeyDown(event: KeyboardEvent) {
         @keydown="handleKeyDown"
       >
         <div class="flex items-center mr-0.5">
-          <PButton
+          <UButton
             icon="i-lucide-corner-down-left"
             variant="ghost"
             size="sm"
@@ -123,9 +123,9 @@ function handleKeyDown(event: KeyboardEvent) {
             @click="setLink"
           />
 
-          <PSeparator orientation="vertical" class="h-6 mx-1" />
+          <USeparator orientation="vertical" class="h-6 mx-1" />
 
-          <PButton
+          <UButton
             icon="i-lucide-external-link"
             color="neutral"
             variant="ghost"
@@ -135,7 +135,7 @@ function handleKeyDown(event: KeyboardEvent) {
             @click="openLink"
           />
 
-          <PButton
+          <UButton
             icon="i-lucide-trash"
             color="neutral"
             variant="ghost"
@@ -145,7 +145,7 @@ function handleKeyDown(event: KeyboardEvent) {
             @click="removeLink"
           />
         </div>
-      </PInput>
+      </UInput>
     </template>
-  </PPopover>
+  </UPopover>
 </template>

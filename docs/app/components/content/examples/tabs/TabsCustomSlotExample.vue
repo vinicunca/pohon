@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TabsItem } from 'pohon-ui'
+import type { TabsItem } from '@nuxt/ui'
 
 const items = [
   {
@@ -17,7 +17,7 @@ const items = [
 ] satisfies TabsItem[]
 
 const state = reactive({
-  name: 'praburangki',
+  name: 'Benjamin Canac',
   username: 'benjamincanac',
   currentPassword: '',
   newPassword: '',
@@ -26,42 +26,42 @@ const state = reactive({
 </script>
 
 <template>
-  <PTabs :items="items" variant="link" :ui="{ trigger: 'grow' }" class="gap-4 w-full">
+  <UTabs :items="items" variant="link" :ui="{ trigger: 'grow' }" class="gap-4 w-full">
     <template #account="{ item }">
-      <p class="color-text-muted mb-4">
+      <p class="text-muted mb-4">
         {{ item.description }}
       </p>
 
-      <PForm :state="state" class="flex flex-col gap-4">
-        <PFormField label="Name" name="name">
-          <PInput v-model="state.name" class="w-full" />
-        </PFormField>
-        <PFormField label="Username" name="username">
-          <PInput v-model="state.username" class="w-full" />
-        </PFormField>
+      <UForm :state="state" class="flex flex-col gap-4">
+        <UFormField label="Name" name="name">
+          <UInput v-model="state.name" class="w-full" />
+        </UFormField>
+        <UFormField label="Username" name="username">
+          <UInput v-model="state.username" class="w-full" />
+        </UFormField>
 
-        <PButton label="Save changes" type="submit" variant="soft" class="self-end" />
-      </PForm>
+        <UButton label="Save changes" type="submit" variant="soft" class="self-end" />
+      </UForm>
     </template>
 
     <template #password="{ item }">
-      <p class="color-text-muted mb-4">
+      <p class="text-muted mb-4">
         {{ item.description }}
       </p>
 
-      <PForm :state="state" class="flex flex-col gap-4">
-        <PFormField label="Current Password" name="current" required>
-          <PInput v-model="state.currentPassword" type="password" required class="w-full" />
-        </PFormField>
-        <PFormField label="New Password" name="new" required>
-          <PInput v-model="state.newPassword" type="password" required class="w-full" />
-        </PFormField>
-        <PFormField label="Confirm Password" name="confirm" required>
-          <PInput v-model="state.confirmPassword" type="password" required class="w-full" />
-        </PFormField>
+      <UForm :state="state" class="flex flex-col gap-4">
+        <UFormField label="Current Password" name="current" required>
+          <UInput v-model="state.currentPassword" type="password" required class="w-full" />
+        </UFormField>
+        <UFormField label="New Password" name="new" required>
+          <UInput v-model="state.newPassword" type="password" required class="w-full" />
+        </UFormField>
+        <UFormField label="Confirm Password" name="confirm" required>
+          <UInput v-model="state.confirmPassword" type="password" required class="w-full" />
+        </UFormField>
 
-        <PButton label="Change password" type="submit" variant="soft" class="self-end" />
-      </PForm>
+        <UButton label="Change password" type="submit" variant="soft" class="self-end" />
+      </UForm>
     </template>
-  </PTabs>
+  </UTabs>
 </template>

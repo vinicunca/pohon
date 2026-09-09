@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const users = [
   {
-    label: 'praburangki',
+    label: 'Benjamin Canac',
     suffix: 'benjamincanac',
     to: 'https://github.com/benjamincanac',
     target: '_blank',
     avatar: {
-      src: 'https://github.com/praburangki.png',
+      src: 'https://github.com/benjamincanac.png',
       loading: 'lazy' as const
     }
   },
@@ -90,7 +90,7 @@ function onSelect() {
 </script>
 
 <template>
-  <PCommandPalette
+  <UCommandPalette
     v-model:search-term="searchTerm"
     :groups="[{ id: 'users', items: users }]"
     class="flex-1"

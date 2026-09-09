@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Editor } from '@tiptap/vue-3'
-import type { EditorToolbarItem } from 'pohon-ui'
+import type { EditorToolbarItem } from '@nuxt/ui'
 
 const value = ref(`Click on the image below to see the image-specific toolbar:
 
@@ -33,13 +33,13 @@ const items = (editor: Editor): EditorToolbarItem[][] => {
 </script>
 
 <template>
-  <PEditor
+  <UEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     class="w-full min-h-113"
   >
-    <PEditorToolbar
+    <UEditorToolbar
       :editor="editor"
       :items="items(editor)"
       layout="bubble"
@@ -47,5 +47,5 @@ const items = (editor: Editor): EditorToolbarItem[][] => {
         return editor.isActive('image') && view.hasFocus()
       }"
     />
-  </PEditor>
+  </UEditor>
 </template>

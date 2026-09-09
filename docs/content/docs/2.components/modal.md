@@ -21,18 +21,17 @@ Use a [Button](/docs/components/button) or any other component in the default sl
 
 Then, use the `#content` slot to add the content displayed when the Modal is open.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 slots:
-default: |
+  default: |
 
-    <PButton label="Open" color="neutral" variant="subtle" />
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-content: |
+  content: |
 
     <Placeholder class="h-48 m-4" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -47,20 +46,19 @@ You can also use the `#header`{lang="ts-type"}, `#body`{lang="ts-type"} and `#fo
 
 Use the `title` prop to set the title of the Modal's header.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 props:
-title: 'Modal with title'
+  title: 'Modal with title'
 slots:
-default: |
+  default: |
 
-    <PButton label="Open" color="neutral" variant="subtle" />
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-body: |
+  body: |
 
     <Placeholder class="h-48" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -73,24 +71,22 @@ body: |
 
 Use the `description` prop to set the description of the Modal's header.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- title
-  props:
+  - title
+props:
   title: 'Modal with description'
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  slots:
+slots:
   default: |
 
-      <PButton label="Open" color="neutral" variant="subtle" />
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-body: |
+  body: |
 
     <Placeholder class="h-48" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -105,29 +101,27 @@ Use the `close` prop to customize or hide the close button (with `false` value) 
 
 You can pass any property from the [Button](/docs/components/button) component to customize it.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- title
-- close.color
-- close.variant
-  props:
+  - title
+  - close.color
+  - close.variant
+props:
   title: 'Modal with close button'
   close:
-  color: primary
-  variant: outline
-  class: 'rounded-full'
-  slots:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+slots:
   default: |
 
-      <PButton label="Open" color="neutral" variant="subtle" />
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-body: |
+  body: |
 
     <Placeholder class="h-48" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -144,24 +138,22 @@ The close button is not displayed if the `#content` slot is used as it's a part 
 
 Use the `close-icon` prop to customize the close button [Icon](/docs/components/icon). Defaults to `i-lucide-x`.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- title
-  props:
+  - title
+props:
   title: 'Modal with close button'
   closeIcon: 'i-lucide-arrow-right'
-  slots:
+slots:
   default: |
 
-      <PButton label="Open" color="neutral" variant="subtle" />
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-body: |
+  body: |
 
     <Placeholder class="h-48" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -186,24 +178,22 @@ You can customize this icon globally in your `vite.config.ts` under `ui.icons.cl
 
 Use the `transition` prop to control whether the Modal is animated or not. Defaults to `true`.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- title
-  props:
+  - title
+props:
   transition: false
   title: 'Modal without transition'
-  slots:
+slots:
   default: |
 
-      <PButton label="Open" color="neutral" variant="subtle" />
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-body: |
+  body: |
 
     <Placeholder class="h-48" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -216,24 +206,22 @@ body: |
 
 Use the `overlay` prop to control whether the Modal has an overlay or not. Defaults to `true`.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- title
-  props:
+  - title
+props:
   overlay: false
   title: 'Modal without overlay'
-  slots:
+slots:
   default: |
 
-      <PButton label="Open" color="neutral" variant="subtle" />
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-body: |
+  body: |
 
     <Placeholder class="h-48" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -250,24 +238,22 @@ Use the `modal` prop to control whether the Modal blocks interaction with outsid
 When `modal` is set to `false`, the overlay is automatically disabled and outside content becomes interactive.
 ::
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- title
-  props:
+  - title
+props:
   modal: false
   title: 'Modal interactive'
-  slots:
+slots:
   default: |
 
-      <PButton label="Open" color="neutral" variant="subtle" />
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-body: |
+  body: |
 
     <Placeholder class="h-48" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -288,25 +274,23 @@ A `close:prevent` event will be emitted when the user tries to close it.
 You can combine `modal: false` with `dismissible: false` to make the Modal's background interactive without closing it.
 ::
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- title
-  props:
+  - title
+props:
   dismissible: false
   modal: true
   title: 'Modal non-dismissible'
-  slots:
+slots:
   default: |
 
-      <PButton label="Open" color="neutral" variant="subtle" />
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-body: |
+  body: |
 
     <Placeholder class="h-48" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -323,25 +307,23 @@ Use the `scrollable` prop to make the Modal's content scrollable within the over
 As the overlay is needed for scrolling, `modal: false` is not compatible and `overlay: false` only removes the background.
 ::
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- title
-  props:
+  - title
+props:
   scrollable: true
   overlay: true
   title: 'Modal scrollable'
-  slots:
+slots:
   default: |
 
-      <PButton label="Open" color="neutral" variant="subtle" />
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-body: |
+  body: |
 
     <Placeholder class="h-full" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -358,25 +340,23 @@ There's a [known issue](https://reka-ui.com/docs/components/dialog#scrollable-ov
 
 Use the `fullscreen` prop to make the Modal fullscreen.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- title
-- fullscreen
-  props:
+  - title
+  - fullscreen
+props:
   fullscreen: true
   title: 'Modal fullscreen'
-  slots:
+slots:
   default: |
 
-      <PButton label="Open" color="neutral" variant="subtle" />
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-body: |
+  body: |
 
     <Placeholder class="h-full" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -389,24 +369,22 @@ body: |
 
 Use the `unmount-on-hide` prop to prevent the Modal's content from being unmounted when it is closed. Defaults to `true`.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- title
-  props:
+  - title
+props:
   unmountOnHide: false
   title: 'Modal'
-  slots:
+slots:
   default: |
 
-      <PButton label="Open" color="neutral" variant="subtle" />
+    <UButton label="Open" color="neutral" variant="subtle" />
 
-body: |
+  body: |
 
     <Placeholder class="h-48" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle"}
@@ -429,10 +407,10 @@ When the `portal` prop is set to `false`, the content is also rendered on the se
 
 You can control the open state by using the `default-open` prop or the `v-model:open` directive.
 
-## ::component-example
-
-## name: 'modal-open-example'
-
+::component-example
+---
+name: 'modal-open-example'
+---
 ::
 
 ::note
@@ -453,14 +431,12 @@ Make sure to wrap your app with the [`App`](/docs/components/app) component whic
 
 First, create a modal component that will be opened programmatically:
 
-## ::component-example
-
+::component-example
+---
 prettier: true
 name: 'modal-example'
 preview: false
-
 ---
-
 ::
 
 ::note
@@ -469,10 +445,10 @@ We are emitting a `close` event when the modal is closed or dismissed here. You 
 
 Then, use it in your app:
 
-## ::component-example
-
-## name: 'modal-programmatic-example'
-
+::component-example
+---
+name: 'modal-programmatic-example'
+---
 ::
 
 ::tip
@@ -483,33 +459,31 @@ You can close the modal within the modal component by emitting `emit('close')`.
 
 You can nest modals within each other.
 
-## ::component-example
-
-## name: 'modal-nested-example'
-
+::component-example
+---
+name: 'modal-nested-example'
+---
 ::
 
 ### With footer slot
 
 Use the `#footer` slot to add content after the Modal's body.
 
-## ::component-example
-
-## name: 'modal-footer-slot-example'
-
+::component-example
+---
+name: 'modal-footer-slot-example'
+---
 ::
 
 ### With command palette
 
 You can use a [CommandPalette](/docs/components/command-palette) component inside the Modal's content.
 
-## ::component-example
-
+::component-example
+---
 collapse: true
 name: 'modal-command-palette-example'
-
 ---
-
 ::
 
 ::note

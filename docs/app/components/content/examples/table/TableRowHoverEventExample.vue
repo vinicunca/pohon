@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn, TableRow } from 'pohon-ui'
+import type { TableColumn, TableRow } from '@nuxt/ui'
 
-const PBadge = resolveComponent('PBadge')
-const PCheckbox = resolveComponent('PCheckbox')
+const UBadge = resolveComponent('UBadge')
+const UCheckbox = resolveComponent('UCheckbox')
 
 type Payment = {
   id: string
@@ -47,12 +47,12 @@ const data = ref<Payment[]>([{
 
 const columns: TableColumn<Payment>[] = [{
   id: 'select',
-  header: ({ table }) => h(PCheckbox, {
+  header: ({ table }) => h(UCheckbox, {
     'modelValue': table.getIsSomePageRowsSelected() ? 'indeterminate' : table.getIsAllPageRowsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => table.toggleAllPageRowsSelected(!!value),
     'aria-label': 'Select all'
   }),
-  cell: ({ row }) => h(PCheckbox, {
+  cell: ({ row }) => h(UCheckbox, {
     'modelValue': row.getIsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => row.toggleSelected(!!value),
     'aria-label': 'Select row'
@@ -83,7 +83,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -94,7 +94,7 @@ const columns: TableColumn<Payment>[] = [{
   meta: {
     class: {
       th: 'text-right',
-      td: 'text-right font-500'
+      td: 'text-right font-medium'
     }
   },
   cell: ({ row }) => {
@@ -134,7 +134,7 @@ function onHover(_e: Event, row: TableRow<Payment> | null) {
 
 <template>
   <div class="flex w-full flex-1 gap-1">
-    <PTable
+    <UTable
       :data="data"
       :columns="columns"
       class="flex-1"
@@ -145,7 +145,7 @@ function onHover(_e: Event, row: TableRow<Payment> | null) {
       @hover="onHover"
     />
 
-    <PPopover
+    <UPopover
       :content="{ side: 'top', sideOffset: 16, updatePositionStrategy: 'always' }"
       :open="openDebounced"
       :reference="reference"
@@ -155,6 +155,6 @@ function onHover(_e: Event, row: TableRow<Payment> | null) {
           {{ selectedRow?.original?.id }}
         </div>
       </template>
-    </PPopover>
+    </UPopover>
   </div>
 </template>

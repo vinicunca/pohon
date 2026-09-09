@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { AvatarProps, TableColumn } from 'pohon-ui'
+import type { AvatarProps, TableColumn } from '@nuxt/ui'
 
-const PAvatar = resolveComponent('PAvatar')
+const UAvatar = resolveComponent('UAvatar')
 
 type User = {
   id: number
@@ -31,13 +31,13 @@ const columns: TableColumn<User>[] = [{
   header: 'Name',
   cell: ({ row }) => {
     return h('div', { class: 'flex items-center gap-3' }, [
-      h(PAvatar, {
+      h(UAvatar, {
         ...row.original.avatar,
         loading: 'lazy',
         size: 'lg'
       }),
       h('div', undefined, [
-        h('p', { class: 'font-500 color-text-highlighted' }, row.original.name),
+        h('p', { class: 'font-medium text-highlighted' }, row.original.name),
         h('p', { class: '' }, `@${row.original.username}`)
       ])
     ])
@@ -53,7 +53,7 @@ const columns: TableColumn<User>[] = [{
 </script>
 
 <template>
-  <PTable
+  <UTable
     :data="data"
     :columns="columns"
     :loading="status === 'pending' || status === 'idle'"

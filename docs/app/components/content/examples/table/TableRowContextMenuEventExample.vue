@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { ContextMenuItem, TableColumn, TableRow } from 'pohon-ui'
+import type { ContextMenuItem, TableColumn, TableRow } from '@nuxt/ui'
 import { useClipboard } from '@vueuse/core'
 
-const PBadge = resolveComponent('PBadge')
-const PCheckbox = resolveComponent('PCheckbox')
+const UBadge = resolveComponent('UBadge')
+const UCheckbox = resolveComponent('UCheckbox')
 
 const toast = useToast()
 const { copy } = useClipboard()
@@ -51,12 +51,12 @@ const data = ref<Payment[]>([{
 
 const columns: TableColumn<Payment>[] = [{
   id: 'select',
-  header: ({ table }) => h(PCheckbox, {
+  header: ({ table }) => h(UCheckbox, {
     'modelValue': table.getIsSomePageRowsSelected() ? 'indeterminate' : table.getIsAllPageRowsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => table.toggleAllPageRowsSelected(!!value),
     'aria-label': 'Select all'
   }),
-  cell: ({ row }) => h(PCheckbox, {
+  cell: ({ row }) => h(UCheckbox, {
     'modelValue': row.getIsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => row.toggleSelected(!!value),
     'aria-label': 'Select row'
@@ -87,7 +87,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -98,7 +98,7 @@ const columns: TableColumn<Payment>[] = [{
   meta: {
     class: {
       th: 'text-right',
-      td: 'text-right font-500'
+      td: 'text-right font-medium'
     }
   },
   cell: ({ row }) => {
@@ -147,8 +147,8 @@ function onContextmenu(_e: Event, row: TableRow<Payment>) {
 </script>
 
 <template>
-  <PContextMenu :items="items">
-    <PTable
+  <UContextMenu :items="items">
+    <UTable
       :data="data"
       :columns="columns"
       class="flex-1"
@@ -157,6 +157,6 @@ function onContextmenu(_e: Event, row: TableRow<Payment>) {
       <template #expanded="{ row }">
         <pre>{{ row.original }}</pre>
       </template>
-    </PTable>
-  </PContextMenu>
+    </UTable>
+  </UContextMenu>
 </template>

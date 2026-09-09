@@ -16,7 +16,7 @@ function onOpen() {
 </script>
 
 <template>
-  <PInputMenu
+  <UInputMenu
     :items="countries"
     :loading="status === 'pending'"
     label-key="name"
@@ -29,12 +29,12 @@ function onOpen() {
       <span v-if="modelValue" class="size-5 text-center">
         {{ modelValue?.emoji }}
       </span>
-      <PIcon v-else name="i-lucide-earth" :class="ui.leadingIcon()" />
+      <UIcon v-else name="i-lucide-earth" :class="ui.leadingIcon()" />
     </template>
     <template #item-leading="{ item }">
       <span class="size-5 text-center">
         {{ item.emoji }}
       </span>
     </template>
-  </PInputMenu>
+  </UInputMenu>
 </template>

@@ -2,18 +2,18 @@
 import { isTextUIPart } from 'ai'
 import type { UIMessage } from 'ai'
 import { useChat } from '@ai-sdk/vue'
-import { isPartStreaming } from 'pohon-ui/utils/ai'
+import { isPartStreaming } from '@nuxt/ui/utils/ai'
 import { Markdown } from '@comark/vue'
 import shiki from '@comark/vue/plugins/shiki'
 
 const initialMessages: UIMessage[] = [{
   id: '1',
   role: 'user',
-  parts: [{ type: 'text', text: 'What is Pohon UI?' }]
+  parts: [{ type: 'text', text: 'What is Nuxt UI?' }]
 }, {
   id: '2',
   role: 'assistant',
-  parts: [{ type: 'text', text: 'Pohon UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }]
+  parts: [{ type: 'text', text: 'Nuxt UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }]
 }]
 const input = ref('')
 
@@ -47,14 +47,14 @@ const ui = {
 </script>
 
 <template>
-  <PModal open :ui="{ content: 'sm:max-w-3xl sm:h-[28rem]' }">
+  <UModal open :ui="{ content: 'sm:max-w-3xl sm:h-[28rem]' }">
     <template #content>
-      <PTheme :ui="ui">
-        <PChatPalette>
-          <PChatMessages
+      <UTheme :ui="ui">
+        <UChatPalette>
+          <UChatMessages
             :messages="messages"
             :status="status"
-            :user="{ side: 'left', variant: 'naked', avatar: { src: 'https://github.com/praburangki.png', loading: 'lazy' as const } }"
+            :user="{ side: 'left', variant: 'naked', avatar: { src: 'https://github.com/benjamincanac.png', loading: 'lazy' as const } }"
             :assistant="{ icon: 'i-lucide-bot' }"
           >
             <template #content="{ message }">
@@ -73,10 +73,10 @@ const ui = {
                 </template>
               </template>
             </template>
-          </PChatMessages>
+          </UChatMessages>
 
           <template #prompt>
-            <PChatPrompt
+            <UChatPrompt
               v-model="input"
               icon="i-lucide-search"
               variant="naked"
@@ -84,8 +84,8 @@ const ui = {
               @submit="onSubmit"
             />
           </template>
-        </PChatPalette>
-      </PTheme>
+        </UChatPalette>
+      </UTheme>
     </template>
-  </PModal>
+  </UModal>
 </template>

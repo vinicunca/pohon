@@ -14,9 +14,9 @@ const testimonial = ref({
 </script>
 
 <template>
-  <PPageCard :description="testimonial.quote" class="w-60">
+  <UPageCard :description="testimonial.quote" class="w-60">
     <template #footer>
-      <PUser v-bind="testimonial.user" />
+      <UUser v-bind="testimonial.user" />
     </template>
-  </PPageCard>
+  </UPageCard>
 </template>

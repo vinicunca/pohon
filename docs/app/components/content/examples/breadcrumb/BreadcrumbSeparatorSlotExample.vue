@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { BreadcrumbItem } from 'pohon-ui'
+import type { BreadcrumbItem } from '@nuxt/ui'
 
 const items: BreadcrumbItem[] = [
   {
@@ -18,9 +18,9 @@ const items: BreadcrumbItem[] = [
 </script>
 
 <template>
-  <PBreadcrumb :items="items">
+  <UBreadcrumb :items="items">
     <template #separator>
-      <span class="mx-2 color-text-muted">/</span>
+      <span class="mx-2 text-muted">/</span>
     </template>
-  </PBreadcrumb>
+  </UBreadcrumb>
 </template>

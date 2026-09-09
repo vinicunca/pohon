@@ -28,7 +28,7 @@ This is a paragraph with a **tighter typographic scale** applied through the \`T
 </script>
 
 <template>
-  <PTheme :ui="ui">
+  <UTheme :ui="ui">
     <MDC :value="value" />
-  </PTheme>
+  </UTheme>
 </template>

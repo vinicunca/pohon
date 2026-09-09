@@ -1,5 +1,5 @@
 ---
-description: "A pre-built error component with NuxtError support."
+description: 'A pre-built error component with NuxtError support.'
 category: layout
 links:
   - label: GitHub
@@ -19,78 +19,69 @@ The Error component uses the `--ui-header-height` CSS variable to position itsel
 
 Use the `error` prop to display an error message.
 
-::note{to="https://nuxt.com/docs/guide/directory-structure/error" target="\_blank"}
+::note{to="https://nuxt.com/docs/guide/directory-structure/error" target="_blank"}
 In most cases, you will receive the `error` prop in your `error.vue` file.
 ::
 
-## ::component-code
-
-hide:
-
-- class
-  prettier: true
-  props:
-  error:
-  statusCode: 404
-  statusMessage: 'Page not found'
-  message: 'The page you are looking for does not exist.'
-  class: '!min-h-96'
-
+::component-code
 ---
-
+hide:
+  - class
+prettier: true
+props:
+  error:
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
+  class: '!min-h-96'
+---
 ::
 
 ### Icon :badge{label="4.8+" class="align-text-top"}
 
 Use the `icon` prop to display an icon above the status code.
 
-## ::component-code
-
+::component-code
+---
 hide:
-
-- class
-  prettier: true
-  ignore:
-- error.statusCode
-- error.statusMessage
-- error.message
-  props:
+  - class
+prettier: true
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+props:
   icon: 'i-lucide-file-x'
   error:
-  statusCode: 404
-  statusMessage: 'Page not found'
-  message: 'The page you are looking for does not exist.'
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
   class: '!min-h-96'
-
 ---
-
 ::
 
 Use the `#leading` slot to display a custom element, such as a logo.
 
-## ::component-code
-
+::component-code
+---
 hide:
-
-- class
-  prettier: true
-  ignore:
-- error.statusCode
-- error.statusMessage
-- error.message
-  props:
+  - class
+prettier: true
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+props:
   error:
-  statusCode: 404
-  statusMessage: 'Page not found'
-  message: 'The page you are looking for does not exist.'
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
   class: '!min-h-96'
-  slots:
+slots:
   leading: |
 
-      <img src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full">
-
+    <img src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full">
 ---
-
 #leading
 :img{src="https://github.com/nuxt.png" alt="Logo" class="size-10 rounded-full"}
 ::
@@ -101,60 +92,54 @@ Use the `clear` prop to customize or hide the clear button (with `false` value).
 
 You can pass any property from the [Button](/docs/components/button) component to customize it.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 hide:
-
-- class
-  ignore:
-- error.statusCode
-- error.statusMessage
-- error.message
-- clear.color
-- clear.size
-- clear.icon
-- clear.class
-  props:
+  - class
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+  - clear.color
+  - clear.size
+  - clear.icon
+  - clear.class
+props:
   clear:
-  color: neutral
-  size: xl
-  icon: i-lucide-arrow-left
-  class: 'rounded-full'
+    color: neutral
+    size: xl
+    icon: i-lucide-arrow-left
+    class: 'rounded-full'
   error:
-  statusCode: 404
-  statusMessage: 'Page not found'
-  message: 'The page you are looking for does not exist.'
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
   class: '!min-h-96'
-
 ---
-
 ::
 
 ### Redirect
 
 Use the `redirect` prop to redirect the user to a different page when the clear button is clicked. Defaults to `/`.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 hide:
-
-- class
-  ignore:
-- error.statusCode
-- error.statusMessage
-- error.message
-  props:
+  - class
+ignore:
+  - error.statusCode
+  - error.statusMessage
+  - error.message
+props:
   redirect: '/docs/getting-started'
   error:
-  statusCode: 404
-  statusMessage: 'Page not found'
-  message: 'The page you are looking for does not exist.'
+    statusCode: 404
+    statusMessage: 'Page not found'
+    message: 'The page you are looking for does not exist.'
   class: '!min-h-96'
-
 ---
-
 ::
 
 ## Examples
@@ -165,21 +150,21 @@ Use the Error component in your `error.vue`:
 
 ```vue [error.vue]{13}
 <script setup lang="ts">
-import type { NuxtError } from "#app";
+import type { NuxtError } from '#app'
 
 const props = defineProps<{
-  error: NuxtError;
-}>();
+  error: NuxtError
+}>()
 </script>
 
 <template>
-  <PApp>
-    <PHeader />
+  <UApp>
+    <UHeader />
 
-    <PError :error="error" />
+    <UError :error="error" />
 
-    <PFooter />
-  </PApp>
+    <UFooter />
+  </UApp>
 </template>
 ```
 
@@ -190,19 +175,15 @@ You might want to replicate the code of your `app.vue` inside your `error.vue` f
 ::note
 You can read more about how to handle errors in the [Nuxt documentation](https://nuxt.com/docs/getting-started/error-handling#error-page), but when using `nuxt generate` it is recommended to add `fatal: true` inside your `createError` call to make sure the error page is displayed:
 
-```vue [pages/[...slug].vue]
+```vue [pages/\[...slug\\].vue]
 <script setup lang="ts">
-const route = useRoute();
+const route = useRoute()
 
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection("docs").path(route.path).first();
-});
+  return queryCollection('docs').path(route.path).first()
+})
 if (!page.value) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: "Page not found",
-    fatal: true,
-  });
+  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 </script>
 ```

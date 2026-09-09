@@ -4,22 +4,22 @@ const appConfig = useAppConfig()
 
 <template>
   <div>
-    <PFormField
+    <UFormField
       label="toaster.duration"
       size="sm"
       :ui="{
-        wrapper: 'bg-background-elevated/50 rounded-l-sm flex border-r border-border-accented',
-        label: 'color-text-muted px-2 py-1.5',
+        wrapper: 'bg-elevated/50 rounded-l-sm flex border-r border-accented',
+        label: 'text-muted px-2 py-1.5',
         container: 'mt-0'
       }"
-      class="inline-flex ring ring-ring-accented rounded-sm"
+      class="inline-flex ring ring-accented rounded-sm"
     >
-      <PInput
+      <UInput
         v-model="appConfig.toaster.duration"
         color="neutral"
         variant="soft"
         :ui="{ base: 'rounded-sm rounded-l-none min-w-12' }"
       />
-    </PFormField>
+    </UFormField>
   </div>
 </template>

@@ -1,6 +1,6 @@
 ---
 title: DashboardSearch
-description: "A ready-to-use CommandPalette to add to your dashboard."
+description: 'A ready-to-use CommandPalette to add to your dashboard.'
 category: dashboard
 links:
   - label: CommandPalette
@@ -19,15 +19,15 @@ Use it inside the default slot of the [DashboardGroup](/docs/components/dashboar
 
 ```vue [layouts/dashboard.vue]{3}
 <template>
-  <PDashboardGroup>
-    <PDashboardSidebar>
-      <PDashboardSearchButton />
-    </PDashboardSidebar>
+  <UDashboardGroup>
+    <UDashboardSidebar>
+      <UDashboardSearchButton />
+    </UDashboardSidebar>
 
-    <PDashboardSearch />
+    <UDashboardSearch />
 
     <slot />
-  </PDashboardGroup>
+  </UDashboardGroup>
 </template>
 ```
 
@@ -41,7 +41,7 @@ Use the `shortcut` prop to change the shortcut used in [defineShortcuts](/docs/c
 
 ```vue [app.vue]{4}
 <template>
-  <PDashboardSearch
+  <UDashboardSearch
     v-model:search-term="searchTerm"
     shortcut="meta_k"
     :groups="groups"
@@ -57,8 +57,8 @@ By default, a group of commands will be added to the command palette so you can 
 ```vue [pages/index.vue]
 <script setup lang="ts">
 definePageMeta({
-  colorMode: "dark",
-});
+  colorMode: 'dark'
+})
 </script>
 ```
 
@@ -66,7 +66,7 @@ You can disable this behavior by setting the `color-mode` prop to `false`:
 
 ```vue [app.vue]{4}
 <template>
-  <PDashboardSearch
+  <UDashboardSearch
     v-model:search-term="searchTerm"
     :color-mode="false"
     :groups="groups"
@@ -93,9 +93,9 @@ You can disable this behavior by setting the `color-mode` prop to `false`:
 
 When accessing the component via a template ref, you can use the following:
 
-| Name                                | Type                                                                |
-| ----------------------------------- | ------------------------------------------------------------------- |
-| `commandPaletteRef`{lang="ts-type"} | `Ref<InstanceType<typeof PCommandPalette> \| null>`{lang="ts-type"} |
+| Name | Type |
+| ---- | ---- |
+| `commandPaletteRef`{lang="ts-type"} | `Ref<InstanceType<typeof UCommandPalette> \| null>`{lang="ts-type"} |
 
 ## Theme
 

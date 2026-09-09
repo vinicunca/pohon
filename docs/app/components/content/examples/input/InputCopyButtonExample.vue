@@ -7,13 +7,13 @@ const { copy, copied } = useClipboard()
 </script>
 
 <template>
-  <PInput
+  <UInput
     v-model="value"
     :ui="{ trailing: 'pr-0.5' }"
   >
     <template v-if="value?.length" #trailing>
-      <PTooltip text="Copy to clipboard" :content="{ side: 'right' }">
-        <PButton
+      <UTooltip text="Copy to clipboard" :content="{ side: 'right' }">
+        <UButton
           :color="copied ? 'success' : 'neutral'"
           variant="link"
           size="sm"
@@ -21,7 +21,7 @@ const { copy, copied } = useClipboard()
           aria-label="Copy to clipboard"
           @click="copy(value)"
         />
-      </PTooltip>
+      </UTooltip>
     </template>
-  </PInput>
+  </UInput>
 </template>

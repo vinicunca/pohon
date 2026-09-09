@@ -52,7 +52,7 @@ features:
     to: /docs/getting-started/integrations/content
 design_system:
   title: Flexible design system
-  description: Build faster with Pohon UI's CSS-first design system powered by Tailwind CSS and its semantic color system combined with a runtime configuration.
+  description: Build faster with Nuxt UI's CSS-first design system powered by Tailwind CSS and its semantic color system combined with a runtime configuration.
   links:
     - label: Customize design system
       to: /docs/getting-started/theme/design-system
@@ -74,7 +74,7 @@ design_system:
 
     ```css [app/assets/css/main.css]
     @import "tailwindcss";
-    @import "pohon-ui";
+    @import "@nuxt/ui";
 
     @theme static {
       --font-sans: 'Public Sans', system-ui, sans-serif;
@@ -126,10 +126,10 @@ css_variables:
       trailingIcon: i-lucide-arrow-right
   features:
     - title: Semantic color utilities
-      description: Use utility classes like color-primary, bg-success, or border-error that automatically adapt to light and dark modes via CSS variables.
+      description: Use utility classes like text-primary, bg-success, or border-error that automatically adapt to light and dark modes via CSS variables.
       icon: i-lucide-palette
     - title: Text and background tokens
-      description: Complete set of utility classes for text (color-text-dimmed, color-text-muted, color-text-highlighted), backgrounds (bg-background, bg-background-elevated, bg-background-accented) and borders.
+      description: Complete set of utility classes for text (text-dimmed, text-muted, text-highlighted), backgrounds (bg-default, bg-elevated, bg-accented) and borders.
       icon: i-lucide-layers
     - title: Global layout variables
       description: Customize global styles with --ui-radius for border rounding, --ui-container for layout widths, and --ui-header-height for consistent spacing.
@@ -139,7 +139,7 @@ css_variables:
 
     ```css [app/assets/css/main.css]
     @import "tailwindcss";
-    @import "pohon-ui";
+    @import "@nuxt/ui";
 
     :root {
       --ui-primary: black;
@@ -156,13 +156,13 @@ css_variables:
 
     ```vue [Component.vue]
     <template>
-      <div class="bg-background border border-border rounded-lg p-4">
-        <span class="color-primary">Primary text</span>
+      <div class="bg-default border border-default rounded-lg p-4">
+        <span class="text-primary">Primary text</span>
 
-        <span class="color-text-dimmed">Dimmed text</span>
+        <span class="text-dimmed">Dimmed text</span>
 
-        <div class="bg-background-elevated p-3 rounded-md mt-2">
-          <span class="color-text-muted">Elevated background</span>
+        <div class="bg-elevated p-3 rounded-md mt-2">
+          <span class="text-muted">Elevated background</span>
         </div>
       </div>
     </template>
@@ -196,7 +196,7 @@ components:
       ui: {
         button: {
           slots: {
-            base: 'font-700'
+            base: 'font-bold'
           },
           variants: {
             size: {
@@ -215,7 +215,7 @@ components:
 
     ```vue [Button.vue]
     <template>
-      <PButton
+      <UButton
         label="Button"
         size="md"
         variant="outline"
@@ -246,11 +246,11 @@ templates:
       description: Templates available for both Nuxt and Vue applications with framework-specific optimizations, choose the one that best fits your project needs.
       icon: i-simple-icons-vuedotjs
     - title: Fully customizable
-      description: Built on top of Pohon UI components with complete source code access, easily customize colors, fonts, layouts, and components to match your brand identity.
+      description: Built on top of Nuxt UI components with complete source code access, easily customize colors, fonts, layouts, and components to match your brand identity.
       icon: i-lucide-palette
 community:
-  title: Join the Pohon UI community
-  description: Join our thriving open-source community to contribute code, report issues, suggest features, or help with documentation. Every contribution makes Pohon UI better for everyone in the ecosystem.
+  title: Join the Nuxt UI community
+  description: Join our thriving open-source community to contribute code, report issues, suggest features, or help with documentation. Every contribution makes Nuxt UI better for everyone in the ecosystem.
   links:
     - label: Star on GitHub
       color: neutral

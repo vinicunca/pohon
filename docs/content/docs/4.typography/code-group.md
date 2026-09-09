@@ -1,6 +1,6 @@
 ---
 title: ProseCodeGroup
-description: "Group multiple code examples in tabbed interfaces for easy comparison."
+description: 'Group multiple code examples in tabbed interfaces for easy comparison.'
 category: components
 navigation.title: CodeGroup
 links:
@@ -13,24 +13,24 @@ links:
 
 Wrap your code blocks around a `code-group` component to group them together in tabs.
 
-::code-preview{class="[&>div]:_:my-0 [&>div]:_:w-full"}
+::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
 
 :::code-group
 
 ```bash [pnpm]
-pnpm add pohon-ui
+pnpm add @nuxt/ui
 ```
 
 ```bash [yarn]
-yarn add pohon-ui
+yarn add @nuxt/ui
 ```
 
 ```bash [npm]
-npm install pohon-ui
+npm install @nuxt/ui
 ```
 
 ```bash [bun]
-bun add pohon-ui
+bun add @nuxt/ui
 ```
 
 :::
@@ -41,19 +41,19 @@ bun add pohon-ui
 ::code-group
 
 ```bash [pnpm]
-pnpm add pohon-ui
+pnpm add @nuxt/ui
 ```
 
 ```bash [yarn]
-yarn add pohon-ui
+yarn add @nuxt/ui
 ```
 
 ```bash [npm]
-npm install pohon-ui
+npm install @nuxt/ui
 ```
 
 ```bash [bun]
-bun add pohon-ui
+bun add @nuxt/ui
 ```
 
 ::

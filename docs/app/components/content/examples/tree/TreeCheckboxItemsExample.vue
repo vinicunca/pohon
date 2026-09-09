@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { TreeItemSelectEvent } from 'reka-ui'
-import type { TreeItem } from 'pohon-ui'
+import type { TreeItem } from '@nuxt/ui'
 
 const items: TreeItem[] = [
   {
@@ -38,7 +38,7 @@ function onSelect(e: TreeItemSelectEvent<TreeItem>) {
 </script>
 
 <template>
-  <PTree
+  <UTree
     v-model="value"
     :as="{ link: 'div' }"
     :items="items"
@@ -48,12 +48,12 @@ function onSelect(e: TreeItemSelectEvent<TreeItem>) {
     @select="onSelect"
   >
     <template #item-leading="{ selected, indeterminate, handleSelect }">
-      <PCheckbox
+      <UCheckbox
         :model-value="indeterminate ? 'indeterminate' : selected"
         tabindex="-1"
         @change="handleSelect"
         @click.stop
       />
     </template>
-  </PTree>
+  </UTree>
 </template>

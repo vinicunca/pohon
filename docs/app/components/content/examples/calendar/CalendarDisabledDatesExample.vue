@@ -13,5 +13,5 @@ const isDateDisabled = (date: DateValue) => {
 </script>
 
 <template>
-  <PCalendar v-model="modelValue" :is-date-disabled="isDateDisabled" range />
+  <UCalendar v-model="modelValue" :is-date-disabled="isDateDisabled" range />
 </template>

@@ -20,18 +20,16 @@ It uses the `useEditorMenu` composable built on top of TipTap's [Suggestion](htt
 It must be used inside an [Editor](/docs/components/editor) component's default slot to have access to the editor instance.
 ::
 
-## ::component-example
-
+::component-example
+---
 elevated: true
 collapse: true
 name: 'editor-mention-menu-example'
 class: 'p-8'
-
 ---
-
 ::
 
-::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/extensions/nodes/mention" target="\_blank"}
+::callout{icon="i-custom-tiptap" to="https://tiptap.dev/docs/editor/extensions/nodes/mention" target="_blank"}
 Learn more about the Mention extension in the TipTap documentation.
 ::
 
@@ -45,15 +43,13 @@ Use the `items` prop as an array of objects with the following properties:
 - `description?: string`{lang="ts-type"}
 - `disabled?: boolean`{lang="ts-type"}
 
-## ::component-example
-
+::component-example
+---
 elevated: true
 collapse: true
 name: 'editor-mention-menu-items-example'
 class: 'p-8'
-
 ---
-
 ::
 
 ::note
@@ -66,9 +62,9 @@ Use the `char` prop to change the trigger character. Defaults to `@`{lang="ts-ty
 
 ```vue
 <template>
-  <PEditor v-slot="{ editor }">
-    <PEditorMentionMenu :editor="editor" :items="channels" char="#" />
-  </PEditor>
+  <UEditor v-slot="{ editor }">
+    <UEditorMentionMenu :editor="editor" :items="channels" char="#" />
+  </UEditor>
 </template>
 ```
 
@@ -77,22 +73,12 @@ You can use multiple `EditorMentionMenu` components on the same editor with diff
 
 ```vue
 <template>
-  <PEditor v-slot="{ editor }">
-    <PEditorMentionMenu
-      :editor="editor"
-      :items="users"
-      plugin-key="mentionMenu"
-    />
-    <PEditorMentionMenu
-      :editor="editor"
-      :items="tags"
-      char="#"
-      plugin-key="tagMenu"
-    />
-  </PEditor>
+  <UEditor v-slot="{ editor }">
+    <UEditorMentionMenu :editor="editor" :items="users" plugin-key="mentionMenu" />
+    <UEditorMentionMenu :editor="editor" :items="tags" char="#" plugin-key="tagMenu" />
+  </UEditor>
 </template>
 ```
-
 ::
 
 ### Suggestion :badge{label="4.7+" class="align-text-top"}
@@ -103,16 +89,16 @@ This is useful when the trigger character should open directly after other chara
 
 ```vue
 <template>
-  <PEditor v-slot="{ editor }">
-    <PEditorMentionMenu
+  <UEditor v-slot="{ editor }">
+    <UEditorMentionMenu
       :editor="editor"
       :items="items"
       char="#"
       :suggestion="{
-        allowedPrefixes: null,
+        allowedPrefixes: null
       }"
     />
-  </PEditor>
+  </UEditor>
 </template>
 ```
 
@@ -122,16 +108,16 @@ Use the `options` prop to customize the positioning behavior using [Floating UI 
 
 ```vue
 <template>
-  <PEditor v-slot="{ editor }">
-    <PEditorMentionMenu
+  <UEditor v-slot="{ editor }">
+    <UEditorMentionMenu
       :editor="editor"
       :items="items"
       :options="{
         placement: 'bottom-start',
-        offset: 4,
+        offset: 4
       }"
     />
-  </PEditor>
+  </UEditor>
 </template>
 ```
 
@@ -141,15 +127,13 @@ Use the `options` prop to customize the positioning behavior using [Floating UI 
 
 You can set the `ignore-filter` prop to `true` to disable the internal search and use your own search logic. Use `v-model:search-term` to access the current search term and fetch items from an API.
 
-## ::component-example
-
+::component-example
+---
 elevated: true
 collapse: true
 name: 'editor-mention-menu-ignore-filter-example'
 class: 'p-8'
-
 ---
-
 ::
 
 ::note

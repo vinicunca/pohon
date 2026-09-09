@@ -3,7 +3,7 @@ const value = ref(5)
 </script>
 
 <template>
-  <PInputNumber
+  <UInputNumber
     v-model="value"
     :format-options="{
       signDisplay: 'exceptZero',

@@ -1,6 +1,6 @@
 ---
 title: ChatPrompt
-description: "An enhanced Textarea for submitting prompts in AI chat interfaces."
+description: 'An enhanced Textarea for submitting prompts in AI chat interfaces.'
 category: chat
 links:
   - label: Textarea
@@ -15,13 +15,11 @@ links:
 
 The ChatPrompt component renders a `<form>` element and extends the [Textarea](/docs/components/textarea) component so you can pass any property such as `icon`, `placeholder`, `autofocus`, etc.
 
-## ::component-example
-
+::component-example
+---
 collapse: true
 name: 'chat-prompt-example'
-
 ---
-
 ::
 
 ::note
@@ -29,23 +27,20 @@ The ChatPrompt handles the following events:
 
 - The form is submitted when the user presses :kbd{value="enter"} or when the user clicks on the submit button. Set the `submit-on-enter` prop to `false` to submit with :kbd{value="ctrl"} + :kbd{value="enter"} (or :kbd{value="cmd"} + :kbd{value="enter"} on macOS) instead, allowing :kbd{value="enter"} to insert a newline.
 - The textarea is blurred when :kbd{value="escape"} is pressed and emits a `close` event.
-  ::
+::
 
 ### Variant
 
 Use the `variant` prop to change the style of the prompt. Defaults to `outline`.
 
-## ::component-code
-
+::component-code
+---
 hide:
-
-- autofocus
-  props:
+  - autofocus
+props:
   variant: 'soft'
   autofocus: false
-
 ---
-
 ::
 
 ## Examples
@@ -58,14 +53,12 @@ Check the **Chat** overview page for installation instructions, server setup and
 
 Compose the `#header`, `#body` and `#footer` slots to build a rich prompt: file attachments, an [Editor](/docs/components/editor) with `@` mentions and `/` commands through [EditorMentionMenu](/docs/components/editor-mention-menu), and a mode selector.
 
-## ::component-example
-
+::component-example
+---
 collapse: true
 name: 'chat-prompt-editor-example'
 class: 'justify-center'
-
 ---
-
 ::
 
 ::note
@@ -78,34 +71,34 @@ You can also use it in your chat interface home page.
 
 ```vue [pages/index.vue] {2,4,8-15,24,26}
 <script setup lang="ts">
-import { useChat } from "@ai-sdk/vue";
+import { useChat } from '@ai-sdk/vue'
 
-const input = ref("");
+const input = ref('')
 
-const { messages, status, sendMessage } = useChat();
+const { messages, status, sendMessage } = useChat()
 
 async function onSubmit() {
-  sendMessage({ text: input.value });
+  sendMessage({ text: input.value })
 
   // Navigate to chat page after first message
   if (messages.value.length === 1) {
-    await navigateTo("/chat");
+    await navigateTo('/chat')
   }
 }
 </script>
 
 <template>
-  <PDashboardPanel>
+  <UDashboardPanel>
     <template #body>
-      <PContainer>
+      <UContainer>
         <h1>How can I help you today?</h1>
 
-        <PChatPrompt v-model="input" @submit="onSubmit">
-          <PChatPromptSubmit :status="status" />
-        </PChatPrompt>
-      </PContainer>
+        <UChatPrompt v-model="input" @submit="onSubmit">
+          <UChatPromptSubmit :status="status" />
+        </UChatPrompt>
+      </UContainer>
     </template>
-  </PDashboardPanel>
+  </UDashboardPanel>
 </template>
 ```
 
@@ -115,7 +108,7 @@ async function onSubmit() {
 
 :component-props
 
-::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes" target="\_blank"}
+::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes" target="_blank"}
 This component also supports all native `<textarea>` HTML attributes.
 ::
 
@@ -131,8 +124,8 @@ This component also supports all native `<textarea>` HTML attributes.
 
 When accessing the component via a template ref, you can use the following:
 
-| Name                          | Type                                               |
-| ----------------------------- | -------------------------------------------------- |
+| Name | Type |
+| ---- | ---- |
 | `textareaRef`{lang="ts-type"} | `Ref<HTMLTextAreaElement \| null>`{lang="ts-type"} |
 
 ## Theme

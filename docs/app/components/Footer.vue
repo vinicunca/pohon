@@ -4,19 +4,19 @@ const { links } = useFooter()
 </script>
 
 <template>
-  <PSeparator :icon="route.path === '/' ? undefined : 'i-simple-icons-nuxtdotjs'" class="h-px" />
+  <USeparator :icon="route.path === '/' ? undefined : 'i-simple-icons-nuxtdotjs'" class="h-px" />
 
-  <PFooter>
+  <UFooter>
     <template #left>
-      <NuxtLink to="https://github.com/nuxt/ui" target="_blank" class="text-sm color-text-muted">
-        Published under <span class="color-text-highlighted">MIT License</span>
+      <NuxtLink to="https://github.com/nuxt/ui" target="_blank" class="text-sm text-muted">
+        Published under <span class="text-highlighted">MIT License</span>
       </NuxtLink>
     </template>
 
-    <PNavigationMenu :items="links" variant="link" color="neutral" />
+    <UNavigationMenu :items="links" variant="link" color="neutral" />
 
     <template #right>
-      <PButton
+      <UButton
         aria-label="Nuxt Website"
         icon="i-simple-icons-nuxtdotjs"
         to="https://nuxt.com"
@@ -25,7 +25,7 @@ const { links } = useFooter()
         variant="ghost"
         size="sm"
       />
-      <PButton
+      <UButton
         aria-label="Nuxt on Discord"
         icon="i-simple-icons-discord"
         to="https://go.nuxt.com/discord"
@@ -34,7 +34,7 @@ const { links } = useFooter()
         variant="ghost"
         size="sm"
       />
-      <PButton
+      <UButton
         aria-label="Nuxt on X"
         icon="i-simple-icons-x"
         to="https://go.nuxt.com/x"
@@ -43,7 +43,7 @@ const { links } = useFooter()
         variant="ghost"
         size="sm"
       />
-      <PButton
+      <UButton
         aria-label="Nuxt on BlueSky"
         icon="i-simple-icons-bluesky"
         to="https://go.nuxt.com/bluesky"
@@ -52,8 +52,8 @@ const { links } = useFooter()
         variant="ghost"
         size="sm"
       />
-      <PButton
-        aria-label="Pohon UI on GitHub"
+      <UButton
+        aria-label="Nuxt UI on GitHub"
         icon="i-simple-icons-github"
         to="https://github.com/nuxt/ui"
         target="_blank"
@@ -62,5 +62,5 @@ const { links } = useFooter()
         size="sm"
       />
     </template>
-  </PFooter>
+  </UFooter>
 </template>

@@ -10,5 +10,5 @@ const items = [
 </script>
 
 <template>
-  <PPageLogos title="Trusted by the best front-end teams" :items="items" />
+  <UPageLogos title="Trusted by the best front-end teams" :items="items" />
 </template>

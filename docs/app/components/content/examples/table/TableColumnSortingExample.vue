@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from 'pohon-ui'
+import type { TableColumn } from '@nuxt/ui'
 
-const PBadge = resolveComponent('PBadge')
-const PButton = resolveComponent('PButton')
+const UBadge = resolveComponent('UBadge')
+const UButton = resolveComponent('UButton')
 
 type Payment = {
   id: string
@@ -71,14 +71,14 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
   header: ({ column }) => {
     const isSorted = column.getIsSorted()
 
-    return h(PButton, {
+    return h(UButton, {
       color: 'neutral',
       variant: 'ghost',
       label: 'Email',
@@ -93,7 +93,7 @@ const columns: TableColumn<Payment>[] = [{
   meta: {
     class: {
       th: 'text-right',
-      td: 'text-right font-500'
+      td: 'text-right font-medium'
     }
   },
   cell: ({ row }) => {
@@ -112,7 +112,7 @@ const sorting = ref([{
 </script>
 
 <template>
-  <PTable
+  <UTable
     v-model:sorting="sorting"
     :data="data"
     :columns="columns"

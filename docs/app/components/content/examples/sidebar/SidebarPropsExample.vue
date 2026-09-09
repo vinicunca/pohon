@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem, SidebarProps } from 'pohon-ui'
+import type { NavigationMenuItem, SidebarProps } from '@nuxt/ui'
 
 // Ignore the props for the example
 defineProps<Pick<SidebarProps, 'variant' | 'collapsible' | 'side'>>()
@@ -28,7 +28,7 @@ const items: NavigationMenuItem[] = [{
       side === 'right' && 'flex-row-reverse'
     ]"
   >
-    <PSidebar
+    <USidebar
       v-model:open="open"
       :variant="variant"
       :collapsible="collapsible"
@@ -38,25 +38,25 @@ const items: NavigationMenuItem[] = [{
       }"
     >
       <template #header>
-        <PIcon name="i-logos-nuxt-icon" class="size-8" />
+        <UIcon name="i-logos-nuxt-icon" class="size-8" />
       </template>
 
-      <PNavigationMenu
+      <UNavigationMenu
         :items="items"
         orientation="vertical"
         :ui="{ link: 'p-1.5 overflow-hidden' }"
       />
-    </PSidebar>
+    </USidebar>
 
-    <div class="flex-1 flex flex-col overflow-hidden lg:peer-data-[variant=floating]:my-4 peer-data-[variant=inset]:m-4 lg:peer-data-[variant=inset]:not-peer-data-[collapsible=offcanvas]:ms-0 peer-data-[variant=inset]:rounded-xl peer-data-[variant=inset]:shadow-sm peer-data-[variant=inset]:ring peer-data-[variant=inset]:ring-ring bg-background">
+    <div class="flex-1 flex flex-col overflow-hidden lg:peer-data-[variant=floating]:my-4 peer-data-[variant=inset]:m-4 lg:peer-data-[variant=inset]:not-peer-data-[collapsible=offcanvas]:ms-0 peer-data-[variant=inset]:rounded-xl peer-data-[variant=inset]:shadow-sm peer-data-[variant=inset]:ring peer-data-[variant=inset]:ring-default bg-default">
       <div
         class="h-(--ui-header-height) shrink-0 flex items-center px-4"
         :class="[
-          variant !== 'floating' && 'border-b border-border',
+          variant !== 'floating' && 'border-b border-default',
           side === 'right' && 'justify-end'
         ]"
       >
-        <PButton
+        <UButton
           :icon="side === 'left' ? 'i-lucide-panel-left' : 'i-lucide-panel-right'"
           color="neutral"
           variant="ghost"

@@ -36,7 +36,7 @@ const { data: meta } = await useFetchComponentMeta(name as any)
         <ProseTd>
           <HighlightInlineType v-if="slot.type" :type="slot.type" />
 
-          <MDC v-if="slot.description" :value="slot.description" class="color-text-toned mt-1" :cache-key="`${kebabCase(route.path)}-${slot.name}-description`" />
+          <MDC v-if="slot.description" :value="slot.description" class="text-toned mt-1" :cache-key="`${kebabCase(route.path)}-${slot.name}-description`" />
         </ProseTd>
       </ProseTr>
     </ProseTbody>

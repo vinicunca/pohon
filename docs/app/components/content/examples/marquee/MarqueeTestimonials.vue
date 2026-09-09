@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { UserProps } from 'pohon-ui'
+import type { UserProps } from '@nuxt/ui'
 
 const testimonials: { user: UserProps, quote: string }[] = [{
   user: {
@@ -20,7 +20,7 @@ const testimonials: { user: UserProps, quote: string }[] = [{
       loading: 'lazy' as const
     }
   },
-  quote: 'Wow, Pohon UI Pro is a total game-changer! I\'m seriously impressed with the quality, attention to detail, and the insane variety of components you get. It\'s like hitting the jackpot for any developer. I\'ve saved countless hours that I would\'ve spent stressing over making my apps look good, with amazing accessible UX,  and instead, I\'ve been able to focus on the real deal – building the app itself. It\'s an instant buy for me, every single time. No second thoughts!'
+  quote: 'Wow, Nuxt UI Pro is a total game-changer! I\'m seriously impressed with the quality, attention to detail, and the insane variety of components you get. It\'s like hitting the jackpot for any developer. I\'ve saved countless hours that I would\'ve spent stressing over making my apps look good, with amazing accessible UX,  and instead, I\'ve been able to focus on the real deal – building the app itself. It\'s an instant buy for me, every single time. No second thoughts!'
 }, {
   user: {
     name: 'Kevin Olson',
@@ -31,7 +31,7 @@ const testimonials: { user: UserProps, quote: string }[] = [{
       loading: 'lazy' as const
     }
   },
-  quote: 'Pohon UI Pro saves 100s of hours of dev and design time while delivering a clean professional look on any device.'
+  quote: 'Nuxt UI Pro saves 100s of hours of dev and design time while delivering a clean professional look on any device.'
 }, {
   user: {
     name: 'Michael Hoffmann',
@@ -42,7 +42,7 @@ const testimonials: { user: UserProps, quote: string }[] = [{
       loading: 'lazy' as const
     }
   },
-  quote: 'I decided to replace my custom-built components with a component library and chose Pohon UI Pro. It only took me a few hours, and the new UI looks more professional. Integrating the library is easy; the components are well-documented and highly customizable. I can only recommend it; this library is my new choice for new SaaS products.'
+  quote: 'I decided to replace my custom-built components with a component library and chose Nuxt UI Pro. It only took me a few hours, and the new UI looks more professional. Integrating the library is easy; the components are well-documented and highly customizable. I can only recommend it; this library is my new choice for new SaaS products.'
 }, {
   user: {
     name: 'Harlan Wilton',
@@ -53,7 +53,7 @@ const testimonials: { user: UserProps, quote: string }[] = [{
       loading: 'lazy' as const
     }
   },
-  quote: 'Pohon UI Pro is my go to component library. Out-of-the-box it handles all of the UI demands I throw at it while looking great. The customisation is really worth thought out, allowing you to override components in a breeze. Always amazed at the improvements dropped in each update as well, the team is doing an amazing job.'
+  quote: 'Nuxt UI Pro is my go to component library. Out-of-the-box it handles all of the UI demands I throw at it while looking great. The customisation is really worth thought out, allowing you to override components in a breeze. Always amazed at the improvements dropped in each update as well, the team is doing an amazing job.'
 }, {
   user: {
     name: 'Thomas Sanlis',
@@ -63,7 +63,7 @@ const testimonials: { user: UserProps, quote: string }[] = [{
       loading: 'lazy' as const
     }
   },
-  quote: 'I jumped at the chance to buy the Nuxt team\'s new UI kit as soon as I saw it. While I\'m already a fan of Pohon UI, the pro version takes it to a whole new level and lets me paste entire blocks into all my projects, saving me a ton of time.'
+  quote: 'I jumped at the chance to buy the Nuxt team\'s new UI kit as soon as I saw it. While I\'m already a fan of Nuxt UI, the pro version takes it to a whole new level and lets me paste entire blocks into all my projects, saving me a ton of time.'
 }, {
   user: {
     name: 'Benjamin Code',
@@ -73,7 +73,7 @@ const testimonials: { user: UserProps, quote: string }[] = [{
       loading: 'lazy' as const
     }
   },
-  quote: 'Pohon UI has allowed me to develop my SaaS without any prior mockups. The design quality of their components and the intelligence of the DX meant that I was able to try many different layouts for my application until I found the perfect UX for my users. Pohon UI is the ui-kit I would have dreamed of building myself, and Pohon UI Pro makes things even easier when you want to go further with your SaaS. Kudos to the team.'
+  quote: 'Nuxt UI has allowed me to develop my SaaS without any prior mockups. The design quality of their components and the intelligence of the DX meant that I was able to try many different layouts for my application until I found the perfect UX for my users. Nuxt UI is the ui-kit I would have dreamed of building myself, and Nuxt UI Pro makes things even easier when you want to go further with your SaaS. Kudos to the team.'
 }, {
   user: {
     name: 'Estéban Soubiran',
@@ -83,14 +83,14 @@ const testimonials: { user: UserProps, quote: string }[] = [{
       loading: 'lazy' as const
     }
   },
-  quote: 'Pohon UI Pro is my preferred choice for everything, from a POC to a web platform. It\'s ready to use out-of-the-box and assists me in crafting pixel-perfect UIs. It saves me a significant amount of time while remaining highly customizable. Give it a try, and you won\'t be let down.'
+  quote: 'Nuxt UI Pro is my preferred choice for everything, from a POC to a web platform. It\'s ready to use out-of-the-box and assists me in crafting pixel-perfect UIs. It saves me a significant amount of time while remaining highly customizable. Give it a try, and you won\'t be let down.'
 }]
 </script>
 
 <template>
   <div class="flex flex-col gap-4 w-full">
-    <PMarquee pause-on-hover :overlay="false" :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }">
-      <PPageCard
+    <UMarquee pause-on-hover :overlay="false" :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }">
+      <UPageCard
         v-for="(testimonial, index) in testimonials"
         :key="index"
         variant="subtle"
@@ -101,12 +101,12 @@ const testimonials: { user: UserProps, quote: string }[] = [{
         class="w-64 shrink-0"
       >
         <template #footer>
-          <PUser v-bind="testimonial.user" size="xl" :ui="{ description: 'line-clamp-1' }" />
+          <UUser v-bind="testimonial.user" size="xl" :ui="{ description: 'line-clamp-1' }" />
         </template>
-      </PPageCard>
-    </PMarquee>
-    <PMarquee pause-on-hover reverse :overlay="false" :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }">
-      <PPageCard
+      </UPageCard>
+    </UMarquee>
+    <UMarquee pause-on-hover reverse :overlay="false" :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }">
+      <UPageCard
         v-for="(testimonial, index) in testimonials"
         :key="index"
         variant="subtle"
@@ -117,9 +117,9 @@ const testimonials: { user: UserProps, quote: string }[] = [{
         class="w-64 shrink-0"
       >
         <template #footer>
-          <PUser v-bind="testimonial.user" size="xl" :ui="{ description: 'line-clamp-1' }" />
+          <UUser v-bind="testimonial.user" size="xl" :ui="{ description: 'line-clamp-1' }" />
         </template>
-      </PPageCard>
-    </PMarquee>
+      </UPageCard>
+    </UMarquee>
   </div>
 </template>

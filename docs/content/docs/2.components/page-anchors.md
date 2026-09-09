@@ -1,6 +1,6 @@
 ---
 title: PageAnchors
-description: "A list of anchors to be displayed in the page."
+description: 'A list of anchors to be displayed in the page.'
 category: page
 links:
   - label: GitHub
@@ -12,32 +12,33 @@ links:
 
 Use the PageAnchors component to display a list of links.
 
-## ::component-code
-
+::component-code
+---
 collapse: true
 prettier: true
 ignore:
-
-- links
-  external:
-- links
-  externalTypes:
-- PageAnchor[]
-  props:
-  links: - label: 'Documentation'
-  icon: i-lucide-book-open
-  to: /docs/getting-started - label: 'Components'
-  icon: i-lucide-box
-  to: /docs/components - label: 'Figma Kit'
-  icon: i-simple-icons-figma
-  to: https://go.nuxt.com/figma-ui
-  target: \_blank - label: 'Releases'
-  icon: i-simple-icons-github
-  to: https://github.com/nuxt/ui/releases
-  target: \_blank
-
+  - links
+external:
+  - links
+externalTypes:
+  - PageAnchor[]
+props:
+  links:
+    - label: 'Documentation'
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+    - label: 'Components'
+      icon: i-lucide-box
+      to: /docs/components
+    - label: 'Figma Kit'
+      icon: i-simple-icons-figma
+      to: https://go.nuxt.com/figma-ui
+      target: _blank
+    - label: 'Releases'
+      icon: i-simple-icons-github
+      to: https://github.com/nuxt/ui/releases
+      target: _blank
 ---
-
 ::
 
 ### Links
@@ -51,31 +52,32 @@ Use the `links` prop as an array of objects with the following properties:
 
 You can pass any property from the [Link](/docs/components/link#props) component such as `to`, `target`, etc.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- links
-  external:
-- links
-  externalTypes:
-- PageAnchor[]
-  props:
-  links: - label: 'Documentation'
-  icon: i-lucide-book-open
-  to: /docs/getting-started - label: 'Components'
-  icon: i-lucide-box
-  to: /docs/components - label: 'Figma Kit'
-  icon: i-simple-icons-figma
-  to: https://go.nuxt.com/figma-ui
-  target: \_blank - label: 'Releases'
-  icon: i-simple-icons-github
-  to: https://github.com/nuxt/ui/releases
-  target: \_blank
-
+  - links
+external:
+  - links
+externalTypes:
+  - PageAnchor[]
+props:
+  links:
+    - label: 'Documentation'
+      icon: i-lucide-book-open
+      to: /docs/getting-started
+    - label: 'Components'
+      icon: i-lucide-box
+      to: /docs/components
+    - label: 'Figma Kit'
+      icon: i-simple-icons-figma
+      to: https://go.nuxt.com/figma-ui
+      target: _blank
+    - label: 'Releases'
+      icon: i-simple-icons-github
+      to: https://github.com/nuxt/ui/releases
+      target: _blank
 ---
-
 ::
 
 ## Examples
@@ -90,51 +92,46 @@ Use the PageAnchors component inside the [PageAside](/docs/components/page-aside
 
 ```vue [layouts/docs.vue]{35}
 <script setup lang="ts">
-import type { PageAnchor } from "pohon-ui";
-import type { ContentNavigationItem } from "@nuxt/content";
+import type { PageAnchor } from '@nuxt/ui'
+import type { ContentNavigationItem } from '@nuxt/content'
 
-const navigation = inject<ContentNavigationItem[]>("navigation");
+const navigation = inject<ContentNavigationItem[]>('navigation')
 
-const links: PageAnchor[] = [
-  {
-    label: "Documentation",
-    icon: "i-lucide-book-open",
-    to: "/docs/getting-started",
-  },
-  {
-    label: "Components",
-    icon: "i-lucide-box",
-    to: "/docs/components",
-  },
-  {
-    label: "Figma Kit",
-    icon: "i-simple-icons-figma",
-    to: "https://go.nuxt.com/figma-ui",
-    target: "_blank",
-  },
-  {
-    label: "Releases",
-    icon: "i-lucide-rocket",
-    to: "https://github.com/nuxt/ui/releases",
-    target: "_blank",
-  },
-];
+const links: PageAnchor[] = [{
+  label: 'Documentation',
+  icon: 'i-lucide-book-open',
+  to: '/docs/getting-started'
+}, {
+  label: 'Components',
+  icon: 'i-lucide-box',
+  to: '/docs/components'
+}, {
+  label: 'Figma Kit',
+  icon: 'i-simple-icons-figma',
+  to: 'https://go.nuxt.com/figma-ui',
+  target: '_blank'
+}, {
+  label: 'Releases',
+  icon: 'i-lucide-rocket',
+  to: 'https://github.com/nuxt/ui/releases',
+  target: '_blank'
+}]
 </script>
 
 <template>
-  <PPage>
+  <UPage>
     <template #left>
-      <PPageAside>
-        <PPageAnchors :links="links" />
+      <UPageAside>
+        <UPageAnchors :links="links" />
 
-        <PSeparator type="dashed" />
+        <USeparator type="dashed" />
 
-        <PContentNavigation :navigation="navigation" />
-      </PPageAside>
+        <UContentNavigation :navigation="navigation" />
+      </UPageAside>
     </template>
 
     <slot />
-  </PPage>
+  </UPage>
 </template>
 ```
 

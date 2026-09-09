@@ -31,7 +31,7 @@ const state = computed(() => props.open ? 'close' : 'normal')
 </script>
 
 <template>
-  <PButton
+  <UButton
     size="sm"
     variant="ghost"
     color="neutral"
@@ -56,6 +56,7 @@ const state = computed(() => props.open ? 'close' : 'normal')
         :animate="state"
         :custom="1"
         tabindex="-1"
+        class="outline-hidden"
       />
       <motion.line
         x1="4"
@@ -66,6 +67,7 @@ const state = computed(() => props.open ? 'close' : 'normal')
         :animate="state"
         :custom="2"
         tabindex="-1"
+        class="outline-hidden"
       />
       <motion.line
         x1="4"
@@ -76,7 +78,8 @@ const state = computed(() => props.open ? 'close' : 'normal')
         :animate="state"
         :custom="3"
         tabindex="-1"
+        class="outline-hidden"
       />
     </svg>
-  </PButton>
+  </UButton>
 </template>

@@ -38,10 +38,16 @@ import {
   themeDashboardSearch,
   themeDashboardSearchButton,
   themeDashboardSidebar,
+  themeDashboardSidebarCollapse,
+  themeDashboardSidebarToggle,
   themeDashboardToolbar,
 } from './pohon-theme/theme.dashboard';
 import { themeDrawer } from './pohon-theme/theme.drawer';
 import { themeDropdownMenu } from './pohon-theme/theme.dropdown-menu';
+import { themeEditor } from './pohon-theme/theme.editor';
+import { themeEditorDragHandle } from './pohon-theme/theme.editor-drag-handle';
+import { themeEditorSuggestionMenu } from './pohon-theme/theme.editor-suggestion-menu';
+import { themeEditorToolbar } from './pohon-theme/theme.editor-toolbar';
 import { themeEmpty } from './pohon-theme/theme.empty';
 import { themeError } from './pohon-theme/theme.error';
 import { themeFieldGroup } from './pohon-theme/theme.field-group';
@@ -144,9 +150,17 @@ export const uiTheme = {
   dashboardSearch: themeDashboardSearch,
   dashboardSearchButton: themeDashboardSearchButton,
   dashboardSidebar: themeDashboardSidebar,
+  dashboardSidebarCollapse: themeDashboardSidebarCollapse,
+  dashboardSidebarToggle: themeDashboardSidebarToggle,
   dashboardToolbar: themeDashboardToolbar,
   drawer: themeDrawer,
   dropdownMenu: themeDropdownMenu,
+  editor: themeEditor,
+  editorDragHandle: themeEditorDragHandle,
+  editorEmojiMenu: themeEditorSuggestionMenu,
+  editorMentionMenu: themeEditorSuggestionMenu,
+  editorSuggestionMenu: themeEditorSuggestionMenu,
+  editorToolbar: themeEditorToolbar,
   empty: themeEmpty,
   error: themeError,
   fieldGroup: themeFieldGroup,

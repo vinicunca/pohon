@@ -3,6 +3,9 @@ const route = useRoute()
 const { desktopLinks } = useHeader()
 const { open } = useChat()
 const { track } = useAnalytics()
+// The Ask-AI button skins to the applied icon pack, like the rest of the
+// studio chrome (the theme applies site-wide, so this stays consistent).
+const studioIcons = useStudioIcons()
 
 function toggleChat() {
   if (!open.value) {
@@ -14,7 +17,7 @@ function toggleChat() {
 
 <!-- eslint-disable vue/no-template-shadow -->
 <template>
-  <PHeader
+  <UHeader
     :ui="{
       left: 'min-w-0',
       right: 'gap-0.5',
@@ -28,27 +31,29 @@ function toggleChat() {
       <VersionMenu />
     </template>
 
-    <PNavigationMenu :items="desktopLinks" variant="link" content-orientation="vertical" />
+    <UNavigationMenu :items="desktopLinks" variant="link" content-orientation="vertical" />
 
     <template #right>
-      <PTooltip text="Search" :kbds="['meta', 'K']" ignore-non-keyboard-focus>
-        <PContentSearchButton />
-      </PTooltip>
+      <UTooltip text="Search" :kbds="['meta', 'K']" ignore-non-keyboard-focus>
+        <UContentSearchButton />
+      </UTooltip>
 
-      <PTooltip text="Ask AI" :kbds="['meta', 'I']" ignore-non-keyboard-focus>
-        <PButton
+      <UTooltip text="Ask AI" :kbds="['meta', 'I']" ignore-non-keyboard-focus>
+        <UButton
           color="neutral"
           variant="ghost"
-          icon="i-lucide-bot-message-square"
+          :icon="studioIcons.assistant"
           aria-label="Ask AI for help"
           @click="toggleChat"
         />
-      </PTooltip>
+      </UTooltip>
 
-      <ThemePicker />
+      <!-- lazy for the theme engine it pulls, hydrated on idle: a plain
+           `Lazy` drops the server-rendered button until the chunk lands -->
+      <LazyThemeStudioPresetPicker hydrate-on-idle />
 
-      <PTooltip text="Open on GitHub" class="hidden lg:flex">
-        <PButton
+      <UTooltip text="Open on GitHub" class="hidden lg:flex" ignore-non-keyboard-focus>
+        <UButton
           color="neutral"
           variant="ghost"
           to="https://github.com/nuxt/ui"
@@ -56,7 +61,7 @@ function toggleChat() {
           icon="i-simple-icons-github"
           aria-label="GitHub"
         />
-      </PTooltip>
+      </UTooltip>
     </template>
 
     <template #toggle="{ open, toggle, ui }">
@@ -74,5 +79,5 @@ function toggleChat() {
     <template v-if="route.path.startsWith('/docs/')" #bottom>
       <HeaderBottom />
     </template>
-  </PHeader>
+  </UHeader>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem, DropdownMenuItem } from 'pohon-ui'
+import type { NavigationMenuItem, DropdownMenuItem } from '@nuxt/ui'
 
 const items = [
   {
@@ -50,15 +50,15 @@ const items = [
 </script>
 
 <template>
-  <PNavigationMenu :items="items" class="w-full justify-center">
+  <UNavigationMenu :items="items" class="w-full justify-center">
     <template #more="{ item }">
-      <PDropdownMenu :content="item.content" :items="item.items">
-        <PButton icon="i-lucide-ellipsis" color="neutral" variant="link" />
-      </PDropdownMenu>
+      <UDropdownMenu :content="item.content" :items="item.items">
+        <UButton icon="i-lucide-ellipsis" color="neutral" variant="link" />
+      </UDropdownMenu>
     </template>
 
     <template #github-trailing>
-      <PBadge label="6k+" color="neutral" variant="subtle" size="sm" />
+      <UBadge label="6k+" color="neutral" variant="subtle" size="sm" />
     </template>
-  </PNavigationMenu>
+  </UNavigationMenu>
 </template>

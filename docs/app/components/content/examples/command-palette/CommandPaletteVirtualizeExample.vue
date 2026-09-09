@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CommandPaletteItem } from 'pohon-ui'
+import type { CommandPaletteItem } from '@nuxt/ui'
 
 const items: CommandPaletteItem[] = Array(1000)
   .fill(0)
@@ -17,7 +17,7 @@ const groups = [
 </script>
 
 <template>
-  <PCommandPalette
+  <UCommandPalette
     virtualize
     :fuse="{ resultLimit: 1000 }"
     :groups="groups"

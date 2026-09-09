@@ -1,6 +1,6 @@
 ---
 title: PageCard
-description: "A pre-styled card component that displays a title, description and optional link."
+description: 'A pre-styled card component that displays a title, description and optional link.'
 category: page
 links:
   - label: GitHub
@@ -14,13 +14,12 @@ The PageCard component provides a flexible way to display content in a card with
 
 ::code-preview
 
-## ::u-page-card
-
+::u-page-card
+---
 title: 'Tailwind CSS'
-description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
+description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
 icon: 'i-simple-icons-tailwindcss'
 class: 'w-96'
-
 ---
 
 :img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
@@ -36,117 +35,102 @@ Use the [PageGrid](/docs/components/page-grid), [PageColumns](/docs/components/p
 
 Use the `title` prop to set the title of the card.
 
-## ::component-code
-
+::component-code
+---
 hide:
-
-- class
-  props:
+  - class
+props:
   title: 'Tailwind CSS'
   class: 'w-96'
-
 ---
-
 ::
 
 ### Description
 
 Use the `description` prop to set the description of the card.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 hide:
-
-- class
-  ignore:
-- title
-  props:
+  - class
+ignore:
+  - title
+props:
   title: 'Tailwind CSS'
-  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   class: 'w-96'
-
 ---
-
 ::
 
 ### Icon
 
 Use the `icon` prop to set the icon of the card.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 hide:
-
-- class
-  ignore:
-- title
-- description
-  props:
+  - class
+ignore:
+  - title
+  - description
+props:
   title: 'Tailwind CSS'
-  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   class: 'w-96'
-
 ---
-
 ::
 
 ### Link
 
 You can pass any property from the [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) component such as `to`, `target`, `rel`, etc.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 hide:
-
-- class
-  ignore:
-- title
-- description
-- icon
-- target
-  props:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - target
+props:
   title: 'Tailwind CSS'
-  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   to: 'https://tailwindcss.com/blog/tailwindcss-v4'
-  target: \_blank
+  target: _blank
   class: 'w-96'
-
 ---
-
 ::
 
 ### Variant
 
 Use the `variant` prop to change the style of the card.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 hide:
-
-- class
-  ignore:
-- title
-- description
-- icon
-- to
-- target
-  props:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - to
+  - target
+props:
   title: 'Tailwind CSS'
-  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   to: 'https://tailwindcss.com/blog/tailwindcss-v4'
-  target: \_blank
+  target: _blank
   variant: soft
   class: 'w-96'
-
 ---
-
 ::
 
 ::tip
@@ -157,24 +141,22 @@ You can apply the `light` or `dark` class to the `links` slot when using the `so
 
 Use the `orientation` prop to change the orientation with the default slot. Defaults to `vertical`.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- title
-- description
-- icon
-  props:
+  - title
+  - description
+  - icon
+props:
   title: 'Tailwind CSS'
-  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   orientation: horizontal
-  slots:
+slots:
   default: |
 
-      <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
-
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
 :img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
@@ -184,25 +166,23 @@ ignore:
 
 Use the `reverse` prop to reverse the orientation of the default slot.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- title
-- description
-- icon
-  props:
+  - title
+  - description
+  - icon
+props:
   title: 'Tailwind CSS'
-  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   orientation: horizontal
   reverse: true
-  slots:
+slots:
   default: |
 
-      <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
-
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
 :img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
@@ -212,29 +192,27 @@ ignore:
 
 Use the `highlight` and `highlight-color` props to display a highlighted border around the card.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 hide:
-
-- class
-  ignore:
-- title
-- description
-- icon
-- orientation
-  props:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - orientation
+props:
   title: 'Tailwind CSS'
-  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   orientation: horizontal
   highlight: true
   highlightColor: 'primary'
-  slots:
+slots:
   default: |
 
-      <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
-
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
 :img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
@@ -248,29 +226,27 @@ Use the `spotlight` and `spotlight-color` props to display a spotlight effect th
 The spotlight effect will take over hover effects when using a `to` prop. It's best to use it with the `outline` variant.
 ::
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 hide:
-
-- class
-  ignore:
-- title
-- description
-- icon
-- orientation
-  props:
+  - class
+ignore:
+  - title
+  - description
+  - icon
+  - orientation
+props:
   title: 'Tailwind CSS'
-  description: 'Pohon UI integrates with latest Tailwind CSS, bringing significant improvements.'
+  description: 'Nuxt UI integrates with latest Tailwind CSS, bringing significant improvements.'
   icon: 'i-simple-icons-tailwindcss'
   orientation: horizontal
   spotlight: true
   spotlightColor: 'primary'
-  slots:
+slots:
   default: |
 
-      <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
-
+    <img src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full" />
 ---
 
 :img{src="/tailwindcss-v4.svg" alt="Tailwind CSS" class="w-full"}
@@ -281,13 +257,9 @@ You can also customize the color and size by using the `--spotlight-color` and `
 
 ```vue
 <template>
-  <PPageCard
-    spotlight
-    class="[--spotlight-color:var(--ui-error)] [--spotlight-size:200px]"
-  />
+  <UPageCard spotlight class="[--spotlight-color:var(--ui-error)] [--spotlight-size:200px]" />
 </template>
 ```
-
 ::
 
 ## Examples
@@ -296,10 +268,10 @@ You can also customize the color and size by using the `--spotlight-color` and `
 
 Use the [User](/docs/components/user) component in the `header` or `footer` slot to make the card look like a testimonial.
 
-## ::component-example
-
-## name: 'page-card-testimonial-example'
-
+::component-example
+---
+name: 'page-card-testimonial-example'
+---
 ::
 
 ::tip{to="/docs/components/page-columns"}

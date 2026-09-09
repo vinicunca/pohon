@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AvatarProps } from 'pohon-ui'
+import type { AvatarProps } from '@nuxt/ui'
 
 const { data: users, status, execute } = await useLazyFetch('https://jsonplaceholder.typicode.com/users', {
   key: 'typicode-users',
@@ -21,7 +21,7 @@ function onOpen() {
 </script>
 
 <template>
-  <PInputMenu
+  <UInputMenu
     :items="users"
     :loading="status === 'pending'"
     icon="i-lucide-user"
@@ -29,12 +29,12 @@ function onOpen() {
     @update:open="onOpen"
   >
     <template #leading="{ modelValue, ui }">
-      <PAvatar
+      <UAvatar
         v-if="modelValue"
         v-bind="modelValue.avatar"
         :size="(ui.leadingAvatarSize() as AvatarProps['size'])"
         :class="ui.leadingAvatar()"
       />
     </template>
-  </PInputMenu>
+  </UInputMenu>
 </template>

@@ -19,74 +19,71 @@ Use anything you like in the default slot of the ContextMenu, and right-click on
 
 ::component-code
 ---
-
 prettier: true
 collapse: true
 ignore:
-
-- items
-- ui.content
-  external:
-- items
-  externalTypes:
-- ContextMenuItem[][]
-  props:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[][]
+props:
   items:
-  - - label: Appearance
-      children:
-      - label: System
-        icon: i-lucide-monitor
-      - label: Light
-        icon: i-lucide-sun
-      - label: Dark
-        icon: i-lucide-moon
-  - - label: Show Sidebar
-      kbds:
-      - meta
-      - s
-    - label: Show Toolbar
-      kbds:
-      - shift
-      - meta
-      - d
-    - label: Collapse Pinned Tabs
-      disabled: true
-  - - label: Refresh the Page
-    - label: Clear Cookies and Refresh
-    - label: Clear Cache and Refresh
-    - type: separator
-    - label: Developer
-      children:
-      - - label: View Source
-          kbds:
+    - - label: Appearance
+        children:
+          - label: System
+            icon: i-lucide-monitor
+          - label: Light
+            icon: i-lucide-sun
+          - label: Dark
+            icon: i-lucide-moon
+    - - label: Show Sidebar
+        kbds:
           - meta
+          - s
+      - label: Show Toolbar
+        kbds:
           - shift
-          - u
-        - label: Developer Tools
-          kbds:
-          - option
           - meta
-          - i
-        - label: Inspect Elements
-          kbds:
-          - option
-          - meta
-          - c
-      - - label: JavaScript Console
-          kbds:
-          - option
-          - meta
-          - j
-            slots:
-            default: |
+          - d
+      - label: Collapse Pinned Tabs
+        disabled: true
+    - - label: Refresh the Page
+      - label: Clear Cookies and Refresh
+      - label: Clear Cache and Refresh
+      - type: separator
+      - label: Developer
+        children:
+          - - label: View Source
+              kbds:
+                - meta
+                - shift
+                - u
+            - label: Developer Tools
+              kbds:
+                - option
+                - meta
+                - i
+            - label: Inspect Elements
+              kbds:
+                - option
+                - meta
+                - c
+          - - label: JavaScript Console
+              kbds:
+                - option
+                - meta
+                - j
+slots:
+  default: |
 
-  <div class="flex items-center justify-center rounded-md border border-dashed border-border-accented text-sm aspect-video w-72">
-    Right click here
-  </div>
-
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-:div{class="flex items-center justify-center rounded-md border border-dashed border-border-accented text-sm aspect-video w-72"}[Right click here]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 ### Items
@@ -112,76 +109,73 @@ You can pass any property from the [Link](/docs/components/link#props) component
 
 ::component-code
 ---
-
 prettier: true
 collapse: true
 ignore:
-
-- items
-- ui.content
-  external:
-- items
-  externalTypes:
-- ContextMenuItem[][]
-  props:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[][]
+props:
   items:
-  - - label: Appearance
-      children:
-      - label: System
-        icon: i-lucide-monitor
-      - label: Light
-        icon: i-lucide-sun
-      - label: Dark
-        icon: i-lucide-moon
-  - - label: Show Sidebar
-      kbds:
-      - meta
-      - s
-    - label: Show Toolbar
-      kbds:
-      - shift
-      - meta
-      - d
-    - label: Collapse Pinned Tabs
-      disabled: true
-  - - label: Refresh the Page
-    - label: Clear Cookies and Refresh
-    - label: Clear Cache and Refresh
-    - type: separator
-    - label: Developer
-      children:
-      - - label: View Source
-          kbds:
+    - - label: Appearance
+        children:
+          - label: System
+            icon: i-lucide-monitor
+          - label: Light
+            icon: i-lucide-sun
+          - label: Dark
+            icon: i-lucide-moon
+    - - label: Show Sidebar
+        kbds:
           - meta
+          - s
+      - label: Show Toolbar
+        kbds:
           - shift
-          - u
-        - label: Developer Tools
-          kbds:
-          - option
           - meta
-          - i
-        - label: Inspect Elements
-          kbds:
-          - option
-          - meta
-          - c
-      - - label: JavaScript Console
-          kbds:
-          - option
-          - meta
-          - j
-            ui:
-            content: 'w-48'
-            slots:
-            default: |
+          - d
+      - label: Collapse Pinned Tabs
+        disabled: true
+    - - label: Refresh the Page
+      - label: Clear Cookies and Refresh
+      - label: Clear Cache and Refresh
+      - type: separator
+      - label: Developer
+        children:
+          - - label: View Source
+              kbds:
+                - meta
+                - shift
+                - u
+            - label: Developer Tools
+              kbds:
+                - option
+                - meta
+                - i
+            - label: Inspect Elements
+              kbds:
+                - option
+                - meta
+                - c
+          - - label: JavaScript Console
+              kbds:
+                - option
+                - meta
+                - j
+  ui:
+    content: 'w-48'
+slots:
+  default: |
 
-  <div class="flex items-center justify-center rounded-md border border-dashed border-border-accented text-sm aspect-video w-72">
-    Right click here
-  </div>
-
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-:div{class="flex items-center justify-center rounded-md border border-dashed border-border-accented text-sm aspect-video w-72"}[Right click here]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 ::note
@@ -198,38 +192,35 @@ Use the `size` prop to change the size of the ContextMenu.
 
 ::component-code
 ---
-
 prettier: true
 collapse: true
 ignore:
-
-- items
-- ui.content
-  external:
-- items
-  externalTypes:
-- ContextMenuItem[]
-  props:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
   size: xl
   items:
-  - label: System
-    icon: i-lucide-monitor
-  - label: Light
-    icon: i-lucide-sun
-  - label: Dark
-    icon: i-lucide-moon
-    ui:
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
     content: 'w-48'
-    slots:
-    default: |
+slots:
+  default: |
 
-  <div class="flex items-center justify-center rounded-md border border-dashed border-border-accented text-sm aspect-video w-72">
-    Right click here
-  </div>
-
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-:div{class="flex items-center justify-center rounded-md border border-dashed border-border-accented text-sm aspect-video w-72"}[Right click here]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 ### Modal
@@ -238,39 +229,37 @@ Use the `modal` prop to control whether the ContextMenu blocks interaction with 
 
 ::component-code
 ---
-
 prettier: true
 collapse: true
 ignore:
-
-- items
-- ui.content
-  external:
-- items
-  externalTypes:
-- ContextMenuItem[]
-  props:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
   modal: false
   items:
-  - label: System
-    icon: i-lucide-monitor
-  - label: Light
-    icon: i-lucide-sun
-  - label: Dark
-    icon: i-lucide-moon
-    ui:
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
     content: 'w-48'
-    slots:
-    default: |
+slots:
+  default: |
 
-  <div class="flex items-center justify-center rounded-md border border-dashed border-border-accented text-sm aspect-video w-72">
-    Right click here
-  </div>
-
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-:div{class="flex items-center justify-center rounded-md border border-dashed border-border-accented text-sm aspect-video w-72"}[Right click here]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
+
 
 ### Disabled
 
@@ -278,38 +267,35 @@ Use the `disabled` prop to disable the ContextMenu.
 
 ::component-code
 ---
-
 prettier: true
 collapse: true
 ignore:
-
-- items
-- ui.content
-  external:
-- items
-  externalTypes:
-- ContextMenuItem[]
-  props:
+  - items
+  - ui.content
+external:
+  - items
+externalTypes:
+  - ContextMenuItem[]
+props:
   disabled: true
   items:
-  - label: System
-    icon: i-lucide-monitor
-  - label: Light
-    icon: i-lucide-sun
-  - label: Dark
-    icon: i-lucide-moon
-    ui:
+    - label: System
+      icon: i-lucide-monitor
+    - label: Light
+      icon: i-lucide-sun
+    - label: Dark
+      icon: i-lucide-moon
+  ui:
     content: 'w-48'
-    slots:
-    default: |
+slots:
+  default: |
 
-  <div class="flex items-center justify-center rounded-md border border-dashed border-border-accented text-sm aspect-video w-72">
-    Right click here
-  </div>
-
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
+      Right click here
+    </div>
 ---
 
-:div{class="flex items-center justify-center rounded-md border border-dashed border-border-accented text-sm aspect-video w-72"}[Right click here]
+:div{class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"}[Right click here]
 ::
 
 ## Examples
@@ -320,11 +306,9 @@ You can use the `type` property with `checkbox` and use the `checked` / `onUpdat
 
 ::component-example
 ---
-
 collapse: true
 name: 'context-menu-checkbox-items-example'
 ---
-
 ::
 
 ::note
@@ -337,11 +321,9 @@ You can use the `color` property to highlight certain items with a color.
 
 ::component-example
 ---
-
 collapse: true
 name: 'context-menu-color-items-example'
 ---
-
 ::
 
 ### With custom slot
@@ -357,11 +339,9 @@ You will have access to the following slots:
 
 ::component-example
 ---
-
 collapse: true
 name: 'context-menu-custom-slot-example'
 ---
-
 ::
 
 ::tip{to="#slots"}
@@ -375,82 +355,60 @@ Use the [extractShortcuts](/docs/composables/extract-shortcuts) utility to autom
 ```vue
 <script setup lang="ts">
 const items = [
-  [
-    {
-      label: "Show Sidebar",
-      kbds: ["meta", "S"],
+  [{
+    label: 'Show Sidebar',
+    kbds: ['meta', 'S'],
+    onSelect() {
+      console.log('Show Sidebar clicked')
+    }
+  }, {
+    label: 'Show Toolbar',
+    kbds: ['shift', 'meta', 'D'],
+    onSelect() {
+      console.log('Show Toolbar clicked')
+    }
+  }, {
+    label: 'Collapse Pinned Tabs',
+    disabled: true
+  }], [{
+    label: 'Refresh the Page'
+  }, {
+    label: 'Clear Cookies and Refresh'
+  }, {
+    label: 'Clear Cache and Refresh'
+  }, {
+    type: 'separator' as const
+  }, {
+    label: 'Developer',
+    children: [[{
+      label: 'View Source',
+      kbds: ['option', 'meta', 'U'],
       onSelect() {
-        console.log("Show Sidebar clicked");
-      },
-    },
-    {
-      label: "Show Toolbar",
-      kbds: ["shift", "meta", "D"],
+        console.log('View Source clicked')
+      }
+    }, {
+      label: 'Developer Tools',
+      kbds: ['option', 'meta', 'I'],
       onSelect() {
-        console.log("Show Toolbar clicked");
-      },
-    },
-    {
-      label: "Collapse Pinned Tabs",
-      disabled: true,
-    },
-  ],
-  [
-    {
-      label: "Refresh the Page",
-    },
-    {
-      label: "Clear Cookies and Refresh",
-    },
-    {
-      label: "Clear Cache and Refresh",
-    },
-    {
-      type: "separator" as const,
-    },
-    {
-      label: "Developer",
-      children: [
-        [
-          {
-            label: "View Source",
-            kbds: ["option", "meta", "U"],
-            onSelect() {
-              console.log("View Source clicked");
-            },
-          },
-          {
-            label: "Developer Tools",
-            kbds: ["option", "meta", "I"],
-            onSelect() {
-              console.log("Developer Tools clicked");
-            },
-          },
-        ],
-        [
-          {
-            label: "Inspect Elements",
-            kbds: ["option", "meta", "C"],
-            onSelect() {
-              console.log("Inspect Elements clicked");
-            },
-          },
-        ],
-        [
-          {
-            label: "JavaScript Console",
-            kbds: ["option", "meta", "J"],
-            onSelect() {
-              console.log("JavaScript Console clicked");
-            },
-          },
-        ],
-      ],
-    },
-  ],
-];
+        console.log('Developer Tools clicked')
+      }
+    }], [{
+      label: 'Inspect Elements',
+      kbds: ['option', 'meta', 'C'],
+      onSelect() {
+        console.log('Inspect Elements clicked')
+      }
+    }], [{
+      label: 'JavaScript Console',
+      kbds: ['option', 'meta', 'J'],
+      onSelect() {
+        console.log('JavaScript Console clicked')
+      }
+    }]]
+  }]
+]
 
-defineShortcuts(extractShortcuts(items));
+defineShortcuts(extractShortcuts(items))
 </script>
 ```
 

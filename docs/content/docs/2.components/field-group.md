@@ -17,17 +17,15 @@ links:
 
 Wrap multiple [Button](/docs/components/button) within a FieldGroup to group them together.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 slots:
-default: |
+  default: |
 
-    <PButton color="neutral" variant="subtle" label="Button" />
-    <PButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
-
+    <UButton color="neutral" variant="subtle" label="Button" />
+    <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-
 :u-button{color="neutral" variant="subtle" label="Button"}
 :u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
@@ -36,19 +34,17 @@ default: |
 
 Use the `size` prop to change the size of all the buttons.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 props:
-size: xl
+  size: xl
 slots:
-default: |
+  default: |
 
-    <PButton color="neutral" variant="subtle" label="Button" />
-    <PButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
-
+    <UButton color="neutral" variant="subtle" label="Button" />
+    <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
 ---
-
 :u-button{color="neutral" variant="subtle" label="Button"}
 :u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
@@ -57,19 +53,17 @@ default: |
 
 Use the `orientation` prop to change the orientation of the buttons. Defaults to `horizontal`.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 props:
-orientation: vertical
+  orientation: vertical
 slots:
-default: |
+  default: |
 
-    <PButton color="neutral" variant="subtle" label="Submit" />
-    <PButton color="neutral" variant="outline" label="Cancel" />
-
+    <UButton color="neutral" variant="subtle" label="Submit" />
+    <UButton color="neutral" variant="outline" label="Cancel" />
 ---
-
 :u-button{color="neutral" variant="subtle" label="Submit"}
 :u-button{color="neutral" variant="outline" label="Cancel"}
 ::
@@ -80,18 +74,16 @@ default: |
 
 You can use components like [Input](/docs/components/input), [InputMenu](/docs/components/input-menu), [Select](/docs/components/select) [SelectMenu](/docs/components/select-menu), etc. within a field group.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 slots:
-default: |
+  default: |
 
-    <PInput color="neutral" variant="outline" placeholder="Enter token" />
+    <UInput color="neutral" variant="outline" placeholder="Enter token" />
 
-    <PButton color="neutral" variant="subtle" icon="i-lucide-clipboard" />
-
+    <UButton color="neutral" variant="subtle" icon="i-lucide-clipboard" />
 ---
-
 :u-input{color="neutral" variant="outline" placeholder="Enter token"}
 :u-button{color="neutral" variant="subtle" icon="i-lucide-clipboard"}
 ::

@@ -66,9 +66,9 @@ const frameworkSuffix = !prefix && page.value?.framework === 'vue' ? ' for Vue' 
 const description = page.value?.seo?.description ? page.value.seo.description : page.value?.description
 
 useSeoMeta({
-  titleTemplate: `${prefix}%s ${suffix}- Pohon UI${frameworkSuffix}`,
+  titleTemplate: `${prefix}%s ${suffix}- Nuxt UI${frameworkSuffix}`,
   title,
-  ogTitle: `${prefix}${title} ${suffix}- Pohon UI${frameworkSuffix}`,
+  ogTitle: `${prefix}${title} ${suffix}- Nuxt UI${frameworkSuffix}`,
   description,
   ogDescription: description
 })
@@ -86,7 +86,7 @@ if (import.meta.server) {
     defineOgImage('Docs.takumi', {
       title: page.value.title,
       description: page.value.description,
-      headline: breadcrumb.value?.[breadcrumb.value.length - 1]?.label || 'Pohon UI',
+      headline: breadcrumb.value?.[breadcrumb.value.length - 1]?.label || 'Nuxt UI',
       framework: page.value?.framework
     })
   }
@@ -108,44 +108,39 @@ if (import.meta.server) {
 
 useCanonical(computed(() => `${path.value}.md`))
 
-const { open, messages } = useChat()
+const { open, ask } = useChat()
+// same glyph as the studio's Ask-AI trigger, and skins with the icon pack
+const studioIcons = useStudioIcons()
 
 const links = computed(() => [{
-  icon: 'i-lucide-file-pen',
+  icon: studioIcons.pencil,
   label: 'Edit this page',
   to: `https://github.com/nuxt/ui/edit/v4/docs/content/${page?.value?.stem}.md`,
   target: '_blank'
 }, {
-  icon: 'i-lucide-bot-message-square',
+  icon: studioIcons.assistant,
   label: 'Explain with AI',
-  onClick: () => {
-    messages.value = [...messages.value, {
-      id: String(Date.now()),
-      role: 'user',
-      parts: [{ type: 'text', text: 'Read this documentation page and summarize it. I want to ask questions about it.' }]
-    }]
-    open.value = true
-  }
+  onClick: () => ask('Read this documentation page and summarize it. I want to ask questions about it.')
 }])
 </script>
 
 <template>
-  <PPage
+  <UPage
     v-if="page"
     :ui="open ? {
       center: 'lg:col-span-10',
       right: 'lg:hidden'
     } : undefined"
   >
-    <PPageHeader>
+    <UPageHeader>
       <template #headline>
-        <PBreadcrumb :items="breadcrumb" />
+        <UBreadcrumb :items="breadcrumb" />
       </template>
 
       <template #title>
         {{ page.title }}
 
-        <PBadge
+        <UBadge
           v-if="page.navigation?.badge"
           :label="page.navigation?.badge"
           variant="subtle"
@@ -159,7 +154,7 @@ const links = computed(() => [{
       </template>
 
       <template #links>
-        <PButton
+        <UButton
           v-for="link in page.links"
           :key="link.label"
           color="neutral"
@@ -168,35 +163,35 @@ const links = computed(() => [{
           v-bind="link"
         >
           <template v-if="link.avatar" #leading>
-            <PAvatar v-bind="link.avatar" size="2xs" :alt="`${link.label} avatar`" />
+            <UAvatar v-bind="link.avatar" size="2xs" :alt="`${link.label} avatar`" />
           </template>
-        </PButton>
+        </UButton>
         <PageHeaderLinks />
       </template>
-    </PPageHeader>
+    </UPageHeader>
 
-    <PPageBody>
+    <UPageBody>
       <ContentRenderer v-if="page.body" :value="page" />
 
-      <PSeparator v-if="surround?.filter(Boolean).length" />
+      <USeparator v-if="surround?.filter(Boolean).length" />
 
-      <PContentSurround :surround="(surround as any)" />
-    </PPageBody>
+      <UContentSurround :surround="(surround as any)" />
+    </UPageBody>
 
     <template v-if="page?.body?.toc?.links?.length" #right>
-      <PContentToc :links="page.body.toc.links" class="z-2" highlight highlight-variant="circuit">
+      <UContentToc :links="page.body.toc.links" class="z-2" highlight highlight-variant="circuit">
         <template #bottom>
-          <PSeparator v-if="page.body?.toc?.links?.length" type="dashed" />
+          <USeparator v-if="page.body?.toc?.links?.length" type="dashed" />
 
-          <PPageLinks :links="links" />
+          <UPageLinks :links="links" />
 
           <template v-if="!isDev">
-            <PSeparator type="dashed" />
+            <USeparator type="dashed" />
 
             <AdsCarbon />
           </template>
         </template>
-      </PContentToc>
+      </UContentToc>
     </template>
-  </PPage>
+  </UPage>
 </template>

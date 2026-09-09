@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ProgressGroupItem } from 'pohon-ui'
+import type { ProgressGroupItem } from '@nuxt/ui'
 
 const max = 128
 
@@ -17,10 +17,10 @@ const used = items.reduce((total, item) => total + (item.value ?? 0), 0)
 </script>
 
 <template>
-  <PProgressGroup :items="items" :max="max" status class="w-96" :ui="{ status: 'w-full justify-between' }">
+  <UProgressGroup :items="items" :max="max" status class="w-96" :ui="{ status: 'w-full justify-between' }">
     <template #status="{ percent }">
       <p>{{ percent }}% Full</p>
-      <p class="color-text-muted">
+      <p class="text-muted">
         ~{{ used.toFixed(1) }}K / {{ max }}K Tokens
       </p>
     </template>
@@ -28,5 +28,5 @@ const used = items.reduce((total, item) => total + (item.value ?? 0), 0)
     <template #item-trailing="{ item }">
       {{ item.value }}K
     </template>
-  </PProgressGroup>
+  </UProgressGroup>
 </template>

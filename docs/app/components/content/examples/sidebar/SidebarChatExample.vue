@@ -2,7 +2,7 @@
 import type { UIMessage } from 'ai'
 import { isTextUIPart } from 'ai'
 import { useChat } from '@ai-sdk/vue'
-import { isPartStreaming } from 'pohon-ui/utils/ai'
+import { isPartStreaming } from '@nuxt/ui/utils/ai'
 import { Markdown } from '@comark/vue'
 import shiki from '@comark/vue/plugins/shiki'
 
@@ -12,11 +12,11 @@ const input = ref('')
 const initialMessages: UIMessage[] = [{
   id: '1',
   role: 'user',
-  parts: [{ type: 'text', text: 'What is Pohon UI?' }]
+  parts: [{ type: 'text', text: 'What is Nuxt UI?' }]
 }, {
   id: '2',
   role: 'assistant',
-  parts: [{ type: 'text', text: 'Pohon UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }]
+  parts: [{ type: 'text', text: 'Nuxt UI is a Vue component library built on Reka UI, Tailwind CSS, and Tailwind Variants. It provides 125+ accessible components for building modern web apps.' }]
 }]
 
 const { messages, status, error, sendMessage, regenerate, stop } = useChat({
@@ -52,8 +52,8 @@ const ui = {
 <template>
   <div class="flex flex-1">
     <div class="flex-1 flex flex-col">
-      <div class="h-(--ui-header-height) shrink-0 flex items-center justify-end px-4 border-b border-border">
-        <PButton
+      <div class="h-(--ui-header-height) shrink-0 flex items-center justify-end px-4 border-b border-default">
+        <UButton
           icon="i-lucide-panel-right"
           color="neutral"
           variant="ghost"
@@ -67,7 +67,7 @@ const ui = {
       </div>
     </div>
 
-    <PSidebar
+    <USidebar
       v-model:open="open"
       side="right"
       title="AI Chat"
@@ -75,8 +75,8 @@ const ui = {
       :style="{ '--sidebar-width': '20rem' }"
       :ui="{ container: 'h-full' }"
     >
-      <PTheme :ui="ui">
-        <PChatMessages
+      <UTheme :ui="ui">
+        <UChatMessages
           :messages="messages"
           :status="status"
           compact
@@ -98,11 +98,11 @@ const ui = {
               </template>
             </template>
           </template>
-        </PChatMessages>
-      </PTheme>
+        </UChatMessages>
+      </UTheme>
 
       <template #footer>
-        <PChatPrompt
+        <UChatPrompt
           v-model="input"
           :error="error"
           :autofocus="false"
@@ -110,14 +110,14 @@ const ui = {
           size="sm"
           @submit="onSubmit"
         >
-          <PChatPromptSubmit
+          <UChatPromptSubmit
             size="sm"
             :status="status"
             @stop="stop()"
             @reload="regenerate()"
           />
-        </PChatPrompt>
+        </UChatPrompt>
       </template>
-    </PSidebar>
+    </USidebar>
   </div>
 </template>

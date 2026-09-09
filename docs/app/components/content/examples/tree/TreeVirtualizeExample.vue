@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TreeItem } from 'pohon-ui'
+import type { TreeItem } from '@nuxt/ui'
 
 const items: TreeItem[] = Array(1000).fill(0).map((_, i) => ({
   label: `Item ${i + 1}`,
@@ -11,5 +11,5 @@ const items: TreeItem[] = Array(1000).fill(0).map((_, i) => ({
 </script>
 
 <template>
-  <PTree virtualize :items="items" class="h-80" />
+  <UTree virtualize :items="items" class="h-80" />
 </template>

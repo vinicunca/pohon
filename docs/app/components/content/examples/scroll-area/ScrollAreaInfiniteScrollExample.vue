@@ -52,7 +52,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <PScrollArea
+  <UScrollArea
     ref="scrollArea"
     v-slot="{ item }"
     :items="users"
@@ -62,24 +62,24 @@ onMounted(() => {
     }"
     class="h-96 w-full"
   >
-    <PPageCard
+    <UPageCard
       orientation="horizontal"
       class="rounded-none"
     >
-      <PUser
+      <UUser
         :name="`${item.firstName} ${item.lastName}`"
         :description="item.email"
         :avatar="{ src: item.image, alt: item.firstName, loading: 'lazy' as const }"
         size="lg"
       />
-    </PPageCard>
-  </PScrollArea>
+    </UPageCard>
+  </UScrollArea>
 
-  <PProgress
+  <UProgress
     v-if="status === 'pending' || status === 'idle'"
     indeterminate
     size="xs"
     class="absolute top-0 inset-x-0 z-1"
-    :ui="{ base: 'bg-background' }"
+    :ui="{ base: 'bg-default' }"
   />
 </template>

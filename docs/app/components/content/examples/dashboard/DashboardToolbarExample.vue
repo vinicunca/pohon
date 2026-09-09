@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from 'pohon-ui'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items: NavigationMenuItem[][] = [[{
   label: 'General',
@@ -25,7 +25,7 @@ const items: NavigationMenuItem[][] = [[{
 </script>
 
 <template>
-  <PDashboardToolbar>
-    <PNavigationMenu :items="items" highlight class="flex-1" />
-  </PDashboardToolbar>
+  <UDashboardToolbar>
+    <UNavigationMenu :items="items" highlight class="flex-1" />
+  </UDashboardToolbar>
 </template>

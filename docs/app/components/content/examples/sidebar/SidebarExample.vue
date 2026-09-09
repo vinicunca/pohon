@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DropdownMenuItem, NavigationMenuItem } from 'pohon-ui'
+import type { DropdownMenuItem, NavigationMenuItem } from '@nuxt/ui'
 
 const open = ref(true)
 
@@ -70,10 +70,10 @@ function getItems(state: 'collapsed' | 'expanded') {
 }
 
 const user = ref({
-  name: 'praburangki',
+  name: 'Benjamin Canac',
   avatar: {
-    src: 'https://github.com/praburangki.png',
-    alt: 'praburangki'
+    src: 'https://github.com/benjamincanac.png',
+    alt: 'Benjamin Canac'
   }
 })
 
@@ -132,38 +132,38 @@ defineShortcuts(extractShortcuts(teamsItems.value))
 
 <template>
   <div class="flex flex-1">
-    <PSidebar
+    <USidebar
       v-model:open="open"
       collapsible="icon"
       rail
       :ui="{
         container: 'h-full',
-        inner: 'bg-background-elevated/25 divide-transparent',
+        inner: 'bg-elevated/25 divide-transparent',
         body: 'py-0'
       }"
     >
       <template #header>
-        <PDropdownMenu
+        <UDropdownMenu
           :items="teamsItems"
           :content="{ align: 'start', collisionPadding: 12 }"
-          :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width) min-w-48' }"
+          :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-48' }"
         >
-          <PButton
+          <UButton
             v-bind="selectedTeam"
             trailing-icon="i-lucide-chevrons-up-down"
             color="neutral"
             variant="ghost"
             square
-            class="w-full data-[state=open]:bg-background-elevated overflow-hidden"
+            class="w-full data-[state=open]:bg-elevated overflow-hidden"
             :ui="{
-              trailingIcon: 'color-text-dimmed ms-auto'
+              trailingIcon: 'text-dimmed ms-auto'
             }"
           />
-        </PDropdownMenu>
+        </UDropdownMenu>
       </template>
 
       <template #default="{ state }">
-        <PNavigationMenu
+        <UNavigationMenu
           :key="state"
           :items="getItems(state)"
           orientation="vertical"
@@ -172,30 +172,30 @@ defineShortcuts(extractShortcuts(teamsItems.value))
       </template>
 
       <template #footer>
-        <PDropdownMenu
+        <UDropdownMenu
           :items="userItems"
           :content="{ align: 'center', collisionPadding: 12 }"
-          :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width) min-w-48' }"
+          :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-48' }"
         >
-          <PButton
+          <UButton
             v-bind="user"
             :label="user?.name"
             trailing-icon="i-lucide-chevrons-up-down"
             color="neutral"
             variant="ghost"
             square
-            class="w-full data-[state=open]:bg-background-elevated overflow-hidden"
+            class="w-full data-[state=open]:bg-elevated overflow-hidden"
             :ui="{
-              trailingIcon: 'color-text-dimmed ms-auto'
+              trailingIcon: 'text-dimmed ms-auto'
             }"
           />
-        </PDropdownMenu>
+        </UDropdownMenu>
       </template>
-    </PSidebar>
+    </USidebar>
 
     <div class="flex-1 flex flex-col">
-      <div class="h-(--ui-header-height) shrink-0 flex items-center px-4 border-b border-border">
-        <PButton
+      <div class="h-(--ui-header-height) shrink-0 flex items-center px-4 border-b border-default">
+        <UButton
           icon="i-lucide-panel-left"
           color="neutral"
           variant="ghost"

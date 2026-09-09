@@ -1,13 +1,13 @@
 <template>
-  <PFieldGroup>
-    <PInput color="neutral" variant="outline" placeholder="Enter token" />
+  <UFieldGroup>
+    <UInput color="neutral" variant="outline" placeholder="Enter token" />
 
-    <PTooltip text="Copy to clipboard">
-      <PButton
+    <UTooltip text="Copy to clipboard">
+      <UButton
         color="neutral"
         variant="subtle"
         icon="i-lucide-clipboard"
       />
-    </PTooltip>
-  </PFieldGroup>
+    </UTooltip>
+  </UFieldGroup>
 </template>

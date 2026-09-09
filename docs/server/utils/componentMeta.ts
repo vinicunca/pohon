@@ -78,7 +78,7 @@ export function getDefaultVariants(camelName: string, prose = false): Record<str
  */
 export async function fetchComponentMetadata(normalizedName: string, { full = false }: { full?: boolean } = {}) {
   const camelName = camelCase(normalizedName)
-  const componentMetaName: string = `P${upperFirst(camelName)}`
+  const componentMetaName: string = `U${upperFirst(camelName)}`
 
   let metadata: Record<string, any>
   try {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { FooterColumn } from 'pohon-ui'
+import type { FooterColumn } from '@nuxt/ui'
 
 const columns: FooterColumn[] = [{
   label: 'Community',
@@ -31,7 +31,7 @@ const columns: FooterColumn[] = [{
     to: 'https://image.nuxt.com/',
     target: '_blank'
   }, {
-    label: 'Pohon UI',
+    label: 'Nuxt UI',
     to: 'https://ui.nuxt.com/',
     target: '_blank'
   }]
@@ -39,15 +39,15 @@ const columns: FooterColumn[] = [{
 </script>
 
 <template>
-  <PFooterColumns :columns="columns">
+  <UFooterColumns :columns="columns">
     <template #right>
-      <PFormField name="email" label="Subscribe to our newsletter" size="lg">
-        <PInput type="email" class="w-full">
+      <UFormField name="email" label="Subscribe to our newsletter" size="lg">
+        <UInput type="email" class="w-full">
           <template #trailing>
-            <PButton type="submit" size="xs" color="neutral" label="Subscribe" />
+            <UButton type="submit" size="xs" color="neutral" label="Subscribe" />
           </template>
-        </PInput>
-      </PFormField>
+        </UInput>
+      </UFormField>
     </template>
-  </PFooterColumns>
+  </UFooterColumns>
 </template>

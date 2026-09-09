@@ -1,7 +1,7 @@
 <template>
-  <PPinInput :length="6" :separator="3" placeholder="○">
+  <UPinInput :length="6" :separator="3" placeholder="○">
     <template #separator>
-      <PIcon name="i-lucide-minus" class="size-4" />
+      <UIcon name="i-lucide-minus" class="size-4" />
     </template>
-  </PPinInput>
+  </UPinInput>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TreeItem } from 'pohon-ui'
+import type { TreeItem } from '@nuxt/ui'
 import { useSortable } from '@vueuse/integrations/useSortable'
 
 const items = shallowRef<TreeItem[]>([
@@ -65,5 +65,5 @@ useSortable(tree, items, {
 </script>
 
 <template>
-  <PTree ref="tree" :nested="false" :unmount-on-hide="false" :items="items" />
+  <UTree ref="tree" :nested="false" :unmount-on-hide="false" :items="items" />
 </template>

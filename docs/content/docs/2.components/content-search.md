@@ -1,6 +1,6 @@
 ---
 title: ContentSearch
-description: "A ready-to-use CommandPalette to add to your documentation."
+description: 'A ready-to-use CommandPalette to add to your documentation.'
 category: content
 framework: nuxt
 links:
@@ -20,17 +20,15 @@ This component is only available when the `@nuxt/content` module is installed.
 
 The ContentSearch component extends the [CommandPalette](/docs/components/command-palette) component with built-in [`@nuxt/content`](https://content.nuxt.com) search support, navigation grouping and color mode commands. It supports both client-side [Fuse.js](https://www.fusejs.io/) filtering and server-side [FTS5 full-text search](https://www.sqlite.org/fts5.html). You can pass any CommandPalette property such as `icon`, `placeholder`, etc.
 
-## ::component-example
-
+::component-example
+---
 iframe:
-height: 500px;
+  height: 500px;
 iframeMobile: true
 overflowHidden: true
 source: false
 name: 'content-search-example'
-
 ---
-
 ::
 
 ::note
@@ -47,17 +45,17 @@ Use the `navigation` prop with [`queryCollectionNavigation`](https://content.nux
 
 ```vue [app.vue] {2, 9}
 <script setup lang="ts">
-const { data: navigation } = await useAsyncData("navigation", () =>
-  queryCollectionNavigation("content"),
-);
+const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('content'))
 </script>
 
 <template>
-  <PApp>
+  <UApp>
     <ClientOnly>
-      <LazyUContentSearch :navigation="navigation" />
+      <LazyUContentSearch
+        :navigation="navigation"
+      />
     </ClientOnly>
-  </PApp>
+  </UApp>
 </template>
 ```
 
@@ -67,24 +65,17 @@ Use the `files` prop with [`queryCollectionSearchSections`](https://content.nuxt
 
 ```vue [app.vue] {4-8, 16}
 <script setup lang="ts">
-const { data: navigation } = await useAsyncData("navigation", () =>
-  queryCollectionNavigation("content"),
-);
+const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('content'))
 
-const { data: files } = useLazyAsyncData(
-  "search",
-  () =>
-    queryCollectionSearchSections("docs", {
-      ignoredTags: ["style"],
-    }),
-  {
-    server: false,
-  },
-);
+const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('docs', {
+  ignoredTags: ['style']
+}), {
+  server: false
+})
 </script>
 
 <template>
-  <PApp>
+  <UApp>
     <ClientOnly>
       <LazyUContentSearch
         :navigation="navigation"
@@ -92,7 +83,7 @@ const { data: files } = useLazyAsyncData(
         :fuse="{ resultLimit: 20, fuseOptions: { threshold: 0.2 } }"
       />
     </ClientOnly>
-  </PApp>
+  </UApp>
 </template>
 ```
 
@@ -110,27 +101,25 @@ Requires `@nuxt/content` v3.14+.
 
 ```vue [app.vue] {4-7, 24-25}
 <script setup lang="ts">
-const { data: navigation } = await useAsyncData("navigation", () =>
-  queryCollectionNavigation("content"),
-);
+const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('content'))
 
-const { search, status, init } = useSearchCollection("content", {
+const { search, status, init } = useSearchCollection('content', {
   immediate: false,
-  ignoredTags: ["style"],
-});
+  ignoredTags: ['style']
+})
 
-const { open } = useContentSearch();
+const { open } = useContentSearch()
 
 // Defer index initialization until the user opens the palette when using `immediate: false`
 watch(open, (value) => {
-  if (value && status.value === "idle") {
-    init();
+  if (value && status.value === 'idle') {
+    init()
   }
-});
+})
 </script>
 
 <template>
-  <PApp>
+  <UApp>
     <ClientOnly>
       <LazyUContentSearch
         :navigation="navigation"
@@ -138,7 +127,7 @@ watch(open, (value) => {
         :search-status="status"
       />
     </ClientOnly>
-  </PApp>
+  </UApp>
 </template>
 ```
 
@@ -156,11 +145,13 @@ Use the `shortcut` prop to change the shortcut used in [defineShortcuts](/docs/c
 
 ```vue [app.vue]{5}
 <template>
-  <PApp>
+  <UApp>
     <ClientOnly>
-      <LazyUContentSearch shortcut="meta_k" />
+      <LazyUContentSearch
+        shortcut="meta_k"
+      />
     </ClientOnly>
-  </PApp>
+  </UApp>
 </template>
 ```
 
@@ -170,31 +161,29 @@ Use the `links` prop to add a group of quick-access links at the top of the comm
 
 ```vue [app.vue] {21}
 <script setup lang="ts">
-const links = [
-  {
-    label: "Docs",
-    icon: "i-lucide-book",
-    to: "/docs/getting-started",
-  },
-  {
-    label: "Components",
-    icon: "i-lucide-box",
-    to: "/docs/components",
-  },
-  {
-    label: "Showcase",
-    icon: "i-lucide-presentation",
-    to: "/showcase",
-  },
-];
+const links = [{
+  label: 'Docs',
+  icon: 'i-lucide-book',
+  to: '/docs/getting-started'
+}, {
+  label: 'Components',
+  icon: 'i-lucide-box',
+  to: '/docs/components'
+}, {
+  label: 'Showcase',
+  icon: 'i-lucide-presentation',
+  to: '/showcase'
+}]
 </script>
 
 <template>
-  <PApp>
+  <UApp>
     <ClientOnly>
-      <LazyUContentSearch :links="links" />
+      <LazyUContentSearch
+        :links="links"
+      />
     </ClientOnly>
-  </PApp>
+  </UApp>
 </template>
 ```
 
@@ -205,8 +194,8 @@ By default, a group of commands will be added to the command palette so you can 
 ```vue [pages/index.vue]
 <script setup lang="ts">
 definePageMeta({
-  colorMode: "dark",
-});
+  colorMode: 'dark'
+})
 </script>
 ```
 
@@ -214,11 +203,13 @@ You can disable this behavior by setting the `color-mode` prop to `false`:
 
 ```vue [app.vue]{5}
 <template>
-  <PApp>
+  <UApp>
     <ClientOnly>
-      <LazyUContentSearch :color-mode="false" />
+      <LazyUContentSearch
+        :color-mode="false"
+      />
     </ClientOnly>
-  </PApp>
+  </UApp>
 </template>
 ```
 
@@ -240,9 +231,9 @@ You can disable this behavior by setting the `color-mode` prop to `false`:
 
 When accessing the component via a template ref, you can use the following:
 
-| Name                                | Type                                                                |
-| ----------------------------------- | ------------------------------------------------------------------- |
-| `commandPaletteRef`{lang="ts-type"} | `Ref<InstanceType<typeof PCommandPalette> \| null>`{lang="ts-type"} |
+| Name | Type |
+| ---- | ---- |
+| `commandPaletteRef`{lang="ts-type"} | `Ref<InstanceType<typeof UCommandPalette> \| null>`{lang="ts-type"} |
 
 ## Theme
 

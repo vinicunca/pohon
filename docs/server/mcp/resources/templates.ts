@@ -2,7 +2,7 @@ import { queryCollection } from '@nuxt/content/server'
 
 export default defineMcpResource({
   uri: 'resource://nuxt-ui/templates',
-  description: 'Complete list of available Pohon UI templates with categories',
+  description: 'Complete list of available Nuxt UI templates with categories',
   cache: '1h',
   async handler(uri: URL) {
     const event = useEvent()

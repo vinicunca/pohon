@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from 'pohon-ui'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items: NavigationMenuItem[] = [{
   label: 'Figma Kit',
@@ -17,17 +17,17 @@ const items: NavigationMenuItem[] = [{
 </script>
 
 <template>
-  <PFooter>
+  <UFooter>
     <template #left>
-      <p class="color-text-muted text-sm">
+      <p class="text-muted text-sm">
         Copyright © {{ new Date().getFullYear() }}
       </p>
     </template>
 
-    <PNavigationMenu :items="items" variant="link" />
+    <UNavigationMenu :items="items" variant="link" />
 
     <template #right>
-      <PButton
+      <UButton
         icon="i-simple-icons-discord"
         color="neutral"
         variant="ghost"
@@ -35,7 +35,7 @@ const items: NavigationMenuItem[] = [{
         target="_blank"
         aria-label="Discord"
       />
-      <PButton
+      <UButton
         icon="i-simple-icons-x"
         color="neutral"
         variant="ghost"
@@ -43,7 +43,7 @@ const items: NavigationMenuItem[] = [{
         target="_blank"
         aria-label="X"
       />
-      <PButton
+      <UButton
         icon="i-simple-icons-github"
         color="neutral"
         variant="ghost"
@@ -52,5 +52,5 @@ const items: NavigationMenuItem[] = [{
         aria-label="GitHub"
       />
     </template>
-  </PFooter>
+  </UFooter>
 </template>

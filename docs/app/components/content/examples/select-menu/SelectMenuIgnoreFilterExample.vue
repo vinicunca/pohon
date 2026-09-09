@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { refDebounced } from '@vueuse/core'
-import type { AvatarProps } from 'pohon-ui'
+import type { AvatarProps } from '@nuxt/ui'
 
 const searchTerm = ref('')
 const searchTermDebounced = refDebounced(searchTerm, 200)
@@ -26,7 +26,7 @@ function onOpen() {
 </script>
 
 <template>
-  <PSelectMenu
+  <USelectMenu
     v-model:search-term="searchTerm"
     :items="users"
     :search-input="{
@@ -40,12 +40,12 @@ function onOpen() {
     @update:open="onOpen"
   >
     <template #leading="{ modelValue, ui }">
-      <PAvatar
+      <UAvatar
         v-if="modelValue"
         v-bind="modelValue.avatar"
         :size="(ui.leadingAvatarSize() as AvatarProps['size'])"
         :class="ui.leadingAvatar()"
       />
     </template>
-  </PSelectMenu>
+  </USelectMenu>
 </template>

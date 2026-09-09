@@ -81,17 +81,17 @@ watch(matches, () => {
     <div
       v-if="!isHorizontal"
       ref="title"
-      class="flex items-end justify-between gap-4 p-6 bg-background-elevated/50"
+      class="flex items-end justify-between gap-4 p-6 bg-elevated/50"
     >
       <div>
-        <h2 class="text-2xl font-700 color-text-highlighted">
+        <h2 class="text-2xl font-bold text-highlighted">
           Members
         </h2>
-        <p class="color-text-muted">
+        <p class="text-muted">
           This header scrolls away with the cards, sharing one scrollbar.
         </p>
       </div>
-      <PBadge
+      <UBadge
         color="neutral"
         variant="subtle"
         :label="`${users.length} members`"
@@ -100,11 +100,11 @@ watch(matches, () => {
 
     <div
       ref="toolbar"
-      class="z-10 flex items-center px-6 py-3 border-y border-border bg-background-elevated/50 backdrop-blur"
+      class="z-10 flex items-center px-6 py-3 border-y border-default bg-elevated/50 backdrop-blur"
       :class="isHorizontal ? 'sticky left-0' : 'sticky top-0'"
     >
-      <PFieldGroup>
-        <PInput
+      <UFieldGroup>
+        <UInput
           v-model="query"
           placeholder="Find a member..."
           icon="i-lucide-search"
@@ -115,15 +115,15 @@ watch(matches, () => {
           <template #trailing>
             <span
               id="scroll-area-find-count"
-              class="text-xs color-text-muted tabular-nums"
+              class="text-xs text-muted tabular-nums"
               aria-live="polite"
               role="status"
             >
               {{ matches.length ? cursor + 1 : 0 }}/{{ matches.length }}
             </span>
           </template>
-        </PInput>
-        <PButton
+        </UInput>
+        <UButton
           :icon="isHorizontal ? 'i-lucide-chevron-left' : 'i-lucide-chevron-up'"
           color="neutral"
           variant="outline"
@@ -131,7 +131,7 @@ watch(matches, () => {
           :disabled="!matches.length"
           @click="step(-1)"
         />
-        <PButton
+        <UButton
           :icon="isHorizontal ? 'i-lucide-chevron-right' : 'i-lucide-chevron-down'"
           color="neutral"
           variant="outline"
@@ -139,9 +139,9 @@ watch(matches, () => {
           :disabled="!matches.length"
           @click="step(1)"
         />
-      </PFieldGroup>
+      </UFieldGroup>
 
-      <PButton
+      <UButton
         :icon="isHorizontal ? 'i-lucide-arrow-left-to-line' : 'i-lucide-arrow-up-to-line'"
         color="neutral"
         variant="outline"
@@ -156,17 +156,17 @@ watch(matches, () => {
       <div
         v-if="isHorizontal"
         ref="title"
-        class="w-72 shrink-0 flex flex-col justify-center gap-4 p-6 bg-background-elevated/50 border-r border-border"
+        class="w-72 shrink-0 flex flex-col justify-center gap-4 p-6 bg-elevated/50 border-r border-default"
       >
         <div>
-          <h2 class="text-2xl font-700 color-text-highlighted">
+          <h2 class="text-2xl font-bold text-highlighted">
             Members
           </h2>
-          <p class="color-text-muted">
+          <p class="text-muted">
             This header scrolls away with the cards, sharing one scrollbar.
           </p>
         </div>
-        <PBadge
+        <UBadge
           color="neutral"
           variant="subtle"
           class="self-start"
@@ -174,7 +174,7 @@ watch(matches, () => {
         />
       </div>
 
-      <PScrollArea
+      <UScrollArea
         ref="scrollArea"
         v-slot="{ item, index }"
         :orientation="orientation"
@@ -182,7 +182,7 @@ watch(matches, () => {
         :class="isHorizontal && 'h-48 shrink-0'"
         :virtualize="{ scrollMargin, getScrollElement, estimateSize: itemSize, skipMeasurement: isHorizontal }"
       >
-        <PPageCard
+        <UPageCard
           class="rounded-none h-full"
           :class="[isHorizontal && 'w-64', index === currentMatch && 'bg-primary/10']"
         >
@@ -190,23 +190,23 @@ watch(matches, () => {
             class="flex gap-3 h-full min-w-0"
             :class="isHorizontal ? 'flex-col items-center justify-center text-center' : 'items-center'"
           >
-            <PAvatar
+            <UAvatar
               :src="item.image"
               :alt="item.firstName"
               :size="isHorizontal ? '2xl' : 'lg'"
               loading="lazy"
             />
             <div class="min-w-0">
-              <p class="font-500 color-text-highlighted truncate">
+              <p class="font-medium text-highlighted truncate">
                 {{ item.firstName }} {{ item.lastName }}
               </p>
-              <p class="text-sm color-text-muted truncate">
+              <p class="text-sm text-muted truncate">
                 {{ item.email }}
               </p>
             </div>
           </div>
-        </PPageCard>
-      </PScrollArea>
+        </UPageCard>
+      </UScrollArea>
     </div>
   </div>
 </template>

@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from 'pohon-ui'
+import type { TableColumn } from '@nuxt/ui'
 import type { Column } from '@tanstack/vue-table'
 
-const PBadge = resolveComponent('PBadge')
-const PButton = resolveComponent('PButton')
-const PDropdownMenu = resolveComponent('PDropdownMenu')
+const UBadge = resolveComponent('UBadge')
+const UButton = resolveComponent('UButton')
+const UDropdownMenu = resolveComponent('UDropdownMenu')
 
 type Payment = {
   id: string
@@ -73,7 +73,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -84,7 +84,7 @@ const columns: TableColumn<Payment>[] = [{
   meta: {
     class: {
       th: 'text-right',
-      td: 'text-right font-500'
+      td: 'text-right font-medium'
     }
   },
   cell: ({ row }) => {
@@ -99,7 +99,7 @@ const columns: TableColumn<Payment>[] = [{
 function getHeader(column: Column<Payment>, label: string) {
   const isSorted = column.getIsSorted()
 
-  return h(PDropdownMenu, {
+  return h(UDropdownMenu, {
     'content': {
       align: 'start'
     },
@@ -129,12 +129,12 @@ function getHeader(column: Column<Payment>, label: string) {
         }
       }
     }]
-  }, () => h(PButton, {
+  }, () => h(UButton, {
     'color': 'neutral',
     'variant': 'ghost',
     label,
     'icon': isSorted ? (isSorted === 'asc' ? 'i-lucide-arrow-up-narrow-wide' : 'i-lucide-arrow-down-wide-narrow') : 'i-lucide-arrow-up-down',
-    'class': '-mx-2.5 data-[state=open]:bg-background-elevated',
+    'class': '-mx-2.5 data-[state=open]:bg-elevated',
     'aria-label': `Sort by ${isSorted === 'asc' ? 'descending' : 'ascending'}`
   }))
 }
@@ -146,7 +146,7 @@ const sorting = ref([{
 </script>
 
 <template>
-  <PTable
+  <UTable
     v-model:sorting="sorting"
     :data="data"
     :columns="columns"

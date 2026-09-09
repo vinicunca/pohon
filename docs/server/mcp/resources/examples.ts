@@ -3,7 +3,7 @@ import { listComponentExamples } from '#component-example/nitro'
 
 export default defineMcpResource({
   uri: 'resource://nuxt-ui/examples',
-  description: 'Complete list of available Pohon UI example code and demonstrations',
+  description: 'Complete list of available Nuxt UI example code and demonstrations',
   cache: '1h',
   handler(uri: URL) {
     return {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import * as locales from 'pohon-ui/locale'
+import * as locales from '@nuxt/ui/locale'
 
 const props = withDefaults(defineProps<{
   default?: string
@@ -74,12 +74,12 @@ function getEmojiFlag(locale: string): string {
     <div class="grid gap-6 grid-cols-2 md:grid-cols-3">
       <div v-for="locale in locales" :key="locale.code">
         <div class="flex gap-3 items-center">
-          <PAvatar size="xl">
+          <UAvatar size="xl">
             {{ getEmojiFlag(locale.code) }}
-          </PAvatar>
+          </UAvatar>
 
           <div class="text-sm">
-            <div class="font-600">{{ locale.name }}</div>
+            <div class="font-semibold">{{ locale.name }}</div>
             <div class="mt-1">Code: <ProseCode class="text-xs">{{ locale.code }}</ProseCode></div>
           </div>
         </div>

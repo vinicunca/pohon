@@ -1,6 +1,6 @@
 ---
 title: PricingTable
-description: "A responsive pricing table component that displays tiered pricing plans with feature comparisons."
+description: 'A responsive pricing table component that displays tiered pricing plans with feature comparisons.'
 category: page
 links:
   - label: GitHub
@@ -16,83 +16,79 @@ The PricingTable component provides a responsive and customizable way to display
 
 ::u-pricing-table
 ---
-
 tiers:
-
-- id: 'solo'
-  title: 'Solo'
-  description: 'For indie hackers.'
-  price: '$249'
-  billingCycle: '/month'
-  billingPeriod: 'billed annually'
-  badge: 'Most popular'
-  button:
-  label: 'Buy now'
-  variant: 'subtle'
-- id: 'team'
-  title: 'Team'
-  description: 'For growing teams.'
-  price: '$499'
-  billingCycle: '/month'
-  billingPeriod: 'billed annually'
-  button:
-  label: 'Buy now'
-  highlight: true
-- id: 'enterprise'
-  title: 'Enterprise'
-  description: 'For large organizations.'
-  price: 'Custom'
-  button:
-  label: 'Contact sales'
-  color: 'neutral'
-  sections:
-- title: 'Features'
-  features:
-  - title: 'Number of developers'
-    tiers:
-    solo: '1'
-    team: '5'
-    enterprise: 'Unlimited'
-  - title: 'Projects'
-    tiers:
-    solo: true
-    team: true
-    enterprise: true
-  - title: 'GitHub repository access'
-    tiers:
-    solo: true
-    team: true
-    enterprise: true
-  - title: 'Updates'
-    tiers:
-    solo: 'Patch & minor'
-    team: 'All updates'
-    enterprise: 'All updates'
-  - title: 'Support'
-    tiers:
-    solo: 'Community'
-    team: 'Priority'
-    enterprise: '24/7'
-- title: 'Security'
-  features:
-  - title: 'SSO'
-    tiers:
-    solo: false
-    team: true
-    enterprise: true
-  - title: 'Audit logs'
-    tiers:
-    solo: false
-    team: true
-    enterprise: true
-  - title: 'Custom security review'
-    tiers:
-    solo: false
-    team: false
-    enterprise: true
-
+  - id: 'solo'
+    title: 'Solo'
+    description: 'For indie hackers.'
+    price: '$249'
+    billingCycle: '/month'
+    billingPeriod: 'billed annually'
+    badge: 'Most popular'
+    button:
+      label: 'Buy now'
+      variant: 'subtle'
+  - id: 'team'
+    title: 'Team'
+    description: 'For growing teams.'
+    price: '$499'
+    billingCycle: '/month'
+    billingPeriod: 'billed annually'
+    button:
+      label: 'Buy now'
+    highlight: true
+  - id: 'enterprise'
+    title: 'Enterprise'
+    description: 'For large organizations.'
+    price: 'Custom'
+    button:
+      label: 'Contact sales'
+      color: 'neutral'
+sections:
+  - title: 'Features'
+    features:
+      - title: 'Number of developers'
+        tiers:
+          solo: '1'
+          team: '5'
+          enterprise: 'Unlimited'
+      - title: 'Projects'
+        tiers:
+          solo: true
+          team: true
+          enterprise: true
+      - title: 'GitHub repository access'
+        tiers:
+          solo: true
+          team: true
+          enterprise: true
+      - title: 'Updates'
+        tiers:
+          solo: 'Patch & minor'
+          team: 'All updates'
+          enterprise: 'All updates'
+      - title: 'Support'
+        tiers:
+          solo: 'Community'
+          team: 'Priority'
+          enterprise: '24/7'
+  - title: 'Security'
+    features:
+      - title: 'SSO'
+        tiers:
+          solo: false
+          team: true
+          enterprise: true
+      - title: 'Audit logs'
+        tiers:
+          solo: false
+          team: true
+          enterprise: true
+      - title: 'Custom security review'
+        tiers:
+          solo: false
+          team: false
+          enterprise: true
 ---
-
 ::
 
 ::
@@ -114,50 +110,46 @@ Use the `tiers` prop as an array of objects to define your pricing plans. Each t
 
 ::component-code
 ---
-
 prettier: true
 collapse: true
 external:
-
-- tiers
-  externalTypes:
-- PricingTableTier[]
-  hide:
-- class
-  ignore:
-- tiers
-  props:
+  - tiers
+externalTypes:
+  - PricingTableTier[]
+hide:
+  - class
+ignore:
+  - tiers
+props:
   tiers:
-  - id: 'solo'
-    title: 'Solo'
-    description: 'For indie hackers.'
-    price: '$249'
-    billingCycle: '/month'
-    billingPeriod: 'billed annually'
-    badge: 'Most popular'
-    button:
-    label: 'Buy now'
-    variant: 'subtle'
-  - id: 'team'
-    title: 'Team'
-    description: 'For growing teams.'
-    price: '$499'
-    billingCycle: '/month'
-    billingPeriod: 'billed annually'
-    button:
-    label: 'Buy now'
-    highlight: true
-  - id: 'enterprise'
-    title: 'Enterprise'
-    description: 'For large organizations.'
-    price: 'Custom'
-    button:
-    label: 'Contact sales'
-    color: 'neutral'
-    class: 'border-b border-border'
-
+    - id: 'solo'
+      title: 'Solo'
+      description: 'For indie hackers.'
+      price: '$249'
+      billingCycle: '/month'
+      billingPeriod: 'billed annually'
+      badge: 'Most popular'
+      button:
+        label: 'Buy now'
+        variant: 'subtle'
+    - id: 'team'
+      title: 'Team'
+      description: 'For growing teams.'
+      price: '$499'
+      billingCycle: '/month'
+      billingPeriod: 'billed annually'
+      button:
+        label: 'Buy now'
+      highlight: true
+    - id: 'enterprise'
+      title: 'Enterprise'
+      description: 'For large organizations.'
+      price: 'Custom'
+      button:
+        label: 'Contact sales'
+        color: 'neutral'
+  class: 'border-b border-default'
 ---
-
 ::
 
 ### Sections
@@ -173,68 +165,64 @@ Use the `sections` prop to organize features into logical groups. Each section r
 
 ::component-code
 ---
-
 prettier: true
 collapse: true
 external:
-
-- tiers
-- sections
-  externalTypes:
-- PricingTableTier[]
-- PricingTableSection[]
-  hide:
-- class
-  ignore:
-- tiers
-- sections
-  props:
+  - tiers
+  - sections
+externalTypes:
+  - PricingTableTier[]
+  - PricingTableSection[]
+hide:
+  - class
+ignore:
+  - tiers
+  - sections
+props:
   tiers:
-  - id: 'solo'
-    title: 'Solo'
-    price: '$249'
-    description: 'For indie hackers.'
-    billingCycle: '/month'
-    button:
-    label: 'Buy now'
-    variant: 'subtle'
-  - id: 'team'
-    title: 'Team'
-    price: '$499'
-    description: 'For growing teams.'
-    billingCycle: '/month'
-    button:
-    label: 'Buy now'
-  - id: 'enterprise'
-    title: 'Enterprise'
-    price: 'Custom'
-    description: 'For large organizations.'
-    button:
-    label: 'Contact sales'
-    color: 'neutral'
-    sections:
-  - title: 'Features'
-    features:
-    - title: 'Number of developers'
-      tiers:
-      solo: '1'
-      team: '5'
-      enterprise: 'Unlimited'
-    - title: 'Projects'
-      tiers:
-      solo: true
-      team: true
-      enterprise: true
-  - title: 'Security'
-    features:
-    - title: 'SSO'
-      tiers:
-      solo: false
-      team: true
-      enterprise: true
-
+    - id: 'solo'
+      title: 'Solo'
+      price: '$249'
+      description: 'For indie hackers.'
+      billingCycle: '/month'
+      button:
+        label: 'Buy now'
+        variant: 'subtle'
+    - id: 'team'
+      title: 'Team'
+      price: '$499'
+      description: 'For growing teams.'
+      billingCycle: '/month'
+      button:
+        label: 'Buy now'
+    - id: 'enterprise'
+      title: 'Enterprise'
+      price: 'Custom'
+      description: 'For large organizations.'
+      button:
+        label: 'Contact sales'
+        color: 'neutral'
+  sections:
+    - title: 'Features'
+      features:
+        - title: 'Number of developers'
+          tiers:
+            solo: '1'
+            team: '5'
+            enterprise: 'Unlimited'
+        - title: 'Projects'
+          tiers:
+            solo: true
+            team: true
+            enterprise: true
+    - title: 'Security'
+      features:
+        - title: 'SSO'
+          tiers:
+            solo: false
+            team: true
+            enterprise: true
 ---
-
 ::
 
 ## Examples
@@ -245,22 +233,20 @@ The PricingTable component provides powerful slot customization options to tailo
 
 ::component-example
 ---
-
 prettier: true
 name: 'pricing-table-slots-example'
 collapse: true
 ---
-
 ::
 
 The component supports various slot types for maximum customization flexibility:
 
-| Slot Type         | Pattern                                         | Description              | Example                      |
-| ----------------- | ----------------------------------------------- | ------------------------ | ---------------------------- |
-| **Tier slots**    | `#{tier-id}-{element}`                          | Target specific tiers    | `#team-title`, `#solo-price` |
-| **Section slots** | `#section-{id\|formatted-title}-title`          | Target specific sections | `#section-features-title`    |
-| **Feature slots** | `#feature-{id\|formatted-title}-{title\|value}` | Target specific features | `#feature-developers-title`  |
-| **Generic slots** | `#tier-title`, `#section-title`, etc.           | Apply to all items       | `#feature-value`             |
+| Slot Type | Pattern | Description | Example |
+|-----------|---------|-------------|---------|
+| **Tier slots** | `#{tier-id}-{element}` | Target specific tiers | `#team-title`, `#solo-price` |
+| **Section slots** | `#section-{id\|formatted-title}-title` | Target specific sections | `#section-features-title` |
+| **Feature slots** | `#feature-{id\|formatted-title}-{title\|value}` | Target specific features | `#feature-developers-title` |
+| **Generic slots** | `#tier-title`, `#section-title`, etc. | Apply to all items | `#feature-value` |
 
 ::note
 When no `id` is provided, the slot name is auto-generated from the title (e.g. "Premium Features!" becomes `#section-premium-features-title`).

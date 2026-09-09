@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from 'pohon-ui'
+import type { TableColumn } from '@nuxt/ui'
 
-const PBadge = resolveComponent('PBadge')
+const UBadge = resolveComponent('UBadge')
 
 type Payment = {
   id: string
@@ -46,7 +46,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -57,7 +57,7 @@ const columns: TableColumn<Payment>[] = [{
   meta: {
     class: {
       th: 'text-right',
-      td: 'text-right font-500'
+      td: 'text-right font-medium'
     }
   },
   cell: ({ row }) => {
@@ -71,7 +71,7 @@ const columns: TableColumn<Payment>[] = [{
 </script>
 
 <template>
-  <PTable
+  <UTable
     sticky
     virtualize
     :data="data"

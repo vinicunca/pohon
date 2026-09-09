@@ -19,16 +19,15 @@ Wrap any form component with a FormField. Used in a [Form](/docs/components/form
 
 Use the `label` prop to set the label for the form control.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 props:
-label: Email
+  label: Email
 slots:
-default: |
+  default: |
 
-    <PInput placeholder="Enter your email" />
-
+    <UInput placeholder="Enter your email" />
 ---
 
 :u-input{placeholder="Enter your email"}
@@ -40,20 +39,18 @@ The label `for` attribute and the form control are associated with a unique `id`
 
 When using the `required` prop, an asterisk is added next to the label.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- label
-  props:
+  - label
+props:
   label: Email
   required: true
-  slots:
+slots:
   default: |
 
-      <PInput placeholder="Enter your email" />
-
+    <UInput placeholder="Enter your email" />
 ---
 
 :u-input{placeholder="Enter your email"}
@@ -63,20 +60,18 @@ ignore:
 
 Use the `description` prop to provide additional information below the label.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- label
-  props:
+  - label
+props:
   label: Email
   description: We'll never share your email with anyone else.
-  slots:
+slots:
   default: |
 
-      <PInput placeholder="Enter your email" class="w-full" />
-
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
 :u-input{placeholder="Enter your email" class="w-full"}
@@ -86,20 +81,18 @@ ignore:
 
 Use the `hint` prop to display a hint message next to the label.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- label
-  props:
+  - label
+props:
   label: Email
   hint: Optional
-  slots:
+slots:
   default: |
 
-      <PInput placeholder="Enter your email" />
-
+    <UInput placeholder="Enter your email" />
 ---
 
 :u-input{placeholder="Enter your email"}
@@ -109,20 +102,18 @@ ignore:
 
 Use the `help` prop to display a help message below the form control. When used together with the `error` prop, the `error` prop takes precedence.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- label
-  props:
+  - label
+props:
   label: Email
   help: Please enter a valid email address.
-  slots:
+slots:
   default: |
 
-      <PInput placeholder="Enter your email" class="w-full" />
-
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
 :u-input{placeholder="Enter your email" class="w-full"}
@@ -134,20 +125,18 @@ Use the `error` prop to display an error message below the form control. When us
 
 When used inside a [Form](/docs/components/form), this is automatically set when a validation error occurs.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- label
-  props:
+  - label
+props:
   label: Email
   error: Please enter a valid email address.
-  slots:
+slots:
   default: |
 
-      <PInput placeholder="Enter your email" class="w-full" />
-
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
 :u-input{placeholder="Enter your email" class="w-full"}
@@ -169,26 +158,24 @@ See an example of using `error-pattern` within a Form.
 
 Use the `size` prop to change the size of the FormField, the `size` is proxied to the form control.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- label
-- description
-- hint
-- help
-  props:
+  - label
+  - description
+  - hint
+  - help
+props:
   label: Email
   description: We'll never share your email with anyone else.
   hint: Optional
   help: Please enter a valid email address.
   size: xl
-  slots:
+slots:
   default: |
 
-      <PInput placeholder="Enter your email" class="w-full" />
-
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
 :u-input{placeholder="Enter your email" class="w-full"}
@@ -198,23 +185,21 @@ ignore:
 
 Use the `orientation` prop to change the layout of the FormField. Defaults to `vertical`.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- label
-- class
-  props:
+  - label
+  - class
+props:
   orientation: horizontal
   label: Email
   help: Please enter a valid email address.
   class: w-72
-  slots:
+slots:
   default: |
 
-      <PInput placeholder="Enter your email" class="w-full" />
-
+    <UInput placeholder="Enter your email" class="w-full" />
 ---
 
 :u-input{placeholder="Enter your email" class="w-full"}

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as z from 'zod'
-import type { FormSubmitEvent } from 'pohon-ui'
+import type { FormSubmitEvent } from '@nuxt/ui'
 
 const schema = z.object({
   name: z.string().min(2),
@@ -25,31 +25,31 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <PForm
+  <UForm
     ref="form"
     :state="state"
     :schema="schema"
     class="gap-4 flex flex-col w-60"
     @submit="onSubmit"
   >
-    <PFormField label="Name" name="name">
-      <PInput v-model="state.name" placeholder="John Lennon" />
-    </PFormField>
+    <UFormField label="Name" name="name">
+      <UInput v-model="state.name" placeholder="John Lennon" />
+    </UFormField>
 
     <div>
-      <PCheckbox v-model="state.news" name="news" label="Register to our newsletter" @update:model-value="state.email = undefined" />
+      <UCheckbox v-model="state.news" name="news" label="Register to our newsletter" @update:model-value="state.email = undefined" />
     </div>
 
-    <PForm v-if="state.news" :schema="nestedSchema" nested>
-      <PFormField label="Email" name="email">
-        <PInput v-model="state.email" placeholder="john@lennon.com" />
-      </PFormField>
-    </PForm>
+    <UForm v-if="state.news" :schema="nestedSchema" nested>
+      <UFormField label="Email" name="email">
+        <UInput v-model="state.email" placeholder="john@lennon.com" />
+      </UFormField>
+    </UForm>
 
     <div>
-      <PButton type="submit">
+      <UButton type="submit">
         Submit
-      </PButton>
+      </UButton>
     </div>
-  </PForm>
+  </UForm>
 </template>

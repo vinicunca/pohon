@@ -3,7 +3,7 @@ const value = ref<File[]>([])
 </script>
 
 <template>
-  <PFileUpload
+  <UFileUpload
     v-model="value"
     icon="i-lucide-image"
     label="Drop your images here"
@@ -14,7 +14,7 @@ const value = ref<File[]>([])
     class="w-96 min-h-48"
   >
     <template #actions="{ open }">
-      <PButton
+      <UButton
         label="Select images"
         icon="i-lucide-upload"
         color="neutral"
@@ -24,12 +24,12 @@ const value = ref<File[]>([])
     </template>
 
     <template #files-bottom="{ removeFile, files }">
-      <PButton
+      <UButton
         v-if="files?.length"
         label="Remove all files"
         color="neutral"
         @click="removeFile()"
       />
     </template>
-  </PFileUpload>
+  </UFileUpload>
 </template>

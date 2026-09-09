@@ -12,9 +12,9 @@ import { BRANDS } from '../design.constants';
 
 export const themeChatMessages = {
   slots: {
-    root: 'px-2.5 flex flex-1 flex-col gap-1 w-full [&>article]:last-of-type:min-h-(--last-message-height)',
-    indicator: '*:bg-background-elevated py-3 flex gap-1 h-6 items-center *:rounded-full *:size-2 motion-safe:[&>*:nth-child(1)]:animate-[bounce_1s_infinite] motion-safe:[&>*:nth-child(2)]:animate-[bounce_1s_0.15s_infinite] motion-safe:[&>*:nth-child(3)]:animate-[bounce_1s_0.3s_infinite]',
-    viewport: 'inset-x-0 top-[86%] absolute data-[state=closed]:animate-[fade-out_200ms_var(--ease-out)] data-[state=open]:animate-[fade-in_200ms_var(--ease-out)]',
+    root: 'px-2.5 flex flex-1 flex-col gap-1 w-full [&>article]:last-of-type:min-h-$last-message-height',
+    indicator: 'py-3 flex gap-1 h-6 items-center *:(rounded-full bg-background-accented size-2) motion-safe:[&>*:nth-child(1)]:(animate-bounce animate-duration-1000) motion-safe:[&>*:nth-child(1)]:animate-[bounce_1s_infinite] motion-safe:[&>*:nth-child(2)]:animate-[bounce_1s_0.15s_infinite] motion-safe:[&>*:nth-child(3)]:animate-[bounce_1s_0.3s_infinite]',
+    viewport: 'inset-x-0 top-[86%] absolute data-[state=closed]:(animate-out fade-out-0) data-[state=open]:(animate-in fade-in-0)',
     autoScroll: 'rounded-full translate-x-1/2 bottom-0 right-1/2 absolute',
   },
 } satisfies PThemeChatMessages;
@@ -199,7 +199,7 @@ export const themeChatTool = {
 } satisfies PThemeChatTool;
 
 export const themeChatShimmer = {
-  base: 'motion-reduce:color-text-muted text-transparent will-change-[background-position] bg-[image:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--ui-color-text-highlighted),#0000_calc(50%+var(--spread))),linear-gradient(var(--ui-color-text-muted),var(--ui-color-text-muted))] bg-size-[calc(200%+var(--spread)*2+2px)_100%,auto] bg-clip-text bg-no-repeat motion-safe:animate-[shimmer_var(--duration)_linear_infinite] motion-reduce:bg-none motion-safe:rtl:animate-[shimmer-rtl_var(--duration)_linear_infinite]',
+  base: 'motion-reduce:color-text-muted text-transparent will-change-[background-position] bg-[image:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--ui-color-text-highlighted),#0000_calc(50%+var(--spread))),linear-gradient(var(--ui-color-text-muted),var(--ui-color-text-muted))] bg-size-[calc(200%+var(--spread)*2+2px)_100%,auto] bg-clip-text bg-no-repeat motion-safe:animate-shimmer motion-reduce:bg-none motion-safe:rtl:animate-shimmer-rtl',
 } satisfies PThemeChatShimmer;
 
 export const themeChatReasoning = {

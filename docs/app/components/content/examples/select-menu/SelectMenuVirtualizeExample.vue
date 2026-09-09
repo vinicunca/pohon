@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SelectMenuItem } from 'pohon-ui'
+import type { SelectMenuItem } from '@nuxt/ui'
 
 const items: SelectMenuItem[] = Array(1000).fill(0).map((_, i) => ({
   label: `item-${i}`,
@@ -8,5 +8,5 @@ const items: SelectMenuItem[] = Array(1000).fill(0).map((_, i) => ({
 </script>
 
 <template>
-  <PSelectMenu virtualize :items="items" class="w-48" />
+  <USelectMenu virtualize :items="items" class="w-48" />
 </template>

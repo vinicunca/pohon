@@ -7,5 +7,5 @@ const maxDate = new CalendarDate(2023, 9, 30)
 </script>
 
 <template>
-  <PCalendar v-model="modelValue" :min-value="minDate" :max-value="maxDate" />
+  <UCalendar v-model="modelValue" :min-value="minDate" :max-value="maxDate" />
 </template>

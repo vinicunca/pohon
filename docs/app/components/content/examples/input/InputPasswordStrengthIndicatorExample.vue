@@ -34,8 +34,8 @@ const text = computed(() => {
 
 <template>
   <div class="space-y-2">
-    <PFormField label="Password">
-      <PInput
+    <UFormField label="Password">
+      <UInput
         v-model="password"
         placeholder="Password"
         :color="color"
@@ -46,7 +46,7 @@ const text = computed(() => {
         class="w-full"
       >
         <template #trailing>
-          <PButton
+          <UButton
             color="neutral"
             variant="link"
             size="sm"
@@ -57,10 +57,10 @@ const text = computed(() => {
             @click="show = !show"
           />
         </template>
-      </PInput>
-    </PFormField>
+      </UInput>
+    </UFormField>
 
-    <PProgress
+    <UProgress
       :color="color"
       :indicator="text"
       :model-value="score"
@@ -68,7 +68,7 @@ const text = computed(() => {
       size="sm"
     />
 
-    <p id="password-strength" class="text-sm font-500">
+    <p id="password-strength" class="text-sm font-medium">
       {{ text }}. Must contain:
     </p>
 
@@ -77,9 +77,9 @@ const text = computed(() => {
         v-for="(req, index) in strength"
         :key="index"
         class="flex items-center gap-0.5"
-        :class="req.met ? 'text-success' : 'color-text-muted'"
+        :class="req.met ? 'text-success' : 'text-muted'"
       >
-        <PIcon :name="req.met ? 'i-lucide-circle-check' : 'i-lucide-circle-x'" class="size-4 shrink-0" />
+        <UIcon :name="req.met ? 'i-lucide-circle-check' : 'i-lucide-circle-x'" class="size-4 shrink-0" />
 
         <span class="text-xs font-light">
           {{ req.text }}

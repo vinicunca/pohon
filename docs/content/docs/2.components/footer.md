@@ -1,5 +1,5 @@
 ---
-description: "A responsive footer for your site links and legal notices."
+description: 'A responsive footer for your site links and legal notices.'
 category: layout
 links:
   - label: GitHub
@@ -13,17 +13,15 @@ The Footer component renders a `<footer>` element.
 
 Use the `left`, `default` and `right` slots to customize the footer.
 
-## ::component-example
-
+::component-example
+---
 prettier: true
 collapse: true
 name: 'footer-example'
 class: '!p-0'
 props:
-class: 'w-full'
-
+  class: 'w-full'
 ---
-
 ::
 
 ::note
@@ -42,50 +40,46 @@ Use the Footer component in your `app.vue` or in a layout:
 
 ```vue [app.vue]{32-67}
 <script setup lang="ts">
-import type { NavigationMenuItem } from "pohon-ui";
+import type { NavigationMenuItem } from '@nuxt/ui'
 
-const items: NavigationMenuItem[] = [
-  {
-    label: "Figma Kit",
-    to: "https://go.nuxt.com/figma-ui",
-    target: "_blank",
-  },
-  {
-    label: "Playground",
-    to: "https://stackblitz.com/edit/nuxt-ui",
-    target: "_blank",
-  },
-  {
-    label: "Releases",
-    to: "https://github.com/nuxt/ui/releases",
-    target: "_blank",
-  },
-];
+const items: NavigationMenuItem[] = [{
+  label: 'Figma Kit',
+  to: 'https://go.nuxt.com/figma-ui',
+  target: '_blank'
+}, {
+  label: 'Playground',
+  to: 'https://stackblitz.com/edit/nuxt-ui',
+  target: '_blank'
+}, {
+  label: 'Releases',
+  to: 'https://github.com/nuxt/ui/releases',
+  target: '_blank'
+}]
 </script>
 
 <template>
-  <PApp>
-    <PHeader />
+  <UApp>
+    <UHeader />
 
-    <PMain>
+    <UMain>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-    </PMain>
+    </UMain>
 
-    <PSeparator icon="i-simple-icons-nuxtdotjs" type="dashed" class="h-px" />
+    <USeparator icon="i-simple-icons-nuxtdotjs" type="dashed" class="h-px" />
 
-    <PFooter>
+    <UFooter>
       <template #left>
-        <p class="color-text-muted text-sm">
+        <p class="text-muted text-sm">
           Copyright © {{ new Date().getFullYear() }}
         </p>
       </template>
 
-      <PNavigationMenu :items="items" variant="link" />
+      <UNavigationMenu :items="items" variant="link" />
 
       <template #right>
-        <PButton
+        <UButton
           icon="i-simple-icons-discord"
           color="neutral"
           variant="ghost"
@@ -93,7 +87,7 @@ const items: NavigationMenuItem[] = [
           target="_blank"
           aria-label="Discord"
         />
-        <PButton
+        <UButton
           icon="i-simple-icons-x"
           color="neutral"
           variant="ghost"
@@ -101,7 +95,7 @@ const items: NavigationMenuItem[] = [
           target="_blank"
           aria-label="X"
         />
-        <PButton
+        <UButton
           icon="i-simple-icons-github"
           color="neutral"
           variant="ghost"
@@ -110,8 +104,8 @@ const items: NavigationMenuItem[] = [
           aria-label="GitHub"
         />
       </template>
-    </PFooter>
-  </PApp>
+    </UFooter>
+  </UApp>
 </template>
 ```
 

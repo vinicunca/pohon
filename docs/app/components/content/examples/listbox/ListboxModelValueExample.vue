@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ListboxItem } from 'pohon-ui'
+import type { ListboxItem } from '@nuxt/ui'
 
 const items: ListboxItem[] = [
   { label: 'France', icon: 'i-lucide-map-pin', value: 'FR' },
@@ -14,7 +14,7 @@ const value = ref<ListboxItem>(items[2]!)
 </script>
 
 <template>
-  <PListbox
+  <UListbox
     v-model="value"
     :items="items"
     class="w-full"

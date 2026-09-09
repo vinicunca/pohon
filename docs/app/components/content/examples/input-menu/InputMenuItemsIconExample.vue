@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { InputMenuItem } from 'pohon-ui'
+import type { InputMenuItem } from '@nuxt/ui'
 
 const items = ref([
   {
@@ -28,5 +28,5 @@ const value = ref(items.value[0])
 </script>
 
 <template>
-  <PInputMenu v-model="value" :icon="value?.icon" :items="items" />
+  <UInputMenu v-model="value" :icon="value?.icon" :items="items" />
 </template>

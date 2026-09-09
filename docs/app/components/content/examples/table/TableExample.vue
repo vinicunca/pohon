@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
 import { upperFirst } from 'scule'
-import type { TableColumn } from 'pohon-ui'
+import type { TableColumn } from '@nuxt/ui'
 import { useClipboard } from '@vueuse/core'
 
-const PButton = resolveComponent('PButton')
-const PCheckbox = resolveComponent('PCheckbox')
-const PBadge = resolveComponent('PBadge')
-const PDropdownMenu = resolveComponent('PDropdownMenu')
+const UButton = resolveComponent('UButton')
+const UCheckbox = resolveComponent('UCheckbox')
+const UBadge = resolveComponent('UBadge')
+const UDropdownMenu = resolveComponent('UDropdownMenu')
 
 const toast = useToast()
 const { copy } = useClipboard()
@@ -144,12 +144,12 @@ const data = ref<Payment[]>([{
 
 const columns: TableColumn<Payment>[] = [{
   id: 'select',
-  header: ({ table }) => h(PCheckbox, {
+  header: ({ table }) => h(UCheckbox, {
     'modelValue': table.getIsSomePageRowsSelected() ? 'indeterminate' : table.getIsAllPageRowsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => table.toggleAllPageRowsSelected(!!value),
     'aria-label': 'Select all'
   }),
-  cell: ({ row }) => h(PCheckbox, {
+  cell: ({ row }) => h(UCheckbox, {
     'modelValue': row.getIsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => row.toggleSelected(!!value),
     'aria-label': 'Select row'
@@ -182,14 +182,14 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
   header: ({ column }) => {
     const isSorted = column.getIsSorted()
 
-    return h(PButton, {
+    return h(UButton, {
       color: 'neutral',
       variant: 'ghost',
       label: 'Email',
@@ -209,7 +209,7 @@ const columns: TableColumn<Payment>[] = [{
   meta: {
     class: {
       th: 'text-right',
-      td: 'text-right font-500'
+      td: 'text-right font-medium'
     }
   },
   cell: ({ row }) => {
@@ -255,13 +255,13 @@ const columns: TableColumn<Payment>[] = [{
       label: 'View payment details'
     }]
 
-    return h(PDropdownMenu, {
+    return h(UDropdownMenu, {
       'content': {
         align: 'end'
       },
       items,
       'aria-label': 'Actions dropdown'
-    }, () => h(PButton, {
+    }, () => h(UButton, {
       'icon': 'i-lucide-ellipsis-vertical',
       'color': 'neutral',
       'variant': 'ghost',
@@ -280,16 +280,16 @@ function randomize() {
 <template>
   <div class="flex-1 divide-y divide-accented w-full">
     <div class="flex items-center gap-2 px-4 py-3.5 overflow-x-auto">
-      <PInput
+      <UInput
         :model-value="(table?.tableApi?.getColumn('email')?.getFilterValue() as string)"
         class="max-w-sm min-w-[12ch]"
         placeholder="Filter emails..."
         @update:model-value="table?.tableApi?.getColumn('email')?.setFilterValue($event)"
       />
 
-      <PButton color="neutral" label="Randomize" @click="randomize" />
+      <UButton color="neutral" label="Randomize" @click="randomize" />
 
-      <PDropdownMenu
+      <UDropdownMenu
         :items="table?.tableApi?.getAllColumns().filter(column => column.getCanHide()).map(column => ({
           label: upperFirst(column.id),
           type: 'checkbox' as const,
@@ -303,7 +303,7 @@ function randomize() {
         }))"
         :content="{ align: 'end' }"
       >
-        <PButton
+        <UButton
           label="Columns"
           color="neutral"
           variant="outline"
@@ -311,10 +311,10 @@ function randomize() {
           class="ml-auto"
           aria-label="Columns select dropdown"
         />
-      </PDropdownMenu>
+      </UDropdownMenu>
     </div>
 
-    <PTable
+    <UTable
       ref="table"
       :data="data"
       :columns="columns"
@@ -324,9 +324,9 @@ function randomize() {
       <template #expanded="{ row }">
         <pre>{{ row.original }}</pre>
       </template>
-    </PTable>
+    </UTable>
 
-    <div class="px-4 py-3.5 text-sm color-text-muted">
+    <div class="px-4 py-3.5 text-sm text-muted">
       {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length || 0 }} of
       {{ table?.tableApi?.getFilteredRowModel().rows.length || 0 }} row(s) selected.
     </div>

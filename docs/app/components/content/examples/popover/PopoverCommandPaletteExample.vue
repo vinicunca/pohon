@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CommandPaletteItem } from 'pohon-ui'
+import type { CommandPaletteItem } from '@nuxt/ui'
 
 const items = ref([
   {
@@ -29,8 +29,8 @@ const label = ref([])
 </script>
 
 <template>
-  <PPopover :content="{ side: 'right', align: 'start' }">
-    <PButton
+  <UPopover :content="{ side: 'right', align: 'start' }">
+    <UButton
       icon="i-lucide-tag"
       label="Select labels"
       color="neutral"
@@ -38,7 +38,7 @@ const label = ref([])
     />
 
     <template #content>
-      <PCommandPalette
+      <UCommandPalette
         v-model="label"
         multiple
         placeholder="Search labels..."
@@ -46,5 +46,5 @@ const label = ref([])
         :ui="{ input: '[&>input]:h-8 [&>input]:text-sm' }"
       />
     </template>
-  </PPopover>
+  </UPopover>
 </template>

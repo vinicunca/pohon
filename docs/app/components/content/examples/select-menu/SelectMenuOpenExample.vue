@@ -9,5 +9,5 @@ defineShortcuts({
 </script>
 
 <template>
-  <PSelectMenu v-model="value" v-model:open="open" :items="items" class="w-48" />
+  <USelectMenu v-model="value" v-model:open="open" :items="items" class="w-48" />
 </template>

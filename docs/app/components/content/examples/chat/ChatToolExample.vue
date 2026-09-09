@@ -21,7 +21,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <PChatTool
+  <UChatTool
     :text="streaming ? 'Running lint checks' : 'Lint checks completed'"
     suffix="cd, pnpm run"
     :streaming="streaming"
@@ -31,5 +31,5 @@ onUnmounted(() => {
     class="w-80"
   >
     <pre language="bash" v-text="result" />
-  </PChatTool>
+  </UChatTool>
 </template>

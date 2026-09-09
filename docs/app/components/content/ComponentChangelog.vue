@@ -27,6 +27,7 @@ const props = defineProps<{
 }>()
 
 const route = useRoute()
+const studioIcons = useStudioIcons()
 const name = route.path.split('/').pop() ?? ''
 const camelName = upperFirst(camelCase(name))
 const kebabName = kebabCase(name)
@@ -67,7 +68,7 @@ const groupedByRelease = computed<ReleaseGroup[]>(() => {
       const majorTag = release.tag_name.replace(/-(alpha|beta|rc)\.\d+$/, '')
       let group = groups.find(g => g.tag === majorTag)
       if (!group) {
-        group = { tag: majorTag, title: majorTag, icon: 'i-lucide-tag', published_at: release.published_at, url: release.html_url, commits: [] }
+        group = { tag: majorTag, title: majorTag, icon: studioIcons.tag, published_at: release.published_at, url: release.html_url, commits: [] }
         groups.push(group)
       }
       if (new Date(release.published_at) > new Date(group.published_at!)) {
@@ -82,7 +83,7 @@ const groupedByRelease = computed<ReleaseGroup[]>(() => {
 
   const result: ReleaseGroup[] = []
   if (unreleased.length) {
-    result.push({ tag: 'unreleased', title: 'Soon', icon: 'i-lucide-tag', commits: unreleased })
+    result.push({ tag: 'unreleased', title: 'Soon', icon: studioIcons.tag, commits: unreleased })
   }
 
   const uniqueTags = [...new Set(sortedReleases.map(r => r.tag_name.replace(/-(alpha|beta|rc)\.\d+$/, '')))]
@@ -107,19 +108,19 @@ function normalizeCommitMessage(commit: Commit) {
     No recent changes
   </div>
 
-  <PTimeline
+  <UTimeline
     v-else
     :items="groupedByRelease"
     size="xs"
     :ui="{ root: '', wrapper: 'mt-0 pb-0', title: 'mb-1.5 flex items-center justify-between' }"
   >
     <template #title="{ item }">
-      <PBadge v-if="item.tag === 'unreleased'" color="neutral" variant="subtle" :label="item.title" class="w-12.5 justify-center" />
-      <PLink v-else :to="item.url" target="_blank">
-        <PBadge variant="subtle" :label="item.tag" />
-      </PLink>
+      <UBadge v-if="item.tag === 'unreleased'" color="neutral" variant="subtle" :label="item.title" class="w-12.5 justify-center" />
+      <ULink v-else :to="item.url" target="_blank">
+        <UBadge variant="subtle" :label="item.tag" />
+      </ULink>
 
-      <time v-if="item.published_at" :datetime="item.published_at" class="text-xs color-text-dimmed font-normal">
+      <time v-if="item.published_at" :datetime="item.published_at" class="text-xs text-dimmed font-normal">
         {{ useTimeAgo(new Date(item.published_at)) }}
       </time>
     </template>
@@ -131,5 +132,5 @@ function normalizeCommitMessage(commit: Commit) {
         </li>
       </ul>
     </template>
-  </PTimeline>
+  </UTimeline>
 </template>

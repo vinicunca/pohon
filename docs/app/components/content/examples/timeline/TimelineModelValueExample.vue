@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TimelineItem } from 'pohon-ui'
+import type { TimelineItem } from '@nuxt/ui'
 
 const items: TimelineItem[] = [{
   date: 'Mar 15, 2025',
@@ -38,5 +38,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <PTimeline v-model="active" :items="items" class="w-96" />
+  <UTimeline v-model="active" :items="items" class="w-96" />
 </template>

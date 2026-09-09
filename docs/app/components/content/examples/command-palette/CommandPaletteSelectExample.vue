@@ -7,12 +7,12 @@ const groups = ref([
     label: 'Users',
     items: [
       {
-        label: 'praburangki',
+        label: 'Benjamin Canac',
         suffix: 'benjamincanac',
         to: 'https://github.com/benjamincanac',
         target: '_blank',
         avatar: {
-          src: 'https://github.com/praburangki.png',
+          src: 'https://github.com/benjamincanac.png',
           loading: 'lazy' as const
         }
       },
@@ -149,7 +149,7 @@ function onSelect(item: any) {
 </script>
 
 <template>
-  <PCommandPalette
+  <UCommandPalette
     :groups="groups"
     class="flex-1 h-80"
     @update:model-value="onSelect"

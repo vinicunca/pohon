@@ -108,11 +108,14 @@ import { uv } from '../utils/uv';
 
 defineOptions({ inheritAttrs: false });
 
-const _props = withDefaults(defineProps<EditorProps<T, H>>(), {
-  image: true,
-  mention: true,
-  starterKit: false,
-});
+const _props = withDefaults(
+  defineProps<EditorProps<T, H>>(),
+  {
+    image: true,
+    mention: true,
+    starterKit: true,
+  },
+);
 const emits = defineEmits<EditorEmits<T>>();
 
 defineSlots<EditorSlots<H>>();

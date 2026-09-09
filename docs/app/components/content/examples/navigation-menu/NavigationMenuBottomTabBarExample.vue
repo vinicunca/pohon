@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from 'pohon-ui'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items: NavigationMenuItem[] = [
   {
@@ -23,10 +23,10 @@ const items: NavigationMenuItem[] = [
 </script>
 
 <template>
-  <PNavigationMenu
+  <UNavigationMenu
     :items="items"
     :ui="{
-      root: 'justify-around border-t border-border py-2',
+      root: 'justify-around border-t border-default py-2',
       item: 'py-0',
       link: 'flex-col gap-1 px-3',
       linkLeadingIcon: 'size-5',

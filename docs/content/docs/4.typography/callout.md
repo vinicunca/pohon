@@ -1,6 +1,6 @@
 ---
 title: ProseCallout
-description: "Highlight important information with eye-catching colored boxes and icons."
+description: 'Highlight important information with eye-catching colored boxes and icons.'
 category: components
 navigation.title: Callout
 links:
@@ -13,83 +13,71 @@ links:
 
 Use markdown in the default slot of the `callout` component to add eye-catching context to your content.
 
-## ::component-code{slug="callout" prose}
-
-props:
-class: 'w-full my-0'
-hide:
-
-- class
-  slots:
-  default: This is a `callout` with full **markdown** support.
-
+::component-code{slug="callout" prose}
 ---
-
+props:
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with full **markdown** support.
+---
 ::
 
 ### Icon
 
 Use the `icon` prop to display an icon next to the content.
 
-## ::component-code{slug="callout" prose}
-
-props:
-icon: i-lucide-square-play
-class: 'w-full my-0'
-hide:
-
-- class
-  slots:
-  default: This is a `callout` with an icon.
-
+::component-code{slug="callout" prose}
 ---
-
+props:
+  icon: i-lucide-square-play
+  class: 'w-full my-0'
+hide:
+  - class
+slots:
+  default: This is a `callout` with an icon.
+---
 ::
 
 ### Color
 
 Use the `color` prop to change the color of the callout.
 
-## ::component-code{slug="callout" prose}
-
+::component-code{slug="callout" prose}
+---
 ignore:
-
-- icon
-  props:
+  - icon
+props:
   icon: i-lucide-info
   color: info
   class: 'w-full my-0'
-  hide:
-- class
-  slots:
+hide:
+  - class
+slots:
   default: This is a `callout` with a custom color.
-
 ---
-
 ::
 
 ### Link
 
 You can pass any property from the [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link) component such as `to` and `target` to make the callout a link.
 
-## ::component-code{slug="callout" prose}
-
+::component-code{slug="callout" prose}
+---
 hide:
-
-- class
-  ignore:
-- icon
-- target
-  props:
+  - class
+ignore:
+  - icon
+  - target
+props:
   icon: i-lucide-square-play
   to: '/docs/getting-started/installation/nuxt'
   color: neutral
   class: 'w-full my-0'
-  slots:
-  default: Learn how to install `pohon-ui` in your project.
-
+slots:
+  default: Learn how to install `@nuxt/ui` in your project.
 ---
-
 ::
 
 ## Shortcuts

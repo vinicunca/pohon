@@ -2,7 +2,7 @@
 import type { ToolUIPart, DynamicToolUIPart } from 'ai'
 import { DefaultChatTransport, isToolUIPart, isReasoningUIPart, isTextUIPart, getToolName } from 'ai'
 import { useChat as useAIChat } from '@ai-sdk/vue'
-import { isPartStreaming, isToolStreaming } from 'pohon-ui/utils/ai'
+import { isPartStreaming, isToolStreaming } from '@nuxt/ui/utils/ai'
 import type { DocsChatMessage, DocsChatTools } from '~~/server/api/ai.post'
 
 const input = ref('')
@@ -10,12 +10,28 @@ const input = ref('')
 const toast = useToast()
 const { track } = useAnalytics()
 const route = useRoute()
-const { open, messages } = useChat()
-const { open: searchOpen } = useContentSearch()
+const { open, messages, pending } = useChat()
 const { framework } = useFrameworks()
-const { resetTheme, applyThemeSettings, hasCSSChanges, hasConfigChanges } = useTheme()
+const { resetTheme, applyThemeSettings, hasChanges: hasThemeChanges } = useTheme()
+// A preset is a whole ThemeDoc, so it rides applyDoc (reset, style axis, class
+// bundle) rather than the settings channel applyTheme uses.
+const { presets, applyPreset } = useThemeStudio()
+// The theme actions the chat exposes are the studio's own, so they take the
+// studio's glyphs and skin to the applied icon pack with it.
+const studioIcons = useStudioIcons()
+const appConfig = useAppConfig()
 
-const hasThemeChanges = computed(() => hasCSSChanges.value || hasConfigChanges.value)
+// app.vue mounts this panel on its first open, so `open` is already true here
+// and the sidebar renders expanded, with no width change for its transition to
+// pick up. Hold it closed for a paint (two frames, the way Vue's own
+// Transition does it) so the first open slides in like every later one.
+const painted = ref(false)
+onMounted(() => requestAnimationFrame(() => requestAnimationFrame(() => (painted.value = true))))
+
+const panelOpen = computed({
+  get: () => painted.value && open.value,
+  set: (value: boolean) => (open.value = value)
+})
 
 let _skipSync = false
 const _themeApplied = new Set<string>()
@@ -32,6 +48,13 @@ function processThemeToolCalls() {
       if (name === 'applyTheme' && part.input) {
         _themeApplied.add(part.toolCallId)
         applyThemeSettings(part.input as DocsChatTools['applyTheme']['input'])
+      } else if (name === 'applyPreset' && part.input) {
+        _themeApplied.add(part.toolCallId)
+        const { preset: id } = part.input as DocsChatTools['applyPreset']['input']
+        // The model picks from an enum, but a renamed preset in a stale
+        // conversation would still resolve to nothing.
+        const preset = presets.find(entry => entry.id === id)
+        if (preset) applyPreset(preset)
       } else if (name === 'resetTheme') {
         _themeApplied.add(part.toolCallId)
         resetTheme()
@@ -58,7 +81,7 @@ const { messages: chatMessages, status, error, sendMessage, regenerate, stop } =
 
     toast.add({
       description: message,
-      icon: 'i-lucide-alert-circle',
+      icon: appConfig.ui.icons.error,
       color: 'error',
       duration: 0
     })
@@ -101,6 +124,18 @@ watch(messages, (newMessages) => {
 
   chatMessages.value = newMessages
   if (chatMessages.value.at(-1)?.role === 'user') {
+    pending.value = false
+    regenerate()
+  }
+})
+
+// A question asked before the panel existed (its first open, from the search
+// palette or "Explain with AI") is already in the seeded messages, the
+// watcher above never saw it arrive. Only that one: a dangling user turn
+// restored from a past session must not re-send itself on every load.
+onMounted(() => {
+  if (pending.value) {
+    pending.value = false
     regenerate()
   }
 })
@@ -129,6 +164,9 @@ function getToolMessage(state: ToolState, toolName: string, input: Record<string
     'getComponentTheme': `${readVerb} ${upperName(input.componentName || '')} theme`,
     'getThemeGuide': `${readVerb} theme guide`,
     'applyTheme': `${applyVerb} theme changes`,
+    // a preset carries its own display name; upperName is for camelCase
+    // component ids and would mangle a hyphenated one
+    'applyPreset': `${applyVerb} ${presets.find(preset => preset.id === input.preset)?.name ?? input.preset} preset`,
     'resetTheme': `${state === 'output-available' ? 'Reset' : 'Resetting'} theme to defaults`
   }[toolName] || `${searchVerb} ${toolName}`
 }
@@ -145,19 +183,20 @@ function getToolIcon(part: ToolPart): string {
   const toolName = getToolName(part)
 
   const iconMap: Record<string, string> = {
-    'get-component': 'i-lucide-file-text',
-    'get-component-metadata': 'i-lucide-file-text',
-    'get-template': 'i-lucide-file-text',
-    'get-documentation-page': 'i-lucide-file-text',
-    'get-migration-guide': 'i-lucide-file-text',
-    'get-example': 'i-lucide-file-text',
-    'getComponentTheme': 'i-lucide-file-text',
-    'getThemeGuide': 'i-lucide-palette',
-    'applyTheme': 'i-lucide-palette',
-    'resetTheme': 'i-lucide-palette'
+    'get-component': appConfig.ui.icons.file,
+    'get-component-metadata': appConfig.ui.icons.file,
+    'get-template': appConfig.ui.icons.file,
+    'get-documentation-page': appConfig.ui.icons.file,
+    'get-migration-guide': appConfig.ui.icons.file,
+    'get-example': appConfig.ui.icons.file,
+    'getComponentTheme': appConfig.ui.icons.file,
+    'getThemeGuide': studioIcons.palette,
+    'applyTheme': studioIcons.palette,
+    'applyPreset': studioIcons.palette,
+    'resetTheme': studioIcons.reset
   }
 
-  return iconMap[toolName] || 'i-lucide-search'
+  return iconMap[toolName] || appConfig.ui.icons.search
 }
 
 function askQuestion(question: string) {
@@ -211,64 +250,55 @@ function clearMessages() {
   chatMessages.value = []
   _themeApplied.clear()
 }
-
-defineShortcuts({
-  meta_i: {
-    handler: () => {
-      if (searchOpen.value) {
-        searchOpen.value = false
-        open.value = true
-      } else {
-        open.value = !open.value
-      }
-    },
-    usingInput: true
-  }
-})
 </script>
 
 <template>
-  <PSidebar
-    v-model:open="open"
+  <USidebar
+    v-model:open="panelOpen"
     side="right"
     title="Ask AI"
     rail
     :style="{ '--sidebar-width': '24rem' }"
     :ui="{ footer: 'p-0', actions: 'gap-0.5' }"
+    class="bg-default"
   >
     <template #actions>
-      <PTooltip v-if="hasThemeChanges" text="Reset theme">
-        <PButton
-          icon="i-lucide-rotate-ccw"
+      <!-- a plain full reset, not the studio's two-stage baseline reset: the
+           chat's changes (component overrides included) may not map to any
+           section, and "back to stock" is what this button always meant -->
+      <UTooltip v-if="hasThemeChanges" text="Reset theme">
+        <UButton
+          :icon="studioIcons.reset"
           color="neutral"
           variant="ghost"
-          @click="resetTheme"
+          aria-label="Reset theme"
+          @click="resetTheme()"
         />
-      </PTooltip>
+      </UTooltip>
 
-      <PTooltip v-if="canClear" text="Clear messages">
-        <PButton
+      <UTooltip v-if="canClear" text="Clear messages">
+        <UButton
           icon="i-lucide-list-x"
           color="neutral"
           variant="ghost"
           @click="clearMessages"
         />
-      </PTooltip>
+      </UTooltip>
     </template>
 
     <template #close>
-      <PTooltip text="Close" :kbds="['meta', 'i']">
-        <PButton
+      <UTooltip text="Close" :kbds="['meta', 'i']">
+        <UButton
           icon="i-lucide-panel-right-close"
           color="neutral"
           variant="ghost"
           aria-label="Close"
           @click="open = false"
         />
-      </PTooltip>
+      </UTooltip>
     </template>
 
-    <PTheme
+    <UTheme
       :props="{
         prose: {
           h1: { anchor: false },
@@ -294,7 +324,7 @@ defineShortcuts({
         }
       }"
     >
-      <PChatMessages
+      <UChatMessages
         v-if="chatMessages.length"
         should-auto-scroll
         :messages="chatMessages"
@@ -304,12 +334,12 @@ defineShortcuts({
         :user="{ ui: { container: 'max-w-full' } }"
       >
         <template #indicator>
-          <PChatTool icon="i-lucide-brain" text="Thinking..." streaming />
+          <UChatTool icon="i-lucide-brain" text="Thinking..." streaming />
         </template>
 
         <template #content="{ message }">
           <template v-for="(part, index) in message.parts" :key="`${message.id}-${part.type}-${index}`">
-            <PChatReasoning
+            <UChatReasoning
               v-if="isReasoningUIPart(part)"
               :text="part.text"
               :streaming="isPartStreaming(part)"
@@ -319,7 +349,7 @@ defineShortcuts({
                 :value="part.text"
                 :streaming="isPartStreaming(part)"
               />
-            </PChatReasoning>
+            </UChatReasoning>
 
             <template v-else-if="isTextUIPart(part) && part.text.length > 0">
               <ChatMarkdown
@@ -332,7 +362,7 @@ defineShortcuts({
               </p>
             </template>
 
-            <PChatTool
+            <UChatTool
               v-else-if="isToolUIPart(part)"
               :text="getToolText(part)"
               :icon="getToolIcon(part)"
@@ -340,20 +370,20 @@ defineShortcuts({
             />
           </template>
         </template>
-      </PChatMessages>
+      </UChatMessages>
 
       <div v-else class="flex flex-col gap-6">
-        <PPageLinks
+        <UPageLinks
           v-for="category in suggestions"
           :key="category.category"
           :title="category.category"
           :links="category.items.map(item => ({ label: item, onClick: () => askQuestion(item) }))"
         />
       </div>
-    </PTheme>
+    </UTheme>
 
     <template #footer>
-      <PChatPrompt
+      <UChatPrompt
         ref="promptRef"
         v-model="input"
         :error="error"
@@ -365,11 +395,11 @@ defineShortcuts({
         @submit="onSubmit"
       >
         <template #footer>
-          <PLink to="https://vercel.com/ai-gateway" target="_blank" class="inline-flex items-center gap-1 text-xs color-text-dimmed hover:color-text-muted">
-            Powered by <PIcon name="i-simple-icons-vercel" class="size-3" /> AI Gateway
-          </PLink>
+          <ULink to="https://vercel.com/ai-gateway" target="_blank" class="inline-flex items-center gap-1 text-xs text-dimmed hover:text-muted">
+            Powered by <UIcon name="i-simple-icons-vercel" class="size-3" /> AI Gateway
+          </ULink>
 
-          <PChatPromptSubmit
+          <UChatPromptSubmit
             size="sm"
             :status="status"
             :disabled="!input.trim()"
@@ -377,7 +407,7 @@ defineShortcuts({
             @reload="regenerate()"
           />
         </template>
-      </PChatPrompt>
+      </UChatPrompt>
     </template>
-  </PSidebar>
+  </USidebar>
 </template>

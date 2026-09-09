@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { UserProps } from 'pohon-ui'
+import type { UserProps } from '@nuxt/ui'
 
 const members: UserProps[] = [
   {
@@ -36,12 +36,12 @@ const members: UserProps[] = [
     }
   },
   {
-    name: 'praburangki',
+    name: 'Benjamin Canac',
     description: 'benjamincanac',
     to: 'https://github.com/benjamincanac',
     target: '_blank',
     avatar: {
-      src: 'https://github.com/praburangki.png',
+      src: 'https://github.com/benjamincanac.png',
       alt: 'benjamincanac',
       loading: 'lazy' as const
     }
@@ -50,7 +50,7 @@ const members: UserProps[] = [
 </script>
 
 <template>
-  <PEmpty
+  <UEmpty
     title="No team members"
     description="Invite your team to collaborate on this project."
     variant="naked"
@@ -61,30 +61,30 @@ const members: UserProps[] = [
     }]"
   >
     <template #leading>
-      <PAvatarGroup size="xl">
-        <PAvatar src="https://github.com/nuxt.png" alt="Nuxt" loading="lazy" />
-        <PAvatar src="https://github.com/unjs.png" alt="Unjs" loading="lazy" />
-      </PAvatarGroup>
+      <UAvatarGroup size="xl">
+        <UAvatar src="https://github.com/nuxt.png" alt="Nuxt" loading="lazy" />
+        <UAvatar src="https://github.com/unjs.png" alt="Unjs" loading="lazy" />
+      </UAvatarGroup>
     </template>
 
     <template #footer>
-      <PSeparator class="my-4" />
+      <USeparator class="my-4" />
 
       <div class="grid grid-cols-2 gap-4">
-        <PPageCard
+        <UPageCard
           v-for="(member, index) in members"
           :key="index"
           :to="member.to"
           :ui="{ container: 'sm:p-4' }"
         >
-          <PUser
+          <UUser
             :avatar="member.avatar"
             :name="member.name"
             :description="member.description"
             :ui="{ name: 'truncate' }"
           />
-        </PPageCard>
+        </UPageCard>
       </div>
     </template>
-  </PEmpty>
+  </UEmpty>
 </template>

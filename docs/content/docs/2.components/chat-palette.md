@@ -1,6 +1,6 @@
 ---
 title: ChatPalette
-description: "A chat palette to create a chatbot interface inside an overlay."
+description: 'A chat palette to create a chatbot interface inside an overlay.'
 category: chat
 links:
   - label: GitHub
@@ -14,13 +14,13 @@ The ChatPalette component is a structured layout wrapper that organizes [ChatMes
 
 ```vue{2,8}
 <template>
-  <PChatPalette>
-    <PChatMessages />
+  <UChatPalette>
+    <UChatMessages />
 
     <template #prompt>
-      <PChatPrompt />
+      <UChatPrompt />
     </template>
-  </PChatPalette>
+  </UChatPalette>
 </template>
 ```
 
@@ -34,35 +34,32 @@ Check the **Chat** overview page for installation instructions, server setup and
 
 You can use the ChatPalette component inside a [Modal](/docs/components/modal)'s content.
 
-## ::component-example
-
+::component-example
+---
 collapse: true
 iframe:
-height: 500px;
+  height: 500px;
 iframeMobile: true
 overflowHidden: true
 name: 'chat-palette-modal-example'
-
 ---
-
 ::
 
 ### Within ContentSearch
 
 You can use the ChatPalette component conditionally inside [ContentSearch](/docs/components/content-search)'s content to display a chatbot interface when a user selects an item.
 
-## ::component-example
-
+::component-example
+---
 collapse: true
 iframe:
-height: 500px;
+  height: 500px;
 iframeMobile: true
 overflowHidden: true
 name: 'chat-palette-content-search-example'
-
 ---
-
 ::
+
 
 ## API
 

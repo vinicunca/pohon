@@ -5,10 +5,10 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  titleTemplate: '%s - Pohon UI',
+  titleTemplate: '%s - Nuxt UI',
   title: page.value.title,
   description: page.value.description,
-  ogTitle: `${page.value.title} - Pohon UI`,
+  ogTitle: `${page.value.title} - Nuxt UI`,
   ogDescription: page.value.description
 })
 
@@ -25,8 +25,11 @@ const { data: module } = await useFetch('/api/module.json')
 
 const contributors = computed(() => module.value?.contributors?.filter(contributor => !module.value?.team?.find(user => user.login === contributor.username)))
 
-const icons = {
-  website: 'i-lucide-link',
+const studioIcons = useStudioIcons()
+
+// computed: the pack is read after mount, a plain object would freeze on Lucide
+const icons = computed<Record<string, string>>(() => ({
+  website: studioIcons.link,
   twitter: 'i-simple-icons-x',
   twitch: 'i-simple-icons-twitch',
   youtube: 'i-simple-icons-youtube',
@@ -35,12 +38,12 @@ const icons = {
   mastodon: 'i-simple-icons-mastodon',
   bluesky: 'i-simple-icons-bluesky',
   github: 'i-simple-icons-github'
-}
+}))
 </script>
 
 <template>
   <main v-if="page">
-    <PPageHero
+    <UPageHero
       :title="page.hero.title"
       :description="page.hero.description"
       class="relative"
@@ -54,11 +57,11 @@ const icons = {
       </template>
 
       <LazyStarsBg />
-    </PPageHero>
+    </UPageHero>
 
-    <PPageSection :ui="{ container: '!pt-0' }">
-      <PPageGrid class="xl:grid-cols-4">
-        <PPageCard
+    <UPageSection :ui="{ container: '!pt-0' }">
+      <UPageGrid class="xl:grid-cols-4">
+        <UPageCard
           v-for="(user, index) in module?.team"
           :key="index"
           :title="user.name"
@@ -68,12 +71,12 @@ const icons = {
             container: 'gap-y-4 lg:py-8',
             leading: 'flex justify-center',
             title: 'text-center',
-            description: 'text-center color-text-muted'
+            description: 'text-center text-muted'
           }"
           variant="subtle"
         >
           <template #leading>
-            <PAvatar
+            <UAvatar
               :src="`https://ipx.nuxt.com/f_auto,s_80x80/gh_avatar/${user.login}`"
               :srcset="`https://ipx.nuxt.com/f_auto,s_160x160/gh_avatar/${user.login} 2x`"
               :alt="`${user.name} avatar`"
@@ -83,18 +86,18 @@ const icons = {
           </template>
 
           <div class="flex items-center justify-center gap-1">
-            <PButton
+            <UButton
               v-for="(link, key) in user.socialAccounts"
               :key="key"
               color="neutral"
               variant="link"
               :to="link.url"
-              :icon="icons[key as keyof typeof icons] || icons.website"
+              :icon="icons[key] || icons.website"
               :aria-label="`Link to ${user.name}'s ${key} profile`"
               target="_blank"
               size="sm"
             />
-            <PButton
+            <UButton
               :to="`https://github.com/${user.login}`"
               color="neutral"
               variant="link"
@@ -102,7 +105,7 @@ const icons = {
               :icon="icons.github"
               target="_blank"
             />
-            <PButton
+            <UButton
               v-if="user.websiteUrl"
               :to="user.websiteUrl"
               color="neutral"
@@ -113,23 +116,23 @@ const icons = {
             />
           </div>
           <div v-if="user.sponsorsListing" class="flex items-center justify-center">
-            <PButton
+            <UButton
               :to="user.sponsorsListing"
               target="_blank"
               color="neutral"
               variant="subtle"
-              icon="i-lucide-heart"
+              :icon="studioIcons.heart"
               label="Sponsor"
               :ui="{ leadingIcon: 'text-pink-500 dark:text-pink-400' }"
             />
           </div>
-        </PPageCard>
-      </PPageGrid>
+        </UPageCard>
+      </UPageGrid>
 
       <ProseHr />
 
-      <PPageGrid class="xl:grid-cols-6">
-        <PPageCard
+      <UPageGrid class="xl:grid-cols-6">
+        <UPageCard
           v-for="contributor in contributors"
           :key="contributor.username"
           :title="contributor.username"
@@ -138,11 +141,11 @@ const icons = {
             container: 'gap-y-2',
             leading: 'flex justify-center',
             title: 'text-center',
-            description: 'text-center color-text-muted'
+            description: 'text-center text-muted'
           }"
         >
           <template #leading>
-            <PAvatar
+            <UAvatar
               :src="`https://ipx.nuxt.com/f_auto,s_80x80/gh_avatar/${contributor.username}`"
               :srcset="`https://ipx.nuxt.com/f_auto,s_160x160/gh_avatar/${contributor.username} 2x`"
               :alt="`${contributor.username} avatar`"
@@ -153,7 +156,7 @@ const icons = {
           </template>
 
           <div class="flex items-center justify-center gap-1">
-            <PButton
+            <UButton
               :to="`https://github.com/${contributor.username}`"
               color="neutral"
               variant="link"
@@ -162,8 +165,8 @@ const icons = {
               target="_blank"
             />
           </div>
-        </PPageCard>
-      </PPageGrid>
-    </PPageSection>
+        </UPageCard>
+      </UPageGrid>
+    </UPageSection>
   </main>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from 'pohon-ui'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const open = ref(true)
 
@@ -19,9 +19,9 @@ const items: NavigationMenuItem[] = [{
 
 <template>
   <div class="flex flex-col flex-1">
-    <PHeader toggle-side="left" :ui="{ container: 'px-4!' }">
+    <UHeader toggle-side="left" :ui="{ container: 'px-4!' }">
       <template #toggle>
-        <PButton
+        <UButton
           icon="i-lucide-panel-left"
           color="neutral"
           variant="ghost"
@@ -29,10 +29,10 @@ const items: NavigationMenuItem[] = [{
           @click="open = !open"
         />
       </template>
-    </PHeader>
+    </UHeader>
 
     <div class="flex flex-1 min-h-0">
-      <PSidebar
+      <USidebar
         v-model:open="open"
         collapsible="icon"
         :ui="{
@@ -40,12 +40,12 @@ const items: NavigationMenuItem[] = [{
           container: 'absolute top-(--ui-header-height) bottom-0 h-[calc(100%-var(--ui-header-height))]'
         }"
       >
-        <PNavigationMenu
+        <UNavigationMenu
           :items="items"
           orientation="vertical"
           :ui="{ link: 'p-1.5 overflow-hidden' }"
         />
-      </PSidebar>
+      </USidebar>
 
       <div class="flex-1 p-4">
         <Placeholder class="size-full" />

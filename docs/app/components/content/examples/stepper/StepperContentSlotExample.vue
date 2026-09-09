@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { StepperItem } from 'pohon-ui'
+import type { StepperItem } from '@nuxt/ui'
 
 const items: StepperItem[] = [
   {
@@ -18,11 +18,11 @@ const items: StepperItem[] = [
 </script>
 
 <template>
-  <PStepper ref="stepper" :items="items" class="w-full">
+  <UStepper ref="stepper" :items="items" class="w-full">
     <template #content="{ item }">
       <Placeholder class="aspect-video">
         This is the {{ item?.title }} step.
       </Placeholder>
     </template>
-  </PStepper>
+  </UStepper>
 </template>

@@ -65,10 +65,10 @@ export function createOpenApiDocument(options: { version: string, url?: string, 
   return {
     openapi: '3.1.0',
     info: {
-      title: 'Pohon UI',
+      title: 'Nuxt UI',
       summary: 'Documentation, content and metadata endpoints of ui.nuxt.com.',
       description: [
-        'Pohon UI is a Vue component library (Nuxt optional) with 125+ accessible, Tailwind CSS components.',
+        'Nuxt UI is a Vue component library (Nuxt optional) with 125+ accessible, Tailwind CSS components.',
         '',
         'This specification covers the public, read-only endpoints agents can use to read the documentation and its metadata.',
         '',
@@ -85,7 +85,7 @@ export function createOpenApiDocument(options: { version: string, url?: string, 
         identifier: 'MIT'
       },
       contact: {
-        name: 'Pohon UI',
+        name: 'Nuxt UI',
         url: `${url}/docs`
       }
     },
@@ -106,7 +106,7 @@ export function createOpenApiDocument(options: { version: string, url?: string, 
           operationId: 'getOpenApiDocument',
           tags: ['Discovery'],
           summary: 'This OpenAPI document',
-          description: 'This document. It is regenerated on every deploy, so `info.version` tracks the published `pohon-ui` release.',
+          description: 'This document. It is regenerated on every deploy, so `info.version` tracks the published `@nuxt/ui` release.',
           responses: {
             200: {
               description: 'OpenAPI 3.1 document.',
@@ -164,7 +164,7 @@ export function createOpenApiDocument(options: { version: string, url?: string, 
           operationId: 'getModuleStats',
           tags: ['Content'],
           summary: 'Module stats, team and contributors',
-          description: 'npm downloads and GitHub stars for `pohon-ui`, plus the team and contributor lists shown on the homepage. Cached for an hour.',
+          description: 'npm downloads and GitHub stars for `@nuxt/ui`, plus the team and contributor lists shown on the homepage. Cached for an hour.',
           responses: { 200: json('Module', 'Download and star counts, team members and contributors.') }
         }
       },
@@ -231,7 +231,7 @@ export function createOpenApiDocument(options: { version: string, url?: string, 
           operationId: 'getLocales',
           tags: ['Data'],
           summary: 'Locales',
-          description: 'Every locale Pohon UI ships a translation for, mapped to its flag emoji.',
+          description: 'Every locale Nuxt UI ships a translation for, mapped to its flag emoji.',
           responses: {
             200: {
               description: 'Map of locale tag to flag emoji, for example `{ "fr-FR": "🇫🇷" }`.',

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from 'pohon-ui'
+import type { TableColumn } from '@nuxt/ui'
 
-const PCheckbox = resolveComponent('PCheckbox')
-const PButton = resolveComponent('PButton')
+const UCheckbox = resolveComponent('UCheckbox')
+const UButton = resolveComponent('UButton')
 
 type Payment = {
   id: string
@@ -76,12 +76,12 @@ const data = ref<Payment[]>([{
 
 const columns: TableColumn<Payment>[] = [{
   id: 'select',
-  header: ({ table }) => h(PCheckbox, {
+  header: ({ table }) => h(UCheckbox, {
     'modelValue': table.getIsSomePageRowsSelected() ? 'indeterminate' : table.getIsAllPageRowsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => table.toggleAllPageRowsSelected(!!value),
     'aria-label': 'Select all'
   }),
-  cell: ({ row }) => h(PCheckbox, {
+  cell: ({ row }) => h(UCheckbox, {
     'modelValue': row.getIsSelected() ? true : row.getIsSomeSelected() ? 'indeterminate' : false,
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => row.toggleSelected(!!value),
     'aria-label': 'Select row'
@@ -99,7 +99,7 @@ const columns: TableColumn<Payment>[] = [{
         class: 'flex items-center gap-2'
       },
       [
-        h(PButton, {
+        h(UButton, {
           color: 'neutral',
           variant: 'outline',
           size: 'xs',
@@ -136,7 +136,7 @@ const columns: TableColumn<Payment>[] = [{
   meta: {
     class: {
       th: 'text-right',
-      td: 'text-right font-500'
+      td: 'text-right font-medium'
     }
   },
   cell: ({ row }) => {
@@ -152,7 +152,7 @@ const expanded = ref({ 0: true })
 </script>
 
 <template>
-  <PTable
+  <UTable
     v-model:expanded="expanded"
     :data="data"
     :columns="columns"
@@ -162,7 +162,7 @@ const expanded = ref({ 0: true })
       base: 'border-separate border-spacing-0',
       tbody: '[&>tr]:last:[&>td]:border-b-0',
       tr: 'group',
-      td: 'empty:p-0 group-has-[td:not(:empty)]:border-b border-border'
+      td: 'empty:p-0 group-has-[td:not(:empty)]:border-b border-default'
     }"
   />
 </template>

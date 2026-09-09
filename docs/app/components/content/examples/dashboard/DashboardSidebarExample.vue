@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from 'pohon-ui'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items: NavigationMenuItem[][] = [[{
   label: 'Home',
@@ -37,14 +37,14 @@ const items: NavigationMenuItem[][] = [[{
 </script>
 
 <template>
-  <PDashboardSidebar collapsible resizable :ui="{ footer: 'border-t border-border' }">
+  <UDashboardSidebar collapsible resizable :ui="{ footer: 'border-t border-default' }">
     <template #header="{ collapsed }">
       <Logo v-if="!collapsed" class="h-5 w-auto shrink-0" />
-      <PIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 color-primary mx-auto" />
+      <UIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 text-primary mx-auto" />
     </template>
 
     <template #default="{ collapsed }">
-      <PButton
+      <UButton
         :label="collapsed ? undefined : 'Search...'"
         icon="i-lucide-search"
         color="neutral"
@@ -54,19 +54,19 @@ const items: NavigationMenuItem[][] = [[{
       >
         <template v-if="!collapsed" #trailing>
           <div class="flex items-center gap-0.5 ms-auto">
-            <PKbd value="meta" variant="subtle" />
-            <PKbd value="K" variant="subtle" />
+            <UKbd value="meta" variant="subtle" />
+            <UKbd value="K" variant="subtle" />
           </div>
         </template>
-      </PButton>
+      </UButton>
 
-      <PNavigationMenu
+      <UNavigationMenu
         :collapsed="collapsed"
         :items="items[0]"
         orientation="vertical"
       />
 
-      <PNavigationMenu
+      <UNavigationMenu
         :collapsed="collapsed"
         :items="items[1]"
         orientation="vertical"
@@ -75,9 +75,9 @@ const items: NavigationMenuItem[][] = [[{
     </template>
 
     <template #footer="{ collapsed }">
-      <PButton
+      <UButton
         :avatar="{
-          src: 'https://github.com/praburangki.png',
+          src: 'https://github.com/benjamincanac.png',
           loading: 'lazy' as const
         }"
         :label="collapsed ? undefined : 'Benjamin'"
@@ -87,5 +87,5 @@ const items: NavigationMenuItem[][] = [[{
         :block="collapsed"
       />
     </template>
-  </PDashboardSidebar>
+  </UDashboardSidebar>
 </template>

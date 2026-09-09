@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TreeItem } from 'pohon-ui'
+import type { TreeItem } from '@nuxt/ui'
 
 const items: TreeItem[] = [
   {
@@ -31,5 +31,5 @@ const value = ref()
 </script>
 
 <template>
-  <PTree v-model="value" :items="items" />
+  <UTree v-model="value" :items="items" />
 </template>

@@ -10,10 +10,10 @@ const modelValue = shallowRef({
 </script>
 
 <template>
-  <PInputDate ref="inputDate" v-model="modelValue" range>
+  <UInputDate ref="inputDate" v-model="modelValue" range>
     <template #trailing>
-      <PPopover :reference="inputDate?.inputsRef[0]?.$el">
-        <PButton
+      <UPopover :reference="inputDate?.inputsRef[0]?.$el">
+        <UButton
           color="neutral"
           variant="link"
           size="sm"
@@ -23,9 +23,9 @@ const modelValue = shallowRef({
         />
 
         <template #content>
-          <PCalendar v-model="modelValue" class="p-2" :number-of-months="2" range />
+          <UCalendar v-model="modelValue" class="p-2" :number-of-months="2" range />
         </template>
-      </PPopover>
+      </UPopover>
     </template>
-  </PInputDate>
+  </UInputDate>
 </template>

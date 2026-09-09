@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { TimelineItem } from 'pohon-ui'
+import type { TimelineItem } from '@nuxt/ui'
 import { useTimeAgo } from '@vueuse/core'
 
 const items = [{
@@ -21,7 +21,7 @@ const items = [{
   action: 'commented on this',
   description: 'I\'ve made a few changes, let me know what you think! Basically I updated the design, removed unnecessary divs, used Avatar component for the indicator since it supports icon already.',
   avatar: {
-    src: 'https://github.com/praburangki.png',
+    src: 'https://github.com/benjamincanac.png',
     loading: 'lazy' as const
   }
 }, {
@@ -42,22 +42,22 @@ const items = [{
 </script>
 
 <template>
-  <PTimeline
+  <UTimeline
     :items="items"
     size="xs"
     :ui="{
       date: 'float-end ms-1',
-      description: 'px-3 py-2 ring ring-ring mt-2 rounded-md color-text'
+      description: 'px-3 py-2 ring ring-default mt-2 rounded-md text-default'
     }"
     class="w-96"
   >
     <template #title="{ item }">
       <span>{{ item.username }}</span>
-      <span class="font-normal color-text-muted">&nbsp;{{ item.action }}</span>
+      <span class="font-normal text-muted">&nbsp;{{ item.action }}</span>
     </template>
 
     <template #date="{ item }">
       {{ useTimeAgo(new Date(item.date)) }}
     </template>
-  </PTimeline>
+  </UTimeline>
 </template>

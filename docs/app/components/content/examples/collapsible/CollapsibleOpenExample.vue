@@ -7,8 +7,8 @@ defineShortcuts({
 </script>
 
 <template>
-  <PCollapsible v-model:open="open" class="flex flex-col gap-2 w-48">
-    <PButton
+  <UCollapsible v-model:open="open" class="flex flex-col gap-2 w-48">
+    <UButton
       label="Open"
       color="neutral"
       variant="subtle"
@@ -19,5 +19,5 @@ defineShortcuts({
     <template #content>
       <Placeholder class="h-48" />
     </template>
-  </PCollapsible>
+  </UCollapsible>
 </template>

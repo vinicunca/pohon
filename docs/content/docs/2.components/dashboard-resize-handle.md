@@ -1,6 +1,6 @@
 ---
 title: DashboardResizeHandle
-description: "A handle to resize a sidebar or panel."
+description: 'A handle to resize a sidebar or panel.'
 category: dashboard
 links:
   - label: GitHub
@@ -24,41 +24,41 @@ Even though this component is automatically displayed when the `resizable` prop 
 
 ```vue [layouts/dashboard.vue]{4-10}
 <template>
-  <PDashboardGroup>
-    <PDashboardSidebar resizable>
+  <UDashboardGroup>
+    <UDashboardSidebar resizable>
       <template #resize-handle="{ onMouseDown, onTouchStart, onDoubleClick }">
-        <PDashboardResizeHandle
+        <UDashboardResizeHandle
           class="after:absolute after:inset-y-0 after:right-0 after:w-px hover:after:bg-(--ui-border-accented) after:transition"
           @mousedown="onMouseDown"
           @touchstart="onTouchStart"
           @dblclick="onDoubleClick"
         />
       </template>
-    </PDashboardSidebar>
+    </UDashboardSidebar>
 
     <slot />
-  </PDashboardGroup>
+  </UDashboardGroup>
 </template>
 ```
 
 ```vue [pages/index.vue]{9-15}
 <script setup lang="ts">
 definePageMeta({
-  layout: "dashboard",
-});
+  layout: 'dashboard'
+})
 </script>
 
 <template>
-  <PDashboardPanel resizable>
+  <UDashboardPanel resizable>
     <template #resize-handle="{ onMouseDown, onTouchStart, onDoubleClick }">
-      <PDashboardResizeHandle
+      <UDashboardResizeHandle
         class="after:absolute after:inset-y-0 after:right-0 after:w-px hover:after:bg-(--ui-border-accented) after:transition"
         @mousedown="onMouseDown"
         @touchstart="onTouchStart"
         @dblclick="onDoubleClick"
       />
     </template>
-  </PDashboardPanel>
+  </UDashboardPanel>
 </template>
 ```
 

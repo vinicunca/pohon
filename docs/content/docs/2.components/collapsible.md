@@ -19,23 +19,21 @@ Use a [Button](/docs/components/button) or any other component in the default sl
 
 Then, use the `#content` slot to add the content displayed when the Collapsible is open.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- class
-  props:
+  - class
+props:
   class: 'flex flex-col gap-2 w-48'
-  slots:
+slots:
   default: |
 
-      <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-content: |
+  content: |
 
     <Placeholder class="h-48" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
@@ -48,24 +46,22 @@ content: |
 
 Use the `unmount-on-hide` prop to prevent the content from being unmounted when the Collapsible is collapsed. Defaults to `true`.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- class
-  props:
+  - class
+props:
   unmountOnHide: false
   class: 'flex flex-col gap-2 w-48'
-  slots:
+slots:
   default: |
 
-      <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-content: |
+  content: |
 
     <Placeholder class="h-48" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
@@ -82,24 +78,22 @@ You can inspect the DOM to see the content being rendered.
 
 Use the `disabled` prop to disable the Collapsible.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 ignore:
-
-- class
-  props:
+  - class
+props:
   class: 'flex flex-col gap-2 w-48'
   disabled: true
-  slots:
+slots:
   default: |
 
-      <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
+    <UButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block />
 
-content: |
+  content: |
 
     <Placeholder class="h-48" />
-
 ---
 
 :u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-down" block}
@@ -114,10 +108,10 @@ content: |
 
 You can control the open state by using the `default-open` prop or the `v-model:open` directive.
 
-## ::component-example
-
-## name: 'collapsible-open-example'
-
+::component-example
+---
+name: 'collapsible-open-example'
+---
 ::
 
 ::note
@@ -132,10 +126,10 @@ This lets you move the trigger outside of the Collapsible or remove it entirely.
 
 Here is an example with a rotating icon in the Button that indicates the open state of the Collapsible.
 
-## ::component-example
-
-## name: 'collapsible-icon-example'
-
+::component-example
+---
+name: 'collapsible-icon-example'
+---
 ::
 
 ## API

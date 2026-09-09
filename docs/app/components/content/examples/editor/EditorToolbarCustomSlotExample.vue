@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorToolbarItem } from 'pohon-ui'
+import type { EditorToolbarItem } from '@nuxt/ui'
 import EditorLinkPopover from './EditorLinkPopover.vue'
 
 const value = ref(`Select text and click the link button to add a link with the custom popover.
@@ -20,16 +20,16 @@ const toolbarItems = [[{
 </script>
 
 <template>
-  <PEditor
+  <UEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     class="w-full min-h-30 flex flex-col gap-4"
   >
-    <PEditorToolbar :editor="editor" :items="toolbarItems" class="sm:px-8">
+    <UEditorToolbar :editor="editor" :items="toolbarItems" class="sm:px-8">
       <template #link>
         <EditorLinkPopover :editor="editor" auto-open />
       </template>
-    </PEditorToolbar>
-  </PEditor>
+    </UEditorToolbar>
+  </UEditor>
 </template>

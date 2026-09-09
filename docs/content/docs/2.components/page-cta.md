@@ -1,6 +1,6 @@
 ---
 title: PageCTA
-description: "A call to action section to display in your pages."
+description: 'A call to action section to display in your pages.'
 category: page
 links:
   - label: GitHub
@@ -14,20 +14,18 @@ The PageCTA component provides a flexible way to display a call to action in you
 
 ::code-preview
 
-## ::u-page-c-t-a
-
+::u-page-c-t-a
+---
 title: 'Trusted and supported by our amazing community'
-description: 'Preview the latest Tailwind CSS and get started with Pohon UI.'
+description: 'Preview the latest Tailwind CSS and get started with Nuxt UI.'
 orientation: horizontal
 links:
-
-- label: 'Get started'
-  color: 'neutral'
-- label: 'Learn more'
-  color: 'neutral'
-  variant: 'subtle'
-  trailingIcon: 'i-lucide-arrow-right'
-
+  - label: 'Get started'
+    color: 'neutral'
+  - label: 'Learn more'
+    color: 'neutral'
+    variant: 'subtle'
+    trailingIcon: 'i-lucide-arrow-right'
 ---
 
 :img{src="https://picsum.photos/640/616" width="320" height="308" alt="Illustration" class="w-full rounded-lg"}
@@ -39,17 +37,17 @@ Use it inside a [PageSection](/docs/components/page-section) component or direct
 
 ```vue {4,8-10}
 <template>
-  <PPageHero />
+  <UPageHero />
 
-  <PPageCTA class="rounded-none" />
+  <UPageCTA class="rounded-none" />
 
-  <PPageSection />
+  <UPageSection />
 
-  <PPageSection :ui="{ container: 'px-0' }">
-    <PPageCTA class="rounded-none sm:rounded-xl" />
-  </PPageSection>
+  <UPageSection :ui="{ container: 'px-0' }">
+    <UPageCTA class="rounded-none sm:rounded-xl" />
+  </UPageSection>
 
-  <PPageSection />
+  <UPageSection />
 </template>
 ```
 
@@ -61,90 +59,83 @@ Use `px-0` and `rounded-none` classes to make the CTA fill the edge of the page 
 
 Use the `title` prop to set the title of the CTA.
 
-## ::component-code{slug="page-CTA"}
-
-props:
-title: 'Trusted and supported by our amazing community'
-
+::component-code{slug="page-CTA"}
 ---
-
+props:
+  title: 'Trusted and supported by our amazing community'
+---
 ::
 
 ### Description
 
 Use the `description` prop to set the description of the CTA.
 
-## ::component-code{slug="page-CTA"}
-
+::component-code{slug="page-CTA"}
+---
 prettier: true
 ignore:
-
-- title
-  props:
+  - title
+props:
   title: 'Trusted and supported by our amazing community'
   description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
-
 ---
-
 ::
 
 ### Links
 
 Use the `links` prop to display a list of [Button](/docs/components/button) under the description.
 
-## ::component-code{slug="page-CTA"}
-
+::component-code{slug="page-CTA"}
+---
 prettier: true
 external:
-
-- links
-  externalTypes:
-- ButtonProps[]
-  ignore:
-- title
-- description
-- links
-  props:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
   title: 'Trusted and supported by our amazing community'
   description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
-  links: - label: 'Get started'
-  color: 'neutral' - label: 'Learn more'
-  color: 'neutral'
-  variant: 'subtle'
-  trailingIcon: 'i-lucide-arrow-right'
-
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
-
 ::
 
 ### Variant
 
 Use the `variant` prop to change the style of the CTA.
 
-## ::component-code{slug="page-CTA"}
-
+::component-code{slug="page-CTA"}
+---
 prettier: true
 external:
-
-- links
-  externalTypes:
-- ButtonProps[]
-  ignore:
-- title
-- description
-- links
-  props:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
   title: 'Trusted and supported by our amazing community'
   description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
   variant: soft
-  links: - label: 'Get started'
-  color: 'neutral' - label: 'Learn more'
-  color: 'neutral'
-  variant: 'subtle'
-  trailingIcon: 'i-lucide-arrow-right'
-
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
 ---
-
 ::
 
 ::tip
@@ -155,32 +146,32 @@ You can apply the `light` or `dark` class to the `links` slot when using the `so
 
 Use the `orientation` prop to change the orientation with the default slot. Defaults to `vertical`.
 
-## ::component-code{slug="page-CTA"}
-
+::component-code{slug="page-CTA"}
+---
 prettier: true
 external:
-
-- links
-  externalTypes:
-- ButtonProps[]
-  ignore:
-- title
-- description
-- links
-  props:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
   title: 'Trusted and supported by our amazing community'
   description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
   orientation: horizontal
-  links: - label: 'Get started'
-  color: 'neutral' - label: 'Learn more'
-  color: 'neutral'
-  variant: 'subtle'
-  trailingIcon: 'i-lucide-arrow-right'
-  slots:
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
   default: |
 
-      <img src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
-
+    <img src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
 :img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}
@@ -190,33 +181,33 @@ external:
 
 Use the `reverse` prop to reverse the orientation of the default slot.
 
-## ::component-code{slug="page-CTA"}
-
+::component-code{slug="page-CTA"}
+---
 prettier: true
 external:
-
-- links
-  externalTypes:
-- ButtonProps[]
-  ignore:
-- title
-- description
-- links
-  props:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - links
+props:
   title: 'Trusted and supported by our amazing community'
   description: "We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
   orientation: horizontal
   reverse: true
-  links: - label: 'Get started'
-  color: 'neutral' - label: 'Learn more'
-  color: 'neutral'
-  variant: 'subtle'
-  trailingIcon: 'i-lucide-arrow-right'
-  slots:
+  links:
+    - label: 'Get started'
+      color: 'neutral'
+    - label: 'Learn more'
+      color: 'neutral'
+      variant: 'subtle'
+      trailingIcon: 'i-lucide-arrow-right'
+slots:
   default: |
 
-      <img src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
-
+    <img src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy" />
 ---
 
 :img{src="https://picsum.photos/640/728" width="320" height="364" alt="Illustration" class="w-full rounded-lg" loading="lazy"}

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRegle, type InferInput } from '@regle/core'
 import { required, email, minLength, withMessage } from '@regle/rules'
-import type { FormSubmitEvent } from 'pohon-ui'
+import type { FormSubmitEvent } from '@nuxt/ui'
 
 const { r$ } = useRegle({ email: '', password: '' }, {
   email: { required, email: withMessage(email, 'Invalid email') },
@@ -18,17 +18,17 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <PForm :schema="r$" :state="r$.$value" class="space-y-4" @submit="onSubmit">
-    <PFormField label="Email" name="email">
-      <PInput v-model="r$.$value.email" />
-    </PFormField>
+  <UForm :schema="r$" :state="r$.$value" class="space-y-4" @submit="onSubmit">
+    <UFormField label="Email" name="email">
+      <UInput v-model="r$.$value.email" />
+    </UFormField>
 
-    <PFormField label="Password" name="password">
-      <PInput v-model="r$.$value.password" type="password" />
-    </PFormField>
+    <UFormField label="Password" name="password">
+      <UInput v-model="r$.$value.password" type="password" />
+    </UFormField>
 
-    <PButton type="submit">
+    <UButton type="submit">
       Submit
-    </PButton>
-  </PForm>
+    </UButton>
+  </UForm>
 </template>

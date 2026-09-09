@@ -1,6 +1,6 @@
 ---
 title: DashboardSidebarCollapse
-description: "A Button to collapse the sidebar on desktop."
+description: 'A Button to collapse the sidebar on desktop.'
 category: dashboard
 links:
   - label: Button
@@ -19,16 +19,13 @@ The DashboardSidebarCollapse component is used to collapse/expand the [Dashboard
 
 It extends the [Button](/docs/components/button) component, so you can pass any property such as `color`, `variant`, `size`, etc.
 
-## ::component-code
-
-ignore:
-
-- variant
-  props:
-  variant: 'subtle'
-
+::component-code
 ---
-
+ignore:
+  - variant
+props:
+  variant: 'subtle'
+---
 ::
 
 ::note
@@ -43,17 +40,17 @@ You can put this component in the `header` slot of the [DashboardSidebar](/docs/
 
 ```vue [layouts/dashboard.vue]{4-8}
 <template>
-  <PDashboardGroup>
-    <PDashboardSidebar collapsible>
+  <UDashboardGroup>
+    <UDashboardSidebar collapsible>
       <template #header="{ collapsed }">
         <Logo v-if="!collapsed" />
 
-        <PDashboardSidebarCollapse variant="subtle" />
+        <UDashboardSidebarCollapse variant="subtle" />
       </template>
-    </PDashboardSidebar>
+    </UDashboardSidebar>
 
     <slot />
-  </PDashboardGroup>
+  </UDashboardGroup>
 </template>
 ```
 
@@ -64,20 +61,20 @@ You can put this component in the `leading` slot of the [DashboardNavbar](/docs/
 ```vue [pages/index.vue]{11-13}
 <script setup lang="ts">
 definePageMeta({
-  layout: "dashboard",
-});
+  layout: 'dashboard'
+})
 </script>
 
 <template>
-  <PDashboardPanel>
+  <UDashboardPanel>
     <template #header>
-      <PDashboardNavbar title="Home">
+      <UDashboardNavbar title="Home">
         <template #leading>
-          <PDashboardSidebarCollapse variant="subtle" />
+          <UDashboardSidebarCollapse variant="subtle" />
         </template>
-      </PDashboardNavbar>
+      </UDashboardNavbar>
     </template>
-  </PDashboardPanel>
+  </UDashboardPanel>
 </template>
 ```
 
@@ -87,7 +84,7 @@ definePageMeta({
 
 :component-props
 
-::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="\_blank"}
+::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 This component also supports all native `<button>` HTML attributes.
 ::
 

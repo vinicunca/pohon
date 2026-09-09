@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { upperFirst } from 'scule'
-import type { DropdownMenuItem } from 'pohon-ui'
-import { mapEditorItems } from 'pohon-ui/utils/editor'
+import type { DropdownMenuItem } from '@nuxt/ui'
+import { mapEditorItems } from '@nuxt/ui/utils/editor'
 import type { Editor, JSONContent } from '@tiptap/vue-3'
 
 const value = ref(`Hover over the left side to see both drag handle and menu button.
@@ -86,14 +86,14 @@ const items = (editor: Editor): DropdownMenuItem[][] => {
 </script>
 
 <template>
-  <PEditor
+  <UEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     class="w-full min-h-19"
   >
-    <PEditorDragHandle v-slot="{ ui }" :editor="editor" @node-change="selectedNode = $event">
-      <PDropdownMenu
+    <UEditorDragHandle v-slot="{ ui }" :editor="editor" @node-change="selectedNode = $event">
+      <UDropdownMenu
         v-slot="{ open }"
         :modal="false"
         :items="items(editor)"
@@ -101,7 +101,7 @@ const items = (editor: Editor): DropdownMenuItem[][] => {
         :ui="{ content: 'w-48', label: 'text-xs' }"
         @update:open="editor.chain().setMeta('lockDragHandle', $event).run()"
       >
-        <PButton
+        <UButton
           icon="i-lucide-grip-vertical"
           color="neutral"
           variant="ghost"
@@ -110,7 +110,7 @@ const items = (editor: Editor): DropdownMenuItem[][] => {
           :active="open"
           :class="ui.handle()"
         />
-      </PDropdownMenu>
-    </PEditorDragHandle>
-  </PEditor>
+      </UDropdownMenu>
+    </UEditorDragHandle>
+  </UEditor>
 </template>

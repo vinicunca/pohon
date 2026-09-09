@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem, DropdownMenuItem } from 'pohon-ui'
+import type { NavigationMenuItem, DropdownMenuItem } from '@nuxt/ui'
 
 const items: NavigationMenuItem[][] = [
   [
@@ -47,38 +47,38 @@ const dropdownItems: DropdownMenuItem[][] = [
 </script>
 
 <template>
-  <PNavigationMenu
+  <UNavigationMenu
     orientation="vertical"
     :items="items"
-    :ui="{ link: 'overflow-hidden has-data-[state=open]:before:bg-background-elevated/50' }"
+    :ui="{ link: 'overflow-hidden has-data-[state=open]:before:bg-elevated/50' }"
     class="w-48"
   >
     <template #personal-label-trailing>
-      <PButton icon="i-lucide-plus" color="neutral" variant="ghost" size="xs" />
+      <UButton icon="i-lucide-plus" color="neutral" variant="ghost" size="xs" />
     </template>
 
     <template #teams-label-trailing>
-      <PButton icon="i-lucide-plus" color="neutral" variant="ghost" size="xs" />
+      <UButton icon="i-lucide-plus" color="neutral" variant="ghost" size="xs" />
     </template>
 
     <template #item-trailing>
       <div class="flex -mr-1.5 -my-0.5 translate-x-full group-hover:translate-x-0 has-data-[state=open]:translate-x-0 transition-transform">
-        <PDropdownMenu
+        <UDropdownMenu
           :items="dropdownItems"
           :content="{ align: 'start' }"
           :modal="false"
           size="xs"
         >
-          <PButton
+          <UButton
             as="div"
             icon="i-lucide-ellipsis"
             color="neutral"
             variant="ghost"
             size="xs"
-            class="color-text-muted hover:color-text-highlighted hover:bg-background-accented/50 data-[state=open]:bg-background-accented/50 mr-1.5"
+            class="text-muted hover:text-highlighted hover:bg-accented/50 data-[state=open]:bg-accented/50 mr-1.5"
           />
-        </PDropdownMenu>
+        </UDropdownMenu>
       </div>
     </template>
-  </PNavigationMenu>
+  </UNavigationMenu>
 </template>

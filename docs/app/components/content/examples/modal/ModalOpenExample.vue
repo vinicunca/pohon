@@ -7,11 +7,11 @@ defineShortcuts({
 </script>
 
 <template>
-  <PModal v-model:open="open">
-    <PButton label="Open" color="neutral" variant="subtle" />
+  <UModal v-model:open="open">
+    <UButton label="Open" color="neutral" variant="subtle" />
 
     <template #content>
       <Placeholder class="h-48 m-4" />
     </template>
-  </PModal>
+  </UModal>
 </template>

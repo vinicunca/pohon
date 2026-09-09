@@ -17,7 +17,7 @@ const groups = computed(() => [{
 </script>
 
 <template>
-  <PCommandPalette
+  <UCommandPalette
     v-model:search-term="searchTerm"
     :loading="status === 'pending' || status === 'idle'"
     :groups="groups"

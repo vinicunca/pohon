@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Extension } from '@tiptap/core'
-import type { EditorMentionMenuItem, SelectItem } from 'pohon-ui'
+import type { EditorMentionMenuItem, SelectItem } from '@nuxt/ui'
 
 const input = ref('')
 const mode = ref('auto')
@@ -55,18 +55,18 @@ function onSubmit() {
 </script>
 
 <template>
-  <PChatPrompt
+  <UChatPrompt
     v-model="input"
     class="w-full p-0 gap-0"
     placeholder="Press / to open the command menu"
     :ui="{
-      header: 'px-2.5 py-2 border-b border-border',
-      footer: 'px-2.5 py-2 border-t border-border'
+      header: 'px-2.5 py-2 border-b border-default',
+      footer: 'px-2.5 py-2 border-t border-default'
     }"
     @submit="onSubmit"
   >
     <template v-if="attachments.length" #header>
-      <PButton
+      <UButton
         v-for="(file, index) in attachments"
         :key="index"
         :label="file.name"
@@ -82,7 +82,7 @@ function onSubmit() {
     </template>
 
     <template #body="{ submit, placeholder }">
-      <PEditor
+      <UEditor
         v-slot="{ editor }"
         v-model="input"
         content-type="markdown"
@@ -96,14 +96,14 @@ function onSubmit() {
           addKeyboardShortcuts: () => ({ Enter: () => (submit(), true) })
         })]"
       >
-        <PEditorMentionMenu :editor="editor" char="@" plugin-key="mention" :items="files" :append-to="appendToBody" />
-        <PEditorMentionMenu :editor="editor" char="/" plugin-key="command" :items="commands" :append-to="appendToBody" />
-      </PEditor>
+        <UEditorMentionMenu :editor="editor" char="@" plugin-key="mention" :items="files" :append-to="appendToBody" />
+        <UEditorMentionMenu :editor="editor" char="/" plugin-key="command" :items="commands" :append-to="appendToBody" />
+      </UEditor>
     </template>
 
     <template #footer>
       <div class="flex items-center gap-0.5">
-        <PButton
+        <UButton
           icon="i-lucide-plus"
           color="neutral"
           variant="ghost"
@@ -115,7 +115,7 @@ function onSubmit() {
       </div>
 
       <div class="flex items-center gap-1">
-        <PSelect
+        <USelect
           v-model="mode"
           :items="modes"
           :icon="modes.find(item => item.value === mode)?.icon"
@@ -125,8 +125,8 @@ function onSubmit() {
           square
         />
 
-        <PChatPromptSubmit size="sm" :disabled="!input.trim()" />
+        <UChatPromptSubmit size="sm" :disabled="!input.trim()" />
       </div>
     </template>
-  </PChatPrompt>
+  </UChatPrompt>
 </template>

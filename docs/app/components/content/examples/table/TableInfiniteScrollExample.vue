@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { TableColumn } from 'pohon-ui'
+import type { TableColumn } from '@nuxt/ui'
 import { useInfiniteScroll } from '@vueuse/core'
 
-const PAvatar = resolveComponent('PAvatar')
+const UAvatar = resolveComponent('UAvatar')
 
 type User = {
   id: number
@@ -36,7 +36,7 @@ const columns: TableColumn<User>[] = [{
 }, {
   accessorKey: 'image',
   header: 'Avatar',
-  cell: ({ row }) => h(PAvatar, { src: row.original.image, loading: 'lazy' })
+  cell: ({ row }) => h(UAvatar, { src: row.original.image, loading: 'lazy' })
 }, {
   accessorKey: 'firstName',
   header: 'First name'
@@ -72,7 +72,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <PTable
+  <UTable
     ref="table"
     :data="users"
     :columns="columns"

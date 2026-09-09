@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { StepperItem } from 'pohon-ui'
+import type { StepperItem } from '@nuxt/ui'
 
 const items = [
   {
@@ -21,7 +21,7 @@ const items = [
 </script>
 
 <template>
-  <PStepper :items="items" class="w-full">
+  <UStepper :items="items" class="w-full">
     <template #address>
       <Placeholder class="aspect-video">
         Address
@@ -39,5 +39,5 @@ const items = [
         Checkout
       </Placeholder>
     </template>
-  </PStepper>
+  </UStepper>
 </template>

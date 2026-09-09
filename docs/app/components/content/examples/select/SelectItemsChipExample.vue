@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SelectItem, ChipProps } from 'pohon-ui'
+import type { SelectItem, ChipProps } from '@nuxt/ui'
 
 const items = ref([
   {
@@ -33,9 +33,9 @@ function getChip(value: string) {
 </script>
 
 <template>
-  <PSelect v-model="value" :items="items" value-key="value" class="w-48">
+  <USelect v-model="value" :items="items" value-key="value" class="w-48">
     <template #leading="{ modelValue, ui }">
-      <PChip
+      <UChip
         v-if="modelValue"
         v-bind="getChip(modelValue)"
         inset
@@ -44,5 +44,5 @@ function getChip(value: string) {
         :class="ui.itemLeadingChip()"
       />
     </template>
-  </PSelect>
+  </USelect>
 </template>

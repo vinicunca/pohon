@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as z from 'zod'
-import type { FormSubmitEvent } from 'pohon-ui'
+import type { FormSubmitEvent } from '@nuxt/ui'
 
 const schema = z.object({
   name: z.string().min(2, 'Too short'),
@@ -24,7 +24,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <PTheme
+  <UTheme
     :props="{
       input: { size: 'lg' },
       textarea: { size: 'lg' }
@@ -36,24 +36,24 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       }
     }"
   >
-    <PForm :schema="schema" :state="state" class="space-y-4 w-full" @submit="onSubmit">
-      <PFormField label="Name" name="name" description="Your public display name.">
-        <PInput v-model="state.name" />
-      </PFormField>
+    <UForm :schema="schema" :state="state" class="space-y-4 w-full" @submit="onSubmit">
+      <UFormField label="Name" name="name" description="Your public display name.">
+        <UInput v-model="state.name" />
+      </UFormField>
 
-      <PFormField label="Email" name="email" description="Used for notifications.">
-        <PInput v-model="state.email" type="email" />
-      </PFormField>
+      <UFormField label="Email" name="email" description="Used for notifications.">
+        <UInput v-model="state.email" type="email" />
+      </UFormField>
 
-      <PFormField label="Bio" name="bio" description="A short description about yourself.">
-        <PTextarea v-model="state.bio" placeholder="Tell us about yourself" />
-      </PFormField>
+      <UFormField label="Bio" name="bio" description="A short description about yourself.">
+        <UTextarea v-model="state.bio" placeholder="Tell us about yourself" />
+      </UFormField>
 
       <div class="flex justify-end">
-        <PButton type="submit">
+        <UButton type="submit">
           Save changes
-        </PButton>
+        </UButton>
       </div>
-    </PForm>
-  </PTheme>
+    </UForm>
+  </UTheme>
 </template>

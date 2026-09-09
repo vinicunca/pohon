@@ -43,5 +43,5 @@ function postFilter(searchTerm: string, items: any[]) {
 </script>
 
 <template>
-  <PCommandPalette :groups="[{ id: 'files', items, postFilter }]" class="flex-1" />
+  <UCommandPalette :groups="[{ id: 'files', items, postFilter }]" class="flex-1" />
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorEmojiMenuItem } from 'pohon-ui'
+import type { EditorEmojiMenuItem } from '@nuxt/ui'
 import { Emoji } from '@tiptap/extension-emoji'
 
 const value = ref(`Type : to see a custom emoji set.
@@ -50,7 +50,7 @@ const items: EditorEmojiMenuItem[] = [{
 </script>
 
 <template>
-  <PEditor
+  <UEditor
     v-slot="{ editor }"
     v-model="value"
     :extensions="[Emoji]"
@@ -58,6 +58,6 @@ const items: EditorEmojiMenuItem[] = [{
     placeholder="Type : to add emojis..."
     class="w-full min-h-26"
   >
-    <PEditorEmojiMenu :editor="editor" :items="items" />
-  </PEditor>
+    <UEditorEmojiMenu :editor="editor" :items="items" />
+  </UEditor>
 </template>

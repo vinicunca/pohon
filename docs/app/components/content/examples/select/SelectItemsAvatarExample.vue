@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { SelectItem } from 'pohon-ui'
+import type { SelectItem } from '@nuxt/ui'
 
 const items = ref([
   {
     label: 'benjamincanac',
     value: 'benjamincanac',
     avatar: {
-      src: 'https://github.com/praburangki.png',
+      src: 'https://github.com/benjamincanac.png',
       alt: 'benjamincanac',
       loading: 'lazy' as const
     }
@@ -46,5 +46,5 @@ const avatar = computed(() => items.value.find(item => item.value === value.valu
 </script>
 
 <template>
-  <PSelect v-model="value" :items="items" value-key="value" :avatar="avatar" class="w-48" />
+  <USelect v-model="value" :items="items" value-key="value" :avatar="avatar" class="w-48" />
 </template>

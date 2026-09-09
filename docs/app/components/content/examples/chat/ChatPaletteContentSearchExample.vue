@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { isTextUIPart } from 'ai'
 import { useChat } from '@ai-sdk/vue'
-import { isPartStreaming } from 'pohon-ui/utils/ai'
+import { isPartStreaming } from '@nuxt/ui/utils/ai'
 import { Markdown } from '@comark/vue'
 import shiki from '@comark/vue/plugins/shiki'
 
@@ -68,14 +68,14 @@ const ui = {
 </script>
 
 <template>
-  <PContentSearch v-model:search-term="searchTerm" open :groups="groups">
+  <UContentSearch v-model:search-term="searchTerm" open :groups="groups">
     <template v-if="ai" #content>
-      <PTheme :ui="ui">
-        <PChatPalette>
-          <PChatMessages
+      <UTheme :ui="ui">
+        <UChatPalette>
+          <UChatMessages
             :messages="messages"
             :status="status"
-            :user="{ side: 'left', variant: 'naked', avatar: { src: 'https://github.com/praburangki.png', loading: 'lazy' as const } }"
+            :user="{ side: 'left', variant: 'naked', avatar: { src: 'https://github.com/benjamincanac.png', loading: 'lazy' as const } }"
             :assistant="{ icon: 'i-lucide-bot' }"
           >
             <template #content="{ message }">
@@ -94,10 +94,10 @@ const ui = {
                 </template>
               </template>
             </template>
-          </PChatMessages>
+          </UChatMessages>
 
           <template #prompt>
-            <PChatPrompt
+            <UChatPrompt
               v-model="input"
               icon="i-lucide-search"
               variant="naked"
@@ -106,8 +106,8 @@ const ui = {
               @close="onClose"
             />
           </template>
-        </PChatPalette>
-      </PTheme>
+        </UChatPalette>
+      </UTheme>
     </template>
-  </PContentSearch>
+  </UContentSearch>
 </template>

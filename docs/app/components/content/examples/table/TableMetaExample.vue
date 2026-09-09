@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TableColumn } from 'pohon-ui'
+import type { TableColumn } from '@nuxt/ui'
 import type { TableMeta, Row } from '@tanstack/vue-table'
 
 type Payment = {
@@ -47,7 +47,7 @@ const columns: TableColumn<Payment>[] = [{
   header: 'ID',
   meta: {
     class: {
-      th: 'text-center font-600',
+      th: 'text-center font-semibold',
       td: 'text-center font-mono'
     }
   }
@@ -76,10 +76,10 @@ const columns: TableColumn<Payment>[] = [{
     const status = row.getValue('status') as string
     const colorMap = {
       paid: 'text-success',
-      failed: 'color-error',
+      failed: 'text-error',
       refunded: 'text-warning'
     }
-    return h('span', { class: `font-600 capitalize ${colorMap[status as keyof typeof colorMap]}` }, status)
+    return h('span', { class: `font-semibold capitalize ${colorMap[status as keyof typeof colorMap]}` }, status)
   }
 }, {
   accessorKey: 'email',
@@ -95,7 +95,7 @@ const columns: TableColumn<Payment>[] = [{
   header: 'Amount',
   meta: {
     class: {
-      th: 'text-right font-700 color-primary',
+      th: 'text-right font-bold text-primary',
       td: 'text-right font-mono'
     }
   },
@@ -105,7 +105,7 @@ const columns: TableColumn<Payment>[] = [{
       style: 'currency',
       currency: 'USD'
     }).format(amount)
-    return h('span', { class: 'font-600 text-success' }, formatted)
+    return h('span', { class: 'font-semibold text-success' }, formatted)
   }
 }]
 
@@ -125,5 +125,5 @@ const meta: TableMeta<Payment> = {
 </script>
 
 <template>
-  <PTable :data="data" :columns="columns" :meta="meta" class="flex-1" />
+  <UTable :data="data" :columns="columns" :meta="meta" class="flex-1" />
 </template>

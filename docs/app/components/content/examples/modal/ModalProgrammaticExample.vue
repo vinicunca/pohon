@@ -40,5 +40,5 @@ async function open() {
 </script>
 
 <template>
-  <PButton label="Open" color="neutral" variant="subtle" @click="open" />
+  <UButton label="Open" color="neutral" variant="subtle" @click="open" />
 </template>

@@ -15,8 +15,8 @@ const { data: components } = await useAsyncData(`components-${props.category}`, 
 </script>
 
 <template>
-  <PPageGrid class="gap-5">
-    <PPageCard
+  <UPageGrid class="gap-5">
+    <UPageCard
       v-for="(component, index) in components"
       :key="component.path"
       :title="component.title"
@@ -27,13 +27,13 @@ const { data: components } = await useAsyncData(`components-${props.category}`, 
         header: 'mb-0',
         container: 'p-0 lg:p-0',
         body: 'p-4',
-        title: 'text-[15px] font-500',
+        title: 'text-[15px] font-medium',
         description: 'line-clamp-2 mt-0.5'
       }"
     >
       <template #header>
-        <div class="rounded-md rounded-b-none border border-muted overflow-hidden aspect-video -m-px">
-          <PColorModeImage
+        <div class="rounded-md rounded-b-none border border-muted overflow-hidden aspect-video -m-px bg-muted">
+          <UColorModeImage
             :light="`${component.path.replace('/docs/components/', '/components/light/')}.png`"
             :dark="`${component.path.replace('/docs/components/', '/components/dark/')}.png`"
             class="group-hover:scale-105 transition-transform size-full"
@@ -44,6 +44,6 @@ const { data: components } = await useAsyncData(`components-${props.category}`, 
           />
         </div>
       </template>
-    </PPageCard>
-  </PPageGrid>
+    </UPageCard>
+  </UPageGrid>
 </template>

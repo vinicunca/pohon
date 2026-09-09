@@ -1,5 +1,5 @@
 <template>
-  <PButton>
+  <UButton>
     My Button
-  </PButton>
+  </UButton>
 </template>

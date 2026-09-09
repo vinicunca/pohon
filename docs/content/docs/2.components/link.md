@@ -30,16 +30,14 @@ It is used by the [`Breadcrumb`](/docs/components/breadcrumb), [`Button`](/docs/
 
 The `Link` components renders an `<a>` tag when a `to` prop is provided, otherwise it renders a `<button>` tag. You can use the `as` prop to change fallback tag.
 
-## ::component-code
-
-props:
-to: ''
-as: 'button'
-slots:
-default: Link
-
+::component-code
 ---
-
+props:
+  to: ''
+  as: 'button'
+slots:
+  default: Link
+---
 ::
 
 ::note
@@ -50,15 +48,13 @@ You can inspect the rendered HTML by changing the `to` prop.
 
 By default, the link has default active and inactive styles, check out the [#theme](#theme) section.
 
-## ::component-code
-
-props:
-to: /docs/components/link
-slots:
-default: Link
-
+::component-code
 ---
-
+props:
+  to: /docs/components/link
+slots:
+  default: Link
+---
 ::
 
 ::note
@@ -67,19 +63,17 @@ Try changing the `to` prop to see the active and inactive states.
 
 You can override this behavior by using the `raw` prop and provide your own styles using `class`, `active-class` and `inactive-class`.
 
-## ::component-code
-
+::component-code
+---
 ignore:
-
-- raw
-  props:
+  - raw
+props:
   raw: true
   to: /docs/components/link
-  activeClass: 'font-700'
-  inactiveClass: 'color-text-muted'
-  slots:
+  activeClass: 'font-bold'
+  inactiveClass: 'text-muted'
+slots:
   default: Link
-
 ---
 
 Link
@@ -90,10 +84,12 @@ If you're using the [Tailwind CSS IntelliSense](https://marketplace.visualstudio
 
 ```json [.vscode/settings.json]
 {
-  "tailwindCSS.classAttributes": ["active-class", "inactive-class"]
+  "tailwindCSS.classAttributes": [
+    "active-class",
+    "inactive-class"
+  ]
 }
 ```
-
 ::
 
 ### Locale :badge{label="4.7+" class="align-text-top"}
@@ -103,7 +99,7 @@ The Link component automatically integrates with [`@nuxtjs/i18n`](https://i18n.n
 ```vue
 <template>
   <!-- Automatically becomes /en/about or /fr/about based on current locale -->
-  <PLink to="/about">About</PLink>
+  <ULink to="/about">About</ULink>
 </template>
 ```
 
@@ -112,24 +108,21 @@ You can still manually use `localePath()` or `localeRoute()` if needed.
 ::
 
 ::note{to="/docs/getting-started/integrations/i18n/nuxt#dynamic-locale"}
-Learn more about Internationalization in Pohon UI.
+Learn more about Internationalization in Nuxt UI.
 ::
 
 ## API
 
 ### Props
 
-## ::component-props
-
-ignore:
-
-- custom
-
+::component-props
 ---
-
+ignore:
+  - custom
+---
 ::
 
-::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes" target="\_blank"}
+::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes" target="_blank"}
 This component also supports all native `<a>` HTML attributes.
 ::
 

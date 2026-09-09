@@ -1,6 +1,6 @@
 ---
 title: ColorModeSelect
-description: "A Select to switch between system, dark and light mode."
+description: 'A Select to switch between system, dark and light mode.'
 category: color-mode
 links:
   - label: SelectMenu
@@ -31,12 +31,12 @@ Use the `app.config.ts` to customize the icon with the `ui.icons` property:
 export default defineAppConfig({
   ui: {
     icons: {
-      system: "i-ph-desktop",
-      light: "i-ph-sun",
-      dark: "i-ph-moon",
-    },
-  },
-});
+      system: 'i-ph-desktop',
+      light: 'i-ph-sun',
+      dark: 'i-ph-moon'
+    }
+  }
+})
 ```
 
 ::
@@ -46,9 +46,9 @@ export default defineAppConfig({
 Use the `vite.config.ts` to customize the icon with the `ui.icons` property:
 
 ```ts [vite.config.ts]
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import ui from "pohon-ui/vite";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import ui from '@nuxt/ui/vite'
 
 export default defineConfig({
   plugins: [
@@ -56,13 +56,13 @@ export default defineConfig({
     ui({
       ui: {
         icons: {
-          light: "i-ph-sun",
-          dark: "i-ph-moon",
-        },
-      },
-    }),
-  ],
-});
+          light: 'i-ph-sun',
+          dark: 'i-ph-moon'
+        }
+      }
+    })
+  ]
+})
 ```
 
 ::

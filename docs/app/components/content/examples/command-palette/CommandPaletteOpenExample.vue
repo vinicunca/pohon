@@ -3,12 +3,12 @@ const open = ref(false)
 
 const users = [
   {
-    label: 'praburangki',
+    label: 'Benjamin Canac',
     suffix: 'benjamincanac',
     to: 'https://github.com/benjamincanac',
     target: '_blank',
     avatar: {
-      src: 'https://github.com/praburangki.png',
+      src: 'https://github.com/benjamincanac.png',
       loading: 'lazy' as const
     }
   },
@@ -86,8 +86,8 @@ const users = [
 </script>
 
 <template>
-  <PModal v-model:open="open">
-    <PButton
+  <UModal v-model:open="open">
+    <UButton
       label="Search users..."
       color="neutral"
       variant="subtle"
@@ -95,7 +95,7 @@ const users = [
     />
 
     <template #content>
-      <PCommandPalette close :groups="[{ id: 'users', items: users }]" @update:open="open = $event" />
+      <UCommandPalette close :groups="[{ id: 'users', items: users }]" @update:open="open = $event" />
     </template>
-  </PModal>
+  </UModal>
 </template>

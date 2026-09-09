@@ -143,6 +143,17 @@ export default defineConfig({
               transform: 'translateY(-100%)',
             },
           },
+
+          'shimmer': {
+            from: { 'background-position': '100% center' },
+            to: { 'background-position': '0% center' },
+          },
+
+          'shimmer-rtl': {
+            from: { 'background-position': '0% center' },
+            to: { 'background-position': '100% center' },
+          },
+
           'swing': {
             '0%, 100%': {
               width: '50%',
@@ -202,6 +213,8 @@ export default defineConfig({
           'toast-closed': 'toast-closed 200ms ease-in-out',
           'toast-pulse-a': 'toast-pulse-a 300ms ease-out',
           'toast-pulse-b': 'toast-pulse-b 300ms ease-out',
+          'shimmer': 'shimmer var(--duration) linear infinite',
+          'shimmer-rtl': 'shimmer-rtl var(--duration) linear infinite',
         },
       },
     }),

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TableColumn, DropdownMenuItem } from 'pohon-ui'
+import type { TableColumn, DropdownMenuItem } from '@nuxt/ui'
 import { useClipboard } from '@vueuse/core'
 
 interface User {
@@ -95,12 +95,12 @@ function getDropdownActions(user: User): DropdownMenuItem[][] {
 </script>
 
 <template>
-  <PTable :data="data" :columns="columns" class="flex-1">
+  <UTable :data="data" :columns="columns" class="flex-1">
     <template #name-cell="{ row }">
       <div class="flex items-center gap-3">
-        <PAvatar :src="`https://i.pravatar.cc/120?img=${row.original.id}`" size="lg" loading="lazy" :alt="`${row.original.name} avatar`" />
+        <UAvatar :src="`https://i.pravatar.cc/120?img=${row.original.id}`" size="lg" loading="lazy" :alt="`${row.original.name} avatar`" />
         <div>
-          <p class="font-500 color-text-highlighted">
+          <p class="font-medium text-highlighted">
             {{ row.original.name }}
           </p>
           <p>
@@ -110,9 +110,9 @@ function getDropdownActions(user: User): DropdownMenuItem[][] {
       </div>
     </template>
     <template #action-cell="{ row }">
-      <PDropdownMenu :items="getDropdownActions(row.original)">
-        <PButton icon="i-lucide-ellipsis-vertical" color="neutral" variant="ghost" aria-label="Actions" />
-      </PDropdownMenu>
+      <UDropdownMenu :items="getDropdownActions(row.original)">
+        <UButton icon="i-lucide-ellipsis-vertical" color="neutral" variant="ghost" aria-label="Actions" />
+      </UDropdownMenu>
     </template>
-  </PTable>
+  </UTable>
 </template>

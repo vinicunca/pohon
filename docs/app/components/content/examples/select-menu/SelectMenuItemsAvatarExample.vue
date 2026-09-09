@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { SelectMenuItem } from 'pohon-ui'
+import type { SelectMenuItem } from '@nuxt/ui'
 
 const items = ref([
   {
     label: 'benjamincanac',
     value: 'benjamincanac',
     avatar: {
-      src: 'https://github.com/praburangki.png',
+      src: 'https://github.com/benjamincanac.png',
       alt: 'benjamincanac',
       loading: 'lazy' as const
     }
@@ -44,5 +44,5 @@ const value = ref(items.value[0])
 </script>
 
 <template>
-  <PSelectMenu v-model="value" :avatar="value?.avatar" :items="items" class="w-48" />
+  <USelectMenu v-model="value" :avatar="value?.avatar" :items="items" class="w-48" />
 </template>

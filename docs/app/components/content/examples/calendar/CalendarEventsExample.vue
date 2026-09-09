@@ -20,11 +20,11 @@ function getColorByDate(date: Date) {
 </script>
 
 <template>
-  <PCalendar v-model="modelValue">
+  <UCalendar v-model="modelValue">
     <template #day="{ day }">
-      <PChip :show="!!getColorByDate(day.toDate('UTC'))" :color="getColorByDate(day.toDate('UTC'))" size="2xs">
+      <UChip :show="!!getColorByDate(day.toDate('UTC'))" :color="getColorByDate(day.toDate('UTC'))" size="2xs">
         {{ day.day }}
-      </PChip>
+      </UChip>
     </template>
-  </PCalendar>
+  </UCalendar>
 </template>

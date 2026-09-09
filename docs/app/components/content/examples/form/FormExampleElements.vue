@@ -1,349 +1,194 @@
 <script setup lang="ts">
-import type { FormSubmitEvent } from 'pohon-ui';
-import * as z from 'zod';
+import * as z from 'zod'
+import type { FormSubmitEvent } from '@nuxt/ui'
 
 const schema = z.object({
   input: z.string({ message: 'Please enter your email' }).min(10, 'Must be at least 10 characters'),
   inputNumber: z.number({ message: 'Please enter a number' }).min(10, 'Must be at least 10'),
-  inputMenu: z.any().refine((option) => option?.value === 'option-2', {
-    message: 'Please select Option 2',
+  inputMenu: z.any().refine(option => option?.value === 'option-2', {
+    message: 'Please select Option 2'
   }),
-  inputMenuMultiple: z.any().refine((values) => !!values?.find((option: any) => option.value === 'option-2'), {
-    message: 'Option 2 must be included',
+  inputMenuMultiple: z.any().refine(values => !!values?.find((option: any) => option.value === 'option-2'), {
+    message: 'Option 2 must be included'
   }),
   textarea: z.string({ message: 'Please enter a message' }).min(10, 'Must be at least 10 characters'),
-  select: z.string({ message: 'Please select an option' }).refine((value) => value === 'option-2', {
-    message: 'Please select Option 2',
+  select: z.string({ message: 'Please select an option' }).refine(value => value === 'option-2', {
+    message: 'Please select Option 2'
   }),
-  selectMultiple: z.array(z.string(), { message: 'Please select at least one option' }).refine((values) => values.includes('option-2'), {
-    message: 'Option 2 must be included',
+  selectMultiple: z.array(z.string(), { message: 'Please select at least one option' }).refine(values => values.includes('option-2'), {
+    message: 'Option 2 must be included'
   }),
-  selectMenu: z.any().refine((option) => option?.value === 'option-2', {
-    message: 'Please select Option 2',
+  selectMenu: z.any().refine(option => option?.value === 'option-2', {
+    message: 'Please select Option 2'
   }),
-  selectMenuMultiple: z.any().refine((values) => !!values?.find((option: any) => option.value === 'option-2'), {
-    message: 'Option 2 must be included',
+  selectMenuMultiple: z.any().refine(values => !!values?.find((option: any) => option.value === 'option-2'), {
+    message: 'Option 2 must be included'
   }),
-  switch: z.boolean().refine((value) => value === true, {
-    message: 'Must be enabled',
+  switch: z.boolean().refine(value => value === true, {
+    message: 'Must be enabled'
   }),
-  checkbox: z.boolean().refine((value) => value === true, {
-    message: 'Must be checked',
+  checkbox: z.boolean().refine(value => value === true, {
+    message: 'Must be checked'
   }),
-  radioGroup: z.string({ message: 'Please select an option' }).refine((value) => value === 'option-2', {
-    message: 'Please select Option 2',
+  radioGroup: z.string({ message: 'Please select an option' }).refine(value => value === 'option-2', {
+    message: 'Please select Option 2'
   }),
-  checkboxGroup: z.any().refine((values) => !!values?.find((option: any) => option === 'option-2'), {
-    message: 'Option 2 must be included',
+  checkboxGroup: z.any().refine(values => !!values?.find((option: any) => option === 'option-2'), {
+    message: 'Option 2 must be included'
   }),
-  listbox: z.any().refine((option) => option?.value === 'option-2', {
-    message: 'Please select Option 2',
+  listbox: z.any().refine(option => option?.value === 'option-2', {
+    message: 'Please select Option 2'
   }),
-  listboxMultiple: z.any().refine((values) => !!values?.find((option: any) => option.value === 'option-2'), {
-    message: 'Option 2 must be included',
+  listboxMultiple: z.any().refine(values => !!values?.find((option: any) => option.value === 'option-2'), {
+    message: 'Option 2 must be included'
   }),
   inputTags: z.array(z.string(), { message: 'Please add at least one tag' }).min(1, 'Please add at least one tag'),
-  inputDate: z.any().refine((value) => !!value, {
-    message: 'Please select a date',
+  inputDate: z.any().refine(value => !!value, {
+    message: 'Please select a date'
   }),
-  inputTime: z.any().refine((value) => !!value, {
-    message: 'Please select a time',
+  inputTime: z.any().refine(value => !!value, {
+    message: 'Please select a time'
   }),
   slider: z.number().min(1, 'Must be greater than 0').max(20, 'Must be less than 20'),
   rating: z.number().min(1, 'Please select a rating'),
   pin: z.string().regex(/^\d$/, 'Must be a digit').array().length(5, 'All 5 digits are required'),
-  file: z.file({ message: 'Please upload a file' }).min(1, 'File is required').max(1024 * 1024, 'File must be less than 1MB').mime('image/png', 'Only PNG images are allowed'),
-});
+  file: z.file({ message: 'Please upload a file' }).min(1, 'File is required').max(1024 * 1024, 'File must be less than 1MB').mime('image/png', 'Only PNG images are allowed')
+})
 
-type Schema = z.input<typeof schema>;
+type Schema = z.input<typeof schema>
 
 const state = reactive<Partial<Schema>>({
   switch: false,
   checkbox: false,
   slider: 0,
   rating: 0,
-  pin: [],
-});
+  pin: []
+})
 
-const form = useTemplateRef('form');
+const form = useTemplateRef('form')
 
 const items = [
   { label: 'Option 1', value: 'option-1' },
   { label: 'Option 2', value: 'option-2' },
-  { label: 'Option 3', value: 'option-3' },
-];
+  { label: 'Option 3', value: 'option-3' }
+]
 
-const toast = useToast();
+const toast = useToast()
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  toast.add({ title: 'Success', description: 'The form has been submitted.', color: 'success' });
-  console.log(event.data);
+  toast.add({ title: 'Success', description: 'The form has been submitted.', color: 'success' })
+  console.log(event.data)
 }
 </script>
 
 <template>
-  <PForm
-    ref="form"
-    :state="state"
-    :schema="schema"
-    class="w-full"
-    @submit="onSubmit"
-  >
-    <div class="gap-4 grid md:grid-cols-3 sm:grid-cols-2">
-      <PFormField
-        label="Input"
-        name="input"
-      >
-        <PInput
-          v-model="state.input"
-          placeholder="you@example.com"
-          class="w-full"
-        />
-      </PFormField>
+  <UForm ref="form" :state="state" :schema="schema" class="w-full" @submit="onSubmit">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <UFormField label="Input" name="input">
+        <UInput v-model="state.input" placeholder="you@example.com" class="w-full" />
+      </UFormField>
 
-      <PFormField
-        name="inputNumber"
-        label="InputNumber"
-      >
-        <PInputNumber
-          v-model="state.inputNumber"
-          placeholder="Enter a number"
-          class="w-full"
-        />
-      </PFormField>
+      <UFormField name="inputNumber" label="InputNumber">
+        <UInputNumber v-model="state.inputNumber" placeholder="Enter a number" class="w-full" />
+      </UFormField>
 
-      <PFormField
-        name="pin"
-        label="PinInput"
-        :error-pattern="/(pin)\..*/"
-      >
-        <PPinInput
-          v-model="state.pin"
-          placeholder="○"
-        />
-      </PFormField>
+      <UFormField name="pin" label="PinInput" :error-pattern="/(pin)\..*/">
+        <UPinInput v-model="state.pin" placeholder="○" />
+      </UFormField>
 
-      <PFormField
-        name="inputDate"
-        label="InputDate"
-      >
-        <PInputDate
-          v-model="state.inputDate"
-          class="w-full"
-        />
-      </PFormField>
+      <UFormField name="inputDate" label="InputDate">
+        <UInputDate v-model="state.inputDate" class="w-full" />
+      </UFormField>
 
-      <PFormField
-        name="inputTime"
-        label="InputTime"
-      >
-        <PInputTime
-          v-model="state.inputTime"
-          class="w-full"
-        />
-      </PFormField>
+      <UFormField name="inputTime" label="InputTime">
+        <UInputTime v-model="state.inputTime" class="w-full" />
+      </UFormField>
 
-      <PFormField
-        name="inputTags"
-        label="InputTags"
-      >
-        <PInputTags
-          v-model="state.inputTags"
-          placeholder="Add a tag..."
-          class="w-full"
-        />
-      </PFormField>
+      <UFormField name="inputTags" label="InputTags">
+        <UInputTags v-model="state.inputTags" placeholder="Add a tag..." class="w-full" />
+      </UFormField>
 
-      <PFormField
-        name="inputMenu"
-        label="InputMenu"
-      >
-        <PInputMenu
-          v-model="state.inputMenu"
-          :items="items"
-          placeholder="Search an option..."
-          class="w-full"
-        />
-      </PFormField>
+      <UFormField name="inputMenu" label="InputMenu">
+        <UInputMenu v-model="state.inputMenu" :items="items" placeholder="Search an option..." class="w-full" />
+      </UFormField>
 
-      <PFormField
-        name="inputMenuMultiple"
-        label="InputMenu (Multiple)"
-      >
-        <PInputMenu
-          v-model="state.inputMenuMultiple"
-          multiple
-          :items="items"
-          placeholder="Search options..."
-          class="w-full"
-        />
-      </PFormField>
+      <UFormField name="inputMenuMultiple" label="InputMenu (Multiple)">
+        <UInputMenu v-model="state.inputMenuMultiple" multiple :items="items" placeholder="Search options..." class="w-full" />
+      </UFormField>
 
-      <PFormField
-        label="Textarea"
-        name="textarea"
-      >
-        <PTextarea
-          v-model="state.textarea"
-          placeholder="Write your message..."
-          class="w-full"
-          :rows="1"
-        />
-      </PFormField>
+      <UFormField label="Textarea" name="textarea">
+        <UTextarea v-model="state.textarea" placeholder="Write your message..." class="w-full" :rows="1" />
+      </UFormField>
 
-      <PFormField
-        name="select"
-        label="Select"
-      >
-        <PSelect
-          v-model="state.select"
-          :items="items"
-          placeholder="Choose an option"
-          class="w-full"
-        />
-      </PFormField>
+      <UFormField name="select" label="Select">
+        <USelect v-model="state.select" :items="items" placeholder="Choose an option" class="w-full" />
+      </UFormField>
 
-      <PFormField
-        name="selectMultiple"
-        label="Select (Multiple)"
-      >
-        <PSelect
-          v-model="state.selectMultiple"
-          multiple
-          :items="items"
-          placeholder="Choose options"
-          class="w-full"
-        />
-      </PFormField>
+      <UFormField name="selectMultiple" label="Select (Multiple)">
+        <USelect v-model="state.selectMultiple" multiple :items="items" placeholder="Choose options" class="w-full" />
+      </UFormField>
 
       <div class="hidden md:block" />
 
-      <PFormField
-        name="selectMenu"
-        label="SelectMenu"
-      >
-        <PSelectMenu
-          v-model="state.selectMenu"
-          :items="items"
-          placeholder="Search an option..."
-          class="w-full"
-        />
-      </PFormField>
+      <UFormField name="selectMenu" label="SelectMenu">
+        <USelectMenu v-model="state.selectMenu" :items="items" placeholder="Search an option..." class="w-full" />
+      </UFormField>
 
-      <PFormField
-        name="selectMenuMultiple"
-        label="SelectMenu (Multiple)"
-      >
-        <PSelectMenu
-          v-model="state.selectMenuMultiple"
-          multiple
-          :items="items"
-          placeholder="Search options..."
-          class="w-full"
-        />
-      </PFormField>
+      <UFormField name="selectMenuMultiple" label="SelectMenu (Multiple)">
+        <USelectMenu v-model="state.selectMenuMultiple" multiple :items="items" placeholder="Search options..." class="w-full" />
+      </UFormField>
 
       <div class="hidden md:block" />
 
-      <PFormField
-        name="listbox"
-        label="Listbox"
-      >
-        <PListbox
-          v-model="state.listbox"
-          :items="items"
-          class="w-full"
-        />
-      </PFormField>
+      <UFormField name="listbox" label="Listbox">
+        <UListbox v-model="state.listbox" :items="items" class="w-full" />
+      </UFormField>
 
-      <PFormField
-        name="listboxMultiple"
-        label="Listbox (Multiple)"
-      >
-        <PListbox
-          v-model="state.listboxMultiple"
-          :items="items"
-          multiple
-          class="w-full"
-        />
-      </PFormField>
+      <UFormField name="listboxMultiple" label="Listbox (Multiple)">
+        <UListbox v-model="state.listboxMultiple" :items="items" multiple class="w-full" />
+      </UFormField>
 
-      <PFormField
-        name="file"
-        label="FileUpload"
-      >
-        <PFileUpload
+      <UFormField name="file" label="FileUpload">
+        <UFileUpload
           v-model="state.file"
           label="Drop your image here"
           description="PNG (max. 1MB)"
           class="w-full"
         />
-      </PFormField>
+      </UFormField>
 
-      <PFormField
-        name="checkbox"
-        label="Checkbox"
-      >
-        <PCheckbox
-          v-model="state.checkbox"
-          label="Check me"
-        />
-      </PFormField>
+      <UFormField name="checkbox" label="Checkbox">
+        <UCheckbox v-model="state.checkbox" label="Check me" />
+      </UFormField>
 
-      <PFormField
-        name="switch"
-        label="Switch"
-      >
-        <PSwitch
-          v-model="state.switch"
-          label="Switch me"
-        />
-      </PFormField>
+      <UFormField name="switch" label="Switch">
+        <USwitch v-model="state.switch" label="Switch me" />
+      </UFormField>
 
-      <PFormField
-        name="slider"
-        label="Slider"
-      >
-        <PSlider
-          v-model="state.slider"
-          class="mt-2.5"
-        />
-      </PFormField>
+      <UFormField name="slider" label="Slider">
+        <USlider v-model="state.slider" class="mt-2.5" />
+      </UFormField>
 
-      <PFormField
-        name="rating"
-        label="InputRating"
-      >
-        <PInputRating v-model="state.rating" />
-      </PFormField>
+      <UFormField name="rating" label="InputRating">
+        <UInputRating v-model="state.rating" />
+      </UFormField>
 
-      <PFormField name="checkboxGroup">
-        <PCheckboxGroup
-          v-model="state.checkboxGroup"
-          legend="CheckboxGroup"
-          :items="items"
-        />
-      </PFormField>
+      <UFormField name="checkboxGroup">
+        <UCheckboxGroup v-model="state.checkboxGroup" legend="CheckboxGroup" :items="items" />
+      </UFormField>
 
-      <PFormField name="radioGroup">
-        <PRadioGroup
-          v-model="state.radioGroup"
-          legend="RadioGroup"
-          :items="items"
-        />
-      </PFormField>
+      <UFormField name="radioGroup">
+        <URadioGroup v-model="state.radioGroup" legend="RadioGroup" :items="items" />
+      </UFormField>
     </div>
 
-    <div class="mt-8 flex gap-2">
-      <PButton type="submit">
+    <div class="flex gap-2 mt-8">
+      <UButton type="submit">
         Submit
-      </PButton>
+      </UButton>
 
-      <PButton
-        variant="outline"
-        @click="form?.clear()"
-      >
+      <UButton variant="outline" @click="form?.clear()">
         Clear
-      </PButton>
+      </UButton>
     </div>
-  </PForm>
+  </UForm>
 </template>

@@ -11,7 +11,6 @@ links:
 ## Usage
 
 The EditorToolbar component displays a toolbar of formatting buttons that automatically sync their active state with the editor content. It supports three layout modes using the `@tiptap/vue-3/menus` package:
-
 - `fixed`{lang="ts-type"} (always visible)
 - `bubble`{lang="ts-type"} (appears on text selection)
 - `floating`{lang="ts-type"} (appears on empty lines)
@@ -20,15 +19,13 @@ The EditorToolbar component displays a toolbar of formatting buttons that automa
 It must be used inside an [Editor](/docs/components/editor) component's default slot to have access to the editor instance.
 ::
 
-## ::component-example
-
+::component-example
+---
 elevated: true
 collapse: true
 name: 'editor-toolbar-example'
 class: 'p-8'
-
 ---
-
 ::
 
 ::callout{icon="i-custom-tiptap"}
@@ -58,15 +55,13 @@ Use the `items` prop as an array of objects with the following properties:
 
 You can pass any property from the [Button](/docs/components/button#props) component such as `color`, `variant`, `size`, etc.
 
-## ::component-example
-
+::component-example
+---
 elevated: true
 collapse: true
 name: 'editor-toolbar-items-example'
 class: 'p-8'
-
 ---
-
 ::
 
 ::note
@@ -81,24 +76,21 @@ Each item can take an `items` array of objects with the same properties as the `
 
 Use the `layout` prop to change how the toolbar is displayed. Defaults to `fixed`{lang="ts-type"}.
 
-## ::component-example
-
+::component-example
+---
 elevated: true
 collapse: true
 name: 'editor-toolbar-layout-example'
 class: 'p-8'
 options:
-
-- name: layout
-  label: Layout
-  default: bubble
-  items:
-  - fixed
-  - bubble
-  - floating
-
+  - name: layout
+    label: Layout
+    default: bubble
+    items:
+      - fixed
+      - bubble
+      - floating
 ---
-
 ::
 
 ### Options
@@ -107,8 +99,8 @@ When using `bubble`{lang="ts-type"} or `floating`{lang="ts-type"} layouts, use t
 
 ```vue
 <template>
-  <PEditor v-slot="{ editor }">
-    <PEditorToolbar
+  <UEditor v-slot="{ editor }">
+    <UEditorToolbar
       :editor="editor"
       :items="items"
       layout="bubble"
@@ -116,10 +108,10 @@ When using `bubble`{lang="ts-type"} or `floating`{lang="ts-type"} layouts, use t
         placement: 'top',
         offset: 8,
         flip: { padding: 8 },
-        shift: { padding: 8 },
+        shift: { padding: 8 }
       }"
     />
-  </PEditor>
+  </UEditor>
 </template>
 ```
 
@@ -129,21 +121,19 @@ When using `bubble`{lang="ts-type"} or `floating`{lang="ts-type"} layouts, use t
 
 ```vue
 <template>
-  <PEditor v-slot="{ editor }">
-    <PEditorToolbar
+  <UEditor v-slot="{ editor }">
+    <UEditorToolbar
       :editor="editor"
       :items="items"
       layout="bubble"
-      :should-show="
-        ({ view, state }) => {
-          const { selection } = state;
-          const { from, to } = selection;
-          const text = state.doc.textBetween(from, to);
-          return view.hasFocus() && !selection.empty && text.length > 10;
-        }
-      "
+      :should-show="({ view, state }) => {
+        const { selection } = state
+        const { from, to } = selection
+        const text = state.doc.textBetween(from, to)
+        return view.hasFocus() && !selection.empty && text.length > 10
+      }"
     />
-  </PEditor>
+  </UEditor>
 </template>
 ```
 
@@ -153,15 +143,13 @@ When using `bubble`{lang="ts-type"} or `floating`{lang="ts-type"} layouts, use t
 
 Use the `should-show` prop to create context-specific toolbars that appear only for certain node types. This example shows a `bubble` toolbar with download and delete actions that only appears when an image is selected.
 
-## ::component-example
-
+::component-example
+---
 elevated: true
 collapse: true
 name: 'editor-toolbar-image-example'
 class: 'p-8'
-
 ---
-
 ::
 
 ### With link popover
@@ -170,27 +158,23 @@ This example demonstrates how to create a custom link popover using the `slot` p
 
 1. Create a Vue component that wraps a [Popover](/docs/components/popover) with link editing functionality:
 
-## ::component-example
-
+::component-example
+---
 preview: false
 collapse: true
 name: 'editor-link-popover'
-
 ---
-
 ::
 
 2. Use the custom component in the toolbar with a named slot:
 
-## ::component-example
-
+::component-example
+---
 elevated: true
 collapse: true
 name: 'editor-toolbar-custom-slot-example'
 class: 'p-8'
-
 ---
-
 ::
 
 ## API

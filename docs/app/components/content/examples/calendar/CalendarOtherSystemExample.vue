@@ -5,5 +5,5 @@ const hebrewDate = shallowRef(new CalendarDate(new HebrewCalendar(), 5781, 1, 1)
 </script>
 
 <template>
-  <PCalendar v-model="hebrewDate" />
+  <UCalendar v-model="hebrewDate" />
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AvatarProps } from 'pohon-ui'
+import type { AvatarProps } from '@nuxt/ui'
 
 const props = defineProps<{
   avatar: AvatarProps
@@ -17,5 +17,5 @@ function showToast() {
 </script>
 
 <template>
-  <PButton label="Invite user" color="neutral" variant="outline" @click="showToast" />
+  <UButton label="Invite user" color="neutral" variant="outline" @click="showToast" />
 </template>

@@ -1,12 +1,12 @@
 /**
- * Normalizes component names by removing Pohon UI prefixes
+ * Normalizes component names by removing Nuxt UI prefixes
  *
  * @param componentName - The component name to normalize
  * @returns The normalized component name without U/u- prefixes
  *
  * @example
- * normalizeComponentName('PButton') // 'Button'
- * normalizeComponentName('PUser') // 'User'
+ * normalizeComponentName('UButton') // 'Button'
+ * normalizeComponentName('UUser') // 'User'
  * normalizeComponentName('u-button') // 'button'
  * normalizeComponentName('u-user') // 'user'
  * normalizeComponentName('Button') // 'Button'

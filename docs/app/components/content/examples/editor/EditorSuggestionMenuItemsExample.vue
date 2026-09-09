@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorSuggestionMenuItem } from 'pohon-ui'
+import type { EditorSuggestionMenuItem } from '@nuxt/ui'
 
 const value = ref(`Type / to see a list of commands.
 
@@ -57,13 +57,13 @@ const items: EditorSuggestionMenuItem[][] = [[{
 </script>
 
 <template>
-  <PEditor
+  <UEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     placeholder="Type / for commands..."
     class="w-full min-h-19"
   >
-    <PEditorSuggestionMenu :editor="editor" :items="items" />
-  </PEditor>
+    <UEditorSuggestionMenu :editor="editor" :items="items" />
+  </UEditor>
 </template>

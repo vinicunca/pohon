@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorMentionMenuItem } from 'pohon-ui'
+import type { EditorMentionMenuItem } from '@nuxt/ui'
 
 const value = ref(`# Mention Menu
 
@@ -36,13 +36,13 @@ const appendToBody = import.meta.client ? () => document.body : undefined
 </script>
 
 <template>
-  <PEditor
+  <UEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     placeholder="Type @ to mention someone..."
     class="w-full min-h-21"
   >
-    <PEditorMentionMenu :editor="editor" :items="items" :append-to="appendToBody" />
-  </PEditor>
+    <UEditorMentionMenu :editor="editor" :items="items" :append-to="appendToBody" />
+  </UEditor>
 </template>

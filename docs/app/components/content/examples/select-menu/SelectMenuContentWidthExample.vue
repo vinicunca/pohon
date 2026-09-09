@@ -20,7 +20,7 @@ function onOpen() {
 </script>
 
 <template>
-  <PSelectMenu
+  <USelectMenu
     :items="users"
     icon="i-lucide-user"
     placeholder="Select user"
@@ -31,9 +31,9 @@ function onOpen() {
     <template #item-label="{ item }">
       {{ item.label }}
 
-      <span class="color-text-muted">
+      <span class="text-muted">
         {{ item.email }}
       </span>
     </template>
-  </PSelectMenu>
+  </USelectMenu>
 </template>

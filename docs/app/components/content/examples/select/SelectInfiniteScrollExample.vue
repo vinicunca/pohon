@@ -52,7 +52,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <PSelect
+  <USelect
     ref="select"
     placeholder="Select user"
     :items="users"

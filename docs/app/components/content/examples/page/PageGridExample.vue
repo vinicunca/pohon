@@ -2,19 +2,19 @@
 const cards = ref([
   {
     title: 'Icons',
-    description: 'Pohon UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.',
+    description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.',
     icon: 'i-lucide-smile',
     to: '/docs/getting-started/integrations/icons'
   },
   {
     title: 'Fonts',
-    description: 'Pohon UI integrates with Nuxt Fonts to provide plug-and-play font optimization.',
+    description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.',
     icon: 'i-lucide-a-large-small',
     to: '/docs/getting-started/integrations/fonts'
   },
   {
     title: 'Color Mode',
-    description: 'Pohon UI integrates with Nuxt Color Mode to switch between light and dark.',
+    description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.',
     icon: 'i-lucide-sun-moon',
     to: '/docs/getting-started/integrations/color-mode'
   }
@@ -22,11 +22,11 @@ const cards = ref([
 </script>
 
 <template>
-  <PPageGrid>
-    <PPageCard
+  <UPageGrid>
+    <UPageCard
       v-for="(card, index) in cards"
       :key="index"
       v-bind="card"
     />
-  </PPageGrid>
+  </UPageGrid>
 </template>

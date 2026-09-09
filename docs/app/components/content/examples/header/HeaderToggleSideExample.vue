@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from 'pohon-ui'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const route = useRoute()
 
@@ -27,18 +27,18 @@ const items = computed<NavigationMenuItem[]>(() => [{
 </script>
 
 <template>
-  <PHeader toggle-side="left">
+  <UHeader toggle-side="left">
     <template #title>
       <Logo class="h-6 w-auto" />
     </template>
 
-    <PNavigationMenu :items="items" />
+    <UNavigationMenu :items="items" />
 
     <template #right>
-      <PColorModeButton />
+      <UColorModeButton />
 
-      <PTooltip text="Open on GitHub" :kbds="['meta', 'G']">
-        <PButton
+      <UTooltip text="Open on GitHub" :kbds="['meta', 'G']">
+        <UButton
           color="neutral"
           variant="ghost"
           to="https://github.com/nuxt/ui"
@@ -46,11 +46,11 @@ const items = computed<NavigationMenuItem[]>(() => [{
           icon="i-simple-icons-github"
           aria-label="GitHub"
         />
-      </PTooltip>
+      </UTooltip>
     </template>
 
     <template #body>
-      <PNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
     </template>
-  </PHeader>
+  </UHeader>
 </template>

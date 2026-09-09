@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Joi from 'joi'
-import type { FormSubmitEvent } from 'pohon-ui'
+import type { FormSubmitEvent } from '@nuxt/ui'
 
 const schema = Joi.object({
   email: Joi.string().required(),
@@ -22,17 +22,17 @@ async function onSubmit(event: FormSubmitEvent<typeof state>) {
 </script>
 
 <template>
-  <PForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
-    <PFormField label="Email" name="email">
-      <PInput v-model="state.email" />
-    </PFormField>
+  <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
+    <UFormField label="Email" name="email">
+      <UInput v-model="state.email" />
+    </UFormField>
 
-    <PFormField label="Password" name="password">
-      <PInput v-model="state.password" type="password" />
-    </PFormField>
+    <UFormField label="Password" name="password">
+      <UInput v-model="state.password" type="password" />
+    </UFormField>
 
-    <PButton type="submit">
+    <UButton type="submit">
       Submit
-    </PButton>
-  </PForm>
+    </UButton>
+  </UForm>
 </template>

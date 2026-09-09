@@ -19,5 +19,5 @@ function showToast() {
 </script>
 
 <template>
-  <PButton label="Show toast" @click="showToast" />
+  <UButton label="Show toast" @click="showToast" />
 </template>

@@ -1,6 +1,6 @@
 ---
 title: DashboardSidebarToggle
-description: "A Button to toggle the sidebar on mobile."
+description: 'A Button to toggle the sidebar on mobile.'
 category: dashboard
 links:
   - label: Button
@@ -17,33 +17,27 @@ The DashboardSidebarToggle component is used by the [DashboardNavbar](/docs/comp
 
 It is automatically displayed on mobile to toggle the sidebar, **you don't have to add it manually**.
 
-## ::component-code
-
-hide:
-
-- class
-  props:
-  class: 'lg:flex'
-
+::component-code
 ---
-
+hide:
+  - class
+props:
+  class: 'lg:flex'
+---
 ::
 
 It extends the [Button](/docs/components/button) component, so you can pass any property such as `color`, `variant`, `size`, etc.
 
-## ::component-code
-
+::component-code
+---
 hide:
-
-- class
-  ignore:
-- variant
-  props:
+  - class
+ignore:
+  - variant
+props:
   variant: 'subtle'
   class: 'lg:flex'
-
 ---
-
 ::
 
 ::note
@@ -60,35 +54,35 @@ Even though this component is automatically displayed on mobile, you can use the
 
 ```vue [layouts/dashboard.vue]{4-6}
 <template>
-  <PDashboardGroup>
-    <PDashboardSidebar>
+  <UDashboardGroup>
+    <UDashboardSidebar>
       <template #toggle>
-        <PDashboardSidebarToggle variant="subtle" />
+        <UDashboardSidebarToggle variant="subtle" />
       </template>
-    </PDashboardSidebar>
+    </UDashboardSidebar>
 
     <slot />
-  </PDashboardGroup>
+  </UDashboardGroup>
 </template>
 ```
 
 ```vue [pages/index.vue]{11-13}
 <script setup lang="ts">
 definePageMeta({
-  layout: "dashboard",
-});
+  layout: 'dashboard'
+})
 </script>
 
 <template>
-  <PDashboardPanel>
+  <UDashboardPanel>
     <template #header>
-      <PDashboardNavbar title="Home">
+      <UDashboardNavbar title="Home">
         <template #toggle>
-          <PDashboardSidebarToggle variant="subtle" />
+          <UDashboardSidebarToggle variant="subtle" />
         </template>
-      </PDashboardNavbar>
+      </UDashboardNavbar>
     </template>
-  </PDashboardPanel>
+  </UDashboardPanel>
 </template>
 ```
 
@@ -104,7 +98,7 @@ When using the `toggle-side` prop of the `DashboardSidebar` and `DashboardNavbar
 
 :component-props
 
-::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="\_blank"}
+::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 This component also supports all native `<button>` HTML attributes.
 ::
 

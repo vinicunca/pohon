@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TabsItem } from 'pohon-ui'
+import type { TabsItem } from '@nuxt/ui'
 
 const items: TabsItem[] = [{
   label: 'All',
@@ -11,17 +11,17 @@ const items: TabsItem[] = [{
 </script>
 
 <template>
-  <PDashboardNavbar title="Inbox">
+  <UDashboardNavbar title="Inbox">
     <template #leading>
-      <PDashboardSidebarCollapse />
+      <UDashboardSidebarCollapse />
     </template>
 
     <template #trailing>
-      <PBadge label="4" variant="subtle" />
+      <UBadge label="4" variant="subtle" />
     </template>
 
     <template #right>
-      <PTabs
+      <UTabs
         :items="items"
         default-value="all"
         size="sm"
@@ -29,5 +29,5 @@ const items: TabsItem[] = [{
         :content="false"
       />
     </template>
-  </PDashboardNavbar>
+  </UDashboardNavbar>
 </template>

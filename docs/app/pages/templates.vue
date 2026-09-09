@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const appConfig = useAppConfig()
+
 const { data: page } = await useAsyncData('templates', () => queryCollection('templates').first())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
@@ -24,7 +26,7 @@ if (import.meta.server) {
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <main v-if="page">
-    <PPageHero :ui="{ container: 'relative py-10 sm:py-16 lg:py-24' }">
+    <UPageHero :ui="{ container: 'relative py-10 sm:py-16 lg:py-24' }">
       <template #title>
         <MDC :value="page.hero.title" unwrap="p" cache-key="pro-templates-hero-title" />
       </template>
@@ -43,77 +45,77 @@ if (import.meta.server) {
 
       <LazyStarsBg />
 
-      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
-    </PPageHero>
+      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+    </UPageHero>
 
-    <PPageSection
+    <UPageSection
       v-for="(template, index) in page.items"
       :key="index"
       :title="template.title"
       :features="template.features"
       orientation="horizontal"
-      class="lg:border-t border-border"
+      class="lg:border-t border-default"
       :class="`${template.framework}-only`"
       :ui="{
         title: 'lg:text-4xl',
-        wrapper: 'lg:py-16 lg:min-h-[481px] flex flex-col justify-center lg:border-r border-border order-last lg:pr-16',
+        wrapper: 'lg:py-16 lg:min-h-[481px] flex flex-col justify-center lg:border-r border-default order-last lg:pr-16',
         container: 'lg:py-0',
         links: 'gap-x-3'
       }"
     >
       <template #links>
-        <PButton v-for="link of template.links" :key="link.label" color="neutral" variant="outline" v-bind="link" />
+        <UButton v-for="link of template.links" :key="link.label" color="neutral" variant="outline" v-bind="link" />
 
-        <PDropdownMenu
+        <UDropdownMenu
           :items="template.open_links"
-          :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width) min-w-auto' }"
+          :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-auto' }"
           :modal="false"
           class="group"
         >
-          <PButton
+          <UButton
             color="neutral"
             variant="outline"
             icon="i-lucide-square-code"
-            trailing-icon="i-lucide-chevron-down"
+            :trailing-icon="appConfig.ui.icons.chevronDown"
             label="Open on"
             :ui="{
-              trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-280'
+              trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200'
             }"
           />
-        </PDropdownMenu>
+        </UDropdownMenu>
 
-        <PDropdownMenu
+        <UDropdownMenu
           :items="[
             ...template.deploy_links,
             { label: 'Other', icon: 'i-lucide-globe', to: 'https://nuxt.com/deploy', target: '_blank' }
           ]"
-          :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width) min-w-auto' }"
+          :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-auto' }"
           :modal="false"
           class="group"
         >
-          <PButton
+          <UButton
             color="neutral"
             variant="outline"
             icon="i-lucide-cloud"
-            trailing-icon="i-lucide-chevron-down"
+            :trailing-icon="appConfig.ui.icons.chevronDown"
             label="Deploy to"
             :ui="{
-              trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-280'
+              trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200'
             }"
           />
-        </PDropdownMenu>
+        </UDropdownMenu>
       </template>
 
       <template #description>
         <MDC :value="template.description" unwrap="p" :cache-key="`pro-templates-${index}-description`" />
       </template>
 
-      <div class="lg:border-x border-border h-full flex items-center lg:bg-muted/20">
+      <div class="lg:border-x border-default h-full flex items-center lg:bg-muted/20">
         <Motion class="flex-1" :initial="{ opacity: 0, transform: 'translateY(10px)' }" :while-in-view="{ opacity: 1, transform: 'translateY(0px)' }" :in-view-options="{ once: true }" :transition="{ duration: 0.5, delay: 0.2 }">
-          <PColorModeImage
+          <UColorModeImage
             :light="`/assets/templates/${template.framework}/${template.title.toLowerCase()}-light.png`"
             :dark="`/assets/templates/${template.framework}/${template.title.toLowerCase()}-dark.png`"
-            class="w-full h-auto border lg:border-y lg:border-x-0 border-border rounded-sm lg:rounded-none"
+            class="w-full h-auto border lg:border-y lg:border-x-0 border-default rounded-sm lg:rounded-none"
             :alt="`Template ${template.title} screenshot`"
             width="654"
             height="368"
@@ -121,6 +123,6 @@ if (import.meta.server) {
           />
         </Motion>
       </div>
-    </PPageSection>
+    </UPageSection>
   </main>
 </template>

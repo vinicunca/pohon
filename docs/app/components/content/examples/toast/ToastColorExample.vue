@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ToastProps } from 'pohon-ui'
+import type { ToastProps } from '@nuxt/ui'
 
 const props = defineProps<{
   color: ToastProps['color']
@@ -18,5 +18,5 @@ function showToast() {
 </script>
 
 <template>
-  <PButton label="Show toast" color="neutral" variant="outline" @click="showToast" />
+  <UButton label="Show toast" color="neutral" variant="outline" @click="showToast" />
 </template>

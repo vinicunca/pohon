@@ -1,6 +1,6 @@
 ---
 title: PageBody
-description: "The main content of your page."
+description: 'The main content of your page.'
 category: page
 links:
   - label: GitHub
@@ -16,11 +16,11 @@ Use it inside the default slot of the [Page](/docs/components/page) component, a
 
 ```vue {5}
 <template>
-  <PPage>
-    <PPageHeader />
+  <UPage>
+    <UPageHeader />
 
-    <PPageBody />
-  </PPage>
+    <UPageBody />
+  </UPage>
 </template>
 ```
 
@@ -34,39 +34,39 @@ While these examples use [Nuxt Content](https://content.nuxt.com), the component
 
 Use the PageBody component in a page to display the content of the page:
 
-```vue [pages/[...slug].vue]{21-27}
+```vue [pages/\[...slug\\].vue]{21-27}
 <script setup lang="ts">
-const route = useRoute();
+const route = useRoute()
 
 definePageMeta({
-  layout: "docs",
-});
+  layout: 'docs'
+})
 
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection("docs").path(route.path).first();
-});
+  return queryCollection('docs').path(route.path).first()
+})
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
-  return queryCollectionItemSurroundings("content", route.path);
-});
+  return queryCollectionItemSurroundings('content', route.path)
+})
 </script>
 
 <template>
-  <PPage>
-    <PPageHeader :title="page.title" :description="page.description" />
+  <UPage>
+    <UPageHeader :title="page.title" :description="page.description" />
 
-    <PPageBody>
+    <UPageBody>
       <ContentRenderer :value="page" />
 
-      <PSeparator />
+      <USeparator />
 
-      <PContentSurround :surround="surround" />
-    </PPageBody>
+      <UContentSurround :surround="surround" />
+    </UPageBody>
 
     <template #right>
-      <PContentToc :links="page.body.toc.links" />
+      <UContentToc :links="page.body.toc.links" />
     </template>
-  </PPage>
+  </UPage>
 </template>
 ```
 

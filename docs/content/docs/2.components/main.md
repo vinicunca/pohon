@@ -1,5 +1,5 @@
 ---
-description: "A main element that fills the available viewport height."
+description: 'A main element that fills the available viewport height.'
 category: layout
 links:
   - label: GitHub
@@ -23,17 +23,17 @@ Use the Main component in your `app.vue` or in a layout:
 
 ```vue [app.vue]{5-9}
 <template>
-  <PApp>
-    <PHeader />
+  <UApp>
+    <UHeader />
 
-    <PMain>
+    <UMain>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
-    </PMain>
+    </UMain>
 
-    <PFooter />
-  </PApp>
+    <UFooter />
+  </UApp>
 </template>
 ```
 

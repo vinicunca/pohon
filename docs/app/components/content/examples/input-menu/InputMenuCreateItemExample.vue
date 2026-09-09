@@ -10,7 +10,7 @@ function onCreate(item: string) {
 </script>
 
 <template>
-  <PInputMenu
+  <UInputMenu
     v-model="value"
     create-item
     :items="items"

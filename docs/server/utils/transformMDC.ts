@@ -127,7 +127,7 @@ function getComponentMeta(componentName: string) {
   const pascalCaseName = componentName.charAt(0).toUpperCase() + componentName.slice(1)
 
   const strategies = [
-    `P${pascalCaseName}`,
+    `U${pascalCaseName}`,
     `Prose${pascalCaseName}`,
     pascalCaseName
   ]
@@ -478,7 +478,7 @@ const generateComponentCode = ({
       .filter(t => t && t !== 'undefined')
       .map(removeBrackets)
     if (types.length) {
-      typeImports.push(`import type { ${types.join(', ')} } from 'pohon-ui'`)
+      typeImports.push(`import type { ${types.join(', ')} } from '@nuxt/ui'`)
     }
   }
 

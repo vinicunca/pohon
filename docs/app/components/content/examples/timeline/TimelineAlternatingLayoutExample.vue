@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TimelineItem } from 'pohon-ui'
+import type { TimelineItem } from '@nuxt/ui'
 
 const items: TimelineItem[] = [{
   date: 'Mar 15, 2025',
@@ -25,7 +25,7 @@ const items: TimelineItem[] = [{
 </script>
 
 <template>
-  <PTimeline
+  <UTimeline
     :items="items"
     :default-value="2"
     :ui="{ item: 'even:flex-row-reverse even:-translate-x-[calc(100%-2rem)] rtl:even:translate-x-[calc(100%-2rem)] even:text-end' }"

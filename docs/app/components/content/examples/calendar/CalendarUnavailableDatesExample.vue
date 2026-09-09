@@ -13,5 +13,5 @@ const isDateUnavailable = (date: DateValue) => {
 </script>
 
 <template>
-  <PCalendar v-model="modelValue" :is-date-unavailable="isDateUnavailable" range />
+  <UCalendar v-model="modelValue" :is-date-unavailable="isDateUnavailable" range />
 </template>

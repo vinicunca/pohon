@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TimelineItem } from 'pohon-ui'
+import type { TimelineItem } from '@nuxt/ui'
 
 const items = [{
   date: 'Mar 15, 2025',
@@ -26,7 +26,7 @@ const items = [{
       src: 'https://github.com/J-Michalek.png',
       loading: 'lazy' as const
     }, {
-      src: 'https://github.com/praburangki.png',
+      src: 'https://github.com/benjamincanac.png',
       loading: 'lazy' as const
     }
   ]
@@ -40,15 +40,15 @@ const items = [{
 </script>
 
 <template>
-  <PTimeline :items="items" :default-value="2" class="w-96">
+  <UTimeline :items="items" :default-value="2" class="w-96">
     <template #development-title="{ item }">
       <div class="flex items-center gap-1">
         <span>{{ item.title }}</span>
 
-        <PAvatarGroup size="2xs">
-          <PAvatar v-for="(developer, index) of item.developers" :key="index" v-bind="developer" />
-        </PAvatarGroup>
+        <UAvatarGroup size="2xs">
+          <UAvatar v-for="(developer, index) of item.developers" :key="index" v-bind="developer" />
+        </UAvatarGroup>
       </div>
     </template>
-  </PTimeline>
+  </UTimeline>
 </template>

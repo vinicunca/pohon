@@ -5,7 +5,7 @@ async function onClick() {
 </script>
 
 <template>
-  <PButton loading-auto @click="onClick">
+  <UButton loading-auto @click="onClick">
     Button
-  </PButton>
+  </UButton>
 </template>

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from 'pohon-ui'
+import type { TableColumn } from '@nuxt/ui'
 import type { Row } from '@tanstack/vue-table'
 import { useClipboard } from '@vueuse/core'
 
-const PButton = resolveComponent('PButton')
-const PBadge = resolveComponent('PBadge')
-const PDropdownMenu = resolveComponent('PDropdownMenu')
+const UButton = resolveComponent('UButton')
+const UBadge = resolveComponent('UBadge')
+const UDropdownMenu = resolveComponent('UDropdownMenu')
 
 const toast = useToast()
 const { copy } = useClipboard()
@@ -77,7 +77,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -88,7 +88,7 @@ const columns: TableColumn<Payment>[] = [{
   meta: {
     class: {
       th: 'text-right',
-      td: 'text-right font-500'
+      td: 'text-right font-medium'
     }
   },
   cell: ({ row }) => {
@@ -106,13 +106,13 @@ const columns: TableColumn<Payment>[] = [{
     }
   },
   cell: ({ row }) => {
-    return h(PDropdownMenu, {
+    return h(UDropdownMenu, {
       'content': {
         align: 'end'
       },
       'items': getRowItems(row),
       'aria-label': 'Actions dropdown'
-    }, () => h(PButton, {
+    }, () => h(UButton, {
       'icon': 'i-lucide-ellipsis-vertical',
       'color': 'neutral',
       'variant': 'ghost',
@@ -147,5 +147,5 @@ function getRowItems(row: Row<Payment>) {
 </script>
 
 <template>
-  <PTable :data="data" :columns="columns" class="flex-1" />
+  <UTable :data="data" :columns="columns" class="flex-1" />
 </template>

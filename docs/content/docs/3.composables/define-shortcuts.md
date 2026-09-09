@@ -1,6 +1,6 @@
 ---
 title: defineShortcuts
-description: "A composable to define keyboard shortcuts in your app."
+description: 'A composable to define keyboard shortcuts in your app.'
 ---
 
 ## Usage
@@ -9,13 +9,13 @@ Use the auto-imported `defineShortcuts` composable to define keyboard shortcuts.
 
 ```vue
 <script setup lang="ts">
-const open = ref(false);
+const open = ref(false)
 
 defineShortcuts({
   meta_k: () => {
-    open.value = !open.value;
-  },
-});
+    open.value = !open.value
+  }
+})
 </script>
 ```
 
@@ -37,12 +37,12 @@ Define keyboard shortcuts for your application. Returns a function that removes 
 
 ::field-group
 
-::field{name="config" type="MaybeRef<ShortcutsConfig>" required}
-An object where keys are shortcut definitions and values are either handler functions or shortcut configuration objects. Pass a `ref` to update the shortcuts reactively. A value of `false`, `null` or `undefined` skips that shortcut, which is how you enable one conditionally.
-::
+  ::field{name="config" type="MaybeRef<ShortcutsConfig>" required}
+  An object where keys are shortcut definitions and values are either handler functions or shortcut configuration objects. Pass a `ref` to update the shortcuts reactively. A value of `false`, `null` or `undefined` skips that shortcut, which is how you enable one conditionally.
+  ::
 
-::field{name="options" type="ShortcutsOptions"}
-Optional configuration for the shortcuts behavior.
+  ::field{name="options" type="ShortcutsOptions"}
+  Optional configuration for the shortcuts behavior.
 
     ::collapsible
 
@@ -58,8 +58,7 @@ Optional configuration for the shortcuts behavior.
         ::
       ::
     ::
-
-::
+  ::
 ::
 
 ### Shortcut definition
@@ -98,18 +97,17 @@ Each shortcut can be defined as a function or an object with the following prope
 #### Parameters
 
 ::field-group
-::field{name="handler" type="(e?: KeyboardEvent) => void" required}
-Function to be executed when the shortcut is triggered. It receives the originating `KeyboardEvent`.
+  ::field{name="handler" type="(e?: KeyboardEvent) => void" required}
+  Function to be executed when the shortcut is triggered. It receives the originating `KeyboardEvent`.
+  ::
+
+  ::field{name="usingInput" type="boolean | string"}
+  Controls when the shortcut should trigger based on input focus:
+  - `false` (default): Shortcut only triggers when no input is focused
+  - `true`: Shortcut triggers even when any input is focused
+  - `string`: Shortcut only triggers when the specified input (by name) is focused
+  ::
 ::
-
-::field{name="usingInput" type="boolean | string"}
-Controls when the shortcut should trigger based on input focus:
-
-- `false` (default): Shortcut only triggers when no input is focused
-- `true`: Shortcut triggers even when any input is focused
-- `string`: Shortcut only triggers when the specified input (by name) is focused
-  ::
-  ::
 
 ## Examples
 
@@ -118,10 +116,10 @@ Controls when the shortcut should trigger based on input focus:
 ```vue
 <script setup lang="ts">
 defineShortcuts({
-  "?": () => openHelpModal(),
-  meta_k: () => openCommandPalette(),
-  "g-d": () => navigateToDashboard(),
-});
+  '?': () => openHelpModal(),
+  'meta_k': () => openCommandPalette(),
+  'g-d': () => navigateToDashboard()
+})
 </script>
 ```
 
@@ -131,22 +129,22 @@ Use `usingInput` to trigger a shortcut only when a specific input is focused.
 
 ```vue
 <template>
-  <PInput v-model="query" name="queryInput" />
+  <UInput v-model="query" name="queryInput" />
 </template>
 
 <script setup lang="ts">
-const query = ref("");
+const query = ref('')
 
 defineShortcuts({
   enter: {
-    usingInput: "queryInput",
-    handler: () => performSearch(),
+    usingInput: 'queryInput',
+    handler: () => performSearch()
   },
   escape: {
     usingInput: true,
-    handler: () => clearSearch(),
-  },
-});
+    handler: () => clearSearch()
+  }
+})
 </script>
 ```
 

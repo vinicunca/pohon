@@ -3,7 +3,7 @@ const value = ref(0.05)
 </script>
 
 <template>
-  <PInputNumber
+  <UInputNumber
     v-model="value"
     :step="0.01"
     :format-options="{

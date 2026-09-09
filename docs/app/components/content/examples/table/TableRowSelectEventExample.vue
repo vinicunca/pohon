@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn, TableRow } from 'pohon-ui'
+import type { TableColumn, TableRow } from '@nuxt/ui'
 
-const PBadge = resolveComponent('PBadge')
-const PCheckbox = resolveComponent('PCheckbox')
+const UBadge = resolveComponent('UBadge')
+const UCheckbox = resolveComponent('UCheckbox')
 
 type Payment = {
   id: string
@@ -47,12 +47,12 @@ const data = ref<Payment[]>([{
 
 const columns: TableColumn<Payment>[] = [{
   id: 'select',
-  header: ({ table }) => h(PCheckbox, {
+  header: ({ table }) => h(UCheckbox, {
     'modelValue': table.getIsSomePageRowsSelected() ? 'indeterminate' : table.getIsAllPageRowsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => table.toggleAllPageRowsSelected(!!value),
     'aria-label': 'Select all'
   }),
-  cell: ({ row }) => h(PCheckbox, {
+  cell: ({ row }) => h(UCheckbox, {
     'modelValue': row.getIsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => row.toggleSelected(!!value),
     'aria-label': 'Select row'
@@ -79,7 +79,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -90,7 +90,7 @@ const columns: TableColumn<Payment>[] = [{
   meta: {
     class: {
       th: 'text-right',
-      td: 'text-right font-500'
+      td: 'text-right font-medium'
     }
   },
   cell: ({ row }) => {
@@ -115,7 +115,7 @@ function onSelect(e: Event, row: TableRow<Payment>) {
 <template>
   <div class="flex w-full flex-1 gap-1">
     <div class="flex-1">
-      <PTable
+      <UTable
         ref="table"
         v-model:row-selection="rowSelection"
         :data="data"
@@ -123,7 +123,7 @@ function onSelect(e: Event, row: TableRow<Payment>) {
         @select="onSelect"
       />
 
-      <div class="px-4 py-3.5 border-t border-border-accented text-sm color-text-muted">
+      <div class="px-4 py-3.5 border-t border-accented text-sm text-muted">
         {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length || 0 }} of
         {{ table?.tableApi?.getFilteredRowModel().rows.length || 0 }} row(s) selected.
       </div>

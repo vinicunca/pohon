@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { TreeItemSelectEvent } from 'reka-ui'
-import type { TreeItem } from 'pohon-ui'
+import type { TreeItem } from '@nuxt/ui'
 
 const items: TreeItem[] = [
   {
@@ -39,5 +39,5 @@ function onSelect(e: TreeItemSelectEvent<TreeItem>) {
 </script>
 
 <template>
-  <PTree :items="items" @select="onSelect" />
+  <UTree :items="items" @select="onSelect" />
 </template>

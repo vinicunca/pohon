@@ -109,7 +109,6 @@ export function createLinkHandler() {
       }
 
       // If href is provided in cmd, use it, otherwise prompt
-      // eslint-disable-next-line no-alert
       const href = cmd?.href || prompt('Enter the URL:');
       if (!href) {
         return chain;
@@ -148,7 +147,6 @@ export function createImageHandler() {
       }
 
       // Otherwise prompt for URL
-      // eslint-disable-next-line no-alert
       const src = prompt('Enter the image URL:');
       if (src) {
         return chain.setImage({ src });

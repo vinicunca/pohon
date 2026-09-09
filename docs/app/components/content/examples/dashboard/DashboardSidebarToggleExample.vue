@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from 'pohon-ui'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items: NavigationMenuItem[] = [{
   label: 'Home',
@@ -15,8 +15,8 @@ const items: NavigationMenuItem[] = [{
 </script>
 
 <template>
-  <PDashboardGroup>
-    <PDashboardSidebar
+  <UDashboardGroup>
+    <UDashboardSidebar
       open
       :toggle="{
         color: 'primary',
@@ -28,16 +28,16 @@ const items: NavigationMenuItem[] = [{
         <Logo class="h-5 w-auto" />
       </template>
 
-      <PNavigationMenu
+      <UNavigationMenu
         :items="items"
         orientation="vertical"
       />
-    </PDashboardSidebar>
+    </UDashboardSidebar>
 
-    <PDashboardPanel>
+    <UDashboardPanel>
       <template #header>
-        <PDashboardNavbar title="Dashboard" />
+        <UDashboardNavbar title="Dashboard" />
       </template>
-    </PDashboardPanel>
-  </PDashboardGroup>
+    </UDashboardPanel>
+  </UDashboardGroup>
 </template>

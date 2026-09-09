@@ -52,7 +52,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <PInputMenu
+  <UInputMenu
     ref="inputMenu"
     placeholder="Select user"
     :items="users"

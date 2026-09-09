@@ -21,9 +21,9 @@ Wrap your entire application with the App component in your `app.vue` file:
 
 ```vue [app.vue]
 <template>
-  <PApp>
+  <UApp>
     <NuxtPage />
-  </PApp>
+  </UApp>
 </template>
 ```
 

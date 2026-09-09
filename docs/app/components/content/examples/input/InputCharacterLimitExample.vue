@@ -4,7 +4,7 @@ const maxLength = 15
 </script>
 
 <template>
-  <PInput
+  <UInput
     v-model="value"
     :maxlength="maxLength"
     aria-describedby="character-count"
@@ -13,12 +13,12 @@ const maxLength = 15
     <template #trailing>
       <div
         id="character-count"
-        class="text-xs color-text-muted tabular-nums"
+        class="text-xs text-muted tabular-nums"
         aria-live="polite"
         role="status"
       >
         {{ value?.length }}/{{ maxLength }}
       </div>
     </template>
-  </PInput>
+  </UInput>
 </template>

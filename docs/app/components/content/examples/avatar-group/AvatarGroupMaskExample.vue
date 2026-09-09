@@ -1,26 +1,26 @@
 <template>
-  <PAvatarGroup :ui="{ base: 'rounded-none squircle' }">
-    <PAvatar
-      src="https://github.com/praburangki.png"
-      alt="praburangki"
+  <UAvatarGroup :ui="{ base: 'rounded-none squircle' }">
+    <UAvatar
+      src="https://github.com/benjamincanac.png"
+      alt="Benjamin Canac"
       loading="lazy"
       class="rounded-none squircle"
     />
 
-    <PAvatar
+    <UAvatar
       src="https://github.com/romhml.png"
       alt="Romain Hamel"
       loading="lazy"
       class="rounded-none squircle"
     />
 
-    <PAvatar
+    <UAvatar
       src="https://github.com/noook.png"
       alt="Neil Richter"
       loading="lazy"
       class="rounded-none squircle"
     />
-  </PAvatarGroup>
+  </UAvatarGroup>
 </template>
 
 <style>

@@ -3,7 +3,7 @@ const tags = ref(['Vue'])
 </script>
 
 <template>
-  <PFormField label="Tags" required>
-    <PInputTags v-model="tags" placeholder="Enter tags..." />
-  </PFormField>
+  <UFormField label="Tags" required>
+    <UInputTags v-model="tags" placeholder="Enter tags..." />
+  </UFormField>
 </template>

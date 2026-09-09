@@ -3,13 +3,13 @@ const value = ref(5)
 </script>
 
 <template>
-  <PInputNumber v-model="value">
+  <UInputNumber v-model="value">
     <template #decrement>
-      <PButton size="xs" icon="i-lucide-minus" />
+      <UButton size="xs" icon="i-lucide-minus" />
     </template>
 
     <template #increment>
-      <PButton size="xs" icon="i-lucide-plus" />
+      <UButton size="xs" icon="i-lucide-plus" />
     </template>
-  </PInputNumber>
+  </UInputNumber>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DropdownMenuItem } from 'pohon-ui'
+import type { DropdownMenuItem } from '@nuxt/ui'
 
 const showBookmarks = ref(true)
 const showHistory = ref(false)
@@ -42,7 +42,7 @@ const items = computed(() => [{
 </script>
 
 <template>
-  <PDropdownMenu :items="items" :content="{ align: 'start' }" :ui="{ content: 'w-48' }">
-    <PButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
-  </PDropdownMenu>
+  <UDropdownMenu :items="items" :content="{ align: 'start' }" :ui="{ content: 'w-48' }">
+    <UButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
+  </UDropdownMenu>
 </template>

@@ -1,6 +1,6 @@
 ---
 title: PageAside
-description: "A sticky aside to display your page navigation."
+description: 'A sticky aside to display your page navigation.'
 category: page
 links:
   - label: GitHub
@@ -20,11 +20,11 @@ Use it inside the `left` or `right` slot of the [Page](/docs/components/page) co
 
 ```vue {4}
 <template>
-  <PPage>
+  <UPage>
     <template #left>
-      <PPageAside />
+      <UPageAside />
     </template>
-  </PPage>
+  </UPage>
 </template>
 ```
 
@@ -40,21 +40,21 @@ Use the PageAside component in a layout to display the navigation:
 
 ```vue [layouts/docs.vue]{9-13}
 <script setup lang="ts">
-import type { ContentNavigationItem } from "@nuxt/content";
+import type { ContentNavigationItem } from '@nuxt/content'
 
-const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </script>
 
 <template>
-  <PPage>
+  <UPage>
     <template #left>
-      <PPageAside>
-        <PContentNavigation :navigation="navigation" />
-      </PPageAside>
+      <UPageAside>
+        <UContentNavigation :navigation="navigation" />
+      </UPageAside>
     </template>
 
     <slot />
-  </PPage>
+  </UPage>
 </template>
 ```
 

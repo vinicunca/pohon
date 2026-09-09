@@ -19,14 +19,12 @@ links:
 
 Use the `name` prop to display an icon.
 
-## ::component-code
-
-props:
-name: 'i-lucide-lightbulb'
-class: 'size-5'
-
+::component-code
 ---
-
+props:
+  name: 'i-lucide-lightbulb'
+  class: 'size-5'
+---
 ::
 
 ::note
@@ -46,21 +44,21 @@ It's highly recommended to install the icons collections you need, read more abo
 
 You can also pass a Vue component into the `name` prop:
 
-## ::component-example
-
-## name: 'icon-svg-example'
-
+::component-example
+---
+name: 'icon-svg-example'
+---
 ::
 
 You can define your icon components yourself, or use [`unplugin-icons`](https://github.com/unplugin/unplugin-icons) to import them directly from SVG files:
 
 ```vue
 <script setup lang="ts">
-import IconLightbulb from "~icons/lucide/lightbulb";
+import IconLightbulb from '~icons/lucide/lightbulb'
 </script>
 
 <template>
-  <PIcon :name="IconLightbulb" class="size-5" />
+  <UIcon :name="IconLightbulb" class="size-5" />
 </template>
 ```
 

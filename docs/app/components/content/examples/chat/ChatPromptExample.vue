@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SelectItem } from 'pohon-ui'
+import type { SelectItem } from '@nuxt/ui'
 
 const input = ref('')
 const model = ref('claude-opus-4.6')
@@ -16,12 +16,12 @@ function onSubmit() {
 </script>
 
 <template>
-  <PChatPrompt v-model="input" class="w-full" @submit="onSubmit">
+  <UChatPrompt v-model="input" class="w-full" @submit="onSubmit">
     <template #footer>
-      <PButton icon="i-lucide-plus" color="neutral" variant="ghost" size="sm" />
+      <UButton icon="i-lucide-plus" color="neutral" variant="ghost" size="sm" />
 
       <div class="flex items-center gap-1.5">
-        <PSelect
+        <USelect
           v-model="model"
           :items="models"
           :icon="models.find(item => item.value === model)?.icon"
@@ -31,8 +31,8 @@ function onSubmit() {
           square
         />
 
-        <PChatPromptSubmit size="sm" />
+        <UChatPromptSubmit size="sm" />
       </div>
     </template>
-  </PChatPrompt>
+  </UChatPrompt>
 </template>

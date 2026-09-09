@@ -16,19 +16,17 @@ links:
 
 Wrap multiple [Avatar](/docs/components/avatar) within an AvatarGroup to stack them.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 slots:
-default: |
+  default: |
 
-    <PAvatar src="https://github.com/praburangki.png" alt="praburangki" />
-    <PAvatar src="https://github.com/romhml.png" alt="Romain Hamel" />
-    <PAvatar src="https://github.com/noook.png" alt="Neil Richter" />
-
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" />
+    <UAvatar src="https://github.com/romhml.png" alt="Romain Hamel" />
+    <UAvatar src="https://github.com/noook.png" alt="Neil Richter" />
 ---
-
-:u-avatar{src="https://github.com/praburangki.png" alt="praburangki"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac"}
 :u-avatar{src="https://github.com/romhml.png" alt="Romain Hamel"}
 :u-avatar{src="https://github.com/noook.png" alt="Neil Richter"}
 ::
@@ -37,21 +35,19 @@ default: |
 
 Use the `size` prop to change the size of all the avatars.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 props:
-size: xl
+  size: xl
 slots:
-default: |
+  default: |
 
-    <PAvatar src="https://github.com/praburangki.png" alt="praburangki" loading="lazy" />
-    <PAvatar src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy" />
-    <PAvatar src="https://github.com/noook.png" alt="Neil Richter" loading="lazy" />
-
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
+    <UAvatar src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy" />
+    <UAvatar src="https://github.com/noook.png" alt="Neil Richter" loading="lazy" />
 ---
-
-:u-avatar{src="https://github.com/praburangki.png" alt="praburangki" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
 :u-avatar{src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy"}
 :u-avatar{src="https://github.com/noook.png" alt="Neil Richter" loading="lazy"}
 ::
@@ -60,21 +56,19 @@ default: |
 
 Use the `max` prop to limit the number of avatars displayed. The rest is displayed as an `+X` avatar.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 props:
-max: 2
+  max: 2
 slots:
-default: |
+  default: |
 
-    <PAvatar src="https://github.com/praburangki.png" alt="praburangki" loading="lazy" />
-    <PAvatar src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy" />
-    <PAvatar src="https://github.com/noook.png" alt="Neil Richter" loading="lazy" />
-
+    <UAvatar src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy" />
+    <UAvatar src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy" />
+    <UAvatar src="https://github.com/noook.png" alt="Neil Richter" loading="lazy" />
 ---
-
-:u-avatar{src="https://github.com/praburangki.png" alt="praburangki" loading="lazy"}
+:u-avatar{src="https://github.com/benjamincanac.png" alt="Benjamin Canac" loading="lazy"}
 :u-avatar{src="https://github.com/romhml.png" alt="Romain Hamel" loading="lazy"}
 :u-avatar{src="https://github.com/noook.png" alt="Neil Richter" loading="lazy"}
 ::
@@ -83,21 +77,19 @@ default: |
 
 Use the `color` prop to change the color of all the avatars.
 
-## ::component-code
-
+::component-code
+---
 prettier: true
 props:
-color: primary
+  color: primary
 slots:
-default: |
+  default: |
 
-    <PAvatar alt="praburangki" />
-    <PAvatar alt="Romain Hamel" />
-    <PAvatar alt="Neil Richter" />
-
+    <UAvatar alt="Benjamin Canac" />
+    <UAvatar alt="Romain Hamel" />
+    <UAvatar alt="Neil Richter" />
 ---
-
-:u-avatar{alt="praburangki"}
+:u-avatar{alt="Benjamin Canac"}
 :u-avatar{alt="Romain Hamel"}
 :u-avatar{alt="Neil Richter"}
 ::

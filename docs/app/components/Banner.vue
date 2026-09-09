@@ -3,9 +3,9 @@ const appConfig = useAppConfig()
 </script>
 
 <template>
-  <PBanner
+  <UBanner
     id="nuxt-ui-v4"
-    title="Pohon UI v4 is officially released!"
+    title="Nuxt UI v4 is officially released!"
     to="https://github.com/nuxt/ui/releases/tag/v4.0.0"
     icon="i-lucide-rocket"
     close

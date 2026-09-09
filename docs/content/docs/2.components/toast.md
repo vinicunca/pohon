@@ -18,14 +18,12 @@ links:
 
 Use the [useToast](/docs/composables/use-toast) composable to display a toast in your application.
 
-## ::component-example
-
+::component-example
+---
 collapse: true
 prettier: true
 name: 'toast-example'
-
 ---
-
 ::
 
 ::warning
@@ -40,118 +38,107 @@ You can check the `App` component `toaster` prop to see how to configure the Toa
 
 Pass a `title` field to the `toast.add` method to display a title.
 
-## ::component-example
-
-options:
-
-- name: 'title'
-  label: 'title'
-  default: 'Uh oh! Something went wrong.'
-  name: 'toast-title-example'
-
+::component-example
 ---
-
+options:
+  - name: 'title'
+    label: 'title'
+    default: 'Uh oh! Something went wrong.'
+name: 'toast-title-example'
+---
 ::
 
 ### Description
 
 Pass a `description` field to the `toast.add` method to display a description.
 
-## ::component-example
-
-options:
-
-- name: 'title'
-  label: 'title'
-  default: 'Uh oh! Something went wrong.'
-- name: 'description'
-  label: 'description'
-  default: 'There was a problem with your request.'
-  name: 'toast-description-example'
-
+::component-example
 ---
-
+options:
+  - name: 'title'
+    label: 'title'
+    default: 'Uh oh! Something went wrong.'
+  - name: 'description'
+    label: 'description'
+    default: 'There was a problem with your request.'
+name: 'toast-description-example'
+---
 ::
 
 ### Icon
 
 Pass an `icon` field to the `toast.add` method to display an [Icon](/docs/components/icon).
 
-## ::component-example
-
-options:
-
-- name: 'icon'
-  label: 'icon'
-  default: 'i-lucide-wifi'
-  name: 'toast-icon-example'
-
+::component-example
 ---
-
+options:
+  - name: 'icon'
+    label: 'icon'
+    default: 'i-lucide-wifi'
+name: 'toast-icon-example'
+---
 ::
 
 ### Avatar
 
 Pass an `avatar` field to the `toast.add` method to display an [Avatar](/docs/components/avatar).
 
-## ::component-example
-
-options:
-
-- name: 'avatar.src'
-  alias: 'avatar'
-  label: 'avatar.src'
-  default:
-  src: 'https://github.com/praburangki.png'
-  name: 'toast-avatar-example'
-
+::component-example
 ---
-
+options:
+  - name: 'avatar.src'
+    alias: 'avatar'
+    label: 'avatar.src'
+    default:
+      src: 'https://github.com/benjamincanac.png'
+name: 'toast-avatar-example'
+---
 ::
 
 ### Color
 
 Pass a `color` field to the `toast.add` method to change the color of the Toast.
 
-## ::component-example
-
-options:
-
-- name: 'color'
-  label: 'color'
-  default: neutral
-  items: - primary - secondary - success - info - warning - error - neutral
-  name: 'toast-color-example'
-
+::component-example
 ---
-
+options:
+  - name: 'color'
+    label: 'color'
+    default: neutral
+    items:
+      - primary
+      - secondary
+      - success
+      - info
+      - warning
+      - error
+      - neutral
+name: 'toast-color-example'
+---
 ::
 
 ### Close
 
 Pass a `close` field to customize or hide the close [Button](/docs/components/button) (with `false` value).
 
-## ::component-example
-
-## name: 'toast-close-example'
-
+::component-example
+---
+name: 'toast-close-example'
+---
 ::
 
 ### Close Icon
 
 Pass a `closeIcon` field to customize the close button [Icon](/docs/components/icon). Defaults to `i-lucide-x`.
 
-## ::component-example
-
-options:
-
-- name: 'closeIcon'
-  label: 'closeIcon'
-  default: 'i-lucide-arrow-right'
-  name: 'toast-close-icon-example'
-
+::component-example
 ---
-
+options:
+  - name: 'closeIcon'
+    label: 'closeIcon'
+    default: 'i-lucide-arrow-right'
+name: 'toast-close-icon-example'
+---
 ::
 
 ::framework-only
@@ -170,17 +157,14 @@ You can customize this icon globally in your `vite.config.ts` under `ui.icons.cl
 
 Pass an `actions` field to add some [Button](/docs/components/button) actions to the Toast.
 
-## ::component-example
-
-options:
-
-- name: 'description'
-  label: 'description'
-  default: 'There was a problem with your request.'
-  name: 'toast-actions-example'
-
+::component-example
 ---
-
+options:
+  - name: 'description'
+    label: 'description'
+    default: 'There was a problem with your request.'
+name: 'toast-actions-example'
+---
 ::
 
 ### Duration
@@ -191,18 +175,19 @@ Pass a `duration` field to the `toast.add` method to change how long the Toast r
 Set the `duration` field to `0` to keep the Toast open until it's manually closed.
 ::
 
-## ::component-example
-
-options:
-
-- name: 'duration'
-  label: 'duration'
-  default: 0
-  items: - 0 - 1000 - 3000 - 5000
-  name: 'toast-duration-example'
-
+::component-example
 ---
-
+options:
+  - name: 'duration'
+    label: 'duration'
+    default: 0
+    items:
+      - 0
+      - 1000
+      - 3000
+      - 5000
+name: 'toast-duration-example'
+---
 ::
 
 ### Progress
@@ -213,34 +198,33 @@ Pass a `progress` field to customize or hide the [Progress](/docs/components/pro
 The Progress bar inherits the Toast color by default, but you can override it using the `progress.color` field.
 ::
 
-## ::component-example
-
-## name: 'toast-progress-example'
-
+::component-example
+---
+name: 'toast-progress-example'
+---
 ::
 
 ### Orientation
 
 Pass an `orientation` field to the `toast.add` method to change the orientation of the Toast.
 
-## ::component-example
-
-options:
-
-- name: 'orientation'
-  label: 'orientation'
-  default: 'horizontal'
-  items: - horizontal - vertical
-  name: 'toast-orientation-example'
-
+::component-example
 ---
-
+options:
+  - name: 'orientation'
+    label: 'orientation'
+    default: 'horizontal'
+    items:
+      - horizontal
+      - vertical
+name: 'toast-orientation-example'
+---
 ::
 
 ## Examples
 
 ::note{to="/docs/components/app"}
-Pohon UI provides an **App** component that wraps your app to provide global configurations.
+Nuxt UI provides an **App** component that wraps your app to provide global configurations.
 ::
 
 ### Change global position
@@ -249,26 +233,26 @@ Change the `toaster.position` prop on the [App](/docs/components/app#props) comp
 
 ```vue [app.vue]
 <script setup lang="ts">
-const toaster = { position: "bottom-right" };
+const toaster = { position: 'bottom-right' }
 </script>
 
 <template>
-  <PApp :toaster="toaster">
+  <UApp :toaster="toaster">
     <NuxtPage />
-  </PApp>
+  </UApp>
 </template>
 ```
 
-## ::component-example
-
+::component-example
+---
 prettier: true
 name: 'toast-example'
-
 ---
 
 #options
 :toaster-position-example
 ::
+
 
 ### Change global duration
 
@@ -276,26 +260,26 @@ Change the `toaster.duration` prop on the [App](/docs/components/app#props) comp
 
 ```vue [app.vue]
 <script setup lang="ts">
-const toaster = { duration: 5000 };
+const toaster = { duration: 5000 }
 </script>
 
 <template>
-  <PApp :toaster="toaster">
+  <UApp :toaster="toaster">
     <NuxtPage />
-  </PApp>
+  </UApp>
 </template>
 ```
 
-## ::component-example
-
+::component-example
+---
 prettier: true
 name: 'toast-example'
-
 ---
 
 #options
 :toaster-duration-example
 ::
+
 
 ### Change global max :badge{label="4.1+" class="align-text-top"}
 
@@ -303,26 +287,26 @@ Change the `toaster.max` prop on the [App](/docs/components/app#props) component
 
 ```vue [app.vue]
 <script setup lang="ts">
-const toaster = { max: 3 };
+const toaster = { max: 3 }
 </script>
 
 <template>
-  <PApp :toaster="toaster">
+  <UApp :toaster="toaster">
     <NuxtPage />
-  </PApp>
+  </UApp>
 </template>
 ```
 
-## ::component-example
-
+::component-example
+---
 prettier: true
 name: 'toast-example'
-
 ---
 
 #options
 :toaster-max-example
 ::
+
 
 ### Stacked toasts
 
@@ -330,13 +314,13 @@ Set the `toaster.expand` prop to `false` on the [App](/docs/components/app#props
 
 ```vue [app.vue]
 <script setup lang="ts">
-const toaster = { expand: true };
+const toaster = { expand: true }
 </script>
 
 <template>
-  <PApp :toaster="toaster">
+  <UApp :toaster="toaster">
     <NuxtPage />
-  </PApp>
+  </UApp>
 </template>
 ```
 
@@ -344,54 +328,48 @@ const toaster = { expand: true };
 You can hover over the toasts to expand them. This will also pause the timer of the toasts.
 ::
 
-## ::component-example
-
+::component-example
+---
 prettier: true
 name: 'toast-example'
-
 ---
 
 #options
 :toaster-expand-example
 ::
 
+
 ### Deduplicated toasts :badge{label="4.5+" class="align-text-top"}
 
 When calling `toast.add` with an `id` that already exists, the existing toast will pulse instead of creating a duplicate.
 
-## ::component-example
-
+::component-example
+---
 collapse: true
 name: 'toast-duplicate-example'
-
 ---
-
 ::
 
 ### With callback
 
 Pass an `onUpdateOpen` field to execute a callback when the toast is closed (either by expiration or user dismissal).
 
-## ::component-example
-
+::component-example
+---
 collapse: true
 name: 'toast-callback-example'
-
 ---
-
 ::
 
 ### With HTML content
 
 Use the [`h()` render function](https://vuejs.org/api/render-function.html#h) in the `title` or `description` fields to render HTML elements or Vue components with custom styling.
 
-## ::component-example
-
+::component-example
+---
 collapse: true
 name: 'toast-html-example'
-
 ---
-
 ::
 
 ## API
@@ -412,8 +390,8 @@ name: 'toast-html-example'
 
 When accessing the component via a template ref, you can use the following:
 
-| Name                     | Type                          |
-| ------------------------ | ----------------------------- |
+| Name | Type |
+| ---- | ---- |
 | `height`{lang="ts-type"} | `Ref<number>`{lang="ts-type"} |
 
 ## Theme

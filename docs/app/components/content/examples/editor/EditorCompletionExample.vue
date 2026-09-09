@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorCustomHandlers, EditorToolbarItem } from 'pohon-ui'
+import type { EditorCustomHandlers, EditorToolbarItem } from '@nuxt/ui'
 import { useEditorCompletion } from './EditorUseCompletion'
 
 const editorRef = useTemplateRef('editorRef')
@@ -106,7 +106,7 @@ const items = computed(() => [[{
 </script>
 
 <template>
-  <PEditor
+  <UEditor
     ref="editorRef"
     v-slot="{ editor }"
     v-model="value"
@@ -116,6 +116,6 @@ const items = computed(() => [[{
     :ui="{ base: 'p-8 sm:px-16' }"
     class="w-full min-h-74"
   >
-    <PEditorToolbar :editor="editor" :items="items" class="border-b border-muted py-2 px-8 sm:px-16 overflow-x-auto" />
-  </PEditor>
+    <UEditorToolbar :editor="editor" :items="items" class="border-b border-muted py-2 px-8 sm:px-16 overflow-x-auto" />
+  </UEditor>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EditorToolbarItem } from 'pohon-ui'
+import type { EditorToolbarItem } from '@nuxt/ui'
 
 defineProps<{
   layout: 'fixed' | 'bubble' | 'floating'
@@ -25,8 +25,8 @@ const items: EditorToolbarItem[][] = [[{
 </script>
 
 <template>
-  <PEditor v-slot="{ editor }" v-model="value" content-type="markdown" class="w-full min-h-26 flex flex-col gap-4">
-    <PEditorToolbar
+  <UEditor v-slot="{ editor }" v-model="value" content-type="markdown" class="w-full min-h-26 flex flex-col gap-4">
+    <UEditorToolbar
       :key="layout"
       :editor="editor"
       :items="items"
@@ -34,5 +34,5 @@ const items: EditorToolbarItem[][] = [[{
       :data-layout="layout"
       class="data-[layout=fixed]:sm:px-8"
     />
-  </PEditor>
+  </UEditor>
 </template>

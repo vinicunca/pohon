@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { motion } from 'motion-v'
 import type { VariantType } from 'motion-v'
-import type { NavigationMenuItem } from 'pohon-ui'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const route = useRoute()
 
@@ -50,18 +50,18 @@ const variants: { [k: string]: VariantType | ((custom: unknown) => VariantType) 
 </script>
 
 <template>
-  <PHeader>
+  <UHeader>
     <template #title>
       <Logo class="h-6 w-auto" />
     </template>
 
-    <PNavigationMenu :items="items" />
+    <UNavigationMenu :items="items" />
 
     <template #right>
-      <PColorModeButton />
+      <UColorModeButton />
 
-      <PTooltip text="Open on GitHub" :kbds="['meta', 'G']">
-        <PButton
+      <UTooltip text="Open on GitHub" :kbds="['meta', 'G']">
+        <UButton
           color="neutral"
           variant="ghost"
           to="https://github.com/nuxt/ui"
@@ -69,11 +69,11 @@ const variants: { [k: string]: VariantType | ((custom: unknown) => VariantType) 
           icon="i-simple-icons-github"
           aria-label="GitHub"
         />
-      </PTooltip>
+      </UTooltip>
     </template>
 
     <template #toggle="{ open, toggle, ui }">
-      <PButton
+      <UButton
         size="sm"
         variant="ghost"
         color="neutral"
@@ -122,11 +122,11 @@ const variants: { [k: string]: VariantType | ((custom: unknown) => VariantType) 
             tabindex="-1"
           />
         </svg>
-      </PButton>
+      </UButton>
     </template>
 
     <template #body>
-      <PNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
     </template>
-  </PHeader>
+  </UHeader>
 </template>

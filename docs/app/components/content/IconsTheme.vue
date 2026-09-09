@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import json5 from 'json5'
-import { themeIcons } from '../../utils/theme'
+import { themeIcons } from '../../utils/theme/icons'
 
 const { icon: iconSet } = useTheme()
 
@@ -25,7 +25,7 @@ export default defineAppConfig(${json5.stringify({
 \`\`\`ts [vite.config.ts]
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import ui from 'pohon-ui/vite'
+import ui from '@nuxt/ui/vite'
 
 export default defineConfig({
   plugins: [

@@ -1,10 +1,12 @@
 title: Showcase
-description: Check out some of the amazing projects built with Pohon UI.
+description: Check out some of the amazing projects built with Nuxt UI.
 navigation: false
 hero:
   title: Showcase
-  description: Discover our selection of projects built with Pohon UI.
+  description: Discover our selection of projects built with Nuxt UI.
 items:
+  - name: Ace
+    url: https://acecompany.nl/
   - name: Brusnika.LMS
     url: https://brusnika-lms.com/
     screenshotOptions:
@@ -83,6 +85,8 @@ items:
     url: https://uneed.best/
   - name: Volta
     url: https://volta.net/
+  - name: whichcoding.tools
+    url: https://whichcoding.tools/
   - name: Wiredash
     url: https://wiredash.com/
   - name: Zielgestalt

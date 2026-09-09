@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { InputMenuItem } from 'pohon-ui'
+import type { InputMenuItem } from '@nuxt/ui'
 
 const items = ref([
   {
     label: 'benjamincanac',
     value: 'benjamincanac',
     avatar: {
-      src: 'https://github.com/praburangki.png',
+      src: 'https://github.com/benjamincanac.png',
       alt: 'benjamincanac',
       loading: 'lazy' as const
     }
@@ -44,5 +44,5 @@ const value = ref(items.value[0])
 </script>
 
 <template>
-  <PInputMenu v-model="value" :avatar="value?.avatar" :items="items" />
+  <UInputMenu v-model="value" :avatar="value?.avatar" :items="items" />
 </template>

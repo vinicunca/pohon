@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import * as z from 'zod'
-import type { FormSubmitEvent, AuthFormField } from 'pohon-ui'
+import type { FormSubmitEvent, AuthFormField } from '@nuxt/ui'
 
 const toast = useToast()
 
@@ -50,8 +50,8 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
 
 <template>
   <div class="flex flex-col items-center justify-center gap-4 p-4">
-    <PPageCard class="w-full max-w-md">
-      <PAuthForm
+    <UPageCard class="w-full max-w-md">
+      <UAuthForm
         :schema="schema"
         :fields="fields"
         :providers="providers"
@@ -60,18 +60,18 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
         @submit="onSubmit"
       >
         <template #description>
-          Don't have an account? <PLink to="#" class="color-primary font-500">Sign up</PLink>.
+          Don't have an account? <ULink to="#" class="text-primary font-medium">Sign up</ULink>.
         </template>
         <template #password-hint>
-          <PLink to="#" class="color-primary font-500" tabindex="-1">Forgot password?</PLink>
+          <ULink to="#" class="text-primary font-medium" tabindex="-1">Forgot password?</ULink>
         </template>
         <template #validation>
-          <PAlert color="error" icon="i-lucide-info" title="Error signing in" />
+          <UAlert color="error" icon="i-lucide-info" title="Error signing in" />
         </template>
         <template #footer>
-          By signing in, you agree to our <PLink to="#" class="color-primary font-500">Terms of Service</PLink>.
+          By signing in, you agree to our <ULink to="#" class="text-primary font-medium">Terms of Service</ULink>.
         </template>
-      </PAuthForm>
-    </PPageCard>
+      </UAuthForm>
+    </UPageCard>
   </div>
 </template>

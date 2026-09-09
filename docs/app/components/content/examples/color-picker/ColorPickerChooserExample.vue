@@ -5,15 +5,15 @@ const chip = computed(() => ({ backgroundColor: color.value }))
 </script>
 
 <template>
-  <PPopover>
-    <PButton label="Choose color" color="neutral" variant="outline">
+  <UPopover>
+    <UButton label="Choose color" color="neutral" variant="outline">
       <template #leading>
         <span :style="chip" class="size-3 rounded-full" />
       </template>
-    </PButton>
+    </UButton>
 
     <template #content>
-      <PColorPicker v-model="color" class="p-2" />
+      <UColorPicker v-model="color" class="p-2" />
     </template>
-  </PPopover>
+  </UPopover>
 </template>

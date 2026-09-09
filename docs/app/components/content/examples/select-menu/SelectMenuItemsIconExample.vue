@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SelectMenuItem } from 'pohon-ui'
+import type { SelectMenuItem } from '@nuxt/ui'
 
 const items = ref([
   {
@@ -28,5 +28,5 @@ const value = ref(items.value[0])
 </script>
 
 <template>
-  <PSelectMenu v-model="value" :icon="value?.icon" :items="items" class="w-48" />
+  <USelectMenu v-model="value" :icon="value?.icon" :items="items" class="w-48" />
 </template>

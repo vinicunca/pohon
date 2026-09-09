@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AccordionItem } from 'pohon-ui'
+import type { AccordionItem } from '@nuxt/ui'
 
 const items: AccordionItem[] = [
   {
@@ -30,5 +30,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <PAccordion v-model="active" :items="items" />
+  <UAccordion v-model="active" :items="items" />
 </template>

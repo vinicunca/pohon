@@ -3,7 +3,7 @@ const value = ref<File[]>([])
 </script>
 
 <template>
-  <PFileUpload
+  <UFileUpload
     v-model="value"
     icon="i-lucide-image"
     label="Drop your images here"
@@ -14,7 +14,7 @@ const value = ref<File[]>([])
     class="w-96 min-h-48"
   >
     <template #actions="{ open }">
-      <PButton
+      <UButton
         label="Select images"
         icon="i-lucide-upload"
         color="neutral"
@@ -25,11 +25,11 @@ const value = ref<File[]>([])
 
     <template #files-top="{ open, files }">
       <div v-if="files?.length" class="mb-2 flex items-center justify-between">
-        <p class="font-700">
+        <p class="font-bold">
           Files ({{ files?.length }})
         </p>
 
-        <PButton
+        <UButton
           icon="i-lucide-plus"
           label="Add more"
           color="neutral"
@@ -39,5 +39,5 @@ const value = ref<File[]>([])
         />
       </div>
     </template>
-  </PFileUpload>
+  </UFileUpload>
 </template>

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const users = ref([
   {
-    name: 'praburangki',
+    name: 'Benjamin Canac',
     description: 'benjamincanac',
     to: 'https://github.com/benjamincanac',
     target: '_blank',
     avatar: {
-      src: 'https://github.com/praburangki.png',
+      src: 'https://github.com/benjamincanac.png',
       alt: 'benjamincanac',
       loading: 'lazy' as const
     }
@@ -92,8 +92,8 @@ const users = ref([
 </script>
 
 <template>
-  <PPageList divide>
-    <PPageCard
+  <UPageList divide>
+    <UPageCard
       v-for="(user, index) in users"
       :key="index"
       variant="ghost"
@@ -101,8 +101,8 @@ const users = ref([
       :target="user.target"
     >
       <template #body>
-        <PUser :name="user.name" :description="user.description" :avatar="user.avatar" size="xl" />
+        <UUser :name="user.name" :description="user.description" :avatar="user.avatar" size="xl" />
       </template>
-    </PPageCard>
-  </PPageList>
+    </UPageCard>
+  </UPageList>
 </template>

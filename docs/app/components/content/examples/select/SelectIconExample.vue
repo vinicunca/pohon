@@ -4,11 +4,11 @@ const value = ref('Backlog')
 </script>
 
 <template>
-  <PSelect
+  <USelect
     v-model="value"
     :items="items"
     :ui="{
-      trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-280'
+      trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200'
     }"
     class="w-48"
   />

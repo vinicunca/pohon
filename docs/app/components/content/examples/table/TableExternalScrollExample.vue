@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from 'pohon-ui'
+import type { TableColumn } from '@nuxt/ui'
 
-const PBadge = resolveComponent('PBadge')
+const UBadge = resolveComponent('UBadge')
 
 type Payment = {
   id: string
@@ -72,7 +72,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'amount',
@@ -80,7 +80,7 @@ const columns: TableColumn<Payment>[] = [{
   meta: {
     class: {
       th: 'text-right',
-      td: 'text-right font-500'
+      td: 'text-right font-medium'
     }
   },
   cell: ({ row }) => new Intl.NumberFormat('en-US', {
@@ -97,24 +97,24 @@ const columns: TableColumn<Payment>[] = [{
   >
     <div
       ref="title"
-      class="sticky left-0 z-10 flex items-end justify-between gap-4 p-6 bg-background-elevated/50"
+      class="sticky left-0 z-10 flex items-end justify-between gap-4 p-6 bg-elevated/50"
     >
       <div>
-        <h2 class="text-2xl font-700 color-text-highlighted">
+        <h2 class="text-2xl font-bold text-highlighted">
           Payments
         </h2>
-        <p class="color-text-muted">
+        <p class="text-muted">
           The title stays put while the wide table scrolls both axes under one scrollbar.
         </p>
       </div>
-      <PBadge
+      <UBadge
         color="neutral"
         variant="subtle"
         :label="`${data.length} rows`"
       />
     </div>
 
-    <PTable
+    <UTable
       sticky
       :data="data"
       :columns="columns"

@@ -57,8 +57,8 @@ const versions = [{
 </script>
 
 <template>
-  <PChangelogVersions :indicator="false">
-    <PChangelogVersion
+  <UChangelogVersions :indicator="false">
+    <UChangelogVersion
       v-for="version in versions"
       :key="version.title"
       v-bind="version"
@@ -70,10 +70,10 @@ const versions = [{
       }"
     >
       <template #indicator>
-        <PBadge :label="version.badge" variant="soft" />
+        <UBadge :label="version.badge" variant="soft" />
 
-        <span class="text-sm color-text-muted">{{ new Date(version.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) }}</span>
+        <span class="text-sm text-muted">{{ new Date(version.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) }}</span>
       </template>
-    </PChangelogVersion>
-  </PChangelogVersions>
+    </UChangelogVersion>
+  </UChangelogVersions>
 </template>

@@ -1,9 +1,9 @@
 <template>
-  <PTooltip text="praburangki">
-    <PAvatar
-      src="https://github.com/praburangki.png"
-      alt="praburangki"
+  <UTooltip text="Benjamin Canac">
+    <UAvatar
+      src="https://github.com/benjamincanac.png"
+      alt="Benjamin Canac"
       loading="lazy"
     />
-  </PTooltip>
+  </UTooltip>
 </template>

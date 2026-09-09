@@ -33,8 +33,8 @@ watch(countryCode, () => {
 </script>
 
 <template>
-  <PFieldGroup>
-    <PSelectMenu
+  <UFieldGroup>
+    <USelectMenu
       v-model="countryCode"
       :items="phoneCodes"
       value-key="code"
@@ -67,21 +67,21 @@ watch(countryCode, () => {
       <template #item-label="{ item }">
         {{ item.name }} ({{ item.dialCode }})
       </template>
-    </PSelectMenu>
+    </USelectMenu>
 
-    <PInput
+    <UInput
       v-model="phone"
       v-maska="mask"
       :placeholder="mask.replaceAll('#', '_')"
       :style="{ '--dial-code-length': `${dialCode.length + 1.5}ch` }"
       :ui="{
         base: 'ps-(--dial-code-length)',
-        leading: 'pointer-events-none text-base md:text-sm color-text-muted'
+        leading: 'pointer-events-none text-base md:text-sm text-muted'
       }"
     >
       <template #leading>
         {{ dialCode }}
       </template>
-    </PInput>
-  </PFieldGroup>
+    </UInput>
+  </UFieldGroup>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useFilter } from 'pohon-ui/composables'
+import { useFilter } from '@nuxt/ui/composables'
 import type { ContentNavigationItem } from '@nuxt/content'
 
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
@@ -47,33 +47,33 @@ defineShortcuts({
 </script>
 
 <template>
-  <PMain>
-    <PContainer>
-      <PPage>
+  <UMain>
+    <UContainer>
+      <UPage>
         <template #left>
-          <PPageAside>
+          <UPageAside>
             <template v-if="isSearchActive" #top>
-              <PInput ref="input" v-model="searchTerm" variant="soft" placeholder="Filter..." class="group">
+              <UInput ref="input" v-model="searchTerm" variant="soft" placeholder="Filter..." class="group">
                 <template #trailing>
-                  <PKbd value="/" variant="subtle" class="ring-muted bg-transparent color-text-muted" />
+                  <UKbd value="/" variant="subtle" class="ring-muted bg-transparent text-muted" />
                 </template>
-              </PInput>
+              </UInput>
             </template>
 
-            <PContentNavigation
+            <UContentNavigation
               :key="navigationKey"
               :collapsible="false"
               :navigation="filteredNavigation"
               highlight
               :ui="{
-                linkTrailingBadge: 'font-600 uppercase'
+                linkTrailingBadge: 'font-semibold uppercase'
               }"
             />
-          </PPageAside>
+          </UPageAside>
         </template>
 
         <slot />
-      </PPage>
-    </PContainer>
-  </PMain>
+      </UPage>
+    </UContainer>
+  </UMain>
 </template>

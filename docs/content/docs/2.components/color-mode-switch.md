@@ -1,6 +1,6 @@
 ---
 title: ColorModeSwitch
-description: "A Switch to toggle between light and dark mode."
+description: 'A Switch to toggle between light and dark mode.'
 category: color-mode
 links:
   - label: Switch
@@ -31,11 +31,11 @@ Use the `app.config.ts` to customize the icon with the `ui.icons` property:
 export default defineAppConfig({
   ui: {
     icons: {
-      light: "i-ph-sun",
-      dark: "i-ph-moon",
-    },
-  },
-});
+      light: 'i-ph-sun',
+      dark: 'i-ph-moon'
+    }
+  }
+})
 ```
 
 ::
@@ -45,9 +45,9 @@ export default defineAppConfig({
 Use the `vite.config.ts` to customize the icon with the `ui.icons` property:
 
 ```ts [vite.config.ts]
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import ui from "pohon-ui/vite";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import ui from '@nuxt/ui/vite'
 
 export default defineConfig({
   plugins: [
@@ -55,13 +55,13 @@ export default defineConfig({
     ui({
       ui: {
         icons: {
-          light: "i-ph-sun",
-          dark: "i-ph-moon",
-        },
-      },
-    }),
-  ],
-});
+          light: 'i-ph-sun',
+          dark: 'i-ph-moon'
+        }
+      }
+    })
+  ]
+})
 ```
 
 ::

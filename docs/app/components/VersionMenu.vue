@@ -25,7 +25,7 @@ const items = computed(() => {
 </script>
 
 <template>
-  <PDropdownMenu
+  <UDropdownMenu
     v-slot="{ open }"
     :modal="false"
     :items="items"
@@ -33,16 +33,16 @@ const items = computed(() => {
     :ui="{ content: 'min-w-fit' }"
     size="xs"
   >
-    <PButton
+    <UButton
       :label="`v${config.version}`"
       variant="subtle"
       :trailing-icon="appConfig.ui.icons.chevronDown"
       size="xs"
-      class="-mb-[6px] font-600 rounded-full truncate"
+      class="-mb-[6px] font-semibold rounded-xl truncate"
       :class="[open && 'bg-primary/15']"
       :ui="{
-        trailingIcon: ['transition-transform duration-280', open ? 'rotate-180' : undefined].filter(Boolean).join(' ')
+        trailingIcon: ['transition-transform duration-200', open ? 'rotate-180' : undefined].filter(Boolean).join(' ')
       }"
     />
-  </PDropdownMenu>
+  </UDropdownMenu>
 </template>

@@ -1,6 +1,6 @@
 ---
 title: ColorModeButton
-description: "A Button to switch between light and dark mode."
+description: 'A Button to switch between light and dark mode.'
 category: color-mode
 links:
   - label: Button
@@ -35,11 +35,11 @@ Use the `app.config.ts` to customize the icon with the `ui.icons` property:
 export default defineAppConfig({
   ui: {
     icons: {
-      light: "i-ph-sun",
-      dark: "i-ph-moon",
-    },
-  },
-});
+      light: 'i-ph-sun',
+      dark: 'i-ph-moon'
+    }
+  }
+})
 ```
 
 ::
@@ -49,9 +49,9 @@ export default defineAppConfig({
 Use the `vite.config.ts` to customize the icon with the `ui.icons` property:
 
 ```ts [vite.config.ts]
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import ui from "pohon-ui/vite";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import ui from '@nuxt/ui/vite'
 
 export default defineConfig({
   plugins: [
@@ -59,13 +59,13 @@ export default defineConfig({
     ui({
       ui: {
         icons: {
-          light: "i-ph-sun",
-          dark: "i-ph-moon",
-        },
-      },
-    }),
-  ],
-});
+          light: 'i-ph-sun',
+          dark: 'i-ph-moon'
+        }
+      }
+    })
+  ]
+})
 ```
 
 ::
@@ -78,7 +78,7 @@ export default defineConfig({
 
 :component-props
 
-::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="\_blank"}
+::callout{icon="i-simple-icons-mdnwebdocs" to="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes" target="_blank"}
 This component also supports all native `<button>` HTML attributes.
 ::
 

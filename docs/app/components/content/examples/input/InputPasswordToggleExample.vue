@@ -4,14 +4,14 @@ const password = ref('')
 </script>
 
 <template>
-  <PInput
+  <UInput
     v-model="password"
     placeholder="Password"
     :type="show ? 'text' : 'password'"
     :ui="{ trailing: 'pe-1' }"
   >
     <template #trailing>
-      <PButton
+      <UButton
         color="neutral"
         variant="link"
         size="sm"
@@ -22,7 +22,7 @@ const password = ref('')
         @click="show = !show"
       />
     </template>
-  </PInput>
+  </UInput>
 </template>
 
 <style>

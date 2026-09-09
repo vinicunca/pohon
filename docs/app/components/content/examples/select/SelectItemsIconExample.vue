@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SelectItem } from 'pohon-ui'
+import type { SelectItem } from '@nuxt/ui'
 
 const items = ref([
   {
@@ -30,5 +30,5 @@ const icon = computed(() => items.value.find(item => item.value === value.value)
 </script>
 
 <template>
-  <PSelect v-model="value" :items="items" value-key="value" :icon="icon" class="w-48" />
+  <USelect v-model="value" :items="items" value-key="value" :icon="icon" class="w-48" />
 </template>

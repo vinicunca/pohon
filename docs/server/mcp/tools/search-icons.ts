@@ -1,7 +1,7 @@
 import { z } from 'zod'
 
 export default defineMcpTool({
-  description: 'Search for icons across Iconify collections. Returns matching icon names in the `i-{prefix}-{name}` format used by Pohon UI. Default collection is `lucide`.',
+  description: 'Search for icons across Iconify collections. Returns matching icon names in the `i-{prefix}-{name}` format used by Nuxt UI. Default collection is `lucide`.',
   annotations: {
     readOnlyHint: true,
     destructiveHint: false,

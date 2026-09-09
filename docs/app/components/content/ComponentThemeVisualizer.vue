@@ -148,51 +148,51 @@ watch(open, (isOpen) => {
 
 <template>
   <template v-if="themeSlots.length">
-    <PPopover
+    <UPopover
       v-model:open="open"
       :content="{ align: 'start' }"
       :ui="{ content: 'w-64 max-h-72 overflow-y-auto' }"
       :dismissible="false"
     >
-      <PTooltip text="Inspect theme slots" :disabled="open" :content="{ side: 'right' }">
-        <PButton
+      <UTooltip text="Inspect theme slots" :disabled="open" :content="{ side: 'right' }">
+        <UButton
           color="neutral"
           variant="outline"
           size="sm"
           square
-          class="absolute -top-[13px] -right-[13px] z-1 rounded-full lg:opacity-0 lg:group-hover/component:opacity-100 ring-muted transition-opacity duration-280"
-          :class="[open && 'lg:opacity-100 bg-background-elevated']"
+          class="absolute -top-[13px] -right-[13px] z-1 rounded-full lg:opacity-0 lg:group-hover/component:opacity-100 ring-muted transition-opacity duration-200"
+          :class="[open && 'lg:opacity-100 bg-elevated']"
           tabindex="-1"
         >
           <ComponentThemeVisualizerIcon :open="open" />
-        </PButton>
-      </PTooltip>
+        </UButton>
+      </UTooltip>
 
       <template #content>
-        <div ref="popoverContentRef" class="px-2.5 py-1.5 text-xs font-600 color-text-highlighted border-b border-border">
+        <div ref="popoverContentRef" class="px-2.5 py-1.5 text-xs font-semibold text-highlighted border-b border-default">
           Theme slots
         </div>
         <div class="p-1">
           <div
             v-for="slotName in themeSlots"
             :key="slotName"
-            class="p-1.5 cursor-default hover:bg-background-elevated/50 transition-colors rounded-sm"
-            :class="[highlightedSlot === slotName && 'bg-background-elevated/50']"
+            class="p-1.5 cursor-default hover:bg-elevated/50 transition-colors rounded-sm"
+            :class="[highlightedSlot === slotName && 'bg-elevated/50']"
             @mouseenter="highlightSlot(slotName)"
             @mouseleave="clearHighlight"
           >
             <div class="flex items-center gap-2">
-              <code class="text-xs font-500" :class="[getSlotRenderLocation(slotName) !== 'none' ? 'color-text-highlighted' : 'color-text-muted']">{{ slotName }}</code>
-              <span v-if="getSlotRenderLocation(slotName) === 'portal'" class="text-[10px] color-text-muted">(in portal)</span>
-              <span v-else-if="getSlotRenderLocation(slotName) === 'none'" class="text-[10px] color-text-muted">(not rendered)</span>
+              <code class="text-xs font-medium" :class="[getSlotRenderLocation(slotName) !== 'none' ? 'text-highlighted' : 'text-muted']">{{ slotName }}</code>
+              <span v-if="getSlotRenderLocation(slotName) === 'portal'" class="text-[10px] text-muted">(in portal)</span>
+              <span v-else-if="getSlotRenderLocation(slotName) === 'none'" class="text-[10px] text-muted">(not rendered)</span>
             </div>
-            <div v-if="getSlotClasses(slotName)" class="mt-0.5 text-[10px] color-text-muted line-clamp-2 font-mono">
+            <div v-if="getSlotClasses(slotName)" class="mt-0.5 text-[10px] text-muted line-clamp-2 font-mono">
               {{ getSlotClasses(slotName) }}
             </div>
           </div>
         </div>
       </template>
-    </PPopover>
+    </UPopover>
 
     <Teleport to="body" :disabled="!isPortalHighlight">
       <div
@@ -206,7 +206,7 @@ watch(open, (isOpen) => {
       >
         <div
           v-if="highlightedSlot"
-          class="absolute -top-6 -left-0.5 px-1.5 py-0.5 text-xs font-500 font-mono bg-primary color-text-highlighted rounded-sm whitespace-nowrap"
+          class="absolute -top-6 -left-0.5 px-1.5 py-0.5 text-xs font-medium font-mono bg-primary text-highlighted rounded-sm whitespace-nowrap"
         >
           {{ highlightedSlot }}
         </div>

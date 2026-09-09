@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DropdownMenuItem } from 'pohon-ui'
+import type { DropdownMenuItem } from '@nuxt/ui'
 
 const items: DropdownMenuItem[][] = [[{
   label: 'Profile',
@@ -19,7 +19,7 @@ const items: DropdownMenuItem[][] = [[{
   children: [
     {
       label: 'benjamincanac',
-      avatar: { src: 'https://github.com/praburangki.png', loading: 'lazy' as const }
+      avatar: { src: 'https://github.com/benjamincanac.png', loading: 'lazy' as const }
     },
     {
       label: 'HugoRCD',
@@ -69,7 +69,7 @@ const items: DropdownMenuItem[][] = [[{
 </script>
 
 <template>
-  <PDropdownMenu :items="items" :content="{ align: 'start' }" :ui="{ content: 'w-48' }">
-    <PButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
-  </PDropdownMenu>
+  <UDropdownMenu :items="items" :content="{ align: 'start' }" :ui="{ content: 'w-48' }">
+    <UButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
+  </UDropdownMenu>
 </template>

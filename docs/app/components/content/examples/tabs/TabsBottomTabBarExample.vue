@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TabsItem } from 'pohon-ui'
+import type { TabsItem } from '@nuxt/ui'
 
 const items: TabsItem[] = [
   {
@@ -22,7 +22,7 @@ const items: TabsItem[] = [
 </script>
 
 <template>
-  <PTabs
+  <UTabs
     :items="items"
     :content="false"
     :ui="{

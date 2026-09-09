@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from 'pohon-ui'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items: NavigationMenuItem[] = [
   {
@@ -13,7 +13,7 @@ const items: NavigationMenuItem[] = [
       },
       {
         label: 'Installation',
-        description: 'Learn how to install and configure Pohon UI in your application.',
+        description: 'Learn how to install and configure Nuxt UI in your application.',
         icon: 'i-lucide-cloud-download'
       },
       {
@@ -108,5 +108,5 @@ defineShortcuts({
 </script>
 
 <template>
-  <PNavigationMenu v-model="active" :items="items" class="w-full justify-center" />
+  <UNavigationMenu v-model="active" :items="items" class="w-full justify-center" />
 </template>

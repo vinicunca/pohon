@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { h, resolveComponent } from 'vue'
-import type { TableColumn } from 'pohon-ui'
+import type { TableColumn } from '@nuxt/ui'
 
-const PBadge = resolveComponent('PBadge')
+const UBadge = resolveComponent('UBadge')
 
 type Payment = {
   id: string
@@ -70,7 +70,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -81,7 +81,7 @@ const columns: TableColumn<Payment>[] = [{
   meta: {
     class: {
       th: 'text-right',
-      td: 'text-right font-500'
+      td: 'text-right font-medium'
     }
   },
   cell: ({ row }) => {
@@ -103,8 +103,8 @@ const columnFilters = ref([{
 
 <template>
   <div class="flex flex-col flex-1 w-full">
-    <div class="flex px-4 py-3.5 border-b border-border-accented">
-      <PInput
+    <div class="flex px-4 py-3.5 border-b border-accented">
+      <UInput
         :model-value="(table?.tableApi?.getColumn('email')?.getFilterValue() as string)"
         class="max-w-sm"
         placeholder="Filter emails..."
@@ -112,7 +112,7 @@ const columnFilters = ref([{
       />
     </div>
 
-    <PTable
+    <UTable
       ref="table"
       v-model:column-filters="columnFilters"
       :data="data"

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { refDebounced } from '@vueuse/core'
-import type { DropdownMenuItem } from 'pohon-ui'
+import type { DropdownMenuItem } from '@nuxt/ui'
 
 const searchTerm = ref('')
 const searchTermDebounced = refDebounced(searchTerm, 200)
@@ -25,7 +25,7 @@ function onOpen() {
 </script>
 
 <template>
-  <PDropdownMenu
+  <UDropdownMenu
     v-model:search-term="searchTerm"
     :items="users || []"
     :filter="{
@@ -37,6 +37,6 @@ function onOpen() {
     :ui="{ content: 'w-48' }"
     @update:open="onOpen"
   >
-    <PButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
-  </PDropdownMenu>
+    <UButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
+  </UDropdownMenu>
 </template>

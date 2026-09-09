@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const content = `
-![Pohon UI v3](https://nuxt.com/assets/blog/nuxt-ui-v3.png)
+![Nuxt UI v3](https://nuxt.com/assets/blog/nuxt-ui-v3.png)
 
-We are thrilled to introduce Pohon UI v3, a comprehensive redesign of our UI library that delivers significant improvements in accessibility, performance, and developer experience. This major update represents over 1,500 commits of dedicated work, collaboration, and innovation from our team and the community.
+We are thrilled to introduce Nuxt UI v3, a comprehensive redesign of our UI library that delivers significant improvements in accessibility, performance, and developer experience. This major update represents over 1,500 commits of dedicated work, collaboration, and innovation from our team and the community.
 
 Read the blog post announcement: https://nuxt.com/blog/nuxt-ui-v3
 
-**[Get started with Pohon UI v3 →](https://ui3.nuxt.com/getting-started/installation/nuxt)**
+**[Get started with Nuxt UI v3 →](https://ui3.nuxt.com/getting-started/installation/nuxt)**
 
 ### 🧩 Reka UI: A New Foundation
 
@@ -18,7 +18,7 @@ We've transitioned from [Headless UI](https://headlessui.com/) to [Reka UI](http
 
 ### 🚀 Tailwind CSS Integration
 
-Pohon UI now leverages the latest [Tailwind CSS](https://tailwindcss.com), delivering:
+Nuxt UI now leverages the latest [Tailwind CSS](https://tailwindcss.com), delivering:
 
 - **Exceptional Performance**: Full builds up to 5× faster, with incremental builds over 100× faster
 - **Streamlined Toolchain**: Built-in import handling, vendor prefixing, and syntax transforms with zero additional tooling
@@ -34,7 +34,7 @@ We've adopted [Tailwind Variants](https://www.tailwind-variants.org/) to power o
 
 ## Migration from v2
 
-We want to be transparent: migrating from Pohon UI v2 to v3 requires significant effort. While we've maintained core concepts and components, Pohon UI v3 has been rebuilt from the ground up to provide enhanced capabilities.
+We want to be transparent: migrating from Nuxt UI v2 to v3 requires significant effort. While we've maintained core concepts and components, Nuxt UI v3 has been rebuilt from the ground up to provide enhanced capabilities.
 
 To upgrade your project:
 
@@ -44,22 +44,22 @@ To upgrade your project:
 
 ## 🙏 Acknowledgements
 
-This release represents thousands of hours of work from our team and the community. We'd like to thank everyone who contributed to making Pohon UI v3 a reality, especially @romhml, @sandros94, and @hywax for their tremendous work.
+This release represents thousands of hours of work from our team and the community. We'd like to thank everyone who contributed to making Nuxt UI v3 a reality, especially @romhml, @sandros94, and @hywax for their tremendous work.
 `
 
 const version = {
-  title: 'Introducing Pohon UI v3',
-  description: 'Pohon UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.',
+  title: 'Introducing Nuxt UI v3',
+  description: 'Nuxt UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, Tailwind CSS support, and full Vue compatibility.',
   date: '2025-03-12T00:00:00.000Z',
   badge: 'Release',
   to: 'https://nuxt.com/blog/nuxt-ui-v3',
   target: '_blank',
   content,
   authors: [{
-    name: 'praburangki',
+    name: 'Benjamin Canac',
     avatar: {
-      src: 'https://github.com/praburangki.png',
-      alt: 'praburangki',
+      src: 'https://github.com/benjamincanac.png',
+      alt: 'Benjamin Canac',
       loading: 'lazy' as const
     },
     to: 'https://github.com/benjamincanac',
@@ -69,9 +69,9 @@ const version = {
 </script>
 
 <template>
-  <PChangelogVersion v-bind="version" :ui="{ container: 'max-w-lg' }" class="w-full">
+  <UChangelogVersion v-bind="version" :ui="{ container: 'max-w-lg' }" class="w-full">
     <template #body>
       <MDC :value="version.content" />
     </template>
-  </PChangelogVersion>
+  </UChangelogVersion>
 </template>

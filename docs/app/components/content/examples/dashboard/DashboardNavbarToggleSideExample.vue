@@ -1,5 +1,5 @@
 <template>
-  <PDashboardNavbar
+  <UDashboardNavbar
     title="Dashboard"
     toggle-side="right"
   />

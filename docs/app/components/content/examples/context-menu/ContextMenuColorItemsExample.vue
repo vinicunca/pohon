@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ContextMenuItem } from 'pohon-ui'
+import type { ContextMenuItem } from '@nuxt/ui'
 
 const items: ContextMenuItem[][] = [
   [
@@ -27,9 +27,9 @@ const items: ContextMenuItem[][] = [
 </script>
 
 <template>
-  <PContextMenu :items="items" :ui="{ content: 'w-48' }">
-    <div class="flex items-center justify-center rounded-md border border-dashed border-border-accented text-sm aspect-video w-72">
+  <UContextMenu :items="items" :ui="{ content: 'w-48' }">
+    <div class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72">
       Right click here
     </div>
-  </PContextMenu>
+  </UContextMenu>
 </template>

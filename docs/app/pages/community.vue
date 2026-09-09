@@ -5,10 +5,10 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  titleTemplate: '%s - Pohon UI',
+  titleTemplate: '%s - Nuxt UI',
   title: page.value.title,
   description: page.value.description,
-  ogTitle: `${page.value.title} - Pohon UI`,
+  ogTitle: `${page.value.title} - Nuxt UI`,
   ogDescription: page.value.description
 })
 
@@ -24,10 +24,10 @@ if (import.meta.server) {
 
 <template>
   <main v-if="page">
-    <PPageHero
+    <UPageHero
       :title="page.hero.title"
       :description="page.hero.description"
-      class="md:border-b border-border"
+      class="md:border-b border-default"
       :ui="{ container: 'relative py-10 sm:py-16 lg:py-24' }"
     >
       <template #top>
@@ -36,13 +36,13 @@ if (import.meta.server) {
 
       <LazyStarsBg />
 
-      <div aria-hidden="true" class="hidden md:block absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
-    </PPageHero>
+      <div aria-hidden="true" class="hidden md:block absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+    </UPageHero>
 
-    <PPageSection :ui="{ container: '!py-0' }">
-      <div class="pb-16 sm:pb-24 lg:pb-32 md:border-x border-border">
-        <PPageGrid class="gap-px">
-          <PPageCard
+    <UPageSection :ui="{ container: '!py-0' }">
+      <div class="pb-16 sm:pb-24 lg:pb-32 md:border-x border-default">
+        <UPageGrid class="gap-px">
+          <UPageCard
             v-for="item in page.items"
             :key="item.label"
             :title="item.label"
@@ -50,14 +50,14 @@ if (import.meta.server) {
             :to="item.to"
             target="_blank"
             class="rounded-none group"
-            :ui="{ footer: 'pointer-events-auto z-1' }"
+            :ui="{ footer: 'pointer-events-auto z-[1]' }"
           >
             <template #leading>
-              <PAvatar v-bind="item.avatar" :alt="`${item.label} logo`" size="3xl" class="mx-auto" loading="lazy" />
+              <UAvatar v-bind="item.avatar" :alt="`${item.label} logo`" size="3xl" class="mx-auto" loading="lazy" />
             </template>
 
             <template v-if="item.user" #footer>
-              <PButton
+              <UButton
                 :label="item.user.name"
                 :avatar="{
                   ...item.user.avatar,
@@ -68,12 +68,12 @@ if (import.meta.server) {
                 size="sm"
                 color="neutral"
                 variant="outline"
-                class="ring-ring group-hover:ring-ring-accented transition bg-transparent"
+                class="ring-default group-hover:ring-accented transition bg-transparent"
               />
             </template>
-          </PPageCard>
-        </PPageGrid>
+          </UPageCard>
+        </UPageGrid>
       </div>
-    </PPageSection>
+    </UPageSection>
   </main>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AccordionItem } from 'pohon-ui'
+import type { AccordionItem } from '@nuxt/ui'
 
 const items: AccordionItem[] = [
   {
@@ -18,9 +18,9 @@ const items: AccordionItem[] = [
 </script>
 
 <template>
-  <PAccordion :items="items">
+  <UAccordion :items="items">
     <template #body="{ item }">
       This is the {{ item.label }} panel.
     </template>
-  </PAccordion>
+  </UAccordion>
 </template>

@@ -30,7 +30,7 @@ const groups = [
     slot: 'users' as const,
     items: [
       {
-        label: 'praburangki',
+        label: 'Benjamin Canac',
         suffix: 'benjamincanac',
         to: 'https://github.com/benjamincanac',
         target: '_blank'
@@ -83,17 +83,17 @@ const groups = [
 </script>
 
 <template>
-  <PCommandPalette :groups="groups" class="flex-1 h-80">
+  <UCommandPalette :groups="groups" class="flex-1 h-80">
     <template #users-leading="{ item }">
-      <PAvatar :src="`https://github.com/${item.suffix}.png`" size="2xs" loading="lazy" />
+      <UAvatar :src="`https://github.com/${item.suffix}.png`" size="2xs" loading="lazy" />
     </template>
 
     <template #billing-label="{ item }">
-      <span class="font-500 color-primary">{{ item.label }}</span>
+      <span class="font-medium text-primary">{{ item.label }}</span>
 
-      <PBadge variant="subtle" size="sm">
+      <UBadge variant="subtle" size="sm">
         50% off
-      </PBadge>
+      </UBadge>
     </template>
-  </PCommandPalette>
+  </UCommandPalette>
 </template>

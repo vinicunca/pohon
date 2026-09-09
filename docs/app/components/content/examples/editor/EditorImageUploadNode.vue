@@ -44,7 +44,7 @@ watch(file, async (newFile) => {
 
 <template>
   <NodeViewWrapper>
-    <PFileUpload
+    <UFileUpload
       v-model="file"
       accept="image/*"
       label="Upload an image"
@@ -53,12 +53,12 @@ watch(file, async (newFile) => {
       class="min-h-48"
     >
       <template #leading>
-        <PAvatar
+        <UAvatar
           :icon="loading ? 'i-lucide-loader-circle' : 'i-lucide-image'"
           size="xl"
           :ui="{ icon: [loading && 'animate-spin'] }"
         />
       </template>
-    </PFileUpload>
+    </UFileUpload>
   </NodeViewWrapper>
 </template>

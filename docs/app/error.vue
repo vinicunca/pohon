@@ -8,6 +8,33 @@ const props = defineProps<{
 const route = useRoute()
 const { style, link, color } = useTheme()
 
+// same lazy mount as app.vue: a static mount here would defeat the
+// dynamic import and pull the studio engine back into the entry chunk
+const { open: chatOpen } = useChat()
+const chatSeen = ref(false)
+watch(chatOpen, (value) => {
+  if (value) chatSeen.value = true
+}, { immediate: true })
+
+// ⌘I lives here rather than in Chat.vue: the chat only mounts once it has been
+// opened, so a binding inside it would never exist on the fresh load where the
+// command palette still advertises the shortcut.
+const { open: searchOpen } = useContentSearch()
+
+defineShortcuts({
+  meta_i: {
+    handler: () => {
+      if (searchOpen.value) {
+        searchOpen.value = false
+        chatOpen.value = true
+      } else {
+        chatOpen.value = !chatOpen.value
+      }
+    },
+    usingInput: true
+  }
+})
+
 const { data: navigation } = await useFetch('/api/navigation.json')
 
 useHead({
@@ -20,13 +47,13 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Pohon UI',
+  titleTemplate: '%s - Nuxt UI',
   title: String(props.error.statusCode)
 })
 
 if (import.meta.server) {
   useSeoMeta({
-    ogSiteName: 'Pohon UI',
+    ogSiteName: 'Nuxt UI',
     twitterCard: 'summary_large_image'
   })
 }
@@ -39,7 +66,7 @@ provide('navigation', rootNavigation)
 </script>
 
 <template>
-  <PApp>
+  <UApp>
     <NuxtLoadingIndicator color="var(--ui-primary)" :height="2" />
 
     <div class="flex">
@@ -48,16 +75,16 @@ provide('navigation', rootNavigation)
 
         <Header />
 
-        <PError :error="error" />
+        <UError :error="error" />
 
         <Footer />
       </div>
 
       <ClientOnly>
-        <Chat />
+        <LazyChat v-if="chatSeen" />
 
         <Search :navigation="navigationByFramework" />
       </ClientOnly>
     </div>
-  </PApp>
+  </UApp>
 </template>

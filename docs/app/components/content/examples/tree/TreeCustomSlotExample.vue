@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TreeItem } from 'pohon-ui'
+import type { TreeItem } from '@nuxt/ui'
 
 const items = [
   {
@@ -30,11 +30,11 @@ const items = [
 </script>
 
 <template>
-  <PTree :items="items">
+  <UTree :items="items">
     <template #app="{ item }">
-      <p class="italic font-700">
+      <p class="italic font-bold">
         {{ item.label }}
       </p>
     </template>
-  </PTree>
+  </UTree>
 </template>

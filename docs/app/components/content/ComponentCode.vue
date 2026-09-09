@@ -1,6 +1,6 @@
 <!-- eslint-disable no-useless-escape -->
 <script setup lang="ts">
-import type { ChipProps } from 'pohon-ui'
+import type { ChipProps } from '@nuxt/ui'
 import json5 from 'json5'
 import { upperFirst, camelCase, kebabCase } from 'scule'
 import { hash } from 'ohash'
@@ -264,7 +264,7 @@ ${props.slots?.default}
       const removeArrayBrackets = (type: string): string => type.endsWith('[]') ? removeArrayBrackets(type.slice(0, -2)) : type
 
       const types = props.externalTypes.map(type => removeArrayBrackets(type))
-      code += `import type { ${types.join(', ')} } from 'pohon-ui'
+      code += `import type { ${types.join(', ')} } from '@nuxt/ui'
 `
     }
 
@@ -415,17 +415,17 @@ const { data: ast } = useAsyncData(codeKey, async () => {
     <div ref="wrapperContainer" class="relative group/component">
       <div v-if="options.length" class="flex flex-wrap items-center gap-2.5 border border-muted border-b-0 relative rounded-t-md px-4 py-2.5 overflow-x-auto">
         <template v-for="option in options" :key="option.name">
-          <PFormField
+          <UFormField
             :label="option.label"
             size="sm"
-            class="inline-flex ring ring-ring-accented rounded-sm"
+            class="inline-flex ring ring-accented rounded-sm"
             :ui="{
-              wrapper: 'bg-background-elevated/50 rounded-l-sm flex border-r border-border-accented',
-              label: 'color-text-muted px-2 py-1.5',
+              wrapper: 'bg-elevated/50 rounded-l-sm flex border-r border-accented',
+              label: 'text-muted px-2 py-1.5',
               container: 'mt-0'
             }"
           >
-            <PSelect
+            <USelect
               v-if="option.items?.length"
               :model-value="getComponentProp(option.name)"
               :items="option.items"
@@ -438,7 +438,7 @@ const { data: ast } = useAsyncData(codeKey, async () => {
               @update:model-value="setComponentProp(option.name, $event)"
             >
               <template v-if="option.name.toLowerCase().endsWith('color')" #leading="{ modelValue, ui }">
-                <PChip
+                <UChip
                   v-if="modelValue"
                   inset
                   standalone
@@ -447,8 +447,8 @@ const { data: ast } = useAsyncData(codeKey, async () => {
                   class="size-2"
                 />
               </template>
-            </PSelect>
-            <PInput
+            </USelect>
+            <UInput
               v-else
               :type="option.inputType"
               :model-value="getComponentProp(option.name)"
@@ -457,7 +457,7 @@ const { data: ast } = useAsyncData(codeKey, async () => {
               :ui="{ base: 'rounded-sm rounded-l-none min-w-12' }"
               @update:model-value="setComponentProp(option.name, $event)"
             />
-          </PFormField>
+          </UFormField>
         </template>
       </div>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AccordionItem } from 'pohon-ui'
+import type { AccordionItem } from '@nuxt/ui'
 import { useSortable } from '@vueuse/integrations/useSortable'
 
 const items = shallowRef<AccordionItem[]>([
@@ -28,5 +28,5 @@ useSortable(accordion, items, {
 </script>
 
 <template>
-  <PAccordion ref="accordion" :items="items" />
+  <UAccordion ref="accordion" :items="items" />
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ChipProps } from 'pohon-ui'
+import type { ChipProps } from '@nuxt/ui'
 import { camelCase, upperFirst } from 'scule'
 import { hash } from 'ohash'
 import { useElementSize } from '@vueuse/core'
@@ -190,20 +190,20 @@ const urlSearchParams = computed(() => {
           <div v-if="props.options?.length || !!slots.options" class="flex gap-4 p-4 border-b border-muted">
             <slot name="options" />
 
-            <PFormField
+            <UFormField
               v-for="option in props.options"
               :key="option.name"
               :label="option.label"
               :name="option.name"
               size="sm"
-              class="inline-flex ring ring-ring-accented rounded-sm"
+              class="inline-flex ring ring-accented rounded-sm"
               :ui="{
-                wrapper: 'bg-background-elevated/50 rounded-l-sm flex border-r border-border-accented',
-                label: 'color-text-muted px-2 py-1.5',
+                wrapper: 'bg-elevated/50 rounded-l-sm flex border-r border-accented',
+                label: 'text-muted px-2 py-1.5',
                 container: 'mt-0'
               }"
             >
-              <PSelectMenu
+              <USelectMenu
                 v-if="option.items?.length"
                 :model-value="get(optionsValues, option.name)"
                 :items="option.items"
@@ -218,7 +218,7 @@ const urlSearchParams = computed(() => {
                 @update:model-value="set(optionsValues, option.name, $event)"
               >
                 <template v-if="option.name.toLowerCase().endsWith('color')" #leading="{ modelValue, ui }">
-                  <PChip
+                  <UChip
                     inset
                     standalone
                     :color="(modelValue as any)"
@@ -226,8 +226,8 @@ const urlSearchParams = computed(() => {
                     class="size-2"
                   />
                 </template>
-              </PSelectMenu>
-              <PInput
+              </USelectMenu>
+              <UInput
                 v-else
                 :model-value="get(optionsValues, option.name)"
                 :type="option.type"
@@ -236,7 +236,7 @@ const urlSearchParams = computed(() => {
                 :ui="{ base: 'rounded-sm rounded-l-none min-w-12' }"
                 @update:model-value="set(optionsValues, option.name, $event)"
               />
-            </PFormField>
+            </UFormField>
           </div>
 
           <iframe

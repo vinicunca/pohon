@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { queryCollection } from '@nuxt/content/server'
 
 export default defineMcpTool({
-  description: 'Lists all available Pohon UI templates with optional framework filtering',
+  description: 'Lists all available Nuxt UI templates with optional framework filtering',
   annotations: {
     readOnlyHint: true,
     destructiveHint: false,

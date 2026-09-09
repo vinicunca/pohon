@@ -22,19 +22,19 @@ const appendToBody = import.meta.client ? () => document.body : undefined
 </script>
 
 <template>
-  <PEditor
+  <UEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     placeholder="Type @ to mention someone..."
     class="w-full min-h-21"
   >
-    <PEditorMentionMenu
+    <UEditorMentionMenu
       v-model:search-term="searchTerm"
       :editor="editor"
       :items="items"
       :append-to="appendToBody"
       ignore-filter
     />
-  </PEditor>
+  </UEditor>
 </template>

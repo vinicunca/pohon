@@ -1,7 +1,7 @@
-title: Official Pohon UI Templates
+title: Official Nuxt UI Templates
 description: 'Explore ready-made templates powered by our Vue components. These templates are fully responsive, accessible, and easy to customize, so you can launch your project quickly and effortlessly.'
 hero:
-  title: Ship [faster]{.color-primary} with :br Pohon UI Templates
+  title: Ship [faster]{.text-primary} with :br Nuxt UI Templates
   description: 'Explore ready-made templates powered by our Vue components. These templates are fully responsive, accessible, and easy to customize, so you can launch your project quickly and effortlessly.'
 navigation: false
 items:
@@ -378,7 +378,7 @@ items:
         target: _blank
         icon: i-simple-icons-v0
   - title: 'Starter'
-    description: "A minimal template to get started with Pohon UI."
+    description: "A minimal template to get started with Nuxt UI."
     icon: i-lucide-flower
     framework: nuxt
     features:
@@ -410,7 +410,7 @@ items:
         target: _blank
         icon: i-simple-icons-v0
   - title: 'Starter'
-    description: "A minimal template to get started with Pohon UI."
+    description: "A minimal template to get started with Nuxt UI."
     icon: i-lucide-flower
     framework: vue
     features:

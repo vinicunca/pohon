@@ -3,7 +3,7 @@ const value = ref(1500)
 </script>
 
 <template>
-  <PInputNumber
+  <UInputNumber
     v-model="value"
     :format-options="{
       style: 'currency',

@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
 
   const result = streamText({
     model: 'anthropic/claude-haiku-4.5',
-    instructions: 'You are a helpful assistant for Pohon UI, a UI library for Nuxt and Vue.',
+    instructions: 'You are a helpful assistant for Nuxt UI, a UI library for Nuxt and Vue.',
     messages: await convertToModelMessages(messages),
     providerOptions: {
       gateway: {

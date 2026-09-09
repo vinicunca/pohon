@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ContentNavigationItem } from '@nuxt/content'
-import { mapContentNavigation } from 'pohon-ui/utils/content'
+import { mapContentNavigation } from '@nuxt/ui/utils/content'
 
 const route = useRoute()
 
@@ -13,11 +13,11 @@ const items = computed(() => mapContentNavigation(navigation?.value.map(item => 
 </script>
 
 <template>
-  <PSeparator class="hidden lg:flex" />
+  <USeparator class="hidden lg:flex" />
 
-  <PContainer class="hidden lg:flex items-center justify-between">
-    <PNavigationMenu :items="items" variant="pill" highlight class="-mx-2.5 -mb-px" />
+  <UContainer class="hidden lg:flex items-center justify-between">
+    <UNavigationMenu :items="items" variant="pill" highlight class="-mx-2.5 -mb-px" />
 
     <FrameworkTabs class="w-40" />
-  </PContainer>
+  </UContainer>
 </template>
