@@ -123,7 +123,7 @@ function handleKeyDown(event: KeyboardEvent) {
             @click="setLink"
           />
 
-          <USeparator orientation="vertical" class="h-6 mx-1" />
+          <PSeparator orientation="vertical" class="h-6 mx-1" />
 
           <PButton
             icon="i-lucide-external-link"

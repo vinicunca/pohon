@@ -63,7 +63,7 @@ In this example, we use the `ContentNavigation` component to display the navigat
 
 Use the Page component in a page with the `right` slot to display a table of contents:
 
-```vue [pages/[...slug\].vue]{29-31}
+```vue [pages/[...slug].vue]{29-31}
 <script setup lang="ts">
 const route = useRoute();
 
@@ -87,7 +87,7 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
     <UPageBody>
       <ContentRenderer :value="page" />
 
-      <USeparator />
+      <PSeparator />
 
       <UContentSurround :surround="surround" />
     </UPageBody>

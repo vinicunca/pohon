@@ -16,9 +16,9 @@ const usernames = [
           Built by the community.
         </p>
       </div>
-      <UBadge color="neutral" variant="subtle">
+      <PBadge color="neutral" variant="subtle">
         312
-      </UBadge>
+      </PBadge>
     </div>
 
     <div class="flex flex-wrap gap-1.5">

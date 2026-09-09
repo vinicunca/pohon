@@ -24,7 +24,7 @@ function format(amount: number) {
       </p>
     </div>
 
-    <USeparator />
+    <PSeparator />
 
     <ul class="divide-y divide-default">
       <li v-for="transaction in transactions" :key="transaction.name" class="flex items-center gap-3 px-4 py-2.5">

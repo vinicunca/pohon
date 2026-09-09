@@ -17,7 +17,7 @@ const items: TabsItem[] = [{
     </template>
 
     <template #trailing>
-      <UBadge label="4" variant="subtle" />
+      <PBadge label="4" variant="subtle" />
     </template>
 
     <template #right>

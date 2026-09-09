@@ -51,7 +51,7 @@ const cards = ref([
       :key="index"
       v-bind="card"
     >
-      <UColorModeImage
+      <PColorModeImage
         v-if="card.image"
         :light="`${card.image.path}-light.svg`"
         :dark="`${card.image.path}-dark.svg`"

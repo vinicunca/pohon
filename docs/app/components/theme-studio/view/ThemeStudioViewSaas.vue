@@ -403,7 +403,7 @@ onMounted(() => {
       </UPageColumns>
     </UPageSection>
 
-    <USeparator />
+    <PSeparator />
 
     <UPageSection
       title="A Plan for Every Need"
@@ -498,9 +498,9 @@ onMounted(() => {
       </div>
     </UPageCTA>
 
-    <USeparator :icon="studioIcons.saas" class="h-px" />
+    <PSeparator :icon="studioIcons.saas" class="h-px" />
 
-    <UFooter :ui="{ top: 'border-b border-default' }">
+    <UFooter :ui="{ top: 'border-b border-border' }">
       <template #top>
         <UContainer>
           <UFooterColumns :columns="footerColumns">

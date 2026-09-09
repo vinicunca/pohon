@@ -169,7 +169,7 @@ watch(open, (isOpen) => {
       </UTooltip>
 
       <template #content>
-        <div ref="popoverContentRef" class="px-2.5 py-1.5 text-xs font-semibold text-highlighted border-b border-default">
+        <div ref="popoverContentRef" class="px-2.5 py-1.5 text-xs font-semibold text-highlighted border-b border-border">
           Theme slots
         </div>
         <div class="p-1">

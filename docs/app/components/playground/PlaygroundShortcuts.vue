@@ -19,7 +19,7 @@ const shortcuts = [
       </p>
     </div>
 
-    <USeparator />
+    <PSeparator />
 
     <ul class="divide-y divide-default">
       <li v-for="shortcut in shortcuts" :key="shortcut.label" class="flex items-center justify-between px-4 py-2.5">

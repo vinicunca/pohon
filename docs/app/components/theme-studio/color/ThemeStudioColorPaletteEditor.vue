@@ -511,7 +511,7 @@ function resetEffects() {
           onInteractOutside: stuckShade === swatchDetail.shade ? (event: Event) => event.preventDefault() : undefined,
           onFocusOutside: stuckShade === swatchDetail.shade ? (event: Event) => event.preventDefault() : undefined
         }"
-        :ui="{ content: 'w-(--reka-popover-trigger-width)' }"
+        :ui="{ content: 'w-(--akar-popover-trigger-width)' }"
         @update:open="onSwatchOpenUpdate(swatchDetail.shade, $event)"
       >
         <template #content>

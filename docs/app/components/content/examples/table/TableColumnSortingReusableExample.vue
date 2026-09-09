@@ -3,7 +3,7 @@ import { h, resolveComponent } from 'vue'
 import type { TableColumn } from 'pohon-ui'
 import type { Column } from '@tanstack/vue-table'
 
-const UBadge = resolveComponent('UBadge')
+const PBadge = resolveComponent('PBadge')
 const PButton = resolveComponent('PButton')
 const UDropdownMenu = resolveComponent('UDropdownMenu')
 
@@ -73,7 +73,7 @@ const columns: TableColumn<Payment>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',

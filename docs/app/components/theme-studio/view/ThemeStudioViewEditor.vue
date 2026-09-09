@@ -277,11 +277,11 @@ function dragHandleItems(editor: Editor): DropdownMenuItem[][] {
               </UTooltip>
             </UAvatarGroup>
 
-            <USeparator orientation="vertical" class="h-7 shrink-0" />
+            <PSeparator orientation="vertical" class="h-7 shrink-0" />
 
             <UEditorToolbar :editor="editor" :items="toolbarItems" />
 
-            <USeparator orientation="vertical" class="h-7 shrink-0" />
+            <PSeparator orientation="vertical" class="h-7 shrink-0" />
 
             <!-- Static: the studio toolbar owns color mode. -->
             <PButton color="neutral" variant="ghost" size="sm" aria-label="Color mode">

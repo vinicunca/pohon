@@ -63,7 +63,7 @@ const items = [
   <UNavigationMenu
     :items="items"
     :ui="{
-      viewport: 'sm:w-(--reka-navigation-menu-viewport-width)',
+      viewport: 'sm:w-(--akar-navigation-menu-viewport-width)',
       content: 'sm:w-auto',
       childList: 'sm:w-96',
       childLinkDescription: 'text-balance line-clamp-2'
@@ -77,14 +77,14 @@ const items = [
         </li>
 
         <li v-for="child in item.children" :key="child.label">
-          <ULink class="text-sm text-left rounded-md p-3 transition-colors hover:bg-elevated/50">
+          <PLink class="text-sm text-left rounded-md p-3 transition-colors hover:bg-elevated/50">
             <p class="font-medium text-highlighted">
               {{ child.label }}
             </p>
             <p class="text-muted line-clamp-2">
               {{ child.description }}
             </p>
-          </ULink>
+          </PLink>
         </li>
       </ul>
     </template>

@@ -180,7 +180,7 @@ const ui = {
         <UDropdownMenu
           :items="userItems"
           :content="{ align: 'center', collisionPadding: 12 }"
-          :ui="{ content: collapsed ? 'w-48' : 'w-(--reka-dropdown-menu-trigger-width)' }"
+          :ui="{ content: collapsed ? 'w-48' : 'w-(--akar-dropdown-menu-trigger-width)' }"
         >
           <PButton
             :label="collapsed ? undefined : 'Benjamin Canac'"

@@ -153,7 +153,7 @@ const gridUi = {
         @update:model-value="select"
       >
         <template #item-leading="{ item }">
-          <UColorModeImage
+          <PColorModeImage
             :light="`${item.image}-light.png`"
             :dark="`${item.image}-dark.png`"
             :alt="`${item.label} preview`"

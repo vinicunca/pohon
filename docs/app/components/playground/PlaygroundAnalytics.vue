@@ -15,9 +15,9 @@ const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
           418.2K
         </p>
       </div>
-      <UBadge color="success" variant="subtle" size="sm" :icon="studioIcons.trendingUp">
+      <PBadge color="success" variant="subtle" size="sm" :icon="studioIcons.trendingUp">
         +10%
-      </UBadge>
+      </PBadge>
     </div>
 
     <div>

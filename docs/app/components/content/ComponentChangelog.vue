@@ -115,10 +115,10 @@ function normalizeCommitMessage(commit: Commit) {
     :ui="{ root: '', wrapper: 'mt-0 pb-0', title: 'mb-1.5 flex items-center justify-between' }"
   >
     <template #title="{ item }">
-      <UBadge v-if="item.tag === 'unreleased'" color="neutral" variant="subtle" :label="item.title" class="w-12.5 justify-center" />
-      <ULink v-else :to="item.url" target="_blank">
-        <UBadge variant="subtle" :label="item.tag" />
-      </ULink>
+      <PBadge v-if="item.tag === 'unreleased'" color="neutral" variant="subtle" :label="item.title" class="w-12.5 justify-center" />
+      <PLink v-else :to="item.url" target="_blank">
+        <PBadge variant="subtle" :label="item.tag" />
+      </PLink>
 
       <time v-if="item.published_at" :datetime="item.published_at" class="text-xs text-dimmed font-normal">
         {{ useTimeAgo(new Date(item.published_at)) }}

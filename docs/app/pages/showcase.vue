@@ -38,18 +38,18 @@ if (import.meta.server) {
 
       <LazyStarsBg />
 
-      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
     </UPageHero>
 
     <UPageSection :ui="{ container: '!pt-0 relative' }">
-      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
 
-      <div class="border-l border-t border-default">
+      <div class="border-l border-t border-border">
         <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start justify-center divide-y divide-x divide-default">
           <li
             v-for="item in page.items"
             :key="item.name"
-            class="group relative flex items-center justify-center flex-1 size-full p-2 last:border-r last:border-b border-default overflow-hidden"
+            class="group relative flex items-center justify-center flex-1 size-full p-2 last:border-r last:border-b border-border overflow-hidden"
           >
             <NuxtLink class="inset-0 absolute" :to="item.url" target="_blank">
               <span class="sr-only">Go to {{ item.name }}</span>

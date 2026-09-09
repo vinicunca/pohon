@@ -102,9 +102,9 @@ onMounted(async () => {
           d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"
         />
       </svg>
-      <UBadge color="info" class="absolute top-[18px] left-[18px] p-1 rounded-sm font-semibold leading-none">
+      <PBadge color="info" class="absolute top-[18px] left-[18px] p-1 rounded-sm font-semibold leading-none">
         Hugo
-      </UBadge>
+      </PBadge>
     </div>
     <div id="cursor2" class="absolute z-10 pointer-events-none" :style="{ opacity: 0 }">
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" class="absolute top-0 left-0 drop-shadow-[0_1px_2px_rgb(0,0,0,0.25)] text-inverted">
@@ -117,9 +117,9 @@ onMounted(async () => {
           d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"
         />
       </svg>
-      <UBadge color="success" class="absolute top-[18px] left-[18px] p-1 rounded-sm font-semibold leading-none">
+      <PBadge color="success" class="absolute top-[18px] left-[18px] p-1 rounded-sm font-semibold leading-none">
         Sarah
-      </UBadge>
+      </PBadge>
     </div>
 
     <UPageHero
@@ -133,7 +133,7 @@ onMounted(async () => {
       <template #description>
         <MDC :value="page.hero.description" unwrap="p" cache-key="figma-hero-description" />
       </template>
-      <!-- <img src="/figma/nuxt-ui-figma.png" alt="Screnshot of the Pohon Figma design kit" class="w-full h-auto border border-default border-b-0"> -->
+      <!-- <img src="/figma/nuxt-ui-figma.png" alt="Screnshot of the Pohon Figma design kit" class="w-full h-auto border border-border border-b-0"> -->
       <div class="relative">
         <video
           ref="video"
@@ -160,9 +160,9 @@ onMounted(async () => {
         </div>
       </div>
 
-      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
     </UPageHero>
-    <UPageSection v-bind="page.features1" :ui="{ container: 'py-16 sm:py-16 lg:py-16', features: 'mt-0' }" class="border-y border-default" />
+    <UPageSection v-bind="page.features1" :ui="{ container: 'py-16 sm:py-16 lg:py-16', features: 'mt-0' }" class="border-y border-border" />
     <UPageCTA
       v-if="page.cta1"
       variant="naked"
@@ -201,7 +201,7 @@ onMounted(async () => {
     <UPageSection v-bind="page.section3" orientation="horizontal" :ui="{ container: 'py-16 sm:pt-16 lg:pt-16' }">
       <NuxtImg v-if="page.section3.image" v-bind="page.section3.image" class="w-full h-auto rounded-lg" loading="lazy" />
     </UPageSection>
-    <USeparator />
+    <PSeparator />
     <UPageSection
       v-bind="page.section4"
       orientation="vertical"
@@ -216,14 +216,14 @@ onMounted(async () => {
       <template #description>
         <MDC :value="page.section4.description" unwrap="p" cache-key="figma-section-4-description" />
       </template>
-      <div aria-hidden="true" class="absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
-      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start justify-center border border-default border-b-0 sm:divide-x divide-y lg:divide-y-0 divide-default">
+      <div aria-hidden="true" class="absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-start justify-center border border-border border-b-0 sm:divide-x divide-y lg:divide-y-0 divide-default">
         <li v-for="(step, index) in page?.section4.steps" :key="step.title" class="relative flex flex-col gap-y-4 justify-start group h-full p-4 bg-default" :class="{ 'hover:bg-muted/50': step.to }">
-          <ULink v-if="step.to" :to="step.to" :aria-label="`Open ${step.title}`" target="_blank" class="absolute inset-0 z-10" />
+          <PLink v-if="step.to" :to="step.to" :aria-label="`Open ${step.title}`" target="_blank" class="absolute inset-0 z-10" />
           <NuxtImg v-if="step.image" v-bind="step.image" class="rounded-sm" loading="lazy" />
           <div>
             <h2 class="font-semibold inline-flex items-center gap-x-1">
-              <UBadge :label="index + 1" size="sm" color="neutral" variant="subtle" class="rounded-full tabular-nums" /> {{ step.title }}
+              <PBadge :label="index + 1" size="sm" color="neutral" variant="subtle" class="rounded-full tabular-nums" /> {{ step.title }}
             </h2>
             <p class="text-muted text-sm">
               {{ step.description }}
@@ -232,15 +232,15 @@ onMounted(async () => {
         </li>
       </ul>
     </UPageSection>
-    <UPageSection v-bind="page.features2" :ui="{ container: 'py-16 sm:py-16 lg:py-16', features: 'mt-0' }" class="border-y border-default" />
+    <UPageSection v-bind="page.features2" :ui="{ container: 'py-16 sm:py-16 lg:py-16', features: 'mt-0' }" class="border-y border-border" />
 
     <UPageCTA v-if="page.customers" :title="page.customers.title" :ui="{ title: '!text-base font-medium', container: 'sm:py-12 sm:gap-8' }" variant="outline" class="rounded-none">
-      <UMarquee pause-on-hover :ui="{ root: '[--duration:40s]' }">
+      <PMarquee pause-on-hover :ui="{ root: '[--duration:40s]' }">
         <img v-for="(logo, index) in page.customers.items" :key="index" v-bind="logo" class="h-6 shrink-0 max-w-[140px] filter invert dark:invert-0" loading="lazy">
-      </UMarquee>
+      </PMarquee>
     </UPageCTA>
     <UPageSection v-bind="page.faq" :ui="{ container: 'relative' }">
-      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div aria-hidden="true" class="hidden lg:block absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
       <UAccordion
         type="multiple"
         :items="(page.faq.items as any[])"

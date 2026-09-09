@@ -66,7 +66,7 @@ ignore:
 
 Use the ContentSurround component in a page to display the prev and next links:
 
-```vue [pages/[...slug\].vue]{19}
+```vue [pages/[...slug].vue]{19}
 <script setup lang="ts">
 const route = useRoute();
 
@@ -89,7 +89,7 @@ if (!page.value) {
     <UPageBody>
       <ContentRenderer v-if="page.body" :value="page" />
 
-      <USeparator v-if="surround?.filter(Boolean).length" />
+      <PSeparator v-if="surround?.filter(Boolean).length" />
 
       <UContentSurround :surround="surround as any" />
     </UPageBody>

@@ -212,7 +212,7 @@ onMounted(() => {
           orientation="vertical"
           :links="introLinks"
           :ui="{
-            root: 'border-b border-default xl:border-b-0 xl:sticky xl:top-0 xl:h-[calc(100dvh_-_var(--ui-header-height)_*_2_-_0.5rem)] overflow-hidden',
+            root: 'border-b border-border xl:border-b-0 xl:sticky xl:top-0 xl:h-[calc(100dvh_-_var(--ui-header-height)_*_2_-_0.5rem)] overflow-hidden',
             container: 'h-full items-center justify-center',
             wrapper: 'flex flex-col',
             headline: 'mb-6',
@@ -270,7 +270,7 @@ onMounted(() => {
               :ui="{
                 root: 'flex items-start',
                 container: 'max-w-xl min-w-0',
-                header: 'border-b border-default pb-4 mb-4',
+                header: 'border-b border-border pb-4 mb-4',
                 title: 'text-3xl',
                 date: 'text-xs/9 text-highlighted font-mono',
                 indicator: 'sticky top-0 pt-16 -mt-16 sm:pt-24 sm:-mt-24 lg:pt-32 lg:-mt-32'

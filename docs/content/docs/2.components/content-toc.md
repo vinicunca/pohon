@@ -291,7 +291,7 @@ hide:
 
 Use the ContentToc component in a page to display the Table of Contents:
 
-```vue [pages/[...slug\].vue]{22-24}
+```vue [pages/[...slug].vue]{22-24}
 <script setup lang="ts">
 const route = useRoute();
 
@@ -314,7 +314,7 @@ if (!page.value) {
     <UPageBody>
       <ContentRenderer v-if="page.body" :value="page" />
 
-      <USeparator v-if="surround?.filter(Boolean).length" />
+      <PSeparator v-if="surround?.filter(Boolean).length" />
 
       <UContentSurround :surround="surround as any" />
     </UPageBody>

@@ -167,7 +167,7 @@ const shareOpen = ref(false)
             <ThemeStudioColorModeTabs size="sm" class="w-full" />
           </PFormField>
 
-          <USeparator class="my-5" />
+          <PSeparator class="my-5" />
 
           <ThemeStudioShuffleButton variant="outline" vertical />
           <ThemeStudioResetButton variant="outline" vertical />
@@ -234,13 +234,13 @@ const shareOpen = ref(false)
           </UTooltip>
 
           <!-- undo/redo step through history, the two beside them rewrite it -->
-          <USeparator orientation="vertical" class="h-4 mx-0.5" />
+          <PSeparator orientation="vertical" class="h-4 mx-0.5" />
 
           <ThemeStudioResetButton size="sm" />
           <ThemeStudioShuffleButton size="sm" />
         </div>
 
-        <USeparator orientation="vertical" class="h-auto self-stretch py-1 ms-4.5 me-1.5" />
+        <PSeparator orientation="vertical" class="h-auto self-stretch py-1 ms-4.5 me-1.5" />
       </template>
 
       <ThemeStudioToolbar />

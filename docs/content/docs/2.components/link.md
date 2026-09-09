@@ -104,7 +104,7 @@ The Link component automatically integrates with [`@nuxtjs/i18n`](https://i18n.n
 ```vue
 <template>
   <!-- Automatically becomes /en/about or /fr/about based on current locale -->
-  <ULink to="/about">About</ULink>
+  <PLink to="/about">About</PLink>
 </template>
 ```
 

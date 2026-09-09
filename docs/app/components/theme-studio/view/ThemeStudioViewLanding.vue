@@ -160,7 +160,7 @@ const vReveal = {
 
       <template #headline>
         <div class="landing-enter" style="animation-delay: 200ms">
-          <UBadge
+          <PBadge
             label="v2.0, Now with predictive alerting"
             color="neutral"
             variant="soft"
@@ -169,7 +169,7 @@ const vReveal = {
             <template #leading>
               <UChip inset standalone :ui="{ base: 'animate-pulse ring-0' }" />
             </template>
-          </UBadge>
+          </PBadge>
         </div>
       </template>
 
@@ -195,11 +195,11 @@ const vReveal = {
       </template>
 
       <div class="landing-enter max-w-2xl mx-auto w-full" style="animation-delay: 850ms">
-        <div class="rounded-xl border border-default bg-elevated/50 backdrop-blur-sm ring-1 ring-inverted/2 overflow-hidden">
-          <div class="flex items-center gap-1.5 border-b border-default p-4 sm:px-6">
-            <span class="size-2.5 rounded-full border border-default bg-muted" />
-            <span class="size-2.5 rounded-full border border-default bg-muted" />
-            <span class="size-2.5 rounded-full border border-default bg-muted" />
+        <div class="rounded-xl border border-border bg-elevated/50 backdrop-blur-sm ring-1 ring-inverted/2 overflow-hidden">
+          <div class="flex items-center gap-1.5 border-b border-border p-4 sm:px-6">
+            <span class="size-2.5 rounded-full border border-border bg-muted" />
+            <span class="size-2.5 rounded-full border border-border bg-muted" />
+            <span class="size-2.5 rounded-full border border-border bg-muted" />
           </div>
 
           <div class="min-h-[200px] p-5 sm:p-6 font-mono text-[13px] leading-[1.8] text-start">
@@ -244,7 +244,7 @@ const vReveal = {
         <span v-reveal="200" class="inline-block">No more tab-switching between metrics, traces, and logs. Correlate everything into a single explorable topology.</span>
       </template>
 
-      <div class="rounded-2xl border border-default bg-default overflow-hidden">
+      <div class="rounded-2xl border border-border bg-default overflow-hidden">
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-px">
           <UPageCard
             v-for="(feature, index) in features"
@@ -280,7 +280,7 @@ const vReveal = {
         <span v-reveal="200" class="inline-block">Process billions of events per day across thousands of production environments with an architecture designed for the workloads of 2030.</span>
       </template>
 
-      <div class="rounded-2xl border border-default bg-default overflow-hidden">
+      <div class="rounded-2xl border border-border bg-default overflow-hidden">
         <div class="grid grid-cols-2 xl:grid-cols-4 gap-px">
           <UPageCard
             v-for="(metric, index) in metrics"
@@ -341,7 +341,7 @@ const vReveal = {
     </UPageCTA>
 
     <!-- Footer -->
-    <UFooter :ui="{ container: 'border-t border-default', right: 'gap-x-0 flex-wrap justify-end' }">
+    <UFooter :ui="{ container: 'border-t border-border', right: 'gap-x-0 flex-wrap justify-end' }">
       <template #left>
         <p class="text-sm text-dimmed">
           Built with Pohon • © 2026

@@ -58,7 +58,7 @@ const items = [
     </template>
 
     <template #github-trailing>
-      <UBadge label="6k+" color="neutral" variant="subtle" size="sm" />
+      <PBadge label="6k+" color="neutral" variant="subtle" size="sm" />
     </template>
   </UNavigationMenu>
 </template>

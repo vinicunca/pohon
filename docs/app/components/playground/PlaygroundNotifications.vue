@@ -27,7 +27,7 @@ const settings = ref({
       </div>
     </div>
 
-    <div class="flex justify-end border-t border-default p-3">
+    <div class="flex justify-end border-t border-border p-3">
       <PButton label="Save preferences" @click="toast.add({ title: 'Preferences saved' })" />
     </div>
   </div>

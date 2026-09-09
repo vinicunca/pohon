@@ -4,7 +4,7 @@ const { links } = useFooter()
 </script>
 
 <template>
-  <USeparator :icon="route.path === '/' ? undefined : 'i-simple-icons-nuxtdotjs'" class="h-px" />
+  <PSeparator :icon="route.path === '/' ? undefined : 'i-simple-icons-nuxtdotjs'" class="h-px" />
 
   <UFooter>
     <template #left>

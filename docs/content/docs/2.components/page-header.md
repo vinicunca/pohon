@@ -133,7 +133,7 @@ While these examples use [Nuxt Content](https://content.nuxt.com), the component
 
 Use the PageHeader component in a page to display the header of the page:
 
-```vue [pages/[...slug\].vue]{19-24}
+```vue [pages/[...slug].vue]{19-24}
 <script setup lang="ts">
 const route = useRoute();
 
@@ -162,7 +162,7 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
     <UPageBody>
       <ContentRenderer :value="page" />
 
-      <USeparator />
+      <PSeparator />
 
       <UContentSurround :surround="surround" />
     </UPageBody>

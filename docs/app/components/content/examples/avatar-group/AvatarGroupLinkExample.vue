@@ -1,6 +1,6 @@
 <template>
   <UAvatarGroup>
-    <ULink
+    <PLink
       to="https://github.com/benjamincanac"
       target="_blank"
       class="hover:ring-primary transition"
@@ -11,9 +11,9 @@
         alt="Benjamin Canac"
         loading="lazy"
       />
-    </ULink>
+    </PLink>
 
-    <ULink
+    <PLink
       to="https://github.com/romhml"
       target="_blank"
       class="hover:ring-primary transition"
@@ -24,9 +24,9 @@
         alt="Romain Hamel"
         loading="lazy"
       />
-    </ULink>
+    </PLink>
 
-    <ULink
+    <PLink
       to="https://github.com/noook"
       target="_blank"
       class="hover:ring-primary transition"
@@ -37,6 +37,6 @@
         alt="Neil Richter"
         loading="lazy"
       />
-    </ULink>
+    </PLink>
   </UAvatarGroup>
 </template>

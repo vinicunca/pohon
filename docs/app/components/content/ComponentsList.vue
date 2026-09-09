@@ -33,7 +33,7 @@ const { data: components } = await useAsyncData(`components-${props.category}`, 
     >
       <template #header>
         <div class="rounded-md rounded-b-none border border-muted overflow-hidden aspect-video -m-px bg-muted">
-          <UColorModeImage
+          <PColorModeImage
             :light="`${component.path.replace('/docs/components/', '/components/light/')}.png`"
             :dark="`${component.path.replace('/docs/components/', '/components/dark/')}.png`"
             class="group-hover:scale-105 transition-transform size-full"

@@ -91,9 +91,9 @@ const groups = [
     <template #billing-label="{ item }">
       <span class="font-medium text-primary">{{ item.label }}</span>
 
-      <UBadge variant="subtle" size="sm">
+      <PBadge variant="subtle" size="sm">
         50% off
-      </UBadge>
+      </PBadge>
     </template>
   </UCommandPalette>
 </template>

@@ -146,7 +146,7 @@ defineShortcuts(extractShortcuts(teamsItems.value))
         <UDropdownMenu
           :items="teamsItems"
           :content="{ align: 'start', collisionPadding: 12 }"
-          :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-48' }"
+          :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width) min-w-48' }"
         >
           <PButton
             v-bind="selectedTeam"
@@ -175,7 +175,7 @@ defineShortcuts(extractShortcuts(teamsItems.value))
         <UDropdownMenu
           :items="userItems"
           :content="{ align: 'center', collisionPadding: 12 }"
-          :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-48' }"
+          :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width) min-w-48' }"
         >
           <PButton
             v-bind="user"
@@ -194,7 +194,7 @@ defineShortcuts(extractShortcuts(teamsItems.value))
     </USidebar>
 
     <div class="flex-1 flex flex-col">
-      <div class="h-(--ui-header-height) shrink-0 flex items-center px-4 border-b border-default">
+      <div class="h-(--ui-header-height) shrink-0 flex items-center px-4 border-b border-border">
         <PButton
           icon="i-lucide-panel-left"
           color="neutral"

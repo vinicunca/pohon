@@ -34,7 +34,7 @@ const link = 'https://app.nuxt.com/invite/x8f2k'
         </div>
       </div>
 
-      <USeparator label="Or share a link" />
+      <PSeparator label="Or share a link" />
 
       <UInput :model-value="link" readonly class="w-full">
         <template #trailing>
@@ -50,7 +50,7 @@ const link = 'https://app.nuxt.com/invite/x8f2k'
       </UInput>
     </div>
 
-    <div class="flex justify-end border-t border-default p-3">
+    <div class="flex justify-end border-t border-border p-3">
       <PButton label="Send invites" @click="toast.add({ title: 'Invites sent' })" />
     </div>
   </div>

@@ -53,7 +53,7 @@ function isSelected(color: string) {
 <template>
   <UPopover
     :content="{ side: 'bottom', align: 'center' }"
-    :ui="{ content: 'p-2 grid grid-cols-3 gap-1 w-[calc(var(--reka-popover-trigger-width)+1rem)]' }"
+    :ui="{ content: 'p-2 grid grid-cols-3 gap-1 w-[calc(var(--akar-popover-trigger-width)+1rem)]' }"
   >
     <PButton
       color="neutral"

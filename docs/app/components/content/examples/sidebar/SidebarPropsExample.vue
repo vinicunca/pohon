@@ -52,7 +52,7 @@ const items: NavigationMenuItem[] = [{
       <div
         class="h-(--ui-header-height) shrink-0 flex items-center px-4"
         :class="[
-          variant !== 'floating' && 'border-b border-default',
+          variant !== 'floating' && 'border-b border-border',
           side === 'right' && 'justify-end'
         ]"
       >

@@ -4,7 +4,7 @@ import type { TableColumn } from 'pohon-ui'
 import { getGroupedRowModel } from '@tanstack/vue-table'
 import type { GroupingOptions } from '@tanstack/vue-table'
 
-const UBadge = resolveComponent('UBadge')
+const PBadge = resolveComponent('PBadge')
 
 type Account = {
   id: string
@@ -193,14 +193,14 @@ const grouping_options = ref<GroupingOptions>({
         <strong v-if="row.groupingColumnId === 'account_id'">{{
           row.original.account.name
         }}</strong>
-        <UBadge
+        <PBadge
           v-else-if="row.groupingColumnId === 'status'"
           :color="getColorByStatus(row.original.status)"
           class="capitalize"
           variant="subtle"
         >
           {{ row.original.status }}
-        </UBadge>
+        </PBadge>
       </div>
     </template>
   </PTable>

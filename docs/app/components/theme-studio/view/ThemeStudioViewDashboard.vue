@@ -4,7 +4,7 @@ import { CalendarDate, DateFormatter } from '@internationalized/date'
 import type { DropdownMenuItem, NavigationMenuItem, TableColumn } from 'pohon-ui'
 
 const UAvatar = resolveComponent('UAvatar')
-const UBadge = resolveComponent('UBadge')
+const PBadge = resolveComponent('PBadge')
 const PButton = resolveComponent('PButton')
 const UCheckbox = resolveComponent('UCheckbox')
 const UDropdownMenu = resolveComponent('UDropdownMenu')
@@ -207,7 +207,7 @@ const salesColumns: TableColumn<Sale>[] = [{
       refunded: 'neutral' as const
     })[row.getValue('status') as string]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.getValue('status'))
   }
 }, {
   accessorKey: 'email',
@@ -410,7 +410,7 @@ const customerColumns: TableColumn<Customer>[] = [{
       bounced: 'warning' as const
     })[row.original.status]
 
-    return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.original.status)
+    return h(PBadge, { class: 'capitalize', variant: 'subtle', color }, () => row.original.status)
   }
 }, {
   id: 'actions',
@@ -533,13 +533,13 @@ const pageTitles: Record<Page, string> = {
       collapsible
       resizable
       class="bg-elevated/25"
-      :ui="{ root: 'flex min-h-0', footer: 'border-t border-default' }"
+      :ui="{ root: 'flex min-h-0', footer: 'border-t border-border' }"
     >
       <template #header="{ collapsed }">
         <UDropdownMenu
           :items="teamItems"
           :content="{ align: 'center', collisionPadding: 12 }"
-          :ui="{ content: collapsed ? 'w-40' : 'w-(--reka-dropdown-menu-trigger-width)' }"
+          :ui="{ content: collapsed ? 'w-40' : 'w-(--akar-dropdown-menu-trigger-width)' }"
         >
           <PButton
             v-bind="{
@@ -582,7 +582,7 @@ const pageTitles: Record<Page, string> = {
         <UDropdownMenu
           :items="userItems"
           :content="{ align: 'center', collisionPadding: 12 }"
-          :ui="{ content: collapsed ? 'w-48' : 'w-(--reka-dropdown-menu-trigger-width)' }"
+          :ui="{ content: collapsed ? 'w-48' : 'w-(--akar-dropdown-menu-trigger-width)' }"
         >
           <PButton
             v-bind="{
@@ -616,7 +616,7 @@ const pageTitles: Record<Page, string> = {
             <UDashboardSidebarCollapse />
           </template>
           <template #trailing>
-            <UBadge :label="String(filteredMails.length)" variant="subtle" />
+            <PBadge :label="String(filteredMails.length)" variant="subtle" />
           </template>
 
           <template #right>
@@ -689,7 +689,7 @@ const pageTitles: Record<Page, string> = {
           </template>
         </UDashboardNavbar>
 
-        <div class="flex flex-col sm:flex-row justify-between gap-1 p-4 sm:px-6 border-b border-default">
+        <div class="flex flex-col sm:flex-row justify-between gap-1 p-4 sm:px-6 border-b border-border">
           <div class="flex items-start gap-4 sm:my-1.5">
             <UAvatar v-bind="selectedMail.from.avatar" size="3xl" />
 
@@ -867,9 +867,9 @@ const pageTitles: Record<Page, string> = {
                   {{ stat.value }}
                 </span>
 
-                <UBadge :color="stat.variation > 0 ? 'success' : 'error'" variant="subtle" class="text-xs">
+                <PBadge :color="stat.variation > 0 ? 'success' : 'error'" variant="subtle" class="text-xs">
                   {{ stat.variation > 0 ? '+' : '' }}{{ stat.variation }}%
-                </UBadge>
+                </PBadge>
               </div>
             </UPageCard>
           </UPageGrid>
@@ -915,8 +915,8 @@ const pageTitles: Record<Page, string> = {
               base: 'table-fixed border-separate border-spacing-0',
               thead: '[&>tr]:bg-elevated/50 [&>tr]:after:content-none',
               tbody: '[&>tr]:last:[&>td]:border-b-0',
-              th: 'first:rounded-l-lg last:rounded-r-lg border-y border-default first:border-l last:border-r',
-              td: 'border-b border-default'
+              th: 'first:rounded-l-lg last:rounded-r-lg border-y border-border first:border-l last:border-r',
+              td: 'border-b border-border'
             }"
           />
         </template>
@@ -972,12 +972,12 @@ const pageTitles: Record<Page, string> = {
               base: 'table-fixed border-separate border-spacing-0',
               thead: '[&>tr]:bg-elevated/50 [&>tr]:after:content-none',
               tbody: '[&>tr]:last:[&>td]:border-b-0',
-              th: 'py-2 first:rounded-l-lg last:rounded-r-lg border-y border-default first:border-l last:border-r',
-              td: 'border-b border-default'
+              th: 'py-2 first:rounded-l-lg last:rounded-r-lg border-y border-border first:border-l last:border-r',
+              td: 'border-b border-border'
             }"
           />
 
-          <div class="flex items-center justify-between gap-3 border-t border-default pt-4 mt-auto shrink-0">
+          <div class="flex items-center justify-between gap-3 border-t border-border pt-4 mt-auto shrink-0">
             <div class="text-sm text-muted">
               {{ selectedCustomersCount }} of {{ displayedCustomers.length }} row(s) selected.
             </div>
@@ -1003,7 +1003,7 @@ const pageTitles: Record<Page, string> = {
 
             <UPageCard variant="subtle">
               <template v-for="(field, index) in profileFields" :key="field.name">
-                <USeparator v-if="index > 0" />
+                <PSeparator v-if="index > 0" />
 
                 <PFormField
                   :name="field.name"
@@ -1015,7 +1015,7 @@ const pageTitles: Record<Page, string> = {
                   <UInput v-model="profile[field.name]" autocomplete="off" />
                 </PFormField>
               </template>
-              <USeparator />
+              <PSeparator />
               <PFormField
                 name="bio"
                 label="Bio"

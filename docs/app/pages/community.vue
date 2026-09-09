@@ -27,7 +27,7 @@ if (import.meta.server) {
     <UPageHero
       :title="page.hero.title"
       :description="page.hero.description"
-      class="md:border-b border-default"
+      class="md:border-b border-border"
       :ui="{ container: 'relative py-10 sm:py-16 lg:py-24' }"
     >
       <template #top>
@@ -36,11 +36,11 @@ if (import.meta.server) {
 
       <LazyStarsBg />
 
-      <div aria-hidden="true" class="hidden md:block absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div aria-hidden="true" class="hidden md:block absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
     </UPageHero>
 
     <UPageSection :ui="{ container: '!py-0' }">
-      <div class="pb-16 sm:pb-24 lg:pb-32 md:border-x border-default">
+      <div class="pb-16 sm:pb-24 lg:pb-32 md:border-x border-border">
         <UPageGrid class="gap-px">
           <UPageCard
             v-for="item in page.items"

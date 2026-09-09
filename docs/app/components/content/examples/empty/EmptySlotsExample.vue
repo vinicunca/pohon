@@ -68,7 +68,7 @@ const members: UserProps[] = [
     </template>
 
     <template #footer>
-      <USeparator class="my-4" />
+      <PSeparator class="my-4" />
 
       <div class="grid grid-cols-2 gap-4">
         <UPageCard

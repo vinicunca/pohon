@@ -47,7 +47,7 @@ const to = ref('savings')
       </div>
     </div>
 
-    <div class="flex justify-end border-t border-default p-3">
+    <div class="flex justify-end border-t border-border p-3">
       <PButton label="Confirm transfer" @click="toast.add({ title: 'Transfer confirmed' })" />
     </div>
   </div>

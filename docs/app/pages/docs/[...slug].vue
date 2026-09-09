@@ -140,7 +140,7 @@ const links = computed(() => [{
       <template #title>
         {{ page.title }}
 
-        <UBadge
+        <PBadge
           v-if="page.navigation?.badge"
           :label="page.navigation?.badge"
           variant="subtle"
@@ -173,7 +173,7 @@ const links = computed(() => [{
     <UPageBody>
       <ContentRenderer v-if="page.body" :value="page" />
 
-      <USeparator v-if="surround?.filter(Boolean).length" />
+      <PSeparator v-if="surround?.filter(Boolean).length" />
 
       <UContentSurround :surround="(surround as any)" />
     </UPageBody>
@@ -181,12 +181,12 @@ const links = computed(() => [{
     <template v-if="page?.body?.toc?.links?.length" #right>
       <UContentToc :links="page.body.toc.links" class="z-2" highlight highlight-variant="circuit">
         <template #bottom>
-          <USeparator v-if="page.body?.toc?.links?.length" type="dashed" />
+          <PSeparator v-if="page.body?.toc?.links?.length" type="dashed" />
 
           <UPageLinks :links="links" />
 
           <template v-if="!isDev">
-            <USeparator type="dashed" />
+            <PSeparator type="dashed" />
 
             <AdsCarbon />
           </template>

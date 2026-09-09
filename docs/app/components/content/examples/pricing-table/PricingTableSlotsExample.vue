@@ -77,7 +77,7 @@ const sections = [
     <!-- Customize specific feature value -->
     <template #feature-developers-value="{ feature, tier }">
       <template v-if="feature.tiers?.[tier.id]">
-        <UBadge :label="String(feature.tiers[tier.id])" color="primary" variant="soft" />
+        <PBadge :label="String(feature.tiers[tier.id])" color="primary" variant="soft" />
       </template>
       <UIcon v-else name="i-lucide-x" class="size-4 text-muted" />
     </template>

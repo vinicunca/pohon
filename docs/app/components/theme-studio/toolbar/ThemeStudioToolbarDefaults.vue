@@ -156,7 +156,7 @@ const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y 
             <UPopover
               v-model:open="variantGridOpen[field.key]"
               :content="{ side: 'bottom', align: 'center' }"
-              :ui="{ content: 'p-1 grid grid-cols-2 gap-1 w-(--reka-popover-trigger-width)' }"
+              :ui="{ content: 'p-1 grid grid-cols-2 gap-1 w-(--akar-popover-trigger-width)' }"
               class="flex-1"
             >
               <PButton

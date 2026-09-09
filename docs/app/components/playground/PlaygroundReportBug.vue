@@ -50,7 +50,7 @@ const steps = ref('')
       </PFormField>
     </div>
 
-    <div class="flex items-center justify-between border-t border-default p-3">
+    <div class="flex items-center justify-between border-t border-border p-3">
       <PButton label="Attach file" :icon="studioIcons.paperclip" color="neutral" variant="ghost" />
       <PButton label="Submit bug" @click="toast.add({ title: 'Bug reported' })" />
     </div>

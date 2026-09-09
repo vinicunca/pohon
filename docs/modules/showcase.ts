@@ -1,54 +1,54 @@
-import { defineNuxtModule } from '@nuxt/kit'
-import { existsSync } from 'node:fs'
-import { join } from 'pathe'
-import captureWebsite from 'capture-website'
+import { existsSync } from 'node:fs';
+import { defineNuxtModule } from '@nuxt/kit';
+import captureWebsite from 'capture-website';
+import { join } from 'pathe';
 
 interface ContentFile {
-  id?: string
-  items?: TemplateItem[]
+  id?: string;
+  items?: Array<TemplateItem>;
 }
 
 interface TemplateItem {
-  name: string
-  url?: string
-  screenshotUrl?: string
-  screenshotOptions?: Record<string, any>
+  name: string;
+  url?: string;
+  screenshotUrl?: string;
+  screenshotOptions?: Record<string, any>;
 }
 
 export default defineNuxtModule((_, nuxt) => {
   nuxt.hook('content:file:afterParse', async ({ content: file }: { content: ContentFile }) => {
     if (!file.id?.includes('showcase')) {
-      return
+      return;
     }
     if (!file.items?.length) {
-      return
+      return;
     }
     for (const template of file.items) {
-      const url = template.screenshotUrl || template.url
+      const url = template.screenshotUrl || template.url;
       if (!url) {
-        console.error(`Template ${template.name} has no "url" or "screenshotUrl" to take a screenshot from`)
-        continue
+        console.error(`Template ${template.name} has no "url" or "screenshotUrl" to take a screenshot from`);
+        continue;
       }
 
-      const name = template.name.toLowerCase().replace(/\s/g, '-')
-      const filename = join(nuxt.options.rootDir, 'public/assets/showcase', `${name}.png`)
+      const name = template.name.toLowerCase().replace(/\s/g, '-');
+      const filename = join(nuxt.options.rootDir, 'public/assets/showcase', `${name}.png`);
 
       if (existsSync(filename)) {
-        continue
+        continue;
       }
 
-      console.log(`Generating screenshot for Template ${template.name} hitting ${url}...`)
+      console.log(`Generating screenshot for Template ${template.name} hitting ${url}...`);
 
       try {
         await captureWebsite.file(url, filename, {
           ...(template.screenshotOptions || {}),
-          launchOptions: { headless: true }
-        })
+          launchOptions: { headless: true },
+        });
 
-        console.log(`Screenshot for ${template.name} generated successfully`)
+        console.log(`Screenshot for ${template.name} generated successfully`);
       } catch (error) {
-        console.error(`Error generating screenshot for ${template.name}:`, error)
+        console.error(`Error generating screenshot for ${template.name}:`, error);
       }
     }
-  })
-})
+  });
+});

@@ -165,7 +165,7 @@ onUnmounted(() => clearTimeout(appearTimeout))
       </UNavigationMenu>
     </div>
 
-    <UContainer class="sm:border-x border-default pt-10">
+    <UContainer class="sm:border-x border-border pt-10">
       <UPageHero
         title="Hey, I'm Mike Newbon Design Engineer"
         description="Based in Amsterdam, I craft intuitive digital products, where design meets fun-ctionality. Like this theme editor!"
@@ -209,7 +209,7 @@ onUnmounted(() => clearTimeout(appearTimeout))
           </div>
         </template>
 
-        <UMarquee pause-on-hover class="py-2 -mx-8 sm:-mx-12 lg:-mx-16 [--duration:40s]">
+        <PMarquee pause-on-hover class="py-2 -mx-8 sm:-mx-12 lg:-mx-16 [--duration:40s]">
           <div
             v-for="(img, index) in heroImages"
             :key="index"
@@ -223,7 +223,7 @@ onUnmounted(() => clearTimeout(appearTimeout))
             <UIcon :name="img.icon" class="size-10 text-dimmed relative" />
             <span class="text-xs text-muted font-medium relative">{{ img.label }}</span>
           </div>
-        </UMarquee>
+        </PMarquee>
       </UPageHero>
 
       <!-- About + work experience share a two-column section on the template home. -->
@@ -256,7 +256,7 @@ onUnmounted(() => clearTimeout(appearTimeout))
                 <p class="text-sm">
                   {{ item.date }}
                 </p>
-                <USeparator />
+                <PSeparator />
                 <span class="flex items-center gap-1">
                   <span class="text-sm">{{ item.position }}</span>
                   <span class="inline-flex items-center gap-1 text-highlighted">

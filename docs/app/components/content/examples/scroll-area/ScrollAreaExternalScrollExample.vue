@@ -91,7 +91,7 @@ watch(matches, () => {
           This header scrolls away with the cards, sharing one scrollbar.
         </p>
       </div>
-      <UBadge
+      <PBadge
         color="neutral"
         variant="subtle"
         :label="`${users.length} members`"
@@ -100,7 +100,7 @@ watch(matches, () => {
 
     <div
       ref="toolbar"
-      class="z-10 flex items-center px-6 py-3 border-y border-default bg-elevated/50 backdrop-blur"
+      class="z-10 flex items-center px-6 py-3 border-y border-border bg-elevated/50 backdrop-blur"
       :class="isHorizontal ? 'sticky left-0' : 'sticky top-0'"
     >
       <UFieldGroup>
@@ -156,7 +156,7 @@ watch(matches, () => {
       <div
         v-if="isHorizontal"
         ref="title"
-        class="w-72 shrink-0 flex flex-col justify-center gap-4 p-6 bg-elevated/50 border-r border-default"
+        class="w-72 shrink-0 flex flex-col justify-center gap-4 p-6 bg-elevated/50 border-r border-border"
       >
         <div>
           <h2 class="text-2xl font-bold text-highlighted">
@@ -166,7 +166,7 @@ watch(matches, () => {
             This header scrolls away with the cards, sharing one scrollbar.
           </p>
         </div>
-        <UBadge
+        <PBadge
           color="neutral"
           variant="subtle"
           class="self-start"

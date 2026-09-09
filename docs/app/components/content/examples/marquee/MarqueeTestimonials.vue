@@ -89,7 +89,7 @@ const testimonials: { user: UserProps, quote: string }[] = [{
 
 <template>
   <div class="flex flex-col gap-4 w-full">
-    <UMarquee pause-on-hover :overlay="false" :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }">
+    <PMarquee pause-on-hover :overlay="false" :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }">
       <UPageCard
         v-for="(testimonial, index) in testimonials"
         :key="index"
@@ -104,8 +104,8 @@ const testimonials: { user: UserProps, quote: string }[] = [{
           <PUser v-bind="testimonial.user" size="xl" :ui="{ description: 'line-clamp-1' }" />
         </template>
       </UPageCard>
-    </UMarquee>
-    <UMarquee pause-on-hover reverse :overlay="false" :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }">
+    </PMarquee>
+    <PMarquee pause-on-hover reverse :overlay="false" :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }">
       <UPageCard
         v-for="(testimonial, index) in testimonials"
         :key="index"
@@ -120,6 +120,6 @@ const testimonials: { user: UserProps, quote: string }[] = [{
           <PUser v-bind="testimonial.user" size="xl" :ui="{ description: 'line-clamp-1' }" />
         </template>
       </UPageCard>
-    </UMarquee>
+    </PMarquee>
   </div>
 </template>

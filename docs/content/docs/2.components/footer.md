@@ -73,7 +73,7 @@ const items: NavigationMenuItem[] = [
       </NuxtLayout>
     </UMain>
 
-    <USeparator icon="i-simple-icons-nuxtdotjs" type="dashed" class="h-px" />
+    <PSeparator icon="i-simple-icons-nuxtdotjs" type="dashed" class="h-px" />
 
     <UFooter>
       <template #left>

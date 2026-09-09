@@ -9,7 +9,7 @@ const studioIcons = useStudioIcons()
 // Left aside. UContentNavigation is prop-driven, not content-coupled: it reads
 // `title`, and `active` forces the state without a route, so the tree is a
 // static array. Paths are empty so nothing navigates out of the studio: the
-// type wants the key, and both the mapper and ULink drop a falsy one.
+// type wants the key, and both the mapper and PLink drop a falsy one.
 const navLinks: ContentNavigationLink[] = [{
   path: '',
   title: 'Getting Started',
@@ -273,7 +273,7 @@ export default defineAppConfig({
           <UPageBody>
             <Markdown :value="content" :plugins="[shiki()]" />
 
-            <USeparator />
+            <PSeparator />
 
             <UContentSurround :surround="surround" />
           </UPageBody>
@@ -309,7 +309,7 @@ export default defineAppConfig({
                 </ul>
               </div>
 
-              <USeparator type="dashed" />
+              <PSeparator type="dashed" />
 
               <UPageLinks title="Community" :links="communityLinks" />
             </div>

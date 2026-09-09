@@ -34,7 +34,7 @@ While these examples use [Nuxt Content](https://content.nuxt.com), the component
 
 Use the PageBody component in a page to display the content of the page:
 
-```vue [pages/[...slug\].vue]{21-27}
+```vue [pages/[...slug].vue]{21-27}
 <script setup lang="ts">
 const route = useRoute();
 
@@ -58,7 +58,7 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
     <UPageBody>
       <ContentRenderer :value="page" />
 
-      <USeparator />
+      <PSeparator />
 
       <UContentSurround :surround="surround" />
     </UPageBody>

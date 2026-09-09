@@ -162,7 +162,7 @@ const expanded = ref({ 0: true })
       base: 'border-separate border-spacing-0',
       tbody: '[&>tr]:last:[&>td]:border-b-0',
       tr: 'group',
-      td: 'empty:p-0 group-has-[td:not(:empty)]:border-b border-default'
+      td: 'empty:p-0 group-has-[td:not(:empty)]:border-b border-border'
     }"
   />
 </template>

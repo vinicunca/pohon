@@ -32,9 +32,9 @@ const progress = ref(75)
       </div>
 
       <div class="flex items-center gap-2">
-        <UBadge color="success" variant="subtle" size="sm" :icon="studioIcons.trendingUp">
+        <PBadge color="success" variant="subtle" size="sm" :icon="studioIcons.trendingUp">
           +12.5%
-        </UBadge>
+        </PBadge>
 
         <UDropdownMenu :items="items" :ui="{ content: 'w-44' }">
           <PButton
@@ -57,7 +57,7 @@ const progress = ref(75)
       <UProgress v-model="progress" size="sm" />
     </div>
 
-    <USeparator />
+    <PSeparator />
 
     <div class="flex items-center justify-between">
       <UAvatarGroup size="xs">

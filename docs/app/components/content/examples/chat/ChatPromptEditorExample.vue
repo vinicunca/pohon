@@ -60,8 +60,8 @@ function onSubmit() {
     class="w-full p-0 gap-0"
     placeholder="Press / to open the command menu"
     :ui="{
-      header: 'px-2.5 py-2 border-b border-default',
-      footer: 'px-2.5 py-2 border-t border-default'
+      header: 'px-2.5 py-2 border-b border-border',
+      footer: 'px-2.5 py-2 border-t border-border'
     }"
     @submit="onSubmit"
   >

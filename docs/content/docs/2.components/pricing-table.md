@@ -154,7 +154,7 @@ external:
     button:
     label: 'Contact sales'
     color: 'neutral'
-    class: 'border-b border-default'
+    class: 'border-b border-border'
 
 ---
 

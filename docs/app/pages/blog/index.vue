@@ -39,7 +39,7 @@ function formatDate(date: string) {
     <UPageHero :ui="{ container: 'relative py-10 sm:py-16 lg:py-24' }">
       <LazyStarsBg />
 
-      <div aria-hidden="true" class="absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div aria-hidden="true" class="absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
 
       <template #title>
         <MDC :value="page.hero.title" unwrap="p" cache-key="blog-hero-title" />
@@ -50,18 +50,18 @@ function formatDate(date: string) {
       </template>
     </UPageHero>
 
-    <UPageBody class="my-0! py-0! border-y border-default">
+    <UPageBody class="my-0! py-0! border-y border-border">
       <UContainer>
-        <div class="border-x border-default gap-0!">
+        <div class="border-x border-border gap-0!">
           <Motion
             v-for="(post, index) in posts"
             :key="post.path"
             :initial="{ opacity: 0, x: -20 }"
             :animate="{ opacity: 1, x: 0 }"
             :transition="{ delay: index * 0.05, type: 'spring', stiffness: 300, damping: 30 }"
-            class="group border-b border-default last:border-b-0"
+            class="group border-b border-border last:border-b-0"
           >
-            <ULink
+            <PLink
               :to="post.path"
               class="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-6 hover:bg-muted/30 transition-all duration-200 gap-4 sm:gap-6"
             >
@@ -97,14 +97,14 @@ function formatDate(date: string) {
                   class="size-4 text-muted group-hover:text-highlighted transition-colors duration-200 shrink-0"
                 />
               </div>
-            </ULink>
+            </PLink>
           </Motion>
         </div>
       </UContainer>
     </UPageBody>
 
     <UContainer class="relative min-h-24 grow">
-      <div aria-hidden="true" class="absolute z-[-1] border-x border-default inset-0 mx-4 sm:mx-6 lg:mx-8" />
+      <div aria-hidden="true" class="absolute z-[-1] border-x border-border inset-0 mx-4 sm:mx-6 lg:mx-8" />
     </UContainer>
   </main>
 </template>

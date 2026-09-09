@@ -64,7 +64,7 @@ const groups = [
               <UKbd value="enter" />
             </template>
           </PButton>
-          <USeparator orientation="vertical" class="h-4" />
+          <PSeparator orientation="vertical" class="h-4" />
           <PButton color="neutral" variant="ghost" label="Actions" class="text-dimmed" size="xs">
             <template #trailing>
               <UKbd value="meta" />
