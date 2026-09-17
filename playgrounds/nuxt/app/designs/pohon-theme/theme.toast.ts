@@ -4,10 +4,10 @@ import { BRANDS } from '../design.constants';
 
 export const themeToast = {
   slots: {
-    root: 'group bg-background ring-ring p-4 rounded-lg flex gap-2.5 ring shadow-lg relative overflow-hidden',
+    root: 'group p-4 rounded-lg bg-background flex gap-2.5 ring ring-ring shadow-lg relative overflow-hidden',
     wrapper: 'flex flex-1 flex-col w-0',
-    title: 'color-text-highlighted text-sm font-500',
-    description: 'color-text-muted text-sm',
+    title: 'text-sm color-text-highlighted font-500',
+    description: 'text-sm color-text-muted',
     icon: 'shrink-0 size-5',
     avatar: 'shrink-0',
     avatarSize: '2xl',
@@ -25,7 +25,7 @@ export const themeToast = {
         },
       ])),
       neutral: {
-        root: 'outline-outline-inverted/25 focus-visible:ring-ring-inverted focus-visible:outline-3',
+        root: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
         icon: 'color-text-highlighted',
       },
     },
@@ -45,4 +45,4 @@ export const themeToast = {
       },
     },
   },
-} satisfies PThemeToast;
+};

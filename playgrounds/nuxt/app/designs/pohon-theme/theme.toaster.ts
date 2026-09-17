@@ -4,7 +4,7 @@ import type { PThemeToaster } from 'pohon-ui';
 export const themeToaster = {
   slots: {
     viewport: 'flex flex-col w-[calc(100%-2rem)] fixed z-[100] focus:outline-none data-[expanded=true]:h-$height sm:w-96',
-    base: 'data-[state=closed]:animate-toast-closed data-[state=closed]:data-[expanded=false]:data-[front=false]:animate-toast-collapsed-closed motion-safe:data-[state=open]:data-[pulsing=even]:animate-toast-pulse-b motion-safe:data-[state=open]:data-[pulsing=odd]:animate-toast-pulse-a pointer-events-auto transition-[transform,height]-280 ease-out [transform:var(--transform)] inset-x-0 z-$index data-[swipe=move]:transition-none motion-reduce:transition-none data-[expanded=false]:data-[front=false]:h-$front-height data-[front=false]:*:transition-opacity data-[front=false]:*:duration-100 pohon:absolute data-[expanded=false]:data-[front=false]:*:opacity-0',
+    base: 'pointer-events-auto transition-[transform,height]-280 ease-out [transform:var(--transform)] inset-x-0 z-$index data-[swipe=move]:transition-none motion-reduce:transition-none data-[state=closed]:animate-toast-closed data-[expanded=false]:data-[front=false]:h-$front-height data-[front=false]:*:transition-opacity data-[front=false]:*:duration-100 pohon:absolute data-[expanded=false]:data-[front=false]:*:opacity-0 data-[state=closed]:data-[expanded=false]:data-[front=false]:animate-toast-collapsed-closed motion-safe:data-[state=open]:data-[pulsing=even]:animate-toast-pulse-b motion-safe:data-[state=open]:data-[pulsing=odd]:animate-toast-pulse-a',
   },
   variants: {
     position: {

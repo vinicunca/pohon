@@ -179,6 +179,9 @@ export const uiTheme = {
   kbd: themeKbd,
   link: themeLink,
   listbox: themeListbox,
+  main: {
+    base: 'min-h-[calc(100vh-var(--ui-header-height))]',
+  },
   marquee: themeMarquee,
   modal: themeModal,
   navigationMenu: themeNavigationMenu,

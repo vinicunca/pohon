@@ -462,8 +462,10 @@ const api = {
     // Clear from nested forms and collect remaining errors
     const nestedErrors: Array<FormError> = [];
     for (const form of nestedForms.value.values()) {
+      // A RegExp is written against the parent's prefixed names, so it cannot be
+      // re-tested inside the nested form and clears it whole.
       if (matchesTarget(name, form.name)) {
-        form.api.clear();
+        form.api.clear(name instanceof RegExp ? undefined : getNestedTarget(name, form.name || ''));
       }
       nestedErrors.push(...getFormErrors(form as any));
     }

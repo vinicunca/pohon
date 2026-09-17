@@ -13,33 +13,27 @@ describe('selectMenu', () => {
   const sizes = Object.keys(theme.variants.size) as any;
   const variants = Object.keys(theme.variants.variant) as any;
 
-  const items = [
-    {
-      label: 'Backlog',
-      value: 'backlog',
-      icon: 'i-lucide-circle-help',
-    },
-    {
-      label: 'Todo',
-      value: 'todo',
-      icon: 'i-lucide-circle-plus',
-    },
-    {
-      label: 'In Progress',
-      value: 'in_progress',
-      icon: 'i-lucide-circle-arrow-up',
-    },
-    {
-      label: 'Done',
-      value: 'done',
-      icon: 'i-lucide-circle-check',
-    },
-    {
-      label: 'Canceled',
-      value: 'canceled',
-      icon: 'i-lucide-circle-x',
-    },
-  ];
+  const items = [{
+    label: 'Backlog',
+    value: 'backlog',
+    icon: 'i-lucide-circle-help',
+  }, {
+    label: 'Todo',
+    value: 'todo',
+    icon: 'i-lucide-circle-plus',
+  }, {
+    label: 'In Progress',
+    value: 'in_progress',
+    icon: 'i-lucide-circle-arrow-up',
+  }, {
+    label: 'Done',
+    value: 'done',
+    icon: 'i-lucide-circle-check',
+  }, {
+    label: 'Canceled',
+    value: 'canceled',
+    icon: 'i-lucide-circle-x',
+  }];
 
   const itemsWithDescription = [...items.map((item) => ({ ...item, description: 'Description' }))];
 
@@ -70,13 +64,13 @@ describe('selectMenu', () => {
     ['with leadingIcon', { props: { leadingIcon: 'i-lucide-arrow-left' } }],
     ['with trailing and icon', { props: { trailing: true, icon: 'i-lucide-arrow-right' } }],
     ['with trailingIcon', { props: { trailingIcon: 'i-lucide-arrow-right' } }],
-    ['with avatar', { props: { avatar: { src: 'https://github.com/praburangki.png' } } }],
-    ['with avatar and leadingIcon', { props: { avatar: { src: 'https://github.com/praburangki.png' }, leadingIcon: 'i-lucide-arrow-left' } }],
-    ['with avatar and trailingIcon', { props: { avatar: { src: 'https://github.com/praburangki.png' }, trailingIcon: 'i-lucide-arrow-right' } }],
+    ['with avatar', { props: { avatar: { src: 'https://github.com/benjamincanac.png' } } }],
+    ['with avatar and leadingIcon', { props: { avatar: { src: 'https://github.com/benjamincanac.png' }, leadingIcon: 'i-lucide-arrow-left' } }],
+    ['with avatar and trailingIcon', { props: { avatar: { src: 'https://github.com/benjamincanac.png' }, trailingIcon: 'i-lucide-arrow-right' } }],
     ['with loading', { props: { loading: true } }],
-    ['with loading and avatar', { props: { loading: true, avatar: { src: 'https://github.com/praburangki.png' } } }],
+    ['with loading and avatar', { props: { loading: true, avatar: { src: 'https://github.com/benjamincanac.png' } } }],
     ['with loading trailing', { props: { loading: true, trailing: true } }],
-    ['with loading trailing and avatar', { props: { loading: true, trailing: true, avatar: { src: 'https://github.com/praburangki.png' } } }],
+    ['with loading trailing and avatar', { props: { loading: true, trailing: true, avatar: { src: 'https://github.com/benjamincanac.png' } } }],
     ['with loadingIcon', { props: { loading: true, loadingIcon: 'i-lucide-loader' } }],
     ['with trailingIcon', { props: { ...props, trailingIcon: 'i-lucide-chevron-down' } }],
     ['with selectedIcon', { props: { ...props, selectedIcon: 'i-lucide-check' } }],
@@ -180,8 +174,65 @@ describe('selectMenu', () => {
     });
   });
 
+  describe('keyboard', () => {
+    it.each(['ArrowDown', 'ArrowUp'])('opens the menu on %s', async (key) => {
+      const wrapper = mount(SelectMenu, { attachTo: document.body, props: { portal: false, items } });
+
+      await wrapper.find('[data-slot="base"]').trigger('keydown', { key });
+      await flushPromises();
+
+      expect(wrapper.emitted('update:open')).toMatchObject([[true]]);
+
+      wrapper.unmount();
+    });
+
+    it('does not toggle the menu on ArrowDown when already open', async () => {
+      const wrapper = mount(SelectMenu, { attachTo: document.body, props: { portal: false, items } });
+      const root = wrapper.findComponent({ name: 'ComboboxRoot' });
+
+      await root.vm.$emit('update:open', true);
+      await wrapper.find('[data-slot="base"]').trigger('keydown', { key: 'ArrowDown' });
+      await flushPromises();
+
+      expect(wrapper.emitted('update:open')).toMatchObject([[true]]);
+
+      wrapper.unmount();
+    });
+  });
+
+  describe('search input', () => {
+    it('focuses the search input when the menu opens by default', async () => {
+      const wrapper = mount(SelectMenu, { attachTo: document.body, props: { open: true, portal: false, items } });
+
+      await flushPromises();
+      // Input.vue's autofocus runs on a macrotask
+      await new Promise((resolve) => {
+        setTimeout(resolve);
+      });
+
+      const input = wrapper.find('[data-slot="input"] input');
+      expect(document.activeElement).toBe(input.element);
+
+      wrapper.unmount();
+    });
+
+    it('does not focus the search input with searchInput autofocus disabled', async () => {
+      const wrapper = mount(SelectMenu, { attachTo: document.body, props: { open: true, portal: false, items, searchInput: { autofocus: false } } });
+
+      await flushPromises();
+      await new Promise((resolve) => {
+        setTimeout(resolve);
+      });
+
+      const input = wrapper.find('[data-slot="input"] input');
+      expect(document.activeElement).not.toBe(input.element);
+
+      wrapper.unmount();
+    });
+  });
+
   describe('create-item', () => {
-    // With `create-item`, the create item is always registered so akar's collection
+    // With `create-item`, the create item is always registered so reka-ui's collection
     // never goes from empty to non-empty, leaving the highlight stale when async items load.
     it('re-highlights first item when items change while open', async () => {
       const wrapper = mount(SelectMenu, {
@@ -291,9 +342,9 @@ describe('selectMenu', () => {
           items: ['Option 1', 'Option 2'],
         },
         slotTemplate: `
-        <PFormField name="value">
-          <PSelectMenu id="input" v-model="state.value" :items="items" />
-        </PFormField>
+        <UFormField name="value">
+          <USelectMenu id="input" v-model="state.value" :items="items" />
+        </UFormField>
         `,
       });
       const input = wrapper.findComponent({ name: 'ComboboxRoot' });
