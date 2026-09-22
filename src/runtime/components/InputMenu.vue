@@ -284,9 +284,9 @@ const { t } = useLocale();
 const appConfig = useAppConfig() as InputMenu['AppConfig'];
 const { filterGroups } = useFilter();
 
-const isAutocomplete = computed(() => props.mode === 'autocomplete')
+const isAutocomplete = computed(() => props.mode === 'autocomplete');
 // `multiple` doesn't apply in autocomplete mode.
-const isMultiple = computed(() => !!props.multiple && !isAutocomplete.value)
+const isMultiple = computed(() => !!props.multiple && !isAutocomplete.value);
 
 const rootPropsPick = reactivePick(props, 'as', 'modelValue', 'defaultValue', 'open', 'defaultOpen', 'required', 'multiple', 'resetSearchTermOnBlur', 'resetSearchTermOnSelect', 'resetModelValueOnClear', 'highlightOnHover', 'openOnClick', 'openOnFocus', 'by');
 const rootPropsOmitted = reactiveOmit(rootPropsPick, 'multiple', 'resetSearchTermOnSelect', 'resetModelValueOnClear', 'by');
@@ -582,6 +582,10 @@ function isModelValueEmpty(modelValue: ApplyModifiers<GetModelValue<T, VK, M, Ex
 }
 
 function onClear() {
+  if (disabled.value) {
+    return;
+  }
+
   emits('clear');
 }
 
@@ -772,7 +776,7 @@ defineExpose({
 
       <Component.Trigger v-if="isTrailing || !!slots.trailing || !!props.clear" data-slot="trailing" :class="ui.trailing({ class: props.ui?.trailing })">
         <slot name="trailing" :model-value="(modelValue as ApplyModifiers<GetModelValue<T, VK, M, ExcludeItem>, Mod>)" :open="open" :ui="ui">
-          <Component.Cancel v-if="!!props.clear && !isModelValueEmpty(modelValue as ApplyModifiers<GetModelValue<T, VK, M, ExcludeItem>, Mod>)" as-child>
+          <Component.Cancel v-if="!!props.clear && !disabled && !isModelValueEmpty(modelValue as ApplyModifiers<GetModelValue<T, VK, M, ExcludeItem>, Mod>)" as-child>
             <PButton
               as="span"
               :icon="props.clearIcon || appConfig.ui.icons.close"
