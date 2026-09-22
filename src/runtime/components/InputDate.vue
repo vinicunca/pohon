@@ -222,8 +222,8 @@ defineExpose({
     :disabled="disabled"
     :class="ui.base({ class: [props.ui?.base, props.class] })"
     @update:model-value="onUpdate"
-    @blur="onFocusOut"
-    @focus="onFocusIn"
+    @focusout="onFocusOut"
+    @focusin="onFocusIn"
   >
     <template v-if="Array.isArray(segments)">
       <ReuseSegmentsTemplate :segments="segments" />

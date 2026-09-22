@@ -104,9 +104,9 @@ describe('inputDate', () => {
           },
         },
         slotTemplate: `
-        <UFormField name="value">
-          <UInputDate id="input" v-model="state.value" />
-        </UFormField>
+        <PFormField name="value">
+          <PInputDate id="input" v-model="state.value" />
+        </PFormField>
         `,
       });
 

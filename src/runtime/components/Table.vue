@@ -39,7 +39,7 @@ import type {
   VisibilityState,
 } from '@tanstack/vue-table';
 import type { VirtualizerOptions } from '@tanstack/vue-virtual';
-import type { ComponentPublicInstance, Ref, VNode, WatchOptions } from 'vue';
+import type { AriaAttributes, ComponentPublicInstance, Ref, VNode, WatchOptions } from 'vue';
 import type { TableHTMLAttributes } from '../types/html';
 import type { ComponentConfig } from '../types/uv';
 import theme from '#build/ui/table';
@@ -480,13 +480,17 @@ function onRowSelect(e: Event, row: TableRow<T>) {
     return;
   }
   const target = e.target as HTMLElement;
-  const isInteractive = target.closest('button') || target.closest('a');
+  const isInteractive = target.closest('a, button, input, label, select, textarea');
   if (isInteractive) {
     return;
   }
 
   e.preventDefault();
   e.stopPropagation();
+
+  if ((e as KeyboardEvent).repeat) {
+    return;
+  }
 
   props.onSelect(e, row);
 }
@@ -586,7 +590,6 @@ defineExpose({
       :data-selectable="!!props.onSelect || !!props.onHover || !!props.onContextmenu"
       :data-expanded="row.getIsExpanded()"
       :data-pinned="row.getIsPinned() || undefined"
-      :role="props.onSelect ? 'button' : undefined"
       :tabindex="props.onSelect ? 0 : undefined"
       data-slot="tr"
       :class="ui.tr({
@@ -597,6 +600,7 @@ defineExpose({
       })"
       :style="[resolveValue(tableApi.options.meta?.style?.tr, row), style]"
       @click="onRowSelect($event, row)"
+      @keydown.self.exact.enter.space="onRowSelect($event, row)"
       @pointerenter="onRowHover($event, row)"
       @pointerleave="onRowHover($event, null)"
       @contextmenu="onRowContextmenu($event, row)"
@@ -607,7 +611,6 @@ defineExpose({
         :data-pinned="cell.column.getIsPinned()"
         :colspan="resolveValue(cell.column.columnDef.meta?.colspan?.td, cell)"
         :rowspan="resolveValue(cell.column.columnDef.meta?.rowspan?.td, cell)"
-        :aria-sort="getAriaSort(props.header)"
         data-slot="td"
         :class="ui.td({
           class: [
@@ -651,6 +654,7 @@ defineExpose({
             :scope="header.colSpan > 1 ? 'colgroup' : 'col'"
             :colspan="header.colSpan > 1 ? header.colSpan : undefined"
             :rowspan="header.rowSpan > 1 ? header.rowSpan : undefined"
+            :aria-sort="getAriaSort(header)"
             data-slot="th"
             :class="ui.th({
               class: [

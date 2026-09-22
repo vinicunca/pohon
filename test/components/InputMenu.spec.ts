@@ -239,7 +239,7 @@ describe('inputMenu', () => {
   });
 
   describe('create-item', () => {
-    // With `create-item`, the create item is always registered so reka-ui's collection
+    // With `create-item`, the create item is always registered so akar's collection
     // never goes from empty to non-empty, leaving the highlight stale when async items load.
     it('re-highlights first item when items change while open', async () => {
       const wrapper = mount(InputMenu, {
@@ -277,7 +277,7 @@ describe('inputMenu', () => {
   });
 
   describe('multiple', () => {
-    // reka-ui's `TagsInputInput` adds the search term as a tag on `Enter`, which renders a chip
+    // akar's `TagsInputInput` adds the search term as a tag on `Enter`, which renders a chip
     // that is not part of the model since `TagsInputRoot` is controlled by the combobox.
     it('does not add a tag on enter when the search term matches no item', async () => {
       const wrapper = mount(InputMenu, {
@@ -405,9 +405,9 @@ describe('inputMenu', () => {
           items: ['Option 1', 'Option 2'],
         },
         slotTemplate: `
-        <UFormField name="value">
-          <UInputMenu id="input" v-model="state.value" :items="items" />
-        </UFormField>
+        <PFormField name="value">
+          <PInputMenu id="input" v-model="state.value" :items="items" />
+        </PFormField>
         `,
       });
       const input = wrapper.findComponent({ name: 'ComboboxRoot' });

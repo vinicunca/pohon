@@ -28,7 +28,7 @@ const form = useTemplateRef('form');
         id="firstField"
         name="first"
       >
-        <UInput
+        <PInput
           id="first"
           v-model="state.nested.first"
         />
@@ -37,7 +37,7 @@ const form = useTemplateRef('form');
         id="secondField"
         name="second"
       >
-        <UInput
+        <PInput
           id="second"
           v-model="state.nested.second"
         />

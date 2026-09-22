@@ -109,9 +109,9 @@ describe('inputTime', () => {
           },
         },
         slotTemplate: `
-        <UFormField name="value">
-          <UInputTime id="input" v-model="state.value" />
-        </UFormField>
+        <PFormField name="value">
+          <PInputTime id="input" v-model="state.value" />
+        </PFormField>
         `,
       });
 

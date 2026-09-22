@@ -119,7 +119,7 @@ export interface InputMenuProps<T extends ArrayOrNested<InputMenuItem> = ArrayOr
   portal?: boolean | string | HTMLElement;
   /**
    * Enable virtualization for large lists.
-   * Note: when enabled, all groups are flattened into a single list due to a limitation of Akar
+   * Note: when enabled, all groups are flattened into a single list due to a limitation of akar.
    * @defaultValue false
    */
   virtualize?: boolean | {
@@ -524,7 +524,7 @@ function onUpdateOpen(value: boolean) {
     emitFormBlur();
 
     // Since we use `displayValue` prop inside ComboboxInput we should reset searchTerm manually
-    // https://akar.vincunca.dev/docs/components/combobox#api-reference
+    // https://akar.vinicunca.dev/docs/components/combobox#api-reference
     if (!isAutocomplete.value && props.resetSearchTermOnBlur) {
       const STATE_ANIMATION_DELAY_MS = 100;
 

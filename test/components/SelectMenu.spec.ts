@@ -275,7 +275,7 @@ describe('selectMenu', () => {
   });
 
   describe('create-item', () => {
-    // With `create-item`, the create item is always registered so reka-ui's collection
+    // With `create-item`, the create item is always registered so akar's collection
     // never goes from empty to non-empty, leaving the highlight stale when async items load.
     it('re-highlights first item when items change while open', async () => {
       const wrapper = mount(SelectMenu, {
@@ -385,9 +385,9 @@ describe('selectMenu', () => {
           items: ['Option 1', 'Option 2'],
         },
         slotTemplate: `
-        <UFormField name="value">
-          <USelectMenu id="input" v-model="state.value" :items="items" />
-        </UFormField>
+        <PFormField name="value">
+          <PSelectMenu id="input" v-model="state.value" :items="items" />
+        </PFormField>
         `,
       });
       const input = wrapper.findComponent({ name: 'ComboboxRoot' });

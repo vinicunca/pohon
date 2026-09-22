@@ -106,9 +106,9 @@ describe('pinInput', () => {
           },
         },
         slotTemplate: `
-        <UFormField name="value">
-          <UPinInput id="input" v-model="state.value" />
-        </UFormField>
+        <PFormField name="value">
+          <PPinInput id="input" v-model="state.value" />
+        </PFormField>
         `,
       });
       const input = wrapper.findComponent({ name: 'PinInputRoot' });

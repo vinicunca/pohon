@@ -45,7 +45,7 @@ function createComponentSource(cwd: string, prefix: string, ignore: Array<string
 }
 
 const RELATIVE_IMPORT_RE = /^\.{1,2}\//;
-const PACKAGE_IMPORT_RE = /(?:^|\/node_modules\/)@nuxt\/ui\/(?:dist\/)?(?:runtime\/)?components\/(.+\.vue)$/;
+const PACKAGE_IMPORT_RE = /(?:^|\/node_modules\/)pohon-ui\/(?:dist\/)?(?:runtime\/)?components\/(.+\.vue)$/;
 
 /**
  * This plugin adds all the Pohon UI components as auto-imports.
