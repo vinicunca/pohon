@@ -33,4 +33,7 @@ export default {
       vertical: 'flex flex-col -space-y-px',
     },
   },
+  defaultVariants: {
+    size: 'md',
+  },
 };
