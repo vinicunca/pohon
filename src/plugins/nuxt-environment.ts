@@ -2,7 +2,7 @@ import type { UnpluginOptions } from 'unplugin';
 import type { PohonUiOptions } from '../unplugin';
 import MagicString from 'magic-string';
 import { resolvePathSync } from 'mlly';
-import { normalize } from 'pathe';
+import { join, normalize } from 'pathe';
 import { runtimeDir } from '../unplugin';
 import { resolveRouterMode } from '../utils/router';
 
@@ -11,9 +11,7 @@ import { resolveRouterMode } from '../utils/router';
  */
 export default function NuxtEnvironmentPlugin(options: PohonUiOptions) {
   const routerMode = resolveRouterMode(options);
-  const stubsPath = `../runtime/vue/stubs/${routerMode}`;
-
-  const stubPath = resolvePathSync(stubsPath, { extensions: ['.ts', '.mjs', '.js'], url: import.meta.url });
+  const stubPath = resolvePathSync(join(runtimeDir, 'vue/stubs', routerMode), { extensions: ['.ts', '.mjs', '.js'] });
 
   return {
     name: 'pohon:ui',

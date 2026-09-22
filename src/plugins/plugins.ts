@@ -15,12 +15,12 @@ export default function PluginsPlugin(options: PohonUiOptions) {
   // const plugins = globSync(['**/*', '!*.d.ts'], { cwd: join(runtimeDir, 'plugins'), absolute: true });
   const plugins: Array<string> = [];
 
-  plugins.unshift(resolvePathSync('../runtime/vue/plugins/router', { extensions: ['.ts', '.mjs', '.js'], url: import.meta.url }));
-  plugins.unshift(resolvePathSync('../runtime/vue/plugins/head', { extensions: ['.ts', '.mjs', '.js'], url: import.meta.url }));
-  plugins.unshift(resolvePathSync('../runtime/vue/plugins/icons', { extensions: ['.ts', '.mjs', '.js'], url: import.meta.url }));
+  plugins.unshift(resolvePathSync(join(runtimeDir, 'vue/plugins/router'), { extensions: ['.ts', '.mjs', '.js'] }));
+  plugins.unshift(resolvePathSync(join(runtimeDir, 'vue/plugins/head'), { extensions: ['.ts', '.mjs', '.js'] }));
+  plugins.unshift(resolvePathSync(join(runtimeDir, 'vue/plugins/icons'), { extensions: ['.ts', '.mjs', '.js'] }));
 
   if (options.colorMode) {
-    plugins.push(resolvePathSync('../runtime/vue/plugins/color-mode', { extensions: ['.ts', '.mjs', '.js'], url: import.meta.url }));
+    plugins.push(resolvePathSync(join(runtimeDir, 'vue/plugins/color-mode'), { extensions: ['.ts', '.mjs', '.js'] }));
   }
 
   const proseComponents = (options.prose || options.mdc)
