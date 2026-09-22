@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0-rc7.9](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.8...v2.0.0-rc7.9) (2026-09-22)
+
+### Bug Fixes
+
+* **components:** allow partial ui overrides on items ([80288fd](https://github.com/vinicunca/pohon/commit/80288fdb5936914d7beffa7bf76fbb1c98174d90))
+* **Form:** clear only the targeted field inside a nested form ([e289733](https://github.com/vinicunca/pohon/commit/e2897331adf6b4e8c6c599d6d4bac61eb0af8d49))
+* **InputDate/InputTime:** emit focus and blur when focus enters or leaves the field ([01a70e4](https://github.com/vinicunca/pohon/commit/01a70e4d6cde45a33474ccff23693a3c0c0371fc))
+* **InputMenu:** prevent tags input from adding the search term on enter ([9432309](https://github.com/vinicunca/pohon/commit/94323091a75fb42702d6bb08a3b75f7e75a9ad72))
+* **Link:** propagate click handler errors to Vue error handling ([9232976](https://github.com/vinicunca/pohon/commit/923297684e876063661bcd8b0f10335e07faa356))
+* **SelectMenu/InputMenu:** ignore clear button when disabled ([de4068f](https://github.com/vinicunca/pohon/commit/de4068fd3c316907438370b3f8312db92ea4bdb5))
+* **SelectMenu:** remove the inherited "Show popup" aria-label ([7aba573](https://github.com/vinicunca/pohon/commit/7aba573c98da2d21498f3d4feb5376a9cec9549d))
+* **Table:** emit aria-sort on sortable th elements ([902805a](https://github.com/vinicunca/pohon/commit/902805a6d74398edff1f94a2b1ea8f5415837332))
+* **Table:** inset row focus outline ([c69a52d](https://github.com/vinicunca/pohon/commit/c69a52de60332c4549f099e803d2316678c391cd))
+* **test:** focus in and out ([2ebc4d5](https://github.com/vinicunca/pohon/commit/2ebc4d53c572821f8f5244ee13327a6e9914cd9b))
+* **Toaster:** prevent onClick from being called twice ([b29e111](https://github.com/vinicunca/pohon/commit/b29e1116471f1a810e7f2f774967376050cfd556))
+* **vue:** resolve explicit component imports to their Vue overrides ([15df259](https://github.com/vinicunca/pohon/commit/15df259a602b75c91f1f1db8f6d1452c8be007c3))
+
 ## [2.0.0-rc7.8](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.7...v2.0.0-rc7.8) (2026-09-09)
 
 ### Features
