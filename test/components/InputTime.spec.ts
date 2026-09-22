@@ -1,10 +1,13 @@
+import type { FormInputEvents } from '../../src/module';
 import { Time } from '@internationalized/date';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
-import { afterAll, describe, expect, it, vi } from 'vitest';
+import { flushPromises } from '@vue/test-utils';
+import { afterAll, afterEach, describe, expect, it, vi } from 'vitest';
 import { axe } from 'vitest-axe';
 import theme from '#build/ui/input-time';
 import InputTime from '../../src/runtime/components/InputTime.vue';
 import { renderEach } from '../component-render';
+import { renderForm } from '../utils/form';
 
 describe('inputTime', () => {
   const sizes = Object.keys(theme.variants.size) as any;
@@ -12,6 +15,10 @@ describe('inputTime', () => {
   const date = new Date('2025-01-01');
 
   vi.setSystemTime(date);
+
+  afterEach(() => {
+    vi.setSystemTime(date);
+  });
 
   afterAll(() => {
     vi.useRealTimers();
@@ -69,6 +76,75 @@ describe('inputTime', () => {
 
       await wrapper.setValue(time);
       expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [[time]] });
+    });
+
+    it('focus and blur events when focus enters and leaves the field, not between segments', async () => {
+      const wrapper = await mountSuspended(InputTime);
+      const segments = wrapper.findAll('[data-segment]').filter((segment) => segment.attributes('data-segment') !== 'literal');
+      const [first, second] = segments;
+
+      // Vue skips native events stamped at the exact time their listener was attached
+      vi.setSystemTime(new Date(date.getTime() + 1000));
+
+      first!.element.dispatchEvent(new FocusEvent('focusin', { bubbles: true, relatedTarget: null }));
+      first!.element.dispatchEvent(new FocusEvent('focusout', { bubbles: true, relatedTarget: second!.element }));
+      second!.element.dispatchEvent(new FocusEvent('focusin', { bubbles: true, relatedTarget: first!.element }));
+      second!.element.dispatchEvent(new FocusEvent('focusout', { bubbles: true, relatedTarget: null }));
+
+      expect(wrapper.emitted()).toMatchObject({ focus: [[{ type: 'focusin' }]], blur: [[{ type: 'focusout' }]] });
+    });
+  });
+
+  describe('form integration', async () => {
+    async function createForm(validateOn?: Array<FormInputEvents>) {
+      const wrapper = await renderForm({
+        props: {
+          validateOn,
+          validateOnInputDelay: 0,
+          async validate(state: any) {
+            if (!state.value) {
+              return [{ name: 'value', message: 'Error message' }];
+            }
+            return [];
+          },
+        },
+        slotTemplate: `
+        <UFormField name="value">
+          <UInputTime id="input" v-model="state.value" />
+        </UFormField>
+        `,
+      });
+
+      const input = wrapper.findComponent({ name: 'TimeFieldRoot' });
+      const segments = wrapper.findAll('[data-segment]').filter((segment) => segment.attributes('data-segment') !== 'literal');
+
+      // Vue skips native events stamped at the exact time their listener was attached
+      vi.setSystemTime(new Date(date.getTime() + 1000));
+
+      return { wrapper, input, segments };
+    }
+
+    it('validate on blur works', async () => {
+      const { wrapper, input, segments } = await createForm(['blur']);
+      const last = segments[segments.length - 1]!;
+
+      last.element.dispatchEvent(new FocusEvent('focusout', { bubbles: true, relatedTarget: null }));
+      await flushPromises();
+      expect(wrapper.text()).toContain('Error message');
+
+      await input.vm.$emit('update:modelValue', new Time(12, 30));
+      last.element.dispatchEvent(new FocusEvent('focusout', { bubbles: true, relatedTarget: null }));
+      await flushPromises();
+      expect(wrapper.text()).not.toContain('Error message');
+    });
+
+    it('validate on blur ignores focus moving between segments', async () => {
+      const { wrapper, segments } = await createForm(['blur']);
+      const [first, second] = segments;
+
+      first!.element.dispatchEvent(new FocusEvent('focusout', { bubbles: true, relatedTarget: second!.element }));
+      await flushPromises();
+      expect(wrapper.text()).not.toContain('Error message');
     });
   });
 

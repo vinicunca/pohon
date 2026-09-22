@@ -154,14 +154,22 @@ function onUpdate(value: any) {
   emitFormInput();
 }
 
-function onBlur(event: FocusEvent) {
-  emitFormBlur();
+function onFocusOut(event: FocusEvent) {
+  if (event.relatedTarget && (event.currentTarget as HTMLElement).contains(event.relatedTarget as Node)) {
+    return;
+  }
+
   emits('blur', event);
+  emitFormBlur();
 }
 
-function onFocus(event: FocusEvent) {
-  emitFormFocus();
+function onFocusIn(event: FocusEvent) {
+  if (event.relatedTarget && (event.currentTarget as HTMLElement).contains(event.relatedTarget as Node)) {
+    return;
+  }
+
   emits('focus', event);
+  emitFormFocus();
 }
 
 function autoFocus() {
@@ -214,8 +222,8 @@ defineExpose({
     :disabled="disabled"
     :class="ui.base({ class: [props.ui?.base, props.class] })"
     @update:model-value="onUpdate"
-    @blur="onBlur"
-    @focus="onFocus"
+    @blur="onFocusOut"
+    @focus="onFocusIn"
   >
     <template v-if="Array.isArray(segments)">
       <ReuseSegmentsTemplate :segments="segments" />
