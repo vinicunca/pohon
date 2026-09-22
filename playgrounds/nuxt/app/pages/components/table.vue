@@ -181,6 +181,7 @@ const columns: Array<TableColumn<Payment>> = [
   },
   {
     accessorKey: 'email',
+    enableSorting: true,
     header: ({ column }) => {
       const isSorted = column.getIsSorted();
 

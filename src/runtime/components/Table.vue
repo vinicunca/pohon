@@ -534,6 +534,38 @@ function getColumnStyles(column: Column<T>): Record<string, string> {
   return styles;
 }
 
+// `getCanSort()` is true for every accessor column, so it cannot tell a column that offers sort UI
+// from a plain one, and an explicit `enableSorting: true` can still come from `defaultColumn` or be
+// overridden by `sortingOptions`. A header is sortable only when both agree.
+function isSortable(column: Column<T, unknown>) {
+  return column.columnDef.enableSorting === true && column.getCanSort();
+}
+
+function getAriaSort(header: Header<T, unknown>): AriaAttributes['aria-sort'] {
+  if (header.isPlaceholder || !isSortable(header.column)) {
+    return undefined;
+  }
+
+  const sorted = header.column.getIsSorted();
+  if (!sorted) {
+    return 'none';
+  }
+
+  // `aria-sort` is a single-column pattern, so the direction goes to the first sort key that has a
+  // header on screen. Keys for an unknown id, a hidden column or a column with no sort UI are
+  // skipped, otherwise every header would report `none` while the rows are sorted.
+  const sortableIds = new Set(tableApi.getVisibleLeafColumns()
+    .filter(isSortable)
+    .map((column) => column.id));
+  const primary = tableApi.getState().sorting.find(({ id }) => sortableIds.has(id));
+
+  if (primary?.id !== header.column.id) {
+    return 'none';
+  }
+
+  return sorted === 'asc' ? 'ascending' : 'descending';
+}
+
 watch(() => props.data, () => {
   data.value = props.data ? [...props.data] : [];
 }, props.watchOptions);
@@ -575,6 +607,7 @@ defineExpose({
         :data-pinned="cell.column.getIsPinned()"
         :colspan="resolveValue(cell.column.columnDef.meta?.colspan?.td, cell)"
         :rowspan="resolveValue(cell.column.columnDef.meta?.rowspan?.td, cell)"
+        :aria-sort="getAriaSort(props.header)"
         data-slot="td"
         :class="ui.td({
           class: [
