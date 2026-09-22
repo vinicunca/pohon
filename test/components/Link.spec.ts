@@ -1,6 +1,8 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime';
-import { describe, expect, it } from 'vitest';
+import { flushPromises } from '@vue/test-utils';
+import { describe, expect, it, vi } from 'vitest';
 import { axe } from 'vitest-axe';
+import { onErrorCaptured } from 'vue';
 import { PLink as Link } from '#components';
 import { renderEach } from '../component-render';
 
@@ -28,6 +30,26 @@ describe('link', () => {
     // Slots
     ['with default slot', { slots: { default: () => 'Default slot' } }],
   ]);
+
+  it('propagates async click handler errors to onErrorCaptured', async () => {
+    const onError = vi.fn(() => false);
+    const wrapper = await mountSuspended({
+      components: { Link },
+      setup() {
+        onErrorCaptured(onError);
+
+        return { onClick: () => Promise.reject(new Error('click error')) };
+      },
+      template: `
+        <Link @click="onClick"> Click </Link>
+      `,
+    });
+
+    wrapper.find('button').trigger('click');
+    await flushPromises();
+
+    expect(onError).toHaveBeenCalledOnce();
+  });
 
   it('passes accessibility tests', async () => {
     const wrapper = await mountSuspended(Link, {

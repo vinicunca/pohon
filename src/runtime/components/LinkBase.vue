@@ -33,15 +33,20 @@ function onClickWrapper(e: MouseEvent) {
     return;
   }
 
+  const results: Array<unknown> = [];
+
   if (props.onClick) {
     for (const onClick of Array.isArray(props.onClick) ? props.onClick : [props.onClick]) {
-      onClick(e);
+      results.push(onClick(e));
     }
   }
 
   if (props.href && props.navigate && !props.isExternal) {
     props.navigate(e);
   }
+
+  // Returned so Vue routes async handler errors to `onErrorCaptured`
+  return Promise.all(results);
 }
 </script>
 

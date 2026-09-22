@@ -1,8 +1,8 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { flushPromises } from '@vue/test-utils';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { axe } from 'vitest-axe';
-import { ref } from 'vue';
+import { onErrorCaptured, ref } from 'vue';
 import theme from '#build/ui/button';
 import { PForm } from '#components';
 import Button from '../../src/runtime/components/Button.vue';
@@ -46,6 +46,32 @@ describe('button', () => {
     ['with leading slot', { slots: { leading: () => 'Leading slot' } }],
     ['with trailing slot', { slots: { trailing: () => 'Trailing slot' } }],
   ]);
+
+  it.each([
+    ['sync', () => {
+      throw new Error('click error');
+    }],
+    ['async', () => Promise.reject(new Error('click error'))],
+  ])('propagates %s click handler errors to onErrorCaptured', async (_, onClick) => {
+    const onError = vi.fn(() => false);
+    const wrapper = await mountSuspended({
+      components: { Button },
+      setup() {
+        onErrorCaptured(onError);
+
+        return { onClick };
+      },
+      template: `
+        <Button loading-auto @click="onClick"> Click </Button>
+      `,
+    });
+
+    wrapper.find('button').trigger('click');
+    await flushPromises();
+
+    expect(onError).toHaveBeenCalledOnce();
+    expect(wrapper.findComponent({ name: 'Icon' }).exists()).toBe(false);
+  });
 
   it('with loading-auto works', async () => {
     let resolve: any | null = null;

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`avatar > renders with alt correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-text-muted">BC</span></span>"`;
+exports[`avatar > renders with alt correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-text-muted">p</span></span>"`;
 
 exports[`avatar > renders with as (object) correctly 1`] = `
 "<section data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base">
@@ -16,19 +16,19 @@ exports[`avatar > renders with chip correctly 1`] = `"<span data-slot="root" cla
 
 exports[`avatar > renders with class correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base bg-background"><span data-slot="fallback" class="font-500 truncate color-text-muted">&nbsp;</span></span>"`;
 
-exports[`avatar > renders with color error correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-error/10 size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-error">BC</span></span>"`;
+exports[`avatar > renders with color error correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-error/10 size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-error">p</span></span>"`;
 
-exports[`avatar > renders with color info correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-info/10 size-8 text-base"><span data-slot="fallback" class="font-500 truncate text-info">BC</span></span>"`;
+exports[`avatar > renders with color info correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-info/10 size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-info">p</span></span>"`;
 
-exports[`avatar > renders with color neutral correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-text-muted">BC</span></span>"`;
+exports[`avatar > renders with color neutral correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-text-muted">p</span></span>"`;
 
-exports[`avatar > renders with color primary correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-primary/10 size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-primary">BC</span></span>"`;
+exports[`avatar > renders with color primary correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-primary/10 size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-primary">p</span></span>"`;
 
-exports[`avatar > renders with color secondary correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-secondary/10 size-8 text-base"><span data-slot="fallback" class="font-500 truncate text-secondary">BC</span></span>"`;
+exports[`avatar > renders with color secondary correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-secondary/10 size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-secondary">p</span></span>"`;
 
-exports[`avatar > renders with color success correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-success/10 size-8 text-base"><span data-slot="fallback" class="font-500 truncate text-success">BC</span></span>"`;
+exports[`avatar > renders with color success correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-success/10 size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-success">p</span></span>"`;
 
-exports[`avatar > renders with color warning correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-warning/10 size-8 text-base"><span data-slot="fallback" class="font-500 truncate text-warning">BC</span></span>"`;
+exports[`avatar > renders with color warning correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-warning/10 size-8 text-base"><span data-slot="fallback" class="font-500 truncate color-warning">p</span></span>"`;
 
 exports[`avatar > renders with custom size correctly 1`] = `"<span data-slot="root" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base size-100"><img src="https://github.com/praburangki.png" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>"`;
 

@@ -1,13 +1,20 @@
 import type { TableColumn, TableRow } from '../../src/runtime/components/Table.vue';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { flushPromises } from '@vue/test-utils';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { axe } from 'vitest-axe';
 import { computed, h, ref } from 'vue';
 import theme from '#build/ui/table';
 import { PBadge, PButton, PCheckbox, PDropdownMenu } from '#components';
 import Table from '../../src/runtime/components/Table.vue';
 import { renderEach } from '../component-render';
+
+async function triggerKeydown(element: Element, init: KeyboardEventInit) {
+  const event = new KeyboardEvent('keydown', { bubbles: true, cancelable: true, ...init });
+  element.dispatchEvent(event);
+  await flushPromises();
+  return event;
+}
 
 describe('table', () => {
   const loadingColors = Object.keys(theme.variants.loadingColor) as any;
@@ -233,6 +240,143 @@ describe('table', () => {
         'empty-table-header': { enabled: false },
       },
     })).toHaveNoViolations();
+  });
+
+  it('passes accessibility tests with select event', async () => {
+    const wrapper = await mountSuspended(Table, {
+      props: {
+        ...props,
+        columns: columns as any,
+        caption: 'Table caption',
+        onSelect: () => {},
+      },
+    });
+    expect(await axe(wrapper.element, {
+      rules: {
+        'empty-table-header': { enabled: false },
+      },
+    })).toHaveNoViolations();
+  });
+
+  it('calls select on Enter and Space', async () => {
+    const onSelect = vi.fn();
+    const wrapper = await mountSuspended(Table, {
+      props: { ...props, onSelect },
+    });
+
+    const row = wrapper.find('tbody tr');
+    expect(row.attributes('tabindex')).toBe('0');
+    expect(row.attributes('role')).toBeUndefined();
+
+    const enterEvent = await triggerKeydown(row.element, { key: 'Enter' });
+    expect(onSelect).toHaveBeenCalledTimes(1);
+    expect(enterEvent.defaultPrevented).toBe(true);
+
+    const spaceEvent = await triggerKeydown(row.element, { key: ' ' });
+    expect(onSelect).toHaveBeenCalledTimes(2);
+    expect(spaceEvent.defaultPrevented).toBe(true);
+  });
+
+  it('does not call select when a modifier key is held', async () => {
+    const onSelect = vi.fn();
+    const wrapper = await mountSuspended(Table, {
+      props: { ...props, onSelect },
+    });
+
+    const row = wrapper.find('tbody tr');
+    const metaEvent = await triggerKeydown(row.element, { key: 'Enter', metaKey: true });
+    expect(metaEvent.defaultPrevented).toBe(false);
+
+    const shiftEvent = await triggerKeydown(row.element, { key: ' ', shiftKey: true });
+    expect(shiftEvent.defaultPrevented).toBe(false);
+
+    expect(onSelect).not.toHaveBeenCalled();
+
+    await triggerKeydown(row.element, { key: 'Enter' });
+    expect(onSelect).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not call select on repeated keydown', async () => {
+    const onSelect = vi.fn();
+    const wrapper = await mountSuspended(Table, {
+      props: { ...props, onSelect },
+    });
+
+    const row = wrapper.find('tbody tr');
+    await row.trigger('keydown', { key: 'Enter', repeat: true });
+    const spaceEvent = await triggerKeydown(row.element, { key: ' ', repeat: true });
+    expect(spaceEvent.defaultPrevented).toBe(true);
+    expect(onSelect).not.toHaveBeenCalled();
+
+    await row.trigger('keydown', { key: 'Enter' });
+    expect(onSelect).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not call select from nested controls', async () => {
+    const onSelect = vi.fn();
+    const wrapper = await mountSuspended(Table, {
+      props: {
+        ...props,
+        columns: [{
+          id: 'controls',
+          header: 'Controls',
+          cell: () => [
+            h('input', { 'type': 'checkbox', 'aria-label': 'Select row' }),
+            h('button', { type: 'button' }, 'Edit'),
+            h('a', { href: '#' }, 'Details'),
+            h('label', {}, [h('input', { type: 'checkbox' }), 'Toggle']),
+          ],
+        }] as any,
+        onSelect,
+      },
+    });
+
+    const checkbox = wrapper.find<HTMLInputElement>('tbody tr input');
+    const checkboxEvent = await triggerKeydown(checkbox.element, { key: ' ' });
+    expect(checkboxEvent.defaultPrevented).toBe(false);
+
+    const buttonEvent = await triggerKeydown(wrapper.find('tbody tr button').element, { key: ' ' });
+    expect(buttonEvent.defaultPrevented).toBe(false);
+
+    const linkEvent = await triggerKeydown(wrapper.find('tbody tr a').element, { key: 'Enter' });
+    expect(linkEvent.defaultPrevented).toBe(false);
+
+    await checkbox.trigger('click');
+    expect(checkbox.element.checked).toBe(true);
+
+    await wrapper.find('tbody tr button').trigger('click');
+    await wrapper.find('tbody tr a').trigger('click');
+    await wrapper.find('tbody tr label').trigger('click');
+    expect(wrapper.find<HTMLInputElement>('tbody tr label input').element.checked).toBe(true);
+
+    expect(onSelect).not.toHaveBeenCalled();
+
+    await wrapper.find('tbody tr').trigger('keydown', { key: 'Enter' });
+    expect(onSelect).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not call select from a nested contenteditable', async () => {
+    const onSelect = vi.fn();
+    const wrapper = await mountSuspended(Table, {
+      props: {
+        ...props,
+        columns: [{
+          id: 'notes',
+          header: 'Notes',
+          cell: () => h('div', { contenteditable: 'true' }, 'Notes'),
+        }] as any,
+        onSelect,
+      },
+    });
+
+    const editable = wrapper.find('tbody tr [contenteditable]');
+    const enterEvent = await triggerKeydown(editable.element, { key: 'Enter' });
+    expect(enterEvent.defaultPrevented).toBe(false);
+
+    const spaceEvent = await triggerKeydown(editable.element, { key: ' ' });
+    expect(spaceEvent.defaultPrevented).toBe(false);
+
+    expect(onSelect).not.toHaveBeenCalled();
   });
 
   it('sets aria-sort on sortable th elements', async () => {
