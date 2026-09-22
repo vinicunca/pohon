@@ -1,6 +1,6 @@
 import type { ComputedRef, MaybeRef } from 'vue';
 import { useEmitAsProps } from 'akar';
-import { computed, isRef } from 'vue';
+import { computed, unref } from 'vue';
 
 /**
  * Proxy-aware replacement for akar's `useForwardProps` / `useForwardPropsEmits`.
@@ -22,7 +22,7 @@ export function useForwardProps<T extends object, E extends string = string>(
   // so cast at the call site (this is a runtime-transparent name → `onXxx` prop mapping).
   const emitAsProps = emits ? useEmitAsProps(emits as Parameters<typeof useEmitAsProps>[0]) : {};
   return computed(() => {
-    const src = isRef(source) ? source.value : source;
+    const src = unref(source);
     const out: Record<string, any> = { ...emitAsProps };
     for (const key in src) {
       const value = (src as any)[key];
