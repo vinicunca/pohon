@@ -763,9 +763,6 @@ importers:
       superstruct:
         specifier: ^2
         version: 2.0.2
-      tailwindcss:
-        specifier: ^4
-        version: 4.3.3
       tinyglobby:
         specifier: 'catalog:'
         version: 0.2.17

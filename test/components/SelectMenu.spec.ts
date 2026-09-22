@@ -150,6 +150,35 @@ describe('selectMenu', () => {
     })).toHaveNoViolations();
   });
 
+  // Akar's `ComboboxTrigger` hard-codes `aria-label="Show popup"`, which would win over the `FormField` label.
+  describe('accessible name', () => {
+    it('does not inherit the Akar trigger label', () => {
+      const wrapper = mount(SelectMenu, { props });
+
+      expect(wrapper.get('[data-slot="base"]').attributes('aria-label')).toBeUndefined();
+    });
+
+    it('keeps a caller label', () => {
+      const wrapper = mount(SelectMenu, { props, attrs: { 'aria-label': 'Aria label' } });
+
+      expect(wrapper.get('[data-slot="base"]').attributes('aria-label')).toBe('Aria label');
+    });
+
+    it('is named by the form field label', async () => {
+      const wrapper = await renderForm({
+        slotTemplate: `
+        <PFormField label="Sort order">
+          <PSelectMenu :items="['Newest', 'Oldest']" />
+        </PFormField>
+        `,
+      });
+
+      const trigger = wrapper.get('[data-slot="base"]');
+      expect(trigger.attributes('aria-label')).toBeUndefined();
+      expect(wrapper.get('label').attributes('for')).toBe(trigger.attributes('id'));
+    });
+  });
+
   describe('emits', () => {
     it('update:modelValue event', async () => {
       const wrapper = mount(SelectMenu, { props: { items: ['Option 1', 'Option 2'] } });
