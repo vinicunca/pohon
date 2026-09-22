@@ -4,6 +4,7 @@ import { flushPromises, mount } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';
 import { axe } from 'vitest-axe';
 import theme from '#build/ui/input';
+import { PButton, PFieldGroup } from '#components';
 import InputMenu from '../../src/runtime/components/InputMenu.vue';
 import { renderEach } from '../component-render';
 import { renderForm } from '../utils/form';
@@ -13,33 +14,27 @@ describe('inputMenu', () => {
   const sizes = Object.keys(theme.variants.size) as any;
   const variants = Object.keys(theme.variants.variant) as any;
 
-  const items = [
-    {
-      label: 'Backlog',
-      value: 'backlog',
-      icon: 'i-lucide-circle-help',
-    },
-    {
-      label: 'Todo',
-      value: 'todo',
-      icon: 'i-lucide-circle-plus',
-    },
-    {
-      label: 'In Progress',
-      value: 'in_progress',
-      icon: 'i-lucide-circle-arrow-up',
-    },
-    {
-      label: 'Done',
-      value: 'done',
-      icon: 'i-lucide-circle-check',
-    },
-    {
-      label: 'Canceled',
-      value: 'canceled',
-      icon: 'i-lucide-circle-x',
-    },
-  ];
+  const items = [{
+    label: 'Backlog',
+    value: 'backlog',
+    icon: 'i-lucide-circle-help',
+  }, {
+    label: 'Todo',
+    value: 'todo',
+    icon: 'i-lucide-circle-plus',
+  }, {
+    label: 'In Progress',
+    value: 'in_progress',
+    icon: 'i-lucide-circle-arrow-up',
+  }, {
+    label: 'Done',
+    value: 'done',
+    icon: 'i-lucide-circle-check',
+  }, {
+    label: 'Canceled',
+    value: 'canceled',
+    icon: 'i-lucide-circle-x',
+  }];
 
   const itemsWithDescription = [...items.map((item) => ({ ...item, description: 'Description' }))];
 
@@ -74,13 +69,13 @@ describe('inputMenu', () => {
     ['with leadingIcon', { props: { leadingIcon: 'i-lucide-arrow-left' } }],
     ['with trailing and icon', { props: { trailing: true, icon: 'i-lucide-arrow-right' } }],
     ['with trailingIcon', { props: { trailingIcon: 'i-lucide-arrow-right' } }],
-    ['with avatar', { props: { avatar: { src: 'https://github.com/praburangki.png' } } }],
-    ['with avatar and leadingIcon', { props: { avatar: { src: 'https://github.com/praburangki.png' }, leadingIcon: 'i-lucide-arrow-left' } }],
-    ['with avatar and trailingIcon', { props: { avatar: { src: 'https://github.com/praburangki.png' }, trailingIcon: 'i-lucide-arrow-right' } }],
+    ['with avatar', { props: { avatar: { src: 'https://github.com/benjamincanac.png' } } }],
+    ['with avatar and leadingIcon', { props: { avatar: { src: 'https://github.com/benjamincanac.png' }, leadingIcon: 'i-lucide-arrow-left' } }],
+    ['with avatar and trailingIcon', { props: { avatar: { src: 'https://github.com/benjamincanac.png' }, trailingIcon: 'i-lucide-arrow-right' } }],
     ['with loading', { props: { loading: true } }],
-    ['with loading and avatar', { props: { loading: true, avatar: { src: 'https://github.com/praburangki.png' } } }],
+    ['with loading and avatar', { props: { loading: true, avatar: { src: 'https://github.com/benjamincanac.png' } } }],
     ['with loading trailing', { props: { loading: true, trailing: true } }],
-    ['with loading trailing and avatar', { props: { loading: true, trailing: true, avatar: { src: 'https://github.com/praburangki.png' } } }],
+    ['with loading trailing and avatar', { props: { loading: true, trailing: true, avatar: { src: 'https://github.com/benjamincanac.png' } } }],
     ['with loadingIcon', { props: { loading: true, loadingIcon: 'i-lucide-loader' } }],
     ['with trailingIcon', { props: { ...props, trailingIcon: 'i-lucide-chevron-down' } }],
     ['with selectedIcon', { props: { ...props, selectedIcon: 'i-lucide-check' } }],
@@ -140,6 +135,24 @@ describe('inputMenu', () => {
 
     expect(wrapper.find('[data-slot="trailing"]').exists()).toBe(false);
     expect(wrapper.find('[data-slot="trailingIcon"]').exists()).toBe(false);
+  });
+
+  // `root` and `base` are the same element in `multiple` mode, so the rounding
+  // has to come from the element's own position, not from a `group` ancestor.
+  it('with multiple rounds its corners inside a FieldGroup', async () => {
+    const wrapper = await mountSuspended({
+      components: { PFieldGroup, PButton, PInputMenu: InputMenu },
+      template: '<PFieldGroup><PButton label="Button" /><PInputMenu multiple /></PFieldGroup>',
+    });
+
+    expect(wrapper.get('div[data-slot="base"]').classes()).toContain('not-only:last:rounded-s-none');
+  });
+
+  it('with autocomplete mode ignores multiple', () => {
+    const autocomplete = mount(InputMenu, { props: { items, mode: 'autocomplete' as const } });
+    const withMultiple = mount(InputMenu, { props: { items, mode: 'autocomplete' as const, multiple: true } });
+
+    expect(withMultiple.html()).toBe(autocomplete.html());
   });
 
   it('passes accessibility tests', async () => {
@@ -211,8 +224,22 @@ describe('inputMenu', () => {
     });
   });
 
+  describe('clear', () => {
+    it('does not render the clear button when disabled', () => {
+      const wrapper = mount(InputMenu, { props: { items, modelValue: items[0]!, clear: true, disabled: true } });
+
+      expect(wrapper.find('[data-slot="trailingClear"]').exists()).toBe(false);
+    });
+
+    it('renders the clear button when not disabled', () => {
+      const wrapper = mount(InputMenu, { props: { items, modelValue: items[0]!, clear: true } });
+
+      expect(wrapper.find('[data-slot="trailingClear"]').exists()).toBe(true);
+    });
+  });
+
   describe('create-item', () => {
-    // With `create-item`, the create item is always registered so akar's collection
+    // With `create-item`, the create item is always registered so reka-ui's collection
     // never goes from empty to non-empty, leaving the highlight stale when async items load.
     it('re-highlights first item when items change while open', async () => {
       const wrapper = mount(InputMenu, {
@@ -244,6 +271,61 @@ describe('inputMenu', () => {
       const highlighted = wrapper.find('[role="option"][data-highlighted]');
       expect(highlighted.exists()).toBe(true);
       expect(highlighted.text()).toContain('Option 1');
+
+      wrapper.unmount();
+    });
+  });
+
+  describe('multiple', () => {
+    // reka-ui's `TagsInputInput` adds the search term as a tag on `Enter`, which renders a chip
+    // that is not part of the model since `TagsInputRoot` is controlled by the combobox.
+    it('does not add a tag on enter when the search term matches no item', async () => {
+      const wrapper = mount(InputMenu, {
+        attachTo: document.body,
+        props: {
+          modelValue: ['Option 1'],
+          items: ['Option 1', 'Option 2'],
+          multiple: true,
+          portal: false,
+        },
+      });
+
+      await flushPromises();
+
+      const input = wrapper.find('input');
+      await input.setValue('Option 3');
+      await flushPromises();
+
+      await input.trigger('keydown', { key: 'Enter' });
+      await flushPromises();
+
+      expect(wrapper.findAll('[data-slot="tagsItem"]')).toHaveLength(1);
+      expect(wrapper.emitted('update:modelValue')).toBeFalsy();
+
+      wrapper.unmount();
+    });
+
+    it('still selects the highlighted item on enter', async () => {
+      const wrapper = mount(InputMenu, {
+        attachTo: document.body,
+        props: {
+          modelValue: ['Option 1'],
+          items: ['Option 1', 'Option 2'],
+          multiple: true,
+          portal: false,
+        },
+      });
+
+      await flushPromises();
+
+      const input = wrapper.find('input');
+      await input.setValue('Option 2');
+      await flushPromises();
+
+      await input.trigger('keydown', { key: 'Enter' });
+      await flushPromises();
+
+      expect(wrapper.emitted('update:modelValue')).toMatchObject([[['Option 1', 'Option 2']]]);
 
       wrapper.unmount();
     });
@@ -323,9 +405,9 @@ describe('inputMenu', () => {
           items: ['Option 1', 'Option 2'],
         },
         slotTemplate: `
-        <PFormField name="value">
-          <PInputMenu id="input" v-model="state.value" :items="items" />
-        </PFormField>
+        <UFormField name="value">
+          <UInputMenu id="input" v-model="state.value" :items="items" />
+        </UFormField>
         `,
       });
       const input = wrapper.findComponent({ name: 'ComboboxRoot' });
