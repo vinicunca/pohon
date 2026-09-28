@@ -1198,6 +1198,55 @@ importers:
         specifier: 'catalog:'
         version: 3.3.11(typescript@6.0.3)
 
+  test/bundle/nuxt:
+    dependencies:
+      nuxt:
+        specifier: 'catalog:'
+        version: 4.5.2(7d5c0aaf4411d0a3e84008a48c4b941f)
+      pohon-ui:
+        specifier: workspace:*
+        version: link:../../..
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.43(typescript@6.0.3)
+
+  test/bundle/nuxt-full:
+    dependencies:
+      nuxt:
+        specifier: 'catalog:'
+        version: 4.5.2(7d5c0aaf4411d0a3e84008a48c4b941f)
+      pohon-ui:
+        specifier: workspace:*
+        version: link:../../..
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.43(typescript@6.0.3)
+
+  test/bundle/vue:
+    dependencies:
+      '@vinicunca/unocss-preset':
+        specifier: 'catalog:'
+        version: 2.4.0(@vinicunca/perkakas@1.17.1)(unocss@66.10.5(@unocss/webpack@66.10.5(esbuild@0.28.0)(rolldown@1.2.7)(rollup@4.60.4)(vite@8.3.0(@types/node@25.3.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3)))(cac@7.0.0)(esbuild@0.28.0)(rolldown@1.2.7)(rollup@4.60.4)(srvx@1.0.5)(vite@8.3.0(@types/node@25.3.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3)))
+      pohon-ui:
+        specifier: workspace:*
+        version: link:../../..
+      unocss:
+        specifier: 'catalog:'
+        version: 66.10.5(@unocss/webpack@66.10.5(esbuild@0.28.0)(rolldown@1.2.7)(rollup@4.60.4)(vite@8.3.0(@types/node@25.3.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3)))(cac@7.0.0)(esbuild@0.28.0)(rolldown@1.2.7)(rollup@4.60.4)(srvx@1.0.5)(vite@8.3.0(@types/node@25.3.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.43(typescript@6.0.3)
+      vue-router:
+        specifier: 'catalog:'
+        version: 5.3.1(@vue/compiler-sfc@3.5.42)(esbuild@0.28.0)(rolldown@1.2.7)(rollup@4.60.4)(vite@8.3.0(@types/node@25.3.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(vue@3.5.43(typescript@6.0.3))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3))
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: 'catalog:'
+        version: 6.0.9(vite@8.3.0(@types/node@25.3.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(vue@3.5.43(typescript@6.0.3))
+      vite:
+        specifier: 'catalog:'
+        version: 8.3.0(@types/node@25.3.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0)
+
 packages:
 
   '@ai-sdk/anthropic@4.0.58':

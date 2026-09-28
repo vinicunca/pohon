@@ -13,6 +13,7 @@ packages:
   - playgrounds/nuxt
   - playgrounds/vue
   - playgrounds/repl
+  - test/bundle/*
 
 overrides:
   # `@codspeed/vitest-plugin` caps its `vite` peer at ^7 while the repo resolves

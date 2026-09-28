@@ -1,0 +1,19 @@
+{
+  "name": "pohon-ui-bundle-vue",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node ../build.mjs"
+  },
+  "dependencies": {
+    "pohon-ui": "workspace:*",
+    "@vinicunca/unocss-preset": "catalog:",
+    "unocss": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "catalog:",
+    "vite": "catalog:"
+  }
+}
