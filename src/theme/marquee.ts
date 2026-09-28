@@ -1,7 +1,7 @@
 export default {
   slots: {
-    root: 'group relative flex items-center overflow-hidden gap-(--gap) [--gap:--spacing(16)] [--duration:20s]',
-    content: 'flex items-center shrink-0 justify-around gap-(--gap) min-w-max',
+    root: 'group flex gap-$gap [--duration:20s] [--gap:--spacing(16)] items-center relative overflow-hidden',
+    content: 'flex shrink-0 gap-$gap min-w-max items-center justify-around',
   },
   variants: {
     orientation: {
@@ -24,7 +24,7 @@ export default {
     },
     overlay: {
       true: {
-        root: 'before:absolute before:pointer-events-none before:content-[""] before:z-2 before:from-default before:to-transparent after:absolute after:pointer-events-none after:content-[""] after:z-2 after:from-default after:to-transparent',
+        root: 'after:(pointer-events-none content-empty absolute z-2 from-background to-transparent) before:(pointer-events-none content-empty absolute z-2 from-background to-transparent)',
       },
     },
   },
@@ -33,28 +33,28 @@ export default {
       orientation: 'horizontal',
       class: {
         root: 'flex-row',
-        content: 'flex-row motion-safe:animate-[marquee_var(--duration)_linear_infinite] motion-safe:rtl:animate-[marquee-rtl_var(--duration)_linear_infinite] backface-hidden',
+        content: 'flex-row motion-safe:animate-marquee motion-safe:rtl:animate-marquee backface-hidden',
       },
     },
     {
       orientation: 'horizontal',
       overlay: true,
       class: {
-        root: 'before:inset-y-0 before:start-0 before:h-full before:w-1/3 before:bg-gradient-to-r rtl:before:bg-gradient-to-l after:inset-y-0 after:end-0 after:h-full after:w-1/3 after:bg-gradient-to-l rtl:after:bg-gradient-to-r backface-hidden',
+        root: 'backface-hidden after:(h-full w-1/3 content-empty end-0 inset-y-0 bg-gradient-to-l) before:(h-full w-1/3 content-empty start-0 inset-y-0 bg-gradient-to-r) rtl:after:bg-gradient-to-r rtl:before:bg-gradient-to-l',
       },
     },
     {
       orientation: 'vertical',
       class: {
         root: 'flex-col',
-        content: 'flex-col motion-safe:animate-[marquee-vertical_var(--duration)_linear_infinite] h-[fit-content] backface-hidden',
+        content: 'flex-col motion-safe:animate-marquee-vertical pohon:h-fit backface-hidden',
       },
     },
     {
       orientation: 'vertical',
       overlay: true,
       class: {
-        root: 'before:inset-x-0 before:top-0 before:w-full before:h-1/3 before:bg-gradient-to-b after:inset-x-0 after:bottom-0 after:w-full after:h-1/3 after:bg-gradient-to-t backface-hidden',
+        root: 'backface-hidden after:(h-1/3 w-full content-empty inset-x-0 bottom-0 bg-gradient-to-t) before:(h-1/3 w-full content-empty inset-x-0 top-0 bg-gradient-to-b)',
       },
     },
   ],
