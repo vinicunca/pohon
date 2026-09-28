@@ -1,9 +1,17 @@
 import type { Editor } from '@tiptap/vue-3';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { TooltipProvider } from 'akar';
 import { describe, expect, it, vi } from 'vitest';
 import { axe } from 'vitest-axe';
+import { defineComponent } from 'vue';
 import EditorToolbar from '../../src/runtime/components/EditorToolbar.vue';
 import { renderEach } from '../component-render';
+
+const EditorToolbarWrapper = defineComponent({
+  components: { TooltipProvider, EditorToolbar },
+  inheritAttrs: false,
+  template: '<TooltipProvider><EditorToolbar v-bind="$attrs" /></TooltipProvider>',
+});
 
 describe('editorToolbar', () => {
   const items = [[{
@@ -78,5 +86,42 @@ describe('editorToolbar', () => {
     });
 
     expect(await axe(wrapper.element)).toHaveNoViolations();
+  });
+
+  it('names icon-only buttons from their tooltips', async () => {
+    const wrapper = await mountSuspended(EditorToolbarWrapper, {
+      props: {
+        editor: { registerPlugin: vi.fn() } as unknown as Editor,
+        items: [[
+          { kind: 'mark', mark: 'bold', icon: 'i-lucide-bold', tooltip: { text: 'Bold' } },
+          { 'kind': 'mark', 'mark': 'italic', 'icon': 'i-lucide-italic', 'tooltip': { text: 'Italic' }, 'aria-label': 'Italic text' },
+          { kind: 'mark', mark: 'underline', icon: 'i-lucide-underline', label: 'Underline', tooltip: { text: 'Underline' } },
+          { kind: 'mark', mark: 'strike', icon: 'i-lucide-strikethrough' },
+        ]],
+      },
+    });
+
+    const buttons = wrapper.findAll('[role=toolbar] button');
+    expect(buttons).toHaveLength(4);
+    expect(buttons[0]!.attributes('aria-label')).toBe('Bold');
+    expect(buttons[1]!.attributes('aria-label')).toBe('Italic text');
+    expect(buttons[2]!.attributes('aria-label')).toBeUndefined();
+    expect(buttons[2]!.text()).toContain('Underline');
+    expect(buttons[3]!.attributes('aria-label')).toBeUndefined();
+  });
+
+  it('names dropdown triggers from their tooltips', async () => {
+    const wrapper = await mountSuspended(EditorToolbarWrapper, {
+      props: {
+        editor: { registerPlugin: vi.fn() } as unknown as Editor,
+        items: [[{
+          icon: 'i-lucide-heading',
+          tooltip: { text: 'Headings' },
+          items: [{ kind: 'heading', level: 1, icon: 'i-lucide-heading-1', label: 'Heading 1' }],
+        }]],
+      },
+    });
+
+    expect(wrapper.find('[role=toolbar] button').attributes('aria-label')).toBe('Headings');
   });
 });
