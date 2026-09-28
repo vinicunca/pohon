@@ -77,7 +77,7 @@ export interface FormSlots {
 
 <script lang="ts" setup generic="S extends FormSchema, T extends boolean = true, N extends boolean = false">
 import { useEventBus } from '@vueuse/core';
-import { computed, inject, nextTick, onMounted, onUnmounted, provide, reactive, readonly, ref, useId, useTemplateRef } from 'vue';
+import { computed, inject, nextTick, onMounted, onUnmounted, provide, reactive, readonly, ref, unref, useId, useTemplateRef } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { formBusInjectionKey, formErrorsInjectionKey, formInputsInjectionKey, formLoadingInjectionKey, formOptionsInjectionKey, formStateInjectionKey } from '../composables/useFormField';
@@ -131,12 +131,12 @@ const state = computed(() => {
 provide(formBusInjectionKey, bus);
 provide(formStateInjectionKey, state);
 
-const nestedForms = ref<Map<string | number, { validate: typeof _validate; name?: string; api: Form<any> }>>(new Map());
+const nestedForms = ref<Map<string | number, { validate: typeof _validate; clearDirty: () => void; name?: string; api: Form<any> }>>(new Map());
 
 onMounted(async () => {
   if (parentBus) {
     await nextTick();
-    parentBus.emit({ type: 'attach', validate: _validate, formId, name: props.name, api });
+    parentBus.emit({ type: 'attach', validate: _validate, clearDirty, formId, name: props.name, api });
   }
 });
 
@@ -150,7 +150,7 @@ onUnmounted(() => {
 onMounted(async () => {
   bus.on(async (event) => {
     if (event.type === 'attach') {
-      nestedForms.value.set(event.formId, { validate: event.validate, name: event.name, api: event.api as any });
+      nestedForms.value.set(event.formId, { validate: event.validate, clearDirty: event.clearDirty, name: event.name, api: event.api as any });
     } else if (event.type === 'detach') {
       nestedForms.value.delete(event.formId);
     } else if (props.validateOn?.includes(event.type) && !loading.value) {
@@ -185,6 +185,13 @@ provide(formInputsInjectionKey, inputs as any);
 const dirtyFields: Set<keyof I> = reactive(new Set<keyof I>());
 const touchedFields: Set<keyof I> = reactive(new Set<keyof I>());
 const blurredFields: Set<keyof I> = reactive(new Set<keyof I>());
+
+function clearDirty() {
+  dirtyFields.clear();
+  for (const form of nestedForms.value.values()) {
+    form.clearDirty();
+  }
+}
 
 function resolveErrorIds(errs: Array<FormError>): Array<FormErrorWithId> {
   return errs.map((err) => ({
@@ -278,7 +285,7 @@ async function onSubmitWrapper(payload: Event) {
   try {
     event.data = await _validate({ nested: true, transform: props.transform });
     await props.onSubmit?.(event);
-    dirtyFields.clear();
+    clearDirty();
   } catch (error) {
     if (!(error instanceof FormValidationException)) {
       throw error;
@@ -475,7 +482,7 @@ const api = {
 
   disabled,
   loading,
-  dirty: computed(() => !!dirtyFields.size),
+  dirty: computed(() => !!dirtyFields.size || Array.from(nestedForms.value.values()).some((form) => unref(form.api.dirty))),
   dirtyFields: readonly(dirtyFields),
   blurredFields: readonly(blurredFields),
   touchedFields: readonly(touchedFields),
