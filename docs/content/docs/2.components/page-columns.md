@@ -1,11 +1,11 @@
 ---
 title: PageColumns
-description: "A responsive multi-column layout system for organizing content side-by-side."
+description: 'A responsive multi-column layout system for organizing content side-by-side.'
 category: page
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/PageColumns.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/PageColumns.vue
 ---
 
 ## Usage
@@ -14,12 +14,10 @@ The PageColumns component displays content in a responsive multi-column layout. 
 
 ::component-example
 ---
-
 collapse: true
 name: 'page-columns-example'
 class: 'p-8'
 ---
-
 ::
 
 ## API

@@ -17,7 +17,7 @@ const estimateSize = computed(() => laneWidth.value * (480 / 640))
 </script>
 
 <template>
-  <UScrollArea
+  <PScrollArea
     ref="scrollArea"
     v-slot="{ item }"
     :items="items"
@@ -37,5 +37,5 @@ const estimateSize = computed(() => laneWidth.value * (480 / 640))
       loading="lazy"
       class="rounded-md size-full object-cover"
     >
-  </UScrollArea>
+  </PScrollArea>
 </template>

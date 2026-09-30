@@ -1,11 +1,11 @@
 ---
 title: DashboardGroup
-description: "A fixed layout component that provides context for dashboard components with sidebar state management and persistence."
+description: 'A fixed layout component that provides context for dashboard components with sidebar state management and persistence.'
 category: dashboard
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/DashboardGroup.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/DashboardGroup.vue
 ---
 
 ## Usage
@@ -16,11 +16,11 @@ Use it in a layout or in your `app.vue`:
 
 ```vue [layouts/dashboard.vue]{2,6}
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar />
+  <PDashboardGroup>
+    <PDashboardSidebar />
 
     <slot />
-  </UDashboardGroup>
+  </PDashboardGroup>
 </template>
 ```
 

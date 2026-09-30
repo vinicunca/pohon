@@ -12,7 +12,7 @@ const { canReset, resetLabel, resetToBaseline } = useThemeStudioToolbar()
 </script>
 
 <template>
-  <UTooltip :text="resetLabel" :disabled="vertical">
+  <PTooltip :text="resetLabel" :disabled="vertical">
     <PButton
       :icon="studioIcons.reset"
       :label="vertical ? resetLabel : undefined"
@@ -22,8 +22,8 @@ const { canReset, resetLabel, resetToBaseline } = useThemeStudioToolbar()
       :block="vertical"
       :disabled="!canReset"
       :aria-label="resetLabel"
-      :ui="{ leadingIcon: vertical && 'text-dimmed' }"
+      :ui="{ leadingIcon: vertical && 'color-text-dimmed' }"
       @click="resetToBaseline"
     />
-  </UTooltip>
+  </PTooltip>
 </template>

@@ -13,7 +13,7 @@ const appendToBody = import.meta.client ? () => document.body : undefined
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-slot="{ editor }"
     v-model="value"
     :extensions="[Emoji]"
@@ -21,6 +21,6 @@ const appendToBody = import.meta.client ? () => document.body : undefined
     placeholder="Type : to add emojis..."
     class="w-full min-h-21"
   >
-    <UEditorEmojiMenu :editor="editor" :items="items" :append-to="appendToBody" />
-  </UEditor>
+    <PEditorEmojiMenu :editor="editor" :items="items" :append-to="appendToBody" />
+  </PEditor>
 </template>

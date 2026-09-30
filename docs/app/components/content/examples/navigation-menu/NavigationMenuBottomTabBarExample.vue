@@ -23,7 +23,7 @@ const items: NavigationMenuItem[] = [
 </script>
 
 <template>
-  <UNavigationMenu
+  <PNavigationMenu
     :items="items"
     :ui="{
       root: 'justify-around border-t border-border py-2',

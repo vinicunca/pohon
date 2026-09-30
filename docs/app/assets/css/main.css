@@ -1,10 +1,10 @@
-@theme static {
+@import "../../designs/styles/theme.css";
+
+:root {
   --container-8xl: 90rem;
 
   --font-sans: "Public Sans", sans-serif;
-  /* Tailwind's preflight wires --font-sans and --font-mono itself, nothing
-     consumes --font-serif. Defaulting it to the body stack keeps the heading
-     rule below inert until the studio sets a serif of its own. */
+  /* Keep headings on the body stack until the studio selects a serif font. */
   --font-serif: var(--font-sans);
 
   --color-green-50: #effdf5;
@@ -24,9 +24,12 @@
   --ui-container: var(--container-8xl);
 }
 
-/* The live counterpart of the export's heading rule, until v5 ships
-   --ui-font-heading. In `base` so `font-mono` on an h1 still wins. */
+/* The live counterpart of the exported heading rule. */
 @layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+
   h1,
   h2,
   h3,
@@ -37,22 +40,25 @@
   }
 }
 
+body.theme-studio .font-normal { font-weight: var(--font-weight-normal, 400); }
+body.theme-studio .font-medium { font-weight: var(--font-weight-medium, 500); }
+body.theme-studio .font-semibold { font-weight: var(--font-weight-semibold, 600); }
+body.theme-studio .font-bold { font-weight: var(--font-weight-bold, 700); }
+
 /* The studio's canvas sits recessed behind the preview card. Mixed off
-   --ui-bg so editing that token moves the canvas too; the weights land the
-   stock theme on neutral-50 / neutral-950. Unlayered, to outrank the
-   bg-default utility the Nuxt root carries. */
+   --ui-color-bg so editing that token moves the canvas too. */
 body.theme-studio,
 body.theme-studio #__nuxt {
   background-color: color-mix(
     in oklab,
-    var(--ui-bg) 98%,
+    var(--ui-color-bg) 98%,
     var(--ui-color-neutral-950)
   );
 }
 
 .dark body.theme-studio,
 .dark body.theme-studio #__nuxt {
-  background-color: color-mix(in oklab, var(--ui-bg) 70%, black);
+  background-color: color-mix(in oklab, var(--ui-color-bg) 70%, black);
 }
 
 html[data-framework="nuxt"] .vue-only,
@@ -76,7 +82,7 @@ html.dark .shiki span {
   height: 1.25em;
   vertical-align: -0.25em;
   margin-right: 0.125em;
-  background-color: var(--ui-text-highlighted);
+  background-color: var(--ui-color-text-highlighted);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;

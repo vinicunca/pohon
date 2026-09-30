@@ -25,7 +25,7 @@ function onOpen() {
 </script>
 
 <template>
-  <UDrawer :handle="false" @update:open="onOpen">
+  <PDrawer :handle="false" @update:open="onOpen">
     <PButton
       label="Search users..."
       color="neutral"
@@ -34,7 +34,7 @@ function onOpen() {
     />
 
     <template #content>
-      <UCommandPalette
+      <PCommandPalette
         v-model:search-term="searchTerm"
         :loading="status === 'pending'"
         :groups="groups"
@@ -42,5 +42,5 @@ function onOpen() {
         class="h-80"
       />
     </template>
-  </UDrawer>
+  </PDrawer>
 </template>

@@ -45,7 +45,7 @@ const pins = ref<PalettePin[]>(stored?.pins ? plainPins(stored.pins) : [])
 // shade → pin lightness: `has` answers "pinned?", the badge reads L for contrast
 const pinnedShades = computed(() => new Map(pins.value.map(pin => [pin.shade, pin.l])))
 
-// L above which a stop takes the dark badge. Whole class strings, tailwind's
+// L above which a stop takes the dark badge. Whole class strings, UnoCSS's
 // scanner only sees literals.
 const LIGHT_STOP_L = 0.62
 
@@ -130,7 +130,7 @@ const stuckShade = ref<number>()
 const hoveredShade = ref<number>()
 let hoverLeaveTimeout: ReturnType<typeof setTimeout> | undefined
 
-// One popover serves the whole strip (stuck wins over hover), a single Reka
+// One popover serves the whole strip (stuck wins over hover), a single Akar
 // instance instead of one per stop is the bulk of the 19-stop speedup.
 const activeShade = computed(() => stuckShade.value ?? hoveredShade.value)
 
@@ -194,7 +194,7 @@ function onColorCommit(shade: number, field: 'oklch' | 'hex' | 'rgb', event: Eve
   }
 }
 
-// Reka emits update:open(false) for trigger clicks too, clearing the stick
+// Akar emits update:open(false) for trigger clicks too, clearing the stick
 // here would race toggleStuck. Only hover clears; toggleStuck/Esc release.
 function onSwatchOpenUpdate(shade: number, open: boolean) {
   if (open) return
@@ -205,13 +205,13 @@ function onSwatchEscape(shade: number) {
   if (stuckShade.value === shade) stuckShade.value = undefined
 }
 
-// A closing hover-popover returns focus to its trigger tile, Reka reads that
+// A closing hover-popover returns focus to its trigger tile, Akar reads that
 // focusin as focus-outside on the newly-opened one and dismisses it (hover A→B
 // closed B). Keep the focus return only for keyboard flows.
 function onSwatchCloseAutoFocus(event: Event) {
   // the whole editor sits in the Colors panel's popper wrapper, only a swatch
   // detail popover (has a copy button) marks a keyboard flow
-  const wrapper = document.activeElement?.closest('[data-reka-popper-content-wrapper]')
+  const wrapper = document.activeElement?.closest('[data-akar-popper-content-wrapper]')
   if (!wrapper?.querySelector('[aria-label^="Copy oklch"]')) {
     event.preventDefault()
   }
@@ -447,7 +447,7 @@ function resetEffects() {
 
 <template>
   <div class="flex flex-col gap-2.5">
-    <UTabs
+    <PTabs
       v-model="tab"
       :items="tabs"
       :content="false"
@@ -472,7 +472,7 @@ function resetEffects() {
       />
 
       <!-- One tile per stop, the single popover below carries their detail. -->
-      <div class="flex aspect-11/1 rounded-b-sm overflow-hidden ring ring-default">
+      <div class="flex aspect-11/1 rounded-b-sm overflow-hidden ring ring-ring">
         <button
           v-for="info in swatches"
           :key="info.shade"
@@ -486,7 +486,7 @@ function resetEffects() {
           @mouseenter="onSwatchEnter(info.shade)"
           @mouseleave="onSwatchLeave"
         >
-          <UIcon
+          <PIcon
             v-if="pinnedShades.has(info.shade)"
             :name="studioIcons.pin"
             class="absolute inset-0 m-auto size-2.5 pointer-events-none"
@@ -495,7 +495,7 @@ function resetEffects() {
         </button>
       </div>
 
-      <UPopover
+      <PPopover
         :open="!!activeSwatch"
         :reference="anchorEl"
         :content="{
@@ -527,7 +527,7 @@ function resetEffects() {
               </span>
 
               <div class="flex items-center">
-                <UTooltip text="Copy oklch">
+                <PTooltip text="Copy oklch" ignore-non-keyboard-focus>
                   <PButton
                     size="xs"
                     color="neutral"
@@ -538,9 +538,9 @@ function resetEffects() {
                     :aria-label="`Copy oklch ${swatchDetail.oklch}`"
                     @click="copySwatch(swatchDetail)"
                   />
-                </UTooltip>
+                </PTooltip>
 
-                <UTooltip :text="swatchDetail.pinned ? 'Unpin colour' : 'Pin this colour exactly'">
+                <PTooltip :text="swatchDetail.pinned ? 'Unpin colour' : 'Pin this colour exactly'" ignore-non-keyboard-focus>
                   <PButton
                     size="xs"
                     color="neutral"
@@ -554,12 +554,12 @@ function resetEffects() {
                     :aria-label="swatchDetail.pinned ? 'Unpin this colour' : 'Pin this colour exactly'"
                     @click="togglePinExact(swatchDetail.shade)"
                   />
-                </UTooltip>
+                </PTooltip>
               </div>
             </div>
 
             <!-- paste any format into any field: it pins the stop to that colour -->
-            <UInput
+            <PInput
               :model-value="swatchDetail.oklch"
               size="xs"
               variant="ghost"
@@ -572,7 +572,7 @@ function resetEffects() {
               @keydown.enter="($event.target as HTMLInputElement).blur()"
             />
             <div class="flex gap-1.5">
-              <UInput
+              <PInput
                 :model-value="swatchDetail.hex"
                 size="xs"
                 variant="ghost"
@@ -585,7 +585,7 @@ function resetEffects() {
                 @change="onColorCommit(swatchDetail.shade, 'hex', $event)"
                 @keydown.enter="($event.target as HTMLInputElement).blur()"
               />
-              <UInput
+              <PInput
                 :model-value="swatchDetail.rgb"
                 size="xs"
                 variant="ghost"
@@ -601,7 +601,7 @@ function resetEffects() {
             </div>
           </div>
         </template>
-      </UPopover>
+      </PPopover>
     </div>
 
     <!-- Modifiers recompute from the fitted base. They live outside the doc,

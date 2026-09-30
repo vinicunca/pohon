@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { SplitterItem } from 'pohon-ui'
 
-const card = 'bg-elevated/50 border border-border rounded-xl items-center justify-center text-muted font-medium'
+const card = 'bg-background-elevated/50 border border-border rounded-xl items-center justify-center color-text-muted font-medium'
 
 const items: SplitterItem[] = [
   { slot: 'left', minSize: 20, class: card },
@@ -16,13 +16,13 @@ const nested: SplitterItem[] = [
 
 <template>
   <div class="w-full h-96">
-    <USplitter id="splitter-nested-example" :items="items">
+    <PSplitter id="splitter-nested-example" :items="items">
       <template #left>
         Left
       </template>
 
       <template #right>
-        <USplitter id="splitter-nested-example-inner" orientation="vertical" :items="nested">
+        <PSplitter id="splitter-nested-example-inner" orientation="vertical" :items="nested">
           <template #top>
             Top
           </template>
@@ -30,8 +30,8 @@ const nested: SplitterItem[] = [
           <template #bottom>
             Bottom
           </template>
-        </USplitter>
+        </PSplitter>
       </template>
-    </USplitter>
+    </PSplitter>
   </div>
 </template>

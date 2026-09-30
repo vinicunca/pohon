@@ -4,6 +4,6 @@ const retries = ref(0)
 
 <template>
   <PFormField label="Retries" help="Specify number of attempts" required>
-    <UInputNumber v-model="retries" placeholder="Enter retries" />
+    <PInputNumber v-model="retries" placeholder="Enter retries" />
   </PFormField>
 </template>

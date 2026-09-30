@@ -13,7 +13,7 @@ links:
     to: https://tanstack.com/table/v8
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Table.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Table.vue
 ---
 
 ## Usage
@@ -24,15 +24,13 @@ It renders your data as rows and columns and supports sorting, filtering, pagina
 
 ::component-example
 ---
-
 source: false
 name: 'table-example'
 class: '!p-0'
 ---
-
 ::
 
-::callout{icon="i-simple-icons-github" to="https://github.com/vinicunca/pohon/tree/v4/docs/app/components/content/examples/table/TableExample.vue" aria-label="View source code"}
+::callout{icon="i-simple-icons-github" to="https://github.com/vinicunca/pohon/tree/main/docs/app/components/content/examples/table/TableExample.vue" aria-label="View source code"}
 This example demonstrates the most common use case of the `Table` component. Check out the source code on GitHub.
 ::
 
@@ -42,68 +40,64 @@ Use the `data` prop as an array of objects, the columns will be generated based 
 
 ::component-code
 ---
-
 prettier: true
 collapse: true
 class: '!p-0'
 ignore:
-
-- data
-- class
-  external:
-- data
-  props:
+  - data
+  - class
+external:
+  - data
+props:
   data:
-  - id: '4600'
-    date: '2024-03-11T15:30:00'
-    status: 'paid'
-    email: 'james.anderson@example.com'
-    amount: 594
-  - id: '4599'
-    date: '2024-03-11T10:10:00'
-    status: 'failed'
-    email: 'mia.white@example.com'
-    amount: 276
-  - id: '4598'
-    date: '2024-03-11T08:50:00'
-    status: 'refunded'
-    email: 'william.brown@example.com'
-    amount: 315
-  - id: '4597'
-    date: '2024-03-10T19:45:00'
-    status: 'paid'
-    email: 'emma.davis@example.com'
-    amount: 529
-  - id: '4596'
-    date: '2024-03-10T15:55:00'
-    status: 'paid'
-    email: 'ethan.harris@example.com'
-    amount: 639
-    class: 'flex-1'
-
+    - id: '4600'
+      date: '2024-03-11T15:30:00'
+      status: 'paid'
+      email: 'james.anderson@example.com'
+      amount: 594
+    - id: '4599'
+      date: '2024-03-11T10:10:00'
+      status: 'failed'
+      email: 'mia.white@example.com'
+      amount: 276
+    - id: '4598'
+      date: '2024-03-11T08:50:00'
+      status: 'refunded'
+      email: 'william.brown@example.com'
+      amount: 315
+    - id: '4597'
+      date: '2024-03-10T19:45:00'
+      status: 'paid'
+      email: 'emma.davis@example.com'
+      amount: 529
+    - id: '4596'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+  class: 'flex-1'
 ---
-
 ::
 
 ### Columns
 
 Use the `columns` prop as an array of [ColumnDef](https://tanstack.com/table/v8/docs/api/core/column-def) objects with properties like:
 
-- `accessorKey`: [The key of the row object to use when extracting the value for the column.]{class="text-muted"}
-- `header`: [The header to display for the column. If a string is passed, it can be used as a default for the column ID. If a function is passed, it will be passed a props object for the header and should return the rendered header value (the exact type depends on the adapter being used).]{class="text-muted"}
-- [`footer`](#with-column-footer): [The footer to display for the column. Works exactly like header, but is displayed under the table.]{class="text-muted"}
-- `cell`: [The cell to display each row for the column. If a function is passed, it will be passed a props object for the cell and should return the rendered cell value (the exact type depends on the adapter being used).]{class="text-muted"}
-- `meta`: [Extra properties for the column.]{class="text-muted"}
+- `accessorKey`: [The key of the row object to use when extracting the value for the column.]{class="color-text-muted"}
+- `header`: [The header to display for the column. If a string is passed, it can be used as a default for the column ID. If a function is passed, it will be passed a props object for the header and should return the rendered header value (the exact type depends on the adapter being used).]{class="color-text-muted"}
+- [`footer`](#with-column-footer): [The footer to display for the column. Works exactly like header, but is displayed under the table.]{class="color-text-muted"}
+- `cell`: [The cell to display each row for the column. If a function is passed, it will be passed a props object for the cell and should return the rendered cell value (the exact type depends on the adapter being used).]{class="color-text-muted"}
+- `meta`: [Extra properties for the column.]{class="color-text-muted"}
   - `class`:
-    - `td`: [The classes to apply to the `td` element.]{class="text-muted"}
-    - `th`: [The classes to apply to the `th` element.]{class="text-muted"}
+    - `td`: [The classes to apply to the `td` element.]{class="color-text-muted"}
+    - `th`: [The classes to apply to the `th` element.]{class="color-text-muted"}
   - `style`:
-    - `td`: [The style to apply to the `td` element.]{class="text-muted"}
-    - `th`: [The style to apply to the `th` element.]{class="text-muted"}
+    - `td`: [The style to apply to the `td` element.]{class="color-text-muted"}
+    - `th`: [The style to apply to the `th` element.]{class="color-text-muted"}
   - [`colspan`](#with-column-span):
-    - `td`: [The colspan attribute to apply to the `td` element.]{class="text-muted"}
+    - `td`: [The colspan attribute to apply to the `td` element.]{class="color-text-muted"}
   - [`rowspan`](#with-column-span):
-    - `td`: [The rowspan attribute to apply to the `td` element.]{class="text-muted"}
+    - `td`: [The rowspan attribute to apply to the `td` element.]{class="color-text-muted"}
 
 To render components or other HTML elements, you need to use the Vue [`h` function](https://vuejs.org/api/render-function.html#h) inside the `header` and `cell` props. This is different from other components that use slots but allows for more flexibility.
 
@@ -113,18 +107,14 @@ You can also use slots to customize the header and data cells of the table.
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 class: '!p-0'
 name: 'table-columns-example'
 highlights:
-
-- 53
-- 108
-
+  - 53
+  - 108
 ---
-
 ::
 
 ::note
@@ -136,24 +126,20 @@ When rendering components with `h`, you can either use the `resolveComponent` fu
 Use the `meta` prop as an object ([TableMeta](https://tanstack.com/table/v8/docs/api/core/table#meta)) to pass properties like:
 
 - `class`:
-  - `tr`: [The classes to apply to the `tr` element.]{class="text-muted"}
+  - `tr`: [The classes to apply to the `tr` element.]{class="color-text-muted"}
 - `style`:
-  - `tr`: [The style to apply to the `tr` element.]{class="text-muted"}
+  - `tr`: [The style to apply to the `tr` element.]{class="color-text-muted"}
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-meta-example'
 class: '!p-0'
 highlights:
-
-- 128
-- 140
-
+  - 128
+  - 140
 ---
-
 ::
 
 ### Loading
@@ -162,50 +148,46 @@ Use the `loading` prop to display a loading state, the `loading-color` prop to c
 
 ::component-code
 ---
-
 prettier: true
 collapse: true
 class: '!p-0'
 ignore:
-
-- data
-- class
-  external:
-- data
-  props:
+  - data
+  - class
+external:
+  - data
+props:
   loading: true
   loadingColor: primary
   loadingAnimation: carousel
   data:
-  - id: '4600'
-    date: '2024-03-11T15:30:00'
-    status: 'paid'
-    email: 'james.anderson@example.com'
-    amount: 594
-  - id: '4599'
-    date: '2024-03-11T10:10:00'
-    status: 'failed'
-    email: 'mia.white@example.com'
-    amount: 276
-  - id: '4598'
-    date: '2024-03-11T08:50:00'
-    status: 'refunded'
-    email: 'william.brown@example.com'
-    amount: 315
-  - id: '4597'
-    date: '2024-03-10T19:45:00'
-    status: 'paid'
-    email: 'emma.davis@example.com'
-    amount: 529
-  - id: '4596'
-    date: '2024-03-10T15:55:00'
-    status: 'paid'
-    email: 'ethan.harris@example.com'
-    amount: 639
-    class: 'flex-1'
-
+    - id: '4600'
+      date: '2024-03-11T15:30:00'
+      status: 'paid'
+      email: 'james.anderson@example.com'
+      amount: 594
+    - id: '4599'
+      date: '2024-03-11T10:10:00'
+      status: 'failed'
+      email: 'mia.white@example.com'
+      amount: 276
+    - id: '4598'
+      date: '2024-03-11T08:50:00'
+      status: 'refunded'
+      email: 'william.brown@example.com'
+      amount: 315
+    - id: '4597'
+      date: '2024-03-10T19:45:00'
+      status: 'paid'
+      email: 'emma.davis@example.com'
+      amount: 529
+    - id: '4596'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+  class: 'flex-1'
 ---
-
 ::
 
 ::tip
@@ -218,62 +200,58 @@ Use the `sticky` prop to make the header or footer sticky.
 
 ::component-code
 ---
-
 prettier: true
 collapse: true
 class: '!p-0'
 ignore:
-
-- data
-- class
-  external:
-- data
-  items:
+  - data
+  - class
+external:
+  - data
+items:
   sticky:
-  - true
-  - false
-    props:
-    sticky: true
-    data:
-  - id: '4600'
-    date: '2024-03-11T15:30:00'
-    status: 'paid'
-    email: 'james.anderson@example.com'
-    amount: 594
-  - id: '4599'
-    date: '2024-03-11T10:10:00'
-    status: 'failed'
-    email: 'mia.white@example.com'
-    amount: 276
-  - id: '4598'
-    date: '2024-03-11T08:50:00'
-    status: 'refunded'
-    email: 'william.brown@example.com'
-    amount: 315
-  - id: '4597'
-    date: '2024-03-10T19:45:00'
-    status: 'paid'
-    email: 'emma.davis@example.com'
-    amount: 529
-  - id: '4596'
-    date: '2024-03-10T15:55:00'
-    status: 'paid'
-    email: 'ethan.harris@example.com'
-    amount: 639
-  - id: '4595'
-    date: '2024-03-10T15:55:00'
-    status: 'paid'
-    email: 'ethan.harris@example.com'
-    amount: 639
-  - id: '4594'
-    date: '2024-03-10T15:55:00'
-    status: 'paid'
-    email: 'ethan.harris@example.com'
-    amount: 639
-    class: 'flex-1 max-h-[312px]'
-
+    - true
+    - false
+props:
+  sticky: true
+  data:
+    - id: '4600'
+      date: '2024-03-11T15:30:00'
+      status: 'paid'
+      email: 'james.anderson@example.com'
+      amount: 594
+    - id: '4599'
+      date: '2024-03-11T10:10:00'
+      status: 'failed'
+      email: 'mia.white@example.com'
+      amount: 276
+    - id: '4598'
+      date: '2024-03-11T08:50:00'
+      status: 'refunded'
+      email: 'william.brown@example.com'
+      amount: 315
+    - id: '4597'
+      date: '2024-03-10T19:45:00'
+      status: 'paid'
+      email: 'emma.davis@example.com'
+      amount: 529
+    - id: '4596'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+    - id: '4595'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+    - id: '4594'
+      date: '2024-03-10T15:55:00'
+      status: 'paid'
+      email: 'ethan.harris@example.com'
+      amount: 639
+  class: 'flex-1 max-h-[312px]'
 ---
-
 ::
 
 ## Examples
@@ -284,18 +262,14 @@ You can add a new column that renders a [DropdownMenu](/docs/components/dropdown
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-row-actions-example'
 highlights:
-
-- 115
-- 141
-  class: '!p-0'
-
+  - 115
+  - 141
+class: '!p-0'
 ---
-
 ::
 
 ### With expandable rows
@@ -308,18 +282,14 @@ You need to define the `#expanded` slot to render the expanded content which wil
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-row-expandable-example'
 highlights:
-
-- 55
-- 72
-  class: '!p-0'
-
+  - 55
+  - 72
+class: '!p-0'
 ---
-
 ::
 
 ::tip
@@ -336,50 +306,42 @@ You can group rows based on a given column value and show/hide sub rows via some
 
 #### Important parts
 
-- Add `grouping` prop with an array of column ids you want to group by.
-- Add `grouping-options` prop. It must include `getGroupedRowModel`, you can import it from `@tanstack/vue-table` or implement your own.
-- Expand rows via `row.toggleExpanded()` method on any cell of the row. Keep in mind, it also toggles `#expanded` slot.
-- Use `aggregateFn` on column definition to define how to aggregate the rows.
-- `agregatedCell` renderer on column definition only works if there is no `cell` renderer.
+* Add `grouping` prop with an array of column ids you want to group by.
+* Add `grouping-options` prop. It must include `getGroupedRowModel`, you can import it from `@tanstack/vue-table` or implement your own.
+* Expand rows via `row.toggleExpanded()` method on any cell of the row. Keep in mind, it also toggles `#expanded` slot.
+* Use `aggregateFn` on column definition to define how to aggregate the rows.
+* `agregatedCell` renderer on column definition only works if there is no `cell` renderer.
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-grouped-rows-example'
 highlights:
-
-- 157
-- 160
-  class: '!p-0'
-
+  - 157
+  - 160
+class: '!p-0'
 ---
-
 ::
 
-### With row pinning :badge{label="4.6+" class="align-text-top"}
+### With row pinning
 
 You can add a column that renders a [Button](/docs/components/button) component inside the `cell` to toggle the pinning state of a row using the TanStack Table [Row Pinning APIs](https://tanstack.com/table/v8/docs/api/features/row-pinning). Pinned rows will stay at the top or bottom of the table regardless of sorting or filtering.
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-row-pinning-example'
 overflowHidden: true
 highlights:
-
-- 91
-- 107
-- 160
-- 165
-- 168
-  class: '!p-0'
-
+  - 91
+  - 107
+  - 160
+  - 165
+  - 168
+class: '!p-0'
 ---
-
 ::
 
 ::tip
@@ -392,18 +354,14 @@ You can add a new column that renders a [Checkbox](/docs/components/checkbox) co
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-row-selection-example'
 highlights:
-
-- 55
-- 72
-  class: '!p-0'
-
+  - 55
+  - 72
+class: '!p-0'
 ---
-
 ::
 
 ::tip
@@ -420,18 +378,14 @@ The handler function receives the `Event` and `TableRow` instance as the first a
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-row-select-event-example'
 highlights:
-
-- 124
-- 131
-  class: '!p-0'
-
+  - 124
+  - 131
+class: '!p-0'
 ---
-
 ::
 
 ::tip
@@ -448,18 +402,14 @@ The handler function receives the `Event` and `TableRow` instance as the first a
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-row-context-menu-event-example'
 highlights:
-
-- 133
-- 173
-  class: '!p-0'
-
+  - 133
+  - 173
+class: '!p-0'
 ---
-
 ::
 
 ### With row hover event
@@ -472,18 +422,14 @@ The handler function receives the `Event` and `TableRow` instance as the first a
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-row-hover-event-example'
 highlights:
-
-- 129
-- 152
-  class: '!p-0'
-
+  - 129
+  - 152
+class: '!p-0'
 ---
-
 ::
 
 ::note
@@ -496,18 +442,14 @@ You can add a `footer` property to the column definition to render a footer for 
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-column-footer-example'
 highlights:
-
-- 100
-- 112
-  class: '!p-0'
-
+  - 100
+  - 112
+class: '!p-0'
 ---
-
 ::
 
 ### With column span
@@ -520,33 +462,29 @@ When using `rowspan`, cells that are "absorbed" by a previous row's span need to
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-column-span-example'
 class: '!p-0'
 ---
-
 ::
 
 ### With column sorting
 
 You can update a column `header` to render a [Button](/docs/components/button) component inside the `header` to toggle the sorting state using the TanStack Table [Sorting APIs](https://tanstack.com/table/v8/docs/api/features/sorting).
 
+Set `enableSorting: true` on those columns as well. This puts `aria-sort` on the `<th>` so screen readers can read the current sort state of the column: `none`, `ascending` or `descending`. The `Button` stays the control that changes it.
+
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-column-sorting-example'
 highlights:
-
-- 90
-- 105
-  class: '!p-0'
-
+  - 90
+  - 106
+class: '!p-0'
 ---
-
 ::
 
 ::tip
@@ -557,18 +495,14 @@ You can also create a reusable component to make any column header sortable.
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-column-sorting-reusable-example'
 highlights:
-
-- 110
-- 161
-  class: '!p-0'
-
+  - 115
+  - 166
+class: '!p-0'
 ---
-
 ::
 
 ::note
@@ -585,19 +519,15 @@ A pinned column will become sticky on the left or right side of the table. When 
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 overflowHidden: true
 name: 'table-column-pinning-example'
 highlights:
-
-- 108
-- 126
-  class: '!p-0 overflow-clip'
-
+  - 108
+  - 126
+class: '!p-0 overflow-clip'
 ---
-
 ::
 
 ::tip
@@ -610,18 +540,14 @@ You can use a [DropdownMenu](/docs/components/dropdown-menu) component to toggle
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-column-visibility-example'
 highlights:
-
-- 121
-- 146
-  class: '!p-0'
-
+  - 121
+  - 146
+class: '!p-0'
 ---
-
 ::
 
 ::tip
@@ -634,18 +560,14 @@ You can use an [Input](/docs/components/input) component to filter per column th
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-column-filters-example'
 highlights:
-
-- 123
-- 128
-  class: '!p-0'
-
+  - 123
+  - 128
+class: '!p-0'
 ---
-
 ::
 
 ::tip
@@ -658,17 +580,13 @@ You can use an [Input](/docs/components/input) component to filter the rows usin
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-global-filter-example'
 class: '!p-0'
 highlights:
-
-- 116
-
+  - 116
 ---
-
 ::
 
 ::tip
@@ -683,18 +601,14 @@ There are different pagination approaches as explained in [Pagination Guide](htt
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-pagination-example'
 class: '!p-0'
 highlights:
-
-- 204
-- 209
-
+  - 204
+  - 209
 ---
-
 ::
 
 ::tip
@@ -707,18 +621,14 @@ You can fetch data from an API and use them in the Table.
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-fetch-example'
 highlights:
-
-- 15
-- 26
-  class: '!p-0'
-
+  - 15
+  - 26
+class: '!p-0'
 ---
-
 ::
 
 ::note
@@ -727,23 +637,19 @@ This example uses `useLazyFetch` with `server: false` to fetch data on the clien
 
 ### With infinite scroll
 
-If you use server-side pagination, you can use the [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/#useinfinitescroll) composable to load more data as the user scrolls.
+If you use server-side pagination, you can use the [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/#useinfinitescroll) composable to load more data  as the user scrolls.
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 highlights:
-
-- 72
-- 83
-  overflowHidden: true
-  name: 'table-infinite-scroll-example'
-  class: '!p-0'
-
+  - 72
+  - 83
+overflowHidden: true
+name: 'table-infinite-scroll-example'
+class: '!p-0'
 ---
-
 ::
 
 ::note
@@ -760,21 +666,17 @@ Since the table ref doesn't expose the tbody element, add a unique class to it v
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 highlights:
-
-- 81
-- 83
-  name: 'table-drag-and-drop-example'
-  class: '!p-0'
-
+  - 81
+  - 83
+name: 'table-drag-and-drop-example'
+class: '!p-0'
 ---
-
 ::
 
-### With virtualization :badge{label="4.1+" class="align-text-top"}
+### With virtualization
 
 Use the `virtualize` prop to enable virtualization for large datasets as a boolean or an object with options like `{ estimateSize: 65, overscan: 12 }`. You can also pass other [TanStack Virtual options](https://tanstack.com/virtual/latest/docs/api/virtualizer#optional-options) to customize the virtualization behavior. The `sticky` prop works in combination with `virtualize` to keep the header or footer visible while scrolling through large datasets.
 
@@ -784,34 +686,30 @@ Row pinning is not supported when virtualization is enabled.
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 overflowHidden: true
 name: 'table-virtualize-example'
 class: '!p-0'
 ---
-
 ::
 
 ::note
 A height constraint is required on the table for virtualization to work properly (e.g. `class="h-[400px]"`).
 ::
 
-### With external scroll element :badge{label="4.10+" class="align-text-top"}
+### With external scroll element
 
 Pass a `getScrollElement` function in the `virtualize` prop to virtualize against an ancestor scroll container instead of the table's own root. Set `scrollMargin` to the table's offset from the scroll element's start (e.g. the height of the content above it), so a header and the table body share a single scrollbar.
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 overflowHidden: true
 name: 'table-external-scroll-example'
 class: '!p-0'
 ---
-
 ::
 
 ::note
@@ -825,17 +723,13 @@ For example, if your data objects have a `children` array, set `:get-sub-rows="r
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 highlights:
-
-- 175
-  name: 'table-tree-data-example'
-  class: '!p-0'
-
+  - 175
+name: 'table-tree-data-example'
+class: '!p-0'
 ---
-
 ::
 
 ### With slots
@@ -848,13 +742,11 @@ Use the `#<column>-cell` slot to customize the cell of a column. You will have a
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'table-slots-example'
 class: '!p-0'
 ---
-
 ::
 
 ## API
@@ -877,7 +769,7 @@ You can access the typed component instance using [`useTemplateRef`](https://vue
 
 ```vue
 <script setup lang="ts">
-const table = useTemplateRef("table");
+const table = useTemplateRef('table')
 </script>
 
 <template>
@@ -887,9 +779,9 @@ const table = useTemplateRef("table");
 
 This will give you access to the following:
 
-| Name                       | Type                                                                                   |
-| -------------------------- | -------------------------------------------------------------------------------------- |
-| `tableRef`{lang="ts-type"} | `Ref<HTMLTableElement \| null>`{lang="ts-type"}                                        |
+| Name | Type |
+| ---- | ---- |
+| `tableRef`{lang="ts-type"} | `Ref<HTMLTableElement \| null>`{lang="ts-type"} |
 | `tableApi`{lang="ts-type"} | [`Table`{lang="ts-type"}](https://tanstack.com/table/v8/docs/api/core/table#table-api) |
 
 ## Theme

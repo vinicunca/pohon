@@ -99,7 +99,7 @@ jobs:
             }
 
             if (pull.base.repo.id !== context.payload.repository.id || pull.base.ref !== 'main') {
-              core.setFailed('The pull request does not target a release branch.')
+              core.setFailed('The pull request does not target main.')
               return
             }
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TreeItemToggleEvent } from 'reka-ui'
+import type { TreeItemToggleEvent } from 'akar'
 import type { TreeItem } from 'pohon-ui'
 
 const items: TreeItem[] = [
@@ -39,5 +39,5 @@ function onToggle(e: TreeItemToggleEvent<TreeItem>) {
 </script>
 
 <template>
-  <UTree :items="items" @toggle="onToggle" />
+  <PTree :items="items" @toggle="onToggle" />
 </template>

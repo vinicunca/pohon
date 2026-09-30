@@ -5,7 +5,11 @@ import { useChat } from '@ai-sdk/vue'
 import { isPartStreaming } from 'pohon-ui/utils/ai'
 import { Markdown } from '@comark/vue'
 import shiki from '@comark/vue/plugins/shiki'
+import security from '@comark/vue/plugins/security'
 import type { DropdownMenuItem, NavigationMenuItem } from 'pohon-ui'
+
+// built once: in the template it would be a new plugin on every render
+const plugins = [shiki(), security({ blockedTags: ['script', 'style', 'iframe', 'object', 'embed', 'form'] })]
 
 const appConfig = useAppConfig()
 const studioIcons = useStudioIcons()
@@ -15,11 +19,11 @@ const input = ref('')
 const initialMessages: UIMessage[] = [{
   id: '1',
   role: 'user',
-  parts: [{ type: 'text', text: 'I want to build a dashboard with Pohon. Where should I start?' }]
+  parts: [{ type: 'text', text: 'I want to build a dashboard with Pohon UI. Where should I start?' }]
 }, {
   id: '2',
   role: 'assistant',
-  parts: [{ type: 'text', text: 'Great choice! Start with UDashboardGroup as the root layout, then add a UDashboardSidebar for navigation and a UDashboardPanel for each page. The sidebar is collapsible and resizable out of the box, so you get a polished shell before writing any custom code.' }]
+  parts: [{ type: 'text', text: 'Great choice! Start with PDashboardGroup as the root layout, then add a PDashboardSidebar for navigation and a PDashboardPanel for each page. The sidebar is collapsible and resizable out of the box, so you get a polished shell before writing any custom code.' }]
 }, {
   id: '3',
   role: 'user',
@@ -27,7 +31,7 @@ const initialMessages: UIMessage[] = [{
 }, {
   id: '4',
   role: 'assistant',
-  parts: [{ type: 'text', text: 'Define your palette once in @theme and map it to the primary and neutral aliases in app.config.ts. Every component reads from those semantic tokens, so buttons, badges, inputs and even this chat pick up your brand automatically, exactly what this preview is showing you right now.' }]
+  parts: [{ type: 'text', text: 'Define your palette with CSS variables and map it to the primary and neutral aliases in app.config.ts. Every component reads from those semantic tokens, so buttons, badges, inputs and even this chat pick up your brand automatically, exactly what this preview is showing you right now.' }]
 }]
 
 const { messages, status, error, sendMessage, regenerate, stop, clearError } = useChat({
@@ -51,25 +55,25 @@ function newChat() {
   input.value = ''
 }
 
-const menuItems: NavigationMenuItem[] = [
+const menuItems = computed<NavigationMenuItem[]>(() => [
   { label: 'New chat', icon: appConfig.ui.icons.plus, kbds: ['meta', 'o'], onSelect: () => newChat() },
   { label: 'Search', icon: appConfig.ui.icons.search, kbds: ['meta', 'k'] }
-]
+])
 
 // The per-chat menu, on the sidebar rows and behind the navbar title.
-const chatActions: DropdownMenuItem[] = [
+const chatActions = computed<DropdownMenuItem[]>(() => [
   { label: 'Rename', icon: studioIcons.pencil },
   { label: 'Delete', icon: studioIcons.trash, color: 'error' }
-]
+])
 
-const userItems: DropdownMenuItem[][] = [
+const userItems = computed<DropdownMenuItem[][]>(() => [
   [{ label: 'Benjamin Canac', avatar: { src: 'https://github.com/benjamincanac.png', alt: 'Benjamin Canac' }, type: 'label' }],
   [{ label: 'Settings', icon: studioIcons.settings }, { label: 'Log out', icon: studioIcons.logout }]
-]
+])
 
 const historyItems: NavigationMenuItem[] = [
   { label: 'Today', type: 'label' },
-  { label: 'Building a dashboard with Pohon', active: true },
+  { label: 'Building a dashboard with Pohon UI', active: true },
   { label: 'Theming buttons and badges' },
   { label: 'Yesterday', type: 'label' },
   { label: 'Form validation with PForm' },
@@ -109,14 +113,14 @@ const ui = {
 
 <template>
   <!-- The template's layout: a collapsible sidebar beside a floating panel on a
-       muted body. UDashboardGroup is `fixed inset-0` by default, so it gets
+       muted body. PDashboardGroup is `fixed inset-0` by default, so it gets
        contained in the preview pane instead. -->
-  <UDashboardGroup
+  <PDashboardGroup
     unit="rem"
     :persistent="false"
-    class="relative inset-auto h-full w-full bg-elevated/50"
+    class="relative inset-auto h-full w-full bg-background-elevated/50"
   >
-    <UDashboardSidebar
+    <PDashboardSidebar
       collapsible
       resizable
       :min-size="12"
@@ -126,30 +130,30 @@ const ui = {
     >
       <template #header="{ collapsed }">
         <div v-if="!collapsed" class="flex items-center gap-1.5 px-2.5 py-1">
-          <UIcon :name="studioIcons.messageCircle" class="size-6 text-primary shrink-0" />
-          <span class="text-xl font-bold text-highlighted">Chat</span>
+          <PIcon :name="studioIcons.messageCircle" class="size-6 text-primary shrink-0" />
+          <span class="text-xl font-bold color-text-highlighted">Chat</span>
         </div>
 
-        <UDashboardSidebarCollapse class="ms-auto" />
+        <PDashboardSidebarCollapse class="ms-auto" />
       </template>
 
       <template #default="{ collapsed }">
-        <UNavigationMenu :collapsed="collapsed" :items="menuItems" orientation="vertical">
+        <PNavigationMenu :collapsed="collapsed" :items="menuItems" orientation="vertical">
           <template #item-trailing="{ item }">
             <div v-if="item.kbds?.length" class="flex items-center gap-px opacity-0 group-hover:opacity-100 transition-opacity">
-              <UKbd
+              <PKbd
                 v-for="kbd in item.kbds"
                 :key="kbd"
                 :value="kbd"
                 size="sm"
                 variant="soft"
-                class="bg-accented/50"
+                class="bg-background-accented/50"
               />
             </div>
           </template>
-        </UNavigationMenu>
+        </PNavigationMenu>
 
-        <UNavigationMenu
+        <PNavigationMenu
           v-if="!collapsed"
           :items="historyItems"
           orientation="vertical"
@@ -159,25 +163,25 @@ const ui = {
           }"
         >
           <template #item-trailing="{ item }">
-            <UDropdownMenu v-if="item.type !== 'label'" :items="chatActions" :content="{ align: 'end' }">
+            <PDropdownMenu v-if="item.type !== 'label'" :items="chatActions" :content="{ align: 'end' }">
               <PButton
                 as="div"
                 :icon="appConfig.ui.icons.ellipsis"
                 color="neutral"
                 variant="link"
                 size="sm"
-                class="rounded-[5px] hover:bg-accented/50 focus-visible:bg-accented/50 data-[state=open]:bg-accented/50"
+                class="rounded-[5px] hover:bg-background-accented/50 focus-visible:bg-background-accented/50 data-[state=open]:bg-background-accented/50"
                 aria-label="Chat actions"
                 tabindex="-1"
                 @click.stop.prevent
               />
-            </UDropdownMenu>
+            </PDropdownMenu>
           </template>
-        </UNavigationMenu>
+        </PNavigationMenu>
       </template>
 
       <template #footer="{ collapsed }">
-        <UDropdownMenu
+        <PDropdownMenu
           :items="userItems"
           :content="{ align: 'center', collisionPadding: 12 }"
           :ui="{ content: collapsed ? 'w-48' : 'w-(--akar-dropdown-menu-trigger-width)' }"
@@ -190,51 +194,51 @@ const ui = {
             variant="ghost"
             block
             :square="collapsed"
-            class="data-[state=open]:bg-elevated"
-            :ui="{ trailingIcon: 'ms-auto text-dimmed' }"
+            class="data-[state=open]:bg-background-elevated"
+            :ui="{ trailingIcon: 'ms-auto color-text-dimmed' }"
           />
-        </UDropdownMenu>
+        </PDropdownMenu>
       </template>
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
     <!-- The template's signature: the conversation floats over the body. -->
-    <div class="flex-1 flex m-4 lg:ms-0 rounded-lg ring ring-default bg-default/75 shadow-sm min-w-0 overflow-hidden">
-      <UDashboardPanel class="relative min-h-0" :ui="{ body: 'p-0 sm:p-0 overscroll-none' }">
+    <div class="flex-1 flex m-4 lg:ms-0 rounded-lg ring ring-ring bg-background/75 shadow-sm min-w-0 overflow-hidden">
+      <PDashboardPanel class="relative min-h-0" :ui="{ body: 'p-0 sm:p-0 overscroll-none' }">
         <template #header>
           <!-- Transparent and absolute, so the messages scroll under a blur.
                Rounded like the panel: a backdrop filter paints its own square
                corners past the parent's overflow clip. -->
-          <UDashboardNavbar :ui="{ root: 'absolute top-0 inset-x-0 rounded-t-lg border-b-0 z-10 backdrop-blur-sm sm:px-4' }">
+          <PDashboardNavbar :ui="{ root: 'absolute top-0 inset-x-0 rounded-t-lg border-b-0 z-10 backdrop-blur-sm sm:px-4' }">
             <template #leading>
               <span />
             </template>
 
             <template #title>
-              <UDropdownMenu :items="chatActions" :content="{ align: 'start' }">
+              <PDropdownMenu :items="chatActions" :content="{ align: 'start' }">
                 <PButton
-                  label="Building a dashboard with Pohon"
+                  label="Building a dashboard with Pohon UI"
                   :trailing-icon="appConfig.ui.icons.chevronDown"
                   color="neutral"
                   variant="ghost"
-                  class="max-w-3xs data-[state=open]:bg-elevated"
-                  :ui="{ trailingIcon: 'text-dimmed shrink-0 group-data-[state=open]:rotate-180 transition-transform duration-200' }"
+                  class="max-w-3xs data-[state=open]:bg-background-elevated"
+                  :ui="{ trailingIcon: 'color-text-dimmed shrink-0 group-data-[state=open]:rotate-180 transition-transform duration-200' }"
                 />
-              </UDropdownMenu>
+              </PDropdownMenu>
             </template>
 
             <template #right>
-              <UTooltip text="Share chat">
+              <PTooltip text="Share chat">
                 <PButton :icon="studioIcons.share" color="neutral" variant="ghost" square aria-label="Share chat" />
-              </UTooltip>
+              </PTooltip>
             </template>
-          </UDashboardNavbar>
+          </PDashboardNavbar>
         </template>
 
         <template #body>
           <!-- The template caps the column at --ui-container: 3xl. -->
-          <UContainer class="flex-1 flex flex-col gap-4 sm:gap-6" style="--ui-container: var(--container-3xl)">
-            <UTheme :ui="ui">
-              <UChatMessages
+          <PContainer class="flex-1 flex flex-col gap-4 sm:gap-6" style="--ui-container: var(--container-3xl)">
+            <PTheme :ui="ui">
+              <PChatMessages
                 :messages="messages"
                 :status="status"
                 should-auto-scroll
@@ -248,7 +252,7 @@ const ui = {
                         v-if="message.role === 'assistant'"
                         :value="part.text"
                         :streaming="isPartStreaming(part)"
-                        :plugins="[shiki()]"
+                        :plugins="plugins"
                         class="*:first:mt-0 *:last:mb-0"
                       />
                       <p v-else class="whitespace-pre-wrap leading-6">
@@ -257,22 +261,22 @@ const ui = {
                     </template>
                   </template>
                 </template>
-              </UChatMessages>
-            </UTheme>
+              </PChatMessages>
+            </PTheme>
 
-            <UChatPrompt
+            <PChatPrompt
               v-model="input"
               :error="error"
               color="neutral"
               variant="subtle"
-              placeholder="Ask anything about Pohon..."
+              placeholder="Ask anything about Pohon UI..."
               class="sticky bottom-0 rounded-b-none z-10"
               :ui="{ base: 'px-1.5' }"
               @submit="onSubmit"
             >
               <template #footer>
                 <div class="flex items-center gap-1">
-                  <UTooltip text="Attach file" :content="{ side: 'top' }">
+                  <PTooltip text="Attach file" :content="{ side: 'top' }">
                     <PButton
                       :icon="studioIcons.paperclip"
                       color="neutral"
@@ -281,9 +285,9 @@ const ui = {
                       square
                       aria-label="Attach file"
                     />
-                  </UTooltip>
+                  </PTooltip>
 
-                  <USelectMenu
+                  <PSelectMenu
                     v-model="model"
                     :items="models"
                     :icon="activeModel?.icon"
@@ -291,12 +295,12 @@ const ui = {
                     color="neutral"
                     variant="ghost"
                     size="sm"
-                    class="data-[state=open]:bg-elevated"
+                    class="data-[state=open]:bg-background-elevated"
                     :ui="{ trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200' }"
                   />
                 </div>
 
-                <UChatPromptSubmit
+                <PChatPromptSubmit
                   :status="status"
                   color="neutral"
                   size="sm"
@@ -304,10 +308,10 @@ const ui = {
                   @reload="regenerate()"
                 />
               </template>
-            </UChatPrompt>
-          </UContainer>
+            </PChatPrompt>
+          </PContainer>
         </template>
-      </UDashboardPanel>
+      </PDashboardPanel>
     </div>
-  </UDashboardGroup>
+  </PDashboardGroup>
 </template>

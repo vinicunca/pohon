@@ -5,9 +5,9 @@ import type { TableColumn } from 'pohon-ui'
 import { useClipboard } from '@vueuse/core'
 
 const PButton = resolveComponent('PButton')
-const UCheckbox = resolveComponent('UCheckbox')
+const PCheckbox = resolveComponent('PCheckbox')
 const PBadge = resolveComponent('PBadge')
-const UDropdownMenu = resolveComponent('UDropdownMenu')
+const PDropdownMenu = resolveComponent('PDropdownMenu')
 
 const toast = useToast()
 const { copy } = useClipboard()
@@ -144,12 +144,12 @@ const data = ref<Payment[]>([{
 
 const columns: TableColumn<Payment>[] = [{
   id: 'select',
-  header: ({ table }) => h(UCheckbox, {
+  header: ({ table }) => h(PCheckbox, {
     'modelValue': table.getIsSomePageRowsSelected() ? 'indeterminate' : table.getIsAllPageRowsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => table.toggleAllPageRowsSelected(!!value),
     'aria-label': 'Select all'
   }),
-  cell: ({ row }) => h(UCheckbox, {
+  cell: ({ row }) => h(PCheckbox, {
     'modelValue': row.getIsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => row.toggleSelected(!!value),
     'aria-label': 'Select row'
@@ -186,6 +186,7 @@ const columns: TableColumn<Payment>[] = [{
   }
 }, {
   accessorKey: 'email',
+  enableSorting: true,
   header: ({ column }) => {
     const isSorted = column.getIsSorted()
 
@@ -255,7 +256,7 @@ const columns: TableColumn<Payment>[] = [{
       label: 'View payment details'
     }]
 
-    return h(UDropdownMenu, {
+    return h(PDropdownMenu, {
       'content': {
         align: 'end'
       },
@@ -278,9 +279,9 @@ function randomize() {
 </script>
 
 <template>
-  <div class="flex-1 divide-y divide-accented w-full">
+  <div class="flex-1 divide-y divide-border-accented w-full">
     <div class="flex items-center gap-2 px-4 py-3.5 overflow-x-auto">
-      <UInput
+      <PInput
         :model-value="(table?.tableApi?.getColumn('email')?.getFilterValue() as string)"
         class="max-w-sm min-w-[12ch]"
         placeholder="Filter emails..."
@@ -289,7 +290,7 @@ function randomize() {
 
       <PButton color="neutral" label="Randomize" @click="randomize" />
 
-      <UDropdownMenu
+      <PDropdownMenu
         :items="table?.tableApi?.getAllColumns().filter(column => column.getCanHide()).map(column => ({
           label: upperFirst(column.id),
           type: 'checkbox' as const,
@@ -311,7 +312,7 @@ function randomize() {
           class="ml-auto"
           aria-label="Columns select dropdown"
         />
-      </UDropdownMenu>
+      </PDropdownMenu>
     </div>
 
     <PTable
@@ -326,7 +327,7 @@ function randomize() {
       </template>
     </PTable>
 
-    <div class="px-4 py-3.5 text-sm text-muted">
+    <div class="px-4 py-3.5 text-sm color-text-muted">
       {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length || 0 }} of
       {{ table?.tableApi?.getFilteredRowModel().rows.length || 0 }} row(s) selected.
     </div>

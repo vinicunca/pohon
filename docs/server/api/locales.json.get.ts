@@ -478,7 +478,7 @@ const locales: Record<string, string> = {
   'ts': '🇿🇦',
   'ts-ZA': '🇿🇦',
   'uk': '🇺🇦',
-  'uk-UA': '🇺🇦',
+  'uk-PA': '🇺🇦',
   'ur': '🇵🇰',
   'ur-PK': '🇵🇰',
   'uz': '🇺🇿',
@@ -499,7 +499,7 @@ const locales: Record<string, string> = {
   'zh-SG': '🇸🇬',
   'zh-TW': '🇹🇼',
   'zu': '🇿🇦',
-  'zu-ZA': '🇿🇦',
-};
+  'zu-ZA': '🇿🇦'
+}
 
-export default eventHandler(async () => locales);
+export default eventHandler(async () => locales)

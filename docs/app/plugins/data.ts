@@ -23,7 +23,7 @@ export default defineNuxtPlugin({
             }
           }
 
-          var f = getCookie('nuxt-ui-framework');
+          var f = getCookie('pohon-ui-framework');
           document.documentElement.setAttribute('data-framework', f || 'nuxt');
           `.replace(/\s+/g, ' '),
           type: 'text/javascript',

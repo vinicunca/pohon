@@ -1,22 +1,13 @@
 <script setup lang="ts">
-const appConfig = useAppConfig()
+const studioIcons = useStudioIcons()
 </script>
 
 <template>
-  <UBanner
-    id="nuxt-ui-v4"
-    title="Pohon v4 is officially released!"
-    to="https://github.com/vinicunca/pohon/releases/tag/v4.0.0"
-    icon="i-lucide-rocket"
+  <PBanner
+    id="pohon-ui-v2"
+    title="Pohon UI v2 release candidate is available"
+    to="https://github.com/vinicunca/pohon/releases"
+    :icon="studioIcons.rocket"
     close
-    :actions="[{
-      label: 'Read the post',
-      color: 'neutral',
-      variant: 'outline',
-      trailingIcon: appConfig.ui.icons.arrowRight,
-      to: 'https://nuxt.com/blog/nuxt-ui-v4',
-      target: '_blank',
-      class: 'ring-0'
-    }]"
   />
 </template>

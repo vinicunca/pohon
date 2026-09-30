@@ -28,5 +28,5 @@ useSortable(accordion, items, {
 </script>
 
 <template>
-  <UAccordion ref="accordion" :items="items" />
+  <PAccordion ref="accordion" :items="items" />
 </template>

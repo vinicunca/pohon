@@ -1,5 +1,5 @@
 ---
-description: "A component that displays a sequence of events with dates, titles, icons or avatars."
+description: 'A component that displays a sequence of events with dates, titles, icons or avatars.'
 category: data
 keywords:
   - activity feed
@@ -7,7 +7,7 @@ keywords:
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Timeline.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Timeline.vue
 ---
 
 ## Usage
@@ -16,43 +16,39 @@ Use the Timeline component to display a list of items in a timeline.
 
 ::component-code
 ---
-
 collapse: true
 hide:
-
-- class
-- defaultValue
-  ignore:
-- items
-- class
-- defaultValue
-  external:
-- items
-  externalTypes:
-- TimelineItem[]
-  props:
+  - class
+  - defaultValue
+ignore:
+  - items
+  - class
+  - defaultValue
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
   defaultValue: 2
   items:
-  - date: 'Mar 15, 2025'
-    title: 'Project Kickoff'
-    description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
-    icon: 'i-lucide-rocket'
-  - date: 'Mar 22 2025'
-    title: 'Design Phase'
-    description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
-    icon: 'i-lucide-palette'
-  - date: 'Mar 29 2025'
-    title: 'Development Sprint'
-    description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
-    icon: 'i-lucide-code'
-  - date: 'Apr 5 2025'
-    title: 'Testing & Deployment'
-    description: 'QA testing and performance optimization. Deployed the application to production.'
-    icon: 'i-lucide-check-circle'
-    class: 'w-96'
-
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization. Deployed the application to production.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-96'
 ---
-
 ::
 
 ### Items
@@ -71,39 +67,35 @@ Use the `items` prop as an array of objects with the following properties:
 
 ::component-code
 ---
-
 ignore:
-
-- items
-- class
-- defaultValue
-  external:
-- items
-  externalTypes:
-- TimelineItem[]
-  props:
+  - items
+  - class
+  - defaultValue
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
   defaultValue: 2
   items:
-  - date: 'Mar 15, 2025'
-    title: 'Project Kickoff'
-    description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
-    icon: 'i-lucide-rocket'
-  - date: 'Mar 22 2025'
-    title: 'Design Phase'
-    description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
-    icon: 'i-lucide-palette'
-  - date: 'Mar 29 2025'
-    title: 'Development Sprint'
-    description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
-    icon: 'i-lucide-code'
-  - date: 'Apr 5 2025'
-    title: 'Testing & Deployment'
-    description: 'QA testing and performance optimization. Deployed the application to production.'
-    icon: 'i-lucide-check-circle'
-    class: 'w-96'
-
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization. Deployed the application to production.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-96'
 ---
-
 ::
 
 ### Color
@@ -112,40 +104,36 @@ Use the `color` prop to change the color of the active items in a Timeline.
 
 ::component-code
 ---
-
 ignore:
-
-- items
-- class
-- defaultValue
-  external:
-- items
-  externalTypes:
-- TimelineItem[]
-  props:
+  - items
+  - class
+  - defaultValue
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
   color: neutral
   defaultValue: 2
   items:
-  - date: 'Mar 15, 2025'
-    title: 'Project Kickoff'
-    description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
-    icon: 'i-lucide-rocket'
-  - date: 'Mar 22 2025'
-    title: 'Design Phase'
-    description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
-    icon: 'i-lucide-palette'
-  - date: 'Mar 29 2025'
-    title: 'Development Sprint'
-    description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
-    icon: 'i-lucide-code'
-  - date: 'Apr 5 2025'
-    title: 'Testing & Deployment'
-    description: 'QA testing and performance optimization. Deployed the application to production.'
-    icon: 'i-lucide-check-circle'
-    class: 'w-96'
-
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization. Deployed the application to production.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-96'
 ---
-
 ::
 
 ### Size
@@ -154,40 +142,36 @@ Use the `size` prop to change the size of the Timeline.
 
 ::component-code
 ---
-
 ignore:
-
-- items
-- class
-- defaultValue
-  external:
-- items
-  externalTypes:
-- TimelineItem[]
-  props:
+  - items
+  - class
+  - defaultValue
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
   size: xs
   defaultValue: 2
   items:
-  - date: 'Mar 15, 2025'
-    title: 'Project Kickoff'
-    description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
-    icon: 'i-lucide-rocket'
-  - date: 'Mar 22 2025'
-    title: 'Design Phase'
-    description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
-    icon: 'i-lucide-palette'
-  - date: 'Mar 29 2025'
-    title: 'Development Sprint'
-    description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
-    icon: 'i-lucide-code'
-  - date: 'Apr 5 2025'
-    title: 'Testing & Deployment'
-    description: 'QA testing and performance optimization. Deployed the application to production.'
-    icon: 'i-lucide-check-circle'
-    class: 'w-96'
-
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment. Set up project milestones and allocated resources.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops. Created wireframes and prototypes for user testing.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development. Implemented core features and integrated with APIs.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization. Deployed the application to production.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-96'
 ---
-
 ::
 
 ### Orientation
@@ -196,41 +180,37 @@ Use the `orientation` prop to change the orientation of the Timeline. Defaults t
 
 ::component-code
 ---
-
 ignore:
-
-- items
-- class
-- defaultValue
-  external:
-- items
-  externalTypes:
-- TimelineItem[]
-  props:
+  - items
+  - class
+  - defaultValue
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
   orientation: 'horizontal'
   defaultValue: 2
   items:
-  - date: 'Mar 15, 2025'
-    title: 'Project Kickoff'
-    description: 'Kicked off the project with team alignment.'
-    icon: 'i-lucide-rocket'
-  - date: 'Mar 22 2025'
-    title: 'Design Phase'
-    description: 'User research and design workshops.'
-    icon: 'i-lucide-palette'
-  - date: 'Mar 29 2025'
-    title: 'Development Sprint'
-    description: 'Frontend and backend development.'
-    icon: 'i-lucide-code'
-  - date: 'Apr 5 2025'
-    title: 'Testing & Deployment'
-    description: 'QA testing and performance optimization.'
-    icon: 'i-lucide-check-circle'
-    class: 'w-full'
-    class: 'overflow-x-auto'
-
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-full'
+class: 'overflow-x-auto'
 ---
-
 ::
 
 ### Reverse
@@ -239,42 +219,38 @@ Use the reverse prop to reverse the direction of the Timeline.
 
 ::component-code
 ---
-
 ignore:
-
-- items
-- class
-- defaultValue
-  external:
-- items
-  externalTypes:
-- TimelineItem[]
-  props:
+  - items
+  - class
+  - defaultValue
+external:
+  - items
+externalTypes:
+  - TimelineItem[]
+props:
   reverse: true
   modelValue: 2
   orientation: 'vertical'
   items:
-  - date: 'Mar 15, 2025'
-    title: 'Project Kickoff'
-    description: 'Kicked off the project with team alignment.'
-    icon: 'i-lucide-rocket'
-  - date: 'Mar 22 2025'
-    title: 'Design Phase'
-    description: 'User research and design workshops.'
-    icon: 'i-lucide-palette'
-  - date: 'Mar 29 2025'
-    title: 'Development Sprint'
-    description: 'Frontend and backend development.'
-    icon: 'i-lucide-code'
-  - date: 'Apr 5 2025'
-    title: 'Testing & Deployment'
-    description: 'QA testing and performance optimization.'
-    icon: 'i-lucide-check-circle'
-    class: 'w-full'
-    class: 'overflow-x-auto'
-
+    - date: 'Mar 15, 2025'
+      title: 'Project Kickoff'
+      description: 'Kicked off the project with team alignment.'
+      icon: 'i-lucide-rocket'
+    - date: 'Mar 22 2025'
+      title: 'Design Phase'
+      description: 'User research and design workshops.'
+      icon: 'i-lucide-palette'
+    - date: 'Mar 29 2025'
+      title: 'Development Sprint'
+      description: 'Frontend and backend development.'
+      icon: 'i-lucide-code'
+    - date: 'Apr 5 2025'
+      title: 'Testing & Deployment'
+      description: 'QA testing and performance optimization.'
+      icon: 'i-lucide-check-circle'
+  class: 'w-full'
+class: 'overflow-x-auto'
 ---
-
 ::
 
 ## Examples
@@ -299,11 +275,9 @@ The handler function receives the `Event` and `TimelineItem` as the first and se
 
 ::component-example
 ---
-
 prettier: true
 name: 'timeline-select-example'
 ---
-
 ::
 
 ### With alternating layout

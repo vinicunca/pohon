@@ -84,71 +84,71 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   <PForm ref="form" :state="state" :schema="schema" class="w-full" @submit="onSubmit">
     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
       <PFormField label="Input" name="input">
-        <UInput v-model="state.input" placeholder="you@example.com" class="w-full" />
+        <PInput v-model="state.input" placeholder="you@example.com" class="w-full" />
       </PFormField>
 
       <PFormField name="inputNumber" label="InputNumber">
-        <UInputNumber v-model="state.inputNumber" placeholder="Enter a number" class="w-full" />
+        <PInputNumber v-model="state.inputNumber" placeholder="Enter a number" class="w-full" />
       </PFormField>
 
       <PFormField name="pin" label="PinInput" :error-pattern="/(pin)\..*/">
-        <UPinInput v-model="state.pin" placeholder="○" />
+        <PPinInput v-model="state.pin" placeholder="○" />
       </PFormField>
 
       <PFormField name="inputDate" label="InputDate">
-        <UInputDate v-model="state.inputDate" class="w-full" />
+        <PInputDate v-model="state.inputDate" class="w-full" />
       </PFormField>
 
       <PFormField name="inputTime" label="InputTime">
-        <UInputTime v-model="state.inputTime" class="w-full" />
+        <PInputTime v-model="state.inputTime" class="w-full" />
       </PFormField>
 
       <PFormField name="inputTags" label="InputTags">
-        <UInputTags v-model="state.inputTags" placeholder="Add a tag..." class="w-full" />
+        <PInputTags v-model="state.inputTags" placeholder="Add a tag..." class="w-full" />
       </PFormField>
 
       <PFormField name="inputMenu" label="InputMenu">
-        <UInputMenu v-model="state.inputMenu" :items="items" placeholder="Search an option..." class="w-full" />
+        <PInputMenu v-model="state.inputMenu" :items="items" placeholder="Search an option..." class="w-full" />
       </PFormField>
 
       <PFormField name="inputMenuMultiple" label="InputMenu (Multiple)">
-        <UInputMenu v-model="state.inputMenuMultiple" multiple :items="items" placeholder="Search options..." class="w-full" />
+        <PInputMenu v-model="state.inputMenuMultiple" multiple :items="items" placeholder="Search options..." class="w-full" />
       </PFormField>
 
       <PFormField label="Textarea" name="textarea">
-        <UTextarea v-model="state.textarea" placeholder="Write your message..." class="w-full" :rows="1" />
+        <PTextarea v-model="state.textarea" placeholder="Write your message..." class="w-full" :rows="1" />
       </PFormField>
 
       <PFormField name="select" label="Select">
-        <USelect v-model="state.select" :items="items" placeholder="Choose an option" class="w-full" />
+        <PSelect v-model="state.select" :items="items" placeholder="Choose an option" class="w-full" />
       </PFormField>
 
       <PFormField name="selectMultiple" label="Select (Multiple)">
-        <USelect v-model="state.selectMultiple" multiple :items="items" placeholder="Choose options" class="w-full" />
+        <PSelect v-model="state.selectMultiple" multiple :items="items" placeholder="Choose options" class="w-full" />
       </PFormField>
 
       <div class="hidden md:block" />
 
       <PFormField name="selectMenu" label="SelectMenu">
-        <USelectMenu v-model="state.selectMenu" :items="items" placeholder="Search an option..." class="w-full" />
+        <PSelectMenu v-model="state.selectMenu" :items="items" placeholder="Search an option..." class="w-full" />
       </PFormField>
 
       <PFormField name="selectMenuMultiple" label="SelectMenu (Multiple)">
-        <USelectMenu v-model="state.selectMenuMultiple" multiple :items="items" placeholder="Search options..." class="w-full" />
+        <PSelectMenu v-model="state.selectMenuMultiple" multiple :items="items" placeholder="Search options..." class="w-full" />
       </PFormField>
 
       <div class="hidden md:block" />
 
       <PFormField name="listbox" label="Listbox">
-        <UListbox v-model="state.listbox" :items="items" class="w-full" />
+        <PListbox v-model="state.listbox" :items="items" class="w-full" />
       </PFormField>
 
       <PFormField name="listboxMultiple" label="Listbox (Multiple)">
-        <UListbox v-model="state.listboxMultiple" :items="items" multiple class="w-full" />
+        <PListbox v-model="state.listboxMultiple" :items="items" multiple class="w-full" />
       </PFormField>
 
       <PFormField name="file" label="FileUpload">
-        <UFileUpload
+        <PFileUpload
           v-model="state.file"
           label="Drop your image here"
           description="PNG (max. 1MB)"
@@ -157,27 +157,27 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       </PFormField>
 
       <PFormField name="checkbox" label="Checkbox">
-        <UCheckbox v-model="state.checkbox" label="Check me" />
+        <PCheckbox v-model="state.checkbox" label="Check me" />
       </PFormField>
 
       <PFormField name="switch" label="Switch">
-        <USwitch v-model="state.switch" label="Switch me" />
+        <PSwitch v-model="state.switch" label="Switch me" />
       </PFormField>
 
       <PFormField name="slider" label="Slider">
-        <USlider v-model="state.slider" class="mt-2.5" />
+        <PSlider v-model="state.slider" class="mt-2.5" />
       </PFormField>
 
       <PFormField name="rating" label="InputRating">
-        <UInputRating v-model="state.rating" />
+        <PInputRating v-model="state.rating" />
       </PFormField>
 
       <PFormField name="checkboxGroup">
-        <UCheckboxGroup v-model="state.checkboxGroup" legend="CheckboxGroup" :items="items" />
+        <PCheckboxGroup v-model="state.checkboxGroup" legend="CheckboxGroup" :items="items" />
       </PFormField>
 
       <PFormField name="radioGroup">
-        <URadioGroup v-model="state.radioGroup" legend="RadioGroup" :items="items" />
+        <PRadioGroup v-model="state.radioGroup" legend="RadioGroup" :items="items" />
       </PFormField>
     </div>
 

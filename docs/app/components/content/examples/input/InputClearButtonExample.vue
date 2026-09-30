@@ -3,7 +3,7 @@ const value = ref('Click to clear')
 </script>
 
 <template>
-  <UInput
+  <PInput
     v-model="value"
     placeholder="Type something..."
     :ui="{ trailing: 'pe-1' }"
@@ -18,5 +18,5 @@ const value = ref('Click to clear')
         @click="value = ''"
       />
     </template>
-  </UInput>
+  </PInput>
 </template>

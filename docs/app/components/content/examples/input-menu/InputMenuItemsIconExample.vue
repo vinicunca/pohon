@@ -28,5 +28,5 @@ const value = ref(items.value[0])
 </script>
 
 <template>
-  <UInputMenu v-model="value" :icon="value?.icon" :items="items" />
+  <PInputMenu v-model="value" :icon="value?.icon" :items="items" />
 </template>

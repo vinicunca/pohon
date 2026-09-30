@@ -13,5 +13,5 @@ const isDateUnavailable = (date: DateValue) => {
 </script>
 
 <template>
-  <UInputDate v-model="modelValue" :is-date-unavailable="isDateUnavailable" range />
+  <PInputDate v-model="modelValue" :is-date-unavailable="isDateUnavailable" range />
 </template>

@@ -55,7 +55,7 @@ function onSubmit() {
 </script>
 
 <template>
-  <UChatPrompt
+  <PChatPrompt
     v-model="input"
     class="w-full p-0 gap-0"
     placeholder="Press / to open the command menu"
@@ -82,7 +82,7 @@ function onSubmit() {
     </template>
 
     <template #body="{ submit, placeholder }">
-      <UEditor
+      <PEditor
         v-slot="{ editor }"
         v-model="input"
         content-type="markdown"
@@ -96,9 +96,9 @@ function onSubmit() {
           addKeyboardShortcuts: () => ({ Enter: () => (submit(), true) })
         })]"
       >
-        <UEditorMentionMenu :editor="editor" char="@" plugin-key="mention" :items="files" :append-to="appendToBody" />
-        <UEditorMentionMenu :editor="editor" char="/" plugin-key="command" :items="commands" :append-to="appendToBody" />
-      </UEditor>
+        <PEditorMentionMenu :editor="editor" char="@" plugin-key="mention" :items="files" :append-to="appendToBody" />
+        <PEditorMentionMenu :editor="editor" char="/" plugin-key="command" :items="commands" :append-to="appendToBody" />
+      </PEditor>
     </template>
 
     <template #footer>
@@ -115,7 +115,7 @@ function onSubmit() {
       </div>
 
       <div class="flex items-center gap-1">
-        <USelect
+        <PSelect
           v-model="mode"
           :items="modes"
           :icon="modes.find(item => item.value === mode)?.icon"
@@ -125,8 +125,8 @@ function onSubmit() {
           square
         />
 
-        <UChatPromptSubmit size="sm" :disabled="!input.trim()" />
+        <PChatPromptSubmit size="sm" :disabled="!input.trim()" />
       </div>
     </template>
-  </UChatPrompt>
+  </PChatPrompt>
 </template>

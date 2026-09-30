@@ -3,7 +3,7 @@ import { h, resolveComponent } from 'vue'
 import type { TableColumn, TableRow } from 'pohon-ui'
 
 const PBadge = resolveComponent('PBadge')
-const UCheckbox = resolveComponent('UCheckbox')
+const PCheckbox = resolveComponent('PCheckbox')
 
 type Payment = {
   id: string
@@ -47,12 +47,12 @@ const data = ref<Payment[]>([{
 
 const columns: TableColumn<Payment>[] = [{
   id: 'select',
-  header: ({ table }) => h(UCheckbox, {
+  header: ({ table }) => h(PCheckbox, {
     'modelValue': table.getIsSomePageRowsSelected() ? 'indeterminate' : table.getIsAllPageRowsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => table.toggleAllPageRowsSelected(!!value),
     'aria-label': 'Select all'
   }),
-  cell: ({ row }) => h(UCheckbox, {
+  cell: ({ row }) => h(PCheckbox, {
     'modelValue': row.getIsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => row.toggleSelected(!!value),
     'aria-label': 'Select row'
@@ -145,7 +145,7 @@ function onHover(_e: Event, row: TableRow<Payment> | null) {
       @hover="onHover"
     />
 
-    <UPopover
+    <PPopover
       :content="{ side: 'top', sideOffset: 16, updatePositionStrategy: 'always' }"
       :open="openDebounced"
       :reference="reference"
@@ -155,6 +155,6 @@ function onHover(_e: Event, row: TableRow<Payment> | null) {
           {{ selectedRow?.original?.id }}
         </div>
       </template>
-    </UPopover>
+    </PPopover>
   </div>
 </template>

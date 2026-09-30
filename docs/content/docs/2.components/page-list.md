@@ -1,11 +1,11 @@
 ---
 title: PageList
-description: "A vertical list layout for displaying content in a stacked format."
+description: 'A vertical list layout for displaying content in a stacked format.'
 category: page
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/PageList.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/PageList.vue
 ---
 
 ## Usage
@@ -14,13 +14,11 @@ The PageList component provides a flexible way to display content in a vertical 
 
 ::component-example
 ---
-
 collapse: true
 name: 'page-list-example'
 props:
-class: 'w-full'
+  class: 'w-full'
 ---
-
 ::
 
 ### Divide
@@ -29,13 +27,11 @@ Use the `divide` prop to add a divider between each child element.
 
 ::component-example
 ---
-
 collapse: true
 name: 'page-list-divide-example'
 props:
-class: 'w-full'
+  class: 'w-full'
 ---
-
 ::
 
 ## API

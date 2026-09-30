@@ -6,16 +6,16 @@ Pohon UI forms use `PForm` + `PFormField` + Standard Schema validation (Zod, Val
 
 ```vue
 <script setup lang="ts">
-import * as z from "zod";
-import type { FormSubmitEvent } from "pohon-ui";
+import * as z from 'zod'
+import type { FormSubmitEvent } from 'pohon-ui'
 
 const schema = z.object({
-  email: z.email("Invalid email"),
-  password: z.string().min(8, "Min 8 characters"),
-});
+  email: z.email('Invalid email'),
+  password: z.string().min(8, 'Min 8 characters')
+})
 
-type Schema = z.output<typeof schema>;
-const state = reactive<Partial<Schema>>({ email: "", password: "" });
+type Schema = z.output<typeof schema>
+const state = reactive<Partial<Schema>>({ email: '', password: '' })
 
 function onSubmit(event: FormSubmitEvent<Schema>) {
   // PForm validates before emitting @submit — access validated data via event.data
@@ -25,19 +25,11 @@ function onSubmit(event: FormSubmitEvent<Schema>) {
 <template>
   <PForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
     <PFormField name="email" label="Email" required>
-      <PInput
-        v-model="state.email"
-        type="email"
-        placeholder="you@example.com"
-      />
+      <PInput v-model="state.email" type="email" placeholder="you@example.com" />
     </PFormField>
 
     <PFormField name="password" label="Password" required>
-      <PInput
-        v-model="state.password"
-        type="password"
-        placeholder="Min 8 characters"
-      />
+      <PInput v-model="state.password" type="password" placeholder="Min 8 characters" />
     </PFormField>
 
     <PButton type="submit" label="Sign in" />
@@ -55,14 +47,14 @@ function onSubmit(event: FormSubmitEvent<Schema>) {
 
 ## PFormField props
 
-| Prop          | Purpose                                     |
-| ------------- | ------------------------------------------- |
-| `name`        | Links to schema field for validation errors |
-| `label`       | Visible label text                          |
-| `description` | Help text below the input                   |
-| `hint`        | Right-aligned hint text (e.g., "Optional")  |
-| `required`    | Shows required indicator                    |
-| `size`        | Inherits to child input                     |
+| Prop | Purpose |
+|---|---|
+| `name` | Links to schema field for validation errors |
+| `label` | Visible label text |
+| `description` | Help text below the input |
+| `hint` | Right-aligned hint text (e.g., "Optional") |
+| `required` | Shows required indicator |
+| `size` | Inherits to child input |
 
 ## Field layout patterns
 
@@ -151,11 +143,7 @@ function onSubmit(event: FormSubmitEvent<Schema>) {
 ### Textarea
 
 ```vue
-<PFormField
-  name="bio"
-  label="Bio"
-  description="Brief description for your profile."
->
+<PFormField name="bio" label="Bio" description="Brief description for your profile.">
   <PTextarea v-model="state.bio" :rows="3" autoresize :maxrows="6" />
 </PFormField>
 ```
@@ -190,25 +178,27 @@ function onSubmit(event: FormSubmitEvent<Schema>) {
 
 ```vue
 <script setup lang="ts">
-const form = useTemplateRef("form");
+const form = useTemplateRef('form')
 
 async function validateAndSubmit() {
-  const result = await form.value?.validate();
+  const result = await form.value?.validate({ silent: true })
   if (result) {
     // valid — submit
   }
 }
 
 async function validateEmail() {
-  await form.value?.validate({ name: "email" });
+  await form.value?.validate({ name: 'email', silent: true })
 }
 
 function setServerError() {
-  form.value?.setErrors([{ name: "email", message: "Email already taken" }]);
+  form.value?.setErrors([
+    { name: 'email', message: 'Email already taken' }
+  ])
 }
 
 function resetErrors() {
-  form.value?.clearErrors();
+  form.value?.clear()
 }
 </script>
 
@@ -219,17 +209,14 @@ function resetErrors() {
 </template>
 ```
 
+By default, `validate()` throws a `FormValidationException` when validation fails. Pass `{ silent: true }` when you want it to return `false` instead. Use `clear()` to remove validation errors.
+
 ## Form in a modal
 
 Use `#footer="{ close }"` scoped slot for cancel/submit actions. Wrap the modal body in `PForm` with a `type="submit"` button in the footer so validation runs on submit.
 
 ```vue
-<PModal
-  v-model:open="isOpen"
-  title="Edit profile"
-  description="Update your information."
-  :ui="{ footer: 'justify-end' }"
->
+<PModal v-model:open="isOpen" title="Edit profile" description="Update your information." :ui="{ footer: 'justify-end' }">
   <template #body>
     <PForm id="profile-form" :schema="schema" :state="state" class="space-y-4" @submit="onSave">
       <PFormField name="name" label="Name">

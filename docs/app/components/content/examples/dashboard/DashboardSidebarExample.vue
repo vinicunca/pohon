@@ -26,7 +26,7 @@ const items: NavigationMenuItem[][] = [[{
 }], [{
   label: 'Feedback',
   icon: 'i-lucide-message-circle',
-  to: 'https://github.com/vinicunca/pohon-ui-templates/dashboard',
+  to: 'https://github.com/vinicunca/pohon/tree/main/playgrounds/nuxt',
   target: '_blank'
 }, {
   label: 'Help & Support',
@@ -37,10 +37,10 @@ const items: NavigationMenuItem[][] = [[{
 </script>
 
 <template>
-  <UDashboardSidebar collapsible resizable :ui="{ footer: 'border-t border-border' }">
+  <PDashboardSidebar collapsible resizable :ui="{ footer: 'border-t border-border' }">
     <template #header="{ collapsed }">
       <Logo v-if="!collapsed" class="h-5 w-auto shrink-0" />
-      <UIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 text-primary mx-auto" />
+      <PIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 text-primary mx-auto" />
     </template>
 
     <template #default="{ collapsed }">
@@ -54,19 +54,19 @@ const items: NavigationMenuItem[][] = [[{
       >
         <template v-if="!collapsed" #trailing>
           <div class="flex items-center gap-0.5 ms-auto">
-            <UKbd value="meta" variant="subtle" />
-            <UKbd value="K" variant="subtle" />
+            <PKbd value="meta" variant="subtle" />
+            <PKbd value="K" variant="subtle" />
           </div>
         </template>
       </PButton>
 
-      <UNavigationMenu
+      <PNavigationMenu
         :collapsed="collapsed"
         :items="items[0]"
         orientation="vertical"
       />
 
-      <UNavigationMenu
+      <PNavigationMenu
         :collapsed="collapsed"
         :items="items[1]"
         orientation="vertical"
@@ -87,5 +87,5 @@ const items: NavigationMenuItem[][] = [[{
         :block="collapsed"
       />
     </template>
-  </UDashboardSidebar>
+  </PDashboardSidebar>
 </template>

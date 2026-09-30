@@ -132,18 +132,18 @@ defineShortcuts(extractShortcuts(teamsItems.value))
 
 <template>
   <div class="flex flex-1">
-    <USidebar
+    <PSidebar
       v-model:open="open"
       collapsible="icon"
       rail
       :ui="{
         container: 'h-full',
-        inner: 'bg-elevated/25 divide-transparent',
+        inner: 'bg-background-elevated/25 divide-transparent',
         body: 'py-0'
       }"
     >
       <template #header>
-        <UDropdownMenu
+        <PDropdownMenu
           :items="teamsItems"
           :content="{ align: 'start', collisionPadding: 12 }"
           :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width) min-w-48' }"
@@ -154,16 +154,16 @@ defineShortcuts(extractShortcuts(teamsItems.value))
             color="neutral"
             variant="ghost"
             square
-            class="w-full data-[state=open]:bg-elevated overflow-hidden"
+            class="w-full data-[state=open]:bg-background-elevated overflow-hidden"
             :ui="{
-              trailingIcon: 'text-dimmed ms-auto'
+              trailingIcon: 'color-text-dimmed ms-auto'
             }"
           />
-        </UDropdownMenu>
+        </PDropdownMenu>
       </template>
 
       <template #default="{ state }">
-        <UNavigationMenu
+        <PNavigationMenu
           :key="state"
           :items="getItems(state)"
           orientation="vertical"
@@ -172,7 +172,7 @@ defineShortcuts(extractShortcuts(teamsItems.value))
       </template>
 
       <template #footer>
-        <UDropdownMenu
+        <PDropdownMenu
           :items="userItems"
           :content="{ align: 'center', collisionPadding: 12 }"
           :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width) min-w-48' }"
@@ -184,14 +184,14 @@ defineShortcuts(extractShortcuts(teamsItems.value))
             color="neutral"
             variant="ghost"
             square
-            class="w-full data-[state=open]:bg-elevated overflow-hidden"
+            class="w-full data-[state=open]:bg-background-elevated overflow-hidden"
             :ui="{
-              trailingIcon: 'text-dimmed ms-auto'
+              trailingIcon: 'color-text-dimmed ms-auto'
             }"
           />
-        </UDropdownMenu>
+        </PDropdownMenu>
       </template>
-    </USidebar>
+    </PSidebar>
 
     <div class="flex-1 flex flex-col">
       <div class="h-(--ui-header-height) shrink-0 flex items-center px-4 border-b border-border">

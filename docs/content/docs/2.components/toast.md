@@ -7,11 +7,11 @@ keywords:
   - flash message
 links:
   - label: Toast
-    icon: i-custom-reka-ui
+    icon: i-lucide-box
     to: https://akar.vinicunca.dev/docs/components/toast
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Toast.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Toast.vue
 ---
 
 ## Usage
@@ -20,16 +20,14 @@ Use the [useToast](/docs/composables/use-toast) composable to display a toast in
 
 ::component-example
 ---
-
 collapse: true
 prettier: true
 name: 'toast-example'
 ---
-
 ::
 
 ::warning
-Make sure to wrap your app with the [`App`](/docs/components/app) component which uses our [`Toaster`](https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Toaster.vue) component which uses the [`ToastProvider`](https://akar.vinicunca.dev/docs/components/toast#provider) component from Akar.
+Make sure to wrap your app with the [`App`](/docs/components/app) component which uses our [`Toaster`](https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Toaster.vue) component which uses the [`ToastProvider`](https://akar.vinicunca.dev/docs/components/toast#provider) component from Akar.
 ::
 
 ::tip{to="/docs/components/app#props"}
@@ -42,16 +40,12 @@ Pass a `title` field to the `toast.add` method to display a title.
 
 ::component-example
 ---
-
 options:
-
-- name: 'title'
-  label: 'title'
-  default: 'Uh oh! Something went wrong.'
-  name: 'toast-title-example'
-
+  - name: 'title'
+    label: 'title'
+    default: 'Uh oh! Something went wrong.'
+name: 'toast-title-example'
 ---
-
 ::
 
 ### Description
@@ -60,19 +54,15 @@ Pass a `description` field to the `toast.add` method to display a description.
 
 ::component-example
 ---
-
 options:
-
-- name: 'title'
-  label: 'title'
-  default: 'Uh oh! Something went wrong.'
-- name: 'description'
-  label: 'description'
-  default: 'There was a problem with your request.'
-  name: 'toast-description-example'
-
+  - name: 'title'
+    label: 'title'
+    default: 'Uh oh! Something went wrong.'
+  - name: 'description'
+    label: 'description'
+    default: 'There was a problem with your request.'
+name: 'toast-description-example'
 ---
-
 ::
 
 ### Icon
@@ -81,16 +71,12 @@ Pass an `icon` field to the `toast.add` method to display an [Icon](/docs/compon
 
 ::component-example
 ---
-
 options:
-
-- name: 'icon'
-  label: 'icon'
-  default: 'i-lucide-wifi'
-  name: 'toast-icon-example'
-
+  - name: 'icon'
+    label: 'icon'
+    default: 'i-lucide-wifi'
+name: 'toast-icon-example'
 ---
-
 ::
 
 ### Avatar
@@ -99,18 +85,14 @@ Pass an `avatar` field to the `toast.add` method to display an [Avatar](/docs/co
 
 ::component-example
 ---
-
 options:
-
-- name: 'avatar.src'
-  alias: 'avatar'
-  label: 'avatar.src'
-  default:
-  src: 'https://github.com/benjamincanac.png'
-  name: 'toast-avatar-example'
-
+  - name: 'avatar.src'
+    alias: 'avatar'
+    label: 'avatar.src'
+    default:
+      src: 'https://github.com/benjamincanac.png'
+name: 'toast-avatar-example'
 ---
-
 ::
 
 ### Color
@@ -119,24 +101,20 @@ Pass a `color` field to the `toast.add` method to change the color of the Toast.
 
 ::component-example
 ---
-
 options:
-
-- name: 'color'
-  label: 'color'
-  default: neutral
-  items:
-  - primary
-  - secondary
-  - success
-  - info
-  - warning
-  - error
-  - neutral
-    name: 'toast-color-example'
-
+  - name: 'color'
+    label: 'color'
+    default: neutral
+    items:
+      - primary
+      - secondary
+      - success
+      - info
+      - warning
+      - error
+      - neutral
+name: 'toast-color-example'
 ---
-
 ::
 
 ### Close
@@ -145,10 +123,8 @@ Pass a `close` field to customize or hide the close [Button](/docs/components/bu
 
 ::component-example
 ---
-
 name: 'toast-close-example'
 ---
-
 ::
 
 ### Close Icon
@@ -157,16 +133,12 @@ Pass a `closeIcon` field to customize the close button [Icon](/docs/components/i
 
 ::component-example
 ---
-
 options:
-
-- name: 'closeIcon'
-  label: 'closeIcon'
-  default: 'i-lucide-arrow-right'
-  name: 'toast-close-icon-example'
-
+  - name: 'closeIcon'
+    label: 'closeIcon'
+    default: 'i-lucide-arrow-right'
+name: 'toast-close-icon-example'
 ---
-
 ::
 
 ::framework-only
@@ -187,16 +159,12 @@ Pass an `actions` field to add some [Button](/docs/components/button) actions to
 
 ::component-example
 ---
-
 options:
-
-- name: 'description'
-  label: 'description'
-  default: 'There was a problem with your request.'
-  name: 'toast-actions-example'
-
+  - name: 'description'
+    label: 'description'
+    default: 'There was a problem with your request.'
+name: 'toast-actions-example'
 ---
-
 ::
 
 ### Duration
@@ -209,21 +177,17 @@ Set the `duration` field to `0` to keep the Toast open until it's manually close
 
 ::component-example
 ---
-
 options:
-
-- name: 'duration'
-  label: 'duration'
-  default: 0
-  items:
-  - 0
-  - 1000
-  - 3000
-  - 5000
-    name: 'toast-duration-example'
-
+  - name: 'duration'
+    label: 'duration'
+    default: 0
+    items:
+      - 0
+      - 1000
+      - 3000
+      - 5000
+name: 'toast-duration-example'
 ---
-
 ::
 
 ### Progress
@@ -236,10 +200,8 @@ The Progress bar inherits the Toast color by default, but you can override it us
 
 ::component-example
 ---
-
 name: 'toast-progress-example'
 ---
-
 ::
 
 ### Orientation
@@ -248,25 +210,21 @@ Pass an `orientation` field to the `toast.add` method to change the orientation 
 
 ::component-example
 ---
-
 options:
-
-- name: 'orientation'
-  label: 'orientation'
-  default: 'horizontal'
-  items:
-  - horizontal
-  - vertical
-    name: 'toast-orientation-example'
-
+  - name: 'orientation'
+    label: 'orientation'
+    default: 'horizontal'
+    items:
+      - horizontal
+      - vertical
+name: 'toast-orientation-example'
 ---
-
 ::
 
 ## Examples
 
 ::note{to="/docs/components/app"}
-Pohon provides an **App** component that wraps your app to provide global configurations.
+Pohon UI provides an **App** component that wraps your app to provide global configurations.
 ::
 
 ### Change global position
@@ -275,7 +233,7 @@ Change the `toaster.position` prop on the [App](/docs/components/app#props) comp
 
 ```vue [app.vue]
 <script setup lang="ts">
-const toaster = { position: "bottom-right" };
+const toaster = { position: 'bottom-right' }
 </script>
 
 <template>
@@ -287,7 +245,6 @@ const toaster = { position: "bottom-right" };
 
 ::component-example
 ---
-
 prettier: true
 name: 'toast-example'
 ---
@@ -296,13 +253,14 @@ name: 'toast-example'
 :toaster-position-example
 ::
 
+
 ### Change global duration
 
 Change the `toaster.duration` prop on the [App](/docs/components/app#props) component to change the duration of the toasts.
 
 ```vue [app.vue]
 <script setup lang="ts">
-const toaster = { duration: 5000 };
+const toaster = { duration: 5000 }
 </script>
 
 <template>
@@ -314,7 +272,6 @@ const toaster = { duration: 5000 };
 
 ::component-example
 ---
-
 prettier: true
 name: 'toast-example'
 ---
@@ -323,13 +280,14 @@ name: 'toast-example'
 :toaster-duration-example
 ::
 
-### Change global max :badge{label="4.1+" class="align-text-top"}
+
+### Change global max
 
 Change the `toaster.max` prop on the [App](/docs/components/app#props) component to change the max number of toasts displayed at once.
 
 ```vue [app.vue]
 <script setup lang="ts">
-const toaster = { max: 3 };
+const toaster = { max: 3 }
 </script>
 
 <template>
@@ -341,7 +299,6 @@ const toaster = { max: 3 };
 
 ::component-example
 ---
-
 prettier: true
 name: 'toast-example'
 ---
@@ -350,13 +307,14 @@ name: 'toast-example'
 :toaster-max-example
 ::
 
+
 ### Stacked toasts
 
 Set the `toaster.expand` prop to `false` on the [App](/docs/components/app#props) component to display stacked toasts (inspired by [Sonner](https://sonner.emilkowal.ski/)).
 
 ```vue [app.vue]
 <script setup lang="ts">
-const toaster = { expand: true };
+const toaster = { expand: true }
 </script>
 
 <template>
@@ -372,7 +330,6 @@ You can hover over the toasts to expand them. This will also pause the timer of 
 
 ::component-example
 ---
-
 prettier: true
 name: 'toast-example'
 ---
@@ -381,17 +338,16 @@ name: 'toast-example'
 :toaster-expand-example
 ::
 
-### Deduplicated toasts :badge{label="4.5+" class="align-text-top"}
+
+### Deduplicated toasts
 
 When calling `toast.add` with an `id` that already exists, the existing toast will pulse instead of creating a duplicate.
 
 ::component-example
 ---
-
 collapse: true
 name: 'toast-duplicate-example'
 ---
-
 ::
 
 ### With callback
@@ -400,11 +356,9 @@ Pass an `onUpdateOpen` field to execute a callback when the toast is closed (eit
 
 ::component-example
 ---
-
 collapse: true
 name: 'toast-callback-example'
 ---
-
 ::
 
 ### With HTML content
@@ -413,11 +367,9 @@ Use the [`h()` render function](https://vuejs.org/api/render-function.html#h) in
 
 ::component-example
 ---
-
 collapse: true
 name: 'toast-html-example'
 ---
-
 ::
 
 ## API
@@ -438,8 +390,8 @@ name: 'toast-html-example'
 
 When accessing the component via a template ref, you can use the following:
 
-| Name                     | Type                          |
-| ------------------------ | ----------------------------- |
+| Name | Type |
+| ---- | ---- |
 | `height`{lang="ts-type"} | `Ref<number>`{lang="ts-type"} |
 
 ## Theme

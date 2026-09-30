@@ -22,14 +22,14 @@ const state = reactive({
 </script>
 
 <template>
-  <UTabs :items="items">
+  <PTabs :items="items">
     <template #account>
       <PForm :state="state" class="flex flex-col gap-4">
         <PFormField label="Name" name="name">
-          <UInput v-model="state.name" class="w-full" />
+          <PInput v-model="state.name" class="w-full" />
         </PFormField>
         <PFormField label="Username" name="username">
-          <UInput v-model="state.username" class="w-full" />
+          <PInput v-model="state.username" class="w-full" />
         </PFormField>
       </PForm>
     </template>
@@ -37,15 +37,15 @@ const state = reactive({
     <template #password>
       <PForm :state="state" class="flex flex-col gap-4">
         <PFormField label="Current Password" name="current" required>
-          <UInput v-model="state.currentPassword" type="password" required class="w-full" />
+          <PInput v-model="state.currentPassword" type="password" required class="w-full" />
         </PFormField>
         <PFormField label="New Password" name="new" required>
-          <UInput v-model="state.newPassword" type="password" required class="w-full" />
+          <PInput v-model="state.newPassword" type="password" required class="w-full" />
         </PFormField>
         <PFormField label="Confirm Password" name="confirm" required>
-          <UInput v-model="state.confirmPassword" type="password" required class="w-full" />
+          <PInput v-model="state.confirmPassword" type="password" required class="w-full" />
         </PFormField>
       </PForm>
     </template>
-  </UTabs>
+  </PTabs>
 </template>

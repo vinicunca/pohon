@@ -15,15 +15,15 @@ const { data: components } = await useAsyncData(`components-${props.category}`, 
 </script>
 
 <template>
-  <UPageGrid class="gap-5">
-    <UPageCard
+  <PPageGrid class="gap-5">
+    <PPageCard
       v-for="(component, index) in components"
       :key="component.path"
       :title="component.title"
       :description="component.description"
       :to="component.path"
       :ui="{
-        root: 'overflow-hidden group ring-muted',
+        root: 'overflow-hidden group ring-ring-muted',
         header: 'mb-0',
         container: 'p-0 lg:p-0',
         body: 'p-4',
@@ -32,7 +32,7 @@ const { data: components } = await useAsyncData(`components-${props.category}`, 
       }"
     >
       <template #header>
-        <div class="rounded-md rounded-b-none border border-muted overflow-hidden aspect-video -m-px bg-muted">
+        <div class="rounded-md rounded-b-none border border-border-muted overflow-hidden aspect-video -m-px bg-background-muted">
           <PColorModeImage
             :light="`${component.path.replace('/docs/components/', '/components/light/')}.png`"
             :dark="`${component.path.replace('/docs/components/', '/components/dark/')}.png`"
@@ -44,6 +44,6 @@ const { data: components } = await useAsyncData(`components-${props.category}`, 
           />
         </div>
       </template>
-    </UPageCard>
-  </UPageGrid>
+    </PPageCard>
+  </PPageGrid>
 </template>

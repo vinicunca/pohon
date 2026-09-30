@@ -3,17 +3,17 @@ const open = ref(false)
 </script>
 
 <template>
-  <UPopover
+  <PPopover
     v-model:open="open"
     :dismissible="false"
     :ui="{ content: 'w-(--akar-popover-trigger-width) p-4' }"
   >
     <template #anchor>
-      <UInput placeholder="Focus to open" @focus="open = true" @blur="open = false" />
+      <PInput placeholder="Focus to open" @focus="open = true" @blur="open = false" />
     </template>
 
     <template #content>
       <Placeholder class="w-full aspect-square" />
     </template>
-  </UPopover>
+  </PPopover>
 </template>

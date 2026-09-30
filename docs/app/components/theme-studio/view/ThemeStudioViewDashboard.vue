@@ -3,11 +3,11 @@ import { h, resolveComponent } from 'vue'
 import { CalendarDate, DateFormatter } from '@internationalized/date'
 import type { DropdownMenuItem, NavigationMenuItem, TableColumn } from 'pohon-ui'
 
-const UAvatar = resolveComponent('UAvatar')
+const PAvatar = resolveComponent('PAvatar')
 const PBadge = resolveComponent('PBadge')
 const PButton = resolveComponent('PButton')
-const UCheckbox = resolveComponent('UCheckbox')
-const UDropdownMenu = resolveComponent('UDropdownMenu')
+const PCheckbox = resolveComponent('PCheckbox')
+const PDropdownMenu = resolveComponent('PDropdownMenu')
 
 const appConfig = useAppConfig()
 const studioIcons = useStudioIcons()
@@ -88,7 +88,7 @@ const user = {
   avatar: { src: 'https://github.com/benjamincanac.png', alt: 'Benjamin Canac' }
 }
 
-const userItems: DropdownMenuItem[][] = [[{
+const userItems = computed<DropdownMenuItem[][]>(() => [[{
   type: 'label',
   label: user.name,
   avatar: user.avatar
@@ -98,12 +98,12 @@ const userItems: DropdownMenuItem[][] = [[{
   { label: 'Settings', icon: studioIcons.settings }
 ], [
   { label: 'Log out', icon: studioIcons.logout }
-]]
+]])
 
-const newItems: DropdownMenuItem[][] = [[
+const newItems = computed<DropdownMenuItem[][]>(() => [[
   { label: 'New mail', icon: studioIcons.send },
   { label: 'New customer', icon: studioIcons.userPlus }
-]]
+]])
 
 // lowercase like the template, capitalized back through the select's `ui`
 const periodItems = ['daily', 'weekly', 'monthly']
@@ -153,12 +153,12 @@ function selectDateRange(range: DateRangePreset) {
 }
 const period = ref('daily')
 
-const stats = [
+const stats = computed(() => [
   { title: 'Customers', icon: studioIcons.users, value: '892', variation: 14 },
   { title: 'Conversions', icon: studioIcons.chart, value: '1,436', variation: 8 },
   { title: 'Revenue', icon: studioIcons.dollar, value: '$312,540', variation: 23 },
   { title: 'Orders', icon: studioIcons.cart, value: '254', variation: -5 }
-]
+])
 
 const revenue = [6200, 7400, 6800, 9100, 8600, 10400, 9800, 11900, 11200, 13000, 12400, 14100, 13600, 15200]
 const revenueMin = Math.min(...revenue)
@@ -299,12 +299,12 @@ watch(filteredMails, () => {
   }
 })
 
-const mailDropdownItems: DropdownMenuItem[][] = [[
+const mailDropdownItems = computed<DropdownMenuItem[][]>(() => [[
   { label: 'Mark as unread', icon: appConfig.ui.icons.success },
   { label: 'Mark as important', icon: appConfig.ui.icons.warning }
 ], [
   { label: 'Star thread', icon: appConfig.ui.icons.star }
-]]
+]])
 
 const reply = ref('')
 
@@ -350,23 +350,23 @@ const customerStatusItems = [
   { label: 'Bounced', value: 'bounced' }
 ]
 
-const customerRowItems: DropdownMenuItem[] = [
+const customerRowItems = computed<DropdownMenuItem[]>(() => [
   { type: 'label', label: 'Actions' },
   { label: 'Copy customer ID', icon: appConfig.ui.icons.copy },
   { type: 'separator' },
   { label: 'View customer details', icon: studioIcons.list },
   { type: 'separator' },
   { label: 'Delete customer', icon: studioIcons.trash, color: 'error' }
-]
+])
 
 const customerColumns: TableColumn<Customer>[] = [{
   id: 'select',
-  header: ({ table }) => h(UCheckbox, {
+  header: ({ table }) => h(PCheckbox, {
     'modelValue': table.getIsSomePageRowsSelected() ? 'indeterminate' : table.getIsAllPageRowsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => table.toggleAllPageRowsSelected(!!value),
     'ariaLabel': 'Select all'
   }),
-  cell: ({ row }) => h(UCheckbox, {
+  cell: ({ row }) => h(PCheckbox, {
     'modelValue': row.getIsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => row.toggleSelected(!!value),
     'ariaLabel': 'Select row'
@@ -379,9 +379,9 @@ const customerColumns: TableColumn<Customer>[] = [{
   header: 'Name',
   cell: ({ row }) => {
     return h('div', { class: 'flex items-center gap-3' }, [
-      h(UAvatar, { ...row.original.avatar, size: 'lg' }),
+      h(PAvatar, { ...row.original.avatar, size: 'lg' }),
       h('div', undefined, [
-        h('p', { class: 'font-medium text-highlighted' }, row.original.name),
+        h('p', { class: 'font-medium color-text-highlighted' }, row.original.name),
         h('p', undefined, `@${row.original.username}`)
       ])
     ])
@@ -416,8 +416,8 @@ const customerColumns: TableColumn<Customer>[] = [{
   id: 'actions',
   cell: () => {
     return h('div', { class: 'text-right' }, h(
-      UDropdownMenu,
-      { content: { align: 'end' }, items: customerRowItems },
+      PDropdownMenu,
+      { content: { align: 'end' }, items: customerRowItems.value },
       () => h(PButton, { icon: appConfig.ui.icons.ellipsis, color: 'neutral', variant: 'ghost', class: 'ml-auto' })
     ))
   }
@@ -476,7 +476,7 @@ const notificationSections = [{
   ]
 }, {
   title: 'Account updates',
-  description: 'Receive updates about Pohon.',
+  description: 'Receive updates about Pohon UI.',
   fields: [
     { name: 'weekly_digest', label: 'Weekly digest', description: 'Receive a weekly digest of news.' },
     { name: 'product_updates', label: 'Product updates', description: 'Receive a monthly email with all new features and updates.' }
@@ -523,20 +523,20 @@ const pageTitles: Record<Page, string> = {
 </script>
 
 <template>
-  <!-- UDashboardGroup is `fixed inset-0` by default: contain it in the preview pane instead. -->
-  <UDashboardGroup
+  <!-- PDashboardGroup is `fixed inset-0` by default: contain it in the preview pane instead. -->
+  <PDashboardGroup
     unit="rem"
     :persistent="false"
     class="relative inset-auto h-full w-full"
   >
-    <UDashboardSidebar
+    <PDashboardSidebar
       collapsible
       resizable
-      class="bg-elevated/25"
+      class="bg-background-elevated/25"
       :ui="{ root: 'flex min-h-0', footer: 'border-t border-border' }"
     >
       <template #header="{ collapsed }">
-        <UDropdownMenu
+        <PDropdownMenu
           :items="teamItems"
           :content="{ align: 'center', collisionPadding: 12 }"
           :ui="{ content: collapsed ? 'w-40' : 'w-(--akar-dropdown-menu-trigger-width)' }"
@@ -551,17 +551,17 @@ const pageTitles: Record<Page, string> = {
             variant="ghost"
             block
             :square="collapsed"
-            class="data-[state=open]:bg-elevated"
+            class="data-[state=open]:bg-background-elevated"
             :class="[!collapsed && 'py-2']"
-            :ui="{ trailingIcon: 'text-dimmed' }"
+            :ui="{ trailingIcon: 'color-text-dimmed' }"
           />
-        </UDropdownMenu>
+        </PDropdownMenu>
       </template>
 
       <template #default="{ collapsed }">
-        <UDashboardSearchButton :collapsed="collapsed" class="bg-transparent ring-default" />
+        <PDashboardSearchButton :collapsed="collapsed" class="bg-transparent ring-ring" />
 
-        <UNavigationMenu
+        <PNavigationMenu
           :collapsed="collapsed"
           :items="links[0]"
           orientation="vertical"
@@ -569,7 +569,7 @@ const pageTitles: Record<Page, string> = {
           popover
         />
 
-        <UNavigationMenu
+        <PNavigationMenu
           :collapsed="collapsed"
           :items="links[1]"
           orientation="vertical"
@@ -579,7 +579,7 @@ const pageTitles: Record<Page, string> = {
       </template>
 
       <template #footer="{ collapsed }">
-        <UDropdownMenu
+        <PDropdownMenu
           :items="userItems"
           :content="{ align: 'center', collisionPadding: 12 }"
           :ui="{ content: collapsed ? 'w-48' : 'w-(--akar-dropdown-menu-trigger-width)' }"
@@ -594,16 +594,16 @@ const pageTitles: Record<Page, string> = {
             variant="ghost"
             block
             :square="collapsed"
-            class="data-[state=open]:bg-elevated"
-            :ui="{ trailingIcon: 'text-dimmed' }"
+            class="data-[state=open]:bg-background-elevated"
+            :ui="{ trailingIcon: 'color-text-dimmed' }"
           />
-        </UDropdownMenu>
+        </PDropdownMenu>
       </template>
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
     <!-- Inbox replicates the template's split list / mail panes, so it swaps the whole panel. -->
     <template v-if="page === 'inbox'">
-      <UDashboardPanel
+      <PDashboardPanel
         id="theme-studio-inbox-list"
         resizable
         :default-size="25"
@@ -611,30 +611,30 @@ const pageTitles: Record<Page, string> = {
         :max-size="45"
         :ui="{ root: 'min-h-0' }"
       >
-        <UDashboardNavbar title="Inbox">
+        <PDashboardNavbar title="Inbox">
           <template #leading>
-            <UDashboardSidebarCollapse />
+            <PDashboardSidebarCollapse />
           </template>
           <template #trailing>
             <PBadge :label="String(filteredMails.length)" variant="subtle" />
           </template>
 
           <template #right>
-            <UTabs
+            <PTabs
               v-model="selectedMailTab"
               :items="mailTabItems"
               :content="false"
               size="xs"
             />
           </template>
-        </UDashboardNavbar>
+        </PDashboardNavbar>
 
-        <div class="overflow-y-auto divide-y divide-default">
+        <div class="overflow-y-auto divide-y divide-border">
           <div v-for="mail in filteredMails" :key="mail.id">
             <div
               class="p-4 sm:px-6 text-sm cursor-pointer border-l-2 transition-colors"
               :class="[
-                mail.unread ? 'text-highlighted' : 'text-toned',
+                mail.unread ? 'color-text-highlighted' : 'color-text-toned',
                 selectedMail && selectedMail.id === mail.id
                   ? 'border-primary bg-primary/10'
                   : 'border-bg hover:border-primary hover:bg-primary/5'
@@ -645,7 +645,7 @@ const pageTitles: Record<Page, string> = {
                 <div class="flex items-center gap-3">
                   {{ mail.from.name }}
 
-                  <UChip v-if="mail.unread" />
+                  <PChip v-if="mail.unread" />
                 </div>
 
                 <span>{{ mail.date }}</span>
@@ -653,16 +653,16 @@ const pageTitles: Record<Page, string> = {
               <p class="truncate" :class="[mail.unread && 'font-semibold']">
                 {{ mail.subject }}
               </p>
-              <p class="text-dimmed line-clamp-1">
+              <p class="color-text-dimmed line-clamp-1">
                 {{ mail.body }}
               </p>
             </div>
           </div>
         </div>
-      </UDashboardPanel>
+      </PDashboardPanel>
 
-      <UDashboardPanel v-if="selectedMail" id="theme-studio-inbox-mail" :ui="{ root: 'min-h-0' }">
-        <UDashboardNavbar :title="selectedMail.subject" :toggle="false">
+      <PDashboardPanel v-if="selectedMail" id="theme-studio-inbox-mail" :ui="{ root: 'min-h-0' }">
+        <PDashboardNavbar :title="selectedMail.subject" :toggle="false">
           <template #leading>
             <PButton
               :icon="appConfig.ui.icons.close"
@@ -675,35 +675,35 @@ const pageTitles: Record<Page, string> = {
           </template>
 
           <template #right>
-            <UTooltip text="Archive">
+            <PTooltip text="Archive">
               <PButton :icon="studioIcons.inbox" color="neutral" variant="ghost" aria-label="Archive" />
-            </UTooltip>
+            </PTooltip>
 
-            <UTooltip text="Reply">
+            <PTooltip text="Reply">
               <PButton :icon="studioIcons.reply" color="neutral" variant="ghost" aria-label="Reply" />
-            </UTooltip>
+            </PTooltip>
 
-            <UDropdownMenu :items="mailDropdownItems">
+            <PDropdownMenu :items="mailDropdownItems">
               <PButton :icon="appConfig.ui.icons.ellipsis" color="neutral" variant="ghost" aria-label="More actions" />
-            </UDropdownMenu>
+            </PDropdownMenu>
           </template>
-        </UDashboardNavbar>
+        </PDashboardNavbar>
 
         <div class="flex flex-col sm:flex-row justify-between gap-1 p-4 sm:px-6 border-b border-border">
           <div class="flex items-start gap-4 sm:my-1.5">
-            <UAvatar v-bind="selectedMail.from.avatar" size="3xl" />
+            <PAvatar v-bind="selectedMail.from.avatar" size="3xl" />
 
             <div class="min-w-0">
-              <p class="font-semibold text-highlighted">
+              <p class="font-semibold color-text-highlighted">
                 {{ selectedMail.from.name }}
               </p>
-              <p class="text-muted">
+              <p class="color-text-muted">
                 {{ selectedMail.from.email }}
               </p>
             </div>
           </div>
 
-          <p class="max-sm:pl-16 text-muted text-sm sm:mt-2">
+          <p class="max-sm:pl-16 color-text-muted text-sm sm:mt-2">
             {{ selectedMail.datetime }}
           </p>
         </div>
@@ -715,9 +715,9 @@ const pageTitles: Record<Page, string> = {
         </div>
 
         <div class="pb-4 px-4 sm:px-6 shrink-0">
-          <UCard variant="subtle" class="mt-auto" :ui="{ header: 'flex items-center gap-1.5 text-dimmed' }">
+          <PCard variant="subtle" class="mt-auto" :ui="{ header: 'flex items-center gap-1.5 color-text-dimmed' }">
             <template #header>
-              <UIcon :name="studioIcons.reply" class="size-5" />
+              <PIcon :name="studioIcons.reply" class="size-5" />
 
               <span class="text-sm truncate">
                 Reply to {{ selectedMail.from.name }} ({{ selectedMail.from.email }})
@@ -725,7 +725,7 @@ const pageTitles: Record<Page, string> = {
             </template>
 
             <form @submit.prevent>
-              <UTextarea
+              <PTextarea
                 v-model="reply"
                 color="neutral"
                 variant="none"
@@ -737,9 +737,9 @@ const pageTitles: Record<Page, string> = {
               />
 
               <div class="flex items-center justify-between">
-                <UTooltip text="Attach file">
+                <PTooltip text="Attach file">
                   <PButton color="neutral" variant="ghost" :icon="studioIcons.paperclip" aria-label="Attach file" />
-                </UTooltip>
+                </PTooltip>
 
                 <div class="flex items-center gap-2">
                   <PButton color="neutral" variant="ghost" label="Save draft" />
@@ -747,62 +747,62 @@ const pageTitles: Record<Page, string> = {
                 </div>
               </div>
             </form>
-          </UCard>
+          </PCard>
         </div>
-      </UDashboardPanel>
+      </PDashboardPanel>
       <div v-else class="flex-1 hidden lg:flex items-center justify-center">
-        <UIcon :name="studioIcons.inbox" class="size-32 text-dimmed" />
+        <PIcon :name="studioIcons.inbox" class="size-32 color-text-dimmed" />
       </div>
     </template>
 
-    <UDashboardPanel v-else :ui="{ root: 'min-h-0' }">
+    <PDashboardPanel v-else :ui="{ root: 'min-h-0' }">
       <template #header>
-        <UDashboardNavbar :title="pageTitles[page]" :ui="{ right: 'gap-3' }">
+        <PDashboardNavbar :title="pageTitles[page]" :ui="{ right: 'gap-3' }">
           <template #leading>
-            <UDashboardSidebarCollapse />
+            <PDashboardSidebarCollapse />
           </template>
 
           <template #right>
-            <UTooltip text="Notifications" :shortcuts="['N']">
+            <PTooltip text="Notifications" :shortcuts="['N']">
               <PButton color="neutral" variant="ghost" square aria-label="Notifications">
-                <UChip color="error" inset>
-                  <UIcon :name="studioIcons.bell" class="size-5 shrink-0" />
-                </UChip>
+                <PChip color="error" inset>
+                  <PIcon :name="studioIcons.bell" class="size-5 shrink-0" />
+                </PChip>
               </PButton>
-            </UTooltip>
+            </PTooltip>
 
             <PButton
               v-if="page === 'customers'"
               label="New customer"
               :icon="appConfig.ui.icons.plus"
             />
-            <UDropdownMenu v-else :items="newItems">
+            <PDropdownMenu v-else :items="newItems">
               <PButton :icon="appConfig.ui.icons.plus" class="rounded-full" aria-label="New" />
-            </UDropdownMenu>
+            </PDropdownMenu>
           </template>
-        </UDashboardNavbar>
+        </PDashboardNavbar>
 
-        <UDashboardToolbar v-if="page === 'home'">
+        <PDashboardToolbar v-if="page === 'home'">
           <template #left>
-            <UPopover :content="{ align: 'start' }">
+            <PPopover :content="{ align: 'start' }">
               <PButton
                 color="neutral"
                 variant="ghost"
                 :icon="studioIcons.calendar"
-                class="-ms-1 group data-[state=open]:bg-elevated"
+                class="-ms-1 group data-[state=open]:bg-background-elevated"
               >
                 <span class="truncate">{{ dateRangeLabel }}</span>
 
                 <template #trailing>
-                  <UIcon
+                  <PIcon
                     :name="appConfig.ui.icons.chevronDown"
-                    class="shrink-0 text-dimmed size-5 group-data-[state=open]:rotate-180 transition-transform duration-200"
+                    class="shrink-0 color-text-dimmed size-5 group-data-[state=open]:rotate-180 transition-transform duration-200"
                   />
                 </template>
               </PButton>
 
               <template #content>
-                <div class="flex items-stretch sm:divide-x divide-default">
+                <div class="flex items-stretch sm:divide-x divide-border">
                   <div class="hidden sm:flex flex-col justify-center">
                     <PButton
                       v-for="range in dateRanges"
@@ -811,22 +811,22 @@ const pageTitles: Record<Page, string> = {
                       color="neutral"
                       variant="ghost"
                       class="rounded-none px-4"
-                      :class="isDateRangeSelected(range) ? 'bg-elevated' : 'hover:bg-elevated/50'"
+                      :class="isDateRangeSelected(range) ? 'bg-background-elevated' : 'hover:bg-background-elevated/50'"
                       truncate
                       @click="selectDateRange(range)"
                     />
                   </div>
 
-                  <UCalendar v-model="selectedDateRange" class="p-2" :number-of-months="2" range />
+                  <PCalendar v-model="selectedDateRange" class="p-2" :number-of-months="2" range />
                 </div>
               </template>
-            </UPopover>
+            </PPopover>
 
-            <USelect
+            <PSelect
               v-model="period"
               :items="periodItems"
               variant="ghost"
-              class="data-[state=open]:bg-elevated"
+              class="data-[state=open]:bg-background-elevated"
               :ui="{
                 value: 'capitalize',
                 itemLabel: 'capitalize',
@@ -834,11 +834,11 @@ const pageTitles: Record<Page, string> = {
               }"
             />
           </template>
-        </UDashboardToolbar>
+        </PDashboardToolbar>
 
-        <UDashboardToolbar v-else-if="page === 'settings'">
-          <UNavigationMenu :items="settingsLinks" highlight class="-mx-1 flex-1" />
-        </UDashboardToolbar>
+        <PDashboardToolbar v-else-if="page === 'settings'">
+          <PNavigationMenu :items="settingsLinks" highlight class="-mx-1 flex-1" />
+        </PDashboardToolbar>
       </template>
 
       <template #body>
@@ -847,8 +847,8 @@ const pageTitles: Record<Page, string> = {
         <!-- shrink-0 everywhere: the panel body is a scrollable flex column,
              and a shrinking child gets crushed into its own overflow-hidden -->
         <template v-if="page === 'home'">
-          <UPageGrid class="shrink-0 grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-px">
-            <UPageCard
+          <PPageGrid class="shrink-0 grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-px">
+            <PPageCard
               v-for="stat in stats"
               :key="stat.title"
               :icon="stat.icon"
@@ -857,13 +857,13 @@ const pageTitles: Record<Page, string> = {
                 container: 'gap-y-1.5',
                 wrapper: 'items-start',
                 leading: 'p-2.5 rounded-full bg-primary/10 ring ring-inset ring-primary/25 flex-col',
-                title: 'font-normal text-muted text-xs uppercase'
+                title: 'font-normal color-text-muted text-xs uppercase'
               }"
               variant="subtle"
               class="xl:rounded-none xl:first:rounded-l-lg xl:last:rounded-r-lg"
             >
               <div class="flex items-center gap-2 flex-wrap min-w-0">
-                <span class="text-2xl font-semibold text-highlighted">
+                <span class="text-2xl font-semibold color-text-highlighted">
                   {{ stat.value }}
                 </span>
 
@@ -871,16 +871,16 @@ const pageTitles: Record<Page, string> = {
                   {{ stat.variation > 0 ? '+' : '' }}{{ stat.variation }}%
                 </PBadge>
               </div>
-            </UPageCard>
-          </UPageGrid>
+            </PPageCard>
+          </PPageGrid>
 
-          <UCard class="shrink-0" :ui="{ body: 'px-0! pt-0! pb-3!' }">
+          <PCard class="shrink-0" :ui="{ body: 'px-0! pt-0! pb-3!' }">
             <template #header>
               <div>
-                <p class="text-xs text-muted uppercase mb-1.5">
+                <p class="text-xs color-text-muted uppercase mb-1.5">
                   Revenue
                 </p>
-                <p class="text-3xl text-highlighted font-semibold">
+                <p class="text-3xl color-text-highlighted font-semibold">
                   {{ revenueTotal }}
                 </p>
               </div>
@@ -902,10 +902,10 @@ const pageTitles: Record<Page, string> = {
               />
             </svg>
 
-            <div class="flex items-center justify-between px-4 sm:px-6 pt-2 text-xs text-dimmed">
+            <div class="flex items-center justify-between px-4 sm:px-6 pt-2 text-xs color-text-dimmed">
               <span v-for="tick in chartTicks" :key="tick">{{ tick }}</span>
             </div>
-          </UCard>
+          </PCard>
 
           <PTable
             :data="sales"
@@ -913,7 +913,7 @@ const pageTitles: Record<Page, string> = {
             class="shrink-0"
             :ui="{
               base: 'table-fixed border-separate border-spacing-0',
-              thead: '[&>tr]:bg-elevated/50 [&>tr]:after:content-none',
+              thead: '[&>tr]:bg-background-elevated/50 [&>tr]:after:content-none',
               tbody: '[&>tr]:last:[&>td]:border-b-0',
               th: 'first:rounded-l-lg last:rounded-r-lg border-y border-border first:border-l last:border-r',
               td: 'border-b border-border'
@@ -923,7 +923,7 @@ const pageTitles: Record<Page, string> = {
 
         <template v-else-if="page === 'customers'">
           <div class="flex flex-wrap items-center justify-between gap-1.5 shrink-0">
-            <UInput
+            <PInput
               v-model="customerEmailFilter"
               class="max-w-sm"
               :icon="appConfig.ui.icons.search"
@@ -939,11 +939,11 @@ const pageTitles: Record<Page, string> = {
                 :icon="studioIcons.trash"
               >
                 <template #trailing>
-                  <UKbd>{{ selectedCustomersCount }}</UKbd>
+                  <PKbd>{{ selectedCustomersCount }}</PKbd>
                 </template>
               </PButton>
 
-              <USelect
+              <PSelect
                 v-model="customerStatusFilter"
                 :items="customerStatusItems"
                 :ui="{ trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200' }"
@@ -951,14 +951,14 @@ const pageTitles: Record<Page, string> = {
                 class="min-w-28"
               />
 
-              <UDropdownMenu :items="customerDisplayItems" :content="{ align: 'end' }" :ui="{ itemLabel: 'capitalize' }">
+              <PDropdownMenu :items="customerDisplayItems" :content="{ align: 'end' }" :ui="{ itemLabel: 'capitalize' }">
                 <PButton
                   label="Display"
                   color="neutral"
                   variant="outline"
                   :trailing-icon="studioIcons.options"
                 />
-              </UDropdownMenu>
+              </PDropdownMenu>
             </div>
           </div>
 
@@ -970,7 +970,7 @@ const pageTitles: Record<Page, string> = {
             class="shrink-0"
             :ui="{
               base: 'table-fixed border-separate border-spacing-0',
-              thead: '[&>tr]:bg-elevated/50 [&>tr]:after:content-none',
+              thead: '[&>tr]:bg-background-elevated/50 [&>tr]:after:content-none',
               tbody: '[&>tr]:last:[&>td]:border-b-0',
               th: 'py-2 first:rounded-l-lg last:rounded-r-lg border-y border-border first:border-l last:border-r',
               td: 'border-b border-border'
@@ -978,11 +978,11 @@ const pageTitles: Record<Page, string> = {
           />
 
           <div class="flex items-center justify-between gap-3 border-t border-border pt-4 mt-auto shrink-0">
-            <div class="text-sm text-muted">
+            <div class="text-sm color-text-muted">
               {{ selectedCustomersCount }} of {{ displayedCustomers.length }} row(s) selected.
             </div>
 
-            <UPagination
+            <PPagination
               v-model:page="customerPage"
               :items-per-page="5"
               :total="displayedCustomers.length"
@@ -992,16 +992,16 @@ const pageTitles: Record<Page, string> = {
 
         <div v-else-if="page === 'settings'" class="flex flex-col gap-4 sm:gap-6 w-full lg:max-w-2xl mx-auto shrink-0">
           <template v-if="settingsSection === 'general'">
-            <UPageCard
+            <PPageCard
               title="Profile"
               description="These informations will be displayed publicly."
               variant="naked"
               orientation="horizontal"
             >
               <PButton label="Save changes" color="neutral" class="w-fit lg:ms-auto" />
-            </UPageCard>
+            </PPageCard>
 
-            <UPageCard variant="subtle">
+            <PPageCard variant="subtle">
               <template v-for="(field, index) in profileFields" :key="field.name">
                 <PSeparator v-if="index > 0" />
 
@@ -1012,7 +1012,7 @@ const pageTitles: Record<Page, string> = {
                   required
                   class="flex max-sm:flex-col justify-between items-start gap-4"
                 >
-                  <UInput v-model="profile[field.name]" autocomplete="off" />
+                  <PInput v-model="profile[field.name]" autocomplete="off" />
                 </PFormField>
               </template>
               <PSeparator />
@@ -1023,21 +1023,21 @@ const pageTitles: Record<Page, string> = {
                 class="flex max-sm:flex-col justify-between items-start gap-4"
                 :ui="{ container: 'w-full' }"
               >
-                <UTextarea v-model="profile.bio" :rows="4" autoresize class="w-full" />
+                <PTextarea v-model="profile.bio" :rows="4" autoresize class="w-full" />
               </PFormField>
-            </UPageCard>
+            </PPageCard>
           </template>
 
           <template v-else-if="settingsSection === 'notifications'">
             <div v-for="(section, index) in notificationSections" :key="index">
-              <UPageCard
+              <PPageCard
                 :title="section.title"
                 :description="section.description"
                 variant="naked"
                 class="mb-4"
               />
 
-              <UPageCard variant="subtle" :ui="{ container: 'divide-y divide-default' }">
+              <PPageCard variant="subtle" :ui="{ container: 'divide-y divide-border' }">
                 <PFormField
                   v-for="field in section.fields"
                   :key="field.name"
@@ -1046,26 +1046,26 @@ const pageTitles: Record<Page, string> = {
                   :description="field.description"
                   class="flex items-center justify-between not-last:pb-4 gap-2"
                 >
-                  <USwitch v-model="notificationsState[field.name]" />
+                  <PSwitch v-model="notificationsState[field.name]" />
                 </PFormField>
-              </UPageCard>
+              </PPageCard>
             </div>
           </template>
 
           <template v-else>
-            <UPageCard
+            <PPageCard
               title="Password"
               description="Confirm your current password before setting a new one."
               variant="subtle"
             >
               <div class="flex flex-col gap-4 max-w-xs">
-                <UInput
+                <PInput
                   v-model="password.current"
                   type="password"
                   placeholder="Current password"
                   class="w-full"
                 />
-                <UInput
+                <PInput
                   v-model="password.new"
                   type="password"
                   placeholder="New password"
@@ -1074,9 +1074,9 @@ const pageTitles: Record<Page, string> = {
 
                 <PButton label="Update" class="w-fit" />
               </div>
-            </UPageCard>
+            </PPageCard>
 
-            <UPageCard
+            <PPageCard
               title="Account"
               description="No longer want to use our service? You can delete your account here. This action is not reversible. All information related to this account will be deleted permanently."
               class="bg-linear-to-tl from-error/10 from-5% to-default"
@@ -1084,10 +1084,10 @@ const pageTitles: Record<Page, string> = {
               <template #footer>
                 <PButton label="Delete account" color="error" />
               </template>
-            </UPageCard>
+            </PPageCard>
           </template>
         </div>
       </template>
-    </UDashboardPanel>
-  </UDashboardGroup>
+    </PDashboardPanel>
+  </PDashboardGroup>
 </template>

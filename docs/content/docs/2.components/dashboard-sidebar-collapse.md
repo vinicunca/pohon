@@ -1,6 +1,6 @@
 ---
 title: DashboardSidebarCollapse
-description: "A Button to collapse the sidebar on desktop."
+description: 'A Button to collapse the sidebar on desktop.'
 category: dashboard
 links:
   - label: Button
@@ -8,7 +8,7 @@ links:
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/DashboardSidebarCollapse.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/DashboardSidebarCollapse.vue
 ---
 
 ## Usage
@@ -21,15 +21,11 @@ It extends the [Button](/docs/components/button) component, so you can pass any 
 
 ::component-code
 ---
-
 ignore:
-
-- variant
-  props:
+  - variant
+props:
   variant: 'subtle'
-
 ---
-
 ::
 
 ::note
@@ -44,17 +40,17 @@ You can put this component in the `header` slot of the [DashboardSidebar](/docs/
 
 ```vue [layouts/dashboard.vue]{4-8}
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar collapsible>
+  <PDashboardGroup>
+    <PDashboardSidebar collapsible>
       <template #header="{ collapsed }">
         <Logo v-if="!collapsed" />
 
-        <UDashboardSidebarCollapse variant="subtle" />
+        <PDashboardSidebarCollapse variant="subtle" />
       </template>
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
     <slot />
-  </UDashboardGroup>
+  </PDashboardGroup>
 </template>
 ```
 
@@ -65,20 +61,20 @@ You can put this component in the `leading` slot of the [DashboardNavbar](/docs/
 ```vue [pages/index.vue]{11-13}
 <script setup lang="ts">
 definePageMeta({
-  layout: "dashboard",
-});
+  layout: 'dashboard'
+})
 </script>
 
 <template>
-  <UDashboardPanel>
+  <PDashboardPanel>
     <template #header>
-      <UDashboardNavbar title="Home">
+      <PDashboardNavbar title="Home">
         <template #leading>
-          <UDashboardSidebarCollapse variant="subtle" />
+          <PDashboardSidebarCollapse variant="subtle" />
         </template>
-      </UDashboardNavbar>
+      </PDashboardNavbar>
     </template>
-  </UDashboardPanel>
+  </PDashboardPanel>
 </template>
 ```
 

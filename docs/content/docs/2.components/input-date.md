@@ -1,6 +1,6 @@
 ---
 title: InputDate
-description: "An input component for date selection."
+description: 'An input component for date selection.'
 category: form
 keywords:
   - date picker
@@ -8,11 +8,11 @@ keywords:
   - calendar input
 links:
   - label: DateField
-    icon: i-custom-reka-ui
+    icon: i-lucide-box
     to: https://akar.vinicunca.dev/docs/components/date-field
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/InputDate.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/InputDate.vue
 ---
 
 ## Usage
@@ -21,38 +21,30 @@ Use the `v-model` directive to control the selected date.
 
 ::component-code
 ---
-
 cast:
-modelValue: DateValue
+  modelValue: DateValue
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: [2022, 2, 3]
-
 ---
-
 ::
 
 Use the `default-value` prop to set the initial value when you do not need to control its state.
 
 ::component-code
 ---
-
 cast:
-defaultValue: DateValue
+  defaultValue: DateValue
 ignore:
-
-- defaultValue
-  external:
-- defaultValue
-  props:
+  - defaultValue
+external:
+  - defaultValue
+props:
   defaultValue: [2022, 2, 6]
-
 ---
-
 ::
 
 ::framework-only
@@ -73,25 +65,21 @@ Use the `range` prop to select a range of dates.
 
 ::component-code
 ---
-
 prettier: true
 cast:
-modelValue: DateRange
+  modelValue: DateRange
 ignore:
-
-- range
-- modelValue.start
-- modelValue.end
-  external:
-- modelValue
-  props:
+  - range
+  - modelValue.start
+  - modelValue.end
+external:
+  - modelValue
+props:
   range: true
   modelValue:
-  start: [2022, 2, 3]
-  end: [2022, 2, 20]
-
+    start: [2022, 2, 3]
+    end: [2022, 2, 20]
 ---
-
 ::
 
 ### Color
@@ -100,12 +88,10 @@ Use the `color` prop to change the color of the InputDate.
 
 ::component-code
 ---
-
 props:
-color: neutral
-highlight: true
+  color: neutral
+  highlight: true
 ---
-
 ::
 
 ### Variant
@@ -114,11 +100,9 @@ Use the `variant` prop to change the variant of the InputDate.
 
 ::component-code
 ---
-
 props:
-variant: subtle
+  variant: subtle
 ---
-
 ::
 
 ### Size
@@ -127,11 +111,9 @@ Use the `size` prop to change the size of the InputDate.
 
 ::component-code
 ---
-
 props:
-size: xl
+  size: xl
 ---
-
 ::
 
 ### Icon
@@ -140,11 +122,9 @@ Use the `icon` prop to show an [Icon](/docs/components/icon) inside the InputDat
 
 ::component-code
 ---
-
 props:
-icon: 'i-lucide-calendar'
+  icon: 'i-lucide-calendar'
 ---
-
 ::
 
 ::note
@@ -157,16 +137,12 @@ Use the `separator-icon` prop to change the [Icon](/docs/components/icon) of the
 
 ::component-code
 ---
-
 ignore:
-
-- range
-  props:
+  - range
+props:
   range: true
   separatorIcon: 'i-lucide-arrow-right'
-
 ---
-
 ::
 
 ::framework-only
@@ -187,20 +163,16 @@ Use the `avatar` prop to show an [Avatar](/docs/components/avatar) inside the In
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- avatar.loading
-  props:
+  - avatar.loading
+props:
   avatar:
-  src: 'https://github.com/vuejs.png'
-  loading: lazy
+    src: 'https://github.com/vuejs.png'
+    loading: lazy
   size: md
   variant: outline
-
 ---
-
 ::
 
 ### Disabled
@@ -209,11 +181,9 @@ Use the `disabled` prop to disable the InputDate.
 
 ::component-code
 ---
-
 props:
-disabled: true
+  disabled: true
 ---
-
 ::
 
 ## Examples
@@ -224,10 +194,8 @@ Use the `is-date-unavailable` prop with a function to mark specific dates as una
 
 ::component-example
 ---
-
 name: 'input-date-unavailable-dates-example'
 ---
-
 ::
 
 ### With min/max dates
@@ -236,10 +204,8 @@ Use the `min-value` and `max-value` props to limit the dates.
 
 ::component-example
 ---
-
 name: 'input-date-min-max-dates-example'
 ---
-
 ::
 
 ### As a date picker
@@ -248,10 +214,8 @@ Use a [Calendar](/docs/components/calendar) and a [Popover](/docs/components/pop
 
 ::component-example
 ---
-
 name: 'input-date-date-picker-example'
 ---
-
 ::
 
 ### As a date range picker
@@ -260,10 +224,8 @@ Use a [Calendar](/docs/components/calendar) and a [Popover](/docs/components/pop
 
 ::component-example
 ---
-
 name: 'input-date-date-range-picker-example'
 ---
-
 ::
 
 ## API

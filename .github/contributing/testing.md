@@ -1,5 +1,3 @@
-<!-- eslint-disable sonar/no-dead-store -->
-
 # Testing
 
 Component tests use Vitest with Vue Test Utils and snapshot testing.
@@ -11,51 +9,45 @@ Tests live in `test/components/` matching the component name (e.g., `Button.spec
 ## Basic Test Structure
 
 ```ts
-import { mountSuspended } from "@nuxt/test-utils/runtime";
-import { describe, expect, it } from "vitest";
-import { axe } from "vitest-axe";
-import theme from "#build/ui/component-name";
-import ComponentName from "../../src/runtime/components/ComponentName.vue";
-import { renderEach } from "../component-render";
+import { describe, it, expect } from 'vitest'
+import { axe } from 'vitest-axe'
+import { mountSuspended } from '@nuxt/test-utils/runtime'
+import ComponentName from '../../src/runtime/components/ComponentName.vue'
+import { renderEach } from '../component-render'
+import theme from '#build/ui/component-name'
 
-describe("ComponentName", () => {
+describe('ComponentName', () => {
   // Extract variant keys for dynamic testing
-  const sizes = Object.keys(theme.variants.size) as any;
-  const variants = Object.keys(theme.variants.variant) as any;
+  const sizes = Object.keys(theme.variants.size) as any
+  const variants = Object.keys(theme.variants.variant) as any
 
   renderEach(ComponentName, [
     // Props
-    ["with label", { props: { label: "Label" } }],
-    ...sizes.map((size: string) => [
-      `with size ${size}`,
-      { props: { label: "Label", size } },
-    ]),
-    ...variants.map((variant: string) => [
-      `with variant ${variant}`,
-      { props: { label: "Label", variant } },
-    ]),
-    ["with icon", { props: { icon: "i-lucide-rocket" } }],
-    ["with disabled", { props: { label: "Label", disabled: true } }],
-    ["with class", { props: { label: "Label", class: "custom-class" } }],
-    ["with ui", { props: { label: "Label", ui: { base: "font-700" } } }],
+    ['with label', { props: { label: 'Label' } }],
+    ...sizes.map((size: string) => [`with size ${size}`, { props: { label: 'Label', size } }]),
+    ...variants.map((variant: string) => [`with variant ${variant}`, { props: { label: 'Label', variant } }]),
+    ['with icon', { props: { icon: 'i-lucide-rocket' } }],
+    ['with disabled', { props: { label: 'Label', disabled: true } }],
+    ['with class', { props: { label: 'Label', class: 'custom-class' } }],
+    ['with ui', { props: { label: 'Label', ui: { base: 'font-bold' } } }],
 
     // Slots
-    ["with default slot", { slots: { default: () => "Default slot" } }],
-    ["with leading slot", { slots: { leading: () => "Leading slot" } }],
-    ["with trailing slot", { slots: { trailing: () => "Trailing slot" } }],
-  ]);
+    ['with default slot', { slots: { default: () => 'Default slot' } }],
+    ['with leading slot', { slots: { leading: () => 'Leading slot' } }],
+    ['with trailing slot', { slots: { trailing: () => 'Trailing slot' } }]
+  ])
 
   // Accessibility test
-  it("passes accessibility tests", async () => {
+  it('passes accessibility tests', async () => {
     const wrapper = await mountSuspended(ComponentName, {
       props: {
-        label: "Accessible Label",
-      },
-    });
+        label: 'Accessible Label'
+      }
+    })
 
-    expect(await axe(wrapper.element)).toHaveNoViolations();
-  });
-});
+    expect(await axe(wrapper.element)).toHaveNoViolations()
+  })
+})
 ```
 
 ## Testing Patterns
@@ -67,127 +59,103 @@ Test all significant prop combinations:
 ```ts
 renderEach(Button, [
   // Basic props
-  ["with label", { props: { label: "Button" } }],
+  ['with label', { props: { label: 'Button' } }],
 
   // All sizes
-  ...sizes.map((size: string) => [
-    `with size ${size}`,
-    { props: { label: "Button", size } },
-  ]),
+  ...sizes.map((size: string) => [`with size ${size}`, { props: { label: 'Button', size } }]),
 
   // All variants with primary color
-  ...variants.map((variant: string) => [
-    `with primary variant ${variant}`,
-    { props: { label: "Button", variant } },
-  ]),
+  ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { label: 'Button', variant } }]),
 
   // All variants with neutral color
-  ...variants.map((variant: string) => [
-    `with neutral variant ${variant}`,
-    { props: { label: "Button", variant, color: "neutral" } },
-  ]),
+  ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { label: 'Button', variant, color: 'neutral' } }]),
 
   // Icon variations
-  ["with icon", { props: { icon: "i-lucide-rocket" } }],
-  [
-    "with leading and icon",
-    { props: { leading: true, icon: "i-lucide-arrow-left" } },
-  ],
-  ["with leadingIcon", { props: { leadingIcon: "i-lucide-arrow-left" } }],
-  [
-    "with trailing and icon",
-    { props: { trailing: true, icon: "i-lucide-arrow-right" } },
-  ],
-  ["with trailingIcon", { props: { trailingIcon: "i-lucide-arrow-right" } }],
+  ['with icon', { props: { icon: 'i-lucide-rocket' } }],
+  ['with leading and icon', { props: { leading: true, icon: 'i-lucide-arrow-left' } }],
+  ['with leadingIcon', { props: { leadingIcon: 'i-lucide-arrow-left' } }],
+  ['with trailing and icon', { props: { trailing: true, icon: 'i-lucide-arrow-right' } }],
+  ['with trailingIcon', { props: { trailingIcon: 'i-lucide-arrow-right' } }],
 
   // States
-  ["with loading", { props: { loading: true } }],
-  ["with disabled", { props: { label: "Button", disabled: true } }],
+  ['with loading', { props: { loading: true } }],
+  ['with disabled', { props: { label: 'Button', disabled: true } }],
 
   // Customization
-  [
-    "with class",
-    { props: { label: "Button", class: "rounded-full font-700" } },
-  ],
-  ["with ui", { props: { label: "Button", ui: { label: "font-700" } } }],
-]);
+  ['with class', { props: { label: 'Button', class: 'rounded-full font-bold' } }],
+  ['with ui', { props: { label: 'Button', ui: { label: 'font-bold' } } }]
+])
 ```
 
 ### Slots Testing
 
 ```ts
 // Simple slot
-(["with default slot", { slots: { default: () => "Default slot" } }],
-  // Slot with props access
-  [
-    "with default slot using props",
-    {
-      slots: {
-        default: (props: any) => `UI: ${JSON.stringify(props.ui)}`,
-      },
-    },
-  ],
-  // Multiple slots
-  [
-    "with all slots",
-    {
-      slots: {
-        leading: () => "Leading",
-        default: () => "Default",
-        trailing: () => "Trailing",
-      },
-    },
-  ]);
+['with default slot', { slots: { default: () => 'Default slot' } }],
+
+// Slot with props access
+['with default slot using props', {
+  slots: {
+    default: (props: any) => `UI: ${JSON.stringify(props.ui)}`
+  }
+}],
+
+// Multiple slots
+['with all slots', {
+  slots: {
+    leading: () => 'Leading',
+    default: () => 'Default',
+    trailing: () => 'Trailing'
+  }
+}]
 ```
 
 ### Interactive Behavior Tests
 
 ```ts
-test("with loading-auto works", async () => {
-  let resolve: any | null = null;
+test('with loading-auto works', async () => {
+  let resolve: any | null = null
   const wrapper = await mountSuspended({
     components: { Button },
     setup() {
       function onClick() {
-        return new Promise((res) => {
-          resolve = res;
-        });
+        return new Promise(res => resolve = res)
       }
-      return { onClick };
+      return { onClick }
     },
-    template: '<Button loading-auto @click="onClick">Click</Button>',
-  });
+    template: `<Button loading-auto @click="onClick">Click</Button>`
+  })
 
-  const button = wrapper.find("button");
-  button.trigger("click");
-  await flushPromises();
+  const button = wrapper.find('button')
+  button.trigger('click')
+  await flushPromises()
 
-  const icon = wrapper.findComponent({ name: "Icon" });
-  expect(icon.classes()).toContain("animate-spin");
+  const icon = wrapper.findComponent({ name: 'Icon' })
+  expect(icon.classes()).toContain('animate-spin')
 
-  resolve?.(null);
-});
+  resolve?.(null)
+})
 ```
 
 ### Form Integration Tests
 
 ```ts
-test("works with PForm", async () => {
+test('works with PForm', async () => {
   const wrapper = await mountSuspended({
     components: { Input, PForm },
     setup() {
-      const form = ref();
-      return { form };
+      const form = ref()
+      return { form }
     },
     template: `
       <PForm :state="{}" ref="form">
         <Input name="test" />
       </PForm>
-    `,
-  });
+    `
+  })
 
   // Test form integration
-});
+})
 ```
 
 ## Accessibility Testing
@@ -195,33 +163,28 @@ test("works with PForm", async () => {
 Always include accessibility tests:
 
 ```ts
-it("passes accessibility tests", async () => {
+it('passes accessibility tests', async () => {
   const wrapper = await mountSuspended(ComponentName, {
     props: {
       // Provide props that ensure accessible markup
-      label: "Accessible Label",
+      label: 'Accessible Label',
       // For images
       avatar: {
-        src: "https://example.com/image.png",
-        alt: "Description",
-      },
-    },
-  });
+        src: 'https://example.com/image.png',
+        alt: 'Description'
+      }
+    }
+  })
 
-  expect(await axe(wrapper.element)).toHaveNoViolations();
-});
+  expect(await axe(wrapper.element)).toHaveNoViolations()
+})
 ```
 
 ## Snapshot Updates
 
 When component changes require snapshot updates:
 
-1. Run tests: `pnpm run test`
-2. Review changes carefully
-3. Press `u` to update snapshots
-4. Commit updated snapshots
-
-**Never manually edit snapshot files.**
+Run `pnpm run test run -u <spec>` on the affected specs only, then review the snapshot diff before committing. Don't hand-edit snapshot files, regenerate them so they match the real render output.
 
 ## Running Tests
 
@@ -232,9 +195,10 @@ pnpm run test
 # Run specific test file
 pnpm run test Button
 
-# Run with coverage
-pnpm run test -- --coverage
-
 # Watch mode
 pnpm run test -- --watch
 ```
+
+## Bundle Size
+
+`pnpm run size` builds the small Nuxt and Vue apps in `test/bundle` against the current `dist` and prints their client JS and CSS sizes. On pull requests, the `bundle-size` workflow measures both the base branch and the PR with the real build and comments the difference.

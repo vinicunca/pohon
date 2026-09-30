@@ -8,5 +8,5 @@ if (!page.value) {
 </script>
 
 <template>
-  <UContentToc :links="page?.body?.toc?.links" />
+  <PContentToc :links="page?.body?.toc?.links" />
 </template>

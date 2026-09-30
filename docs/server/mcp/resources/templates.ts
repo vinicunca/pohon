@@ -1,15 +1,15 @@
-import { queryCollection } from '@nuxt/content/server';
+import { queryCollection } from '@nuxt/content/server'
 
 export default defineMcpResource({
   uri: 'resource://pohon-ui/templates',
-  description: 'Complete list of available Pohon templates with categories',
+  description: 'Complete list of available Pohon UI templates with categories',
   cache: '1h',
   async handler(uri: URL) {
-    const event = useEvent();
+    const event = useEvent()
 
-    const templatesCollectionItems = await queryCollection(event, 'templates').first();
+    const templatesCollectionItems = await queryCollection(event, 'templates').first()
 
-    const templateListing = templatesCollectionItems?.items || [];
+    const templateListing = templatesCollectionItems?.items || []
 
     return {
       contents: [{
@@ -17,9 +17,9 @@ export default defineMcpResource({
         mimeType: 'application/json',
         text: JSON.stringify({
           templates: templateListing,
-          total: templateListing.length,
-        }, null, 2),
-      }],
-    };
-  },
-});
+          total: templateListing.length
+        }, null, 2)
+      }]
+    }
+  }
+})

@@ -7,11 +7,11 @@ defineShortcuts({
 </script>
 
 <template>
-  <USlideover v-model:open="open">
+  <PSlideover v-model:open="open">
     <PButton label="Open" color="neutral" variant="subtle" />
 
     <template #content>
       <Placeholder class="h-full m-4" />
     </template>
-  </USlideover>
+  </PSlideover>
 </template>

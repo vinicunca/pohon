@@ -11,17 +11,17 @@ const items = [
     level: 2
   },
   {
-    id: '/docs/getting-started#reka-ui',
+    id: '/docs/getting-started#akar',
     label: 'Akar',
     level: 3
   },
   {
-    id: '/docs/getting-started#tailwind-css',
+    id: '/docs/getting-started/installation/nuxt',
     label: 'UnoCSS',
     level: 3
   },
   {
-    id: '/docs/getting-started#tailwind-variants',
+    id: '/docs/getting-started#unocss-variants',
     label: 'UnoCSS Variants',
     level: 3
   },
@@ -43,5 +43,5 @@ function postFilter(searchTerm: string, items: any[]) {
 </script>
 
 <template>
-  <UCommandPalette :groups="[{ id: 'files', items, postFilter }]" class="flex-1" />
+  <PCommandPalette :groups="[{ id: 'files', items, postFilter }]" class="flex-1" />
 </template>

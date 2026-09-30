@@ -140,13 +140,13 @@ const items: EditorToolbarItem[][] = [
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     :extensions="[TextAlign.configure({ types: ['heading', 'paragraph'] })]"
     class="w-full min-h-37 flex flex-col gap-4"
   >
-    <UEditorToolbar :editor="editor" :items="items" class="sm:px-8 overflow-x-auto" />
-  </UEditor>
+    <PEditorToolbar :editor="editor" :items="items" class="sm:px-8 overflow-x-auto" />
+  </PEditor>
 </template>

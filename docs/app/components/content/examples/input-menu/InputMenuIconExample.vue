@@ -4,7 +4,7 @@ const value = ref('Backlog')
 </script>
 
 <template>
-  <UInputMenu
+  <PInputMenu
     v-model="value"
     :items="items"
     :ui="{

@@ -97,13 +97,13 @@ const columns: TableColumn<Payment>[] = [{
   >
     <div
       ref="title"
-      class="sticky left-0 z-10 flex items-end justify-between gap-4 p-6 bg-elevated/50"
+      class="sticky left-0 z-10 flex items-end justify-between gap-4 p-6 bg-background-elevated/50"
     >
       <div>
-        <h2 class="text-2xl font-bold text-highlighted">
+        <h2 class="text-2xl font-bold color-text-highlighted">
           Payments
         </h2>
-        <p class="text-muted">
+        <p class="color-text-muted">
           The title stays put while the wide table scrolls both axes under one scrollbar.
         </p>
       </div>

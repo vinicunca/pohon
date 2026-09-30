@@ -11,21 +11,21 @@ const shortcuts = [
 <template>
   <div>
     <div class="p-4">
-      <p class="font-semibold text-highlighted">
+      <p class="font-semibold color-text-highlighted">
         Shortcuts
       </p>
-      <p class="text-sm text-muted">
+      <p class="text-sm color-text-muted">
         Work faster with the keyboard.
       </p>
     </div>
 
     <PSeparator />
 
-    <ul class="divide-y divide-default">
+    <ul class="divide-y divide-border">
       <li v-for="shortcut in shortcuts" :key="shortcut.label" class="flex items-center justify-between px-4 py-2.5">
-        <span class="text-sm text-default">{{ shortcut.label }}</span>
+        <span class="text-sm color-text">{{ shortcut.label }}</span>
         <div class="flex gap-1">
-          <UKbd v-for="key in shortcut.keys" :key="key" :value="key" />
+          <PKbd v-for="key in shortcut.keys" :key="key" :value="key" />
         </div>
       </li>
     </ul>

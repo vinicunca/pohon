@@ -1,12 +1,12 @@
 ---
 title: ContentNavigation
-description: "An accordion-style navigation component for organizing page links."
+description: 'An accordion-style navigation component for organizing page links.'
 category: content
 framework: nuxt
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/content/ContentNavigation.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/content/ContentNavigation.vue
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
@@ -19,14 +19,12 @@ Use the `navigation` prop with the `navigation`{lang="ts-type"} value you get wh
 
 ::component-example
 ---
-
 name: 'content-navigation-example'
 class: 'h-96 overflow-y-auto'
 overflowHidden: true
 props:
-class: 'w-full'
+  class: 'w-full'
 ---
-
 ::
 
 ### Type
@@ -35,45 +33,41 @@ Set the `type` prop to `single` to only allow one item to be open at a time. Def
 
 ::component-code{prefix="content"}
 ---
-
 prettier: true
 collapse: true
 external:
-
-- navigation
-  externalTypes:
-- ContentNavigationLink[]
-  items:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+items:
   type:
-- 'single'
-- 'multiple'
-  hide:
-- class
-- navigation
-  props:
+  - 'single'
+  - 'multiple'
+hide:
+  - class
+  - navigation
+props:
   class: 'w-full'
   type: 'single'
   navigation:
-  - title: 'Guide'
-    icon: 'i-lucide-book-open'
-    path: '#getting-started'
-    children:
-    - title: 'Introduction'
-      path: '#introduction'
-      active: true
-    - title: 'Installation'
-      path: '#installation'
-  - title: 'Composables'
-    icon: 'i-lucide-database'
-    path: '#composables'
-    children:
-    - title: 'defineShortcuts'
-      path: '#defineshortcuts'
-    - title: 'useModal'
-      path: '#usemodal'
-
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+        - title: 'Introduction'
+          path: '#introduction'
+          active: true
+        - title: 'Installation'
+          path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+        - title: 'defineShortcuts'
+          path: '#defineshortcuts'
+        - title: 'useModal'
+          path: '#usemodal'
 ---
-
 ::
 
 ### Color
@@ -82,41 +76,37 @@ Use the `color` prop to change the color of the navigation links.
 
 ::component-code{prefix="content"}
 ---
-
 prettier: true
 collapse: true
 external:
-
-- navigation
-  externalTypes:
-- ContentNavigationLink[]
-  hide:
-- class
-- navigation
-  props:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
   class: 'w-full'
   color: 'neutral'
   navigation:
-  - title: 'Guide'
-    icon: 'i-lucide-book-open'
-    path: '#getting-started'
-    children:
-    - title: 'Introduction'
-      path: '#introduction'
-      active: true
-    - title: 'Installation'
-      path: '#installation'
-  - title: 'Composables'
-    icon: 'i-lucide-database'
-    path: '#composables'
-    children:
-    - title: 'defineShortcuts'
-      path: '#defineshortcuts'
-    - title: 'useModal'
-      path: '#usemodal'
-
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
-
 ::
 
 ### Variant
@@ -125,45 +115,41 @@ Use the `variant` prop to change the variant of the navigation links.
 
 ::component-code{prefix="content"}
 ---
-
 prettier: true
 collapse: true
 external:
-
-- navigation
-  externalTypes:
-- ContentNavigationLink[]
-  hide:
-- class
-- navigation
-  items:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+items:
   variant:
-- 'link'
-- 'pill'
-  props:
+  - 'link'
+  - 'pill'
+props:
   class: 'w-full'
   variant: 'link'
   navigation:
-  - title: 'Guide'
-    icon: 'i-lucide-book-open'
-    path: '#getting-started'
-    children:
-    - title: 'Introduction'
-      path: '#introduction'
-      active: true
-    - title: 'Installation'
-      path: '#installation'
-  - title: 'Composables'
-    icon: 'i-lucide-database'
-    path: '#composables'
-    children:
-    - title: 'defineShortcuts'
-      path: '#defineshortcuts'
-    - title: 'useModal'
-      path: '#usemodal'
-
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
-
 ::
 
 ### Highlight
@@ -174,44 +160,40 @@ Use the `highlight-color` prop to change the color of the border. It defaults to
 
 ::component-code{prefix="content"}
 ---
-
 prettier: true
 collapse: true
 external:
-
-- navigation
-  externalTypes:
-- ContentNavigationLink[]
-  hide:
-- class
-- navigation
-  props:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
   class: 'w-full'
   highlight: true
   highlightColor: 'primary'
   color: 'primary'
   variant: 'pill'
   navigation:
-  - title: 'Guide'
-    icon: 'i-lucide-book-open'
-    path: '#getting-started'
-    children:
-    - title: 'Introduction'
-      path: '#introduction'
-      active: true
-    - title: 'Installation'
-      path: '#installation'
-  - title: 'Composables'
-    icon: 'i-lucide-database'
-    path: '#composables'
-    children:
-    - title: 'defineShortcuts'
-      path: '#defineshortcuts'
-    - title: 'useModal'
-      path: '#usemodal'
-
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
-
 ::
 
 ### Trailing Icon
@@ -220,41 +202,37 @@ Use the `trailing-icon` prop to customize the trailing [Icon](/docs/components/i
 
 ::component-code{prefix="content"}
 ---
-
 prettier: true
 collapse: true
 external:
-
-- navigation
-  externalTypes:
-- ContentNavigationLink[]
-  hide:
-- class
-- navigation
-  props:
+  - navigation
+externalTypes:
+  - ContentNavigationLink[]
+hide:
+  - class
+  - navigation
+props:
   class: 'w-full'
   trailingIcon: 'i-lucide-arrow-up'
   navigation:
-  - title: 'Guide'
-    icon: 'i-lucide-book-open'
-    path: '#getting-started'
-    children:
-    - title: 'Introduction'
-      path: '#introduction'
-      active: true
-    - title: 'Installation'
-      path: '#installation'
-  - title: 'Composables'
-    icon: 'i-lucide-database'
-    path: '#composables'
-    children:
-    - title: 'defineShortcuts'
-      path: '#defineshortcuts'
-    - title: 'useModal'
-      path: '#usemodal'
-
+    - title: 'Guide'
+      icon: 'i-lucide-book-open'
+      path: '#getting-started'
+      children:
+      - title: 'Introduction'
+        path: '#introduction'
+        active: true
+      - title: 'Installation'
+        path: '#installation'
+    - title: 'Composables'
+      icon: 'i-lucide-database'
+      path: '#composables'
+      children:
+      - title: 'defineShortcuts'
+        path: '#defineshortcuts'
+      - title: 'useModal'
+        path: '#usemodal'
 ---
-
 ::
 
 ::tip{to="/docs/getting-started/integrations/icons/nuxt#theme"}
@@ -269,21 +247,21 @@ Use the ContentNavigation component inside a [PageAside](/docs/components/page-a
 
 ```vue [layouts/docs.vue]{11}
 <script setup lang="ts">
-import type { ContentNavigationItem } from "@nuxt/content";
+import type { ContentNavigationItem } from '@nuxt/content'
 
-const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </script>
 
 <template>
-  <UPage>
+  <PPage>
     <template #left>
-      <UPageAside>
-        <UContentNavigation :navigation="navigation" highlight />
-      </UPageAside>
+      <PPageAside>
+        <PContentNavigation :navigation="navigation" highlight />
+      </PPageAside>
     </template>
 
     <slot />
-  </UPage>
+  </PPage>
 </template>
 ```
 
@@ -293,17 +271,17 @@ Use the ContentNavigation component inside the `content` slot of a [Header](/doc
 
 ```vue [components/Header.vue]{9-11}
 <script setup lang="ts">
-import type { ContentNavigationItem } from "@nuxt/content";
+import type { ContentNavigationItem } from '@nuxt/content'
 
-const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </script>
 
 <template>
-  <UHeader>
+  <PHeader>
     <template #body>
-      <UContentNavigation :navigation="navigation" highlight />
+      <PContentNavigation :navigation="navigation" highlight />
     </template>
-  </UHeader>
+  </PHeader>
 </template>
 ```
 

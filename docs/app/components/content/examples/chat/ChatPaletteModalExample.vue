@@ -5,15 +5,18 @@ import { useChat } from '@ai-sdk/vue'
 import { isPartStreaming } from 'pohon-ui/utils/ai'
 import { Markdown } from '@comark/vue'
 import shiki from '@comark/vue/plugins/shiki'
+import security from '@comark/vue/plugins/security'
+
+const plugins = [shiki(), security({ blockedTags: ['script', 'style', 'iframe', 'object', 'embed', 'form'] })]
 
 const initialMessages: UIMessage[] = [{
   id: '1',
   role: 'user',
-  parts: [{ type: 'text', text: 'What is Pohon?' }]
+  parts: [{ type: 'text', text: 'What is Pohon UI?' }]
 }, {
   id: '2',
   role: 'assistant',
-  parts: [{ type: 'text', text: 'Pohon is a Vue component library built on Akar, UnoCSS, and UnoCSS Variants. It provides 125+ accessible components for building modern web apps.' }]
+  parts: [{ type: 'text', text: 'Pohon UI is a Vue component library built on Akar, UnoCSS, and UnoCSS Variants. It provides 125+ accessible components for building modern web apps.' }]
 }]
 const input = ref('')
 
@@ -47,11 +50,11 @@ const ui = {
 </script>
 
 <template>
-  <UModal open :ui="{ content: 'sm:max-w-3xl sm:h-[28rem]' }">
+  <PModal open :ui="{ content: 'sm:max-w-3xl sm:h-[28rem]' }">
     <template #content>
-      <UTheme :ui="ui">
-        <UChatPalette>
-          <UChatMessages
+      <PTheme :ui="ui">
+        <PChatPalette>
+          <PChatMessages
             :messages="messages"
             :status="status"
             :user="{ side: 'left', variant: 'naked', avatar: { src: 'https://github.com/benjamincanac.png', loading: 'lazy' as const } }"
@@ -64,7 +67,7 @@ const ui = {
                     v-if="message.role === 'assistant'"
                     :value="part.text"
                     :streaming="isPartStreaming(part)"
-                    :plugins="[shiki()]"
+                    :plugins="plugins"
                     class="*:first:mt-0 *:last:mb-0"
                   />
                   <p v-else-if="message.role === 'user'" class="whitespace-pre-wrap leading-6">
@@ -73,10 +76,10 @@ const ui = {
                 </template>
               </template>
             </template>
-          </UChatMessages>
+          </PChatMessages>
 
           <template #prompt>
-            <UChatPrompt
+            <PChatPrompt
               v-model="input"
               icon="i-lucide-search"
               variant="naked"
@@ -84,8 +87,8 @@ const ui = {
               @submit="onSubmit"
             />
           </template>
-        </UChatPalette>
-      </UTheme>
+        </PChatPalette>
+      </PTheme>
     </template>
-  </UModal>
+  </PModal>
 </template>

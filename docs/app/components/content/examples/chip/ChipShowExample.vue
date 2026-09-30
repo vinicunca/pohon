@@ -17,7 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <UChip :color="color" :show="show" inset>
-    <UAvatar src="https://github.com/benjamincanac.png" loading="lazy" />
-  </UChip>
+  <PChip :color="color" :show="show" inset>
+    <PAvatar src="https://github.com/benjamincanac.png" loading="lazy" />
+  </PChip>
 </template>

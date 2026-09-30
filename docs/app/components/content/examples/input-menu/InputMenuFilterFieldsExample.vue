@@ -22,7 +22,7 @@ function onOpen() {
 </script>
 
 <template>
-  <UInputMenu
+  <PInputMenu
     :items="users"
     :loading="status === 'pending'"
     :filter-fields="['label', 'email']"
@@ -32,7 +32,7 @@ function onOpen() {
     @update:open="onOpen"
   >
     <template #leading="{ modelValue, ui }">
-      <UAvatar
+      <PAvatar
         v-if="modelValue"
         v-bind="modelValue.avatar"
         :size="(ui.leadingAvatarSize() as AvatarProps['size'])"
@@ -43,9 +43,9 @@ function onOpen() {
     <template #item-label="{ item }">
       {{ item.label }}
 
-      <span class="text-muted">
+      <span class="color-text-muted">
         {{ item.email }}
       </span>
     </template>
-  </UInputMenu>
+  </PInputMenu>
 </template>

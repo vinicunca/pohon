@@ -4,7 +4,7 @@ import type { ContextMenuItem, TableColumn, TableRow } from 'pohon-ui'
 import { useClipboard } from '@vueuse/core'
 
 const PBadge = resolveComponent('PBadge')
-const UCheckbox = resolveComponent('UCheckbox')
+const PCheckbox = resolveComponent('PCheckbox')
 
 const toast = useToast()
 const { copy } = useClipboard()
@@ -51,12 +51,12 @@ const data = ref<Payment[]>([{
 
 const columns: TableColumn<Payment>[] = [{
   id: 'select',
-  header: ({ table }) => h(UCheckbox, {
+  header: ({ table }) => h(PCheckbox, {
     'modelValue': table.getIsSomePageRowsSelected() ? 'indeterminate' : table.getIsAllPageRowsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => table.toggleAllPageRowsSelected(!!value),
     'aria-label': 'Select all'
   }),
-  cell: ({ row }) => h(UCheckbox, {
+  cell: ({ row }) => h(PCheckbox, {
     'modelValue': row.getIsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => row.toggleSelected(!!value),
     'aria-label': 'Select row'
@@ -147,7 +147,7 @@ function onContextmenu(_e: Event, row: TableRow<Payment>) {
 </script>
 
 <template>
-  <UContextMenu :items="items">
+  <PContextMenu :items="items">
     <PTable
       :data="data"
       :columns="columns"
@@ -158,5 +158,5 @@ function onContextmenu(_e: Event, row: TableRow<Payment>) {
         <pre>{{ row.original }}</pre>
       </template>
     </PTable>
-  </UContextMenu>
+  </PContextMenu>
 </template>

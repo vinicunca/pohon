@@ -30,8 +30,11 @@ pnpm add ai @ai-sdk/gateway @ai-sdk/vue @comark/vue
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
-  modules: ["pohon-ui", "@comark/nuxt"],
-});
+  modules: [
+    'pohon-ui',
+    '@comark/nuxt'
+  ]
+})
 ```
 
 **Vue (Vite):** No module registration needed, import directly from `@comark/vue`.
@@ -54,54 +57,46 @@ html.dark .shiki span {
 
 ### Server endpoint
 
+These examples target AI SDK v7 (`instructions`, `toUIMessageStream`).
+
 Using [Vercel AI Gateway](https://vercel.com/ai-gateway) (recommended):
 
 ```ts [server/api/chat.post.ts]
-import {
-  streamText,
-  convertToModelMessages,
-  toUIMessageStream,
-  createUIMessageStreamResponse,
-} from "ai";
-import { gateway } from "@ai-sdk/gateway";
+import { streamText, convertToModelMessages, toUIMessageStream, createUIMessageStreamResponse } from 'ai'
+import { gateway } from '@ai-sdk/gateway'
 
 export default defineEventHandler(async (event) => {
-  const { messages } = await readBody(event);
+  const { messages } = await readBody(event)
 
   const result = streamText({
-    model: gateway("anthropic/claude-sonnet-5"),
-    instructions: "You are a helpful assistant.",
-    messages: await convertToModelMessages(messages),
-  });
+    model: gateway('anthropic/claude-sonnet-5'),
+    instructions: 'You are a helpful assistant.',
+    messages: await convertToModelMessages(messages)
+  })
 
-  const stream = toUIMessageStream({ stream: result.stream });
-  return createUIMessageStreamResponse({ stream });
-});
+  const stream = toUIMessageStream({ stream: result.stream })
+  return createUIMessageStreamResponse({ stream })
+})
 ```
 
 Or with a direct provider (e.g., `pnpm add @ai-sdk/openai`):
 
 ```ts [server/api/chat.post.ts]
-import {
-  streamText,
-  convertToModelMessages,
-  toUIMessageStream,
-  createUIMessageStreamResponse,
-} from "ai";
-import { openai } from "@ai-sdk/openai";
+import { streamText, convertToModelMessages, toUIMessageStream, createUIMessageStreamResponse } from 'ai'
+import { openai } from '@ai-sdk/openai'
 
 export default defineEventHandler(async (event) => {
-  const { messages } = await readBody(event);
+  const { messages } = await readBody(event)
 
   const result = streamText({
-    model: openai("gpt-5-nano"),
-    instructions: "You are a helpful assistant.",
-    messages: await convertToModelMessages(messages),
-  });
+    model: openai('gpt-5-nano'),
+    instructions: 'You are a helpful assistant.',
+    messages: await convertToModelMessages(messages)
+  })
 
-  const stream = toUIMessageStream({ stream: result.stream });
-  return createUIMessageStreamResponse({ stream });
-});
+  const stream = toUIMessageStream({ stream: result.stream })
+  return createUIMessageStreamResponse({ stream })
+})
 ```
 
 ## Component tree
@@ -120,25 +115,25 @@ PDashboardPanel
 
 ```vue [pages/chat/[id].vue]
 <script setup lang="ts">
-import { isReasoningUIPart, isTextUIPart, isToolUIPart, getToolName } from "ai";
-import { useChat } from "@ai-sdk/vue";
-import { isPartStreaming, isToolStreaming } from "pohon-ui/utils/ai";
-import highlight from "@comark/nuxt/plugins/highlight";
+import { isReasoningUIPart, isTextUIPart, isToolUIPart, getToolName } from 'ai'
+import { useChat } from '@ai-sdk/vue'
+import { isPartStreaming, isToolStreaming } from 'pohon-ui/utils/ai'
+import highlight from '@comark/nuxt/plugins/highlight'
 
-definePageMeta({ layout: "dashboard" });
+definePageMeta({ layout: 'dashboard' })
 
-const input = ref("");
+const input = ref('')
 
 const { messages, status, error, sendMessage, stop, regenerate } = useChat({
   onError(error) {
-    console.error(error);
-  },
-});
+    console.error(error)
+  }
+})
 
 function onSubmit() {
-  if (!input.value.trim()) return;
-  sendMessage({ text: input.value });
-  input.value = "";
+  if (!input.value.trim()) return
+  sendMessage({ text: input.value })
+  input.value = ''
 }
 </script>
 
@@ -152,10 +147,7 @@ function onSubmit() {
       <PContainer>
         <PChatMessages :messages="messages" :status="status">
           <template #content="{ message }">
-            <template
-              v-for="(part, index) in message.parts"
-              :key="`${message.id}-${part.type}-${index}`"
-            >
+            <template v-for="(part, index) in message.parts" :key="`${message.id}-${part.type}-${index}`">
               <PChatReasoning
                 v-if="isReasoningUIPart(part)"
                 :text="part.text"
@@ -183,10 +175,7 @@ function onSubmit() {
                   :plugins="[highlight()]"
                   class="*:first:mt-0 *:last:mb-0"
                 />
-                <p
-                  v-else-if="message.role === 'user'"
-                  class="whitespace-pre-wrap"
-                >
+                <p v-else-if="message.role === 'user'" class="whitespace-pre-wrap">
                   {{ part.text }}
                 </p>
               </template>
@@ -199,11 +188,7 @@ function onSubmit() {
     <template #footer>
       <PContainer class="pb-4 sm:pb-6">
         <PChatPrompt v-model="input" :error="error" @submit="onSubmit">
-          <PChatPromptSubmit
-            :status="status"
-            @stop="stop()"
-            @reload="regenerate()"
-          />
+          <PChatPromptSubmit :status="status" @stop="stop()" @reload="regenerate()" />
         </PChatPrompt>
       </PContainer>
     </template>
@@ -217,7 +202,7 @@ function onSubmit() {
 - `PChatMessage` — individual bubble. Props: `message`, `side` (`'left'`/`'right'`).
 - `PChatReasoning` — collapsible reasoning block. Auto-opens during streaming, auto-closes when done. Use `isPartStreaming(part)` from `pohon-ui/utils/ai`.
 - `PChatTool` — tool invocation status. Use `isToolStreaming(part)`. Variants: `'inline'` (default), `'card'`.
-- `PChatPrompt` — enhanced textarea. Accepts all Textarea props + `error` prop.
+- `PChatPrompt` — enhanced textarea for chat. Its typed API exposes a selected subset of `PTextarea` props, forwards additional attributes to the underlying textarea, and adds chat-specific props such as `error` and `submitOnEnter`.
 - `PChatPromptSubmit` — submit button with automatic status handling (send/stop/reload).
 - `PChatPalette` — layout wrapper for chat inside overlays.
 

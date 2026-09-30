@@ -8,10 +8,10 @@ const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
   <div class="p-4 space-y-4">
     <div class="flex items-start justify-between">
       <div>
-        <p class="text-sm text-muted">
+        <p class="text-sm color-text-muted">
           Visitors
         </p>
-        <p class="text-2xl font-semibold text-highlighted">
+        <p class="text-2xl font-semibold color-text-highlighted">
           418.2K
         </p>
       </div>
@@ -30,7 +30,7 @@ const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
         />
       </div>
       <div class="flex gap-1.5 mt-1.5">
-        <span v-for="(day, index) in days" :key="index" class="flex-1 text-center text-xs text-muted">
+        <span v-for="(day, index) in days" :key="index" class="flex-1 text-center text-xs color-text-muted">
           {{ day }}
         </span>
       </div>

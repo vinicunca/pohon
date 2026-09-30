@@ -1,5 +1,5 @@
 <template>
-  <UTheme
+  <PTheme
     :ui="{
       button: {
         base: 'rounded-full'
@@ -11,5 +11,5 @@
       <PButton label="Button" color="neutral" variant="outline" />
       <PButton label="Button" color="neutral" variant="subtle" />
     </div>
-  </UTheme>
+  </PTheme>
 </template>

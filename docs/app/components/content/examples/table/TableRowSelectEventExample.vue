@@ -3,7 +3,7 @@ import { h, resolveComponent } from 'vue'
 import type { TableColumn, TableRow } from 'pohon-ui'
 
 const PBadge = resolveComponent('PBadge')
-const UCheckbox = resolveComponent('UCheckbox')
+const PCheckbox = resolveComponent('PCheckbox')
 
 type Payment = {
   id: string
@@ -47,12 +47,12 @@ const data = ref<Payment[]>([{
 
 const columns: TableColumn<Payment>[] = [{
   id: 'select',
-  header: ({ table }) => h(UCheckbox, {
+  header: ({ table }) => h(PCheckbox, {
     'modelValue': table.getIsSomePageRowsSelected() ? 'indeterminate' : table.getIsAllPageRowsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => table.toggleAllPageRowsSelected(!!value),
     'aria-label': 'Select all'
   }),
-  cell: ({ row }) => h(UCheckbox, {
+  cell: ({ row }) => h(PCheckbox, {
     'modelValue': row.getIsSelected(),
     'onUpdate:modelValue': (value: boolean | 'indeterminate') => row.toggleSelected(!!value),
     'aria-label': 'Select row'
@@ -123,7 +123,7 @@ function onSelect(e: Event, row: TableRow<Payment>) {
         @select="onSelect"
       />
 
-      <div class="px-4 py-3.5 border-t border-accented text-sm text-muted">
+      <div class="px-4 py-3.5 border-t border-border-accented text-sm color-text-muted">
         {{ table?.tableApi?.getFilteredSelectedRowModel().rows.length || 0 }} of
         {{ table?.tableApi?.getFilteredRowModel().rows.length || 0 }} row(s) selected.
       </div>

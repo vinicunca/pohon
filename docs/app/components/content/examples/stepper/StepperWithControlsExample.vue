@@ -21,13 +21,13 @@ const stepper = useTemplateRef('stepper')
 
 <template>
   <div class="w-full">
-    <UStepper ref="stepper" :items="items">
+    <PStepper ref="stepper" :items="items">
       <template #content="{ item }">
         <Placeholder class="aspect-video">
           {{ item.title }}
         </Placeholder>
       </template>
-    </UStepper>
+    </PStepper>
 
     <div class="flex gap-2 justify-between mt-4">
       <PButton

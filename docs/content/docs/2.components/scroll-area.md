@@ -14,7 +14,7 @@ links:
     to: https://tanstack.com/virtual/latest
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/ScrollArea.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/ScrollArea.vue
 ---
 
 ## Usage
@@ -23,13 +23,11 @@ The ScrollArea component creates scrollable containers with optional virtualizat
 
 ::component-example
 ---
-
 collapse: true
 overflowHidden: true
 name: 'scroll-area-example'
 class: '!p-0'
 ---
-
 ::
 
 ### Items
@@ -38,13 +36,11 @@ Use the `items` prop as an array and render each item using the default slot:
 
 ::component-example
 ---
-
 collapse: true
 overflowHidden: true
 name: 'scroll-area-items-example'
 class: '!p-0'
 ---
-
 ::
 
 ::tip{to="#with-default-slot"}
@@ -57,22 +53,18 @@ Use the `orientation` prop to change the scroll direction. Defaults to `vertical
 
 ::component-example
 ---
-
 collapse: true
 overflowHidden: true
 name: 'scroll-area-orientation-example'
 class: '!p-0'
 options:
-
-- name: orientation
-  label: orientation
-  default: horizontal
-  items:
-  - vertical
-  - horizontal
-
+  - name: orientation
+    label: orientation
+    default: horizontal
+    items:
+      - vertical
+      - horizontal
 ---
-
 ::
 
 ### Virtualize
@@ -89,35 +81,29 @@ If all your items have the **same height**, set `skipMeasurement` to `true` in t
 
 ::component-example
 ---
-
 collapse: true
 overflowHidden: true
 name: 'scroll-area-virtualize-example'
 class: '!p-0'
 options:
-
-- name: orientation
-  label: orientation
-  default: vertical
-  items:
-  - vertical
-  - horizontal
-
+  - name: orientation
+    label: orientation
+    default: vertical
+    items:
+      - vertical
+      - horizontal
 ---
-
 ::
 
-### Shadow :badge{label="4.9+" class="align-text-top"}
+### Shadow
 
 Use the `shadow` prop to display fade shadows on the scrollable edges, indicating that more content is available in the scroll direction. The fade automatically follows the `orientation` and only appears when the content overflows.
 
 ::component-example
 ---
-
 collapse: true
 name: 'scroll-area-shadow-example'
 ---
-
 ::
 
 ::tip
@@ -132,30 +118,26 @@ Use the `virtualize` prop with `lanes`, `gap`, and `estimateSize` options to cre
 
 ::component-example
 ---
-
 collapse: true
 overflowHidden: true
 name: 'scroll-area-masonry-layout-example'
 class: '!p-0'
 options:
-
-- name: orientation
-  label: orientation
-  default: vertical
-  items:
-  - vertical
-  - horizontal
-- name: lanes
-  type: number
-  label: lanes
-  default: 3
-- name: gap
-  type: number
-  label: gap
-  default: 16
-
+  - name: orientation
+    label: orientation
+    default: vertical
+    items:
+      - vertical
+      - horizontal
+  - name: lanes
+    type: number
+    label: lanes
+    default: 3
+  - name: gap
+    type: number
+    label: gap
+    default: 16
 ---
-
 ::
 
 ::tip
@@ -168,38 +150,32 @@ You can use the [`useWindowSize`](https://vueuse.org/core/useWindowSize/) (for v
 
 ::component-example
 ---
-
 collapse: true
 overflowHidden: true
 name: 'scroll-area-responsive-lanes-example'
 class: '!p-0'
 ---
-
 ::
 
-### With external scroll element :badge{label="4.10+" class="align-text-top"}
+### With external scroll element
 
 Pass a `getScrollElement` function in the `virtualize` prop to virtualize against an ancestor scroll container instead of the component's own viewport. Set `scrollMargin` to the list's offset from the scroll element's start (e.g. the height of the content above it).
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 overflowHidden: true
 name: 'scroll-area-external-scroll-example'
 class: '!p-0'
 options:
-
-- name: orientation
-  label: orientation
-  default: vertical
-  items:
-  - vertical
-  - horizontal
-
+  - name: orientation
+    label: orientation
+    default: vertical
+    items:
+      - vertical
+      - horizontal
 ---
-
 ::
 
 ::note
@@ -216,13 +192,11 @@ You can use the exposed `virtualizer` to programmatically control scroll positio
 
 ::component-example
 ---
-
 collapse: true
 overflowHidden: true
 name: 'scroll-area-scroll-to-example'
 class: '!p-0'
 ---
-
 ::
 
 ### With infinite scroll
@@ -231,14 +205,12 @@ You can use the [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 overflowHidden: true
 name: 'scroll-area-infinite-scroll-example'
 class: '!p-0'
 ---
-
 ::
 
 ::note
@@ -251,11 +223,9 @@ You can use the default slot without the `items` prop to render custom scrollabl
 
 ::component-example
 ---
-
 name: 'scroll-area-default-slot-example'
 class: '!p-0'
 ---
-
 ::
 
 ## API
@@ -278,24 +248,24 @@ You can access the typed component instance using [`useTemplateRef`](https://vue
 
 ```vue
 <script setup lang="ts">
-const scrollArea = useTemplateRef("scrollArea");
+const scrollArea = useTemplateRef('scrollArea')
 
 // Scroll to a specific item
 function scrollToItem(index: number) {
-  scrollArea.value?.virtualizer?.scrollToIndex(index, { align: "center" });
+  scrollArea.value?.virtualizer?.scrollToIndex(index, { align: 'center' })
 }
 </script>
 
 <template>
-  <UScrollArea ref="scrollArea" :items="items" virtualize />
+  <PScrollArea ref="scrollArea" :items="items" virtualize />
 </template>
 ```
 
 This will give you access to the following:
 
-| Name                          | Type                                            | Description                                                                                                                                        |
-| ----------------------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$el`{lang="ts-type"}         | `HTMLElement`{lang="ts-type"}                   | The root element of the component.                                                                                                                 |
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `$el`{lang="ts-type"} | `HTMLElement`{lang="ts-type"} | The root element of the component. |
 | `virtualizer`{lang="ts-type"} | `Ref<Virtualizer> \| undefined`{lang="ts-type"} | The [TanStack Virtual](https://tanstack.com/virtual/latest/docs/api/virtualizer) virtualizer instance (`undefined` if virtualization is disabled). |
 
 ## Theme

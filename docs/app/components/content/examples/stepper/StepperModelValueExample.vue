@@ -28,11 +28,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <UStepper v-model="active" :items="items" class="w-full">
+  <PStepper v-model="active" :items="items" class="w-full">
     <template #content="{ item }">
       <Placeholder class="aspect-video">
         This is the {{ item?.title }} step.
       </Placeholder>
     </template>
-  </UStepper>
+  </PStepper>
 </template>

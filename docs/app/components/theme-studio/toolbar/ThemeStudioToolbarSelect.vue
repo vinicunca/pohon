@@ -30,12 +30,12 @@ const open = defineModel<boolean>('open', { default: false })
 
 const attrs = useAttrs()
 
-/** The selected row picked again, which Reka reports as a toggle off. */
+/** The selected row picked again, which Akar reports as a toggle off. */
 const emit = defineEmits<{ reselect: [value: string | number] }>()
 
 const triggerLabel = computed(() => props.items.find(item => item.value === model.value)?.label ?? props.placeholder)
 
-// Reka toggles the selected row off with `undefined`; a pick-one control
+// Akar toggles the selected row off with `undefined`; a pick-one control
 // keeps its value and just closes, but still reports the re-pick, which the
 // preset control turns into a re-apply.
 const selected = computed({
@@ -49,7 +49,7 @@ const selected = computed({
 </script>
 
 <template>
-  <UPopover v-model:open="open" :content="{ align: 'center', onInteractOutside: keepPanels }" :ui="{ content: toolbarPanelClass(vertical) }">
+  <PPopover v-model:open="open" :content="{ align: 'center', onInteractOutside: keepPanels }" :ui="{ content: toolbarPanelClass(vertical) }">
     <ThemeStudioToolbarTrigger
       :label="triggerLabel"
       :icon="icon"
@@ -61,7 +61,7 @@ const selected = computed({
 
     <template #content>
       <!-- the popover already frames the panel, the listbox only fills it -->
-      <UListbox
+      <PListbox
         v-model="selected"
         :items="items"
         value-key="value"
@@ -72,7 +72,7 @@ const selected = computed({
         <template v-for="(_, name) in $slots" :key="name" #[name]="scope">
           <slot :name="name" v-bind="scope ?? {}" />
         </template>
-      </UListbox>
+      </PListbox>
     </template>
-  </UPopover>
+  </PPopover>
 </template>

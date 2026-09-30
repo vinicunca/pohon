@@ -8,23 +8,23 @@ const targets = [
 <template>
   <div class="p-4 space-y-4">
     <div>
-      <p class="font-semibold text-highlighted">
+      <p class="font-semibold color-text-highlighted">
         Savings targets
       </p>
-      <p class="text-sm text-muted">
+      <p class="text-sm color-text-muted">
         Active milestones for 2026.
       </p>
     </div>
 
     <div v-for="target in targets" :key="target.label" class="space-y-2">
       <div class="flex items-baseline justify-between">
-        <span class="text-xs uppercase tracking-wide text-muted">{{ target.label }}</span>
-        <span class="text-xs text-muted">{{ target.value }}% achieved</span>
+        <span class="text-xs uppercase tracking-wide color-text-muted">{{ target.label }}</span>
+        <span class="text-xs color-text-muted">{{ target.value }}% achieved</span>
       </div>
-      <p class="text-xl font-semibold text-highlighted">
+      <p class="text-xl font-semibold color-text-highlighted">
         {{ target.amount }}
       </p>
-      <UProgress :model-value="target.value" size="sm" />
+      <PProgress :model-value="target.value" size="sm" />
     </div>
   </div>
 </template>

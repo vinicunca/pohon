@@ -8,7 +8,7 @@ keywords:
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Badge.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Badge.vue
 ---
 
 ## Usage
@@ -17,11 +17,9 @@ Use the default slot to set the label of the Badge.
 
 ::component-code
 ---
-
 slots:
-default: Badge
+  default: Badge
 ---
-
 ::
 
 ### Label
@@ -30,11 +28,9 @@ Use the `label` prop to set the label of the Badge.
 
 ::component-code
 ---
-
 props:
-label: Badge
+  label: Badge
 ---
-
 ::
 
 ### Color
@@ -43,13 +39,11 @@ Use the `color` prop to change the color of the Badge.
 
 ::component-code
 ---
-
 props:
-color: neutral
+  color: neutral
 slots:
-default: Badge
+  default: Badge
 ---
-
 ::
 
 ### Variant
@@ -58,14 +52,12 @@ Use the `variant` props to change the variant of the Badge.
 
 ::component-code
 ---
-
 props:
-color: neutral
-variant: outline
+  color: neutral
+  variant: outline
 slots:
-default: Badge
+  default: Badge
 ---
-
 ::
 
 ### Size
@@ -74,13 +66,11 @@ Use the `size` prop to change the size of the Badge.
 
 ::component-code
 ---
-
 props:
-size: xl
+  size: xl
 slots:
-default: Badge
+  default: Badge
 ---
-
 ::
 
 ### Icon
@@ -89,30 +79,26 @@ Use the `icon` prop to show an [Icon](/docs/components/icon) inside the Badge.
 
 ::component-code
 ---
-
 props:
-icon: i-lucide-rocket
-size: md
-color: primary
-variant: solid
+  icon: i-lucide-rocket
+  size: md
+  color: primary
+  variant: solid
 slots:
-default: Badge
+  default: Badge
 ---
-
 ::
 
 Use the `leading` and `trailing` props to set the icon position or the `leading-icon` and `trailing-icon` props to set a different icon for each position.
 
 ::component-code
 ---
-
 props:
-trailingIcon: i-lucide-arrow-right
-size: md
+  trailingIcon: i-lucide-arrow-right
+  size: md
 slots:
-default: Badge
+  default: Badge
 ---
-
 ::
 
 ### Avatar
@@ -121,25 +107,21 @@ Use the `avatar` prop to show an [Avatar](/docs/components/avatar) inside the Ba
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- avatar.loading
-  props:
+  - avatar.loading
+props:
   avatar:
-  src: 'https://github.com/nuxt.png'
-  loading: lazy
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
   size: md
   color: neutral
   variant: outline
-  slots:
+slots:
   default: |
 
-  Badge
-
+    Badge
 ---
-
 ::
 
 ## Examples
@@ -150,13 +132,11 @@ Use the `class` prop to override the base styles of the Badge.
 
 ::component-code
 ---
-
 props:
-class: 'font-bold rounded-full'
+  class: 'font-bold rounded-full'
 slots:
-default: Badge
+  default: Badge
 ---
-
 ::
 
 ## API

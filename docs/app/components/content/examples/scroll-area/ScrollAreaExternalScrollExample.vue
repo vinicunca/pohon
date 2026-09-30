@@ -81,13 +81,13 @@ watch(matches, () => {
     <div
       v-if="!isHorizontal"
       ref="title"
-      class="flex items-end justify-between gap-4 p-6 bg-elevated/50"
+      class="flex items-end justify-between gap-4 p-6 bg-background-elevated/50"
     >
       <div>
-        <h2 class="text-2xl font-bold text-highlighted">
+        <h2 class="text-2xl font-bold color-text-highlighted">
           Members
         </h2>
-        <p class="text-muted">
+        <p class="color-text-muted">
           This header scrolls away with the cards, sharing one scrollbar.
         </p>
       </div>
@@ -100,11 +100,11 @@ watch(matches, () => {
 
     <div
       ref="toolbar"
-      class="z-10 flex items-center px-6 py-3 border-y border-border bg-elevated/50 backdrop-blur"
+      class="z-10 flex items-center px-6 py-3 border-y border-border bg-background-elevated/50 backdrop-blur"
       :class="isHorizontal ? 'sticky left-0' : 'sticky top-0'"
     >
-      <UFieldGroup>
-        <UInput
+      <PFieldGroup>
+        <PInput
           v-model="query"
           placeholder="Find a member..."
           icon="i-lucide-search"
@@ -115,14 +115,14 @@ watch(matches, () => {
           <template #trailing>
             <span
               id="scroll-area-find-count"
-              class="text-xs text-muted tabular-nums"
+              class="text-xs color-text-muted tabular-nums"
               aria-live="polite"
               role="status"
             >
               {{ matches.length ? cursor + 1 : 0 }}/{{ matches.length }}
             </span>
           </template>
-        </UInput>
+        </PInput>
         <PButton
           :icon="isHorizontal ? 'i-lucide-chevron-left' : 'i-lucide-chevron-up'"
           color="neutral"
@@ -139,7 +139,7 @@ watch(matches, () => {
           :disabled="!matches.length"
           @click="step(1)"
         />
-      </UFieldGroup>
+      </PFieldGroup>
 
       <PButton
         :icon="isHorizontal ? 'i-lucide-arrow-left-to-line' : 'i-lucide-arrow-up-to-line'"
@@ -156,13 +156,13 @@ watch(matches, () => {
       <div
         v-if="isHorizontal"
         ref="title"
-        class="w-72 shrink-0 flex flex-col justify-center gap-4 p-6 bg-elevated/50 border-r border-border"
+        class="w-72 shrink-0 flex flex-col justify-center gap-4 p-6 bg-background-elevated/50 border-r border-border"
       >
         <div>
-          <h2 class="text-2xl font-bold text-highlighted">
+          <h2 class="text-2xl font-bold color-text-highlighted">
             Members
           </h2>
-          <p class="text-muted">
+          <p class="color-text-muted">
             This header scrolls away with the cards, sharing one scrollbar.
           </p>
         </div>
@@ -174,7 +174,7 @@ watch(matches, () => {
         />
       </div>
 
-      <UScrollArea
+      <PScrollArea
         ref="scrollArea"
         v-slot="{ item, index }"
         :orientation="orientation"
@@ -182,7 +182,7 @@ watch(matches, () => {
         :class="isHorizontal && 'h-48 shrink-0'"
         :virtualize="{ scrollMargin, getScrollElement, estimateSize: itemSize, skipMeasurement: isHorizontal }"
       >
-        <UPageCard
+        <PPageCard
           class="rounded-none h-full"
           :class="[isHorizontal && 'w-64', index === currentMatch && 'bg-primary/10']"
         >
@@ -190,23 +190,23 @@ watch(matches, () => {
             class="flex gap-3 h-full min-w-0"
             :class="isHorizontal ? 'flex-col items-center justify-center text-center' : 'items-center'"
           >
-            <UAvatar
+            <PAvatar
               :src="item.image"
               :alt="item.firstName"
               :size="isHorizontal ? '2xl' : 'lg'"
               loading="lazy"
             />
             <div class="min-w-0">
-              <p class="font-medium text-highlighted truncate">
+              <p class="font-medium color-text-highlighted truncate">
                 {{ item.firstName }} {{ item.lastName }}
               </p>
-              <p class="text-sm text-muted truncate">
+              <p class="text-sm color-text-muted truncate">
                 {{ item.email }}
               </p>
             </div>
           </div>
-        </UPageCard>
-      </UScrollArea>
+        </PPageCard>
+      </PScrollArea>
     </div>
   </div>
 </template>

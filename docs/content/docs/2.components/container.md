@@ -4,7 +4,7 @@ category: layout
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Container.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Container.vue
 ---
 
 ## Usage
@@ -17,12 +17,10 @@ Its max width is controlled by the `--ui-container` CSS variable.
 
 ::component-example
 ---
-
 name: 'container-example'
 props:
-class: 'w-full'
+  class: 'w-full'
 ---
-
 ::
 
 ## API

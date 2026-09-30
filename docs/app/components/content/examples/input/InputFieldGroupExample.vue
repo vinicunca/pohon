@@ -5,8 +5,8 @@ const domain = ref(domains[0])
 </script>
 
 <template>
-  <UFieldGroup>
-    <UInput
+  <PFieldGroup>
+    <PInput
       v-model="value"
       placeholder="nuxt"
       :ui="{
@@ -15,12 +15,12 @@ const domain = ref(domains[0])
       }"
     >
       <template #leading>
-        <p class="text-sm text-muted">
+        <p class="text-sm color-text-muted">
           https://
         </p>
       </template>
-    </UInput>
+    </PInput>
 
-    <USelectMenu v-model="domain" :items="domains" />
-  </UFieldGroup>
+    <PSelectMenu v-model="domain" :items="domains" />
+  </PFieldGroup>
 </template>

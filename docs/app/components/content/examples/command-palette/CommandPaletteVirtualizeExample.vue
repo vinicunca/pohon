@@ -17,7 +17,7 @@ const groups = [
 </script>
 
 <template>
-  <UCommandPalette
+  <PCommandPalette
     virtualize
     :fuse="{ resultLimit: 1000 }"
     :groups="groups"

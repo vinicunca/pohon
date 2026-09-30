@@ -37,7 +37,7 @@ const studioIcons = useStudioIcons()
 
 // Both editors open beside the list rather than inside it: the curve editor
 // alone is taller than the panel, and expanding in place pushed every other
-// alias out of view. Reka stacks dismissable layers, so a nested popover
+// alias out of view. Akar stacks dismissable layers, so a nested popover
 // leaves the panel behind it open (same as the palette menu one row down).
 const editorPanel = 'w-72 max-w-[calc(100vw-2rem)] max-h-[70vh] overflow-y-auto p-3'
 const editorContent = { side: 'right' as const, align: 'start' as const, alignOffset: -8, collisionPadding: 8 }
@@ -46,8 +46,8 @@ const editorContent = { side: 'right' as const, align: 'start' as const, alignOf
 <template>
   <ThemeStudioSection :label="title" :help-to="helpTo" :section-key="sectionKey">
     <template #actions>
-      <UPopover v-model:open="shadeEditor" :content="editorContent" :ui="{ content: editorPanel }">
-        <UTooltip text="Adjust shades" ignore-non-keyboard-focus>
+      <PPopover v-model:open="shadeEditor" :content="editorContent" :ui="{ content: editorPanel }">
+        <PTooltip text="Adjust shades" ignore-non-keyboard-focus>
           <PButton
             :icon="studioIcons.options"
             color="neutral"
@@ -58,7 +58,7 @@ const editorContent = { side: 'right' as const, align: 'start' as const, alignOf
             active-variant="subtle"
             :aria-label="`Adjust ${alias} shades`"
           />
-        </UTooltip>
+        </PTooltip>
 
         <template #content>
           <ThemeStudioColorShadeGroup
@@ -86,10 +86,10 @@ const editorContent = { side: 'right' as const, align: 'start' as const, alignOf
             </ThemeStudioSection>
           </div>
         </template>
-      </UPopover>
+      </PPopover>
 
-      <UPopover v-model:open="paletteEditor" :content="editorContent" :ui="{ content: editorPanel }">
-        <UTooltip text="Edit palette" ignore-non-keyboard-focus>
+      <PPopover v-model:open="paletteEditor" :content="editorContent" :ui="{ content: editorPanel }">
+        <PTooltip text="Edit palette" ignore-non-keyboard-focus>
           <PButton
             :icon="studioIcons.curve"
             color="neutral"
@@ -100,12 +100,12 @@ const editorContent = { side: 'right' as const, align: 'start' as const, alignOf
             active-variant="subtle"
             :aria-label="`Edit ${alias} palette`"
           />
-        </UTooltip>
+        </PTooltip>
 
         <template #content>
           <ThemeStudioColorPaletteEditor :alias="alias" />
         </template>
-      </UPopover>
+      </PPopover>
     </template>
 
     <ThemeStudioColorMenu :alias="alias" />

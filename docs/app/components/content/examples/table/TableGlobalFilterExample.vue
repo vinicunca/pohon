@@ -98,8 +98,8 @@ const globalFilter = ref('45')
 
 <template>
   <div class="flex flex-col flex-1 w-full">
-    <div class="flex px-4 py-3.5 border-b border-accented">
-      <UInput
+    <div class="flex px-4 py-3.5 border-b border-border-accented">
+      <PInput
         v-model="globalFilter"
         class="max-w-sm"
         placeholder="Filter..."

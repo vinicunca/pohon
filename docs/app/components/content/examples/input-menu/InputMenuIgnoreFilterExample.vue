@@ -26,7 +26,7 @@ function onOpen() {
 </script>
 
 <template>
-  <UInputMenu
+  <PInputMenu
     v-model:search-term="searchTerm"
     :items="users"
     :loading="status === 'pending'"
@@ -36,12 +36,12 @@ function onOpen() {
     @update:open="onOpen"
   >
     <template #leading="{ modelValue, ui }">
-      <UAvatar
+      <PAvatar
         v-if="modelValue"
         v-bind="modelValue.avatar"
         :size="(ui.leadingAvatarSize() as AvatarProps['size'])"
         :class="ui.leadingAvatar()"
       />
     </template>
-  </UInputMenu>
+  </PInputMenu>
 </template>

@@ -92,7 +92,7 @@ export const Completion = Extension.create<CompletionOptions, CompletionStorage>
               const span = document.createElement('span')
               span.className = 'completion-suggestion'
               span.textContent = storage.suggestion
-              span.style.cssText = 'color: var(--ui-text-muted); opacity: 0.6; pointer-events: none;'
+              span.style.cssText = 'color: var(--ui-color-text-muted); opacity: 0.6; pointer-events: none;'
               return span
             }, { side: 1 })
 

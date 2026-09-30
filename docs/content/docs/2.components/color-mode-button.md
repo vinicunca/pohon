@@ -1,6 +1,6 @@
 ---
 title: ColorModeButton
-description: "A Button to switch between light and dark mode."
+description: 'A Button to switch between light and dark mode.'
 category: color-mode
 links:
   - label: Button
@@ -8,7 +8,7 @@ links:
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/color-mode/ColorModeButton.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/color-mode/ColorModeButton.vue
 ---
 
 ## Usage
@@ -35,11 +35,11 @@ Use the `app.config.ts` to customize the icon with the `ui.icons` property:
 export default defineAppConfig({
   ui: {
     icons: {
-      light: "i-ph-sun",
-      dark: "i-ph-moon",
-    },
-  },
-});
+      light: 'i-lucide-sun-medium',
+      dark: 'i-lucide-moon-star'
+    }
+  }
+})
 ```
 
 ::
@@ -49,9 +49,9 @@ export default defineAppConfig({
 Use the `vite.config.ts` to customize the icon with the `ui.icons` property:
 
 ```ts [vite.config.ts]
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import ui from "pohon-ui/vite";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import ui from 'pohon-ui/vite'
 
 export default defineConfig({
   plugins: [
@@ -59,13 +59,13 @@ export default defineConfig({
     ui({
       ui: {
         icons: {
-          light: "i-ph-sun",
-          dark: "i-ph-moon",
-        },
-      },
-    }),
-  ],
-});
+          light: 'i-lucide-sun-medium',
+          dark: 'i-lucide-moon-star'
+        }
+      }
+    })
+  ]
+})
 ```
 
 ::

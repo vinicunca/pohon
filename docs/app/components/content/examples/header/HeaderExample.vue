@@ -12,8 +12,8 @@ const items = computed<NavigationMenuItem[]>(() => [{
   to: '/docs/components',
   active: route.path.startsWith('/docs/components')
 }, {
-  label: 'Figma',
-  to: 'https://go.nuxt.com/figma-ui',
+  label: 'Theme',
+  to: '/theme',
   target: '_blank'
 }, {
   label: 'Releases',
@@ -23,17 +23,17 @@ const items = computed<NavigationMenuItem[]>(() => [{
 </script>
 
 <template>
-  <UHeader>
+  <PHeader>
     <template #title>
       <Logo class="h-6 w-auto" />
     </template>
 
-    <UNavigationMenu :items="items" />
+    <PNavigationMenu :items="items" />
 
     <template #right>
-      <UColorModeButton />
+      <PColorModeButton />
 
-      <UTooltip text="Open on GitHub" :kbds="['meta', 'G']">
+      <PTooltip text="Open on GitHub" :kbds="['meta', 'G']">
         <PButton
           color="neutral"
           variant="ghost"
@@ -42,7 +42,7 @@ const items = computed<NavigationMenuItem[]>(() => [{
           icon="i-simple-icons-github"
           aria-label="GitHub"
         />
-      </UTooltip>
+      </PTooltip>
     </template>
-  </UHeader>
+  </PHeader>
 </template>

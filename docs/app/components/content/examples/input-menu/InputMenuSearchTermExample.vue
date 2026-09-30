@@ -5,5 +5,5 @@ const value = ref('Backlog')
 </script>
 
 <template>
-  <UInputMenu v-model="value" v-model:search-term="searchTerm" :items="items" />
+  <PInputMenu v-model="value" v-model:search-term="searchTerm" :items="items" />
 </template>

@@ -46,7 +46,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     @submit="onSubmit"
   >
     <PFormField label="Customer" name="customer">
-      <UInput v-model="state.customer" placeholder="Wonka Industries" />
+      <PInput v-model="state.customer" placeholder="Wonka Industries" />
     </PFormField>
 
     <PForm
@@ -58,10 +58,10 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       nested
     >
       <PFormField :label="!count ? 'Description' : undefined" name="description">
-        <UInput v-model="item.description" />
+        <PInput v-model="item.description" />
       </PFormField>
       <PFormField :label="!count ? 'Price' : undefined" name="price" class="w-20">
-        <UInput v-model="item.price" type="number" />
+        <PInput v-model="item.price" type="number" />
       </PFormField>
     </PForm>
 

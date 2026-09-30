@@ -158,8 +158,8 @@ const globalFilter = ref('')
 
 <template>
   <div class="w-full space-y-4 pb-4">
-    <div class="flex px-4 py-3.5 border-b border-accented">
-      <UInput
+    <div class="flex px-4 py-3.5 border-b border-border-accented">
+      <PInput
         v-model="globalFilter"
         class="max-w-sm"
         placeholder="Filter..."
@@ -179,7 +179,7 @@ const globalFilter = ref('')
     />
 
     <div class="flex justify-end border-t border-border pt-4 px-4">
-      <UPagination
+      <PPagination
         :page="(table?.tableApi?.getState().pagination.pageIndex || 0) + 1"
         :items-per-page="table?.tableApi?.getState().pagination.pageSize"
         :total="table?.tableApi?.getFilteredRowModel().rows.length"

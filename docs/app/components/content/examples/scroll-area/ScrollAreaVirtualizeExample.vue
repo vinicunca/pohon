@@ -11,17 +11,17 @@ const items = computed(() => Array.from({ length: 1000 }, (_, i) => ({
 </script>
 
 <template>
-  <UScrollArea
+  <PScrollArea
     v-slot="{ item, index }"
     :items="items"
     :orientation="orientation"
     virtualize
     class="w-full data-[orientation=vertical]:h-96 data-[orientation=horizontal]:h-24.5"
   >
-    <UPageCard
+    <PPageCard
       v-bind="item"
       :variant="index % 2 === 0 ? 'soft' : 'outline'"
       class="rounded-none"
     />
-  </UScrollArea>
+  </PScrollArea>
 </template>

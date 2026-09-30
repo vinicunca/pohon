@@ -26,18 +26,18 @@ const state = reactive({
 </script>
 
 <template>
-  <UTabs :items="items" variant="link" :ui="{ trigger: 'grow' }" class="gap-4 w-full">
+  <PTabs :items="items" variant="link" :ui="{ trigger: 'grow' }" class="gap-4 w-full">
     <template #account="{ item }">
-      <p class="text-muted mb-4">
+      <p class="color-text-muted mb-4">
         {{ item.description }}
       </p>
 
       <PForm :state="state" class="flex flex-col gap-4">
         <PFormField label="Name" name="name">
-          <UInput v-model="state.name" class="w-full" />
+          <PInput v-model="state.name" class="w-full" />
         </PFormField>
         <PFormField label="Username" name="username">
-          <UInput v-model="state.username" class="w-full" />
+          <PInput v-model="state.username" class="w-full" />
         </PFormField>
 
         <PButton label="Save changes" type="submit" variant="soft" class="self-end" />
@@ -45,23 +45,23 @@ const state = reactive({
     </template>
 
     <template #password="{ item }">
-      <p class="text-muted mb-4">
+      <p class="color-text-muted mb-4">
         {{ item.description }}
       </p>
 
       <PForm :state="state" class="flex flex-col gap-4">
         <PFormField label="Current Password" name="current" required>
-          <UInput v-model="state.currentPassword" type="password" required class="w-full" />
+          <PInput v-model="state.currentPassword" type="password" required class="w-full" />
         </PFormField>
         <PFormField label="New Password" name="new" required>
-          <UInput v-model="state.newPassword" type="password" required class="w-full" />
+          <PInput v-model="state.newPassword" type="password" required class="w-full" />
         </PFormField>
         <PFormField label="Confirm Password" name="confirm" required>
-          <UInput v-model="state.confirmPassword" type="password" required class="w-full" />
+          <PInput v-model="state.confirmPassword" type="password" required class="w-full" />
         </PFormField>
 
         <PButton label="Change password" type="submit" variant="soft" class="self-end" />
       </PForm>
     </template>
-  </UTabs>
+  </PTabs>
 </template>

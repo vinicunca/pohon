@@ -51,7 +51,7 @@ function isSelected(color: string) {
 </script>
 
 <template>
-  <UPopover
+  <PPopover
     :content="{ side: 'bottom', align: 'center' }"
     :ui="{ content: 'p-2 grid grid-cols-3 gap-1 w-[calc(var(--akar-popover-trigger-width)+1rem)]' }"
   >
@@ -64,11 +64,11 @@ function isSelected(color: string) {
       :trailing-icon="appConfig.ui.icons.chevronDown"
       class="capitalize group"
       :style="swatchColor ? { '--swatch-color': swatchColor } : undefined"
-      :ui="{ trailingIcon: 'text-dimmed transition-transform duration-200 group-data-[state=open]:rotate-180' }"
+      :ui="{ trailingIcon: 'color-text-dimmed transition-transform duration-200 group-data-[state=open]:rotate-180' }"
     >
       <template #leading>
         <!-- the chip can't take an inline style, the var rides the button -->
-        <UChip
+        <PChip
           inset
           standalone
           class="mx-1"
@@ -119,5 +119,5 @@ function isSelected(color: string) {
         </template>
       </PButton>
     </template>
-  </UPopover>
+  </PPopover>
 </template>

@@ -20,14 +20,14 @@ function onFrameworkChange(newFramework: string) {
 </script>
 
 <template>
-  <UTabs
+  <PTabs
     v-model="value"
     :items="frameworks"
     :content="false"
     color="neutral"
     :ui="{
-      indicator: 'bg-default',
-      trigger: 'px-1 data-[state=active]:text-highlighted w-full in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:before:bg-default'
+      indicator: 'bg-background',
+      trigger: 'px-1 data-[state=active]:color-text-highlighted w-full in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:before:bg-background'
     }"
     size="xs"
     @update:model-value="onFrameworkChange($event as string)"

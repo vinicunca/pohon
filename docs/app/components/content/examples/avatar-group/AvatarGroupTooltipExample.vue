@@ -1,27 +1,27 @@
 <template>
-  <UAvatarGroup>
-    <UTooltip text="benjamincanac">
-      <UAvatar
+  <PAvatarGroup>
+    <PTooltip text="benjamincanac">
+      <PAvatar
         src="https://github.com/benjamincanac.png"
         alt="Benjamin Canac"
         loading="lazy"
       />
-    </UTooltip>
+    </PTooltip>
 
-    <UTooltip text="romhml">
-      <UAvatar
-        src="https://github.com/romhml.png"
-        alt="Romain Hamel"
+    <PTooltip text="HugoRCD">
+      <PAvatar
+        src="https://github.com/HugoRCD.png"
+        alt="Hugo Richard"
         loading="lazy"
       />
-    </UTooltip>
+    </PTooltip>
 
-    <UTooltip text="noook">
-      <UAvatar
-        src="https://github.com/noook.png"
-        alt="Neil Richter"
+    <PTooltip text="atinux">
+      <PAvatar
+        src="https://github.com/atinux.png"
+        alt="Sébastien Chopin"
         loading="lazy"
       />
-    </UTooltip>
-  </UAvatarGroup>
+    </PTooltip>
+  </PAvatarGroup>
 </template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { SplitterItem } from 'pohon-ui'
 
-const card = 'bg-elevated/50 border border-border rounded-xl items-center justify-center text-muted font-medium'
+const card = 'bg-background-elevated/50 border border-border rounded-xl items-center justify-center color-text-muted font-medium'
 
 const items: SplitterItem[] = [
   { slot: 'left', minSize: 15, defaultSize: 25, class: card },
@@ -12,7 +12,7 @@ const items: SplitterItem[] = [
 
 <template>
   <div class="w-full h-96">
-    <USplitter id="splitter-example" :items="items">
+    <PSplitter id="splitter-example" :items="items">
       <template #left>
         Left
       </template>
@@ -24,6 +24,6 @@ const items: SplitterItem[] = [
       <template #right>
         Right
       </template>
-    </USplitter>
+    </PSplitter>
   </div>
 </template>

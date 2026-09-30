@@ -10,7 +10,7 @@ const items = [
 </script>
 
 <template>
-  <UCarousel
+  <PCarousel
     v-slot="{ item }"
     loop
     arrows
@@ -27,5 +27,5 @@ const items = [
     }"
   >
     <img :src="item" width="320" height="320">
-  </UCarousel>
+  </PCarousel>
 </template>

@@ -16,6 +16,13 @@ if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 
+// A page that is only a link in the sidebar, like Figma. The route rule sends
+// full requests along, this catches client side navigations to it.
+const externalTo = (page.value as { to?: string }).to
+if (externalTo) {
+  await navigateTo(externalTo, { external: true, replace: true })
+}
+
 // Update the framework if the page has different one
 watch(page, () => {
   if (page.value?.framework && page.value?.framework !== framework.value) {
@@ -66,14 +73,16 @@ const frameworkSuffix = !prefix && page.value?.framework === 'vue' ? ' for Vue' 
 const description = page.value?.seo?.description ? page.value.seo.description : page.value?.description
 
 useSeoMeta({
-  titleTemplate: `${prefix}%s ${suffix}- Pohon${frameworkSuffix}`,
+  titleTemplate: `${prefix}%s ${suffix}- Pohon UI${frameworkSuffix}`,
   title,
-  ogTitle: `${prefix}${title} ${suffix}- Pohon${frameworkSuffix}`,
+  ogTitle: `${prefix}${title} ${suffix}- Pohon UI${frameworkSuffix}`,
   description,
   ogDescription: description
 })
 
 const path = computed(() => route.path.replace(/\/$/, ''))
+
+useCanonical(computed(() => `/raw${path.value}.md`))
 
 if (import.meta.server) {
   if (route.path.startsWith('/docs/components/')) {
@@ -86,7 +95,7 @@ if (import.meta.server) {
     defineOgImage('Docs.takumi', {
       title: page.value.title,
       description: page.value.description,
-      headline: breadcrumb.value?.[breadcrumb.value.length - 1]?.label || 'Pohon',
+      headline: breadcrumb.value?.[breadcrumb.value.length - 1]?.label || 'Pohon UI',
       framework: page.value?.framework
     })
   }
@@ -106,35 +115,32 @@ if (import.meta.server) {
   ])
 }
 
-useCanonical(computed(() => `${path.value}.md`))
-
 const { open, ask } = useChat()
-// same glyph as the studio's Ask-AI trigger, and skins with the icon pack
 const studioIcons = useStudioIcons()
 
 const links = computed(() => [{
   icon: studioIcons.pencil,
   label: 'Edit this page',
-  to: `https://github.com/vinicunca/pohon/edit/v4/docs/content/${page?.value?.stem}.md`,
+  to: `https://github.com/vinicunca/pohon/edit/main/docs/content/${page?.value?.stem}.md`,
   target: '_blank'
 }, {
-  icon: studioIcons.assistant,
+  icon: 'i-lucide-sparkles',
   label: 'Explain with AI',
   onClick: () => ask('Read this documentation page and summarize it. I want to ask questions about it.')
 }])
 </script>
 
 <template>
-  <UPage
+  <PPage
     v-if="page"
     :ui="open ? {
       center: 'lg:col-span-10',
       right: 'lg:hidden'
     } : undefined"
   >
-    <UPageHeader>
+    <PPageHeader :description="page.description">
       <template #headline>
-        <UBreadcrumb :items="breadcrumb" />
+        <PBreadcrumb :items="breadcrumb" />
       </template>
 
       <template #title>
@@ -149,10 +155,6 @@ const links = computed(() => [{
         />
       </template>
 
-      <template #description>
-        <MDC v-if="page.description" :value="page.description" unwrap="p" :cache-key="`${kebabCase(route.path)}-description`" />
-      </template>
-
       <template #links>
         <PButton
           v-for="link in page.links"
@@ -163,27 +165,27 @@ const links = computed(() => [{
           v-bind="link"
         >
           <template v-if="link.avatar" #leading>
-            <UAvatar v-bind="link.avatar" size="2xs" :alt="`${link.label} avatar`" />
+            <PAvatar v-bind="link.avatar" size="2xs" :alt="`${link.label} avatar`" />
           </template>
         </PButton>
         <PageHeaderLinks />
       </template>
-    </UPageHeader>
+    </PPageHeader>
 
-    <UPageBody>
+    <PPageBody>
       <ContentRenderer v-if="page.body" :value="page" />
 
       <PSeparator v-if="surround?.filter(Boolean).length" />
 
-      <UContentSurround :surround="(surround as any)" />
-    </UPageBody>
+      <PContentSurround :surround="(surround as any)" />
+    </PPageBody>
 
     <template v-if="page?.body?.toc?.links?.length" #right>
-      <UContentToc :links="page.body.toc.links" class="z-2" highlight highlight-variant="circuit">
+      <PContentToc :links="page.body.toc.links" class="z-2" highlight highlight-variant="circuit">
         <template #bottom>
           <PSeparator v-if="page.body?.toc?.links?.length" type="dashed" />
 
-          <UPageLinks :links="links" />
+          <PPageLinks :links="links" />
 
           <template v-if="!isDev">
             <PSeparator type="dashed" />
@@ -191,7 +193,7 @@ const links = computed(() => [{
             <AdsCarbon />
           </template>
         </template>
-      </UContentToc>
+      </PContentToc>
     </template>
-  </UPage>
+  </PPage>
 </template>

@@ -8,11 +8,11 @@ keywords:
   - counter
 links:
   - label: NumberField
-    icon: i-custom-reka-ui
-    to: https://www.reka-ui.com/docs/components/number-field
+    icon: i-lucide-box
+    to: https://www.akar.com/docs/components/number-field
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/InputNumber.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/InputNumber.vue
 ---
 
 ## Usage
@@ -21,32 +21,24 @@ Use the `v-model` directive to control the value of the InputNumber.
 
 ::component-code
 ---
-
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: 5
-
 ---
-
 ::
 
 Use the `default-value` prop to set the initial value when you do not need to control its state.
 
 ::component-code
 ---
-
 ignore:
-
-- defaultValue
-  props:
+  - defaultValue
+props:
   defaultValue: 5
-
 ---
-
 ::
 
 ::note
@@ -59,19 +51,15 @@ Use the `min` and `max` props to set the minimum and maximum values of the Input
 
 ::component-code
 ---
-
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: 5
   min: 0
   max: 10
-
 ---
-
 ::
 
 ### Step
@@ -80,18 +68,14 @@ Use the `step` prop to set the step value of the InputNumber.
 
 ::component-code
 ---
-
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: 5
   step: 2
-
 ---
-
 ::
 
 ### Orientation
@@ -100,18 +84,14 @@ Use the `orientation` prop to change the orientation of the InputNumber.
 
 ::component-code
 ---
-
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: 5
   orientation: vertical
-
 ---
-
 ::
 
 ### Placeholder
@@ -120,11 +100,9 @@ Use the `placeholder` prop to set a placeholder text.
 
 ::component-code
 ---
-
 props:
-placeholder: 'Enter a number'
+  placeholder: 'Enter a number'
 ---
-
 ::
 
 ### Color
@@ -133,19 +111,15 @@ Use the `color` prop to change the ring color when the InputNumber is focused.
 
 ::component-code
 ---
-
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: 5
   color: neutral
   highlight: true
-
 ---
-
 ::
 
 ### Variant
@@ -154,20 +128,16 @@ Use the `variant` prop to change the variant of the InputNumber.
 
 ::component-code
 ---
-
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: 5
   variant: subtle
   color: neutral
   highlight: false
-
 ---
-
 ::
 
 ### Size
@@ -176,18 +146,14 @@ Use the `size` prop to change the size of the InputNumber.
 
 ::component-code
 ---
-
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: 5
   size: xl
-
 ---
-
 ::
 
 ### Disabled
@@ -196,18 +162,14 @@ Use the `disabled` prop to disable the InputNumber.
 
 ::component-code
 ---
-
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: 5
   disabled: true
-
 ---
-
 ::
 
 ### Increment / Decrement
@@ -216,32 +178,28 @@ Use the `increment` and `decrement` props to customize the increment and decreme
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-- increment.size
-- increment.color
-- increment.variant
-- decrement.size
-- decrement.color
-- decrement.variant
-  external:
-- modelValue
-  props:
+  - modelValue
+  - increment.size
+  - increment.color
+  - increment.variant
+  - decrement.size
+  - decrement.color
+  - decrement.variant
+external:
+  - modelValue
+props:
   modelValue: 5
   increment:
-  color: neutral
-  variant: solid
-  size: xs
+    color: neutral
+    variant: solid
+    size: xs
   decrement:
-  color: neutral
-  variant: solid
-  size: xs
-
+    color: neutral
+    variant: solid
+    size: xs
 ---
-
 ::
 
 ### Increment / Decrement Icons
@@ -250,20 +208,16 @@ Use the `increment-icon` and `decrement-icon` props to customize the buttons [Ic
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: 5
   incrementIcon: 'i-lucide-arrow-right'
   decrementIcon: 'i-lucide-arrow-left'
-
 ---
-
 ::
 
 ## Examples
@@ -274,10 +228,8 @@ Use the `format-options` prop to customize the format of the value.
 
 ::component-example
 ---
-
 name: 'input-number-decimal-example'
 ---
-
 ::
 
 ### With percentage format
@@ -286,10 +238,8 @@ Use the `format-options` prop with `style: 'percent'` to customize the format of
 
 ::component-example
 ---
-
 name: 'input-number-percentage-example'
 ---
-
 ::
 
 ### With currency format
@@ -298,10 +248,8 @@ Use the `format-options` prop with `style: 'currency'` to customize the format o
 
 ::component-example
 ---
-
 name: 'input-number-currency-example'
 ---
-
 ::
 
 ### Without buttons
@@ -310,10 +258,8 @@ You can use the `increment` and `decrement` props to control visibility of the b
 
 ::component-example
 ---
-
 name: 'input-number-without-buttons-example'
 ---
-
 ::
 
 ### Within a FormField
@@ -322,10 +268,8 @@ You can use the InputNumber within a [FormField](/docs/components/form-field) co
 
 ::component-example
 ---
-
 name: 'input-number-form-field-example'
 ---
-
 ::
 
 ### With slots
@@ -334,10 +278,8 @@ Use the `#increment` and `#decrement` slots to customize the buttons.
 
 ::component-example
 ---
-
 name: 'input-number-slots-example'
 ---
-
 ::
 
 ## API
@@ -362,8 +304,8 @@ This component also supports all native `<input>` HTML attributes.
 
 When accessing the component via a template ref, you can use the following:
 
-| Name                       | Type                                            |
-| -------------------------- | ----------------------------------------------- |
+| Name | Type |
+| ---- | ---- |
 | `inputRef`{lang="ts-type"} | `Ref<HTMLInputElement \| null>`{lang="ts-type"} |
 
 ## Theme

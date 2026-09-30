@@ -24,7 +24,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UTheme
+  <PTheme
     :props="{
       input: { size: 'lg' },
       textarea: { size: 'lg' }
@@ -38,15 +38,15 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   >
     <PForm :schema="schema" :state="state" class="space-y-4 w-full" @submit="onSubmit">
       <PFormField label="Name" name="name" description="Your public display name.">
-        <UInput v-model="state.name" />
+        <PInput v-model="state.name" />
       </PFormField>
 
       <PFormField label="Email" name="email" description="Used for notifications.">
-        <UInput v-model="state.email" type="email" />
+        <PInput v-model="state.email" type="email" />
       </PFormField>
 
       <PFormField label="Bio" name="bio" description="A short description about yourself.">
-        <UTextarea v-model="state.bio" placeholder="Tell us about yourself" />
+        <PTextarea v-model="state.bio" placeholder="Tell us about yourself" />
       </PFormField>
 
       <div class="flex justify-end">
@@ -55,5 +55,5 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         </PButton>
       </div>
     </PForm>
-  </UTheme>
+  </PTheme>
 </template>

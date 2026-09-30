@@ -42,22 +42,22 @@ const items = [{
 </script>
 
 <template>
-  <UTimeline
+  <PTimeline
     :items="items"
     size="xs"
     :ui="{
       date: 'float-end ms-1',
-      description: 'px-3 py-2 ring ring-default mt-2 rounded-md text-default'
+      description: 'px-3 py-2 ring ring-ring mt-2 rounded-md color-text'
     }"
     class="w-96"
   >
     <template #title="{ item }">
       <span>{{ item.username }}</span>
-      <span class="font-normal text-muted">&nbsp;{{ item.action }}</span>
+      <span class="font-normal color-text-muted">&nbsp;{{ item.action }}</span>
     </template>
 
     <template #date="{ item }">
       {{ useTimeAgo(new Date(item.date)) }}
     </template>
-  </UTimeline>
+  </PTimeline>
 </template>

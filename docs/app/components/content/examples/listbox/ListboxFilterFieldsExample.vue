@@ -18,7 +18,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <UListbox
+  <PListbox
     :items="users || []"
     :loading="status === 'pending'"
     :filter-fields="['label', 'email']"
@@ -28,9 +28,9 @@ onMounted(() => {
     <template #item-label="{ item }">
       {{ item.label }}
 
-      <span class="text-muted">
+      <span class="color-text-muted">
         {{ item.email }}
       </span>
     </template>
-  </UListbox>
+  </PListbox>
 </template>

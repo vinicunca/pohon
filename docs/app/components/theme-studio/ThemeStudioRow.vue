@@ -80,7 +80,7 @@ const contrastColor = computed(() => shade.value
 
 const stopItems = SHADE_LADDER.map((entry, index) => ({ label: String(entry), value: String(index) }))
 
-// USelect speaks strings; the value is an index into the ladder.
+// PSelect speaks strings; the value is an index into the ladder.
 const stopModel = computed({
   get: () => String(model.value ?? 0),
   set: (value: string) => (model.value = Number(value))
@@ -133,21 +133,21 @@ const showTextLabel = computed(() => !props.icon && !shade.value)
       root: 'flex items-center gap-2 min-h-7',
       wrapper: spread ? 'shrink-0' : 'w-16 shrink-0',
       /* truncate text labels only, it would clip the shade chip's ring */
-      label: `w-full text-muted font-normal select-none${showTextLabel && !spread ? ' truncate' : ''}`,
-      container: `flex-1 flex items-center gap-2 mt-0${spread ? ' justify-end' : ''}`
+      label: ['w-full color-text-muted font-normal select-none', showTextLabel && !spread && 'truncate'],
+      container: ['flex-1 flex items-center gap-2 mt-0', spread && 'justify-end']
     }"
   >
     <template v-if="icon || shade" #label>
-      <UIcon v-if="icon" :name="icon" class="size-3 text-dimmed" />
+      <PIcon v-if="icon" :name="icon" class="size-3 color-text-dimmed" />
 
       <span v-else class="flex items-center gap-2 w-full">
-        <UIcon :name="mode === 'light' ? appConfig.ui.icons.light : appConfig.ui.icons.dark" class="size-3 text-dimmed shrink-0" />
+        <PIcon :name="mode === 'light' ? appConfig.ui.icons.light : appConfig.ui.icons.dark" class="size-3 color-text-dimmed shrink-0" />
         <span class="size-3 grow rounded-full bg-(--slider-color) ring ring-(--slider-contrast) me-px" />
       </span>
     </template>
 
     <template v-if="control === 'slider' || control === 'shade'">
-      <USlider
+      <PSlider
         v-model="model"
         :min="min"
         :max="sliderMax"
@@ -158,7 +158,7 @@ const showTextLabel = computed(() => !props.icon && !shade.value)
       />
 
       <!-- Fixed set of stops, so the readout picks rather than types. -->
-      <USelect
+      <PSelect
         v-if="shade"
         v-model="stopModel"
         :items="stopItems"
@@ -170,7 +170,7 @@ const showTextLabel = computed(() => !props.icon && !shade.value)
         :ui="{
           /* bare until hovered, when a ring says it's editable */
           /* pe-7 is reserved for a chevron we hide, and outranks px-* */
-          base: 'px-1 pe-1 text-xs justify-end font-mono text-dimmed focus:text-default focus:ring-1 ring-inset transition-all focus:ring-default hover:ring-1 ring-default',
+          base: 'px-1 pe-1 text-xs justify-end font-mono color-text-dimmed focus:color-text focus:ring-1 ring-inset transition-all focus:ring-ring hover:ring-1 ring-ring',
           value: 'truncate',
           trailing: 'hidden',
           /* the menu would inherit the readout's 10-wide trigger */
@@ -181,7 +181,7 @@ const showTextLabel = computed(() => !props.icon && !shade.value)
       />
 
       <!-- No v-model: partial keystrokes must not live-apply. -->
-      <UInput
+      <PInput
         v-if="!shade"
         :model-value="display"
         type="text"
@@ -190,7 +190,7 @@ const showTextLabel = computed(() => !props.icon && !shade.value)
         variant="none"
         size="xs"
         class="w-10 shrink-0"
-        :ui="{ base: 'px-1 text-xs text-right font-mono text-dimmed focus:text-default focus:ring-1 ring-inset transition-all focus:ring-default hover:ring-1 ring-default' }"
+        :ui="{ base: 'px-1 text-xs text-right font-mono color-text-dimmed focus:color-text focus:ring-1 ring-inset transition-all focus:ring-ring hover:ring-1 ring-ring' }"
         :aria-label="`${label ?? 'Value'} (arrow keys to adjust, Shift for ×10)`"
         @keydown="onReadoutKeydown"
         @change="commitReadout"
@@ -208,14 +208,14 @@ const showTextLabel = computed(() => !props.icon && !shade.value)
       />
     </template>
 
-    <USwitch
+    <PSwitch
       v-else-if="control === 'switch'"
       v-model="model"
       size="sm"
       :aria-label="ariaLabel ?? label"
     />
 
-    <USelect
+    <PSelect
       v-else-if="control === 'select'"
       v-model="model"
       :items="items ?? []"
@@ -237,9 +237,9 @@ const showTextLabel = computed(() => !props.icon && !shade.value)
       </template>
 
       <template #item-label="{ item }">
-        {{ asItem(item).label }}<span v-if="asItem(item).defaultTag" class="text-dimmed">&nbsp;(Default)</span>
+        {{ asItem(item).label }}<span v-if="asItem(item).defaultTag" class="color-text-dimmed">&nbsp;(Default)</span>
       </template>
-    </USelect>
+    </PSelect>
 
     <slot v-else />
   </PFormField>

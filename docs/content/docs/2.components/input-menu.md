@@ -8,14 +8,14 @@ keywords:
   - autosuggest
 links:
   - label: Combobox
-    icon: i-custom-reka-ui
+    icon: i-lucide-box
     to: https://akar.vinicunca.dev/docs/components/combobox
   - label: Autocomplete
-    icon: i-custom-reka-ui
+    icon: i-lucide-box
     to: https://akar.vinicunca.dev/docs/components/autocomplete
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/InputMenu.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/InputMenu.vue
 ---
 
 ## Usage
@@ -24,25 +24,21 @@ Use the `v-model` directive to control the value of the InputMenu or the `defaul
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-- items
-  external:
-- items
-- modelValue
-  props:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Backlog'
   items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ::tip
@@ -59,25 +55,21 @@ Use the `items` prop as an array of strings, numbers or booleans:
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-- items
-  external:
-- items
-- modelValue
-  props:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Backlog'
   items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 You can also pass an array of objects with the following properties:
@@ -94,58 +86,50 @@ You can also pass an array of objects with the following properties:
 
 ::component-code
 ---
-
 ignore:
-
-- modelValue.label
-- items
-  external:
-- items
-- modelValue
-  externalTypes:
-- InputMenuItem[]
-  props:
+  - modelValue.label
+  - items
+external:
+  - items
+  - modelValue
+externalTypes:
+  - InputMenuItem[]
+props:
   modelValue:
-  label: 'Todo'
+    label: 'Todo'
   items:
-  - label: 'Backlog'
-  - label: 'Todo'
-  - label: 'In Progress'
-  - label: 'Done'
-
+    - label: 'Backlog'
+    - label: 'Todo'
+    - label: 'In Progress'
+    - label: 'Done'
 ---
-
 ::
 
 You can also pass an array of arrays to the `items` prop to display separated groups of items.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-- items
-  external:
-- items
-- modelValue
-  props:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Apple'
   items:
-  - - Apple
-    - Banana
-    - Blueberry
-    - Grapes
-    - Pineapple
-  - - Aubergine
-    - Broccoli
-    - Carrot
-    - Courgette
-    - Leek
-
+    - - Apple
+      - Banana
+      - Blueberry
+      - Grapes
+      - Pineapple
+    - - Aubergine
+      - Broccoli
+      - Carrot
+      - Courgette
+      - Leek
 ---
-
 ::
 
 ### Value Key
@@ -154,33 +138,29 @@ You can choose to bind a single property of the object rather than the whole obj
 
 ::component-code
 ---
-
 collapse: true
 ignore:
-
-- modelValue
-- valueKey
-- items
-  external:
-- items
-- modelValue
-  externalTypes:
-- InputMenuItem[]
-  props:
+  - modelValue
+  - valueKey
+  - items
+external:
+  - items
+  - modelValue
+externalTypes:
+  - InputMenuItem[]
+props:
   modelValue: 'todo'
   valueKey: 'id'
   items:
-  - label: 'Backlog'
-    id: 'backlog'
-  - label: 'Todo'
-    id: 'todo'
-  - label: 'In Progress'
-    id: 'in_progress'
-  - label: 'Done'
-    id: 'done'
-
+    - label: 'Backlog'
+      id: 'backlog'
+    - label: 'Todo'
+      id: 'todo'
+    - label: 'In Progress'
+      id: 'in_progress'
+    - label: 'Done'
+      id: 'done'
 ---
-
 ::
 
 ::tip
@@ -193,29 +173,25 @@ Use the `multiple` prop to allow multiple selections, the selected items will be
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-- items
-- multiple
-  external:
-- items
-- modelValue
-  props:
+  - modelValue
+  - items
+  - multiple
+external:
+  - items
+  - modelValue
+props:
   modelValue:
-  - Backlog
-  - Todo
-    multiple: true
-    items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+  multiple: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ::caution
@@ -228,30 +204,26 @@ With `multiple`, use the `delete-icon` prop to customize the delete [Icon](/docs
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-- items
-- multiple
-  external:
-- items
-- modelValue
-  props:
+  - modelValue
+  - items
+  - multiple
+external:
+  - items
+  - modelValue
+props:
   modelValue:
-  - Backlog
-  - Todo
-    multiple: true
-    deleteIcon: 'i-lucide-trash'
-    items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+  multiple: true
+  deleteIcon: 'i-lucide-trash'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ::framework-only
@@ -272,35 +244,29 @@ Use the `placeholder` prop to set a placeholder text.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-  external:
-- items
-  props:
+  - items
+external:
+  - items
+props:
   placeholder: 'Select status'
   items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
-### Mode :badge{label="4.8+" class="align-text-top"}
+### Mode
 
 Set the `mode` prop to `autocomplete` to turn the InputMenu into a free-form text input with suggestions. The `modelValue` becomes the input text (`string`) instead of a selected item.
 
 ::component-example
 ---
-
 name: 'input-menu-mode-example'
 ---
-
 ::
 
 ::caution
@@ -317,39 +283,35 @@ Use the `content` prop to control how the InputMenu content is rendered, like it
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- modelValue
-  external:
-- items
-- modelValue
-  items:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+items:
   content.align:
-  - start
-  - center
-  - end
-    content.side:
-  - right
-  - left
-  - top
-  - bottom
-    props:
-    modelValue: 'Backlog'
-    content:
+    - start
+    - center
+    - end
+  content.side:
+    - right
+    - left
+    - top
+    - bottom
+props:
+  modelValue: 'Backlog'
+  content:
     align: center
     side: bottom
     sideOffset: 8
-    items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ### Arrow
@@ -358,27 +320,23 @@ Use the `arrow` prop to display an arrow on the InputMenu.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- modelValue
-- arrow
-  external:
-- items
-- modelValue
-  props:
+  - items
+  - modelValue
+  - arrow
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Backlog'
   arrow: true
   items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ### Color
@@ -387,27 +345,23 @@ Use the `color` prop to change the ring color when the InputMenu is focused.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- modelValue
-  external:
-- items
-- modelValue
-  props:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Backlog'
   color: neutral
   highlight: true
   items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ::note
@@ -420,28 +374,24 @@ Use the `variant` prop to change the variant of the InputMenu.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- modelValue
-  external:
-- items
-- modelValue
-  props:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Backlog'
   color: neutral
   variant: subtle
   highlight: false
   items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ### Size
@@ -450,26 +400,22 @@ Use the `size` prop to change the size of the InputMenu.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- modelValue
-  external:
-- items
-- modelValue
-  props:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Backlog'
   size: xl
   items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ### Icon
@@ -478,27 +424,23 @@ Use the `icon` prop to show an [Icon](/docs/components/icon) inside the InputMen
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- modelValue
-  external:
-- items
-- modelValue
-  props:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Backlog'
   icon: 'i-lucide-search'
   size: md
   items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ### Trailing Icon
@@ -507,27 +449,23 @@ Use the `trailing-icon` prop to customize the trailing [Icon](/docs/components/i
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- modelValue
-  external:
-- items
-- modelValue
-  props:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Backlog'
   trailingIcon: 'i-lucide-arrow-down'
   size: md
   items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ::framework-only
@@ -548,27 +486,23 @@ Use the `selected-icon` prop to customize the icon when an item is selected. Def
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- modelValue
-  external:
-- items
-- modelValue
-  props:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Backlog'
   selectedIcon: 'i-lucide-flame'
   size: md
   items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ::framework-only
@@ -583,69 +517,61 @@ You can customize this icon globally in your `vite.config.ts` under `ui.icons.ch
 :::
 ::
 
-### Clear :badge{label="4.4+" class="align-text-top"}
+### Clear
 
 Use the `clear` prop to display a clear button when a value is selected.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- modelValue
-  external:
-- items
-- modelValue
-  items:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+items:
   clear:
-  - true
-  - false
-    props:
-    modelValue: 'Backlog'
-    clear: true
-    items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - true
+    - false
+props:
+  modelValue: 'Backlog'
+  clear: true
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
-### Clear Icon :badge{label="4.4+" class="align-text-top"}
+### Clear Icon
 
 Use the `clear-icon` prop to customize the clear button [Icon](/docs/components/icon). Defaults to `i-lucide-x`.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- modelValue
-  external:
-- items
-- modelValue
-  items:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+items:
   clear:
-  - true
-  - false
-    props:
-    modelValue: 'Backlog'
-    clear: true
-    clearIcon: 'i-lucide-trash'
-    items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - true
+    - false
+props:
+  modelValue: 'Backlog'
+  clear: true
+  clearIcon: 'i-lucide-trash'
+  items:
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ::framework-only
@@ -666,30 +592,26 @@ Use the `avatar` prop to show an [Avatar](/docs/components/avatar) inside the In
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- modelValue
-- avatar.loading
-  external:
-- items
-- modelValue
-  props:
+  - items
+  - modelValue
+  - avatar.loading
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Nuxt'
   avatar:
-  src: 'https://github.com/nuxt.png'
-  loading: lazy
+    src: 'https://github.com/nuxt.png'
+    loading: lazy
   items:
-  - Nuxt
-  - NuxtHub
-  - NuxtLabs
-  - Nuxt Modules
-  - Nuxt Community
-
+    - Nuxt
+    - NuxtHub
+    - NuxtLabs
+    - Nuxt Modules
+    - Nuxt Community
 ---
-
 ::
 
 ### Loading
@@ -698,27 +620,23 @@ Use the `loading` prop to show a loading icon on the InputMenu.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- modelValue
-  external:
-- items
-- modelValue
-  props:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Backlog'
   loading: true
   trailing: false
   items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ### Loading Icon
@@ -727,27 +645,23 @@ Use the `loading-icon` prop to customize the loading icon. Defaults to `i-lucide
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- modelValue
-  external:
-- items
-- modelValue
-  props:
+  - items
+  - modelValue
+external:
+  - items
+  - modelValue
+props:
   modelValue: 'Backlog'
   loading: true
   loadingIcon: 'i-lucide-loader'
   items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ::framework-only
@@ -768,25 +682,21 @@ Use the `disabled` prop to disable the InputMenu.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- items
-- placeholder
-  external:
-- items
-  props:
+  - items
+  - placeholder
+external:
+  - items
+props:
   disabled: true
   placeholder: 'Select status'
   items:
-  - Backlog
-  - Todo
-  - In Progress
-  - Done
-
+    - Backlog
+    - Todo
+    - In Progress
+    - Done
 ---
-
 ::
 
 ## Examples
@@ -797,37 +707,33 @@ You can use the `type` property with `separator` to display a separator between 
 
 ::component-code
 ---
-
 collapse: true
 ignore:
-
-- modelValue
-- items
-  external:
-- items
-- modelValue
-  externalTypes:
-- InputMenuItem[]
-  props:
+  - modelValue
+  - items
+external:
+  - items
+  - modelValue
+externalTypes:
+  - InputMenuItem[]
+props:
   modelValue: 'Apple'
   items:
-  - - type: 'label'
-      label: 'Fruits'
-    - Apple
-    - Banana
-    - Blueberry
-    - Grapes
-    - Pineapple
-  - - type: 'label'
-      label: 'Vegetables'
-    - Aubergine
-    - Broccoli
-    - Carrot
-    - Courgette
-    - Leek
-
+    - - type: 'label'
+        label: 'Fruits'
+      - Apple
+      - Banana
+      - Blueberry
+      - Grapes
+      - Pineapple
+    - - type: 'label'
+        label: 'Vegetables'
+      - Aubergine
+      - Broccoli
+      - Carrot
+      - Courgette
+      - Leek
 ---
-
 ::
 
 ::note
@@ -840,11 +746,9 @@ You can use the `icon` property to display an [Icon](/docs/components/icon) insi
 
 ::component-example
 ---
-
 collapse: true
 name: 'input-menu-items-icon-example'
 ---
-
 ::
 
 ::tip
@@ -857,11 +761,9 @@ You can use the `avatar` property to display an [Avatar](/docs/components/avatar
 
 ::component-example
 ---
-
 collapse: true
 name: 'input-menu-items-avatar-example'
 ---
-
 ::
 
 ::tip
@@ -874,11 +776,9 @@ You can use the `chip` property to display a [Chip](/docs/components/chip) insid
 
 ::component-example
 ---
-
 collapse: true
 name: 'input-menu-items-chip-example'
 ---
-
 ::
 
 ::note
@@ -891,10 +791,8 @@ You can control the open state by using the `default-open` prop or the `v-model:
 
 ::component-example
 ---
-
 name: 'input-menu-open-example'
 ---
-
 ::
 
 ::note
@@ -907,10 +805,8 @@ You can use the `open-on-focus` or `open-on-click` props to open the menu when t
 
 ::component-example
 ---
-
 name: 'input-menu-open-focus-example'
 ---
-
 ::
 
 ### Control search term
@@ -919,10 +815,8 @@ Use the `v-model:search-term` directive to control the search term.
 
 ::component-example
 ---
-
 name: 'input-menu-search-term-example'
 ---
-
 ::
 
 ### With rotating icon
@@ -931,10 +825,8 @@ Here is an example with a rotating icon that indicates the open state of the Inp
 
 ::component-example
 ---
-
 name: 'input-menu-icon-example'
 ---
-
 ::
 
 ### With create item
@@ -943,11 +835,9 @@ Use the `create-item` prop to enable users to add custom values that aren't in t
 
 ::component-example
 ---
-
 collapse: true
 name: 'input-menu-create-item-example'
 ---
-
 ::
 
 ::note
@@ -964,11 +854,9 @@ You can fetch items from an API and use them in the InputMenu.
 
 ::component-example
 ---
-
 collapse: true
 name: 'input-menu-fetch-example'
 ---
-
 ::
 
 ::note
@@ -981,11 +869,9 @@ Set the `ignore-filter` prop to `true` to disable the internal search and use yo
 
 ::component-example
 ---
-
 collapse: true
 name: 'input-menu-ignore-filter-example'
 ---
-
 ::
 
 ::note
@@ -998,52 +884,44 @@ Use the `filter-fields` prop with an array of fields to filter on. Defaults to `
 
 ::component-example
 ---
-
 collapse: true
 name: 'input-menu-filter-fields-example'
 ---
-
 ::
 
 ::note
 This example uses `useLazyFetch` with `immediate: false` to only fetch data when the menu opens, avoiding unnecessary API calls on page load.
 ::
 
-### With virtualization :badge{label="4.1+" class="align-text-top"}
+### With virtualization
 
 Use the `virtualize` prop to enable virtualization for large lists as a boolean or an object with options like `{ estimateSize: 32, overscan: 12 }`.
 
-::warning{to="https://github.com/unovue/reka-ui/issues/1885" target="_blank"}
+::warning{to="https://github.com/unovue/akar/issues/1885" target="_blank"}
 When enabled, all groups are flattened into a single list due to a limitation of Akar.
 ::
 
 ::component-example
 ---
-
 prettier: true
 name: 'input-menu-virtualize-example'
 ---
-
 ::
 
-### With infinite scroll :badge{label="4.4+" class="align-text-top"}
+### With infinite scroll
 
 You can use the [`useInfiniteScroll`](https://vueuse.org/core/useInfiniteScroll/) composable to load more data as the user scrolls.
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 highlights:
-
-- 41
-- 51
-  overflowHidden: true
-  name: 'input-menu-infinite-scroll-example'
-
+  - 41
+  - 51
+overflowHidden: true
+name: 'input-menu-infinite-scroll-example'
 ---
-
 ::
 
 ::note
@@ -1056,11 +934,9 @@ You can expand the content to the full width of its items by adding the `min-w-f
 
 ::component-example
 ---
-
 name: 'input-menu-content-width-example'
 collapse: true
 ---
-
 ::
 
 ::tip
@@ -1077,7 +953,6 @@ export default defineAppConfig({
   }
 })
 ```
-
 ::
 
 ### As a country picker
@@ -1086,11 +961,9 @@ You can use the InputMenu as a country picker with lazy loading. Countries are o
 
 ::component-example
 ---
-
 collapse: true
 name: 'input-menu-countries-example'
 ---
-
 ::
 
 ::note
@@ -1119,10 +992,10 @@ This component also supports all native `<input>` HTML attributes.
 
 When accessing the component via a template ref, you can use the following:
 
-| Name                          | Type                                            |
-| ----------------------------- | ----------------------------------------------- |
-| `inputRef`{lang="ts-type"}    | `Ref<HTMLInputElement \| null>`{lang="ts-type"} |
-| `viewportRef`{lang="ts-type"} | `Ref<HTMLDivElement \| null>`{lang="ts-type"}   |
+| Name | Type |
+| ---- | ---- |
+| `inputRef`{lang="ts-type"} | `Ref<HTMLInputElement \| null>`{lang="ts-type"} |
+| `viewportRef`{lang="ts-type"} | `Ref<HTMLDivElement \| null>`{lang="ts-type"} |
 
 ## Theme
 

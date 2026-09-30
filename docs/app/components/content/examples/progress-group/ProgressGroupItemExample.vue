@@ -10,7 +10,7 @@ const items: ProgressGroupItem[] = [
 </script>
 
 <template>
-  <UProgressGroup :items="items" :max="128" class="w-96">
+  <PProgressGroup :items="items" :max="128" class="w-96">
     <template #item-label="{ item }">
       <span class="font-medium">{{ item.label }}</span>
     </template>
@@ -18,5 +18,5 @@ const items: ProgressGroupItem[] = [
     <template #item-trailing="{ item }">
       {{ item.value }}GB
     </template>
-  </UProgressGroup>
+  </PProgressGroup>
 </template>

@@ -30,30 +30,25 @@ PApp
 
 ```vue [layouts/dashboard.vue]
 <script setup lang="ts">
-import type { NavigationMenuItem } from "pohon-ui";
+import type { NavigationMenuItem } from 'pohon-ui'
 
-const items = computed<NavigationMenuItem[]>(() => [
-  {
-    label: "Home",
-    icon: "i-lucide-house",
-    to: "/dashboard",
-  },
-  {
-    label: "Inbox",
-    icon: "i-lucide-inbox",
-    to: "/dashboard/inbox",
-  },
-  {
-    label: "Users",
-    icon: "i-lucide-users",
-    to: "/dashboard/users",
-  },
-  {
-    label: "Settings",
-    icon: "i-lucide-settings",
-    to: "/dashboard/settings",
-  },
-]);
+const items = computed<NavigationMenuItem[]>(() => [{
+  label: 'Home',
+  icon: 'i-lucide-house',
+  to: '/dashboard'
+}, {
+  label: 'Inbox',
+  icon: 'i-lucide-inbox',
+  to: '/dashboard/inbox'
+}, {
+  label: 'Users',
+  icon: 'i-lucide-users',
+  to: '/dashboard/users'
+}, {
+  label: 'Settings',
+  icon: 'i-lucide-settings',
+  to: '/dashboard/settings'
+}])
 </script>
 
 <template>
@@ -91,7 +86,7 @@ const items = computed<NavigationMenuItem[]>(() => [
 
 ```vue [pages/dashboard/index.vue]
 <script setup lang="ts">
-definePageMeta({ layout: "dashboard" });
+definePageMeta({ layout: 'dashboard' })
 </script>
 
 <template>
@@ -126,21 +121,21 @@ definePageMeta({ layout: "dashboard" });
 
 Root wrapper. Manages sidebar state and persistence.
 
-| Prop          | Default       | Purpose                               |
-| ------------- | ------------- | ------------------------------------- |
-| `storage`     | `'cookie'`    | `'cookie'`, `'localStorage'`, `false` |
-| `storage-key` | `'dashboard'` | Storage key name                      |
+| Prop | Default | Purpose |
+|---|---|---|
+| `storage` | `'cookie'` | `'cookie'`, `'localStorage'`, `false` |
+| `storage-key` | `'dashboard'` | Storage key name |
 
 ### DashboardSidebar
 
 Resizable, collapsible sidebar. Must be inside `DashboardGroup`.
 
-| Prop          | Default       | Purpose                                      |
-| ------------- | ------------- | -------------------------------------------- |
-| `resizable`   | `false`       | Drag to resize                               |
-| `collapsible` | `false`       | Collapse when dragged to edge                |
-| `side`        | `'left'`      | `'left'` or `'right'`                        |
-| `mode`        | `'slideover'` | Mobile: `'modal'`, `'slideover'`, `'drawer'` |
+| Prop | Default | Purpose |
+|---|---|---|
+| `resizable` | `false` | Drag to resize |
+| `collapsible` | `false` | Collapse when dragged to edge |
+| `side` | `'left'` | `'left'` or `'right'` |
+| `mode` | `'slideover'` | Mobile: `'modal'`, `'slideover'`, `'drawer'` |
 
 All slots receive `{ collapsed, collapse }` — `collapsed` is the boolean state, `collapse(value)` toggles it programmatically. Use `v-model:collapsed` and `v-model:open` (mobile) for state control.
 
@@ -150,7 +145,7 @@ Content panel with `#header`, `#body` (scrollable), `#footer`, and `#default` (r
 
 ### DashboardNavbar / DashboardToolbar
 
-Navbar: `#leading`, `#left`, `#default`, `#right` slots + `title` prop. Use `PDashboardSidebarCollapse` in `#leading` to toggle sidebar on mobile.
+Navbar: `#leading`, `#left`, `#default`, `#right` slots + `title` prop. Use `PDashboardSidebarCollapse` in `#leading` to collapse the sidebar on desktop. The navbar already renders a mobile toggle, customized with its `toggle` prop.
 Toolbar: same slots, sits below navbar for filters/actions.
 
 ### PNavigationMenu in sidebar
@@ -161,7 +156,7 @@ Always pass `:collapsed="collapsed"` to `PNavigationMenu` inside a collapsible s
 
 ```vue [pages/dashboard/inbox.vue]
 <script setup lang="ts">
-definePageMeta({ layout: "dashboard" });
+definePageMeta({ layout: 'dashboard' })
 </script>
 
 <template>

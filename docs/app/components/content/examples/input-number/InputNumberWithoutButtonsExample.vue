@@ -3,7 +3,7 @@ const value = ref(5)
 </script>
 
 <template>
-  <UInputNumber
+  <PInputNumber
     v-model="value"
     :increment="false"
     :decrement="false"

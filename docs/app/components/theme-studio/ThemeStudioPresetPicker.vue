@@ -22,9 +22,10 @@ const { presets, selectedPreset, applyPreset, selectPalette, isCustomPalette, ne
 // "changed from the preset" per control, the cue the studio toolbar carries
 const { groupDirtyFlags } = useThemeStudioToolbar()
 
-// The persisted theme is client-only, resolve after mount so hydration
-// matches the server's fallback (the stock preset).
-const mounted = useMounted()
+// The persisted theme is client-only, resolve once the client has it so
+// hydration matches the server's fallback (the stock preset). Shared, or the
+// copy the mobile menu mounts would flash the fallback.
+const mounted = useThemeMounted()
 
 const preset = computed(() => (mounted.value ? presets.find(entry => entry.id === selectedPreset.value) : presets[0]))
 // the color mode preference is client-only too
@@ -76,10 +77,12 @@ const submenu = { content: { class: 'w-auto' } }
 
 /**
  * A setting row: its value and swatch ride the trailing slot, its options the
- * submenu. A value changed from the preset shows in primary.
+ * submenu. A value changed from the preset shows in primary. The label keeps
+ * its width (the menu's label wrapper is flex-1, it would give way first),
+ * a long value ("Saturated mauve") is the part that truncates.
  */
 function setting(row: { label: string, icon: string, value: string, dot?: string, dirty?: boolean, children: NonNullable<DropdownMenuItem['children']> }): DropdownMenuItem {
-  return { ...row, ...submenu, slot: 'setting' }
+  return { ...row, ...submenu, slot: 'setting', ui: { itemWrapper: 'flex-none', itemTrailing: 'min-w-0' } }
 }
 
 /** A font as a menu option, previewing its own face through the `font` slot. */
@@ -112,7 +115,7 @@ const items = computed<DropdownMenuItem[][]>(() => [[{
   avatar: chip(preset.value?.id, preset.value?.doc ?? currentDoc()),
   // edits on top of a preset keep its name (it stays the baseline), the name
   // goes primary like a changed value does
-  ui: { itemLabel: `font-semibold ${preset.value && modified.value ? 'text-primary' : 'text-highlighted'}` },
+  ui: { itemLabel: `font-semibold ${preset.value && modified.value ? 'text-primary' : 'color-text-highlighted'}` },
   children: presets.map(entry => ({
     label: entry.name,
     type: 'checkbox' as const,
@@ -131,7 +134,7 @@ const items = computed<DropdownMenuItem[][]>(() => [[{
     children: [{
       label: 'Black',
       slot: 'color',
-      dot: 'var(--ui-text-highlighted)',
+      dot: 'var(--ui-color-text-highlighted)',
       type: 'checkbox' as const,
       checked: blackAsPrimary.value,
       onSelect: keep(() => setBlackAsPrimary(true))
@@ -198,7 +201,7 @@ const items = computed<DropdownMenuItem[][]>(() => [[{
   label: upperFirst(mode.value),
   icon: appConfig.ui.icons[mode.value],
   // a row, not a group label: item size and weight
-  ui: { label: 'font-normal text-sm text-default' }
+  ui: { label: 'font-normal text-sm color-text' }
 }], [{
   label: 'Edit theme',
   icon: studioIcons.options,
@@ -222,13 +225,13 @@ watch(open, (isOpen) => {
 </script>
 
 <template>
-  <UDropdownMenu
+  <PDropdownMenu
     v-model:open="open"
     :items="items"
-    :content="{ align: 'end', alignOffset: -4, onInteractOutside: keepPanels }"
+    :content="{ align: 'start', alignOffset: -4, onInteractOutside: keepPanels }"
     :ui="{ content: 'w-56 min-w-36 max-h-98', label: 'text-xs' }"
   >
-    <UTooltip :text="name" ignore-non-keyboard-focus>
+    <PTooltip :text="name" ignore-non-keyboard-focus>
       <PButton
         :icon="triggerIcon"
         color="neutral"
@@ -236,15 +239,15 @@ watch(open, (isOpen) => {
         :ui="{ leadingIcon: 'text-primary' }"
         :aria-label="name"
       />
-    </UTooltip>
+    </PTooltip>
 
     <template #setting-trailing="{ item }">
-      <span class="flex items-center gap-1.5" :class="asRow(item).dirty ? 'text-primary' : 'text-muted'">
-        <span v-if="asRow(item).dot" class="size-2 rounded-full" :style="{ backgroundColor: asRow(item).dot }" />
-        {{ asRow(item).value }}
+      <span class="flex items-center gap-1.5 min-w-0" :class="asRow(item).dirty ? 'text-primary' : 'color-text-muted'">
+        <span v-if="asRow(item).dot" class="size-2 shrink-0 rounded-full" :style="{ backgroundColor: asRow(item).dot }" />
+        <span class="truncate">{{ asRow(item).value }}</span>
       </span>
 
-      <UIcon :name="appConfig.ui.icons.chevronRight" class="size-5 shrink-0 text-dimmed" />
+      <PIcon :name="appConfig.ui.icons.chevronRight" class="size-5 shrink-0 color-text-dimmed" />
     </template>
 
     <!-- the swatch sits in the box an item icon takes, so it centers on the label -->
@@ -255,7 +258,7 @@ watch(open, (isOpen) => {
     </template>
 
     <template #color-mode="{ item }">
-      <UIcon :name="asRow(item).icon" class="size-5 shrink-0 text-dimmed" />
+      <PIcon :name="asRow(item).icon" class="size-5 shrink-0 color-text-dimmed" />
       {{ asRow(item).label }}
       <ThemeStudioColorModeTabs class="ms-auto -my-1.5 [&>div]:ring-0" />
     </template>
@@ -263,11 +266,11 @@ watch(open, (isOpen) => {
     <!-- its own slot: the menu only draws a trailing icon for submenus, and
          appConfig.ui.icons is swapped whole with the pack so this follows it -->
     <template #link-trailing>
-      <UIcon :name="appConfig.ui.icons.arrowRight" class="size-5 shrink-0 text-dimmed" />
+      <PIcon :name="appConfig.ui.icons.arrowRight" class="size-5 shrink-0 color-text-dimmed" />
     </template>
 
     <template #font-label="{ item }">
       <span :style="{ fontFamily: `'${asRow(item).label}', sans-serif` }">{{ asRow(item).label }}</span>
     </template>
-  </UDropdownMenu>
+  </PDropdownMenu>
 </template>

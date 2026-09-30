@@ -11,5 +11,5 @@ const items: TreeItem[] = Array(1000).fill(0).map((_, i) => ({
 </script>
 
 <template>
-  <UTree virtualize :items="items" class="h-80" />
+  <PTree virtualize :items="items" class="h-80" />
 </template>

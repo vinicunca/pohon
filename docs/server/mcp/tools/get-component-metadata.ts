@@ -1,48 +1,48 @@
-import { queryCollection } from '@nuxt/content/server';
-import { toKebabCase } from '@vinicunca/perkakas';
-import { z } from 'zod';
+import { z } from 'zod'
+import { kebabCase } from 'scule'
+import { queryCollection } from '@nuxt/content/server'
 
 export default defineMcpTool({
-  description: 'Retrieves metadata for a Pohon component including props, slots, and events. Props are compact by default, pass `full: true` to get the raw recursive prop schemas (very large)',
+  description: 'Retrieves metadata for a Pohon UI component including props, slots, and events. Props are compact by default, pass `full: true` to get the raw recursive prop schemas (very large). Use this over `get-component` when you need structured props, slots and events rather than prose documentation.',
   annotations: {
     readOnlyHint: true,
     destructiveHint: false,
     idempotentHint: true,
-    openWorldHint: false,
+    openWorldHint: false
   },
   inputSchema: {
     componentName: z.string().describe('The name of the component (PascalCase)'),
-    full: z.boolean().optional().describe('Return raw metadata with recursive prop schemas (very large). Defaults to false (compact props)'),
+    full: z.boolean().optional().describe('Return raw metadata with recursive prop schemas (very large). Defaults to false (compact props)')
   },
   inputExamples: [
     { componentName: 'Button' },
     { componentName: 'PTable' },
-    { componentName: 'Tabs', full: true },
+    { componentName: 'Tabs', full: true }
   ],
   cache: '30m',
   async handler({ componentName, full }) {
-    const event = useEvent();
+    const event = useEvent()
 
-    // Normalize component name by removing "P" or "p-" prefix if present
-    const normalizedName = normalizeComponentName(componentName);
+    // Normalize component name by removing "U" or "u-" prefix if present
+    const normalizedName = normalizeComponentName(componentName)
 
     // Convert to kebab-case for path lookup
-    const kebabName = toKebabCase(normalizedName);
+    const kebabName = kebabCase(normalizedName)
 
     // Get basic component info without documentation content
     const page = await queryCollection(event, 'docs')
       .where('path', 'LIKE', `%/components/${kebabName}`)
       .where('extension', '=', 'md')
       .select('id', 'title', 'description', 'path', 'category', 'links')
-      .first();
+      .first()
 
     if (!page) {
-      throw createError({ statusCode: 404, message: `Component '${componentName}' not found in documentation` });
+      throw createError({ statusCode: 404, message: `Component '${componentName}' not found in documentation` })
     }
 
-    const metadata = await fetchComponentMetadata(normalizedName, { full });
+    const metadata = await fetchComponentMetadata(normalizedName, { full })
     if (!metadata) {
-      throw createError({ statusCode: 404, message: `Metadata for component '${componentName}' not available` });
+      throw createError({ statusCode: 404, message: `Metadata for component '${componentName}' not available` })
     }
 
     return {
@@ -51,7 +51,7 @@ export default defineMcpTool({
       description: page.description,
       category: page.category,
       documentation_url: `${SITE_URL}${page.path}`,
-      metadata,
-    };
-  },
-});
+      metadata
+    }
+  }
+})

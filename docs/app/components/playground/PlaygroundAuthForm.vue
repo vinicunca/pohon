@@ -3,7 +3,6 @@ import * as z from 'zod'
 import type { FormSubmitEvent, AuthFormField } from 'pohon-ui'
 
 const toast = useToast()
-const studioIcons = useStudioIcons()
 
 const fields: AuthFormField[] = [{
   name: 'email',
@@ -27,7 +26,7 @@ const providers = [{
   }
 }, {
   label: 'GitHub',
-  icon: studioIcons.github,
+  icon: 'i-simple-icons-github',
   onClick: () => {
     toast.add({ title: 'GitHub', description: 'Login with GitHub' })
   }
@@ -47,7 +46,7 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
 
 <template>
   <div class="p-6">
-    <UAuthForm
+    <PAuthForm
       :schema="schema"
       title="Login"
       description="Enter your credentials to access your account."

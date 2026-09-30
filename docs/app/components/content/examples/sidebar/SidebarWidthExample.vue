@@ -19,17 +19,17 @@ const items: NavigationMenuItem[] = [{
 
 <template>
   <div class="flex flex-1">
-    <USidebar
+    <PSidebar
       v-model:open="open"
       collapsible="icon"
       :style="{ '--sidebar-width': '20rem' }"
     >
-      <UNavigationMenu
+      <PNavigationMenu
         :items="items"
         orientation="vertical"
         :ui="{ link: 'p-1.5 overflow-hidden' }"
       />
-    </USidebar>
+    </PSidebar>
 
     <div class="flex-1 flex flex-col">
       <div class="h-(--ui-header-height) shrink-0 flex items-center px-4 border-b border-border">

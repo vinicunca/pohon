@@ -16,12 +16,12 @@ function onSubmit() {
 </script>
 
 <template>
-  <UChatPrompt v-model="input" class="w-full" @submit="onSubmit">
+  <PChatPrompt v-model="input" class="w-full" @submit="onSubmit">
     <template #footer>
       <PButton icon="i-lucide-plus" color="neutral" variant="ghost" size="sm" />
 
       <div class="flex items-center gap-1.5">
-        <USelect
+        <PSelect
           v-model="model"
           :items="models"
           :icon="models.find(item => item.value === model)?.icon"
@@ -31,8 +31,8 @@ function onSubmit() {
           square
         />
 
-        <UChatPromptSubmit size="sm" />
+        <PChatPromptSubmit size="sm" />
       </div>
     </template>
-  </UChatPrompt>
+  </PChatPrompt>
 </template>

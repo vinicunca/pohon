@@ -25,7 +25,7 @@ function onOpen() {
 </script>
 
 <template>
-  <UDropdownMenu
+  <PDropdownMenu
     v-model:search-term="searchTerm"
     :items="users || []"
     :filter="{
@@ -38,5 +38,5 @@ function onOpen() {
     @update:open="onOpen"
   >
     <PButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
-  </UDropdownMenu>
+  </PDropdownMenu>
 </template>

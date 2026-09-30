@@ -3,14 +3,17 @@ import { Markdown } from '@comark/vue'
 import shiki from '@comark/vue/plugins/shiki'
 import type { ContentNavigationLink, ContentSurroundLink, DropdownMenuItem, PageLink } from 'pohon-ui'
 
+// built once: in the template it would be a new plugin on every render
+const plugins = [shiki()]
+
 const appConfig = useAppConfig()
 const studioIcons = useStudioIcons()
 
-// Left aside. UContentNavigation is prop-driven, not content-coupled: it reads
+// Left aside. PContentNavigation is prop-driven, not content-coupled: it reads
 // `title`, and `active` forces the state without a route, so the tree is a
 // static array. Paths are empty so nothing navigates out of the studio: the
 // type wants the key, and both the mapper and PLink drop a falsy one.
-const navLinks: ContentNavigationLink[] = [{
+const navLinks = computed<ContentNavigationLink[]>(() => [{
   path: '',
   title: 'Getting Started',
   children: [
@@ -34,7 +37,7 @@ const navLinks: ContentNavigationLink[] = [{
     { path: '', title: 'MCP Server', icon: studioIcons.cpu },
     { path: '', title: 'LLMs Integration', icon: appConfig.ui.icons.file }
   ]
-}]
+}])
 
 // The template's prev/next pair, inert for the same reason.
 const surround: ContentSurroundLink[] = [{
@@ -49,14 +52,14 @@ const surround: ContentSurroundLink[] = [{
 }]
 
 // PageHeaderLinks dropdown, minus the real clipboard / external navigations.
-const copyItems: DropdownMenuItem[] = [
+const copyItems = computed<DropdownMenuItem[]>(() => [
   { label: 'Copy Markdown link', icon: studioIcons.link },
   { label: 'View as Markdown', icon: 'i-simple-icons:markdown' },
   { label: 'Open in ChatGPT', icon: 'i-simple-icons:openai' },
   { label: 'Open in Claude', icon: 'i-simple-icons:anthropic' }
-]
+])
 
-// Right column: UContentToc is content-coupled and router-driven, so the
+// Right column: PContentToc is content-coupled and router-driven, so the
 // same sticky layout is hand-rolled with faked active states.
 const tocLinks = [
   { label: 'Writing content', active: true },
@@ -70,11 +73,11 @@ const tocLinks = [
   }
 ]
 
-const communityLinks: PageLink[] = [
+const communityLinks = computed<PageLink[]>(() => [
   { label: 'Edit this page', icon: appConfig.ui.icons.external },
   { label: 'Star on GitHub', icon: appConfig.ui.icons.star },
-  { label: 'Pohon docs', icon: studioIcons.bookOpen }
-]
+  { label: 'Pohon UI docs', icon: studioIcons.bookOpen }
+])
 
 /**
  * The template's `content/1.getting-started/3.usage.md`, verbatim. It renders
@@ -82,14 +85,14 @@ const communityLinks: PageLink[] = [
  * markdown onto the same Prose components, so the callout props, the code
  * block filenames and the heading ids all come out of the markdown itself.
  */
-const content = `This is only a basic example of what you can achieve with [Pohon](https://pohon.vinicunca.dev), you can tweak it to match your needs. The template uses several Nuxt modules underneath like [\`@nuxt/content\`](https://content.nuxt.com) for the content and [\`nuxt-og-image\`](https://nuxtseo.com/og-image/getting-started/installation) for social previews.
+const content = `This is only a basic example of what you can achieve with [Pohon UI](https://pohon.vinicunca.dev), you can tweak it to match your needs. The template uses several Nuxt modules underneath like [\`@nuxt/content\`](https://content.nuxt.com) for the content and [\`nuxt-og-image\`](https://nuxtseo.com/og-image/getting-started/installation) for social previews.
 
 ::tip
 ---
 target: _blank
 to: https://pohon.vinicunca.dev/getting-started/installation
 ---
-Learn more on how to take the most out of Pohon!
+Learn more on how to take the most out of Pohon UI!
 ::
 
 ## Writing content
@@ -122,7 +125,7 @@ export default defineAppConfig({
     // Customize links
     links: [{
       'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/vinicunca/pohon-ui-templates/docs',
+      'to': 'https://github.com/vinicunca/pohon/tree/main/playgrounds/nuxt',
       'target': '_blank',
       'aria-label': 'GitHub'
     }]
@@ -136,25 +139,25 @@ export default defineAppConfig({
 export default defineAppConfig({
   footer: {
     // Update bottom left credits
-    credits: \`Built with Pohon • © \${new Date().getFullYear()}\`,
+    credits: \`Built with Pohon UI • © \${new Date().getFullYear()}\`,
     // Show or hide the color mode button
     colorMode: false,
     // Customize links
     links: [{
       'icon': 'i-simple-icons-discord',
-      'to': 'https://go.nuxt.com/discord',
+      'to': 'https://github.com/vinicunca/pohon/discussions',
       'target': '_blank',
-      'aria-label': 'Nuxt on Discord'
+      'aria-label': 'Pohon UI Discussions'
     }, {
       'icon': 'i-simple-icons-x',
-      'to': 'https://go.nuxt.com/x',
+      'to': 'https://github.com/vinicunca/pohon',
       'target': '_blank',
-      'aria-label': 'Nuxt on X'
+      'aria-label': 'Pohon UI on GitHub'
     }, {
       'icon': 'i-simple-icons-github',
       'to': 'https://github.com/vinicunca/pohon',
       'target': '_blank',
-      'aria-label': 'Pohon on GitHub'
+      'aria-label': 'Pohon UI on GitHub'
     }]
   },
 })
@@ -172,7 +175,7 @@ export default defineAppConfig({
       // Title of the bottom table of contents
       title: 'Community',
       // URL of your repository content folder
-      edit: 'https://github.com/vinicunca/pohon-ui-templates/docs/edit/main/content',
+      edit: 'https://github.com/vinicunca/pohon/tree/main/playgrounds/nuxt',
       links: [{
         icon: 'i-lucide-star',
         label: 'Star on GitHub',
@@ -180,7 +183,7 @@ export default defineAppConfig({
         target: '_blank'
       }, {
         icon: 'i-lucide-book-open',
-        label: 'Pohon docs',
+        label: 'Pohon UI docs',
         to: 'https://pohon.vinicunca.dev/getting-started/installation',
         target: '_blank'
       }]
@@ -192,28 +195,28 @@ export default defineAppConfig({
 
 <template>
   <!-- The pane is the scroll container, so the header and asides stick to it. -->
-  <div class="h-full overflow-y-auto bg-default">
-    <UHeader :toggle="false" class="rounded-t-[inherit]" :ui="{ center: 'flex-1' }">
+  <div class="h-full overflow-y-auto bg-background">
+    <PHeader :toggle="false" class="rounded-t-[inherit]" :ui="{ center: 'flex-1' }">
       <template #left>
         <div class="flex items-center gap-1.5">
-          <UIcon :name="studioIcons.bookOpen" class="size-6 text-primary shrink-0" />
-          <span class="text-xl font-bold text-highlighted">Docs</span>
+          <PIcon :name="studioIcons.bookOpen" class="size-6 text-primary shrink-0" />
+          <span class="text-xl font-bold color-text-highlighted">Docs</span>
         </div>
       </template>
 
-      <!-- UContentSearchButton opens the content search modal: fake the expanded look. -->
+      <!-- PContentSearchButton opens the content search modal: fake the expanded look. -->
       <PButton
         :icon="appConfig.ui.icons.search"
         label="Search documentation..."
         color="neutral"
         variant="outline"
         class="w-full"
-        :ui="{ base: 'text-dimmed hover:text-default font-normal', leadingIcon: 'size-4' }"
+        :ui="{ base: 'color-text-dimmed hover:color-text font-normal', leadingIcon: 'size-4' }"
       >
         <template #trailing>
           <div class="ms-auto hidden lg:flex items-center gap-0.5">
-            <UKbd value="meta" />
-            <UKbd value="K" />
+            <PKbd value="meta" />
+            <PKbd value="K" />
           </div>
         </template>
       </PButton>
@@ -222,38 +225,38 @@ export default defineAppConfig({
         <!-- Static: the studio toolbar owns color mode. -->
         <PButton color="neutral" variant="ghost" aria-label="Color mode">
           <template #leading="{ ui }">
-            <UIcon :name="appConfig.ui.icons.dark" :class="ui.leadingIcon({ class: 'hidden dark:inline-block' })" />
-            <UIcon :name="appConfig.ui.icons.light" :class="ui.leadingIcon({ class: 'dark:hidden' })" />
+            <PIcon :name="appConfig.ui.icons.dark" :class="ui.leadingIcon({ class: 'hidden dark:inline-block' })" />
+            <PIcon :name="appConfig.ui.icons.light" :class="ui.leadingIcon({ class: 'dark:hidden' })" />
           </template>
         </PButton>
-        <PButton :icon="studioIcons.github" aria-label="GitHub" color="neutral" variant="ghost" />
+        <PButton icon="i-simple-icons-github" aria-label="GitHub" color="neutral" variant="ghost" />
       </template>
-    </UHeader>
+    </PHeader>
 
-    <UContainer>
-      <UPage>
+    <PContainer>
+      <PPage>
         <template #left>
-          <UPageAside>
-            <UContentNavigation highlight :navigation="navLinks" />
-          </UPageAside>
+          <PPageAside>
+            <PContentNavigation highlight :navigation="navLinks" />
+          </PPageAside>
         </template>
 
-        <UPage>
-          <UPageHeader
+        <PPage>
+          <PPageHeader
             headline="Getting Started"
             title="Usage"
             description="Learn how to write and customize your documentation."
           >
             <template #links>
-              <UFieldGroup>
+              <PFieldGroup>
                 <PButton
                   label="Copy page"
                   :icon="appConfig.ui.icons.copy"
                   color="neutral"
                   variant="outline"
-                  :ui="{ leadingIcon: 'text-neutral size-3.5' }"
+                  :ui="{ leadingIcon: 'size-3.5' }"
                 />
-                <UDropdownMenu
+                <PDropdownMenu
                   :items="copyItems"
                   :content="{ align: 'end', side: 'bottom', sideOffset: 8 }"
                   :ui="{ content: 'w-48' }"
@@ -265,23 +268,23 @@ export default defineAppConfig({
                     variant="outline"
                     aria-label="Open copy actions menu"
                   />
-                </UDropdownMenu>
-              </UFieldGroup>
+                </PDropdownMenu>
+              </PFieldGroup>
             </template>
-          </UPageHeader>
+          </PPageHeader>
 
-          <UPageBody>
-            <Markdown :value="content" :plugins="[shiki()]" />
+          <PPageBody>
+            <Markdown :value="content" :plugins="plugins" />
 
             <PSeparator />
 
-            <UContentSurround :surround="surround" />
-          </UPageBody>
+            <PContentSurround :surround="surround" />
+          </PPageBody>
 
           <template #right>
             <div class="hidden lg:flex flex-col gap-6 self-start sticky top-(--ui-header-height) py-8">
               <div>
-                <p class="text-sm font-semibold text-highlighted mb-1.5">
+                <p class="text-sm font-semibold color-text-highlighted mb-1.5">
                   Table of Contents
                 </p>
 
@@ -290,7 +293,7 @@ export default defineAppConfig({
                     <button
                       type="button"
                       class="w-full text-start text-sm py-1 truncate transition-colors"
-                      :class="link.active ? 'text-primary' : 'text-muted hover:text-default'"
+                      :class="link.active ? 'text-primary' : 'color-text-muted hover:color-text'"
                     >
                       {{ link.label }}
                     </button>
@@ -299,7 +302,7 @@ export default defineAppConfig({
                       <li v-for="child in link.children" :key="child.label" class="min-w-0">
                         <button
                           type="button"
-                          class="w-full text-start text-sm py-1 truncate text-muted hover:text-default transition-colors"
+                          class="w-full text-start text-sm py-1 truncate color-text-muted hover:color-text transition-colors"
                         >
                           {{ child.label }}
                         </button>
@@ -311,25 +314,25 @@ export default defineAppConfig({
 
               <PSeparator type="dashed" />
 
-              <UPageLinks title="Community" :links="communityLinks" />
+              <PPageLinks title="Community" :links="communityLinks" />
             </div>
           </template>
-        </UPage>
-      </UPage>
-    </UContainer>
+        </PPage>
+      </PPage>
+    </PContainer>
 
-    <UFooter>
+    <PFooter class="border-t border-border">
       <template #left>
-        <p class="text-sm text-muted">
-          Built with Pohon • © 2026
+        <p class="text-sm color-text-muted">
+          Built with Pohon UI • © 2026
         </p>
       </template>
 
       <template #right>
         <PButton icon="i-simple-icons-discord" aria-label="Discord" color="neutral" variant="ghost" />
         <PButton icon="i-simple-icons-x" aria-label="X" color="neutral" variant="ghost" />
-        <PButton :icon="studioIcons.github" aria-label="GitHub" color="neutral" variant="ghost" />
+        <PButton icon="i-simple-icons-github" aria-label="GitHub" color="neutral" variant="ghost" />
       </template>
-    </UFooter>
+    </PFooter>
   </div>
 </template>

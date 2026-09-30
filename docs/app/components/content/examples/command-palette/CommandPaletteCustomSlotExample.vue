@@ -83,9 +83,9 @@ const groups = [
 </script>
 
 <template>
-  <UCommandPalette :groups="groups" class="flex-1 h-80">
+  <PCommandPalette :groups="groups" class="flex-1 h-80">
     <template #users-leading="{ item }">
-      <UAvatar :src="`https://github.com/${item.suffix}.png`" size="2xs" loading="lazy" />
+      <PAvatar :src="`https://github.com/${item.suffix}.png`" size="2xs" loading="lazy" />
     </template>
 
     <template #billing-label="{ item }">
@@ -95,5 +95,5 @@ const groups = [
         50% off
       </PBadge>
     </template>
-  </UCommandPalette>
+  </PCommandPalette>
 </template>

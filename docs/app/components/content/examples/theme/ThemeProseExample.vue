@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Markdown } from '@comark/vue'
+
 const ui = {
   prose: {
     p: { base: 'my-2.5 text-sm/6' },
@@ -28,7 +30,7 @@ This is a paragraph with a **tighter typographic scale** applied through the \`T
 </script>
 
 <template>
-  <UTheme :ui="ui">
-    <MDC :value="value" />
-  </UTheme>
+  <PTheme :ui="ui">
+    <Markdown :value="value" class="*:first:mt-0 *:last:mb-0" />
+  </PTheme>
 </template>

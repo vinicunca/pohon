@@ -8,7 +8,7 @@ Build documentation sites with sidebar navigation, table of contents, and surrou
 - Knowledge bases, help centers
 - Any content-heavy site with hierarchical navigation
 
-> Requires `@nuxt/content` — see [conventions](../guidelines/conventions.md#content-module-integration) for setup (module order + `@source`).
+> Requires `@nuxt/content` — see [conventions](../guidelines/conventions.md#content-module-integration) for setup (module order + UnoCSS content scanning).
 
 ## Component tree
 
@@ -30,23 +30,19 @@ PApp
 
 ```vue [app.vue]
 <script setup lang="ts">
-import type { NavigationMenuItem } from "pohon-ui";
+import type { NavigationMenuItem } from 'pohon-ui'
 
-const route = useRoute();
+const route = useRoute()
 
-const { data: navigation } = await useAsyncData("navigation", () =>
-  queryCollectionNavigation("docs"),
-);
+const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'))
 
-provide("navigation", navigation);
+provide('navigation', navigation)
 
-const items = computed<NavigationMenuItem[]>(() => [
-  {
-    label: "Docs",
-    to: "/docs/getting-started",
-    active: route.path.startsWith("/docs"),
-  },
-]);
+const items = computed<NavigationMenuItem[]>(() => [{
+  label: 'Docs',
+  to: '/docs/getting-started',
+  active: route.path.startsWith('/docs')
+}])
 </script>
 
 <template>
@@ -81,9 +77,9 @@ const items = computed<NavigationMenuItem[]>(() => [
 
 ```vue [layouts/docs.vue]
 <script setup lang="ts">
-import type { ContentNavigationItem } from "@nuxt/content";
+import type { ContentNavigationItem } from '@nuxt/content'
 
-const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </script>
 
 <template>
@@ -103,17 +99,17 @@ const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
 
 ```vue [pages/docs/[...slug].vue]
 <script setup lang="ts">
-const route = useRoute();
+const route = useRoute()
 
-definePageMeta({ layout: "docs" });
+definePageMeta({ layout: 'docs' })
 
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection("docs").path(route.path).first();
-});
+  return queryCollection('docs').path(route.path).first()
+})
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
-  return queryCollectionItemSurroundings("docs", route.path);
-});
+  return queryCollectionItemSurroundings('docs', route.path)
+})
 </script>
 
 <template>

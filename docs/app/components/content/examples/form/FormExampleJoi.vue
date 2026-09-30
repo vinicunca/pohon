@@ -24,11 +24,11 @@ async function onSubmit(event: FormSubmitEvent<typeof state>) {
 <template>
   <PForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
     <PFormField label="Email" name="email">
-      <UInput v-model="state.email" />
+      <PInput v-model="state.email" />
     </PFormField>
 
     <PFormField label="Password" name="password">
-      <UInput v-model="state.password" type="password" />
+      <PInput v-model="state.password" type="password" />
     </PFormField>
 
     <PButton type="submit">

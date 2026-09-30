@@ -11,9 +11,9 @@ const items: TabsItem[] = [{
 </script>
 
 <template>
-  <UDashboardNavbar title="Inbox">
+  <PDashboardNavbar title="Inbox">
     <template #leading>
-      <UDashboardSidebarCollapse />
+      <PDashboardSidebarCollapse />
     </template>
 
     <template #trailing>
@@ -21,7 +21,7 @@ const items: TabsItem[] = [{
     </template>
 
     <template #right>
-      <UTabs
+      <PTabs
         :items="items"
         default-value="all"
         size="sm"
@@ -29,5 +29,5 @@ const items: TabsItem[] = [{
         :content="false"
       />
     </template>
-  </UDashboardNavbar>
+  </PDashboardNavbar>
 </template>

@@ -6,6 +6,6 @@ const time = shallowRef(new Time(12, 30, 0))
 
 <template>
   <PFormField label="Time" help="Specify the time" required>
-    <UInputTime v-model="time" />
+    <PInputTime v-model="time" />
   </PFormField>
 </template>

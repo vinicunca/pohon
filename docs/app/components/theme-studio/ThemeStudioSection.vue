@@ -50,9 +50,9 @@ const hasHeader = computed(() => !!(props.label || props.helpTo || showReset.val
 <template>
   <div :class="[{ 'flex flex-col gap-1': !collapsible }]">
     <div v-if="hasHeader" class="flex items-center gap-0.5" :class="[collapsible ? '-my-1' : '-mt-1']">
-      <span class="flex-1 min-w-0 text-xs/7 font-semibold truncate text-highlighted">{{ label }}</span>
+      <span class="flex-1 min-w-0 text-xs/7 font-semibold truncate color-text-highlighted">{{ label }}</span>
 
-      <UTooltip v-if="helpTo" text="Docs" ignore-non-keyboard-focus>
+      <PTooltip v-if="helpTo" text="Docs" ignore-non-keyboard-focus>
         <PButton
           :to="helpTo"
           size="sm"
@@ -61,9 +61,9 @@ const hasHeader = computed(() => !!(props.label || props.helpTo || showReset.val
           :icon="studioIcons.help"
           aria-label="Documentation for this setting"
         />
-      </UTooltip>
+      </PTooltip>
 
-      <UTooltip v-if="showReset && dirty" text="Reset to preset" ignore-non-keyboard-focus>
+      <PTooltip v-if="showReset && dirty" text="Reset to preset" ignore-non-keyboard-focus>
         <PButton
           size="sm"
           color="primary"
@@ -72,7 +72,7 @@ const hasHeader = computed(() => !!(props.label || props.helpTo || showReset.val
           :aria-label="label ? `Reset ${label} to preset` : 'Reset to preset'"
           @click="reset"
         />
-      </UTooltip>
+      </PTooltip>
 
       <slot name="actions" />
     </div>

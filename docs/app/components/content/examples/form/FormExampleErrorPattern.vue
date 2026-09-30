@@ -24,11 +24,11 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 <template>
   <PForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
     <PFormField label="Email" name="email">
-      <UInput v-model="state.email" />
+      <PInput v-model="state.email" />
     </PFormField>
 
     <PFormField label="Tags" name="tags" :error-pattern="/^tags\..+/">
-      <UInputTags v-model="state.tags" />
+      <PInputTags v-model="state.tags" />
     </PFormField>
 
     <PButton type="submit">

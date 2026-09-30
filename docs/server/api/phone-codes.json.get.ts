@@ -1,12 +1,12 @@
 type PhoneCode = {
-  name: string;
-  code: string;
-  emoji: string;
-  dialCode: string;
-  mask: string;
-};
+  name: string
+  code: string
+  emoji: string
+  dialCode: string
+  mask: string
+}
 
-const phoneCodes: Array<PhoneCode> = [
+const phoneCodes: PhoneCode[] = [
   { name: 'Afghanistan', code: 'AF', emoji: '\u{1F1E6}\u{1F1EB}', dialCode: '+93', mask: '## ### ####' },
   { name: 'Albania', code: 'AL', emoji: '\u{1F1E6}\u{1F1F1}', dialCode: '+355', mask: '## ### ####' },
   { name: 'Algeria', code: 'DZ', emoji: '\u{1F1E9}\u{1F1FF}', dialCode: '+213', mask: '### ## ## ##' },
@@ -186,7 +186,7 @@ const phoneCodes: Array<PhoneCode> = [
   { name: 'Turkmenistan', code: 'TM', emoji: '\u{1F1F9}\u{1F1F2}', dialCode: '+993', mask: '## ######' },
   { name: 'Tuvalu', code: 'TV', emoji: '\u{1F1F9}\u{1F1FB}', dialCode: '+688', mask: '######' },
   { name: 'Uganda', code: 'UG', emoji: '\u{1F1FA}\u{1F1EC}', dialCode: '+256', mask: '### ######' },
-  { name: 'Ukraine', code: 'UA', emoji: '\u{1F1FA}\u{1F1E6}', dialCode: '+380', mask: '## ### ## ##' },
+  { name: 'Ukraine', code: 'PA', emoji: '\u{1F1FA}\u{1F1E6}', dialCode: '+380', mask: '## ### ## ##' },
   { name: 'United Arab Emirates', code: 'AE', emoji: '\u{1F1E6}\u{1F1EA}', dialCode: '+971', mask: '## ### ####' },
   { name: 'United Kingdom', code: 'GB', emoji: '\u{1F1EC}\u{1F1E7}', dialCode: '+44', mask: '#### ######' },
   { name: 'United States', code: 'US', emoji: '\u{1F1FA}\u{1F1F8}', dialCode: '+1', mask: '(###) ###-####' },
@@ -198,7 +198,7 @@ const phoneCodes: Array<PhoneCode> = [
   { name: 'Vietnam', code: 'VN', emoji: '\u{1F1FB}\u{1F1F3}', dialCode: '+84', mask: '## ### ## ##' },
   { name: 'Yemen', code: 'YE', emoji: '\u{1F1FE}\u{1F1EA}', dialCode: '+967', mask: '### ### ###' },
   { name: 'Zambia', code: 'ZM', emoji: '\u{1F1FF}\u{1F1F2}', dialCode: '+260', mask: '## #######' },
-  { name: 'Zimbabwe', code: 'ZW', emoji: '\u{1F1FF}\u{1F1FC}', dialCode: '+263', mask: '## ### ####' },
-];
+  { name: 'Zimbabwe', code: 'ZW', emoji: '\u{1F1FF}\u{1F1FC}', dialCode: '+263', mask: '## ### ####' }
+]
 
-export default eventHandler(async () => phoneCodes);
+export default eventHandler(async () => phoneCodes)

@@ -7,11 +7,11 @@ keywords:
   - multi value
 links:
   - label: InputTags
-    icon: i-custom-reka-ui
+    icon: i-lucide-box
     to: https://akar.vinicunca.dev/docs/components/tags-input
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/InputTags.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/InputTags.vue
 ---
 
 ## Usage
@@ -20,34 +20,26 @@ Use the `v-model` directive to control the value of the InputTags.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
-
 ---
-
 ::
 
 Use the `default-value` prop to set the initial value when you do not need to control its state.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- defaultValue
-  props:
+  - defaultValue
+props:
   defaultValue: ['Vue']
-
 ---
-
 ::
 
 ### Placeholder
@@ -56,11 +48,9 @@ Use the `placeholder` prop to set a placeholder text.
 
 ::component-code
 ---
-
 props:
-placeholder: 'Enter tags...'
+  placeholder: 'Enter tags...'
 ---
-
 ::
 
 ### Max Length
@@ -69,11 +59,9 @@ Use the `max-length` prop to set the maximum number of characters allowed in a t
 
 ::component-code
 ---
-
 props:
-maxLength: 4
+  maxLength: 4
 ---
-
 ::
 
 ### Color
@@ -82,20 +70,16 @@ Use the `color` prop to change the ring color when the InputTags is focused.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
   color: neutral
   highlight: true
-
 ---
-
 ::
 
 ::note
@@ -108,21 +92,17 @@ Use the `variant` prop to change the appearance of the InputTags.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
   variant: subtle
   color: neutral
   highlight: false
-
 ---
-
 ::
 
 ### Sizes
@@ -131,19 +111,15 @@ Use the `size` prop to adjust the size of the InputTags.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
   size: xl
-
 ---
-
 ::
 
 ### Icon
@@ -152,21 +128,17 @@ Use the `icon` prop to show an [Icon](/docs/components/icon) inside the InputTag
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
   icon: 'i-lucide-search'
   size: md
   variant: outline
-
 ---
-
 ::
 
 ::note
@@ -179,24 +151,20 @@ Use the `avatar` prop to show an [Avatar](/docs/components/avatar) inside the In
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-- avatar.loading
-  external:
-- modelValue
-  props:
+  - modelValue
+  - avatar.loading
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
   avatar:
-  src: 'https://github.com/vuejs.png'
-  loading: lazy
+    src: 'https://github.com/vuejs.png'
+    loading: lazy
   size: md
   variant: outline
-
 ---
-
 ::
 
 ### Delete Icon
@@ -205,19 +173,15 @@ Use the `delete-icon` prop to customize the delete [Icon](/docs/components/icon)
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
   deleteIcon: 'i-lucide-trash'
-
 ---
-
 ::
 
 ::framework-only
@@ -238,20 +202,16 @@ Use the `loading` prop to show a loading icon on the InputTags.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
   loading: true
   trailing: false
-
 ---
-
 ::
 
 ### Loading Icon
@@ -260,20 +220,16 @@ Use the `loading-icon` prop to customize the loading icon. Defaults to `i-lucide
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
   loading: true
   loadingIcon: 'i-lucide-loader'
-
 ---
-
 ::
 
 ::framework-only
@@ -294,19 +250,15 @@ Use the `disabled` prop to disable the InputTags.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: ['Vue']
   disabled: true
-
 ---
-
 ::
 
 ## Examples
@@ -317,10 +269,8 @@ You can use the InputTags within a [FormField](/docs/components/form-field) comp
 
 ::component-example
 ---
-
 name: 'input-tags-form-field-example'
 ---
-
 ::
 
 ## API
@@ -345,8 +295,8 @@ This component also supports all native `<input>` HTML attributes.
 
 When accessing the component via a template ref, you can use the following:
 
-| Name                       | Type                                            |
-| -------------------------- | ----------------------------------------------- |
+| Name | Type |
+| ---- | ---- |
 | `inputRef`{lang="ts-type"} | `Ref<HTMLInputElement \| null>`{lang="ts-type"} |
 
 ## Theme

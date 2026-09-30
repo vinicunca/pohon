@@ -28,5 +28,5 @@ const value = ref(items.value[0])
 </script>
 
 <template>
-  <USelectMenu v-model="value" :icon="value?.icon" :items="items" class="w-48" />
+  <PSelectMenu v-model="value" :icon="value?.icon" :items="items" class="w-48" />
 </template>

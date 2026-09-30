@@ -1,16 +1,16 @@
 <template>
-  <UTheme
+  <PTheme
     :props="{
       button: { color: 'neutral', variant: 'subtle', size: 'lg' },
       tooltip: { delayDuration: 0, arrow: true }
     }"
   >
     <div class="flex items-center gap-2">
-      <UTooltip text="Inherits delayDuration from theme">
+      <PTooltip text="Inherits delayDuration from theme">
         <PButton label="Hover me" />
-      </UTooltip>
+      </PTooltip>
       <PButton label="With icon" icon="i-lucide-rocket" />
       <PButton label="Square" icon="i-lucide-star" square />
     </div>
-  </UTheme>
+  </PTheme>
 </template>

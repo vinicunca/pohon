@@ -20,7 +20,7 @@ function onOpen() {
 </script>
 
 <template>
-  <UInputMenu
+  <PInputMenu
     :items="users"
     icon="i-lucide-user"
     placeholder="Select user"
@@ -30,9 +30,9 @@ function onOpen() {
     <template #item-label="{ item }">
       {{ item.label }}
 
-      <span class="text-muted">
+      <span class="color-text-muted">
         {{ item.email }}
       </span>
     </template>
-  </UInputMenu>
+  </PInputMenu>
 </template>

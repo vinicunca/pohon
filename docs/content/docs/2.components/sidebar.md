@@ -1,10 +1,10 @@
 ---
-description: "A collapsible sidebar with multiple visual variants."
+description: 'A collapsible sidebar with multiple visual variants.'
 category: layout
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Sidebar.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Sidebar.vue
 ---
 
 ## Usage
@@ -19,14 +19,12 @@ Use the `header`, `default` and `footer` slots to customize the sidebar content.
 
 ::component-example
 ---
-
 collapse: true
 prettier: true
 name: 'sidebar-example'
 overflowHidden: true
 class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
-
 ::
 
 ### Variant
@@ -35,24 +33,20 @@ Use the `variant` prop to change the visual style of the sidebar. Defaults to `s
 
 ::component-example
 ---
-
 collapse: true
 prettier: true
 name: 'sidebar-props-example'
 overflowHidden: true
 options:
-
-- name: 'variant'
-  label: 'variant'
-  items:
-  - sidebar
-  - floating
-  - inset
+  - name: 'variant'
+    label: 'variant'
+    items:
+      - sidebar
+      - floating
+      - inset
     default: 'inset'
-    class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
-
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
-
 ::
 
 ### Collapsible
@@ -65,31 +59,27 @@ Use the `collapsible` prop to change the collapse behavior of the sidebar. Defau
 
 ::component-example
 ---
-
 collapse: true
 prettier: true
 name: 'sidebar-props-example'
 overflowHidden: true
 options:
-
-- name: 'collapsible'
-  label: 'collapsible'
-  items:
-  - offcanvas
-  - icon
-  - none
+  - name: 'collapsible'
+    label: 'collapsible'
+    items:
+      - offcanvas
+      - icon
+      - none
     default: 'icon'
-- name: 'variant'
-  label: 'variant'
-  items:
-  - sidebar
-  - floating
-  - inset
+  - name: 'variant'
+    label: 'variant'
+    items:
+      - sidebar
+      - floating
+      - inset
     default: 'sidebar'
-    class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
-
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
-
 ::
 
 ::tip{to="#slots"}
@@ -102,23 +92,19 @@ Use the `side` prop to change the side of the sidebar. Defaults to `left`.
 
 ::component-example
 ---
-
 collapse: true
 prettier: true
 name: 'sidebar-props-example'
 overflowHidden: true
 options:
-
-- name: 'side'
-  label: 'side'
-  items:
-  - left
-  - right
+  - name: 'side'
+    label: 'side'
+    items:
+      - left
+      - right
     default: 'right'
-    class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
-
+class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
-
 ::
 
 ### Title
@@ -127,23 +113,20 @@ Use the `title` prop to set the title of the sidebar header.
 
 ::component-code
 ---
-
 prettier: true
 hide:
-
-- class
-- ui
-  ignore:
-- ui.container
-  props:
+  - class
+  - ui
+ignore:
+  - ui.container
+props:
   title: Navigation
   ui:
-  container: h-full
-  slots:
+    container: h-full
+slots:
   default: |
 
-  <Placeholder class="h-full" />
-
+    <Placeholder class="h-full" />
 class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
@@ -156,25 +139,22 @@ Use the `description` prop to set the description of the sidebar header.
 
 ::component-code
 ---
-
 prettier: true
 hide:
-
-- class
-- ui
-  ignore:
-- title
-- ui.container
-  props:
+  - class
+  - ui
+ignore:
+  - title
+  - ui.container
+props:
   title: Navigation
   description: Browse your workspace
   ui:
-  container: h-full
-  slots:
+    container: h-full
+slots:
   default: |
 
-  <Placeholder class="h-full" />
-
+    <Placeholder class="h-full" />
 class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
@@ -187,25 +167,22 @@ Use the `rail` prop to display a thin interactive edge on the sidebar that toggl
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- title
-- ui.container
-  hide:
-- ui
-- class
-  props:
+  - title
+  - ui.container
+hide:
+  - ui
+  - class
+props:
   rail: true
   collapsible: icon
   title: Navigation
   ui.container: h-full
-  slots:
+slots:
   default: |
 
-  <Placeholder class="h-full" />
-
+    <Placeholder class="h-full" />
 class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
@@ -220,32 +197,29 @@ You can pass any property from the [Button](/docs/components/button) component t
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- title
-- rail
-- ui.container
-  hide:
-- ui
-- class
-  props:
+  - title
+  - rail
+  - ui.container
+hide:
+  - ui
+  - class
+props:
   close: true
   rail: true
   collapsible: icon
   title: Navigation
   ui:
-  container: h-full
-  items:
+    container: h-full
+items:
   close:
-  - true
-  - false
-    slots:
-    default: |
+    - true
+    - false
+slots:
+  default: |
 
-  <Placeholder class="h-full" />
-
+    <Placeholder class="h-full" />
 class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
@@ -258,19 +232,17 @@ Use the `close-icon` prop to customize the close button [Icon](/docs/components/
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- title
-- rail
-- side
-- close
-- ui.container
-  hide:
-- ui
-- class
-  props:
+  - title
+  - rail
+  - side
+  - close
+  - ui.container
+hide:
+  - ui
+  - class
+props:
   close: true
   closeIcon: i-lucide-panel-right-close
   rail: true
@@ -278,16 +250,15 @@ ignore:
   side: right
   title: Navigation
   ui:
-  container: h-full
-  items:
+    container: h-full
+items:
   close:
-  - true
-  - false
-    slots:
-    default: |
+    - true
+    - false
+slots:
+  default: |
 
-  <Placeholder class="h-full" />
-
+    <Placeholder class="h-full" />
 class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
 
@@ -312,27 +283,23 @@ Use the `mode` prop to change the mode of the sidebar menu on mobile. Defaults t
 
 ::component-example
 ---
-
 collapse: true
 iframe:
-height: 500px;
+  height: 500px;
 iframeMobile: true
 overflowHidden: true
 name: 'sidebar-mode-example'
 options:
-
-- name: 'mode'
-  label: 'mode'
-  default: 'slideover'
-  items:
-  - modal
-  - slideover
-  - drawer
-    props:
-    class: 'w-full'
-
+  - name: 'mode'
+    label: 'mode'
+    default: 'slideover'
+    items:
+      - modal
+      - slideover
+      - drawer
+props:
+  class: 'w-full'
 ---
-
 ::
 
 ::tip{to="#props"}
@@ -347,14 +314,12 @@ You can control the open state by using the `open` prop or the `v-model:open` di
 
 ::component-example
 ---
-
 collapse: true
 prettier: true
 name: 'sidebar-open-example'
 overflowHidden: true
 class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
-
 ::
 
 ::note
@@ -367,14 +332,12 @@ Use [`useLocalStorage`](https://vueuse.org/core/useLocalStorage/) from VueUse or
 
 ::component-example
 ---
-
 collapse: true
 prettier: true
 name: 'sidebar-persist-example'
 overflowHidden: true
 class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
-
 ::
 
 ::note
@@ -389,14 +352,12 @@ Override them globally in your CSS or per-instance with the `style` attribute.
 
 ::component-example
 ---
-
 collapse: true
 prettier: true
 name: 'sidebar-width-example'
 overflowHidden: true
 class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
-
 ::
 
 ### With header
@@ -405,14 +366,12 @@ To position the sidebar below a [Header](/docs/components/header), customize the
 
 ::component-example
 ---
-
 collapse: true
 prettier: true
 name: 'sidebar-header-example'
 overflowHidden: true
 class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
-
 ::
 
 ::note
@@ -425,14 +384,12 @@ Use the sidebar on the right side with [ChatMessages](/docs/components/chat-mess
 
 ::component-example
 ---
-
 collapse: true
 prettier: true
 name: 'sidebar-chat-example'
 overflowHidden: true
 class: '!p-0 !justify-start h-[500px] contain-[paint] transform-gpu'
 ---
-
 ::
 
 ## API

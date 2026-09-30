@@ -22,7 +22,7 @@ const items: TabsItem[] = [
 </script>
 
 <template>
-  <UTabs
+  <PTabs
     :items="items"
     :content="false"
     :ui="{

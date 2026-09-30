@@ -5,11 +5,11 @@ keywords:
   - hint
 links:
   - label: Tooltip
-    icon: i-custom-reka-ui
+    icon: i-lucide-box
     to: https://akar.vinicunca.dev/docs/components/tooltip
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Tooltip.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Tooltip.vue
 ---
 
 ## Usage
@@ -18,21 +18,18 @@ Use a [Button](/docs/components/button) or any other component in the default sl
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- text
-  props:
+  - text
+props:
   text: 'Open on GitHub'
-  slots:
+slots:
   default: |
 
-  <PButton label="Open" color="neutral" variant="subtle" />
-
+    <PButton label="Open" color="neutral" variant="subtle" />
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle"}
+:u-button{label="Open" color="neutral" variant="subtle"}
 ::
 
 ::warning
@@ -49,18 +46,16 @@ Use the `text` prop to set the content of the Tooltip.
 
 ::component-code
 ---
-
 prettier: true
 props:
-text: 'Open on GitHub'
+  text: 'Open on GitHub'
 slots:
-default: |
+  default: |
 
     <PButton label="Open" color="neutral" variant="subtle" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle"}
+:u-button{label="Open" color="neutral" variant="subtle"}
 ::
 
 ### Kbds
@@ -69,25 +64,22 @@ Use the `kbds` prop to render [Kbd](/docs/components/kbd) components in the Tool
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- text
-- kbds
-  props:
+  - text
+  - kbds
+props:
   text: 'Open on GitHub'
   kbds:
-  - meta
-  - G
-    slots:
-    default: |
+    - meta
+    - G
+slots:
+  default: |
 
-  <PButton label="Open" color="neutral" variant="subtle" />
-
+    <PButton label="Open" color="neutral" variant="subtle" />
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle"}
+:u-button{label="Open" color="neutral" variant="subtle"}
 ::
 
 ::tip
@@ -100,22 +92,19 @@ Use the `delay-duration` prop to change the delay before the Tooltip appears. Fo
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- text
-  props:
+  - text
+props:
   delayDuration: 0
   text: 'Open on GitHub'
-  slots:
+slots:
   default: |
 
-  <PButton label="Open" color="neutral" variant="subtle" />
-
+    <PButton label="Open" color="neutral" variant="subtle" />
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle"}
+:u-button{label="Open" color="neutral" variant="subtle"}
 ::
 
 ::tip
@@ -132,35 +121,32 @@ This can be configured globally through the `tooltip.content` option in the [`Ap
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- text
-  items:
+  - text
+items:
   content.align:
-  - start
-  - center
-  - end
-    content.side:
-  - right
-  - left
-  - top
-  - bottom
-    props:
-    content:
+    - start
+    - center
+    - end
+  content.side:
+    - right
+    - left
+    - top
+    - bottom
+props:
+  content:
     align: center
     side: bottom
     sideOffset: 8
-    text: 'Open on GitHub'
-    slots:
-    default: |
+  text: 'Open on GitHub'
+slots:
+  default: |
 
-  <PButton label="Open" color="neutral" variant="subtle" />
-
+    <PButton label="Open" color="neutral" variant="subtle" />
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle"}
+:u-button{label="Open" color="neutral" variant="subtle"}
 ::
 
 ### Arrow
@@ -169,23 +155,20 @@ Use the `arrow` prop to display an arrow on the Tooltip.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- text
-- arrow
-  props:
+  - text
+  - arrow
+props:
   arrow: true
   text: 'Open on GitHub'
-  slots:
+slots:
   default: |
 
-  <PButton label="Open" color="neutral" variant="subtle" />
-
+    <PButton label="Open" color="neutral" variant="subtle" />
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle"}
+:u-button{label="Open" color="neutral" variant="subtle"}
 ::
 
 ### Disabled
@@ -194,22 +177,19 @@ Use the `disabled` prop to disable the Tooltip.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- text
-  props:
+  - text
+props:
   disabled: true
   text: 'Open on GitHub'
-  slots:
+slots:
   default: |
 
-  <PButton label="Open" color="neutral" variant="subtle" />
-
+    <PButton label="Open" color="neutral" variant="subtle" />
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle"}
+:u-button{label="Open" color="neutral" variant="subtle"}
 ::
 
 ## Examples
@@ -220,10 +200,8 @@ You can control the open state by using the `default-open` prop or the `v-model:
 
 ::component-example
 ---
-
 name: 'tooltip-open-example'
 ---
-
 ::
 
 ::note
@@ -236,10 +214,8 @@ You can make the Tooltip follow the cursor when hovering over an element using t
 
 ::component-example
 ---
-
 name: 'tooltip-cursor-example'
 ---
-
 ::
 
 ## API

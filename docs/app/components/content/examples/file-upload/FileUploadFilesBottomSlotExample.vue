@@ -3,7 +3,7 @@ const value = ref<File[]>([])
 </script>
 
 <template>
-  <UFileUpload
+  <PFileUpload
     v-model="value"
     icon="i-lucide-image"
     label="Drop your images here"
@@ -31,5 +31,5 @@ const value = ref<File[]>([])
         @click="removeFile()"
       />
     </template>
-  </UFileUpload>
+  </PFileUpload>
 </template>

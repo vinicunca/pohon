@@ -3,7 +3,7 @@ const emit = defineEmits<{ close: [] }>()
 </script>
 
 <template>
-  <UModal
+  <PModal
     title="Welcome 👋"
     description="This modal was opened programmatically with useOverlay."
     :close="{ onClick: () => emit('close') }"
@@ -12,5 +12,5 @@ const emit = defineEmits<{ close: [] }>()
     <template #footer>
       <PButton label="Close" color="neutral" @click="emit('close')" />
     </template>
-  </UModal>
+  </PModal>
 </template>

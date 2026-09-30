@@ -119,11 +119,11 @@ const { defaultsLabel, groupDirtyFlags } = useThemeStudioToolbar()
 const open = ref(false)
 const dirty = groupDirtyFlags.defaults
 
-const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y divide-default *:p-3'])
+const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y divide-border *:p-3'])
 </script>
 
 <template>
-  <UPopover v-model:open="open" :content="{ align: 'center', onInteractOutside: keepPanels }" :ui="{ content }">
+  <PPopover v-model:open="open" :content="{ align: 'center', onInteractOutside: keepPanels }" :ui="{ content }">
     <ThemeStudioToolbarTrigger
       :label="defaultsLabel"
       :icon="studioIcons.options"
@@ -153,7 +153,7 @@ const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y 
       >
         <div class="flex flex-col gap-1">
           <ThemeStudioRow control="custom" label="Variant">
-            <UPopover
+            <PPopover
               v-model:open="variantGridOpen[field.key]"
               :content="{ side: 'bottom', align: 'center' }"
               :ui="{ content: 'p-1 grid grid-cols-2 gap-1 w-(--akar-popover-trigger-width)' }"
@@ -170,8 +170,8 @@ const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y 
                 class="group"
                 :ui="{
                   label: 'flex-1 text-left',
-                  leadingIcon: 'text-dimmed',
-                  trailingIcon: 'text-dimmed transition-transform duration-200 group-data-[state=open]:rotate-180'
+                  leadingIcon: 'color-text-dimmed',
+                  trailingIcon: 'color-text-dimmed transition-transform duration-200 group-data-[state=open]:rotate-180'
                 }"
               >
                 <!-- the tag belongs in the grid, where it names the stock option -->
@@ -191,11 +191,11 @@ const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y 
                   :class="[item.value === 'none' && 'opacity-60', 'min-w-0']"
                   @click="groupVariants[field.key].value = (item.value === field.stock ? 'default' : item.value); variantGridOpen[field.key] = false"
                 >
-                  <!-- opacity, not a color: text-dimmed would fight the variant's own text color -->
+                  <!-- opacity, not a color: color-text-dimmed would fight the variant's own text color -->
                   <span class="truncate">{{ item.label }}<span v-if="item.value === field.stock" class="opacity-70 font-normal">&nbsp;(Default)</span></span>
                 </PButton>
               </template>
-            </UPopover>
+            </PPopover>
           </ThemeStudioRow>
 
           <ThemeStudioRow
@@ -207,7 +207,7 @@ const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y 
             :aria-label="`Default color for ${field.label.toLowerCase()}`"
           >
             <template #leading>
-              <UChip
+              <PChip
                 :color="((groupColors[field.key].value === 'default' ? 'primary' : groupColors[field.key].value) as any)"
                 inset
                 standalone
@@ -219,5 +219,5 @@ const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y 
         </div>
       </ThemeStudioSection>
     </template>
-  </UPopover>
+  </PPopover>
 </template>

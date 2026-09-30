@@ -14,9 +14,9 @@ const items = computed<NavigationMenuItem[]>(() => [{
   icon: 'i-lucide-box',
   active: route.path.startsWith('/docs/components')
 }, {
-  label: 'Figma',
-  icon: 'i-simple-icons-figma',
-  to: 'https://go.nuxt.com/figma-ui',
+  label: 'Theme',
+  icon: 'i-lucide-palette',
+  to: '/theme',
   target: '_blank'
 }, {
   label: 'Releases',
@@ -27,17 +27,17 @@ const items = computed<NavigationMenuItem[]>(() => [{
 </script>
 
 <template>
-  <UHeader toggle-side="left">
+  <PHeader toggle-side="left">
     <template #title>
       <Logo class="h-6 w-auto" />
     </template>
 
-    <UNavigationMenu :items="items" />
+    <PNavigationMenu :items="items" />
 
     <template #right>
-      <UColorModeButton />
+      <PColorModeButton />
 
-      <UTooltip text="Open on GitHub" :kbds="['meta', 'G']">
+      <PTooltip text="Open on GitHub" :kbds="['meta', 'G']">
         <PButton
           color="neutral"
           variant="ghost"
@@ -46,11 +46,11 @@ const items = computed<NavigationMenuItem[]>(() => [{
           icon="i-simple-icons-github"
           aria-label="GitHub"
         />
-      </UTooltip>
+      </PTooltip>
     </template>
 
     <template #body>
-      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+      <PNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
     </template>
-  </UHeader>
+  </PHeader>
 </template>

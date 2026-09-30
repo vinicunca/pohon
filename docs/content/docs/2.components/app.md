@@ -4,7 +4,7 @@ category: layout
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/App.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/App.vue
 ---
 
 ## Usage

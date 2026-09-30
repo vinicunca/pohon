@@ -25,8 +25,8 @@ const items: EditorToolbarItem[][] = [[{
 </script>
 
 <template>
-  <UEditor v-slot="{ editor }" v-model="value" content-type="markdown" class="w-full min-h-26 flex flex-col gap-4">
-    <UEditorToolbar
+  <PEditor v-slot="{ editor }" v-model="value" content-type="markdown" class="w-full min-h-26 flex flex-col gap-4">
+    <PEditorToolbar
       :key="layout"
       :editor="editor"
       :items="items"
@@ -34,5 +34,5 @@ const items: EditorToolbarItem[][] = [[{
       :data-layout="layout"
       class="data-[layout=fixed]:sm:px-8"
     />
-  </UEditor>
+  </PEditor>
 </template>

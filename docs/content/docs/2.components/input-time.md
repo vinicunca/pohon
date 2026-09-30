@@ -1,6 +1,6 @@
 ---
 title: InputTime
-description: "An input for selecting a time."
+description: 'An input for selecting a time.'
 category: form
 keywords:
   - time picker
@@ -8,14 +8,14 @@ keywords:
   - hour
 links:
   - label: TimeField
-    icon: i-custom-reka-ui
+    icon: i-lucide-box
     to: https://akar.vinicunca.dev/docs/components/time-field
   - label: TimeRangeField
-    icon: i-custom-reka-ui
+    icon: i-lucide-box
     to: https://akar.vinicunca.dev/docs/components/time-range-field
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/InputTime.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/InputTime.vue
 ---
 
 ## Usage
@@ -24,38 +24,30 @@ Use the `v-model` directive to control the selected time.
 
 ::component-code
 ---
-
 cast:
-modelValue: TimeValue
+  modelValue: TimeValue
 ignore:
-
-- modelValue
-  external:
-- modelValue
-  props:
+  - modelValue
+external:
+  - modelValue
+props:
   modelValue: [12, 30, 0]
-
 ---
-
 ::
 
 Use the `default-value` prop to set the initial value when you do not need to control its state.
 
 ::component-code
 ---
-
 cast:
-defaultValue: TimeValue
+  defaultValue: TimeValue
 ignore:
-
-- defaultValue
-  external:
-- defaultValue
-  props:
+  - defaultValue
+external:
+  - defaultValue
+props:
   defaultValue: [9, 45, 0]
-
 ---
-
 ::
 
 ::framework-only
@@ -76,25 +68,21 @@ Use the `range` prop to enable time range selection with start and end times.
 
 ::component-code
 ---
-
 prettier: true
 cast:
-modelValue: TimeRangeValue
+  modelValue: TimeRangeValue
 ignore:
-
-- range
-- modelValue.start
-- modelValue.end
-  external:
-- modelValue
-  props:
+  - range
+  - modelValue.start
+  - modelValue.end
+external:
+  - modelValue
+props:
   range: true
   modelValue:
-  start: [9, 0, 0]
-  end: [17, 30, 0]
-
+    start: [9, 0, 0]
+    end: [17, 30, 0]
 ---
-
 ::
 
 ### Hour Cycle
@@ -103,21 +91,17 @@ Use the `hour-cycle` prop to change the hour cycle of the InputTime. Defaults to
 
 ::component-code
 ---
-
 cast:
-defaultValue: TimeValue
+  defaultValue: TimeValue
 ignore:
-
-- hourCycle
-- defaultValue
-  external:
-- defaultValue
-  props:
+  - hourCycle
+  - defaultValue
+external:
+  - defaultValue
+props:
   hourCycle: 24
   defaultValue: [16, 30, 0]
-
 ---
-
 ::
 
 ### Color
@@ -126,12 +110,10 @@ Use the `color` prop to change the color of the InputTime.
 
 ::component-code
 ---
-
 props:
-color: neutral
-highlight: true
+  color: neutral
+  highlight: true
 ---
-
 ::
 
 ::note
@@ -144,11 +126,9 @@ Use the `variant` prop to change the variant of the InputTime.
 
 ::component-code
 ---
-
 props:
-variant: subtle
+  variant: subtle
 ---
-
 ::
 
 ### Size
@@ -157,11 +137,9 @@ Use the `size` prop to change the size of the InputTime.
 
 ::component-code
 ---
-
 props:
-size: xl
+  size: xl
 ---
-
 ::
 
 ### Icon
@@ -170,11 +148,9 @@ Use the `icon` prop to show an [Icon](/docs/components/icon) inside the InputTim
 
 ::component-code
 ---
-
 props:
-icon: 'i-lucide-clock'
+  icon: 'i-lucide-clock'
 ---
-
 ::
 
 ::note
@@ -187,16 +163,12 @@ Use the `separator-icon` prop to change the [Icon](/docs/components/icon) of the
 
 ::component-code
 ---
-
 ignore:
-
-- range
-  props:
+  - range
+props:
   range: true
   separatorIcon: 'i-lucide-arrow-right'
-
 ---
-
 ::
 
 ::framework-only
@@ -217,20 +189,16 @@ Use the `avatar` prop to show an [Avatar](/docs/components/avatar) inside the In
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- avatar.loading
-  props:
+  - avatar.loading
+props:
   avatar:
-  src: 'https://github.com/vuejs.png'
-  loading: lazy
+    src: 'https://github.com/vuejs.png'
+    loading: lazy
   size: md
   variant: outline
-
 ---
-
 ::
 
 ### Disabled
@@ -239,11 +207,9 @@ Use the `disabled` prop to disable the InputTime.
 
 ::component-code
 ---
-
 props:
-disabled: true
+  disabled: true
 ---
-
 ::
 
 ## Examples
@@ -254,10 +220,8 @@ You can use the InputTime within a [FormField](/docs/components/form-field) comp
 
 ::component-example
 ---
-
 name: 'input-time-form-field-example'
 ---
-
 ::
 
 ## API

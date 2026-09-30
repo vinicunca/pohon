@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { upperFirst, camelCase, kebabCase } from 'scule'
+import { upperFirst, camelCase } from 'scule'
 import type { ComponentMeta } from 'vue-component-meta'
 import * as theme from '#build/ui'
 
@@ -40,7 +40,7 @@ const props = withDefaults(defineProps<{
 const route = useRoute()
 
 const camelName = camelCase(props.slug ?? route.path.split('/').pop() ?? '')
-const componentName = props.prose ? `Prose${upperFirst(camelName)}` : `P${upperFirst(camelName)}`
+const componentName = props.prose ? `Prose${upperFirst(camelName)}` : `U${upperFirst(camelName)}`
 
 const componentTheme = ((props.prose ? theme.prose : theme) as any)[camelName]
 const { data: meta } = await useFetchComponentMeta(componentName as any)
@@ -119,7 +119,7 @@ const metaProps: ComputedRef<ComponentMeta['props']> = computed(() => {
         <ProseTd>
           <HighlightInlineType v-if="prop.type" :type="prop.type" />
 
-          <MDC v-if="prop.description" :value="prop.description" class="text-toned mt-1" :cache-key="`${kebabCase(route.path)}-${prop.name}-description`" />
+          <DocsMarkdown v-if="prop.description" :value="prop.description" class="color-text-toned mt-1" />
 
           <ComponentPropsLinks v-if="prop.tags?.length" :prop="prop" />
           <ComponentPropsSchema v-if="prop.schema" :prop="prop" :ignore="ignore" />

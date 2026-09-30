@@ -4,7 +4,7 @@ category: layout
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Theme.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Theme.vue
 ---
 
 ## Usage
@@ -33,26 +33,22 @@ Use the `ui` prop to override slot classes of descendant components. Keys are co
 
 ::component-example
 ---
-
 name: 'theme-ui-example'
 ---
-
 ::
 
-### Prop defaults :badge{label="4.8+" class="align-text-top"}
+### Prop defaults
 
 Use the `props` prop to override the default value of any prop on descendant components. Each key maps to a partial of that component's props.
 
 ::component-example
 ---
-
 name: 'theme-props-example'
 ---
-
 ::
 
 ::tip
-Explicit props on a component (e.g. `<PButton color="primary" />`) always win over `<UTheme :props>`. Theme defaults only apply when the prop wasn't passed explicitly.
+Explicit props on a component (e.g. `<PButton color="primary" />`) always win over `<PTheme :props>`. Theme defaults only apply when the prop wasn't passed explicitly.
 ::
 
 ## Examples
@@ -63,10 +59,8 @@ Use different keys in `ui` or `props` to theme multiple component types at once.
 
 ::component-example
 ---
-
 name: 'theme-multiple-example'
 ---
-
 ::
 
 ### Nested themes
@@ -75,10 +69,8 @@ Nest multiple Theme components to compose overrides. The innermost Theme takes p
 
 ::component-example
 ---
-
 name: 'theme-nested-example'
 ---
-
 ::
 
 ### Explicit priority
@@ -87,10 +79,8 @@ Explicitly setting any prop (including `ui`) on an individual component always t
 
 ::component-example
 ---
-
 name: 'theme-priority-example'
 ---
-
 ::
 
 ### Deep propagation
@@ -99,10 +89,8 @@ The overrides are available to all descendant components regardless of how deepl
 
 ::component-example
 ---
-
 name: 'theme-deep-example'
 ---
-
 ::
 
 ::note
@@ -115,14 +103,12 @@ Use the Theme component to apply consistent styling across a group of form compo
 
 ::component-example
 ---
-
 name: 'theme-form-example'
 ---
-
 ::
 
 ::tip
-`<PFormField>`, `<UFieldGroup>` and `<UAvatarGroup>` keep precedence over `<UTheme :props>` for `size`, `color` and `highlight`. Validation errors also force the `error` color over any theme value.
+`<PFormField>`, `<PFieldGroup>` and `<PAvatarGroup>` keep precedence over `<PTheme :props>` for `size`, `color` and `highlight`. Validation errors also force the `error` color over any theme value.
 ::
 
 ### Prose components
@@ -131,10 +117,8 @@ Use the `prose` namespace to theme typography components. Keys are nested under 
 
 ::component-example
 ---
-
 name: 'theme-prose-example'
 ---
-
 ::
 
 ## API

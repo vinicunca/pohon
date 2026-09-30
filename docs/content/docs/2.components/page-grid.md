@@ -1,11 +1,11 @@
 ---
 title: PageGrid
-description: "A responsive grid system for displaying content in a flexible layout."
+description: 'A responsive grid system for displaying content in a flexible layout.'
 category: page
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/PageGrid.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/PageGrid.vue
 ---
 
 ## Usage
@@ -14,23 +14,19 @@ The PageGrid component provides a responsive grid layout for displaying [PageCar
 
 ::component-example
 ---
-
 name: 'page-grid-example'
 class: 'p-8'
 ---
-
 ::
 
 You can also use it to display a list of cards in a bento style layout by using `col-span-*` and `row-span-*` utility classes.
 
 ::component-example
 ---
-
 collapse: true
 name: 'page-grid-bento-example'
 class: 'p-8'
 ---
-
 ::
 
 ## API

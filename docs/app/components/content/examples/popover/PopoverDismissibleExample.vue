@@ -1,10 +1,10 @@
 <template>
-  <UPopover :dismissible="false" :ui="{ content: 'p-4' }">
+  <PPopover :dismissible="false" :ui="{ content: 'p-4' }">
     <PButton label="Open" color="neutral" variant="subtle" />
 
     <template #content="{ close }">
       <div class="flex items-center gap-4 mb-4">
-        <h2 class="text-highlighted font-semibold">
+        <h2 class="color-text-highlighted font-semibold">
           Popover non-dismissible
         </h2>
 
@@ -13,5 +13,5 @@
 
       <Placeholder class="size-full min-h-48" />
     </template>
-  </UPopover>
+  </PPopover>
 </template>

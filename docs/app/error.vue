@@ -47,13 +47,13 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Pohon',
+  titleTemplate: '%s - Pohon UI',
   title: String(props.error.statusCode)
 })
 
 if (import.meta.server) {
   useSeoMeta({
-    ogSiteName: 'Pohon',
+    ogSiteName: 'Pohon UI',
     twitterCard: 'summary_large_image'
   })
 }
@@ -75,7 +75,7 @@ provide('navigation', rootNavigation)
 
         <Header />
 
-        <UError :error="error" />
+        <PError :error="error" />
 
         <Footer />
       </div>

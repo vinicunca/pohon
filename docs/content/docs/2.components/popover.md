@@ -6,14 +6,14 @@ keywords:
   - flyout
 links:
   - label: HoverCard
-    icon: i-custom-reka-ui
+    icon: i-lucide-box
     to: https://akar.vinicunca.dev/docs/components/hover-card
   - label: Popover
-    icon: i-custom-reka-ui
+    icon: i-lucide-box
     to: https://akar.vinicunca.dev/docs/components/popover
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Popover.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Popover.vue
 ---
 
 ## Usage
@@ -24,20 +24,18 @@ Then, use the `#content` slot to add the content displayed when the Popover is o
 
 ::component-code
 ---
-
 prettier: true
 slots:
-default: |
+  default: |
 
     <PButton label="Open" color="neutral" variant="subtle" />
 
-content: |
+  content: |
 
     <Placeholder class="size-48 m-4 inline-flex" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle"}
+:u-button{label="Open" color="neutral" variant="subtle"}
 
 #content
 :placeholder{class="size-48 m-4 inline-flex"}
@@ -53,25 +51,25 @@ In `hover` mode, set the `enable-touch` prop to let users toggle the Popover by 
 
 ::component-code
 ---
-
 prettier: true
 items:
-mode: - click - hover
+  mode:
+    - click
+    - hover
 props:
-mode: 'hover'
-enableTouch: true
+  mode: 'hover'
+  enableTouch: true
 slots:
-default: |
+  default: |
 
     <PButton label="Open" color="neutral" variant="subtle" />
 
-content: |
+  content: |
 
     <Placeholder class="size-48 m-4 inline-flex" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle"}
+:u-button{label="Open" color="neutral" variant="subtle"}
 
 #content
 :placeholder{class="size-48 m-4 inline-flex"}
@@ -87,27 +85,24 @@ When using the `hover` mode, you can use the `open-delay` and `close-delay` prop
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- mode
-  props:
+  - mode
+props:
   mode: 'hover'
   openDelay: 500
   closeDelay: 300
-  slots:
+slots:
   default: |
 
-  <PButton label="Open" color="neutral" variant="subtle" />
+    <PButton label="Open" color="neutral" variant="subtle" />
 
-content: |
+  content: |
 
     <Placeholder class="size-48 m-4 inline-flex" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle"}
+:u-button{label="Open" color="neutral" variant="subtle"}
 
 #content
 :placeholder{class="size-48 m-4 inline-flex"}
@@ -119,28 +114,33 @@ Use the `content` prop to control how the Popover content is rendered, like its 
 
 ::component-code
 ---
-
 prettier: true
 items:
-content.align: - start - center - end
-content.side: - right - left - top - bottom
+  content.align:
+    - start
+    - center
+    - end
+  content.side:
+    - right
+    - left
+    - top
+    - bottom
 props:
-content:
-align: center
-side: bottom
-sideOffset: 8
+  content:
+    align: center
+    side: bottom
+    sideOffset: 8
 slots:
-default: |
+  default: |
 
     <PButton label="Open" color="neutral" variant="subtle" />
 
-content: |
+  content: |
 
     <Placeholder class="size-48 m-4 inline-flex" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle"}
+:u-button{label="Open" color="neutral" variant="subtle"}
 
 #content
 :placeholder{class="size-48 m-4 inline-flex"}
@@ -152,25 +152,22 @@ Use the `arrow` prop to display an arrow on the Popover.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- arrow
-  props:
+  - arrow
+props:
   arrow: true
-  slots:
+slots:
   default: |
 
-  <PButton label="Open" color="neutral" variant="subtle" />
+    <PButton label="Open" color="neutral" variant="subtle" />
 
-content: |
+  content: |
 
     <Placeholder class="size-48 m-4 inline-flex" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle"}
+:u-button{label="Open" color="neutral" variant="subtle"}
 
 #content
 :placeholder{class="size-48 m-4 inline-flex"}
@@ -182,25 +179,22 @@ Use the `modal` prop to control whether the Popover blocks interaction with outs
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- title
-  props:
+  - title
+props:
   modal: true
-  slots:
+slots:
   default: |
 
-  <PButton label="Open" color="neutral" variant="subtle" />
+    <PButton label="Open" color="neutral" variant="subtle" />
 
-content: |
+  content: |
 
     <Placeholder class="size-48 m-4 inline-flex" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle"}
+:u-button{label="Open" color="neutral" variant="subtle"}
 
 #content
 :placeholder{class="size-48 m-4 inline-flex"}
@@ -216,10 +210,8 @@ A `close:prevent` event will be emitted when the user tries to close it.
 
 ::component-example
 ---
-
 name: 'popover-dismissible-example'
 ---
-
 ::
 
 ## Examples
@@ -230,10 +222,8 @@ You can control the open state by using the `default-open` prop or the `v-model:
 
 ::component-example
 ---
-
 name: 'popover-open-example'
 ---
-
 ::
 
 ::note
@@ -246,11 +236,9 @@ You can use a [CommandPalette](/docs/components/command-palette) component insid
 
 ::component-example
 ---
-
 collapse: true
 name: 'popover-command-palette-example'
 ---
-
 ::
 
 ### With following cursor
@@ -259,10 +247,8 @@ You can make the Popover follow the cursor when hovering over an element using t
 
 ::component-example
 ---
-
 name: 'popover-cursor-example'
 ---
-
 ::
 
 ### With anchor slot
@@ -275,11 +261,9 @@ This slot only works when `mode` is `click`.
 
 ::component-example
 ---
-
 collapse: true
 name: 'popover-anchor-slot-example'
 ---
-
 ::
 
 ## API

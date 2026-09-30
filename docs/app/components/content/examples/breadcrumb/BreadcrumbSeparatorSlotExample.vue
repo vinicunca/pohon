@@ -18,9 +18,9 @@ const items: BreadcrumbItem[] = [
 </script>
 
 <template>
-  <UBreadcrumb :items="items">
+  <PBreadcrumb :items="items">
     <template #separator>
-      <span class="mx-2 text-muted">/</span>
+      <span class="mx-2 color-text-muted">/</span>
     </template>
-  </UBreadcrumb>
+  </PBreadcrumb>
 </template>

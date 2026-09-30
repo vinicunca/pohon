@@ -3,7 +3,7 @@ name: release
 on:
   push:
     tags:
-      - "*"
+      - 'v*'
 
 jobs:
   publish:
@@ -41,13 +41,14 @@ jobs:
       - name: Prepare
         run: pnpm run dev:prepare
 
-      - parallel:
-          - name: Lint
-            run: pnpm run lint
-          - name: Typecheck
-            run: pnpm run typecheck
-          - name: Test
-            run: pnpm run test run
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Typecheck
+        run: pnpm run typecheck
+
+      - name: Test
+        run: pnpm run test run
 
       - name: Publish
         run: ./scripts/release.sh

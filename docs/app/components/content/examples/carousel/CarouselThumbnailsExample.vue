@@ -30,7 +30,7 @@ function select(index: number) {
 
 <template>
   <div class="flex-1 w-full">
-    <UCarousel
+    <PCarousel
       ref="carousel"
       v-slot="{ item }"
       arrows
@@ -41,7 +41,7 @@ function select(index: number) {
       @select="onSelect"
     >
       <img :src="item" width="320" height="320" class="rounded-lg" loading="lazy">
-    </UCarousel>
+    </PCarousel>
 
     <div class="flex gap-1 justify-between pt-4 max-w-xs mx-auto">
       <div

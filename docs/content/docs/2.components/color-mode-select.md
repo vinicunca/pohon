@@ -1,6 +1,6 @@
 ---
 title: ColorModeSelect
-description: "A Select to switch between system, dark and light mode."
+description: 'A Select to switch between system, dark and light mode.'
 category: color-mode
 links:
   - label: SelectMenu
@@ -8,7 +8,7 @@ links:
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/color-mode/ColorModeSelect.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/color-mode/ColorModeSelect.vue
 ---
 
 ## Usage
@@ -31,12 +31,12 @@ Use the `app.config.ts` to customize the icon with the `ui.icons` property:
 export default defineAppConfig({
   ui: {
     icons: {
-      system: "i-ph-desktop",
-      light: "i-ph-sun",
-      dark: "i-ph-moon",
-    },
-  },
-});
+      system: 'i-lucide-laptop',
+      light: 'i-lucide-sun-medium',
+      dark: 'i-lucide-moon-star'
+    }
+  }
+})
 ```
 
 ::
@@ -46,9 +46,9 @@ export default defineAppConfig({
 Use the `vite.config.ts` to customize the icon with the `ui.icons` property:
 
 ```ts [vite.config.ts]
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import ui from "pohon-ui/vite";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import ui from 'pohon-ui/vite'
 
 export default defineConfig({
   plugins: [
@@ -56,13 +56,13 @@ export default defineConfig({
     ui({
       ui: {
         icons: {
-          light: "i-ph-sun",
-          dark: "i-ph-moon",
-        },
-      },
-    }),
-  ],
-});
+          light: 'i-lucide-sun-medium',
+          dark: 'i-lucide-moon-star'
+        }
+      }
+    })
+  ]
+})
 ```
 
 ::

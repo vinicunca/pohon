@@ -47,10 +47,10 @@ const dropdownItems: DropdownMenuItem[][] = [
 </script>
 
 <template>
-  <UNavigationMenu
+  <PNavigationMenu
     orientation="vertical"
     :items="items"
-    :ui="{ link: 'overflow-hidden has-data-[state=open]:before:bg-elevated/50' }"
+    :ui="{ link: 'overflow-hidden has-data-[state=open]:before:bg-background-elevated/50' }"
     class="w-48"
   >
     <template #personal-label-trailing>
@@ -63,7 +63,7 @@ const dropdownItems: DropdownMenuItem[][] = [
 
     <template #item-trailing>
       <div class="flex -mr-1.5 -my-0.5 translate-x-full group-hover:translate-x-0 has-data-[state=open]:translate-x-0 transition-transform">
-        <UDropdownMenu
+        <PDropdownMenu
           :items="dropdownItems"
           :content="{ align: 'start' }"
           :modal="false"
@@ -75,10 +75,10 @@ const dropdownItems: DropdownMenuItem[][] = [
             color="neutral"
             variant="ghost"
             size="xs"
-            class="text-muted hover:text-highlighted hover:bg-accented/50 data-[state=open]:bg-accented/50 mr-1.5"
+            class="color-text-muted hover:color-text-highlighted hover:bg-background-accented/50 data-[state=open]:bg-background-accented/50 mr-1.5"
           />
-        </UDropdownMenu>
+        </PDropdownMenu>
       </div>
     </template>
-  </UNavigationMenu>
+  </PNavigationMenu>
 </template>

@@ -76,7 +76,7 @@ if (!props.vertical) {
 </script>
 
 <template>
-  <UTooltip text="Random theme" :disabled="vertical" :kbds="['r']">
+  <PTooltip text="Random theme" :disabled="vertical" :kbds="['r']">
     <PButton
       :icon="diceFace"
       :label="vertical ? 'Random theme' : undefined"
@@ -86,11 +86,11 @@ if (!props.vertical) {
       :block="vertical"
       aria-label="Random theme"
       :class="rolling && 'dice-bumping'"
-      :ui="{ leadingIcon: [rolling && 'dice-rolling', vertical && 'text-dimmed'] }"
+      :ui="{ leadingIcon: [rolling && 'dice-rolling', vertical && 'color-text-dimmed'] }"
       @click="rollDice"
       @animationend="onRollEnd"
     />
-  </UTooltip>
+  </PTooltip>
 </template>
 
 <style scoped>

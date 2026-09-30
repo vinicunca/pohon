@@ -1,6 +1,6 @@
 ---
 title: LocaleSelect
-description: "A Select to switch between locales."
+description: 'A Select to switch between locales.'
 category: i18n
 links:
   - label: SelectMenu
@@ -8,7 +8,7 @@ links:
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/locale/LocaleSelect.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/locale/LocaleSelect.vue
 ---
 
 ## Usage
@@ -38,23 +38,21 @@ Use the `locales` prop with an array of locales from `pohon-ui/locale`.
 
 ::component-example
 ---
-
 name: 'locale-select-example'
 ---
-
 ::
 
 You can pass only the locales you need in your application:
 
 ```vue
 <script setup lang="ts">
-import { en, es, fr } from "pohon-ui/locale";
+import { en, es, fr } from 'pohon-ui/locale'
 
-const locale = ref("en");
+const locale = ref('en')
 </script>
 
 <template>
-  <ULocaleSelect v-model="locale" :locales="[en, es, fr]" />
+  <PLocaleSelect v-model="locale" :locales="[en, es, fr]" />
 </template>
 ```
 
@@ -67,13 +65,13 @@ You can use it with Nuxt i18n:
 
 ```vue
 <script setup lang="ts">
-import * as locales from "pohon-ui/locale";
+import * as locales from 'pohon-ui/locale'
 
-const { locale, setLocale } = useI18n();
+const { locale, setLocale } = useI18n()
 </script>
 
 <template>
-  <ULocaleSelect
+  <PLocaleSelect
     :model-value="locale"
     :locales="Object.values(locales)"
     @update:model-value="setLocale($event)"
@@ -89,14 +87,14 @@ You can use it with Vue i18n:
 
 ```vue
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
-import * as locales from "pohon-ui/locale";
+import { useI18n } from 'vue-i18n'
+import * as locales from 'pohon-ui/locale'
 
-const { locale, setLocale } = useI18n();
+const { locale, setLocale } = useI18n()
 </script>
 
 <template>
-  <ULocaleSelect
+  <PLocaleSelect
     :model-value="locale"
     :locales="Object.values(locales)"
     @update:model-value="setLocale($event)"

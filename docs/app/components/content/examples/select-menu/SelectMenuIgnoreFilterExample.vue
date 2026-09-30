@@ -26,7 +26,7 @@ function onOpen() {
 </script>
 
 <template>
-  <USelectMenu
+  <PSelectMenu
     v-model:search-term="searchTerm"
     :items="users"
     :search-input="{
@@ -40,12 +40,12 @@ function onOpen() {
     @update:open="onOpen"
   >
     <template #leading="{ modelValue, ui }">
-      <UAvatar
+      <PAvatar
         v-if="modelValue"
         v-bind="modelValue.avatar"
         :size="(ui.leadingAvatarSize() as AvatarProps['size'])"
         :class="ui.leadingAvatar()"
       />
     </template>
-  </USelectMenu>
+  </PSelectMenu>
 </template>

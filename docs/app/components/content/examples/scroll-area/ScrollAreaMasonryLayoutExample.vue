@@ -30,7 +30,7 @@ const items = Array.from({ length: 1000 }).map((_, index) => {
 </script>
 
 <template>
-  <UScrollArea
+  <PScrollArea
     v-slot="{ item }"
     :items="items"
     :orientation="orientation"
@@ -49,5 +49,5 @@ const items = Array.from({ length: 1000 }).map((_, index) => {
       loading="lazy"
       class="rounded-md size-full object-cover"
     >
-  </UScrollArea>
+  </PScrollArea>
 </template>

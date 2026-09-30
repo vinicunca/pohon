@@ -10,7 +10,7 @@ keywords:
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/FieldGroup.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/FieldGroup.vue
 ---
 
 ## Usage
@@ -19,18 +19,15 @@ Wrap multiple [Button](/docs/components/button) within a FieldGroup to group the
 
 ::component-code
 ---
-
 prettier: true
 slots:
-default: |
+  default: |
 
     <PButton color="neutral" variant="subtle" label="Button" />
     <PButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
-
 ---
-
-:p-button{color="neutral" variant="subtle" label="Button"}
-:p-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
+:u-button{color="neutral" variant="subtle" label="Button"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
 ### Size
@@ -39,20 +36,17 @@ Use the `size` prop to change the size of all the buttons.
 
 ::component-code
 ---
-
 prettier: true
 props:
-size: xl
+  size: xl
 slots:
-default: |
+  default: |
 
     <PButton color="neutral" variant="subtle" label="Button" />
     <PButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
-
 ---
-
-:p-button{color="neutral" variant="subtle" label="Button"}
-:p-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
+:u-button{color="neutral" variant="subtle" label="Button"}
+:u-button{color="neutral" variant="outline" icon="i-lucide-chevron-down"}
 ::
 
 ### Orientation
@@ -61,20 +55,17 @@ Use the `orientation` prop to change the orientation of the buttons. Defaults to
 
 ::component-code
 ---
-
 prettier: true
 props:
-orientation: vertical
+  orientation: vertical
 slots:
-default: |
+  default: |
 
     <PButton color="neutral" variant="subtle" label="Submit" />
     <PButton color="neutral" variant="outline" label="Cancel" />
-
 ---
-
-:p-button{color="neutral" variant="subtle" label="Submit"}
-:p-button{color="neutral" variant="outline" label="Cancel"}
+:u-button{color="neutral" variant="subtle" label="Submit"}
+:u-button{color="neutral" variant="outline" label="Cancel"}
 ::
 
 ## Examples
@@ -85,19 +76,16 @@ You can use components like [Input](/docs/components/input), [InputMenu](/docs/c
 
 ::component-code
 ---
-
 prettier: true
 slots:
-default: |
+  default: |
 
-    <UInput color="neutral" variant="outline" placeholder="Enter token" />
+    <PInput color="neutral" variant="outline" placeholder="Enter token" />
 
     <PButton color="neutral" variant="subtle" icon="i-lucide-clipboard" />
-
 ---
-
 :u-input{color="neutral" variant="outline" placeholder="Enter token"}
-:p-button{color="neutral" variant="subtle" icon="i-lucide-clipboard"}
+:u-button{color="neutral" variant="subtle" icon="i-lucide-clipboard"}
 ::
 
 ### With tooltip

@@ -8,5 +8,5 @@ const items: InputMenuItem[] = Array(1000).fill(0).map((_, i) => ({
 </script>
 
 <template>
-  <UInputMenu virtualize :items="items" class="w-48" />
+  <PInputMenu virtualize :items="items" class="w-48" />
 </template>

@@ -1,40 +1,40 @@
-import { queryCollection } from '@nuxt/content/server';
-import { z } from 'zod';
+import { z } from 'zod'
+import { queryCollection } from '@nuxt/content/server'
 
 export default defineMcpTool({
-  description: 'Lists all available Pohon templates with optional framework filtering',
+  description: 'Lists all available Pohon UI templates with optional framework filtering',
   annotations: {
     readOnlyHint: true,
     destructiveHint: false,
     idempotentHint: true,
-    openWorldHint: false,
+    openWorldHint: false
   },
   inputSchema: {
-    framework: z.string().optional().describe('Filter templates by framework (e.g., "nuxt", "vue")'),
+    framework: z.string().optional().describe('Filter templates by framework (e.g., "nuxt", "vue")')
   },
   inputExamples: [
     { framework: 'nuxt' },
-    {},
+    {}
   ],
   cache: '1h',
   async handler({ framework }) {
-    const event = useEvent();
+    const event = useEvent()
 
-    const templatesCollectionItems = await queryCollection(event, 'templates').first();
+    const templatesCollectionItems = await queryCollection(event, 'templates').first()
 
-    const templateListing = templatesCollectionItems?.items || [];
+    const templateListing = templatesCollectionItems?.items || []
 
-    const normalizedFramework = framework?.toLowerCase();
+    const normalizedFramework = framework?.toLowerCase()
     const filteredTemplates = normalizedFramework
       ? templateListing.filter(
           (template: { framework?: string }) =>
-            template.framework?.toLowerCase() === normalizedFramework,
+            template.framework?.toLowerCase() === normalizedFramework
         )
-      : templateListing;
+      : templateListing
 
     return {
       templates: filteredTemplates,
-      total: filteredTemplates.length,
-    };
-  },
-});
+      total: filteredTemplates.length
+    }
+  }
+})

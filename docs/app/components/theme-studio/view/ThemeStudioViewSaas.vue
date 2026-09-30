@@ -11,20 +11,20 @@ const navItems: NavigationMenuItem[] = [
   { label: 'Changelog' }
 ]
 
-const heroLinks = [{
+const heroLinks = computed(() => [{
   label: 'Get started',
   trailingIcon: appConfig.ui.icons.arrowRight,
   size: 'xl' as const
 }, {
   label: 'Use this template',
-  icon: studioIcons.github,
+  icon: 'i-simple-icons-github',
   size: 'xl' as const,
   color: 'neutral' as const,
   variant: 'subtle' as const
-}]
+}])
 
-const sections = [{
-  title: 'Powered by Pohon Components',
+const sections = computed(() => [{
+  title: 'Powered by Pohon UI Components',
   description: 'Access a complete component library with beautifully styled, accessible and customizable Vue components. Everything you need to build professional SaaS applications.',
   reverse: false,
   features: [{
@@ -57,9 +57,9 @@ const sections = [{
     description: 'Built-in i18n support for 50+ languages with RTL/LTR layouts and font optimization.',
     icon: studioIcons.globe
   }]
-}]
+}])
 
-const features = [{
+const features = computed(() => [{
   title: 'Beautiful design system',
   description: 'Semantic color aliases, comprehensive design tokens and UnoCSS Variants for consistent styling.',
   icon: studioIcons.palette
@@ -81,9 +81,9 @@ const features = [{
   icon: appConfig.ui.icons.success
 }, {
   title: 'Infinitely customizable',
-  description: 'Override any style with the ui prop, customize globally with AppConfig, or use Tailwind classes directly.',
+  description: 'Override any style with the ui prop, customize globally with AppConfig, or use UnoCSS classes directly.',
   icon: studioIcons.settings
-}]
+}])
 
 // The template's pricing page: three plans over a billing cycle toggle, no
 // badge, and Standard scaled up. Prices and feature lists are content/2.pricing.yml.
@@ -140,7 +140,7 @@ const faqItems = [
 ]
 
 const testimonials = [{
-  quote: 'Pohon transformed how we build. The component quality is exceptional - everything just works with perfect TypeScript support, accessibility and dark mode built in.',
+  quote: 'Pohon UI transformed how we build. The component quality is exceptional - everything just works with perfect TypeScript support, accessibility and dark mode built in.',
   user: { name: 'Sarah Chen', description: 'CTO at TechScale' }
 }, {
   quote: 'We shipped our MVP in 2 weeks instead of 2 months. The authentication flows and form components saved us countless hours of development time.',
@@ -149,7 +149,7 @@ const testimonials = [{
   quote: 'The design system with AppConfig is brilliant. We maintain brand consistency across all our products while leveraging the full component library.',
   user: { name: 'David Kumar', description: 'Security Director at SecureStack' }
 }, {
-  quote: 'Perfect Lighthouse scores out of the box. Our Core Web Vitals improved dramatically just by switching to Pohon components.',
+  quote: 'Perfect Lighthouse scores out of the box. Our Core Web Vitals improved dramatically just by switching to Pohon UI components.',
   user: { name: 'Emily Zhang', description: 'Lead Architect at ScaleForce' }
 }, {
   quote: 'The UnoCSS Variants system makes customization so intuitive. We can override any component style while keeping the functionality intact.',
@@ -159,14 +159,14 @@ const testimonials = [{
   user: { name: 'Lisa Patel', description: 'CEO at AutoScale' }
 }]
 
-const ctaLinks = [{
+const ctaLinks = computed(() => [{
   label: 'Start building',
   trailingIcon: appConfig.ui.icons.arrowRight
 }, {
   label: 'View on GitHub',
-  icon: studioIcons.github,
+  icon: 'i-simple-icons-github',
   variant: 'subtle' as const
-}]
+}])
 
 const footerColumns = [{
   label: 'Resources',
@@ -242,32 +242,32 @@ onMounted(() => {
 
 <template>
   <!-- A mini landing page: the pane is the scroll container, so the header sticks to it. -->
-  <div class="h-full overflow-y-auto bg-default">
-    <UHeader :toggle="false" class="rounded-t-[inherit]">
+  <div class="h-full overflow-y-auto bg-background">
+    <PHeader :toggle="false" class="rounded-t-[inherit]">
       <template #left>
         <div class="flex items-center gap-1.5">
-          <UIcon :name="studioIcons.saas" class="size-6 text-primary shrink-0" />
-          <span class="text-xl font-bold text-highlighted">SaaS</span>
+          <PIcon :name="studioIcons.saas" class="size-6 text-primary shrink-0" />
+          <span class="text-xl font-bold color-text-highlighted">SaaS</span>
         </div>
       </template>
 
-      <UNavigationMenu :items="navItems" variant="link" />
+      <PNavigationMenu :items="navItems" variant="link" />
 
       <template #right>
         <!-- Static: the studio toolbar owns color mode. -->
         <PButton color="neutral" variant="ghost" aria-label="Color mode">
           <template #leading="{ ui }">
-            <UIcon :name="appConfig.ui.icons.dark" :class="ui.leadingIcon({ class: 'hidden dark:inline-block' })" />
-            <UIcon :name="appConfig.ui.icons.light" :class="ui.leadingIcon({ class: 'dark:hidden' })" />
+            <PIcon :name="appConfig.ui.icons.dark" :class="ui.leadingIcon({ class: 'hidden dark:inline-block' })" />
+            <PIcon :name="appConfig.ui.icons.light" :class="ui.leadingIcon({ class: 'dark:hidden' })" />
           </template>
         </PButton>
         <PButton label="Sign in" color="neutral" variant="outline" class="hidden lg:inline-flex" />
         <PButton label="Sign up" color="neutral" :trailing-icon="appConfig.ui.icons.arrowRight" />
       </template>
-    </UHeader>
+    </PHeader>
 
-    <UPageHero
-      description="Build production-ready SaaS applications with Pohon's powerful components, authentication flows, and enterprise features. The same component library trusted by the entire Nuxt ecosystem."
+    <PPageHero
+      description="Build production-ready SaaS applications with Pohon UI's powerful components, authentication flows, and enterprise features. The same component library trusted by the entire Nuxt ecosystem."
       :links="heroLinks"
     >
       <template #top>
@@ -319,8 +319,8 @@ onMounted(() => {
       </template>
 
       <!-- Template's PromotionalVideo: a framed media card below the hero copy. -->
-      <UPageCard variant="subtle" class="rounded-2xl">
-        <div class="relative aspect-video w-full rounded-xl overflow-hidden bg-elevated flex items-center justify-center">
+      <PPageCard variant="subtle" class="rounded-2xl">
+        <div class="relative aspect-video w-full rounded-xl overflow-hidden bg-background-elevated flex items-center justify-center">
           <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 0%, color-mix(in srgb, var(--ui-primary) 15%, transparent), transparent 70%)" />
           <PButton
             :icon="studioIcons.play"
@@ -331,10 +331,10 @@ onMounted(() => {
             class="rounded-full"
           />
         </div>
-      </UPageCard>
-    </UPageHero>
+      </PPageCard>
+    </PPageHero>
 
-    <UPageSection
+    <PPageSection
       v-for="(section, index) in sections"
       :key="index"
       :title="section.title"
@@ -344,9 +344,9 @@ onMounted(() => {
       :features="section.features"
     >
       <!-- Template's ImagePlaceholder: a framed card with a diagonal-stripes pattern. -->
-      <UPageCard variant="subtle">
-        <div class="relative overflow-hidden rounded-sm border border-dashed border-accented opacity-75 px-4 flex items-center justify-center aspect-video">
-          <svg class="absolute inset-0 h-full w-full stroke-inverted/10" fill="none">
+      <PPageCard variant="subtle">
+        <div class="relative overflow-hidden rounded-sm border border-dashed border-border-accented opacity-75 px-4 flex items-center justify-center aspect-video">
+          <svg class="absolute inset-0 h-full w-full stroke-stroke-inverted/10" fill="none">
             <defs>
               <pattern
                 :id="`saas-stripes-${index}`"
@@ -362,30 +362,30 @@ onMounted(() => {
             <rect stroke="none" :fill="`url(#saas-stripes-${index})`" width="100%" height="100%" />
           </svg>
         </div>
-      </UPageCard>
-    </UPageSection>
+      </PPageCard>
+    </PPageSection>
 
-    <UPageSection
+    <PPageSection
       title="Everything You Need to Ship"
-      description="Stop building from scratch. Focus on your unique features while Pohon handles the foundations with battle-tested components and patterns."
+      description="Stop building from scratch. Focus on your unique features while Pohon UI handles the foundations with battle-tested components and patterns."
     >
-      <UPageGrid>
-        <UPageCard
+      <PPageGrid>
+        <PPageCard
           v-for="feature in features"
           :key="feature.title"
           v-bind="feature"
           spotlight
         />
-      </UPageGrid>
-    </UPageSection>
+      </PPageGrid>
+    </PPageSection>
 
-    <UPageSection
+    <PPageSection
       headline="Trusted by Developers"
-      title="Join Thousands Building with Pohon"
-      description="See why developers choose Pohon to ship their SaaS applications faster and with more confidence."
+      title="Join Thousands Building with Pohon UI"
+      description="See why developers choose Pohon UI to ship their SaaS applications faster and with more confidence."
     >
-      <UPageColumns class="lg:columns-2 xl:columns-3">
-        <UPageCard
+      <PPageColumns class="lg:columns-2 xl:columns-3">
+        <PPageCard
           v-for="testimonial in testimonials"
           :key="testimonial.user.name"
           variant="subtle"
@@ -399,53 +399,53 @@ onMounted(() => {
               size="lg"
             />
           </template>
-        </UPageCard>
-      </UPageColumns>
-    </UPageSection>
+        </PPageCard>
+      </PPageColumns>
+    </PPageSection>
 
     <PSeparator />
 
-    <UPageSection
+    <PPageSection
       title="A Plan for Every Need"
       description="Our plans are designed to meet the requirements of both beginners and players. Get the right plan that suits you."
       :ui="{ links: 'justify-center' }"
     >
       <template #links>
-        <UTabs
+        <PTabs
           v-model="billingCycle"
           :items="billingCycleItems"
           :content="false"
           color="neutral"
           size="xs"
           class="w-48"
-          :ui="{ list: 'ring ring-accented rounded-full', indicator: 'rounded-full', trigger: 'w-1/2' }"
+          :ui="{ list: 'ring ring-ring-accented rounded-full', indicator: 'rounded-full', trigger: 'w-1/2' }"
         />
       </template>
 
-      <UPricingPlans scale>
-        <UPricingPlan
+      <PPricingPlans scale>
+        <PPricingPlan
           v-for="plan in plans"
           :key="plan.title"
           v-bind="plan"
           :billing-cycle="billingCycle === 'year' ? '/year' : '/month'"
         />
-      </UPricingPlans>
-    </UPageSection>
+      </PPricingPlans>
+    </PPageSection>
 
-    <UPageSection title="Frequently Asked Questions">
-      <UAccordion
+    <PPageSection title="Frequently Asked Questions">
+      <PAccordion
         :items="faqItems"
         type="multiple"
         :default-value="['0']"
         :unmount-on-hide="false"
         class="max-w-3xl mx-auto"
-        :ui="{ trigger: 'text-base text-highlighted', body: 'text-base text-muted' }"
+        :ui="{ trigger: 'text-base color-text-highlighted', body: 'text-base color-text-muted' }"
       />
-    </UPageSection>
+    </PPageSection>
 
-    <UPageCTA
+    <PPageCTA
       title="Ready to build an amazing SaaS?"
-      description="Join thousands of developers building with Nuxt and Pohon. Get this template and start shipping today."
+      description="Join thousands of developers building with Nuxt and Pohon UI. Get this template and start shipping today."
       :links="ctaLinks"
       variant="naked"
       class="overflow-hidden"
@@ -496,38 +496,38 @@ onMounted(() => {
           </div>
         </div>
       </div>
-    </UPageCTA>
+    </PPageCTA>
 
     <PSeparator :icon="studioIcons.saas" class="h-px" />
 
-    <UFooter :ui="{ top: 'border-b border-border' }">
+    <PFooter :ui="{ top: 'border-b border-border' }">
       <template #top>
-        <UContainer>
-          <UFooterColumns :columns="footerColumns">
+        <PContainer>
+          <PFooterColumns :columns="footerColumns">
             <template #right>
               <PFormField name="email" label="Subscribe to our newsletter" size="lg">
-                <UInput v-model="email" type="email" placeholder="Enter your email" class="w-full">
+                <PInput v-model="email" type="email" placeholder="Enter your email" class="w-full">
                   <template #trailing>
                     <PButton size="xs" color="neutral" label="Subscribe" />
                   </template>
-                </UInput>
+                </PInput>
               </PFormField>
             </template>
-          </UFooterColumns>
-        </UContainer>
+          </PFooterColumns>
+        </PContainer>
       </template>
 
       <template #left>
-        <p class="text-muted text-sm">
-          Built with Pohon • © 2026
+        <p class="color-text-muted text-sm">
+          Built with Pohon UI • © 2026
         </p>
       </template>
 
       <template #right>
-        <PButton :icon="studioIcons.github" aria-label="GitHub" color="neutral" variant="ghost" />
+        <PButton icon="i-simple-icons-github" aria-label="GitHub" color="neutral" variant="ghost" />
         <PButton icon="i-simple-icons-x" aria-label="X" color="neutral" variant="ghost" />
       </template>
-    </UFooter>
+    </PFooter>
   </div>
 </template>
 

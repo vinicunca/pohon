@@ -18,11 +18,11 @@ const items: StepperItem[] = [
 </script>
 
 <template>
-  <UStepper ref="stepper" :items="items" class="w-full">
+  <PStepper ref="stepper" :items="items" class="w-full">
     <template #content="{ item }">
       <Placeholder class="aspect-video">
         This is the {{ item?.title }} step.
       </Placeholder>
     </template>
-  </UStepper>
+  </PStepper>
 </template>

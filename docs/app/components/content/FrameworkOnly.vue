@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Slot } from 'reka-ui'
+import { Slot } from 'akar'
 </script>
 
 <template>

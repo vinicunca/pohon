@@ -21,7 +21,7 @@ function onOpen() {
 </script>
 
 <template>
-  <USelectMenu
+  <PSelectMenu
     :items="users"
     :loading="status === 'pending'"
     icon="i-lucide-user"
@@ -30,12 +30,12 @@ function onOpen() {
     @update:open="onOpen"
   >
     <template #leading="{ modelValue, ui }">
-      <UAvatar
+      <PAvatar
         v-if="modelValue"
         v-bind="modelValue.avatar"
         :size="(ui.leadingAvatarSize() as AvatarProps['size'])"
         :class="ui.leadingAvatar()"
       />
     </template>
-  </USelectMenu>
+  </PSelectMenu>
 </template>

@@ -86,14 +86,14 @@ const items = (editor: Editor): DropdownMenuItem[][] => {
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     class="w-full min-h-19"
   >
-    <UEditorDragHandle v-slot="{ ui }" :editor="editor" @node-change="selectedNode = $event">
-      <UDropdownMenu
+    <PEditorDragHandle v-slot="{ ui }" :editor="editor" @node-change="selectedNode = $event">
+      <PDropdownMenu
         v-slot="{ open }"
         :modal="false"
         :items="items(editor)"
@@ -110,7 +110,7 @@ const items = (editor: Editor): DropdownMenuItem[][] => {
           :active="open"
           :class="ui.handle()"
         />
-      </UDropdownMenu>
-    </UEditorDragHandle>
-  </UEditor>
+      </PDropdownMenu>
+    </PEditorDragHandle>
+  </PEditor>
 </template>

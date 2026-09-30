@@ -4,6 +4,6 @@ const email = ref('')
 
 <template>
   <PFormField label="Email" help="We won't share your email." required>
-    <UInput v-model="email" placeholder="Enter your email" icon="i-lucide-at-sign" />
+    <PInput v-model="email" placeholder="Enter your email" icon="i-lucide-at-sign" />
   </PFormField>
 </template>

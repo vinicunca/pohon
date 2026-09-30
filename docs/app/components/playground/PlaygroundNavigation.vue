@@ -4,7 +4,7 @@ import type { NavigationMenuItem } from 'pohon-ui'
 const appConfig = useAppConfig()
 const studioIcons = useStudioIcons()
 
-const items: NavigationMenuItem[][] = [
+const items = computed<NavigationMenuItem[][]>(() => [
   [
     { label: 'Dashboard', icon: studioIcons.dashboard, active: true },
     { label: 'Inbox', icon: studioIcons.inbox, badge: '4' },
@@ -15,11 +15,11 @@ const items: NavigationMenuItem[][] = [
     { label: 'Settings', icon: studioIcons.settings },
     { label: 'Help', icon: appConfig.ui.icons.info }
   ]
-]
+])
 </script>
 
 <template>
   <div class="p-2">
-    <UNavigationMenu orientation="vertical" :items="items" class="w-full" />
+    <PNavigationMenu orientation="vertical" :items="items" class="w-full" />
   </div>
 </template>

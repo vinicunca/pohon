@@ -6,7 +6,7 @@ import { useClipboard } from '@vueuse/core'
 
 const PButton = resolveComponent('PButton')
 const PBadge = resolveComponent('PBadge')
-const UDropdownMenu = resolveComponent('UDropdownMenu')
+const PDropdownMenu = resolveComponent('PDropdownMenu')
 
 const toast = useToast()
 const { copy } = useClipboard()
@@ -106,7 +106,7 @@ const columns: TableColumn<Payment>[] = [{
     }
   },
   cell: ({ row }) => {
-    return h(UDropdownMenu, {
+    return h(PDropdownMenu, {
       'content': {
         align: 'end'
       },

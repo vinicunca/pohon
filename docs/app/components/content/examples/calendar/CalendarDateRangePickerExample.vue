@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+import { useBreakpoints } from '@vueuse/core'
 import { DateFormatter, getLocalTimeZone, today } from '@internationalized/date'
 
 const df = new DateFormatter('en-US', { dateStyle: 'medium' })
 const tz = getLocalTimeZone()
-const breakpoints = useBreakpoints(breakpointsTailwind)
+const breakpoints = useBreakpoints({ sm: 640, md: 768, lg: 1024, xl: 1280, '2xl': 1536 })
 const isDesktop = breakpoints.greaterOrEqual('sm')
 
 const ranges = [
@@ -46,13 +46,13 @@ function selectRange(range: typeof ranges[number]) {
 </script>
 
 <template>
-  <UPopover :content="{ align: 'center' }">
+  <PPopover :content="{ align: 'center' }">
     <PButton color="neutral" variant="subtle" icon="i-lucide-calendar">
       {{ label }}
     </PButton>
 
     <template #content>
-      <div class="flex items-stretch divide-x divide-(--ui-border)">
+      <div class="flex items-stretch divide-x divide-(--ui-color-border)">
         <div class="hidden sm:flex flex-col justify-center py-2">
           <PButton
             v-for="(range, index) in ranges"
@@ -61,14 +61,14 @@ function selectRange(range: typeof ranges[number]) {
             color="neutral"
             variant="ghost"
             class="rounded-none px-4"
-            :class="[isRangeSelected(range) ? 'bg-elevated' : 'hover:bg-elevated/50']"
+            :class="[isRangeSelected(range) ? 'bg-background-elevated' : 'hover:bg-background-elevated/50']"
             truncate
             @click="selectRange(range)"
           />
         </div>
 
-        <UCalendar v-model="modelValue" class="p-2" :number-of-months="isDesktop ? 2 : 1" range />
+        <PCalendar v-model="modelValue" class="p-2" :number-of-months="isDesktop ? 2 : 1" range />
       </div>
     </template>
-  </UPopover>
+  </PPopover>
 </template>

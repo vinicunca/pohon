@@ -74,23 +74,23 @@ const items = computed<DropdownMenuItem[][]>(() => [
       icon: appConfig.ui.icons.folder,
       children: [
         { label: 'New project', icon: appConfig.ui.icons.plus },
-        { label: 'Pohon', icon: appConfig.ui.icons.folder }
+        { label: 'Pohon UI', icon: appConfig.ui.icons.folder }
       ]
     }
   ],
   [
     {
       label: 'Skills',
-      icon: 'i-lucide-shapes',
+      icon: studioIcons.shapes,
       children: [
         { label: 'Canvas design', icon: studioIcons.palette },
-        { label: 'Slides', icon: 'i-lucide-presentation' },
+        { label: 'Slides', icon: studioIcons.presentation },
         { label: 'PDF', icon: appConfig.ui.icons.file }
       ]
     },
     {
       label: 'Connectors',
-      icon: 'i-lucide-blocks',
+      icon: studioIcons.grid,
       children: [
         [
           { label: 'Add connector', icon: appConfig.ui.icons.plus },
@@ -123,11 +123,21 @@ const items = computed<DropdownMenuItem[][]>(() => [
         ]
       ]
     },
-    { label: 'Add plugins…', icon: 'i-lucide-plug' }
+    { label: 'Add plugins…', icon: studioIcons.plug }
   ],
   [
-    { label: 'Ask Vercel', icon: 'i-simple-icons-vercel' },
-    { label: 'Research', icon: 'i-lucide-activity' },
+    { label: 'Ask Vercel',
+      icon: 'i-simple-icons-vercel',
+      onSelect(e: Event) {
+        e.preventDefault()
+      }
+    },
+    {
+      label: 'Research', icon: studioIcons.activity,
+      onSelect(e: Event) {
+        e.preventDefault()
+      }
+    },
     {
       label: 'Web search',
       icon: studioIcons.globe,
@@ -135,6 +145,9 @@ const items = computed<DropdownMenuItem[][]>(() => [
       checked: webSearch.value,
       onUpdateChecked(checked: boolean) {
         webSearch.value = checked
+      },
+      onSelect(e: Event) {
+        e.preventDefault()
       }
     }
   ]
@@ -149,81 +162,75 @@ function onSubmit() {
 </script>
 
 <template>
-  <UChatPrompt
+  <PChatPrompt
     v-model="input"
     variant="naked"
-    size="md"
     :rows="3"
     autoresize
     :autofocus="false"
     placeholder="Paste a doc, an email, or a question to get started"
-    :ui="{ root: 'rounded-none p-2.5 backdrop-filter-none', body: 'p-1.5', base: 'px-0' }"
+    :ui="{ root: 'rounded-none p-2.5 backdrop-filter-none', body: 'p-1.5', base: 'p-0' }"
     @submit="onSubmit"
   >
     <template #footer>
-      <div class="flex items-center justify-between gap-2 w-full">
+      <div class="flex items-center justify-between gap-1.5 w-full">
         <div class="flex items-center gap-1">
-          <UDropdownMenu :items="items" :content="{ align: 'start', side: 'top' }" :ui="{ content: 'w-60' }" size="sm">
-            <PButton
-              :icon="appConfig.ui.icons.plus"
-              color="neutral"
-              variant="ghost"
-              size="sm"
-              square
-              aria-label="Add content"
-            />
+          <PDropdownMenu :items="items" :content="{ align: 'start', side: 'top' }" :modal="false">
+            <template #default="{ open }">
+              <PButton
+                :icon="appConfig.ui.icons.plus"
+                color="neutral"
+                variant="ghost"
+                aria-label="Add content"
+                :class="[open && 'bg-background-elevated']"
+              />
+            </template>
 
             <template #switch-trailing="{ item }">
-              <USwitch :model-value="(item as DropdownMenuItem).checked" size="sm" tabindex="-1" />
+              <PSwitch :model-value="(item as DropdownMenuItem).checked" tabindex="-1" />
             </template>
-          </UDropdownMenu>
+          </PDropdownMenu>
 
-          <UDropdownMenu :items="modelItems" :content="{ align: 'start', side: 'top' }" :ui="{ content: 'w-72' }" size="sm">
-            <PButton
-              color="neutral"
-              variant="ghost"
-              size="sm"
-              :trailing-icon="appConfig.ui.icons.chevronDown"
-              class="group"
-              :ui="{ trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200' }"
-            >
-              {{ activeModel?.label }} <span class="text-dimmed">{{ effort }}</span>
-            </PButton>
+          <PDropdownMenu :items="modelItems" :content="{ align: 'start', side: 'top' }" :modal="false">
+            <template #default="{ open }">
+              <PButton
+                color="neutral"
+                variant="ghost"
+                :trailing-icon="appConfig.ui.icons.chevronDown"
+                :class="['group', open && 'bg-background-elevated']"
+                :ui="{ trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200' }"
+              >
+                {{ activeModel?.label }} <span class="color-text-dimmed">{{ effort }}</span>
+              </PButton>
+            </template>
 
             <template #effort-trailing="{ ui }">
-              <span class="text-dimmed">{{ effort }}</span>
-              <UIcon :name="appConfig.ui.icons.chevronRight" :class="ui.itemTrailingIcon()" />
+              <span class="color-text-dimmed">{{ effort }}</span>
+              <PIcon :name="appConfig.ui.icons.chevronRight" :class="ui.itemTrailingIcon()" />
             </template>
-          </UDropdownMenu>
+          </PDropdownMenu>
         </div>
 
         <div class="flex items-center gap-1">
+          <PButton :icon="studioIcons.mic" color="neutral" variant="ghost" square aria-label="Dictate" />
           <PButton
-            :icon="studioIcons.mic"
-            color="neutral"
-            variant="ghost"
-            size="sm"
-            square
-            aria-label="Dictate"
-          />
-          <PButton
-            icon="i-lucide-audio-lines"
-            color="neutral"
-            variant="ghost"
-            size="sm"
-            square
-            aria-label="Voice mode"
-          />
-          <PButton
+            v-if="input.trim()"
             :icon="appConfig.ui.icons.arrowUp"
             color="primary"
-            size="sm"
             square
             aria-label="Send"
             @click="onSubmit"
           />
+          <PButton
+            v-else
+            :icon="studioIcons.audioLines"
+            color="neutral"
+            variant="ghost"
+            square
+            aria-label="Voice mode"
+          />
         </div>
       </div>
     </template>
-  </UChatPrompt>
+  </PChatPrompt>
 </template>

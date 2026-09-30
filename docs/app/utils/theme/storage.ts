@@ -19,7 +19,7 @@ export type FontPrefs = NonNullable<ThemeDoc['font']>
  * hydration, see plugins/theme.ts). `currentDoc()` still derives the doc from
  * this state whenever an export, a preset diff or a history entry needs one.
  */
-export const THEME_STORAGE_KEY = 'nuxt-ui-theme'
+export const THEME_STORAGE_KEY = 'pohon-ui-theme'
 
 export interface StoredTheme {
   primary?: string
@@ -49,9 +49,9 @@ export interface StoredTheme {
  * these read back per type rather than through JSON.parse.
  */
 const LEGACY_KEYS = [
-  'nuxt-ui-primary', 'nuxt-ui-neutral', 'nuxt-ui-radius', 'nuxt-ui-font-size',
-  'nuxt-ui-font', 'nuxt-ui-icons', 'nuxt-ui-black-as-primary',
-  'nuxt-ui-font-prefs', 'nuxt-ui-ai-theme', 'nuxt-ui-custom-colors', 'nuxt-ui-css-variables'
+  'pohon-ui-primary', 'pohon-ui-neutral', 'pohon-ui-radius', 'pohon-ui-font-size',
+  'pohon-ui-font', 'pohon-ui-icons', 'pohon-ui-black-as-primary',
+  'pohon-ui-font-prefs', 'pohon-ui-ai-theme', 'pohon-ui-custom-colors', 'pohon-ui-css-variables'
 ]
 
 function migrateLegacyTheme(): StoredTheme {
@@ -69,20 +69,20 @@ function migrateLegacyTheme(): StoredTheme {
     }
   }
 
-  const extras = json<{ colors?: Record<string, string>, ui?: Record<string, Record<string, unknown>> }>('nuxt-ui-ai-theme')
+  const extras = json<{ colors?: Record<string, string>, ui?: Record<string, Record<string, unknown>> }>('pohon-ui-ai-theme')
   const migrated: StoredTheme = {
-    primary: read('nuxt-ui-primary'),
-    neutral: read('nuxt-ui-neutral'),
-    radius: number('nuxt-ui-radius'),
-    fontSize: number('nuxt-ui-font-size'),
-    icons: read('nuxt-ui-icons'),
-    blackAsPrimary: read('nuxt-ui-black-as-primary') === 'true' || undefined,
+    primary: read('pohon-ui-primary'),
+    neutral: read('pohon-ui-neutral'),
+    radius: number('pohon-ui-radius'),
+    fontSize: number('pohon-ui-font-size'),
+    icons: read('pohon-ui-icons'),
+    blackAsPrimary: read('pohon-ui-black-as-primary') === 'true' || undefined,
     // the family and the rest of the typography were separate keys
-    font: normalizeFont({ ...json<Record<string, unknown>>('nuxt-ui-font-prefs'), sans: read('nuxt-ui-font') }),
+    font: normalizeFont({ ...json<Record<string, unknown>>('pohon-ui-font-prefs'), sans: read('pohon-ui-font') }),
     colors: extras?.colors,
     components: extras?.ui,
-    customColors: json('nuxt-ui-custom-colors'),
-    cssVariables: json('nuxt-ui-css-variables')
+    customColors: json('pohon-ui-custom-colors'),
+    cssVariables: json('pohon-ui-css-variables')
   }
 
   // Written back under the new key and the old ones dropped, so this runs
@@ -191,19 +191,19 @@ export function snapshotStoredTheme(): StoredTheme {
   const appConfig = useAppConfig()
   const filled = <T extends object>(value: T | undefined) => value && Object.keys(value).length ? value : undefined
   const unless = <T>(value: T, fallback: T) => value === fallback ? undefined : value
-  const extras = useState<Record<string, any>>('nuxt-ui-ai-theme').value
-  const cssVariables = useState<StoredTheme['cssVariables']>('nuxt-ui-css-variables').value
+  const extras = useState<Record<string, any>>('pohon-ui-ai-theme').value
+  const cssVariables = useState<StoredTheme['cssVariables']>('pohon-ui-css-variables').value
   return {
     primary: unless(appConfig.ui.colors.primary, DEFAULT_COLORS.primary),
     neutral: unless(appConfig.ui.colors.neutral, DEFAULT_COLORS.neutral),
-    radius: unless(useState<number>('nuxt-ui-radius').value, THEME_DEFAULTS.radius),
-    fontSize: unless(useState<number>('nuxt-ui-font-size').value, THEME_DEFAULTS.fontSize),
-    font: filled(useState<StoredTheme['font']>('nuxt-ui-font').value),
-    icons: unless(useState<string>('nuxt-ui-icons').value, THEME_DEFAULTS.icons),
-    blackAsPrimary: useState<boolean>('nuxt-ui-black-as-primary').value || undefined,
+    radius: unless(useState<number>('pohon-ui-radius').value, THEME_DEFAULTS.radius),
+    fontSize: unless(useState<number>('pohon-ui-font-size').value, THEME_DEFAULTS.fontSize),
+    font: filled(useState<StoredTheme['font']>('pohon-ui-font').value),
+    icons: unless(useState<string>('pohon-ui-icons').value, THEME_DEFAULTS.icons),
+    blackAsPrimary: useState<boolean>('pohon-ui-black-as-primary').value || undefined,
     colors: filled(extras?.colors),
     components: filled(extras?.ui),
-    customColors: filled(useState<StoredTheme['customColors']>('nuxt-ui-custom-colors').value),
+    customColors: filled(useState<StoredTheme['customColors']>('pohon-ui-custom-colors').value),
     cssVariables: filled(cssVariables?.light) || filled(cssVariables?.dark) ? cssVariables : undefined,
     style: filled(useState<StoredTheme['style']>(THEME_STATE_KEYS.stylePrefs).value),
     paletteParams: filled(useState<StoredTheme['paletteParams']>(THEME_STATE_KEYS.paletteParams).value),
@@ -218,13 +218,13 @@ export type { ThemeDoc }
 
 /** useState keys shared across composables. */
 export const THEME_STATE_KEYS = {
-  stylePrefs: 'nuxt-ui-style-prefs',
-  themePreset: 'nuxt-ui-theme-preset',
-  paletteParams: 'nuxt-ui-palette-params-state'
+  stylePrefs: 'pohon-ui-style-prefs',
+  themePreset: 'pohon-ui-theme-preset',
+  paletteParams: 'pohon-ui-palette-params-state'
 } as const
 
 /** DOM ids of the style tags useHead owns and the FOUC scripts pre-fill. */
 export const THEME_TAG_IDS = {
-  cssVariables: 'nuxt-ui-css-variables',
-  customColors: 'nuxt-ui-custom-colors'
+  cssVariables: 'pohon-ui-css-variables',
+  customColors: 'pohon-ui-custom-colors'
 } as const

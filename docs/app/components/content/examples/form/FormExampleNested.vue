@@ -33,16 +33,16 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     @submit="onSubmit"
   >
     <PFormField label="Name" name="name">
-      <UInput v-model="state.name" placeholder="John Lennon" />
+      <PInput v-model="state.name" placeholder="John Lennon" />
     </PFormField>
 
     <div>
-      <UCheckbox v-model="state.news" name="news" label="Register to our newsletter" @update:model-value="state.email = undefined" />
+      <PCheckbox v-model="state.news" name="news" label="Register to our newsletter" @update:model-value="state.email = undefined" />
     </div>
 
     <PForm v-if="state.news" :schema="nestedSchema" nested>
       <PFormField label="Email" name="email">
-        <UInput v-model="state.email" placeholder="john@lennon.com" />
+        <PInput v-model="state.email" placeholder="john@lennon.com" />
       </PFormField>
     </PForm>
 

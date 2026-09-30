@@ -2,12 +2,12 @@
 import type { NavigationMenuItem } from 'pohon-ui'
 
 const items: NavigationMenuItem[] = [{
-  label: 'Figma Kit',
-  to: 'https://go.nuxt.com/figma-ui',
+  label: 'Theme Studio',
+  to: '/theme',
   target: '_blank'
 }, {
   label: 'Playground',
-  to: 'https://stackblitz.com/edit/nuxt-ui',
+  to: 'https://play.pohon.vinicunca.dev/',
   target: '_blank'
 }, {
   label: 'Releases',
@@ -17,40 +17,40 @@ const items: NavigationMenuItem[] = [{
 </script>
 
 <template>
-  <UFooter>
+  <PFooter>
     <template #left>
-      <p class="text-muted text-sm">
+      <p class="color-text-muted text-sm">
         Copyright © {{ new Date().getFullYear() }}
       </p>
     </template>
 
-    <UNavigationMenu :items="items" variant="link" />
+    <PNavigationMenu :items="items" variant="link" />
 
     <template #right>
       <PButton
-        icon="i-simple-icons-discord"
+        icon="i-simple-icons-github"
         color="neutral"
         variant="ghost"
-        to="https://go.nuxt.com/discord"
+        to="https://github.com/vinicunca/pohon/discussions"
         target="_blank"
-        aria-label="Discord"
+        aria-label="Discussions"
       />
       <PButton
-        icon="i-simple-icons-x"
+        icon="i-lucide-book-open"
         color="neutral"
         variant="ghost"
-        to="https://go.nuxt.com/x"
+        to="https://pohon.vinicunca.dev/"
         target="_blank"
-        aria-label="X"
+        aria-label="Documentation"
       />
       <PButton
         icon="i-simple-icons-github"
         color="neutral"
         variant="ghost"
-        to="https://github.com/nuxt/nuxt"
+        to="https://github.com/vinicunca/pohon"
         target="_blank"
         aria-label="GitHub"
       />
     </template>
-  </UFooter>
+  </PFooter>
 </template>

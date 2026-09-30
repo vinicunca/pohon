@@ -22,7 +22,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <UBanner
+  <PBanner
     :id="id"
     :title="title || 'This is a closable banner'"
     :color="color"

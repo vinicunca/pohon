@@ -1,5 +1,5 @@
 export function useFrameworks() {
-  const framework = useCookie('nuxt-ui-framework', { default: () => 'nuxt' })
+  const framework = useCookie('pohon-ui-framework', { default: () => 'nuxt' })
   const { track } = useAnalytics()
 
   function setFramework(value: 'nuxt' | 'vue', source?: string) {

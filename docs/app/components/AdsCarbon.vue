@@ -20,30 +20,50 @@ onMounted(() => {
 </template>
 
 <style scoped>
-@reference "../assets/css/main.css";
-
 .carbon :deep(#carbonads) {
-  @apply relative border border-border rounded-md hover:bg-elevated/50 w-full transition-colors min-h-[220px] p-2;
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+  padding: 0.5rem;
+  border: 1px solid var(--ui-color-border);
+  border-radius: 0.375rem;
+  transition: background-color 150ms;
 
   .carbon-img {
-    @apply flex justify-center w-full;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 
     & > img {
-      @apply !max-w-full w-full rounded-sm;
+      width: 100%;
+      max-width: 100% !important;
+      border-radius: 0.125rem;
     }
   }
 
   .carbon-text {
-    @apply text-sm text-muted transition-colors text-center text-pretty flex pt-2;
+    display: flex;
+    padding-top: 0.5rem;
+    color: var(--ui-color-text-muted);
+    font-size: 0.875rem;
+    text-align: center;
+    text-wrap: pretty;
+    transition: color 150ms;
   }
 
   .carbon-poweredby {
-    @apply block text-xs text-center text-muted pt-2;
+    display: block;
+    padding-top: 0.5rem;
+    color: var(--ui-color-text-muted);
+    font-size: 0.75rem;
+    text-align: center;
   }
 
   &:hover {
+    background-color: color-mix(in oklab, var(--ui-color-bg-elevated) 50%, transparent);
+
     .carbon-text {
-      @apply text-default;
+      color: var(--ui-color-text);
     }
   }
 }

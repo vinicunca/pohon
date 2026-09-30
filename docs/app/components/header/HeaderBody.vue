@@ -9,7 +9,7 @@ const { navigationByCategory } = useNavigation(navigation!)
 </script>
 
 <template>
-  <UNavigationMenu orientation="vertical" :items="mobileLinks" class="-mx-2.5" />
+  <PNavigationMenu orientation="vertical" :items="mobileLinks" class="-mx-2.5" />
 
   <template v-if="route.path.startsWith('/docs/')">
     <PSeparator type="dashed" class="mt-4 mb-6" />
@@ -18,6 +18,6 @@ const { navigationByCategory } = useNavigation(navigation!)
       <FrameworkTabs />
     </div>
 
-    <UContentNavigation :navigation="navigationByCategory" highlight :ui="{ linkTrailingBadge: 'font-semibold uppercase' }" />
+    <PContentNavigation :navigation="navigationByCategory" highlight :ui="{ linkTrailingBadge: 'font-semibold uppercase' }" />
   </template>
 </template>

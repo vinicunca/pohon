@@ -3,7 +3,7 @@ const open = ref(false)
 </script>
 
 <template>
-  <UModal v-model:open="open" title="Modal with footer" description="This is useful when you want a form in a Modal." :ui="{ footer: 'justify-end' }">
+  <PModal v-model:open="open" title="Modal with footer" description="This is useful when you want a form in a Modal." :ui="{ footer: 'justify-end' }">
     <PButton label="Open" color="neutral" variant="subtle" />
 
     <template #body>
@@ -14,5 +14,5 @@ const open = ref(false)
       <PButton label="Cancel" color="neutral" variant="outline" @click="close" />
       <PButton label="Submit" color="neutral" />
     </template>
-  </UModal>
+  </PModal>
 </template>

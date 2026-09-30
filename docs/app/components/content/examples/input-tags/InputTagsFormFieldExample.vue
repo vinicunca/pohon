@@ -4,6 +4,6 @@ const tags = ref(['Vue'])
 
 <template>
   <PFormField label="Tags" required>
-    <UInputTags v-model="tags" placeholder="Enter tags..." />
+    <PInputTags v-model="tags" placeholder="Enter tags..." />
   </PFormField>
 </template>

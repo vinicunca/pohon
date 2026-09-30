@@ -7,9 +7,9 @@ import { THEME_DEFAULTS } from '../../../utils/theme/engine/types'
  * Every typographic setting in one panel: the three stacks up top, then the
  * treatment that rides on them.
  *
- * The stacks are what tailwind reads. Mono needs nothing else (preflight
+ * The stacks are what unoPalette reads. Mono needs nothing else (preflight
  * points `code`/`kbd`/`pre`/`samp` at it) and serif drives the h1–h6 rule in
- * main.css until v5 ships `--ui-font-heading`.
+ * main.css while headings use `--font-serif`.
  */
 const { fonts, font, fontPrefs, setFontPrefs, fontSize } = useTheme()
 
@@ -20,7 +20,7 @@ const fontLabel = computed(() => (mounted.value ? font.value : THEME_DEFAULTS.fo
 
 onMounted(() => loadFontPreviews(fonts.map(entry => entry.name)))
 
-// One writable model per tailwind weight step, the knobs components
+// One writable model per unoPalette weight step, the knobs components
 // actually dereference at runtime.
 function weightStepModel(step: keyof typeof FONT_WEIGHT_DEFAULTS) {
   return computed({
@@ -49,7 +49,7 @@ const lineHeight = computed({
 })
 
 /**
- * Tailwind's other two stacks, labelled by what they drive rather than by
+ * UnoCSS's other two stacks, labelled by what they drive rather than by
  * their variable. `undefined` (not the string) is inherit, so an untouched
  * row exports clean; the body stack always resolves, so it has no inherit.
  */
@@ -77,11 +77,11 @@ const { groupDirtyFlags } = useThemeStudioToolbar()
 const open = ref(false)
 const dirty = groupDirtyFlags.font
 
-const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y divide-default *:p-3'])
+const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y divide-border *:p-3'])
 </script>
 
 <template>
-  <UPopover v-model:open="open" :content="{ align: 'center', onInteractOutside: keepPanels }" :ui="{ content }">
+  <PPopover v-model:open="open" :content="{ align: 'center', onInteractOutside: keepPanels }" :ui="{ content }">
     <ThemeStudioToolbarTrigger
       :label="fontLabel"
       :icon="studioIcons.text"
@@ -161,5 +161,5 @@ const content = computed(() => [...toolbarPanelClass(props.vertical), 'divide-y 
         />
       </ThemeStudioSection>
     </template>
-  </UPopover>
+  </PPopover>
 </template>

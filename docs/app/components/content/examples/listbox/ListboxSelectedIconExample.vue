@@ -9,5 +9,5 @@ const value = ref('FR')
 </script>
 
 <template>
-  <UListbox v-model="value" selected-icon="i-lucide-flame" value-key="value" :items="items" class="w-full" />
+  <PListbox v-model="value" selected-icon="i-lucide-flame" value-key="value" :items="items" class="w-full" />
 </template>

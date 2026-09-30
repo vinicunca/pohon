@@ -29,9 +29,9 @@ const value = ref(items.value[0])
 </script>
 
 <template>
-  <USelectMenu v-model="value" :items="items" class="w-48">
+  <PSelectMenu v-model="value" :items="items" class="w-48">
     <template #leading="{ modelValue, ui }">
-      <UChip
+      <PChip
         v-if="modelValue"
         v-bind="modelValue.chip"
         inset
@@ -40,5 +40,5 @@ const value = ref(items.value[0])
         :class="ui.itemLeadingChip()"
       />
     </template>
-  </USelectMenu>
+  </PSelectMenu>
 </template>

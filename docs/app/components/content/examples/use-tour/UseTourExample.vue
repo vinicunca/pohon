@@ -32,33 +32,33 @@ const tour = useTour([
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-      <div ref="dashboard" class="p-4 rounded-lg border border-border bg-elevated/50">
-        <p class="font-medium text-highlighted">
+      <div ref="dashboard" class="p-4 rounded-lg border border-border bg-background-elevated/50">
+        <p class="font-medium color-text-highlighted">
           Dashboard
         </p>
-        <p class="text-sm text-muted">
+        <p class="text-sm color-text-muted">
           Overview of your workspace.
         </p>
       </div>
-      <div ref="profile" class="p-4 rounded-lg border border-border bg-elevated/50">
-        <p class="font-medium text-highlighted">
+      <div ref="profile" class="p-4 rounded-lg border border-border bg-background-elevated/50">
+        <p class="font-medium color-text-highlighted">
           Profile
         </p>
-        <p class="text-sm text-muted">
+        <p class="text-sm color-text-muted">
           Manage your account.
         </p>
       </div>
-      <div ref="settings" class="p-4 rounded-lg border border-border bg-elevated/50">
-        <p class="font-medium text-highlighted">
+      <div ref="settings" class="p-4 rounded-lg border border-border bg-background-elevated/50">
+        <p class="font-medium color-text-highlighted">
           Settings
         </p>
-        <p class="text-sm text-muted">
+        <p class="text-sm color-text-muted">
           Configure your preferences.
         </p>
       </div>
     </div>
 
-    <UPopover
+    <PPopover
       :open="tour.open.value"
       :reference="tour.reference.value"
       :content="{ side: tour.current.value?.side, sideOffset: 8 }"
@@ -68,14 +68,14 @@ const tour = useTour([
       <template #content>
         <div class="p-4 max-w-xs space-y-2">
           <div class="flex items-center justify-between gap-4">
-            <p class="font-semibold text-highlighted">
+            <p class="font-semibold color-text-highlighted">
               {{ tour.current.value?.title }}
             </p>
-            <span class="text-xs text-muted tabular-nums">
+            <span class="text-xs color-text-muted tabular-nums">
               {{ tour.index.value + 1 }} / {{ tour.total.value }}
             </span>
           </div>
-          <p class="text-sm text-muted">
+          <p class="text-sm color-text-muted">
             {{ tour.current.value?.body }}
           </p>
           <div class="flex items-center justify-between pt-2">
@@ -94,6 +94,6 @@ const tour = useTour([
           </div>
         </div>
       </template>
-    </UPopover>
+    </PPopover>
   </div>
 </template>

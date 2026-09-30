@@ -21,7 +21,7 @@ const items = [
 </script>
 
 <template>
-  <UStepper :items="items" class="w-full">
+  <PStepper :items="items" class="w-full">
     <template #address>
       <Placeholder class="aspect-video">
         Address
@@ -39,5 +39,5 @@ const items = [
         Checkout
       </Placeholder>
     </template>
-  </UStepper>
+  </PStepper>
 </template>

@@ -3,16 +3,16 @@ import MyButton from './MyButton.vue'
 </script>
 
 <template>
-  <UTheme
+  <PTheme
     :ui="{
       button: {
         base: 'rounded-full'
       }
     }"
   >
-    <UCard :ui="{ body: 'flex items-center gap-2 sm:flex-row flex-col' }">
+    <PCard :ui="{ body: 'flex items-center gap-2 sm:flex-row flex-col' }">
       <PButton label="Direct child" />
       <MyButton />
-    </UCard>
-  </UTheme>
+    </PCard>
+  </PTheme>
 </template>

@@ -61,12 +61,12 @@ const items: EditorToolbarItem[][] = [[{
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     class="w-full min-h-21"
   >
-    <UEditorToolbar :editor="editor" :items="items" layout="bubble" />
-  </UEditor>
+    <PEditorToolbar :editor="editor" :items="items" layout="bubble" />
+  </PEditor>
 </template>

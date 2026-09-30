@@ -50,8 +50,8 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
 
 <template>
   <div class="flex flex-col items-center justify-center gap-4 p-4">
-    <UPageCard class="w-full max-w-md">
-      <UAuthForm
+    <PPageCard class="w-full max-w-md">
+      <PAuthForm
         :schema="schema"
         :fields="fields"
         :providers="providers"
@@ -66,12 +66,12 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
           <PLink to="#" class="text-primary font-medium" tabindex="-1">Forgot password?</PLink>
         </template>
         <template #validation>
-          <UAlert color="error" icon="i-lucide-info" title="Error signing in" />
+          <PAlert color="error" icon="i-lucide-info" title="Error signing in" />
         </template>
         <template #footer>
           By signing in, you agree to our <PLink to="#" class="text-primary font-medium">Terms of Service</PLink>.
         </template>
-      </UAuthForm>
-    </UPageCard>
+      </PAuthForm>
+    </PPageCard>
   </div>
 </template>

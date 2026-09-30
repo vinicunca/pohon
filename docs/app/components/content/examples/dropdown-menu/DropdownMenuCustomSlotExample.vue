@@ -17,11 +17,11 @@ const items = [
 </script>
 
 <template>
-  <UDropdownMenu :items="items" :ui="{ content: 'w-48' }">
+  <PDropdownMenu :items="items" :ui="{ content: 'w-48' }">
     <PButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
 
     <template #profile-trailing>
-      <UIcon name="i-lucide-badge-check" class="shrink-0 size-5 text-primary" />
+      <PIcon name="i-lucide-badge-check" class="shrink-0 size-5 text-primary" />
     </template>
-  </UDropdownMenu>
+  </PDropdownMenu>
 </template>

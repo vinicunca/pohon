@@ -52,7 +52,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <USelectMenu
+  <PSelectMenu
     ref="selectMenu"
     placeholder="Select user"
     :items="users"

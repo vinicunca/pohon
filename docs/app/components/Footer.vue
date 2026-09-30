@@ -1,59 +1,35 @@
 <script setup lang="ts">
 const route = useRoute()
 const { links } = useFooter()
+const { frameworks } = useFrameworks()
 </script>
 
 <template>
-  <PSeparator :icon="route.path === '/' ? undefined : 'i-simple-icons-nuxtdotjs'" class="h-px" />
+  <PSeparator v-if="route.path === '/'" class="h-px" />
+  <!-- both icons render, the framework class shows one: the cookie is
+       invisible to the prerendered HTML and a class mismatch on a plain
+       element is not patched on hydration -->
+  <PSeparator v-else class="h-px">
+    <PIcon
+      v-for="framework in frameworks"
+      :key="framework.value"
+      :name="framework.icon"
+      :class="[`${framework.value}-only`, 'shrink-0 size-5']"
+    />
+  </PSeparator>
 
-  <UFooter>
+  <PFooter>
     <template #left>
-      <NuxtLink to="https://github.com/vinicunca/pohon" target="_blank" class="text-sm text-muted">
-        Published under <span class="text-highlighted">MIT License</span>
+      <NuxtLink to="https://github.com/vinicunca/pohon" target="_blank" class="text-sm color-text-muted">
+        Published under <span class="color-text-highlighted">MIT License</span>
       </NuxtLink>
     </template>
 
-    <UNavigationMenu :items="links" variant="link" color="neutral" />
+    <PNavigationMenu :items="links" variant="link" color="neutral" :ui="{ list: 'flex-wrap justify-center' }" />
 
     <template #right>
       <PButton
-        aria-label="Nuxt Website"
-        icon="i-simple-icons-nuxtdotjs"
-        to="https://nuxt.com"
-        target="_blank"
-        color="neutral"
-        variant="ghost"
-        size="sm"
-      />
-      <PButton
-        aria-label="Nuxt on Discord"
-        icon="i-simple-icons-discord"
-        to="https://go.nuxt.com/discord"
-        target="_blank"
-        color="neutral"
-        variant="ghost"
-        size="sm"
-      />
-      <PButton
-        aria-label="Nuxt on X"
-        icon="i-simple-icons-x"
-        to="https://go.nuxt.com/x"
-        target="_blank"
-        color="neutral"
-        variant="ghost"
-        size="sm"
-      />
-      <PButton
-        aria-label="Nuxt on BlueSky"
-        icon="i-simple-icons-bluesky"
-        to="https://go.nuxt.com/bluesky"
-        target="_blank"
-        color="neutral"
-        variant="ghost"
-        size="sm"
-      />
-      <PButton
-        aria-label="Pohon on GitHub"
+        aria-label="Pohon UI on GitHub"
         icon="i-simple-icons-github"
         to="https://github.com/vinicunca/pohon"
         target="_blank"
@@ -62,5 +38,5 @@ const { links } = useFooter()
         size="sm"
       />
     </template>
-  </UFooter>
+  </PFooter>
 </template>

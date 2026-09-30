@@ -35,7 +35,7 @@ const text = computed(() => {
 <template>
   <div class="space-y-2">
     <PFormField label="Password">
-      <UInput
+      <PInput
         v-model="password"
         placeholder="Password"
         :color="color"
@@ -57,10 +57,10 @@ const text = computed(() => {
             @click="show = !show"
           />
         </template>
-      </UInput>
+      </PInput>
     </PFormField>
 
-    <UProgress
+    <PProgress
       :color="color"
       :indicator="text"
       :model-value="score"
@@ -77,9 +77,9 @@ const text = computed(() => {
         v-for="(req, index) in strength"
         :key="index"
         class="flex items-center gap-0.5"
-        :class="req.met ? 'text-success' : 'text-muted'"
+        :class="req.met ? 'text-success' : 'color-text-muted'"
       >
-        <UIcon :name="req.met ? 'i-lucide-circle-check' : 'i-lucide-circle-x'" class="size-4 shrink-0" />
+        <PIcon :name="req.met ? 'i-lucide-circle-check' : 'i-lucide-circle-x'" class="size-4 shrink-0" />
 
         <span class="text-xs font-light">
           {{ req.text }}

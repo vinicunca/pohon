@@ -1,6 +1,6 @@
 ---
 title: defineLocale
-description: "A utility to create a custom locale for your app."
+description: 'A utility to create a custom locale for your app.'
 ---
 
 ## Usage
@@ -9,16 +9,16 @@ Use the auto-imported `defineLocale` utility to create a custom locale with your
 
 ```vue
 <script setup lang="ts">
-import type { Messages } from "pohon-ui";
+import type { Messages } from 'pohon-ui'
 
 const locale = defineLocale<Messages>({
-  name: "My custom locale",
-  code: "en",
-  dir: "ltr",
+  name: 'My custom locale',
+  code: 'en',
+  dir: 'ltr',
   messages: {
     // implement pairs
-  },
-});
+  }
+})
 </script>
 
 <template>
@@ -50,8 +50,8 @@ Creates a new locale object with the provided options.
 
 ::field-group
 
-::field{name="options" type="DefineLocaleOptions<M>" required}
-The locale configuration object with the following properties:
+  ::field{name="options" type="DefineLocaleOptions<M>" required}
+  The locale configuration object with the following properties:
 
     ::collapsible
 
@@ -74,8 +74,7 @@ The locale configuration object with the following properties:
         ::
       ::
     ::
-
-::
+  ::
 ::
 
 **Returns:** A `Locale<M>` object that can be passed to the `locale` prop of the [App](/docs/components/app) component.
@@ -86,29 +85,29 @@ Here's a complete example of creating a custom locale:
 
 ```vue
 <script setup lang="ts">
-import type { Messages } from "pohon-ui";
+import type { Messages } from 'pohon-ui'
 
 const locale = defineLocale<Messages>({
-  name: "Español",
-  code: "es",
-  dir: "ltr",
+  name: 'Español',
+  code: 'es',
+  dir: 'ltr',
   messages: {
     alert: {
-      close: "Cerrar",
+      close: 'Cerrar'
     },
     modal: {
-      close: "Cerrar",
+      close: 'Cerrar'
     },
     commandPalette: {
-      back: "Atrás",
-      close: "Cerrar",
-      noData: "Sin datos",
-      noMatch: "Sin resultados",
-      placeholder: "Escribe un comando o busca…",
-    },
+      back: 'Atrás',
+      close: 'Cerrar',
+      noData: 'Sin datos',
+      noMatch: 'Sin resultados',
+      placeholder: 'Escribe un comando o busca…'
+    }
     // ... other component messages
-  },
-});
+  }
+})
 </script>
 
 <template>
@@ -119,5 +118,5 @@ const locale = defineLocale<Messages>({
 ```
 
 ::note
-You can look at the [built-in locales](https://github.com/vinicunca/pohon/tree/v4/src/runtime/locale) for reference on how to structure the messages object.
+You can look at the [built-in locales](https://github.com/vinicunca/pohon/tree/main/src/runtime/locale) for reference on how to structure the messages object.
 ::

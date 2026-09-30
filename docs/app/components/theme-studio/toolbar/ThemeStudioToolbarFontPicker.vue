@@ -98,7 +98,7 @@ function faceOf(value?: string) {
 </script>
 
 <template>
-  <USelectMenu
+  <PSelectMenu
     v-model="model"
     v-model:open="open"
     v-model:search-term="query"
@@ -119,13 +119,13 @@ function faceOf(value?: string) {
     </template>
 
     <template #item-label="{ item }">
-      <span :style="faceOf(item.value)">{{ item.label }}</span><span v-if="item.value && item.value === defaultValue" class="text-dimmed">&nbsp;(Default)</span>
+      <span :style="faceOf(item.value)">{{ item.label }}</span><span v-if="item.value && item.value === defaultValue" class="color-text-dimmed">&nbsp;(Default)</span>
     </template>
 
     <template #item-description="{ item }">
       <span
         v-if="item.value && item.value !== 'inherit'"
-        class="text-xs text-muted truncate"
+        class="text-xs color-text-muted truncate"
         :style="faceOf(item.value)"
       >Grumpy wizards make toxic brew</span>
     </template>
@@ -133,5 +133,5 @@ function faceOf(value?: string) {
     <template #empty>
       {{ empty }}
     </template>
-  </USelectMenu>
+  </PSelectMenu>
 </template>

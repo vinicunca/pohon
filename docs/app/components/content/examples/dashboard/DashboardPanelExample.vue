@@ -1,15 +1,15 @@
 <template>
-  <UDashboardPanel resizable>
+  <PDashboardPanel resizable>
     <template #header>
-      <UDashboardNavbar title="Inbox">
+      <PDashboardNavbar title="Inbox">
         <template #leading>
-          <UDashboardSidebarCollapse />
+          <PDashboardSidebarCollapse />
         </template>
-      </UDashboardNavbar>
+      </PDashboardNavbar>
     </template>
 
     <template #body>
       <Placeholder class="h-full" />
     </template>
-  </UDashboardPanel>
+  </PDashboardPanel>
 </template>

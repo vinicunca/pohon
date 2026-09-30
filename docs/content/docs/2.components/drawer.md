@@ -7,11 +7,11 @@ keywords:
   - mobile sheet
 links:
   - label: Drawer
-    icon: i-custom-reka-ui
+    icon: i-lucide-box
     to: https://github.com/unovue/vaul-vue
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Drawer.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Drawer.vue
 ---
 
 ## Usage
@@ -22,20 +22,18 @@ Then, use the `#content` slot to add the content displayed when the Drawer is op
 
 ::component-code
 ---
-
 prettier: true
 slots:
-default: |
+  default: |
 
     <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-content: |
+  content: |
 
     <Placeholder class="h-48 m-4" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #content
 :placeholder{class="h-48 m-4"}
@@ -49,22 +47,20 @@ Use the `title` prop to set the title of the Drawer's header.
 
 ::component-code
 ---
-
 prettier: true
 props:
-title: 'Drawer with title'
+  title: 'Drawer with title'
 slots:
-default: |
+  default: |
 
     <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-body: |
+  body: |
 
     <Placeholder class="h-48" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #body
 :placeholder{class="h-48"}
@@ -76,32 +72,29 @@ Use the `description` prop to set the description of the Drawer's header.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- title
-  props:
+  - title
+props:
   title: 'Drawer with description'
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  slots:
+slots:
   default: |
 
-  <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
+    <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-body: |
+  body: |
 
     <Placeholder class="h-48" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #body
 :placeholder{class="h-48"}
 ::
 
-### Close :badge{label="4.10+" class="align-text-top"}
+### Close
 
 Use the `close` prop to display a close button in the Drawer. Defaults to `false`.
 
@@ -109,63 +102,57 @@ You can pass any property from the [Button](/docs/components/button) component t
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- title
-- close.color
-- close.variant
-  props:
+  - title
+  - close.color
+  - close.variant
+props:
   title: 'Drawer with close button'
   close:
-  color: primary
-  variant: outline
-  class: 'rounded-full'
-  slots:
+    color: primary
+    variant: outline
+    class: 'rounded-full'
+slots:
   default: |
 
-  <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
+    <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-body: |
+  body: |
 
     <Placeholder class="h-48" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #body
 :placeholder{class="h-48"}
 ::
 
-### Close Icon :badge{label="4.10+" class="align-text-top"}
+### Close Icon
 
 Use the `close-icon` prop to customize the close button [Icon](/docs/components/icon). Defaults to `i-lucide-x`.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- title
-  props:
+  - title
+props:
   title: 'Drawer with close button'
   close: true
   closeIcon: 'i-lucide-arrow-right'
-  slots:
+slots:
   default: |
 
-  <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
+    <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-body: |
+  body: |
 
     <Placeholder class="h-48" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #body
 :placeholder{class="h-48"}
@@ -177,22 +164,20 @@ Use the `direction` prop to control the direction of the Drawer. Defaults to `bo
 
 ::component-code
 ---
-
 prettier: true
 props:
-direction: 'right'
+  direction: 'right'
 slots:
-default: |
+  default: |
 
     <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-content: |
+  content: |
 
     <Placeholder class="min-w-96 min-h-96 size-full m-4" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #content
 :placeholder{class="min-w-96 min-h-96 size-full m-4"}
@@ -204,23 +189,21 @@ Use the `inset` prop to inset the Drawer from the edges.
 
 ::component-code
 ---
-
 prettier: true
 props:
-direction: 'right'
-inset: true
+  direction: 'right'
+  inset: true
 slots:
-default: |
+  default: |
 
     <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-content: |
+  content: |
 
     <Placeholder class="min-w-96 min-h-96 size-full m-4" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #content
 :placeholder{class="min-w-96 min-h-96 size-full m-4"}
@@ -232,22 +215,20 @@ Use the `handle` prop to control whether the Drawer has a handle or not. Default
 
 ::component-code
 ---
-
 prettier: true
 props:
-handle: false
+  handle: false
 slots:
-default: |
+  default: |
 
     <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-content: |
+  content: |
 
     <Placeholder class="h-48 m-4" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #content
 :placeholder{class="h-48 m-4"}
@@ -259,22 +240,20 @@ Use the `handle-only` prop to only allow the Drawer to be dragged by the handle.
 
 ::component-code
 ---
-
 prettier: true
 props:
-handleOnly: true
+  handleOnly: true
 slots:
-default: |
+  default: |
 
     <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-content: |
+  content: |
 
     <Placeholder class="h-48 m-4" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #content
 :placeholder{class="h-48 m-4"}
@@ -286,22 +265,20 @@ Use the `overlay` prop to control whether the Drawer has an overlay or not. Defa
 
 ::component-code
 ---
-
 prettier: true
 props:
-overlay: false
+  overlay: false
 slots:
-default: |
+  default: |
 
     <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-content: |
+  content: |
 
     <Placeholder class="h-48 m-4" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #content
 :placeholder{class="h-48 m-4"}
@@ -317,22 +294,20 @@ When `modal` is set to `false`, the overlay is automatically disabled and outsid
 
 ::component-code
 ---
-
 prettier: true
 props:
-modal: false
+  modal: false
 slots:
-default: |
+  default: |
 
     <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-content: |
+  content: |
 
     <Placeholder class="h-48 m-4" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #content
 :placeholder{class="h-48 m-4"}
@@ -352,11 +327,9 @@ You can combine `modal: false` with `dismissible: false` to make the Drawer's ba
 
 ::component-example
 ---
-
 prettier: true
 name: 'drawer-dismissible-example'
 ---
-
 ::
 
 ### Scale Background
@@ -365,23 +338,21 @@ Use the `should-scale-background` prop to scale the background when the Drawer i
 
 ::component-code
 ---
-
 prettier: true
 props:
-shouldScaleBackground: true
-setBackgroundColorOnScale: true
+  shouldScaleBackground: true
+  setBackgroundColorOnScale: true
 slots:
-default: |
+  default: |
 
     <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
-content: |
+  content: |
 
     <Placeholder class="h-48 m-4" />
-
 ---
 
-:p-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
 
 #content
 :placeholder{class="h-screen m-4"}
@@ -393,7 +364,7 @@ Make sure to add the `data-vaul-drawer-wrapper` directive to a parent element of
 ```vue [app.vue]
 <template>
   <PApp>
-    <div class="bg-default" data-vaul-drawer-wrapper>
+    <div class="bg-background" data-vaul-drawer-wrapper>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
@@ -406,11 +377,11 @@ Make sure to add the `data-vaul-drawer-wrapper` directive to a parent element of
 export default defineNuxtConfig({
   app: {
     rootAttrs: {
-      "data-vaul-drawer-wrapper": "",
-      class: "bg-default",
-    },
-  },
-});
+      'data-vaul-drawer-wrapper': '',
+      'class': 'bg-background'
+    }
+  }
+})
 ```
 
 ::
@@ -423,11 +394,9 @@ You can control the open state by using the `default-open` prop or the `v-model:
 
 ::component-example
 ---
-
 prettier: true
 name: 'drawer-open-example'
 ---
-
 ::
 
 ::note
@@ -444,11 +413,9 @@ You can render a [Modal](/docs/components/modal) component on desktop and a Draw
 
 ::component-example
 ---
-
 prettier: true
 name: 'drawer-responsive-example'
 ---
-
 ::
 
 ### Nested drawers
@@ -457,11 +424,9 @@ You can nest drawers within each other by using the `nested` prop.
 
 ::component-example
 ---
-
 prettier: true
 name: 'drawer-nested-example'
 ---
-
 ::
 
 ### With footer slot
@@ -470,12 +435,10 @@ Use the `#footer` slot to add content after the Drawer's body.
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'drawer-footer-slot-example'
 ---
-
 ::
 
 ### With command palette
@@ -484,11 +447,9 @@ You can use a [CommandPalette](/docs/components/command-palette) component insid
 
 ::component-example
 ---
-
 collapse: true
 name: 'drawer-command-palette-example'
 ---
-
 ::
 
 ::note

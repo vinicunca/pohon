@@ -1,5 +1,5 @@
 <template>
-  <UCollapsible class="flex flex-col gap-2 w-48">
+  <PCollapsible class="flex flex-col gap-2 w-48">
     <PButton
       class="group"
       label="Open"
@@ -15,5 +15,5 @@
     <template #content>
       <Placeholder class="h-48" />
     </template>
-  </UCollapsible>
+  </PCollapsible>
 </template>

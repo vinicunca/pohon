@@ -4,6 +4,9 @@ import { useChat } from '@ai-sdk/vue'
 import { isPartStreaming } from 'pohon-ui/utils/ai'
 import { Markdown } from '@comark/vue'
 import shiki from '@comark/vue/plugins/shiki'
+import security from '@comark/vue/plugins/security'
+
+const plugins = [shiki(), security({ blockedTags: ['script', 'style', 'iframe', 'object', 'embed', 'form'] })]
 
 const input = ref('')
 
@@ -68,11 +71,11 @@ const ui = {
 </script>
 
 <template>
-  <UContentSearch v-model:search-term="searchTerm" open :groups="groups">
+  <PContentSearch v-model:search-term="searchTerm" open :groups="groups">
     <template v-if="ai" #content>
-      <UTheme :ui="ui">
-        <UChatPalette>
-          <UChatMessages
+      <PTheme :ui="ui">
+        <PChatPalette>
+          <PChatMessages
             :messages="messages"
             :status="status"
             :user="{ side: 'left', variant: 'naked', avatar: { src: 'https://github.com/benjamincanac.png', loading: 'lazy' as const } }"
@@ -85,7 +88,7 @@ const ui = {
                     v-if="message.role === 'assistant'"
                     :value="part.text"
                     :streaming="isPartStreaming(part)"
-                    :plugins="[shiki()]"
+                    :plugins="plugins"
                     class="*:first:mt-0 *:last:mb-0"
                   />
                   <p v-else-if="message.role === 'user'" class="whitespace-pre-wrap leading-6">
@@ -94,10 +97,10 @@ const ui = {
                 </template>
               </template>
             </template>
-          </UChatMessages>
+          </PChatMessages>
 
           <template #prompt>
-            <UChatPrompt
+            <PChatPrompt
               v-model="input"
               icon="i-lucide-search"
               variant="naked"
@@ -106,8 +109,8 @@ const ui = {
               @close="onClose"
             />
           </template>
-        </UChatPalette>
-      </UTheme>
+        </PChatPalette>
+      </PTheme>
     </template>
-  </UContentSearch>
+  </PContentSearch>
 </template>

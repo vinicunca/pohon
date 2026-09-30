@@ -1,10 +1,10 @@
 type Country = {
-  name: string;
-  code: string;
-  emoji: string;
-};
+  name: string
+  code: string
+  emoji: string
+}
 
-const countries: Array<Country> = [
+const countries: Country[] = [
   { name: 'Afghanistan', code: 'AF', emoji: '🇦🇫' },
   { name: 'Albania', code: 'AL', emoji: '🇦🇱' },
   { name: 'Algeria', code: 'DZ', emoji: '🇩🇿' },
@@ -184,7 +184,7 @@ const countries: Array<Country> = [
   { name: 'Turkmenistan', code: 'TM', emoji: '🇹🇲' },
   { name: 'Tuvalu', code: 'TV', emoji: '🇹🇻' },
   { name: 'Uganda', code: 'UG', emoji: '🇺🇬' },
-  { name: 'Ukraine', code: 'UA', emoji: '🇺🇦' },
+  { name: 'Ukraine', code: 'PA', emoji: '🇺🇦' },
   { name: 'United Arab Emirates', code: 'AE', emoji: '🇦🇪' },
   { name: 'United Kingdom', code: 'GB', emoji: '🇬🇧' },
   { name: 'United States', code: 'US', emoji: '🇺🇸' },
@@ -197,7 +197,7 @@ const countries: Array<Country> = [
   { name: 'Vietnam', code: 'VN', emoji: '🇻🇳' },
   { name: 'Yemen', code: 'YE', emoji: '🇾🇪' },
   { name: 'Zambia', code: 'ZM', emoji: '🇿🇲' },
-  { name: 'Zimbabwe', code: 'ZW', emoji: '🇿🇼' },
-];
+  { name: 'Zimbabwe', code: 'ZW', emoji: '🇿🇼' }
+]
 
-export default eventHandler(async () => countries);
+export default eventHandler(async () => countries)

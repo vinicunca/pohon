@@ -1,12 +1,12 @@
 ---
 title: ContentToc
-description: "A sticky Table of Contents with automatic active anchor link highlighting."
+description: 'A sticky Table of Contents with automatic active anchor link highlighting.'
 category: content
 framework: nuxt
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/content/ContentToc.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/content/ContentToc.vue
 ---
 
 ::warning{to="/docs/getting-started/integrations/content"}
@@ -19,12 +19,10 @@ Use the `links` prop with the `page?.body?.toc?.links`{lang="ts-type"} you get w
 
 ::component-example
 ---
-
 name: 'content-toc-example'
 props:
-class: 'w-full'
+  class: 'w-full'
 ---
-
 ::
 
 ### Title
@@ -33,44 +31,40 @@ Use the `title` prop to change the title of the Table of Contents.
 
 ::component-code{prefix="content"}
 ---
-
 prettier: true
 collapse: true
 hide:
-
-- class
-  ignore:
-- links
-  external:
-- links
-  externalTypes:
-- ContentTocLink[]
-  props:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
   title: 'On this page'
   class: 'w-full'
   links:
-- id: usage
-  depth: 2
-  text: Usage
-  children:
-  - id: title
-    depth: 3
-    text: Title
-  - id: color
-    depth: 3
-    text: Color
-  - id: highlight
-    depth: 3
-    text: Highlight
-  - id: 'highlight-color'
-    depth: 3
-    text: Highlight Color
-  - id: 'highlight-variant'
-    depth: 3
-    text: Highlight Variant
-
+  - id: usage
+    depth: 2
+    text: Usage
+    children:
+    - id: title
+      depth: 3
+      text: Title
+    - id: color
+      depth: 3
+      text: Color
+    - id: highlight
+      depth: 3
+      text: Highlight
+    - id: 'highlight-color'
+      depth: 3
+      text: Highlight Color
+    - id: 'highlight-variant'
+      depth: 3
+      text: Highlight Variant
 ---
-
 ::
 
 ### Color
@@ -79,44 +73,40 @@ Use the `color` prop to change the color of the links.
 
 ::component-code{prefix="content"}
 ---
-
 prettier: true
 collapse: true
 hide:
-
-- class
-  ignore:
-- links
-  external:
-- links
-  externalTypes:
-- ContentTocLink[]
-  props:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
   color: 'neutral'
   class: 'w-full'
   links:
-  - id: usage
-    depth: 2
-    text: Usage
-    children:
-    - id: title
-      depth: 3
-      text: Title
-    - id: color
-      depth: 3
-      text: Color
-    - id: highlight
-      depth: 3
-      text: Highlight
-    - id: 'highlight-color'
-      depth: 3
-      text: Highlight Color
-    - id: 'highlight-variant'
-      depth: 3
-      text: Highlight Variant
-
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
-
 ::
 
 ### Highlight
@@ -125,44 +115,40 @@ Use the `highlight` prop to display a highlighted border for the active item.
 
 ::component-code{prefix="content"}
 ---
-
 prettier: true
 collapse: true
 hide:
-
-- class
-  ignore:
-- links
-  external:
-- links
-  externalTypes:
-- ContentTocLink[]
-  props:
+  - class
+ignore:
+  - links
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
   highlight: true
   class: 'w-full'
   links:
-  - id: usage
-    depth: 2
-    text: Usage
-    children:
-    - id: title
-      depth: 3
-      text: Title
-    - id: color
-      depth: 3
-      text: Color
-    - id: highlight
-      depth: 3
-      text: Highlight
-    - id: 'highlight-color'
-      depth: 3
-      text: Highlight Color
-    - id: 'highlight-variant'
-      depth: 3
-      text: Highlight Variant
-
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
-
 ::
 
 ### Highlight Color
@@ -171,118 +157,110 @@ Use the `highlight-color` prop to change the color of the highlight. It defaults
 
 ::component-code{prefix="content"}
 ---
-
 prettier: true
 collapse: true
 hide:
-
-- class
-  ignore:
-- links
-- highlight
-  external:
-- links
-  externalTypes:
-- ContentTocLink[]
-  props:
+  - class
+ignore:
+  - links
+  - highlight
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
   highlight: true
   highlightColor: 'neutral'
   class: 'w-full'
   links:
-  - id: usage
-    depth: 2
-    text: Usage
-    children:
-    - id: title
-      depth: 3
-      text: Title
-    - id: color
-      depth: 3
-      text: Color
-    - id: highlight
-      depth: 3
-      text: Highlight
-    - id: 'highlight-color'
-      depth: 3
-      text: Highlight Color
-    - id: 'highlight-variant'
-      depth: 3
-      text: Highlight Variant
-
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
 ---
-
 ::
 
-### Highlight Variant :badge{label="4.6+" class="align-text-top"}
+### Highlight Variant
 
 Use the `highlight-variant` prop to change the style of the highlight. Defaults to `straight`.
 
 ::component-code{prefix="content"}
 ---
-
 prettier: true
 collapse: true
 hide:
-
-- class
-  ignore:
-- links
-- highlight
-  external:
-- links
-  externalTypes:
-- ContentTocLink[]
-  props:
+  - class
+ignore:
+  - links
+  - highlight
+external:
+  - links
+externalTypes:
+  - ContentTocLink[]
+props:
   highlight: true
   highlightColor: 'primary'
   highlightVariant: 'circuit'
   class: 'w-full'
   links:
-  - id: usage
-    depth: 2
-    text: Usage
-    children:
-    - id: title
-      depth: 3
-      text: Title
-    - id: color
-      depth: 3
-      text: Color
-    - id: highlight
-      depth: 3
-      text: Highlight
-    - id: 'highlight-color'
-      depth: 3
-      text: Highlight Color
-    - id: 'highlight-variant'
-      depth: 3
-      text: Highlight Variant
-  - id: examples
-    depth: 2
-    text: Examples
-    children:
-    - id: within-a-page
-      depth: 3
-      text: Within a Page
-  - id: api
-    depth: 2
-    text: API
-    children:
-    - id: props
-      depth: 3
-      text: Props
-    - id: slots
-      depth: 3
-      text: Slots
-    - id: emits
-      depth: 3
-      text: Emits
-  - id: theme
-    depth: 2
-    text: Theme
-
+    - id: usage
+      depth: 2
+      text: Usage
+      children:
+        - id: title
+          depth: 3
+          text: Title
+        - id: color
+          depth: 3
+          text: Color
+        - id: highlight
+          depth: 3
+          text: Highlight
+        - id: 'highlight-color'
+          depth: 3
+          text: Highlight Color
+        - id: 'highlight-variant'
+          depth: 3
+          text: Highlight Variant
+    - id: examples
+      depth: 2
+      text: Examples
+      children:
+        - id: within-a-page
+          depth: 3
+          text: Within a Page
+    - id: api
+      depth: 2
+      text: API
+      children:
+        - id: props
+          depth: 3
+          text: Props
+        - id: slots
+          depth: 3
+          text: Slots
+        - id: emits
+          depth: 3
+          text: Emits
+    - id: theme
+      depth: 2
+      text: Theme
 ---
-
 ::
 
 ## Examples
@@ -291,38 +269,32 @@ hide:
 
 Use the ContentToc component in a page to display the Table of Contents:
 
-```vue [pages/[...slug].vue]{22-24}
+```vue [pages/\[...slug\\].vue]{22-24}
 <script setup lang="ts">
-const route = useRoute();
+const route = useRoute()
 
-const { data: page } = await useAsyncData(route.path, () =>
-  queryCollection("docs").path(route.path).first(),
-);
+const { data: page } = await useAsyncData(route.path, () => queryCollection('docs').path(route.path).first())
 if (!page.value) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: "Page not found",
-    fatal: true,
-  });
+  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 </script>
 
 <template>
-  <UPage v-if="page">
-    <UPageHeader :title="page.title" />
+  <PPage v-if="page">
+    <PPageHeader :title="page.title" />
 
-    <UPageBody>
+    <PPageBody>
       <ContentRenderer v-if="page.body" :value="page" />
 
       <PSeparator v-if="surround?.filter(Boolean).length" />
 
-      <UContentSurround :surround="surround as any" />
-    </UPageBody>
+      <PContentSurround :surround="(surround as any)" />
+    </PPageBody>
 
     <template v-if="page?.body?.toc?.links?.length" #right>
-      <UContentToc :links="page.body.toc.links" />
+      <PContentToc :links="page.body.toc.links" />
     </template>
-  </UPage>
+  </PPage>
 </template>
 ```
 

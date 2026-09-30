@@ -14,7 +14,7 @@ async function validate(data: Partial<typeof state>) {
 <template>
   <PForm :state="state" :validate="validate" @submit="onSubmit">
     <PFormField name="fullName" label="Full name">
-      <UInput v-model="state.fullName" />
+      <PInput v-model="state.fullName" />
     </PFormField>
     <PButton type="submit" class="mt-2" loading-auto>
       Submit

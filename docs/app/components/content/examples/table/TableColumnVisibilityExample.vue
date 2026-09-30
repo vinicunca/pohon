@@ -103,8 +103,8 @@ const columnVisibility = ref({
 
 <template>
   <div class="flex flex-col flex-1 w-full">
-    <div class="flex justify-end px-4 py-3.5 border-b border-accented">
-      <UDropdownMenu
+    <div class="flex justify-end px-4 py-3.5 border-b border-border-accented">
+      <PDropdownMenu
         :items="table?.tableApi?.getAllColumns().filter(column => column.getCanHide()).map(column => ({
           label: upperFirst(column.id),
           type: 'checkbox' as const,
@@ -124,7 +124,7 @@ const columnVisibility = ref({
           variant="outline"
           trailing-icon="i-lucide-chevron-down"
         />
-      </UDropdownMenu>
+      </PDropdownMenu>
     </div>
 
     <PTable

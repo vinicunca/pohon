@@ -14,12 +14,12 @@ const used = items.reduce((total, item) => total + (item.value ?? 0), 0)
 </script>
 
 <template>
-  <UProgressGroup :items="items" :max="max" status class="w-96" :ui="{ status: 'w-full justify-between' }">
+  <PProgressGroup :items="items" :max="max" status class="w-96" :ui="{ status: 'w-full justify-between' }">
     <template #status>
       <p>{{ used }}GB used</p>
-      <p class="text-muted">
+      <p class="color-text-muted">
         {{ max - used }}GB remaining
       </p>
     </template>
-  </UProgressGroup>
+  </PProgressGroup>
 </template>

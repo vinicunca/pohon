@@ -40,15 +40,15 @@ const items = [{
 </script>
 
 <template>
-  <UTimeline :items="items" :default-value="2" class="w-96">
+  <PTimeline :items="items" :default-value="2" class="w-96">
     <template #development-title="{ item }">
       <div class="flex items-center gap-1">
         <span>{{ item.title }}</span>
 
-        <UAvatarGroup size="2xs">
-          <UAvatar v-for="(developer, index) of item.developers" :key="index" v-bind="developer" />
-        </UAvatarGroup>
+        <PAvatarGroup size="2xs">
+          <PAvatar v-for="(developer, index) of item.developers" :key="index" v-bind="developer" />
+        </PAvatarGroup>
       </div>
     </template>
-  </UTimeline>
+  </PTimeline>
 </template>

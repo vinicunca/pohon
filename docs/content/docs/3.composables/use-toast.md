@@ -1,6 +1,6 @@
 ---
 title: useToast
-description: "A composable to display toast notifications in your app."
+description: 'A composable to display toast notifications in your app.'
 ---
 
 ## Usage
@@ -9,10 +9,8 @@ Use the auto-imported `useToast` composable to display [Toast](/docs/components/
 
 ::component-example
 ---
-
 name: 'use-toast-example'
 ---
-
 ::
 
 - The `useToast` composable uses Nuxt's `useState` to manage the toast state, ensuring reactivity across your application.
@@ -20,7 +18,7 @@ name: 'use-toast-example'
 - When removing a toast, there's a 200ms delay before it's actually removed from the state, allowing for exit animations.
 
 ::warning
-Make sure to wrap your app with the [`App`](/docs/components/app) component which uses our [`Toaster`](https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Toaster.vue) component which uses the [`ToastProvider`](https://akar.vinicunca.dev/docs/components/toast#provider) component from Akar.
+Make sure to wrap your app with the [`App`](/docs/components/app) component which uses our [`Toaster`](https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Toaster.vue) component which uses the [`ToastProvider`](https://akar.vinicunca.dev/docs/components/toast#provider) component from Akar.
 ::
 
 ::tip{to="/docs/components/toast"}
@@ -43,8 +41,8 @@ Adds a new toast notification.
 
 ::field-group
 
-::field{name="toast" type="Partial<Toast>" required}
-A partial `Toast` object with the following properties:
+  ::field{name="toast" type="Partial<Toast>" required}
+  A partial `Toast` object with the following properties:
 
     ::collapsible
 
@@ -118,22 +116,21 @@ A partial `Toast` object with the following properties:
         ::
       ::
     ::
-
-::
+  ::
 ::
 
 **Returns:** The complete `Toast` object that was added.
 
 ```vue
 <script setup lang="ts">
-const toast = useToast();
+const toast = useToast()
 
 function showToast() {
   toast.add({
-    title: "Success",
-    description: "Your action was completed successfully.",
-    color: "success",
-  });
+    title: 'Success',
+    description: 'Your action was completed successfully.',
+    color: 'success'
+  })
 }
 </script>
 ```
@@ -147,24 +144,24 @@ Updates an existing toast notification.
 #### Parameters
 
 ::field-group
-::field{name="id" type="string | number" required}
-The unique identifier of the toast to update.
-::
+  ::field{name="id" type="string | number" required}
+  The unique identifier of the toast to update.
+  ::
 
-::field{name="toast" type="Omit<Partial<Toast>, 'id'>" required}
-A partial `Toast` object with the properties to update. The `id` cannot be changed, the toast is reopened, and `duration` is reset unless you pass it again.
-::
+  ::field{name="toast" type="Omit<Partial<Toast>, 'id'>" required}
+  A partial `Toast` object with the properties to update. The `id` cannot be changed, the toast is reopened, and `duration` is reset unless you pass it again.
+  ::
 ::
 
 ```vue
 <script setup lang="ts">
-const toast = useToast();
+const toast = useToast()
 
 function updateToast(id: string | number) {
   toast.update(id, {
-    title: "Updated Toast",
-    description: "This toast has been updated.",
-  });
+    title: 'Updated Toast',
+    description: 'This toast has been updated.'
+  })
 }
 </script>
 ```
@@ -178,17 +175,17 @@ Removes a toast notification.
 #### Parameters
 
 ::field-group
-::field{name="id" type="string | number" required}
-The unique identifier of the toast to remove.
-::
+  ::field{name="id" type="string | number" required}
+  The unique identifier of the toast to remove.
+  ::
 ::
 
 ```vue
 <script setup lang="ts">
-const toast = useToast();
+const toast = useToast()
 
 function removeToast(id: string | number) {
-  toast.remove(id);
+  toast.remove(id)
 }
 </script>
 ```
@@ -201,10 +198,10 @@ Removes all toast notifications.
 
 ```vue
 <script setup lang="ts">
-const toast = useToast();
+const toast = useToast()
 
 function clearAllToasts() {
-  toast.clear();
+  toast.clear()
 }
 </script>
 ```
@@ -217,7 +214,7 @@ A reactive array containing all current toast notifications.
 
 ```vue
 <script setup lang="ts">
-const { toasts } = useToast();
+const { toasts } = useToast()
 </script>
 
 <template>

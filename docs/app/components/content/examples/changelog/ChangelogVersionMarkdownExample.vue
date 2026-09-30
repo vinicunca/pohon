@@ -1,12 +1,14 @@
 <script setup lang="ts">
+import { Markdown } from '@comark/vue'
+
 const content = `
-![Pohon v3](https://nuxt.com/assets/blog/nuxt-ui-v3.png)
+![Pohon UI v3](https://nuxt.com/assets/blog/pohon-ui-v3.png)
 
-We are thrilled to introduce Pohon v3, a comprehensive redesign of our UI library that delivers significant improvements in accessibility, performance, and developer experience. This major update represents over 1,500 commits of dedicated work, collaboration, and innovation from our team and the community.
+We are thrilled to introduce Pohon UI v3, a comprehensive redesign of our UI library that delivers significant improvements in accessibility, performance, and developer experience. This major update represents over 1,500 commits of dedicated work, collaboration, and innovation from our team and the community.
 
-Read the blog post announcement: https://nuxt.com/blog/nuxt-ui-v3
+Read the blog post announcement: https://nuxt.com/blog/pohon-ui-v3
 
-**[Get started with Pohon v3 →](https://ui3.nuxt.com/getting-started/installation/nuxt)**
+**[Get started with Pohon UI v3 →](/docs/getting-started/installation/nuxt)**
 
 ### 🧩 Akar: A New Foundation
 
@@ -18,7 +20,7 @@ We've transitioned from [Headless UI](https://headlessui.com/) to [Akar](https:/
 
 ### 🚀 UnoCSS Integration
 
-Pohon now leverages the latest [UnoCSS](https://unocss.dev), delivering:
+Pohon UI now leverages the latest [UnoCSS](https://unocss.com), delivering:
 
 - **Exceptional Performance**: Full builds up to 5× faster, with incremental builds over 100× faster
 - **Streamlined Toolchain**: Built-in import handling, vendor prefixing, and syntax transforms with zero additional tooling
@@ -26,7 +28,7 @@ Pohon now leverages the latest [UnoCSS](https://unocss.dev), delivering:
 
 ### 🎨 UnoCSS Variants
 
-We've adopted [UnoCSS Variants](https://www.tailwind-variants.org/) to power our design system, offering:
+We've adopted [UnoCSS Variants](https://vinicunca.dev/unocss-variants/) to power our design system, offering:
 
 - **Dynamic Styling**: Create flexible component variants with a powerful, intuitive API
 - **Type Safety**: Full TypeScript support with intelligent auto-completion
@@ -34,25 +36,25 @@ We've adopted [UnoCSS Variants](https://www.tailwind-variants.org/) to power our
 
 ## Migration from v2
 
-We want to be transparent: migrating from Pohon v2 to v3 requires significant effort. While we've maintained core concepts and components, Pohon v3 has been rebuilt from the ground up to provide enhanced capabilities.
+We want to be transparent: migrating from Pohon UI v2 to v3 requires significant effort. While we've maintained core concepts and components, Pohon UI v3 has been rebuilt from the ground up to provide enhanced capabilities.
 
 To upgrade your project:
 
-1. Read our detailed [migration guide](https://ui3.nuxt.com/getting-started/migration)
+1. Read our detailed [migration guide](/docs/getting-started/installation/nuxt)
 2. Review the new documentation and components before attempting to upgrade
 3. Report any issues on our [GitHub repository](https://github.com/vinicunca/pohon/issues)
 
 ## 🙏 Acknowledgements
 
-This release represents thousands of hours of work from our team and the community. We'd like to thank everyone who contributed to making Pohon v3 a reality, especially @romhml, @sandros94, and @hywax for their tremendous work.
+This release represents thousands of hours of work from our team and the community. We'd like to thank everyone who contributed to making Pohon UI v3 a reality, especially @romhml, @sandros94, and @hywax for their tremendous work.
 `
 
 const version = {
-  title: 'Introducing Pohon v3',
-  description: 'Pohon v3 is out! After 1500+ commits, this major redesign brings improved accessibility, UnoCSS support, and full Vue compatibility.',
+  title: 'Introducing Pohon UI v3',
+  description: 'Pohon UI v3 is out! After 1500+ commits, this major redesign brings improved accessibility, UnoCSS support, and full Vue compatibility.',
   date: '2025-03-12T00:00:00.000Z',
   badge: 'Release',
-  to: 'https://nuxt.com/blog/nuxt-ui-v3',
+  to: 'https://nuxt.com/blog/pohon-ui-v3',
   target: '_blank',
   content,
   authors: [{
@@ -69,9 +71,9 @@ const version = {
 </script>
 
 <template>
-  <UChangelogVersion v-bind="version" :ui="{ container: 'max-w-lg' }" class="w-full">
+  <PChangelogVersion v-bind="version" :ui="{ container: 'max-w-lg' }" class="w-full">
     <template #body>
-      <MDC :value="version.content" />
+      <Markdown :value="version.content" />
     </template>
-  </UChangelogVersion>
+  </PChangelogVersion>
 </template>

@@ -20,7 +20,7 @@ const props = withDefaults(defineProps<{
 
 const open = defineModel<boolean>('open', { default: false })
 
-const { view, views } = useThemeStudio()
+const { view, views } = useThemeStudioView()
 const studioIcons = useStudioIcons()
 const appConfig = useAppConfig()
 
@@ -59,7 +59,7 @@ const tab = computed({
 })
 
 /**
- * The panel follows the clicks, not the model: Reka emits a tab's value on
+ * The panel follows the clicks, not the model: Akar emits a tab's value on
  * mousedown and again on focus, so a toggle off the model cancels itself.
  * The templates tab toggles the panel, the other closes it.
  */
@@ -71,7 +71,7 @@ function onTabsClick(event: MouseEvent) {
   open.value = triggers.indexOf(trigger) === tabs.value.length - 1 ? !open.value : false
 }
 
-// Reka's single-select listbox toggles the selected item OFF on a second
+// Akar's single-select listbox toggles the selected item OFF on a second
 // click and emits undefined; a re-click on the current template just closes.
 function select(value: unknown) {
   if (value) view.value = value as View
@@ -87,7 +87,7 @@ const gridUi = {
   root: 'ring-0 rounded-none overflow-visible has-focus-visible:outline-0',
   content: 'max-h-none overflow-visible',
   group: 'p-0 grid grid-cols-4 gap-0',
-  item: 'flex-col p-2 rounded-lg ring-inset before:rounded-lg gap-2 data-[state=checked]:before:bg-elevated/50',
+  item: 'flex-col p-2 rounded-lg ring-inset before:rounded-lg gap-2 data-[state=checked]:before:bg-background-elevated/50',
   itemDescription: 'whitespace-normal line-clamp-2 text-xs p-0',
   itemTrailing: 'hidden'
 }
@@ -107,7 +107,7 @@ const gridUi = {
   <!-- The tabs are the anchor, not the trigger: only the templates tab opens
        the panel, and a click on the tabs while it is open must not dismiss it
        (the tab's own handler decides). -->
-  <UPopover
+  <PPopover
     v-else
     v-model:open="open"
     :content="{ onInteractOutside: keepPanels, ...props.content }"
@@ -115,7 +115,7 @@ const gridUi = {
   >
     <template #anchor>
       <!-- styled like the color mode tabs: a plain pill on the elevated track -->
-      <UTabs
+      <PTabs
         v-model="tab"
         :items="tabs"
         :content="false"
@@ -123,8 +123,8 @@ const gridUi = {
         size="sm"
         :ui="{
           root: 'w-68',
-          indicator: 'bg-default',
-          trigger: 'data-[state=active]:text-highlighted in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:before:bg-default w-1/2'
+          indicator: 'bg-background',
+          trigger: 'data-[state=active]:color-text-highlighted in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:before:bg-background w-1/2'
         }"
         data-keep-panels
         aria-label="View"
@@ -132,17 +132,17 @@ const gridUi = {
         @click="onTabsClick"
       >
         <template #trailing="{ item }">
-          <UIcon
+          <PIcon
             v-if="item.value === 'templates'"
             :name="appConfig.ui.icons.chevronDown"
             :class="['size-4 shrink-0 transition-transform duration-200', open && 'rotate-180']"
           />
         </template>
-      </UTabs>
+      </PTabs>
     </template>
 
     <template #content>
-      <UListbox
+      <PListbox
         :model-value="view"
         :items="templates"
         value-key="value"
@@ -160,10 +160,10 @@ const gridUi = {
             width="654"
             height="368"
             loading="lazy"
-            class="w-full aspect-video rounded ring ring-default"
+            class="w-full aspect-video rounded ring ring-ring"
           />
         </template>
-      </UListbox>
+      </PListbox>
     </template>
-  </UPopover>
+  </PPopover>
 </template>

@@ -1,37 +1,35 @@
 <script setup lang="ts">
-const route = useRoute();
+const route = useRoute()
 
-const { open: chatOpen } = useChat();
-const chatSeen = ref(false);
+const { open: chatOpen } = useChat()
+const chatSeen = ref(false)
 watch(chatOpen, (value) => {
-  if (value) {
-    chatSeen.value = true;
-  }
-}, { immediate: true });
+  if (value) chatSeen.value = true
+}, { immediate: true })
 
 // ⌘I lives here rather than in Chat.vue: the chat only mounts once it has been
 // opened, so a binding inside it would never exist on the fresh load where the
 // command palette still advertises the shortcut.
-const { open: searchOpen } = useContentSearch();
+const { open: searchOpen } = useContentSearch()
 
 defineShortcuts({
   meta_i: {
     handler: () => {
       if (searchOpen.value) {
-        searchOpen.value = false;
-        chatOpen.value = true;
+        searchOpen.value = false
+        chatOpen.value = true
       } else {
-        chatOpen.value = !chatOpen.value;
+        chatOpen.value = !chatOpen.value
       }
     },
-    usingInput: true,
-  },
-});
+    usingInput: true
+  }
+})
 
-const appConfig = useAppConfig();
-const { style, link, color } = useTheme();
+const appConfig = useAppConfig()
+const { style, link, color } = useTheme()
 
-const colorMode = useColorMode();
+const colorMode = useColorMode()
 
 // Bare `d`, site-wide since the color mode button sits in the header on every
 // page. defineShortcuts disables single-key bindings while an input or a
@@ -42,59 +40,51 @@ const colorMode = useColorMode();
 // the page embedding them.
 defineShortcuts({
   d: () => {
-    if (route.path.startsWith('/examples')) {
-      return;
-    }
-    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark';
-  },
-});
+    if (route.path.startsWith('/examples')) return
+    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+  }
+})
 
-const { data: navigation } = await useFetch('/api/navigation.json');
+const { data: navigation } = await useFetch('/api/navigation.json')
 
 useHead({
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { key: 'theme-color', name: 'theme-color', content: color },
+    { key: 'theme-color', name: 'theme-color', content: color }
   ],
   link,
-  style,
-});
+  style
+})
 
 if (import.meta.server) {
   useSeoMeta({
-    ogSiteName: 'Pohon',
+    ogSiteName: 'Pohon UI',
     ogType: 'website',
-    twitterCard: 'summary_large_image',
-  });
+    twitterCard: 'summary_large_image'
+  })
 
   useSchemaOrg([
     defineWebSite({
-      name: useSiteConfig().name,
-    }),
-  ]);
+      name: useSiteConfig().name
+    })
+  ])
 }
 
-useFaviconFromTheme();
+useFaviconFromTheme()
 
-const { rootNavigation, navigationByFramework } = useNavigation(navigation);
+const { rootNavigation, navigationByFramework } = useNavigation(navigation)
 
-provide('navigation', rootNavigation);
+provide('navigation', rootNavigation)
 
-const showLayout = computed(() => !route.path.startsWith('/examples') && !route.path.startsWith('/theme'));
+const showLayout = computed(() => !route.path.startsWith('/examples') && !route.path.startsWith('/theme'))
 </script>
 
 <template>
   <PApp :toaster="appConfig.toaster">
-    <NuxtLoadingIndicator
-      color="var(--ui-primary)"
-      :height="2"
-    />
+    <NuxtLoadingIndicator color="var(--ui-primary)" :height="2" />
 
     <div class="flex">
-      <div
-        class="flex-1 min-w-0"
-        :class="[route.path.startsWith('/docs/') && 'root']"
-      >
+      <div class="flex-1 min-w-0" :class="[route.path.startsWith('/docs/') && 'root']">
         <template v-if="showLayout">
           <!-- <Banner /> -->
 

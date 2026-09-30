@@ -1,12 +1,12 @@
 ---
 title: ProseBadge
-description: "Display version numbers, status labels, and tags within your content."
+description: 'Display version numbers, status labels, and tags within your content.'
 category: components
 navigation.title: Badge
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/prose/Badge.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/prose/Badge.vue
 ---
 
 ## Usage
@@ -16,14 +16,14 @@ Use markdown in the default slot of the `badge` component to display a [Badge](/
 ::code-preview
 
 :::badge
-**v4.0.0**
+**v2.0.0**
 :::
 
 #code
 
 ```mdc
 ::badge
-**v4.0.0**
+**v2.0.0**
 ::
 ```
 

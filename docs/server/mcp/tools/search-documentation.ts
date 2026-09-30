@@ -1,5 +1,5 @@
-import { z } from 'zod';
-import { listAgentPages } from '#agent-discovery';
+import { z } from 'zod'
+import { listAgentPages } from '#agent-discovery'
 
 export default defineMcpTool({
   description: 'Search documentation pages by title, description, or section. With no params, lists all pages.',
@@ -7,17 +7,17 @@ export default defineMcpTool({
     readOnlyHint: true,
     destructiveHint: false,
     idempotentHint: true,
-    openWorldHint: false,
+    openWorldHint: false
   },
   inputSchema: {
     search: z.string().optional().describe('Search terms to filter pages by title, path or description. Every term has to match.'),
-    section: z.string().optional().describe('Filter by documentation section (e.g., "getting-started", "components", "composables")'),
+    section: z.string().optional().describe('Filter by documentation section (e.g., "getting-started", "components", "composables")')
   },
   inputExamples: [
     {},
     { section: 'getting-started' },
     { search: 'installation' },
-    { search: 'color', section: 'getting-started' },
+    { search: 'color', section: 'getting-started' }
   ],
   cache: '30m',
   async handler({ search, section }) {
@@ -26,20 +26,20 @@ export default defineMcpTool({
     // is, and the site URL is no longer written out here.
     const pages = await listAgentPages(useEvent(), {
       search,
-      prefix: section ? `/docs/${section}/` : '/docs/',
-    });
+      prefix: section ? `/docs/${section}/` : '/docs/'
+    })
 
     return {
       pages: pages
-        .map((page) => ({
+        .map(page => ({
           title: page.title,
           description: page.description,
           path: page.route,
           url: page.url,
-          markdown_url: page.rawUrl,
+          markdown_url: page.rawUrl
         }))
         .sort((a, b) => a.path.localeCompare(b.path)),
-      total: pages.length,
-    };
-  },
-});
+      total: pages.length
+    }
+  }
+})

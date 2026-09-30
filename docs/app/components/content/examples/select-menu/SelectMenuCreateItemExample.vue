@@ -10,7 +10,7 @@ function onCreate(item: string) {
 </script>
 
 <template>
-  <USelectMenu
+  <PSelectMenu
     v-model="value"
     create-item
     :items="items"

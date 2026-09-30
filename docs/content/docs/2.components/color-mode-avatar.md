@@ -1,6 +1,6 @@
 ---
 title: ColorModeAvatar
-description: "An Avatar with a different source for light and dark mode."
+description: 'An Avatar with a different source for light and dark mode.'
 category: color-mode
 links:
   - label: Avatar
@@ -8,7 +8,7 @@ links:
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/color-mode/ColorModeAvatar.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/color-mode/ColorModeAvatar.vue
 ---
 
 ## Usage
@@ -19,16 +19,14 @@ Use the `light` and `dark` props to define the source for light and dark mode.
 
 ::component-code{prefix="color-mode"}
 ---
-
 props:
-light: 'https://github.com/vuejs.png'
-dark: 'https://github.com/nuxt.png'
+  light: 'https://github.com/vuejs.png'
+  dark: 'https://github.com/nuxt.png'
 ---
-
 ::
 
 ::note
-Switch between light and dark mode to see the different images: :p-color-mode-select{size="sm"}
+Switch between light and dark mode to see the different images: :u-color-mode-select{size="sm"}
 ::
 
 ## API

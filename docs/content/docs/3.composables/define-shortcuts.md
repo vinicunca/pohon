@@ -129,7 +129,7 @@ Use `usingInput` to trigger a shortcut only when a specific input is focused.
 
 ```vue
 <template>
-  <UInput v-model="query" name="queryInput" />
+  <PInput v-model="query" name="queryInput" />
 </template>
 
 <script setup lang="ts">

@@ -4,7 +4,7 @@ const { icon, icons } = useTheme()
 
 <template>
   <PFormField label="Icons preset">
-    <USelect
+    <PSelect
       v-model="icon"
       color="neutral"
       :icon="icons.find(i => i.value === icon)?.icon"

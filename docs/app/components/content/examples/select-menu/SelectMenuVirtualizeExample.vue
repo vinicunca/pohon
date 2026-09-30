@@ -8,5 +8,5 @@ const items: SelectMenuItem[] = Array(1000).fill(0).map((_, i) => ({
 </script>
 
 <template>
-  <USelectMenu virtualize :items="items" class="w-48" />
+  <PSelectMenu virtualize :items="items" class="w-48" />
 </template>

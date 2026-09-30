@@ -5,7 +5,7 @@ category: editor
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/EditorSuggestionMenu.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/EditorSuggestionMenu.vue
 ---
 
 ## Usage
@@ -22,13 +22,11 @@ It must be used inside an [Editor](/docs/components/editor) component's default 
 
 ::component-example
 ---
-
 elevated: true
 collapse: true
 name: 'editor-suggestion-menu-example'
 class: 'p-8'
 ---
-
 ::
 
 ### Items
@@ -44,13 +42,11 @@ Use the `items` prop as an array of objects with the following properties:
 
 ::component-example
 ---
-
 elevated: true
 collapse: true
 name: 'editor-suggestion-menu-items-example'
 class: 'p-8'
 ---
-
 ::
 
 ::note
@@ -67,13 +63,13 @@ Use the `char` prop to change the trigger character. Defaults to `/`{lang="ts-ty
 
 ```vue
 <template>
-  <UEditor v-slot="{ editor }">
-    <UEditorSuggestionMenu :editor="editor" :items="items" char=">" />
-  </UEditor>
+  <PEditor v-slot="{ editor }">
+    <PEditorSuggestionMenu :editor="editor" :items="items" char=">" />
+  </PEditor>
 </template>
 ```
 
-### Suggestion :badge{label="4.7+" class="align-text-top"}
+### Suggestion
 
 Use the `suggestion` prop to customize TipTap's [Suggestion matching behavior](https://tiptap.dev/docs/editor/api/utilities/suggestion#settings).
 
@@ -81,16 +77,16 @@ This is useful when the trigger character should open directly after other chara
 
 ```vue
 <template>
-  <UEditor v-slot="{ editor }">
-    <UEditorSuggestionMenu
+  <PEditor v-slot="{ editor }">
+    <PEditorSuggestionMenu
       :editor="editor"
       :items="items"
       char=":"
       :suggestion="{
-        allowedPrefixes: null,
+        allowedPrefixes: null
       }"
     />
-  </UEditor>
+  </PEditor>
 </template>
 ```
 
@@ -100,16 +96,16 @@ Use the `options` prop to customize the positioning behavior using [Floating UI 
 
 ```vue
 <template>
-  <UEditor v-slot="{ editor }">
-    <UEditorSuggestionMenu
+  <PEditor v-slot="{ editor }">
+    <PEditorSuggestionMenu
       :editor="editor"
       :items="items"
       :options="{
         placement: 'bottom-start',
-        offset: 4,
+        offset: 4
       }"
     />
-  </UEditor>
+  </PEditor>
 </template>
 ```
 

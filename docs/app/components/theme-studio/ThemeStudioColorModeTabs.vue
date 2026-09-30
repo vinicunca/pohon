@@ -33,7 +33,7 @@ const mode = computed({
 </script>
 
 <template>
-  <UTabs
+  <PTabs
     v-model="mode"
     :items="items"
     :content="false"
@@ -41,9 +41,9 @@ const mode = computed({
     :size="size"
     :ui="{
       label: 'sr-only',
-      list: 'bg-elevated/50 ring ring-default p-0.5',
-      indicator: 'bg-default inset-y-0.5',
-      trigger: 'data-[state=active]:text-highlighted w-full in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:before:bg-default p-1.5'
+      list: 'bg-background-elevated/50 ring ring-ring p-0.5',
+      indicator: 'bg-background inset-y-0.5',
+      trigger: 'data-[state=active]:color-text-highlighted w-full in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:before:bg-background p-1.5'
     }"
     aria-label="Color mode"
   />

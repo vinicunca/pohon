@@ -20,7 +20,7 @@ const items: DropdownMenuItem[] = [{
 </script>
 
 <template>
-  <UDropdownMenu
+  <PDropdownMenu
     :items="items"
     filter
     :filter-fields="['label', 'description']"
@@ -28,5 +28,5 @@ const items: DropdownMenuItem[] = [{
     :ui="{ content: 'w-64' }"
   >
     <PButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
-  </UDropdownMenu>
+  </PDropdownMenu>
 </template>

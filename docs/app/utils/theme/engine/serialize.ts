@@ -1,7 +1,12 @@
 /**
  * The theme's wire format: `generateCSS`/`generateConfig` emit the minimal
- * `main.css` + `app.config.ts` pair for a doc.
+ * `main.css` + `app.config.ts` pair for a doc. `explicit` writes the headline
+ * settings (the semantic colors, the body font) even at their defaults, for
+ * a pane that shows the theme rather than a diff to paste.
  */
+export interface SerializeOptions {
+  explicit?: boolean
+}
 import type { ThemeDoc } from './types'
 import {
   DEFAULT_COLORS,
@@ -17,22 +22,20 @@ import { themeIcons } from '../icons'
 /* ======================================================== emit (export) == */
 
 /** Generate the minimal `main.css`, the doc only holds overrides, so everything present is emitted. */
-export function generateCSS(doc: ThemeDoc, framework: string = 'nuxt'): string {
-  const lines = [
-    '@import "tailwindcss";',
-    '@import "pohon-ui";'
-  ]
+export function generateCSS(doc: ThemeDoc, framework: string = 'nuxt', { explicit = false }: SerializeOptions = {}): string {
+  const lines: string[] = []
 
   // Nuxt resolves the `--font-*` variables below through @nuxt/fonts and
   // self-hosts the faces, so an import there would load each one twice. The
   // Vite plugin ships no fonts integration, so that export fetches them from
-  // Google. The families are not the doc's verbatim: `--font-sans` is skipped
-  // when it matches the default (nothing to override), but serif and mono are
-  // emitted whatever they are, so the default face still needs importing when
-  // it is one of those.
+  // Google. The families are not the doc's verbatim: `--font-sans` is only
+  // named when it differs from the default or the export is explicit, while
+  // serif and mono are emitted whatever they are, so the default face still
+  // needs importing when it is one of those.
   if (framework === 'vue') {
+    const sans = doc.font?.sans ?? THEME_DEFAULTS.font
     const families = [...new Set([
-      doc.font?.sans !== THEME_DEFAULTS.font ? doc.font?.sans : undefined,
+      explicit || sans !== THEME_DEFAULTS.font ? sans : undefined,
       doc.font?.serif,
       doc.font?.mono
     ].filter((name): name is string => !!name))]
@@ -42,13 +45,12 @@ export function generateCSS(doc: ThemeDoc, framework: string = 'nuxt'): string {
   }
 
   const themeLines: string[] = []
-  if (doc.font?.sans && doc.font.sans !== THEME_DEFAULTS.font) {
-    themeLines.push(`  --font-sans: '${doc.font.sans}', sans-serif;`)
+  if (explicit || (doc.font?.sans && doc.font.sans !== THEME_DEFAULTS.font)) {
+    themeLines.push(`  --font-sans: '${doc.font?.sans ?? THEME_DEFAULTS.font}', sans-serif;`)
   }
   if (doc.font?.serif) themeLines.push(`  --font-serif: '${doc.font.serif}', serif;`)
   if (doc.font?.mono) themeLines.push(`  --font-mono: '${doc.font.mono}', monospace;`)
-  // Weight steps are live variables in tailwind v4, so remapping them
-  // reaches every component, not just inherited text.
+  // Keep custom weight choices as CSS variables for the exported theme.
   for (const step of ['normal', 'medium', 'semibold', 'bold'] as const) {
     const weight = doc.font?.weights?.[step]
     if (weight !== undefined) {
@@ -56,7 +58,13 @@ export function generateCSS(doc: ThemeDoc, framework: string = 'nuxt'): string {
     }
   }
   if (themeLines.length) {
-    lines.push('', '@theme {', ...themeLines, '}')
+    lines.push('', ':root {', ...themeLines, '}')
+  }
+
+  for (const step of ['normal', 'medium', 'semibold', 'bold'] as const) {
+    if (doc.font?.weights?.[step] !== undefined) {
+      lines.push(`.font-${step} { font-weight: var(--font-weight-${step}); }`)
+    }
   }
 
   const colorLines: string[] = []
@@ -67,7 +75,7 @@ export function generateCSS(doc: ThemeDoc, framework: string = 'nuxt'): string {
   }
 
   if (colorLines.length) {
-    lines.push('', '@theme static {', ...colorLines, '}')
+    lines.push('', ':root {', ...colorLines, '}')
   }
 
   if (doc.fontSize !== undefined && doc.fontSize !== THEME_DEFAULTS.fontSize) {
@@ -90,13 +98,13 @@ export function generateCSS(doc: ThemeDoc, framework: string = 'nuxt'): string {
     lines.push('', '@layer base {', '  body {', ...bodyLines.map(line => `  ${line}`), '  }', '}')
   }
 
-  // Sans and mono ride tailwind's preflight (`--default-font-family` and
-  // `--default-mono-font-family`), so neither needs a rule. Nothing consumes
-  // `--font-serif`, so headings get this one, emitted only when a serif is
-  // set: without the guard, picking just a sans would drop every heading to
-  // Georgia. A stopgap until v5's `--ui-font-heading`.
+  if (doc.font?.sans) {
+    lines.push('', '@layer base {', '  body { font-family: var(--font-sans); }', '}')
+  }
+
+  // Headings consume the optional serif stack directly.
   if (doc.font?.serif) {
-    lines.push('', '/* until v5 ships --ui-font-heading */', '@layer base {', '  h1, h2, h3, h4, h5, h6 {', '    font-family: var(--font-serif);', '  }', '}')
+    lines.push('', '@layer base {', '  h1, h2, h3, h4, h5, h6 {', '    font-family: var(--font-serif);', '  }', '}')
   }
 
   const rootLines: string[] = []
@@ -150,12 +158,13 @@ function toObjectSource(value: Record<string, any>): string {
 }
 
 /** The `app.config.ts` / `vite.config.ts` side of the export. */
-export function generateConfig(doc: ThemeDoc, framework: string = 'nuxt'): string {
+export function generateConfig(doc: ThemeDoc, framework: string = 'nuxt', { explicit = false }: SerializeOptions = {}): string {
   const config: Record<string, any> = {}
 
   const colorEntries = Object.entries(doc.colors || {}).filter(([key, value]) => value !== DEFAULT_COLORS[key as keyof typeof DEFAULT_COLORS])
-  if (colorEntries.length) {
-    config.ui = { colors: Object.fromEntries(colorEntries) }
+  const colors = explicit ? { ...DEFAULT_COLORS, ...doc.colors } : Object.fromEntries(colorEntries)
+  if (Object.keys(colors).length) {
+    config.ui = { colors }
   }
 
   if (doc.icons && doc.icons !== THEME_DEFAULTS.icons && Object.hasOwn(themeIcons, doc.icons)) {

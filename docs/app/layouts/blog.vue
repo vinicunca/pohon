@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <UMain>
+  <PMain>
     <slot />
-  </UMain>
+  </PMain>
 </template>

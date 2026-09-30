@@ -1,24 +1,24 @@
 <template>
-  <UAvatarGroup>
-    <UAvatar
+  <PAvatarGroup>
+    <PAvatar
       src="https://github.com/benjamincanac.png"
       alt="Benjamin Canac"
       loading="lazy"
       :chip="{ inset: true, color: 'success' }"
     />
 
-    <UAvatar
-      src="https://github.com/romhml.png"
-      alt="Romain Hamel"
+    <PAvatar
+      src="https://github.com/HugoRCD.png"
+      alt="Hugo Richard"
       loading="lazy"
       :chip="{ inset: true, color: 'warning' }"
     />
 
-    <UAvatar
-      src="https://github.com/noook.png"
-      alt="Neil Richter"
+    <PAvatar
+      src="https://github.com/atinux.png"
+      alt="Sébastien Chopin"
       loading="lazy"
       :chip="{ inset: true, color: 'error' }"
     />
-  </UAvatarGroup>
+  </PAvatarGroup>
 </template>

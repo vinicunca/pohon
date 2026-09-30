@@ -9,7 +9,7 @@ const { data: users } = useLazyFetch('https://jsonplaceholder.typicode.com/users
 </script>
 
 <template>
-  <UCommandPalette
+  <PCommandPalette
     :groups="[{ id: 'users', items: users || [] }]"
     :fuse="{ fuseOptions: { includeMatches: true } }"
     class="flex-1 h-80"

@@ -1,4 +1,4 @@
-import { SITE_URL } from './site';
+import { SITE_URL } from './site'
 
 /**
  * OpenAPI description of the public surface of pohon.vinicunca.dev.
@@ -26,14 +26,14 @@ import { SITE_URL } from './site';
 
 /** The `tags`, `paths` and `components` `agentDiscoveryOpenApi()` returns. */
 export interface OpenApiFragments {
-  tags: Array<Record<string, unknown>>;
-  paths: Record<string, unknown>;
-  components: { headers: Record<string, unknown>; responses: Record<string, unknown>; schemas: Record<string, unknown> };
+  tags: Record<string, unknown>[]
+  paths: Record<string, unknown>
+  components: { headers: Record<string, unknown>, responses: Record<string, unknown>, schemas: Record<string, unknown> }
 }
 
 // OpenAPI ignores a header parameter named `Accept`, so the negotiation is
 // described in prose and through the two response media types instead.
-const MARKDOWN_DESCRIPTION = 'Every documentation page is available as Markdown. Append `.md` to the URL, or send `Accept: text/markdown` on the HTML URL. Known AI agent user agents receive Markdown by default.';
+const MARKDOWN_DESCRIPTION = 'Every documentation page is available as Markdown. Append `.md` to the URL, or send `Accept: text/markdown` on the HTML URL. Known AI agent user agents receive Markdown by default.'
 
 /** Nitro's JSON error payload, returned by every `/api/**` failure. */
 function jsonError(description: string) {
@@ -41,10 +41,10 @@ function jsonError(description: string) {
     description,
     content: {
       'application/json': {
-        schema: { $ref: '#/components/schemas/Error' },
-      },
-    },
-  };
+        schema: { $ref: '#/components/schemas/Error' }
+      }
+    }
+  }
 }
 
 function json(schemaRef: string, description: string) {
@@ -52,42 +52,42 @@ function json(schemaRef: string, description: string) {
     description,
     content: {
       'application/json': {
-        schema: { $ref: `#/components/schemas/${schemaRef}` },
-      },
-    },
-  };
+        schema: { $ref: `#/components/schemas/${schemaRef}` }
+      }
+    }
+  }
 }
 
-export function createOpenApiDocument(options: { version: string; url?: string; discovery: OpenApiFragments }) {
-  const url = options.url || SITE_URL;
-  const { discovery } = options;
+export function createOpenApiDocument(options: { version: string, url?: string, discovery: OpenApiFragments }) {
+  const url = options.url || SITE_URL
+  const { discovery } = options
 
   return {
     openapi: '3.1.0',
     info: {
-      title: 'Pohon',
+      title: 'Pohon UI',
       summary: 'Documentation, content and metadata endpoints of pohon.vinicunca.dev.',
       description: [
-        'Pohon is a Vue component library (Nuxt optional) with 125+ accessible, UnoCSS components.',
+        'Pohon UI is a Vue component library (Nuxt optional) with 125+ accessible, UnoCSS components.',
         '',
         'This specification covers the public, read-only endpoints agents can use to read the documentation and its metadata.',
         '',
         `- Markdown documentation: ${MARKDOWN_DESCRIPTION}`,
         `- MCP server: \`POST ${url}/mcp\` (streamable HTTP). See ${url}/.well-known/mcp/server-card.json`,
-        `- Agent skill: ${url}/.well-known/skills/nuxt-ui/SKILL.md`,
+        `- Agent skill: ${url}/.well-known/skills/pohon-ui/SKILL.md`,
         `- LLM indexes: ${url}/llms.txt and ${url}/llms-full.txt`,
         '',
-        'No authentication is required and no endpoint mutates state.',
+        'No authentication is required and no endpoint mutates state.'
       ].join('\n'),
       version: options.version,
       license: {
         name: 'MIT',
-        identifier: 'MIT',
+        identifier: 'MIT'
       },
       contact: {
-        name: 'Pohon',
-        url: `${url}/docs`,
-      },
+        name: 'Pohon UI',
+        url: `${url}/docs`
+      }
     },
     servers: [{ url, description: 'Production' }],
     // Everything here is public and read-only: an empty requirement tells
@@ -97,7 +97,7 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
       ...discovery.tags,
       { name: 'Content', description: 'Navigation and module metadata behind the documentation site.' },
       { name: 'Data', description: 'Static datasets used by the component examples.' },
-      { name: 'GitHub', description: 'Cached GitHub metadata for the repository.' },
+      { name: 'GitHub', description: 'Cached GitHub metadata for the repository.' }
     ],
     paths: {
       ...discovery.paths,
@@ -110,10 +110,10 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
           responses: {
             200: {
               description: 'OpenAPI 3.1 document.',
-              content: { 'application/json': { schema: { type: 'object' } } },
-            },
-          },
-        },
+              content: { 'application/json': { schema: { type: 'object' } } }
+            }
+          }
+        }
       },
       '/mcp': {
         post: {
@@ -125,21 +125,21 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
             required: true,
             content: {
               'application/json': {
-                schema: { type: 'object', description: 'JSON-RPC 2.0 request.' },
-              },
-            },
+                schema: { type: 'object', description: 'JSON-RPC 2.0 request.' }
+              }
+            }
           },
           responses: {
             200: {
               description: 'JSON-RPC 2.0 response, or an SSE stream of them.',
               content: {
                 'application/json': { schema: { type: 'object', description: 'JSON-RPC 2.0 response.' } },
-                'text/event-stream': { schema: { type: 'string' } },
-              },
+                'text/event-stream': { schema: { type: 'string' } }
+              }
             },
-            400: jsonError('Unknown MCP tool requested through `x-mcp-tools`.'),
-          },
-        },
+            400: jsonError('Unknown MCP tool requested through `x-mcp-tools`.')
+          }
+        }
       },
       '/api/navigation.json': {
         get: {
@@ -152,12 +152,12 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
               description: 'Nested navigation items.',
               content: {
                 'application/json': {
-                  schema: { type: 'array', items: { $ref: '#/components/schemas/NavigationItem' } },
-                },
-              },
-            },
-          },
-        },
+                  schema: { type: 'array', items: { $ref: '#/components/schemas/NavigationItem' } }
+                }
+              }
+            }
+          }
+        }
       },
       '/api/module.json': {
         get: {
@@ -165,8 +165,8 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
           tags: ['Content'],
           summary: 'Module stats, team and contributors',
           description: 'npm downloads and GitHub stars for `pohon-ui`, plus the team and contributor lists shown on the homepage. Cached for an hour.',
-          responses: { 200: json('Module', 'Download and star counts, team members and contributors.') },
-        },
+          responses: { 200: json('Module', 'Download and star counts, team members and contributors.') }
+        }
       },
       '/api/component-example/{component}': {
         get: {
@@ -181,14 +181,14 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
               required: true,
               description: 'Example component name, in PascalCase or kebab-case. A `.json` suffix is accepted.',
               schema: { type: 'string' },
-              example: 'button-loading-auto-example',
-            },
+              example: 'button-loading-auto-example'
+            }
           ],
           responses: {
             200: json('ComponentExample', 'Source code of the example component.'),
-            404: jsonError('No example component with that name.'),
-          },
-        },
+            404: jsonError('No example component with that name.')
+          }
+        }
       },
       '/api/countries.json': {
         get: {
@@ -201,12 +201,12 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
               description: 'Countries with their ISO 3166-1 alpha-2 code and flag.',
               content: {
                 'application/json': {
-                  schema: { type: 'array', items: { $ref: '#/components/schemas/Country' } },
-                },
-              },
-            },
-          },
-        },
+                  schema: { type: 'array', items: { $ref: '#/components/schemas/Country' } }
+                }
+              }
+            }
+          }
+        }
       },
       '/api/phone-codes.json': {
         get: {
@@ -219,73 +219,111 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
               description: 'Countries with their dial code and phone number mask.',
               content: {
                 'application/json': {
-                  schema: { type: 'array', items: { $ref: '#/components/schemas/PhoneCode' } },
-                },
-              },
-            },
-          },
-        },
+                  schema: { type: 'array', items: { $ref: '#/components/schemas/PhoneCode' } }
+                }
+              }
+            }
+          }
+        }
       },
       '/api/locales.json': {
         get: {
           operationId: 'getLocales',
           tags: ['Data'],
           summary: 'Locales',
-          description: 'Every locale Pohon ships a translation for, mapped to its flag emoji.',
+          description: 'Every locale Pohon UI ships a translation for, mapped to its flag emoji.',
           responses: {
             200: {
               description: 'Map of locale tag to flag emoji, for example `{ "fr-FR": "🇫🇷" }`.',
               content: {
                 'application/json': {
-                  schema: { type: 'object', additionalProperties: { type: 'string' } },
-                },
-              },
-            },
-          },
-        },
+                  schema: { type: 'object', additionalProperties: { type: 'string' } }
+                }
+              }
+            }
+          }
+        }
       },
       '/api/github/releases.json': {
         get: {
           operationId: 'getReleases',
           tags: ['GitHub'],
-          summary: 'Recent releases',
-          description: 'Releases of `pohon-ui` as returned by the GitHub API, excluding v2. Empty when the server has no GitHub token configured.',
+          summary: 'Releases',
+          description: 'Releases of `vinicunca/pohon`, newest first, all published tags included. The notes are served per release by `/api/github/releases/{tag}`. Cached for an hour.',
           responses: {
             200: {
-              description: 'GitHub release objects.',
+              description: 'Releases, newest first.',
               content: {
                 'application/json': {
-                  schema: { type: 'array', items: { $ref: '#/components/schemas/GitHubObject' } },
-                },
-              },
+                  schema: { type: 'array', items: { $ref: '#/components/schemas/Release' } }
+                }
+              }
+            }
+          }
+        }
+      },
+      '/api/github/releases/{tag}': {
+        get: {
+          operationId: 'getReleaseNotes',
+          tags: ['GitHub'],
+          summary: 'Release notes',
+          description: 'One release with its notes, which the list route leaves out.',
+          parameters: [{ name: 'tag', in: 'path', required: true, schema: { type: 'string', example: 'v2.0.0' } }],
+          responses: {
+            200: {
+              description: 'The release and its notes.',
+              content: {
+                'application/json': {
+                  schema: { $ref: '#/components/schemas/ReleaseNotes' }
+                }
+              }
             },
-          },
-        },
+            404: jsonError('No release has that tag.')
+          }
+        }
       },
       '/api/github/pulls.json': {
         get: {
           operationId: 'getPullRequests',
           tags: ['GitHub'],
           summary: 'Merged pull requests',
-          description: 'Merged pull requests of `pohon-ui` by human authors, as returned by the GitHub API. Empty when the server has no GitHub token configured.',
+          description: 'Merged pull requests of `vinicunca/pohon` by human authors, as returned by the GitHub API. Empty when the server has no GitHub token configured.',
           responses: {
             200: {
               description: 'GitHub pull request objects.',
               content: {
                 'application/json': {
-                  schema: { type: 'array', items: { $ref: '#/components/schemas/GitHubObject' } },
-                },
-              },
-            },
-          },
-        },
+                  schema: { type: 'array', items: { $ref: '#/components/schemas/GitHubObject' } }
+                }
+              }
+            }
+          }
+        }
+      },
+      '/api/github/contributors.json': {
+        get: {
+          operationId: 'getContributors',
+          tags: ['GitHub'],
+          summary: 'Top contributors',
+          description: 'The most active contributors of `vinicunca/pohon` with their public GitHub profile, most contributions first, plus the total contributor count. Without a GitHub token, public GitHub contributor data is used.',
+          responses: {
+            200: {
+              description: 'Contributor count and profiles.',
+              content: {
+                'application/json': {
+                  schema: { $ref: '#/components/schemas/Contributors' }
+                }
+              }
+            }
+          }
+        }
       },
       '/api/github/commits.json': {
         get: {
           operationId: 'getCommits',
           tags: ['GitHub'],
           summary: 'Commits touching given paths',
-          description: 'Commits of `pohon-ui` touching the given repository paths, newest first. Empty when the server has no GitHub token configured.',
+          description: 'Commits of `vinicunca/pohon` touching the given repository paths, newest first. Empty when the server has no GitHub token configured.',
           parameters: [
             {
               name: 'path',
@@ -295,25 +333,25 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
               schema: {
                 oneOf: [
                   { type: 'string' },
-                  { type: 'array', items: { type: 'string' } },
-                ],
+                  { type: 'array', items: { type: 'string' } }
+                ]
               },
-              example: 'src/runtime/components/Button.vue',
-            },
+              example: 'src/runtime/components/Button.vue'
+            }
           ],
           responses: {
             200: {
               description: 'Commits, newest first.',
               content: {
                 'application/json': {
-                  schema: { type: 'array', items: { $ref: '#/components/schemas/Commit' } },
-                },
-              },
+                  schema: { type: 'array', items: { $ref: '#/components/schemas/Commit' } }
+                }
+              }
             },
-            400: jsonError('The `path` query parameter is missing.'),
-          },
-        },
-      },
+            400: jsonError('The `path` query parameter is missing.')
+          }
+        }
+      }
     },
     components: {
       // `headers` and `responses` are entirely the module's: the `Vary` header
@@ -332,12 +370,15 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
             framework: { type: 'string' },
             category: { type: 'string' },
             description: { type: 'string' },
+            // an entry that links out instead of rendering a page
+            to: { type: 'string' },
+            target: { type: 'string' },
             children: {
               type: 'array',
-              items: { $ref: '#/components/schemas/NavigationItem' },
-            },
+              items: { $ref: '#/components/schemas/NavigationItem' }
+            }
           },
-          required: ['title', 'path'],
+          required: ['title', 'path']
         },
         Module: {
           type: 'object',
@@ -346,8 +387,8 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
               type: 'object',
               properties: {
                 downloads: { type: 'integer', description: 'Monthly npm downloads.' },
-                stars: { type: 'integer', description: 'GitHub stars.' },
-              },
+                stars: { type: 'integer', description: 'GitHub stars.' }
+              }
             },
             team: {
               type: 'array',
@@ -356,36 +397,71 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
                 properties: {
                   name: { type: 'string' },
                   login: { type: 'string' },
-                  avatarUrl: { type: 'string', format: 'uri' },
-                },
-              },
+                  avatarUrl: { type: 'string', format: 'uri' }
+                }
+              }
             },
             contributors: {
               type: 'array',
+              description: 'GitHub contributors of `vinicunca/pohon`, most contributions first.',
               items: {
                 type: 'object',
-                properties: { username: { type: 'string' } },
-              },
-            },
+                properties: {
+                  id: { type: 'integer', description: 'GitHub user id.' },
+                  username: { type: 'string' },
+                  contributions: { type: 'integer', description: 'Commit count on the repository.' }
+                }
+              }
+            }
+          }
+        },
+        Contributors: {
+          type: 'object',
+          properties: {
+            total: { type: ['integer', 'null'], description: 'Human contributors on GitHub, null when the server could not count them.' },
+            contributors: { type: 'array', items: { $ref: '#/components/schemas/Contributor' } }
           },
+          required: ['total', 'contributors']
+        },
+        Contributor: {
+          type: 'object',
+          properties: {
+            username: { type: 'string' },
+            contributions: { type: 'integer', description: 'Commit count on the repository.' },
+            name: { type: 'string' },
+            location: { type: 'string' },
+            websiteUrl: { type: 'string', format: 'uri' },
+            socialAccounts: {
+              type: 'array',
+              items: {
+                type: 'object',
+                properties: {
+                  provider: { type: 'string', description: 'Lowercased GitHub provider name, e.g. `twitter`, `bluesky`.' },
+                  url: { type: 'string', format: 'uri' }
+                }
+              }
+            },
+            sponsorsListing: { type: 'string', format: 'uri' }
+          },
+          required: ['username', 'contributions']
         },
         ComponentExample: {
           type: 'object',
           properties: {
             code: { type: 'string', description: 'Single file component source.' },
             filePath: { type: 'string' },
-            pascalName: { type: 'string' },
+            pascalName: { type: 'string' }
           },
-          required: ['code', 'pascalName'],
+          required: ['code', 'pascalName']
         },
         Country: {
           type: 'object',
           properties: {
             name: { type: 'string' },
             code: { type: 'string', description: 'ISO 3166-1 alpha-2 code.' },
-            emoji: { type: 'string' },
+            emoji: { type: 'string' }
           },
-          required: ['name', 'code', 'emoji'],
+          required: ['name', 'code', 'emoji']
         },
         PhoneCode: {
           type: 'object',
@@ -394,18 +470,40 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
             code: { type: 'string', description: 'ISO 3166-1 alpha-2 code.' },
             emoji: { type: 'string' },
             dialCode: { type: 'string', example: '+33' },
-            mask: { type: 'string', example: '# ## ## ## ##' },
+            mask: { type: 'string', example: '# ## ## ## ##' }
           },
-          required: ['name', 'code', 'dialCode'],
+          required: ['name', 'code', 'dialCode']
+        },
+        Release: {
+          type: 'object',
+          properties: {
+            tag: { type: 'string', example: 'v2.0.0' },
+            title: { type: 'string', description: 'Release name, its tag when the release has none.' },
+            date: { type: 'string', format: 'date-time', description: 'Publication date.' },
+            url: { type: 'string', format: 'uri', description: 'The release on GitHub.' }
+          },
+          required: ['tag', 'title', 'date', 'url']
+        },
+        ReleaseNotes: {
+          allOf: [
+            { $ref: '#/components/schemas/Release' },
+            {
+              type: 'object',
+              properties: {
+                markdown: { type: 'string', description: 'The release notes, as GitHub stores them.' }
+              },
+              required: ['markdown']
+            }
+          ]
         },
         Commit: {
           type: 'object',
           properties: {
             sha: { type: 'string' },
             date: { type: 'string', format: 'date-time' },
-            message: { type: 'string', description: 'First line of the commit message.' },
+            message: { type: 'string', description: 'First line of the commit message.' }
           },
-          required: ['sha', 'date', 'message'],
+          required: ['sha', 'date', 'message']
         },
         Error: {
           type: 'object',
@@ -416,16 +514,16 @@ export function createOpenApiDocument(options: { version: string; url?: string; 
             statusCode: { type: 'integer', example: 404 },
             statusMessage: { type: 'string', description: 'Machine-readable reason phrase.', example: 'Example not found!' },
             message: { type: 'string', description: 'Human-readable message.', example: 'Example not found!' },
-            data: { type: 'object', description: 'Extra context, when the endpoint provides any.', additionalProperties: true },
+            data: { type: 'object', description: 'Extra context, when the endpoint provides any.', additionalProperties: true }
           },
-          required: ['error', 'statusCode', 'statusMessage', 'message'],
+          required: ['error', 'statusCode', 'statusMessage', 'message']
         },
         GitHubObject: {
           type: 'object',
           description: 'Object as returned by the GitHub REST API, passed through unchanged.',
-          additionalProperties: true,
-        },
-      },
-    },
-  };
+          additionalProperties: true
+        }
+      }
+    }
+  }
 }

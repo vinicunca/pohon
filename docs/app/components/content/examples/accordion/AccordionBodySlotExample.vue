@@ -18,9 +18,9 @@ const items: AccordionItem[] = [
 </script>
 
 <template>
-  <UAccordion :items="items">
+  <PAccordion :items="items">
     <template #body="{ item }">
       This is the {{ item.label }} panel.
     </template>
-  </UAccordion>
+  </PAccordion>
 </template>

@@ -30,5 +30,5 @@ const icon = computed(() => items.value.find(item => item.value === value.value)
 </script>
 
 <template>
-  <USelect v-model="value" :items="items" value-key="value" :icon="icon" class="w-48" />
+  <PSelect v-model="value" :items="items" value-key="value" :icon="icon" class="w-48" />
 </template>

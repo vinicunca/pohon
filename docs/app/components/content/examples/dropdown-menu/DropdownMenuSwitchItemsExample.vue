@@ -36,11 +36,11 @@ const items = computed(() => [{
 </script>
 
 <template>
-  <UDropdownMenu :items="items" :content="{ align: 'start' }" :ui="{ content: 'w-48' }">
+  <PDropdownMenu :items="items" :content="{ align: 'start' }" :ui="{ content: 'w-48' }">
     <PButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
 
     <template #switch-trailing="{ item }">
-      <USwitch :model-value="item.checked" tabindex="-1" />
+      <PSwitch :model-value="item.checked" tabindex="-1" />
     </template>
-  </UDropdownMenu>
+  </PDropdownMenu>
 </template>

@@ -15,8 +15,8 @@ const items: NavigationMenuItem[] = [{
 </script>
 
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar
+  <PDashboardGroup>
+    <PDashboardSidebar
       open
       :toggle="{
         color: 'primary',
@@ -28,16 +28,16 @@ const items: NavigationMenuItem[] = [{
         <Logo class="h-5 w-auto" />
       </template>
 
-      <UNavigationMenu
+      <PNavigationMenu
         :items="items"
         orientation="vertical"
       />
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
-    <UDashboardPanel>
+    <PDashboardPanel>
       <template #header>
-        <UDashboardNavbar title="Dashboard" />
+        <PDashboardNavbar title="Dashboard" />
       </template>
-    </UDashboardPanel>
-  </UDashboardGroup>
+    </PDashboardPanel>
+  </PDashboardGroup>
 </template>

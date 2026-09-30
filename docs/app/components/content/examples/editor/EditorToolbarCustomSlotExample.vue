@@ -20,16 +20,16 @@ const toolbarItems = [[{
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     v-slot="{ editor }"
     v-model="value"
     content-type="markdown"
     class="w-full min-h-30 flex flex-col gap-4"
   >
-    <UEditorToolbar :editor="editor" :items="toolbarItems" class="sm:px-8">
+    <PEditorToolbar :editor="editor" :items="toolbarItems" class="sm:px-8">
       <template #link>
         <EditorLinkPopover :editor="editor" auto-open />
       </template>
-    </UEditorToolbar>
-  </UEditor>
+    </PEditorToolbar>
+  </PEditor>
 </template>

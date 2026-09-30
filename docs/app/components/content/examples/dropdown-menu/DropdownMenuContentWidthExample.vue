@@ -27,7 +27,7 @@ const items: DropdownMenuItem[][] = [
 </script>
 
 <template>
-  <UDropdownMenu :items="items" :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width)' }">
+  <PDropdownMenu :items="items" :ui="{ content: 'w-(--akar-dropdown-menu-trigger-width)' }">
     <PButton
       label="Open"
       class="w-46"
@@ -36,5 +36,5 @@ const items: DropdownMenuItem[][] = [
       block
       trailing-icon="i-lucide-chevron-down"
     />
-  </UDropdownMenu>
+  </PDropdownMenu>
 </template>

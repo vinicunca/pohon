@@ -91,12 +91,12 @@ const selected = computed({
   >
     <template #item-description="{ item }">
       <span class="flex items-center gap-1">
-        <span class="shrink-0 text-xs text-muted truncate" :style="{ fontFamily: `'${asPreset(item).font}', sans-serif` }">{{ asPreset(item).font }}</span>
+        <span class="shrink-0 text-xs color-text-muted truncate" :style="{ fontFamily: `'${asPreset(item).font}', sans-serif` }">{{ asPreset(item).font }}</span>
 
-        <span class="text-dimmed select-none">·</span>
+        <span class="color-text-dimmed select-none">·</span>
 
         <span class="flex items-center gap-1 shrink-0">
-          <UIcon v-for="name in asPreset(item).iconSamples" :key="name" :name="name" class="size-3 text-dimmed" />
+          <PIcon v-for="name in asPreset(item).iconSamples" :key="name" :name="name" class="size-3 color-text-dimmed" />
         </span>
       </span>
     </template>

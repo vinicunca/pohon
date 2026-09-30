@@ -4,7 +4,7 @@ const value = ref('')
 </script>
 
 <template>
-  <UInputMenu
+  <PInputMenu
     v-model="value"
     mode="autocomplete"
     :items="items"

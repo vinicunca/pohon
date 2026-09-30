@@ -114,8 +114,8 @@ export function clampToGamut(color: Oklch): Oklch {
 }
 
 /**
- * Serialize to tailwind v4's `oklch(62.3% 0.214 259.815)` shape. No gamut
- * clamp, so wider-than-sRGB values (tailwind's own ramps have them) survive
+ * Serialize to UnoCSS's `oklch(62.3% 0.214 259.815)` shape. No gamut
+ * clamp, so wider-than-sRGB values (UnoCSS's own ramps have them) survive
  * a round-trip. Achromatic hue is atan2 noise, zero it.
  */
 export function formatOklch(color: Oklch): string {
@@ -138,7 +138,7 @@ export function parseColor(value: string): Oklch | undefined {
     return rgbToOklch(hexToRgb(input))
   }
 
-  // `none` is CSS Color 4's missing-component keyword, tailwind ≥4.3.3
+  // `none` is CSS Color 4's missing-component keyword, CSS Color 4
   // emits it for achromatic hues (`oklch(98.5% 0 none)`); it reads as 0 here.
   const oklch = input.match(/^oklch\(\s*([\d.]+)(%?)\s+([\d.]+|none)\s+([\d.]+|none)/i)
   if (oklch) {
@@ -187,14 +187,14 @@ export interface PaletteCurveParams {
   hue: ChannelCurve
 }
 
-/** Fitted to tailwind v4's ramps, only seeds empty states; real params come from fitPalette(). */
+/** Fitted to UnoCSS's ramps, only seeds empty states; real params come from fitPalette(). */
 export const CURVE_DEFAULTS: PaletteCurveParams = {
   lightness: { y0: 0.977, y1: 0.27, p1x: 0.1, p1y: 1.012, p2x: 0.925, p2y: 0.376 },
   chroma: { y0: 0.016, y1: 0.08, p1x: 0.4, p1y: 0.3, p2x: 0.6, p2y: 0.25 },
   hue: { y0: 250, y1: 250, p1x: 0.33, p1y: 250, p2x: 0.66, p2y: 250 }
 }
 
-/** Neutrals run to L 0.13 like tailwind's grays, so dark-mode backgrounds stay genuinely dark. */
+/** Neutrals run to L 0.13 like UnoCSS's grays, so dark-mode backgrounds stay genuinely dark. */
 export const NEUTRAL_CURVE_DEFAULTS: PaletteCurveParams = {
   lightness: { ...CURVE_DEFAULTS.lightness, y1: 0.13 },
   chroma: { y0: 0.005, y1: 0.01, p1x: 0.4, p1y: 0.01, p2x: 0.6, p2y: 0.01 },
@@ -560,7 +560,7 @@ export function fitCurve(points: Array<[number, number]>): ChannelCurve {
 }
 
 /**
- * Work backwards from an existing palette (e.g. a tailwind ramp) to curve
+ * Work backwards from an existing palette (e.g. a unoPalette ramp) to curve
  * params that reproduce it, so editing always starts from the real thing.
  */
 export function fitPalette(shades: Partial<Record<Shade, string>>): PaletteCurveParams {

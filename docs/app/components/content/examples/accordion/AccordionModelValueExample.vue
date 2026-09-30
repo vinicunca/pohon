@@ -30,5 +30,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <UAccordion v-model="active" :items="items" />
+  <PAccordion v-model="active" :items="items" />
 </template>

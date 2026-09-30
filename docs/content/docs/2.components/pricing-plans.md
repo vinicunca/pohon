@@ -1,11 +1,11 @@
 ---
 title: PricingPlans
-description: "Display a list of pricing plans in a responsive grid layout."
+description: 'Display a list of pricing plans in a responsive grid layout.'
 category: page
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/PricingPlans.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/PricingPlans.vue
 ---
 
 ## Usage
@@ -14,9 +14,13 @@ The PricingPlans component provides a flexible layout to display a list of [Pric
 
 ```vue {2,8}
 <template>
-  <UPricingPlans>
-    <UPricingPlan v-for="(plan, index) in plans" :key="index" v-bind="plan" />
-  </UPricingPlans>
+  <PPricingPlans>
+    <PPricingPlan
+      v-for="(plan, index) in plans"
+      :key="index"
+      v-bind="plan"
+    />
+  </PPricingPlans>
 </template>
 ```
 
@@ -30,44 +34,40 @@ Use the `plans` prop as an array of objects with the properties of the [PricingP
 
 ::component-code
 ---
-
 collapse: true
 ignore:
-
-- plans
-  external:
-- plans
-  externalTypes:
-- PricingPlanProps[]
-  props:
+  - plans
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+props:
   plans:
-  - title: Solo
-    description: 'Tailored for indie hackers.'
-    price: '$249'
-    features:
-    - 'One developer'
-    - 'Lifetime access'
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
       button:
-      label: 'Buy now'
-  - title: Startup
-    description: 'Best suited for small teams.'
-    price: '$499'
-    features:
-    - 'Up to 5 developers'
-    - 'Everything in Solo'
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
       button:
-      label: 'Buy now'
-  - title: Organization
-    description: 'Ideal for larger teams and organizations.'
-    price: '$999'
-    features:
-    - 'Up to 20 developers'
-    - 'Everything in Startup'
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
       button:
-      label: 'Buy now'
-
+        label: 'Buy now'
 ---
-
 ::
 
 ### Orientation
@@ -76,48 +76,44 @@ Use the `orientation` prop to change the orientation of the PricingPlans. Defaul
 
 ::component-code
 ---
-
 collapse: true
 hide:
-
-- class
-  ignore:
-- plans
-  external:
-- plans
-  externalTypes:
-- PricingPlanProps[]
-  props:
+  - class
+ignore:
+  - plans
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+props:
   orientation: vertical
   plans:
-  - title: Solo
-    description: 'Tailored for indie hackers.'
-    price: '$249'
-    features:
-    - 'One developer'
-    - 'Lifetime access'
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
       button:
-      label: 'Buy now'
-  - title: Startup
-    description: 'Best suited for small teams.'
-    price: '$499'
-    features:
-    - 'Up to 5 developers'
-    - 'Everything in Solo'
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
       button:
-      label: 'Buy now'
-  - title: Organization
-    description: 'Ideal for larger teams and organizations.'
-    price: '$999'
-    features:
-    - 'Up to 20 developers'
-    - 'Everything in Startup'
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
       button:
-      label: 'Buy now'
-      class: 'w-full'
-
+        label: 'Buy now'
+  class: 'w-full'
 ---
-
 ::
 
 ::tip
@@ -130,48 +126,44 @@ Use the `compact` prop to reduce the padding between the plans when one of the p
 
 ::component-code
 ---
-
 collapse: true
 ignore:
-
-- plans
-- compact
-  external:
-- plans
-  externalTypes:
-- PricingPlanProps[]
-  class: 'p-8'
-  props:
+  - plans
+  - compact
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+class: 'p-8'
+props:
   compact: true
   plans:
-  - title: Solo
-    description: 'Tailored for indie hackers.'
-    price: '$249'
-    features:
-    - 'One developer'
-    - 'Lifetime access'
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
       button:
-      label: 'Buy now'
-  - title: Startup
-    description: 'Best suited for small teams.'
-    price: '$499'
-    scale: true
-    features:
-    - 'Up to 5 developers'
-    - 'Everything in Solo'
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      scale: true
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
       button:
-      label: 'Buy now'
-  - title: Organization
-    description: 'Ideal for larger teams and organizations.'
-    price: '$999'
-    features:
-    - 'Up to 20 developers'
-    - 'Everything in Startup'
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
       button:
-      label: 'Buy now'
-
+        label: 'Buy now'
 ---
-
 ::
 
 ### Scale
@@ -180,48 +172,44 @@ Use the `scale` prop to adjust the spacing between the plans when one of the pla
 
 ::component-code
 ---
-
 collapse: true
 ignore:
-
-- plans
-- scale
-  external:
-- plans
-  externalTypes:
-- PricingPlanProps[]
-  class: 'p-8'
-  props:
+  - plans
+  - scale
+external:
+  - plans
+externalTypes:
+  - PricingPlanProps[]
+class: 'p-8'
+props:
   scale: true
   plans:
-  - title: Solo
-    description: 'Tailored for indie hackers.'
-    price: '$249'
-    features:
-    - 'One developer'
-    - 'Lifetime access'
+    - title: Solo
+      description: 'Tailored for indie hackers.'
+      price: '$249'
+      features:
+        - 'One developer'
+        - 'Lifetime access'
       button:
-      label: 'Buy now'
-  - title: Startup
-    description: 'Best suited for small teams.'
-    price: '$499'
-    scale: true
-    features:
-    - 'Up to 5 developers'
-    - 'Everything in Solo'
+        label: 'Buy now'
+    - title: Startup
+      description: 'Best suited for small teams.'
+      price: '$499'
+      scale: true
+      features:
+        - 'Up to 5 developers'
+        - 'Everything in Solo'
       button:
-      label: 'Buy now'
-  - title: Organization
-    description: 'Ideal for larger teams and organizations.'
-    price: '$999'
-    features:
-    - 'Up to 20 developers'
-    - 'Everything in Startup'
+        label: 'Buy now'
+    - title: Organization
+      description: 'Ideal for larger teams and organizations.'
+      price: '$999'
+      features:
+        - 'Up to 20 developers'
+        - 'Everything in Startup'
       button:
-      label: 'Buy now'
-
+        label: 'Buy now'
 ---
-
 ::
 
 ## Examples
@@ -236,21 +224,19 @@ Use the PricingPlans component in a page to create a pricing page:
 
 ```vue [pages/pricing/index.vue]{11}
 <script setup lang="ts">
-const { data: plans } = await useAsyncData("plans", () =>
-  queryCollection("plans").all(),
-);
+const { data: plans } = await useAsyncData('plans', () => queryCollection('plans').all())
 </script>
 
 <template>
-  <UPage>
-    <UPageHero title="Pricing" />
+  <PPage>
+    <PPageHero title="Pricing" />
 
-    <UPageBody>
-      <UContainer>
-        <UPricingPlans :plans="plans" />
-      </UContainer>
-    </UPageBody>
-  </UPage>
+    <PPageBody>
+      <PContainer>
+        <PPricingPlans :plans="plans" />
+      </PContainer>
+    </PPageBody>
+  </PPage>
 </template>
 ```
 

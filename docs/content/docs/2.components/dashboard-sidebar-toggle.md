@@ -1,6 +1,6 @@
 ---
 title: DashboardSidebarToggle
-description: "A Button to toggle the sidebar on mobile."
+description: 'A Button to toggle the sidebar on mobile.'
 category: dashboard
 links:
   - label: Button
@@ -8,7 +8,7 @@ links:
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/DashboardSidebarToggle.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/DashboardSidebarToggle.vue
 ---
 
 ## Usage
@@ -19,33 +19,25 @@ It is automatically displayed on mobile to toggle the sidebar, **you don't have 
 
 ::component-code
 ---
-
 hide:
-
-- class
-  props:
+  - class
+props:
   class: 'lg:flex'
-
 ---
-
 ::
 
 It extends the [Button](/docs/components/button) component, so you can pass any property such as `color`, `variant`, `size`, etc.
 
 ::component-code
 ---
-
 hide:
-
-- class
-  ignore:
-- variant
-  props:
+  - class
+ignore:
+  - variant
+props:
   variant: 'subtle'
   class: 'lg:flex'
-
 ---
-
 ::
 
 ::note
@@ -62,35 +54,35 @@ Even though this component is automatically displayed on mobile, you can use the
 
 ```vue [layouts/dashboard.vue]{4-6}
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar>
+  <PDashboardGroup>
+    <PDashboardSidebar>
       <template #toggle>
-        <UDashboardSidebarToggle variant="subtle" />
+        <PDashboardSidebarToggle variant="subtle" />
       </template>
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
     <slot />
-  </UDashboardGroup>
+  </PDashboardGroup>
 </template>
 ```
 
 ```vue [pages/index.vue]{11-13}
 <script setup lang="ts">
 definePageMeta({
-  layout: "dashboard",
-});
+  layout: 'dashboard'
+})
 </script>
 
 <template>
-  <UDashboardPanel>
+  <PDashboardPanel>
     <template #header>
-      <UDashboardNavbar title="Home">
+      <PDashboardNavbar title="Home">
         <template #toggle>
-          <UDashboardSidebarToggle variant="subtle" />
+          <PDashboardSidebarToggle variant="subtle" />
         </template>
-      </UDashboardNavbar>
+      </PDashboardNavbar>
     </template>
-  </UDashboardPanel>
+  </PDashboardPanel>
 </template>
 ```
 

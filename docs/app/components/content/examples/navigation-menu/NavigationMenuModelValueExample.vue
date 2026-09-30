@@ -13,7 +13,7 @@ const items: NavigationMenuItem[] = [
       },
       {
         label: 'Installation',
-        description: 'Learn how to install and configure Pohon in your application.',
+        description: 'Learn how to install and configure Pohon UI in your application.',
         icon: 'i-lucide-cloud-download'
       },
       {
@@ -108,5 +108,5 @@ defineShortcuts({
 </script>
 
 <template>
-  <UNavigationMenu v-model="active" :items="items" class="w-full justify-center" />
+  <PNavigationMenu v-model="active" :items="items" class="w-full justify-center" />
 </template>

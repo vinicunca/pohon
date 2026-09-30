@@ -98,9 +98,9 @@ function getDropdownActions(user: User): DropdownMenuItem[][] {
   <PTable :data="data" :columns="columns" class="flex-1">
     <template #name-cell="{ row }">
       <div class="flex items-center gap-3">
-        <UAvatar :src="`https://i.pravatar.cc/120?img=${row.original.id}`" size="lg" loading="lazy" :alt="`${row.original.name} avatar`" />
+        <PAvatar :src="`https://i.pravatar.cc/120?img=${row.original.id}`" size="lg" loading="lazy" :alt="`${row.original.name} avatar`" />
         <div>
-          <p class="font-medium text-highlighted">
+          <p class="font-medium color-text-highlighted">
             {{ row.original.name }}
           </p>
           <p>
@@ -110,9 +110,9 @@ function getDropdownActions(user: User): DropdownMenuItem[][] {
       </div>
     </template>
     <template #action-cell="{ row }">
-      <UDropdownMenu :items="getDropdownActions(row.original)">
+      <PDropdownMenu :items="getDropdownActions(row.original)">
         <PButton icon="i-lucide-ellipsis-vertical" color="neutral" variant="ghost" aria-label="Actions" />
-      </UDropdownMenu>
+      </PDropdownMenu>
     </template>
   </PTable>
 </template>

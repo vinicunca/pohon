@@ -128,9 +128,9 @@ const code = computed(() => {
   return buildCodeBlock(rawCode)
 })
 
-const { data: ast } = useAsyncData(`component-example-${camelName}${hash({ props: componentProps, collapse: props.collapse })}`, async () => {
+const { data: markdown } = useAsyncData(`component-example-${camelName}${hash({ props: componentProps, collapse: props.collapse })}`, async () => {
   if (!props.prettier) {
-    return cachedParseMarkdown(code.value)
+    return code.value
   }
 
   let formatted = ''
@@ -145,7 +145,7 @@ const { data: ast } = useAsyncData(`component-example-${camelName}${hash({ props
     formatted = code.value
   }
 
-  return cachedParseMarkdown(formatted)
+  return formatted
 }, { lazy: import.meta.client, watch: [code] })
 
 const optionsValues = ref(props.options?.reduce((acc, option) => {
@@ -186,8 +186,8 @@ const urlSearchParams = computed(() => {
   <div ref="el" class="my-5" :style="{ '--ui-header-height': '4rem' }">
     <template v-if="preview">
       <div ref="wrapperContainer" class="relative group/component">
-        <div class="border border-muted relative z-1" :class="[{ 'border-b-0 rounded-t-md': props.source, 'rounded-md': !props.source, 'overflow-hidden': props.overflowHidden }]">
-          <div v-if="props.options?.length || !!slots.options" class="flex gap-4 p-4 border-b border-muted">
+        <div class="border border-border-muted relative z-1" :class="[{ 'border-b-0 rounded-t-md': props.source, 'rounded-md': !props.source, 'overflow-hidden': props.overflowHidden }]">
+          <div v-if="props.options?.length || !!slots.options" class="flex gap-4 p-4 border-b border-border-muted">
             <slot name="options" />
 
             <PFormField
@@ -196,14 +196,14 @@ const urlSearchParams = computed(() => {
               :label="option.label"
               :name="option.name"
               size="sm"
-              class="inline-flex ring ring-accented rounded-sm"
+              class="inline-flex ring ring-ring-accented rounded-sm"
               :ui="{
-                wrapper: 'bg-elevated/50 rounded-l-sm flex border-r border-accented',
-                label: 'text-muted px-2 py-1.5',
+                wrapper: 'bg-background-elevated/50 rounded-l-sm flex border-r border-border-accented',
+                label: 'color-text-muted px-2 py-1.5',
                 container: 'mt-0'
               }"
             >
-              <USelectMenu
+              <PSelectMenu
                 v-if="option.items?.length"
                 :model-value="get(optionsValues, option.name)"
                 :items="option.items"
@@ -218,7 +218,7 @@ const urlSearchParams = computed(() => {
                 @update:model-value="set(optionsValues, option.name, $event)"
               >
                 <template v-if="option.name.toLowerCase().endsWith('color')" #leading="{ modelValue, ui }">
-                  <UChip
+                  <PChip
                     inset
                     standalone
                     :color="(modelValue as any)"
@@ -226,8 +226,8 @@ const urlSearchParams = computed(() => {
                     class="size-2"
                   />
                 </template>
-              </USelectMenu>
-              <UInput
+              </PSelectMenu>
+              <PInput
                 v-else
                 :model-value="get(optionsValues, option.name)"
                 :type="option.type"
@@ -266,7 +266,7 @@ const urlSearchParams = computed(() => {
       <div v-if="!!slots.code" class="[&_pre]:rounded-t-none! [&_div.my-5]:mt-0!">
         <slot name="code" />
       </div>
-      <MDCRenderer v-else-if="ast" :body="ast.body" :data="ast.data" class="[&_pre]:rounded-t-none! [&_div.my-5]:mt-0!" />
+      <DocsMarkdown v-else-if="markdown" :value="markdown" class="[&_pre]:rounded-t-none! [&_div.my-5]:mt-0!" />
     </template>
   </div>
 </template>

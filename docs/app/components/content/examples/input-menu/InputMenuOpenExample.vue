@@ -9,5 +9,5 @@ defineShortcuts({
 </script>
 
 <template>
-  <UInputMenu v-model="value" v-model:open="open" :items="items" />
+  <PInputMenu v-model="value" v-model:open="open" :items="items" />
 </template>

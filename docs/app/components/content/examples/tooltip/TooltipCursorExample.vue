@@ -17,13 +17,13 @@ const reference = computed(() => ({
 </script>
 
 <template>
-  <UTooltip
+  <PTooltip
     :open="open"
     :reference="reference"
     :content="{ side: 'top', sideOffset: 16, updatePositionStrategy: 'always' }"
   >
     <div
-      class="flex items-center justify-center rounded-md border border-dashed border-accented text-sm aspect-video w-72"
+      class="flex items-center justify-center rounded-md border border-dashed border-border-accented text-sm aspect-video w-72"
       @pointerenter="open = true"
       @pointerleave="open = false"
       @pointermove="(ev: PointerEvent) => {
@@ -37,5 +37,5 @@ const reference = computed(() => ({
     <template #content>
       {{ anchor.x.toFixed(0) }} - {{ anchor.y.toFixed(0) }}
     </template>
-  </UTooltip>
+  </PTooltip>
 </template>

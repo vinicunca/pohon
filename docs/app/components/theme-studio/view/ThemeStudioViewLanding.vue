@@ -10,7 +10,7 @@ const sectionUi = {
   container: 'max-w-5xl',
   headline: 'text-center font-mono font-medium text-xs text-primary uppercase tracking-[0.12em]',
   title: 'max-w-lg mx-auto',
-  description: 'max-w-md mx-auto text-dimmed'
+  description: 'max-w-md mx-auto color-text-dimmed'
 }
 
 const navItems: NavigationMenuItem[] = [
@@ -25,25 +25,25 @@ type TerminalSegment = {
 
 const terminalLines: TerminalSegment[][] = [
   [
-    { text: '$ ', class: 'text-muted' },
-    { text: 'npx telemetry', class: 'text-highlighted' },
+    { text: '$ ', class: 'color-text-muted' },
+    { text: 'npx telemetry', class: 'color-text-highlighted' },
     { text: ' init', class: 'text-primary' }
   ],
-  [{ text: '→ Scanning service topology...', class: 'text-muted' }],
+  [{ text: '→ Scanning service topology...', class: 'color-text-muted' }],
   [
-    { text: '→ Found ', class: 'text-muted' },
-    { text: '23 services', class: 'text-highlighted' },
-    { text: ', ', class: 'text-muted' },
-    { text: '847 endpoints', class: 'text-highlighted' },
-    { text: ', ', class: 'text-muted' },
-    { text: '12 databases', class: 'text-highlighted' }
+    { text: '→ Found ', class: 'color-text-muted' },
+    { text: '23 services', class: 'color-text-highlighted' },
+    { text: ', ', class: 'color-text-muted' },
+    { text: '847 endpoints', class: 'color-text-highlighted' },
+    { text: ', ', class: 'color-text-muted' },
+    { text: '12 databases', class: 'color-text-highlighted' }
   ],
   [
-    { text: '→ Deploying collector agents ', class: 'text-muted' },
+    { text: '→ Deploying collector agents ', class: 'color-text-muted' },
     { text: '✓', class: 'text-success' }
   ],
   [
-    { text: '→ Baseline established in ', class: 'text-muted' },
+    { text: '→ Baseline established in ', class: 'color-text-muted' },
     { text: '340ms', class: 'text-primary' }
   ],
   [{ text: ' ' }],
@@ -61,7 +61,7 @@ const logos = [
   'i-simple-icons-stripe'
 ]
 
-const features = [{
+const features = computed(() => [{
   icon: studioIcons.zap,
   title: 'Predictive Alerts',
   description: 'ML models trained on your baselines detect anomalies 4 minutes before they hit your SLOs.'
@@ -85,7 +85,7 @@ const features = [{
   icon: studioIcons.notebook,
   title: 'Team Notebooks',
   description: 'Collaborative investigation notebooks that turn incident debugging into reusable runbooks.'
-}]
+}])
 
 const metrics = [
   { value: '99.99%', label: 'Uptime SLA', class: 'text-success' },
@@ -123,33 +123,33 @@ const vReveal = {
 </script>
 
 <template>
-  <div class="h-full overflow-y-auto bg-default">
+  <div class="h-full overflow-y-auto bg-background">
     <!-- Header. `center: 'flex'` because the pane is narrower than `lg`, where
-         UHeader would otherwise hide its center slot. -->
-    <UHeader :toggle="false" class="rounded-t-[inherit]" :ui="{ center: 'flex' }">
+         PHeader would otherwise hide its center slot. -->
+    <PHeader :toggle="false" class="rounded-t-[inherit]" :ui="{ center: 'flex' }">
       <template #left>
         <div class="flex items-center gap-1.5">
-          <UIcon :name="studioIcons.activity" class="size-6 text-primary shrink-0" />
-          <span class="text-xl font-bold text-highlighted">Landing</span>
+          <PIcon :name="studioIcons.activity" class="size-6 text-primary shrink-0" />
+          <span class="text-xl font-bold color-text-highlighted">Landing</span>
         </div>
       </template>
 
-      <UNavigationMenu :items="navItems" variant="link" />
+      <PNavigationMenu :items="navItems" variant="link" />
 
       <template #right>
         <PButton label="Sign in" color="neutral" variant="ghost" class="hidden sm:inline-flex" />
         <PButton label="Get started" color="neutral" />
       </template>
-    </UHeader>
+    </PHeader>
 
     <!-- Hero -->
-    <UPageHero
+    <PPageHero
       :ui="{
         root: 'pb-24 sm:pb-32',
         container: 'relative z-10 lg:py-32',
         wrapper: 'flex flex-col items-center',
         title: 'sm:text-6xl lg:text-7xl xl:text-[80px] tracking-tighter leading-[1.05]',
-        description: 'mt-5 max-w-xl mx-auto text-base sm:text-lg leading-relaxed text-default',
+        description: 'mt-5 max-w-xl mx-auto text-base sm:text-lg leading-relaxed color-text',
         links: 'gap-3'
       }"
     >
@@ -164,10 +164,10 @@ const vReveal = {
             label="v2.0, Now with predictive alerting"
             color="neutral"
             variant="soft"
-            class="rounded-full px-3 py-1.5 gap-1.5 bg-inverted/5 backdrop-blur"
+            class="rounded-full px-3 py-1.5 gap-1.5 bg-background-inverted/5 backdrop-blur"
           >
             <template #leading>
-              <UChip inset standalone :ui="{ base: 'animate-pulse ring-0' }" />
+              <PChip inset standalone :ui="{ base: 'animate-pulse ring-0' }" />
             </template>
           </PBadge>
         </div>
@@ -195,11 +195,11 @@ const vReveal = {
       </template>
 
       <div class="landing-enter max-w-2xl mx-auto w-full" style="animation-delay: 850ms">
-        <div class="rounded-xl border border-border bg-elevated/50 backdrop-blur-sm ring-1 ring-inverted/2 overflow-hidden">
+        <div class="rounded-xl border border-border bg-background-elevated/50 backdrop-blur-sm ring-1 ring-ring-inverted/2 overflow-hidden">
           <div class="flex items-center gap-1.5 border-b border-border p-4 sm:px-6">
-            <span class="size-2.5 rounded-full border border-border bg-muted" />
-            <span class="size-2.5 rounded-full border border-border bg-muted" />
-            <span class="size-2.5 rounded-full border border-border bg-muted" />
+            <span class="size-2.5 rounded-full border border-border bg-background-muted" />
+            <span class="size-2.5 rounded-full border border-border bg-background-muted" />
+            <span class="size-2.5 rounded-full border border-border bg-background-muted" />
           </div>
 
           <div class="min-h-[200px] p-5 sm:p-6 font-mono text-[13px] leading-[1.8] text-start">
@@ -216,20 +216,20 @@ const vReveal = {
       </div>
 
       <div class="landing-enter max-w-lg mx-auto w-full" style="animation-delay: 950ms">
-        <UPageLogos
+        <PPageLogos
           title="Trusted by engineering teams at"
           :items="logos"
           :ui="{
-            title: 'font-mono uppercase text-xs tracking-[0.12em] text-dimmed',
+            title: 'font-mono uppercase text-xs tracking-[0.12em] color-text-dimmed',
             logos: 'gap-0',
-            logo: 'text-muted size-6'
+            logo: 'color-text-muted size-6'
           }"
         />
       </div>
-    </UPageHero>
+    </PPageHero>
 
     <!-- Features -->
-    <UPageSection
+    <PPageSection
       :ui="sectionUi"
     >
       <template #headline>
@@ -244,28 +244,28 @@ const vReveal = {
         <span v-reveal="200" class="inline-block">No more tab-switching between metrics, traces, and logs. Correlate everything into a single explorable topology.</span>
       </template>
 
-      <div class="rounded-2xl border border-border bg-default overflow-hidden">
+      <div class="rounded-2xl border border-border bg-background overflow-hidden">
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-px">
-          <UPageCard
+          <PPageCard
             v-for="(feature, index) in features"
             :key="feature.title"
             v-reveal="index * 80"
             :icon="feature.icon"
             :title="feature.title"
             :description="feature.description"
-            class="rounded-none transition duration-300 hover:bg-elevated/50"
+            class="rounded-none transition duration-300 hover:bg-background-elevated/50"
             :ui="{
               leading: 'mb-5 flex size-9 items-center justify-center rounded-lg bg-primary/10',
               title: 'text-sm tracking-tight',
-              description: 'text-sm leading-relaxed sm:line-clamp-2 lg:line-clamp-3 text-dimmed'
+              description: 'text-sm leading-relaxed sm:line-clamp-2 lg:line-clamp-3 color-text-dimmed'
             }"
           />
         </div>
       </div>
-    </UPageSection>
+    </PPageSection>
 
     <!-- Metrics -->
-    <UPageSection
+    <PPageSection
       :ui="sectionUi"
     >
       <template #headline>
@@ -280,34 +280,34 @@ const vReveal = {
         <span v-reveal="200" class="inline-block">Process billions of events per day across thousands of production environments with an architecture designed for the workloads of 2030.</span>
       </template>
 
-      <div class="rounded-2xl border border-border bg-default overflow-hidden">
+      <div class="rounded-2xl border border-border bg-background overflow-hidden">
         <div class="grid grid-cols-2 xl:grid-cols-4 gap-px">
-          <UPageCard
+          <PPageCard
             v-for="(metric, index) in metrics"
             :key="metric.label"
             v-reveal="index * 80"
             :title="metric.value"
             :description="metric.label"
-            class="rounded-none transition duration-300 hover:bg-elevated/50"
+            class="rounded-none transition duration-300 hover:bg-background-elevated/50"
             :ui="{
               root: 'text-center',
               wrapper: 'items-center',
               title: ['text-3xl sm:text-4xl font-bold tracking-tight leading-none', metric.class],
-              description: 'font-mono text-xs uppercase tracking-[0.06em] text-dimmed mt-3'
+              description: 'font-mono text-xs uppercase tracking-[0.06em] color-text-dimmed mt-3'
             }"
           />
         </div>
       </div>
-    </UPageSection>
+    </PPageSection>
 
     <!-- CTA -->
-    <UPageCTA
+    <PPageCTA
       variant="naked"
       :ui="{
         root: 'py-24 sm:py-32',
         container: 'max-w-3xl text-center',
         title: 'lg:text-5xl tracking-tighter',
-        description: 'mx-auto max-w-sm leading-relaxed text-dimmed'
+        description: 'mx-auto max-w-sm leading-relaxed color-text-dimmed'
       }"
     >
       <template #top>
@@ -332,19 +332,19 @@ const vReveal = {
             color="neutral"
             variant="subtle"
             size="xl"
-            class="font-mono font-light text-toned gap-4"
+            class="font-mono font-light color-text-toned gap-4"
             :ui="{ trailingIcon: 'size-5' }"
             @click="copyCommand('npx telemetry init')"
           />
         </div>
       </template>
-    </UPageCTA>
+    </PPageCTA>
 
     <!-- Footer -->
-    <UFooter :ui="{ container: 'border-t border-border', right: 'gap-x-0 flex-wrap justify-end' }">
+    <PFooter :ui="{ container: 'border-t border-border', right: 'gap-x-0 flex-wrap justify-end' }">
       <template #left>
-        <p class="text-sm text-dimmed">
-          Built with Pohon • © 2026
+        <p class="text-sm color-text-dimmed">
+          Built with Pohon UI • © 2026
         </p>
       </template>
 
@@ -359,7 +359,7 @@ const vReveal = {
           class="font-light"
         />
       </template>
-    </UFooter>
+    </PFooter>
   </div>
 </template>
 

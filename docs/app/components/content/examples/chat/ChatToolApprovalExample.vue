@@ -53,7 +53,7 @@ onUnmounted(() => {
 
 <template>
   <div class="flex flex-col items-start gap-4">
-    <UChatTool
+    <PChatTool
       :text="text"
       icon="i-lucide-terminal"
       variant="card"
@@ -62,7 +62,7 @@ onUnmounted(() => {
       class="w-80"
     >
       <pre language="bash" v-text="output" />
-    </UChatTool>
+    </PChatTool>
 
     <PButton
       v-if="state !== 'approval-requested'"

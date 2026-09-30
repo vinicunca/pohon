@@ -5,7 +5,7 @@ import type { Column } from '@tanstack/vue-table'
 
 const PBadge = resolveComponent('PBadge')
 const PButton = resolveComponent('PButton')
-const UDropdownMenu = resolveComponent('UDropdownMenu')
+const PDropdownMenu = resolveComponent('PDropdownMenu')
 
 type Payment = {
   id: string
@@ -49,10 +49,12 @@ const data = ref<Payment[]>([{
 
 const columns: TableColumn<Payment>[] = [{
   accessorKey: 'id',
+  enableSorting: true,
   header: ({ column }) => getHeader(column, 'ID'),
   cell: ({ row }) => `#${row.getValue('id')}`
 }, {
   accessorKey: 'date',
+  enableSorting: true,
   header: ({ column }) => getHeader(column, 'Date'),
   cell: ({ row }) => {
     return new Date(row.getValue('date')).toLocaleString('en-US', {
@@ -65,6 +67,7 @@ const columns: TableColumn<Payment>[] = [{
   }
 }, {
   accessorKey: 'status',
+  enableSorting: true,
   header: ({ column }) => getHeader(column, 'Status'),
   cell: ({ row }) => {
     const color = ({
@@ -77,9 +80,11 @@ const columns: TableColumn<Payment>[] = [{
   }
 }, {
   accessorKey: 'email',
+  enableSorting: true,
   header: ({ column }) => getHeader(column, 'Email')
 }, {
   accessorKey: 'amount',
+  enableSorting: true,
   header: ({ column }) => getHeader(column, 'Amount'),
   meta: {
     class: {
@@ -99,7 +104,7 @@ const columns: TableColumn<Payment>[] = [{
 function getHeader(column: Column<Payment>, label: string) {
   const isSorted = column.getIsSorted()
 
-  return h(UDropdownMenu, {
+  return h(PDropdownMenu, {
     'content': {
       align: 'start'
     },
@@ -134,7 +139,7 @@ function getHeader(column: Column<Payment>, label: string) {
     'variant': 'ghost',
     label,
     'icon': isSorted ? (isSorted === 'asc' ? 'i-lucide-arrow-up-narrow-wide' : 'i-lucide-arrow-down-wide-narrow') : 'i-lucide-arrow-up-down',
-    'class': '-mx-2.5 data-[state=open]:bg-elevated',
+    'class': '-mx-2.5 data-[state=open]:bg-background-elevated',
     'aria-label': `Sort by ${isSorted === 'asc' ? 'descending' : 'ascending'}`
   }))
 }

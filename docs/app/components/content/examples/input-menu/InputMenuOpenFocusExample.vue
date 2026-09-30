@@ -4,7 +4,7 @@ const selected = ref('Backlog')
 </script>
 
 <template>
-  <UInputMenu
+  <PInputMenu
     v-model="selected"
     :items="items"
     open-on-focus

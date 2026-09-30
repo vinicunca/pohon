@@ -33,11 +33,11 @@ async function onError(event: FormErrorEvent) {
 <template>
   <PForm :validate="validate" :state="state" class="space-y-4" @submit="onSubmit" @error="onError">
     <PFormField label="Email" name="email">
-      <UInput v-model="state.email" />
+      <PInput v-model="state.email" />
     </PFormField>
 
     <PFormField label="Password" name="password">
-      <UInput v-model="state.password" type="password" />
+      <PInput v-model="state.password" type="password" />
     </PFormField>
 
     <PButton type="submit">

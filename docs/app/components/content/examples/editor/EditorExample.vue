@@ -12,9 +12,9 @@ import EditorLinkPopover from './EditorLinkPopover.vue'
 
 const editorRef = useTemplateRef('editorRef')
 
-const value = ref(`# Building Modern Interfaces with Pohon
+const value = ref(`# Building Modern Interfaces with Pohon UI
 
-Welcome to the **Pohon Editor** — a powerful rich text editing experience built on [TipTap](https://tiptap.dev). This editor combines *flexibility* with ease of use, making content creation a breeze.
+Welcome to the **Pohon UI Editor** — a powerful rich text editing experience built on [TipTap](https://tiptap.dev). This editor combines *flexibility* with ease of use, making content creation a breeze.
 
 ![Placeholder](/placeholder.jpeg)
 
@@ -39,7 +39,7 @@ Try out these powerful capabilities:
 1. **Custom Extensions** — Add your own TipTap extensions seamlessly
 2. **Multiple Content Types** — Support for JSON, HTML, and Markdown
 3. **Customizable Toolbars** — Fixed, bubble, and floating layouts
-4. **Theme Integration** — Fully styled with Pohon theme system
+4. **Theme Integration** — Fully styled with Pohon UI theme system
 
 #### Code Blocks
 
@@ -47,13 +47,13 @@ Perfect for technical documentation:
 
 \`\`\`vue
 <template>
-  <UEditor v-model="value" content-type="markdown" />
+  <PEditor v-model="value" content-type="markdown" />
 </template>
 \`\`\`
 
 ---
 
-Whether you're building a blog, documentation site, or content management system, the Pohon Editor provides everything you need for a professional editing experience. Visit [pohon.vinicunca.dev](https://pohon.vinicunca.dev) to explore more components.`)
+Whether you're building a blog, documentation site, or content management system, the Pohon UI Editor provides everything you need for a professional editing experience. Visit [pohon.vinicunca.dev](https://pohon.vinicunca.dev) to explore more components.`)
 
 const { extension: completionExtension, handlers: aiHandlers, isLoading: aiLoading } = useEditorCompletion(editorRef)
 
@@ -545,27 +545,27 @@ const mentionItems: EditorMentionMenuItem[] = [{
   label: 'HugoRCD',
   avatar: { src: 'https://avatars.githubusercontent.com/u/71938701?v=4', loading: 'lazy' as const }
 }, {
+  label: 'atinux',
+  avatar: { src: 'https://avatars.githubusercontent.com/u/904724?v=4', loading: 'lazy' as const }
+}, {
   label: 'romhml',
   avatar: { src: 'https://avatars.githubusercontent.com/u/25613751?v=4', loading: 'lazy' as const }
 }, {
   label: 'sandros94',
   avatar: { src: 'https://avatars.githubusercontent.com/u/13056429?v=4', loading: 'lazy' as const }
 }, {
-  label: 'hywax',
-  avatar: { src: 'https://avatars.githubusercontent.com/u/149865959?v=4', loading: 'lazy' as const }
-}, {
   label: 'J-Michalek',
   avatar: { src: 'https://avatars.githubusercontent.com/u/71264422?v=4', loading: 'lazy' as const }
 }, {
-  label: 'genu',
-  avatar: { src: 'https://avatars.githubusercontent.com/u/928780?v=4', loading: 'lazy' as const }
+  label: 'hywax',
+  avatar: { src: 'https://avatars.githubusercontent.com/u/149865959?v=4', loading: 'lazy' as const }
 }]
 
 const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.name.startsWith('regional_indicator_'))
 </script>
 
 <template>
-  <UEditor
+  <PEditor
     ref="editorRef"
     v-slot="{ editor, handlers }"
     v-model="value"
@@ -588,13 +588,13 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
     :ui="{ base: 'p-8 sm:px-16 py-13.5' }"
     class="w-full"
   >
-    <UEditorToolbar :editor="editor" :items="fixedToolbarItems" class="border-b border-muted sticky top-0 inset-x-0 px-8 sm:px-16 py-2 z-50 bg-default overflow-x-auto">
+    <PEditorToolbar :editor="editor" :items="fixedToolbarItems" class="border-b border-border-muted sticky top-0 inset-x-0 px-8 sm:px-16 py-2 z-50 bg-background overflow-x-auto">
       <template #link>
         <EditorLinkPopover :editor="editor" auto-open />
       </template>
-    </UEditorToolbar>
+    </PEditorToolbar>
 
-    <UEditorToolbar
+    <PEditorToolbar
       :editor="editor"
       :items="bubbleToolbarItems"
       layout="bubble"
@@ -609,9 +609,9 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
       <template #link>
         <EditorLinkPopover :editor="editor" />
       </template>
-    </UEditorToolbar>
+    </PEditorToolbar>
 
-    <UEditorToolbar
+    <PEditorToolbar
       :editor="editor"
       :items="imageToolbarItems(editor)"
       layout="bubble"
@@ -620,13 +620,13 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
       }"
     />
 
-    <UEditorSuggestionMenu :editor="editor" :items="suggestionItems" />
+    <PEditorSuggestionMenu :editor="editor" :items="suggestionItems" />
 
-    <UEditorMentionMenu :editor="editor" :items="mentionItems" />
+    <PEditorMentionMenu :editor="editor" :items="mentionItems" />
 
-    <UEditorEmojiMenu :editor="editor" :items="emojiItems" />
+    <PEditorEmojiMenu :editor="editor" :items="emojiItems" />
 
-    <UEditorDragHandle v-slot="{ ui, onClick }" :editor="editor" @node-change="selectedNode = $event">
+    <PEditorDragHandle v-slot="{ ui, onClick }" :editor="editor" @node-change="selectedNode = $event">
       <PButton
         icon="i-lucide-plus"
         color="neutral"
@@ -641,7 +641,7 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
         }"
       />
 
-      <UDropdownMenu
+      <PDropdownMenu
         v-slot="{ open }"
         :modal="false"
         :items="handleItems(editor)"
@@ -658,15 +658,15 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(emoji => !emoji.na
           :active="open"
           :class="ui.handle()"
         />
-      </UDropdownMenu>
-    </UEditorDragHandle>
-  </UEditor>
+      </PDropdownMenu>
+    </PEditorDragHandle>
+  </PEditor>
 </template>
 
 <style>
 html.dark .tiptap .shiki,
 html.dark .tiptap .shiki span {
   color: var(--shiki-dark) !important;
-  background-color: var(--ui-bg-muted) !important;
+  background-color: var(--ui-color-bg-muted) !important;
 }
 </style>

@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { camelCase, kebabCase, upperFirst } from 'scule';
+import { upperFirst, camelCase } from 'scule'
 
 const props = defineProps<{
-  prose?: boolean;
-  slug?: string;
-}>();
+  prose?: boolean
+  slug?: string
+}>()
 
-const route = useRoute();
+const route = useRoute()
 
-const camelName = camelCase(props.slug ?? route.path.split('/').pop() ?? '');
-const name = `${props.prose ? 'Prose' : 'P'}${upperFirst(camelName)}`;
+const camelName = camelCase(props.slug ?? route.path.split('/').pop() ?? '')
+const name = `${props.prose ? 'Prose' : 'U'}${upperFirst(camelName)}`
 
-const { data: meta } = await useFetchComponentMeta(name as any);
+const { data: meta } = await useFetchComponentMeta(name as any)
 </script>
 
 <template>
@@ -27,27 +27,16 @@ const { data: meta } = await useFetchComponentMeta(name as any);
       </ProseTr>
     </ProseThead>
     <ProseTbody>
-      <ProseTr
-        v-for="slot in (meta?.meta?.slots || [])"
-        :key="slot.name"
-      >
+      <ProseTr v-for="slot in (meta?.meta?.slots || [])" :key="slot.name">
         <ProseTd>
           <ProseCode>
             {{ slot.name }}
           </ProseCode>
         </ProseTd>
         <ProseTd>
-          <HighlightInlineType
-            v-if="slot.type"
-            :type="slot.type"
-          />
+          <HighlightInlineType v-if="slot.type" :type="slot.type" />
 
-          <MDC
-            v-if="slot.description"
-            :value="slot.description"
-            class="text-toned mt-1"
-            :cache-key="`${kebabCase(route.path)}-${slot.name}-description`"
-          />
+          <DocsMarkdown v-if="slot.description" :value="slot.description" class="color-text-toned mt-1" />
         </ProseTd>
       </ProseTr>
     </ProseTbody>

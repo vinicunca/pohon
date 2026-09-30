@@ -1,6 +1,6 @@
 ---
 title: AuthForm
-description: "A customizable Form to create login, register or password reset forms."
+description: 'A customizable Form to create login, register or password reset forms.'
 category: page
 links:
   - label: Form
@@ -8,7 +8,7 @@ links:
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/AuthForm.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/AuthForm.vue
 ---
 
 ## Usage
@@ -17,11 +17,9 @@ Built on top of the [Form](/docs/components/form) component, the `AuthForm` comp
 
 ::component-example
 ---
-
 name: 'auth-form-example'
 collapse: true
 ---
-
 ::
 
 ### Fields
@@ -39,54 +37,50 @@ You can also pass any property from the [FormField](/docs/components/form-field#
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- fields
-- class
-  external:
-- fields
-  externalTypes:
-- AuthFormField[]
-  props:
+  - fields
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
   fields:
-  - name: 'email'
-    type: 'email'
-    label: 'Email'
-    placeholder: 'Enter your email'
-    required: true
-  - name: 'password'
-    type: 'password'
-    label: 'Password'
-    placeholder: 'Enter your password'
-    required: true
-  - name: 'country'
-    type: 'select'
-    label: 'Country'
-    placeholder: 'Select country'
-    items:
-    - label: 'United States'
-      value: 'us'
-    - label: 'France'
-      value: 'fr'
-    - label: 'United Kingdom'
-      value: 'uk'
-    - label: 'Australia'
-      value: 'au'
-  - name: 'otp'
-    type: 'otp'
-    label: 'OTP'
-    length: 6
-    placeholder: '○'
-  - name: 'remember'
-    type: 'checkbox'
-    label: 'Remember me'
-    description: 'You will be logged in for 30 days.'
-    class: 'max-w-sm'
-
+    - name: 'email'
+      type: 'email'
+      label: 'Email'
+      placeholder: 'Enter your email'
+      required: true
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+      placeholder: 'Enter your password'
+      required: true
+    - name: 'country'
+      type: 'select'
+      label: 'Country'
+      placeholder: 'Select country'
+      items:
+        - label: 'United States'
+          value: 'us'
+        - label: 'France'
+          value: 'fr'
+        - label: 'United Kingdom'
+          value: 'uk'
+        - label: 'Australia'
+          value: 'au'
+    - name: 'otp'
+      type: 'otp'
+      label: 'OTP'
+      length: 6
+      placeholder: '○'
+    - name: 'remember'
+      type: 'checkbox'
+      label: 'Remember me'
+      description: 'You will be logged in for 30 days.'
+  class: 'max-w-sm'
 ---
-
 ::
 
 ### Title
@@ -95,29 +89,25 @@ Use the `title` prop to set the title of the Form.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- fields
-- class
-  external:
-- fields
-  externalTypes:
-- AuthFormField[]
-  props:
+  - fields
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
   title: 'Login'
   fields:
-  - name: 'email'
-    type: text
-    label: 'Email'
-  - name: 'password'
-    type: 'password'
-    label: 'Password'
-    class: 'max-w-md'
-
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
-
 ::
 
 ### Description
@@ -126,31 +116,27 @@ Use the `description` prop to set the description of the Form.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- fields
-- title
-- class
-  external:
-- fields
-  externalTypes:
-- AuthFormField[]
-  props:
+  - fields
+  - title
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
   title: 'Login'
   description: 'Enter your credentials to access your account.'
   fields:
-  - name: 'email'
-    type: text
-    label: 'Email'
-  - name: 'password'
-    type: 'password'
-    label: 'Password'
-    class: 'max-w-md'
-
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
-
 ::
 
 ### Icon
@@ -159,33 +145,29 @@ Use the `icon` prop to set the icon of the Form.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- fields
-- title
-- description
-- class
-  external:
-- fields
-  externalTypes:
-- AuthFormField[]
-  props:
+  - fields
+  - title
+  - description
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
   title: 'Login'
   description: 'Enter your credentials to access your account.'
   icon: 'i-lucide-user'
   fields:
-  - name: 'email'
-    type: text
-    label: 'Email'
-  - name: 'password'
-    type: 'password'
-    label: 'Password'
-    class: 'max-w-md'
-
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
-
 ::
 
 ### Providers
@@ -196,47 +178,43 @@ You can pass any property from the [Button](/docs/components/button) component s
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- fields
-- title
-- description
-- icon
-- providers
-- headerAlign
-- class
-  external:
-- providers
-- fields
-  externalTypes:
-- ButtonProps[]
-- AuthFormField[]
-  props:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - headerAlign
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
   title: 'Login'
   description: 'Enter your credentials to access your account.'
   icon: 'i-lucide-user'
   providers:
-  - label: 'Google'
-    icon: 'i-simple-icons-google'
-    color: 'neutral'
-    variant: 'subtle'
-  - label: 'GitHub'
-    icon: 'i-simple-icons-github'
-    color: 'neutral'
-    variant: 'subtle'
-    fields:
-  - name: 'email'
-    type: text
-    label: 'Email'
-  - name: 'password'
-    type: 'password'
-    label: 'Password'
-    class: 'max-w-md'
-
+    - label: 'Google'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  class: 'max-w-md'
 ---
-
 ::
 
 ### Separator
@@ -245,95 +223,87 @@ Use the `separator` prop to customize the [Separator](/docs/components/separator
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- fields
-- title
-- description
-- icon
-- providers
-- class
-  external:
-- providers
-- fields
-  externalTypes:
-- ButtonProps[]
-- AuthFormField[]
-  props:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
   title: 'Login'
   description: 'Enter your credentials to access your account.'
   icon: 'i-lucide-user'
   providers:
-  - label: 'Google'
-    icon: 'i-simple-icons-google'
-    color: 'neutral'
-    variant: 'subtle'
-  - label: 'GitHub'
-    icon: 'i-simple-icons-github'
-    color: 'neutral'
-    variant: 'subtle'
-    fields:
-  - name: 'email'
-    type: text
-    label: 'Email'
-  - name: 'password'
-    type: 'password'
-    label: 'Password'
-    separator: 'Providers'
-    class: 'max-w-md'
-
+    - label: 'Google'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  separator: 'Providers'
+  class: 'max-w-md'
 ---
-
 ::
 
 You can pass any property from the [Separator](/docs/components/separator#props) component to customize it.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- fields
-- title
-- description
-- icon
-- providers
-- class
-  external:
-- providers
-- fields
-  externalTypes:
-- ButtonProps[]
-- AuthFormField[]
-  props:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - class
+external:
+  - providers
+  - fields
+externalTypes:
+  - ButtonProps[]
+  - AuthFormField[]
+props:
   title: 'Login'
   description: 'Enter your credentials to access your account.'
   icon: 'i-lucide-user'
   providers:
-  - label: 'Google'
-    icon: 'i-simple-icons-google'
-    color: 'neutral'
-    variant: 'subtle'
-  - label: 'GitHub'
-    icon: 'i-simple-icons-github'
-    color: 'neutral'
-    variant: 'subtle'
-    fields:
-  - name: 'email'
-    type: text
-    label: 'Email'
-  - name: 'password'
-    type: 'password'
-    label: 'Password'
-    separator:
+    - label: 'Google'
+      icon: 'i-simple-icons-google'
+      color: 'neutral'
+      variant: 'subtle'
+    - label: 'GitHub'
+      icon: 'i-simple-icons-github'
+      color: 'neutral'
+      variant: 'subtle'
+  fields:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  separator:
     icon: 'i-lucide-user'
-    class: 'max-w-md'
-
+  class: 'max-w-md'
 ---
-
 ::
 
 ### Submit
@@ -344,42 +314,38 @@ You can pass any property from the [Button](/docs/components/button) component s
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- fields
-- title
-- description
-- icon
-- providers
-- submit.label
-- submit.color
-- submit.variant
-- class
-  external:
-- fields
-  externalTypes:
-- AuthFormField[]
-  props:
+  - fields
+  - title
+  - description
+  - icon
+  - providers
+  - submit.label
+  - submit.color
+  - submit.variant
+  - class
+external:
+  - fields
+externalTypes:
+  - AuthFormField[]
+props:
   title: 'Login'
   description: 'Enter your credentials to access your account.'
   icon: 'i-lucide-user'
   fields:
-  - name: 'email'
-    type: text
-    label: 'Email'
-  - name: 'password'
-    type: 'password'
-    label: 'Password'
-    submit:
+    - name: 'email'
+      type: text
+      label: 'Email'
+    - name: 'password'
+      type: 'password'
+      label: 'Password'
+  submit:
     label: 'Submit'
     color: 'error'
     variant: 'subtle'
-    class: 'max-w-md'
-
+  class: 'max-w-md'
 ---
-
 ::
 
 ## Examples
@@ -390,11 +356,9 @@ You can wrap the `AuthForm` component with the [PageCard](/docs/components/page-
 
 ::component-example
 ---
-
 name: 'auth-form-page-example'
 collapse: true
 ---
-
 ::
 
 ## API
@@ -421,20 +385,20 @@ You can access the typed component instance (exposing formRef and state) using [
 
 ```vue
 <script setup lang="ts">
-const authForm = useTemplateRef("authForm");
+const authForm = useTemplateRef('authForm')
 </script>
 
 <template>
-  <UAuthForm ref="authForm" />
+  <PAuthForm ref="authForm" />
 </template>
 ```
 
 This gives you access to the following (exposed) properties:
 
-| Name                      | Type                                           |
-| ------------------------- | ---------------------------------------------- |
+| Name | Type |
+| ---- | ---- |
 | `formRef`{lang="ts-type"} | `Ref<HTMLFormElement \| null>`{lang="ts-type"} |
-| `state`{lang="ts-type"}   | `Reactive<FormStateType>`{lang="ts-type"}      |
+| `state`{lang="ts-type"} | `Reactive<FormStateType>`{lang="ts-type"} |
 
 ## Theme
 

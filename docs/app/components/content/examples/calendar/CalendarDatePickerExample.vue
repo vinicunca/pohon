@@ -9,13 +9,13 @@ const modelValue = shallowRef(new CalendarDate(2022, 1, 10))
 </script>
 
 <template>
-  <UPopover>
+  <PPopover>
     <PButton color="neutral" variant="subtle" icon="i-lucide-calendar">
       {{ modelValue ? df.format(modelValue.toDate(getLocalTimeZone())) : 'Select a date' }}
     </PButton>
 
     <template #content>
-      <UCalendar v-model="modelValue" class="p-2" />
+      <PCalendar v-model="modelValue" class="p-2" />
     </template>
-  </UPopover>
+  </PPopover>
 </template>

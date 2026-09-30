@@ -9,8 +9,7 @@ const input = ref('')
 
 const toast = useToast()
 const { track } = useAnalytics()
-const route = useRoute()
-const { open, messages, pending } = useChat()
+const { open, messages, pending, currentPage } = useChat()
 const { framework } = useFrameworks()
 const { resetTheme, applyThemeSettings, hasChanges: hasThemeChanges } = useTheme()
 // A preset is a whole ThemeDoc, so it rides applyDoc (reset, style axis, class
@@ -35,6 +34,18 @@ const panelOpen = computed({
 
 let _skipSync = false
 const _themeApplied = new Set<string>()
+
+// The conversation is restored from a past session with its tool calls in
+// it. Those were applied back then and the theme they produced persists on
+// its own, so they count as seen from the start: otherwise the next answer's
+// stream would replay every one of them over whatever theme is on screen
+// now, a shared link's for one.
+for (const message of messages.value) {
+  for (const part of message.parts || []) {
+    if (isToolUIPart(part)) _themeApplied.add(part.toolCallId)
+  }
+}
+
 function processThemeToolCalls() {
   for (const message of chatMessages.value) {
     if (message.role !== 'assistant') continue
@@ -67,7 +78,7 @@ const { messages: chatMessages, status, error, sendMessage, regenerate, stop } =
   messages: messages.value,
   transport: new DefaultChatTransport<DocsChatMessage>({
     api: '/api/ai',
-    body: () => ({ framework: framework.value, currentPage: route.path.startsWith('/docs/') ? route.path : null })
+    body: () => ({ framework: framework.value })
   }),
   onError: (error) => {
     let message = error.message
@@ -111,7 +122,7 @@ function onSubmit() {
 
   track('AI Chat Message Sent')
 
-  sendMessage({ text: input.value })
+  sendMessage({ text: input.value, metadata: { currentPage: currentPage.value } })
 
   input.value = ''
 }
@@ -158,11 +169,11 @@ function getToolMessage(state: ToolState, toolName: string, input: Record<string
     'list-templates': `${searchVerb} templates${input.category ? ` in ${input.category} category` : ''}`,
     'get-template': `${readVerb} template ${upperName(input.templateName || '')}`,
     'get-documentation-page': `${readVerb} ${input.path || ''} page`,
-    'get-migration-guide': `${readVerb} migration guide${input.version ? ` for ${input.version}` : ''}`,
     'list-examples': `${searchVerb} examples`,
     'get-example': `${readVerb} ${upperName(input.exampleName || '')} example`,
     'getComponentTheme': `${readVerb} ${upperName(input.componentName || '')} theme`,
     'getThemeGuide': `${readVerb} theme guide`,
+    'searchFonts': `${searchVerb} fonts${input.category ? ` (${input.category})` : ''}${input.query ? ` for "${input.query}"` : ''}`,
     'applyTheme': `${applyVerb} theme changes`,
     // a preset carries its own display name; upperName is for camelCase
     // component ids and would mangle a hyphenated one
@@ -187,10 +198,10 @@ function getToolIcon(part: ToolPart): string {
     'get-component-metadata': appConfig.ui.icons.file,
     'get-template': appConfig.ui.icons.file,
     'get-documentation-page': appConfig.ui.icons.file,
-    'get-migration-guide': appConfig.ui.icons.file,
     'get-example': appConfig.ui.icons.file,
     'getComponentTheme': appConfig.ui.icons.file,
     'getThemeGuide': studioIcons.palette,
+    'searchFonts': studioIcons.text,
     'applyTheme': studioIcons.palette,
     'applyPreset': studioIcons.palette,
     'resetTheme': studioIcons.reset
@@ -253,20 +264,20 @@ function clearMessages() {
 </script>
 
 <template>
-  <USidebar
+  <PSidebar
     v-model:open="panelOpen"
     side="right"
     title="Ask AI"
     rail
     :style="{ '--sidebar-width': '24rem' }"
     :ui="{ footer: 'p-0', actions: 'gap-0.5' }"
-    class="bg-default"
+    class="bg-background"
   >
     <template #actions>
       <!-- a plain full reset, not the studio's two-stage baseline reset: the
            chat's changes (component overrides included) may not map to any
            section, and "back to stock" is what this button always meant -->
-      <UTooltip v-if="hasThemeChanges" text="Reset theme">
+      <PTooltip v-if="hasThemeChanges" text="Reset theme">
         <PButton
           :icon="studioIcons.reset"
           color="neutral"
@@ -274,31 +285,31 @@ function clearMessages() {
           aria-label="Reset theme"
           @click="resetTheme()"
         />
-      </UTooltip>
+      </PTooltip>
 
-      <UTooltip v-if="canClear" text="Clear messages">
+      <PTooltip v-if="canClear" text="Clear messages">
         <PButton
-          icon="i-lucide-list-x"
+          :icon="studioIcons.clear"
           color="neutral"
           variant="ghost"
           @click="clearMessages"
         />
-      </UTooltip>
+      </PTooltip>
     </template>
 
     <template #close>
-      <UTooltip text="Close" :kbds="['meta', 'i']">
+      <PTooltip text="Close" :kbds="['meta', 'i']">
         <PButton
-          icon="i-lucide-panel-right-close"
+          :icon="studioIcons.panelRightClose"
           color="neutral"
           variant="ghost"
           aria-label="Close"
           @click="open = false"
         />
-      </UTooltip>
+      </PTooltip>
     </template>
 
-    <UTheme
+    <PTheme
       :props="{
         prose: {
           h1: { anchor: false },
@@ -324,7 +335,7 @@ function clearMessages() {
         }
       }"
     >
-      <UChatMessages
+      <PChatMessages
         v-if="chatMessages.length"
         should-auto-scroll
         :messages="chatMessages"
@@ -334,22 +345,22 @@ function clearMessages() {
         :user="{ ui: { container: 'max-w-full' } }"
       >
         <template #indicator>
-          <UChatTool icon="i-lucide-brain" text="Thinking..." streaming />
+          <PChatTool :icon="studioIcons.brain" text="Thinking..." streaming />
         </template>
 
         <template #content="{ message }">
           <template v-for="(part, index) in message.parts" :key="`${message.id}-${part.type}-${index}`">
-            <UChatReasoning
+            <PChatReasoning
               v-if="isReasoningUIPart(part)"
               :text="part.text"
               :streaming="isPartStreaming(part)"
-              icon="i-lucide-brain"
+              :icon="studioIcons.brain"
             >
               <ChatMarkdown
                 :value="part.text"
                 :streaming="isPartStreaming(part)"
               />
-            </UChatReasoning>
+            </PChatReasoning>
 
             <template v-else-if="isTextUIPart(part) && part.text.length > 0">
               <ChatMarkdown
@@ -362,7 +373,7 @@ function clearMessages() {
               </p>
             </template>
 
-            <UChatTool
+            <PChatTool
               v-else-if="isToolUIPart(part)"
               :text="getToolText(part)"
               :icon="getToolIcon(part)"
@@ -370,20 +381,20 @@ function clearMessages() {
             />
           </template>
         </template>
-      </UChatMessages>
+      </PChatMessages>
 
       <div v-else class="flex flex-col gap-6">
-        <UPageLinks
+        <PPageLinks
           v-for="category in suggestions"
           :key="category.category"
           :title="category.category"
           :links="category.items.map(item => ({ label: item, onClick: () => askQuestion(item) }))"
         />
       </div>
-    </UTheme>
+    </PTheme>
 
     <template #footer>
-      <UChatPrompt
+      <PChatPrompt
         ref="promptRef"
         v-model="input"
         :error="error"
@@ -395,11 +406,11 @@ function clearMessages() {
         @submit="onSubmit"
       >
         <template #footer>
-          <PLink to="https://vercel.com/ai-gateway" target="_blank" class="inline-flex items-center gap-1 text-xs text-dimmed hover:text-muted">
-            Powered by <UIcon name="i-simple-icons-vercel" class="size-3" /> AI Gateway
+          <PLink to="https://vercel.com/ai-gateway" target="_blank" class="inline-flex items-center gap-1 text-xs color-text-dimmed hover:color-text-muted">
+            Powered by <PIcon name="i-simple-icons-vercel" class="size-3" /> AI Gateway
           </PLink>
 
-          <UChatPromptSubmit
+          <PChatPromptSubmit
             size="sm"
             :status="status"
             :disabled="!input.trim()"
@@ -407,7 +418,7 @@ function clearMessages() {
             @reload="regenerate()"
           />
         </template>
-      </UChatPrompt>
+      </PChatPrompt>
     </template>
-  </USidebar>
+  </PSidebar>
 </template>

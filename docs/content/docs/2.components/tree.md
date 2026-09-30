@@ -7,11 +7,11 @@ keywords:
   - folder tree
 links:
   - label: Tree
-    icon: i-custom-reka-ui
+    icon: i-lucide-box
     to: https://akar.vinicunca.dev/docs/components/tree
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/Tree.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Tree.vue
 ---
 
 ## Usage
@@ -20,43 +20,39 @@ Use the Tree component to display a hierarchical structure of items.
 
 ::component-code
 ---
-
 collapse: true
 hide:
-
-- class
-  ignore:
-- items
-  external:
-- items
-  externalTypes:
-- TreeItem[]
-  props:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
   items:
-  - label: 'app/'
-    defaultExpanded: true
-    children:
-    - label: 'composables/'
-      children:
-      - label: 'useAuth.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-      - label: 'useUser.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-    - label: 'components/'
+    - label: 'app/'
       defaultExpanded: true
       children:
-      - label: 'Card.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-      - label: 'Button.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-  - label: 'app.vue'
-    icon: 'i-vscode-icons-file-type-vue'
-  - label: 'nuxt.config.ts'
-    icon: 'i-vscode-icons-file-type-nuxt'
-    class: 'w-60'
-
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
-
 ::
 
 ### Items
@@ -81,43 +77,39 @@ A unique identifier is required for each item. The component will use the `label
 
 ::component-code
 ---
-
 collapse: true
 hide:
-
-- class
-  ignore:
-- items
-  external:
-- items
-  externalTypes:
-- TreeItem[]
-  props:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
   items:
-  - label: 'app/'
-    defaultExpanded: true
-    children:
-    - label: 'composables/'
-      children:
-      - label: 'useAuth.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-      - label: 'useUser.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-    - label: 'components/'
+    - label: 'app/'
       defaultExpanded: true
       children:
-      - label: 'Card.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-      - label: 'Button.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-  - label: 'app.vue'
-    icon: 'i-vscode-icons-file-type-vue'
-  - label: 'nuxt.config.ts'
-    icon: 'i-vscode-icons-file-type-nuxt'
-    class: 'w-60'
-
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
-
 ::
 
 ### Multiple
@@ -126,90 +118,82 @@ Use the `multiple` prop to allow multiple item selections.
 
 ::component-code
 ---
-
 collapse: true
 hide:
-
-- class
-  ignore:
-- items
-  external:
-- items
-  externalTypes:
-- TreeItem[]
-  props:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
   multiple: true
   items:
-  - label: 'app/'
-    defaultExpanded: true
-    children:
-    - label: 'composables/'
-      children:
-      - label: 'useAuth.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-      - label: 'useUser.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-    - label: 'components/'
+    - label: 'app/'
       defaultExpanded: true
       children:
-      - label: 'Card.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-      - label: 'Button.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-  - label: 'app.vue'
-    icon: 'i-vscode-icons-file-type-vue'
-  - label: 'nuxt.config.ts'
-    icon: 'i-vscode-icons-file-type-nuxt'
-    class: 'w-60'
-
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
-
 ::
 
-### Nested :badge{label="4.1+" class="align-text-top"}
+### Nested
 
 Use the `nested` prop to control whether the Tree is rendered with nested structure or as a flat list. Defaults to `true`.
 
 ::component-code
 ---
-
 collapse: true
 hide:
-
-- class
-  ignore:
-- items
-  external:
-- items
-  externalTypes:
-- TreeItem[]
-  props:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
   nested: false
   items:
-  - label: 'app/'
-    defaultExpanded: true
-    children:
-    - label: 'composables/'
-      children:
-      - label: 'useAuth.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-      - label: 'useUser.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-    - label: 'components/'
+    - label: 'app/'
       defaultExpanded: true
       children:
-      - label: 'Card.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-      - label: 'Button.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-  - label: 'app.vue'
-    icon: 'i-vscode-icons-file-type-vue'
-  - label: 'nuxt.config.ts'
-    icon: 'i-vscode-icons-file-type-nuxt'
-    class: 'w-60'
-
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
-
 ::
 
 ::note{to="#with-virtualization"}
@@ -222,44 +206,40 @@ Use the `color` prop to change the color of the Tree.
 
 ::component-code
 ---
-
 collapse: true
 hide:
-
-- class
-  ignore:
-- items
-  external:
-- items
-  externalTypes:
-- TreeItem[]
-  props:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
   color: neutral
   items:
-  - label: 'app/'
-    defaultExpanded: true
-    children:
-    - label: 'composables/'
-      children:
-      - label: 'useAuth.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-      - label: 'useUser.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-    - label: 'components/'
+    - label: 'app/'
       defaultExpanded: true
       children:
-      - label: 'Card.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-      - label: 'Button.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-  - label: 'app.vue'
-    icon: 'i-vscode-icons-file-type-vue'
-  - label: 'nuxt.config.ts'
-    icon: 'i-vscode-icons-file-type-nuxt'
-    class: 'w-60'
-
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
-
 ::
 
 ### Size
@@ -268,44 +248,40 @@ Use the `size` prop to change the size of the Tree.
 
 ::component-code
 ---
-
 collapse: true
 hide:
-
-- class
-  ignore:
-- items
-  external:
-- items
-  externalTypes:
-- TreeItem[]
-  props:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
   size: xl
   items:
-  - label: 'app/'
-    defaultExpanded: true
-    children:
-    - label: 'composables/'
-      children:
-      - label: 'useAuth.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-      - label: 'useUser.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-    - label: 'components/'
+    - label: 'app/'
       defaultExpanded: true
       children:
-      - label: 'Card.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-      - label: 'Button.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-  - label: 'app.vue'
-    icon: 'i-vscode-icons-file-type-vue'
-  - label: 'nuxt.config.ts'
-    icon: 'i-vscode-icons-file-type-nuxt'
-    class: 'w-60'
-
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
-
 ::
 
 ### Trailing Icon
@@ -318,45 +294,41 @@ If an icon is specified for an item, it will always take precedence over these p
 
 ::component-code
 ---
-
 collapse: true
 hide:
-
-- class
-  ignore:
-- items
-  external:
-- items
-  externalTypes:
-- TreeItem[]
-  props:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
   trailingIcon: 'i-lucide-arrow-down'
   items:
-  - label: 'app/'
-    defaultExpanded: true
-    children:
-    - label: 'composables/'
-      trailingIcon: 'i-lucide-chevron-down'
-      children:
-      - label: 'useAuth.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-      - label: 'useUser.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-    - label: 'components/'
+    - label: 'app/'
       defaultExpanded: true
       children:
-      - label: 'Card.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-      - label: 'Button.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-  - label: 'app.vue'
-    icon: 'i-vscode-icons-file-type-vue'
-  - label: 'nuxt.config.ts'
-    icon: 'i-vscode-icons-file-type-nuxt'
-    class: 'w-60'
-
+        - label: 'composables/'
+          trailingIcon: 'i-lucide-chevron-down'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
-
 ::
 
 ::framework-only
@@ -377,45 +349,41 @@ Use the `expanded-icon` and `collapsed-icon` props to customize the icons of a p
 
 ::component-code
 ---
-
 collapse: true
 hide:
-
-- class
-  ignore:
-- items
-  external:
-- items
-  externalTypes:
-- TreeItem[]
-  props:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
   expandedIcon: 'i-lucide-book-open'
   collapsedIcon: 'i-lucide-book'
   items:
-  - label: 'app/'
-    defaultExpanded: true
-    children:
-    - label: 'composables/'
-      children:
-      - label: 'useAuth.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-      - label: 'useUser.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-    - label: 'components/'
+    - label: 'app/'
       defaultExpanded: true
       children:
-      - label: 'Card.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-      - label: 'Button.vue'
-        icon: 'i-vscode-icons-file-type-vue'
-  - label: 'app.vue'
-    icon: 'i-vscode-icons-file-type-vue'
-  - label: 'nuxt.config.ts'
-    icon: 'i-vscode-icons-file-type-nuxt'
-    class: 'w-60'
-
+        - label: 'composables/'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components/'
+          defaultExpanded: true
+          children:
+            - label: 'Card.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+            - label: 'Button.vue'
+              icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
-
 ::
 
 ::framework-only
@@ -436,49 +404,45 @@ Use the `disabled` prop to prevent any user interaction with the Tree.
 
 ::component-code
 ---
-
 collapse: true
 hide:
-
-- class
-  ignore:
-- items
-  external:
-- items
-  externalTypes:
-- TreeItem[]
-  props:
+  - class
+ignore:
+  - items
+external:
+  - items
+externalTypes:
+  - TreeItem[]
+props:
   disabled: true
   items:
-  - label: 'app'
-    icon: 'i-lucide-folder'
-    defaultExpanded: true
-    children:
-    - label: 'composables'
+    - label: 'app'
       icon: 'i-lucide-folder'
+      defaultExpanded: true
       children:
-      - label: 'useAuth.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-      - label: 'useUser.ts'
-        icon: 'i-vscode-icons-file-type-typescript'
-    - label: 'components'
-      icon: 'i-lucide-folder'
-      children:
-      - label: 'Home'
-        icon: 'i-lucide-folder'
-        children:
-        - label: 'Card.vue'
-          icon: 'i-vscode-icons-file-type-vue'
-        - label: 'Button.vue'
-          icon: 'i-vscode-icons-file-type-vue'
-  - label: 'app.vue'
-    icon: 'i-vscode-icons-file-type-vue'
-  - label: 'nuxt.config.ts'
-    icon: 'i-vscode-icons-file-type-nuxt'
-    class: 'w-60'
-
+        - label: 'composables'
+          icon: 'i-lucide-folder'
+          children:
+            - label: 'useAuth.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+            - label: 'useUser.ts'
+              icon: 'i-vscode-icons-file-type-typescript'
+        - label: 'components'
+          icon: 'i-lucide-folder'
+          children:
+            - label: 'Home'
+              icon: 'i-lucide-folder'
+              children:
+                - label: 'Card.vue'
+                  icon: 'i-vscode-icons-file-type-vue'
+                - label: 'Button.vue'
+                  icon: 'i-vscode-icons-file-type-vue'
+    - label: 'app.vue'
+      icon: 'i-vscode-icons-file-type-vue'
+    - label: 'nuxt.config.ts'
+      icon: 'i-vscode-icons-file-type-nuxt'
+  class: 'w-60'
 ---
-
 ::
 
 ::note
@@ -493,13 +457,11 @@ You can control the selected item(s) by using the `default-value` prop or the `v
 
 ::component-example
 ---
-
 name: 'tree-model-value-example'
 collapse: true
 props:
-class: 'w-60'
+  class: 'w-60'
 ---
-
 ::
 
 ::tip
@@ -510,13 +472,11 @@ If you want to prevent an item from being selected, you can use the `item.onSele
 
 ::component-example
 ---
-
 name: 'tree-on-select-example'
 collapse: true
 props:
-class: 'w-60'
+  class: 'w-60'
 ---
-
 ::
 
 ::note
@@ -529,70 +489,62 @@ You can control the expanded items by using the `default-expanded` prop or the `
 
 ::component-example
 ---
-
 name: 'tree-expanded-example'
 collapse: true
 props:
-class: 'w-60'
+  class: 'w-60'
 ---
-
 ::
 
 If you want to prevent an item from being expanded, you can use the `item.onToggle()`{lang="ts-type"} property or the global `toggle` event:
 
 ::component-example
 ---
-
 name: 'tree-on-toggle-example'
 collapse: true
 props:
-class: 'w-60'
+  class: 'w-60'
 ---
-
 ::
 
 ::note
 This lets you select a parent item without expanding or collapsing its children.
 ::
 
-### With checkbox in items :badge{label="4.1+" class="align-text-top"}
+### With checkbox in items
 
 You can use the `item-leading` slot to add a [Checkbox](/docs/components/checkbox) to the items. Use the `multiple`, `propagate-select` and `bubble-select` props to enable multi-selection with parent-child relationship and the `select` and `toggle` events to control the selected and expanded state of the items.
 
 ::component-example
 ---
-
 name: 'tree-checkbox-items-example'
 collapse: true
 props:
-class: 'w-60'
+  class: 'w-60'
 ---
-
 ::
 
 ::note
 This example uses the `as` prop to change the items from `button` to `div` as the [`Checkbox`](/docs/components/checkbox) is also rendered as a `button`.
 ::
 
-### With drag and drop :badge{label="4.1+" class="align-text-top"}
+### With drag and drop
 
 Use the [`useSortable`](https://vueuse.org/integrations/useSortable/) composable from [`@vueuse/integrations`](https://vueuse.org/integrations/README.html) to enable drag and drop functionality on the Tree. This integration wraps [Sortable.js](https://sortablejs.github.io/Sortable/) to provide a seamless drag and drop experience.
 
 ::component-example
 ---
-
 prettier: true
 collapse: true
 name: 'tree-drag-and-drop-example'
 ---
-
 ::
 
 ::note
 This example sets the `nested` prop to `false` to have a flat list of items so that the items can be dragged and dropped.
 ::
 
-### With virtualization :badge{label="4.1+" class="align-text-top"}
+### With virtualization
 
 Use the `virtualize` prop to enable virtualization for large lists as a boolean or an object with options like `{ estimateSize: 32, overscan: 12 }`.
 
@@ -602,13 +554,11 @@ When virtualization is enabled, the tree structure is flattened, similar to sett
 
 ::component-example
 ---
-
 prettier: true
 name: 'tree-virtualize-example'
 props:
-class: 'w-60'
+  class: 'w-60'
 ---
-
 ::
 
 ### With custom slot
@@ -625,13 +575,11 @@ You will have access to the following slots:
 
 ::component-example
 ---
-
 name: 'tree-custom-slot-example'
 collapse: true
 props:
-class: 'w-60'
+  class: 'w-60'
 ---
-
 ::
 
 ## API

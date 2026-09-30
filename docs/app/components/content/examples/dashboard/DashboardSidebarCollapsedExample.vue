@@ -21,16 +21,16 @@ defineShortcuts({
 </script>
 
 <template>
-  <UDashboardSidebar v-model:collapsed="collapsed" collapsible>
+  <PDashboardSidebar v-model:collapsed="collapsed" collapsible>
     <template #header>
       <Logo v-if="!collapsed" class="h-5 w-auto" />
-      <UIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 text-primary mx-auto" />
+      <PIcon v-else name="i-simple-icons-nuxtdotjs" class="size-5 text-primary mx-auto" />
     </template>
 
-    <UNavigationMenu
+    <PNavigationMenu
       :collapsed="collapsed"
       :items="items"
       orientation="vertical"
     />
-  </UDashboardSidebar>
+  </PDashboardSidebar>
 </template>

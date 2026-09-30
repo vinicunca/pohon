@@ -1,6 +1,6 @@
 ---
 title: extractShortcuts
-description: "A utility to extract keyboard shortcuts from menu items."
+description: 'A utility to extract keyboard shortcuts from menu items.'
 ---
 
 ## Usage
@@ -9,26 +9,23 @@ Use the auto-imported `extractShortcuts` utility to define keyboard shortcuts fr
 
 ```vue
 <script setup lang="ts">
-const items = [
-  {
-    label: "Save",
-    icon: "i-lucide-file-down",
-    kbds: ["meta", "S"],
-    onSelect() {
-      save();
-    },
-  },
-  {
-    label: "Copy",
-    icon: "i-lucide-copy",
-    kbds: ["meta", "C"],
-    onSelect() {
-      copy();
-    },
-  },
-];
+const items = [{
+  label: 'Save',
+  icon: 'i-lucide-file-down',
+  kbds: ['meta', 'S'],
+  onSelect() {
+    save()
+  }
+}, {
+  label: 'Copy',
+  icon: 'i-lucide-copy',
+  kbds: ['meta', 'C'],
+  onSelect() {
+    copy()
+  }
+}]
 
-defineShortcuts(extractShortcuts(items));
+defineShortcuts(extractShortcuts(items))
 </script>
 ```
 
@@ -46,8 +43,8 @@ Extracts keyboard shortcuts from an array of menu items and returns a configurat
 
 ::field-group
 
-::field{name="items" type="any[] | any[][]" required}
-An array of menu items (or nested arrays) containing shortcut definitions. Each item can have the following properties:
+  ::field{name="items" type="any[] | any[][]" required}
+  An array of menu items (or nested arrays) containing shortcut definitions. Each item can have the following properties:
 
     ::collapsible
 
@@ -74,12 +71,11 @@ An array of menu items (or nested arrays) containing shortcut definitions. Each 
         ::
       ::
     ::
+  ::
 
-::
-
-::field{name="separator" type="'_' | '-'"}
-The separator used to join keyboard keys. Use `'_'` for key combinations (e.g. `meta_k`) or `'-'` for key sequences (e.g. `g-d`). Defaults to `'_'`.
-::
+  ::field{name="separator" type="'_' | '-'"}
+  The separator used to join keyboard keys. Use `'_'` for key combinations (e.g. `meta_k`) or `'-'` for key sequences (e.g. `g-d`). Defaults to `'_'`.
+  ::
 ::
 
 **Returns:** A `ShortcutsConfig` object that can be passed directly to `defineShortcuts`.
@@ -92,72 +88,56 @@ The utility recursively traverses `children` and `items` properties to extract s
 
 ```vue
 <script setup lang="ts">
-import type { DropdownMenuItem } from "pohon-ui";
+import type { DropdownMenuItem } from 'pohon-ui'
 
-const items: DropdownMenuItem[][] = [
-  [
-    {
-      label: "Edit",
-      icon: "i-lucide-pencil",
-      kbds: ["E"],
-      onSelect() {
-        edit();
-      },
-    },
-    {
-      label: "Duplicate",
-      icon: "i-lucide-copy",
-      kbds: ["D"],
-      onSelect() {
-        duplicate();
-      },
-    },
-  ],
-  [
-    {
-      label: "Invite users",
-      icon: "i-lucide-user-plus",
-      children: [
-        [
-          {
-            label: "Invite by email",
-            icon: "i-lucide-send-horizontal",
-            kbds: ["meta", "E"],
-            onSelect() {
-              inviteByEmail();
-            },
-          },
-          {
-            label: "Invite by link",
-            icon: "i-lucide-link",
-            kbds: ["meta", "I"],
-            onSelect() {
-              inviteByLink();
-            },
-          },
-        ],
-      ],
-    },
-  ],
-  [
-    {
-      label: "Delete",
-      icon: "i-lucide-trash",
-      kbds: ["meta", "backspace"],
-      onSelect() {
-        remove();
-      },
-    },
-  ],
-];
+const items: DropdownMenuItem[][] = [[{
+  label: 'Edit',
+  icon: 'i-lucide-pencil',
+  kbds: ['E'],
+  onSelect() {
+    edit()
+  }
+}, {
+  label: 'Duplicate',
+  icon: 'i-lucide-copy',
+  kbds: ['D'],
+  onSelect() {
+    duplicate()
+  }
+}], [{
+  label: 'Invite users',
+  icon: 'i-lucide-user-plus',
+  children: [[{
+    label: 'Invite by email',
+    icon: 'i-lucide-send-horizontal',
+    kbds: ['meta', 'E'],
+    onSelect() {
+      inviteByEmail()
+    }
+  }, {
+    label: 'Invite by link',
+    icon: 'i-lucide-link',
+    kbds: ['meta', 'I'],
+    onSelect() {
+      inviteByLink()
+    }
+  }]]
+}], [{
+  label: 'Delete',
+  icon: 'i-lucide-trash',
+  kbds: ['meta', 'backspace'],
+  onSelect() {
+    remove()
+  }
+}]]
 
-defineShortcuts(extractShortcuts(items));
+defineShortcuts(extractShortcuts(items))
 </script>
 
 <template>
-  <UDropdownMenu :items="items">
+  <PDropdownMenu :items="items">
     <PButton label="Actions" />
-  </UDropdownMenu>
+  </PDropdownMenu>
 </template>
 ```
 
@@ -167,24 +147,21 @@ Use the `separator` parameter to create key sequences instead of key combination
 
 ```vue
 <script setup lang="ts">
-const items = [
-  {
-    label: "Go to Dashboard",
-    kbds: ["G", "D"],
-    onSelect() {
-      navigateTo("/dashboard");
-    },
-  },
-  {
-    label: "Go to Settings",
-    kbds: ["G", "S"],
-    onSelect() {
-      navigateTo("/settings");
-    },
-  },
-];
+const items = [{
+  label: 'Go to Dashboard',
+  kbds: ['G', 'D'],
+  onSelect() {
+    navigateTo('/dashboard')
+  }
+}, {
+  label: 'Go to Settings',
+  kbds: ['G', 'S'],
+  onSelect() {
+    navigateTo('/settings')
+  }
+}]
 
 // Using '-' creates key sequences: 'g-d', 'g-s'
-defineShortcuts(extractShortcuts(items, "-"));
+defineShortcuts(extractShortcuts(items, '-'))
 </script>
 ```

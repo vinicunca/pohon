@@ -4,26 +4,26 @@ import type { NavigationMenuItem } from 'pohon-ui'
 const appConfig = useAppConfig()
 const studioIcons = useStudioIcons()
 
-// Replicates the Pohon Portfolio template home page: floating pill nav,
+// Replicates the Pohon UI Portfolio template home page: floating pill nav,
 // avatar hero with polaroid marquee, about + work experience columns,
 // blog list, testimonial carousel, FAQ tabs and footer.
-const navItems: NavigationMenuItem[] = [
+const navItems = computed<NavigationMenuItem[]>(() => [
   { label: 'Home', icon: studioIcons.home, active: true },
   { label: 'Projects', icon: appConfig.ui.icons.folder },
   { label: 'Blog', icon: appConfig.ui.icons.file },
   { label: 'Speaking', icon: studioIcons.mic },
   { label: 'About', icon: studioIcons.user }
-]
+])
 
 const socialLinks = [
   { 'icon': 'i-simple-icons-discord', 'aria-label': 'Discord' },
   { 'icon': 'i-simple-icons-x', 'aria-label': 'X' },
-  { 'icon': studioIcons.github, 'aria-label': 'GitHub' }
+  { 'icon': 'i-simple-icons-github', 'aria-label': 'GitHub' }
 ]
 
 // The template scrolls travel photos in a marquee; gradient polaroids stand in
 // because a tinted surface tracks the theme and a photo does not.
-const heroImages = [
+const heroImages = computed(() => [
   { icon: studioIcons.mountain, label: 'Alps, 2024' },
   { icon: studioIcons.coffee, label: 'Café sketching' },
   { icon: studioIcons.bike, label: 'Canal ride' },
@@ -33,7 +33,7 @@ const heroImages = [
   { icon: studioIcons.palette, label: 'Color studies' },
   { icon: studioIcons.ferrisWheel, label: 'Rotterdam fair' },
   { icon: studioIcons.waves, label: 'North Sea' }
-]
+])
 
 const about = {
   title: 'About Me',
@@ -41,10 +41,10 @@ const about = {
   description: 'I\'m an English designer and developer based in Amsterdam. I sit right between design and engineering, which means both teams assume I\'m the other team\'s problem.'
 }
 
-const experience = [{
+const experience = computed(() => [{
   date: '2025 - Present',
   position: 'Public Contributor for',
-  company: { name: 'Pohon', logo: 'i-simple-icons-nuxtdotjs' }
+  company: { name: 'Pohon UI', logo: 'i-simple-icons-nuxtdotjs' }
 }, {
   date: '2024 - Present',
   position: 'Founder of',
@@ -57,7 +57,7 @@ const experience = [{
   date: '1995 - Present',
   position: 'Human person on',
   company: { name: 'Earth', logo: studioIcons.globe }
-}]
+}])
 
 const posts = [{
   title: 'Twelve Identical Greys: A Field Guide to Choosing Your Neutral',
@@ -134,14 +134,14 @@ onUnmounted(() => clearTimeout(appearTimeout))
 
 <template>
   <!-- A mini portfolio: the pane is the scroll container, so the pill nav sticks to it. -->
-  <div class="h-full overflow-y-auto bg-default" style="--ui-container: var(--container-4xl)">
+  <div class="h-full overflow-y-auto bg-background" style="--ui-container: var(--container-4xl)">
     <!-- Template's AppHeader: a floating centered pill navigation. -->
     <div class="sticky top-2 sm:top-4 z-10 h-0 flex items-start justify-center pointer-events-none">
-      <UNavigationMenu
+      <PNavigationMenu
         :items="navItems"
         variant="link"
         color="neutral"
-        class="pointer-events-auto bg-muted/80 backdrop-blur-sm rounded-full px-2 sm:px-4 border border-muted/50 shadow-lg shadow-neutral-950/5"
+        class="pointer-events-auto bg-background-muted/80 backdrop-blur-sm rounded-full px-2 sm:px-4 border border-border-muted/50 shadow-lg shadow-neutral-950/5"
         :ui="{
           link: 'px-2 py-1',
           linkLeadingIcon: 'hidden'
@@ -157,39 +157,39 @@ onUnmounted(() => clearTimeout(appearTimeout))
             aria-label="Color mode"
           >
             <template #leading="{ ui }">
-              <UIcon :name="appConfig.ui.icons.dark" :class="ui.leadingIcon({ class: 'hidden dark:inline-block' })" />
-              <UIcon :name="appConfig.ui.icons.light" :class="ui.leadingIcon({ class: 'dark:hidden' })" />
+              <PIcon :name="appConfig.ui.icons.dark" :class="ui.leadingIcon({ class: 'hidden dark:inline-block' })" />
+              <PIcon :name="appConfig.ui.icons.light" :class="ui.leadingIcon({ class: 'dark:hidden' })" />
             </template>
           </PButton>
         </template>
-      </UNavigationMenu>
+      </PNavigationMenu>
     </div>
 
-    <UContainer class="sm:border-x border-border pt-10">
-      <UPageHero
+    <PContainer class="sm:border-x border-border pt-10">
+      <PPageHero
         title="Hey, I'm Mike Newbon Design Engineer"
         description="Based in Amsterdam, I craft intuitive digital products, where design meets fun-ctionality. Like this theme editor!"
         :ui="{
           container: 'py-18 sm:py-24 lg:py-32',
           headline: 'flex items-center justify-center',
           title: 'text-shadow-md max-w-lg mx-auto text-pretty text-3xl sm:text-4xl lg:text-5xl',
-          description: 'mt-2 text-md mx-auto max-w-2xl text-pretty sm:text-md text-muted',
+          description: 'mt-2 text-base mx-auto max-w-2xl text-pretty sm:text-base color-text-muted',
           links: 'mt-4 flex-col justify-center items-center'
         }"
       >
         <template #headline>
-          <UAvatar
+          <PAvatar
             alt="Mike Newbon"
             size="3xl"
             src="https://github.com/mikenewbon.png"
-            class="size-18 ring ring-default ring-offset-3 ring-offset-bg transition-all duration-600"
+            class="size-18 ring ring-ring ring-offset-3 ring-offset-bg transition-all duration-600"
             :class="heroAppear ? 'opacity-100 blur-none scale-100' : 'opacity-0 blur-lg scale-110'"
           />
         </template>
 
         <template #links>
           <div class="flex items-center gap-2">
-            <PButton :icon="studioIcons.github" label="View Github" color="neutral" to="https://github.com/mikenewbon/" target="_blank" />
+            <PButton icon="i-simple-icons-github" label="View Github" color="neutral" to="https://github.com/mikenewbon/" target="_blank" />
             <PButton color="success" variant="ghost" class="gap-2" label="Always online">
               <template #leading>
                 <span class="relative flex size-2">
@@ -213,32 +213,32 @@ onUnmounted(() => clearTimeout(appearTimeout))
           <div
             v-for="(img, index) in heroImages"
             :key="index"
-            class="w-[234px] aspect-square shrink-0 rounded-lg overflow-hidden relative bg-elevated flex flex-col items-center justify-center gap-3"
+            class="w-[234px] aspect-square shrink-0 rounded-lg overflow-hidden relative bg-background-elevated flex flex-col items-center justify-center gap-3"
             :class="index % 2 === 0 ? '-rotate-2' : 'rotate-2'"
           >
             <div
               class="absolute inset-0"
               :style="{ background: `radial-gradient(ellipse at ${index % 2 === 0 ? '30% 20%' : '70% 80%'}, color-mix(in srgb, var(--ui-primary) ${12 + (index % 3) * 6}%, transparent), transparent 70%)` }"
             />
-            <UIcon :name="img.icon" class="size-10 text-dimmed relative" />
-            <span class="text-xs text-muted font-medium relative">{{ img.label }}</span>
+            <PIcon :name="img.icon" class="size-10 color-text-dimmed relative" />
+            <span class="text-xs color-text-muted font-medium relative">{{ img.label }}</span>
           </div>
         </PMarquee>
-      </UPageHero>
+      </PPageHero>
 
       <!-- About + work experience share a two-column section on the template home. -->
-      <UPageSection :ui="{ container: 'pt-0! lg:grid lg:grid-cols-2 lg:gap-8' }">
-        <UPageSection
+      <PPageSection :ui="{ container: 'pt-0! lg:grid lg:grid-cols-2 lg:gap-8' }">
+        <PPageSection
           :title="about.title"
           :description="about.description"
           :ui="{
             container: 'p-0!',
             title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
-            description: 'text-left mt-3 text-sm sm:text-md lg:text-sm text-muted whitespace-pre-line'
+            description: 'text-left mt-3 text-sm sm:text-base lg:text-sm color-text-muted whitespace-pre-line'
           }"
         />
 
-        <UPageSection
+        <PPageSection
           title="Work Experience"
           :ui="{
             container: 'p-0! gap-4 sm:gap-4',
@@ -251,7 +251,7 @@ onUnmounted(() => clearTimeout(appearTimeout))
               <div
                 v-for="(item, index) in experience"
                 :key="index"
-                class="text-muted flex items-center text-nowrap gap-2"
+                class="color-text-muted flex items-center text-nowrap gap-2"
               >
                 <p class="text-sm">
                   {{ item.date }}
@@ -259,28 +259,28 @@ onUnmounted(() => clearTimeout(appearTimeout))
                 <PSeparator />
                 <span class="flex items-center gap-1">
                   <span class="text-sm">{{ item.position }}</span>
-                  <span class="inline-flex items-center gap-1 text-highlighted">
+                  <span class="inline-flex items-center gap-1 color-text-highlighted">
                     <span class="font-medium text-sm">{{ item.company.name }}</span>
-                    <UIcon :name="item.company.logo" />
+                    <PIcon :name="item.company.logo" />
                   </span>
                 </span>
               </div>
             </div>
           </template>
-        </UPageSection>
-      </UPageSection>
+        </PPageSection>
+      </PPageSection>
 
-      <UPageSection
+      <PPageSection
         title="Latest Articles"
         description="Some of my recent thoughts"
         :ui="{
           container: 'px-0 pt-0! sm:gap-6 lg:gap-8',
           title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
-          description: 'text-left mt-2 text-sm sm:text-md lg:text-sm text-muted'
+          description: 'text-left mt-2 text-sm sm:text-base lg:text-sm color-text-muted'
         }"
       >
-        <UBlogPosts orientation="vertical" class="gap-4 lg:gap-y-4">
-          <UBlogPost
+        <PBlogPosts orientation="vertical" class="gap-4 lg:gap-y-4">
+          <PBlogPost
             v-for="(post, index) in posts"
             :key="index"
             orientation="horizontal"
@@ -295,33 +295,33 @@ onUnmounted(() => clearTimeout(appearTimeout))
             <template #footer>
               <PButton size="xs" variant="link" class="px-0 gap-0" label="Read Article">
                 <template #trailing>
-                  <UIcon
+                  <PIcon
                     :name="appConfig.ui.icons.arrowRight"
                     class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
                   />
                 </template>
               </PButton>
             </template>
-          </UBlogPost>
-        </UBlogPosts>
-      </UPageSection>
+          </PBlogPost>
+        </PBlogPosts>
+      </PPageSection>
 
-      <UPageSection :ui="{ container: 'px-0 pt-0!' }">
-        <UCarousel
+      <PPageSection :ui="{ container: 'px-0 pt-0!' }">
+        <PCarousel
           v-slot="{ item }"
           :items="testimonials"
           :autoplay="{ delay: 4000 }"
           loop
           dots
-          :ui="{ viewport: '-mx-4 sm:-mx-12 lg:-mx-16 bg-elevated/50 max-w-(--ui-container)' }"
+          :ui="{ viewport: '-mx-4 sm:-mx-12 lg:-mx-16 bg-background-elevated/50 max-w-(--ui-container)' }"
         >
-          <UPageCTA
+          <PPageCTA
             :description="item.quote"
             variant="naked"
             class="rounded-none"
             :ui="{
               container: 'sm:py-12 lg:py-12 sm:gap-8',
-              description: 'text-base! text-balance before:content-[open-quote] before:text-5xl lg:before:text-7xl before:inline-block before:text-dimmed before:absolute before:-ml-6 lg:before:-ml-10 before:-mt-2 lg:before:-mt-4 after:content-[close-quote] after:text-5xl lg:after:text-7xl after:inline-block after:text-dimmed after:absolute after:mt-1 lg:after:mt-0 after:ml-1 lg:after:ml-2'
+              description: 'text-base! text-balance before:content-[open-quote] before:text-5xl lg:before:text-7xl before:inline-block before:color-text-dimmed before:absolute before:-ml-6 lg:before:-ml-10 before:-mt-2 lg:before:-mt-4 after:content-[close-quote] after:text-5xl lg:after:text-7xl after:inline-block after:color-text-dimmed after:absolute after:mt-1 lg:after:mt-0 after:ml-1 lg:after:ml-2'
             }"
           >
             <PUser
@@ -330,49 +330,49 @@ onUnmounted(() => clearTimeout(appearTimeout))
               size="xl"
               class="justify-center"
             />
-          </UPageCTA>
-        </UCarousel>
-      </UPageSection>
+          </PPageCTA>
+        </PCarousel>
+      </PPageSection>
 
-      <UPageSection
+      <PPageSection
         title="Frequently Asked Questions"
         description="Answers to common questions about my process and services."
         :ui="{
           container: 'px-0 pt-0! gap-4 sm:gap-4',
           title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
-          description: 'text-left mt-2 text-sm sm:text-md lg:text-sm text-muted'
+          description: 'text-left mt-2 text-sm sm:text-base lg:text-sm color-text-muted'
         }"
       >
-        <UTabs
+        <PTabs
           :items="faqCategories"
           orientation="horizontal"
           :ui="{
             root: 'flex items-center gap-4 w-full',
             list: 'relative flex bg-transparent dark:bg-transparent gap-2 px-0',
-            indicator: 'absolute top-[4px] duration-200 ease-out focus:outline-none rounded-lg bg-elevated/60',
-            trigger: 'px-3 py-2 rounded-lg hover:bg-muted/50 data-[state=active]:text-highlighted data-[state=inactive]:text-muted',
+            indicator: 'absolute top-[4px] duration-200 ease-out focus:outline-none rounded-lg bg-background-elevated/60',
+            trigger: 'px-3 py-2 rounded-lg hover:bg-background-muted/50 data-[state=active]:color-text-highlighted data-[state=inactive]:color-text-muted',
             label: 'truncate'
           }"
         >
           <template #content="{ item }">
-            <UAccordion
+            <PAccordion
               :trailing-icon="appConfig.ui.icons.plus"
               :items="item.questions"
               :unmount-on-hide="false"
               :ui="{
                 item: 'border-none',
-                trigger: 'mb-2 border-0 group px-4 transform-gpu rounded-lg bg-elevated/60 will-change-transform hover:bg-muted/50 text-base',
+                trigger: 'mb-2 border-0 group px-4 transform-gpu rounded-lg bg-background-elevated/60 will-change-transform hover:bg-background-muted/50 text-base',
                 body: 'px-4',
-                trailingIcon: 'group-data-[state=closed]:rotate-0 group-data-[state=open]:rotate-135 text-base text-muted'
+                trailingIcon: 'group-data-[state=closed]:rotate-0 group-data-[state=open]:rotate-135 text-base color-text-muted'
               }"
             />
           </template>
-        </UTabs>
-      </UPageSection>
+        </PTabs>
+      </PPageSection>
 
-      <UFooter class="z-10 bg-default" :ui="{ left: 'text-muted text-xs' }">
+      <PFooter class="z-10 bg-background" :ui="{ left: 'color-text-muted text-xs' }">
         <template #left>
-          Built with Pohon • © 2026
+          Built with Pohon UI • © 2026
         </template>
 
         <template #right>
@@ -382,7 +382,7 @@ onUnmounted(() => clearTimeout(appearTimeout))
             v-bind="{ size: 'xs', color: 'neutral', variant: 'ghost', ...link }"
           />
         </template>
-      </UFooter>
-    </UContainer>
+      </PFooter>
+    </PContainer>
   </div>
 </template>

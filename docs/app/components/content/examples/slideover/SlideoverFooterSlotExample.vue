@@ -3,7 +3,7 @@ const open = ref(false)
 </script>
 
 <template>
-  <USlideover v-model:open="open" title="Slideover with footer" description="This is useful when you want a form in a Slideover." :ui="{ footer: 'justify-end' }">
+  <PSlideover v-model:open="open" title="Slideover with footer" description="This is useful when you want a form in a Slideover." :ui="{ footer: 'justify-end' }">
     <PButton label="Open" color="neutral" variant="subtle" />
 
     <template #body>
@@ -14,5 +14,5 @@ const open = ref(false)
       <PButton label="Cancel" color="neutral" variant="outline" @click="close" />
       <PButton label="Submit" color="neutral" />
     </template>
-  </USlideover>
+  </PSlideover>
 </template>

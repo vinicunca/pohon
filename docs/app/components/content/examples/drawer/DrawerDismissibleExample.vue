@@ -3,7 +3,7 @@ const open = ref(false)
 </script>
 
 <template>
-  <UDrawer
+  <PDrawer
     v-model:open="open"
     title="Drawer non-dismissible"
     close
@@ -16,5 +16,5 @@ const open = ref(false)
     <template #body>
       <Placeholder class="size-full min-h-48" />
     </template>
-  </UDrawer>
+  </PDrawer>
 </template>

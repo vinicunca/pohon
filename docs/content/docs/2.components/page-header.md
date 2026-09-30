@@ -1,11 +1,11 @@
 ---
 title: PageHeader
-description: "A responsive header for your pages."
+description: 'A responsive header for your pages.'
 category: page
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/PageHeader.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/PageHeader.vue
 ---
 
 ## Usage
@@ -16,11 +16,11 @@ Use it inside the default slot of the [Page](/docs/components/page) component, b
 
 ```vue {3}
 <template>
-  <UPage>
-    <UPageHeader />
+  <PPage>
+    <PPageHeader />
 
-    <UPageBody />
-  </UPage>
+    <PPageBody />
+  </PPage>
 </template>
 ```
 
@@ -30,16 +30,12 @@ Use the `title` prop to display a title in the header.
 
 ::component-code
 ---
-
 hide:
-
-- class
-  props:
+  - class
+props:
   title: 'PageHeader'
   class: 'w-full'
-
 ---
-
 ::
 
 ### Description
@@ -48,20 +44,16 @@ Use the `description` prop to display a description in the header.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- title
-  hide:
-- class
-  props:
+  - title
+hide:
+  - class
+props:
   title: 'PageHeader'
   description: 'A responsive page header with title, description and actions.'
   class: 'w-full'
-
 ---
-
 ::
 
 ### Headline
@@ -70,22 +62,18 @@ Use the `headline` prop to display a headline in the header.
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- title
-- description
-  hide:
-- class
-  props:
+  - title
+  - description
+hide:
+  - class
+props:
   title: 'PageHeader'
   description: 'A responsive page header with title, description and actions.'
   headline: 'Components'
   class: 'w-full'
-
 ---
-
 ::
 
 ### Links
@@ -94,33 +82,29 @@ Use the `links` prop to display a list of [Button](/docs/components/button) in t
 
 ::component-code
 ---
-
 prettier: true
 external:
-
-- links
-  externalTypes:
-- ButtonProps[]
-  ignore:
-- title
-- description
-- headline
-- links
-  hide:
-- class
-  props:
+  - links
+externalTypes:
+  - ButtonProps[]
+ignore:
+  - title
+  - description
+  - headline
+  - links
+hide:
+  - class
+props:
   title: 'PageHeader'
   description: 'A responsive page header with title, description and actions.'
   headline: 'Components'
   links:
-  - label: 'GitHub'
-    icon: i-simple-icons-github
-    to: 'https://github.com/vinicunca/pohon/tree/v4/src/runtime/components/PageHeader.vue'
-    target: '_blank'
-    class: 'w-full'
-
+    - label: 'GitHub'
+      icon: i-simple-icons-github
+      to: 'https://github.com/vinicunca/pohon/tree/main/src/runtime/components/PageHeader.vue'
+      target: '_blank'
+  class: 'w-full'
 ---
-
 ::
 
 ## Examples
@@ -133,44 +117,44 @@ While these examples use [Nuxt Content](https://content.nuxt.com), the component
 
 Use the PageHeader component in a page to display the header of the page:
 
-```vue [pages/[...slug].vue]{19-24}
+```vue [pages/\[...slug\\].vue]{19-24}
 <script setup lang="ts">
-const route = useRoute();
+const route = useRoute()
 
 definePageMeta({
-  layout: "docs",
-});
+  layout: 'docs'
+})
 
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection("docs").path(route.path).first();
-});
+  return queryCollection('docs').path(route.path).first()
+})
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
-  return queryCollectionItemSurroundings("content", route.path);
-});
+  return queryCollectionItemSurroundings('content', route.path)
+})
 </script>
 
 <template>
-  <UPage>
-    <UPageHeader
+  <PPage>
+    <PPageHeader
       :title="page.title"
       :description="page.description"
       :headline="page.headline"
       :links="page.links"
     />
 
-    <UPageBody>
+    <PPageBody>
       <ContentRenderer :value="page" />
 
       <PSeparator />
 
-      <UContentSurround :surround="surround" />
-    </UPageBody>
+      <PContentSurround :surround="surround" />
+    </PPageBody>
 
     <template #right>
-      <UContentToc :links="page.body.toc.links" />
+      <PContentToc :links="page.body.toc.links" />
     </template>
-  </UPage>
+  </PPage>
 </template>
 ```
 

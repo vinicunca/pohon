@@ -50,15 +50,15 @@ const items = [
 </script>
 
 <template>
-  <UNavigationMenu :items="items" class="w-full justify-center">
+  <PNavigationMenu :items="items" class="w-full justify-center">
     <template #more="{ item }">
-      <UDropdownMenu :content="item.content" :items="item.items">
+      <PDropdownMenu :content="item.content" :items="item.items">
         <PButton icon="i-lucide-ellipsis" color="neutral" variant="link" />
-      </UDropdownMenu>
+      </PDropdownMenu>
     </template>
 
     <template #github-trailing>
       <PBadge label="6k+" color="neutral" variant="subtle" size="sm" />
     </template>
-  </UNavigationMenu>
+  </PNavigationMenu>
 </template>

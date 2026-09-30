@@ -7,11 +7,11 @@ defineShortcuts({
 </script>
 
 <template>
-  <UDrawer v-model:open="open">
+  <PDrawer v-model:open="open">
     <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
 
     <template #content>
       <Placeholder class="h-48 m-4" />
     </template>
-  </UDrawer>
+  </PDrawer>
 </template>

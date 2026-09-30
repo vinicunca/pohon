@@ -23,7 +23,7 @@ const items: NavigationMenuItem[] = [
 </script>
 
 <template>
-  <UNavigationMenu
+  <PNavigationMenu
     collapsed
     orientation="vertical"
     :items="items"

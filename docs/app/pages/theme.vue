@@ -4,7 +4,6 @@ import { decodeThemeDoc } from '../utils/theme/link'
 import { snapshotStoredTheme, writeStoredTheme } from '../utils/theme/storage'
 
 const { track } = useAnalytics()
-const { icon: iconSet } = useTheme()
 
 const { open: chatOpen } = useChat()
 
@@ -15,7 +14,6 @@ function toggleChat() {
   chatOpen.value = !chatOpen.value
 }
 
-// The chrome skins to the applied icon pack.
 const studioIcons = useStudioIcons()
 
 const { view, views, applyDoc, presets, activePreset } = useThemeStudio()
@@ -67,7 +65,7 @@ onMounted(() => {
 })
 
 // The studio's preview is a card floating on a recessed canvas, which is the
-// one background the semantic tokens can't express: `--ui-bg-*` only ever
+// one background the semantic tokens can't express: `--ui-color-bg-*` only ever
 // elevates, so there is no "behind the surface" step (v5's elevation ladder).
 // Unhead drops the class on navigate, so the canvas stays on this page.
 useHead({
@@ -77,13 +75,13 @@ useHead({
 const { url } = useSiteConfig()
 
 const title = 'Theme'
-const description = 'Customize Pohon live: colors, radius, fonts and icons, then export only what you changed.'
+const description = 'Customize Pohon UI live: colors, radius, fonts and icons, then export only what you changed.'
 
 useSeoMeta({
-  titleTemplate: '%s - Pohon',
+  titleTemplate: '%s - Pohon UI',
   title,
   description,
-  ogTitle: `${title} - Pohon`,
+  ogTitle: `${title} - Pohon UI`,
   ogDescription: description,
   // A static file rather than defineOgImage: the page renders per request
   // for ?doc= (nuxt.config routeRules) and ogImage.zeroRuntime only builds
@@ -100,23 +98,18 @@ onMounted(() => {
   if (linkApplied) track('Theme Link Applied', { preset: linkedPreset?.id })
 })
 
-// Color mode rides the app-wide `d` binding in app.vue, no page copy needed.
 defineShortcuts({
   meta_z: undo,
   meta_shift_z: redo,
   ctrl_y: redo
 })
 
-/** The export modal, opened from the header. */
 const shareOpen = ref(false)
 </script>
 
 <template>
-  <!-- page tint composites on the app root's bg-default (nuxt.config rootAttrs) -->
-  <main class="max-w-(--ui-container) mx-auto">
-    <!-- `modal: false` so the panels' popovers, portalled to the body, stay
-         interactive over the fullscreen menu -->
-    <UHeader :menu="{ modal: false }" :ui="{ root: () => 'h-(--ui-header-height) border-b border-transparent' }">
+  <main class="max-w-(--ui-container) mx-auto w-full">
+    <PHeader :menu="{ modal: false }" :ui="{ root: () => 'h-(--ui-header-height) border-b border-transparent' }">
       <template #left>
         <HeaderLogo />
       </template>
@@ -124,7 +117,7 @@ const shareOpen = ref(false)
       <ThemeStudioViewSwitcher />
 
       <template #right>
-        <UTooltip text="Ask AI" :kbds="['meta', 'I']" ignore-non-keyboard-focus>
+        <PTooltip text="Ask AI" :kbds="['meta', 'I']" ignore-non-keyboard-focus>
           <PButton
             color="neutral"
             variant="outline"
@@ -132,8 +125,12 @@ const shareOpen = ref(false)
             aria-label="Ask AI for help"
             class="hidden lg:inline-flex"
             @click="toggleChat"
-          />
-        </UTooltip>
+          >
+            <template #leading>
+              <PIcon name="i-lucide-sparkles" class="size-5 shrink-0" />
+            </template>
+          </PButton>
+        </PTooltip>
 
         <PButton
           color="neutral"
@@ -181,13 +178,12 @@ const shareOpen = ref(false)
           />
         </div>
       </template>
-    </UHeader>
+    </PHeader>
 
-    <div class="flex flex-col bg-default rounded-xl overflow-hidden shadow ring ring-default h-[calc(100dvh-var(--ui-header-height)-0.5rem)] lg:h-[calc(100dvh-var(--ui-header-height)-var(--ui-header-height)-0.5rem)] mx-2">
+    <div class="flex flex-col bg-background rounded-xl overflow-hidden shadow ring ring-ring h-[calc(100dvh-var(--ui-header-height)-0.5rem)] lg:h-[calc(100dvh-var(--ui-header-height)-var(--ui-header-height)-0.5rem)] mx-2">
       <!-- [contain:paint]: Chromium won't clip nested composited layers by
-             an ancestor's overflow alone. Keyed on the icon pack: demo views
-             resolve icons at setup, so a pack swap remounts to re-resolve. -->
-      <div :key="iconSet" class="flex-1 min-h-0 overflow-hidden *:contain-[paint]">
+             an ancestor's overflow alone -->
+      <div class="flex-1 min-h-0 overflow-hidden *:contain-[paint]">
         <Playground v-if="view === 'grid'" />
         <LazyThemeStudioViewDashboard v-else-if="view === 'dashboard'" />
         <LazyThemeStudioViewChat v-else-if="view === 'chat'" />
@@ -202,14 +198,10 @@ const shareOpen = ref(false)
 
     <!-- the centre takes every pixel the two clusters leave and shrinks
          (min-w-0), so the toolbar inside it scrolls instead of widening the bar -->
-    <UFooter class="hidden lg:block ring ring-default rounded-xl bg-default mx-2 mt-2" :ui="{ container: 'py-3! px-6!', left: 'mt-0 gap-0 lg:flex-none', center: 'flex-1 min-w-0 justify-start', right: 'mt-0 lg:flex-none' }">
+    <PFooter class="hidden lg:block ring ring-ring rounded-xl bg-background mx-2 mt-2" :ui="{ container: 'py-3! px-6!', left: 'mt-0 gap-0 lg:flex-none', center: 'flex-1 min-w-0 justify-start', right: 'mt-0 lg:flex-none' }">
       <template #left>
-        <!-- one cluster: these four move the whole theme, the controls beside
-             them each change one setting. Framed like the mode tabs' own track
-             at the other end, a size down on the buttons so both land at the
-             height of the plain controls between them. -->
-        <div class="flex items-center gap-0.5 p-0.5 rounded-lg ring ring-default bg-elevated/50">
-          <UTooltip text="Undo" :kbds="['meta', 'Z']">
+        <div class="flex items-center gap-0.5 p-0.5 rounded-lg ring ring-ring bg-background-elevated/50">
+          <PTooltip text="Undo" :kbds="['meta', 'Z']">
             <PButton
               :icon="studioIcons.undo"
               color="neutral"
@@ -219,9 +211,9 @@ const shareOpen = ref(false)
               aria-label="Undo theme change"
               @click="undo"
             />
-          </UTooltip>
+          </PTooltip>
 
-          <UTooltip text="Redo" :kbds="['meta', 'shift', 'Z']">
+          <PTooltip text="Redo" :kbds="['meta', 'shift', 'Z']">
             <PButton
               :icon="studioIcons.redo"
               color="neutral"
@@ -231,9 +223,8 @@ const shareOpen = ref(false)
               aria-label="Redo theme change"
               @click="redo"
             />
-          </UTooltip>
+          </PTooltip>
 
-          <!-- undo/redo step through history, the two beside them rewrite it -->
           <PSeparator orientation="vertical" class="h-4 mx-0.5" />
 
           <ThemeStudioResetButton size="sm" />
@@ -246,15 +237,14 @@ const shareOpen = ref(false)
       <ThemeStudioToolbar />
 
       <template #right>
-        <UTooltip text="Switch color mode" :kbds="['d']">
-          <!-- framed like the history cluster, the bar's two ends match -->
+        <PTooltip text="Switch color mode" :kbds="['d']">
           <ThemeStudioColorModeTabs
             data-keep-panels
             class="shrink-0"
           />
-        </UTooltip>
+        </PTooltip>
       </template>
-    </UFooter>
+    </PFooter>
 
     <ThemeStudioShareModal v-model:open="shareOpen" />
   </main>

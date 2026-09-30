@@ -21,11 +21,11 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   <div class="space-y-4">
     <PForm ref="form" :state="state" class="space-y-4" @submit="onSubmit">
       <PFormField label="Email" name="email">
-        <UInput v-model="state.email" type="email" required />
+        <PInput v-model="state.email" type="email" required />
       </PFormField>
 
       <PFormField label="Age" name="age">
-        <UInput v-model="state.age" type="number" min="18" max="100" required />
+        <PInput v-model="state.age" type="number" min="18" max="100" required />
       </PFormField>
     </PForm>
 

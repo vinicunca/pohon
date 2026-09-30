@@ -7,5 +7,5 @@ const maxDate = new CalendarDate(2023, 9, 30)
 </script>
 
 <template>
-  <UInputDate v-model="modelValue" :min-value="minDate" :max-value="maxDate" />
+  <PInputDate v-model="modelValue" :min-value="minDate" :max-value="maxDate" />
 </template>

@@ -17,12 +17,12 @@ export interface ThemePreset {
  * block, a table head) would lose its shape.
  */
 const tintedNeutralBase = {
-  '--ui-bg': { light: 50 },
-  '--ui-bg-muted': { light: 100 },
-  '--ui-text-inverted': { light: 50 },
-  '--ui-text-highlighted': { dark: 50 },
-  '--ui-bg-inverted': { dark: 50 },
-  '--ui-border-inverted': { dark: 50 }
+  '--ui-color-bg': { light: 50 },
+  '--ui-color-bg-muted': { light: 100 },
+  '--ui-color-text-inverted': { light: 50 },
+  '--ui-color-text-highlighted': { dark: 50 },
+  '--ui-color-bg-inverted': { dark: 50 },
+  '--ui-color-border-inverted': { dark: 50 }
 } satisfies StyleOptions['tokenShades']
 
 /**
@@ -61,12 +61,12 @@ export const presets: ThemePreset[] = [{
         }
       },
       tokenShades: {
-        '--ui-bg': { dark: 950 },
-        '--ui-bg-muted': { light: 100, dark: 900 },
-        '--ui-bg-elevated': { light: 100, dark: 900 },
-        '--ui-bg-accented': { light: 200, dark: 800 },
-        '--ui-text': { light: 900, dark: 100 },
-        '--ui-text-highlighted': { light: 950, dark: 50 }
+        '--ui-color-bg': { dark: 950 },
+        '--ui-color-bg-muted': { light: 100, dark: 900 },
+        '--ui-color-bg-elevated': { light: 100, dark: 900 },
+        '--ui-color-bg-accented': { light: 200, dark: 800 },
+        '--ui-color-text': { light: 900, dark: 100 },
+        '--ui-color-text-highlighted': { light: 950, dark: 50 }
       }
     }
   }
@@ -77,7 +77,7 @@ export const presets: ThemePreset[] = [{
   doc: {
     version: 1,
     // Prefixed names: a palette named plainly 'blue'/'gray' would override
-    // the same-named tailwind ramp app-wide while active.
+    // the same-named unoPalette ramp app-wide while active.
     palettes: {
       'cobalt': {
         shades: {
@@ -94,7 +94,7 @@ export const presets: ThemePreset[] = [{
           950: 'oklch(14.7% 0.037 249.929)'
         }
       },
-      // A flat cool gray, its mid stops lighter than tailwind's so borders
+      // A flat cool gray, its mid stops lighter than UnoCSS's so borders
       // and muted text stay soft against the tinted page.
       'cobalt-gray': {
         shades: {
@@ -129,16 +129,16 @@ export const presets: ThemePreset[] = [{
     tokens: {
       light: {
         '--ui-secondary': 'var(--ui-color-secondary-600)',
-        '--ui-bg-muted': 'var(--ui-color-neutral-200)',
-        '--ui-text': 'var(--ui-color-neutral-800)',
-        '--ui-border': 'var(--ui-color-neutral-400)',
-        '--ui-border-muted': 'var(--ui-color-neutral-300)',
-        '--ui-bg': 'var(--ui-color-neutral-100)',
-        '--ui-text-toned': 'var(--ui-color-neutral-700)',
-        '--ui-text-muted': 'var(--ui-color-neutral-600)',
-        '--ui-text-dimmed': 'var(--ui-color-neutral-600)',
-        '--ui-bg-elevated': 'var(--ui-color-neutral-200)',
-        '--ui-bg-accented': 'var(--ui-color-neutral-300)'
+        '--ui-color-bg-muted': 'var(--ui-color-neutral-200)',
+        '--ui-color-text': 'var(--ui-color-neutral-800)',
+        '--ui-color-border': 'var(--ui-color-neutral-400)',
+        '--ui-color-border-muted': 'var(--ui-color-neutral-300)',
+        '--ui-color-bg': 'var(--ui-color-neutral-100)',
+        '--ui-color-text-toned': 'var(--ui-color-neutral-700)',
+        '--ui-color-text-muted': 'var(--ui-color-neutral-600)',
+        '--ui-color-text-dimmed': 'var(--ui-color-neutral-600)',
+        '--ui-color-bg-elevated': 'var(--ui-color-neutral-200)',
+        '--ui-color-bg-accented': 'var(--ui-color-neutral-300)'
       },
       // Dark keeps the same brand colours rather than lifting to the 400s.
       dark: {
@@ -148,8 +148,8 @@ export const presets: ThemePreset[] = [{
         '--ui-info': 'var(--ui-color-info-500)',
         '--ui-warning': 'var(--ui-color-warning-500)',
         '--ui-error': 'var(--ui-color-error-500)',
-        '--ui-bg-muted': 'var(--ui-color-neutral-700)',
-        '--ui-text': 'var(--ui-color-neutral-300)'
+        '--ui-color-bg-muted': 'var(--ui-color-neutral-700)',
+        '--ui-color-text': 'var(--ui-color-neutral-300)'
       }
     }
   }
@@ -238,11 +238,11 @@ export const presets: ThemePreset[] = [{
         // 600 is the deep cinema red, 500 leans orange; dark holds it rather
         // than lifting to the salmon 400
         '--ui-primary': { light: 600, dark: 500 },
-        '--ui-bg': { light: 50, dark: 950 },
+        '--ui-color-bg': { light: 50, dark: 950 },
         // light restates tintedNeutral's step: this key replaces it wholesale
-        '--ui-bg-muted': { light: 100, dark: 900 },
-        '--ui-bg-elevated': { dark: 900 },
-        '--ui-bg-accented': { dark: 800 }
+        '--ui-color-bg-muted': { light: 100, dark: 900 },
+        '--ui-color-bg-elevated': { dark: 900 },
+        '--ui-color-bg-accented': { dark: 800 }
       }
     }
   }
@@ -335,25 +335,25 @@ export const presets: ThemePreset[] = [{
     style: {
       defaults: { variants: { buttons: 'solid', panels: 'subtle', inputs: 'subtle' } },
       tokenShades: {
-        '--ui-bg': { light: 50, dark: 800 },
-        '--ui-bg-muted': { light: 300, dark: 700 },
-        '--ui-bg-elevated': { light: 300, dark: 700 },
-        '--ui-bg-accented': { light: 400, dark: 600 },
-        '--ui-bg-inverted': { light: 900, dark: 50 },
-        '--ui-text-inverted': { light: 50 },
-        '--ui-text-dimmed': { light: 500, dark: 400 },
-        '--ui-text-muted': { light: 800, dark: 300 },
-        '--ui-text-toned': { light: 900 },
-        '--ui-text': { light: 900 },
-        '--ui-text-highlighted': { light: 950, dark: 100 },
+        '--ui-color-bg': { light: 50, dark: 800 },
+        '--ui-color-bg-muted': { light: 300, dark: 700 },
+        '--ui-color-bg-elevated': { light: 300, dark: 700 },
+        '--ui-color-bg-accented': { light: 400, dark: 600 },
+        '--ui-color-bg-inverted': { light: 900, dark: 50 },
+        '--ui-color-text-inverted': { light: 50 },
+        '--ui-color-text-dimmed': { light: 500, dark: 400 },
+        '--ui-color-text-muted': { light: 800, dark: 300 },
+        '--ui-color-text-toned': { light: 900 },
+        '--ui-color-text': { light: 900 },
+        '--ui-color-text-highlighted': { light: 950, dark: 100 },
         // Light keeps the ink hairline; dark has to run the other way, a
         // border below the surface's own lightness just reads as a seam.
-        '--ui-border': { light: 950, dark: 600 },
+        '--ui-color-border': { light: 950, dark: 600 },
         // dark is left at the library's own neutral-700, restating it would
         // only add a line the importer then has to recognise as generated
-        '--ui-border-muted': { light: 400 },
-        '--ui-border-accented': { light: 950, dark: 500 },
-        '--ui-border-inverted': { light: 500, dark: 50 }
+        '--ui-color-border-muted': { light: 400 },
+        '--ui-color-border-accented': { light: 950, dark: 500 },
+        '--ui-color-border-inverted': { light: 500, dark: 50 }
       }
     }
   }
@@ -391,14 +391,14 @@ export const presets: ThemePreset[] = [{
     icons: 'phosphor',
     tokens: {
       light: {
-        '--ui-bg': 'var(--ui-color-neutral-50)',
-        '--ui-text-inverted': 'var(--ui-color-neutral-50)',
-        '--ui-bg-muted': 'var(--ui-color-neutral-100)'
+        '--ui-color-bg': 'var(--ui-color-neutral-50)',
+        '--ui-color-text-inverted': 'var(--ui-color-neutral-50)',
+        '--ui-color-bg-muted': 'var(--ui-color-neutral-100)'
       },
       dark: {
-        '--ui-bg-inverted': 'var(--ui-color-neutral-50)',
-        '--ui-text-highlighted': 'var(--ui-color-neutral-50)',
-        '--ui-border-inverted': 'var(--ui-color-neutral-50)'
+        '--ui-color-bg-inverted': 'var(--ui-color-neutral-50)',
+        '--ui-color-text-highlighted': 'var(--ui-color-neutral-50)',
+        '--ui-color-border-inverted': 'var(--ui-color-neutral-50)'
       }
     }
   }
@@ -452,23 +452,23 @@ export const presets: ThemePreset[] = [{
     icons: 'heroicons',
     // Surfaces and borders stepped one deeper to hold on the tinted cream
     // page. Elevated has to stay below the page: the library's hover and
-    // highlight tints are bg-elevated at half opacity, a lighter elevated
+    // highlight tints are bg-background-elevated at half opacity, a lighter elevated
     // vanishes into it.
     tokens: {
       light: {
-        '--ui-bg': 'var(--ui-color-neutral-100)',
-        '--ui-bg-muted': 'var(--ui-color-neutral-200)',
-        '--ui-bg-elevated': 'var(--ui-color-neutral-200)',
-        '--ui-bg-accented': 'var(--ui-color-neutral-300)',
-        '--ui-border': 'var(--ui-color-neutral-300)',
+        '--ui-color-bg': 'var(--ui-color-neutral-100)',
+        '--ui-color-bg-muted': 'var(--ui-color-neutral-200)',
+        '--ui-color-bg-elevated': 'var(--ui-color-neutral-200)',
+        '--ui-color-bg-accented': 'var(--ui-color-neutral-300)',
+        '--ui-color-border': 'var(--ui-color-neutral-300)',
         // the library leaves this at 200, where the muted surface now sits:
         // a code block's frame would land on its own background
-        '--ui-border-muted': 'var(--ui-color-neutral-300)',
-        '--ui-border-accented': 'var(--ui-color-neutral-400)'
+        '--ui-color-border-muted': 'var(--ui-color-neutral-300)',
+        '--ui-color-border-accented': 'var(--ui-color-neutral-400)'
       },
       dark: {
         '--ui-primary': 'var(--ui-color-primary-500)',
-        '--ui-bg-accented': 'var(--ui-color-neutral-800)'
+        '--ui-color-bg-accented': 'var(--ui-color-neutral-800)'
       }
     }
   }

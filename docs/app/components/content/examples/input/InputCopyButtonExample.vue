@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { useClipboard } from '@vueuse/core'
 
-const value = ref('npx nuxt module add ui')
+const value = ref('pnpm add pohon-ui')
 
 const { copy, copied } = useClipboard()
 </script>
 
 <template>
-  <UInput
+  <PInput
     v-model="value"
     :ui="{ trailing: 'pr-0.5' }"
   >
     <template v-if="value?.length" #trailing>
-      <UTooltip text="Copy to clipboard" :content="{ side: 'right' }">
+      <PTooltip text="Copy to clipboard" :content="{ side: 'right' }">
         <PButton
           :color="copied ? 'success' : 'neutral'"
           variant="link"
@@ -21,7 +21,7 @@ const { copy, copied } = useClipboard()
           aria-label="Copy to clipboard"
           @click="copy(value)"
         />
-      </UTooltip>
+      </PTooltip>
     </template>
-  </UInput>
+  </PInput>
 </template>

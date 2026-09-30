@@ -50,8 +50,8 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
 
 <template>
   <div class="flex flex-col items-center justify-center gap-4 p-4">
-    <UPageCard class="w-full max-w-md">
-      <UAuthForm
+    <PPageCard class="w-full max-w-md">
+      <PAuthForm
         :schema="schema"
         title="Login"
         description="Enter your credentials to access your account."
@@ -60,6 +60,6 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
         :providers="providers"
         @submit="onSubmit"
       />
-    </UPageCard>
+    </PPageCard>
   </div>
 </template>

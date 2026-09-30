@@ -4,7 +4,7 @@ const value = ref('Backlog')
 </script>
 
 <template>
-  <USelect
+  <PSelect
     v-model="value"
     :items="items"
     :ui="{

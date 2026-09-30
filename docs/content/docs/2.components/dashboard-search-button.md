@@ -1,6 +1,6 @@
 ---
 title: DashboardSearchButton
-description: "A pre-styled Button to open the DashboardSearch modal."
+description: 'A pre-styled Button to open the DashboardSearch modal.'
 category: dashboard
 links:
   - label: Button
@@ -8,7 +8,7 @@ links:
     icon: i-simple-icons-nuxtdotjs
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/DashboardSearchButton.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/DashboardSearchButton.vue
 ---
 
 ## Usage
@@ -21,15 +21,11 @@ It extends the [Button](/docs/components/button) component, so you can pass any 
 
 ::component-code
 ---
-
 ignore:
-
-- variant
-  props:
+  - variant
+props:
   variant: 'subtle'
-
 ---
-
 ::
 
 ::note{to="#collapsed"}
@@ -42,12 +38,10 @@ Use the `collapsed` prop to hide the button's label and [kbds](#kbds). Defaults 
 
 ::component-code
 ---
-
 prettier: true
 props:
-collapsed: true
+  collapsed: true
 ---
-
 ::
 
 ::tip{to="/docs/components/dashboard-sidebar#slots"}
@@ -60,19 +54,15 @@ Use the `kbds` prop to display keyboard keys in the button. Defaults to `['meta'
 
 ::component-code
 ---
-
 prettier: true
 ignore:
-
-- kbds
-  props:
+  - kbds
+props:
   collapsed: false
   kbds:
-  - 'alt'
-  - 'O'
-
+    - 'alt'
+    - 'O'
 ---
-
 ::
 
 ## API

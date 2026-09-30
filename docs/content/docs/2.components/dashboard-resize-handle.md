@@ -1,11 +1,11 @@
 ---
 title: DashboardResizeHandle
-description: "A handle to resize a sidebar or panel."
+description: 'A handle to resize a sidebar or panel.'
 category: dashboard
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/vinicunca/pohon/blob/v4/src/runtime/components/DashboardResizeHandle.vue
+    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/DashboardResizeHandle.vue
 ---
 
 ## Usage
@@ -24,41 +24,41 @@ Even though this component is automatically displayed when the `resizable` prop 
 
 ```vue [layouts/dashboard.vue]{4-10}
 <template>
-  <UDashboardGroup>
-    <UDashboardSidebar resizable>
+  <PDashboardGroup>
+    <PDashboardSidebar resizable>
       <template #resize-handle="{ onMouseDown, onTouchStart, onDoubleClick }">
-        <UDashboardResizeHandle
-          class="after:absolute after:inset-y-0 after:right-0 after:w-px hover:after:bg-(--ui-border-accented) after:transition"
+        <PDashboardResizeHandle
+          class="after:absolute after:inset-y-0 after:right-0 after:w-px hover:after:bg-(--ui-color-border-accented) after:transition"
           @mousedown="onMouseDown"
           @touchstart="onTouchStart"
           @dblclick="onDoubleClick"
         />
       </template>
-    </UDashboardSidebar>
+    </PDashboardSidebar>
 
     <slot />
-  </UDashboardGroup>
+  </PDashboardGroup>
 </template>
 ```
 
 ```vue [pages/index.vue]{9-15}
 <script setup lang="ts">
 definePageMeta({
-  layout: "dashboard",
-});
+  layout: 'dashboard'
+})
 </script>
 
 <template>
-  <UDashboardPanel resizable>
+  <PDashboardPanel resizable>
     <template #resize-handle="{ onMouseDown, onTouchStart, onDoubleClick }">
-      <UDashboardResizeHandle
-        class="after:absolute after:inset-y-0 after:right-0 after:w-px hover:after:bg-(--ui-border-accented) after:transition"
+      <PDashboardResizeHandle
+        class="after:absolute after:inset-y-0 after:right-0 after:w-px hover:after:bg-(--ui-color-border-accented) after:transition"
         @mousedown="onMouseDown"
         @touchstart="onTouchStart"
         @dblclick="onDoubleClick"
       />
     </template>
-  </UDashboardPanel>
+  </PDashboardPanel>
 </template>
 ```
 

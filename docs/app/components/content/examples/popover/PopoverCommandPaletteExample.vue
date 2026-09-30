@@ -29,7 +29,7 @@ const label = ref([])
 </script>
 
 <template>
-  <UPopover :content="{ side: 'right', align: 'start' }">
+  <PPopover :content="{ side: 'right', align: 'start' }">
     <PButton
       icon="i-lucide-tag"
       label="Select labels"
@@ -38,7 +38,7 @@ const label = ref([])
     />
 
     <template #content>
-      <UCommandPalette
+      <PCommandPalette
         v-model="label"
         multiple
         placeholder="Search labels..."
@@ -46,5 +46,5 @@ const label = ref([])
         :ui="{ input: '[&>input]:h-8 [&>input]:text-sm' }"
       />
     </template>
-  </UPopover>
+  </PPopover>
 </template>

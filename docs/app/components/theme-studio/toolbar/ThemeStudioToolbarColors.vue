@@ -17,7 +17,7 @@ const content = computed(() => [...toolbarPanelClass(props.vertical), 'p-3 flex 
 </script>
 
 <template>
-  <UPopover v-model:open="open" :content="{ align: 'center', onInteractOutside: keepPanels }" :ui="{ content }">
+  <PPopover v-model:open="open" :content="{ align: 'center', onInteractOutside: keepPanels }" :ui="{ content }">
     <ThemeStudioToolbarTrigger
       :label="colorLabel"
       :dirty="dirty"
@@ -34,7 +34,7 @@ const content = computed(() => [...toolbarPanelClass(props.vertical), 'p-3 flex 
           <span
             v-for="(chip, index) in colorChips"
             :key="chip.label"
-            class="relative size-3 rounded-full ring-2 ring-bg group-hover:ring-(--ui-bg-elevated) transition"
+            class="relative size-3 rounded-full ring-2 ring-bg group-hover:ring-(--ui-color-bg-elevated) transition"
             :class="!chip.dot && 'bg-black dark:bg-white'"
             :style="{ ...(chip.dot ? { backgroundColor: chip.dot } : {}), zIndex: colorChips.length - index }"
           />
@@ -53,5 +53,5 @@ const content = computed(() => [...toolbarPanelClass(props.vertical), 'p-3 flex 
         :section-key="alias"
       />
     </template>
-  </UPopover>
+  </PPopover>
 </template>

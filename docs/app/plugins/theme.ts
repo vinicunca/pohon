@@ -31,21 +31,21 @@ export default defineNuxtPlugin({
         // Both end up interpolated into <style> text, and storage is writable
         // by anything on the origin, so they get the same clamp the FOUC
         // script (num) and applyThemeSettings already apply.
-        useState('nuxt-ui-radius').value = clamped(saved.radius, 0, 4) ?? THEME_DEFAULTS.radius
-        useState('nuxt-ui-font-size').value = clamped(saved.fontSize, 12, 20) ?? THEME_DEFAULTS.fontSize
-        useState('nuxt-ui-font').value = saved.font ?? {}
-        useState('nuxt-ui-icons').value = saved.icons ?? THEME_DEFAULTS.icons
-        useState('nuxt-ui-black-as-primary').value = saved.blackAsPrimary ?? false
+        useState('pohon-ui-radius').value = clamped(saved.radius, 0, 4) ?? THEME_DEFAULTS.radius
+        useState('pohon-ui-font-size').value = clamped(saved.fontSize, 12, 20) ?? THEME_DEFAULTS.fontSize
+        useState('pohon-ui-font').value = saved.font ?? {}
+        useState('pohon-ui-icons').value = saved.icons ?? THEME_DEFAULTS.icons
+        useState('pohon-ui-black-as-primary').value = saved.blackAsPrimary ?? false
         // Through the same boundary the AI path uses: these two are
         // concatenated into <style> text, and storage is writable by anything
         // on the origin. (The inline FOUC script still paints the raw values
         // once, before the boot pass runs.)
-        useState('nuxt-ui-custom-colors').value = sanitizeCustomColors(saved.customColors ?? {})
-        useState('nuxt-ui-css-variables').value = saved.cssVariables ? sanitizeCSSVariables(saved.cssVariables) : {}
+        useState('pohon-ui-custom-colors').value = sanitizeCustomColors(saved.customColors ?? {})
+        useState('pohon-ui-css-variables').value = saved.cssVariables ? sanitizeCSSVariables(saved.cssVariables) : {}
         useState(THEME_STATE_KEYS.stylePrefs).value = saved.style ?? {}
         useState(THEME_STATE_KEYS.paletteParams).value = saved.paletteParams ?? {}
         useState(THEME_STATE_KEYS.themePreset).value = saved.preset
-        useState<Record<string, any>>('nuxt-ui-ai-theme').value = {
+        useState<Record<string, any>>('pohon-ui-ai-theme').value = {
           ...(saved.colors ? { colors: { ...saved.colors } } : {}),
           ...(saved.components ? { ui: { ...saved.components } } : {})
         }
@@ -79,7 +79,7 @@ export default defineNuxtPlugin({
         } catch {
           // ignored: the theme still restores, minus the style bundle
         }
-        useState<Record<string, any>>('nuxt-ui-style-ui').value = styleUi
+        useState<Record<string, any>>('pohon-ui-style-ui').value = styleUi
         defer(() => {
           // same order as the live path: style bundle first, explicit wins;
           // keys a previous distribution touched but this one doesn't reset
@@ -136,7 +136,7 @@ export default defineNuxtPlugin({
             (function() {
               if (/^\\/theme\\/?$/.test(location.pathname) && /[?&]doc=/.test(location.search)) { return; }
               var T = {};
-              try { T = JSON.parse(localStorage.getItem('nuxt-ui-theme') || '{}') || {}; } catch (e) { return; }
+              try { T = JSON.parse(localStorage.getItem('pohon-ui-theme') || '{}') || {}; } catch (e) { return; }
               var SAFE = /^[\\w -]{1,50}$/;
               function num(v, lo, hi) { var n = parseFloat(v); return isFinite(n) ? Math.min(hi, Math.max(lo, n)) : undefined; }
               function set(id, css) { var el = document.getElementById(id); if (el) { el.textContent = css; } }
@@ -154,14 +154,14 @@ export default defineNuxtPlugin({
                   }
                   el.innerHTML = html;
                 };
-                var colorsEl = document.querySelector('style#nuxt-ui-colors');
+                var colorsEl = document.querySelector('style#pohon-ui-colors');
                 if (colorsEl) { swapColors(colorsEl); }
                 else {
                   var obs = new MutationObserver(function(mutations) {
                     for (var i = 0; i < mutations.length; i++) {
                       for (var j = 0; j < mutations[i].addedNodes.length; j++) {
                         var node = mutations[i].addedNodes[j];
-                        if (node.id === 'nuxt-ui-colors') { swapColors(node); obs.disconnect(); return; }
+                        if (node.id === 'pohon-ui-colors') { swapColors(node); obs.disconnect(); return; }
                       }
                     }
                   });
@@ -170,13 +170,13 @@ export default defineNuxtPlugin({
               }
 
               var radius = num(T.radius, 0, 4);
-              if (radius !== undefined) { set('nuxt-ui-radius', ':root { --ui-radius: ' + radius + 'rem; }'); }
+              if (radius !== undefined) { set('pohon-ui-radius', ':root { --ui-radius: ' + radius + 'rem; }'); }
 
               var fontSize = num(T.fontSize, 12, 20);
-              if (fontSize !== undefined && fontSize !== 16) { set('nuxt-ui-font-size', 'html { font-size: ' + fontSize + 'px; }'); }
+              if (fontSize !== undefined && fontSize !== 16) { set('pohon-ui-font-size', 'html { font-size: ' + fontSize + 'px; }'); }
 
 
-              set('nuxt-ui-black-as-primary', T.blackAsPrimary ? ':root { --ui-primary: black; } .dark { --ui-primary: white; }' : '');
+              set('pohon-ui-black-as-primary', T.blackAsPrimary ? ':root { --ui-primary: black; } .dark { --ui-primary: white; }' : '');
 
               var prefs = T.font || {};
               var font = (prefs.sans && SAFE.test(prefs.sans)) ? prefs.sans : 'Public Sans';
@@ -198,7 +198,7 @@ export default defineNuxtPlugin({
               var lh = num(prefs.lineHeight, 0.8, 3);
               if (lh !== undefined) { bodyRules += 'line-height: ' + lh + '; '; }
               if (bodyRules) { css += ' body { ' + bodyRules + '}'; }
-              if (Object.keys(prefs).length) { set('nuxt-ui-font', css); }
+              if (Object.keys(prefs).length) { set('pohon-ui-font', css); }
               [font, serif, mono].forEach(function(name) {
                 if (!name || name === 'Public Sans') return;
                 var id = 'font-' + name.toLowerCase().replace(/\\s+/g, '-');
@@ -220,7 +220,7 @@ export default defineNuxtPlugin({
                   if (!SAFE.test(name)) continue;
                   for (var shade in custom[name]) { if (SHADE.test(shade) && !BREAKOUT.test(String(custom[name][shade]))) { vars.push('--color-' + name + '-' + shade + ': ' + custom[name][shade] + ';'); } }
                 }
-                if (vars.length) { set('nuxt-ui-custom-colors', ':root { ' + vars.join(' ') + ' }'); }
+                if (vars.length) { set('pohon-ui-custom-colors', ':root { ' + vars.join(' ') + ' }'); }
               }
 
               var cssVars = T.cssVariables;
@@ -236,7 +236,7 @@ export default defineNuxtPlugin({
                 var parts = [];
                 if (cssVars.light && Object.keys(cssVars.light).length) { parts.push('.light { ' + merge(defaults.light, cssVars.light).join(' ') + ' }'); }
                 if (cssVars.dark && Object.keys(cssVars.dark).length) { parts.push('.dark { ' + merge(defaults.dark, cssVars.dark).join(' ') + ' }'); }
-                if (parts.length) { set('nuxt-ui-css-variables', parts.join(' ')); }
+                if (parts.length) { set('pohon-ui-css-variables', parts.join(' ')); }
               }
             })();
           `.replace(/\s+/g, ' '),

@@ -65,7 +65,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 <template>
   <PForm :schema="schema" :state="state" class="space-y-4 w-96" @submit="onSubmit">
     <PFormField name="image" label="Image" description="JPG, GIF or PNG. 2MB Max.">
-      <UFileUpload v-model="state.image" accept="image/*" class="min-h-48" />
+      <PFileUpload v-model="state.image" accept="image/*" class="min-h-48" />
     </PFormField>
 
     <PButton type="submit" label="Submit" color="neutral" />

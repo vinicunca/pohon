@@ -22,7 +22,7 @@ const items: DropdownMenuItem[] = [
 </script>
 
 <template>
-  <UDropdownMenu v-model:open="open" :items="items" :ui="{ content: 'w-48' }">
+  <PDropdownMenu v-model:open="open" :items="items" :ui="{ content: 'w-48' }">
     <PButton label="Open" color="neutral" variant="outline" icon="i-lucide-menu" />
-  </UDropdownMenu>
+  </PDropdownMenu>
 </template>

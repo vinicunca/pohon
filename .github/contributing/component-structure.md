@@ -8,16 +8,16 @@ Components live in `src/runtime/components/` with PascalCase naming (e.g., `Butt
 
 ```vue
 <script lang="ts">
-import type { AppConfig } from '@nuxt/schema';
 // 1. Type imports first (always separate)
-import type { VNode } from 'vue';
-import type { ComponentConfig } from '../types/uv';
+import type { VNode } from 'vue'
+import type { AppConfig } from '@nuxt/schema'
+import type { ComponentConfig } from '../types/tv'
 
 // 2. Theme import
-import theme from '#build/ui/component-name';
+import theme from '#build/ui/component-name'
 
 // 3. Type definition
-type ComponentName = ComponentConfig<typeof theme, AppConfig, 'componentName'>;
+type ComponentName = ComponentConfig<typeof theme, AppConfig, 'componentName'>
 
 // 4. Props interface with JSDoc defaults
 export interface ComponentNameProps {
@@ -25,65 +25,61 @@ export interface ComponentNameProps {
    * The element or component this component should render as.
    * @defaultValue 'div'
    */
-  as?: any;
+  as?: any
   /**
    * @defaultValue 'primary'
    */
-  color?: ComponentName['variants']['color'];
+  color?: ComponentName['variants']['color']
   /**
    * @defaultValue 'md'
    */
-  size?: ComponentName['variants']['size'];
-  class?: any;
-  ui?: ComponentName['slots'];
+  size?: ComponentName['variants']['size']
+  class?: any
+  ui?: ComponentName['slots']
 }
 
 // 5. Slots interface - always pass ui for customization
 //    Return type is VNode[], slots are optional with `?`
 export interface ComponentNameSlots {
-  default?: (props: { ui: ComponentName['ui'] }) => Array<VNode>;
+  default?(props: { ui: ComponentName['ui'] }): VNode[]
 }
 </script>
 
 <script setup lang="ts">
-import { Primitive } from 'akar';
 // 6. Regular imports (separate from type imports)
-import { computed } from 'vue';
-import { useAppConfig } from '#imports';
-import { useComponentProps } from '../composables/useComponentProps';
-import { uv } from '../utils/uv';
+import { computed } from 'vue'
+import { Primitive } from 'akar'
+import { useAppConfig } from '#imports'
+import { useComponentProps } from '../composables/useComponentProps'
+import { tv } from '../utils/tv'
 
 // 7. Raw props (use withDefaults only when you actually need a runtime default)
-const _props = defineProps<ComponentNameProps>();
-const slots = defineSlots<ComponentNameSlots>();
+const _props = defineProps<ComponentNameProps>()
+const slots = defineSlots<ComponentNameSlots>()
 
 // 8. Theme-aware proxy: resolves explicit > <PTheme :props> > withDefaults
 //    > app.config.ui.<name>.defaultVariants. The `ui` prop is deep-merged
 //    automatically, so reach for `props.ui?.<slot>` in the template.
-//    `theme.defaultVariants` is NOT in this chain — it only feeds `uv()`
+//    `theme.defaultVariants` is NOT in this chain — it only feeds `tv()`
 //    class resolution.
-const props = useComponentProps('componentName', _props);
+const props = useComponentProps('componentName', _props)
 
 // 9. App config
-const appConfig = useAppConfig() as ComponentName['AppConfig'];
+const appConfig = useAppConfig() as ComponentName['AppConfig']
 
 // 10. Computed UI - always computed for reactivity
-const ui = computed(() => uv({
-  extend: uv(theme),
+const ui = computed(() => tv({
+  extend: theme,
   ...(appConfig.ui?.componentName || {})
 })({
   color: props.color,
-  size: props.size,
-}));
+  size: props.size
+}))
 </script>
 
 <template>
   <!-- 11. data-slot on every element, always read props as `props.x` -->
-  <Primitive
-    :as="props.as"
-    data-slot="root"
-    :class="ui.root({ class: [props.ui?.root, props.class] })"
-  >
+  <Primitive :as="props.as" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <slot :ui="ui" />
   </Primitive>
 </template>
@@ -95,78 +91,64 @@ For components wrapping Akar primitives (example: `Collapsible.vue`):
 
 ```vue
 <script lang="ts">
-import type { AppConfig } from '@nuxt/schema';
-import type { CollapsibleRootEmits, CollapsibleRootProps } from 'akar';
-import type { VNode } from 'vue';
-import type { ComponentConfig } from '../types/uv';
-import theme from '#build/ui/collapsible';
-</script>
+import type { CollapsibleRootProps, CollapsibleRootEmits } from 'akar'
+import type { VNode } from 'vue'
+import type { AppConfig } from '@nuxt/schema'
+import theme from '#build/ui/collapsible'
+import type { ComponentConfig } from '../types/tv'
 
-<script setup lang="ts">
-import { reactivePick } from '@vueuse/core';
-import { CollapsibleContent, CollapsibleRoot, CollapsibleTrigger } from 'akar';
-import { computed } from 'vue';
-import { useAppConfig } from '#imports';
-import { useComponentProps } from '../composables/useComponentProps';
-import { useForwardProps } from '../composables/useForwardProps';
-import { uv } from '../utils/uv';
-
-type Collapsible = ComponentConfig<typeof theme, AppConfig, 'collapsible'>;
+type Collapsible = ComponentConfig<typeof theme, AppConfig, 'collapsible'>
 
 export interface CollapsibleProps extends Pick<CollapsibleRootProps, 'defaultOpen' | 'open' | 'disabled' | 'unmountOnHide'> {
-  as?: any;
-  class?: any;
-  ui?: Collapsible['slots'];
+  as?: any
+  class?: any
+  ui?: Collapsible['slots']
 }
 
 export interface CollapsibleEmits extends CollapsibleRootEmits {}
 
 export interface CollapsibleSlots {
-  default?: (props: { open: boolean }) => Array<VNode>;
-  content?: (props?: {}) => Array<VNode>;
+  default?(props: { open: boolean }): VNode[]
+  content?(props?: {}): VNode[]
 }
+</script>
 
-const _props = withDefaults(
-  defineProps<CollapsibleProps>(),
-  {
-    unmountOnHide: true
-  }
-);
-const emits = defineEmits<CollapsibleEmits>();
-const slots = defineSlots<CollapsibleSlots>();
+<script setup lang="ts">
+import { computed } from 'vue'
+import { CollapsibleRoot, CollapsibleTrigger, CollapsibleContent } from 'akar'
+import { reactivePick } from '@vueuse/core'
+import { useAppConfig } from '#imports'
+import { useComponentProps } from '../composables/useComponentProps'
+import { useForwardProps } from '../composables/useForwardProps'
+import { tv } from '../utils/tv'
+
+const _props = withDefaults(defineProps<CollapsibleProps>(), {
+  unmountOnHide: true
+})
+const emits = defineEmits<CollapsibleEmits>()
+const slots = defineSlots<CollapsibleSlots>()
 
 // Theme-aware proxy. `props` deep-merges `ui` and resolves <PTheme :props> defaults.
-const props = useComponentProps('collapsible', _props);
+const props = useComponentProps('collapsible', _props)
 
-const appConfig = useAppConfig() as Collapsible['AppConfig'];
+const appConfig = useAppConfig() as Collapsible['AppConfig']
 
 // Pick from `props` (the proxy) so theme-supplied values flow through.
 // Use the local `useForwardProps` — akar's `useForwardProps` /
 // `useForwardPropsEmits` filter root props by `vm.vnode.props ∪ withDefaults`
 // and would strip <PTheme :props> values.
-const rootProps = useForwardProps(reactivePick(props, 'as', 'defaultOpen', 'open', 'disabled', 'unmountOnHide'), emits);
+const rootProps = useForwardProps(reactivePick(props, 'as', 'defaultOpen', 'open', 'disabled', 'unmountOnHide'), emits)
 
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.collapsible || {}) })());
+const ui = computed(() => tv({ extend: theme, ...(appConfig.ui?.collapsible || {}) })())
 </script>
 
 <template>
-  <CollapsibleRoot
-    v-slot="{ open }"
-    v-bind="rootProps"
-    data-slot="root"
-    :class="ui.root({ class: [props.ui?.root, props.class] })"
-  >
-    <CollapsibleTrigger
-      v-if="!!slots.default"
-      as-child
-    >
+  <CollapsibleRoot v-slot="{ open }" v-bind="rootProps" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+    <CollapsibleTrigger v-if="!!slots.default" as-child>
       <slot :open="open" />
     </CollapsibleTrigger>
 
-    <CollapsibleContent
-      data-slot="content"
-      :class="ui.content({ class: props.ui?.content })"
-    >
+    <CollapsibleContent data-slot="content" :class="ui.content({ class: props.ui?.content })">
       <slot name="content" />
     </CollapsibleContent>
   </CollapsibleRoot>
@@ -180,28 +162,25 @@ For components with typed items (Accordion, Select, Table):
 ```vue
 <script lang="ts">
 export interface AccordionItem {
-  label?: string;
-  icon?: string;
-  content?: string;
-  value?: string;
-  disabled?: boolean;
-  [key: string]: any;
+  label?: string
+  icon?: string
+  content?: string
+  value?: string
+  disabled?: boolean
+  [key: string]: any
 }
 
 export interface AccordionProps<T extends AccordionItem = AccordionItem> {
-  items?: Array<T>;
+  items?: T[]
   // ...
 }
 </script>
 
 <script setup lang="ts" generic="T extends AccordionItem">
-const props = withDefaults(
-  defineProps<AccordionProps<T>>(),
-  {
-    type: 'single',
-    collapsible: true
-  }
-);
+const props = withDefaults(defineProps<AccordionProps<T>>(), {
+  type: 'single',
+  collapsible: true
+})
 </script>
 ```
 
@@ -211,10 +190,10 @@ For inputs that integrate with PForm:
 
 ```vue
 <script setup lang="ts">
-import { useFieldGroup } from '../composables/useFieldGroup';
-import { useFormField } from '../composables/useFormField';
+import { useFormField } from '../composables/useFormField'
+import { useFieldGroup } from '../composables/useFieldGroup'
 
-defineOptions({ inheritAttrs: false });
+defineOptions({ inheritAttrs: false })
 
 // Pass raw `_props` (not the proxy) so the wrapping `<PFormField>` /
 // `<PFieldGroup>` keep precedence over `<PTheme :props>` / `withDefaults` /
@@ -222,34 +201,26 @@ defineOptions({ inheritAttrs: false });
 // so handing them the proxy would leak theme defaults into "explicit prop"
 // and silently override the wrapper.
 const {
-  id,
-  name,
-  size: formFieldSize,
-  color,
-  highlight,
-  disabled,
-  ariaAttrs,
-  emitFormBlur,
-  emitFormInput,
-  emitFormChange
-} = useFormField<InputProps>(_props, { deferInputValidation: true });
+  id, name, size: formFieldSize, color, highlight, disabled,
+  ariaAttrs, emitFormBlur, emitFormInput, emitFormChange
+} = useFormField<InputProps>(_props, { deferInputValidation: true })
 
-const { orientation, size: fieldGroupSize } = useFieldGroup<InputProps>(_props);
+const { orientation, size: fieldGroupSize } = useFieldGroup<InputProps>(_props)
 
-const inputSize = computed(() => fieldGroupSize.value || formFieldSize.value);
+const inputSize = computed(() => fieldGroupSize.value || formFieldSize.value)
 
-// In `uv()` calls, fall back to `props.X` (the proxy) so `<PTheme :props>`
+// In `tv()` calls, fall back to `props.X` (the proxy) so `<PTheme :props>`
 // applies when there is no wrapping FormField/FieldGroup. Without `?? props.X`,
 // theme size/color/highlight is silently dropped on bare inputs.
 //
 // Final precedence: explicit > closer-context (form/group) > <PTheme :props>
-//                   > withDefaults > app.config > uv defaults
-const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.input || {}) })({
+//                   > withDefaults > app.config > tv defaults
+const ui = computed(() => tv({ extend: theme, ...(appConfig.ui?.input || {}) })({
   color: color.value ?? props.color,
   size: inputSize.value ?? props.size,
   highlight: highlight.value ?? props.highlight,
   variant: props.variant
-}));
+}))
 </script>
 
 <template>
@@ -265,25 +236,49 @@ const ui = computed(() => uv({ extend: uv(theme), ...(appConfig.ui?.input || {})
 </template>
 ```
 
-The same `?? props.X` pattern applies to `useAvatarGroup` (`size`) and any other context composable whose contract is `props?.x ?? injected.x`. The composable itself stays untouched — the fallback lives at the `uv()` call site so the wrapper-vs-theme precedence is explicit and reviewable.
+The same `?? props.X` pattern applies to `useAvatarGroup` (`size`) and any other context composable whose contract is `props?.x ?? injected.x`. The composable itself stays untouched — the fallback lives at the `tv()` call site so the wrapper-vs-theme precedence is explicit and reviewable.
+
+## `data-slot` on the root
+
+Parents label a child by passing `data-slot` (e.g. `<PIcon data-slot="leadingIcon" />`, `<PAvatar data-slot="leadingAvatar" />`). The rule is: **a caller-supplied `data-slot` always wins on the component's root element**, with the component's own value (`root`/`base`) as the fallback. Inner elements keep their own `data-slot`.
+
+How you achieve it depends on how the root receives attributes:
+
+- **Single root, default `inheritAttrs`** (Badge, Card, …): nothing to do. Vue's attribute fallthrough already lets the caller's `data-slot` override the static one on the root. This only holds when the template root renders an element: `Button`'s root is a renderless `PLink custom` that hands `$attrs` back as slot props, so its `PLinkBase` needs the default placed before the spread (`<PLinkBase data-slot="base" v-bind="slotProps">`), same as the `$attrs` case below.
+- **`inheritAttrs: false`, `$attrs` spread on the root**: fallthrough is off, so a static `data-slot="root"` placed *after* `v-bind` would win over the caller. Put the attribute *before* the `v-bind` instead, so a caller value in `$attrs` overrides it:
+
+  ```vue
+  <Primitive :as="props.as" data-slot="root" v-bind="$attrs" :class="ui.root({ class: [props.ui?.root, props.class] })" />
+
+  <Separator data-slot="root" v-bind="{ ...rootProps, ...$attrs }" :class="ui.root({ class: [props.ui?.root, props.class] })" />
+  ```
+
+  Keep `:id`, `ref` and `v-slot` **before** `data-slot`: `vue/attributes-order` ranks them first, and its autofix moves `data-slot` past the `v-bind` (reverting the override) instead of moving them up. `test/components/DataSlot.spec.ts` catches this, but better not to trip it.
+
+- **`inheritAttrs: false`, `$attrs` forwarded to an inner element** (Avatar, Input, Checkbox, Switch, …): the root never receives `$attrs`, so read the caller's value on the root explicitly, and keep each inner element's own `data-slot` *after* its `$attrs` spread so the caller's value does not leak onto it:
+
+  ```vue
+  <Primitive :as="props.as" :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'" :class="ui.root({ class: [props.ui?.root, props.class] })">
+    <input v-bind="{ ...$attrs, ...ariaAttrs }" data-slot="base" :class="ui.base({ class: props.ui?.base })">
+  </Primitive>
+  ```
+
+  For `<Slot>` forwards and inner elements that have no `data-slot` of their own, strip it from what you forward so it cannot leak: `v-bind="{ ...$attrs, 'data-slot': undefined }"`. The same applies when attributes are forwarded from the script, like `Editor` spreading `useAttrs()` into tiptap's `editorProps.attributes`: use `omit(attrs, ['data-slot'])`.
+
+The rule is enforced by `test/components/DataSlot.spec.ts`, which mounts every component with a caller `data-slot` and asserts it lands exactly once, on the outermost rendered element.
 
 ## Components with Icons
 
 ```vue
 <script setup lang="ts">
-import { useComponentIcons } from '../composables/useComponentIcons';
-import PIcon from './Icon.vue';
+import { useComponentIcons } from '../composables/useComponentIcons'
+import PIcon from './Icon.vue'
 
-const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
+const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props)
 </script>
 
 <template>
-  <PIcon
-    v-if="isLeading && leadingIconName"
-    :name="leadingIconName"
-    data-slot="leadingIcon"
-    :class="ui.leadingIcon()"
-  />
+  <PIcon v-if="isLeading && leadingIconName" :name="leadingIconName" data-slot="leadingIcon" :class="ui.leadingIcon()" />
 </template>
 ```
 
@@ -291,17 +286,17 @@ const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponen
 
 ```vue
 <script setup lang="ts">
-const inputRef = useTemplateRef('inputRef');
+const inputRef = useTemplateRef('inputRef')
 
 defineExpose({
   inputRef
-});
+})
 </script>
 ```
 
 ## Theme Defaults
 
-`useComponentProps` is the primary integration with `<PTheme>`. The proxy resolves the priority chain **explicit prop > nearest `<PTheme :props>` > `withDefaults` > `app.config.ui.<name>.defaultVariants`** for every prop — including ones driving template logic that `uv().defaultVariants` can't reach (`<component :is>`, `v-if`, computed conditionals). `theme.defaultVariants` is intentionally NOT in the proxy chain — it only feeds `uv()` class resolution. If a prop value is consumed in template logic, it must come from one of the proxy-resolved sources (typically `withDefaults`):
+`useComponentProps` is the primary integration with `<PTheme>`. The proxy resolves the priority chain **explicit prop > nearest `<PTheme :props>` > `withDefaults` > `app.config.ui.<name>.defaultVariants`** for every prop — including ones driving template logic that `tv().defaultVariants` can't reach (`<component :is>`, `v-if`, computed conditionals). `theme.defaultVariants` is intentionally NOT in the proxy chain — it only feeds `tv()` class resolution. If a prop value is consumed in template logic, it must come from one of the proxy-resolved sources (typically `withDefaults`):
 
 ```vue
 <template>
@@ -313,7 +308,7 @@ Notes:
 - The proxy passes through to `_props` for explicitly set props, so `withDefaults` fallbacks stay lower priority than `<PTheme>` overrides.
 - The `ui` prop is deep-merged (slot classes layered on top of theme overrides). All other props are explicit-wins.
 - **Always read props as `props.x` in templates and `<script setup>`.** Bare prop names (`{{ label }}`, `v-if="arrow"`) resolve to `_props` and bypass the proxy, so `<PTheme :props>` defaults won't apply. The `pohon-ui/no-bare-prop-refs` ESLint rule autofixes this.
-- Pass the **raw** `_props` (not the proxy) to context composables — `useFormField`, `useFieldGroup`, `useAvatarGroup`. Their internal fallback is `props?.x ?? injected.x`, so the wrapping `<PFormField>` / `<PFieldGroup>` / `<PAvatarGroup>` should beat `<PTheme :props>` / `withDefaults` / `app.config` defaults (closer context wins). **Then always fall back to the proxy in `uv()` calls** — `size: formSize.value ?? props.size`, `color: color.value ?? props.color`, `highlight: highlight.value ?? props.highlight`. Without `?? props.X`, `<PTheme :props>` is silently dropped when no closer context wraps the component. Final chain: `explicit > closer-context > PTheme > withDefaults > app.config > uv defaults`. `useComponentIcons` has no injection chain, so pass the proxy `props` directly.
+- Pass the **raw** `_props` (not the proxy) to context composables — `useFormField`, `useFieldGroup`, `useAvatarGroup`. Their internal fallback is `props?.x ?? injected.x`, so the wrapping `<PFormField>` / `<PFieldGroup>` / `<PAvatarGroup>` should beat `<PTheme :props>` / `withDefaults` / `app.config` defaults (closer context wins). **Then always fall back to the proxy in `tv()` calls** — `size: formSize.value ?? props.size`, `color: color.value ?? props.color`, `highlight: highlight.value ?? props.highlight`. Without `?? props.X`, `<PTheme :props>` is silently dropped when no closer context wraps the component. Final chain: `explicit > closer-context > PTheme > withDefaults > app.config > tv defaults`. `useComponentIcons` has no injection chain, so pass the proxy `props` directly.
 - Akar primitives' `useForwardProps` / `useForwardPropsEmits` filter root props by `vm.vnode.props ∪ withDefaults` and would strip theme-supplied values. Import `useForwardProps` from `composables/useForwardProps.ts` instead — same `(source, emits?)` signature, proxy-aware.
 
 ## Key Patterns
@@ -324,6 +319,7 @@ Notes:
 | `useForwardProps(source, emits?)` (local) | Forward Akar props/emits without filtering theme defaults |
 | `withDefaults` | Runtime default values |
 | `defineOptions({ inheritAttrs: false })` | When spreading `$attrs` to inner element |
+| Caller `data-slot` wins on root | Place the default `data-slot` before the root `v-bind`, or read `$attrs['data-slot']` on the root — see [`data-slot` on the root](#data-slot-on-the-root) |
 | `reactivePick` | Pick keys off `props` (the proxy) before forwarding |
 | `createReusableTemplate` | Complex template reuse (Table, Modal) |
 | `useTemplateRef` | Template refs (Vue 3.5+) |
@@ -334,17 +330,17 @@ Notes:
 Add to `src/runtime/types/index.ts`:
 
 ```ts
-export * from '../components/ComponentName.vue';
+export * from '../components/ComponentName.vue'
 ```
 
 ## Register in `ThemeDefaults`
 
-The `ThemeDefaults` interface in `src/runtime/composables/useComponentProps.ts` powers autocomplete inside `<PTheme :props="{ componentName: { … } }">`. The CLI scaffolder (`pohon-ui make component`) auto-inserts the entry; only do this manually if you skipped the CLI:
+The `ThemeDefaults` interface in `src/runtime/composables/useComponentProps.ts` powers autocomplete inside `<PTheme :props="{ componentName: { … } }">`. The CLI scaffolder (`pnpm cli make component`) auto-inserts the entry; only do this manually if you skipped the CLI:
 
 ```ts
 export interface ThemeDefaults {
   // ... existing entries
-  componentName?: Partial<ComponentTypes.ComponentNameProps>;
+  componentName?: Partial<ComponentTypes.ComponentNameProps>
 }
 ```
 

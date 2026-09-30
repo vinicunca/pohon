@@ -14,7 +14,7 @@ const SAFE_HEX = /^#[0-9a-f]{3,8}$/i
 // every spelling parseColor reads has to pass too (a fractional lightness,
 // a `.2` chroma, a `deg` hue, padding): the AI writes them all, and a
 // rejected shade drops the whole palette. Digits, `%`, `deg`, `none` and
-// spaces only, so a value still can't end its declaration early. Tailwind
+// spaces only, so a value still can't end its declaration early. UnoCSS
 // >=4.3.3 emits `none` for achromatic chroma/hue (the whole neutral ramp).
 const OKLCH_NUMBER = String.raw`\d+(?:\.\d+)?|\.\d+`
 const SAFE_OKLCH = new RegExp(String.raw`^oklch\(\s*(?:${OKLCH_NUMBER})%?\s+(?:${OKLCH_NUMBER}|none)\s+(?:(?:${OKLCH_NUMBER})(?:deg)?|none)\s*\)$`, 'i')

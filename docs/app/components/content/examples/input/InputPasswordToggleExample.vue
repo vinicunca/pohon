@@ -4,7 +4,7 @@ const password = ref('')
 </script>
 
 <template>
-  <UInput
+  <PInput
     v-model="password"
     placeholder="Password"
     :type="show ? 'text' : 'password'"
@@ -22,7 +22,7 @@ const password = ref('')
         @click="show = !show"
       />
     </template>
-  </UInput>
+  </PInput>
 </template>
 
 <style>

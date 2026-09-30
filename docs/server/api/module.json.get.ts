@@ -1,35 +1,27 @@
-interface TeamMember {
-  name: string;
-  login: string;
-  avatarUrl: string;
-  pronouns?: string;
-  location?: string;
-  websiteUrl?: string;
-  sponsorsListing?: string;
-  socialAccounts: Record<string, { displayName: string; url: string }>;
+interface GitHubRepository {
+  stargazers_count: number
 }
 
-interface Module {
-  stats: {
-    downloads: number;
-    stars: number;
-  };
-  contributors: Array<{
-    username: string;
-  }>;
+interface NpmDownloads {
+  downloads: number
 }
 
 export default defineCachedEventHandler(async () => {
-  const team = await $fetch<Array<TeamMember>>('https://nuxt.com/api/v1/teams/ui');
-  const { stats, contributors } = await $fetch<Module>('https://nuxt.com/api/v1/modules/ui');
+  const [repository, npm] = await Promise.all([
+    $fetch<GitHubRepository>('https://api.github.com/repos/vinicunca/pohon', {
+      headers: { 'User-Agent': 'pohon-ui-docs' }
+    }).catch(() => null),
+    $fetch<NpmDownloads>('https://api.npmjs.org/downloads/point/last-month/pohon-ui').catch(() => null)
+  ])
 
   return {
-    team,
-    stats,
-    contributors,
-  };
+    stats: {
+      downloads: npm?.downloads ?? 0,
+      stars: repository?.stargazers_count ?? 0
+    }
+  }
 }, {
-  maxAge: 60 * 60, // 1 hour
+  maxAge: 60 * 60,
   shouldBypassCache: () => !!import.meta.dev,
-  getKey: () => 'module',
-});
+  getKey: () => 'module'
+})
