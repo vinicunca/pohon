@@ -26,6 +26,7 @@ import { ConfigProvider, TooltipProvider, useForwardProps } from 'akar';
 import { provide, toRef, useId } from 'vue';
 import { localeContextInjectionKey } from '../composables/useLocale';
 import { portalTargetInjectionKey } from '../composables/usePortal';
+import en from '../locale/en';
 import POverlayProvider from './OverlayProvider.vue';
 import PToaster from './Toaster.vue';
 
@@ -41,7 +42,7 @@ const configProviderProps = useForwardProps(reactivePick(props, 'scrollBody'));
 const tooltipProps = toRef(() => props.tooltip);
 const toasterProps = toRef(() => props.toaster);
 
-const locale = toRef(() => props.locale);
+const locale = toRef(() => props.dir ? { ...(props.locale || en), dir: props.dir } : props.locale);
 provide(localeContextInjectionKey, locale);
 
 const portal = toRef(() => props.portal);
