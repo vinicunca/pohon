@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.0.1](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.9...v2.0.1) (2026-09-30)
+
+### Bug Fixes
+
+* **App:** apply the dir prop to the provided locale ([32dbff2](https://github.com/vinicunca/pohon/commit/32dbff243f4a959e6afb526854cb2998a0591c35))
+* **CheckboxGroup/RadioGroup:** lift a hovered table item above its neighbors ([70b2368](https://github.com/vinicunca/pohon/commit/70b2368705306cfcd2a8f6d20e7d45b416a75410))
+* **ContentSearch/DashboardSearch:** use translated search label as dialog title ([fb66bdd](https://github.com/vinicunca/pohon/commit/fb66bdd49489efe51668e11d812562be613bb6d1))
+* **EditorToolbar:** use tooltip text as aria-label on icon-only buttons ([13ee357](https://github.com/vinicunca/pohon/commit/13ee35786887a58a2f613f97901bc195b9b99d3a))
+* **Form:** include nested forms in parent dirty state ([fd7f6ea](https://github.com/vinicunca/pohon/commit/fd7f6ea3130763a39b39a8c36c3de631d5ae2892))
+* **Table:** keep footer separator above pinned columns ([aae07ea](https://github.com/vinicunca/pohon/commit/aae07ea8d847d35fdad22737631e5139dd386601))
+* **theme:** drop double quotes from class strings ([8db9731](https://github.com/vinicunca/pohon/commit/8db9731537ace0824d25754011168be52776f40a))
+* **useFilter:** keep labels and separators in place while sorting ([7b7233b](https://github.com/vinicunca/pohon/commit/7b7233ba6b04856846a4a5eff3c96062ba0ed6e9))
+* **useOverlay:** resolve every pending promise when reopened ([0b7777b](https://github.com/vinicunca/pohon/commit/0b7777bc8ca7e0d1c8e08864da67d47209d9b324))
+
 ## [2.0.0-rc7.9](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.8...v2.0.0-rc7.9) (2026-09-22)
 
 ### Bug Fixes
