@@ -162,7 +162,7 @@ const props = useComponentProps<ContentSearchProps<T>>('contentSearch', _props);
 
 const searchTerm = defineModel<string>('searchTerm', { default: '' });
 
-const { t } = useLocale();
+const { t, locale } = useLocale();
 const { open, mapNavigationItems, mapLinks, mapSearchResults, postFilter } = useContentSearch();
 
 const colorMode = useColorMode();
@@ -373,8 +373,8 @@ defineExpose({
 <template>
   <PModal
     v-model:open="open"
-    :title="props.title || t('contentSearch.title')"
-    :description="props.description || t('contentSearch.description')"
+    :title="props.title || locale.messages.contentSearch?.title || t('contentSearchButton.label')"
+    :description="props.description || locale.messages.contentSearch?.description"
     v-bind="modalProps"
     data-slot="modal"
     :class="ui.modal({ class: [props.ui?.modal, props.class] })"
