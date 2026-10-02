@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.2](https://github.com/vinicunca/pohon/compare/v2.0.1...v2.0.2) (2026-10-02)
+
+### Bug Fixes
+
+* **ChatPrompt:** add method="post" to prevent input leaking via GET before hydration ([e786d4b](https://github.com/vinicunca/pohon/commit/e786d4b8d4cc7ec9069be01b419a64b5ccef2895))
+* **DashboardSidebar/Header:** use translated toggle label as menu dialog title ([68b614b](https://github.com/vinicunca/pohon/commit/68b614b569caf7c7beea676f0a01509e1ce6af64))
+* **Form:** keep dirty state and validation in sync with input ([3e976b7](https://github.com/vinicunca/pohon/commit/3e976b773e2639ace42e6a61edbc31cf7cd90d0d))
+* **Select/SelectMenu:** keep focus moved on selection ([12c833d](https://github.com/vinicunca/pohon/commit/12c833d4068aeb172ada4085d2a90f2ad38d2500))
+* **utils:** prevent prototype pollution in set and setAtPath ([b7c29a3](https://github.com/vinicunca/pohon/commit/b7c29a3c106ed95f7a9bc21dc369fe0784a53104))
+
 ## [2.0.1](https://github.com/vinicunca/pohon/compare/v2.0.0-rc7.9...v2.0.1) (2026-09-30)
 
 ### Bug Fixes
