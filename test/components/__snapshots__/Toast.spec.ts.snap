@@ -7,11 +7,12 @@ exports[`toast > renders with actions correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
         <!--v-if-->
         <div data-slot="actions" class="flex gap-1.5 shrink-0 items-start mt-2.5"><button type="button" data-slot="base" data-akar-toast-announce-exclude="" data-akar-toast-announce-alt="Action" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2 py-1 text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
@@ -33,7 +34,7 @@ exports[`toast > renders with actions correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -47,11 +48,12 @@ exports[`toast > renders with as correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <section data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <section data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
         <!--v-if-->
         <!--v-if-->
@@ -70,7 +72,7 @@ exports[`toast > renders with as correctly 1`] = `
         <!--v-if-->
       </div>
     </section>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -84,10 +86,11 @@ exports[`toast > renders with avatar correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-11 text-[22px] shrink-0"><img src="https://github.com/praburangki.png" width="44" height="44" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-11 text-[22px] shrink-0"><img src="https://github.com/praburangki.png" width="44" height="44" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
         <!--v-if-->
         <!--v-if-->
@@ -106,7 +109,7 @@ exports[`toast > renders with avatar correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -120,11 +123,12 @@ exports[`toast > renders with class correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start bg-background-elevated/50" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start bg-background-elevated/50" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
         <!--v-if-->
         <!--v-if-->
@@ -143,7 +147,7 @@ exports[`toast > renders with class correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -157,11 +161,12 @@ exports[`toast > renders with close slot correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
         <!--v-if-->
         <!--v-if-->
@@ -177,7 +182,7 @@ exports[`toast > renders with close slot correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -191,11 +196,12 @@ exports[`toast > renders with closeIcon correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
         <!--v-if-->
         <!--v-if-->
@@ -214,7 +220,7 @@ exports[`toast > renders with closeIcon correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -228,11 +234,12 @@ exports[`toast > renders with color neutral correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
         <!--v-if-->
         <!--v-if-->
@@ -251,7 +258,7 @@ exports[`toast > renders with color neutral correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -265,12 +272,13 @@ exports[`toast > renders with description correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
-        <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
+        <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div><!-- A managed toast without a description renders nothing, unless slot content is given. -->
         <div data-slot="description" class="text-sm color-text-muted mt-1">This is a toast</div>
         <!--v-if-->
       </div>
@@ -288,7 +296,7 @@ exports[`toast > renders with description correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -302,12 +310,13 @@ exports[`toast > renders with description slot correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
-        <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
+        <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div><!-- A managed toast without a description renders nothing, unless slot content is given. -->
         <div data-slot="description" class="text-sm color-text-muted mt-1">Description slot</div>
         <!--v-if-->
       </div>
@@ -325,7 +334,7 @@ exports[`toast > renders with description slot correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -339,10 +348,11 @@ exports[`toast > renders with icon correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right"><span class="iconify i-lucide:rocket shrink-0 size-5 color-primary" aria-hidden="true" data-slot="icon"></span>
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right"><span class="iconify i-lucide:rocket shrink-0 size-5 color-primary" aria-hidden="true" data-slot="icon"></span>
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
         <!--v-if-->
         <!--v-if-->
@@ -361,7 +371,7 @@ exports[`toast > renders with icon correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -375,9 +385,10 @@ exports[`toast > renders with leading slot correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">Leading slot<div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">Leading slot<div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
         <!--v-if-->
         <!--v-if-->
@@ -396,7 +407,7 @@ exports[`toast > renders with leading slot correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -410,11 +421,12 @@ exports[`toast > renders with orientation horizontal correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="horizontal" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-center" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right"><span class="iconify i-lucide:rocket shrink-0 size-5 color-primary" aria-hidden="true" data-slot="icon"></span>
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="horizontal" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-center" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right"><span class="iconify i-lucide:rocket shrink-0 size-5 color-primary" aria-hidden="true" data-slot="icon"></span>
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
-        <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
+        <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div><!-- A managed toast without a description renders nothing, unless slot content is given. -->
         <div data-slot="description" class="text-sm color-text-muted mt-1">This is a toast</div>
         <!--v-if-->
       </div>
@@ -433,7 +445,7 @@ exports[`toast > renders with orientation horizontal correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -447,11 +459,12 @@ exports[`toast > renders with orientation vertical correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right"><span class="iconify i-lucide:rocket shrink-0 size-5 color-primary" aria-hidden="true" data-slot="icon"></span>
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right"><span class="iconify i-lucide:rocket shrink-0 size-5 color-primary" aria-hidden="true" data-slot="icon"></span>
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
-        <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
+        <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div><!-- A managed toast without a description renders nothing, unless slot content is given. -->
         <div data-slot="description" class="text-sm color-text-muted mt-1">This is a toast</div>
         <div data-slot="actions" class="flex gap-1.5 shrink-0 items-start mt-2.5"><button type="button" data-slot="base" data-akar-toast-announce-exclude="" data-akar-toast-announce-alt="Action" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2 py-1 text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
             <!--v-if--><span data-slot="label" class="truncate">Action</span>
@@ -472,7 +485,7 @@ exports[`toast > renders with orientation vertical correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -486,11 +499,12 @@ exports[`toast > renders with title correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
         <!--v-if-->
         <!--v-if-->
@@ -509,7 +523,7 @@ exports[`toast > renders with title correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -523,11 +537,12 @@ exports[`toast > renders with title slot correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted">Title slot</div>
         <!--v-if-->
         <!--v-if-->
@@ -546,7 +561,7 @@ exports[`toast > renders with title slot correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -560,11 +575,12 @@ exports[`toast > renders with type correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
         <!--v-if-->
         <!--v-if-->
@@ -583,7 +599,7 @@ exports[`toast > renders with type correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -597,11 +613,12 @@ exports[`toast > renders with ui correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted font-700">Toast</div>
         <!--v-if-->
         <!--v-if-->
@@ -620,7 +637,7 @@ exports[`toast > renders with ui correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
@@ -634,11 +651,12 @@ exports[`toast > renders without close correctly 1`] = `
 <!--teleport start-->
 
 
-<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
-  <ol tabindex="-1" data-expanded="true" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;">
-    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none;" data-state="open" data-swipe-direction="right">
+<div role="region" aria-label="Notifications (F8)" tabindex="-1"><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  <ol tabindex="-1" data-expanded="true" style="--scale-factor: 0.05; --translate-factor: -1px; --gap: -16px; --front-height: 0px; --height: 0px;" data-slot="viewport" class="fixed flex flex-col w-[calc(100%-2rem)] sm:w-96 z-[100] data-[expanded=true]:h-(--height) focus:outline-none right-4 bottom-4">
+    <li data-akar-collection-item="" tabindex="0" data-orientation="vertical" data-slot="root" class="relative group overflow-hidden bg-background shadow-lg rounded-lg ring ring-ring p-4 flex gap-2.5 outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary items-start" style="--height: 0; user-select: none; touch-action: none; --akar-toast-index: 0; --akar-toast-offset-y: 0px;" data-state="open" data-swipe-direction="right">
       <!--v-if-->
       <div data-slot="wrapper" class="w-0 flex-1 flex flex-col">
+        <!-- A managed toast without a title renders nothing, unless slot content is given. -->
         <div data-slot="title" class="text-sm font-500 color-text-highlighted">Toast</div>
         <!--v-if-->
         <!--v-if-->
@@ -652,7 +670,7 @@ exports[`toast > renders without close correctly 1`] = `
         <!--v-if-->
       </div>
     </li>
-  </ol><span aria-hidden="true" tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
+  </ol><span tabindex="0" style="position: fixed; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; word-wrap: normal; top: -1px; left: -1px;"></span>
 </div>
 
 
