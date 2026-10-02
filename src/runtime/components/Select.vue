@@ -335,6 +335,14 @@ function isSelectItem(item: SelectItem): item is Exclude<SelectItem, SelectValue
   return typeof item === 'object' && item !== null;
 }
 
+function onCloseAutoFocus(event: Event) {
+  // Keep the focus where it was moved on select instead of restoring it to the trigger after the close animation.
+  const activeElement = document.activeElement;
+  if (activeElement && activeElement !== document.body && !(event.target as HTMLElement).contains(activeElement)) {
+    event.preventDefault();
+  }
+}
+
 function onTriggerClick(open: boolean) {
   // A real pointer click opens the menu via `pointerdown` (so `open` is already `true`
   // here), and keyboard activation opens via `keydown`. A `<label for>` click only
@@ -404,7 +412,7 @@ defineExpose({
 
     <SelectPortal v-bind="portalProps">
       <FieldGroupReset>
-        <SelectContent data-slot="content" :class="ui.content({ class: props.ui?.content })" v-bind="contentProps">
+        <SelectContent data-slot="content" :class="ui.content({ class: props.ui?.content })" v-bind="contentProps" @close-auto-focus="onCloseAutoFocus">
           <slot name="content-top" />
 
           <component :is="isItemAligned ? SelectViewport : 'div'" ref="viewportRef" role="presentation" data-slot="viewport" :class="ui.viewport({ class: props.ui?.viewport })">

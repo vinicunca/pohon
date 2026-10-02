@@ -252,6 +252,31 @@ describe('select', () => {
     });
   });
 
+  describe('focus', () => {
+    it('keeps the focus moved on select', async () => {
+      const input = document.createElement('input');
+      document.body.appendChild(input);
+
+      const wrapper = mount(Select, { attachTo: document.body, props: { 'defaultOpen': true, 'portal': false, items, 'onUpdate:modelValue': () => input.focus() } });
+
+      await flushPromises();
+      await new Promise((resolve) => {
+        setTimeout(resolve);
+      });
+
+      await wrapper.findAll('[role="option"]')[1]!.trigger('keydown', { key: 'Enter' });
+      await flushPromises();
+      await new Promise((resolve) => {
+        setTimeout(resolve);
+      });
+
+      expect(document.activeElement).toBe(input);
+
+      wrapper.unmount();
+      input.remove();
+    });
+  });
+
   describe('form integration', async () => {
     async function createForm(validateOn?: Array<FormInputEvents>) {
       const wrapper = await renderForm({

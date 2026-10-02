@@ -118,7 +118,7 @@ catalog:
   '@vueuse/nuxt': ^14.4.0
   '@vueuse/shared': ^14.4.0
   ai: ^7.0.116
-  akar: 2.0.18
+  akar: 2.0.22
   capture-website: ^5.1.0
   citty: ^0.2.2
   colortranslator: ^5.0.0

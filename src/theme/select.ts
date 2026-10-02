@@ -11,7 +11,7 @@ export default (options: Required<ModuleOptions>) => {
       value: 'truncate pointer-events-none',
       placeholder: 'truncate color-text-dimmed',
       arrow: 'fill-bg stroke-default',
-      content: 'max-h-[min(15rem,var(--akar-select-content-available-height,15rem))] w-(--akar-select-trigger-width) bg-background shadow-lg rounded-md ring ring-ring overflow-hidden origin-(--akar-select-content-transform-origin) pointer-events-auto flex flex-col',
+      content: 'max-h-[min(15rem,var(--akar-select-content-available-height,15rem))] w-(--akar-select-trigger-width) bg-background shadow-lg rounded-md ring ring-ring overflow-hidden origin-(--akar-select-content-transform-origin) pointer-events-auto data-[state=closed]:pointer-events-none! flex flex-col',
       viewport: 'relative divide-y divide-divide scroll-py-1 overflow-y-auto flex-1',
       group: 'p-1 isolate',
       empty: 'text-center color-text-muted',
