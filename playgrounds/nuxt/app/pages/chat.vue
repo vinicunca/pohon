@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import type { ChatStatus, UIMessage } from 'ai';
 
-const colors = ['neutral', 'primary', 'secondary', 'success', 'info', 'warning', 'error'];
-const messageVariants = ['naked', 'solid', 'outline', 'soft', 'subtle'];
-const promptVariants = ['outline', 'soft', 'subtle'];
+const colors: Array<'neutral' | 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error'> = ['neutral', 'primary', 'secondary', 'success', 'info', 'warning', 'error'];
+const messageVariants: Array<'naked' | 'solid' | 'outline' | 'soft' | 'subtle'> = ['naked', 'solid', 'outline', 'soft', 'subtle'];
+const promptVariants: Array<'outline' | 'soft' | 'subtle'> = ['outline', 'soft', 'subtle'];
 
-const messageColor = ref('primary');
-const messageVariant = ref('soft');
-const promptColor = ref('primary');
-const promptVariant = ref('subtle');
+const messageColor = ref<(typeof colors)[number]>('primary');
+const messageVariant = ref<(typeof messageVariants)[number]>('soft');
+const promptColor = ref<(typeof colors)[number]>('primary');
+const promptVariant = ref<(typeof promptVariants)[number]>('subtle');
 const compact = ref(false);
 const showIndicator = ref(false);
 const toolLoading = ref(false);

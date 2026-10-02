@@ -109,7 +109,7 @@ import { themeTree } from './pohon-theme/theme.tree';
 import { themeUser } from './pohon-theme/theme.user';
 
 // @keep-sorted
-export const uiTheme = {
+export const uiTheme: NonNullable<AppConfigInput['ui']> = {
   accordion: themeAccordion,
   alert: themeAlert,
   authForm: themeAuthForm,
@@ -237,4 +237,4 @@ export const uiTheme = {
   tooltip: themeTooltip,
   tree: themeTree,
   user: themeUser,
-} satisfies AppConfigInput['ui'];
+};

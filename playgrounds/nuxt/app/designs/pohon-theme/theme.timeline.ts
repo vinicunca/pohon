@@ -7,12 +7,12 @@ export const themeTimeline = {
     root: 'flex gap-1.5',
     item: 'group flex flex-1 gap-3 relative',
     container: 'flex gap-1.5 items-center relative',
-    indicator: 'group-data-[state=completed]:color-text-inverted group-data-[state=active]:color-text-inverted color-text-muted',
-    separator: 'bg-background-elevated rounded-full flex-1',
+    indicator: 'color-text-muted group-data-[state=active]:color-text-inverted group-data-[state=completed]:color-text-inverted',
+    separator: 'rounded-full bg-background-elevated flex-1',
     wrapper: 'w-full',
-    date: 'color-text-dimmed text-xs/5',
-    title: 'color-text-highlighted text-sm font-500',
-    description: 'color-text-muted text-sm text-wrap',
+    date: 'text-xs/5 color-text-dimmed',
+    title: 'text-sm color-text-highlighted font-500',
+    description: 'text-sm color-text-muted text-wrap',
   },
 
   variants: {
@@ -35,8 +35,24 @@ export const themeTimeline = {
 
       }])),
       neutral: {
-        indicator: 'group-data-[state=completed]:bg-background-inverted group-data-[state=active]:bg-background-inverted',
+        indicator: 'group-data-[state=active]:bg-background-inverted group-data-[state=completed]:bg-background-inverted',
       },
+    },
+
+    size: {
+      '3xs': '',
+      '2xs': '',
+      'xs': '',
+      'sm': '',
+      'md': '',
+      'lg': '',
+      'xl': '',
+      '2xl': '',
+      '3xl': '',
+    },
+
+    reverse: {
+      true: '',
     },
   },
 
