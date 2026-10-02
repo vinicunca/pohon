@@ -77,7 +77,7 @@ export interface FormSlots {
 
 <script lang="ts" setup generic="S extends FormSchema, T extends boolean = true, N extends boolean = false">
 import { useEventBus } from '@vueuse/core';
-import { computed, inject, nextTick, onMounted, onUnmounted, provide, reactive, readonly, ref, unref, useId, useTemplateRef } from 'vue';
+import { computed, inject, nextTick, onMounted, onUnmounted, provide, reactive, readonly, ref, toRaw, unref, useId, useTemplateRef } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { formBusInjectionKey, formErrorsInjectionKey, formInputsInjectionKey, formLoadingInjectionKey, formOptionsInjectionKey, formStateInjectionKey } from '../composables/useFormField';
@@ -151,27 +151,49 @@ onMounted(async () => {
   bus.on(async (event) => {
     if (event.type === 'attach') {
       nestedForms.value.set(event.formId, { validate: event.validate, clearDirty: event.clearDirty, name: event.name, api: event.api as any });
-    } else if (event.type === 'detach') {
+      return;
+    }
+
+    if (event.type === 'detach') {
       nestedForms.value.delete(event.formId);
-    } else if (props.validateOn?.includes(event.type) && !loading.value) {
-      if (event.type !== 'input') {
-        await _validate({ name: event.name, silent: true, nested: false });
-      } else if (event.eager || blurredFields.has(event.name)) {
-        await _validate({ name: event.name, silent: true, nested: false });
+      return;
+    }
+
+    if (event.track !== false) {
+      if (event.type === 'blur') {
+        blurredFields.add(event.name);
       }
-    }
 
-    if (event.type === 'blur') {
-      blurredFields.add(event.name);
-    }
+      if (event.type === 'change' || event.type === 'input') {
+        dirtyFields.add(event.name);
+        dirtyEpochs.set(event.name, epoch);
+      }
 
-    if (event.type === 'change' || event.type === 'input' || event.type === 'blur' || event.type === 'focus') {
+      if (event.type === 'input') {
+        inputEpochs.set(event.name, epoch);
+      }
+
       touchedFields.add(event.name);
     }
 
-    if (event.type === 'change' || event.type === 'input') {
-      dirtyFields.add(event.name);
+    if (event.validate === false || !props.validateOn?.includes(event.type) || loading.value) {
+      return;
     }
+
+    if (event.type === 'input' && (inputEpochs.get(event.name) !== epoch || !(event.eager || blurredFields.has(event.name)))) {
+      return;
+    }
+
+    const run = (validationRuns.get(event.name) ?? 0) + 1;
+    validationRuns.set(event.name, run);
+    const startEpoch = epoch;
+
+    await _validate({
+      name: event.name,
+      silent: true,
+      nested: false,
+      isCurrent: () => validationRuns.get(event.name) === run && epoch === startEpoch,
+    });
   });
 });
 
@@ -186,8 +208,20 @@ const dirtyFields: Set<keyof I> = reactive(new Set<keyof I>());
 const touchedFields: Set<keyof I> = reactive(new Set<keyof I>());
 const blurredFields: Set<keyof I> = reactive(new Set<keyof I>());
 
+// Bumped on every full validation (submit, `validate()`, a parent validating its nested forms):
+// input typed and field validations started before it are stale.
+let epoch = 0;
+const inputEpochs = new Map<keyof I, number>();
+const validationRuns = new Map<keyof I, number>();
+const dirtyEpochs = new Map<keyof I, number>();
+
 function clearDirty() {
-  dirtyFields.clear();
+  // Fields edited since the last full validation (during an async `onSubmit`) stay dirty
+  for (const field of dirtyFields) {
+    if (dirtyEpochs.get(field) !== epoch) {
+      dirtyFields.delete(field);
+    }
+  }
   for (const form of nestedForms.value.values()) {
     form.clearDirty();
   }
@@ -217,11 +251,14 @@ async function getErrors(): Promise<Array<FormErrorWithId>> {
   return resolveErrorIds(errs);
 }
 
-type ValidateOpts<Silent extends boolean, Transform extends boolean> = { name?: keyof I | Array<keyof I>; silent?: Silent; nested?: boolean; transform?: Transform };
+type ValidateOpts<Silent extends boolean, Transform extends boolean> = { name?: keyof I | Array<keyof I>; silent?: Silent; nested?: boolean; transform?: Transform; isCurrent?: () => boolean };
 async function _validate<T extends boolean>(opts: ValidateOpts<false, T>): Promise<FormData<S, T>>;
 async function _validate<T extends boolean>(opts: ValidateOpts<true, T>): Promise<FormData<S, T> | false>;
 async function _validate<T extends boolean>(opts: ValidateOpts<boolean, boolean> = { silent: false, nested: false, transform: false }): Promise<FormData<S, T> | false> {
   const names = opts.name && !Array.isArray(opts.name) ? [opts.name] : opts.name as Array<keyof O>;
+  if (!names) {
+    epoch++;
+  }
 
   // Validate nested forms if needed
   let nestedResults: Array<any> = [];
@@ -242,33 +279,42 @@ async function _validate<T extends boolean>(opts: ValidateOpts<boolean, boolean>
 
   // Get all errors
   const currentErrors = await getErrors();
+  if (opts.isCurrent?.() === false) {
+    return false;
+  }
+
   const allErrors = [...currentErrors, ...nestedErrors];
 
-  // Filter by field names if specified
+  // Only the targeted fields decide the result, errors on other fields are kept as is
+  let failedErrors = allErrors;
   if (names) {
-    errors.value = filterErrorsByNames(allErrors, names);
+    const matchesNames = nameMatcher(names);
+    failedErrors = allErrors.filter(matchesNames);
+    errors.value = [...errors.value.filter((error) => !matchesNames(error)), ...failedErrors];
   } else {
     errors.value = allErrors;
   }
 
   // Handle validation failure
-  if (errors.value?.length) {
+  if (failedErrors.length) {
     if (opts.silent) {
       return false;
     }
-    throw new FormValidationException(formId, errors.value);
+    throw new FormValidationException(formId, failedErrors);
   }
 
   // Apply transformations
   if (opts.transform) {
+    let output = transformedState.value;
     nestedResults.forEach((result) => {
       if (result.name) {
         setAtPath(transformedState.value, result.name, result.output);
       } else {
-        Object.assign(transformedState.value, result.output);
+        // A parent without a schema has no output yet, merge into a copy of the state
+        output = Object.assign(output ?? { ...toRaw(state.value) }, result.output);
       }
     });
-    return transformedState.value ?? state.value;
+    return output ?? state.value;
   }
 
   return state.value as FormData<S, T>;
@@ -375,13 +421,13 @@ function getNestedTarget(target: keyof I | string | RegExp | undefined, formPath
   return target;
 }
 
-function filterErrorsByNames(allErrors: Array<FormErrorWithId>, names: Array<keyof O>): Array<FormErrorWithId> {
+function nameMatcher(names: Array<keyof O>): (error: FormErrorWithId) => boolean {
   const nameSet = new Set(names);
   const patterns = names
     .map((name) => inputs.value?.[name]?.pattern)
     .filter(Boolean) as Array<RegExp>;
 
-  const matchesNames = (error: FormErrorWithId): boolean => {
+  return (error) => {
     if (!error.name) {
       return false;
     }
@@ -390,11 +436,6 @@ function filterErrorsByNames(allErrors: Array<FormErrorWithId>, names: Array<key
     }
     return patterns.some((pattern) => pattern.test(error.name!));
   };
-
-  const keepErrors = errors.value.filter((error) => !matchesNames(error));
-  const newErrors = allErrors.filter(matchesNames);
-
-  return [...keepErrors, ...newErrors];
 }
 
 function filterErrorsByTarget(currentErrors: Array<FormErrorWithId>, target: keyof I | string | RegExp): Array<FormErrorWithId> {
