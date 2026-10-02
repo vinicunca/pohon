@@ -1,17 +1,16 @@
-import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
-import ui from 'pohon-ui/vue-plugin'
-import App from './App.vue'
-import 'virtual:uno.css'
+import ui from 'pohon-ui/vue-plugin';
+import { createApp } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import App from './App.vue';
 
-const app = createApp(App)
+const app = createApp(App);
 
 const router = createRouter({
   routes: [],
-  history: createWebHistory()
-})
+  history: createWebHistory(),
+});
 
-app.use(router)
-app.use(ui)
+app.use(router);
+app.use(ui);
 
-app.mount('#app')
+app.mount('#app');

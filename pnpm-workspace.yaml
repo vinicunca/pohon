@@ -26,13 +26,12 @@ overrides:
   # Pinned until ipx 4 is stable, keep in sync with the renovate.json rule.
   '@nuxt/image': 2.0.0
   '@nuxt/kit': ^4.5.2
-  '@types/node': 25.3.0
   c12: ^3.3.4
-  h3@: 1.15.11
+  h3: 1.15.11
   pohon-ui: workspace:*
   typescript: ^6.0.3
-  unplugin: 3.3.0
-  unplugin-auto-import: 21.0.0
+  unplugin: ^3.4.0
+  yaml: 2.9.0
 
 allowBuilds:
   '@parcel/watcher': false
