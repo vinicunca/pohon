@@ -31,28 +31,13 @@ jobs:
       NUXT_GITHUB_TOKEN: ${{ secrets.NUXT_GITHUB_TOKEN }}
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-        with:
-          persist-credentials: false
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v6
-
-      - name: Install node
-        uses: actions/setup-node@v7
+      - name: Setup JavaScript
+        uses: vinicunca/workflows/setup-js@main
         with:
           node-version: ${{ matrix.node }}
-          cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install
 
       - name: Prepare
         run: pnpm run dev:prepare
-
-      - name: Lint
-        run: pnpm run lint
 
       - name: Typecheck
         run: pnpm run typecheck
@@ -78,10 +63,11 @@ jobs:
 
       - name: Publish
         # Only publish preview package on ubuntu, and skip forks of the repo (pkg-pr-new still runs on fork PRs against vinicunca/pohon)
-        if: matrix.os == 'ubuntu-latest' && github.repository_owner == 'vinicunca'
+        if: matrix.os == 'ubuntu-latest' && github.repository == 'vinicunca/pohon'
         run: pnpx pkg-pr-new publish --compact --no-template --pnpm
 
   consumer:
+    if: github.repository == 'vinicunca/pohon'
     needs: build
 
     runs-on: ${{ matrix.os }}
@@ -146,8 +132,8 @@ jobs:
         run: pnpm run build
 
   benchmarks:
-    # Skip forks of the repo, they can't authenticate with CodSpeed
-    if: github.repository_owner == 'vinicunca'
+    # Enable after registering this repository with CodSpeed; forks cannot authenticate
+    if: github.repository_owner == 'vinicunca' && vars.CODSPEED_ENABLED == 'true'
 
     runs-on: ${{ matrix.os }}
 
@@ -164,22 +150,10 @@ jobs:
         node: [24]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-        with:
-          persist-credentials: false
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v6
-
-      - name: Install node
-        uses: actions/setup-node@v7
+      - name: Setup JavaScript
+        uses: vinicunca/workflows/setup-js@main
         with:
           node-version: ${{ matrix.node }}
-          cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install
 
       - name: Prepare
         run: pnpm run dev:prepare
