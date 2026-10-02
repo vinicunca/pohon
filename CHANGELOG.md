@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.3](https://github.com/vinicunca/pohon/compare/v2.0.2...v2.0.3) (2026-10-02)
+
+### Bug Fixes
+
+* pnpm lock ([12aaba1](https://github.com/vinicunca/pohon/commit/12aaba1ddf23f020c93d947b8f6bbf5784b288f7))
+
 ## [2.0.2](https://github.com/vinicunca/pohon/compare/v2.0.1...v2.0.2) (2026-10-02)
 
 ### Bug Fixes
