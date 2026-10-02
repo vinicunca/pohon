@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.4](https://github.com/vinicunca/pohon/compare/v2.0.3...v2.0.4) (2026-10-02)
+
+### Bug Fixes
+
+* h3 lock file ([9e3e634](https://github.com/vinicunca/pohon/commit/9e3e634f269b10d70cc948eaab5ba1f4bd91d0aa))
+* playground typings ([d46b8fe](https://github.com/vinicunca/pohon/commit/d46b8fe8e3459dc85552657833d9864aaa758881))
+* remove form from playground ([5577285](https://github.com/vinicunca/pohon/commit/557728537ca0b44dbb9ac7781c2d439d3d402be9))
+* snapshot testing ([baf1337](https://github.com/vinicunca/pohon/commit/baf13376ccbf70d1459b2b2a3250107ec8ac3b6a))
+
 ## [2.0.3](https://github.com/vinicunca/pohon/compare/v2.0.2...v2.0.3) (2026-10-02)
 
 ### Bug Fixes
