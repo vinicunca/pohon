@@ -27,7 +27,7 @@ overrides:
   '@nuxt/image': 2.0.0
   '@nuxt/kit': ^4.5.2
   c12: ^3.3.4
-  h3: 1.15.11
+  h3@: 1.15.11
   pohon-ui: workspace:*
   typescript: ^6.0.3
   unplugin: ^3.4.0
