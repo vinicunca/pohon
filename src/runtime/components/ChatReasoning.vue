@@ -41,6 +41,11 @@ export interface ChatReasoningProps extends Pick<CollapsibleRootProps, 'defaultO
    */
   chevronIcon?: IconProps['name'];
   /**
+   * Whether to automatically open when streaming starts.
+   * @defaultValue true
+   */
+  autoOpen?: boolean;
+  /**
    * The delay in milliseconds before auto-closing when streaming ends.
    * Set to `0` to disable auto-close.
    * @defaultValue 500
@@ -81,6 +86,7 @@ const _props = withDefaults(
     streaming: false,
     chevron: 'trailing',
     unmountOnHide: false,
+    autoOpen: true,
     autoCloseDelay: 500,
   },
 );
@@ -110,7 +116,9 @@ watch(() => props.streaming, (streaming, wasStreaming) => {
       autoCloseTimeout.value = null;
     }
     if (!wasStreaming) {
-      setOpen(true);
+      if (props.autoOpen) {
+        setOpen(true);
+      }
       startTime.value = Date.now();
     }
   } else if (wasStreaming) {
