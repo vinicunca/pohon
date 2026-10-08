@@ -81,8 +81,7 @@ export interface InputTimeSlots {
 
 <script setup lang="ts" generic="R extends boolean">
 import { createReusableTemplate, reactiveOmit } from '@vueuse/core';
-import { TimeRangeFieldInput, TimeRangeFieldRoot } from 'akar';
-import { TimeField as SingleTimeField } from 'akar/namespaced';
+import { TimeRangeField as RangeTimeField, TimeField as SingleTimeField } from 'akar/namespaced';
 import { computed, onMounted, onScopeDispose, ref } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentIcons } from '../composables/useComponentIcons';
@@ -148,9 +147,6 @@ const [DefineSegmentsTemplate, ReuseSegmentsTemplate] = createReusableTemplate<{
 }>();
 
 const inputsRef = ref<Array<ComponentPublicInstance>>([]);
-
-// FIXME: Move to namespaced when exported in `akar`
-const RangeTimeField = { Root: TimeRangeFieldRoot, Input: TimeRangeFieldInput };
 
 const TimeField = computed(() => props.range ? RangeTimeField : SingleTimeField);
 

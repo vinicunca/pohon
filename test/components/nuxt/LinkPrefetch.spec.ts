@@ -52,6 +52,7 @@ function waitForObserver() {
 describe('link prefetch', () => {
   let wrapper: Awaited<ReturnType<typeof mountSuspended>> | undefined;
   let unhook: (() => void) | undefined;
+  let restoreScheduler: (() => void) | undefined;
 
   function spyOnPrefetch() {
     const spy = vi.fn();
@@ -62,6 +63,8 @@ describe('link prefetch', () => {
   afterEach(() => {
     wrapper?.unmount();
     unhook?.();
+    restoreScheduler?.();
+    restoreScheduler = undefined;
     vi.unstubAllGlobals();
     MockIntersectionObserver.instances = [];
   });
@@ -116,6 +119,35 @@ describe('link prefetch', () => {
     expect(spy).toHaveBeenCalledTimes(1);
     expect(spy).toHaveBeenCalledWith('/about');
     expect(observer.unobserved).toEqual([link]);
+  });
+
+  it('promotes the queued prefetch on interaction once prefetched', async () => {
+    vi.stubGlobal('IntersectionObserver', MockIntersectionObserver);
+    const nuxtApp = useNuxtApp();
+    const scheduler = nuxtApp._prefetch;
+    const promote = vi.fn();
+    nuxtApp._prefetch = { promote } as unknown as typeof scheduler;
+    restoreScheduler = () => {
+      nuxtApp._prefetch = scheduler;
+    };
+    const spy = spyOnPrefetch();
+    wrapper = await mountSuspended(Link, { props: { to: '/about?tab=1#team' }, slots: { default: () => 'About' } });
+    const link = wrapper.get('a');
+
+    await link.trigger('pointerenter');
+    expect(promote).not.toHaveBeenCalled();
+
+    const observer = await waitForObserver();
+    observer.trigger(link.element);
+    await flushPromises();
+
+    await link.trigger('pointerenter');
+    await link.trigger('focus');
+    await link.trigger('pointerdown');
+
+    expect(spy).toHaveBeenCalledTimes(1);
+    expect(promote).toHaveBeenCalledTimes(3);
+    expect(promote).toHaveBeenCalledWith('/about?tab=1');
   });
 
   it('does not observe visibility with `prefetchOn: interaction`', async () => {
