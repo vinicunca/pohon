@@ -1,5 +1,5 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { axe } from 'vitest-axe';
 import theme from '#build/ui/drawer';
 import Drawer from '../../src/runtime/components/Drawer.vue';
@@ -45,5 +45,22 @@ describe('drawer', () => {
     });
 
     expect(await axe(wrapper.element)).toHaveNoViolations();
+  });
+
+  it('emits `after:enter` and `after:leave` once the animation ends', async () => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    const wrapper = await mountSuspended(Drawer, { props: { open: false, portal: false } });
+
+    vi.advanceTimersByTime(500);
+    expect(wrapper.emitted('after:leave')).toBeUndefined();
+
+    await wrapper.setProps({ open: true });
+    vi.advanceTimersByTime(500);
+    expect(wrapper.emitted('after:enter')).toHaveLength(1);
+
+    await wrapper.setProps({ open: false });
+    vi.advanceTimersByTime(500);
+    expect(wrapper.emitted('after:leave')).toHaveLength(1);
+    vi.useRealTimers();
   });
 });
