@@ -64,7 +64,8 @@ export interface CheckboxSlots {
 
 <script setup lang="ts" generic="T = boolean">
 import { reactivePick } from '@vueuse/core';
-import { CheckboxIndicator, CheckboxRoot, Label, Primitive } from 'akar';
+import { CheckboxIndicator, CheckboxRoot, injectCheckboxGroupRootContext, Label, Primitive } from 'akar';
+import { isEqual } from 'ohash/utils';
 import { computed, useAttrs, useId } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
@@ -95,6 +96,20 @@ const size = computed(() => formFieldSize.value ?? props.size);
 
 const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
+// Once a CheckboxGroup reaches its `max`, the unchecked checkboxes stay focusable but can't be checked.
+const checkboxGroupContext = injectCheckboxGroupRootContext(null);
+const maxReached = computed(() => {
+  const max = checkboxGroupContext?.max.value;
+  if (!checkboxGroupContext || max === null || max === undefined) {
+    return false;
+  }
+
+  // Same check as Akar, whose `value` prop defaults to `on`.
+  const values = checkboxGroupContext.modelValue.value ?? [];
+  const checkboxValue = props.value === undefined ? 'on' : props.value;
+  return values.length >= max && !values.some((value) => isEqual(value, checkboxValue));
+});
+
 // When the indicator is hidden the checked icon is never visible, so `icon` renders above the
 // label instead. No `appConfig` fallback here, an unset `icon` must render nothing.
 const labelIcon = computed(() => props.indicator === 'hidden' ? props.icon : undefined);
@@ -114,7 +129,7 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.checkbox || {}) 
   indicator: props.indicator,
   highlight: highlight.value,
   required: props.required,
-  disabled: disabled.value,
+  disabled: disabled.value || maxReached.value,
 }));
 
 function onUpdate(value: any) {
