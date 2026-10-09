@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.0.5](https://github.com/vinicunca/pohon/compare/v2.0.4...v2.0.5) (2026-10-09)
+
+### Features
+
+* **CheckboxGroup:** add max prop ([4695051](https://github.com/vinicunca/pohon/commit/4695051a27476ef9f7fd87b621d62e70e4b7d2a1))
+* **components:** add loop prop ([3d98455](https://github.com/vinicunca/pohon/commit/3d984559d535fa0bec8cd20e847e1be3b10e468c))
+* **ContextMenu:** add open and pressOpenDelay props ([4da2c6d](https://github.com/vinicunca/pohon/commit/4da2c6da3377fbd1ee93f07bbff36e2d141cef9d))
+* **InputMenu:** add default slot ([42fb3e8](https://github.com/vinicunca/pohon/commit/42fb3e8fdb146671d8638be0f8a4812ec0a5ef80))
+* **module:** export prose components from @nuxt/ui/components/prose ([0d85fa4](https://github.com/vinicunca/pohon/commit/0d85fa439b534820977b3ac82b5bafd678986cd5))
+* **Sidebar:** add breakpoint prop ([8df432e](https://github.com/vinicunca/pohon/commit/8df432edc734591837b19f8b1b4dbcc70ab45b49))
+
+### Bug Fixes
+
+* **ChatMessages/ChatPromptSubmit:** add accessible names to icon buttons ([f4b46f4](https://github.com/vinicunca/pohon/commit/f4b46f44ced5083238d63328b9a8550439fe5914))
+* **Drawer:** emit after:leave and after:enter when the animation ends ([45a71f3](https://github.com/vinicunca/pohon/commit/45a71f3758c3944dc7552e72ac1a9d37abe924c9))
+* **SelectMenu:** keep menu open when focus moves outside ([3feee5a](https://github.com/vinicunca/pohon/commit/3feee5a762a3a8d08e4d4d2c1fe8179533231040))
+* **Tree:** pass disabled to tree item ([5d8dd78](https://github.com/vinicunca/pohon/commit/5d8dd78ebd0736e508864001515e3e9b5c00bfbf))
+
 ## [2.0.4](https://github.com/vinicunca/pohon/compare/v2.0.3...v2.0.4) (2026-10-02)
 
 ### Bug Fixes
