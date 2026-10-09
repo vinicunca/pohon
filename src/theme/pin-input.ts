@@ -3,7 +3,7 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative inline-flex items-center gap-1.5',
-    base: ['rounded-md border-0 placeholder:color-text-dimmed text-center disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
+    base: ['text-center border-0 rounded-md placeholder:color-text-dimmed disabled:opacity-75 disabled:cursor-not-allowed', options.theme.transitions && 'transition-colors'],
     separator: 'color-text-dimmed flex items-center justify-center',
   },
   variants: {
@@ -53,7 +53,7 @@ export default (options: Required<ModuleOptions>) => ({
   })), ...(options.theme.colors || []).map((color: string) => ({
     color,
     highlight: true,
-    class: `ring ring-inset ring-${color}`,
+    class: `ring ring-inset pohon:ring-${color}`,
   })), {
     color: 'neutral',
     variant: ['outline', 'subtle'],

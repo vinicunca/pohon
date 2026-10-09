@@ -50,7 +50,7 @@ export default (options: Required<ModuleOptions>) => ({
         description: 'color-text-muted',
       },
       naked: {
-        container: 'p-0 sm:p-0',
+        container: 'pohon:p-0 pohon:sm:p-0',
         description: 'color-text-muted',
       },
     },
@@ -75,7 +75,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     spotlight: {
       true: {
-        root: '[--spotlight-size:400px] before:absolute before:-inset-px before:pointer-events-none before:rounded-inherit before:bg-[radial-gradient(var(--spotlight-size)_var(--spotlight-size)_at_calc(var(--spotlight-x,0px))_calc(var(--spotlight-y,0px)),var(--spotlight-color),transparent_70%)]',
+        root: '[--spotlight-size:400px] before:rounded-inherit before:bg-[radial-gradient(var(--spotlight-size)_var(--spotlight-size)_at_calc(var(--spotlight-x,0px))_calc(var(--spotlight-y,0px)),var(--spotlight-color),transparent_70%)] before:pointer-events-none before:content-empty before:absolute before:-inset-px',
       },
     },
     spotlightColor: {
@@ -131,7 +131,7 @@ export default (options: Required<ModuleOptions>) => ({
     highlightColor,
     highlight: true,
     class: {
-      root: `ring-${highlightColor}`,
+      root: `pohon:ring-${highlightColor}`,
     },
   })), {
     highlightColor: 'neutral',
@@ -149,7 +149,7 @@ export default (options: Required<ModuleOptions>) => ({
     spotlightColor: 'neutral',
     spotlight: true,
     class: {
-      root: '[--spotlight-color:var(--ui-bg-background-inverted)]',
+      root: '[--spotlight-color:var(--ui-bg-inverted)]',
     },
   }],
   defaultVariants: {

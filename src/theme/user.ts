@@ -19,10 +19,10 @@ export default (options: Required<ModuleOptions>) => ({
     },
     to: {
       true: {
-        root: ['rounded-md outline-primary/25 has-focus-visible:outline-3', options.theme.transitions && 'transition'],
+        root: ['outline-primary/25 rounded-md has-[>a:focus-visible]:outline-3', options.theme.transitions && 'transition'],
         name: ['color-text peer-hover:color-text-highlighted peer-focus-visible:color-text-highlighted', options.theme.transitions && 'transition-colors'],
         description: ['peer-hover:color-text-toned peer-focus-visible:color-text-toned', options.theme.transitions && 'transition-colors'],
-        avatar: 'transform transition-transform duration-280 group-hover/user:scale-115 group-has-focus-visible/user:scale-115',
+        avatar: 'transform transition-transform ease-out group-has-focus-visible/user:scale-115 group-hover/user:scale-115 motion-reduce:transition-none',
       },
       false: {
         name: 'color-text-highlighted',

@@ -1,13 +1,13 @@
 import type { ModuleOptions } from '../module';
 
 // Shared with `checkbox-group` and `radio-group`, which style the same states on their own slots.
-export const hover = 'hover:not-has-disabled:not-has-aria-disabled:not-has-focus-visible:not-has-data-[state=checked]:';
+export const hover = 'hover:[&:not(:has(:disabled,[aria-disabled=true],:focus-visible,[data-state=checked]))]:';
 
 // `list` puts focus on the control, which is the click target there. `card` and `table`
 // render the root as a label wrapping everything, so focus belongs on the card itself,
 // as it does whenever the control is `sr-only`.
 export const focusControl = (token: string) => `outline-${token}/25 focus-visible:outline-solid focus-visible:outline-3 focus-visible:ring-${token}`;
-export const focusCard = (token: string) => `outline-${token}/25 has-focus-visible:outline-3 not-has-disabled:has-focus-visible:border-${token} has-focus-visible:z-1`;
+export const focusCard = (token: string) => `outline-${token}/25 has-focus-visible:outline-3 has-focus-visible:[&:not(:has(:disabled,[aria-disabled=true]))]:border-${token} has-focus-visible:z-1`;
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
@@ -85,7 +85,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     required: {
       true: {
-        label: 'after:content-[\'*\'] after:ms-0.5 after:color-error',
+        label: 'after:color-error after:ms-0.5 after:content-[\'*\']',
       },
     },
     disabled: {
@@ -177,7 +177,7 @@ export default (options: Required<ModuleOptions>) => ({
       indicator: 'hidden',
       highlight: true,
       class: {
-        root: `not-has-disabled:not-has-aria-disabled:border-${color} not-has-disabled:not-has-aria-disabled:has-data-[state=checked]:border-${color}`,
+        root: `[&:not(:has(:disabled,[aria-disabled=true]))]:border-${color} [&:not(:has(:disabled,[aria-disabled=true])):has([data-state=checked])]:border-${color}`,
       },
     })),
     {
@@ -185,7 +185,7 @@ export default (options: Required<ModuleOptions>) => ({
       indicator: 'hidden',
       highlight: true,
       class: {
-        root: 'not-has-disabled:not-has-aria-disabled:border-border-inverted not-has-disabled:not-has-aria-disabled:has-data-[state=checked]:border-border-inverted',
+        root: '[&:not(:has(:disabled,[aria-disabled=true]))]:border-border-inverted [&:not(:has(:disabled,[aria-disabled=true])):has([data-state=checked])]:border-border-inverted',
       },
     },
     ...(options.theme.colors || []).map((color: string) => ({

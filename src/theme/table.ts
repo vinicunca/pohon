@@ -6,12 +6,12 @@ export default (options: Required<ModuleOptions>) => ({
     base: 'min-w-full overflow-clip',
     caption: 'sr-only',
     thead: 'relative',
-    tbody: 'isolate [&>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&>tr]:data-[selectable=true]:outline-primary/25 [&>tr]:data-[selectable=true]:focus-visible:outline-3 [&>tr]:data-[selectable=true]:-outline-offset-3 divide-y divide-divide',
+    tbody: 'isolate divide-divide divide-y [&>tr]:data-[selectable=true]:outline-primary/25 [&>tr]:data-[selectable=true]:focus-visible:outline-3 [&>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&>tr]:data-[selectable=true]:-outline-offset-3',
     tfoot: 'relative [&>[data-slot=separator]]:z-2',
     tr: 'data-[selected=true]:bg-background-elevated/50',
     th: 'px-4 py-3.5 text-sm color-text-highlighted text-start font-600 [&:has([role=checkbox])]:pe-0',
     td: 'p-4 text-sm color-text-muted whitespace-nowrap [&:has([role=checkbox])]:pe-0',
-    separator: 'absolute z-1 start-0 w-full h-px bg-(--ui-border-accented)',
+    separator: 'bg-border-accented h-px w-full start-0 absolute z-1',
     empty: 'py-6 text-center text-sm color-text-muted',
     loading: 'py-6 text-center',
   },
@@ -36,7 +36,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     loading: {
       true: {
-        thead: 'after:absolute after:z-1 after:h-px motion-reduce:after:inset-x-0 motion-reduce:after:animate-pulse',
+        thead: 'after:h-px after:content-empty after:absolute after:z-1 motion-reduce:after:inset-x-0 motion-reduce:after:animate-pulse',
       },
     },
     externalScroll: {
@@ -74,28 +74,28 @@ export default (options: Required<ModuleOptions>) => ({
       loading: true,
       loadingAnimation: 'carousel',
       class: {
-        thead: 'motion-safe:after:animate-[carousel_2s_linear_infinite] motion-safe:rtl:after:animate-[carousel-rtl_2s_linear_infinite]',
+        thead: 'motion-safe:after:animate-carousel motion-safe:rtl:after:animate-carousel-rtl',
       },
     },
     {
       loading: true,
       loadingAnimation: 'carousel-inverse',
       class: {
-        thead: 'motion-safe:after:animate-[carousel-inverse_2s_linear_infinite] motion-safe:rtl:after:animate-[carousel-inverse-rtl_2s_linear_infinite]',
+        thead: 'motion-safe:after:animate-carousel-inverse motion-safe:rtl:after:animate-carousel-inverse-rtl',
       },
     },
     {
       loading: true,
       loadingAnimation: 'swing',
       class: {
-        thead: 'motion-safe:after:animate-[swing_2s_var(--ease-in-out)_infinite]',
+        thead: 'motion-safe:after:animate-swing',
       },
     },
     {
       loading: true,
       loadingAnimation: 'elastic',
       class: {
-        thead: 'motion-safe:after:animate-[elastic_2s_var(--ease-in-out)_infinite]',
+        thead: 'motion-safe:after:animate-elastic',
       },
     },
   ],

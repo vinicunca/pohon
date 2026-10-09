@@ -3,7 +3,7 @@ import { fieldGroupVariant } from './field-group';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    base: ['rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75', options.theme.transitions && 'transition-colors'],
+    base: ['font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed', options.theme.transitions && 'transition-colors'],
     label: 'truncate',
     leadingIcon: 'shrink-0',
     leadingAvatar: 'shrink-0',
@@ -26,31 +26,31 @@ export default (options: Required<ModuleOptions>) => ({
     },
     size: {
       xs: {
-        base: 'px-2 py-1 text-xs gap-1',
+        base: 'text-xs gap-1',
         leadingIcon: 'size-4',
         leadingAvatarSize: '3xs',
         trailingIcon: 'size-4',
       },
       sm: {
-        base: 'px-2.5 py-1.5 text-xs gap-1.5',
+        base: 'text-xs gap-1.5',
         leadingIcon: 'size-4',
         leadingAvatarSize: '3xs',
         trailingIcon: 'size-4',
       },
       md: {
-        base: 'px-2.5 py-1.5 text-sm gap-1.5',
+        base: 'text-sm gap-1.5',
         leadingIcon: 'size-5',
         leadingAvatarSize: '2xs',
         trailingIcon: 'size-5',
       },
       lg: {
-        base: 'px-3 py-2 text-sm gap-2',
+        base: 'text-sm gap-2',
         leadingIcon: 'size-5',
         leadingAvatarSize: '2xs',
         trailingIcon: 'size-5',
       },
       xl: {
-        base: 'px-3 py-2 text-base gap-2',
+        base: 'text-base gap-2',
         leadingIcon: 'size-6',
         leadingAvatarSize: 'xs',
         trailingIcon: 'size-6',
@@ -133,20 +133,40 @@ export default (options: Required<ModuleOptions>) => ({
     class: 'color-text-muted hover:color-text active:color-text disabled:color-text-muted aria-disabled:color-text-muted outline-outline-inverted/25 focus-visible:outline-3',
   }, {
     size: 'xs',
+    square: false,
+    class: 'px-2 py-1',
+  }, {
+    size: 'xs',
     square: true,
     class: 'p-1',
+  }, {
+    size: 'sm',
+    square: false,
+    class: 'px-2.5 py-1.5',
   }, {
     size: 'sm',
     square: true,
     class: 'p-1.5',
   }, {
     size: 'md',
+    square: false,
+    class: 'px-2.5 py-1.5',
+  }, {
+    size: 'md',
     square: true,
     class: 'p-1.5',
   }, {
     size: 'lg',
+    square: false,
+    class: 'px-3 py-2',
+  }, {
+    size: 'lg',
     square: true,
     class: 'p-2',
+  }, {
+    size: 'xl',
+    square: false,
+    class: 'px-3 py-2',
   }, {
     size: 'xl',
     square: true,

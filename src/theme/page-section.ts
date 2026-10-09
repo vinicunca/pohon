@@ -1,7 +1,7 @@
 export default {
   slots: {
     root: 'relative isolate',
-    container: 'flex flex-col lg:grid py-16 sm:py-24 lg:py-32 gap-8 sm:gap-16',
+    container: 'py-16 flex flex-col gap-8 lg:py-32 lg:grid sm:py-24 sm:gap-16',
     wrapper: '',
     header: '',
     leading: 'flex items-center mb-6',

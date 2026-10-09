@@ -2,7 +2,7 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: 'flex items-center align-center text-center',
+    root: 'text-center flex items-center items-center',
     border: '',
     container: 'font-500 color-text flex',
     icon: 'shrink-0 size-5',
@@ -82,19 +82,19 @@ export default (options: Required<ModuleOptions>) => ({
   }, {
     orientation: 'horizontal',
     size: 'sm',
-    class: { border: 'border-t-[2px]' },
+    class: { border: 'border-t-2' },
   }, {
     orientation: 'horizontal',
     size: 'md',
-    class: { border: 'border-t-[3px]' },
+    class: { border: 'border-t-3' },
   }, {
     orientation: 'horizontal',
     size: 'lg',
-    class: { border: 'border-t-[4px]' },
+    class: { border: 'border-t-4' },
   }, {
     orientation: 'horizontal',
     size: 'xl',
-    class: { border: 'border-t-[5px]' },
+    class: { border: 'border-t-5' },
   }, {
     orientation: 'vertical',
     size: 'xs',
@@ -102,19 +102,19 @@ export default (options: Required<ModuleOptions>) => ({
   }, {
     orientation: 'vertical',
     size: 'sm',
-    class: { border: 'border-s-[2px]' },
+    class: { border: 'border-s-2' },
   }, {
     orientation: 'vertical',
     size: 'md',
-    class: { border: 'border-s-[3px]' },
+    class: { border: 'border-s-3' },
   }, {
     orientation: 'vertical',
     size: 'lg',
-    class: { border: 'border-s-[4px]' },
+    class: { border: 'border-s-4' },
   }, {
     orientation: 'vertical',
     size: 'xl',
-    class: { border: 'border-s-[5px]' },
+    class: { border: 'border-s-5' },
   }],
   defaultVariants: {
     color: 'neutral',

@@ -8,7 +8,7 @@ export default (options: Required<ModuleOptions>) => {
   return {
     slots: {
       root: 'relative inline-flex items-center',
-      base: ['w-full rounded-md border-0 placeholder:color-text-dimmed disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
+      base: ['placeholder:color-text-dimmed border-0 rounded-md w-full disabled:opacity-75 disabled:cursor-not-allowed', options.theme.transitions && 'transition-colors'],
       increment: 'absolute flex items-center',
       decrement: 'absolute flex items-center',
     },
@@ -69,7 +69,7 @@ export default (options: Required<ModuleOptions>) => {
     })), ...(options.theme.colors || []).map((color: string) => ({
       color,
       highlight: true,
-      class: `ring ring-inset ring-${color}`,
+      class: `ring ring-inset pohon:ring-${color}`,
     })), {
       color: 'neutral',
       variant: ['outline', 'subtle'],

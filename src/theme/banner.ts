@@ -4,7 +4,7 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: ['relative z-50 w-full', options.theme.transitions && 'transition-colors'],
     container: 'flex items-center justify-between gap-3 h-12',
-    left: 'hidden lg:flex-1 lg:flex lg:items-center',
+    left: 'hidden lg:flex lg:flex-1 lg:items-center',
     center: 'flex items-center gap-1.5 min-w-0',
     right: 'lg:flex-1 flex items-center justify-end',
     icon: 'size-5 shrink-0 color-text-inverted pointer-events-none',
@@ -23,7 +23,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     to: {
       true: {
-        root: 'outline-(--ui-bg)/25 -outline-offset-3 has-[>a:focus-visible]:outline-3',
+        root: 'outline-$ui-color-bg/25 has-[>a:focus-visible]:outline-3 -outline-offset-3',
       },
     },
   },

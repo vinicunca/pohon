@@ -20,7 +20,7 @@ export default {
     },
     required: {
       true: {
-        label: 'after:content-[\'*\'] after:ms-0.5 after:color-error',
+        label: 'after:color-error after:ms-0.5 after:content-[\'*\']',
       },
     },
     orientation: {

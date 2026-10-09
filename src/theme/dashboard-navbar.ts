@@ -1,6 +1,6 @@
 export default {
   slots: {
-    root: 'h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5',
+    root: 'border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6',
     left: 'flex items-center gap-1.5 min-w-0',
     icon: 'shrink-0 size-5 self-center me-1.5',
     title: 'flex items-center gap-1.5 font-600 color-text-highlighted truncate',

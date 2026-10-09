@@ -4,7 +4,7 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'gap-2',
     base: 'relative overflow-hidden rounded-full bg-background-accented',
-    indicator: 'rounded-full size-full transition-transform duration-280 ease-out motion-reduce:transition-none motion-reduce:data-[state=indeterminate]:animate-pulse',
+    indicator: 'rounded-full size-full transition-transform-280 ease-out motion-reduce:transition-none motion-reduce:data-[state=indeterminate]:animate-pulse',
     status: 'flex color-text-dimmed duration-280 ease-out motion-reduce:transition-none',
     steps: 'grid items-end',
     step: 'truncate text-end row-start-1 col-start-1 transition-opacity ease-out',
@@ -74,12 +74,12 @@ export default (options: Required<ModuleOptions>) => ({
       horizontal: {
         root: 'w-full flex flex-col',
         base: 'w-full',
-        status: 'flex-row items-center justify-end w-(--percent) min-w-fit transition-[width]',
+        status: 'flex-row min-w-fit w-$percent transition-[width] items-center justify-end',
       },
       vertical: {
         root: 'h-full flex flex-row-reverse',
         base: 'h-full',
-        status: 'flex-col justify-end h-(--percent) min-h-fit transition-[height]',
+        status: 'flex-col h-$percent min-h-fit transition-[height] justify-end',
       },
     },
     inverted: {
@@ -179,56 +179,56 @@ export default (options: Required<ModuleOptions>) => ({
       orientation: 'horizontal',
       animation: 'carousel',
       class: {
-        indicator: 'motion-safe:data-[state=indeterminate]:animate-[carousel_2s_linear_infinite] motion-safe:data-[state=indeterminate]:rtl:animate-[carousel-rtl_2s_linear_infinite]',
+        indicator: 'motion-safe:data-[state=indeterminate]:animate-carousel motion-safe:data-[state=indeterminate]:rtl:animate-carousel-rtl',
       },
     },
     {
       orientation: 'vertical',
       animation: 'carousel',
       class: {
-        indicator: 'motion-safe:data-[state=indeterminate]:animate-[carousel-vertical_2s_linear_infinite]',
+        indicator: 'motion-safe:data-[state=indeterminate]:animate-carousel-vertical',
       },
     },
     {
       orientation: 'horizontal',
       animation: 'carousel-inverse',
       class: {
-        indicator: 'motion-safe:data-[state=indeterminate]:animate-[carousel-inverse_2s_linear_infinite] motion-safe:data-[state=indeterminate]:rtl:animate-[carousel-inverse-rtl_2s_linear_infinite]',
+        indicator: 'motion-safe:data-[state=indeterminate]:animate-carousel-inverse motion-safe:data-[state=indeterminate]:rtl:animate-carousel-inverse-rtl',
       },
     },
     {
       orientation: 'vertical',
       animation: 'carousel-inverse',
       class: {
-        indicator: 'motion-safe:data-[state=indeterminate]:animate-[carousel-inverse-vertical_2s_linear_infinite]',
+        indicator: 'motion-safe:data-[state=indeterminate]:animate-carousel-inverse-vertical',
       },
     },
     {
       orientation: 'horizontal',
       animation: 'swing',
       class: {
-        indicator: 'motion-safe:data-[state=indeterminate]:animate-[swing_2s_var(--ease-in-out)_infinite]',
+        indicator: 'motion-safe:data-[state=indeterminate]:animate-swing',
       },
     },
     {
       orientation: 'vertical',
       animation: 'swing',
       class: {
-        indicator: 'motion-safe:data-[state=indeterminate]:animate-[swing-vertical_2s_var(--ease-in-out)_infinite]',
+        indicator: 'motion-safe:data-[state=indeterminate]:animate-swing-vertical',
       },
     },
     {
       orientation: 'horizontal',
       animation: 'elastic',
       class: {
-        indicator: 'relative motion-safe:data-[state=indeterminate]:animate-[elastic_2s_var(--ease-in-out)_infinite]',
+        indicator: 'relative motion-safe:data-[state=indeterminate]:animate-elastic',
       },
     },
     {
       orientation: 'vertical',
       animation: 'elastic',
       class: {
-        indicator: 'relative motion-safe:data-[state=indeterminate]:animate-[elastic-vertical_2s_var(--ease-in-out)_infinite]',
+        indicator: 'relative motion-safe:data-[state=indeterminate]:animate-elastic-vertical',
       },
     },
   ],

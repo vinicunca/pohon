@@ -6,11 +6,11 @@ export default (options: Required<ModuleOptions>) => ({
     item: 'w-full',
     listWithChildren: 'border-s border-border',
     itemWithChildren: 'ps-1.5 -ms-px',
-    link: 'relative group w-full flex items-center text-sm select-none before:absolute before:inset-y-px before:inset-x-0 before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none focus-visible:before:outline-3',
+    link: 'group text-sm flex w-full select-none items-center relative focus-visible:outline-none focus:outline-none before:rounded-md before:content-empty before:inset-x-0 before:inset-y-px before:absolute before:-z-1 focus-visible:before:outline-3',
     linkLeadingIcon: 'shrink-0 relative',
     linkLabel: 'truncate',
     linkTrailing: 'ms-auto inline-flex gap-1.5 items-center',
-    linkTrailingIcon: 'shrink-0 transform transition-transform duration-280 group-data-expanded:rotate-180',
+    linkTrailingIcon: 'shrink-0 transition-transform-280 ease-out group-data-[expanded]:rotate-180 motion-reduce:transition-none',
   },
   variants: {
     virtualize: {

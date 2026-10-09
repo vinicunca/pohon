@@ -7,18 +7,18 @@ export default (options: Required<ModuleOptions>) => {
   return defuFn({
     slots: {
       root: () => undefined,
-      base: () => ['relative group rounded-md inline-flex items-center disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
+      base: () => ['group rounded-md inline-flex items-center relative disabled:opacity-75 disabled:cursor-not-allowed', options.theme.transitions && 'transition-colors'],
       value: 'truncate pointer-events-none',
       placeholder: 'truncate color-text-dimmed',
-      arrow: 'fill-bg stroke-default',
-      content: 'max-h-[min(15rem,var(--akar-select-content-available-height,15rem))] w-(--akar-select-trigger-width) bg-background shadow-lg rounded-md ring ring-ring overflow-hidden origin-(--akar-select-content-transform-origin) pointer-events-auto data-[state=closed]:pointer-events-none! flex flex-col',
+      arrow: 'fill-fill-bg stroke-stroke',
+      content: 'bg-background ring-ring rounded-md flex flex-col max-h-[min(15rem,var(--akar-select-content-available-height,15rem))] w-$akar-select-trigger-width pointer-events-auto ring shadow-lg origin-$akar-select-content-transform-origin overflow-hidden data-[state=closed]:pointer-events-none!',
       viewport: 'relative divide-y divide-divide scroll-py-1 overflow-y-auto flex-1',
       group: 'p-1 isolate',
       empty: 'text-center color-text-muted',
       label: 'font-600 color-text-highlighted',
       separator: '-mx-1 my-1 h-px bg-border',
-      item: ['group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75 color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-      itemLeadingIcon: ['shrink-0 color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text', options.theme.transitions && 'transition-colors'],
+      item: ['group color-text data-[highlighted]:not-[[data-disabled]]:color-text-highlighted data-[highlighted]:not-[[data-disabled]]:before:bg-background-elevated/50 outline-none flex w-full select-none items-start relative before:rounded-md before:content-empty before:inset-px before:absolute before:-z-1 data-[disabled]:opacity-75 data-[disabled]:cursor-not-allowed', options.theme.transitions && 'transition-colors before:transition-colors'],
+      itemLeadingIcon: ['color-text-dimmed [.group[data-highlighted]:not([data-disabled])_&]:color-text shrink-0', options.theme.transitions && 'transition-colors'],
       itemLeadingAvatar: 'shrink-0',
       itemLeadingAvatarSize: '',
       itemLeadingChip: 'shrink-0',
@@ -90,7 +90,7 @@ export default (options: Required<ModuleOptions>) => {
       },
       position: {
         'popper': {
-          content: 'data-[state=open]:animate-[scale-in_100ms_var(--ease-out)] data-[state=closed]:animate-[scale-out_100ms_var(--ease-out)]',
+          content: 'data-[side=bottom]:translate-y-1 data-[side=bottom]:slide-in-from-top-2 data-[side=right]:translate-x-1 data-[side=right]:slide-in-from-left-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[side=left]:slide-in-from-right-2 data-[side=left]:-translate-x-1 data-[side=top]:slide-in-from-bottom-2 data-[side=top]:-translate-y-1',
         },
         'item-aligned': {
           content: '',

@@ -10,7 +10,7 @@ export default (options: Required<ModuleOptions>) => ({
     avatar: 'shrink-0',
     avatarSize: '2xl',
     actions: 'flex flex-wrap gap-1.5 shrink-0',
-    close: 'p-0',
+    close: 'pohon:p-0',
   },
   variants: {
     color: {
@@ -45,6 +45,7 @@ export default (options: Required<ModuleOptions>) => ({
       variant: 'solid',
       class: {
         root: `bg-${color} color-text-inverted`,
+        close: 'pohon:color-text-inverted',
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({

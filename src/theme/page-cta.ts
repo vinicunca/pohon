@@ -1,7 +1,7 @@
 export default {
   slots: {
     root: 'relative isolate rounded-xl overflow-hidden',
-    container: 'flex flex-col lg:grid px-6 py-12 sm:px-12 sm:py-24 lg:px-16 lg:py-24 gap-8 sm:gap-16',
+    container: 'px-6 py-12 flex flex-col gap-8 lg:px-16 lg:py-24 lg:grid sm:px-12 sm:py-24 sm:gap-16',
     wrapper: '',
     header: '',
     title: 'text-3xl sm:text-4xl text-pretty tracking-tight font-700 color-text-highlighted',
@@ -32,7 +32,7 @@ export default {
       solid: {
         root: 'bg-background-inverted color-text-inverted',
         title: 'color-text-inverted',
-        description: 'color-text-dimmed',
+        description: 'pohon:color-text-dimmed',
       },
       outline: {
         root: 'bg-background ring ring-ring',

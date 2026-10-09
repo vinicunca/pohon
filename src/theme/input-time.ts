@@ -8,31 +8,31 @@ export default (options: Required<ModuleOptions>) => {
     slots: {
       root: () => undefined,
       base: () => ['group relative inline-flex items-center rounded-md select-none', options.theme.transitions && 'transition-colors'],
-      segment: ['rounded-sm text-center outline-hidden data-placeholder:color-text-dimmed data-[segment=literal]:color-text-muted data-invalid:color-error data-disabled:cursor-not-allowed data-disabled:opacity-75', options.theme.transitions && 'transition-colors'],
+      segment: ['rounded-sm text-center outline-hidden data-[placeholder]:color-text-dimmed data-[segment=literal]:color-text-muted data-[invalid]:color-error data-[disabled]:cursor-not-allowed data-[disabled]:opacity-75', options.theme.transitions && 'transition-colors'],
       separatorIcon: 'shrink-0 size-4 color-text-muted',
     },
     variants: {
       ...fieldGroupVariant,
       size: {
         xs: {
-          base: (prev: string) => [prev, 'gap-0.25'],
-          segment: 'not-data-[segment=literal]:w-8',
+          base: (prev: string) => [prev, 'pohon:gap-0.25'],
+          segment: 'not-[[data-segment=literal]]:w-8',
         },
         sm: {
-          base: (prev: string) => [prev, 'gap-0.5'],
-          segment: 'not-data-[segment=literal]:w-8',
+          base: (prev: string) => [prev, 'pohon:gap-0.5'],
+          segment: 'not-[[data-segment=literal]]:w-8',
         },
         md: {
-          base: (prev: string) => [prev, 'gap-0.5'],
-          segment: 'not-data-[segment=literal]:w-9',
+          base: (prev: string) => [prev, 'pohon:gap-0.5'],
+          segment: 'not-[[data-segment=literal]]:w-9',
         },
         lg: {
-          base: (prev: string) => [prev, 'gap-0.75'],
-          segment: 'not-data-[segment=literal]:w-9',
+          base: (prev: string) => [prev, 'pohon:gap-0.75'],
+          segment: 'not-[[data-segment=literal]]:w-9',
         },
         xl: {
-          base: (prev: string) => [prev, 'gap-0.75'],
-          segment: 'not-data-[segment=literal]:w-10',
+          base: (prev: string) => [prev, 'pohon:gap-0.75'],
+          segment: 'not-[[data-segment=literal]]:w-10',
         },
       },
       variant: (prev: Record<string, string>) => Object.fromEntries(

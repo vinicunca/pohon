@@ -1,5 +1,5 @@
 import type { Direction } from 'pohon-ui';
-import { uiTheme } from './designs/design.pohon-theme';
+// import { uiTheme } from './designs/design.pohon-theme';
 
 export default defineAppConfig({
   dir: 'ltr' as Direction,
@@ -16,6 +16,6 @@ export default defineAppConfig({
       neutral: 'slate',
     },
 
-    ...uiTheme,
+    // ...uiTheme,
   },
 });

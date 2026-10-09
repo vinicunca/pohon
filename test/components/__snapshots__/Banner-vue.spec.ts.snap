@@ -4,10 +4,10 @@ exports[`banner > renders with actions correctly 1`] = `
 "<div class="banner relative z-50 w-full transition-colors bg-primary" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="size-5 shrink-0 color-text-inverted pointer-events-none"></svg>
       <div data-slot="title" class="text-sm color-text-inverted font-500 truncate">Title</div>
-      <div data-slot="actions" class="flex gap-1.5 shrink-0 isolate"><button type="button" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2 py-1 text-xs gap-1 color-text-inverted bg-background-inverted hover:bg-background-inverted/90 active:bg-background-inverted/90 disabled:bg-background-inverted aria-disabled:bg-background-inverted outline-outline-inverted/25 focus-visible:outline-3">
+      <div data-slot="actions" class="flex gap-1.5 shrink-0 isolate"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-xs gap-1 color-text-inverted bg-background-inverted hover:bg-background-inverted/90 active:bg-background-inverted/90 disabled:bg-background-inverted aria-disabled:bg-background-inverted outline-outline-inverted/25 focus-visible:outline-3 px-2 py-1">
           <!--v-if--><span data-slot="label" class="truncate">Learn more</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class="shrink-0 size-4"></svg>
         </button></div>
     </div>
@@ -22,7 +22,7 @@ exports[`banner > renders with actions slot correctly 1`] = `
 "<div class="banner relative z-50 w-full transition-colors bg-primary" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <!--v-if-->
@@ -39,7 +39,7 @@ exports[`banner > renders with as correctly 1`] = `
 "<section class="banner relative z-50 w-full transition-colors bg-primary" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <!--v-if-->
@@ -56,7 +56,7 @@ exports[`banner > renders with class correctly 1`] = `
 "<div class="banner relative z-50 w-full transition-colors bg-primary z-10" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <!--v-if-->
@@ -73,13 +73,13 @@ exports[`banner > renders with close correctly 1`] = `
 "<div class="banner relative z-50 w-full transition-colors bg-primary" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
     </div>
-    <div data-slot="right" class="lg:flex-1 flex items-center justify-end"><button type="button" data-slot="close" aria-label="Close" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 color-text-inverted hover:bg-background/10 focus-visible:bg-background/10 -me-1.5 lg:me-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg>
+    <div data-slot="right" class="lg:flex-1 flex items-center justify-end"><button type="button" data-slot="close" aria-label="Close" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 color-text-inverted hover:bg-background/10 focus-visible:bg-background/10 -me-1.5 lg:me-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg>
         <!--v-if-->
         <!--v-if-->
       </button></div>
@@ -91,7 +91,7 @@ exports[`banner > renders with close slot correctly 1`] = `
 "<div class="banner relative z-50 w-full transition-colors bg-primary" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <!--v-if-->
@@ -106,7 +106,7 @@ exports[`banner > renders with closeIcon correctly 1`] = `
 "<div class="banner relative z-50 w-full transition-colors bg-primary" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <!--v-if-->
@@ -123,7 +123,7 @@ exports[`banner > renders with icon correctly 1`] = `
 "<div class="banner relative z-50 w-full transition-colors bg-primary" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="size-5 shrink-0 color-text-inverted pointer-events-none"></svg>
       <div data-slot="title" class="text-sm color-text-inverted font-500 truncate">Title</div>
       <!--v-if-->
@@ -139,7 +139,7 @@ exports[`banner > renders with id correctly 1`] = `
 "<div class="banner relative z-50 w-full transition-colors bg-primary" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <!--v-if-->
@@ -156,7 +156,7 @@ exports[`banner > renders with leading slot correctly 1`] = `
 "<div class="banner relative z-50 w-full transition-colors bg-primary" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0">Leading slot
       <!--v-if-->
       <!--v-if-->
@@ -172,7 +172,7 @@ exports[`banner > renders with neutral color correctly 1`] = `
 "<div class="banner relative z-50 w-full transition-colors bg-background-inverted" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="icon" class="size-5 shrink-0 color-text-inverted pointer-events-none"></svg>
       <div data-slot="title" class="text-sm color-text-inverted font-500 truncate">Title</div>
       <!--v-if-->
@@ -185,9 +185,9 @@ exports[`banner > renders with neutral color correctly 1`] = `
 `;
 
 exports[`banner > renders with target correctly 1`] = `
-"<div class="banner relative z-50 w-full transition-colors bg-primary outline-(--ui-bg)/25 -outline-offset-3 has-[>a:focus-visible]:outline-3 hover:bg-primary/90" data-banner-id="banner-banner" data-slot="root"><a href="https://nuxt.com" rel="noopener noreferrer" target="_blank" class="focus:outline-none"><span class="absolute inset-0" aria-hidden="true"></span></a>
+"<div class="banner relative z-50 w-full transition-colors bg-primary outline-$ui-color-bg/25 has-[>a:focus-visible]:outline-3 -outline-offset-3 hover:bg-primary/90" data-banner-id="banner-banner" data-slot="root"><a href="https://nuxt.com" rel="noopener noreferrer" target="_blank" class="focus:outline-none"><span class="absolute inset-0" aria-hidden="true"></span></a>
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <!--v-if-->
@@ -204,7 +204,7 @@ exports[`banner > renders with title correctly 1`] = `
 "<div class="banner relative z-50 w-full transition-colors bg-primary" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <div data-slot="title" class="text-sm color-text-inverted font-500 truncate">Title</div>
@@ -221,7 +221,7 @@ exports[`banner > renders with title slot correctly 1`] = `
 "<div class="banner relative z-50 w-full transition-colors bg-primary" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <div data-slot="title" class="text-sm color-text-inverted font-500 truncate">Title slot</div>
@@ -235,9 +235,9 @@ exports[`banner > renders with title slot correctly 1`] = `
 `;
 
 exports[`banner > renders with to correctly 1`] = `
-"<div class="banner relative z-50 w-full transition-colors bg-primary outline-(--ui-bg)/25 -outline-offset-3 has-[>a:focus-visible]:outline-3 hover:bg-primary/90" data-banner-id="banner-banner" data-slot="root"><a href="/getting-started" class="focus:outline-none"><span class="absolute inset-0" aria-hidden="true"></span></a>
+"<div class="banner relative z-50 w-full transition-colors bg-primary outline-$ui-color-bg/25 has-[>a:focus-visible]:outline-3 -outline-offset-3 hover:bg-primary/90" data-banner-id="banner-banner" data-slot="root"><a href="/getting-started" class="focus:outline-none"><span class="absolute inset-0" aria-hidden="true"></span></a>
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <!--v-if-->
@@ -254,7 +254,7 @@ exports[`banner > renders with ui correctly 1`] = `
 "<div class="banner relative z-50 w-full transition-colors bg-primary" data-banner-id="banner-banner" data-slot="root">
   <!--v-if-->
   <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 h-12 gap-6" data-slot="container">
-    <div data-slot="left" class="hidden lg:flex-1 lg:flex lg:items-center"></div>
+    <div data-slot="left" class="hidden lg:flex lg:flex-1 lg:items-center"></div>
     <div data-slot="center" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <!--v-if-->

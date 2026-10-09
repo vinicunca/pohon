@@ -2,15 +2,15 @@
 
 exports[`chatTool > renders with actions and content correctly 1`] = `
 "<div data-state="open" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="true" data-state="open" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors rounded-sm outline-primary/25 focus-visible:outline-3">
-    <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class="size-4 shrink-0 group-data-[state=open]:rotate-180 transition-transform duration-280"></svg>
+    <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class="shrink-0 size-4 transition-transform-280 ease-out group-data-[state=open]:rotate-180 motion-reduce:transition-none"></svg>
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2">Tool output content</div>
   </div>
-  <div data-slot="actions" data-state="open" class="flex items-center justify-end gap-1.5 pt-2"><button type="button" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2 py-1 text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+  <div data-slot="actions" data-state="open" class="flex items-center justify-end gap-1.5 pt-2"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-2 py-1">
       <!--v-if--><span data-slot="label" class="truncate">Approve</span>
       <!--v-if-->
-    </button><button type="button" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2 py-1 text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+    </button><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-2 py-1">
       <!--v-if--><span data-slot="label" class="truncate">Deny</span>
       <!--v-if-->
     </button></div>
@@ -22,13 +22,13 @@ exports[`chatTool > renders with actions correctly 1`] = `
     <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
-  <div data-slot="actions" data-state="closed" class="flex items-center justify-end gap-1.5 pt-2"><button type="button" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2 py-1 text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+  <div data-slot="actions" data-state="closed" class="flex items-center justify-end gap-1.5 pt-2"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-2 py-1">
       <!--v-if--><span data-slot="label" class="truncate">Approve</span>
       <!--v-if-->
-    </button><button type="button" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2 py-1 text-xs gap-1 color-text bg-background-elevated hover:bg-background-accented/75 active:bg-background-accented/75 outline-outline-inverted/25 focus-visible:outline-3 disabled:bg-background-elevated aria-disabled:bg-background-elevated">
+    </button><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-xs gap-1 color-text bg-background-elevated hover:bg-background-accented/75 active:bg-background-accented/75 outline-outline-inverted/25 focus-visible:outline-3 disabled:bg-background-elevated aria-disabled:bg-background-elevated px-2 py-1">
       <!--v-if--><span data-slot="label" class="truncate">Deny</span>
       <!--v-if-->
     </button></div>
@@ -40,7 +40,7 @@ exports[`chatTool > renders with actions slot correctly 1`] = `
     <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
   <div data-slot="actions" data-state="closed" class="flex items-center justify-end gap-1.5 pt-2">Custom actions</div>
@@ -52,13 +52,13 @@ exports[`chatTool > renders with actions variant card correctly 1`] = `
     <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap border-t border-border p-2 max-h-[200px] overflow-y-auto focus:outline-none"></div>
   </div>
-  <div data-slot="actions" data-state="closed" class="flex items-center justify-end gap-1.5 border-t border-border p-2"><button type="button" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2 py-1 text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+  <div data-slot="actions" data-state="closed" class="flex items-center justify-end gap-1.5 border-t border-border p-2"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-2 py-1">
       <!--v-if--><span data-slot="label" class="truncate">Approve</span>
       <!--v-if-->
-    </button><button type="button" data-slot="base" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2 py-1 text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3">
+    </button><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-2 py-1">
       <!--v-if--><span data-slot="label" class="truncate">Deny</span>
       <!--v-if-->
     </button></div>
@@ -69,7 +69,7 @@ exports[`chatTool > renders with chevron leading and icon correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors rounded-sm outline-primary/25 focus-visible:outline-3"><span data-slot="leading" class="relative size-4 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="size-4 shrink-0"></svg><!--v-if--></span><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
   <!--v-if-->
@@ -81,7 +81,7 @@ exports[`chatTool > renders with chevron leading correctly 1`] = `
     <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
   <!--v-if-->
@@ -89,10 +89,10 @@ exports[`chatTool > renders with chevron leading correctly 1`] = `
 `;
 
 exports[`chatTool > renders with chevron leading, icon and content correctly 1`] = `
-"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors rounded-sm outline-primary/25 focus-visible:outline-3"><span data-slot="leading" class="relative size-4 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="size-4 shrink-0 absolute inset-0 group-hover:opacity-0 group-data-[state=open]:opacity-0 transition-opacity duration-280"></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="chevronIcon" class="size-4 shrink-0 group-data-[state=open]:rotate-180 transition-transform duration-280 absolute inset-0 opacity-0 group-hover:opacity-100 group-data-[state=open]:opacity-100 transition-[rotate,opacity] duration-280"></svg></span><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
+"<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors rounded-sm outline-primary/25 focus-visible:outline-3"><span data-slot="leading" class="relative size-4 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="size-4 shrink-0 inset-0 absolute group-data-[state=open]:opacity-0 group-hover:opacity-0 transition-opacity-280 ease-out"></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="chevronIcon" class="shrink-0 size-4 transition-transform-280 ease-out group-data-[state=open]:rotate-180 motion-reduce:transition-none opacity-0 inset-0 absolute group-data-[state=open]:opacity-100 group-hover:opacity-100 transition-[transform,opacity]-280 ease-out motion-reduce:transition-none"></svg></span><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2">Tool output content</div>
   </div>
   <!--v-if-->
@@ -104,7 +104,7 @@ exports[`chatTool > renders with chevronIcon correctly 1`] = `
     <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
   <!--v-if-->
@@ -116,7 +116,7 @@ exports[`chatTool > renders with class correctly 1`] = `
     <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
   <!--v-if-->
@@ -125,9 +125,9 @@ exports[`chatTool > renders with class correctly 1`] = `
 
 exports[`chatTool > renders with default slot correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors rounded-sm outline-primary/25 focus-visible:outline-3">
-    <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class="size-4 shrink-0 group-data-[state=open]:rotate-180 transition-transform duration-280"></svg>
+    <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="trailingIcon" class="shrink-0 size-4 transition-transform-280 ease-out group-data-[state=open]:rotate-180 motion-reduce:transition-none"></svg>
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2">Tool output content</div>
   </div>
   <!--v-if-->
@@ -139,7 +139,7 @@ exports[`chatTool > renders with defaultOpen correctly 1`] = `
     <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px; transition-duration: 0s; animation-name: none;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
   <!--v-if-->
@@ -150,7 +150,7 @@ exports[`chatTool > renders with icon correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors rounded-sm outline-primary/25 focus-visible:outline-3"><span data-slot="leading" class="relative size-4 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="size-4 shrink-0"></svg><!--v-if--></span><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
   <!--v-if-->
@@ -161,7 +161,7 @@ exports[`chatTool > renders with loading and loadingIcon correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors rounded-sm outline-primary/25 focus-visible:outline-3"><span data-slot="leading" class="relative size-4 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="size-4 shrink-0 animate-spin"></svg><!--v-if--></span><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
   <!--v-if-->
@@ -172,7 +172,7 @@ exports[`chatTool > renders with loading correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors rounded-sm outline-primary/25 focus-visible:outline-3"><span data-slot="leading" class="relative size-4 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="size-4 shrink-0 animate-spin"></svg><!--v-if--></span><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
   <!--v-if-->
@@ -181,11 +181,11 @@ exports[`chatTool > renders with loading correctly 1`] = `
 
 exports[`chatTool > renders with streaming correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors rounded-sm outline-primary/25 focus-visible:outline-3">
-    <!--v-if--><span data-slot="label" class="truncate"><span style="--spread: 40px; --duration: 2s;" data-slot="base" class="text-transparent bg-clip-text bg-no-repeat bg-size-[calc(200%+var(--spread)*2+2px)_100%,auto] bg-[image:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--ui-text-highlighted),#0000_calc(50%+var(--spread))),linear-gradient(var(--ui-text-muted),var(--ui-text-muted))] animate-[shimmer_var(--duration)_linear_infinite] rtl:animate-[shimmer-rtl_var(--duration)_linear_infinite] will-change-[background-position]">Searching components</span>
+    <!--v-if--><span data-slot="label" class="truncate"><span style="--spread: 40px; --duration: 2s;" data-slot="base" class="motion-reduce:color-text-muted text-transparent will-change-[background-position] bg-[image:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--ui-color-text-highlighted),#0000_calc(50%+var(--spread))),linear-gradient(var(--ui-color-text-muted),var(--ui-color-text-muted))] bg-size-[calc(200%+var(--spread)*2+2px)_100%,auto] bg-clip-text bg-no-repeat motion-safe:animate-shimmer motion-reduce:bg-none motion-safe:rtl:animate-shimmer-rtl">Searching components</span>
     <!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
   <!--v-if-->
@@ -197,7 +197,7 @@ exports[`chatTool > renders with suffix correctly 1`] = `
     <!--v-if--><span data-slot="label" class="truncate">Searching components<span data-slot="suffix" class="color-text-dimmed ms-1">Button</span></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
   <!--v-if-->
@@ -209,7 +209,7 @@ exports[`chatTool > renders with text correctly 1`] = `
     <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
   <!--v-if-->
@@ -221,7 +221,7 @@ exports[`chatTool > renders with ui correctly 1`] = `
     <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2 color-text-muted"></div>
   </div>
   <!--v-if-->
@@ -233,7 +233,7 @@ exports[`chatTool > renders with variant card correctly 1`] = `
     <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap border-t border-border p-2 max-h-[200px] overflow-y-auto focus:outline-none"></div>
   </div>
   <!--v-if-->
@@ -245,7 +245,7 @@ exports[`chatTool > renders with variant inline correctly 1`] = `
     <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
-  <div data-slot="content" class="data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
+  <div data-slot="content" class="data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down data-[state=closed]:overflow-hidden" id="akar-collapsible-content-v-0" hidden="" data-state="closed" style="--akar-collapsible-content-height: 0px; --akar-collapsible-content-width: 0px;">
     <div data-slot="body" class="text-sm color-text-dimmed whitespace-pre-wrap pt-2"></div>
   </div>
   <!--v-if-->

@@ -9,7 +9,7 @@ export default (options: Required<ModuleOptions>) => ({
     item: 'flex items-start',
     container: 'flex items-center',
     base: 'rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none',
-    indicator: 'flex items-center justify-center size-full after:bg-background after:rounded-full',
+    indicator: 'flex size-full items-center justify-center after:content-empty after:rounded-full after:bg-background',
     wrapper: 'w-full',
     label: 'block font-500 color-text',
     icon: 'shrink-0',
@@ -115,7 +115,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     required: {
       true: {
-        legend: 'after:content-[\'*\'] after:ms-0.5 after:color-error',
+        legend: 'after:color-error after:ms-0.5 after:content-[\'*\']',
       },
     },
   },
@@ -222,7 +222,7 @@ export default (options: Required<ModuleOptions>) => ({
       indicator: 'hidden',
       highlight: true,
       class: {
-        item: `not-has-disabled:border-${color} not-has-disabled:has-data-[state=checked]:border-${color}`,
+        item: `[&:not(:has(:disabled))]:border-${color} [&:not(:has(:disabled)):has([data-state=checked])]:border-${color}`,
       },
     })),
     {
@@ -230,7 +230,7 @@ export default (options: Required<ModuleOptions>) => ({
       indicator: 'hidden',
       highlight: true,
       class: {
-        item: 'not-has-disabled:border-border-inverted not-has-disabled:has-data-[state=checked]:border-border-inverted',
+        item: '[&:not(:has(:disabled))]:border-border-inverted [&:not(:has(:disabled)):has([data-state=checked])]:border-border-inverted',
       },
     },
     ...(options.theme.colors || []).map((color: string) => ({

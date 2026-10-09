@@ -20,7 +20,7 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: '',
     header: 'flex items-center justify-between',
-    body: 'flex flex-col space-y-4 pt-4 sm:flex-row sm:space-x-4 sm:space-y-0',
+    body: 'pt-4 flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0',
     heading: 'flex-1 min-w-0 text-center',
     headingLabel: 'font-500 block truncate p-1.5',
     grid: 'w-full border-collapse select-none space-y-1 focus:outline-none',
@@ -30,7 +30,7 @@ export default (options: Required<ModuleOptions>) => ({
     headCell: 'rounded-md',
     headCellWeek: 'rounded-md color-text-muted',
     cell: 'relative text-center',
-    cellTrigger: ['m-0.5 relative flex items-center justify-center whitespace-nowrap focus-visible:outline-3 data-disabled:color-text-muted data-unavailable:line-through data-unavailable:color-text-muted data-unavailable:pointer-events-none data-today:font-600', options.theme.transitions && 'transition'],
+    cellTrigger: ['data-[disabled]:color-text-muted data-[unavailable]:color-text-muted m-0.5 flex whitespace-nowrap items-center justify-center relative data-[today]:font-600 focus-visible:outline-3 data-[unavailable]:line-through data-[unavailable]:pointer-events-none', options.theme.transitions && 'transition'],
     cellWeek: 'relative text-center color-text-muted',
   },
   variants: {
@@ -91,7 +91,7 @@ export default (options: Required<ModuleOptions>) => ({
     view: {
       day: {
         gridRow: 'grid-cols-7 place-items-center',
-        cellTrigger: 'rounded-full data-outside-view:color-text-muted',
+        cellTrigger: 'data-[outside-view]:color-text-muted rounded-full',
       },
       month: {
         gridRow: 'grid-cols-4',
@@ -111,56 +111,56 @@ export default (options: Required<ModuleOptions>) => ({
       color,
       variant: 'solid',
       class: {
-        cellTrigger: `data-selected:bg-${color} data-selected:color-text-inverted data-today:not-data-selected:color-${color} data-highlighted:bg-${color}/20 hover:not-data-selected:bg-${color}/20`,
+        cellTrigger: `data-[selected]:bg-${color} data-[selected]:color-text-inverted data-[today]:not-[[data-selected]]:color-${color} data-[highlighted]:bg-${color}/20 hover:not-[[data-selected]]:bg-${color}/20`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'outline',
       class: {
-        cellTrigger: `data-selected:ring data-selected:ring-inset data-selected:ring-${color}/50 data-selected:color-${color} data-selected:focus-visible:ring-${color} data-today:not-data-selected:color-${color} data-highlighted:bg-${color}/10 hover:not-data-selected:bg-${color}/10`,
+        cellTrigger: `data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-${color}/50 data-[selected]:color-${color} data-[today]:not-[[data-selected]]:color-${color} data-[highlighted]:bg-${color}/10 hover:not-[[data-selected]]:bg-${color}/10`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'soft',
       class: {
-        cellTrigger: `data-selected:bg-${color}/10 data-selected:color-${color} data-today:not-data-selected:color-${color} data-highlighted:bg-${color}/20 hover:not-data-selected:bg-${color}/20`,
+        cellTrigger: `data-[selected]:bg-${color}/10 data-[selected]:color-${color} data-[today]:not-[[data-selected]]:color-${color} data-[highlighted]:bg-${color}/20 hover:not-[[data-selected]]:bg-${color}/20`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'subtle',
       class: {
-        cellTrigger: `data-selected:bg-${color}/10 data-selected:color-${color} data-selected:ring data-selected:ring-inset data-selected:ring-${color}/25 data-selected:focus-visible:ring-${color} data-today:not-data-selected:color-${color} data-highlighted:bg-${color}/20 hover:not-data-selected:bg-${color}/20`,
+        cellTrigger: `data-[selected]:bg-${color}/10 data-[selected]:color-${color} data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-${color}/25 data-[today]:not-[[data-selected]]:color-${color} data-[highlighted]:bg-${color}/20 hover:not-[[data-selected]]:bg-${color}/20`,
       },
     })),
     {
       color: 'neutral',
       variant: 'solid',
       class: {
-        cellTrigger: 'data-selected:bg-background-inverted data-selected:color-text-inverted data-today:not-data-selected:color-text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
+        cellTrigger: 'data-[selected]:bg-background-inverted data-[selected]:color-text-inverted data-[today]:not-[[data-selected]]:color-text-highlighted data-[highlighted]:bg-background-inverted/20 hover:not-[[data-selected]]:bg-background-inverted/10',
       },
     },
     {
       color: 'neutral',
       variant: 'outline',
       class: {
-        cellTrigger: 'data-selected:ring data-selected:ring-inset data-selected:ring-ring-accented data-selected:color-text data-selected:bg-background data-selected:focus-visible:ring-ring-inverted data-today:not-data-selected:color-text-highlighted data-highlighted:bg-background-inverted/10 hover:not-data-selected:bg-background-inverted/10',
+        cellTrigger: 'data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-ring-accented data-[selected]:color-text data-[selected]:bg-background data-[today]:not-[[data-selected]]:color-text-highlighted data-[highlighted]:bg-background-inverted/10 hover:not-[[data-selected]]:bg-background-inverted/10',
       },
     },
     {
       color: 'neutral',
       variant: 'soft',
       class: {
-        cellTrigger: 'data-selected:bg-background-elevated data-selected:color-text data-today:not-data-selected:color-text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
+        cellTrigger: 'data-[selected]:bg-background-elevated data-[selected]:color-text data-[today]:not-[[data-selected]]:color-text-highlighted data-[highlighted]:bg-background-inverted/20 hover:not-[[data-selected]]:bg-background-inverted/10',
       },
     },
     {
       color: 'neutral',
       variant: 'subtle',
       class: {
-        cellTrigger: 'data-selected:bg-background-elevated data-selected:color-text data-selected:ring data-selected:ring-inset data-selected:ring-ring-accented data-selected:focus-visible:ring-ring-inverted data-today:not-data-selected:color-text-highlighted data-highlighted:bg-background-inverted/20 hover:not-data-selected:bg-background-inverted/10',
+        cellTrigger: 'data-[selected]:bg-background-elevated data-[selected]:color-text data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-ring-accented data-[today]:not-[[data-selected]]:color-text-highlighted data-[highlighted]:bg-background-inverted/20 hover:not-[[data-selected]]:bg-background-inverted/10',
       },
     },
     ...Object.entries(daySizes).map(([size, cellTrigger]) => ({

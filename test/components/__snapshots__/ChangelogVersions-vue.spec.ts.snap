@@ -16,7 +16,7 @@ exports[`changelogVersions > renders with as correctly 1`] = `
       </div>
       <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
         <div data-slot="header" class="">
-          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 color-text-inverted bg-background-inverted px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
             <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 color-text-toned truncate lg:hidden">Dec 13, 2024</time>
           </div>
           <h2 data-slot="title" class="relative text-xl text-pretty font-600 color-text-highlighted">
@@ -60,7 +60,7 @@ exports[`changelogVersions > renders with class correctly 1`] = `
       </div>
       <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
         <div data-slot="header" class="">
-          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 color-text-inverted bg-background-inverted px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
             <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 color-text-toned truncate lg:hidden">Dec 13, 2024</time>
           </div>
           <h2 data-slot="title" class="relative text-xl text-pretty font-600 color-text-highlighted">
@@ -111,7 +111,7 @@ exports[`changelogVersions > renders with indicator slot correctly 1`] = `
       </div>
       <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
         <div data-slot="header" class="">
-          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 color-text-inverted bg-background-inverted px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
             <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 color-text-toned truncate lg:hidden">Dec 13, 2024</time>
           </div>
           <h2 data-slot="title" class="relative text-xl text-pretty font-600 color-text-highlighted">
@@ -155,7 +155,7 @@ exports[`changelogVersions > renders with ui correctly 1`] = `
       </div>
       <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
         <div data-slot="header" class="">
-          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 color-text-inverted bg-background-inverted px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
             <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 color-text-toned truncate lg:hidden">Dec 13, 2024</time>
           </div>
           <h2 data-slot="title" class="relative text-xl text-pretty font-600 color-text-highlighted">
@@ -199,7 +199,7 @@ exports[`changelogVersions > renders with versions correctly 1`] = `
       </div>
       <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
         <div data-slot="header" class="">
-          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 color-text-inverted bg-background-inverted px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
             <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 color-text-toned truncate lg:hidden">Dec 13, 2024</time>
           </div>
           <h2 data-slot="title" class="relative text-xl text-pretty font-600 color-text-highlighted">
@@ -237,7 +237,7 @@ exports[`changelogVersions > renders without indicator correctly 1`] = `
       <!--v-if-->
       <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
         <div data-slot="header" class="">
-          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+          <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 color-text-inverted bg-background-inverted px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
             <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm/6 color-text-toned truncate">Dec 13, 2024</time>
           </div>
           <h2 data-slot="title" class="relative text-xl text-pretty font-600 color-text-highlighted">

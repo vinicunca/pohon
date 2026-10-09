@@ -12,7 +12,7 @@ export default (options: Required<ModuleOptions>) => ({
     group: 'p-1 isolate',
     empty: 'text-center color-text-muted',
     label: 'font-600 color-text-highlighted',
-    item: 'group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75',
+    item: 'group outline-none flex w-full select-none items-start relative before:rounded-md before:content-empty before:inset-px before:absolute before:-z-1 data-[disabled]:opacity-75 data-[disabled]:cursor-not-allowed',
     itemLeadingIcon: 'shrink-0',
     itemLeadingAvatar: 'shrink-0',
     itemLeadingAvatarSize: '',
@@ -20,7 +20,7 @@ export default (options: Required<ModuleOptions>) => ({
     itemLeadingChipSize: '',
     itemTrailing: 'ms-auto inline-flex items-center',
     itemTrailingIcon: 'shrink-0',
-    itemTrailingHighlightedIcon: 'shrink-0 color-text-dimmed hidden group-data-highlighted:inline-flex',
+    itemTrailingHighlightedIcon: 'color-text-dimmed shrink-0 hidden group-data-[highlighted]:inline-flex',
     itemTrailingKbds: 'hidden lg:inline-flex items-center shrink-0',
     itemTrailingKbdsSize: '',
     itemWrapper: 'flex-1 flex flex-col text-start min-w-0',
@@ -122,8 +122,8 @@ export default (options: Required<ModuleOptions>) => ({
         itemLeadingIcon: 'color-text',
       },
       false: {
-        item: ['color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-        itemLeadingIcon: ['color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text', options.theme.transitions && 'transition-colors'],
+        item: ['color-text data-[highlighted]:not-[[data-disabled]]:color-text-highlighted data-[highlighted]:not-[[data-disabled]]:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+        itemLeadingIcon: ['color-text-dimmed [.group[data-highlighted]:not([data-disabled])_&]:color-text', options.theme.transitions && 'transition-colors'],
       },
     },
     loading: {

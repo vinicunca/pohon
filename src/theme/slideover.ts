@@ -1,8 +1,8 @@
 export default {
   slots: {
     overlay: 'fixed inset-0 bg-background-elevated/75',
-    content: 'fixed bg-background divide-y divide-divide sm:ring ring-ring sm:shadow-lg flex flex-col focus:outline-none',
-    header: 'flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)',
+    content: 'bg-background flex flex-col ring-ring fixed divide-divide divide-y focus:outline-none sm:ring sm:shadow-lg',
+    header: 'p-4 flex gap-1.5 min-h-$ui-header-height items-center sm:px-6',
     wrapper: '',
     body: 'flex-1 overflow-y-auto p-4 sm:p-6',
     footer: 'flex items-center gap-1.5 p-4 sm:px-6',
@@ -32,7 +32,7 @@ export default {
     },
     transition: {
       true: {
-        overlay: 'data-[state=open]:animate-[fade-in_200ms_ease-out] data-[state=closed]:animate-[fade-out_200ms_ease-in]',
+        overlay: 'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0',
       },
     },
   },
@@ -88,25 +88,25 @@ export default {
     transition: true,
     side: 'top',
     class: {
-      content: 'data-[state=open]:animate-[slide-in-from-top_200ms_ease-in-out] data-[state=closed]:animate-[slide-out-to-top_200ms_ease-in-out]',
+      content: 'data-[state=open]:animate-in data-[state=open]:slide-in-from-top data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top',
     },
   }, {
     transition: true,
     side: 'right',
     class: {
-      content: 'data-[state=open]:animate-[slide-in-from-right_200ms_ease-in-out] data-[state=closed]:animate-[slide-out-to-right_200ms_ease-in-out]',
+      content: 'data-[state=open]:animate-in data-[state=open]:slide-in-from-right data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right',
     },
   }, {
     transition: true,
     side: 'bottom',
     class: {
-      content: 'data-[state=open]:animate-[slide-in-from-bottom_200ms_ease-in-out] data-[state=closed]:animate-[slide-out-to-bottom_200ms_ease-in-out]',
+      content: 'data-[state=open]:animate-in data-[state=open]:slide-in-from-bottom data-[state=closed]:animate-out data-[state=closed]:slide-out-to-bottom',
     },
   }, {
     transition: true,
     side: 'left',
     class: {
-      content: 'data-[state=open]:animate-[slide-in-from-left_200ms_ease-in-out] data-[state=closed]:animate-[slide-out-to-left_200ms_ease-in-out]',
+      content: 'data-[state=open]:animate-in data-[state=open]:slide-in-left data-[state=closed]:animate-out data-[state=closed]:slide-out-left',
     },
   }],
 };

@@ -2,7 +2,7 @@ export default {
   slots: {
     overlay: 'fixed inset-0',
     content: 'bg-background divide-y divide-divide flex flex-col focus:outline-none',
-    header: 'flex items-center gap-1.5 p-4 sm:px-6 min-h-(--ui-header-height)',
+    header: 'p-4 flex gap-1.5 min-h-$ui-header-height items-center sm:px-6',
     wrapper: '',
     body: 'flex-1 p-4 sm:p-6',
     footer: 'flex items-center gap-1.5 p-4 sm:px-6',
@@ -13,8 +13,8 @@ export default {
   variants: {
     transition: {
       true: {
-        overlay: 'data-[state=open]:animate-[fade-in_200ms_ease-out] data-[state=closed]:animate-[fade-out_200ms_ease-in]',
-        content: 'data-[state=open]:animate-[scale-in_200ms_ease-out] data-[state=closed]:animate-[scale-out_200ms_ease-in]',
+        overlay: 'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:animate-in data-[state=open]:fade-in-0',
+        content: 'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95',
       },
     },
     fullscreen: {

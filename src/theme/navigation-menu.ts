@@ -2,11 +2,11 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: 'relative flex gap-1.5 [&>div]:min-w-0',
-    list: 'isolate min-w-0',
-    label: 'w-full flex items-center gap-1.5 font-600 text-xs/5 color-text-highlighted px-2.5 py-1.5',
+    root: 'flex gap-1.5 relative [&>div]:min-w-0',
+    list: 'min-w-0 isolate',
+    label: 'color-text-highlighted text-xs/5 font-600 px-2.5 py-1.5 flex gap-1.5 w-full items-center',
     item: 'min-w-0',
-    link: 'group relative w-full flex items-center gap-1.5 font-500 text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none focus-visible:before:outline-3',
+    link: 'group text-sm font-500 flex gap-1.5 w-full items-center relative focus-visible:outline-none focus:outline-none before:rounded-md before:content-empty before:absolute before:-z-1 focus-visible:before:outline-3',
     linkLeadingIcon: 'shrink-0 size-5',
     linkLeadingAvatar: 'shrink-0',
     linkLeadingAvatarSize: '2xs',
@@ -14,24 +14,24 @@ export default (options: Required<ModuleOptions>) => ({
     linkTrailing: 'group ms-auto inline-flex gap-1.5 items-center',
     linkTrailingBadge: 'shrink-0',
     linkTrailingBadgeSize: 'sm',
-    linkTrailingIcon: 'size-5 transform shrink-0 group-data-[state=open]:rotate-180 transition-transform duration-280',
+    linkTrailingIcon: 'shrink-0 size-5 transform transition-transform-280 ease-out group-data-[state=open]:rotate-180 motion-reduce:transition-none',
     linkLabel: 'truncate',
-    linkLabelExternalIcon: 'inline-block size-3 align-top color-text-dimmed',
+    linkLabelExternalIcon: 'color-text-dimmed align-top size-3 inline-block',
     childList: 'isolate',
-    childLabel: 'text-xs color-text-highlighted',
+    childLabel: 'color-text-highlighted text-xs',
     childItem: '',
-    childLink: 'group relative size-full flex items-start text-start text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none focus-visible:before:outline-3',
+    childLink: 'group text-sm text-start flex size-full items-start relative focus-visible:outline-none focus:outline-none before:rounded-md before:content-empty before:absolute before:-z-1 focus-visible:before:outline-3',
     childLinkWrapper: 'min-w-0',
-    childLinkIcon: 'size-5 shrink-0',
+    childLinkIcon: 'shrink-0 size-5',
     childLinkLabel: 'truncate',
-    childLinkLabelExternalIcon: 'inline-block size-3 align-top color-text-dimmed',
+    childLinkLabelExternalIcon: 'color-text-dimmed align-top size-3 inline-block',
     childLinkDescription: 'color-text-muted',
-    separator: 'px-2 h-px bg-border',
-    viewportWrapper: 'absolute top-full left-0 flex w-full',
-    viewport: 'relative overflow-hidden bg-background shadow-lg rounded-md ring ring-ring h-(--akar-navigation-menu-viewport-height) w-full transition-[width,height,left,right] duration-280 origin-[top_center] data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] z-1',
+    separator: 'bg-border px-2 h-px',
+    viewportWrapper: 'flex w-full start-0 top-full absolute',
+    viewport: 'rounded-md bg-background h-$akar-navigation-menu-viewport-height w-full ring ring-ring shadow-lg origin-[top_center] transition-[width,height,left,right]-280 ease-out relative z-1 overflow-hidden motion-reduce:transition-none data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:zoom-in-90',
     content: '',
-    indicator: 'absolute left-0 data-[state=visible]:animate-[fade-in_100ms_ease-out] data-[state=hidden]:animate-[fade-out_100ms_ease-in] data-[state=hidden]:opacity-0 bottom-0 z-2 w-(--akar-navigation-menu-indicator-size) translate-x-(--akar-navigation-menu-indicator-position) flex h-2.5 items-end justify-center overflow-hidden transition-[translate,width] duration-280',
-    arrow: 'relative top-[50%] size-2.5 rotate-45 border border-border bg-background z-1 rounded-xs',
+    indicator: 'flex h-2.5 w-$akar-navigation-menu-indicator-size translate-x-$akar-navigation-menu-indicator-position transition-[transform,width]-280 ease-out items-end bottom-0 left-0 justify-center absolute z-2 overflow-hidden data-[state=hidden]:opacity-0 data-[state=hidden]:animate-out data-[state=hidden]:fade-out motion-reduce:transition-none data-[state=visible]:animate-in data-[state=visible]:fade-in',
+    arrow: 'border-border bg-background border rounded-xs size-2.5 rotate-45 top-[50%] relative z-1',
   },
   variants: {
     color: {
@@ -58,25 +58,25 @@ export default (options: Required<ModuleOptions>) => ({
         list: 'flex items-center',
         item: 'py-2',
         link: 'px-2.5 py-1.5 before:inset-x-px before:inset-y-0',
-        childList: 'grid p-2',
+        childList: 'p-2 grid',
         childLink: 'px-3 py-2 gap-2 before:inset-x-px before:inset-y-0',
         childLinkLabel: 'font-500',
-        content: 'absolute top-0 left-0 w-full max-h-[70vh] overflow-y-auto',
+        content: 'max-h-[70vh] w-full start-0 top-0 absolute overflow-y-auto',
       },
       vertical: {
         root: 'flex-col',
-        link: 'flex-row px-2.5 py-1.5 before:inset-y-px before:inset-x-0',
+        link: 'px-2.5 py-1.5 flex-row before:inset-x-0 before:inset-y-px',
         childLabel: 'px-1.5 py-0.5',
-        childLink: 'p-1.5 gap-1.5 before:inset-y-px before:inset-x-0',
+        childLink: 'p-1.5 gap-1.5 before:inset-x-0 before:inset-y-px',
       },
     },
     contentOrientation: {
       horizontal: {
         viewportWrapper: 'justify-center',
-        content: 'data-[motion=from-start]:animate-[enter-from-left_200ms_ease] data-[motion=from-end]:animate-[enter-from-right_200ms_ease] data-[motion=to-start]:animate-[exit-to-left_200ms_ease] data-[motion=to-end]:animate-[exit-to-right_200ms_ease]',
+        content: 'data-[motion^=from-]:animate-in data-[motion^=from-]:fade-in data-[motion^=to-]:animate-out data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52',
       },
       vertical: {
-        viewport: 'sm:w-(--akar-navigation-menu-viewport-width) left-(--akar-navigation-menu-viewport-left) rtl:left-auto rtl:right-[calc(100%-var(--akar-navigation-menu-viewport-left)-var(--akar-navigation-menu-viewport-width))]',
+        viewport: 'left-$akar-navigation-menu-viewport-left sm:w-$akar-navigation-menu-viewport-width rtl:left-auto rtl:right-[calc(100%-var(--akar-navigation-menu-viewport-left)-var(--akar-navigation-menu-viewport-width))]',
       },
     },
     active: {
@@ -87,13 +87,13 @@ export default (options: Required<ModuleOptions>) => ({
       false: {
         link: 'color-text-muted',
         linkLeadingIcon: 'color-text-dimmed',
-        childLink: ['hover:before:bg-background-elevated/50 color-text hover:color-text-highlighted', options.theme.transitions && 'transition-colors before:transition-colors'],
+        childLink: ['color-text hover:color-text-highlighted hover:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
         childLinkIcon: ['color-text-dimmed group-hover:color-text', options.theme.transitions && 'transition-colors'],
       },
     },
     disabled: {
       true: {
-        link: 'cursor-not-allowed opacity-75',
+        link: 'opacity-75 cursor-not-allowed',
       },
     },
     highlight: {
@@ -106,164 +106,185 @@ export default (options: Required<ModuleOptions>) => ({
       true: '',
     },
   },
-  compoundVariants: [{
-    orientation: 'horizontal',
-    contentOrientation: 'horizontal',
-    class: {
-      childList: 'grid-cols-2 gap-2',
+  compoundVariants: [
+    {
+      orientation: 'horizontal',
+      contentOrientation: 'horizontal',
+      class: {
+        childList: 'grid-cols-2 gap-2',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    contentOrientation: 'vertical',
-    class: {
-      childList: 'gap-1',
-      content: 'w-60',
+    {
+      orientation: 'horizontal',
+      contentOrientation: 'vertical',
+      class: {
+        childList: 'gap-1',
+        content: 'pohon:w-60',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    collapsed: false,
-    class: {
-      childList: 'ms-5 border-s border-border',
-      childItem: 'ps-1.5 -ms-px',
-      content: 'data-[state=open]:animate-[collapsible-down_200ms_ease-out] data-[state=closed]:animate-[collapsible-up_200ms_ease-out] data-[state=closed]:overflow-hidden',
+    {
+      orientation: 'vertical',
+      collapsed: false,
+      class: {
+        childList: 'ms-5 border-s border-border',
+        childItem: 'ps-1.5 -ms-px',
+        content: 'data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up data-[state=closed]:overflow-hidden',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    collapsed: true,
-    class: {
-      link: 'px-1.5',
-      linkLabel: 'hidden',
-      linkTrailing: 'hidden',
-      content: 'shadow-sm rounded-sm min-h-6 p-1',
+    {
+      orientation: 'vertical',
+      collapsed: true,
+      class: {
+        link: 'px-1.5',
+        linkLabel: 'hidden',
+        linkTrailing: 'hidden',
+        content: 'shadow-sm rounded-sm min-h-6 p-1',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    highlight: true,
-    class: {
-      link: ['after:absolute after:-bottom-2 after:inset-x-2.5 after:block after:h-px after:rounded-full', options.theme.transitions && 'after:transition-colors'],
+    {
+      orientation: 'horizontal',
+      highlight: true,
+      class: {
+        link: ['after:rounded-full after:h-px after:block after:content-empty after:inset-x-2.5 after:absolute after:-bottom-2', options.theme.transitions && 'after:transition-colors'],
+      },
     },
-  }, {
-    orientation: 'vertical',
-    highlight: true,
-    level: true,
-    class: {
-      link: ['after:absolute after:-start-1.5 after:inset-y-0.5 after:block after:w-px after:rounded-full', options.theme.transitions && 'after:transition-colors'],
+    {
+      orientation: 'vertical',
+      highlight: true,
+      level: true,
+      class: {
+        link: ['after:content-empty after:rounded-full after:w-px after:block after:inset-y-0.5 after:absolute after:-start-1.5', options.theme.transitions && 'after:transition-colors'],
+      },
     },
-  }, {
-    disabled: false,
-    active: false,
-    variant: 'pill',
-    class: {
-      link: ['hover:color-text-highlighted hover:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-      linkLeadingIcon: ['group-hover:color-text', options.theme.transitions && 'transition-colors'],
+    {
+      disabled: false,
+      active: false,
+      variant: 'pill',
+      class: {
+        link: ['hover:color-text-highlighted hover:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+        linkLeadingIcon: ['group-hover:color-text', options.theme.transitions && 'transition-colors'],
+      },
     },
-  }, {
-    disabled: false,
-    active: false,
-    variant: 'pill',
-    orientation: 'horizontal',
-    class: {
-      link: 'data-[state=open]:color-text-highlighted',
-      linkLeadingIcon: 'group-data-[state=open]:color-text',
+    {
+      disabled: false,
+      active: false,
+      variant: 'pill',
+      orientation: 'horizontal',
+      class: {
+        link: 'data-[state=open]:color-text-highlighted',
+        linkLeadingIcon: 'group-data-[state=open]:color-text',
+      },
     },
-  }, {
-    disabled: false,
-    variant: 'pill',
-    highlight: true,
-    orientation: 'horizontal',
-    class: {
-      link: 'data-[state=open]:before:bg-background-elevated/50',
+    {
+      disabled: false,
+      variant: 'pill',
+      highlight: true,
+      orientation: 'horizontal',
+      class: {
+        link: 'data-[state=open]:before:bg-background-elevated/50',
+      },
     },
-  }, {
-    disabled: false,
-    variant: 'pill',
-    highlight: false,
-    active: false,
-    orientation: 'horizontal',
-    class: {
-      link: 'data-[state=open]:before:bg-background-elevated/50',
+    {
+      disabled: false,
+      variant: 'pill',
+      highlight: false,
+      active: false,
+      orientation: 'horizontal',
+      class: {
+        link: 'data-[state=open]:before:bg-background-elevated/50',
+      },
     },
-  }, ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'pill',
-    active: true,
-    class: {
-      link: `color-${color}`,
-      linkLeadingIcon: `color-${color} group-data-[state=open]:color-${color}`,
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'pill',
+      active: true,
+      class: {
+        link: `color-${color}`,
+        linkLeadingIcon: `color-${color} group-data-[state=open]:color-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      variant: 'pill',
+      active: true,
+      class: {
+        link: 'color-text-highlighted',
+        linkLeadingIcon: 'color-text-highlighted group-data-[state=open]:color-text-highlighted',
+      },
     },
-  })), {
-    color: 'neutral',
-    variant: 'pill',
-    active: true,
-    class: {
-      link: 'color-text-highlighted',
-      linkLeadingIcon: 'color-text-highlighted group-data-[state=open]:color-text-highlighted',
+    {
+      variant: 'pill',
+      active: true,
+      highlight: false,
+      class: {
+        link: 'before:bg-background-elevated',
+      },
     },
-  }, {
-    variant: 'pill',
-    active: true,
-    highlight: false,
-    class: {
-      link: 'before:bg-background-elevated',
+    {
+      variant: 'pill',
+      active: true,
+      highlight: true,
+      disabled: false,
+      class: {
+        link: ['hover:before:bg-background-elevated/50', options.theme.transitions && 'before:transition-colors'],
+      },
     },
-  }, {
-    variant: 'pill',
-    active: true,
-    highlight: true,
-    disabled: false,
-    class: {
-      link: ['hover:before:bg-background-elevated/50', options.theme.transitions && 'before:transition-colors'],
+    {
+      disabled: false,
+      active: false,
+      variant: 'link',
+      class: {
+        link: ['hover:color-text-highlighted', options.theme.transitions && 'transition-colors'],
+        linkLeadingIcon: ['group-hover:color-text', options.theme.transitions && 'transition-colors'],
+      },
     },
-  }, {
-    disabled: false,
-    active: false,
-    variant: 'link',
-    class: {
-      link: ['hover:color-text-highlighted', options.theme.transitions && 'transition-colors'],
-      linkLeadingIcon: ['group-hover:color-text', options.theme.transitions && 'transition-colors'],
+    {
+      disabled: false,
+      active: false,
+      variant: 'link',
+      orientation: 'horizontal',
+      class: {
+        link: 'data-[state=open]:color-text-highlighted',
+        linkLeadingIcon: 'group-data-[state=open]:color-text',
+      },
     },
-  }, {
-    disabled: false,
-    active: false,
-    variant: 'link',
-    orientation: 'horizontal',
-    class: {
-      link: 'data-[state=open]:color-text-highlighted',
-      linkLeadingIcon: 'group-data-[state=open]:color-text',
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'link',
+      active: true,
+      class: {
+        link: `color-${color}`,
+        linkLeadingIcon: `color-${color} group-data-[state=open]:color-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      variant: 'link',
+      active: true,
+      class: {
+        link: 'color-text-highlighted',
+        linkLeadingIcon: 'color-text-highlighted group-data-[state=open]:color-text-highlighted',
+      },
     },
-  }, ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'link',
-    active: true,
-    class: {
-      link: `color-${color}`,
-      linkLeadingIcon: `color-${color} group-data-[state=open]:color-${color}`,
+    ...(options.theme.colors || []).map((highlightColor: string) => ({
+      highlightColor,
+      highlight: true,
+      level: true,
+      active: true,
+      class: {
+        link: `after:bg-${highlightColor}`,
+      },
+    })),
+    {
+      highlightColor: 'neutral',
+      highlight: true,
+      level: true,
+      active: true,
+      class: {
+        link: 'after:bg-background-inverted',
+      },
     },
-  })), {
-    color: 'neutral',
-    variant: 'link',
-    active: true,
-    class: {
-      link: 'color-text-highlighted',
-      linkLeadingIcon: 'color-text-highlighted group-data-[state=open]:color-text-highlighted',
-    },
-  }, ...(options.theme.colors || []).map((highlightColor: string) => ({
-    highlightColor,
-    highlight: true,
-    level: true,
-    active: true,
-    class: {
-      link: `after:bg-${highlightColor}`,
-    },
-  })), {
-    highlightColor: 'neutral',
-    highlight: true,
-    level: true,
-    active: true,
-    class: {
-      link: 'after:bg-background-inverted',
-    },
-  }],
+  ],
   defaultVariants: {
     color: 'primary',
     highlightColor: 'primary',

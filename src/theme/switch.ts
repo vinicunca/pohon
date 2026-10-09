@@ -3,10 +3,10 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative flex items-start',
-    base: ['inline-flex items-center shrink-0 rounded-full border-2 border-transparent focus-visible:outline-3 data-[state=unchecked]:bg-background-accented', options.theme.transitions && 'transition-[background] duration-280'],
+    base: ['border-2 border-transparent rounded-full inline-flex shrink-0 items-center focus-visible:outline-3 data-[state=unchecked]:bg-background-accented', options.theme.transitions && 'transition-[background-color]-280 ease-out'],
     container: 'flex items-center',
-    thumb: 'group pointer-events-none rounded-full bg-background shadow-lg ring-0 transition-transform duration-280 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:rtl:-translate-x-0 flex items-center justify-center',
-    icon: ['absolute shrink-0 group-data-[state=unchecked]:color-text-dimmed opacity-0 size-10/12', options.theme.transitions && 'transition-[color,opacity] duration-280'],
+    thumb: 'group rounded-full bg-background flex pointer-events-none ring-0 shadow-lg transition-transform-280 ease-out items-center justify-center data-[state=unchecked]:translate-x-0 motion-reduce:transition-none data-[state=unchecked]:rtl:-translate-x-0',
+    icon: ['opacity-0 shrink-0 size-10/12 absolute group-data-[state=unchecked]:color-text-dimmed', options.theme.transitions && 'transition-[color,opacity]-280 ease-out'],
     wrapper: 'ms-2',
     label: 'block font-500 color-text',
     description: 'color-text-muted',
@@ -74,7 +74,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     required: {
       true: {
-        label: 'after:content-[\'*\'] after:ms-0.5 after:color-error',
+        label: 'after:color-error after:ms-0.5 after:content-[\'*\']',
       },
     },
     disabled: {

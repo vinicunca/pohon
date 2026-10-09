@@ -8,30 +8,30 @@ export default (options: Required<ModuleOptions>) => {
     slots: {
       root: () => undefined,
       base: () => ['group relative inline-flex items-center rounded-md select-none', options.theme.transitions && 'transition-colors'],
-      segment: ['rounded-sm text-center outline-hidden data-placeholder:color-text-dimmed data-[segment=literal]:color-text-muted data-invalid:color-error data-disabled:cursor-not-allowed data-disabled:opacity-75', options.theme.transitions && 'transition-colors'],
+      segment: ['data-[placeholder]:color-text-dimmed data-[segment=literal]:color-text-muted data-[invalid]:color-error text-center outline-hidden rounded-sm data-[disabled]:opacity-75 data-[disabled]:cursor-not-allowed', options.theme.transitions && 'transition-colors'],
       separatorIcon: 'shrink-0 size-4 color-text-muted',
     },
     variants: {
       ...fieldGroupVariant,
       size: {
         xs: {
-          base: (prev: string) => [prev, 'gap-0.25'],
+          base: (prev: string) => [prev, 'pohon:gap-0.25'],
           segment: 'data-[segment=day]:w-8 data-[segment=month]:w-8 data-[segment=year]:w-10',
         },
         sm: {
-          base: (prev: string) => [prev, 'gap-0.5'],
+          base: (prev: string) => [prev, 'pohon:gap-0.5'],
           segment: 'data-[segment=day]:w-8 data-[segment=month]:w-8 data-[segment=year]:w-10',
         },
         md: {
-          base: (prev: string) => [prev, 'gap-0.5'],
+          base: (prev: string) => [prev, 'pohon:gap-0.5'],
           segment: 'data-[segment=day]:w-9 data-[segment=month]:w-9 data-[segment=year]:w-11',
         },
         lg: {
-          base: (prev: string) => [prev, 'gap-0.75'],
+          base: (prev: string) => [prev, 'pohon:gap-0.75'],
           segment: 'data-[segment=day]:w-9 data-[segment=month]:w-9 data-[segment=year]:w-11',
         },
         xl: {
-          base: (prev: string) => [prev, 'gap-0.75'],
+          base: (prev: string) => [prev, 'pohon:gap-0.75'],
           segment: 'data-[segment=day]:w-10 data-[segment=month]:w-10 data-[segment=year]:w-12',
         },
       },

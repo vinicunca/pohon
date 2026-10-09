@@ -145,7 +145,7 @@ describe('inputMenu', () => {
       template: '<PFieldGroup><PButton label="Button" /><PInputMenu multiple /></PFieldGroup>',
     });
 
-    expect(wrapper.get('div[data-slot="base"]').classes()).toContain('not-only:last:rounded-s-none');
+    expect(wrapper.get('div[data-slot="base"]').classes()).toContain('last:not-[*:only-child]:rounded-s-none');
   });
 
   it('with autocomplete mode ignores multiple', () => {

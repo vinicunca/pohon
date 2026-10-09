@@ -4,7 +4,7 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     overlay: 'fixed inset-0 bg-background-elevated/75',
     content: 'fixed bg-background ring ring-ring flex focus:outline-none',
-    handle: ['shrink-0 !bg-background-accented', options.theme.transitions && 'transition-opacity'],
+    handle: ['!bg-background-accented shrink-0', options.theme.transitions && 'transition-opacity ease-out'],
     container: 'w-full flex flex-col gap-4 p-4 overflow-y-auto',
     header: 'flex items-center gap-1.5 min-h-8',
     wrapper: 'min-w-0 flex-1',
@@ -59,7 +59,7 @@ export default (options: Required<ModuleOptions>) => ({
     direction: ['right', 'left'],
     class: {
       content: 'w-auto max-w-[calc(100%-2rem)]',
-      handle: '!h-12 !w-1.5 mt-auto mb-auto',
+      handle: '!h-12 !w-1.5 my-auto',
     },
   }, {
     direction: ['right', 'left'],

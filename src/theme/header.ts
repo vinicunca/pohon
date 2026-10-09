@@ -1,6 +1,6 @@
 export default {
   slots: {
-    root: 'bg-background/75 backdrop-blur-sm border-b border-border h-(--ui-header-height) sticky top-0 z-50',
+    root: 'bg-background/75 border-border border-b h-$ui-header-height top-0 sticky z-50 backdrop-blur-sm',
     container: 'flex items-center justify-between gap-3 h-full',
     left: 'lg:flex-1 flex items-center gap-1.5',
     center: 'hidden lg:flex',
@@ -9,7 +9,7 @@ export default {
     toggle: 'lg:hidden',
     content: 'lg:hidden',
     overlay: 'lg:hidden',
-    header: 'px-4 sm:px-6 h-(--ui-header-height) shrink-0 flex items-center justify-between gap-3',
+    header: 'px-4 flex shrink-0 gap-3 h-$ui-header-height items-center justify-between sm:px-6',
     body: 'p-4 sm:p-6 overflow-y-auto',
   },
   variants: {

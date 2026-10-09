@@ -10,8 +10,8 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'flex items-center gap-2',
     list: 'relative flex p-1 group',
-    indicator: 'absolute transition-[translate,width] duration-280',
-    trigger: ['group relative inline-flex items-center min-w-0 data-[state=inactive]:color-text-muted hover:data-[state=inactive]:not-disabled:color-text font-500 rounded-md disabled:cursor-not-allowed disabled:opacity-75', options.theme.transitions && 'transition-colors'],
+    indicator: 'transition-[transform,width]-280 ease-out absolute motion-reduce:transition-none',
+    trigger: ['group font-500 rounded-md inline-flex min-w-0 items-center relative data-[state=inactive]:color-text-muted disabled:opacity-75 disabled:cursor-not-allowed hover:data-[state=inactive]:not-disabled:color-text', options.theme.transitions && 'transition-colors'],
     leadingIcon: 'shrink-0',
     leadingAvatar: 'shrink-0',
     leadingAvatarSize: '',
@@ -32,7 +32,7 @@ export default (options: Required<ModuleOptions>) => ({
     variant: {
       pill: {
         list: 'bg-background-elevated rounded-lg',
-        trigger: ['grow', ssr('before:content-[\'\']', 'before:absolute', 'before:inset-0', 'before:rounded-md', 'before:shadow-xs', 'before:-z-10', 'isolate')],
+        trigger: ['list-no-indicator:data-[state=active]:isolate list-no-indicator:data-[state=active]:before:content-empty list-no-indicator:data-[state=active]:before:absolute list-no-indicator:data-[state=active]:before:inset-0 list-no-indicator:data-[state=active]:before:rounded-md list-no-indicator:data-[state=active]:before:shadow-xs list-no-indicator:data-[state=active]:before:-z-10 grow', ssr('before:content-[\'\']', 'before:absolute', 'before:inset-0', 'before:rounded-md', 'before:shadow-xs', 'before:-z-10', 'isolate')],
         indicator: 'rounded-md shadow-xs',
       },
       link: {
@@ -45,12 +45,12 @@ export default (options: Required<ModuleOptions>) => ({
       horizontal: {
         root: 'flex-col',
         list: 'w-full',
-        indicator: 'left-0 w-(--akar-tabs-indicator-size) translate-x-(--akar-tabs-indicator-position)',
+        indicator: 'w-$akar-tabs-indicator-size translate-x-$akar-tabs-indicator-position left-0',
         trigger: 'justify-center',
       },
       vertical: {
         list: 'flex-col',
-        indicator: 'top-0 h-(--akar-tabs-indicator-size) translate-y-(--akar-tabs-indicator-position)',
+        indicator: 'h-$akar-tabs-indicator-size translate-y-$akar-tabs-indicator-position top-0',
       },
     },
     size: {
@@ -116,28 +116,28 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'pill',
     class: {
       indicator: `bg-${color}`,
-      trigger: [`data-[state=active]:color-text-inverted outline-${color}/25 focus-visible:outline-3`, ssr(`before:bg-${color}`)],
+      trigger: [`data-[state=active]:color-text-inverted outline-${color}/25 focus-visible:outline-3 list-no-indicator:data-[state=active]:before:bg-${color}`, ssr(`before:bg-${color}`)],
     },
   })), {
     color: 'neutral',
     variant: 'pill',
     class: {
       indicator: 'bg-background-inverted',
-      trigger: ['data-[state=active]:color-text-inverted outline-outline-inverted/25 focus-visible:outline-3', ssr('before:bg-background-inverted')],
+      trigger: ['data-[state=active]:color-text-inverted outline-outline-inverted/25 focus-visible:outline-3 list-no-indicator:data-[state=active]:before:bg-background-inverted', ssr('before:bg-background-inverted')],
     },
   }, ...(options.theme.colors || []).map((color: string) => ({
     color,
     variant: 'link',
     class: {
       indicator: `bg-${color}`,
-      trigger: [`data-[state=active]:color-${color} outline-${color}/25 focus-visible:outline-3`, ssr(`after:bg-${color}`)],
+      trigger: [`data-[state=active]:color-${color} outline-${color}/25 focus-visible:outline-3 list-no-indicator:data-[state=active]:after:bg-${color}`, ssr(`after:bg-${color}`)],
     },
   })), {
     color: 'neutral',
     variant: 'link',
     class: {
       indicator: 'bg-background-inverted',
-      trigger: ['data-[state=active]:color-text-highlighted outline-outline-inverted/25 focus-visible:outline-3', ssr('after:bg-background-inverted')],
+      trigger: ['data-[state=active]:color-text-highlighted outline-outline-inverted/25 focus-visible:outline-3 list-no-indicator:data-[state=active]:after:bg-background-inverted', ssr('after:bg-background-inverted')],
     },
   }],
   defaultVariants: {

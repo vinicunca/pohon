@@ -3,7 +3,7 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'inline-flex flex-row-reverse justify-end',
-    base: 'relative rounded-full ring-bg first:me-0',
+    base: 'ring-background rounded-full relative first:me-0',
   },
   variants: {
     size: {

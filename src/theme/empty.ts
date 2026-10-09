@@ -12,27 +12,27 @@ export default {
   variants: {
     size: {
       xs: {
-        avatar: 'size-8 text-base',
+        avatar: 'pohon:size-8 text-base',
         title: 'text-sm',
         description: 'text-xs',
       },
       sm: {
-        avatar: 'size-9 text-lg',
+        avatar: 'pohon:size-9 text-lg',
         title: 'text-sm',
         description: 'text-xs',
       },
       md: {
-        avatar: 'size-10 text-xl',
+        avatar: 'pohon:size-10 text-xl',
         title: 'text-base',
         description: 'text-sm',
       },
       lg: {
-        avatar: 'size-11 text-[22px]',
+        avatar: 'pohon:size-11 text-[22px]',
         title: 'text-base',
         description: 'text-sm',
       },
       xl: {
-        avatar: 'size-12 text-2xl',
+        avatar: 'pohon:size-12 text-2xl',
         title: 'text-lg',
         description: 'text-base',
       },

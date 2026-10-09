@@ -84,7 +84,7 @@ exports[`changelogVersion > renders with badge correctly 1`] = `
   </div>
   <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
     <div data-slot="header" class="">
-      <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md color-text-inverted bg-background-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 color-text-inverted bg-background-inverted px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
         <!--v-if--></span>
         <!--v-if-->
       </div>
@@ -107,7 +107,7 @@ exports[`changelogVersion > renders with badge object correctly 1`] = `
   </div>
   <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
     <div data-slot="header" class="">
-      <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs px-2 py-1 gap-1 rounded-md bg-primary color-text-inverted"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 bg-primary color-text-inverted px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
         <!--v-if--></span>
         <!--v-if-->
       </div>
@@ -439,7 +439,7 @@ exports[`changelogVersion > renders with to & image correctly 1`] = `
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
-      <div data-slot="imageWrapper" class="relative overflow-hidden rounded-lg aspect-[16/9] mt-5 group/changelog-version-image"><img src="https://picsum.photos/640/360" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform duration-280 group-hover/changelog-version-image:scale-105 group-has-focus-visible/changelog-version-image:scale-105"><a href="/changelog" aria-label="Version link" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a></div>
+      <div data-slot="imageWrapper" class="relative overflow-hidden rounded-lg aspect-[16/9] mt-5 group/changelog-version-image"><img src="https://picsum.photos/640/360" data-slot="image" class="object-cover object-top w-full h-full transform transition-transform ease-out group-has-focus-visible/changelog-version-image:scale-105 group-hover/changelog-version-image:scale-105 motion-reduce:transition-none"><a href="/changelog" aria-label="Version link" class="focus:outline-none peer"><span class="absolute inset-0" aria-hidden="true"></span></a></div>
     </div>
     <!--v-if-->
   </div>

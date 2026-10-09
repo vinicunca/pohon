@@ -3,8 +3,8 @@
 exports[`dashboardNavbar > renders with as correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <section data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
-    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+  <section data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
+    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
         <!--v-if-->
         <!--v-if-->
       </button>
@@ -22,8 +22,8 @@ exports[`dashboardNavbar > renders with as correctly 1`] = `
 exports[`dashboardNavbar > renders with class correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5 px-8">
-    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6 px-8">
+    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
         <!--v-if-->
         <!--v-if-->
       </button>
@@ -41,8 +41,8 @@ exports[`dashboardNavbar > renders with class correctly 1`] = `
 exports[`dashboardNavbar > renders with default slot correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
-    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
+    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
         <!--v-if-->
         <!--v-if-->
       </button>
@@ -60,8 +60,8 @@ exports[`dashboardNavbar > renders with default slot correctly 1`] = `
 exports[`dashboardNavbar > renders with icon correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
-    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
+    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
         <!--v-if-->
         <!--v-if-->
       </button><span class="iconify i-lucide:house shrink-0 size-5 self-center me-1.5" aria-hidden="true" data-slot="icon"></span>
@@ -78,8 +78,8 @@ exports[`dashboardNavbar > renders with icon correctly 1`] = `
 exports[`dashboardNavbar > renders with leading slot correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
-    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
+    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
         <!--v-if-->
         <!--v-if-->
       </button>Leading slot
@@ -96,8 +96,8 @@ exports[`dashboardNavbar > renders with leading slot correctly 1`] = `
 exports[`dashboardNavbar > renders with left slot correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
-    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
+    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
         <!--v-if-->
         <!--v-if-->
       </button>Left slot</div>
@@ -112,8 +112,8 @@ exports[`dashboardNavbar > renders with left slot correctly 1`] = `
 exports[`dashboardNavbar > renders with right slot correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
-    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
+    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
         <!--v-if-->
         <!--v-if-->
       </button>
@@ -131,8 +131,8 @@ exports[`dashboardNavbar > renders with right slot correctly 1`] = `
 exports[`dashboardNavbar > renders with title correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
-    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
+    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
         <!--v-if-->
         <!--v-if-->
       </button>
@@ -150,8 +150,8 @@ exports[`dashboardNavbar > renders with title correctly 1`] = `
 exports[`dashboardNavbar > renders with title slot correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
-    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
+    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
         <!--v-if-->
         <!--v-if-->
       </button>
@@ -169,8 +169,8 @@ exports[`dashboardNavbar > renders with title slot correctly 1`] = `
 exports[`dashboardNavbar > renders with toggle correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
-    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
+    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
         <!--v-if-->
         <!--v-if-->
       </button>
@@ -188,7 +188,7 @@ exports[`dashboardNavbar > renders with toggle correctly 1`] = `
 exports[`dashboardNavbar > renders with toggle slot correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
     <div data-slot="left" class="flex items-center gap-1.5 min-w-0">Toggle slot
       <!--v-if-->
       <!--v-if-->
@@ -204,14 +204,14 @@ exports[`dashboardNavbar > renders with toggle slot correctly 1`] = `
 exports[`dashboardNavbar > renders with toggleSide correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
     <div data-slot="left" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
     </div>
     <!--v-if-->
-    <div data-slot="right" class="flex items-center shrink-0 gap-1.5"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+    <div data-slot="right" class="flex items-center shrink-0 gap-1.5"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
         <!--v-if-->
         <!--v-if-->
       </button></div>
@@ -222,8 +222,8 @@ exports[`dashboardNavbar > renders with toggleSide correctly 1`] = `
 exports[`dashboardNavbar > renders with trailing slot correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
-    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
+    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
         <!--v-if-->
         <!--v-if-->
       </button>
@@ -241,8 +241,8 @@ exports[`dashboardNavbar > renders with trailing slot correctly 1`] = `
 exports[`dashboardNavbar > renders with ui correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
-    <div data-slot="left" class="flex items-center gap-1.5 min-w-0 gap-3"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="rounded-md font-500 inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-2.5 py-1.5 text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
+    <div data-slot="left" class="flex items-center gap-1.5 min-w-0 gap-3"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
         <!--v-if-->
         <!--v-if-->
       </button>
@@ -260,7 +260,7 @@ exports[`dashboardNavbar > renders with ui correctly 1`] = `
 exports[`dashboardNavbar > renders without toggle correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->
-  <div data-slot="root" class="h-(--ui-header-height) shrink-0 flex items-center justify-between border-b border-border px-4 sm:px-6 gap-1.5">
+  <div data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
     <div data-slot="left" class="flex items-center gap-1.5 min-w-0">
       <!--v-if-->
       <!--v-if-->

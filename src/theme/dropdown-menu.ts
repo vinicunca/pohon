@@ -2,15 +2,15 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    content: 'min-w-32 max-h-(--akar-dropdown-menu-content-available-height) bg-background shadow-lg rounded-md ring ring-ring overflow-hidden data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--akar-dropdown-menu-content-transform-origin) flex flex-col',
+    content: 'bg-background ring-ring rounded-md flex flex-col max-h-$akar-dropdown-menu-content-available-height min-w-32 ring shadow-lg origin-$akar-dropdown-menu-content-transform-origin overflow-hidden data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
     input: 'border-b border-border',
     empty: 'text-center color-text-muted',
     viewport: 'relative divide-y divide-divide scroll-py-1 overflow-y-auto flex-1',
-    arrow: 'fill-bg stroke-default',
+    arrow: 'fill-fill-bg stroke-stroke',
     group: 'p-1 isolate',
     label: 'w-full flex items-center font-600 color-text-highlighted',
     separator: '-mx-1 my-1 h-px bg-border',
-    item: 'group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75',
+    item: 'group outline-none flex w-full select-none items-start relative before:rounded-md before:content-empty before:inset-px before:absolute before:-z-1 data-[disabled]:opacity-75 data-[disabled]:cursor-not-allowed',
     itemLeadingIcon: 'shrink-0',
     itemLeadingAvatar: 'shrink-0',
     itemLeadingAvatarSize: '',
@@ -34,8 +34,8 @@ export default (options: Required<ModuleOptions>) => ({
         itemLeadingIcon: 'color-text',
       },
       false: {
-        item: ['color-text data-highlighted:color-text-highlighted data-[state=open]:color-text-highlighted data-highlighted:before:bg-background-elevated/50 data-[state=open]:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-        itemLeadingIcon: ['color-text-dimmed group-data-highlighted:color-text group-data-[state=open]:color-text', options.theme.transitions && 'transition-colors'],
+        item: ['color-text data-[highlighted]:color-text-highlighted data-[state=open]:color-text-highlighted data-[highlighted]:before:bg-background-elevated/50 data-[state=open]:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+        itemLeadingIcon: ['color-text-dimmed group-data-[highlighted]:color-text group-data-[state=open]:color-text', options.theme.transitions && 'transition-colors before:transition-colors'],
       },
     },
     loading: {
@@ -100,8 +100,8 @@ export default (options: Required<ModuleOptions>) => ({
     color,
     active: false,
     class: {
-      item: `color-${color} data-highlighted:color-${color} data-highlighted:before:bg-${color}/10 data-[state=open]:before:bg-${color}/10`,
-      itemLeadingIcon: `color-${color}/75 group-data-highlighted:color-${color} group-data-[state=open]:color-${color}`,
+      item: `color-${color} data-[highlighted]:color-${color} data-[highlighted]:before:bg-${color}/10 data-[state=open]:before:bg-${color}/10`,
+      itemLeadingIcon: `color-${color}/75 group-data-[highlighted]:color-${color} group-data-[state=open]:color-${color}`,
     },
   })), ...(options.theme.colors || []).map((color: string) => ({
     color,

@@ -1,9 +1,9 @@
 export default {
   slots: {
-    root: 'flex flex-col lg:grid lg:grid-cols-10 lg:gap-10',
+    root: 'flex flex-col lg:gap-10 lg:grid lg:grid-cols-10',
     left: 'lg:col-span-2',
     center: 'lg:col-span-8',
-    right: 'lg:col-span-2 order-first lg:order-last',
+    right: 'order-first lg:col-span-2 lg:order-last',
   },
   variants: {
     left: {

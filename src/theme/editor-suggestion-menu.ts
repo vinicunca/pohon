@@ -2,12 +2,12 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    content: 'min-w-48 max-w-60 max-h-96 bg-background shadow-lg rounded-md ring ring-ring overflow-hidden data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--akar-dropdown-menu-content-transform-origin) flex flex-col',
+    content: 'rounded-md bg-background flex flex-col max-h-96 max-w-60 min-w-48 ring ring-ring shadow-lg origin-$akar-dropdown-menu-content-transform-origin overflow-hidden data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95',
     viewport: 'relative divide-y divide-divide scroll-py-1 overflow-y-auto flex-1',
     group: 'p-1 isolate',
-    label: 'w-full flex items-center font-600 color-text-highlighted',
+    label: 'color-text-highlighted font-semibold flex w-full items-center',
     separator: '-mx-1 my-1 h-px bg-border',
-    item: 'group relative w-full flex items-start select-none outline-none before:absolute before:z-[-1] before:inset-px before:rounded-md data-disabled:cursor-not-allowed data-disabled:opacity-75',
+    item: 'group outline-none flex w-full select-none items-start relative before:rounded-md before:content-empty before:inset-px before:absolute before:-z-1 data-[disabled]:opacity-75 data-[disabled]:cursor-not-allowed',
     itemLeadingIcon: 'shrink-0 flex items-center justify-center',
     itemLeadingAvatar: 'shrink-0',
     itemLeadingAvatarSize: '',
@@ -55,8 +55,8 @@ export default (options: Required<ModuleOptions>) => ({
         itemLeadingIcon: 'color-text',
       },
       false: {
-        item: ['color-text data-highlighted:not-data-disabled:color-text-highlighted data-highlighted:not-data-disabled:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-        itemLeadingIcon: ['color-text-dimmed group-data-highlighted:not-group-data-disabled:color-text', options.theme.transitions && 'transition-colors'],
+        item: ['color-text data-[highlighted]:not-[[data-disabled]]:color-text-highlighted data-[highlighted]:not-[[data-disabled]]:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+        itemLeadingIcon: ['color-text-dimmed [.group[data-highlighted]:not([data-disabled])_&]:color-text', options.theme.transitions && 'transition-colors'],
       },
     },
   },

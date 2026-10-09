@@ -1,7 +1,7 @@
 export default {
   slots: {
-    root: 'relative hidden lg:flex flex-col min-h-svh min-w-16 w-(--width) shrink-0',
-    header: 'h-(--ui-header-height) shrink-0 flex items-center gap-1.5 px-4',
+    root: 'shrink-0 flex-col min-w-16 w-$width hidden relative min-h-svh lg:flex',
+    header: 'px-4 flex shrink-0 gap-1.5 h-$ui-header-height items-center',
     body: 'flex flex-col gap-4 flex-1 overflow-y-auto px-4 py-2',
     footer: 'shrink-0 flex items-center gap-1.5 px-4 py-2',
     toggle: '',

@@ -57,7 +57,7 @@ export default (options: Required<ModuleOptions>) => ({
     },
     required: {
       true: {
-        legend: 'after:content-[\'*\'] after:ms-0.5 after:color-error',
+        legend: 'after:color-error after:ms-0.5 after:content-[\'*\']',
       },
     },
     highlight: {
@@ -93,7 +93,7 @@ export default (options: Required<ModuleOptions>) => ({
       variant: 'table',
       class: {
         item: 'first-of-type:rounded-s-lg last-of-type:rounded-e-lg',
-        fieldset: 'gap-0 -space-x-px',
+        fieldset: 'pohon:gap-0 -space-x-px',
       },
     },
     {
@@ -101,7 +101,7 @@ export default (options: Required<ModuleOptions>) => ({
       variant: 'table',
       class: {
         item: 'first-of-type:rounded-t-lg last-of-type:rounded-b-lg',
-        fieldset: 'gap-0 -space-y-px',
+        fieldset: 'pohon:gap-0 -space-y-px',
       },
     },
     ...(options.theme.colors || []).map((color: string) => ({

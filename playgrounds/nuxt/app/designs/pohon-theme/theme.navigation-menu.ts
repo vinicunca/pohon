@@ -7,7 +7,7 @@ export const themeNavigationMenu = {
   slots: {
     root: 'flex gap-1.5 relative [&>div]:min-w-0',
     list: 'min-w-0 isolate',
-    label: 'color-text-highlighted text-xs/5 font-600 px-2.5 py-1.5 flex gap-1.5 w-full items-center',
+    label: 'text-xs/5 color-text-highlighted font-600 px-2.5 py-1.5 flex gap-1.5 w-full items-center',
     item: 'min-w-0',
     link: 'group text-sm font-500 flex gap-1.5 w-full items-center relative focus-visible:outline-none focus:outline-none before:(rounded-md content-empty absolute -z-1) focus-visible:before:outline-3',
     linkLeadingIcon: 'shrink-0 size-5',
@@ -21,7 +21,7 @@ export const themeNavigationMenu = {
     linkLabel: 'truncate',
     linkLabelExternalIcon: 'color-text-dimmed align-top size-3 inline-block',
     childList: 'isolate',
-    childLabel: 'color-text-highlighted text-xs',
+    childLabel: 'text-xs color-text-highlighted',
     childItem: '',
     childLink: 'group text-sm text-start flex size-full items-start relative focus-visible:outline-none focus:outline-none before:(rounded-md content-empty absolute -z-1) focus-visible:before:outline-3',
     childLinkWrapper: 'min-w-0',
@@ -29,12 +29,12 @@ export const themeNavigationMenu = {
     childLinkLabel: 'truncate',
     childLinkLabelExternalIcon: 'color-text-dimmed align-top size-3 inline-block',
     childLinkDescription: 'color-text-muted',
-    separator: 'bg-border px-2 h-px',
+    separator: 'px-2 bg-border h-px',
     viewportWrapper: 'flex w-full start-0 top-full absolute',
-    viewport: 'bg-background ring-ring rounded-md h-$akar-navigation-menu-viewport-height w-full ring shadow-lg origin-[top_center] transition-[width,height,left,right]-280 ease-out relative z-1 overflow-hidden motion-reduce:transition-none data-[state=closed]:(animate-out zoom-out-95) data-[state=open]:(animate-in zoom-in-90)',
+    viewport: 'rounded-md bg-background h-$akar-navigation-menu-viewport-height w-full ring ring-ring shadow-lg origin-[top_center] transition-[width,height,left,right]-280 ease-out relative z-1 overflow-hidden motion-reduce:transition-none data-[state=closed]:(animate-out zoom-out-95) data-[state=open]:(animate-in zoom-in-90)',
     content: '',
     indicator: 'flex h-2.5 w-$akar-navigation-menu-indicator-size translate-x-$akar-navigation-menu-indicator-position transition-[transform,width]-280 ease-out items-end bottom-0 left-0 justify-center absolute z-2 overflow-hidden data-[state=hidden]:(opacity-0 animate-out fade-out) motion-reduce:transition-none data-[state=visible]:(animate-in fade-in)',
-    arrow: 'border-border bg-background border rounded-xs size-2.5 rotate-45 top-[50%] relative z-1',
+    arrow: 'border border-border rounded-xs bg-background size-2.5 rotate-45 top-[50%] relative z-1',
   },
   variants: {
     color: {
@@ -84,14 +84,14 @@ export const themeNavigationMenu = {
     },
     active: {
       true: {
-        childLink: 'before:bg-background-elevated color-text-highlighted',
+        childLink: 'color-text-highlighted before:bg-background-elevated',
         childLinkIcon: 'color-text',
       },
       false: {
         link: 'color-text-muted',
         linkLeadingIcon: 'color-text-dimmed',
-        childLink: 'hover:before:bg-background-elevated/50 color-text hover:color-text-highlighted transition-colors before:transition-colors',
-        childLinkIcon: 'color-text-dimmed group-hover:color-text transition-colors',
+        childLink: 'color-text transition-colors hover:color-text-highlighted before:transition-colors hover:before:bg-background-elevated/50',
+        childLinkIcon: 'color-text-dimmed transition-colors group-hover:color-text',
       },
     },
     disabled: {

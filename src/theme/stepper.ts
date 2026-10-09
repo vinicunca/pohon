@@ -6,7 +6,7 @@ export default (options: Required<ModuleOptions>) => ({
     header: 'flex',
     item: 'group text-center relative w-full',
     container: 'relative',
-    trigger: 'rounded-full font-500 text-center align-middle flex items-center justify-center font-600 group-data-[state=completed]:color-text-inverted group-data-[state=active]:color-text-inverted color-text-muted bg-background-elevated focus-visible:outline-3',
+    trigger: 'color-text-muted font-600 text-center align-middle rounded-full bg-background-elevated flex items-center justify-center group-data-[state=active]:color-text-inverted group-data-[state=completed]:color-text-inverted focus-visible:outline-3',
     indicator: 'flex items-center justify-center size-full',
     icon: 'shrink-0',
     separator: 'absolute rounded-full group-data-[disabled]:opacity-75 bg-background-accented',

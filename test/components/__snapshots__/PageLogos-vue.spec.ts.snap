@@ -3,7 +3,7 @@
 exports[`pageLogos > renders with as correctly 1`] = `
 "<section data-slot="root" class="relative overflow-hidden">
   <!--v-if-->
-  <div data-slot="logos" class="mt-10 flex items-center shrink-0 justify-around gap-(--gap) [--gap:--spacing(16)]">
+  <div data-slot="logos" class="mt-10 flex shrink-0 gap-$gap [--gap:--spacing(16)] items-center justify-around">
     <!--v-if-->
   </div>
 </section>"
@@ -12,7 +12,7 @@ exports[`pageLogos > renders with as correctly 1`] = `
 exports[`pageLogos > renders with class correctly 1`] = `
 "<div data-slot="root" class="relative overflow-hidden text-xl">
   <!--v-if-->
-  <div data-slot="logos" class="mt-10 flex items-center shrink-0 justify-around gap-(--gap) [--gap:--spacing(16)]">
+  <div data-slot="logos" class="mt-10 flex shrink-0 gap-$gap [--gap:--spacing(16)] items-center justify-around">
     <!--v-if-->
   </div>
 </div>"
@@ -21,28 +21,28 @@ exports[`pageLogos > renders with class correctly 1`] = `
 exports[`pageLogos > renders with default slot correctly 1`] = `
 "<div data-slot="root" class="relative overflow-hidden">
   <!--v-if-->
-  <div data-slot="logos" class="mt-10 flex items-center shrink-0 justify-around gap-(--gap) [--gap:--spacing(16)]">Default slot</div>
+  <div data-slot="logos" class="mt-10 flex shrink-0 gap-$gap [--gap:--spacing(16)] items-center justify-around">Default slot</div>
 </div>"
 `;
 
 exports[`pageLogos > renders with default slot correctly 2`] = `
 "<div data-slot="root" class="relative overflow-hidden">
   <!--v-if-->
-  <div data-slot="logos" class="mt-10 flex items-center shrink-0 justify-around gap-(--gap) [--gap:--spacing(16)]">Default slot</div>
+  <div data-slot="logos" class="mt-10 flex shrink-0 gap-$gap [--gap:--spacing(16)] items-center justify-around">Default slot</div>
 </div>"
 `;
 
 exports[`pageLogos > renders with items correctly 1`] = `
 "<div data-slot="root" class="relative overflow-hidden">
   <!--v-if-->
-  <div data-slot="logos" class="mt-10 flex items-center shrink-0 justify-around gap-(--gap) [--gap:--spacing(16)]"><span data-slot="logo" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base size-10 shrink-0"><img src="https://avatars.githubusercontent.com/u/739984?v=4" alt="praburangki" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span><span data-slot="logo" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base size-10 shrink-0"><img src="https://avatars.githubusercontent.com/u/71938701?v=4" alt="Hugo Richard" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span></div>
+  <div data-slot="logos" class="mt-10 flex shrink-0 gap-$gap [--gap:--spacing(16)] items-center justify-around"><span data-slot="logo" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base size-10 shrink-0"><img src="https://avatars.githubusercontent.com/u/739984?v=4" alt="praburangki" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span><span data-slot="logo" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base size-10 shrink-0"><img src="https://avatars.githubusercontent.com/u/71938701?v=4" alt="Hugo Richard" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span></div>
 </div>"
 `;
 
 exports[`pageLogos > renders with marquee correctly 1`] = `
 "<div data-slot="root" class="relative overflow-hidden">
   <!--v-if-->
-  <div data-orientation="horizontal" data-slot="logos" class="group flex gap-$gap [--duration:20s] [--gap:--spacing(16)] items-center relative overflow-hidden after:(pointer-events-none content-empty absolute z-2 from-background to-transparent) before:(pointer-events-none content-empty absolute z-2 from-background to-transparent) flex-row backface-hidden after:(h-full w-1/3 content-empty end-0 inset-y-0 bg-gradient-to-l) before:(h-full w-1/3 content-empty start-0 inset-y-0 bg-gradient-to-r) rtl:after:bg-gradient-to-r rtl:before:bg-gradient-to-l mt-10">
+  <div data-orientation="horizontal" data-slot="logos" class="group flex gap-$gap [--duration:20s] [--gap:--spacing(16)] items-center relative overflow-hidden after:pointer-events-none after:content-empty after:absolute after:z-2 after:from-background after:to-transparent before:pointer-events-none before:content-empty before:absolute before:z-2 before:from-background before:to-transparent flex-row backface-hidden after:h-full after:w-1/3 after:content-empty after:end-0 after:inset-y-0 after:bg-gradient-to-l before:h-full before:w-1/3 before:content-empty before:start-0 before:inset-y-0 before:bg-gradient-to-r rtl:after:bg-gradient-to-r rtl:before:bg-gradient-to-l mt-10">
     <div data-slot="content" class="flex shrink-0 gap-$gap min-w-max items-center justify-around w-full flex-row motion-safe:animate-marquee motion-safe:rtl:animate-marquee backface-hidden"><span data-slot="logo" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base size-10 shrink-0"><img src="https://avatars.githubusercontent.com/u/739984?v=4" alt="praburangki" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span><span data-slot="logo" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base size-10 shrink-0"><img src="https://avatars.githubusercontent.com/u/71938701?v=4" alt="Hugo Richard" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span></div>
     <div data-slot="content" class="flex shrink-0 gap-$gap min-w-max items-center justify-around w-full flex-row motion-safe:animate-marquee motion-safe:rtl:animate-marquee backface-hidden"><span data-slot="logo" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base size-10 shrink-0"><img src="https://avatars.githubusercontent.com/u/739984?v=4" alt="praburangki" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span><span data-slot="logo" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base size-10 shrink-0"><img src="https://avatars.githubusercontent.com/u/71938701?v=4" alt="Hugo Richard" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span></div>
     <div data-slot="content" class="flex shrink-0 gap-$gap min-w-max items-center justify-around w-full flex-row motion-safe:animate-marquee motion-safe:rtl:animate-marquee backface-hidden"><span data-slot="logo" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base size-10 shrink-0"><img src="https://avatars.githubusercontent.com/u/739984?v=4" alt="praburangki" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span><span data-slot="logo" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base size-10 shrink-0"><img src="https://avatars.githubusercontent.com/u/71938701?v=4" alt="Hugo Richard" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span></div>
@@ -54,7 +54,7 @@ exports[`pageLogos > renders with marquee correctly 1`] = `
 exports[`pageLogos > renders with title correctly 1`] = `
 "<div data-slot="root" class="relative overflow-hidden">
   <h2 data-slot="title" class="text-lg text-center font-600 color-text-highlighted">Title</h2>
-  <div data-slot="logos" class="mt-10 flex items-center shrink-0 justify-around gap-(--gap) [--gap:--spacing(16)]">
+  <div data-slot="logos" class="mt-10 flex shrink-0 gap-$gap [--gap:--spacing(16)] items-center justify-around">
     <!--v-if-->
   </div>
 </div>"
@@ -63,7 +63,7 @@ exports[`pageLogos > renders with title correctly 1`] = `
 exports[`pageLogos > renders with ui correctly 1`] = `
 "<div data-slot="root" class="relative overflow-hidden">
   <!--v-if-->
-  <div data-slot="logos" class="mt-10 flex items-center shrink-0 justify-around gap-(--gap) [--gap:--spacing(16)]">
+  <div data-slot="logos" class="mt-10 flex shrink-0 gap-$gap [--gap:--spacing(16)] items-center justify-around">
     <!--v-if-->
   </div>
 </div>"

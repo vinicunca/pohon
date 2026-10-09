@@ -17,7 +17,7 @@ export default defineNuxtConfig({
 
   ui: {
     theme: {
-      unstyled: true,
+      // unstyled: true,
     },
   },
 

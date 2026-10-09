@@ -2,18 +2,18 @@
 
 exports[`dashboardResizeHandle > renders with as correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
-  <section role="separator" class="hidden lg:block touch-none select-none cursor-ew-resize relative before:absolute before:inset-y-0 before:-left-1.5 before:-right-1.5 before:z-1"></section>
+  <section role="separator" class="hidden cursor-ew-resize select-none relative touch-none lg:block before:content-empty before:inset-y-0 before:absolute before:z-1 before:-left-1.5 before:-right-1.5"></section>
 </div>"
 `;
 
 exports[`dashboardResizeHandle > renders with class correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
-  <div role="separator" class="hidden lg:block touch-none select-none cursor-ew-resize relative before:absolute before:inset-y-0 before:-left-1.5 before:-right-1.5 before:z-1 absolute"></div>
+  <div role="separator" class="hidden cursor-ew-resize select-none relative touch-none lg:block before:content-empty before:inset-y-0 before:absolute before:z-1 before:-left-1.5 before:-right-1.5 absolute"></div>
 </div>"
 `;
 
 exports[`dashboardResizeHandle > renders with default slot correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
-  <div role="separator" class="hidden lg:block touch-none select-none cursor-ew-resize relative before:absolute before:inset-y-0 before:-left-1.5 before:-right-1.5 before:z-1">Default slot</div>
+  <div role="separator" class="hidden cursor-ew-resize select-none relative touch-none lg:block before:content-empty before:inset-y-0 before:absolute before:z-1 before:-left-1.5 before:-right-1.5">Default slot</div>
 </div>"
 `;
