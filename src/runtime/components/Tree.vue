@@ -31,7 +31,7 @@ export type TreeItem = {
   [key: string]: any;
 };
 
-export interface TreeProps<T extends Array<TreeItem> = Array<TreeItem>, M extends boolean = false> extends Pick<TreeRootProps<T>, 'expanded' | 'defaultExpanded' | 'selectionBehavior' | 'propagateSelect' | 'disabled' | 'bubbleSelect'> {
+export interface TreeProps<T extends Array<TreeItem> = Array<TreeItem>, M extends boolean = false> extends Pick<TreeRootProps<T>, 'expanded' | 'defaultExpanded' | 'selectionBehavior' | 'propagateSelect' | 'disabled' | 'bubbleSelect' | 'loop'> {
   /**
    * The element or component this component should render as.
    * @defaultValue 'ul'
@@ -171,7 +171,7 @@ const props = useComponentProps<TreeProps<T, M>>('tree', _props);
 
 const appConfig = useAppConfig() as Tree['AppConfig'];
 
-const rootProps = useForwardProps(reactivePick(props, 'items', 'multiple', 'expanded', 'disabled', 'propagateSelect', 'bubbleSelect'), emits);
+const rootProps = useForwardProps(reactivePick(props, 'items', 'multiple', 'expanded', 'disabled', 'propagateSelect', 'bubbleSelect', 'loop'), emits);
 
 const as = computed(() => {
   if (typeof props.as === 'string' || typeof props.as?.render === 'function') {

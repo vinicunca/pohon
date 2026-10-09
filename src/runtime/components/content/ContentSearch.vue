@@ -60,7 +60,7 @@ export interface ContentSearchItem extends Omit<LinkProps, 'custom'>, CommandPal
   icon?: IconProps['name'];
 }
 
-export interface ContentSearchProps<T extends ContentSearchLink = ContentSearchLink> extends Pick<ModalProps, 'title' | 'description' | 'overlay' | 'transition' | 'content' | 'dismissible' | 'fullscreen' | 'modal' | 'portal' | 'unmountOnHide'>, Pick<CommandPaletteProps<CommandPaletteGroup<ContentSearchItem>, ContentSearchItem>, 'icon' | 'trailingIcon' | 'selectedIcon' | 'childrenIcon' | 'placeholder' | 'autofocus' | 'loading' | 'loadingIcon' | 'closeIcon' | 'back' | 'backIcon' | 'disabled' | 'highlightOnHover' | 'labelKey' | 'descriptionKey' | 'preserveGroupOrder' | 'virtualize' | 'groups'> {
+export interface ContentSearchProps<T extends ContentSearchLink = ContentSearchLink> extends Pick<ModalProps, 'title' | 'description' | 'overlay' | 'transition' | 'content' | 'dismissible' | 'fullscreen' | 'modal' | 'portal' | 'unmountOnHide'>, Pick<CommandPaletteProps<CommandPaletteGroup<ContentSearchItem>, ContentSearchItem>, 'icon' | 'trailingIcon' | 'selectedIcon' | 'childrenIcon' | 'placeholder' | 'autofocus' | 'loading' | 'loadingIcon' | 'closeIcon' | 'back' | 'backIcon' | 'disabled' | 'highlightOnHover' | 'loop' | 'labelKey' | 'descriptionKey' | 'preserveGroupOrder' | 'virtualize' | 'groups'> {
   /**
    * @defaultValue 'md'
    */
@@ -138,16 +138,16 @@ export type ContentSearchSlots = CommandPaletteSlots<ContentSearchItem> & {
 <script setup lang="ts" generic="T extends ContentSearchLink">
 import { reactivePick, refDebounced } from '@vueuse/core';
 import { defu } from 'defu';
-import { computed, shallowRef, useTemplateRef, watch } from 'vue';
+import { computed, defineAsyncComponent, shallowRef, useAttrs, useTemplateRef, watch } from 'vue';
 import { defineShortcuts, useAppConfig, useColorMode } from '#imports';
 import { useComponentProps } from '../../composables/useComponentProps';
 import { useContentSearch } from '../../composables/useContentSearch';
 import { useForwardProps } from '../../composables/useForwardProps';
+import { useLazyOverlay } from '../../composables/useLazyOverlay';
 import { useLocale } from '../../composables/useLocale';
 import { omit, transformUI } from '../../utils';
+import { lazyOverlays, loadOverlay } from '../../utils/lazy-overlay';
 import { uv } from '../../utils/uv';
-import PCommandPalette from '../CommandPalette.vue';
-import PModal from '../Modal.vue';
 
 const _props = withDefaults(defineProps<ContentSearchProps<T>>(), {
   shortcut: 'meta_k',
@@ -168,7 +168,7 @@ const { open, mapNavigationItems, mapLinks, mapSearchResults, postFilter } = use
 const colorMode = useColorMode();
 const appConfig = useAppConfig() as ContentSearch['AppConfig'];
 
-const commandPaletteProps = useForwardProps(reactivePick(props, 'size', 'icon', 'trailingIcon', 'selectedIcon', 'childrenIcon', 'placeholder', 'autofocus', 'loading', 'loadingIcon', 'close', 'closeIcon', 'back', 'backIcon', 'disabled', 'highlightOnHover', 'labelKey', 'descriptionKey', 'preserveGroupOrder', 'virtualize', 'searchDelay'));
+const commandPaletteProps = useForwardProps(reactivePick(props, 'size', 'icon', 'trailingIcon', 'selectedIcon', 'childrenIcon', 'placeholder', 'autofocus', 'loading', 'loadingIcon', 'close', 'closeIcon', 'back', 'backIcon', 'disabled', 'highlightOnHover', 'loop', 'labelKey', 'descriptionKey', 'preserveGroupOrder', 'virtualize', 'searchDelay'));
 const modalProps = useForwardProps(reactivePick(props, 'overlay', 'transition', 'content', 'dismissible', 'fullscreen', 'modal', 'portal', 'unmountOnHide'));
 const inputProps = computed(() => {
   if (props.input === false) {
@@ -195,6 +195,15 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.contentSearch ||
   size: props.size,
   fullscreen: props.fullscreen,
 }));
+
+const attrs = useAttrs();
+
+const loadCommandPalette = () => import('../CommandPalette.vue');
+
+const PModal = lazyOverlays.modal;
+const PCommandPalette = defineAsyncComponent(loadCommandPalette);
+
+const renderModal = useLazyOverlay(() => open.value || (attrs.open !== undefined && attrs.open !== false) || props.unmountOnHide === false, () => Promise.all([loadOverlay('modal'), loadCommandPalette()]));
 
 const commandPaletteRef = useTemplateRef('commandPaletteRef');
 
@@ -372,6 +381,7 @@ defineExpose({
 
 <template>
   <PModal
+    v-if="renderModal"
     v-model:open="open"
     :title="props.title || locale.messages.contentSearch?.title || t('contentSearchButton.label')"
     :description="props.description || locale.messages.contentSearch?.description"
