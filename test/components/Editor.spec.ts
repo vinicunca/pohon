@@ -20,6 +20,7 @@ describe('editor', () => {
   it('passes accessibility tests', async () => {
     const wrapper = await mountSuspended(Editor, {
       props,
+      attrs: { 'aria-label': 'Editor' },
     });
 
     expect(await axe(wrapper.element)).toHaveNoViolations();
@@ -31,7 +32,7 @@ describe('editor', () => {
     const wrapper = await mountSuspended(Editor, {
       props: {
         contentType: 'markdown',
-        modelValue: '# Building Modern Interfaces with Pohon UI',
+        modelValue: '# Building Modern Interfaces with Nuxt UI',
         placeholder: 'Write something...',
       },
     });

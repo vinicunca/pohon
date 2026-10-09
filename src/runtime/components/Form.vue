@@ -1,7 +1,7 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
 import type { VNode } from 'vue';
-import type { Form, FormData, FormError, FormErrorEvent, FormErrorWithId, FormEvent, FormInputEvents, FormSchema, FormSubmitEvent, InferInput, InferOutput } from '../types/form';
+import type { Form, FormData, FormError, FormErrorEvent, FormErrorWithId, FormEvent, FormInputEvents, FormSchema, FormState, FormSubmitEvent, InferInput, InferOutput } from '../types/form';
 import type { FormHTMLAttributes } from '../types/html';
 import type { ComponentConfig } from '../types/uv';
 import theme from '#build/ui/form';
@@ -13,7 +13,7 @@ export type FormProps<S extends FormSchema, T extends boolean = true, N extends 
   /** Schema to validate the form state. Supports Standard Schema objects, Yup, Joi, and Superstructs. */
   schema?: S;
   /** An object representing the current state of the form. */
-  state?: N extends false ? Partial<InferInput<S>> : never;
+  state?: N extends false ? FormState<S> : never;
   /**
    * Custom validation function to validate the form state.
    * @param state - The current state of the form.

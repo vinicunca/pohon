@@ -15,7 +15,7 @@ export interface ColorModeButtonProps extends Omit<ButtonProps, LinkPropsKeys | 
 </script>
 
 <script setup lang="ts">
-import { reactiveOmit } from '@vueuse/core';
+import { reactiveOmit, useMounted } from '@vueuse/core';
 import { computed } from 'vue';
 import { useAppConfig, useColorMode } from '#imports';
 import { useComponentProps } from '../../composables/useComponentProps';
@@ -42,9 +42,12 @@ const appConfig = useAppConfig();
 
 const buttonProps = useForwardProps(reactiveOmit(props, 'icon'));
 
+// The resolved color mode is only known on the client, so the label matches the server until mounted.
+const mounted = useMounted();
+
 const isDark = computed({
   get() {
-    return colorMode.value === 'dark';
+    return mounted.value && colorMode.value === 'dark';
   },
   set(_isDark: boolean) {
     colorMode.preference = _isDark ? 'dark' : 'light';

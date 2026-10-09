@@ -70,15 +70,14 @@ import { defu } from 'defu';
 import { computed, toRef, watch } from 'vue';
 import { useAppConfig, useRoute } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
+import { useLazyOverlay } from '../composables/useLazyOverlay';
 import { useLocale } from '../composables/useLocale';
 import { getSlotChildrenText } from '../utils';
+import { lazyOverlays, loadOverlay } from '../utils/lazy-overlay';
 import { uv } from '../utils/uv';
 import PButton from './Button.vue';
 import PContainer from './Container.vue';
-import PDrawer from './Drawer.vue';
 import PLink from './Link.vue';
-import PModal from './Modal.vue';
-import PSlideover from './Slideover.vue';
 
 defineOptions({ inheritAttrs: false });
 
@@ -123,6 +122,8 @@ watch(() => route.fullPath, () => {
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.header || {}) })());
 
+const { slideover: PSlideover, modal: PModal, drawer: PDrawer } = lazyOverlays;
+
 const Menu = computed(() => ({
   slideover: PSlideover,
   modal: PModal,
@@ -130,6 +131,8 @@ const Menu = computed(() => ({
 })[props.mode as HeaderMode]);
 
 const menuProps = toRef(() => defu(props.menu, {}, props.mode === 'modal' ? { fullscreen: true, transition: false } : {}) as HeaderMenu<T>);
+
+const renderMenu = useLazyOverlay(() => open.value || (props.menu as ModalProps | undefined)?.unmountOnHide === false, () => loadOverlay(props.mode as HeaderMode));
 
 function toggleOpen() {
   open.value = !open.value;
@@ -192,6 +195,7 @@ function toggleOpen() {
   </Primitive>
 
   <Menu
+    v-if="renderMenu"
     v-model:open="open"
     :title="locale.messages.header?.title || t('header.open')"
     :description="locale.messages.header?.description"

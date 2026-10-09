@@ -113,6 +113,7 @@ export interface FileUploadProps<M extends boolean = false> extends /** @vue-ign
 
 export interface FileUploadEmits {
   change: [event: Event];
+  reject: [files: Array<File>];
 }
 
 type FileUploadFiles<M> = (M extends true ? Array<File> : File) | null;
@@ -190,6 +191,7 @@ const { isDragging, open, inputRef, dropzoneRef } = useFileUpload({
   multiple: multiple as MaybeRef<boolean>,
   dropzone: props.dropzone,
   onUpdate,
+  onReject,
 });
 
 const {
@@ -281,6 +283,14 @@ function onUpdate(files: Array<File>, reset = false) {
   emits('change', event);
   emitFormChange();
   emitFormInput();
+}
+
+function onReject(files: Array<File>) {
+  if (disabled.value) {
+    return;
+  }
+
+  emits('reject', files);
 }
 
 function removeFile(index?: number) {

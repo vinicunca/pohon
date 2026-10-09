@@ -14,6 +14,8 @@ exports[`kbd > renders with neutral variant solid correctly 1`] = `"<kbd class="
 
 exports[`kbd > renders with neutral variant subtle correctly 1`] = `"<kbd class="inline-flex items-center justify-center px-1 rounded-sm font-500 font-sans uppercase h-5 min-w-[20px] text-[11px] ring ring-inset ring-ring-accented color-text bg-background-elevated">K</kbd>"`;
 
+exports[`kbd > renders with platform-specific value correctly 1`] = `"<kbd class="inline-flex items-center justify-center px-1 rounded-sm font-500 font-sans uppercase h-5 min-w-[20px] text-[11px] ring ring-inset ring-ring-accented color-text bg-background"><span class="hidden in-[.ui-macos]:inline">⌘</span><span class="in-[.ui-macos]:hidden">Ctrl</span></kbd>"`;
+
 exports[`kbd > renders with primary variant outline correctly 1`] = `"<kbd class="inline-flex items-center justify-center px-1 rounded-sm font-500 font-sans uppercase h-5 min-w-[20px] text-[11px] ring ring-inset ring-ring-accented color-text bg-background">K</kbd>"`;
 
 exports[`kbd > renders with primary variant soft correctly 1`] = `"<kbd class="inline-flex items-center justify-center px-1 rounded-sm font-500 font-sans uppercase h-5 min-w-[20px] text-[11px] color-text bg-background-elevated">K</kbd>"`;

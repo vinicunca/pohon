@@ -61,15 +61,14 @@ import { defu } from 'defu';
 import { computed, ref, toRef, useId, watch } from 'vue';
 import { useAppConfig, useRoute, useRuntimeHook } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
+import { useLazyOverlay } from '../composables/useLazyOverlay';
 import { useLocale } from '../composables/useLocale';
 import { useResizable } from '../composables/useResizable';
 import { useDashboard } from '../utils/dashboard';
+import { lazyOverlays, loadOverlay } from '../utils/lazy-overlay';
 import { uv } from '../utils/uv';
 import PDashboardResizeHandle from './DashboardResizeHandle.vue';
 import PDashboardSidebarToggle from './DashboardSidebarToggle.vue';
-import PDrawer from './Drawer.vue';
-import PModal from './Modal.vue';
-import PSlideover from './Slideover.vue';
 
 defineOptions({ inheritAttrs: false });
 
@@ -149,6 +148,8 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardSidebar
   side: props.side,
 }));
 
+const { slideover: PSlideover, modal: PModal, drawer: PDrawer } = lazyOverlays;
+
 const Menu = computed(() => ({
   slideover: PSlideover,
   modal: PModal,
@@ -156,6 +157,8 @@ const Menu = computed(() => ({
 })[props.mode as DashboardSidebarMode]);
 
 const menuProps = toRef(() => defu(props.menu, {}, props.mode === 'modal' ? { fullscreen: true, transition: false } : props.mode === 'slideover' ? { side: 'left' } : {}) as DashboardSidebarMenu<T>);
+
+const renderMenu = useLazyOverlay(() => open.value || (props.menu as ModalProps | undefined)?.unmountOnHide === false, () => loadOverlay(props.mode as DashboardSidebarMode));
 
 function toggleOpen() {
   open.value = !open.value;
@@ -217,6 +220,7 @@ function toggleOpen() {
   <ReuseResizeHandleTemplate v-if="props.side === 'left'" />
 
   <Menu
+    v-if="renderMenu"
     v-model:open="open"
     :title="locale.messages.dashboardSidebar?.title || t('dashboardSidebarToggle.open')"
     :description="locale.messages.dashboardSidebar?.description"

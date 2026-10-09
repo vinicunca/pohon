@@ -11,6 +11,7 @@ export * from './useFilter';
 export * from './useFormField';
 export * from './useIMEGuard';
 export * from './useKbd';
+export * from './useLazyOverlay';
 export * from './useLocale';
 export * from './useOverlay';
 export * from './usePortal';
