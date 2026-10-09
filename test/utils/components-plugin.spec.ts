@@ -30,6 +30,11 @@ describe('pohon:ui:components', () => {
     expect(resolveId(join(runtimeDir, 'components/Button.vue'), '/app/src/App.tsx')).toBeUndefined();
   });
 
+  it('resolves relative imports inside the components directory by path', () => {
+    expect(resolveId('../Icon.vue', join(runtimeDir, 'components/prose/Icon.vue'))).toBe(join(runtimeDir, 'vue/components/Icon.vue'));
+    expect(resolveId('./Icon.vue', join(runtimeDir, 'components/prose/index.ts'))).toBeUndefined();
+  });
+
   it('leaves other package imports alone', () => {
     expect(resolveId('pohon-ui/components/Button.vue', '/app/src/App.tsx')).toBeUndefined();
     expect(resolveId('pohon-ui/components/prose/Icon.vue', '/app/src/App.tsx')).toBeUndefined();

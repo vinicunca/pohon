@@ -2,7 +2,7 @@ import type { UnpluginContextMeta, UnpluginOptions } from 'unplugin';
 import type { Options as ComponentsOptions } from 'unplugin-vue-components/types';
 import type { PohonUiOptions } from '../unplugin';
 import { defu } from 'defu';
-import { join, normalize } from 'pathe';
+import { dirname, join, normalize, resolve } from 'pathe';
 import { globSync } from 'tinyglobby';
 import AutoImportComponents from 'unplugin-vue-components';
 import { runtimeDir } from '../unplugin';
@@ -99,6 +99,24 @@ export default function ComponentImportPlugin(options: PohonUiOptions & { prefix
       }
 
       if (!RELATIVE_IMPORT_RE.test(id)) {
+        return;
+      }
+
+      // A relative import that lands in the components directory resolves by its path there, so that
+      // `./Icon.vue` from the prose barrel stays `prose/Icon.vue` instead of matching `Icon.vue`.
+      const importerPath = normalize(importer).split('?')[0];
+      if (!importerPath) {
+        return;
+      }
+      const resolvedId = resolve(dirname(importerPath), id);
+      if (resolvedId.startsWith(componentsDir)) {
+        const relativePath = resolvedId.slice(componentsDir.length);
+        for (const source of overrideSources) {
+          const resolved = source.resolvePath(relativePath);
+          if (resolved) {
+            return resolved;
+          }
+        }
         return;
       }
 
