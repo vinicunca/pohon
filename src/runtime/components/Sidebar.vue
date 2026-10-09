@@ -73,6 +73,11 @@ export interface SidebarProps<T extends SidebarMode = SidebarMode> {
    */
   transition?: boolean;
   /**
+   * The breakpoint below which the sidebar renders as a menu.
+   * @defaultValue 'lg'
+   */
+  breakpoint?: Sidebar['variants']['breakpoint'];
+  /**
    * The mode of the sidebar menu on mobile.
    * @defaultValue 'slideover'
    */
@@ -105,12 +110,11 @@ import { defu } from 'defu';
 import { computed, onMounted, ref, toRef, watch } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
+import { useLazyOverlay } from '../composables/useLazyOverlay';
 import { useLocale } from '../composables/useLocale';
+import { lazyOverlays, loadOverlay } from '../utils/lazy-overlay';
 import { uv } from '../utils/uv';
 import PButton from './Button.vue';
-import PDrawer from './Drawer.vue';
-import PModal from './Modal.vue';
-import PSlideover from './Slideover.vue';
 
 defineOptions({ inheritAttrs: false });
 
@@ -124,6 +128,7 @@ const _props = withDefaults(
     close: false,
     transition: true,
     rail: false,
+    breakpoint: 'lg',
     mode: 'slideover' as never,
   },
 );
@@ -134,12 +139,15 @@ const props = useComponentProps<SidebarProps<T>>('sidebar', _props);
 const [DefineInnerTemplate, ReuseInnerTemplate] = createReusableTemplate();
 const [DefineContentTemplate, ReuseContentTemplate] = createReusableTemplate();
 
-const mediaQuery = useMediaQuery('(max-width: 1023px)');
+// Same values as the UnoCSS variants in the theme, in rem
+const breakpoints = { 'sm': 40, 'md': 48, 'lg': 64, 'xl': 80, '2xl': 96 };
+
+const mediaQuery = useMediaQuery(() => `(min-width: ${breakpoints[props.breakpoint || 'lg']}rem)`);
 const isMounted = ref(false);
 onMounted(() => {
   isMounted.value = true;
 });
-const isMobile = computed(() => isMounted.value && mediaQuery.value);
+const isMobile = computed(() => isMounted.value && !mediaQuery.value);
 
 // Viewport-aware open model: on desktop controls expanded/collapsed, on mobile controls the sheet
 const modelOpen = defineModel<boolean>('open', { default: true });
@@ -203,8 +211,11 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.sidebar || {}) }
   side: props.side,
   variant: props.variant,
   collapsible: props.collapsible,
+  breakpoint: props.breakpoint,
   transition: props.transition,
 }));
+
+const { slideover: PSlideover, modal: PModal, drawer: PDrawer } = lazyOverlays;
 
 const Menu = computed(() => ({
   slideover: PSlideover,
@@ -218,6 +229,12 @@ const menuProps = toRef(() => defu(props.menu, {
   close: props.close,
   closeIcon: props.closeIcon,
 }, props.mode === 'modal' ? { } : props.mode === 'slideover' ? { side: props.side, inset: props.variant === 'inset' } : {}) as SidebarMenu<T>);
+
+const renderMenu = useLazyOverlay(() => openMobile.value || (props.menu as ModalProps | undefined)?.unmountOnHide === false, async () => {
+  if (isMobile.value) {
+    await loadOverlay(props.mode as SidebarMode);
+  }
+});
 </script>
 
 <template>
@@ -327,7 +344,7 @@ const menuProps = toRef(() => defu(props.menu, {
 
     <!-- Mobile menu -->
     <Menu
-      v-if="isMobile"
+      v-if="isMobile && renderMenu"
       v-model:open="openMobile"
       v-bind="menuProps"
     >

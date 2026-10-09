@@ -7,11 +7,14 @@ import PButton from '../../src/runtime/components/Button.vue';
 import PPagination from '../../src/runtime/components/Pagination.vue';
 import { useLocale } from '../../src/runtime/composables/useLocale';
 import ar from '../../src/runtime/locale/ar';
+import de from '../../src/runtime/locale/de';
 
 const teardowns: Array<() => void> = [];
 
 afterEach(() => {
-  teardowns.splice(0).forEach((fn) => fn());
+  teardowns.splice(0).forEach((fn) => {
+    fn();
+  });
 });
 
 async function mountDir(appProps?: Pick<AppProps, 'dir' | 'locale'>, localeOverride?: typeof ar) {
@@ -69,5 +72,22 @@ describe('useLocale', () => {
     expect(icon('prev')).toBe('i-lucide-chevron-right');
     expect(icon('next')).toBe('i-lucide-chevron-left');
     expect(icon('last')).toBe('i-lucide-chevrons-left');
+  });
+
+  it('labels Pagination controls and pages in the App locale', async () => {
+    const wrapper = await mountSuspended(defineComponent({
+      render: () => h(PApp, { locale: de }, () => h(PPagination, { total: 30 })),
+    }));
+    teardowns.push(() => wrapper.unmount());
+
+    expect(wrapper.findAll('button').map((button) => button.attributes('aria-label'))).toEqual([
+      'Erste Seite',
+      'Vorherige Seite',
+      'Seite 1',
+      'Seite 2',
+      'Seite 3',
+      'Nächste Seite',
+      'Letzte Seite',
+    ]);
   });
 });
