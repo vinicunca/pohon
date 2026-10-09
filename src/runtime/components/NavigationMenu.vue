@@ -339,16 +339,26 @@ function getAccordionDefaultValue(list: Array<NavigationMenuItem>, level = 0, li
   return props.type === 'single' ? indexes[0] : indexes;
 }
 
+const trailingClicks = new WeakSet<Event>();
+
 function onLinkTrailingClick(e: Event, item: NavigationMenuItem, trailingTrigger?: boolean) {
   if (!item.children?.length) {
     return;
   }
 
   if (props.orientation === 'horizontal') {
-    e.preventDefault();
+    trailingClicks.add(e);
   } else if (props.orientation === 'vertical' && !props.collapsed && trailingTrigger) {
     e.preventDefault();
     e.stopPropagation();
+  }
+}
+
+// Bound on the link so it runs after the trigger's click handler, which ignores prevented events,
+// and before `LinkBase` calls `navigate`.
+function onLinkClick(e: Event) {
+  if (trailingClicks.has(e)) {
+    e.preventDefault();
   }
 }
 </script>
@@ -464,11 +474,11 @@ function onLinkTrailingClick(e: Event, item: NavigationMenuItem, trailingTrigger
             </template>
           </PPopover>
           <PTooltip v-else-if="(props.orientation === 'vertical' && props.collapsed && (!!props.tooltip || !!item.tooltip)) || (props.orientation === 'horizontal' && !!item.tooltip)" :text="get(item, props.labelKey as string)" v-bind="{ ...tooltipProps, ...(typeof item.tooltip === 'boolean' ? {} : item.tooltip || {}) }">
-            <PLinkBase v-bind="slotProps" data-slot="link" :class="ui.link({ class: [props.ui?.link, item.ui?.link, item.class], active: active || item.active, disabled: !!item.disabled, level: level > 0 })">
+            <PLinkBase v-bind="slotProps" data-slot="link" :class="ui.link({ class: [props.ui?.link, item.ui?.link, item.class], active: active || item.active, disabled: !!item.disabled, level: level > 0 })" @click="onLinkClick">
               <ReuseLinkTemplate :item="item" :active="active || item.active" :index="index" :trailing-trigger="!!(slotProps as any).href" />
             </PLinkBase>
           </PTooltip>
-          <PLinkBase v-else v-bind="slotProps" data-slot="link" :class="ui.link({ class: [props.ui?.link, item.ui?.link, item.class], active: active || item.active, disabled: !!item.disabled, level: props.orientation === 'horizontal' || level > 0 })">
+          <PLinkBase v-else v-bind="slotProps" data-slot="link" :class="ui.link({ class: [props.ui?.link, item.ui?.link, item.class], active: active || item.active, disabled: !!item.disabled, level: props.orientation === 'horizontal' || level > 0 })" @click="onLinkClick">
             <ReuseLinkTemplate :item="item" :active="active || item.active" :index="index" :trailing-trigger="!!(slotProps as any).href" />
           </PLinkBase>
         </component>

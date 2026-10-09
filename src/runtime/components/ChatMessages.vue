@@ -90,6 +90,7 @@ import { defu } from 'defu';
 import { computed, nextTick, onMounted, ref, shallowRef, toRef, watch } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
+import { useLocale } from '../composables/useLocale';
 import { omit } from '../utils';
 import { uv } from '../utils/uv';
 import PButton from './Button.vue';
@@ -129,6 +130,7 @@ function showIndicator() {
   return lastMessage?.role === 'assistant' && !lastMessage.parts?.length;
 }
 
+const { t } = useLocale();
 const appConfig = useAppConfig() as ChatMessages['AppConfig'];
 
 const userProps = toRef(() => defu(props.user, { side: 'right' as const, variant: 'soft' as const }));
@@ -378,6 +380,7 @@ defineExpose({
             :icon="props.autoScrollIcon || appConfig.ui.icons.arrowDown"
             color="neutral"
             variant="outline"
+            :aria-label="t('chatMessages.autoScroll')"
             v-bind="(typeof props.autoScroll === 'object' ? props.autoScroll : {})"
             data-slot="autoScroll"
             :class="ui.autoScroll({ class: props.ui?.autoScroll })"

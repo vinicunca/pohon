@@ -1,7 +1,9 @@
 import type { ChatMessageSlots } from '../../src/runtime/components/ChatMessage.vue';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { TooltipProvider } from 'akar';
 import { describe, expect, it } from 'vitest';
 import { axe } from 'vitest-axe';
+import { defineComponent, h } from 'vue';
 import theme from '#build/ui/chat-message';
 import ChatMessage from '../../src/runtime/components/ChatMessage.vue';
 import { renderEach } from '../component-render';
@@ -41,6 +43,17 @@ describe('chatMessage', () => {
       props,
     });
 
+    expect(await axe(wrapper.element)).toHaveNoViolations();
+  });
+
+  it('uses the action label as aria-label', async () => {
+    const wrapper = await mountSuspended(defineComponent({
+      setup() {
+        return () => h(TooltipProvider, () => h(ChatMessage, { ...props, actions: [{ icon: 'i-lucide-copy', label: 'Copy' }] }));
+      },
+    }));
+
+    expect(wrapper.find('[data-slot="actions"] button').attributes('aria-label')).toBe('Copy');
     expect(await axe(wrapper.element)).toHaveNoViolations();
   });
 

@@ -35,7 +35,7 @@ export interface ChatMessageProps<TMetadata = unknown, TDataParts extends UIData
   side?: ChatMessage['variants']['side'];
   /**
    * Display a list of actions under the message.
-   * The `label` will be used in a tooltip.
+   * The `label` will be used in a tooltip and as the button's `aria-label`.
    * `{ size: 'xs', color: 'neutral', variant: 'ghost' }`{lang="ts-type"}
    */
   actions?: Array<Omit<ButtonProps, 'onClick'> & { onClick?: (e: MouseEvent, message: UIMessage<TMetadata, TDataParts, TTools>) => void }>;
@@ -142,6 +142,7 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatMessage || {
                   size="sm"
                   color="neutral"
                   variant="ghost"
+                  :aria-label="action.label"
                   v-bind="omit(action, ['onClick'])"
                   :label="undefined"
                   @click="typeof action.onClick === 'function' ? action.onClick($event, messageProps) : undefined"

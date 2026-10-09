@@ -1,4 +1,5 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { ToastProvider } from 'akar';
 import { describe, expect, it, vi } from 'vitest';
 import { axe } from 'vitest-axe';
 import { defineComponent } from 'vue';
@@ -67,6 +68,44 @@ describe('toast', () => {
     expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ id: body.id, title: 'Toast' }));
 
     toast.clear();
+  });
+
+  it('marks stacked toasts as collapsed', async () => {
+    const toast = useToast();
+    toast.clear();
+
+    const wrapper = await mountSuspended(Toaster, { props: { portal: false, expand: false } });
+    toast.add({ title: 'Back' });
+    toast.add({ title: 'Front' });
+
+    await vi.waitFor(() => expect(wrapper.findAll('li[data-slot="base"]')).toHaveLength(2), { timeout: 4000 });
+    const [back, front] = wrapper.findAll('li[data-slot="base"]');
+
+    expect([back!.attributes('data-collapsed'), back!.attributes('data-front')]).toEqual(['true', 'false']);
+    expect([front!.attributes('data-collapsed'), front!.attributes('data-front')]).toEqual(['true', 'true']);
+
+    toast.clear();
+  });
+
+  it('does not pass attributes down to the provider', async () => {
+    const wrapper = await mountSuspended(Toaster, { props: { portal: false }, attrs: { limit: 1 } });
+
+    expect(wrapper.findComponent(ToastProvider).props('limit')).toBeUndefined();
+  });
+
+  it.each(['vertical', 'horizontal'] as const)('keeps the toast open when an action has closeOnClick false with orientation %s', async (orientation) => {
+    const wrapper = await mountSuspended(ToastWrapper, {
+      props: { title: 'Toast', orientation, actions: [{ label: 'Keep', closeOnClick: false }, { label: 'Close' }] },
+    });
+
+    const [keep, close] = wrapper.findAll('[data-slot="actions"] button');
+    expect(keep!.attributes('closeonclick')).toBeUndefined();
+
+    await keep!.trigger('click');
+    expect(wrapper.findComponent(Toast).emitted('update:open')).toBeUndefined();
+
+    await close!.trigger('click');
+    expect(wrapper.findComponent(Toast).emitted('update:open')).toEqual([[false]]);
   });
 
   it('passes accessibility tests', async () => {
