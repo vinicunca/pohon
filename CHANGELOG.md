@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.6](https://github.com/vinicunca/pohon/compare/v2.0.5...v2.0.6) (2026-10-09)
+
+### Bug Fixes
+
+* theme classes ([2705377](https://github.com/vinicunca/pohon/commit/27053779d801ff32e49e5540d7decfb3cb2f74bd))
+
 ## [2.0.5](https://github.com/vinicunca/pohon/compare/v2.0.4...v2.0.5) (2026-10-09)
 
 ### Features
