@@ -181,10 +181,10 @@ const ariaLabel = computed(() => {
       v-if="props.to"
       :aria-label="ariaLabel"
       v-bind="{ 'to': props.to, 'target': props.target, ...$attrs, 'data-slot': undefined }"
-      class="peer focus:outline-none"
+      class="focus:outline-none peer"
       raw
     >
-      <span class="inset-0 absolute" aria-hidden="true" />
+      <span class="absolute inset-0" aria-hidden="true" />
     </PLink>
   </Primitive>
 </template>

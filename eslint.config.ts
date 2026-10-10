@@ -57,6 +57,15 @@ export default vinicuncaESLint(
   },
 
   {
+    // Class order in themes and components is part of the rendered output, and
+    // snapshots and `uv` tests assert it, so `--fix` must not reorder it
+    files: ['src/**', 'test/**'],
+    rules: {
+      'unocss/order': 'off',
+    },
+  },
+
+  {
     // Node scripts that measure the bundle size
     files: ['test/bundle/*.mjs'],
     rules: {

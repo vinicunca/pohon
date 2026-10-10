@@ -11,10 +11,10 @@ const uvt = uv as unknown as (config?: any) => (variants?: any) => {
 
 describe('uv class replace', () => {
   const theme = {
-    slots: { base: 'text-sm rounded-md inline-flex', label: 'truncate' },
+    slots: { base: 'inline-flex rounded-md text-sm', label: 'truncate' },
     variants: {
-      color: { primary: { base: 'color-text-inverted bg-primary' } },
-      size: { md: { base: 'text-sm px-2.5' } },
+      color: { primary: { base: 'bg-primary color-text-inverted' } },
+      size: { md: { base: 'px-2.5 text-sm' } },
     },
     compoundVariants: [{ color: 'primary', size: 'md', class: { base: 'gap-1.5' } }],
     defaultVariants: { color: 'primary', size: 'md' },
@@ -167,7 +167,7 @@ describe('uv class replace (slotless component)', () => {
 
 describe('uv slot memoization', () => {
   const theme = {
-    slots: { base: 'text-sm inline-flex', label: 'truncate' },
+    slots: { base: 'inline-flex text-sm', label: 'truncate' },
     variants: {
       active: {
         true: { base: 'font-700' },
