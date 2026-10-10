@@ -28,12 +28,12 @@ export type UvConfig<T extends Record<string, any>> = {
         [S in keyof T[P]['slots']]?: SlotClass
       }
         : K extends 'variants' ? UvVariants<T[P]['slots'], ClassValue, WidenVariantsValues<T[P]['variants']>>
-          : K extends 'defaultVariants' ? UvDefaultVariants<WidenVariantsValues<T[P]['variants']>, T[P]['slots'], object, undefined>
+          : K extends 'defaultVariants' ? UvDefaultVariants<WidenVariantsValues<T[P]['variants']>, T[P]['slots'], undefined, undefined>
             : never
   }
 } & {
   [P in keyof T]?: P extends 'prose' ? UvConfig<T[P]> : {
-    compoundVariants?: UvCompoundVariants<WidenVariantsValues<T[P]['variants']>, T[P]['slots'], ClassValue, object, undefined>;
+    compoundVariants?: UvCompoundVariants<WidenVariantsValues<T[P]['variants']>, T[P]['slots'], ClassValue, undefined, undefined>;
   }
 };
 

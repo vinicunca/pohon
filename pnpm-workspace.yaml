@@ -129,7 +129,7 @@ catalog:
   ufo: ^1.6.4
   unbuild: ^3.6.1
   unocss: 66.10.5
-  unocss-variants: 1.6.0
+  unocss-variants: 1.6.1
   unplugin: ^3.4.0
   unplugin-auto-import: ^21.1.0
   unplugin-vue-components: ^32.1.0
