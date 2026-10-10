@@ -420,8 +420,8 @@ catalogs:
       specifier: 66.10.5
       version: 66.10.5
     unocss-variants:
-      specifier: 1.5.0
-      version: 1.5.0
+      specifier: 1.6.0
+      version: 1.6.0
     unplugin-auto-import:
       specifier: ^21.1.0
       version: 21.1.0
@@ -665,7 +665,7 @@ importers:
         version: 66.10.5(@unocss/webpack@66.10.5(esbuild@0.28.0)(rolldown@1.2.13)(rollup@4.60.4)(vite@8.3.4(@types/node@25.3.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3)))(esbuild@0.28.0)(rolldown@1.2.13)(rollup@4.60.4)(srvx@0.11.22)(vite@8.3.4(@types/node@25.3.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3))
       unocss-variants:
         specifier: 'catalog:'
-        version: 1.5.0
+        version: 1.6.0
       unplugin:
         specifier: ^3.4.0
         version: 3.4.0(esbuild@0.28.0)(rolldown@1.2.13)(rollup@4.60.4)(vite@8.3.4(@types/node@25.3.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3))
@@ -9073,8 +9073,8 @@ packages:
   universal-user-agent@7.0.3:
     resolution: {integrity: sha512-TmnEAEAsBJVZM/AADELsK76llnwcf9vMKuPz8JflO1frO8Lchitr0fNaN9d+Ap0BjKtqWqd/J17qeDnXh8CL2A==}
 
-  unocss-variants@1.5.0:
-    resolution: {integrity: sha512-AeWieDoPv3nxFP7W9Y5p4+nGrtRIzNQAgG+jFTdfvfedlW1EaE2llfCyFnuLUA7b5/kl4exQzQqxi2pGzqYKJA==}
+  unocss-variants@1.6.0:
+    resolution: {integrity: sha512-AwdH1KSamcgxZ5cDwWQIBTi4w+WMvoVTDWxSMH3mA7aNdV4jzQtKhKzQifqrfeLxD7slqPODF+FFAMiCiCgTXg==}
 
   unocss@66.10.5:
     resolution: {integrity: sha512-hts6uxRjtEdOLmdmo0Mbh5k3jrHsjsQlU3rFJdtob+wu57iM5b+d70fnxqMWe7yF/OBeiZKW6H+ti0qHNJBKPw==}
@@ -21393,7 +21393,7 @@ snapshots:
 
   universal-user-agent@7.0.3: {}
 
-  unocss-variants@1.5.0:
+  unocss-variants@1.6.0:
     dependencies:
       '@vinicunca/perkakas': 1.17.1
 
