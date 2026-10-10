@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.7](https://github.com/vinicunca/pohon/compare/v2.0.6...v2.0.7) (2026-10-10)
+
+### Bug Fixes
+
+* restore class order reordered by unocss/order ([88c8e2c](https://github.com/vinicunca/pohon/commit/88c8e2cb92e208aa746232a024e3408396a7d4c1))
+
 ## [2.0.6](https://github.com/vinicunca/pohon/compare/v2.0.5...v2.0.6) (2026-10-09)
 
 ### Bug Fixes
