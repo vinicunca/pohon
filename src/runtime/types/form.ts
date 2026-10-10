@@ -23,12 +23,12 @@ export type FormSchema<I extends object = object, O extends object = I>
   = | SuperstructSchema<any, any>
     | StandardSchemaV1<I, O>;
 
-// Define a utility type to infer the input type based on the schema type
+/** Define a utility type to infer the input type based on the schema type */
 export type InferInput<Schema> = Schema extends StandardSchemaV1 ? StandardSchemaV1.InferInput<Schema>
   : Schema extends SuperstructSchema<infer I, any> ? I
     : never;
 
-// Define a utility type to infer the output type based on the schema type
+/** Define a utility type to infer the output type based on the schema type */
 export type InferOutput<Schema> = Schema extends StandardSchemaV1 ? StandardSchemaV1.InferOutput<Schema>
   : Schema extends SuperstructSchema<infer O, any> ? O
     : never;
@@ -40,7 +40,7 @@ type FormStateValue<T> = T extends FormStateLeaf ? T | null | undefined
     : T extends number | bigint ? T | '' | null | undefined
       : T | null | undefined;
 
-// The state holds the fields before validation: any value can be empty and a cleared number input holds an empty string
+/** The state holds the fields before validation: any value can be empty and a cleared number input holds an empty string */
 export type FormState<S extends FormSchema> = NonNullable<FormStateValue<InferInput<S>>>;
 
 export type FormData<S extends FormSchema, T extends boolean = true> = T extends true ? InferOutput<S> : InferInput<S>;

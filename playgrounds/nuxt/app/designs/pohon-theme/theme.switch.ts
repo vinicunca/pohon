@@ -1,5 +1,4 @@
 // @unocss-include
-import type { PThemeSwitch } from 'pohon-ui';
 import { BRANDS } from '../design.constants';
 
 export const themeSwitch = {

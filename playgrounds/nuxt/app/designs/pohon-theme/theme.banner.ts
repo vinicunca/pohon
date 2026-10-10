@@ -12,9 +12,9 @@ export const themeBanner = {
     center: 'flex gap-1.5 min-w-0 items-center',
     right: 'flex items-center justify-end lg:flex-1',
     icon: 'color-text-inverted shrink-0 size-5 pointer-events-none',
-    title: 'color-text-inverted text-sm font-500 truncate',
+    title: 'text-sm color-text-inverted font-500 truncate',
     actions: 'flex shrink-0 gap-1.5 isolate',
-    close: 'color-text-inverted hover:bg-background/10 focus-visible:bg-background/10 -me-1.5 lg:me-0',
+    close: 'color-text-inverted -me-1.5 lg:me-0 focus-visible:bg-background/10 hover:bg-background/10',
   },
   variants: {
     color: {

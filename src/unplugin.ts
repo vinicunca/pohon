@@ -26,7 +26,7 @@ type NeutralColor = 'slate' | 'gray' | 'zinc' | 'neutral' | 'stone' | 'taupe' | 
 type Color = Exclude<keyof typeof colors, 'inherit' | 'current' | 'transparent' | 'black' | 'white' | NeutralColor> | (string & {});
 
 type AppConfigUI = {
-  // TODO: add type hinting for colors from `options.theme.colors`
+  /** TODO: add type hinting for colors from `options.theme.colors` */
   colors?: Record<string, Color> & { neutral?: NeutralColor };
   icons?: Partial<typeof icons>;
   prefix?: string;
@@ -44,7 +44,7 @@ export interface PohonUiOptions extends Omit<ModuleOptions, 'fonts' | 'colorMode
    * @see https://pohon.vinicunca.dev/docs/getting-started/integrations/icons/vue#collections
    */
   icon?: Partial<Pick<RuntimeOptions, 'customize' | 'size' | 'mode'>> & {
-    // `includeCustomCollections` is omitted: the Vue build has no custom-collections feature.
+    /** `includeCustomCollections` is omitted: the Vue build has no custom-collections feature. */
     clientBundle?: false | Omit<NonNullable<NuxtIconModuleOptions['clientBundle']>, 'includeCustomCollections'>;
   };
   /**
@@ -94,7 +94,7 @@ export interface PohonUiOptions extends Omit<ModuleOptions, 'fonts' | 'colorMode
 
 export const runtimeDir = normalize(fileURLToPath(new URL('./runtime', import.meta.url)));
 
-// `resolvePathSync` needs a relative id and a file url: an absolute Windows path like `D:/...` is parsed as a `d:` url scheme
+/** `resolvePathSync` needs a relative id and a file url: an absolute Windows path like `D:/...` is parsed as a `d:` url scheme */
 export const runtimeUrl = pathToFileURL(`${runtimeDir}/`).href;
 
 export const PohonUiPlugin = createUnplugin<PohonUiOptions | undefined>((_options = {}, meta) => {

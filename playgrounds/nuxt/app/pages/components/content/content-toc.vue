@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { Markdown } from '@comark/vue'
+import { Markdown } from '@comark/vue';
 
-import theme from '#build/ui/content/content-toc'
+import theme from '#build/ui/content/content-toc';
 
-const highlight = ref(true)
-const color = ref(theme.defaultVariants.color)
-const highlightVariant = ref(theme.defaultVariants.highlightVariant)
+const highlight = ref(true);
+const color = ref(theme.defaultVariants.color);
+const highlightVariant = ref(theme.defaultVariants.highlightVariant);
 
-const colors = Object.keys(theme.variants.color)
-const highlightVariants = Object.keys(theme.variants.highlightVariant)
+const colors = Object.keys(theme.variants.color);
+const highlightVariants = Object.keys(theme.variants.highlightVariant);
 
 const links = [
   {
@@ -19,19 +19,19 @@ const links = [
       {
         id: 'title',
         depth: 3,
-        text: 'Title'
+        text: 'Title',
       },
       {
         id: 'color',
         depth: 3,
-        text: 'Color'
+        text: 'Color',
       },
       {
         id: 'highlight',
         depth: 3,
-        text: 'Highlight'
-      }
-    ]
+        text: 'Highlight',
+      },
+    ],
   },
   {
     id: 'api',
@@ -41,21 +41,21 @@ const links = [
       {
         id: 'props',
         depth: 3,
-        text: 'Props'
+        text: 'Props',
       },
       {
         id: 'slots',
         depth: 3,
-        text: 'Slots'
-      }
-    ]
+        text: 'Slots',
+      },
+    ],
   },
   {
     id: 'theme',
     depth: 2,
-    text: 'Theme'
-  }
-]
+    text: 'Theme',
+  },
+];
 
 const value = `
 ## Usage
@@ -113,18 +113,30 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-`
+`;
 </script>
 
 <template>
   <Navbar>
-    <PSwitch v-model="highlight" label="Highlight" />
-    <PSelect v-model="color" :items="colors" />
-    <PSelect v-model="highlightVariant" :items="highlightVariants" />
+    <PSwitch
+      v-model="highlight"
+      label="Highlight"
+    />
+    <PSelect
+      v-model="color"
+      :items="colors"
+    />
+    <PSelect
+      v-model="highlightVariant"
+      :items="highlightVariants"
+    />
   </Navbar>
 
-  <div class="w-full flex flex-col lg:grid lg:grid-cols-10 lg:gap-10">
-    <Markdown :value="value" class="lg:col-span-8 max-w-xl mx-auto color-text-muted" />
+  <div class="flex flex-col w-full lg:gap-10 lg:grid lg:grid-cols-10">
+    <Markdown
+      :value="value"
+      class="color-text-muted mx-auto max-w-xl lg:col-span-8"
+    />
 
     <PContentToc
       :links="links"
@@ -132,7 +144,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
       :color="color"
       :highlight-color="color"
       :highlight-variant="highlightVariant"
-      class="lg:col-span-2 order-first lg:order-last top-0 max-h-[calc(100vh-12rem)]"
+      class="max-h-[calc(100vh-12rem)] top-0 order-first lg:col-span-2 lg:order-last"
     >
       <template #bottom>
         <PSeparator type="dashed" />

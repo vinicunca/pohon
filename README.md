@@ -58,8 +58,8 @@ bun add pohon-ui tailwindcss
 
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
-  modules: ["pohon-ui"],
-  css: ["~/assets/css/main.css"],
+  modules: ['pohon-ui'],
+  css: ['~/assets/css/main.css'],
 });
 ```
 
@@ -77,9 +77,9 @@ Learn more in the [installation guide](https://pohon.vinicunca.dev/docs/getting-
 1. Add the Pohon UI Vite plugin in your `vite.config.ts`:
 
 ```ts [vite.config.ts]
-import vue from "@vitejs/plugin-vue";
-import ui from "pohon-ui/vite";
-import { defineConfig } from "vite";
+import vue from '@vitejs/plugin-vue';
+import ui from 'pohon-ui/vite';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [vue(), ui()],
@@ -89,11 +89,11 @@ export default defineConfig({
 2. Use the Pohon UI Vue plugin in your `main.ts`:
 
 ```ts [src/main.ts]
-import ui from "pohon-ui/vue-plugin";
-import { createApp } from "vue";
-import { createRouter, createWebHistory } from "vue-router";
-import App from "./App.vue";
-import "./assets/css/main.css";
+import ui from 'pohon-ui/vue-plugin';
+import { createApp } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import App from './App.vue';
+import './assets/css/main.css';
 
 const app = createApp(App);
 
@@ -105,7 +105,7 @@ const router = createRouter({
 app.use(router);
 app.use(ui);
 
-app.mount("#app");
+app.mount('#app');
 ```
 
 3. Import UnoCSS and Pohon UI in your CSS:

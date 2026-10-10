@@ -30,8 +30,10 @@ export type GetObjectField<MaybeObject, Key extends string> = MaybeObject extend
   ? MaybeObject[Key]
   : never;
 
-// NOTE: `Boolean` could potentially cause casting issues, but have been safe so far.
-// https://vuejs.org/guide/components/props.html#boolean-casting
+/**
+ * NOTE: `Boolean` could potentially cause casting issues, but have been safe so far.
+ * https://vuejs.org/guide/components/props.html#boolean-casting
+ */
 export type AcceptableValue = Exclude<_AcceptableValue, Record<string, any>> | boolean;
 export type ArrayOrNested<T> = Array<T> | Array<Array<T>>;
 export type NestedItem<T> = T extends Array<infer I> ? NestedItem<I> : T;

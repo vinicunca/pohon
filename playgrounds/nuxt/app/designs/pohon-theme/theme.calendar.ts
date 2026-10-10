@@ -33,7 +33,7 @@ export const themeCalendar = {
     headCell: 'rounded-md',
     headCellWeek: 'color-text-muted rounded-md',
     cell: 'text-center relative',
-    cellTrigger: 'data-[disabled]:color-text-muted data-[unavailable]:color-text-muted m-0.5 flex whitespace-nowrap transition items-center justify-center relative data-[today]:font-600 focus-visible:outline-3 data-[unavailable]:(line-through pointer-events-none)',
+    cellTrigger: 'm-0.5 flex whitespace-nowrap transition items-center justify-center relative data-[disabled]:color-text-muted data-[unavailable]:(color-text-muted line-through pointer-events-none) data-[today]:font-600 focus-visible:outline-3',
     cellWeek: 'color-text-muted text-center relative',
   },
   variants: {
@@ -88,7 +88,7 @@ export const themeCalendar = {
     view: {
       day: {
         gridRow: 'grid-cols-7 place-items-center',
-        cellTrigger: 'data-[outside-view]:color-text-muted rounded-full',
+        cellTrigger: 'rounded-full data-[outside-view]:color-text-muted',
       },
       month: {
         gridRow: 'grid-cols-4',

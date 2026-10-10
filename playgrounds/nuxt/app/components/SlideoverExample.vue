@@ -1,9 +1,9 @@
 <script setup lang="ts">
 defineProps<{
-  count: number
-}>()
+  count: number;
+}>();
 
-const emit = defineEmits(['close'])
+const emit = defineEmits(['close']);
 </script>
 
 <template>
@@ -13,7 +13,11 @@ const emit = defineEmits(['close'])
     </template>
 
     <template #footer>
-      <PButton color="neutral" label="Close" @click="emit('close')" />
+      <PButton
+        color="neutral"
+        label="Close"
+        @click="emit('close')"
+      />
     </template>
   </PSlideover>
 </template>

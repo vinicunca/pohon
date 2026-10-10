@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   modules: [
-    'pohon-ui'
+    'pohon-ui',
   ],
 
   css: ['~/assets/css/main.css'],
@@ -9,12 +9,12 @@ export default defineNuxtConfig({
 
   hooks: {
     // Register every Pohon UI component globally so the client bundle ships all of them
-    'components:extend'(components) {
+    'components:extend': function (components) {
       for (const component of components) {
         if (component.pascalName.startsWith('P')) {
-          component.global = true
+          component.global = true;
         }
       }
-    }
-  }
-})
+    },
+  },
+});

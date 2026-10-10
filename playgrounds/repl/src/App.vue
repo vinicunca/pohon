@@ -1,22 +1,22 @@
 <!-- eslint-disable no-useless-escape -->
 <script setup lang="ts">
-import { ref, computed, watchEffect } from 'vue'
-import { Repl, useStore, useVueImportMap } from '@vue/repl'
-import { useColorMode, useClipboard } from '@vueuse/core'
-import CodeMirror from '@vue/repl/codemirror-editor'
-import { publicComposables } from '../../../src/imports'
+import { Repl, useStore, useVueImportMap } from '@vue/repl';
+import CodeMirror from '@vue/repl/codemirror-editor';
+import { useClipboard, useColorMode } from '@vueuse/core';
+import { computed, ref, watchEffect } from 'vue';
+import { publicComposables } from '../../../src/imports';
 
-const colorMode = useColorMode()
-const theme = computed(() => colorMode.value === 'dark' ? 'dark' : 'light')
+const colorMode = useColorMode();
+const theme = computed(() => colorMode.value === 'dark' ? 'dark' : 'light');
 
 const {
   importMap: vueImportMap,
-  vueVersion
+  vueVersion,
 } = useVueImportMap({
   runtimeDev: 'https://esm.sh/vue@3/dist/vue.esm-browser.js',
   runtimeProd: 'https://esm.sh/vue@3/dist/vue.esm-browser.prod.js',
-  serverRenderer: 'https://esm.sh/@vue/server-renderer@3/dist/server-renderer.esm-browser.js'
-})
+  serverRenderer: 'https://esm.sh/@vue/server-renderer@3/dist/server-renderer.esm-browser.js',
+});
 
 const builtinImportMap = computed(() => ({
   imports: {
@@ -27,19 +27,19 @@ const builtinImportMap = computed(() => ({
     '@vueuse/core': 'https://esm.sh/@vueuse/core?external=vue',
     '@tanstack/vue-table': 'https://esm.sh/@tanstack/vue-table?external=vue',
     '@internationalized/date': 'https://esm.sh/@internationalized/date',
-    'scule': 'https://esm.sh/scule'
-  }
-}))
+    'scule': 'https://esm.sh/scule',
+  },
+}));
 
 const store = useStore(
   {
     builtinImportMap,
     vueVersion,
     showOutput: ref(false),
-    outputMode: ref('preview')
+    outputMode: ref('preview'),
   },
-  location.hash
-)
+  location.hash,
+);
 
 const defaultCode = `<script setup lang="ts">
 import { z } from 'zod'
@@ -136,40 +136,40 @@ const state = reactive<Partial<Schema>>({
       </PForm>
     </PCard>
   </div>
-</template>`
+</template>`;
 
-const hasInitialHash = !!location.hash
+const hasInitialHash = !!location.hash;
 
 if (!hasInitialHash) {
   store.setFiles({
-    'src/App.vue': defaultCode
-  }, 'src/App.vue')
+    'src/App.vue': defaultCode,
+  }, 'src/App.vue');
 }
 
-const hasChanged = ref(hasInitialHash)
+const hasChanged = ref(hasInitialHash);
 
 watchEffect(() => {
-  const serialized = store.serialize()
-  const isDefault = !hasInitialHash && store.getFiles()['App.vue']?.trimEnd() === defaultCode.trimEnd()
+  const serialized = store.serialize();
+  const isDefault = !hasInitialHash && store.getFiles()['App.vue']?.trimEnd() === defaultCode.trimEnd();
 
-  hasChanged.value = !isDefault
+  hasChanged.value = !isDefault;
   if (isDefault) {
     if (location.hash) {
-      history.replaceState({}, '', location.pathname)
+      history.replaceState({}, '', location.pathname);
     }
-    return
+    return;
   }
-  history.replaceState({}, '', serialized)
-})
+  history.replaceState({}, '', serialized);
+});
 
-const { copy, copied } = useClipboard()
+const { copy, copied } = useClipboard();
 function share() {
-  copy(location.href)
+  copy(location.href);
 }
 
 // Mirror the auto-imports available in a real Pohon UI app so REPL code can call
 // these composables without importing them.
-const composables = Object.values(publicComposables).flat()
+const composables = Object.values(publicComposables).flat();
 
 const previewOptions = {
   headHTML: [
@@ -180,25 +180,31 @@ const previewOptions = {
     '<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"><\/script>',
     '<style type="text/tailwindcss">@theme { --font-sans: \'Public Sans\', sans-serif; }</style>',
     '<style>body { font-family: var(--font-sans); }</style>',
-    '<style>#app { isolation: isolate; }</style>'
+    '<style>#app { isolation: isolate; }</style>',
   ].join(''),
   customCode: {
-    importCode: `import ui, { ${composables.join(', ')} } from 'pohon-ui'\nimport { h } from 'vue'\n${composables.map(name => `window.${name} = ${name}`).join('\n')}`,
-    useCode: `app.use(ui)\napp.component('Placeholder', { template: '<div class="relative overflow-hidden rounded-sm border border-dashed border-border-accented opacity-75 px-4 flex items-center justify-center"><svg class="absolute inset-0 size-full stroke-inverted/10" fill="none"><defs><pattern id="placeholder-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3" /></pattern></defs><rect stroke="none" fill="url(#placeholder-pattern)" width="100%" height="100%" /></svg><slot /></div>' })\nconst _Root = app._component\nconst _UApp = app.component('PApp')\nconst _origMount = app.mount\napp.mount = function(el) {\n  const wrapper = _createApp({ render() { return h(_UApp, null, { default: () => h(_Root) }) } })\n  Object.assign(wrapper._context.components, app._context.components)\n  Object.assign(wrapper._context.directives, app._context.directives)\n  Object.assign(wrapper._context.provides, app._context.provides)\n  wrapper.config.errorHandler = e => console.error(e)\n  wrapper.mount(el)\n  window.__app__ = wrapper\n}`
-  }
-}
+    importCode: `import ui, { ${composables.join(', ')} } from 'pohon-ui'\nimport { h } from 'vue'\n${composables.map((name) => `window.${name} = ${name}`).join('\n')}`,
+    useCode: 'app.use(ui)\napp.component(\'Placeholder\', { template: \'<div class="relative overflow-hidden rounded-sm border border-dashed border-border-accented opacity-75 px-4 flex items-center justify-center"><svg class="absolute inset-0 size-full stroke-inverted/10" fill="none"><defs><pattern id="placeholder-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3" /></pattern></defs><rect stroke="none" fill="url(#placeholder-pattern)" width="100%" height="100%" /></svg><slot /></div>\' })\nconst _Root = app._component\nconst _UApp = app.component(\'PApp\')\nconst _origMount = app.mount\napp.mount = function(el) {\n  const wrapper = _createApp({ render() { return h(_UApp, null, { default: () => h(_Root) }) } })\n  Object.assign(wrapper._context.components, app._context.components)\n  Object.assign(wrapper._context.directives, app._context.directives)\n  Object.assign(wrapper._context.provides, app._context.provides)\n  wrapper.config.errorHandler = e => console.error(e)\n  wrapper.mount(el)\n  window.__app__ = wrapper\n}',
+  },
+};
 </script>
 
 <template>
   <PApp>
-    <div class="h-dvh flex flex-col">
-      <PHeader title="Pohon UI Playground" :ui="{ container: 'max-w-none' }">
+    <div class="flex flex-col h-dvh">
+      <PHeader
+        title="Pohon UI Playground"
+        :ui="{ container: 'max-w-none' }"
+      >
         <template #left>
-          <Logo class="w-auto h-6 shrink-0 color-text-highlighted" />
+          <Logo class="color-text-highlighted shrink-0 h-6 w-auto" />
         </template>
 
         <template #right>
-          <PTooltip :text="copied ? 'Copied!' : 'Share'" :disabled="!hasChanged">
+          <PTooltip
+            :text="copied ? 'Copied!' : 'Share'"
+            :disabled="!hasChanged"
+          >
             <PButton
               color="neutral"
               variant="ghost"

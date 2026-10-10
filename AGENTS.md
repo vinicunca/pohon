@@ -21,8 +21,6 @@ test/
 ├── components/         # Component tests (*.spec.ts)
 │   └── __snapshots__/  # Auto-generated snapshots
 └── component-render.ts
-docs/
-└── content/docs/2.components/  # Documentation (*.md)
 playgrounds/
 └── nuxt/app/pages/components/  # Playground pages
 ```
@@ -70,7 +68,7 @@ Options:
 
 ## Library Source (`src/` and `test/`)
 
-The following conventions and references apply **only** when working on files in `src/` or `test/`. They do not apply to `docs/`, `playgrounds/`, or other directories.
+The following conventions and references apply **only** when working on files in `src/` or `test/`. They do not apply to `playgrounds/` or other directories.
 
 ### References
 
@@ -112,7 +110,7 @@ Progress:
 - [ ] 4. Export types from src/runtime/types/index.ts
 - [ ] 5. Register in ThemeDefaults interface (src/runtime/composables/useComponentProps.ts)
 - [ ] 6. Write tests in test/components/
-- [ ] 7. Create docs in docs/content/docs/2.components/
+- [ ] 7. Create docs in the vinicunca/docs repo: content/pohon/2.components/
 - [ ] 8. Add playground page
 - [ ] 9. Run pnpm run lint
 - [ ] 10. Run pnpm run typecheck

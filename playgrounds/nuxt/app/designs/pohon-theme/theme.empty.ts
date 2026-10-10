@@ -1,6 +1,6 @@
 import type { PThemeEmpty } from 'pohon-ui';
 
-// @unocss-include
+/** @unocss-include */
 export const themeEmpty = {
   slots: {
     root: 'p-4 rounded-lg flex flex-col gap-4 min-w-0 items-center justify-center relative lg:p-8 sm:p-6',
@@ -15,27 +15,27 @@ export const themeEmpty = {
   variants: {
     size: {
       xs: {
-        avatar: 'pohon:size-8 text-base',
+        avatar: 'text-base pohon:size-8',
         title: 'text-sm',
         description: 'text-xs',
       },
       sm: {
-        avatar: 'pohon:size-9 text-lg',
+        avatar: 'text-lg pohon:size-9',
         title: 'text-sm',
         description: 'text-xs',
       },
       md: {
-        avatar: 'pohon:size-10 text-xl',
+        avatar: 'text-xl pohon:size-10',
         title: 'text-base',
         description: 'text-sm',
       },
       lg: {
-        avatar: 'pohon:size-11 text-[22px]',
+        avatar: 'text-[22px] pohon:size-11',
         title: 'text-base',
         description: 'text-sm',
       },
       xl: {
-        avatar: 'pohon:size-12 text-2xl',
+        avatar: 'text-2xl pohon:size-12',
         title: 'text-lg',
         description: 'text-base',
       },
@@ -47,7 +47,7 @@ export const themeEmpty = {
         description: 'color-text-dimmed',
       },
       outline: {
-        root: 'bg-background ring-ring ring',
+        root: 'bg-background ring ring-ring',
         description: 'color-text-muted',
       },
       soft: {
@@ -55,7 +55,7 @@ export const themeEmpty = {
         description: 'color-text-toned',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring-ring ring',
+        root: 'bg-background-elevated/50 ring ring-ring',
         description: 'color-text-toned',
       },
       naked: {

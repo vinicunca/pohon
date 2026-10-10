@@ -6,7 +6,7 @@ import { BRANDS } from '../design.constants';
 export const themeFileUpload = {
   slots: {
     root: 'flex flex-col relative',
-    base: 'bg-background border-border border rounded-lg flex flex-1 flex-col gap-2 w-full transition-[background-color] ease-out items-stretch justify-center focus-visible:outline-3',
+    base: 'border border-border rounded-lg bg-background flex flex-1 flex-col gap-2 w-full transition-[background-color] ease-out items-stretch justify-center focus-visible:outline-3',
     wrapper: 'text-center flex flex-col items-center justify-center',
     icon: 'shrink-0',
     avatar: 'shrink-0',
@@ -68,13 +68,13 @@ export const themeFileUpload = {
       list: {
         root: 'gap-2 items-start',
         files: 'flex flex-col gap-2 w-full',
-        file: 'border-border border rounded-md flex min-w-0 w-full items-center',
+        file: 'border border-border rounded-md flex min-w-0 w-full items-center',
         fileTrailingButton: 'ms-auto',
       },
       grid: {
         fileWrapper: 'hidden',
         fileLeadingAvatar: 'pohon:rounded-lg pohon:size-full',
-        fileTrailingButton: 'border-border-bg pohon:p-0 border-2 pohon:rounded-full absolute -end-1.5 -top-1.5',
+        fileTrailingButton: 'border-2 border-border-bg absolute -end-1.5 -top-1.5 pohon:p-0 pohon:rounded-full',
       },
     },
     position: {
@@ -82,7 +82,7 @@ export const themeFileUpload = {
       outside: '',
     },
     dropzone: {
-      true: 'data-[dragging=true]:bg-background-elevated/25 border-dashed',
+      true: 'border-dashed data-[dragging=true]:bg-background-elevated/25',
     },
     interactive: {
       true: '',

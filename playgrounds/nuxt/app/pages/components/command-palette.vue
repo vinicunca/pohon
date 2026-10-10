@@ -199,7 +199,7 @@ defineShortcuts({
       />
 
       <template #content>
-        <ReuseTemplate class="border-border mt-4 border-t" />
+        <ReuseTemplate class="mt-4 border-t border-border" />
       </template>
     </PDrawer>
 

@@ -4,8 +4,10 @@
 
 type IdleCallbackHandle = ReturnType<typeof setTimeout> | number;
 
-// Mirrors Nuxt's `requestIdleCallback` compat: falls back to a short timeout
-// when the browser (or happy-dom in tests) does not implement it.
+/**
+ * Mirrors Nuxt's `requestIdleCallback` compat: falls back to a short timeout
+ * when the browser (or happy-dom in tests) does not implement it.
+ */
 export function requestIdleCallback(callback: () => void): IdleCallbackHandle | undefined {
   if (typeof window === 'undefined') {
     return;
@@ -34,8 +36,10 @@ export function cancelIdleCallback(handle: IdleCallbackHandle | undefined) {
 let observer: IntersectionObserver | null = null;
 const callbacks = new Map<Element, () => void>();
 
-// One `IntersectionObserver` shared by every link, like NuxtLink's own observer:
-// creating one per link is wasteful for navigations with hundreds of entries.
+/**
+ * One `IntersectionObserver` shared by every link, like NuxtLink's own observer:
+ * creating one per link is wasteful for navigations with hundreds of entries.
+ */
 export function observeIntersection(element: Element, callback: () => void): () => void {
   if (typeof IntersectionObserver === 'undefined') {
     return () => {};

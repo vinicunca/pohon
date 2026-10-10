@@ -1,7 +1,7 @@
 <template>
-  <div class="border-border-accented px-4 border rounded-sm border-dashed opacity-75 flex items-center justify-center relative overflow-hidden">
+  <div class="px-4 border border-border-accented rounded-sm border-dashed opacity-75 flex items-center justify-center relative overflow-hidden">
     <svg
-      class="stroke-stroke-inverted/10 size-full inset-0 absolute"
+      class="size-full inset-0 absolute stroke-stroke-inverted/10"
       fill="none"
     >
       <defs>

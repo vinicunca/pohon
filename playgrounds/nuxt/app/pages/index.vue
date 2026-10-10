@@ -1,11 +1,11 @@
 <template>
-  <PDashboardNavbar class="absolute top-0 inset-x-0 lg:border-b-0" />
+  <PDashboardNavbar class="inset-x-0 top-0 absolute lg:border-b-0" />
 
   <div class="text-center space-y-4">
-    <h1 class="text-2xl font-700 color-primary">
+    <h1 class="text-2xl color-primary font-700">
       Playground
     </h1>
-    <p class="max-w-sm mx-auto color-text-muted">
+    <p class="color-text-muted mx-auto max-w-sm">
       Explore and test all Pohon UI components in an interactive environment.
     </p>
   </div>

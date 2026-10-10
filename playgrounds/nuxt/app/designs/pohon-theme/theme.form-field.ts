@@ -24,7 +24,7 @@ export const themeFormField = {
     },
     required: {
       true: {
-        label: 'after:color-error after:(ms-0.5 content-["*"])',
+        label: 'after:(color-error ms-0.5 content-["*"])',
       },
     },
     orientation: {

@@ -62,7 +62,7 @@ if (!import.meta.client && platformKey.value) {
   useHead({
     script: [{
       key: 'ui-kbd-macos',
-      innerHTML: `/Macintosh;/.test(navigator.userAgent)&&document.documentElement.classList.add('ui-macos')`,
+      innerHTML: '/Macintosh;/.test(navigator.userAgent)&&document.documentElement.classList.add(\'ui-macos\')',
       tagPosition: 'head',
     }],
   });

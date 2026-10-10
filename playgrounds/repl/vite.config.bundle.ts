@@ -1,6 +1,6 @@
 import { normalize, resolve } from 'node:path';
-import ui from 'pohon-ui/vite';
 import vue from '@vitejs/plugin-vue';
+import ui from 'pohon-ui/vite';
 import { defineConfig } from 'vite';
 
 const runtimeDir = normalize(resolve(__dirname, '../../src/runtime'));

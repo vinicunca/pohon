@@ -12,7 +12,7 @@ export const themeCarousel = {
     prev: 'rounded-full absolute',
     next: 'rounded-full absolute',
     dots: 'flex flex-wrap gap-3 items-center inset-x-0 justify-center absolute -bottom-7',
-    dot: 'bg-background-accented outline-outline-inverted/25 rounded-full size-3 cursor-pointer transition focus-visible:outline-3',
+    dot: 'outline-outline-inverted/25 rounded-full bg-background-accented size-3 cursor-pointer transition focus-visible:outline-3',
   },
   variants: {
     orientation: {

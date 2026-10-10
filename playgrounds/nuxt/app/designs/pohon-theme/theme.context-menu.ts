@@ -5,12 +5,12 @@ import { BRANDS } from '../design.constants';
 
 export const themeContextMenu = {
   slots: {
-    content: 'bg-background ring-ring rounded-md flex flex-col max-h-$akar-context-menu-content-available-height min-w-32 ring shadow-lg origin-$akar-context-menu-content-transform-origin overflow-hidden data-[state=closed]:(animate-out fade-out-0 zoom-out-95) data-[state=open]:(animate-in fade-in-0 zoom-in-95) data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
-    viewport: 'divide-divide flex-1 relative overflow-y-auto scroll-py-1 divide-y',
+    content: 'rounded-md bg-background flex flex-col max-h-$akar-context-menu-content-available-height min-w-32 ring ring-ring shadow-lg origin-$akar-context-menu-content-transform-origin overflow-hidden data-[state=closed]:(animate-out fade-out-0 zoom-out-95) data-[state=open]:(animate-in fade-in-0 zoom-in-95) data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+    viewport: 'flex-1 relative overflow-y-auto scroll-py-1 divide-divide divide-y',
     group: 'p-1 isolate',
     label: 'color-text-highlighted font-600 flex w-full items-center',
-    separator: 'bg-border my-1 h-px -mx-1',
-    item: 'group outline-none flex w-full select-none items-start relative before:(rounded-md inset-px absolute -z-1 content-empty) data-[disabled]:(opacity-75 cursor-not-allowed)',
+    separator: 'my-1 bg-border h-px -mx-1',
+    item: 'group outline-none flex w-full select-none items-start relative before:(rounded-md content-empty inset-px absolute -z-1) data-[disabled]:(opacity-75 cursor-not-allowed)',
     itemLeadingIcon: 'shrink-0',
     itemLeadingAvatar: 'shrink-0',
     itemLeadingAvatarSize: '',
@@ -34,8 +34,8 @@ export const themeContextMenu = {
         itemLeadingIcon: 'color-text',
       },
       false: {
-        item: 'color-text data-[highlighted]:color-text-highlighted data-[state=open]:color-text-highlighted data-[highlighted]:before:bg-background-elevated/50 data-[state=open]:before:bg-background-elevated/50 transition-colors before:transition-colors',
-        itemLeadingIcon: 'color-text-dimmed group-data-[highlighted]:color-text group-data-[state=open]:color-text transition-colors',
+        item: 'color-text transition-colors data-[highlighted]:color-text-highlighted data-[state=open]:color-text-highlighted before:transition-colors data-[highlighted]:before:bg-background-elevated/50 data-[state=open]:before:bg-background-elevated/50',
+        itemLeadingIcon: 'color-text-dimmed transition-colors group-data-[highlighted]:color-text group-data-[state=open]:color-text',
       },
     },
     loading: {

@@ -25,7 +25,7 @@ interface Shortcut {
   handler: Handler;
   enabled: boolean;
   chained: boolean;
-  // KeyboardEvent attributes
+  /** KeyboardEvent attributes */
   key: string;
   ctrlKey: boolean;
   metaKey: boolean;

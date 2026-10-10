@@ -4,14 +4,14 @@ import type { PThemeDrawer } from 'pohon-ui';
 export const themeDrawer = {
   slots: {
     overlay: 'bg-background-elevated/75 inset-0 fixed',
-    content: 'bg-background ring-ring flex ring fixed focus:outline-none',
+    content: 'bg-background flex ring ring-ring fixed focus:outline-none',
     // TODO: remove the important when vaul is replaced by the built in drawer
-    handle: '!bg-background-accented shrink-0 transition-opacity ease-out',
+    handle: 'shrink-0 transition-opacity ease-out !bg-background-accented',
     container: 'p-4 flex flex-col gap-4 w-full overflow-y-auto',
     header: 'flex gap-1.5 min-h-8 items-center',
     wrapper: 'flex-1 min-w-0',
     title: 'color-text-highlighted font-600',
-    description: 'color-text-muted text-sm mt-1',
+    description: 'text-sm color-text-muted mt-1',
     actions: 'ms-auto flex shrink-0 gap-1.5 items-center',
     body: 'flex-1',
     footer: 'flex flex-col gap-1.5',

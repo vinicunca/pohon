@@ -165,7 +165,7 @@ function onClose() {
       class="focus:outline-none"
       raw
     >
-      <span class="absolute inset-0" aria-hidden="true" />
+      <span class="inset-0 absolute" aria-hidden="true" />
     </PLink>
 
     <PContainer data-slot="container" :class="ui.container({ class: props.ui?.container })">

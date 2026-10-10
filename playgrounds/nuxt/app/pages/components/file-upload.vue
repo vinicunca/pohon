@@ -148,7 +148,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
           <p
             v-if="state.avatar"
-            class="color-text-muted text-xs mt-1.5"
+            class="text-xs color-text-muted mt-1.5"
           >
             {{ state.avatar.name }}
 

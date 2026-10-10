@@ -3,7 +3,7 @@ import type { PThemeCommandPalette } from 'pohon-ui';
 
 export const themeCommandPalette = {
   slots: {
-    root: 'divide-divide flex flex-col min-h-0 min-w-0 divide-y',
+    root: 'flex flex-col min-h-0 min-w-0 divide-divide divide-y',
     input: '',
     close: '',
     back: 'p-0',
@@ -29,7 +29,7 @@ export const themeCommandPalette = {
     itemLabelBase: 'color-text-highlighted [&>mark]:color-primary [&>mark]:bg-primary/15',
     itemLabelPrefix: 'color-text',
     itemLabelSuffix: 'color-text-dimmed [&>mark]:color-primary [&>mark]:bg-primary/15',
-    itemDescription: 'color-text-muted [&>mark]:color-primary [&>mark]:bg-primary/15 truncate',
+    itemDescription: 'color-text-muted truncate [&>mark]:color-primary [&>mark]:bg-primary/15',
   },
   variants: {
     virtualize: {
@@ -123,8 +123,8 @@ export const themeCommandPalette = {
         itemLeadingIcon: 'color-text',
       },
       false: {
-        item: 'color-text data-[highlighted]:not-[[data-disabled]]:color-text-highlighted data-[highlighted]:not-[[data-disabled]]:before:bg-background-elevated/50 transition-colors before:transition-colors',
-        itemLeadingIcon: 'color-text-dimmed [.group[data-highlighted]:not([data-disabled])_&]:color-text transition-colors',
+        item: 'color-text transition-colors before:transition-colors data-[highlighted]:not-[[data-disabled]]:color-text-highlighted data-[highlighted]:not-[[data-disabled]]:before:bg-background-elevated/50',
+        itemLeadingIcon: 'color-text-dimmed transition-colors [.group[data-highlighted]:not([data-disabled])_&]:color-text',
       },
     },
     loading: {

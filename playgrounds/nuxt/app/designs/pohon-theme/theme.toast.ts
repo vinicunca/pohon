@@ -1,5 +1,4 @@
 // @unocss-include
-import type { PThemeToast } from 'pohon-ui';
 import { BRANDS } from '../design.constants';
 
 export const themeToast = {

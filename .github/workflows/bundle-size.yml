@@ -4,14 +4,14 @@ on:
   # Any base branch, stacked pull requests are compared to the branch below them
   pull_request:
     paths:
-      - "src/**"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
-      - "test/bundle/**"
-      - "build.config.ts"
-      - ".github/workflows/bundle-size.yml"
-      - ".github/workflows/bundle-size-comment.yml"
+      - 'src/**'
+      - package.json
+      - pnpm-lock.yaml
+      - pnpm-workspace.yaml
+      - 'test/bundle/**'
+      - build.config.ts
+      - .github/workflows/bundle-size.yml
+      - .github/workflows/bundle-size-comment.yml
 
 permissions:
   contents: read

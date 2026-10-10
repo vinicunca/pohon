@@ -22,8 +22,8 @@ export const themeUser = {
     to: {
       true: {
         root: 'outline-primary/25 rounded-md transition has-[>a:focus-visible]:outline-3',
-        name: 'color-text peer-hover:color-text-highlighted peer-focus-visible:color-text-highlighted transition-colors',
-        description: 'peer-hover:color-text-toned peer-focus-visible:color-text-toned transition-colors',
+        name: 'color-text transition-colors peer-focus-visible:color-text-highlighted peer-hover:color-text-highlighted',
+        description: 'transition-colors peer-focus-visible:color-text-toned peer-hover:color-text-toned',
         avatar: 'transform transition-transform ease-out group-has-focus-visible/user:scale-115 group-hover/user:scale-115 motion-reduce:transition-none',
       },
       false: {

@@ -1,9 +1,9 @@
 export default defineNuxtConfig({
   modules: [
-    'pohon-ui'
+    'pohon-ui',
   ],
 
   css: ['~/assets/css/main.css'],
 
-  compatibilityDate: '2024-07-09'
-})
+  compatibilityDate: '2024-07-09',
+});

@@ -1,11 +1,13 @@
 import type { ModuleOptions } from '../module';
 
-// Shared with `checkbox-group` and `radio-group`, which style the same states on their own slots.
+/** Shared with `checkbox-group` and `radio-group`, which style the same states on their own slots. */
 export const hover = 'hover:[&:not(:has(:disabled,[aria-disabled=true],:focus-visible,[data-state=checked]))]:';
 
-// `list` puts focus on the control, which is the click target there. `card` and `table`
-// render the root as a label wrapping everything, so focus belongs on the card itself,
-// as it does whenever the control is `sr-only`.
+/**
+ * `list` puts focus on the control, which is the click target there. `card` and `table`
+ * render the root as a label wrapping everything, so focus belongs on the card itself,
+ * as it does whenever the control is `sr-only`.
+ */
 export const focusControl = (token: string) => `outline-${token}/25 focus-visible:outline-solid focus-visible:outline-3 focus-visible:ring-${token}`;
 export const focusCard = (token: string) => `outline-${token}/25 has-focus-visible:outline-3 has-focus-visible:[&:not(:has(:disabled,[aria-disabled=true]))]:border-${token} has-focus-visible:z-1`;
 

@@ -18,7 +18,7 @@ export const themeDashboardGroup = {
 
 export const themeDashboardNavbar = {
   slots: {
-    root: 'border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6',
+    root: 'px-4 border-b border-border flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6',
     left: 'flex gap-1.5 min-w-0 items-center',
     icon: 'me-1.5 shrink-0 size-5 self-center',
     title: 'color-text-highlighted font-600 flex gap-1.5 truncate items-center',
@@ -29,7 +29,7 @@ export const themeDashboardNavbar = {
 
 export const themeDashboardPanel = {
   slots: {
-    root: 'lg:not-last:border-border flex shrink-0 flex-col min-w-0 relative min-h-svh lg:not-last:border-e',
+    root: 'flex shrink-0 flex-col min-w-0 relative min-h-svh lg:not-last:border-e lg:not-last:border-border',
     body: 'p-4 flex flex-1 flex-col gap-4 overflow-y-auto sm:(p-6 gap-6)',
   },
   variants: {
@@ -99,7 +99,7 @@ export const themeDashboardSidebar = {
     },
     side: {
       left: {
-        root: 'border-border border-e',
+        root: 'border-e border-border',
       },
     },
     toggleSide: {
@@ -112,7 +112,7 @@ export const themeDashboardSidebar = {
 
 export const themeDashboardToolbar = {
   slots: {
-    root: 'border-border px-4 border-b flex shrink-0 gap-1.5 min-h-[49px] items-center justify-between overflow-x-auto sm:px-6',
+    root: 'px-4 border-b border-border flex shrink-0 gap-1.5 min-h-[49px] items-center justify-between overflow-x-auto sm:px-6',
     left: 'flex gap-1.5 items-center',
     right: 'flex gap-1.5 items-center',
   },

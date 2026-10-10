@@ -202,7 +202,8 @@ function docs({ name, primitive }) {
   const upperName = capitalize(toCamelCase(name));
 
   return {
-    filename: `docs/content/docs/2.components/${kebabName}.md`,
+    // Docs live in the vinicunca/docs hub, expected next to this repo
+    filename: `../docs/content/pohon/2.components/${kebabName}.md`,
     contents: `---
 title: ${upperName}
 description: ''

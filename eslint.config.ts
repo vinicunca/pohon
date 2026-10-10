@@ -6,11 +6,13 @@ export default vinicuncaESLint(
   {
     ignores: [
       '.github/**/*.md',
+      'graphify-out/**',
       'skills/**/*.md',
     ],
     unocss: {
       configPath: 'playgrounds/nuxt/uno.config.ts',
     },
+    antislop: false,
   },
   {
     rules: {
@@ -51,6 +53,14 @@ export default vinicuncaESLint(
     ],
     rules: {
       'no-console': 'off',
+    },
+  },
+
+  {
+    // Node scripts that measure the bundle size
+    files: ['test/bundle/*.mjs'],
+    rules: {
+      'antfu/no-top-level-await': 'off',
     },
   },
 

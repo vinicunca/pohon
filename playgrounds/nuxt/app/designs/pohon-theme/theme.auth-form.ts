@@ -9,8 +9,8 @@ export const themeAuthForm = {
     header: 'text-center flex flex-col',
     leading: 'mb-2',
     leadingIcon: 'shrink-0 size-8 inline-block',
-    title: 'color-text-highlighted text-xl font-600 text-pretty',
-    description: 'color-text-muted text-base mt-1 text-pretty',
+    title: 'text-xl color-text-highlighted font-600 text-pretty',
+    description: 'text-base color-text-muted mt-1 text-pretty',
     body: 'flex flex-col gap-y-6',
     providers: 'space-y-3',
     select: 'w-full',
@@ -18,6 +18,6 @@ export const themeAuthForm = {
     otp: 'w-full',
     input: 'w-full',
     form: 'space-y-5',
-    footer: 'color-text-muted text-sm mt-2 text-center',
+    footer: 'text-sm color-text-muted mt-2 text-center',
   },
 } satisfies PThemeAuthForm;

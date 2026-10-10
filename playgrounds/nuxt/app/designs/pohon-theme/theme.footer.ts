@@ -23,7 +23,7 @@ export const themeFooterColumns = {
     label: 'text-sm font-600',
     list: 'mt-6 space-y-4',
     item: 'relative',
-    link: 'group outline-primary/25 text-sm rounded-sm flex gap-1.5 items-center focus-visible:outline-3',
+    link: 'group text-sm outline-primary/25 rounded-sm flex gap-1.5 items-center focus-visible:outline-3',
     linkLeadingIcon: 'shrink-0 size-5',
     linkLabel: 'truncate',
     linkLabelExternalIcon: 'color-text-dimmed size-3 inline-block top-0 absolute',
@@ -34,7 +34,7 @@ export const themeFooterColumns = {
         link: 'color-primary font-500',
       },
       false: {
-        link: 'color-text-muted hover:color-text transition-colors',
+        link: 'color-text-muted transition-colors hover:color-text',
       },
     },
   },

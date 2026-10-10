@@ -49,7 +49,7 @@ const columns = [{
 <template>
   <Navbar />
 
-  <PFooter class="border-border divide-divide border-t min-h-0 w-full divide-y">
+  <PFooter class="border-t border-border min-h-0 w-full divide-divide divide-y">
     <template #top>
       <PContainer>
         <PFooterColumns :columns="columns">
@@ -79,7 +79,7 @@ const columns = [{
     </template>
 
     <template #left>
-      <p class="color-text-muted text-sm">
+      <p class="text-sm color-text-muted">
         Copyright © {{ new Date().getFullYear() }}
       </p>
     </template>

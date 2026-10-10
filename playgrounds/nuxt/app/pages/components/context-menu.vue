@@ -118,7 +118,7 @@ defineShortcuts(extractShortcuts(items.value));
       :items="items"
       v-bind="props"
     >
-      <div class="border-border-accented text-sm border rounded-md border-dashed flex w-72 aspect-video items-center justify-center">
+      <div class="text-sm border border-border-accented rounded-md border-dashed flex w-72 aspect-video items-center justify-center">
         Right click here
       </div>
     </PContextMenu>

@@ -108,7 +108,7 @@ import { themeTooltip } from './pohon-theme/theme.tooltip';
 import { themeTree } from './pohon-theme/theme.tree';
 import { themeUser } from './pohon-theme/theme.user';
 
-// @keep-sorted
+/** @keep-sorted */
 export const uiTheme: NonNullable<AppConfigInput['ui']> = {
   accordion: themeAccordion,
   alert: themeAlert,

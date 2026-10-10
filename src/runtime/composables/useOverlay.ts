@@ -13,6 +13,7 @@ type CloseEventArgTypeSimple<T> = T extends (event: 'close', arg_0: infer Arg, .
  *
  * @see https://github.com/microsoft/TypeScript/issues/32164
  */
+/* eslint-disable ts/unified-signatures -- The identical overloads are the workaround described above */
 type CloseEventArgTypeComplex<T> = T extends {
   (event: 'close', arg_0: infer Arg, ...args: Array<any>): void;
   (...args: Array<any>): void;
@@ -32,6 +33,7 @@ type CloseEventArgTypeComplex<T> = T extends {
   (...args: Array<any>): void;
   (...args: Array<any>): void;
 } ? Arg : never;
+/* eslint-enable ts/unified-signatures */
 
 type CloseEventArgType<T> = CloseEventArgTypeSimple<T> | CloseEventArgTypeComplex<T>;
 

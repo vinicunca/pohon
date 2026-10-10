@@ -53,10 +53,12 @@ function truncateHTMLFromStart(html: string, maxLength: number) {
   return truncated;
 }
 
-// Escape an FTS snippet to safe HTML while preserving the `<mark>` highlight tags.
-// The tag is intentionally hardcoded — exposing it as a parameter would let a
-// caller smuggle through arbitrary tags (e.g. `<script>`) since `v-html` is
-// used to render the result downstream.
+/**
+ * Escape an FTS snippet to safe HTML while preserving the `<mark>` highlight tags.
+ * The tag is intentionally hardcoded — exposing it as a parameter would let a
+ * caller smuggle through arbitrary tags (e.g. `<script>`) since `v-html` is
+ * used to render the result downstream.
+ */
 export function sanitizeSnippet(snippet: string): string {
   const tagOpen = '\0markO\0';
   const tagClose = '\0markC\0';

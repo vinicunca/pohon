@@ -102,10 +102,10 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.user || {}) })({
         v-if="props.to"
         :aria-label="props.name"
         v-bind="{ 'to': props.to, 'target': props.target, ...$attrs, 'data-slot': undefined }"
-        class="focus:outline-none peer"
+        class="peer focus:outline-none"
         raw
       >
-        <span class="absolute inset-0" aria-hidden="true" />
+        <span class="inset-0 absolute" aria-hidden="true" />
       </PLink>
 
       <slot>

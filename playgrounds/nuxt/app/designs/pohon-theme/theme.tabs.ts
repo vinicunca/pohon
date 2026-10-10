@@ -1,12 +1,13 @@
 // @unocss-include
 import { BRANDS } from '../design.constants';
 
-// Active-tab highlight shown before akar's `TabsIndicator` mounts (SSR / pre-hydration).
-// akar only renders the real indicator on the client (it needs DOM measurements), so we gate
-// a CSS-only pseudo-element fallback on the active trigger by the *absence* of the indicator
-// element — the instant akar's measured indicator appears, this selector stops matching.
-// use this variant class: `list-no-indicator:data-[state=active]:`
-
+/**
+ * Active-tab highlight shown before akar's `TabsIndicator` mounts (SSR / pre-hydration).
+ * akar only renders the real indicator on the client (it needs DOM measurements), so we gate
+ * a CSS-only pseudo-element fallback on the active trigger by the *absence* of the indicator
+ * element — the instant akar's measured indicator appears, this selector stops matching.
+ * use this variant class: `list-no-indicator:data-[state=active]:`
+ */
 export const themeTabs = {
   slots: {
     root: 'flex gap-2 items-center',
@@ -33,13 +34,13 @@ export const themeTabs = {
     variant: {
       pill: {
         list: 'rounded-lg bg-background-elevated',
-        trigger: 'list-no-indicator:data-[state=active]:isolate list-no-indicator:data-[state=active]:before:content-empty list-no-indicator:data-[state=active]:before:absolute list-no-indicator:data-[state=active]:before:inset-0 list-no-indicator:data-[state=active]:before:rounded-md list-no-indicator:data-[state=active]:before:shadow-xs list-no-indicator:data-[state=active]:before:-z-10 grow',
+        trigger: 'grow list-no-indicator:data-[state=active]:isolate list-no-indicator:data-[state=active]:before:rounded-md list-no-indicator:data-[state=active]:before:content-empty list-no-indicator:data-[state=active]:before:shadow-xs list-no-indicator:data-[state=active]:before:inset-0 list-no-indicator:data-[state=active]:before:absolute list-no-indicator:data-[state=active]:before:-z-10',
         indicator: 'rounded-md shadow-xs',
       },
       link: {
         list: 'border-border',
         indicator: 'rounded-full',
-        trigger: 'list-no-indicator:data-[state=active]:after:content-empty list-no-indicator:data-[state=active]:after:absolute list-no-indicator:data-[state=active]:after:rounded-full',
+        trigger: 'list-no-indicator:data-[state=active]:after:rounded-full list-no-indicator:data-[state=active]:after:content-empty list-no-indicator:data-[state=active]:after:absolute',
       },
     },
     orientation: {

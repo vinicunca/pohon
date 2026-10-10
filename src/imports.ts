@@ -1,5 +1,7 @@
-// Keep in sync with the actual named exports from each composable file.
-// Used by both the Nuxt module (`addImports`) and Vite plugin (`unplugin-auto-import`).
+/**
+ * Keep in sync with the actual named exports from each composable file.
+ * Used by both the Nuxt module (`addImports`) and Vite plugin (`unplugin-auto-import`).
+ */
 export const publicComposables: Record<string, Array<string>> = {
   defineLocale: ['defineLocale', 'extendLocale'],
   defineShortcuts: ['defineShortcuts', 'extractShortcuts'],

@@ -1,6 +1,5 @@
 import type { Direction } from 'pohon-ui';
-// import { uiTheme } from './designs/design.pohon-theme';
-
+/** import { uiTheme } from './designs/design.pohon-theme'; */
 export default defineAppConfig({
   dir: 'ltr' as Direction,
   toaster: {

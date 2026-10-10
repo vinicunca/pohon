@@ -4,7 +4,7 @@ Component documentation uses MDC (Markdown Components) syntax.
 
 ## File Location
 
-Docs live in `docs/content/docs/2.components/` with kebab-case naming (e.g., `button.md`).
+Docs live in the [vinicunca/docs](https://github.com/vinicunca/docs) repository, in `content/pohon/2.components/` with kebab-case naming (e.g., `button.md`). `pohon-ui make component` writes the page there when that repo is checked out next to this one.
 
 ## Basic Structure
 
@@ -119,7 +119,7 @@ Required fields:
 ```yaml
 ---
 description: Brief description of the component.
-category: element  # reuse an existing category from docs/content/docs/2.components/
+category: element  # reuse an existing category from content/pohon/2.components/
 links:
   - label: GitHub
     icon: i-simple-icons-github
@@ -288,7 +288,7 @@ For complex examples with setup code:
 :component-example{name="button-loading-auto-example"}
 ```
 
-Example component in `docs/app/components/content/examples/<component>/`:
+Example component in `app/components/content/examples/<component>/` of the vinicunca/docs repository:
 
 ```vue
 <!-- button/ButtonLoadingAutoExample.vue -->

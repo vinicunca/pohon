@@ -65,7 +65,7 @@ const ariaLabel = computed(() => (props.title || 'Card link').trim());
       class="focus:outline-none"
       raw
     >
-      <span class="absolute inset-0" aria-hidden="true" />
+      <span class="inset-0 absolute" aria-hidden="true" />
     </PLink>
 
     <PIcon v-if="props.icon" :name="props.icon" :class="ui.icon({ class: props.ui?.icon })" />

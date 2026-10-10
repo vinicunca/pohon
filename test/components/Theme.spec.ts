@@ -1,3 +1,4 @@
+/* eslint-disable slop/max-comment-length */
 import type { ThemeProps, ThemeSlots } from '../../src/runtime/components/Theme.vue';
 import type { ButtonProps } from '../../src/runtime/types';
 import { mountSuspended } from '@nuxt/test-utils/runtime';

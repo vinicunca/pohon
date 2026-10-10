@@ -93,7 +93,6 @@ describe('authForm', () => {
     expect(await axe(wrapper.element)).toHaveNoViolations();
   });
 
-  // eslint-disable-next-line sonar/assertions-in-tests
   it('should have the correct types', () => {
     const schema = z.object({
       email: z.string(),

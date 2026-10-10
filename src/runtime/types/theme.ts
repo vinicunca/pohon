@@ -86,9 +86,11 @@ export interface ThemeDefaults {
   fileUpload?: Partial<ComponentTypes.FileUploadProps>;
   footer?: Partial<ComponentTypes.FooterProps>;
   footerColumns?: Partial<ComponentTypes.FooterColumnsProps>;
-  // TODO: `FormProps` carries three generics for state, schema, and fields —
-  // none of which are themable defaults. Loosened to `any` so this entry stays
-  // assignable from any concrete `Form` instance.
+  /**
+   * TODO: `FormProps` carries three generics for state, schema, and fields —
+   * none of which are themable defaults. Loosened to `any` so this entry stays
+   * assignable from any concrete `Form` instance.
+   */
   form?: Partial<ComponentTypes.FormProps<any, any, any>>;
   formField?: Partial<ComponentTypes.FormFieldProps>;
   header?: Partial<ComponentTypes.HeaderProps>;
@@ -198,7 +200,7 @@ export type PThemeContentSurround = UvConfig<typeof ui>['contentSurround'];
 export type PThemeContentToc = UvConfig<typeof ui>['contentToc'];
 export type PThemeProse = UvConfig<typeof prose>;
 
-// Components
+/** Components */
 export type PThemeAccordion = UvConfig<typeof ui>['accordion'];
 export type PThemeAlert = UvConfig<typeof ui>['alert'];
 export type PThemeAuthForm = UvConfig<typeof ui>['authForm'];

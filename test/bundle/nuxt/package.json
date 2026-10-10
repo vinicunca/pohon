@@ -1,13 +1,13 @@
 {
   "name": "pohon-ui-bundle-nuxt",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "node ../build.mjs"
   },
   "dependencies": {
-    "pohon-ui": "workspace:*",
     "nuxt": "catalog:",
+    "pohon-ui": "workspace:*",
     "vue": "catalog:"
   }
 }

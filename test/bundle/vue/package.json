@@ -1,13 +1,13 @@
 {
   "name": "pohon-ui-bundle-vue",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "node ../build.mjs"
   },
   "dependencies": {
-    "pohon-ui": "workspace:*",
     "@vinicunca/unocss-preset": "catalog:",
+    "pohon-ui": "workspace:*",
     "unocss": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"

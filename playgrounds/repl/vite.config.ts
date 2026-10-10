@@ -1,6 +1,6 @@
 import { resolve } from 'node:path';
-import ui from 'pohon-ui/vite';
 import vue from '@vitejs/plugin-vue';
+import ui from 'pohon-ui/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({

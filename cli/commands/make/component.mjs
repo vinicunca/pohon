@@ -2,7 +2,7 @@ import { existsSync, promises as fsp } from 'node:fs';
 import { capitalize, toCamelCase, toKebabCase } from '@vinicunca/perkakas';
 import { defineCommand } from 'citty';
 import { consola } from 'consola';
-import { resolve } from 'pathe';
+import { dirname, resolve } from 'pathe';
 import templates from '../../templates.mjs';
 import { appendFile, appendThemeDefault, sortFile } from '../../utils.mjs';
 
@@ -54,6 +54,11 @@ export default defineCommand({
       }
 
       const filePath = resolve(path, filename);
+
+      if (!existsSync(dirname(filePath))) {
+        consola.warn(`Skipped ${template}: ${dirname(filePath)} doesn't exist`);
+        continue;
+      }
 
       if (existsSync(filePath)) {
         consola.error(`🚨 ${filePath} already exists!`);

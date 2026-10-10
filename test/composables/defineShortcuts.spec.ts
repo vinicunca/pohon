@@ -1,4 +1,3 @@
-/* eslint-disable sonar/assertions-in-tests */
 import type { ShortcutsConfig, ShortcutsOptions } from '../../src/runtime/composables/defineShortcuts';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { afterEach, describe, expect, it, vi } from 'vitest';

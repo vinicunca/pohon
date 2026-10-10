@@ -56,10 +56,10 @@ import { injectTooltipProviderContext, TooltipArrow, TooltipContent, TooltipPort
 import { defu } from 'defu';
 import { computed, toRef } from 'vue';
 import { useAppConfig } from '#imports';
-import { useKbd } from '../composables/useKbd';
 import { useComponentProps } from '../composables/useComponentProps';
 import { FieldGroupReset } from '../composables/useFieldGroup';
 import { useForwardProps } from '../composables/useForwardProps';
+import { useKbd } from '../composables/useKbd';
 import { usePortal } from '../composables/usePortal';
 import { uv } from '../utils/uv';
 import PKbd from './Kbd.vue';
