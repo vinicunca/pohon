@@ -20,84 +20,90 @@ const collapsed = ref(false);
 const arrow = ref(false);
 
 const items = [
-  [{
-    label: 'Link',
-    type: 'label' as const,
-  }, {
-    label: 'Documentation',
-    icon: 'i-lucide-book-open',
-    badge: 10,
-    chip: true,
-    children: [{
-      label: 'Introduction',
-      description: 'Fully styled and customizable components for Nuxt.',
-      icon: 'i-lucide-house',
-    }, {
-      label: 'Installation',
-      description: 'Learn how to install and configure Pohon UI in your application.',
-      icon: 'i-lucide-cloud-download',
-    }, {
-      label: 'Theming',
-      description: 'Learn how to customize the look and feel of the components.',
-      icon: 'i-lucide-swatch-book',
-    }, {
-      label: 'Shortcuts',
-      description: 'Learn how to display and define keyboard shortcuts in your app.',
-      icon: 'i-lucide-monitor',
-    }],
-  }, {
-    label: 'Components',
-    icon: 'i-lucide-box',
-    to: '/components/navigation-menu',
-    type: 'trigger',
-    active: true,
-    defaultOpen: true,
-    children: [{
+  [
+    {
       label: 'Link',
-      icon: 'i-lucide-link',
-      description: 'Use NuxtLink with superpowers.',
-      to: '/components/link',
-    }, {
-      label: 'Modal',
-      icon: 'i-lucide-square',
-      description: 'Display a modal dialog overlay for important content.',
-      to: '/components/modal',
-    }, {
-      label: 'NavigationMenu',
-      icon: 'i-lucide-list',
-      description: 'Display a list of links.',
-      to: '/components/navigation-menu',
-      trailingIcon: 'i-lucide-check',
-    }, {
-      label: 'Pagination',
-      icon: 'i-lucide-parking-meter',
-      description: 'Display a list of pages.',
-      to: '/components/pagination',
-    }, {
-      label: 'Popover',
-      icon: 'i-lucide-message-circle',
-      description: 'Display a non-modal dialog that floats around a trigger element.',
-      to: '/components/popover',
-    }, {
-      label: 'Progress',
-      icon: 'i-lucide-loader',
-      description: 'Show a horizontal bar to indicate task progression.',
-      to: '/components/progress',
-    }],
-  }, {
-    label: 'GitHub',
-    icon: 'i-simple-icons-github',
-    to: 'https://github.com/vinicunca/pohon',
-    target: '_blank',
-    tooltip: {
-      text: 'Open on GitHub',
-      kbds: ['meta', 'G'],
+      type: 'label' as const,
     },
-  }, {
-    label: 'Help',
-    icon: 'i-lucide-circle-help',
-    disabled: true,
-  }],
+    {
+      label: 'Documentation',
+      icon: 'i-lucide-book-open',
+      badge: 10,
+      chip: true,
+      children: [{
+        label: 'Introduction',
+        description: 'Fully styled and customizable components for Nuxt.',
+        icon: 'i-lucide-house',
+      }, {
+        label: 'Installation',
+        description: 'Learn how to install and configure Pohon UI in your application.',
+        icon: 'i-lucide-cloud-download',
+      }, {
+        label: 'Theming',
+        description: 'Learn how to customize the look and feel of the components.',
+        icon: 'i-lucide-swatch-book',
+      }, {
+        label: 'Shortcuts',
+        description: 'Learn how to display and define keyboard shortcuts in your app.',
+        icon: 'i-lucide-monitor',
+      }],
+    },
+    // {
+    //   label: 'Components',
+    //   icon: 'i-lucide-box',
+    //   to: '/components/navigation-menu',
+    //   type: 'trigger',
+    //   active: true,
+    //   defaultOpen: true,
+    //   children: [{
+    //     label: 'Link',
+    //     icon: 'i-lucide-link',
+    //     description: 'Use NuxtLink with superpowers.',
+    //     to: '/components/link',
+    //   }, {
+    //     label: 'Modal',
+    //     icon: 'i-lucide-square',
+    //     description: 'Display a modal dialog overlay for important content.',
+    //     to: '/components/modal',
+    //   }, {
+    //     label: 'NavigationMenu',
+    //     icon: 'i-lucide-list',
+    //     description: 'Display a list of links.',
+    //     to: '/components/navigation-menu',
+    //     trailingIcon: 'i-lucide-check',
+    //   }, {
+    //     label: 'Pagination',
+    //     icon: 'i-lucide-parking-meter',
+    //     description: 'Display a list of pages.',
+    //     to: '/components/pagination',
+    //   }, {
+    //     label: 'Popover',
+    //     icon: 'i-lucide-message-circle',
+    //     description: 'Display a non-modal dialog that floats around a trigger element.',
+    //     to: '/components/popover',
+    //   }, {
+    //     label: 'Progress',
+    //     icon: 'i-lucide-loader',
+    //     description: 'Show a horizontal bar to indicate task progression.',
+    //     to: '/components/progress',
+    //   }],
+    // },
+    // {
+    //   label: 'GitHub',
+    //   icon: 'i-simple-icons-github',
+    //   to: 'https://github.com/vinicunca/pohon',
+    //   target: '_blank',
+    //   tooltip: {
+    //     text: 'Open on GitHub',
+    //     kbds: ['meta', 'G'],
+    //   },
+    // },
+    // {
+    //   label: 'Help',
+    //   icon: 'i-lucide-circle-help',
+    //   disabled: true,
+    // },
+  ],
 ] satisfies Array<Array<NavigationMenuItem>>;
 </script>
 

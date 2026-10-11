@@ -5,7 +5,7 @@ export default (options: Required<ModuleOptions>) => ({
   variants: {
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, `border border-${color}/25 bg-${color}/10 color-${color}`])),
-      neutral: 'border border-muted color-text-highlighted bg-muted',
+      neutral: 'border border-border-muted color-text-highlighted bg-background-muted',
     },
   },
   defaultVariants: {

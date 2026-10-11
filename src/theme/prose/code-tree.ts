@@ -2,8 +2,8 @@ import type { ModuleOptions } from '../../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: 'relative lg:h-[450px] my-5 grid lg:grid-cols-3 border border-muted rounded-md',
-    list: 'isolate relative p-2 border-b lg:border-b-0 lg:border-e border-muted overflow-y-auto',
+    root: 'relative lg:h-[450px] my-5 grid lg:grid-cols-3 border border-border-muted rounded-md',
+    list: 'isolate relative p-2 border-b lg:border-b-0 lg:border-e border-border-muted overflow-y-auto',
     item: '',
     listWithChildren: 'ms-4.5 border-s border-border',
     itemWithChildren: 'ps-1.5 -ms-px',

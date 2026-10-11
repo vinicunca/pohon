@@ -14,7 +14,7 @@ export default (options: Required<ModuleOptions>) => ({
     close: '',
     body: 'flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4',
     footer: 'flex items-center gap-1.5 overflow-hidden p-4',
-    rail: ['w-4 hidden inset-y-0 absolute z-20 after:w-px after:content-empty after:inset-y-0 after:left-1/2 after:absolute hover:after:bg-$ui-border-accented', options.theme.transitions && 'after:transition-colors'],
+    rail: ['w-4 hidden inset-y-0 absolute z-20 after:w-px after:content-empty after:inset-y-0 after:left-1/2 after:absolute hover:after:bg-$ui-color-border-accented', options.theme.transitions && 'after:transition-colors'],
   },
   variants: {
     transition: {

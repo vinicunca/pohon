@@ -149,7 +149,7 @@ export default (options: Required<ModuleOptions>) => ({
     spotlightColor: 'neutral',
     spotlight: true,
     class: {
-      root: '[--spotlight-color:var(--ui-bg-inverted)]',
+      root: '[--spotlight-color:var(--ui-color-bg-inverted)]',
     },
   }],
   defaultVariants: {
