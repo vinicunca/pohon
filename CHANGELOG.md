@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.9](https://github.com/vinicunca/pohon/compare/v2.0.8...v2.0.9) (2026-10-11)
+
+### Bug Fixes
+
+* colors for themes ([59357b2](https://github.com/vinicunca/pohon/commit/59357b2b95afd4683a0c3ee4987e13bf502d3e02))
+
 ## [2.0.8](https://github.com/vinicunca/pohon/compare/v2.0.7...v2.0.8) (2026-10-10)
 
 ## [2.0.7](https://github.com/vinicunca/pohon/compare/v2.0.6...v2.0.7) (2026-10-10)
