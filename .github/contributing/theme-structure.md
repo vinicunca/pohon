@@ -84,7 +84,7 @@ export default (options: Required<ModuleOptions>) => ({
     {
       color: 'neutral',
       variant: 'outline',
-      class: 'ring ring-inset ring-ring-accented color-text bg-background'
+      class: 'ring ring-inset ring-border-accented color-text bg-background'
     }
   ],
   defaultVariants: {
@@ -131,8 +131,8 @@ Always use semantic colors, never UnoCSS palette colors:
 
 ### Border Colors
 - `border-border` - Standard borders
-- `ring-ring` - Focus rings
-- `ring-ring-accented` - Accented rings
+- `ring-border` - Focus rings
+- `ring-border-accented` - Accented rings
 - `divide-border` - Dividers
 
 ### Theme Colors
@@ -232,7 +232,7 @@ compoundVariants: [
   {
     color: 'neutral',
     variant: ['outline', 'subtle'],
-    class: 'focus-visible:ring-2 focus-visible:ring-ring-inverted'
+    class: 'focus-visible:ring-2 focus-visible:ring-border-inverted'
   }
 ]
 ```

@@ -57,9 +57,9 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
     variant: {
-      outline: 'color-text-highlighted bg-background ring ring-inset ring-ring-accented',
+      outline: 'color-text-highlighted bg-background ring ring-inset ring-border-accented',
       soft: 'color-text-highlighted bg-background-elevated/50 hover:bg-background-elevated focus:bg-background-elevated disabled:bg-background-elevated/50',
-      subtle: 'color-text-highlighted bg-background-elevated ring ring-inset ring-ring-accented',
+      subtle: 'color-text-highlighted bg-background-elevated ring ring-inset ring-border-accented',
       ghost: 'color-text-highlighted bg-transparent hover:bg-background-elevated focus:bg-background-elevated disabled:bg-transparent dark:disabled:bg-transparent',
       none: 'color-text-highlighted bg-transparent focus:outline-none',
     },
@@ -101,15 +101,15 @@ export default (options: Required<ModuleOptions>) => ({
   })), {
     color: 'neutral',
     variant: ['outline', 'subtle'],
-    class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
+    class: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:ring-border-inverted',
   }, {
     color: 'neutral',
     variant: ['soft', 'ghost'],
-    class: 'outline-outline-inverted/25 focus-visible:outline-3',
+    class: 'outline-border-inverted/25 focus-visible:outline-3',
   }, {
     color: 'neutral',
     highlight: true,
-    class: 'ring ring-inset ring-ring-inverted',
+    class: 'ring ring-inset ring-border-inverted',
   }, {
     leading: true,
     size: 'xs',

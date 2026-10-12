@@ -47,7 +47,7 @@ export const themeEmpty = {
         description: 'color-text-dimmed',
       },
       outline: {
-        root: 'bg-background ring ring-ring',
+        root: 'bg-background ring ring-border',
         description: 'color-text-muted',
       },
       soft: {
@@ -55,7 +55,7 @@ export const themeEmpty = {
         description: 'color-text-toned',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-ring',
+        root: 'bg-background-elevated/50 ring ring-border',
         description: 'color-text-toned',
       },
       naked: {

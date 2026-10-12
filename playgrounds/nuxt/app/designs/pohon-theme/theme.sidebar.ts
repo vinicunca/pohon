@@ -4,7 +4,7 @@ export const themeSidebar = {
     root: 'peer [--sidebar-width-icon:4rem] [--sidebar-width:16rem]',
     gap: 'bg-transparent w-$sidebar-width relative',
     container: 'w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh lg:flex',
-    inner: 'flex flex-col size-full overflow-hidden divide-divide divide-y',
+    inner: 'flex flex-col size-full overflow-hidden divide-border divide-y',
     header: 'px-4 flex gap-1.5 min-h-$ui-header-height items-center overflow-hidden',
     wrapper: 'flex-1 min-w-0',
     title: 'color-text-highlighted font-600 truncate',
@@ -52,7 +52,7 @@ export const themeSidebar = {
       sidebar: {},
       floating: {
         container: 'p-4 border-transparent',
-        inner: 'rounded-lg ring ring-ring shadow-lg',
+        inner: 'rounded-lg ring ring-border shadow-lg',
         rail: 'inset-y-4',
       },
       inset: {

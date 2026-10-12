@@ -3,7 +3,7 @@ import { BRANDS } from '../design.constants';
 
 export const themeToast = {
   slots: {
-    root: 'group p-4 rounded-lg bg-background flex gap-2.5 ring ring-ring shadow-lg relative overflow-hidden',
+    root: 'group p-4 rounded-lg bg-background flex gap-2.5 ring ring-border shadow-lg relative overflow-hidden',
     wrapper: 'flex flex-1 flex-col w-0',
     title: 'text-sm color-text-highlighted font-500',
     description: 'text-sm color-text-muted',
@@ -24,7 +24,7 @@ export const themeToast = {
         },
       ])),
       neutral: {
-        root: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
+        root: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:ring-border-inverted',
         icon: 'color-text-highlighted',
       },
     },

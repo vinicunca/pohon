@@ -18,7 +18,7 @@ export default (options: Required<ModuleOptions>) => ({
         icon: `group-data-[state=checked]:color-${color}`,
       }])),
       neutral: {
-        base: 'data-[state=checked]:bg-background-inverted outline-outline-inverted/25',
+        base: 'data-[state=checked]:bg-background-inverted outline-border-inverted/25',
         icon: 'group-data-[state=checked]:color-text-highlighted',
       },
     },
@@ -98,7 +98,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       highlight: true,
       class: {
-        base: 'ring ring-ring-inverted',
+        base: 'ring ring-border-inverted',
       },
     },
   ],

@@ -10,7 +10,7 @@ export const themeInputTags = defuFn(
     slots: {
       root: (prev: string) => [prev, 'flex-wrap'],
       base: () => 'rounded-md transition-colors',
-      item: 'px-1.5 py-0.5 rounded-sm font-500 inline-flex items-center gap-0.5 ring ring-inset ring-ring-accented bg-background-elevated color-text data-disabled:(cursor-not-allowed opacity-75) wrap-anywhere data-[state="active"]:bg-background-accented',
+      item: 'px-1.5 py-0.5 rounded-sm font-500 inline-flex items-center gap-0.5 ring ring-inset ring-border-accented bg-background-elevated color-text data-disabled:(cursor-not-allowed opacity-75) wrap-anywhere data-[state="active"]:bg-background-accented',
       itemText: '',
       itemDelete: 'inline-flex items-center rounded-xs color-text-dimmed hover:color-text hover:bg-background-accented/75 disabled:pointer-events-none transition-colors',
       itemDeleteIcon: 'shrink-0',

@@ -67,7 +67,7 @@ function onSubmit() {
       />
     </PSidebar>
 
-    <div class="bg-background flex flex-1 flex-col overflow-hidden peer-data-[variant=inset]:m-4 peer-data-[variant=inset]:rounded-xl peer-data-[variant=inset]:ring peer-data-[variant=inset]:ring-ring peer-data-[variant=inset]:shadow-sm lg:peer-data-[variant=floating]:my-4 lg:peer-data-[variant=inset]:mx-0">
+    <div class="bg-background flex flex-1 flex-col overflow-hidden peer-data-[variant=inset]:m-4 peer-data-[variant=inset]:rounded-xl peer-data-[variant=inset]:ring peer-data-[variant=inset]:ring-border peer-data-[variant=inset]:shadow-sm lg:peer-data-[variant=floating]:my-4 lg:peer-data-[variant=inset]:mx-0">
       <Navbar class="w-full relative">
         <PSelect
           v-model="variant"

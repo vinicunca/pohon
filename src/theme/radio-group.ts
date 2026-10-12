@@ -8,7 +8,7 @@ export default (options: Required<ModuleOptions>) => ({
     legend: 'mb-1 block font-500 color-text',
     item: 'flex items-start',
     container: 'flex items-center',
-    base: 'rounded-full ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none',
+    base: 'rounded-full ring ring-inset ring-border-accented overflow-hidden focus-visible:outline-none',
     indicator: 'flex size-full items-center justify-center after:content-empty after:rounded-full after:bg-background',
     wrapper: 'w-full',
     label: 'block font-500 color-text',
@@ -244,7 +244,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       highlight: true,
       class: {
-        base: 'ring-ring-inverted',
+        base: 'ring-border-inverted',
       },
     },
   ],

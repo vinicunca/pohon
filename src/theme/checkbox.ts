@@ -15,7 +15,7 @@ export default (options: Required<ModuleOptions>) => ({
   slots: {
     root: 'relative flex items-start',
     container: 'flex items-center',
-    base: 'rounded-sm ring ring-inset ring-ring-accented overflow-hidden focus-visible:outline-none',
+    base: 'rounded-sm ring ring-inset ring-border-accented overflow-hidden focus-visible:outline-none',
     indicator: 'flex items-center justify-center size-full color-text-inverted',
     icon: 'shrink-0',
     wrapper: 'w-full',
@@ -201,7 +201,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       highlight: true,
       class: {
-        base: 'ring-ring-inverted',
+        base: 'ring-border-inverted',
       },
     },
   ],

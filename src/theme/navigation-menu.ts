@@ -28,7 +28,7 @@ export default (options: Required<ModuleOptions>) => ({
     childLinkDescription: 'color-text-muted',
     separator: 'bg-border px-2 h-px',
     viewportWrapper: 'flex w-full start-0 top-full absolute',
-    viewport: 'rounded-md bg-background h-$akar-navigation-menu-viewport-height w-full ring ring-ring shadow-lg origin-[top_center] transition-[width,height,left,right]-280 ease-out relative z-1 overflow-hidden motion-reduce:transition-none data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:zoom-in-90',
+    viewport: 'rounded-md bg-background h-$akar-navigation-menu-viewport-height w-full ring ring-border shadow-lg origin-[top_center] transition-[width,height,left,right]-280 ease-out relative z-1 overflow-hidden motion-reduce:transition-none data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:zoom-in-90',
     content: '',
     indicator: 'flex h-2.5 w-$akar-navigation-menu-indicator-size translate-x-$akar-navigation-menu-indicator-position transition-[transform,width]-280 ease-out items-end bottom-0 left-0 justify-center absolute z-2 overflow-hidden data-[state=hidden]:opacity-0 data-[state=hidden]:animate-out data-[state=hidden]:fade-out motion-reduce:transition-none data-[state=visible]:animate-in data-[state=visible]:fade-in',
     arrow: 'border-border bg-background border rounded-xs size-2.5 rotate-45 top-[50%] relative z-1',
@@ -40,8 +40,8 @@ export default (options: Required<ModuleOptions>) => ({
         childLink: `before:outline-${color}/25`,
       }])),
       neutral: {
-        link: 'before:outline-outline-inverted/25',
-        childLink: 'before:outline-outline-inverted/25',
+        link: 'before:outline-border-inverted/25',
+        childLink: 'before:outline-border-inverted/25',
       },
     },
     highlightColor: {

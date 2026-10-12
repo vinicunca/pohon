@@ -35,7 +35,7 @@ export default (options: Required<ModuleOptions>) => ({
         description: 'color-text-dimmed',
       },
       outline: {
-        root: 'bg-background ring ring-ring',
+        root: 'bg-background ring ring-border',
         description: 'color-text-muted',
       },
       soft: {
@@ -43,7 +43,7 @@ export default (options: Required<ModuleOptions>) => ({
         description: 'color-text-toned',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-ring',
+        root: 'bg-background-elevated/50 ring ring-border',
         description: 'color-text-toned',
       },
       ghost: {
@@ -112,7 +112,7 @@ export default (options: Required<ModuleOptions>) => ({
     to: true,
     highlight: false,
     class: {
-      root: 'hover:ring-ring-accented',
+      root: 'hover:ring-border-accented',
     },
   }, {
     variant: ['outline', 'subtle'],
@@ -137,7 +137,7 @@ export default (options: Required<ModuleOptions>) => ({
     highlightColor: 'neutral',
     highlight: true,
     class: {
-      root: 'ring-ring-inverted',
+      root: 'ring-border-inverted',
     },
   }, ...(options.theme.colors || []).map((spotlightColor: string) => ({
     spotlightColor,

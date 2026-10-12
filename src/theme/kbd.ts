@@ -42,7 +42,7 @@ export default (options: Required<ModuleOptions>) => ({
   }, {
     color: 'neutral',
     variant: 'outline',
-    class: 'ring ring-inset ring-ring-accented color-text bg-background',
+    class: 'ring ring-inset ring-border-accented color-text bg-background',
   }, {
     color: 'neutral',
     variant: 'soft',
@@ -50,7 +50,7 @@ export default (options: Required<ModuleOptions>) => ({
   }, {
     color: 'neutral',
     variant: 'subtle',
-    class: 'ring ring-inset ring-ring-accented color-text bg-background-elevated',
+    class: 'ring ring-inset ring-border-accented color-text bg-background-elevated',
   }],
   defaultVariants: {
     variant: 'outline',

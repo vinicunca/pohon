@@ -5,6 +5,7 @@ export default defineBuildConfig({
     // Vue support
     './src/unplugin',
     './src/vite',
+    './src/unocss',
   ],
   rollup: {
     replace: {

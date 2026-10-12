@@ -38,7 +38,7 @@ export const themePageCard = {
         description: 'color-text-dimmed',
       },
       outline: {
-        root: 'bg-background ring ring-ring',
+        root: 'bg-background ring ring-border',
         description: 'color-text-muted',
       },
       soft: {
@@ -46,7 +46,7 @@ export const themePageCard = {
         description: 'color-text-toned',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-ring',
+        root: 'bg-background-elevated/50 ring ring-border',
         description: 'color-text-toned',
       },
       ghost: {
@@ -120,7 +120,7 @@ export const themePageCard = {
       to: true,
       highlight: false,
       class: {
-        root: 'hover:ring-ring-accented',
+        root: 'hover:ring-border-accented',
       },
     },
     {
@@ -149,7 +149,7 @@ export const themePageCard = {
       highlightColor: 'neutral',
       highlight: true,
       class: {
-        root: 'ring-ring-inverted',
+        root: 'ring-border-inverted',
       },
     },
     ...BRANDS.map((spotlightColor: string) => ({

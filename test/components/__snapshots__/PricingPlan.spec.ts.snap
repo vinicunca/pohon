@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`pricingPlan > renders with as correctly 1`] = `
-"<section data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<section data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -32,7 +32,7 @@ exports[`pricingPlan > renders with as correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with badge correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -48,7 +48,7 @@ exports[`pricingPlan > renders with badge correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with badge object correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -64,7 +64,7 @@ exports[`pricingPlan > renders with badge object correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with badge slot correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -94,7 +94,7 @@ exports[`pricingPlan > renders with badge slot correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with billing cycle correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -114,7 +114,7 @@ exports[`pricingPlan > renders with billing cycle correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with billing period correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -136,7 +136,7 @@ exports[`pricingPlan > renders with billing period correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with billing slot correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -167,7 +167,7 @@ exports[`pricingPlan > renders with billing slot correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with body slot correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">Body slot</div>
   <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
@@ -182,7 +182,7 @@ exports[`pricingPlan > renders with body slot correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with button correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -205,7 +205,7 @@ exports[`pricingPlan > renders with button correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with button slot correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -232,7 +232,7 @@ exports[`pricingPlan > renders with button slot correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with class correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring rounded-xl">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border rounded-xl">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -263,7 +263,7 @@ exports[`pricingPlan > renders with class correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with description correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -279,7 +279,7 @@ exports[`pricingPlan > renders with description correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with description slot correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -310,7 +310,7 @@ exports[`pricingPlan > renders with description slot correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with discount correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -330,7 +330,7 @@ exports[`pricingPlan > renders with discount correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with discount slot correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -361,7 +361,7 @@ exports[`pricingPlan > renders with discount slot correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with features correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -381,7 +381,7 @@ exports[`pricingPlan > renders with features correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with features object correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -401,7 +401,7 @@ exports[`pricingPlan > renders with features object correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with features slot correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -428,7 +428,7 @@ exports[`pricingPlan > renders with features slot correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with footer slot correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -452,7 +452,7 @@ exports[`pricingPlan > renders with footer slot correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with header slot correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <div data-slot="header" class="">Header slot</div>
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -483,7 +483,7 @@ exports[`pricingPlan > renders with header slot correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with highlight correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring ring-2 ring-inset ring-primary">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border ring-2 ring-inset ring-primary">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -514,7 +514,7 @@ exports[`pricingPlan > renders with highlight correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with orientation horizontal correctly 1`] = `
-"<div data-slot="root" data-orientation="horizontal" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 grid-cols-1 justify-between divide-divide divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="horizontal" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 grid-cols-1 justify-between divide-border divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0 pb-6 justify-center lg:pb-0 lg:pe-6 lg:col-span-2">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -545,7 +545,7 @@ exports[`pricingPlan > renders with orientation horizontal correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with orientation vertical correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -576,7 +576,7 @@ exports[`pricingPlan > renders with orientation vertical correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with price correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -596,7 +596,7 @@ exports[`pricingPlan > renders with price correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with price slot correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -627,7 +627,7 @@ exports[`pricingPlan > renders with price slot correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with scale correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring lg:scale-[1.1] lg:z-1">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border lg:scale-[1.1] lg:z-1">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -658,7 +658,7 @@ exports[`pricingPlan > renders with scale correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with tagline correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -679,7 +679,7 @@ exports[`pricingPlan > renders with tagline correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with tagline slot correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -710,7 +710,7 @@ exports[`pricingPlan > renders with tagline slot correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with terms correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -731,7 +731,7 @@ exports[`pricingPlan > renders with terms correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with terms slot correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -762,7 +762,7 @@ exports[`pricingPlan > renders with terms slot correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with title correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -778,7 +778,7 @@ exports[`pricingPlan > renders with title correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with title slot correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -809,7 +809,7 @@ exports[`pricingPlan > renders with title slot correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with ui correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -840,7 +840,7 @@ exports[`pricingPlan > renders with ui correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with variant outline correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">
@@ -933,7 +933,7 @@ exports[`pricingPlan > renders with variant solid correctly 1`] = `
 `;
 
 exports[`pricingPlan > renders with variant subtle correctly 1`] = `
-"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background-elevated/50 ring ring-ring">
+"<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background-elevated/50 ring ring-border">
   <!--v-if-->
   <div data-slot="body" class="flex flex-col min-w-0">
     <div data-slot="titleWrapper" class="flex items-center gap-3">

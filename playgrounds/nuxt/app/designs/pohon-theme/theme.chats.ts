@@ -136,7 +136,7 @@ export const themeChatMessage = {
       color: 'neutral',
       variant: 'outline',
       class: {
-        content: 'bg-background ring ring-ring',
+        content: 'bg-background ring ring-border',
       },
     },
     {
@@ -150,7 +150,7 @@ export const themeChatMessage = {
       color: 'neutral',
       variant: 'subtle',
       class: {
-        content: 'bg-background-elevated/50 ring ring-ring',
+        content: 'bg-background-elevated/50 ring ring-border',
       },
     },
   ],
@@ -177,7 +177,7 @@ export const themeChatTool = {
         actions: 'pt-2',
       },
       card: {
-        root: 'outline-primary/25 rounded-md ring ring-ring overflow-hidden has-focus-visible:outline-3 has-focus-visible:ring-primary',
+        root: 'outline-primary/25 rounded-md ring ring-border overflow-hidden has-focus-visible:outline-3 has-focus-visible:ring-primary',
         trigger: 'px-2 py-1 focus:outline-none',
         trailingIcon: 'ms-auto',
         body: 'p-2 border-t border-border max-h-[200px] overflow-y-auto focus:outline-none',
@@ -246,13 +246,13 @@ export const themeChatPrompt = {
   variants: {
     variant: {
       outline: {
-        root: 'bg-background/75 ring ring-ring',
+        root: 'bg-background/75 ring ring-border',
       },
       soft: {
         root: 'bg-background-elevated/50',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-ring',
+        root: 'bg-background-elevated/50 ring ring-border',
       },
     },
   },
@@ -270,12 +270,12 @@ export const themeChatPrompt = {
     {
       color: 'neutral',
       variant: ['outline', 'subtle'],
-      class: { root: `outline-outline-inverted/25 ${focusHighlight('outline-3 ring-ring-inverted')}` },
+      class: { root: `outline-border-inverted/25 ${focusHighlight('outline-3 ring-border-inverted')}` },
     },
     {
       color: 'neutral',
       variant: 'soft',
-      class: { root: `outline-outline-inverted/25 ${focusHighlight('outline-3')}` },
+      class: { root: `outline-border-inverted/25 ${focusHighlight('outline-3')}` },
     },
   ],
 } satisfies PThemeChatPrompt;

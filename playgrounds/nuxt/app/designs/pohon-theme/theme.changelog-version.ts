@@ -14,7 +14,7 @@ export const themeChangelogVersion = {
     authors: 'flex flex-wrap gap-x-4 gap-y-1.5',
     footer: 'pt-5 border-t border-border flex items-center justify-between',
     indicator: 'gap-3 min-w-0 w-32 hidden items-center start-0 top-0 justify-end absolute lg:flex',
-    dot: 'my-1 rounded-full bg-background flex size-4 ring ring-ring items-center justify-center',
+    dot: 'my-1 rounded-full bg-background flex size-4 ring ring-border items-center justify-center',
     dotInner: 'rounded-full bg-primary size-2',
   },
   variants: {

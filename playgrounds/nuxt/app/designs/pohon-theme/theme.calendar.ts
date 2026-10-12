@@ -44,7 +44,7 @@ export const themeCalendar = {
       }])),
       neutral: {
         headCell: 'color-text-highlighted',
-        cellTrigger: 'outline-outline-inverted/25',
+        cellTrigger: 'outline-border-inverted/25',
       },
     },
     size: {
@@ -140,7 +140,7 @@ export const themeCalendar = {
       color: 'neutral',
       variant: 'outline',
       class: {
-        cellTrigger: 'data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-ring-accented data-[selected]:color-text data-[selected]:bg-background data-[today]:not-[[data-selected]]:color-text-highlighted data-[highlighted]:bg-background-inverted/10 hover:not-[[data-selected]]:bg-background-inverted/10',
+        cellTrigger: 'data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-border-accented data-[selected]:color-text data-[selected]:bg-background data-[today]:not-[[data-selected]]:color-text-highlighted data-[highlighted]:bg-background-inverted/10 hover:not-[[data-selected]]:bg-background-inverted/10',
       },
     },
     {
@@ -154,7 +154,7 @@ export const themeCalendar = {
       color: 'neutral',
       variant: 'subtle',
       class: {
-        cellTrigger: 'data-[selected]:bg-background-elevated data-[selected]:color-text data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-ring-accented data-[today]:not-[[data-selected]]:color-text-highlighted data-[highlighted]:bg-background-inverted/20 hover:not-[[data-selected]]:bg-background-inverted/10',
+        cellTrigger: 'data-[selected]:bg-background-elevated data-[selected]:color-text data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-border-accented data-[today]:not-[[data-selected]]:color-text-highlighted data-[highlighted]:bg-background-inverted/20 hover:not-[[data-selected]]:bg-background-inverted/10',
       },
     },
 

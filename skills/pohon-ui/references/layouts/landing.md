@@ -81,7 +81,7 @@ const items = computed<NavigationMenuItem[]>(() => [{
     ]"
     orientation="horizontal"
   >
-    <img src="/hero-image.png" alt="App screenshot" class="rounded-lg shadow-2xl ring ring-ring" />
+    <img src="/hero-image.png" alt="App screenshot" class="rounded-lg shadow-2xl ring ring-border" />
   </PPageHero>
 
   <PPageSection

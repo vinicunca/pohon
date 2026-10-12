@@ -74,7 +74,7 @@ export const themeFileUpload = {
       grid: {
         fileWrapper: 'hidden',
         fileLeadingAvatar: 'pohon:rounded-lg pohon:size-full',
-        fileTrailingButton: 'border-2 border-border-bg absolute -end-1.5 -top-1.5 pohon:p-0 pohon:rounded-full',
+        fileTrailingButton: 'border-2 border-background absolute -end-1.5 -top-1.5 pohon:p-0 pohon:rounded-full',
       },
     },
     position: {
@@ -109,7 +109,7 @@ export const themeFileUpload = {
     })),
     {
       color: 'neutral',
-      class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:border-border-inverted',
+      class: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:border-border-inverted',
     },
     {
       color: 'neutral',

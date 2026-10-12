@@ -20,13 +20,13 @@ export const themeCard = {
         description: 'color-text-dimmed',
       },
       outline: {
-        root: 'bg-background ring ring-ring divide-divide divide-y',
+        root: 'bg-background ring ring-border divide-border divide-y',
       },
       soft: {
-        root: 'bg-background-elevated/50 divide-divide divide-y',
+        root: 'bg-background-elevated/50 divide-border divide-y',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-ring divide-divide divide-y',
+        root: 'bg-background-elevated/50 ring ring-border divide-border divide-y',
       },
     },
   },

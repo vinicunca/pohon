@@ -4,7 +4,7 @@ import type { PThemeModal } from 'pohon-ui';
 export const themeModal = {
   slots: {
     overlay: 'inset-0 fixed',
-    content: 'bg-background flex flex-col divide-divide divide-y focus:outline-none',
+    content: 'bg-background flex flex-col divide-border divide-y focus:outline-none',
     header: 'p-4 flex gap-1.5 min-h-$ui-header-height items-center sm:px-6',
     wrapper: '',
     body: 'p-4 flex-1 sm:p-6',
@@ -25,7 +25,7 @@ export const themeModal = {
         content: 'inset-0',
       },
       false: {
-        content: 'rounded-lg max-w-lg w-[calc(100vw-2rem)] ring ring-ring shadow-lg',
+        content: 'rounded-lg max-w-lg w-[calc(100vw-2rem)] ring ring-border shadow-lg',
       },
     },
     overlay: {

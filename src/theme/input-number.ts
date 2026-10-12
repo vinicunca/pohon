@@ -73,15 +73,15 @@ export default (options: Required<ModuleOptions>) => {
     })), {
       color: 'neutral',
       variant: ['outline', 'subtle'],
-      class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
+      class: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:ring-border-inverted',
     }, {
       color: 'neutral',
       variant: ['soft', 'ghost'],
-      class: 'outline-outline-inverted/25 focus-visible:outline-3',
+      class: 'outline-border-inverted/25 focus-visible:outline-3',
     }, {
       color: 'neutral',
       highlight: true,
-      class: 'ring ring-inset ring-ring-inverted',
+      class: 'ring ring-inset ring-border-inverted',
     }, {
       orientation: 'horizontal',
       decrement: false,

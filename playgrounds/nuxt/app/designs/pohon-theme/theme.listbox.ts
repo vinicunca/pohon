@@ -5,7 +5,7 @@ import { BRANDS } from '../design.constants';
 
 export const themeListbox = {
   slots: {
-    root: 'rounded-lg flex flex-col min-h-0 min-w-0 ring ring-ring ring-inset overflow-hidden',
+    root: 'rounded-lg flex flex-col min-h-0 min-w-0 ring ring-border ring-inset overflow-hidden',
     input: 'border-b border-border',
     content: 'flex-1 max-h-60 relative overflow-y-auto scroll-py-1 focus:outline-none',
     group: 'p-1 isolate',
@@ -95,7 +95,7 @@ export const themeListbox = {
         root: `outline-${color}/25 has-focus-visible:outline-3 has-focus-visible:ring-${color}`,
       }])),
       neutral: {
-        root: 'outline-outline-inverted/25 has-focus-visible:outline-3 has-focus-visible:ring-ring-inverted',
+        root: 'outline-border-inverted/25 has-focus-visible:outline-3 has-focus-visible:ring-border-inverted',
       },
     },
     virtualize: {
@@ -103,7 +103,7 @@ export const themeListbox = {
         content: 'p-1 isolate',
       },
       false: {
-        content: 'divide-divide divide-y',
+        content: 'divide-border divide-y',
       },
     },
     disabled: {
@@ -127,7 +127,7 @@ export const themeListbox = {
       color: 'neutral',
       highlight: true,
       class: {
-        root: 'ring ring-inset ring-ring-inverted',
+        root: 'ring ring-inset ring-border-inverted',
       },
     },
   ],

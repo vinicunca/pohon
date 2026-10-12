@@ -15,7 +15,7 @@ export default (options: Required<ModuleOptions>) => ({
       }])),
       neutral: {
         range: 'bg-background-inverted',
-        thumb: 'ring-ring-inverted outline-outline-inverted/25',
+        thumb: 'ring-border-inverted outline-border-inverted/25',
       },
     },
     size: {

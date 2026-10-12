@@ -3,7 +3,7 @@ import type { ModuleOptions } from '../module';
 export default (options: Required<ModuleOptions>) => ({
   slots: {
     overlay: 'fixed inset-0 bg-background-elevated/75',
-    content: 'fixed bg-background ring ring-ring flex focus:outline-none',
+    content: 'fixed bg-background ring ring-border flex focus:outline-none',
     handle: ['!bg-background-accented shrink-0', options.theme.transitions && 'transition-opacity ease-out'],
     container: 'w-full flex flex-col gap-4 p-4 overflow-y-auto',
     header: 'flex items-center gap-1.5 min-h-8',

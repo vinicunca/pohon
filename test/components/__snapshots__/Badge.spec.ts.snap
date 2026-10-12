@@ -57,7 +57,7 @@ exports[`badge > renders with leadingIcon correctly 1`] = `
 `;
 
 exports[`badge > renders with neutral variant outline correctly 1`] = `
-"<span data-slot="base" class="font-500 inline-flex items-center text-xs rounded-md gap-1 ring ring-inset ring-ring-accented color-text bg-background px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+"<span data-slot="base" class="font-500 inline-flex items-center text-xs rounded-md gap-1 ring ring-inset ring-border-accented color-text bg-background px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
 <!--v-if--></span>"
 `;
 
@@ -72,7 +72,7 @@ exports[`badge > renders with neutral variant solid correctly 1`] = `
 `;
 
 exports[`badge > renders with neutral variant subtle correctly 1`] = `
-"<span data-slot="base" class="font-500 inline-flex items-center text-xs rounded-md gap-1 ring ring-inset ring-ring-accented color-text bg-background-elevated px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+"<span data-slot="base" class="font-500 inline-flex items-center text-xs rounded-md gap-1 ring ring-inset ring-border-accented color-text bg-background-elevated px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
 <!--v-if--></span>"
 `;
 

@@ -9,7 +9,7 @@ export const themeTable = {
     base: 'min-w-full overflow-clip',
     caption: 'sr-only',
     thead: 'relative',
-    tbody: 'isolate divide-divide divide-y [&>tr]:data-[selectable=true]:outline-primary/25 [&>tr]:data-[selectable=true]:focus-visible:outline-3 [&>tr]:data-[selectable=true]:hover:bg-background-elevated/50',
+    tbody: 'isolate divide-border divide-y [&>tr]:data-[selectable=true]:outline-primary/25 [&>tr]:data-[selectable=true]:focus-visible:outline-3 [&>tr]:data-[selectable=true]:hover:bg-background-elevated/50',
     tfoot: 'relative',
     tr: 'data-[selected=true]:bg-background-elevated/50',
     th: 'text-sm color-text-highlighted font-600 px-4 py-3.5 text-start [&:has([role=checkbox])]:pe-0',

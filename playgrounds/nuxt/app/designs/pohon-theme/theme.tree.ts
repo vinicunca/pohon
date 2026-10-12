@@ -28,7 +28,7 @@ export const themeTree = {
         },
       ])),
       neutral: {
-        link: 'before:outline-outline-inverted/25',
+        link: 'before:outline-border-inverted/25',
       },
     },
     size: {

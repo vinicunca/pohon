@@ -4,7 +4,7 @@ import type { PThemeSlideover } from 'pohon-ui';
 export const themeSlideover = {
   slots: {
     overlay: 'bg-background-elevated/75 inset-0 fixed',
-    content: 'bg-background flex flex-col ring-ring fixed divide-divide divide-y focus:outline-none sm:(ring shadow-lg)',
+    content: 'bg-background flex flex-col ring-border fixed divide-border divide-y focus:outline-none sm:(ring shadow-lg)',
     header: 'p-4 flex gap-1.5 min-h-$ui-header-height items-center sm:px-6',
     wrapper: '',
     body: 'p-4 flex-1 overflow-y-auto sm:p-6',

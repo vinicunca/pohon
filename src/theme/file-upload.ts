@@ -71,7 +71,7 @@ export default (options: Required<ModuleOptions>) => ({
       grid: {
         fileWrapper: 'hidden',
         fileLeadingAvatar: 'pohon:rounded-lg pohon:size-full',
-        fileTrailingButton: 'border-border-bg pohon:p-0 border-2 pohon:rounded-full absolute -end-1.5 -top-1.5',
+        fileTrailingButton: 'border-background pohon:p-0 border-2 pohon:rounded-full absolute -end-1.5 -top-1.5',
       },
     },
     position: {
@@ -103,7 +103,7 @@ export default (options: Required<ModuleOptions>) => ({
     class: `border-${color}`,
   })), {
     color: 'neutral',
-    class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:border-border-inverted',
+    class: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:border-border-inverted',
   }, {
     color: 'neutral',
     highlight: true,

@@ -24,7 +24,7 @@ export default (options: Required<ModuleOptions>) => ({
         link: `before:outline-${color}/25`,
       }])),
       neutral: {
-        link: 'before:outline-outline-inverted/25',
+        link: 'before:outline-border-inverted/25',
       },
     },
     highlightColor: {

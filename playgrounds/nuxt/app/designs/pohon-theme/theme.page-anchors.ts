@@ -21,7 +21,7 @@ export const themePageAnchors = {
       },
       false: {
         link: 'color-text-muted font-500 transition-colors hover:color-text',
-        linkLeading: 'color-text-dimmed bg-background-elevated/50 ring-ring-accented transition group-hover:(color-text-inverted bg-primary ring-primary)',
+        linkLeading: 'color-text-dimmed bg-background-elevated/50 ring-border-accented transition group-hover:(color-text-inverted bg-primary ring-primary)',
       },
     },
   },

@@ -6,7 +6,7 @@ export default (options: Required<ModuleOptions>) => ({
     base: 'min-w-full overflow-clip',
     caption: 'sr-only',
     thead: 'relative',
-    tbody: 'isolate divide-divide divide-y [&>tr]:data-[selectable=true]:outline-primary/25 [&>tr]:data-[selectable=true]:focus-visible:outline-3 [&>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&>tr]:data-[selectable=true]:-outline-offset-3',
+    tbody: 'isolate divide-border divide-y [&>tr]:data-[selectable=true]:outline-primary/25 [&>tr]:data-[selectable=true]:focus-visible:outline-3 [&>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&>tr]:data-[selectable=true]:-outline-offset-3',
     tfoot: 'relative [&>[data-slot=separator]]:z-2',
     tr: 'data-[selected=true]:bg-background-elevated/50',
     th: 'px-4 py-3.5 text-sm color-text-highlighted text-start font-600 [&:has([role=checkbox])]:pe-0',

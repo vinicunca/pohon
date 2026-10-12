@@ -135,7 +135,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'outline',
       class: {
-        content: 'bg-background ring ring-ring',
+        content: 'bg-background ring ring-border',
       },
     },
     {
@@ -149,7 +149,7 @@ export default (options: Required<ModuleOptions>) => ({
       color: 'neutral',
       variant: 'subtle',
       class: {
-        content: 'bg-background-elevated/50 ring ring-ring',
+        content: 'bg-background-elevated/50 ring ring-border',
       },
     },
   ],

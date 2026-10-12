@@ -76,7 +76,7 @@ export const themeAlert = {
       color: 'neutral',
       variant: 'outline',
       class: {
-        root: 'color-text-highlighted bg-background ring ring-inset ring-ring',
+        root: 'color-text-highlighted bg-background ring ring-inset ring-border',
       },
     },
     {
@@ -90,7 +90,7 @@ export const themeAlert = {
       color: 'neutral',
       variant: 'subtle',
       class: {
-        root: 'color-text-highlighted bg-background-elevated/50 ring ring-inset ring-ring-accented',
+        root: 'color-text-highlighted bg-background-elevated/50 ring ring-inset ring-border-accented',
       },
     },
   ],

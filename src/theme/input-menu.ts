@@ -9,8 +9,8 @@ export default (options: Required<ModuleOptions>) => {
       base: () => ['rounded-md', options.theme.transitions && 'transition-colors'],
       trailing: 'group flex items-center end-0 inset-y-0 absolute focus:outline-none disabled:opacity-75 disabled:cursor-not-allowed',
       trailingClear: 'pohon:p-0',
-      arrow: 'fill-fill-bg stroke-stroke',
-      content: 'max-h-[min(15rem,var(--akar-combobox-content-available-height,15rem))] w-$akar-combobox-trigger-width bg-background shadow-lg rounded-md ring ring-ring overflow-hidden data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-$akar-combobox-content-transform-origin pointer-events-auto flex flex-col',
+      arrow: 'fill-background stroke-border',
+      content: 'max-h-[min(15rem,var(--akar-combobox-content-available-height,15rem))] w-$akar-combobox-trigger-width bg-background shadow-lg rounded-md ring ring-border overflow-hidden data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-$akar-combobox-content-transform-origin pointer-events-auto flex flex-col',
       viewport: 'relative scroll-py-1 overflow-y-auto flex-1',
       group: 'p-1 isolate',
       empty: 'text-center color-text-muted',
@@ -27,7 +27,7 @@ export default (options: Required<ModuleOptions>) => {
       itemWrapper: 'flex-1 flex flex-col min-w-0',
       itemLabel: 'truncate',
       itemDescription: 'truncate color-text-muted',
-      tagsItem: 'px-1.5 py-0.5 rounded-sm font-500 inline-flex items-center gap-0.5 ring ring-inset ring-ring-accented bg-background-elevated color-text data-[disabled]:cursor-not-allowed data-[disabled]:opacity-75',
+      tagsItem: 'px-1.5 py-0.5 rounded-sm font-500 inline-flex items-center gap-0.5 ring ring-inset ring-border-accented bg-background-elevated color-text data-[disabled]:cursor-not-allowed data-[disabled]:opacity-75',
       tagsItemText: 'truncate',
       tagsItemDelete: ['inline-flex items-center rounded-xs color-text-dimmed hover:color-text hover:bg-background-accented/75 disabled:pointer-events-none', options.theme.transitions && 'transition-colors'],
       tagsItemDeleteIcon: 'shrink-0',
@@ -47,7 +47,7 @@ export default (options: Required<ModuleOptions>) => {
           viewport: 'p-1 isolate',
         },
         false: {
-          viewport: 'divide-y divide-divide',
+          viewport: 'divide-y divide-border',
         },
       },
       multiple: {
@@ -162,7 +162,7 @@ export default (options: Required<ModuleOptions>) => {
         color: 'neutral',
         multiple: true,
         variant: ['outline', 'subtle'],
-        class: 'has-focus-visible:outline-3 has-focus-visible:ring-ring-inverted',
+        class: 'has-focus-visible:outline-3 has-focus-visible:ring-border-inverted',
       },
     ],
   }, input(options));

@@ -28,7 +28,7 @@ export const themeTabs = {
         content: `outline-${color}/25`,
       }])),
       neutral: {
-        content: 'outline-outline-inverted/25',
+        content: 'outline-border-inverted/25',
       },
     },
     variant: {
@@ -135,7 +135,7 @@ export const themeTabs = {
       class: {
         indicator: 'bg-background-inverted',
         trigger: [
-          'data-[state=active]:color-text-inverted outline-outline-inverted/25 focus-visible:outline-3',
+          'data-[state=active]:color-text-inverted outline-border-inverted/25 focus-visible:outline-3',
           'list-no-indicator:data-[state=active]:before:bg-background-inverted',
         ],
       },
@@ -157,7 +157,7 @@ export const themeTabs = {
       class: {
         indicator: 'bg-background-inverted',
         trigger: [
-          'data-[state=active]:color-text-highlighted outline-outline-inverted/25 focus-visible:outline-3',
+          'data-[state=active]:color-text-highlighted outline-border-inverted/25 focus-visible:outline-3',
           'list-no-indicator:data-[state=active]:after:bg-background-inverted',
         ],
       },

@@ -53,7 +53,7 @@ const items = computed<Array<DropdownMenuItem>>(() => [{
     <template #item-leading="{ item }">
       <div class="inline-flex shrink-0 size-5 items-center justify-center">
         <span
-          class="ring-bg bg---chip-light dark:bg---chip-dark rounded-full size-2 ring"
+          class="bg---chip-light dark:bg---chip-dark rounded-full size-2 ring ring-background"
           :style="{
             '--chip-light': `var(--color-${(item as any).chip}-500)`,
             '--chip-dark': `var(--color-${(item as any).chip}-400)`,

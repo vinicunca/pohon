@@ -34,7 +34,7 @@ export default (options: Required<ModuleOptions>) => ({
     color: 'neutral',
     to: true,
     class: {
-      base: 'hover:border-border-inverted outline-outline-inverted/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-border-inverted',
+      base: 'hover:border-border-inverted outline-border-inverted/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-border-inverted',
       externalIcon: 'group-hover:color-text-highlighted',
     },
   }],

@@ -79,7 +79,7 @@ export const themeBadge = {
     {
       color: 'neutral',
       variant: 'outline',
-      class: 'ring ring-inset ring-ring-accented color-text bg-background',
+      class: 'ring ring-inset ring-border-accented color-text bg-background',
     },
     {
       color: 'neutral',
@@ -89,7 +89,7 @@ export const themeBadge = {
     {
       color: 'neutral',
       variant: 'subtle',
-      class: 'ring ring-inset ring-ring-accented color-text bg-background-elevated',
+      class: 'ring ring-inset ring-border-accented color-text bg-background-elevated',
     },
     {
       size: 'xs',

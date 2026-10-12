@@ -22,13 +22,13 @@ export default (options: Required<ModuleOptions>) => ({
     },
     variant: {
       outline: {
-        root: 'bg-background/75 ring ring-ring',
+        root: 'bg-background/75 ring ring-border',
       },
       soft: {
         root: 'bg-background-elevated/50',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-ring',
+        root: 'bg-background-elevated/50 ring ring-border',
       },
       naked: {
         root: '',
@@ -49,12 +49,12 @@ export default (options: Required<ModuleOptions>) => ({
     {
       color: 'neutral',
       variant: ['outline', 'subtle'],
-      class: { root: `outline-outline-inverted/25 ${focusHighlight('outline-3 ring-ring-inverted')}` },
+      class: { root: `outline-border-inverted/25 ${focusHighlight('outline-3 ring-border-inverted')}` },
     },
     {
       color: 'neutral',
       variant: 'soft',
-      class: { root: `outline-outline-inverted/25 ${focusHighlight('outline-3')}` },
+      class: { root: `outline-border-inverted/25 ${focusHighlight('outline-3')}` },
     },
   ],
   defaultVariants: {

@@ -38,6 +38,10 @@
       "types": "./dist/vite.d.mts",
       "import": "./dist/vite.mjs"
     },
+    "./unocss": {
+      "types": "./dist/unocss.d.mts",
+      "import": "./dist/unocss.mjs"
+    },
     "./vue-plugin": {
       "types": "./vue-plugin.d.ts"
     },
@@ -79,6 +83,9 @@
       ],
       "vite": [
         "./dist/vite.d.mts"
+      ],
+      "unocss": [
+        "./dist/unocss.d.mts"
       ],
       "vue-plugin": [
         "./vue-plugin.d.ts"

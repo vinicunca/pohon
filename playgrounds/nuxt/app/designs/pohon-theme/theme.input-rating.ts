@@ -49,7 +49,7 @@ export const themeInputRating = {
       }])),
       neutral: {
         indicator: 'data-[state=active]:color-text-highlighted',
-        item: 'outline-outline-inverted/25',
+        item: 'outline-border-inverted/25',
       },
     },
     readonly: {

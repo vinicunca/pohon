@@ -19,7 +19,7 @@ export const themeSwitch = {
         icon: `group-data-[state=checked]:color-${color}`,
       }])),
       neutral: {
-        base: 'outline-outline-inverted/25 data-[state=checked]:bg-background-inverted',
+        base: 'outline-border-inverted/25 data-[state=checked]:bg-background-inverted',
         icon: 'group-data-[state=checked]:color-text-highlighted',
       },
     },
@@ -99,7 +99,7 @@ export const themeSwitch = {
       color: 'neutral',
       highlight: true,
       class: {
-        base: 'ring ring-ring-inverted',
+        base: 'ring ring-border-inverted',
       },
     },
   ],

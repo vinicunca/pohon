@@ -28,7 +28,7 @@ exports[`chatTool > renders with actions correctly 1`] = `
   <div data-slot="actions" data-state="closed" class="flex items-center justify-end gap-1.5 pt-2"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-xs gap-1 color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-2 py-1">
       <!--v-if--><span data-slot="label" class="truncate">Approve</span>
       <!--v-if-->
-    </button><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-xs gap-1 color-text bg-background-elevated hover:bg-background-accented/75 active:bg-background-accented/75 outline-outline-inverted/25 focus-visible:outline-3 disabled:bg-background-elevated aria-disabled:bg-background-elevated px-2 py-1">
+    </button><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-xs gap-1 color-text bg-background-elevated hover:bg-background-accented/75 active:bg-background-accented/75 outline-border-inverted/25 focus-visible:outline-3 disabled:bg-background-elevated aria-disabled:bg-background-elevated px-2 py-1">
       <!--v-if--><span data-slot="label" class="truncate">Deny</span>
       <!--v-if-->
     </button></div>
@@ -48,7 +48,7 @@ exports[`chatTool > renders with actions slot correctly 1`] = `
 `;
 
 exports[`chatTool > renders with actions variant card correctly 1`] = `
-"<div data-state="closed" data-slot="root" class="rounded-md ring ring-ring overflow-hidden outline-primary/25 has-focus-visible:outline-3 has-focus-visible:ring-primary"><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors px-2 py-1 focus:outline-none">
+"<div data-state="closed" data-slot="root" class="rounded-md ring ring-border overflow-hidden outline-primary/25 has-focus-visible:outline-3 has-focus-visible:ring-primary"><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors px-2 py-1 focus:outline-none">
     <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>
@@ -233,7 +233,7 @@ exports[`chatTool > renders with ui correctly 1`] = `
 `;
 
 exports[`chatTool > renders with variant card correctly 1`] = `
-"<div data-state="closed" data-slot="root" class="rounded-md ring ring-ring overflow-hidden outline-primary/25 has-focus-visible:outline-3 has-focus-visible:ring-primary"><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors px-2 py-1 focus:outline-none">
+"<div data-state="closed" data-slot="root" class="rounded-md ring ring-border overflow-hidden outline-primary/25 has-focus-visible:outline-3 has-focus-visible:ring-primary"><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors px-2 py-1 focus:outline-none">
     <!--v-if--><span data-slot="label" class="truncate">Searching components<!--v-if--></span>
     <!--v-if-->
   </button>

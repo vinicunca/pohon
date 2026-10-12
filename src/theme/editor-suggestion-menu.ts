@@ -2,8 +2,8 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    content: 'rounded-md bg-background flex flex-col max-h-96 max-w-60 min-w-48 ring ring-ring shadow-lg origin-$akar-dropdown-menu-content-transform-origin overflow-hidden data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95',
-    viewport: 'relative divide-y divide-divide scroll-py-1 overflow-y-auto flex-1',
+    content: 'rounded-md bg-background flex flex-col max-h-96 max-w-60 min-w-48 ring ring-border shadow-lg origin-$akar-dropdown-menu-content-transform-origin overflow-hidden data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95',
+    viewport: 'relative divide-y divide-border scroll-py-1 overflow-y-auto flex-1',
     group: 'p-1 isolate',
     label: 'color-text-highlighted font-semibold flex w-full items-center',
     separator: '-mx-1 my-1 h-px bg-border',

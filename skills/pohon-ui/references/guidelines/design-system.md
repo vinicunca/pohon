@@ -192,7 +192,7 @@ export default defineAppConfig({
       compoundVariants: [{
         color: 'neutral',
         variant: 'outline',
-        class: 'ring-ring hover:bg-background-accented'
+        class: 'ring-border hover:bg-background-accented'
       }],
       defaultVariants: {
         color: 'neutral',

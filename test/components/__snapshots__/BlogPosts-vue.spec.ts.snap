@@ -2,11 +2,11 @@
 
 exports[`blogPosts > renders with as correctly 1`] = `
 "<section data-orientation="horizontal" class="flex flex-col gap-8 lg:gap-y-16 sm:grid sm:grid-cols-2 lg:grid-cols-3">
-  <article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring">
+  <article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-border">
     <!--v-if-->
     <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img alt="Image alt" src="https://picsum.photos/640/360" data-slot="image" class="object-cover object-top w-full h-full"></div>
     <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-      <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 ring ring-inset ring-ring-accented color-text bg-background-elevated px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 ring ring-inset ring-border-accented color-text bg-background-elevated px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
         <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm color-text-toned">Dec 13, 2024</time>
       </div>
       <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
@@ -28,11 +28,11 @@ exports[`blogPosts > renders with as correctly 1`] = `
 
 exports[`blogPosts > renders with class correctly 1`] = `
 "<div data-orientation="horizontal" class="flex flex-col gap-8 lg:gap-y-16 sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12">
-  <article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring">
+  <article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-border">
     <!--v-if-->
     <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img alt="Image alt" src="https://picsum.photos/640/360" data-slot="image" class="object-cover object-top w-full h-full"></div>
     <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-      <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 ring ring-inset ring-ring-accented color-text bg-background-elevated px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 ring ring-inset ring-border-accented color-text bg-background-elevated px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
         <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm color-text-toned">Dec 13, 2024</time>
       </div>
       <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
@@ -56,11 +56,11 @@ exports[`blogPosts > renders with default slot correctly 1`] = `"<div data-orien
 
 exports[`blogPosts > renders with orientation vertical correctly 1`] = `
 "<div data-orientation="vertical" class="flex flex-col gap-8 lg:gap-y-16">
-  <article data-orientation="horizontal" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden gap-x-8 lg:grid lg:grid-cols-2 lg:items-center bg-background ring ring-ring">
+  <article data-orientation="horizontal" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden gap-x-8 lg:grid lg:grid-cols-2 lg:items-center bg-background ring ring-border">
     <!--v-if-->
     <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img alt="Image alt" src="https://picsum.photos/640/360" data-slot="image" class="object-cover object-top w-full h-full"></div>
     <div data-slot="body" class="min-w-0 flex-1 flex flex-col justify-center p-4 sm:p-6 lg:px-0">
-      <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 ring ring-inset ring-ring-accented color-text bg-background-elevated px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 ring ring-inset ring-border-accented color-text bg-background-elevated px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
         <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm color-text-toned">Dec 13, 2024</time>
       </div>
       <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>
@@ -82,11 +82,11 @@ exports[`blogPosts > renders with orientation vertical correctly 1`] = `
 
 exports[`blogPosts > renders with posts correctly 1`] = `
 "<div data-orientation="horizontal" class="flex flex-col gap-8 lg:gap-y-16 sm:grid sm:grid-cols-2 lg:grid-cols-3">
-  <article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-ring">
+  <article data-orientation="vertical" data-slot="root" class="relative group/blog-post flex flex-col rounded-lg overflow-hidden flex flex-col bg-background ring ring-border">
     <!--v-if-->
     <div data-slot="header" class="relative overflow-hidden aspect-[16/9] w-full pointer-events-none"><img alt="Image alt" src="https://picsum.photos/640/360" data-slot="image" class="object-cover object-top w-full h-full"></div>
     <div data-slot="body" class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
-      <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 ring ring-inset ring-ring-accented color-text bg-background-elevated px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="meta" class="flex items-center gap-2 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 ring ring-inset ring-border-accented color-text bg-background-elevated px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
         <!--v-if--></span><time datetime="2024-12-13T09:32:32.598Z" data-slot="date" class="text-sm color-text-toned">Dec 13, 2024</time>
       </div>
       <h2 data-slot="title" class="text-xl text-pretty font-600 color-text-highlighted">Title</h2>

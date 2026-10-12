@@ -25,7 +25,7 @@ export default {
   variants: {
     orientation: {
       horizontal: {
-        root: 'grid-cols-1 justify-between divide-divide divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0',
+        root: 'grid-cols-1 justify-between divide-border divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0',
         body: 'pb-6 justify-center lg:pb-0 lg:pe-6 lg:col-span-2',
         footer: 'lg:mx-auto lg:p-6 lg:max-w-xs lg:w-full lg:items-center lg:justify-center',
         features: 'lg:mt-12 lg:grid lg:grid-cols-2',
@@ -47,13 +47,13 @@ export default {
         featureTitle: 'pohon:color-text-dimmed',
       },
       outline: {
-        root: 'bg-background ring ring-ring',
+        root: 'bg-background ring ring-border',
       },
       soft: {
         root: 'bg-background-elevated/50',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-ring',
+        root: 'bg-background-elevated/50 ring ring-border',
       },
     },
     highlight: {
@@ -71,13 +71,13 @@ export default {
     orientation: 'horizontal',
     variant: 'soft',
     class: {
-      root: 'divide-divide-accented',
+      root: 'divide-border-accented',
     },
   }, {
     orientation: 'horizontal',
     variant: 'subtle',
     class: {
-      root: 'divide-divide-accented',
+      root: 'divide-border-accented',
     },
   }],
   defaultVariants: {

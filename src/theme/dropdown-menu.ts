@@ -2,11 +2,11 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    content: 'bg-background ring-ring rounded-md flex flex-col max-h-$akar-dropdown-menu-content-available-height min-w-32 ring shadow-lg origin-$akar-dropdown-menu-content-transform-origin overflow-hidden data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+    content: 'bg-background ring-border rounded-md flex flex-col max-h-$akar-dropdown-menu-content-available-height min-w-32 ring shadow-lg origin-$akar-dropdown-menu-content-transform-origin overflow-hidden data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
     input: 'border-b border-border',
     empty: 'text-center color-text-muted',
-    viewport: 'relative divide-y divide-divide scroll-py-1 overflow-y-auto flex-1',
-    arrow: 'fill-fill-bg stroke-stroke',
+    viewport: 'relative divide-y divide-border scroll-py-1 overflow-y-auto flex-1',
+    arrow: 'fill-background stroke-border',
     group: 'p-1 isolate',
     label: 'w-full flex items-center font-600 color-text-highlighted',
     separator: '-mx-1 my-1 h-px bg-border',

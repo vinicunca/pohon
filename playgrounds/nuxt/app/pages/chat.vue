@@ -146,7 +146,7 @@ function submit() {
 
     <PChatPalette
       :key="animationKey"
-      class="rounded-lg min-h-[38rem] ring ring-ring overflow-hidden"
+      class="rounded-lg min-h-[38rem] ring ring-border overflow-hidden"
     >
       <PChatMessages
         :messages="messages"

@@ -11,18 +11,15 @@
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-Pohon UI harnesses the combined strengths of [Akar](https://akar.com/), [UnoCSS](https://unocss.dev/), and [UnoCss Variants](https://vinicunca.dev/unocss-variants) to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces.
-
-> [!NOTE]
-> You are on the `v4` branch, check out the [v3 branch](https://github.com/vinicunca/pohon/tree/v3) for Pohon UI v3 or [v2 branch](https://github.com/vinicunca/pohon/tree/v2) for Pohon UI v2.
+Pohon UI harnesses the combined strengths of [Akar](https://vinicunca.dev/akar), [UnoCSS](https://unocss.dev/), and [UnoCss Variants](https://vinicunca.dev/unocss-variants) to offer developers an unparalleled set of tools for creating sophisticated, accessible, and highly performant user interfaces.
 
 ## Documentation
 
-Visit https://pohon.vinicunca.dev to explore the documentation.
+Visit https://vinicunca.dev/pohon to explore the documentation.
 
 ## Templates
 
-Kickstart your project with one of our ready-to-use Pohon UI templates or follow the [Installation Guide](https://pohon.vinicunca.dev/getting-started/installation/nuxt). Explore all available templates on the [official templates page](https://pohon.vinicunca.dev/templates).
+Kickstart your project with one of our ready-to-use Pohon UI templates or follow the [Installation Guide](https://vinicunca.dev/pohon/getting-started/installation/nuxt). Explore all available templates on the [official templates page](https://pohon.vinicunca.dev/templates).
 
 - [Starter](https://github.com/pohon-ui-templates/starter) — A minimal template to get started with Pohon UI.
 - [Landing](https://github.com/pohon-ui-templates/landing) — A modern landing page template powered by Nuxt Content.
@@ -37,19 +34,19 @@ Kickstart your project with one of our ready-to-use Pohon UI templates or follow
 ## Installation
 
 ```bash [pnpm]
-pnpm add pohon-ui tailwindcss
+pnpm add pohon-ui unocss @vinicunca/unocss-preset
 ```
 
 ```bash [yarn]
-yarn add pohon-ui tailwindcss
+yarn add pohon-ui unocss @vinicunca/unocss-preset
 ```
 
 ```bash [npm]
-npm install pohon-ui tailwindcss
+npm install pohon-ui unocss @vinicunca/unocss-preset
 ```
 
 ```bash [bun]
-bun add pohon-ui tailwindcss
+bun add pohon-ui unocss @vinicunca/unocss-preset
 ```
 
 ### Nuxt
@@ -59,18 +56,23 @@ bun add pohon-ui tailwindcss
 ```ts [nuxt.config.ts]
 export default defineNuxtConfig({
   modules: ['pohon-ui'],
-  css: ['~/assets/css/main.css'],
 });
 ```
 
-2. Import UnoCSS and Pohon UI in your CSS:
+2. Configure the UnoCSS preset (the module registers `@unocss/nuxt` for you):
 
-```css [app/assets/css/main.css]
-@import "tailwindcss";
-@import "pohon-ui";
+```ts [uno.config.ts]
+import { presetVinicunca } from '@vinicunca/unocss-preset';
+import { pohonColors } from 'pohon-ui/unocss';
+import { defineConfig } from 'unocss';
+
+export default defineConfig({
+  presets: [presetVinicunca()],
+  theme: { colors: pohonColors },
+});
 ```
 
-Learn more in the [installation guide](https://pohon.vinicunca.dev/docs/getting-started/installation/nuxt).
+Learn more in the [installation guide](https://vinicunca.dev/pohon/getting-started/installation/nuxt).
 
 ### Vue
 
@@ -79,10 +81,11 @@ Learn more in the [installation guide](https://pohon.vinicunca.dev/docs/getting-
 ```ts [vite.config.ts]
 import vue from '@vitejs/plugin-vue';
 import ui from 'pohon-ui/vite';
+import UnoCSS from 'unocss/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  plugins: [vue(), ui()],
+  plugins: [UnoCSS(), vue(), ui()],
 });
 ```
 
@@ -93,7 +96,7 @@ import ui from 'pohon-ui/vue-plugin';
 import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import App from './App.vue';
-import './assets/css/main.css';
+import 'virtual:uno.css';
 
 const app = createApp(App);
 
@@ -108,37 +111,46 @@ app.use(ui);
 app.mount('#app');
 ```
 
-3. Import UnoCSS and Pohon UI in your CSS:
+3. Configure the UnoCSS preset:
 
-```css [src/assets/css/main.css]
-@import "tailwindcss";
-@import "pohon-ui";
+```ts [uno.config.ts]
+import { presetVinicunca } from '@vinicunca/unocss-preset';
+import { pohonColors } from 'pohon-ui/unocss';
+import { defineConfig } from 'unocss';
+
+export default defineConfig({
+  presets: [presetVinicunca()],
+  theme: { colors: pohonColors },
+});
 ```
 
-Learn more in the [installation guide](https://pohon.vinicunca.dev/docs/getting-started/installation/vue).
+Learn more in the [installation guide](https://vinicunca.dev/pohon/getting-started/installation/vue).
 
 ## Contribution
 
 Thank you for considering contributing to Pohon UI. Here are a few ways you can get involved:
 
 - Reporting Bugs: If you come across any bugs or issues, please check out the reporting bugs guide to learn how to submit a bug report.
-- Suggestions: Have any thoughts to enhance Pohon UI? We'd love to hear them! Check out the [contribution guide](https://pohon.vinicunca.dev/docs/getting-started/contribution) to share your suggestions.
+- Suggestions: Have any thoughts to enhance Pohon UI? We'd love to hear them! Check out the [contribution guide](https://vinicunca.dev/pohon/getting-started/contribution) to share your suggestions.
 
 > [!TIP]
 > We provide contributing guidelines through [`AGENTS.md`](https://github.com/vinicunca/pohon/blob/main/AGENTS.md) for AI assistants to help you contribute to Pohon UI. It is automatically picked up by all AI coding agents and guides through component structure, theming patterns, testing conventions, and documentation guidelines.
 
 ## Local Development
 
-Follow the docs to [set up your local development environment](https://pohon.vinicunca.dev/docs/getting-started/contribution#local-development) and contribute.
+Follow the docs to [set up your local development environment](https://vinicunca.dev/pohon/getting-started/contribution#local-development) and contribute.
 
 ## Credits
 
+Pohon UI is derived from [Nuxt UI](https://github.com/nuxt/ui), ported from Tailwind CSS to UnoCSS.
+
+- [nuxt/ui](https://github.com/nuxt/ui)
 - [nuxt/nuxt](https://github.com/nuxt/nuxt)
 - [nuxt/icon](https://github.com/nuxt/icon)
 - [nuxt/fonts](https://github.com/nuxt/fonts)
 - [nuxt-modules/color-mode](https://github.com/nuxt-modules/color-mode)
-- [unovue/akar](https://github.com/unovue/akar)
-- [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss)
+- [unovue/reka-ui](https://github.com/unovue/reka-ui)
+- [unocss/unocss](https://github.com/unocss/unocss)
 - [vueuse/vueuse](https://github.com/vueuse/vueuse)
 
 ## License

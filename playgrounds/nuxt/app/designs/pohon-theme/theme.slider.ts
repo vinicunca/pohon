@@ -18,7 +18,7 @@ export const themeSlider = {
       }])),
       neutral: {
         range: 'bg-background-inverted',
-        thumb: 'outline-outline-inverted/25 ring-ring-inverted',
+        thumb: 'outline-border-inverted/25 ring-border-inverted',
       },
     },
     size: {

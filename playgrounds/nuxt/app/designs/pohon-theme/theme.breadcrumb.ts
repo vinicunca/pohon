@@ -36,7 +36,7 @@ export const themeBreadcrumb = {
         color,
         { link: `outline-${color}/25 focus-visible:outline-3` },
       ])),
-      neutral: { link: 'outline-outline-inverted/25 focus-visible:outline-3' },
+      neutral: { link: 'outline-border-inverted/25 focus-visible:outline-3' },
     },
   },
   compoundVariants: [

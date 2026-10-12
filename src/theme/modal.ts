@@ -1,7 +1,7 @@
 export default {
   slots: {
     overlay: 'fixed inset-0',
-    content: 'bg-background divide-y divide-divide flex flex-col focus:outline-none',
+    content: 'bg-background divide-y divide-border flex flex-col focus:outline-none',
     header: 'p-4 flex gap-1.5 min-h-$ui-header-height items-center sm:px-6',
     wrapper: '',
     body: 'flex-1 p-4 sm:p-6',
@@ -22,7 +22,7 @@ export default {
         content: 'inset-0',
       },
       false: {
-        content: 'w-[calc(100vw-2rem)] max-w-lg rounded-lg shadow-lg ring ring-ring',
+        content: 'w-[calc(100vw-2rem)] max-w-lg rounded-lg shadow-lg ring ring-border',
       },
     },
     overlay: {

@@ -1,5 +1,38 @@
 # Changelog
 
+## Unreleased
+
+### Breaking changes
+
+Pohon UI now shares its semantic UnoCSS color map through `pohon-ui/unocss`.
+Import `pohonColors` and set `theme: { colors: pohonColors }` alongside your preset
+in `uno.config.ts`. See the README for Nuxt and Vue setup examples.
+
+The redundant `ring`, `divide`, `outline`, `stroke`, and `fill` color groups,
+including `ring.offset`, have been removed. `border.bg`, `background.border`,
+and `background.header` have also been removed. Update custom classes in `ui`
+props, `app.config`, and application templates:
+
+| Old class | Replacement |
+| --- | --- |
+| `ring-ring[-muted/-accented/-inverted]` | `ring-border[-muted/-accented/-inverted]` |
+| `ring-ring-bg` | `ring-background` |
+| `divide-divide[-muted/-accented/-inverted]` | `divide-border[-muted/-accented/-inverted]` |
+| `outline-outline[-inverted]` | `outline-border[-inverted]` |
+| `stroke-stroke[-inverted]` | `stroke-border[-inverted]` |
+| `stroke-stroke-bg` | `stroke-background` |
+| `fill-fill[-inverted]` | `fill-border[-inverted]` |
+| `fill-fill-bg` | `fill-background` |
+| `border-border-bg` | `border-background` |
+| `bg-background-border` | `bg-border` |
+
+Opacity modifiers such as `/25` and variants such as `focus-visible:` stay the
+same. Ring offset colors can use `ring-offset-border`,
+`ring-offset-border-accented`, or `ring-offset-background`. For the removed
+`background.header` token, define your own color if you use `--ui-color-bg-header`.
+Apply the same replacements to any other utility using these removed color groups.
+The component colors still resolve to the same CSS variables.
+
 ## [2.0.9](https://github.com/vinicunca/pohon/compare/v2.0.8...v2.0.9) (2026-10-11)
 
 ### Bug Fixes

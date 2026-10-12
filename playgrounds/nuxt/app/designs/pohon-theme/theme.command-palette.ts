@@ -3,7 +3,7 @@ import type { PThemeCommandPalette } from 'pohon-ui';
 
 export const themeCommandPalette = {
   slots: {
-    root: 'flex flex-col min-h-0 min-w-0 divide-divide divide-y',
+    root: 'flex flex-col min-h-0 min-w-0 divide-border divide-y',
     input: '',
     close: '',
     back: 'p-0',
@@ -37,7 +37,7 @@ export const themeCommandPalette = {
         viewport: 'p-1 isolate',
       },
       false: {
-        viewport: 'divide-divide divide-y',
+        viewport: 'divide-border divide-y',
       },
     },
     size: {

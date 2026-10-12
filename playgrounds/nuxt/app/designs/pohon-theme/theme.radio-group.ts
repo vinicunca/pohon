@@ -10,7 +10,7 @@ export const themeRadioGroup = {
     legend: 'color-text font-500 mb-1 block',
     item: 'flex items-start',
     container: 'flex items-center',
-    base: 'rounded-full ring ring-ring-accented ring-inset overflow-hidden focus-visible:outline-none',
+    base: 'rounded-full ring ring-border-accented ring-inset overflow-hidden focus-visible:outline-none',
     indicator: 'flex size-full items-center justify-center after:(rounded-full bg-background content-empty)',
     wrapper: 'w-full',
     label: 'color-text font-500 block',
@@ -255,7 +255,7 @@ export const themeRadioGroup = {
       color: 'neutral',
       highlight: true,
       class: {
-        base: 'ring-ring-inverted',
+        base: 'ring-border-inverted',
       },
     },
   ],

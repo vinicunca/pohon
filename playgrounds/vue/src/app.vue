@@ -43,7 +43,7 @@ provide('components', components);
           class="bg-background-elevated/25"
           resizable
           collapsible
-          :toggle="{ size: 'sm', variant: 'outline', class: 'ring-ring' }"
+          :toggle="{ size: 'sm', variant: 'outline', class: 'ring-border' }"
         >
           <template #header="{ collapsed }">
             <RouterLink

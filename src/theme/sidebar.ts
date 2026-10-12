@@ -5,7 +5,7 @@ export default (options: Required<ModuleOptions>) => ({
     root: 'peer [--sidebar-width:16rem] [--sidebar-width-icon:4rem]',
     gap: 'bg-transparent w-$sidebar-width relative',
     container: 'w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh',
-    inner: 'flex size-full flex-col overflow-hidden divide-y divide-divide',
+    inner: 'flex size-full flex-col overflow-hidden divide-y divide-border',
     header: 'px-4 flex gap-1.5 min-h-$ui-header-height items-center overflow-hidden',
     wrapper: 'min-w-0 flex-1',
     title: 'color-text-highlighted font-600 truncate',
@@ -76,7 +76,7 @@ export default (options: Required<ModuleOptions>) => ({
       sidebar: {},
       floating: {
         container: 'p-4 border-transparent',
-        inner: 'rounded-lg ring ring-ring shadow-lg',
+        inner: 'rounded-lg ring ring-border shadow-lg',
         rail: 'inset-y-4',
       },
       inset: {

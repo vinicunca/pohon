@@ -7,7 +7,7 @@ exports[`sidebar > renders with actions slot correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <div data-slot="header" class="px-4 flex gap-1.5 min-h-$ui-header-height items-center overflow-hidden">
         <!--v-if-->
         <div data-slot="actions" class="flex items-center gap-1.5 shrink-0">Actions slot
@@ -31,10 +31,10 @@ exports[`sidebar > renders with breakpoint 2xl correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="collapsed" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="collapsed" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none 2xl:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <div data-slot="header" class="px-4 flex gap-1.5 min-h-$ui-header-height items-center overflow-hidden">
         <!--v-if-->
-        <div data-slot="actions" class="flex items-center gap-1.5 shrink-0"><button type="button" data-slot="close" aria-label="Close" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg>
+        <div data-slot="actions" class="flex items-center gap-1.5 shrink-0"><button type="button" data-slot="close" aria-label="Close" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-border-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg>
             <!--v-if-->
             <!--v-if-->
           </button></div>
@@ -56,7 +56,7 @@ exports[`sidebar > renders with breakpoint lg correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -75,7 +75,7 @@ exports[`sidebar > renders with breakpoint md correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none md:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -94,7 +94,7 @@ exports[`sidebar > renders with breakpoint sm correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none sm:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -113,10 +113,10 @@ exports[`sidebar > renders with breakpoint xl correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="collapsed" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="collapsed" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none xl:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <div data-slot="header" class="px-4 flex gap-1.5 min-h-$ui-header-height items-center overflow-hidden">
         <!--v-if-->
-        <div data-slot="actions" class="flex items-center gap-1.5 shrink-0"><button type="button" data-slot="close" aria-label="Close" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg>
+        <div data-slot="actions" class="flex items-center gap-1.5 shrink-0"><button type="button" data-slot="close" aria-label="Close" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-border-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg>
             <!--v-if-->
             <!--v-if-->
           </button></div>
@@ -138,7 +138,7 @@ exports[`sidebar > renders with class correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -157,13 +157,13 @@ exports[`sidebar > renders with close correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-$sidebar-width-icon"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:w-$sidebar-width-icon">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <div data-slot="header" class="px-4 flex gap-1.5 min-h-$ui-header-height items-center overflow-hidden">
         <div data-slot="wrapper" class="min-w-0 flex-1">
           <p data-slot="title" class="color-text-highlighted font-600 truncate">Sidebar Title</p>
           <!--v-if-->
         </div>
-        <div data-slot="actions" class="flex items-center gap-1.5 shrink-0 group-data-[state=collapsed]/sidebar:hidden"><button type="button" data-slot="close" aria-label="Close" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-outline-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg>
+        <div data-slot="actions" class="flex items-center gap-1.5 shrink-0 group-data-[state=collapsed]/sidebar:hidden"><button type="button" data-slot="close" aria-label="Close" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-border-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="leadingIcon" class="shrink-0 size-5"></svg>
             <!--v-if-->
             <!--v-if-->
           </button></div>
@@ -185,7 +185,7 @@ exports[`sidebar > renders with collapsed icon correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="collapsed" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-$sidebar-width-icon"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="collapsed" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:w-$sidebar-width-icon">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4 group-data-[state=collapsed]/sidebar:overflow-hidden"></div>
       <!--v-if-->
@@ -204,7 +204,7 @@ exports[`sidebar > renders with collapsed offcanvas correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="collapsed" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="collapsed" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -223,7 +223,7 @@ exports[`sidebar > renders with collapsible icon correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-$sidebar-width-icon"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:w-$sidebar-width-icon">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4 group-data-[state=collapsed]/sidebar:overflow-hidden"></div>
       <!--v-if-->
@@ -238,7 +238,7 @@ exports[`sidebar > renders with collapsible icon correctly 1`] = `
 exports[`sidebar > renders with collapsible none correctly 1`] = `
 "<!-- Non-collapsible: simple inline sidebar -->
 <aside data-slot="root" data-variant="sidebar" class="peer [--sidebar-width:16rem] [--sidebar-width-icon:4rem] h-full w-$sidebar-width border-e border-border">
-  <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+  <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
     <!--v-if-->
     <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
     <!--v-if-->
@@ -253,7 +253,7 @@ exports[`sidebar > renders with collapsible offcanvas correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -272,7 +272,7 @@ exports[`sidebar > renders with content slot correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -291,7 +291,7 @@ exports[`sidebar > renders with default slot correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4">Default slot</div>
       <!--v-if-->
@@ -310,7 +310,7 @@ exports[`sidebar > renders with description correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <div data-slot="header" class="px-4 flex gap-1.5 min-h-$ui-header-height items-center overflow-hidden">
         <div data-slot="wrapper" class="min-w-0 flex-1">
           <p data-slot="title" class="color-text-highlighted font-600 truncate">Sidebar Title</p>
@@ -335,7 +335,7 @@ exports[`sidebar > renders with footer slot correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <div data-slot="footer" class="flex items-center gap-1.5 overflow-hidden p-4">Footer slot</div>
@@ -354,7 +354,7 @@ exports[`sidebar > renders with header slot correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <div data-slot="header" class="px-4 flex gap-1.5 min-h-$ui-header-height items-center overflow-hidden">Header slot</div>
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -373,7 +373,7 @@ exports[`sidebar > renders with mode drawer correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -392,7 +392,7 @@ exports[`sidebar > renders with mode modal correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -411,7 +411,7 @@ exports[`sidebar > renders with mode slideover correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -430,7 +430,7 @@ exports[`sidebar > renders with rail correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-$sidebar-width-icon"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:w-$sidebar-width-icon">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4 group-data-[state=collapsed]/sidebar:overflow-hidden"></div>
       <!--v-if-->
@@ -448,7 +448,7 @@ exports[`sidebar > renders with side left correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -467,7 +467,7 @@ exports[`sidebar > renders with side right correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-s border-border end-0 data-[state=collapsed]:-end-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -486,7 +486,7 @@ exports[`sidebar > renders with title correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <div data-slot="header" class="px-4 flex gap-1.5 min-h-$ui-header-height items-center overflow-hidden">
         <div data-slot="wrapper" class="min-w-0 flex-1">
           <p data-slot="title" class="color-text-highlighted font-600 truncate">Sidebar Title</p>
@@ -511,7 +511,7 @@ exports[`sidebar > renders with ui correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4 py-0"></div>
       <!--v-if-->
@@ -530,7 +530,7 @@ exports[`sidebar > renders with variant floating correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 p-4 border-transparent data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide rounded-lg ring ring-ring shadow-lg">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border rounded-lg ring ring-border shadow-lg">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -549,7 +549,7 @@ exports[`sidebar > renders with variant inset correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 py-4 border-transparent data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide divide-transparent">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border divide-transparent">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->
@@ -568,7 +568,7 @@ exports[`sidebar > renders with variant sidebar correctly 1`] = `
   <!-- Gap spacer: reserves layout space for the fixed sidebar -->
   <div data-slot="gap" data-state="expanded" class="bg-transparent w-$sidebar-width relative transition-[width]-280 ease-out motion-reduce:transition-none data-[state=collapsed]:w-0"></div><!-- Fixed container: the actual visible sidebar -->
   <div data-slot="container" data-state="expanded" class="w-$sidebar-width hidden inset-y-0 fixed z-10 h-svh duration-280 ease-out [transition-property:inset-inline-start,inset-inline-end,width] motion-reduce:transition-none lg:flex border-e border-border start-0 data-[state=collapsed]:-start-$sidebar-width">
-    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-divide">
+    <div data-slot="inner" class="flex size-full flex-col overflow-hidden divide-y divide-border">
       <!--v-if-->
       <div data-slot="body" class="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4"></div>
       <!--v-if-->

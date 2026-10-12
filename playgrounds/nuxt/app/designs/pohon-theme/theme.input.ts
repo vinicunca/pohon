@@ -59,9 +59,9 @@ export const themeInput = {
       },
     },
     variant: {
-      outline: 'color-text-highlighted bg-background ring ring-ring-accented ring-inset',
+      outline: 'color-text-highlighted bg-background ring ring-border-accented ring-inset',
       soft: 'color-text-highlighted bg-background-elevated/50 disabled:bg-background-elevated/50 focus:bg-background-elevated hover:bg-background-elevated',
-      subtle: 'color-text-highlighted bg-background-elevated ring ring-ring-accented ring-inset',
+      subtle: 'color-text-highlighted bg-background-elevated ring ring-border-accented ring-inset',
       ghost: 'color-text-highlighted bg-transparent disabled:bg-transparent focus:bg-background-elevated hover:bg-background-elevated dark:disabled:bg-transparent',
       none: 'color-text-highlighted bg-transparent focus:outline-none',
     },
@@ -107,17 +107,17 @@ export const themeInput = {
     {
       color: 'neutral',
       variant: ['outline', 'subtle'],
-      class: 'outline-outline-inverted/25 focus-visible:outline-3 focus-visible:ring-ring-inverted',
+      class: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:ring-border-inverted',
     },
     {
       color: 'neutral',
       variant: ['soft', 'ghost'],
-      class: 'outline-outline-inverted/25 focus-visible:outline-3',
+      class: 'outline-border-inverted/25 focus-visible:outline-3',
     },
     {
       color: 'neutral',
       highlight: true,
-      class: 'ring ring-inset ring-ring-inverted',
+      class: 'ring ring-inset ring-border-inverted',
     },
     {
       leading: true,

@@ -77,7 +77,7 @@ export const themeStepper = {
         separator: `group-data-[state=completed]:bg-${color}`,
       }])),
       neutral: {
-        trigger: 'outline-outline-inverted/25 group-data-[state=active]:bg-background-inverted group-data-[state=completed]:bg-background-inverted',
+        trigger: 'outline-border-inverted/25 group-data-[state=active]:bg-background-inverted group-data-[state=completed]:bg-background-inverted',
         separator: 'group-data-[state=completed]:bg-background-inverted',
       },
     },

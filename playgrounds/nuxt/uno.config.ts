@@ -1,4 +1,5 @@
 import { presetVinicunca } from '@vinicunca/unocss-preset';
+import { pohonColors } from 'pohon-ui/unocss';
 import { defineConfig } from 'unocss';
 import { BRANDS } from './app/designs/design.constants';
 
@@ -241,73 +242,7 @@ export default defineConfig({
       sans: 'Public Sans',
     },
 
-    colors: {
-      text: {
-        dimmed: 'var(--ui-color-text-dimmed)',
-        muted: 'var(--ui-color-text-muted)',
-        toned: 'var(--ui-color-text-toned)',
-        DEFAULT: 'var(--ui-color-text)',
-        highlighted: 'var(--ui-color-text-highlighted)',
-        inverted: 'var(--ui-color-text-inverted)',
-      },
-      background: {
-        DEFAULT: 'var(--ui-color-bg)',
-        muted: 'var(--ui-color-bg-muted)',
-        elevated: 'var(--ui-color-bg-elevated)',
-        accented: 'var(--ui-color-bg-accented)',
-        inverted: 'var(--ui-color-bg-inverted)',
-        border: 'var(--ui-color-border)',
-        header: 'var(--ui-color-bg-header)',
-      },
-      border: {
-        DEFAULT: 'var(--ui-color-border)',
-        muted: 'var(--ui-color-border-muted)',
-        accented: 'var(--ui-color-border-accented)',
-        inverted: 'var(--ui-color-border-inverted)',
-        bg: 'var(--ui-color-bg)',
-      },
-      ring: {
-        DEFAULT: 'var(--ui-color-border)',
-        muted: 'var(--ui-color-border-muted)',
-        accented: 'var(--ui-color-border-accented)',
-        inverted: 'var(--ui-color-border-inverted)',
-        bg: 'var(--ui-color-bg)',
-        offset: {
-          DEFAULT: 'var(--ui-color-border)',
-          muted: 'var(--ui-color-border-muted)',
-          accented: 'var(--ui-color-border-accented)',
-          inverted: 'var(--ui-color-border-inverted)',
-          bg: 'var(--ui-color-bg)',
-        },
-      },
-      divide: {
-        DEFAULT: 'var(--ui-color-border)',
-        muted: 'var(--ui-color-border-muted)',
-        accented: 'var(--ui-color-border-accented)',
-        inverted: 'var(--ui-color-border-inverted)',
-      },
-      outline: {
-        DEFAULT: 'var(--ui-color-border)',
-        inverted: 'var(--ui-color-border-inverted)',
-      },
-      stroke: {
-        DEFAULT: 'var(--ui-color-border)',
-        bg: 'var(--ui-color-bg)',
-        inverted: 'var(--ui-color-border-inverted)',
-      },
-      fill: {
-        DEFAULT: 'var(--ui-color-border)',
-        bg: 'var(--ui-color-bg)',
-        inverted: 'var(--ui-color-border-inverted)',
-      },
-
-      primary: 'var(--ui-color-primary)',
-      secondary: 'var(--ui-color-secondary)',
-      success: 'var(--ui-color-success)',
-      info: 'var(--ui-color-info)',
-      warning: 'var(--ui-color-warning)',
-      error: 'var(--ui-color-error)',
-    },
+    colors: pohonColors,
 
     containers: {
       center: true,

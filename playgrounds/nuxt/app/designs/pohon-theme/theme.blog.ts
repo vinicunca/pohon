@@ -40,7 +40,7 @@ export const themeBlogPost = {
     },
     variant: {
       outline: {
-        root: 'bg-background ring ring-ring',
+        root: 'bg-background ring ring-border',
         date: 'color-text-toned',
         description: 'color-text-muted',
       },
@@ -50,7 +50,7 @@ export const themeBlogPost = {
         description: 'color-text-toned',
       },
       subtle: {
-        root: 'bg-background-elevated/50 ring ring-ring',
+        root: 'bg-background-elevated/50 ring ring-border',
         date: 'color-text-muted',
         description: 'color-text-toned',
       },
@@ -93,7 +93,7 @@ export const themeBlogPost = {
       variant: 'subtle',
       to: true,
       class: {
-        root: 'hover:bg-background-elevated hover:ring-ring-accented',
+        root: 'hover:bg-background-elevated hover:ring-border-accented',
       },
     },
     {

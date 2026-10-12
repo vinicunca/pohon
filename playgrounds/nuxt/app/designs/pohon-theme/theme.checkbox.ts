@@ -14,7 +14,7 @@ export const themeCheckbox = {
   slots: {
     root: 'flex items-start relative',
     container: 'flex items-center',
-    base: 'rounded-sm ring ring-ring-accented ring-inset overflow-hidden focus-visible:outline-none',
+    base: 'rounded-sm ring ring-border-accented ring-inset overflow-hidden focus-visible:outline-none',
     indicator: 'color-text-inverted flex size-full items-center justify-center',
     icon: 'shrink-0',
     wrapper: 'w-full',
@@ -199,7 +199,7 @@ export const themeCheckbox = {
       color: 'neutral',
       highlight: true,
       class: {
-        base: 'ring-ring-inverted',
+        base: 'ring-border-inverted',
       },
     },
   ],

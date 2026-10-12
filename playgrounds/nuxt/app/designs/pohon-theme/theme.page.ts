@@ -28,7 +28,7 @@ export const themePage = {
       left: false,
       right: false,
       class: {
-        center: 'lg:col-span-10',
+        center: 'pohon:lg:col-span-10',
       },
     },
   ],

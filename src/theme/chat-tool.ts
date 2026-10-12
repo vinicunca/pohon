@@ -22,7 +22,7 @@ export default (options: Required<ModuleOptions>) => ({
         actions: 'pt-2',
       },
       card: {
-        root: 'rounded-md ring ring-ring overflow-hidden outline-primary/25 has-focus-visible:outline-3 has-focus-visible:ring-primary',
+        root: 'rounded-md ring ring-border overflow-hidden outline-primary/25 has-focus-visible:outline-3 has-focus-visible:ring-primary',
         trigger: 'px-2 py-1 focus:outline-none',
         trailingIcon: 'ms-auto',
         body: 'border-t border-border p-2 max-h-[200px] overflow-y-auto focus:outline-none',

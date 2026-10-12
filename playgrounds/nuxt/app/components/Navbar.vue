@@ -38,12 +38,12 @@ defineShortcuts({
       <PDashboardSidebarToggle
         size="sm"
         variant="outline"
-        class="ring-ring"
+        class="ring-border"
       />
       <PDashboardSidebarCollapse
         size="sm"
         variant="outline"
-        class="ring-ring"
+        class="ring-border"
       />
     </template>
 
@@ -54,7 +54,7 @@ defineShortcuts({
           color="neutral"
           variant="outline"
           :disabled="index === 0"
-          class="ring-ring"
+          class="ring-border"
           aria-label="Previous component"
           @click="navigate(index - 1)"
         />
@@ -63,7 +63,7 @@ defineShortcuts({
           color="neutral"
           variant="outline"
           :disabled="index === (components?.length ?? 0) - 1"
-          class="ring-ring"
+          class="ring-border"
           aria-label="Next component"
           @click="navigate(index + 1)"
         />

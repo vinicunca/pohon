@@ -4,7 +4,7 @@ import type { PThemeDrawer } from 'pohon-ui';
 export const themeDrawer = {
   slots: {
     overlay: 'bg-background-elevated/75 inset-0 fixed',
-    content: 'bg-background flex ring ring-ring fixed focus:outline-none',
+    content: 'bg-background flex ring ring-border fixed focus:outline-none',
     // TODO: remove the important when vaul is replaced by the built in drawer
     handle: 'shrink-0 transition-opacity ease-out !bg-background-accented',
     container: 'p-4 flex flex-col gap-4 w-full overflow-y-auto',
