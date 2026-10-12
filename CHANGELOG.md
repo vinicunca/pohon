@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.0.10](https://github.com/vinicunca/pohon/compare/v2.0.9...v2.0.10) (2026-10-12)
+
+### Features
+
+* add pohonColors ([5c78290](https://github.com/vinicunca/pohon/commit/5c782901b6c4b7d1425dd069e2d1f3c5ed042862))
+
 ## Unreleased
 
 ### Breaking changes
