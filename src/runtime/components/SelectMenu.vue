@@ -253,7 +253,7 @@ import {
   FocusScope,
 } from 'akar';
 import { defu } from 'defu';
-import { computed, nextTick, onMounted, onScopeDispose, ref, toRaw, toRef, useTemplateRef, watch } from 'vue';
+import { computed, nextTick, onMounted, onScopeDispose, ref, toRaw, toRef, useId, useTemplateRef, watch } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentIcons } from '../composables/useComponentIcons';
 import { useComponentProps } from '../composables/useComponentProps';
@@ -596,6 +596,9 @@ function onMountAutoFocus(event: Event) {
 }
 
 const viewportRef = useTemplateRef('viewportRef');
+const selectMenuId = useId();
+const triggerId = computed(() => id.value ?? `select-menu-${selectMenuId}`);
+const listboxId = `select-menu-listbox-${selectMenuId}`;
 
 const comboboxRootRef = useTemplateRef('comboboxRootRef');
 
@@ -705,12 +708,13 @@ defineExpose({
   >
     <ComboboxAnchor as-child>
       <ComboboxTrigger
-        :id="id"
+        :id="triggerId"
         ref="triggerRef"
         data-slot="base"
         :class="ui.base({ class: [props.ui?.base, props.class] })"
         tabindex="0"
         v-bind="{ 'aria-label': undefined, ...$attrs, ...ariaAttrs }"
+        :aria-controls="listboxId"
         @keydown.down="onTriggerKeydown"
         @keydown.up="onTriggerKeydown"
       >
@@ -757,7 +761,15 @@ defineExpose({
 
     <ComboboxPortal v-bind="portalProps">
       <FieldGroupReset>
-        <ComboboxContent data-slot="content" :class="ui.content({ class: props.ui?.content })" v-bind="contentProps" @focus-outside="onFocusOutside">
+        <ComboboxContent
+          data-slot="content"
+          :class="ui.content({ class: props.ui?.content })"
+          v-bind="contentProps"
+          :role="undefined"
+          :aria-orientation="undefined"
+          :aria-multiselectable="undefined"
+          @focus-outside="onFocusOutside"
+        >
           <FocusScope
             ref="focusScopeRef"
             loop
@@ -768,7 +780,7 @@ defineExpose({
           >
             <slot name="content-top" />
 
-            <ComboboxInput v-if="!!props.searchInput" v-model="searchTerm" :display-value="() => searchTerm" as-child>
+            <ComboboxInput v-if="!!props.searchInput" v-model="searchTerm" :display-value="() => searchTerm" :aria-controls="listboxId" as-child>
               <PInput
                 autofocus
                 autocomplete="off"
@@ -789,7 +801,16 @@ defineExpose({
               </slot>
             </ComboboxEmpty>
 
-            <div ref="viewportRef" role="presentation" data-slot="viewport" :class="ui.viewport({ class: props.ui?.viewport })">
+            <div
+              :id="listboxId"
+              ref="viewportRef"
+              role="listbox"
+              :aria-labelledby="triggerId"
+              :aria-multiselectable="!!props.multiple"
+              aria-orientation="vertical"
+              data-slot="viewport"
+              :class="ui.viewport({ class: props.ui?.viewport })"
+            >
               <template v-if="!!props.virtualize">
                 <ReuseCreateItemTemplate v-if="createItem && createItemPosition === 'top'" />
 

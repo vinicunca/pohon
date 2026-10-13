@@ -3,6 +3,7 @@ import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { flushPromises, mount } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';
 import { axe } from 'vitest-axe';
+import { h } from 'vue';
 import theme from '#build/ui/input';
 import SelectMenu from '../../src/runtime/components/SelectMenu.vue';
 import { renderEach } from '../component-render';
@@ -139,18 +140,37 @@ describe('selectMenu', () => {
 
       },
     });
-    expect(await axe(wrapper.element, {
-      rules: {
-        // "Certain ARIA roles must contain particular children (aria-required-children)"
-
-        // Fix any of the following:
-        //   Element has children which are not allowed: div[tabindex]
-        'aria-required-children': { enabled: false },
-      },
-    })).toHaveNoViolations();
+    expect(await axe(wrapper.element)).toHaveNoViolations();
   });
 
   // Akar's `ComboboxTrigger` hard-codes `aria-label="Show popup"`, which would win over the `FormField` label.
+  describe('listbox semantics', () => {
+    it.each([
+      { searchInput: true, multiple: false },
+      { searchInput: false, multiple: false },
+      { searchInput: true, multiple: true },
+      { searchInput: false, multiple: true },
+    ])('keeps controls outside the listbox with %j', async (options) => {
+      const wrapper = await mountSuspended(SelectMenu, {
+        props: { ...props, ...options, placeholder: 'Select a status' },
+        slots: { 'content-top': () => h('button', 'Extra action') },
+      });
+
+      const listbox = wrapper.get('[role="listbox"]');
+      expect(wrapper.findAll('[role="listbox"]')).toHaveLength(1);
+      expect(listbox.attributes('id')).toBeTruthy();
+      expect(listbox.attributes('aria-multiselectable')).toBe(String(options.multiple));
+      expect(listbox.find('input, button').exists()).toBe(false);
+      expect(wrapper.get('[data-slot="base"]').attributes('aria-controls')).toBe(listbox.attributes('id'));
+
+      if (options.searchInput) {
+        expect(wrapper.get('input').attributes('aria-controls')).toBe(listbox.attributes('id'));
+      }
+
+      expect(await axe(wrapper.element)).toHaveNoViolations();
+    });
+  });
+
   describe('accessible name', () => {
     it('does not inherit the Akar trigger label', () => {
       const wrapper = mount(SelectMenu, { props });
