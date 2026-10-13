@@ -109,6 +109,7 @@ provide(formFieldInjectionKey, computed(() => ({
   description: props.description,
   help: props.help,
   ariaId,
+  labelId: (props.label || !!slots.label) ? `${ariaId}-label` : undefined,
 }) as FormFieldInjectedOptions<FormFieldProps>));
 </script>
 
@@ -116,7 +117,7 @@ provide(formFieldInjectionKey, computed(() => ({
   <Primitive :as="props.as" :data-orientation="props.orientation" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <div data-slot="wrapper" :class="ui.wrapper({ class: props.ui?.wrapper })">
       <div v-if="props.label || !!slots.label" data-slot="labelWrapper" :class="ui.labelWrapper({ class: props.ui?.labelWrapper })">
-        <Label :for="id" data-slot="label" :class="ui.label({ class: props.ui?.label })">
+        <Label :id="`${ariaId}-label`" :for="id" data-slot="label" :class="ui.label({ class: props.ui?.label })">
           <slot name="label" :label="props.label">
             {{ props.label }}
           </slot>

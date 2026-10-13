@@ -102,14 +102,16 @@ describe('listbox', () => {
         modelValue: items[0],
       },
       attrs: {
-        ariaLabel: 'Countries',
+        'aria-label': 'Countries',
+        'aria-describedby': 'countries-hint',
       },
     });
-    expect(await axe(wrapper.element, {
-      rules: {
-        'aria-input-field-name': { enabled: false },
-      },
-    })).toHaveNoViolations();
+    const listbox = wrapper.find('[role="listbox"]');
+    expect(listbox.attributes('aria-label')).toBe('Countries');
+    expect(listbox.attributes('aria-describedby')).toBe('countries-hint');
+    expect(wrapper.attributes('aria-label')).toBeUndefined();
+    expect(wrapper.attributes('aria-describedby')).toBeUndefined();
+    expect(await axe(wrapper.element)).toHaveNoViolations();
   });
 
   describe('emits', () => {
