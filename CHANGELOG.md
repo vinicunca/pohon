@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.1.0](https://github.com/vinicunca/pohon/compare/v2.0.10...v2.1.0) (2026-10-13)
+
+### Features
+
+* **components:** allow controlling heading element via as prop ([586f270](https://github.com/vinicunca/pohon/commit/586f2700edbfd45d0d2bb09e421faa916bbebb3a))
+* **FileUpload:** support custom file items in v-model ([2e8b9d9](https://github.com/vinicunca/pohon/commit/2e8b9d918da3b7c21d691854ce9f074d8a14008d))
+* **ProsePrompt:** add prompt prop ([6448d0e](https://github.com/vinicunca/pohon/commit/6448d0e316debdb2df69c8f7f56b32ed885d3520))
+
+### Bug Fixes
+
+* **components:** localize hardcoded accessibility labels ([56975e3](https://github.com/vinicunca/pohon/commit/56975e39907acb09d21b9badc272c0dc1308e5cf))
+* **ContentSearch/DashboardSearch:** handle undefined selection when an item is toggled off ([057a615](https://github.com/vinicunca/pohon/commit/057a615c4bee217c58730271073d07ab8f519306))
+* **Listbox:** add accessible name to listbox ([6f99124](https://github.com/vinicunca/pohon/commit/6f9912446f994b495091180da2ca904874bd7b54))
+* **SelectMenu:** keep controls outside the listbox ([e24d549](https://github.com/vinicunca/pohon/commit/e24d5491edf6f6d43fd6f247a216d97efebc3a08))
+
+### Performance Improvements
+
+* **components:** import primitives by name instead of from akar/namespaced ([cf1fd48](https://github.com/vinicunca/pohon/commit/cf1fd48d4af66690f28ea533cec0d0d9a8976924))
+
 ## [2.0.10](https://github.com/vinicunca/pohon/compare/v2.0.9...v2.0.10) (2026-10-12)
 
 ### Features
