@@ -16,17 +16,25 @@ export default defineLocale<Messages>({
     banner: {
       close: 'Tutup',
     },
+    breadcrumb: {
+      label: 'jejak navigasi',
+    },
     calendar: {
+      label: 'Tanggal acara',
+      monthPicker: 'Pemilih bulan',
       nextMonth: 'Bulan berikutnya',
       nextYear: 'Tahun berikutnya',
       prevMonth: 'Bulan sebelumnya',
       prevYear: 'Tahun sebelumnya',
+      yearPicker: 'Pemilih tahun',
     },
     carousel: {
       dots: 'Pilih slide untuk ditampilkan',
       goto: 'Pergi ke slide {slide}',
       next: 'Berikutnya',
       prev: 'Sebelumnya',
+      roledescription: 'korsel',
+      slide: 'slide',
     },
     chatMessages: {
       autoScroll: 'Gulir ke bawah',
@@ -57,6 +65,7 @@ export default defineLocale<Messages>({
       noData: 'Tidak ada data',
       noMatch: 'Tidak ada data yang cocok',
       placeholder: 'Ketik perintah atau cari…',
+      results: 'Hasil',
     },
     contentSearch: {
       links: 'Tautan',
@@ -100,14 +109,37 @@ export default defineLocale<Messages>({
       close: 'Tutup menu',
       open: 'Buka menu',
     },
+    inputDate: {
+      day: 'hari',
+      dayPeriod: 'AM/PM',
+      era: 'era',
+      hour: 'jam',
+      minute: 'menit',
+      month: 'bulan',
+      second: 'detik',
+      timeZoneName: 'zona waktu',
+      year: 'tahun',
+    },
     inputMenu: {
       create: 'Buat "{label}"',
       noData: 'Tidak ada data',
       noMatch: 'Tidak ada data yang cocok',
+      trigger: 'Tampilkan opsi',
     },
     inputNumber: {
       decrement: 'Kurangi',
       increment: 'Tambah',
+      roledescription: 'bidang angka',
+    },
+    inputRating: {
+      rate: 'Beri nilai {value} dari {length}',
+    },
+    inputTime: {
+      dayPeriod: 'AM/PM',
+      hour: 'jam',
+      minute: 'menit',
+      second: 'detik',
+      timeZoneName: 'zona waktu',
     },
     listbox: {
       noData: 'Tidak ada data',
@@ -123,6 +155,9 @@ export default defineLocale<Messages>({
       next: 'Halaman selanjutnya',
       page: 'Halaman {page}',
       prev: 'Halaman sebelumnya',
+    },
+    pinInput: {
+      input: 'kode PIN, karakter {index} dari {length}',
     },
     pricingTable: {
       caption: 'Perbandingan Harga',
@@ -156,14 +191,30 @@ export default defineLocale<Messages>({
       noMatch: 'Tidak ada data yang cocok',
       search: 'Cari…',
     },
+    skeleton: {
+      label: 'memuat',
+    },
     slideover: {
       close: 'Tutup',
+    },
+    slider: {
+      max: 'Maksimum',
+      min: 'Minimum',
+      thumb: 'Penggeser',
+      value: 'Nilai {index} dari {total}',
+    },
+    stepper: {
+      label: 'kemajuan',
     },
     table: {
       noData: 'Tidak ada data',
     },
     toast: {
       close: 'Tutup',
+    },
+    toaster: {
+      label: 'Notifikasi',
+      viewport: 'Notifikasi ({hotkey})',
     },
   },
 });

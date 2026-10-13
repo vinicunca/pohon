@@ -69,6 +69,7 @@ import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useFormField } from '../composables/useFormField';
 import { useForwardProps } from '../composables/useForwardProps';
+import { useLocale } from '../composables/useLocale';
 import { looseToNumber } from '../utils';
 import { uv } from '../utils/uv';
 
@@ -81,6 +82,7 @@ const emits = defineEmits<PinInputEmits<T>>();
 defineSlots<PinInputSlots>();
 
 const props = useComponentProps<PinInputProps<T>>('pinInput', _props);
+const { t } = useLocale();
 
 const appConfig = useAppConfig() as PinInput['AppConfig'];
 
@@ -203,6 +205,7 @@ defineExpose({
       <PinInputInput
         :ref="el => setInputRef(index as number, el)"
         :index="(index as number)"
+        :aria-label="t('pinInput.input', { index: (index as number) + 1, length: looseToNumber(props.length) })"
         data-slot="base"
         :class="ui.base({ class: props.ui?.base })"
         :disabled="disabled"

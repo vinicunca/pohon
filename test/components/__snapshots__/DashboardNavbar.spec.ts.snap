@@ -19,6 +19,25 @@ exports[`dashboardNavbar > renders with as correctly 1`] = `
 </div>"
 `;
 
+exports[`dashboardNavbar > renders with as object correctly 1`] = `
+"<div class="fixed inset-0 flex overflow-hidden">
+  <!---->
+  <section data-slot="root" class="border-border px-4 border-b flex shrink-0 gap-1.5 h-$ui-header-height items-center justify-between sm:px-6">
+    <div data-slot="left" class="flex items-center gap-1.5 min-w-0"><button type="button" data-slot="toggle" aria-label="Open sidebar" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-1.5 color-text hover:bg-background-elevated active:bg-background-elevated outline-border-inverted/25 focus-visible:outline-3 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-1.5 lg:hidden"><span class="iconify i-lucide:menu shrink-0 size-5" aria-hidden="true" data-slot="leadingIcon"></span>
+        <!--v-if-->
+        <!--v-if-->
+      </button>
+      <!--v-if-->
+      <h2 data-slot="title" class="flex items-center gap-1.5 font-600 color-text-highlighted truncate">Dashboard</h2>
+    </div>
+    <!--v-if-->
+    <div data-slot="right" class="flex items-center shrink-0 gap-1.5">
+      <!--v-if-->
+    </div>
+  </section>
+</div>"
+`;
+
 exports[`dashboardNavbar > renders with class correctly 1`] = `
 "<div class="fixed inset-0 flex overflow-hidden">
   <!---->

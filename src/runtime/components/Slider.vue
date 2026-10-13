@@ -46,11 +46,12 @@ export interface SliderEmits {
 <script setup lang="ts" generic="T extends number | number[]">
 import { reactivePick } from '@vueuse/core';
 import { SliderRange, SliderRoot, SliderThumb, SliderTrack } from 'akar';
-import { computed } from 'vue';
+import { computed, useAttrs } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useFormField } from '../composables/useFormField';
 import { useForwardProps } from '../composables/useForwardProps';
+import { useLocale } from '../composables/useLocale';
 import { omit, pick } from '../utils';
 import { uv } from '../utils/uv';
 import PTooltip from './Tooltip.vue';
@@ -67,6 +68,7 @@ const emits = defineEmits<SliderEmits>();
 const props = useComponentProps<SliderProps>('slider', _props);
 
 const modelValue = defineModel<T>();
+const { t } = useLocale();
 
 const appConfig = useAppConfig() as Slider['AppConfig'];
 
@@ -102,8 +104,21 @@ const sliderValue = computed({
 const thumbs = computed(() => sliderValue.value?.length ?? 1);
 
 // The thumb is the element with `role="slider"`, so these describe it rather than the root.
-// Multiple thumbs keep Akar's positional names and the caller's label groups them on the root.
+// Multiple thumbs get positional names and the caller's label groups them on the root.
 const thumbAttrs = ['aria-label', 'aria-labelledby', 'aria-describedby', 'aria-valuetext', 'aria-invalid', 'aria-errormessage'];
+const attrs = useAttrs();
+
+// A single thumb is named by the caller's `aria-labelledby` / `aria-label` first.
+function thumbLabel(index: number) {
+  if (thumbs.value === 1) {
+    return attrs['aria-labelledby'] ? undefined : (attrs['aria-label'] as string | undefined) ?? t('slider.thumb');
+  }
+  if (thumbs.value === 2) {
+    return index === 0 ? t('slider.min') : t('slider.max');
+  }
+
+  return t('slider.value', { index: index + 1, total: thumbs.value });
+}
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.slider || {}) })({
   disabled: disabled.value,
@@ -145,9 +160,9 @@ function onChange(value: any) {
         disable-closing-trigger
         v-bind="(typeof props.tooltip === 'object' ? props.tooltip : {})"
       >
-        <SliderThumb data-slot="thumb" :class="ui.thumb({ class: props.ui?.thumb })" v-bind="{ ...(thumbs === 1 ? pick($attrs, thumbAttrs) : {}), ...ariaAttrs }" :aria-label="thumbs > 1 || $attrs['aria-labelledby'] ? undefined : ($attrs['aria-label'] ?? 'Thumb')" />
+        <SliderThumb data-slot="thumb" :class="ui.thumb({ class: props.ui?.thumb })" v-bind="{ ...(thumbs === 1 ? pick($attrs, thumbAttrs) : {}), ...ariaAttrs }" :aria-label="thumbLabel(thumb - 1)" />
       </PTooltip>
-      <SliderThumb v-else data-slot="thumb" :class="ui.thumb({ class: props.ui?.thumb })" v-bind="{ ...(thumbs === 1 ? pick($attrs, thumbAttrs) : {}), ...ariaAttrs }" :aria-label="thumbs > 1 || $attrs['aria-labelledby'] ? undefined : ($attrs['aria-label'] ?? 'Thumb')" />
+      <SliderThumb v-else data-slot="thumb" :class="ui.thumb({ class: props.ui?.thumb })" v-bind="{ ...(thumbs === 1 ? pick($attrs, thumbAttrs) : {}), ...ariaAttrs }" :aria-label="thumbLabel(thumb - 1)" />
     </template>
   </SliderRoot>
 </template>

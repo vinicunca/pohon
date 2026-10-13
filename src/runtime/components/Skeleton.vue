@@ -21,11 +21,13 @@ import { Primitive } from 'akar';
 import { computed } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
+import { useLocale } from '../composables/useLocale';
 import { uv } from '../utils/uv';
 
 const _props = defineProps<SkeletonProps>();
 
 const props = useComponentProps('skeleton', _props);
+const { t } = useLocale();
 
 const appConfig = useAppConfig() as Skeleton['AppConfig'];
 
@@ -36,7 +38,7 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.skeleton || {}) 
   <Primitive
     :as="props.as"
     aria-busy="true"
-    aria-label="loading"
+    :aria-label="t('skeleton.label')"
     aria-live="polite"
     role="alert"
     :class="ui({ class: [props.ui?.base, props.class] })"

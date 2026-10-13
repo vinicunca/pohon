@@ -67,6 +67,7 @@ import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useFormField } from '../composables/useFormField';
 import { useForwardProps } from '../composables/useForwardProps';
+import { useLocale } from '../composables/useLocale';
 import { uv } from '../utils/uv';
 import PIcon from './Icon.vue';
 
@@ -85,6 +86,7 @@ const emits = defineEmits<InputRatingEmits>();
 defineSlots<InputRatingSlots>();
 
 const props = useComponentProps<InputRatingProps>('inputRating', _props);
+const { t } = useLocale();
 
 const appConfig = useAppConfig() as InputRating['AppConfig'];
 
@@ -163,7 +165,7 @@ function onUpdate(value: number) {
         v-for="step in steps"
         :key="step"
         :step="step"
-        :aria-label="`Rate ${step} out of ${props.length}`"
+        :aria-label="t('inputRating.rate', { value: step, length: props.length! })"
         data-slot="indicator"
         :class="ui.indicator({ class: props.ui?.indicator })"
       >

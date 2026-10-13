@@ -36,6 +36,18 @@ exports[`empty > renders with as correctly 1`] = `
 </section>"
 `;
 
+exports[`empty > renders with as object correctly 1`] = `
+"<section data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-border">
+  <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center">
+    <!--v-if-->
+    <h3 data-slot="title" class="color-text-highlighted text-pretty font-500 text-base">Title</h3>
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+  <!--v-if-->
+</section>"
+`;
+
 exports[`empty > renders with avatar correctly 1`] = `
 "<div data-slot="root" class="relative flex flex-col items-center justify-center gap-4 rounded-lg p-4 sm:p-6 lg:p-8 min-w-0 bg-background ring ring-border">
   <div data-slot="header" class="flex flex-col items-center gap-2 max-w-sm text-center"><span data-slot="avatar" class="inline-flex items-center justify-center shrink-0 select-none rounded-full align-middle bg-background-elevated size-8 text-base shrink-0 mb-2 pohon:size-10 text-xl"><img src="https://github.com/praburangki.png" width="32" height="32" data-slot="image" class="h-full w-full rounded-inherit object-cover"></span>
