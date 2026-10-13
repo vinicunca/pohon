@@ -62,8 +62,7 @@ type DropdownMenuContentSlots<
 
 <script setup lang="ts" generic="T extends ArrayOrNested<DropdownMenuItem>">
 import { createReusableTemplate, reactiveOmit } from '@vueuse/core';
-import { useForwardPropsEmits } from 'akar';
-import { DropdownMenu as AkarDropdownMenu } from 'akar/namespaced';
+import { DropdownMenuItem as AkarDropdownMenuItem, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuFilter, DropdownMenuGroup, DropdownMenuItemIndicator, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuSeparator, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, useForwardPropsEmits } from 'akar';
 import { defu } from 'defu';
 import { computed, ref, toRef } from 'vue';
 import { useAppConfig } from '#imports';
@@ -82,8 +81,12 @@ import PLink from './Link.vue';
 import PLinkBase from './LinkBase.vue';
 
 const props = defineProps<DropdownMenuContentProps<T>>();
+
 const emits = defineEmits<DropdownMenuContentEmits>();
+
 const slots = defineSlots<DropdownMenuContentSlots<T>>();
+
+const AkarDropdownMenu = { Portal: DropdownMenuPortal, Content: DropdownMenuContent, Item: AkarDropdownMenuItem, Group: DropdownMenuGroup, Separator: DropdownMenuSeparator, CheckboxItem: DropdownMenuCheckboxItem, ItemIndicator: DropdownMenuItemIndicator, Label: DropdownMenuLabel, Sub: DropdownMenuSub, SubContent: DropdownMenuSubContent, SubTrigger: DropdownMenuSubTrigger, Filter: DropdownMenuFilter };
 
 const { t, dir } = useLocale();
 const appConfig = useAppConfig();

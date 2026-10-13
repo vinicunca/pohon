@@ -81,7 +81,7 @@ export interface InputTimeSlots {
 
 <script setup lang="ts" generic="R extends boolean">
 import { createReusableTemplate, reactiveOmit } from '@vueuse/core';
-import { TimeRangeField as RangeTimeField, TimeField as SingleTimeField } from 'akar/namespaced';
+import { TimeFieldInput, TimeFieldRoot, TimeRangeFieldInput, TimeRangeFieldRoot } from 'akar';
 import { computed, onMounted, onScopeDispose, ref } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentIcons } from '../composables/useComponentIcons';
@@ -89,19 +89,22 @@ import { useComponentProps } from '../composables/useComponentProps';
 import { useFieldGroup } from '../composables/useFieldGroup';
 import { useFormField } from '../composables/useFormField';
 import { useForwardProps } from '../composables/useForwardProps';
+import { useLocale } from '../composables/useLocale';
 import { uv } from '../utils/uv';
 import PAvatar from './Avatar.vue';
 import PIcon from './Icon.vue';
 
 defineOptions({ inheritAttrs: false });
-
 const _props = withDefaults(defineProps<InputTimeProps<R>>(), {
   autofocusDelay: 0,
 });
 const emits = defineEmits<InputTimeEmits<R>>();
 const slots = defineSlots<InputTimeSlots>();
+const SingleTimeField = { Root: TimeFieldRoot, Input: TimeFieldInput };
+const RangeTimeField = { Root: TimeRangeFieldRoot, Input: TimeRangeFieldInput };
 
 const props = useComponentProps<InputTimeProps<R>>('inputTime', _props);
+const { t } = useLocale();
 
 const appConfig = useAppConfig() as InputTime['AppConfig'];
 
@@ -153,6 +156,10 @@ const TimeField = computed(() => props.range ? RangeTimeField : SingleTimeField)
 function setInputRef(index: number, el: Element | ComponentPublicInstance | null) {
   // @ts-expect-error - ComponentPublicInstance type mismatch in Nuxt module augmentation
   inputsRef.value[index] = el;
+}
+// Literal segments are hidden from assistive technologies.
+function segmentLabel(part: SegmentPart) {
+  return part !== 'literal' ? t(`inputTime.${part}`) : undefined;
 }
 
 function onUpdate(value: any) {
@@ -214,6 +221,7 @@ defineExpose({
       data-slot="segment"
       :class="ui.segment({ class: props.ui?.segment })"
       :data-segment="segment.part"
+      :aria-label="segmentLabel(segment.part)"
     >
       {{ segment.value.trim() }}
     </TimeField.Input>

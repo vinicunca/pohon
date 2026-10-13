@@ -238,8 +238,7 @@ export interface InputMenuSlots<
 
 <script setup lang="ts" generic="T extends ArrayOrNested<InputMenuItem>, VK extends GetItemKeys<T> | undefined = undefined, M extends boolean = false, Mod extends Omit<ModelModifiers, 'lazy'> = Omit<ModelModifiers, 'lazy'>, C extends boolean | object = false">
 import { createReusableTemplate, reactiveOmit, reactivePick } from '@vueuse/core';
-import { TagsInputInput, TagsInputItem, TagsInputItemDelete, TagsInputItemText, TagsInputRoot } from 'akar';
-import { Autocomplete, Combobox } from 'akar/namespaced';
+import { AutocompleteAnchor, AutocompleteArrow, AutocompleteCancel, AutocompleteContent, AutocompleteEmpty, AutocompleteGroup, AutocompleteInput, AutocompleteItem, AutocompleteItemIndicator, AutocompleteLabel, AutocompletePortal, AutocompleteRoot, AutocompleteSeparator, AutocompleteTrigger, AutocompleteVirtualizer, ComboboxAnchor, ComboboxArrow, ComboboxCancel, ComboboxContent, ComboboxEmpty, ComboboxGroup, ComboboxInput, ComboboxItem, ComboboxItemIndicator, ComboboxLabel, ComboboxPortal, ComboboxRoot, ComboboxSeparator, ComboboxTrigger, ComboboxVirtualizer, TagsInputInput, TagsInputItem, TagsInputItemDelete, TagsInputItemText, TagsInputRoot } from 'akar';
 import { defu } from 'defu';
 import { isEqual } from 'ohash/utils';
 import { computed, nextTick, onMounted, onScopeDispose, ref, toRaw, toRef, useAttrs, useTemplateRef, watch } from 'vue';
@@ -261,7 +260,6 @@ import PChip from './Chip.vue';
 import PIcon from './Icon.vue';
 
 defineOptions({ inheritAttrs: false });
-
 const _props = withDefaults(defineProps<InputMenuProps<T, VK, M, Mod, C>>(), {
   type: 'text',
   autofocusDelay: 0,
@@ -276,6 +274,8 @@ const _props = withDefaults(defineProps<InputMenuProps<T, VK, M, Mod, C>>(), {
 });
 const emits = defineEmits<InputMenuEmits<T, VK, M, Mod, C>>();
 const slots = defineSlots<InputMenuSlots<T, VK, M, Mod, C>>();
+const Combobox = { Root: ComboboxRoot, Input: ComboboxInput, Anchor: ComboboxAnchor, Empty: ComboboxEmpty, Trigger: ComboboxTrigger, Cancel: ComboboxCancel, Group: ComboboxGroup, Label: ComboboxLabel, Content: ComboboxContent, Virtualizer: ComboboxVirtualizer, Item: ComboboxItem, ItemIndicator: ComboboxItemIndicator, Separator: ComboboxSeparator, Arrow: ComboboxArrow, Portal: ComboboxPortal };
+const Autocomplete = { Root: AutocompleteRoot, Input: AutocompleteInput, Anchor: AutocompleteAnchor, Empty: AutocompleteEmpty, Trigger: AutocompleteTrigger, Cancel: AutocompleteCancel, Group: AutocompleteGroup, Label: AutocompleteLabel, Content: AutocompleteContent, Virtualizer: AutocompleteVirtualizer, Item: AutocompleteItem, ItemIndicator: AutocompleteItemIndicator, Separator: AutocompleteSeparator, Arrow: AutocompleteArrow, Portal: AutocompletePortal };
 
 const props = useComponentProps<InputMenuProps<T, VK, M, Mod, C>>('inputMenu', _props);
 
@@ -777,7 +777,7 @@ defineExpose({
         </slot>
       </span>
 
-      <Component.Trigger v-if="isTrailing || !!slots.trailing || !!props.clear" data-slot="trailing" :class="ui.trailing({ class: props.ui?.trailing })">
+      <Component.Trigger v-if="isTrailing || !!slots.trailing || !!props.clear" :aria-label="t('inputMenu.trigger')" data-slot="trailing" :class="ui.trailing({ class: props.ui?.trailing })">
         <slot name="trailing" :model-value="(modelValue as ApplyModifiers<GetModelValue<T, VK, M, ExcludeItem>, Mod>)" :open="open" :ui="ui">
           <Component.Cancel v-if="!!props.clear && !disabled && !isModelValueEmpty(modelValue as ApplyModifiers<GetModelValue<T, VK, M, ExcludeItem>, Mod>)" as-child>
             <PButton

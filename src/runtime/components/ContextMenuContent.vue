@@ -39,8 +39,7 @@ interface ContextMenuContentEmits extends AkarContextMenuContentEmits {}
 
 <script setup lang="ts" generic="T extends ArrayOrNested<ContextMenuItem>">
 import { createReusableTemplate, reactiveOmit } from '@vueuse/core';
-import { useForwardPropsEmits } from 'akar';
-import { ContextMenu as AkarContextMenu } from 'akar/namespaced';
+import { ContextMenuItem as AkarContextMenuItem, ContextMenuCheckboxItem, ContextMenuContent, ContextMenuGroup, ContextMenuItemIndicator, ContextMenuLabel, ContextMenuPortal, ContextMenuSeparator, ContextMenuSub, ContextMenuSubContent, ContextMenuSubTrigger, useForwardPropsEmits } from 'akar';
 import { computed, toRef } from 'vue';
 import { useAppConfig } from '#imports';
 import { FieldGroupReset } from '../composables/useFieldGroup';
@@ -56,8 +55,12 @@ import PLink from './Link.vue';
 import PLinkBase from './LinkBase.vue';
 
 const props = defineProps<ContextMenuContentProps<T>>();
+
 const emits = defineEmits<ContextMenuContentEmits>();
+
 const slots = defineSlots<ContextMenuSlots<T>>();
+
+const AkarContextMenu = { Portal: ContextMenuPortal, Content: ContextMenuContent, Item: AkarContextMenuItem, Group: ContextMenuGroup, Separator: ContextMenuSeparator, CheckboxItem: ContextMenuCheckboxItem, ItemIndicator: ContextMenuItemIndicator, Label: ContextMenuLabel, Sub: ContextMenuSub, SubContent: ContextMenuSubContent, SubTrigger: ContextMenuSubTrigger };
 
 const { dir } = useLocale();
 const appConfig = useAppConfig();

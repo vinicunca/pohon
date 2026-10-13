@@ -151,7 +151,7 @@ export interface CalendarSlots {
 
 <script setup lang="ts" generic="R extends boolean, M extends boolean">
 import { reactiveOmit } from '@vueuse/core';
-import { MonthPicker, MonthRangePicker, RangeCalendar, Calendar as SingleCalendar, YearPicker, YearRangePicker } from 'akar/namespaced';
+import { CalendarCell, CalendarCellTrigger, CalendarGrid, CalendarGridBody, CalendarGridHead, CalendarGridRow, CalendarHeadCell, CalendarHeader, CalendarHeading, CalendarNext, CalendarPrev, CalendarRoot, MonthPickerCell, MonthPickerCellTrigger, MonthPickerGrid, MonthPickerGridBody, MonthPickerGridRow, MonthPickerHeader, MonthPickerHeading, MonthPickerNext, MonthPickerPrev, MonthPickerRoot, MonthRangePickerCell, MonthRangePickerCellTrigger, MonthRangePickerGrid, MonthRangePickerGridBody, MonthRangePickerGridRow, MonthRangePickerHeader, MonthRangePickerHeading, MonthRangePickerNext, MonthRangePickerPrev, MonthRangePickerRoot, RangeCalendarCell, RangeCalendarCellTrigger, RangeCalendarGrid, RangeCalendarGridBody, RangeCalendarGridHead, RangeCalendarGridRow, RangeCalendarHeadCell, RangeCalendarHeader, RangeCalendarHeading, RangeCalendarNext, RangeCalendarPrev, RangeCalendarRoot, YearPickerCell, YearPickerCellTrigger, YearPickerGrid, YearPickerGridBody, YearPickerGridRow, YearPickerHeader, YearPickerHeading, YearPickerNext, YearPickerPrev, YearPickerRoot, YearRangePickerCell, YearRangePickerCellTrigger, YearRangePickerGrid, YearRangePickerGridBody, YearRangePickerGridRow, YearRangePickerHeader, YearRangePickerHeading, YearRangePickerNext, YearRangePickerPrev, YearRangePickerRoot } from 'akar';
 import { computed, ref, shallowRef, watch } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
@@ -168,8 +168,13 @@ const _props = withDefaults(defineProps<CalendarProps<R, M>>(), {
   viewControl: true,
 });
 const emits = defineEmits<CalendarEmits<R, M>>();
-
 defineSlots<CalendarSlots>();
+const SingleCalendar = { Root: CalendarRoot, Header: CalendarHeader, Heading: CalendarHeading, Grid: CalendarGrid, Cell: CalendarCell, HeadCell: CalendarHeadCell, Next: CalendarNext, Prev: CalendarPrev, GridHead: CalendarGridHead, GridBody: CalendarGridBody, GridRow: CalendarGridRow, CellTrigger: CalendarCellTrigger };
+const RangeCalendar = { Root: RangeCalendarRoot, Header: RangeCalendarHeader, Heading: RangeCalendarHeading, Grid: RangeCalendarGrid, Cell: RangeCalendarCell, HeadCell: RangeCalendarHeadCell, Next: RangeCalendarNext, Prev: RangeCalendarPrev, GridHead: RangeCalendarGridHead, GridBody: RangeCalendarGridBody, GridRow: RangeCalendarGridRow, CellTrigger: RangeCalendarCellTrigger };
+const MonthPicker = { Root: MonthPickerRoot, Header: MonthPickerHeader, Heading: MonthPickerHeading, Grid: MonthPickerGrid, Cell: MonthPickerCell, Next: MonthPickerNext, Prev: MonthPickerPrev, GridBody: MonthPickerGridBody, GridRow: MonthPickerGridRow, CellTrigger: MonthPickerCellTrigger };
+const MonthRangePicker = { Root: MonthRangePickerRoot, Header: MonthRangePickerHeader, Heading: MonthRangePickerHeading, Grid: MonthRangePickerGrid, Cell: MonthRangePickerCell, Next: MonthRangePickerNext, Prev: MonthRangePickerPrev, GridBody: MonthRangePickerGridBody, GridRow: MonthRangePickerGridRow, CellTrigger: MonthRangePickerCellTrigger };
+const YearPicker = { Root: YearPickerRoot, Header: YearPickerHeader, Heading: YearPickerHeading, Grid: YearPickerGrid, Cell: YearPickerCell, Next: YearPickerNext, Prev: YearPickerPrev, GridBody: YearPickerGridBody, GridRow: YearPickerGridRow, CellTrigger: YearPickerCellTrigger };
+const YearRangePicker = { Root: YearRangePickerRoot, Header: YearRangePickerHeader, Heading: YearRangePickerHeading, Grid: YearRangePickerGrid, Cell: YearRangePickerCell, Next: YearRangePickerNext, Prev: YearRangePickerPrev, GridBody: YearRangePickerGridBody, GridRow: YearRangePickerGridRow, CellTrigger: YearRangePickerCellTrigger };
 
 const props = useComponentProps<CalendarProps<R, M>>('calendar', _props);
 
@@ -300,6 +305,7 @@ const prevMonthIcon = computed(() => props.prevMonthIcon || (dir.value === 'rtl'
 
 const prevLabel = computed(() => view.value === 'day' ? t('calendar.prevMonth') : t('calendar.prevYear'));
 const nextLabel = computed(() => view.value === 'day' ? t('calendar.nextMonth') : t('calendar.nextYear'));
+const calendarLabel = computed(() => view.value === 'year' ? t('calendar.yearPicker') : view.value === 'month' ? t('calendar.monthPicker') : t('calendar.label'));
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.calendar || {}) })({
   color: props.color,
@@ -314,6 +320,7 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.calendar || {}) 
   <Picker.Root
     v-slot="{ weekDays, grid, date }"
     v-bind="rootProps"
+    :calendar-label="calendarLabel"
     :model-value="(isMinView ? (props.modelValue as DateValue | DateValue[] | DateRange) : undefined)"
     :default-value="(isMinView ? (props.defaultValue as DateValue | DateValue[] | DateRange) : undefined)"
     :placeholder="placeholder"

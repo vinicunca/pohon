@@ -63,7 +63,7 @@ export interface PopoverSlots<M extends PopoverMode = PopoverMode> {
 
 <script setup lang="ts" generic="M extends PopoverMode">
 import { reactivePick } from '@vueuse/core';
-import { Popover as AkarPopover, HoverCard } from 'akar/namespaced';
+import { HoverCardArrow, HoverCardContent, HoverCardPortal, HoverCardRoot, HoverCardTrigger, PopoverAnchor, PopoverArrow, PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'akar';
 import { defu } from 'defu';
 import { computed, toRef } from 'vue';
 import { useAppConfig } from '#imports';
@@ -86,6 +86,8 @@ const _props = withDefaults(
 );
 const emits = defineEmits<PopoverEmits>();
 const slots = defineSlots<PopoverSlots<M>>();
+const AkarPopover = { Root: PopoverRoot, Trigger: PopoverTrigger, Portal: PopoverPortal, Content: PopoverContent, Arrow: PopoverArrow, Anchor: PopoverAnchor };
+const HoverCard = { Root: HoverCardRoot, Trigger: HoverCardTrigger, Portal: HoverCardPortal, Content: HoverCardContent, Arrow: HoverCardArrow };
 
 const props = useComponentProps<PopoverProps<M>>('popover', _props);
 

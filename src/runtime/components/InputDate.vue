@@ -71,7 +71,7 @@ export interface InputDateSlots {
 
 <script setup lang="ts" generic="R extends boolean">
 import { createReusableTemplate, reactiveOmit } from '@vueuse/core';
-import { DateRangeField as RangeDateField, DateField as SingleDateField } from 'akar/namespaced';
+import { DateFieldInput, DateFieldRoot, DateRangeFieldInput, DateRangeFieldRoot } from 'akar';
 import { computed, onMounted, onScopeDispose, ref } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentIcons } from '../composables/useComponentIcons';
@@ -79,12 +79,12 @@ import { useComponentProps } from '../composables/useComponentProps';
 import { useFieldGroup } from '../composables/useFieldGroup';
 import { useFormField } from '../composables/useFormField';
 import { useForwardProps } from '../composables/useForwardProps';
+import { useLocale } from '../composables/useLocale';
 import { uv } from '../utils/uv';
 import PAvatar from './Avatar.vue';
 import PIcon from './Icon.vue';
 
 defineOptions({ inheritAttrs: false });
-
 const _props = withDefaults(
   defineProps<InputDateProps<R>>(),
   {
@@ -93,8 +93,11 @@ const _props = withDefaults(
 );
 const emits = defineEmits<InputDateEmits<R>>();
 const slots = defineSlots<InputDateSlots>();
+const SingleDateField = { Root: DateFieldRoot, Input: DateFieldInput };
+const RangeDateField = { Root: DateRangeFieldRoot, Input: DateRangeFieldInput };
 
 const props = useComponentProps<InputDateProps<R>>('inputDate', _props);
+const { t } = useLocale();
 
 const appConfig = useAppConfig() as InputDate['AppConfig'];
 
@@ -143,6 +146,10 @@ const inputsRef = ref<Array<ComponentPublicInstance>>([]);
 function setInputRef(index: number, el: Element | ComponentPublicInstance | null) {
   // @ts-expect-error - ComponentPublicInstance type mismatch in Nuxt module augmentation
   inputsRef.value[index] = el;
+}
+// Literal segments are hidden from assistive technologies.
+function segmentLabel(part: SegmentPart) {
+  return part !== 'literal' ? t(`inputDate.${part}`) : undefined;
 }
 
 function onUpdate(value: any) {
@@ -206,6 +213,7 @@ defineExpose({
       data-slot="segment"
       :class="ui.segment({ class: props.ui?.segment })"
       :data-segment="segment.part"
+      :aria-label="segmentLabel(segment.part)"
     >
       {{ segment.value.trim() }}
     </DateField.Input>
