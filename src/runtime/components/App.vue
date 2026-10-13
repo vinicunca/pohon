@@ -23,7 +23,7 @@ export default {
 <script setup lang="ts" generic="T extends Messages">
 import { reactivePick } from '@vueuse/core';
 import { ConfigProvider, TooltipProvider, useForwardProps } from 'akar';
-import { provide, toRef, useId } from 'vue';
+import { inject, provide, toRef, useId } from 'vue';
 import { localeContextInjectionKey } from '../composables/useLocale';
 import { portalTargetInjectionKey } from '../composables/usePortal';
 import en from '../locale/en';
@@ -42,7 +42,11 @@ const configProviderProps = useForwardProps(reactivePick(props, 'scrollBody', 'n
 const tooltipProps = toRef(() => props.tooltip);
 const toasterProps = toRef(() => props.toaster);
 
-const locale = toRef(() => props.dir ? { ...(props.locale || en), dir: props.dir } : props.locale);
+const parentLocale = inject(localeContextInjectionKey, undefined);
+const locale = toRef(() => {
+  const value = props.locale || parentLocale?.value;
+  return props.dir ? { ...(value || en), dir: props.dir } : value;
+});
 provide(localeContextInjectionKey, locale);
 
 const portal = toRef(() => props.portal);
