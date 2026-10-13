@@ -149,7 +149,7 @@ import { computed, toRef, useTemplateRef } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useForwardProps } from '../composables/useForwardProps';
-import { get } from '../utils';
+import { get, resolveAs } from '../utils';
 import { uv } from '../utils/uv';
 import { getEstimateSize } from '../utils/virtualizer';
 import PIcon from './Icon.vue';
@@ -173,13 +173,7 @@ const appConfig = useAppConfig() as Tree['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'items', 'multiple', 'expanded', 'disabled', 'propagateSelect', 'bubbleSelect', 'loop'), emits);
 
-const as = computed(() => {
-  if (typeof props.as === 'string' || typeof props.as?.render === 'function') {
-    return { root: props.as, link: 'button' };
-  }
-
-  return defu(props.as, { root: 'ul', link: 'button' });
-});
+const as = computed(() => resolveAs(props.as, { root: 'ul', link: 'button' }));
 
 const nested = computed(() => props.virtualize ? false : props.nested);
 

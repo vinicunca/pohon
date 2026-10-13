@@ -1,4 +1,5 @@
 import type { GetItemKeys } from '../types/utils';
+import { defu } from 'defu';
 import { isEqual } from 'ohash/utils';
 import { joinURL, withLeadingSlash, withTrailingSlash } from 'ufo';
 
@@ -219,6 +220,22 @@ export function resolveBaseURL(path?: string, baseURL?: string): string | undefi
     }
   }
   return path;
+}
+/**
+ * Resolves an `as` prop that accepts either a single element / component (applied to `root`)
+ * or an object targeting multiple elements, e.g. `{ root: 'div', title: 'h3' }`.
+ */
+export function resolveAs<T extends { root: any }>(as: any, defaults: T): T {
+  if (
+    typeof as === 'string'
+    || typeof as === 'function'
+    || typeof as?.render === 'function'
+    || typeof as?.setup === 'function'
+  ) {
+    return { ...defaults, root: as };
+  }
+
+  return defu(as, defaults) as T;
 }
 
 export * from './content';

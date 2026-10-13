@@ -14,7 +14,7 @@ export interface PageSectionProps {
    * The element or component this component should render as.
    * @defaultValue 'section'
    */
-  as?: any;
+  as?: any | { root?: any; title?: any };
   /**
    * The headline displayed above the title.
    */
@@ -70,6 +70,7 @@ import { Primitive } from 'akar';
 import { computed } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
+import { resolveAs } from '../utils';
 import { uv } from '../utils/uv';
 import PButton from './Button.vue';
 import PContainer from './Container.vue';
@@ -79,7 +80,6 @@ import PPageFeature from './PageFeature.vue';
 const _props = withDefaults(
   defineProps<PageSectionProps>(),
   {
-    as: 'section',
     orientation: 'vertical',
   },
 );
@@ -88,6 +88,8 @@ const slots = defineSlots<PageSectionSlots>();
 const props = useComponentProps('pageSection', _props);
 
 const appConfig = useAppConfig() as PageSection['AppConfig'];
+
+const as = computed(() => resolveAs(props.as, { root: 'section', title: 'h2' }));
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageSection || {}) })({
   orientation: props.orientation,
@@ -99,7 +101,7 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageSection || {
 </script>
 
 <template>
-  <Primitive :as="props.as" :data-orientation="props.orientation" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <Primitive :as="as.root" :data-orientation="props.orientation" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <slot name="top" />
 
     <PContainer data-slot="container" :class="ui.container({ class: props.ui?.container })">
@@ -118,11 +120,11 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageSection || {
               </slot>
             </div>
 
-            <h2 v-if="props.title || !!slots.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
+            <Primitive v-if="props.title || !!slots.title" :as="as.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
               <slot name="title">
                 {{ props.title }}
               </slot>
-            </h2>
+            </Primitive>
 
             <div v-if="props.description || !!slots.description" data-slot="description" :class="ui.description({ class: props.ui?.description })">
               <slot name="description">

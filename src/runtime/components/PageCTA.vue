@@ -12,7 +12,7 @@ export interface PageCTAProps {
    * The element or component this component should render as.
    * @defaultValue 'div'
    */
-  as?: any;
+  as?: any | { root?: any; title?: any };
   class?: any;
   title?: string;
   description?: string;
@@ -56,6 +56,7 @@ import { Primitive } from 'akar';
 import { computed } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
+import { resolveAs } from '../utils';
 import { uv } from '../utils/uv';
 import PButton from './Button.vue';
 import PContainer from './Container.vue';
@@ -73,6 +74,8 @@ const props = useComponentProps('pageCTA', _props);
 
 const appConfig = useAppConfig() as PageCTA['AppConfig'];
 
+const as = computed(() => resolveAs(props.as, { root: 'div', title: 'h2' }));
+
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageCTA || {}) })({
   variant: props.variant,
   orientation: props.orientation,
@@ -82,18 +85,18 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageCTA || {}) }
 </script>
 
 <template>
-  <Primitive :as="props.as" :data-orientation="props.orientation" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <Primitive :as="as.root" :data-orientation="props.orientation" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <slot name="top" />
 
     <PContainer data-slot="container" :class="ui.container({ class: props.ui?.container })">
       <div v-if="!!slots.header || (props.title || !!slots.title) || (props.description || !!slots.description) || !!slots.body || !!slots.footer || (props.links?.length || !!slots.links)" data-slot="wrapper" :class="ui.wrapper({ class: props.ui?.wrapper })">
         <div v-if="!!slots.header || (props.title || !!slots.title) || (props.description || !!slots.description)" data-slot="header" :class="ui.header({ class: props.ui?.header })">
           <slot name="header">
-            <h2 v-if="props.title || !!slots.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
+            <Primitive v-if="props.title || !!slots.title" :as="as.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
               <slot name="title">
                 {{ props.title }}
               </slot>
-            </h2>
+            </Primitive>
 
             <div v-if="props.description || !!slots.description" data-slot="description" :class="ui.description({ class: props.ui?.description })">
               <slot name="description">

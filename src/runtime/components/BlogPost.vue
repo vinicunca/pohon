@@ -15,7 +15,7 @@ export interface BlogPostProps {
    * The element or component this component should render as.
    * @defaultValue 'article'
    */
-  as?: any;
+  as?: any | { root?: any; title?: any };
   title?: string;
   description?: string;
   /** The date of the blog post. Can be a string or a Date object. */
@@ -65,7 +65,7 @@ import ImageComponent from '#build/ui-image-component';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useLocale } from '../composables/useLocale';
-import { getSlotChildrenText } from '../utils';
+import { getSlotChildrenText, resolveAs } from '../utils';
 import { uv } from '../utils/uv';
 import PAvatar from './Avatar.vue';
 import PAvatarGroup from './AvatarGroup.vue';
@@ -78,7 +78,6 @@ defineOptions({ inheritAttrs: false });
 const _props = withDefaults(
   defineProps<BlogPostProps>(),
   {
-    as: 'article',
     orientation: 'vertical',
   },
 );
@@ -89,6 +88,8 @@ const props = useComponentProps('blogPost', _props);
 const { locale } = useLocale();
 const appConfig = useAppConfig() as BlogPost['AppConfig'];
 const formatter = useDateFormatter(locale.value.code);
+
+const as = computed(() => resolveAs(props.as, { root: 'article', title: 'h2' }));
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.blogPost || {}) })({
   orientation: props.orientation,
@@ -127,7 +128,7 @@ const ariaLabel = computed(() => {
 
 <template>
   <Primitive
-    :as="props.as"
+    :as="as.root"
     v-bind="!props.to ? $attrs : {}"
     :data-orientation="props.orientation"
     :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'"
@@ -174,11 +175,11 @@ const ariaLabel = computed(() => {
           </time>
         </div>
 
-        <h2 v-if="props.title || !!slots.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
+        <Primitive v-if="props.title || !!slots.title" :as="as.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
           <slot name="title">
             {{ props.title }}
           </slot>
-        </h2>
+        </Primitive>
 
         <div v-if="props.description || !!slots.description" data-slot="description" :class="ui.description({ class: props.ui?.description })">
           <slot name="description">

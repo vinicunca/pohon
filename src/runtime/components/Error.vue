@@ -14,7 +14,7 @@ export interface ErrorProps {
    * The element or component this component should render as.
    * @defaultValue 'main'
    */
-  as?: any;
+  as?: any | { root?: any; statusMessage?: any };
   /**
    * The icon displayed above the status code.
    * @IconifyIcon
@@ -52,6 +52,7 @@ import { computed } from 'vue';
 import { clearError, useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useLocale } from '../composables/useLocale';
+import { resolveAs } from '../utils';
 import { uv } from '../utils/uv';
 import PButton from './Button.vue';
 import PIcon from './Icon.vue';
@@ -59,7 +60,6 @@ import PIcon from './Icon.vue';
 const _props = withDefaults(
   defineProps<ErrorProps>(),
   {
-    as: 'main',
     redirect: '/',
     clear: true,
   },
@@ -71,6 +71,8 @@ const props = useComponentProps('error', _props);
 const { t } = useLocale();
 const appConfig = useAppConfig() as Error['AppConfig'];
 
+const as = computed(() => resolveAs(props.as, { root: 'main', statusMessage: 'h1' }));
+
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.error || {}) })());
 
 function handleError() {
@@ -79,7 +81,7 @@ function handleError() {
 </script>
 
 <template>
-  <Primitive :as="props.as" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <Primitive :as="as.root" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <div v-if="props.icon || !!slots.leading" data-slot="leading" :class="ui.leading({ class: props.ui?.leading })">
       <slot name="leading" :ui="ui">
         <PIcon v-if="props.icon" :name="props.icon" data-slot="leadingIcon" :class="ui.leadingIcon({ class: props.ui?.leadingIcon })" />
@@ -90,11 +92,11 @@ function handleError() {
         {{ props.error?.statusCode || props.error?.status }}
       </slot>
     </p>
-    <h1 v-if="!!props.error?.statusMessage || !!props.error?.statusText || !!slots.statusMessage" data-slot="statusMessage" :class="ui.statusMessage({ class: props.ui?.statusMessage })">
+    <Primitive v-if="!!props.error?.statusMessage || !!props.error?.statusText || !!slots.statusMessage" :as="as.statusMessage" data-slot="statusMessage" :class="ui.statusMessage({ class: props.ui?.statusMessage })">
       <slot name="statusMessage">
         {{ props.error?.statusMessage || props.error?.statusText }}
       </slot>
-    </h1>
+    </Primitive>
     <p v-if="(props.error?.message && props.error.message !== (props.error.statusMessage || props.error.statusText)) || !!slots.message" data-slot="message" :class="ui.message({ class: props.ui?.message })">
       <slot name="message">
         {{ props.error?.message }}

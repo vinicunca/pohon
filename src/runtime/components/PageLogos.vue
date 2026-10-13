@@ -17,7 +17,7 @@ export interface PageLogosProps {
    * The element or component this component should render as.
    * @defaultValue 'div'
    */
-  as?: any;
+  as?: any | { root?: any; title?: any };
   title?: string;
   items?: Array<PageLogosItem>;
   marquee?: boolean | MarqueeProps;
@@ -36,6 +36,7 @@ import { Primitive } from 'akar';
 import { computed } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
+import { resolveAs } from '../utils';
 import { uv } from '../utils/uv';
 import PAvatar from './Avatar.vue';
 import PIcon from './Icon.vue';
@@ -57,6 +58,8 @@ const [DefineCreateItemTemplate, ReuseCreateItemTemplate] = createReusableTempla
 const props = useComponentProps('pageLogos', _props);
 
 const appConfig = useAppConfig() as PageLogos['AppConfig'];
+
+const as = computed(() => resolveAs(props.as, { root: 'div', title: 'h2' }));
 
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageLogos || {}) })());
 </script>
@@ -83,10 +86,10 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageLogos || {})
     </template>
   </DefineCreateItemTemplate>
 
-  <Primitive :as="props.as" data-slot="root" v-bind="$attrs" :class="ui.root({ class: [props.ui?.root, props.class] })">
-    <h2 v-if="props.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
+  <Primitive :as="as.root" data-slot="root" v-bind="$attrs" :class="ui.root({ class: [props.ui?.root, props.class] })">
+    <Primitive v-if="props.title" :as="as.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
       {{ props.title }}
-    </h2>
+    </Primitive>
 
     <PMarquee
       v-if="props.marquee"

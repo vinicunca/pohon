@@ -43,12 +43,12 @@ export interface AvatarSlots {
 
 <script setup lang="ts">
 import { Primitive, Slot } from 'akar';
-import { defu } from 'defu';
 import { computed, ref, watch } from 'vue';
 import ImageComponent from '#build/ui-image-component';
 import { useAppConfig } from '#imports';
 import { useAvatarGroup } from '../composables/useAvatarGroup';
 import { useComponentProps } from '../composables/useComponentProps';
+import { resolveAs } from '../utils';
 import { uv } from '../utils/uv';
 import PChip from './Chip.vue';
 import PIcon from './Icon.vue';
@@ -59,13 +59,7 @@ const _props = defineProps<AvatarProps>();
 
 const props = useComponentProps('avatar', _props);
 
-const as = computed(() => {
-  if (typeof props.as === 'string' || typeof props.as?.render === 'function') {
-    return { root: props.as };
-  }
-
-  return defu(props.as, { root: 'span' });
-});
+const as = computed(() => resolveAs<{ root: any; img?: any }>(props.as, { root: 'span' }));
 
 const fallback = computed(() => props.text || (props.alt || '').split(' ').map((word) => word.charAt(0)).join('').substring(0, 2));
 

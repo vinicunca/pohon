@@ -14,7 +14,7 @@ export interface EmptyProps {
    * The element or component this component should render as.
    * @defaultValue 'div'
    */
-  as?: any;
+  as?: any | { root?: any; title?: any };
   /**
    * The icon displayed above the title.
    * @IconifyIcon
@@ -63,6 +63,7 @@ import { Primitive } from 'akar';
 import { computed } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
+import { resolveAs } from '../utils';
 import { uv } from '../utils/uv';
 import PAvatar from './Avatar.vue';
 import PButton from './Button.vue';
@@ -76,6 +77,8 @@ const appConfig = useAppConfig() as Empty['AppConfig'];
 
 const iconName = computed(() => props.loading ? (props.loadingIcon || appConfig.ui.icons.loading) : props.icon);
 
+const as = computed(() => resolveAs(props.as, { root: 'div', title: 'h2' }));
+
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.empty || {}) })({
   variant: props.variant,
   size: props.size,
@@ -84,18 +87,18 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.empty || {}) })(
 </script>
 
 <template>
-  <Primitive :as="props.as" :aria-busy="props.loading ? 'true' : undefined" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <Primitive :as="as.root" :aria-busy="props.loading ? 'true' : undefined" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <div v-if="!!slots.header || (iconName || props.avatar || !!slots.leading) || (props.title || !!slots.title) || (props.description || !!slots.description)" data-slot="header" :class="ui.header({ class: props.ui?.header })">
       <slot name="header">
         <slot name="leading" :ui="ui">
           <PAvatar v-if="iconName || props.avatar" :icon="iconName" v-bind="typeof props.avatar === 'object' ? props.avatar : {}" data-slot="avatar" :class="ui.avatar({ class: props.ui?.avatar })" />
         </slot>
 
-        <h2 v-if="props.title || !!slots.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
+        <Primitive v-if="props.title || !!slots.title" :as="as.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
           <slot name="title">
             {{ props.title }}
           </slot>
-        </h2>
+        </Primitive>
 
         <div v-if="props.description || !!slots.description" data-slot="description" :class="ui.description({ class: props.ui?.description })">
           <slot name="description">

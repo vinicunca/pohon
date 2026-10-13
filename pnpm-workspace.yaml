@@ -21,7 +21,7 @@ overrides:
   # alongside 0.34.5 and kills the docs prerender as soon as it hits `/_ipx`.
   # Pinned until ipx 4 is stable, keep in sync with the renovate.json rule.
   '@nuxt/image': 2.0.0
-  '@nuxt/kit': ^4.6.0
+  '@nuxt/kit': ^4.6.1
   c12: ^3.3.4
   h3@: 1.15.11
   pohon-ui: workspace:*
@@ -41,30 +41,30 @@ allowBuilds:
   vue-demi: false
 
 catalog:
-  '@ai-sdk/anthropic': ^4.0.71
-  '@ai-sdk/gateway': ^4.0.103
-  '@ai-sdk/vue': ^4.0.127
+  '@ai-sdk/anthropic': ^4.0.78
+  '@ai-sdk/gateway': ^4.0.110
+  '@ai-sdk/vue': ^4.0.137
   '@codspeed/vitest-plugin': ^5.7.1
   '@comark/vue': ^0.7.0
   '@floating-ui/dom': ^1.8.0
-  '@iconify-json/lucide': ^1.2.139
-  '@iconify-json/simple-icons': ^1.2.98
+  '@iconify-json/lucide': ^1.2.142
+  '@iconify-json/simple-icons': ^1.2.99
   '@iconify/vue': ^5.0.3
   '@internationalized/date': ^3.12.4
-  '@internationalized/number': ^3.6.8
+  '@internationalized/number': ^3.6.9
   '@nuxt/content': ^3.16.1
   '@nuxt/fonts': ^0.14.0
   '@nuxt/icon': ^2.5.1
-  '@nuxt/kit': ^4.6.0
+  '@nuxt/kit': ^4.6.1
   '@nuxt/module-builder': ^1.0.3
-  '@nuxt/schema': ^4.6.0
+  '@nuxt/schema': ^4.6.1
   '@nuxt/test-utils': ^4.3.3
   '@nuxtjs/color-mode': ^4.0.1
   '@release-it/conventional-changelog': ^12.0.2
   '@standard-schema/spec': ^1.1.0
   '@tanstack/table-core': ^8.21.3
   '@tanstack/vue-table': ^8.21.3
-  '@tanstack/vue-virtual': ^3.13.39
+  '@tanstack/vue-virtual': ^3.13.40
   '@tiptap/core': ^3.31.4
   '@tiptap/extension-bubble-menu': ^3.31.4
   '@tiptap/extension-code': ^3.31.4
@@ -90,13 +90,13 @@ catalog:
   '@vinicunca/eslint-config': 6.0.0
   '@vinicunca/perkakas': 1.17.1
   '@vinicunca/unocss-preset': 2.4.0
-  '@vitejs/plugin-vue': ^6.0.9
+  '@vitejs/plugin-vue': ^6.0.10
   '@vue/repl': ^4.7.2
   '@vue/test-utils': ^2.5.1
   '@vueuse/core': ^14.4.0
   '@vueuse/integrations': ^14.4.0
   '@vueuse/shared': ^14.4.0
-  ai: ^7.0.127
+  ai: ^7.0.137
   akar: 2.0.23
   citty: ^0.2.2
   colortranslator: ^5.0.0
@@ -112,17 +112,17 @@ catalog:
   embla-carousel-wheel-gestures: ^8.1.0
   eslint: ^10.12.0
   fuse.js: ^7.5.0
-  happy-dom: ^20.14.5
+  happy-dom: ^20.14.6
   hookable: ^6.1.2
   knitwork: ^1.3.0
-  magic-string: ^1.4.2
+  magic-string: ^1.4.3
   mlly: ^1.8.2
-  motion-v: ^2.5.2
-  nuxt: ^4.6.0
+  motion-v: ^2.6.0
+  nuxt: ^4.6.1
   ohash: ^2.0.12
   pathe: ^2.0.3
   pohon-ui: workspace:*
-  release-it: ^21.1.0
+  release-it: ^21.1.1
   scule: ^1.3.0
   tinyglobby: ^0.2.17
   typescript: ^6.0.3
@@ -134,12 +134,12 @@ catalog:
   unplugin-auto-import: ^21.1.0
   unplugin-vue-components: ^32.1.0
   vaul-vue: 0.4.1
-  vite: ^8.3.2
+  vite: ^8.3.4
   vitest: ^4.1.11
   vitest-axe: ^0.1.0
   vitest-environment-nuxt: ^2.0.0
   vue: ^3.5.43
-  vue-component-type-helpers: ^3.3.12
-  vue-router: ^5.3.1
+  vue-component-type-helpers: ^3.3.13
+  vue-router: ^5.4.0
   vue-tsc: ^3.3.11
   zod: ^4.6.5
