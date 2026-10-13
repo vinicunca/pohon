@@ -1,12 +1,16 @@
 import type { FormInputEvents } from '../../src/module';
+import type { FileUploadItem } from '../../src/runtime/components/FileUpload.vue';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { mount } from '@vue/test-utils';
 import { describe, expect, it, vi } from 'vitest';
 import { axe } from 'vitest-axe';
+import { h } from 'vue';
 import theme from '#build/ui/file-upload';
+import Avatar from '../../src/runtime/components/Avatar.vue';
 import FileUpload from '../../src/runtime/components/FileUpload.vue';
 import { renderEach } from '../component-render';
 import { renderForm } from '../utils/form';
+import { expectEmitPayloadType, expectSlotProps } from '../utils/types';
 
 // Mock URL.createObjectURL to return deterministic blob URLs
 URL.createObjectURL = vi.fn((file: File | Blob) => {
@@ -32,7 +36,51 @@ async function setFilesOnInput(input: any, files: Array<File>) {
   await input.trigger('change');
 }
 
+interface CustomFileUploadItem extends FileUploadItem { id: string }
+
 describe('fileUpload', () => {
+  it('preserves row state when file items are copied and reordered', async () => {
+    const first = { name: 'first.png', progress: 0 };
+    const second = { name: 'second.png', progress: 0 };
+    const wrapper = mount(FileUpload, {
+      props: { modelValue: [first, second], multiple: true },
+      slots: { file: () => h('input', { 'data-test': 'file-state' }) },
+    });
+
+    const inputs = wrapper.findAll<HTMLInputElement>('[data-test="file-state"]');
+    await inputs[0]!.setValue('first file');
+    await inputs[1]!.setValue('second file');
+
+    await wrapper.setProps({ modelValue: [{ ...second, progress: 50 }, { ...first, progress: 50 }] });
+
+    const updatedInputs = wrapper.findAll<HTMLInputElement>('[data-test="file-state"]');
+    expect(updatedInputs.map((input) => input.element.value)).toEqual(['second file', 'first file']);
+    expect(updatedInputs[0]!.element).toBe(inputs[1]!.element);
+    expect(updatedInputs[1]!.element).toBe(inputs[0]!.element);
+  });
+
+  it('preserves native file types by default', () => {
+    expectEmitPayloadType('update:modelValue', () => FileUpload({})).toEqualTypeOf<[File | null | undefined]>();
+    expectEmitPayloadType('update:modelValue', () => FileUpload({ multiple: true })).toEqualTypeOf<[Array<File> | null | undefined]>();
+    expectSlotProps('file', () => FileUpload({})).toEqualTypeOf<{
+      file: File;
+      index: number;
+      removeFile: (index?: number) => void;
+    }>();
+  });
+
+  it('infers custom item types alongside native files', () => {
+    const item: CustomFileUploadItem = { name: 'existing.png', id: 'file-1' };
+
+    expectEmitPayloadType('update:modelValue', () => FileUpload({ modelValue: item })).toEqualTypeOf<[CustomFileUploadItem | File | null | undefined]>();
+    expectEmitPayloadType('update:modelValue', () => FileUpload({ modelValue: [item], multiple: true })).toEqualTypeOf<[Array<CustomFileUploadItem | File> | null | undefined]>();
+    expectSlotProps('file', () => FileUpload({ modelValue: item })).toEqualTypeOf<{
+      file: CustomFileUploadItem | File;
+      index: number;
+      removeFile: (index?: number) => void;
+    }>();
+  });
+
   const sizes = Object.keys(theme.variants.size) as any;
   const variants = Object.keys(theme.variants.variant) as any;
   const layouts = Object.keys(theme.variants.layout) as any;
@@ -142,6 +190,80 @@ describe('fileUpload', () => {
 
     expect(input.attributes('accept')).toBe('application/pdf');
     expect(input.attributes('multiple')).toBe('');
+  });
+
+  it('renders a custom file item', async () => {
+    const item: FileUploadItem = {
+      name: 'avatar.png',
+      avatar: {
+        src: 'https://example.com/avatar.png',
+        alt: 'User avatar',
+      },
+    };
+    const wrapper = await mountSuspended(FileUpload, {
+      props: { modelValue: item },
+    });
+
+    expect(wrapper.get('[data-slot="fileName"]').text()).toBe(item.name);
+    expect(wrapper.get('[data-slot="fileLeadingAvatar"] img').attributes()).toMatchObject({
+      src: item.avatar?.src,
+      alt: item.avatar?.alt,
+    });
+  });
+
+  it('uses the file name as preview alt text', async () => {
+    const wrapper = await mountSuspended(FileUpload, {
+      props: {
+        modelValue: {
+          name: 'avatar.png',
+          avatar: { src: 'https://example.com/avatar.png' },
+        },
+      },
+    });
+
+    expect(wrapper.get('[data-slot="fileLeadingAvatar"] img').attributes('alt')).toBe('avatar.png');
+  });
+
+  it('hides custom item previews when fileImage is false', async () => {
+    const wrapper = await mountSuspended(FileUpload, {
+      props: {
+        modelValue: {
+          name: 'avatar.png',
+          avatar: {
+            src: 'https://example.com/avatar.png',
+            icon: 'i-lucide-user',
+            text: 'PA',
+          },
+        },
+        fileImage: false,
+        fileIcon: 'i-lucide-file-text',
+      },
+    });
+
+    const fileAvatar = wrapper.findAllComponents(Avatar).find((component) => component.attributes('data-slot') === 'fileLeadingAvatar');
+
+    expect(wrapper.find('[data-slot="fileLeadingAvatar"] img').exists()).toBe(false);
+    expect(fileAvatar?.props('icon')).toBe('i-lucide-file-text');
+    expect(wrapper.text()).not.toContain('PA');
+  });
+
+  it('preserves custom file items when adding files', async () => {
+    const item: CustomFileUploadItem = {
+      id: 'file-1',
+      name: 'existing.png',
+      avatar: { src: 'https://example.com/existing.png' },
+    };
+    const wrapper = mount(FileUpload, {
+      props: {
+        modelValue: [item],
+        multiple: true,
+      },
+    });
+    const file = new File(['foo'], 'new.txt', { type: 'text/plain' });
+
+    await setFilesOnInput(wrapper.find('input'), [file]);
+
+    expect(wrapper.emitted('update:modelValue')?.at(-1)?.[0]).toEqual([item, file]);
   });
 
   describe('emits', () => {
