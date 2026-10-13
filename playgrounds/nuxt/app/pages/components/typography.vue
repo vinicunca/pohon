@@ -322,13 +322,16 @@ Press :kbd{value="meta"} :kbd{value="K"} to open the command palette.
 ### Prompt
 
 ::prompt{description="Build a dashboard layout with Pohon UI." icon="i-lucide-layout-dashboard" actions='["cursor", "claude"]'}
-You are a Pohon UI expert. Help me build a dashboard layout with a collapsible sidebar and a sticky top navbar.
+---
+prompt: |
+  You are a Pohon UI expert. Help me build a dashboard layout with a collapsible sidebar and a sticky top navbar.
 
-Requirements:
-- Use \`PDashboardPanel\`, \`PDashboardSidebar\` and \`PDashboardNavbar\`
-- Use semantic color tokens like \`bg-background-elevated\` and \`color-text-muted\`
-- The sidebar should include navigation links with icons using \`PNavigationMenu\`
-- The layout must collapse the sidebar on mobile
+  Requirements:
+  - Use \`PDashboardPanel\`, \`PDashboardSidebar\` and \`PDashboardNavbar\`
+  - Use semantic color tokens like \`bg-background-elevated\` and \`color-text-muted\`
+  - The sidebar should include navigation links with icons using \`PNavigationMenu\`
+  - The layout must collapse the sidebar on mobile
+---
 ::
 
 ### Steps

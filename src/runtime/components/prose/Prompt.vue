@@ -10,6 +10,11 @@ type ProsePrompt = ComponentConfig<typeof theme, AppConfig, 'prompt', 'ui.prose'
 export interface ProsePromptProps {
   description?: string;
   /**
+   * The prompt to copy, kept as written.
+   * The default slot is copied as plain text when not set.
+   */
+  prompt?: string;
+  /**
    * @IconifyIcon
    */
   icon?: IconProps['name'];
@@ -56,6 +61,9 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.prompt ||
 const actions = computed(() => [...new Set(['copy', ...props.actions])]);
 
 function getPromptText() {
+  if (props.prompt) {
+    return props.prompt.trim();
+  }
   const children = slots.default?.();
   return children ? getSlotChildrenText(children).trim() : '';
 }
