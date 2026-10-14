@@ -111,56 +111,56 @@ export default (options: Required<ModuleOptions>) => ({
       color,
       variant: 'solid',
       class: {
-        cellTrigger: `data-[selected]:bg-${color} data-[selected]:color-text-inverted data-[today]:not-[[data-selected]]:color-${color} data-[highlighted]:bg-${color}/20 hover:not-[[data-selected]]:bg-${color}/20`,
+        cellTrigger: `data-[selected]:bg-${color} data-[selected]:color-text-inverted data-[today]:not-data-[selected]:color-${color} data-[highlighted]:bg-${color}/20 hover:not-data-[selected]:bg-${color}/20`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'outline',
       class: {
-        cellTrigger: `data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-${color}/50 data-[selected]:color-${color} data-[today]:not-[[data-selected]]:color-${color} data-[highlighted]:bg-${color}/10 hover:not-[[data-selected]]:bg-${color}/10`,
+        cellTrigger: `data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-${color}/50 data-[selected]:color-${color} data-[today]:not-data-[selected]:color-${color} data-[highlighted]:bg-${color}/10 hover:not-data-[selected]:bg-${color}/10`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'soft',
       class: {
-        cellTrigger: `data-[selected]:bg-${color}/10 data-[selected]:color-${color} data-[today]:not-[[data-selected]]:color-${color} data-[highlighted]:bg-${color}/20 hover:not-[[data-selected]]:bg-${color}/20`,
+        cellTrigger: `data-[selected]:bg-${color}/10 data-[selected]:color-${color} data-[today]:not-data-[selected]:color-${color} data-[highlighted]:bg-${color}/20 hover:not-data-[selected]:bg-${color}/20`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({
       color,
       variant: 'subtle',
       class: {
-        cellTrigger: `data-[selected]:bg-${color}/10 data-[selected]:color-${color} data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-${color}/25 data-[today]:not-[[data-selected]]:color-${color} data-[highlighted]:bg-${color}/20 hover:not-[[data-selected]]:bg-${color}/20`,
+        cellTrigger: `data-[selected]:bg-${color}/10 data-[selected]:color-${color} data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-${color}/25 data-[today]:not-data-[selected]:color-${color} data-[highlighted]:bg-${color}/20 hover:not-data-[selected]:bg-${color}/20`,
       },
     })),
     {
       color: 'neutral',
       variant: 'solid',
       class: {
-        cellTrigger: 'data-[selected]:bg-background-inverted data-[selected]:color-text-inverted data-[today]:not-[[data-selected]]:color-text-highlighted data-[highlighted]:bg-background-inverted/20 hover:not-[[data-selected]]:bg-background-inverted/10',
+        cellTrigger: 'data-[selected]:bg-background-inverted data-[selected]:color-text-inverted data-[today]:not-data-[selected]:color-text-highlighted data-[highlighted]:bg-background-inverted/20 hover:not-data-[selected]:bg-background-inverted/10',
       },
     },
     {
       color: 'neutral',
       variant: 'outline',
       class: {
-        cellTrigger: 'data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-border-accented data-[selected]:color-text data-[selected]:bg-background data-[today]:not-[[data-selected]]:color-text-highlighted data-[highlighted]:bg-background-inverted/10 hover:not-[[data-selected]]:bg-background-inverted/10',
+        cellTrigger: 'data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-border-accented data-[selected]:color-text data-[selected]:bg-background data-[today]:not-data-[selected]:color-text-highlighted data-[highlighted]:bg-background-inverted/10 hover:not-data-[selected]:bg-background-inverted/10',
       },
     },
     {
       color: 'neutral',
       variant: 'soft',
       class: {
-        cellTrigger: 'data-[selected]:bg-background-elevated data-[selected]:color-text data-[today]:not-[[data-selected]]:color-text-highlighted data-[highlighted]:bg-background-inverted/20 hover:not-[[data-selected]]:bg-background-inverted/10',
+        cellTrigger: 'data-[selected]:bg-background-elevated data-[selected]:color-text data-[today]:not-data-[selected]:color-text-highlighted data-[highlighted]:bg-background-inverted/20 hover:not-data-[selected]:bg-background-inverted/10',
       },
     },
     {
       color: 'neutral',
       variant: 'subtle',
       class: {
-        cellTrigger: 'data-[selected]:bg-background-elevated data-[selected]:color-text data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-border-accented data-[today]:not-[[data-selected]]:color-text-highlighted data-[highlighted]:bg-background-inverted/20 hover:not-[[data-selected]]:bg-background-inverted/10',
+        cellTrigger: 'data-[selected]:bg-background-elevated data-[selected]:color-text data-[selected]:ring data-[selected]:ring-inset data-[selected]:ring-border-accented data-[today]:not-data-[selected]:color-text-highlighted data-[highlighted]:bg-background-inverted/20 hover:not-data-[selected]:bg-background-inverted/10',
       },
     },
     ...Object.entries(daySizes).map(([size, cellTrigger]) => ({

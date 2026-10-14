@@ -25,6 +25,14 @@ describe('colorPicker', () => {
     ['with ui', { props: { ui: { picker: 'gap-8' } } }],
   ]);
 
+  it('renders the RGB color represented by CMYK input', async () => {
+    const wrapper = await mountSuspended(ColorPicker, {
+      props: { format: 'cmyk', defaultValue: 'cmyk(100%, 0%, 45.08%, 24.31%)' },
+    });
+
+    expect(wrapper.find('[data-slot="selectorThumb"]').attributes('style')).toContain('background-color: #00C16A;');
+  });
+
   it('passes accessibility tests', async () => {
     const wrapper = await mountSuspended(ColorPicker);
 

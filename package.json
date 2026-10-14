@@ -299,6 +299,7 @@
     "vitest-axe": "catalog:",
     "vitest-environment-nuxt": "catalog:",
     "vue": "catalog:",
-    "vue-tsc": "catalog:"
+    "vue-tsc": "catalog:",
+    "zod": "catalog:"
   }
 }
