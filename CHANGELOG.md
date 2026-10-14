@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.2.0](https://github.com/vinicunca/pohon/compare/v2.1.0...v2.2.0) (2026-10-14)
+
+### Bug Fixes
+
+* lock file ([9557941](https://github.com/vinicunca/pohon/commit/9557941949014b95007f80caf31e736614643fc2))
+
 ## [2.1.0](https://github.com/vinicunca/pohon/compare/v2.0.10...v2.1.0) (2026-10-13)
 
 ### Features

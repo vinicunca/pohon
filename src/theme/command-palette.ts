@@ -122,7 +122,7 @@ export default (options: Required<ModuleOptions>) => ({
         itemLeadingIcon: 'color-text',
       },
       false: {
-        item: ['color-text data-[highlighted]:not-[[data-disabled]]:color-text-highlighted data-[highlighted]:not-[[data-disabled]]:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+        item: ['color-text data-[highlighted]:not-data-[disabled]:color-text-highlighted data-[highlighted]:not-data-[disabled]:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
         itemLeadingIcon: ['color-text-dimmed [.group[data-highlighted]:not([data-disabled])_&]:color-text', options.theme.transitions && 'transition-colors'],
       },
     },

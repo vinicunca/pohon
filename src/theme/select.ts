@@ -17,7 +17,7 @@ export default (options: Required<ModuleOptions>) => {
       empty: 'text-center color-text-muted',
       label: 'font-600 color-text-highlighted',
       separator: '-mx-1 my-1 h-px bg-border',
-      item: ['group color-text data-[highlighted]:not-[[data-disabled]]:color-text-highlighted data-[highlighted]:not-[[data-disabled]]:before:bg-background-elevated/50 outline-none flex w-full select-none items-start relative before:rounded-md before:content-empty before:inset-px before:absolute before:-z-1 data-[disabled]:opacity-75 data-[disabled]:cursor-not-allowed', options.theme.transitions && 'transition-colors before:transition-colors'],
+      item: ['group color-text data-[highlighted]:not-data-[disabled]:color-text-highlighted data-[highlighted]:not-data-[disabled]:before:bg-background-elevated/50 outline-none flex w-full select-none items-start relative before:rounded-md before:content-empty before:inset-px before:absolute before:-z-1 data-[disabled]:opacity-75 data-[disabled]:cursor-not-allowed', options.theme.transitions && 'transition-colors before:transition-colors'],
       itemLeadingIcon: ['color-text-dimmed [.group[data-highlighted]:not([data-disabled])_&]:color-text shrink-0', options.theme.transitions && 'transition-colors'],
       itemLeadingAvatar: 'shrink-0',
       itemLeadingAvatarSize: '',
