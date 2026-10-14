@@ -198,7 +198,14 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.drawer || {}) })
       <FieldGroupReset>
         <DrawerOverlay v-if="props.modal === true" data-slot="overlay" :class="ui.overlay({ class: [props.ui?.overlay, !props.overlay && 'hidden'] })" />
 
-        <DrawerContent :as="props.as" data-slot="content" :class="ui.content({ class: [!slots.default && props.class, props.ui?.content] })" v-bind="contentProps" v-on="contentEvents" @animationend="onAnimationEnd">
+        <DrawerContent
+          :as="props.as"
+          data-slot="content"
+          :class="ui.content({ class: [!slots.default && props.class, props.ui?.content] })"
+          v-bind="contentProps"
+          v-on="contentEvents"
+          @animationend="onAnimationEnd"
+        >
           <DrawerHandle v-if="props.handle" data-slot="handle" :class="ui.handle({ class: props.ui?.handle })" />
 
           <VisuallyHidden v-if="(!props.title && !slots.title) || (!props.description && !slots.description) || !!slots.content">

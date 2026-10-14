@@ -4,7 +4,7 @@ import type { VNode } from 'vue';
 import type { ComponentConfig } from '../types/uv';
 import theme from '#build/ui/drawer-provider';
 
-type DrawerProvider = ComponentConfig<typeof theme, AppConfig, 'drawerProvider'>;
+type DrawerProviderConfig = ComponentConfig<typeof theme, AppConfig, 'drawerProvider'>;
 
 export interface DrawerProviderProps {
   /**
@@ -18,7 +18,7 @@ export interface DrawerProviderProps {
    */
   scale?: boolean;
   class?: any;
-  ui?: DrawerProvider['slots'];
+  ui?: DrawerProviderConfig['slots'];
 }
 
 export interface DrawerProviderSlots {
@@ -33,13 +33,12 @@ import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { uv } from '../utils/uv';
 
+defineOptions({ inheritAttrs: false });
 const _props = withDefaults(defineProps<DrawerProviderProps>(), { scale: false });
 defineSlots<DrawerProviderSlots>();
 const props = useComponentProps('drawerProvider', _props);
-const appConfig = useAppConfig() as DrawerProvider['AppConfig'];
+const appConfig = useAppConfig() as DrawerProviderConfig['AppConfig'];
 const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.drawerProvider || {}) })({ scale: props.scale }));
-
-defineOptions({ inheritAttrs: false });
 </script>
 
 <template>
