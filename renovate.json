@@ -23,8 +23,7 @@
     {
       "groupName": "akar",
       "matchPackageNames": [
-        "akar",
-        "vaul-vue"
+        "akar"
       ]
     },
     {

@@ -76,6 +76,7 @@ export interface ThemeDefaults {
   dashboardSidebarToggle?: Partial<ComponentTypes.DashboardSidebarToggleProps>;
   dashboardToolbar?: Partial<ComponentTypes.DashboardToolbarProps>;
   drawer?: Partial<ComponentTypes.DrawerProps>;
+  drawerProvider?: Partial<ComponentTypes.DrawerProviderProps>;
   dropdownMenu?: Partial<ComponentTypes.DropdownMenuProps>;
   editor?: Partial<ComponentTypes.EditorProps>;
   editorDragHandle?: Partial<ComponentTypes.EditorDragHandleProps>;
@@ -244,6 +245,7 @@ export type PThemeDashboardSidebarToggle = UvConfig<typeof ui>['dashboardSidebar
 export type PThemeDashboardSidebar = UvConfig<typeof ui>['dashboardSidebar'];
 export type PThemeDashboardToolbar = UvConfig<typeof ui>['dashboardToolbar'];
 export type PThemeDrawer = UvConfig<typeof ui>['drawer'];
+export type PThemeDrawerProvider = UvConfig<typeof ui>['drawerProvider'];
 export type PThemeDropdownMenu = UvConfig<typeof ui>['dropdownMenu'];
 export type PThemeEditorDragHandle = UvConfig<typeof ui>['editorDragHandle'];
 export type PThemeEditorEmojiMenu = UvConfig<typeof ui>['editorEmojiMenu'];

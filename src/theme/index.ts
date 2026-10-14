@@ -41,6 +41,7 @@ export { default as dashboardSidebarCollapse } from './dashboard-sidebar-collaps
 export { default as dashboardSidebarToggle } from './dashboard-sidebar-toggle';
 export { default as dashboardToolbar } from './dashboard-toolbar';
 export { default as drawer } from './drawer';
+export { default as drawerProvider } from './drawer-provider';
 export { default as dropdownMenu } from './dropdown-menu';
 export { default as editor } from './editor';
 export { default as editorDragHandle } from './editor-drag-handle';

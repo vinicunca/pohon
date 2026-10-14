@@ -1,0 +1,257 @@
+--- a/content/pohon/2.components/drawer.md
++++ b/content/pohon/2.components/drawer.md
+@@ -8,7 +8,7 @@
+ links:
+   - label: Drawer
+     icon: i-lucide-box
+-    to: https://github.com/unovue/vaul-vue
++    to: /akar/components/drawer
+   - label: GitHub
+     icon: i-simple-icons-github
+     to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/Drawer.vue
+@@ -234,15 +234,15 @@
+ :placeholder{class="h-48 m-4"}
+ ::
+ 
+-### Handle Only
+-
+-Use the `handle-only` prop to only allow the Drawer to be dragged by the handle.
+-
+-::component-code
+----
+-prettier: true
+-props:
+-  handleOnly: true
++### Overlay
++
++Use the `overlay` prop to control whether the Drawer has an overlay or not. Defaults to `true`.
++
++::component-code
++---
++prettier: true
++props:
++  overlay: false
+ slots:
+   default: |
+ 
+@@ -259,34 +259,9 @@
+ :placeholder{class="h-48 m-4"}
+ ::
+ 
+-### Overlay
+-
+-Use the `overlay` prop to control whether the Drawer has an overlay or not. Defaults to `true`.
+-
+-::component-code
+----
+-prettier: true
+-props:
+-  overlay: false
+-slots:
+-  default: |
+-
+-    <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
+-
+-  content: |
+-
+-    <Placeholder class="h-48 m-4" />
+----
+-
+-:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+-
+-# content
+-:placeholder{class="h-48 m-4"}
+-::
+-
+ ### Modal
+ 
+-Use the `modal` prop to control whether the Drawer blocks interaction with outside content. Defaults to `true`.
++Use the `modal` prop to control whether the Drawer blocks interaction with outside content. Defaults to `true`. Set it to `'trap-focus'` to trap keyboard focus while allowing outside pointer interaction, without a backdrop or body scroll lock.
+ 
+ ::note
+ When `modal` is set to `false`, the overlay is automatically disabled and outside content becomes interactive.
+@@ -315,7 +290,7 @@
+ 
+ ### Dismissible
+ 
+-Use the `dismissible` prop to control whether the Drawer is dismissible when clicking outside of it or pressing escape. Defaults to `true`.
++Use the `dismissible` prop to control whether the Drawer is dismissible when swiping, clicking outside of it, or pressing Escape. Defaults to `true`.
+ 
+ ::note
+ A `close:prevent` event will be emitted when the user tries to close it.
+@@ -332,62 +307,44 @@
+ ---
+ ::
+ 
+-### Scale Background
+-
+-Use the `should-scale-background` prop to scale the background when the Drawer is open, creating a visual depth effect. You can set the `set-background-color-on-scale` prop to `false` to prevent changing the background color.
+-
+-::component-code
+----
+-prettier: true
+-props:
+-  shouldScaleBackground: true
+-  setBackgroundColorOnScale: true
+-slots:
+-  default: |
+-
+-    <PButton label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up" />
+-
+-  content: |
+-
+-    <Placeholder class="h-48 m-4" />
+----
+-
+-:u-button{label="Open" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"}
+-
+-# content
+-:placeholder{class="h-screen m-4"}
+-::
+-
+-::warning
+-Make sure to add the `data-vaul-drawer-wrapper` directive to a parent element of your app to make this work.
++### Scale Background :badge{label="Soon" class="align-text-top"}
++
++Wrap page content in [DrawerProvider](/pohon/components/drawer-provider) with `scale` to scale it whenever a descendant Drawer is open. Leave the Drawer's portal enabled so the drawer renders outside the scaled content.
+ 
+ ```vue [app.vue]
+ <template>
+   <PApp>
+-    <div
+-      class="bg-background"
+-      data-vaul-drawer-wrapper
+-    >
++    <PDrawerProvider scale class="min-h-dvh" :ui="{ content: 'min-h-dvh' }">
+       <NuxtLayout>
+         <NuxtPage />
+       </NuxtLayout>
+-    </div>
++    </PDrawerProvider>
+   </PApp>
+ </template>
+ ```
+ 
+-```ts [nuxt.config.ts]
+-export default defineNuxtConfig({
+-  app: {
+-    rootAttrs: {
+-      'data-vaul-drawer-wrapper': '',
+-      'class': 'bg-background'
+-    }
+-  }
+-});
++### Snap Points :badge{label="Soon" class="align-text-top"}
++
++Use `snap-points` to define snap positions, `default-snap-point` for the initial uncontrolled position, or `v-model:snap-point` to control it. Enable `snap-to-sequential-points` to advance one position at a time.
++
++```vue
++<PDrawer :snap-points="[0.5, 1]" :default-snap-point="0.5" snap-to-sequential-points title="Snap points">
++  <PButton label="Open" />
++  <template #body>
++    <Placeholder class="h-screen w-full" />
++  </template>
++</PDrawer>
+ ```
+ 
+-::
++Numeric fractions use the viewport height; numbers greater than 1 are pixels. Strings support `px` and `rem`.
++
++### Migrating from Vaul :badge{label="Soon" class="align-text-top"}
++
++Drawer now uses Akar. Replace `activeSnapPoint` and its update event with `snapPoint` / `update:snapPoint`. Nesting is automatic; remove `nested`. Replace the Vaul wrapper attribute and scaling props with `PDrawerProvider scale`.
++
++The Vaul-only props `handleOnly`, `closeThreshold`, `scrollLockTimeout`, `fixed`, `noBodyStyles`, and `preventScrollRestoration` have been removed. The handle is now a visual swipe affordance; it no longer cycles snap points on click. Use `after:enter`, `after:leave`, or `update:openComplete` instead of `animationEnd`; `drag`, `release`, and `close` events are no longer exposed.
++
++`update:open` receives `(open, details)`, where `details.reason` describes the interaction and `details.cancel()` rejects it. `content` now uses Akar's drawer-specific types, including `initialFocus` and `finalFocus`. See the [migration guide](https://github.com/vinicunca/pohon/blob/main/docs/migrations/akar-drawer.md) for details.
+ 
+ ## Examples
+ 
+@@ -423,7 +380,7 @@
+ 
+ ### Nested drawers
+ 
+-You can nest drawers within each other by using the `nested` prop.
++Drawers nested inside another Drawer’s content are detected automatically; no `nested` prop is needed.
+ 
+ ::component-example
+ ---
+--- a/app/components/content/examples/drawer/DrawerNestedExample.vue
++++ b/app/components/content/examples/drawer/DrawerNestedExample.vue
+@@ -9,7 +9,6 @@
+ 
+     <template #footer>
+       <PDrawer
+-        nested
+         :ui="{ content: 'h-full', overlay: 'bg-background-inverted/30' }"
+       >
+         <PButton
+--- /dev/null
++++ b/content/pohon/2.components/drawer-provider.md
+@@ -0,0 +1,66 @@
++---
++description: A wrapper that coordinates drawers and optionally scales the page behind them.
++category: overlay
++links:
++  - label: Akar Drawer
++    icon: i-lucide-box
++    to: /akar/components/drawer
++  - label: GitHub
++    icon: i-simple-icons-github
++    to: https://github.com/vinicunca/pohon/blob/main/src/runtime/components/DrawerProvider.vue
++---
++
++## Usage :badge{label="Soon" class="align-text-top"}
++
++Wrap page content in DrawerProvider and enable `scale` to shrink it while a descendant [Drawer](/pohon/components/drawer) is open. This replaces `data-vaul-drawer-wrapper`.
++
++```vue
++<PDrawerProvider scale class="min-h-dvh" :ui="{ content: 'min-h-dvh' }">
++  <NuxtLayout>
++    <NuxtPage />
++  </NuxtLayout>
++</PDrawerProvider>
++```
++
++Keep the Drawer's portal enabled so its panel renders outside the scaled page. Every descendant Drawer participates. `scale` defaults to `false`.
++
++### Scale
++
++The page scales down and gains rounded corners when a Drawer opens. It follows swipe progress back toward its resting state during dismissal. Reduced-motion preferences disable the transition.
++
++### Element
++
++Use `as` to change the root element. Defaults to `div`.
++
++## Examples
++
++### Custom background
++
++Use `ui.background` to customize the surface behind the page, and `ui.content` for the page wrapper.
++
++```vue
++<PDrawerProvider scale :ui="{ background: 'bg-background-accented', content: 'min-h-dvh p-4' }">
++  <PDrawer title="Example" close>
++    <PButton label="Open" />
++    <template #body>Page content scales behind this drawer.</template>
++  </PDrawer>
++</PDrawerProvider>
++```
++
++## API
++
++### Props
++
++:component-props
++
++### Slots
++
++:component-slots
++
++## Theme
++
++:component-theme
++
++## Changelog
++
++:component-changelog

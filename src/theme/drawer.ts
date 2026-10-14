@@ -2,10 +2,10 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    overlay: 'fixed inset-0 bg-background-elevated/75',
-    content: 'fixed bg-background ring ring-border flex focus:outline-none',
-    handle: ['!bg-background-accented shrink-0', options.theme.transitions && 'transition-opacity ease-out'],
-    container: 'w-full flex flex-col gap-4 p-4 overflow-y-auto',
+    overlay: 'pohon-drawer-overlay fixed inset-0 bg-background-elevated/75',
+    content: 'pohon-drawer-content fixed bg-background ring ring-border flex min-h-0 focus:outline-none',
+    handle: ['bg-background-accented rounded-full shrink-0', options.theme.transitions && 'transition-opacity ease-out'],
+    container: 'w-full min-h-0 flex flex-col gap-4 p-4 overflow-y-auto overscroll-contain',
     header: 'flex items-center gap-1.5 min-h-8',
     wrapper: 'min-w-0 flex-1',
     title: 'color-text-highlighted font-600',
@@ -23,7 +23,7 @@ export default (options: Required<ModuleOptions>) => ({
       },
       right: {
         content: 'flex-row rtl:flex-row-reverse',
-        handle: '!ml-4',
+        handle: 'ml-4',
       },
       bottom: {
         content: 'mt-24 flex-col',
@@ -31,12 +31,18 @@ export default (options: Required<ModuleOptions>) => ({
       },
       left: {
         content: 'flex-row-reverse rtl:flex-row',
-        handle: '!mr-4',
+        handle: 'mr-4',
       },
     },
     inset: {
       true: {
-        content: 'rounded-lg after:hidden overflow-hidden [--initial-transform:calc(100%+1.5rem)]',
+        content: 'rounded-lg after:hidden overflow-hidden',
+      },
+    },
+    transition: {
+      true: {
+        content: options.theme.transitions ? 'pohon-drawer-transition' : '',
+        overlay: options.theme.transitions ? 'pohon-drawer-transition' : '',
       },
     },
     snapPoints: {
@@ -47,7 +53,7 @@ export default (options: Required<ModuleOptions>) => ({
     direction: ['top', 'bottom'],
     class: {
       content: 'h-auto max-h-[96%]',
-      handle: '!w-12 !h-1.5 mx-auto',
+      handle: 'w-12 h-1.5 mx-auto',
     },
   }, {
     direction: ['top', 'bottom'],
@@ -59,7 +65,7 @@ export default (options: Required<ModuleOptions>) => ({
     direction: ['right', 'left'],
     class: {
       content: 'w-auto max-w-[calc(100%-2rem)]',
-      handle: '!h-12 !w-1.5 my-auto',
+      handle: 'h-12 w-1.5 my-auto',
     },
   }, {
     direction: ['right', 'left'],

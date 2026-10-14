@@ -11,7 +11,7 @@ const inset = ref(false);
     />
   </Navbar>
 
-  <div class="flex flex-col gap-2 min-h-0">
+  <PDrawerProvider scale class="flex-1" :ui="{ content: 'flex flex-col gap-2 min-h-0' }">
     <PDrawer
       v-model:open="open"
       title="Drawer with v-model"
@@ -45,9 +45,8 @@ const inset = ref(false);
     </PDrawer>
 
     <PDrawer
-      should-scale-background
-      title="Drawer with `should-scale-background`"
-      description="You need to add the `data-vaul-drawer-wrapper` directive to your content to make it work."
+      title="Drawer with background scaling"
+      description="Wrap page content in PDrawerProvider with scale to enable background scaling."
       :inset="inset"
       close
     >
@@ -66,7 +65,6 @@ const inset = ref(false);
       title="Drawer with nested"
       :inset="inset"
       :ui="{ content: 'h-full' }"
-      should-scale-background
       close
     >
       <PButton
@@ -78,7 +76,6 @@ const inset = ref(false);
       <template #footer>
         <PDrawer
           :inset="inset"
-          nested
           :ui="{ content: 'h-full' }"
         >
           <PButton
@@ -111,6 +108,20 @@ const inset = ref(false);
 
       <template #body>
         <Placeholder class="h-96 w-full" />
+      </template>
+    </PDrawer>
+
+    <PDrawer
+      title="Drawer with snap points"
+      :snap-points="[0.5, 1]"
+      :default-snap-point="0.5"
+      snap-to-sequential-points
+      :inset="inset"
+      close
+    >
+      <PButton color="neutral" variant="outline" label="Open with snap points" />
+      <template #body>
+        <Placeholder class="h-screen w-full" />
       </template>
     </PDrawer>
 
@@ -181,5 +192,5 @@ const inset = ref(false);
         <Placeholder class="h-full w-96" />
       </template>
     </PDrawer>
-  </div>
+  </PDrawerProvider>
 </template>
