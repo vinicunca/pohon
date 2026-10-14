@@ -11,7 +11,11 @@ const inset = ref(false);
     />
   </Navbar>
 
-  <PDrawerProvider scale class="flex-1" :ui="{ content: 'flex flex-col gap-2 min-h-0' }">
+  <PDrawerProvider
+    scale
+    class="flex-1"
+    :ui="{ content: 'flex flex-col gap-2 min-h-0' }"
+  >
     <PDrawer
       v-model:open="open"
       title="Drawer with v-model"
@@ -119,7 +123,11 @@ const inset = ref(false);
       :inset="inset"
       close
     >
-      <PButton color="neutral" variant="outline" label="Open with snap points" />
+      <PButton
+        color="neutral"
+        variant="outline"
+        label="Open with snap points"
+      />
       <template #body>
         <Placeholder class="h-screen w-full" />
       </template>

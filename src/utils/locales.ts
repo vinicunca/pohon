@@ -48,8 +48,8 @@ export function generateI18nPlugin(locales: Array<I18nLocale>, keys: Array<strin
     genImport(join(runtimeDir, 'composables/useLocale'), ['localeContextInjectionKey']),
     ...[...imports].map((key) => genImport(join(runtimeDir, 'locale', key), key)),
     `const locales = ${genObjectFromRawEntries(entries)}`,
-    `export default defineNuxtPlugin((nuxtApp) => {`,
-    `  nuxtApp.vueApp.provide(localeContextInjectionKey, computed(() => locales[unref(nuxtApp.$i18n?.locale)]))`,
-    `})`,
+    'export default defineNuxtPlugin((nuxtApp) => {',
+    '  nuxtApp.vueApp.provide(localeContextInjectionKey, computed(() => locales[unref(nuxtApp.$i18n?.locale)]))',
+    '})',
   ].join('\n');
 }

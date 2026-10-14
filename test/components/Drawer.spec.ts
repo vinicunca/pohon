@@ -1,8 +1,8 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { DrawerRoot } from 'akar';
 import { describe, expect, it } from 'vitest';
-import { h, nextTick } from 'vue';
 import { axe } from 'vitest-axe';
+import { h, nextTick } from 'vue';
 import theme from '#build/ui/drawer';
 import Drawer from '../../src/runtime/components/Drawer.vue';
 import { renderEach } from '../component-render';
@@ -79,8 +79,12 @@ describe('drawer', () => {
     let canceled = false;
     wrapper.findComponent(DrawerRoot).vm.$emit('update:open', false, {
       reason,
-      cancel() { canceled = true; },
-      get isCanceled() { return canceled; },
+      cancel() {
+        canceled = true;
+      },
+      get isCanceled() {
+        return canceled;
+      },
     });
     expect(canceled).toBe(true);
     expect(wrapper.emitted('update:open')).toBeUndefined();
@@ -105,8 +109,14 @@ describe('drawer', () => {
       ['pointerup', 700, 0],
     ] as const) {
       const event = new PointerEvent(type, {
-        bubbles: true, cancelable: true, pointerType: 'mouse', pointerId: 1,
-        button: 0, buttons, clientX: 100, clientY,
+        bubbles: true,
+        cancelable: true,
+        pointerType: 'mouse',
+        pointerId: 1,
+        button: 0,
+        buttons,
+        clientX: 100,
+        clientY,
       });
       Object.defineProperty(event, 'timeStamp', { value: 0 });
       content.dispatchEvent(event);
@@ -146,7 +156,7 @@ describe('drawer', () => {
 
   it('lets consumers cancel an open change', async () => {
     const wrapper = await mountSuspended(Drawer, {
-      props: { portal: false, 'onUpdate:open': (_open, details) => details.cancel() },
+      props: { 'portal': false, 'onUpdate:open': (_open, details) => details.cancel() },
       slots: { default: () => h('button', 'Open') },
     });
     await wrapper.get('button').trigger('click');

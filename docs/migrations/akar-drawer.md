@@ -9,7 +9,11 @@ Replace `data-vaul-drawer-wrapper` and the drawer's `should-scale-background` / 
 ```vue
 <template>
   <PApp>
-    <PDrawerProvider scale class="min-h-dvh" :ui="{ content: 'min-h-dvh' }">
+    <PDrawerProvider
+      scale
+      class="min-h-dvh"
+      :ui="{ content: 'min-h-dvh' }"
+    >
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
