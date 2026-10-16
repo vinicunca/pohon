@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.3.1](https://github.com/vinicunca/pohon/compare/v2.2.0...v2.3.1) (2026-10-16)
+
+### Features
+
+* add color foreground ([087aaff](https://github.com/vinicunca/pohon/commit/087aaff1772ba34b5446ebfc4cb2b24e6e93aa63))
+* **Chart:** new component ([e911c44](https://github.com/vinicunca/pohon/commit/e911c44e5f418b7e078e770da0d4bc8ac07499a6))
+* use akar drawer ([638215a](https://github.com/vinicunca/pohon/commit/638215a4b5d99380097a87419bd3c72cdad39fc8))
+
+### Bug Fixes
+
+* **FileUpload:** make the dropzone prop reactive ([fc89ea7](https://github.com/vinicunca/pohon/commit/fc89ea74c090fbdb5a5b554324eae65995a9d175))
+
+### Performance Improvements
+
+* **components:** pick link props without a reactive proxy ([2d8b859](https://github.com/vinicunca/pohon/commit/2d8b8591734614b5822ec2f8d07d42fe5886b50d))
+
 ## [2.2.0](https://github.com/vinicunca/pohon/compare/v2.1.0...v2.2.0) (2026-10-14)
 
 ### Bug Fixes
