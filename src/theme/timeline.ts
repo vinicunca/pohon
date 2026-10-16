@@ -5,7 +5,7 @@ export default (options: Required<ModuleOptions>) => ({
     root: 'flex gap-1.5',
     item: 'group relative flex flex-1 gap-3',
     container: 'relative flex items-center gap-1.5',
-    indicator: 'group-data-[state=completed]:color-text-inverted group-data-[state=active]:color-text-inverted color-text-muted',
+    indicator: 'color-text-muted',
     separator: 'flex-1 rounded-full bg-background-elevated',
     wrapper: 'w-full',
     date: 'color-text-dimmed text-xs/5',
@@ -29,11 +29,11 @@ export default (options: Required<ModuleOptions>) => ({
 
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        indicator: `group-data-[state=completed]:bg-${color} group-data-[state=active]:bg-${color}`,
+        indicator: `group-data-[state=completed]:bg-${color} group-data-[state=active]:bg-${color} group-data-[state=completed]:color-${color}-foreground group-data-[state=active]:color-${color}-foreground`,
 
       }])),
       neutral: {
-        indicator: 'group-data-[state=completed]:bg-background-inverted group-data-[state=active]:bg-background-inverted',
+        indicator: 'group-data-[state=completed]:bg-background-inverted group-data-[state=active]:bg-background-inverted group-data-[state=completed]:color-text-inverted group-data-[state=active]:color-text-inverted',
       },
     },
 

@@ -129,6 +129,14 @@
     --ui-color-error-800: oklch(44.4% 0.177 26.899);
     --ui-color-error-900: oklch(39.6% 0.141 25.723);
     --ui-color-error-950: oklch(25.8% 0.092 26.042);
+
+    /* Text on top of a solid brand background, e.g. `bg-primary color-primary-foreground` */
+    --ui-color-primary-foreground: var(--ui-color-primary-950);
+    --ui-color-secondary-foreground: var(--ui-color-secondary-950);
+    --ui-color-success-foreground: var(--ui-color-success-950);
+    --ui-color-info-foreground: var(--ui-color-info-950);
+    --ui-color-warning-foreground: var(--ui-color-warning-950);
+    --ui-color-error-foreground: var(--ui-color-error-950);
   }
 
   :root,

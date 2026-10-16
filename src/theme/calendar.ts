@@ -111,7 +111,7 @@ export default (options: Required<ModuleOptions>) => ({
       color,
       variant: 'solid',
       class: {
-        cellTrigger: `data-[selected]:bg-${color} data-[selected]:color-text-inverted data-[today]:not-data-[selected]:color-${color} data-[highlighted]:bg-${color}/20 hover:not-data-[selected]:bg-${color}/20`,
+        cellTrigger: `data-[selected]:bg-${color} data-[selected]:color-${color}-foreground data-[today]:not-data-[selected]:color-${color} data-[highlighted]:bg-${color}/20 hover:not-data-[selected]:bg-${color}/20`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({

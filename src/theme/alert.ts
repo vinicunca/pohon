@@ -44,8 +44,8 @@ export default (options: Required<ModuleOptions>) => ({
       color,
       variant: 'solid',
       class: {
-        root: `bg-${color} color-text-inverted`,
-        close: 'pohon:color-text-inverted',
+        root: `bg-${color} color-${color}-foreground`,
+        close: `pohon:color-${color}-foreground`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({

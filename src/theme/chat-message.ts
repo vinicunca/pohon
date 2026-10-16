@@ -93,7 +93,7 @@ export default (options: Required<ModuleOptions>) => ({
       color,
       variant: 'solid',
       class: {
-        content: `bg-${color} color-text-inverted`,
+        content: `bg-${color} color-${color}-foreground`,
       },
     })),
     ...(options.theme.colors || []).map((color: string) => ({

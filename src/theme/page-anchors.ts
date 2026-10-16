@@ -15,11 +15,11 @@ export default (options: Required<ModuleOptions>) => ({
     active: {
       true: {
         link: 'color-primary font-600',
-        linkLeading: 'bg-primary ring-primary color-text-inverted',
+        linkLeading: 'bg-primary ring-primary color-primary-foreground',
       },
       false: {
         link: ['color-text-muted hover:color-text font-500', options.theme.transitions && 'transition-colors'],
-        linkLeading: ['color-text-dimmed bg-background-elevated/50 ring-border-accented group-hover:color-text-inverted group-hover:bg-primary group-hover:ring-primary', options.theme.transitions && 'transition'],
+        linkLeading: ['color-text-dimmed bg-background-elevated/50 ring-border-accented group-hover:color-primary-foreground group-hover:bg-primary group-hover:ring-primary', options.theme.transitions && 'transition'],
       },
     },
   },

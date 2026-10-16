@@ -16,7 +16,7 @@ export default (options: Required<ModuleOptions>) => ({
     root: 'relative flex items-start',
     container: 'flex items-center',
     base: 'rounded-sm ring ring-inset ring-border-accented overflow-hidden focus-visible:outline-none',
-    indicator: 'flex items-center justify-center size-full color-text-inverted',
+    indicator: 'flex items-center justify-center size-full',
     icon: 'shrink-0',
     wrapper: 'w-full',
     label: 'block font-500 color-text',
@@ -25,10 +25,10 @@ export default (options: Required<ModuleOptions>) => ({
   variants: {
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        indicator: `bg-${color}`,
+        indicator: `bg-${color} color-${color}-foreground`,
       }])),
       neutral: {
-        indicator: 'bg-background-inverted',
+        indicator: 'bg-background-inverted color-text-inverted',
       },
     },
     variant: {

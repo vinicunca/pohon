@@ -116,7 +116,7 @@ export default (options: Required<ModuleOptions>) => ({
     variant: 'pill',
     class: {
       indicator: `bg-${color}`,
-      trigger: [`data-[state=active]:color-text-inverted outline-${color}/25 focus-visible:outline-3 list-no-indicator:data-[state=active]:before:bg-${color}`, ssr(`before:bg-${color}`)],
+      trigger: [`data-[state=active]:color-${color}-foreground outline-${color}/25 focus-visible:outline-3 list-no-indicator:data-[state=active]:before:bg-${color}`, ssr(`before:bg-${color}`)],
     },
   })), {
     color: 'neutral',

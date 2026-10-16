@@ -31,6 +31,17 @@ describe('pohon semantic colors', () => {
   });
 
   it.each([
+    ['color-primary-foreground', 'color', 'primary'],
+    ['color-error-foreground', 'color', 'error'],
+    ['group-hover:color-primary-foreground', 'color', 'primary'],
+  ])('generates %s falling back to the inverted text color', async (utility, property, color) => {
+    const { css, matched } = await (await uno).generate(utility, { preflights: false });
+
+    expect(matched.has(utility)).toBe(true);
+    expect(css).toContain(`${property}:color-mix(in srgb, var(--ui-color-${color}-foreground)`);
+  });
+
+  it.each([
     ['outline-border-inverted/25', 'outline-color', 'border-inverted', 25],
     ['focus-visible:ring-border-accented/50', '--un-ring-color', 'border-accented', 50],
     ['stroke-border-inverted/10', 'stroke', 'border-inverted', 10],

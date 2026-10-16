@@ -22,7 +22,7 @@ export default (options: Required<ModuleOptions>) => ({
   compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
     color,
     variant: 'solid',
-    class: `color-text-inverted bg-${color}`,
+    class: `color-${color}-foreground bg-${color}`,
   })), ...(options.theme.colors || []).map((color: string) => ({
     color,
     variant: 'outline',

@@ -1,3 +1,14 @@
+/**
+ * A brand color and the text color that sits on top of it (`bg-primary color-primary-foreground`).
+ * `--ui-color-<name>-foreground` is optional and falls back to `--ui-color-text-inverted`.
+ */
+function brandColor(name: string) {
+  return {
+    DEFAULT: `var(--ui-color-${name})`,
+    foreground: `var(--ui-color-${name}-foreground)`,
+  };
+}
+
 /** Semantic colors for UnoCSS `theme.colors`, backed by Pohon UI CSS variables. */
 export const pohonColors = {
   text: {
@@ -21,10 +32,10 @@ export const pohonColors = {
     accented: 'var(--ui-color-border-accented)',
     inverted: 'var(--ui-color-border-inverted)',
   },
-  primary: 'var(--ui-color-primary)',
-  secondary: 'var(--ui-color-secondary)',
-  success: 'var(--ui-color-success)',
-  info: 'var(--ui-color-info)',
-  warning: 'var(--ui-color-warning)',
-  error: 'var(--ui-color-error)',
+  primary: brandColor('primary'),
+  secondary: brandColor('secondary'),
+  success: brandColor('success'),
+  info: brandColor('info'),
+  warning: brandColor('warning'),
+  error: brandColor('error'),
 };

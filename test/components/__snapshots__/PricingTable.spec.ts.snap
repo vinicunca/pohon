@@ -37,7 +37,7 @@ exports[`pricingTable > renders with as correctly 1`] = `
               <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
               <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
             </div>
-            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
                 <!--v-if--><span data-slot="label" class="truncate">Get started</span>
                 <!--v-if-->
               </button></div>
@@ -209,7 +209,7 @@ exports[`pricingTable > renders with as correctly 1`] = `
           <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
           <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
         </div>
-        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
             <!--v-if--><span data-slot="label" class="truncate">Get started</span>
             <!--v-if-->
           </button></div>
@@ -326,7 +326,7 @@ exports[`pricingTable > renders with caption correctly 1`] = `
               <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
               <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
             </div>
-            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
                 <!--v-if--><span data-slot="label" class="truncate">Get started</span>
                 <!--v-if-->
               </button></div>
@@ -498,7 +498,7 @@ exports[`pricingTable > renders with caption correctly 1`] = `
           <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
           <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
         </div>
-        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
             <!--v-if--><span data-slot="label" class="truncate">Get started</span>
             <!--v-if-->
           </button></div>
@@ -615,7 +615,7 @@ exports[`pricingTable > renders with caption slot correctly 1`] = `
               <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
               <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
             </div>
-            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
                 <!--v-if--><span data-slot="label" class="truncate">Get started</span>
                 <!--v-if-->
               </button></div>
@@ -787,7 +787,7 @@ exports[`pricingTable > renders with caption slot correctly 1`] = `
           <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
           <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
         </div>
-        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
             <!--v-if--><span data-slot="label" class="truncate">Get started</span>
             <!--v-if-->
           </button></div>
@@ -904,7 +904,7 @@ exports[`pricingTable > renders with class correctly 1`] = `
               <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
               <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
             </div>
-            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
                 <!--v-if--><span data-slot="label" class="truncate">Get started</span>
                 <!--v-if-->
               </button></div>
@@ -1076,7 +1076,7 @@ exports[`pricingTable > renders with class correctly 1`] = `
           <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
           <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
         </div>
-        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
             <!--v-if--><span data-slot="label" class="truncate">Get started</span>
             <!--v-if-->
           </button></div>
@@ -1390,7 +1390,7 @@ exports[`pricingTable > renders with tier-badge slot correctly 1`] = `
               <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
               <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
             </div>
-            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
                 <!--v-if--><span data-slot="label" class="truncate">Get started</span>
                 <!--v-if-->
               </button></div>
@@ -1559,7 +1559,7 @@ exports[`pricingTable > renders with tier-badge slot correctly 1`] = `
           <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
           <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
         </div>
-        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
             <!--v-if--><span data-slot="label" class="truncate">Get started</span>
             <!--v-if-->
           </button></div>
@@ -1675,7 +1675,7 @@ exports[`pricingTable > renders with tier-billing slot correctly 1`] = `
               <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
               <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0">Tier billing slot</div>
             </div>
-            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
                 <!--v-if--><span data-slot="label" class="truncate">Get started</span>
                 <!--v-if-->
               </button></div>
@@ -1847,7 +1847,7 @@ exports[`pricingTable > renders with tier-billing slot correctly 1`] = `
           <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
           <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0">Tier billing slot</div>
         </div>
-        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
             <!--v-if--><span data-slot="label" class="truncate">Get started</span>
             <!--v-if-->
           </button></div>
@@ -2235,7 +2235,7 @@ exports[`pricingTable > renders with tier-description slot correctly 1`] = `
               <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
               <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
             </div>
-            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
                 <!--v-if--><span data-slot="label" class="truncate">Get started</span>
                 <!--v-if-->
               </button></div>
@@ -2407,7 +2407,7 @@ exports[`pricingTable > renders with tier-description slot correctly 1`] = `
           <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
           <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
         </div>
-        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
             <!--v-if--><span data-slot="label" class="truncate">Get started</span>
             <!--v-if-->
           </button></div>
@@ -2524,7 +2524,7 @@ exports[`pricingTable > renders with tier-discount slot correctly 1`] = `
               <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
               <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
             </div>
-            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
                 <!--v-if--><span data-slot="label" class="truncate">Get started</span>
                 <!--v-if-->
               </button></div>
@@ -2696,7 +2696,7 @@ exports[`pricingTable > renders with tier-discount slot correctly 1`] = `
           <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
           <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
         </div>
-        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
             <!--v-if--><span data-slot="label" class="truncate">Get started</span>
             <!--v-if-->
           </button></div>
@@ -2813,7 +2813,7 @@ exports[`pricingTable > renders with tier-price slot correctly 1`] = `
               <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">Tier price slot</div>
               <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
             </div>
-            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
                 <!--v-if--><span data-slot="label" class="truncate">Get started</span>
                 <!--v-if-->
               </button></div>
@@ -2985,7 +2985,7 @@ exports[`pricingTable > renders with tier-price slot correctly 1`] = `
           <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">Tier price slot</div>
           <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
         </div>
-        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
             <!--v-if--><span data-slot="label" class="truncate">Get started</span>
             <!--v-if-->
           </button></div>
@@ -3102,7 +3102,7 @@ exports[`pricingTable > renders with tier-title slot correctly 1`] = `
               <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
               <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
             </div>
-            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
                 <!--v-if--><span data-slot="label" class="truncate">Get started</span>
                 <!--v-if-->
               </button></div>
@@ -3274,7 +3274,7 @@ exports[`pricingTable > renders with tier-title slot correctly 1`] = `
           <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
           <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
         </div>
-        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
             <!--v-if--><span data-slot="label" class="truncate">Get started</span>
             <!--v-if-->
           </button></div>
@@ -3391,7 +3391,7 @@ exports[`pricingTable > renders with tiers and sections correctly 1`] = `
               <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
               <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
             </div>
-            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
                 <!--v-if--><span data-slot="label" class="truncate">Get started</span>
                 <!--v-if-->
               </button></div>
@@ -3563,7 +3563,7 @@ exports[`pricingTable > renders with tiers and sections correctly 1`] = `
           <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
           <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
         </div>
-        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
             <!--v-if--><span data-slot="label" class="truncate">Get started</span>
             <!--v-if-->
           </button></div>
@@ -3680,7 +3680,7 @@ exports[`pricingTable > renders with ui correctly 1`] = `
               <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
               <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
             </div>
-            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+            <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
                 <!--v-if--><span data-slot="label" class="truncate">Get started</span>
                 <!--v-if-->
               </button></div>
@@ -3852,7 +3852,7 @@ exports[`pricingTable > renders with ui correctly 1`] = `
           <div data-slot="tierPrice" class="color-text-highlighted text-3xl sm:text-4xl font-600">$9</div>
           <div data-slot="tierBilling" class="flex flex-col justify-between min-w-0"><span data-slot="tierBillingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="tierBillingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
         </div>
-        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-text-inverted bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+        <div data-slot="tierButton" class="mt-6 md:mt-auto md:pt-6"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
             <!--v-if--><span data-slot="label" class="truncate">Get started</span>
             <!--v-if-->
           </button></div>

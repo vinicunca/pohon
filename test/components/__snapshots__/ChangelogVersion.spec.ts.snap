@@ -129,7 +129,7 @@ exports[`changelogVersion > renders with badge object correctly 1`] = `
   </div>
   <div data-slot="container" class="flex flex-col mx-auto max-w-2xl">
     <div data-slot="header" class="">
-      <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 bg-primary color-text-inverted px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <div data-slot="meta" class="flex items-center gap-3 mb-2"><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 bg-primary color-primary-foreground px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
         <!--v-if--></span>
         <!--v-if-->
       </div>

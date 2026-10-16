@@ -7,18 +7,24 @@ export default (options: Required<ModuleOptions>) => ({
     left: 'hidden lg:flex lg:flex-1 lg:items-center',
     center: 'flex items-center gap-1.5 min-w-0',
     right: 'lg:flex-1 flex items-center justify-end',
-    icon: 'size-5 shrink-0 color-text-inverted pointer-events-none',
-    title: 'text-sm color-text-inverted font-500 truncate',
+    icon: 'size-5 shrink-0 pointer-events-none',
+    title: 'text-sm font-500 truncate',
     actions: 'flex gap-1.5 shrink-0 isolate',
-    close: 'color-text-inverted hover:bg-background/10 focus-visible:bg-background/10 -me-1.5 lg:me-0',
+    close: 'hover:bg-background/10 focus-visible:bg-background/10 -me-1.5 lg:me-0',
   },
   variants: {
     color: {
       ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
         root: `bg-${color}`,
+        icon: `color-${color}-foreground`,
+        title: `color-${color}-foreground`,
+        close: `color-${color}-foreground`,
       }])),
       neutral: {
         root: 'bg-background-inverted',
+        icon: 'color-text-inverted',
+        title: 'color-text-inverted',
+        close: 'color-text-inverted',
       },
     },
     to: {
