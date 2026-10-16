@@ -1,5 +1,5 @@
-import type { TableColumn, TableRow } from '../../src/runtime/components/Table.vue';
 import type { Virtualizer } from '@tanstack/vue-virtual';
+import type { TableColumn, TableRow } from '../../src/runtime/components/Table.vue';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { flushPromises } from '@vue/test-utils';
 import { describe, expect, it, vi } from 'vitest';

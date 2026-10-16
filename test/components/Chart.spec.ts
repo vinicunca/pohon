@@ -1,5 +1,5 @@
-import { defineChart } from '@tanstack/charts';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { defineChart } from '@tanstack/charts';
 import { TooltipProvider } from 'akar';
 import { describe, expect, it } from 'vitest';
 import { axe } from 'vitest-axe';
@@ -9,7 +9,7 @@ import Chart from '../../src/runtime/components/Chart.vue';
 import ar from '../../src/runtime/locale/ar';
 import { renderEach } from '../component-render';
 
-describe('Chart', () => {
+describe('chart', () => {
   const types = Object.keys(theme.variants.type) as any;
 
   const props = {
