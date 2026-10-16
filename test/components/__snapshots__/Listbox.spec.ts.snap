@@ -117,7 +117,7 @@ exports[`listbox > renders with disabled correctly 1`] = `
 
 exports[`listbox > renders with filter and placeholder correctly 1`] = `
 "<div dir="ltr" data-slot="root" class="flex flex-col min-h-0 min-w-0 ring ring-inset ring-border rounded-lg overflow-hidden outline-primary/25 has-focus-visible:outline-3 has-focus-visible:ring-primary">
-  <div data-slot="input" class="relative inline-flex items-center border-b border-border"><input type="text" placeholder="Filter..." class="placeholder:color-text-dimmed appearance-none border-0 rounded-md w-full disabled:opacity-75 disabled:cursor-not-allowed transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-transparent focus:outline-none md:text-sm" autocomplete="off" aria-disabled="false" data-slot="base" value="" aria-activedescendant="akar-listbox-item-v-0-0-1">
+  <div data-slot="input" class="relative inline-flex items-center w-full border-b border-border"><input type="text" placeholder="Filter..." class="placeholder:color-text-dimmed appearance-none border-0 rounded-md w-full disabled:opacity-75 disabled:cursor-not-allowed transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-transparent focus:outline-none md:text-sm" autocomplete="off" aria-disabled="false" data-slot="base" value="" aria-activedescendant="akar-listbox-item-v-0-0-1">
     <!--v-if-->
     <!--v-if-->
   </div>
@@ -143,7 +143,7 @@ exports[`listbox > renders with filter and placeholder correctly 1`] = `
 
 exports[`listbox > renders with filter correctly 1`] = `
 "<div dir="ltr" data-slot="root" class="flex flex-col min-h-0 min-w-0 ring ring-inset ring-border rounded-lg overflow-hidden outline-primary/25 has-focus-visible:outline-3 has-focus-visible:ring-primary">
-  <div data-slot="input" class="relative inline-flex items-center border-b border-border"><input type="text" placeholder="Search…" class="placeholder:color-text-dimmed appearance-none border-0 rounded-md w-full disabled:opacity-75 disabled:cursor-not-allowed transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-transparent focus:outline-none md:text-sm" autocomplete="off" aria-disabled="false" data-slot="base" value="" aria-activedescendant="akar-listbox-item-v-0-0-1">
+  <div data-slot="input" class="relative inline-flex items-center w-full border-b border-border"><input type="text" placeholder="Search…" class="placeholder:color-text-dimmed appearance-none border-0 rounded-md w-full disabled:opacity-75 disabled:cursor-not-allowed transition-colors px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-transparent focus:outline-none md:text-sm" autocomplete="off" aria-disabled="false" data-slot="base" value="" aria-activedescendant="akar-listbox-item-v-0-0-1">
     <!--v-if-->
     <!--v-if-->
   </div>

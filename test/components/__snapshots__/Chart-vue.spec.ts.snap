@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Chart > renders with aspectRatio correctly 1`] = `
+exports[`chart > renders with aspectRatio correctly 1`] = `
 "<div data-slot="root" data-measured="true" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; aspect-ratio: 2 / 1;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 320" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -48,7 +48,7 @@ exports[`Chart > renders with aspectRatio correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with axis labels correctly 1`] = `
+exports[`chart > renders with axis labels correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -92,7 +92,7 @@ exports[`Chart > renders with axis labels correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with categories objects correctly 1`] = `
+exports[`chart > renders with categories objects correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-error); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -140,7 +140,7 @@ exports[`Chart > renders with categories objects correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with class correctly 1`] = `
+exports[`chart > renders with class correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit] max-w-lg" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -188,7 +188,7 @@ exports[`Chart > renders with class correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with colors correctly 1`] = `
+exports[`chart > renders with colors correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-success); --ts-chart-2: #8b5cf6;" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -236,7 +236,7 @@ exports[`Chart > renders with colors correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with curve monotone area correctly 1`] = `
+exports[`chart > renders with curve monotone area correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -303,7 +303,7 @@ exports[`Chart > renders with curve monotone area correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with curve monotone correctly 1`] = `
+exports[`chart > renders with curve monotone correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -351,7 +351,7 @@ exports[`Chart > renders with curve monotone correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with curve step correctly 1`] = `
+exports[`chart > renders with curve step correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -399,7 +399,7 @@ exports[`Chart > renders with curve step correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with definition only correctly 1`] = `
+exports[`chart > renders with definition only correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Chart" tabindex="0" style="display:block;overflow:visible">
@@ -412,7 +412,7 @@ exports[`Chart > renders with definition only correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with empty colors correctly 1`] = `
+exports[`chart > renders with empty colors correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -460,7 +460,7 @@ exports[`Chart > renders with empty colors correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with format correctly 1`] = `
+exports[`chart > renders with format correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -508,7 +508,7 @@ exports[`Chart > renders with format correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with height correctly 1`] = `
+exports[`chart > renders with height correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 200px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 200" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -548,7 +548,7 @@ exports[`Chart > renders with height correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with neutral color correctly 1`] = `
+exports[`chart > renders with neutral color correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-color-bg-inverted); --ts-chart-2: var(--ui-primary);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -596,7 +596,7 @@ exports[`Chart > renders with neutral color correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with points correctly 1`] = `
+exports[`chart > renders with points correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -650,7 +650,7 @@ exports[`Chart > renders with points correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with stacked area correctly 1`] = `
+exports[`chart > renders with stacked area correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -715,7 +715,7 @@ exports[`Chart > renders with stacked area correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with stacked bar correctly 1`] = `
+exports[`chart > renders with stacked bar correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -768,7 +768,7 @@ exports[`Chart > renders with stacked bar correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with type area correctly 1`] = `
+exports[`chart > renders with type area correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -835,7 +835,7 @@ exports[`Chart > renders with type area correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with type bar correctly 1`] = `
+exports[`chart > renders with type bar correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -890,7 +890,7 @@ exports[`Chart > renders with type bar correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with type donut and center slot correctly 1`] = `
+exports[`chart > renders with type donut and center slot correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Desktop" tabindex="0" style="display:block;overflow:visible">
@@ -917,7 +917,7 @@ exports[`Chart > renders with type donut and center slot correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with type donut and repeated colors correctly 1`] = `
+exports[`chart > renders with type donut and repeated colors correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-primary); --ts-chart-2: color-mix(in oklab, var(--ui-primary) 65%, var(--ui-color-bg)); --ts-chart-3: color-mix(in oklab, var(--ui-primary) 42%, var(--ui-color-bg)); --ts-chart-4: color-mix(in oklab, var(--ui-primary) 27%, var(--ui-color-bg)); --ts-chart-5: color-mix(in oklab, var(--ui-primary) 18%, var(--ui-color-bg)); --ts-chart-6: color-mix(in oklab, var(--ui-primary) 12%, var(--ui-color-bg));" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Desktop" tabindex="0" style="display:block;overflow:visible">
@@ -950,7 +950,7 @@ exports[`Chart > renders with type donut and repeated colors correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with type donut correctly 1`] = `
+exports[`chart > renders with type donut correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -977,7 +977,7 @@ exports[`Chart > renders with type donut correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with type donut without legend correctly 1`] = `
+exports[`chart > renders with type donut without legend correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Desktop" tabindex="0" style="display:block;overflow:visible">
@@ -999,7 +999,7 @@ exports[`Chart > renders with type donut without legend correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with type line correctly 1`] = `
+exports[`chart > renders with type line correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -1047,7 +1047,7 @@ exports[`Chart > renders with type line correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with ui correctly 1`] = `
+exports[`chart > renders with ui correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary rounded-md" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -1095,7 +1095,7 @@ exports[`Chart > renders with ui correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders with width correctly 1`] = `
+exports[`chart > renders with width correctly 1`] = `
 "<div data-slot="root" data-measured="true" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; width: 400px; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 400 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -1143,7 +1143,7 @@ exports[`Chart > renders with width correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders without axes correctly 1`] = `
+exports[`chart > renders without axes correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -1177,7 +1177,7 @@ exports[`Chart > renders without axes correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders without grid correctly 1`] = `
+exports[`chart > renders without grid correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
@@ -1216,7 +1216,7 @@ exports[`Chart > renders without grid correctly 1`] = `
 </div>"
 `;
 
-exports[`Chart > renders without legend correctly 1`] = `
+exports[`chart > renders without legend correctly 1`] = `
 "<div data-slot="root" class="relative w-full text-xs color-text-muted **:data-akar-popper-content-wrapper:pointer-events-none [--ts-chart-tooltip-background:var(--ui-color-bg)] [--ts-chart-tooltip-color:var(--ui-color-text-highlighted)] [--ts-chart-tooltip-border:1px_solid_var(--ui-color-border)] [--ts-chart-tooltip-border-radius:var(--radius-sm)] [--ts-chart-tooltip-shadow:var(--shadow-sm)] [--ts-chart-tooltip-padding:--spacing(1.5)_--spacing(2.5)] [--ts-chart-tooltip-font:inherit]" style="--ts-chart-1: var(--ui-chart-1); --ts-chart-2: var(--ui-chart-2); --ts-chart-3: var(--ui-chart-3); --ts-chart-4: var(--ui-chart-4); --ts-chart-5: var(--ui-chart-5); --ts-chart-6: var(--ui-chart-6);" data-measured="true">
   <div class="ts-chart-host opacity-0 in-data-measured:opacity-100 transition-opacity duration-150 [&amp;_.ts-chart]:rounded-md [&amp;_.ts-chart]:outline-0 [&amp;_.ts-chart]:outline-primary/25 [&amp;_.ts-chart:focus-visible]:outline-3 [&amp;_.ts-chart:focus-visible]:ring [&amp;_.ts-chart:focus-visible]:ring-primary" style="position: relative; height: 300px;">
     <div class="ts-chart-surface" style="width: 100%; height: 100%; position: relative;"><svg class="ts-chart" width="100%" height="100%" viewBox="0 0 640 300" role="img" aria-roledescription="chart" aria-label="Visitors" tabindex="0" style="display:block;overflow:visible">
