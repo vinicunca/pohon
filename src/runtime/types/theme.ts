@@ -42,6 +42,7 @@ export interface ThemeDefaults {
   calendar?: Partial<ComponentTypes.CalendarProps>;
   card?: Partial<ComponentTypes.CardProps>;
   carousel?: Partial<ComponentTypes.CarouselProps>;
+  chart?: Partial<ComponentTypes.ChartProps>;
   changelogVersion?: Partial<ComponentTypes.ChangelogVersionProps>;
   changelogVersions?: Partial<ComponentTypes.ChangelogVersionsProps>;
   chatMessage?: Partial<ComponentTypes.ChatMessageProps>;

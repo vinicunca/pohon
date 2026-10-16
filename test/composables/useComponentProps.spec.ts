@@ -2,9 +2,11 @@ import type * as ui from '#build/ui';
 import type { ThemeDefaults } from '../../src/runtime/types/theme';
 
 import { mountSuspended } from '@nuxt/test-utils/runtime';
-import { afterAll, beforeAll, describe, expect, expectTypeOf, it } from 'vitest';
+import { afterAll, beforeAll, describe, expect, expectTypeOf, it, vi } from 'vitest';
+import { defineComponent, h, isReadonly, isRef, isShallow } from 'vue';
 import { PFormField } from '#components';
 import { useAppConfig } from '#imports';
+import { useComponentProps } from '../../src/runtime/composables/useComponentProps';
 
 /**
  * Hand-maintained list of `#build/ui` exports that intentionally don't
@@ -76,5 +78,32 @@ describe('app.config defaultVariants', () => {
 
     const root = wrapper.find('[data-slot="root"]');
     expect(root.attributes('data-orientation')).toBe('vertical');
+  });
+});
+
+describe('vue internal flags', () => {
+  it('reads `__v_*` flags without resolving theme defaults', async () => {
+    let calls = -1;
+    let flags: Array<boolean> = [];
+
+    const Probe = defineComponent({
+      props: { color: String },
+      setup(rawProps) {
+        const props = useComponentProps('button', rawProps);
+        const replace = vi.spyOn(String.prototype, 'replace');
+        try {
+          flags = [isReadonly(props), isShallow(props), isRef(props)];
+          calls = replace.mock.calls.length;
+        } finally {
+          replace.mockRestore();
+        }
+        return () => h('i');
+      },
+    });
+
+    await mountSuspended(Probe);
+    expect(calls).toBe(0);
+    // the proxy only advertises itself as reactive, not readonly or shallow
+    expect(flags).toEqual([false, false, false]);
   });
 });

@@ -150,6 +150,7 @@
     "@internationalized/date": "^3",
     "@internationalized/number": "^3",
     "@nuxt/content": "^3",
+    "@tanstack/charts": "^1",
     "@tiptap/core": "^3",
     "@tiptap/extension-bubble-menu": "^3",
     "@tiptap/extension-code": "^3",
@@ -190,6 +191,9 @@
     "@nuxt/content": {
       "optional": true
     },
+    "@tanstack/charts": {
+      "optional": true
+    },
     "ai": {
       "optional": true
     },
@@ -223,6 +227,7 @@
     "@nuxt/schema": "catalog:",
     "@nuxtjs/color-mode": "catalog:",
     "@standard-schema/spec": "catalog:",
+    "@tanstack/charts": "catalog:",
     "@tanstack/vue-table": "catalog:",
     "@tanstack/vue-virtual": "catalog:",
     "@tiptap/core": "catalog:",

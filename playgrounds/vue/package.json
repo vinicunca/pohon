@@ -10,6 +10,7 @@
     "typecheck": "vue-tsc -b"
   },
   "dependencies": {
+    "@tanstack/charts": "catalog:",
     "@tiptap/extension-emoji": "catalog:",
     "@tiptap/extension-text-align": "catalog:",
     "@vinicunca/unocss-preset": "catalog:",

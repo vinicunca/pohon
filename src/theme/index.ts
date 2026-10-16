@@ -14,6 +14,7 @@ export { default as card } from './card';
 export { default as carousel } from './carousel';
 export { default as changelogVersion } from './changelog-version';
 export { default as changelogVersions } from './changelog-versions';
+export { default as chart } from './chart';
 export { default as chatMessage } from './chat-message';
 export { default as chatMessages } from './chat-messages';
 export { default as chatPalette } from './chat-palette';

@@ -3,7 +3,7 @@ import type { AppProps } from '../../src/runtime/components/App.vue';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { ToastProvider } from 'akar';
 import { afterEach, describe, expect, it } from 'vitest';
-import { defineComponent, h, shallowRef } from 'vue';
+import { defineComponent, h, provide, shallowRef } from 'vue';
 import PApp from '../../src/runtime/components/App.vue';
 import PBreadcrumb from '../../src/runtime/components/Breadcrumb.vue';
 import PButton from '../../src/runtime/components/Button.vue';
@@ -20,9 +20,10 @@ import PPinInput from '../../src/runtime/components/PinInput.vue';
 import PSkeleton from '../../src/runtime/components/Skeleton.vue';
 import PSlider from '../../src/runtime/components/Slider.vue';
 import PStepper from '../../src/runtime/components/Stepper.vue';
-import { useLocale } from '../../src/runtime/composables/useLocale';
+import { localeContextInjectionKey, useLocale } from '../../src/runtime/composables/useLocale';
 import ar from '../../src/runtime/locale/ar';
 import de from '../../src/runtime/locale/de';
+import en from '../../src/runtime/locale/en';
 import fr from '../../src/runtime/locale/fr';
 
 const teardowns: Array<() => void> = [];
@@ -33,7 +34,7 @@ afterEach(() => {
   });
 });
 
-async function mountDir(appProps?: Pick<AppProps, 'dir' | 'locale' | 'toaster'>, localeOverride?: typeof ar) {
+async function mountDir(appProps?: Pick<AppProps, 'dir' | 'locale' | 'toaster'>, localeOverride?: typeof ar, providedLocale?: typeof ar) {
   let dir: string | undefined;
 
   const Probe = defineComponent({
@@ -44,6 +45,11 @@ async function mountDir(appProps?: Pick<AppProps, 'dir' | 'locale' | 'toaster'>,
   });
 
   const wrapper = await mountSuspended(defineComponent({
+    setup: () => {
+      if (providedLocale) {
+        provide(localeContextInjectionKey, shallowRef(providedLocale));
+      }
+    },
     render: () => appProps ? h(PApp, appProps, () => h(Probe)) : h(Probe),
   }));
   teardowns.push(() => wrapper.unmount());
@@ -75,6 +81,14 @@ describe('useLocale', () => {
 
   it('lets the App dir prop override the locale dir', async () => {
     expect(await mountDir({ locale: ar, dir: 'ltr' })).toBe('ltr');
+  });
+
+  it('follows a locale provided above the App', async () => {
+    expect(await mountDir({}, undefined, ar)).toBe('rtl');
+  });
+
+  it('lets the App locale prop override a locale provided above it', async () => {
+    expect(await mountDir({ locale: en }, undefined, ar)).toBe('ltr');
   });
 
   it('keeps the dir of a locale passed to useLocale without an App', async () => {

@@ -1,11 +1,13 @@
 import type { HookResult, ModuleDependencies } from '@nuxt/schema';
-import { addComponentsDir, addImports, addImportsDir, createResolver, defineNuxtModule, hasNuxtModule } from '@nuxt/kit';
+import type { I18nLocale } from './utils/locales';
+import { addComponentsDir, addImports, addImportsDir, addPluginTemplate, createResolver, defineNuxtModule, hasNuxtModule } from '@nuxt/kit';
 import { defu } from 'defu';
 import { name, version } from '../package.json';
 import { publicComposables } from './imports';
 import { addTemplates } from './templates';
 import { defaultOptions, getDefaultConfig, resolveColors } from './utils/defaults';
 import { getClientBundleIcons } from './utils/icons';
+import { generateI18nPlugin, getLocaleKeys } from './utils/locales';
 
 export type * from './runtime/types';
 
@@ -222,6 +224,18 @@ export default defineNuxtModule<ModuleOptions>({
     // Isolate root node from portaled components
     nuxt.options.app.rootAttrs = nuxt.options.app.rootAttrs || {};
     nuxt.options.app.rootAttrs.class = [nuxt.options.app.rootAttrs.class, 'isolate'].filter(Boolean).join(' ');
+
+    if (hasNuxtModule('@nuxtjs/i18n')) {
+      addPluginTemplate({
+        filename: 'ui-i18n.mjs',
+        getContents: () => {
+          // Resolved by `@nuxtjs/i18n`, including layers
+          const { locales } = (nuxt.options.runtimeConfig.public.i18n || {}) as { locales?: Array<I18nLocale> };
+
+          return generateI18nPlugin(Array.isArray(locales) ? locales : [], getLocaleKeys(resolve('./runtime/locale')), resolve('./runtime'));
+        },
+      });
+    }
 
     if (options.prose || options.mdc || options.content || hasNuxtModule('@nuxtjs/mdc') || hasNuxtModule('@nuxt/content')) {
       addComponentsDir({

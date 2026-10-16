@@ -2,7 +2,7 @@ import type { ModuleOptions } from '../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: 'text-center flex items-center items-center',
+    root: 'text-center flex items-center',
     border: '',
     container: 'font-500 color-text flex',
     icon: 'shrink-0 size-5',

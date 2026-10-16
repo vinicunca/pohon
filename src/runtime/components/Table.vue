@@ -265,7 +265,12 @@ const data = createRef(props.data ?? [], props.watchOptions?.deep !== false);
 
 const meta = computed(() => props.meta ?? {});
 
-const columns = computed<Array<TableColumn<T>>>(() => processColumns(props.columns ?? Object.keys(data.value[0] ?? {}).map((accessorKey: string) => ({ accessorKey, header: capitalize(accessorKey) }))));
+// TanStack resolves each column as `{ ...defaultColumn, ...columnDef }`, so any key set here shadows `defaultColumn`.
+// The fallback `header` and `cell` are only injected when `defaultColumn` doesn't provide its own.
+const columns = computed<Array<TableColumn<T>>>(() => processColumns(props.columns ?? Object.keys(data.value[0] ?? {}).map((accessorKey: string) => ({
+  accessorKey,
+  ...(props.defaultColumn?.header === undefined && { header: capitalize(accessorKey) }),
+}))));
 
 function processColumns(columns: Array<TableColumn<T>>): Array<TableColumn<T>> {
   return columns.map((column) => {
@@ -275,7 +280,7 @@ function processColumns(columns: Array<TableColumn<T>>): Array<TableColumn<T>> {
       col.columns = processColumns(col.columns as Array<TableColumn<T>>);
     }
 
-    if (!col.cell) {
+    if (!col.cell && !props.defaultColumn?.cell) {
       col.cell = ({ getValue }) => {
         const value = getValue();
         if (value === '' || value === null || value === undefined) {
