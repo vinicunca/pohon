@@ -48,6 +48,7 @@ export * from '../components/DashboardSidebarCollapse.vue';
 export * from '../components/DashboardSidebarToggle.vue';
 export * from '../components/DashboardToolbar.vue';
 export * from '../components/Drawer.vue';
+export * from '../components/DrawerProvider.vue';
 export * from '../components/DropdownMenu.vue';
 export * from '../components/Editor.vue';
 export * from '../components/EditorDragHandle.vue';

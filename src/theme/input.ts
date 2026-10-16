@@ -3,7 +3,7 @@ import { fieldGroupVariantWithRoot } from './field-group';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: 'relative inline-flex items-center',
+    root: 'relative inline-flex items-center w-full',
     base: ['placeholder:color-text-dimmed appearance-none border-0 rounded-md w-full disabled:opacity-75 disabled:cursor-not-allowed', options.theme.transitions && 'transition-colors'],
     leading: 'absolute inset-y-0 start-0 flex items-center',
     leadingIcon: 'shrink-0 color-text-dimmed',

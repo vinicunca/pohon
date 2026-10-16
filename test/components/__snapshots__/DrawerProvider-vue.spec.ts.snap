@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`drawer provider > renders with as correctly 1`] = `
+"<section data-v-19e95058="" data-slot="root" class="relative isolate">
+  <!--v-if-->
+  <div data-v-19e95058="" data-inactive="" style="--drawer-swipe-progress: 0;" data-slot="content" class="relative"></div>
+</section>"
+`;
+
+exports[`drawer provider > renders with class correctly 1`] = `
+"<div data-v-19e95058="" data-slot="root" class="relative isolate min-h-screen">
+  <!--v-if-->
+  <div data-v-19e95058="" data-inactive="" style="--drawer-swipe-progress: 0;" data-slot="content" class="relative"></div>
+</div>"
+`;
+
+exports[`drawer provider > renders with default slot correctly 1`] = `
+"<div data-v-19e95058="" data-slot="root" class="relative isolate">
+  <!--v-if-->
+  <div data-v-19e95058="" data-inactive="" style="--drawer-swipe-progress: 0;" data-slot="content" class="relative">Page content</div>
+</div>"
+`;
+
+exports[`drawer provider > renders with scale correctly 1`] = `
+"<div data-v-19e95058="" data-slot="root" class="relative isolate">
+  <div data-v-19e95058="" data-inactive="" data-slot="background" class="absolute inset-0 bg-background-inverted"></div>
+  <div data-v-19e95058="" data-inactive="" style="--drawer-swipe-progress: 0;" data-slot="content" class="relative pohon-drawer-indent bg-background overflow-hidden pohon-drawer-indent-transition"></div>
+</div>"
+`;
+
+exports[`drawer provider > renders with ui correctly 1`] = `
+"<div data-v-19e95058="" data-slot="root" class="relative isolate">
+  <!--v-if-->
+  <div data-v-19e95058="" data-inactive="" style="--drawer-swipe-progress: 0;" data-slot="content" class="relative p-4"></div>
+</div>"
+`;

@@ -5,8 +5,7 @@ export const themeDrawer = {
   slots: {
     overlay: 'bg-background-elevated/75 inset-0 fixed',
     content: 'bg-background flex ring ring-border fixed focus:outline-none',
-    // TODO: remove the important when vaul is replaced by the built in drawer
-    handle: 'shrink-0 transition-opacity ease-out !bg-background-accented',
+    handle: 'bg-background-accented shrink-0 transition-opacity ease-out',
     container: 'p-4 flex flex-col gap-4 w-full overflow-y-auto',
     header: 'flex gap-1.5 min-h-8 items-center',
     wrapper: 'flex-1 min-w-0',
@@ -25,8 +24,7 @@ export const themeDrawer = {
       },
       right: {
         content: 'flex-row rtl:flex-row-reverse',
-        // TODO: remove the important when vaul is replaced by the built in drawer
-        handle: '!ml-4',
+        handle: 'ml-4',
       },
       bottom: {
         content: 'mt-24 flex-col',
@@ -34,13 +32,12 @@ export const themeDrawer = {
       },
       left: {
         content: 'flex-row-reverse rtl:flex-row',
-        // TODO: remove the important when vaul is replaced by the built in drawer
-        handle: '!mr-4',
+        handle: 'mr-4',
       },
     },
     inset: {
       true: {
-        content: 'rounded-lg [--initial-transform:calc(100%+1.5rem)] overflow-hidden after:hidden',
+        content: 'rounded-lg overflow-hidden after:hidden',
       },
     },
     snapPoints: {
@@ -52,8 +49,7 @@ export const themeDrawer = {
       direction: ['top', 'bottom'],
       class: {
         content: 'h-auto max-h-[96%]',
-        // TODO: remove the important when vaul is replaced by the built in drawer
-        handle: 'mx-auto !h-1.5 !w-12',
+        handle: 'mx-auto h-1.5 w-12',
       },
     },
     {
@@ -67,8 +63,7 @@ export const themeDrawer = {
       direction: ['right', 'left'],
       class: {
         content: 'w-auto max-w-[calc(100%-2rem)]',
-        // TODO: remove the important when vaul is replaced by the built in drawer
-        handle: '!h-12 !w-1.5 my-auto',
+        handle: 'h-12 w-1.5 my-auto',
       },
     },
     {

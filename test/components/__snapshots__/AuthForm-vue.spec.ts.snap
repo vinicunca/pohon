@@ -529,7 +529,7 @@ exports[`authForm > renders with providers correctly 1`] = `
         <!--v-if-->
       </button></div>
     <!---->
-    <div data-orientation="horizontal" role="separator" data-slot="separator" class="text-center flex items-center items-center w-full flex-row">
+    <div data-orientation="horizontal" role="separator" data-slot="separator" class="text-center flex items-center w-full flex-row">
       <!--v-if-->
       <div data-slot="border" class="border-border w-full border-solid border-t"></div>
       <div data-slot="container" class="font-500 color-text flex whitespace-nowrap mx-3"><span data-slot="label" class="text-sm">or</span></div>
