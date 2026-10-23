@@ -11,18 +11,77 @@ describe('chatReasoning', () => {
 
   renderEach(ChatReasoning, [
     // Props
-    ['with text', { props }],
-    ['with streaming', { props: { streaming: true } }],
-    ['with streaming and autoOpen false', { props: { streaming: true, autoOpen: false } }],
-    ['with duration', { props: { ...props, duration: 5 } }],
-    ['with icon', { props: { ...props, icon: 'i-lucide-brain' } }],
-    ['with defaultOpen', { props: { ...props, defaultOpen: true } }],
-    ['with chevron leading', { props: { ...props, chevron: 'leading' } }],
-    ['with chevronIcon', { props: { ...props, chevronIcon: 'i-lucide-arrow-down' } }],
-    ['with class', { props: { ...props, class: 'my-5' } }],
-    ['with ui', { props: { ...props, ui: { body: 'color-text-muted' } } }],
+    [
+      'with text',
+      { props },
+    ],
+    [
+      'with streaming',
+      {
+        props: { streaming: true },
+      },
+    ],
+    [
+      'with streaming and autoOpen false',
+      {
+        props: { streaming: true, autoOpen: false },
+      },
+    ],
+    [
+      'with duration',
+      {
+        props: { ...props, duration: 5 },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { ...props, icon: 'i-lucide-brain' },
+      },
+    ],
+    [
+      'with defaultOpen',
+      {
+        props: { ...props, defaultOpen: true },
+      },
+    ],
+    [
+      'with chevron leading',
+      {
+        props: { ...props, chevron: 'leading' },
+      },
+    ],
+    [
+      'with chevronIcon',
+      {
+        props: { ...props, chevronIcon: 'i-lucide-arrow-down' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'my-5' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { body: 'color-text-muted' },
+        },
+      },
+    ],
     // Slots
-    ['with default slot', { props, slots: { default: () => 'Custom reasoning content' } }],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Custom reasoning content',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {
@@ -62,5 +121,22 @@ describe('chatReasoning', () => {
 
     await wrapper.setProps({ streaming: true });
     expect(root.attributes('data-state')).toBe('closed');
+  });
+
+  it('stays open when opened by the user while streaming', async () => {
+    const wrapper = await mountSuspended(ChatReasoning, {
+      props: { text: 'Thinking...', streaming: true, autoOpen: false },
+    });
+
+    const root = wrapper.find('[data-slot="root"]');
+    await wrapper.find('[data-slot="trigger"]').trigger('click');
+    expect(root.attributes('data-state')).toBe('open');
+
+    vi.useFakeTimers();
+    await wrapper.setProps({ streaming: false });
+    vi.advanceTimersByTime(500);
+    vi.useRealTimers();
+    await wrapper.vm.$nextTick();
+    expect(root.attributes('data-state')).toBe('open');
   });
 });
