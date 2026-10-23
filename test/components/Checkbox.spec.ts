@@ -138,4 +138,38 @@ describe('checkbox', () => {
       expect(wrapper.text()).not.toContain('Error message');
     });
   });
+
+  // https://github.com/nuxt/ui/issues/6033
+  describe('label element', () => {
+    it('is a <label> in the default (list) variant', async () => {
+      const wrapper = await mountSuspended(Checkbox, { props: { label: 'Label' } });
+      const label = wrapper.find('[data-slot="label"]');
+
+      expect(label.exists()).toBe(true);
+      expect(label.element.tagName).toBe('LABEL');
+      expect(label.attributes('for')).toBeTruthy();
+    });
+
+    // `Checkbox` only ships the `list` and `card` variants, `table` lives on `CheckboxGroup`.
+    it.each(['card'] as const)('is a <div> in the %s variant', async (variant) => {
+      const wrapper = await mountSuspended(Checkbox, { props: { label: 'Label', variant } });
+      const label = wrapper.find('[data-slot="label"]');
+
+      expect(label.exists()).toBe(true);
+      expect(label.element.tagName).toBe('DIV');
+      expect(label.attributes('for')).toBeUndefined();
+    });
+
+    it('is a <div> in the card variant with custom content', async () => {
+      const wrapper = await mountSuspended(Checkbox, {
+        props: { label: 'Label', variant: 'card' },
+        slots: { label: '<span data-testid="custom-label">Custom</span>' },
+      });
+      const label = wrapper.find('[data-slot="label"]');
+
+      expect(label.element.tagName).toBe('DIV');
+      expect(label.attributes('for')).toBeUndefined();
+      expect(wrapper.find('[data-testid="custom-label"]').exists()).toBe(true);
+    });
+  });
 });

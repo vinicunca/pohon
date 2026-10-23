@@ -106,13 +106,23 @@ const maxReached = computed(() => {
 
   // Same check as Akar, whose `value` prop defaults to `on`.
   const values = checkboxGroupContext.modelValue.value ?? [];
-  const checkboxValue = props.value === undefined ? 'on' : props.value;
+  const checkboxValue = props.value === undefined
+    ? 'on'
+    : props.value;
   return values.length >= max && !values.some((value) => isEqual(value, checkboxValue));
 });
 
 // When the indicator is hidden the checked icon is never visible, so `icon` renders above the
 // label instead. No `appConfig` fallback here, an unset `icon` must render nothing.
-const labelIcon = computed(() => props.indicator === 'hidden' ? props.icon : undefined);
+const labelIcon = computed(() => props.indicator === 'hidden'
+  ? props.icon
+  : undefined);
+
+// `list` (and the default, which has no `variant`) renders the label as a `<Label>` tied to the
+// input. Every other variant renders the whole root as the `<Label>`, so the text only needs a
+// generic block wrapper there: a `<p>` cannot contain block-level content, so a slot that put a
+// `<div>` inside it made the browser close the tag early and broke hydration. See nuxt/ui#6033.
+const isListVariant = computed(() => !props.variant || props.variant === 'list');
 
 const attrs = useAttrs();
 
@@ -122,7 +132,10 @@ const forwardedAttrs = computed(() => {
   return rest;
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.checkbox || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.checkbox || {}),
+})({
   size: size.value,
   color: color.value,
   variant: props.variant,
@@ -133,8 +146,10 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.checkbox || {}) 
 }));
 
 function onUpdate(value: any) {
-  // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value } });
+  const event = new Event('change', {
+    // @ts-expect-error - 'target' does not exist in type 'EventInit'
+    target: { value },
+  });
   emits('change', event);
   emitFormChange();
   emitFormInput();
@@ -143,7 +158,7 @@ function onUpdate(value: any) {
 
 <!-- eslint-disable vue/no-template-shadow -->
 <template>
-  <Primitive :as="(!props.variant || props.variant === 'list') ? props.as : Label" :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <Primitive :as="isListVariant ? props.as : Label" :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <div data-slot="container" :class="ui.container({ class: props.ui?.container })">
       <CheckboxRoot
         :id="id"
@@ -165,7 +180,7 @@ function onUpdate(value: any) {
 
     <div v-if="labelIcon || (props.label || !!slots.label) || (props.description || !!slots.description)" data-slot="wrapper" :class="ui.wrapper({ class: props.ui?.wrapper })">
       <PIcon v-if="labelIcon" :name="labelIcon" data-slot="icon" :class="ui.icon({ class: props.ui?.icon })" />
-      <component :is="(!props.variant || props.variant === 'list') ? Label : 'p'" v-if="props.label || !!slots.label" :for="id" data-slot="label" :class="ui.label({ class: props.ui?.label })">
+      <component :is="isListVariant ? Label : 'div'" v-if="props.label || !!slots.label" :for="isListVariant ? id : undefined" data-slot="label" :class="ui.label({ class: props.ui?.label })">
         <slot name="label" :label="props.label">
           {{ props.label }}
         </slot>

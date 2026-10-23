@@ -146,16 +146,16 @@ function onSubmit() {
     <template #body>
       <PContainer>
         <PChatMessages :messages="messages" :status="status">
-          <template #content="{ message }">
+          <template #content="{ message, streaming }">
             <template v-for="(part, index) in message.parts" :key="`${message.id}-${part.type}-${index}`">
               <PChatReasoning
                 v-if="isReasoningUIPart(part)"
                 :text="part.text"
-                :streaming="isPartStreaming(part)"
+                :streaming="isPartStreaming(part, streaming)"
               >
                 <Comark
                   :markdown="part.text"
-                  :streaming="isPartStreaming(part)"
+                  :streaming="isPartStreaming(part, streaming)"
                   :plugins="[highlight()]"
                   class="*:first:mt-0 *:last:mb-0"
                 />
@@ -164,14 +164,14 @@ function onSubmit() {
               <PChatTool
                 v-else-if="isToolUIPart(part)"
                 :text="getToolName(part)"
-                :streaming="isToolStreaming(part)"
+                :streaming="isToolStreaming(part, streaming)"
               />
 
               <template v-else-if="isTextUIPart(part)">
                 <Comark
                   v-if="message.role === 'assistant'"
                   :markdown="part.text"
-                  :streaming="isPartStreaming(part)"
+                  :streaming="isPartStreaming(part, streaming)"
                   :plugins="[highlight()]"
                   class="*:first:mt-0 *:last:mb-0"
                 />
@@ -187,7 +187,7 @@ function onSubmit() {
 
     <template #footer>
       <PContainer class="pb-4 sm:pb-6">
-        <PChatPrompt v-model="input" :error="error" @submit="onSubmit">
+        <PChatPrompt v-model="input" :status="status" :error="error" @submit="onSubmit">
           <PChatPromptSubmit :status="status" @stop="stop()" @reload="regenerate()" />
         </PChatPrompt>
       </PContainer>
@@ -200,8 +200,8 @@ function onSubmit() {
 
 - `PChatMessages` — scrollable message list with auto-scroll. Props: `messages`, `status`. Slots: `#content` (per message), `#actions`, `#indicator`.
 - `PChatMessage` — individual bubble. Props: `message`, `side` (`'left'`/`'right'`).
-- `PChatReasoning` — collapsible reasoning block. Auto-opens during streaming, auto-closes when done. Use `isPartStreaming(part)` from `pohon-ui/utils/ai`.
-- `PChatTool` — tool invocation status. Use `isToolStreaming(part)`. Variants: `'inline'` (default), `'card'`.
+- `PChatReasoning` — collapsible reasoning block. Auto-opens during streaming, auto-closes when done. Use `isPartStreaming(part, streaming)` from `pohon-ui/utils/ai`, with `streaming` from the `#content` slot.
+- `PChatTool` — tool invocation status. Use `isToolStreaming(part, streaming)`. Variants: `'inline'` (default), `'card'`.
 - `PChatPrompt` — enhanced textarea for chat. Its typed API exposes a selected subset of `PTextarea` props, forwards additional attributes to the underlying textarea, and adds chat-specific props such as `error` and `submitOnEnter`.
 - `PChatPromptSubmit` — submit button with automatic status handling (send/stop/reload).
 - `PChatPalette` — layout wrapper for chat inside overlays.

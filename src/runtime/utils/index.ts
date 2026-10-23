@@ -25,7 +25,9 @@ export function omit<Data extends object, Keys extends keyof Data>(data: Data, k
 }
 
 export function get(object: Record<string, any> | undefined, path: Array<string | number> | string, defaultValue?: any): any {
-  const keys = typeof path === 'string' ? path.split('.') : path;
+  const keys = typeof path === 'string'
+    ? path.split('.')
+    : path;
 
   let result: any = object;
 
@@ -37,13 +39,17 @@ export function get(object: Record<string, any> | undefined, path: Array<string 
     result = result[key];
   }
 
-  return result !== undefined ? result : defaultValue;
+  return result !== undefined
+    ? result
+    : defaultValue;
 }
 
 export function set(object: Record<string, any>, path: Array<string | number> | string, value: any): void {
   const keys: Array<string> = [];
 
-  for (const segment of typeof path === 'string' ? path.split('.') : path) {
+  for (const segment of typeof path === 'string'
+    ? path.split('.')
+    : path) {
     const key = String(segment);
     if (key === '__proto__' || key === 'constructor' || key === 'prototype') {
       return;
@@ -63,7 +69,9 @@ export function set(object: Record<string, any>, path: Array<string | number> | 
     }
 
     if (current[key] === null || (typeof current[key] !== 'object' && typeof current[key] !== 'function')) {
-      current[key] = /^(?:0|[1-9]\d*)$/.test(keys[i + 1]!) ? [] : {};
+      current[key] = /^(?:0|[1-9]\d*)$/.test(keys[i + 1]!)
+        ? []
+        : {};
     }
 
     current = current[key];
@@ -72,7 +80,9 @@ export function set(object: Record<string, any>, path: Array<string | number> | 
 
 export function looseToNumber(val: any): any {
   const n = Number.parseFloat(val);
-  return Number.isNaN(n) ? val : n;
+  return Number.isNaN(n)
+    ? val
+    : n;
 }
 
 export function compare<T>(value?: T, currentValue?: T, comparator?: string | ((a: T, b: T) => boolean)) {
@@ -151,7 +161,9 @@ export function getDisplayValue<T extends Array<any>, V>(
   });
 
   if (isEmpty(value) && foundItem) {
-    return labelKey ? get(foundItem as Record<string, any>, labelKey as string) : undefined;
+    return labelKey
+      ? get(foundItem as Record<string, any>, labelKey as string)
+      : undefined;
   }
 
   if (isEmpty(value)) {
@@ -165,7 +177,9 @@ export function getDisplayValue<T extends Array<any>, V>(
   }
 
   if (typeof source === 'object') {
-    return labelKey ? get(source as Record<string, any>, labelKey as string) : undefined;
+    return labelKey
+      ? get(source as Record<string, any>, labelKey as string)
+      : undefined;
   }
 
   return String(source);
@@ -187,7 +201,9 @@ export function mergeClasses(appConfigClass?: string | Array<string>, propClass?
   }
 
   return [
-    ...(Array.isArray(appConfigClass) ? appConfigClass : [appConfigClass]),
+    ...(Array.isArray(appConfigClass)
+      ? appConfigClass
+      : [appConfigClass]),
     propClass,
   ].filter(Boolean);
 }
@@ -207,9 +223,13 @@ export function getSlotChildrenText(children: any) {
 
 export function transformUI(ui: any, uiProp?: any) {
   return Object.entries(ui).reduce((acc, [key, value]) => {
-    acc[key] = typeof value === 'function' ? value({ class: uiProp?.[key] }) : value;
+    acc[key] = typeof value === 'function'
+      ? value({ class: uiProp?.[key] })
+      : value;
     return acc;
-  }, { ...(uiProp || {}) });
+  }, {
+    ...(uiProp || {}),
+  });
 }
 
 export function resolveBaseURL(path?: string, baseURL?: string): string | undefined {
@@ -231,6 +251,9 @@ export function resolveAs<T extends { root: any }>(as: any, defaults: T): T {
     || typeof as === 'function'
     || typeof as?.render === 'function'
     || typeof as?.setup === 'function'
+    // Components inheriting their `render` or `setup`
+    || !!as?.extends
+    || !!as?.mixins
   ) {
     return { ...defaults, root: as };
   }
