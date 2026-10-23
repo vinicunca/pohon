@@ -38,7 +38,16 @@ interface Shortcut {
 const chainedShortcutRegex = /^[^-]+.*-.*[^-]+$/;
 const combinedShortcutRegex = /^[^_]+.*_.*[^_]+$/;
 // keyboard keys which can be combined with Shift modifier (in addition to alphabet keys)
-const shiftableKeys = ['arrowleft', 'arrowright', 'arrowup', 'arrowdown', 'tab', 'escape', 'enter', 'backspace'];
+const shiftableKeys = [
+  'arrowleft',
+  'arrowright',
+  'arrowup',
+  'arrowdown',
+  'tab',
+  'escape',
+  'enter',
+  'backspace',
+];
 
 // Simple key to code conversion for layout independence
 function convertKeyToCode(key: string): string {
@@ -172,7 +181,14 @@ export function defineShortcuts(config: MaybeRef<ShortcutsConfig>, options: Shor
         }
       } else {
         const keySplit = key.toLowerCase().split('_').map((k) => k);
-        let baseKey = keySplit.filter((k) => !['meta', 'command', 'ctrl', 'shift', 'alt', 'option'].includes(k)).join('_');
+        let baseKey = keySplit.filter((k) => ![
+          'meta',
+          'command',
+          'ctrl',
+          'shift',
+          'alt',
+          'option',
+        ].includes(k)).join('_');
         if (layoutIndependent) {
           baseKey = convertKeyToCode(baseKey);
         }
@@ -249,12 +265,18 @@ export function defineShortcuts(config: MaybeRef<ShortcutsConfig>, options: Shor
     }
 
     const useCode = layoutIndependent || e.altKey;
-    const alphabetKey = useCode ? /^Key[A-Z]$/i.test(e.code) : /^[a-z]$/i.test(e.key);
-    const shiftableKey = useCode ? shiftableCodes.includes(e.code) : shiftableKeys.includes(e.key.toLowerCase());
+    const alphabetKey = useCode
+      ? /^Key[A-Z]$/i.test(e.code)
+      : /^[a-z]$/i.test(e.key);
+    const shiftableKey = useCode
+      ? shiftableCodes.includes(e.code)
+      : shiftableKeys.includes(e.key.toLowerCase());
 
     let chainedKey;
-    // push either code or key depending on layoutIndependent flag
-    chainedInputs.value.push(layoutIndependent ? e.code : e.key);
+    // push either code or key depending on layoutIndependent flag, keys are lowercased like the config
+    chainedInputs.value.push(layoutIndependent
+      ? e.code
+      : e.key.toLowerCase());
     // try matching a chained shortcut
     if (chainedInputs.value.length >= 2) {
       chainedKey = chainedInputs.value.slice(-2).join('-');
