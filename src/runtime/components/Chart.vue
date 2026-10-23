@@ -90,6 +90,11 @@ export interface ChartProps<T extends ChartData = ChartData> {
    */
   tooltip?: boolean | TooltipProps;
   /**
+   * Animate the chart when its data changes. Does not apply to `definition`, set `svgAnimation` on it instead.
+   * @defaultValue true
+   */
+  transition?: boolean;
+  /**
    * The width of the ring in pixels. Only applies to `donut`.
    * @defaultValue 24
    */
@@ -163,6 +168,7 @@ const _props = withDefaults(defineProps<ChartProps<T>>(), {
   xAxis: true,
   yAxis: true,
   tooltip: true,
+  transition: true,
   thickness: 24,
   initialWidth: 640,
 });
@@ -174,14 +180,19 @@ const props = useComponentProps<ChartProps<T>>('chart', _props);
 const { dir, code } = useLocale();
 const appConfig = useAppConfig() as Chart['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chart || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.chart || {}),
+})({
   type: props.type,
 }));
 
 const themeColors = computed(() => Object.keys(appConfig.ui?.colors || {}));
 
 // The default palette lives in CSS so it can be themed and follows the color mode.
-const seriesColors = computed(() => props.colors?.length ? props.colors : Array.from({ length: 6 }, (_, i) => `var(--ui-chart-${i + 1})`));
+const seriesColors = computed(() => props.colors?.length
+  ? props.colors
+  : Array.from({ length: 6 }, (_, i) => `var(--ui-chart-${i + 1})`));
 
 function resolveColor(color: string) {
   // `neutral` has no `--ui-neutral` variable, the theme paints it with the inverted background.
@@ -189,7 +200,9 @@ function resolveColor(color: string) {
     return 'var(--ui-color-bg-inverted)';
   }
 
-  return themeColors.value.includes(color) ? `var(--ui-${color})` : color;
+  return themeColors.value.includes(color)
+    ? `var(--ui-${color})`
+    : color;
 }
 
 const series = computed(() => (props.categories ?? []).map((category) => typeof category === 'string'
@@ -206,22 +219,36 @@ function seriesLabel(key: string) {
 }
 
 // A donut has one color per row, the other types one per category.
-const seriesCount = computed(() => props.type === 'donut' ? (props.data?.length ?? 0) : seriesKeys.value.length);
+const seriesCount = computed(() => props.type === 'donut'
+  ? (props.data?.length ?? 0)
+  : seriesKeys.value.length);
 
 // Series paint resolves through `--ts-chart-*` so it follows the theme and color mode
 // without rebuilding the definition. Past the last color, each round is a lighter tint
 // of the same colors so two series never share one.
-const style = computed(() => Object.fromEntries(Array.from({ length: Math.max(seriesCount.value, seriesColors.value.length) }, (_, i) => {
+const style = computed(() => Object.fromEntries(Array.from({
+  length: Math.max(seriesCount.value, seriesColors.value.length),
+}, (_, i) => {
   // A color set on the category itself is used as is, without the tint of the repeated palette.
-  const own = props.type !== 'donut' ? series.value[i]?.color : undefined;
+  const own = props.type !== 'donut'
+    ? series.value[i]?.color
+    : undefined;
   if (own) {
-    return [`--ts-chart-${i + 1}`, resolveColor(own)];
+    return [
+      `--ts-chart-${i + 1}`,
+      resolveColor(own),
+    ];
   }
 
   const color = resolveColor(seriesColors.value[i % seriesColors.value.length]!);
   const round = Math.floor(i / seriesColors.value.length);
 
-  return [`--ts-chart-${i + 1}`, round ? `color-mix(in oklab, ${color} ${Math.round(100 * 0.65 ** round)}%, var(--ui-color-bg))` : color];
+  return [
+    `--ts-chart-${i + 1}`,
+    round
+      ? `color-mix(in oklab, ${color} ${Math.round(100 * 0.65 ** round)}%, var(--ui-color-bg))`
+      : color,
+  ];
 })));
 
 // One row per (x, category) pair so a single mark can group, stack and color by series.
@@ -236,11 +263,21 @@ const rows = computed(() => (props.data ?? []).flatMap((datum) => {
 
     // A missing value is a gap: it has no bounds and leaves the stack untouched for the next series.
     if (typeof value !== 'number' || !Number.isFinite(value)) {
-      return { x, category, value: undefined, base: undefined, top: undefined };
+      return {
+        x,
+        category,
+        value: undefined,
+        base: undefined,
+        top: undefined,
+      };
     }
 
     // The bounds of the series as an area: stacked on the previous ones, or from the baseline.
-    const base = props.stacked ? (value < 0 ? negative : positive) : 0;
+    const base = props.stacked
+      ? (value < 0
+          ? negative
+          : positive)
+      : 0;
 
     if (value < 0) {
       negative += value;
@@ -248,16 +285,32 @@ const rows = computed(() => (props.data ?? []).flatMap((datum) => {
       positive += value;
     }
 
-    return { x, category, value, base, top: base + value };
+    return {
+      x,
+      category,
+      value,
+      base,
+      top: base + value,
+    };
   });
 }));
 
 function formatValue(value: number) {
-  return props.format ? props.format(value) : new Intl.NumberFormat(code.value).format(value);
+  return props.format
+    ? props.format(value)
+    : new Intl.NumberFormat(code.value).format(value);
 }
 
 // The default legend stretches its items over the full width. Its values are the series keys, shown as their label.
-const legendGuide = computed(() => colorLegend({ items: colorLegendItems({ justify: 'center', gap: 16, label: { format: (value) => seriesLabel(String(value)) } }) }));
+const legendGuide = computed(() => colorLegend({
+  items: colorLegendItems({
+    justify: 'center',
+    gap: 16,
+    label: {
+      format: (value) => seriesLabel(String(value)),
+    },
+  }),
+}));
 
 // Slices are colored by label rather than by series.
 const donutDefinition = computed(() => {
@@ -281,11 +334,14 @@ const donutDefinition = computed(() => {
       }),
     ],
     scales: { x: null, y: null },
+    svgAnimation: props.transition,
     color: {
       scale: scaleOrdinal<string, string>()
         .domain(labels)
         .range(labels.map((_, i) => `var(--ts-chart-${i + 1})`)),
-      legend: (props.legend ?? labels.length > 1) ? legendGuide.value : undefined,
+      legend: (props.legend ?? labels.length > 1)
+        ? legendGuide.value
+        : undefined,
     },
   } as any);
 });
@@ -313,14 +369,32 @@ const generatedDefinition = computed(() => {
     .domain(seriesKeys.value)
     .range(seriesKeys.value.map((_, i) => `var(--ts-chart-${i + 1})`));
 
-  const channels = { x: 'x', y: 'value', z: 'category', color: 'category' } as const;
-  const curve = props.curve === 'linear' ? undefined : chartCurves[props.curve!];
+  const channels = {
+    x: 'x',
+    y: 'value',
+    z: 'category',
+    color: 'category',
+  } as const;
+  const curve = props.curve === 'linear'
+    ? undefined
+    : chartCurves[props.curve!];
 
   let marks: Array<any>;
   switch (props.type) {
     case 'bar':
       marks = [
-        barY(rows.value, { ...channels, inset: 1, ...(props.stacked ? { radius: { end: 4, stack: 'outer' } } : { radius: { end: 4 }, layout: group({ padding: 0.1 }) }) } as any),
+        barY(rows.value, {
+          ...channels,
+          inset: 1,
+          ...(props.stacked
+            ? {
+                radius: { end: 4, stack: 'outer' },
+              }
+            : {
+                radius: { end: 4 },
+                layout: group({ padding: 0.1 }),
+              }),
+        } as any),
         ruleY([0]),
       ];
       break;
@@ -332,8 +406,24 @@ const generatedDefinition = computed(() => {
           const seriesRows = rows.value.filter((row) => row.category === category);
 
           return [
-            decorative(areaY(seriesRows, { x: 'x', y1: 'base', y2: 'top', z: 'category', color: 'category', curve, fill: `url(#${areaGradients.value[i]!.id})`, fillOpacity: 1 } as any)),
-            lineY(seriesRows, { x: 'x', y: 'top', z: 'category', color: 'category', curve, strokeWidth: 2 } as any),
+            decorative(areaY(seriesRows, {
+              x: 'x',
+              y1: 'base',
+              y2: 'top',
+              z: 'category',
+              color: 'category',
+              curve,
+              fill: `url(#${areaGradients.value[i]!.id})`,
+              fillOpacity: 1,
+            } as any)),
+            lineY(seriesRows, {
+              x: 'x',
+              y: 'top',
+              z: 'category',
+              color: 'category',
+              curve,
+              strokeWidth: 2,
+            } as any),
           ];
         }),
         crosshair({ x: true, y: false }),
@@ -341,7 +431,12 @@ const generatedDefinition = computed(() => {
       break;
     default:
       marks = [
-        lineY(rows.value, { ...channels, curve, strokeWidth: 2, points: props.points } as any),
+        lineY(rows.value, {
+          ...channels,
+          curve,
+          strokeWidth: 2,
+          points: props.points,
+        } as any),
         crosshair({ x: true, y: false }),
       ];
   }
@@ -355,22 +450,36 @@ const generatedDefinition = computed(() => {
           : () => scalePoint<string>().padding(0),
         // Axis sides stay physical in a right-to-left container, so the range and the y axis flip here.
         reverse: dir.value === 'rtl',
-        axis: props.xAxis ? { label: props.xLabel } : false,
+        axis: props.xAxis
+          ? { label: props.xLabel }
+          : false,
       },
       y: {
         scale: scaleLinear,
         nice: true,
         grid: props.grid,
-        side: dir.value === 'rtl' ? 'right' : 'left',
+        side: dir.value === 'rtl'
+          ? 'right'
+          : 'left',
         // Ticks use the same formatting as the tooltip values, in the locale of the app.
-        axis: props.yAxis ? { label: props.yLabel, ticks: { format: formatValue } } : false,
+        axis: props.yAxis
+          ? {
+              label: props.yLabel,
+              ticks: { format: formatValue },
+            }
+          : false,
       },
     },
     color: {
       scale: color,
-      legend: (props.legend ?? multiple) ? legendGuide.value : undefined,
+      legend: (props.legend ?? multiple)
+        ? legendGuide.value
+        : undefined,
     },
-    gradients: props.type === 'area' ? areaGradients.value : undefined,
+    gradients: props.type === 'area'
+      ? areaGradients.value
+      : undefined,
+    svgAnimation: props.transition,
     focus: 'group-x',
     // The default only focuses a point within 48 pixels, which leaves dead zones between sparse x values.
     maxFocusDistance: Number.POSITIVE_INFINITY,
@@ -387,7 +496,9 @@ const tooltipPoints = computed(() => {
     return [];
   }
 
-  const points = groupPoints.value.includes(primaryPoint.value) ? [...groupPoints.value] : [primaryPoint.value];
+  const points = groupPoints.value.includes(primaryPoint.value)
+    ? [...groupPoints.value]
+    : [primaryPoint.value];
 
   // TanStack Charts orders a group by position on the chart, which changes from one x value
   // to the next. Rows follow `categories` like the legend does.
@@ -402,7 +513,9 @@ const tooltipPoints = computed(() => {
 const yAxisLabel = computed(() => {
   const label = (props.definition as { scales?: { y?: { axis?: { label?: string | { text?: string } } } } } | undefined)?.scales?.y?.axis?.label;
 
-  return (typeof label === 'object' ? label?.text : label) ?? '';
+  return (typeof label === 'object'
+    ? label?.text
+    : label) ?? '';
 });
 
 const tooltipContent = computed<{ title?: string; rows: Array<ChartTooltipRow> }>(() => {
@@ -411,7 +524,11 @@ const tooltipContent = computed<{ title?: string; rows: Array<ChartTooltipRow> }
 
   if (generated && props.type === 'donut') {
     return {
-      rows: points.map((point) => ({ label: String(point.datum[props.index!]), value: formatValue(point.datum.value), color: point.color })),
+      rows: points.map((point) => ({
+        label: String(point.datum[props.index!]),
+        value: formatValue(point.datum.value),
+        color: point.color,
+      })),
     };
   }
 
@@ -419,8 +536,14 @@ const tooltipContent = computed<{ title?: string; rows: Array<ChartTooltipRow> }
     title: String((generated ? points[0]?.datum.x : points[0]?.xValue) ?? ''),
     rows: points.map((point) => ({
       // An ungrouped point gets its mark id as `groupLabel`, the y axis title reads better, like the TanStack Charts tooltip.
-      label: generated ? seriesLabel(String(point.datum.category)) : point.group == null ? yAxisLabel.value : point.groupLabel,
-      value: generated ? formatValue(point.datum.value) : String(point.yValue),
+      label: generated
+        ? seriesLabel(String(point.datum.category))
+        : point.group == null
+          ? yAxisLabel.value
+          : point.groupLabel,
+      value: generated
+        ? formatValue(point.datum.value)
+        : String(point.yValue),
       color: point.color,
       active: points.length > 1 && point === primaryPoint.value,
     })),
@@ -438,21 +561,41 @@ const tooltipReference = {
 
     const rect = rootRef.value?.getBoundingClientRect();
 
-    return DOMRect.fromRect({ x: (rect?.left ?? 0) + anchor.x, y: (rect?.top ?? 0) + anchor.y, width: 0, height: 0 });
+    return DOMRect.fromRect({
+      x: (rect?.left ?? 0) + anchor.x,
+      y: (rect?.top ?? 0) + anchor.y,
+      width: 0,
+      height: 0,
+    });
   },
 };
 
 // Akar keeps a visually hidden copy of the content for assistive technologies and does not update it from the slot.
-const tooltipLabel = computed(() => [tooltipContent.value.title, ...tooltipContent.value.rows.map((row) => `${row.label} ${row.value}`)].filter(Boolean).join(', '));
+const tooltipLabel = computed(() => [
+  tooltipContent.value.title,
+  ...tooltipContent.value.rows.map((row) => `${row.label} ${row.value}`),
+].filter(Boolean).join(', '));
 
 // Rendered inside the root, which takes the pointer off the popper wrapper so the tooltip never steals the hover.
-const tooltipProps = toRef(() => defu(typeof props.tooltip === 'object' ? props.tooltip : {}, {
+const tooltipProps = toRef(() => defu(typeof props.tooltip === 'object'
+  ? props.tooltip
+  : {}, {
   portal: false,
-  content: { side: 'top', sideOffset: 12, updatePositionStrategy: 'always', ariaLabel: tooltipLabel.value },
+  content: {
+    side: 'top',
+    sideOffset: 12,
+    updatePositionStrategy: 'always',
+    ariaLabel: tooltipLabel.value,
+  },
 }) as TooltipProps);
 
 // Bound on its own: the docs component meta rewrites every `ui` key in the source, which breaks an object literal.
-const tooltipUi = toRef(() => ({ ...tooltipProps.value.ui, content: ui.value.tooltip({ class: [tooltipProps.value.ui?.content, props.ui?.tooltip] }) }));
+const tooltipUi = toRef(() => ({
+  ...tooltipProps.value.ui,
+  content: ui.value.tooltip({
+    class: [tooltipProps.value.ui?.content, props.ui?.tooltip],
+  }),
+}));
 
 // A definition can bring the TanStack Charts tooltip with its own content, two tooltips would show.
 const hasTooltip = computed(() => !!props.tooltip && !(props.definition as { tooltip?: unknown } | undefined)?.tooltip);
@@ -461,8 +604,12 @@ const chartHeight = computed(() => props.height ?? (props.aspectRatio ? undefine
 
 // The Vue adapter sets both sizes without a unit on its host, which the browser drops.
 const chartStyle = computed(() => ({
-  height: chartHeight.value ? `${chartHeight.value}px` : undefined,
-  width: props.width ? `${props.width}px` : undefined,
+  height: chartHeight.value
+    ? `${chartHeight.value}px`
+    : undefined,
+  width: props.width
+    ? `${props.width}px`
+    : undefined,
 }));
 
 // The center slot covers the plot rather than the whole chart, which includes the legend.
@@ -482,7 +629,12 @@ function onRender({ scene }: { scene: { width: number; height: number; chart: { 
   }
 
   const { x, y, width, height } = scene.chart;
-  plotInset.value = { top: `${y}px`, left: `${x}px`, right: `${scene.width - x - width}px`, bottom: `${scene.height - y - height}px` };
+  plotInset.value = {
+    top: `${y}px`,
+    left: `${x}px`,
+    right: `${scene.width - x - width}px`,
+    bottom: `${scene.height - y - height}px`,
+  };
 }
 
 function onFocusChange(point: ChartPoint<any> | null) {

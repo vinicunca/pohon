@@ -22,7 +22,16 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/docs/components/**': { redirect: { to: '/components/**', statusCode: 301 }, prerender: false },
+    '/docs/components/**': {
+      redirect: { to: '/components/**', statusCode: 301 },
+      prerender: false,
+    },
+  },
+
+  experimental: {
+    // `@nuxt/content` still imports Nitro helpers from `#imports`, which compat v5
+    // no longer provides. Remove once nuxt/content#3889 is released.
+    nitroAutoImports: true,
   },
 
   compatibilityDate: '2024-07-09',
