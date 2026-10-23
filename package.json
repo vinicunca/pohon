@@ -2,7 +2,7 @@
   "name": "pohon-ui",
   "type": "module",
   "version": "2.3.1",
-  "packageManager": "pnpm@12.11.2",
+  "packageManager": "pnpm@12.15.0",
   "description": "A UI Library for Modern Web Apps, powered by Vue & UnoCSS.",
   "license": "MIT",
   "homepage": "https://pohon.vinicunca.dev",

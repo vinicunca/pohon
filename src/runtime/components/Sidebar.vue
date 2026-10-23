@@ -140,7 +140,13 @@ const [DefineInnerTemplate, ReuseInnerTemplate] = createReusableTemplate();
 const [DefineContentTemplate, ReuseContentTemplate] = createReusableTemplate();
 
 // Same values as the UnoCSS variants in the theme, in rem
-const breakpoints = { 'sm': 40, 'md': 48, 'lg': 64, 'xl': 80, '2xl': 96 };
+const breakpoints = {
+  'sm': 40,
+  'md': 48,
+  'lg': 64,
+  'xl': 80,
+  '2xl': 96,
+};
 
 const mediaQuery = useMediaQuery(() => `(min-width: ${breakpoints[props.breakpoint || 'lg']}rem)`);
 const isMounted = ref(false);
@@ -207,7 +213,10 @@ function closeSidebar() {
 
 const hasHeader = computed(() => !!slots.header || props.title || !!slots.title || props.description || !!slots.description || !!slots.actions || canClose.value || !!slots.close);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.sidebar || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.sidebar || {}),
+})({
   side: props.side,
   variant: props.variant,
   collapsible: props.collapsible,
@@ -228,7 +237,11 @@ const menuProps = toRef(() => defu(props.menu, {
   description: props.description,
   close: props.close,
   closeIcon: props.closeIcon,
-}, props.mode === 'modal' ? { } : props.mode === 'slideover' ? { side: props.side, inset: props.variant === 'inset' } : {}) as SidebarMenu<T>);
+}, props.mode === 'modal'
+  ? { }
+  : props.mode === 'slideover'
+    ? { side: props.side, inset: props.variant === 'inset' }
+    : {}) as SidebarMenu<T>);
 
 const renderMenu = useLazyOverlay(() => openMobile.value || (props.menu as ModalProps | undefined)?.unmountOnHide === false, async () => {
   if (isMobile.value) {
@@ -331,6 +344,7 @@ const renderMenu = useLazyOverlay(() => openMobile.value || (props.menu as Modal
 
         <slot v-if="props.rail" name="rail" :state="state" :ui="ui">
           <button
+            type="button"
             data-slot="rail"
             :data-state="state"
             :aria-label="t('sidebar.toggle')"
