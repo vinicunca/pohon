@@ -269,7 +269,9 @@ const meta = computed(() => props.meta ?? {});
 // The fallback `header` and `cell` are only injected when `defaultColumn` doesn't provide its own.
 const columns = computed<Array<TableColumn<T>>>(() => processColumns(props.columns ?? Object.keys(data.value[0] ?? {}).map((accessorKey: string) => ({
   accessorKey,
-  ...(props.defaultColumn?.header === undefined && { header: capitalize(accessorKey) }),
+  ...(props.defaultColumn?.header === undefined && {
+    header: capitalize(accessorKey),
+  }),
 }))));
 
 function processColumns(columns: Array<TableColumn<T>>): Array<TableColumn<T>> {
@@ -297,7 +299,10 @@ function processColumns(columns: Array<TableColumn<T>>): Array<TableColumn<T>> {
 // When an external scroll element is provided, it owns the scroll (the root grows inline).
 const isExternalScroll = computed(() => typeof props.virtualize === 'object' && !!props.virtualize.getScrollElement);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.table || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.table || {}),
+})({
   sticky: props.sticky,
   loading: props.loading,
   loadingColor: props.loadingColor,
@@ -365,32 +370,58 @@ const tableApi = useVueTable({
   meta: meta.value,
   getCoreRowModel: getCoreRowModel(),
   ...(props.globalFilterOptions || {}),
-  ...(globalFilterState.value !== undefined && { onGlobalFilterChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, globalFilterState) }),
+  ...(globalFilterState.value !== undefined && {
+    onGlobalFilterChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, globalFilterState),
+  }),
   ...(props.columnFiltersOptions || {}),
   getFilteredRowModel: getFilteredRowModel(),
-  ...(columnFiltersState.value !== undefined && { onColumnFiltersChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, columnFiltersState) }),
-  ...(columnOrderState.value !== undefined && { onColumnOrderChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, columnOrderState) }),
+  ...(columnFiltersState.value !== undefined && {
+    onColumnFiltersChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, columnFiltersState),
+  }),
+  ...(columnOrderState.value !== undefined && {
+    onColumnOrderChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, columnOrderState),
+  }),
   ...(props.visibilityOptions || {}),
-  ...(columnVisibilityState.value !== undefined && { onColumnVisibilityChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, columnVisibilityState) }),
+  ...(columnVisibilityState.value !== undefined && {
+    onColumnVisibilityChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, columnVisibilityState),
+  }),
   ...(props.columnPinningOptions || {}),
-  ...(columnPinningState.value !== undefined && { onColumnPinningChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, columnPinningState) }),
+  ...(columnPinningState.value !== undefined && {
+    onColumnPinningChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, columnPinningState),
+  }),
   ...(props.columnSizingOptions || {}),
-  ...(columnSizingState.value !== undefined && { onColumnSizingChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, columnSizingState) }),
-  ...(columnSizingInfoState.value !== undefined && { onColumnSizingInfoChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, columnSizingInfoState) }),
+  ...(columnSizingState.value !== undefined && {
+    onColumnSizingChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, columnSizingState),
+  }),
+  ...(columnSizingInfoState.value !== undefined && {
+    onColumnSizingInfoChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, columnSizingInfoState),
+  }),
   ...(props.rowSelectionOptions || {}),
-  ...(rowSelectionState.value !== undefined && { onRowSelectionChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, rowSelectionState) }),
+  ...(rowSelectionState.value !== undefined && {
+    onRowSelectionChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, rowSelectionState),
+  }),
   ...(props.rowPinningOptions || {}),
-  ...(rowPinningState.value !== undefined && { onRowPinningChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, rowPinningState) }),
+  ...(rowPinningState.value !== undefined && {
+    onRowPinningChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, rowPinningState),
+  }),
   ...(props.sortingOptions || {}),
   getSortedRowModel: getSortedRowModel(),
-  ...(sortingState.value !== undefined && { onSortingChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, sortingState) }),
+  ...(sortingState.value !== undefined && {
+    onSortingChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, sortingState),
+  }),
   ...(props.groupingOptions || {}),
-  ...(groupingState.value !== undefined && { onGroupingChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, groupingState) }),
+  ...(groupingState.value !== undefined && {
+    onGroupingChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, groupingState),
+  }),
   ...(props.expandedOptions || {}),
   getExpandedRowModel: getExpandedRowModel(),
-  ...(expandedState.value !== undefined && { onExpandedChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, expandedState) }),
+  ...(expandedState.value !== undefined && {
+    onExpandedChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, expandedState),
+  }),
   ...(props.paginationOptions || {}),
-  ...(paginationState.value !== undefined && { onPaginationChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, paginationState) }),
+  ...(paginationState.value !== undefined && {
+    onPaginationChange: (updaterOrValue: any) => valueUpdater(updaterOrValue, paginationState),
+  }),
   ...(props.facetedOptions || {}),
   state: {
     get globalFilter() {
@@ -436,11 +467,19 @@ const tableApi = useVueTable({
 });
 
 const rows = computed(() => tableApi.getRowModel().rows);
-const topRows = computed(() => props.virtualize ? [] : tableApi.getTopRows());
-const bottomRows = computed(() => props.virtualize ? [] : tableApi.getBottomRows());
-const centerRows = computed(() => topRows.value.length || bottomRows.value.length ? tableApi.getCenterRows() : rows.value);
+const topRows = computed(() => props.virtualize
+  ? []
+  : tableApi.getTopRows());
+const bottomRows = computed(() => props.virtualize
+  ? []
+  : tableApi.getBottomRows());
+const centerRows = computed(() => topRows.value.length || bottomRows.value.length
+  ? tableApi.getCenterRows()
+  : rows.value);
 
-const virtualizerProps = toRef(() => defu(typeof props.virtualize === 'boolean' ? {} : props.virtualize, {
+const virtualizerProps = toRef(() => defu(typeof props.virtualize === 'boolean'
+  ? {}
+  : props.virtualize, {
   estimateSize: 65,
   overscan: 12,
 }));
@@ -448,7 +487,11 @@ const virtualizerProps = toRef(() => defu(typeof props.virtualize === 'boolean' 
 // Rows must carry the attribute the virtualizer reads their index from when measuring them.
 const indexAttribute = computed(() => virtualizerProps.value.indexAttribute ?? 'data-index');
 
-const getScrollElement = () => (isExternalScroll.value ? virtualizerProps.value.getScrollElement?.() : rootRef.value?.$el) ?? null;
+function getScrollElement() {
+  return (isExternalScroll.value
+    ? virtualizerProps.value.getScrollElement?.()
+    : rootRef.value?.$el) ?? null;
+}
 // Offset applied to the spacer rows: `scrollMargin` is the table's offset within the scroll element (0 unless set).
 const scrollMargin = computed(() => virtualizerProps.value.scrollMargin ?? 0);
 
@@ -457,7 +500,9 @@ const scrollMargin = computed(() => virtualizerProps.value.scrollMargin ?? 0);
 const getItemKey = computed(() => {
   const rows = centerRows.value;
   const getKey = virtualizerProps.value.getItemKey;
-  return getKey ? (index: number) => getKey(index) : (index: number) => rows[index]?.id ?? index;
+  return getKey
+    ? (index: number) => getKey(index)
+    : (index: number) => rows[index]?.id ?? index;
 });
 
 const virtualizer = !!props.virtualize && useVirtualizer({
@@ -475,11 +520,15 @@ const virtualizer = !!props.virtualize && useVirtualizer({
   getScrollElement,
   estimateSize: (index: number) => {
     const estimate = virtualizerProps.value.estimateSize;
-    return typeof estimate === 'function' ? estimate(index) : estimate;
+    return typeof estimate === 'function'
+      ? estimate(index)
+      : estimate;
   },
 });
 
-const virtualItems = computed(() => virtualizer ? virtualizer.value.getVirtualItems() : []);
+const virtualItems = computed(() => virtualizer
+  ? virtualizer.value.getVirtualItems()
+  : []);
 
 // `start`/`end` include `scrollMargin`; exclude it from the spacers so the rows sit inline below preceding content.
 const virtualPaddingTop = computed(() => (virtualItems.value[0]?.start ?? 0) - scrollMargin.value);
@@ -491,12 +540,17 @@ const virtualPaddingBottom = computed(() => {
   return virtualizer.value.getTotalSize() - (virtualItems.value[virtualItems.value.length - 1]?.end ?? 0) + scrollMargin.value;
 });
 
+// The instance never changes: reading it once keeps the row template from subscribing to every virtualizer update (e.g. on scroll).
+const virtualizerInstance = virtualizer ? virtualizer.value : undefined;
+
 // Register each rendered row with the virtualizer so its actual height is measured (and re-measured on resize).
 function measureRow(el: Element | ComponentPublicInstance | null) {
-  if (el instanceof Element && virtualizer) {
-    virtualizer.value.measureElement(el);
+  if (el instanceof Element) {
+    virtualizerInstance?.measureElement(el);
   }
 }
+
+const measureRowRef = virtualizerInstance ? measureRow : undefined;
 
 // An expanded `<tr>` belongs to its row's virtual item, so its height is added to the row's (measured by a custom `measureElement` if given). Maps it to its row's `<tr>`.
 const expandedRows = new WeakMap<Element, Element>();
@@ -504,9 +558,13 @@ let expandedRowsObserver: ResizeObserver | undefined;
 
 function measureRowElement(el: Element, entry: ResizeObserverEntry | undefined, instance: Virtualizer<Element, Element>) {
   const measure = virtualizerProps.value.measureElement;
-  const height = measure ? measure(el, entry, instance) : entry?.borderBoxSize?.[0]?.blockSize ?? (el as HTMLElement).offsetHeight;
+  const height = measure
+    ? measure(el, entry, instance)
+    : entry?.borderBoxSize?.[0]?.blockSize ?? (el as HTMLElement).offsetHeight;
   const expanded = el.nextElementSibling;
-  return Math.round(height + (expanded && expandedRows.get(expanded) === el ? (expanded as HTMLElement).offsetHeight : 0));
+  return Math.round(height + (expanded && expandedRows.get(expanded) === el
+    ? (expanded as HTMLElement).offsetHeight
+    : 0));
 }
 
 function remeasureRow(el: Element | null | undefined) {
@@ -549,7 +607,9 @@ function onExpandedRowUnmounted({ el }: VNode) {
 onBeforeUnmount(() => expandedRowsObserver?.disconnect());
 
 function valueUpdater<T extends Updater<any>>(updaterOrValue: T, ref: Ref) {
-  ref.value = typeof updaterOrValue === 'function' ? updaterOrValue(ref.value) : updaterOrValue;
+  ref.value = typeof updaterOrValue === 'function'
+    ? updaterOrValue(ref.value)
+    : updaterOrValue;
 }
 
 function onRowSelect(e: Event, row: TableRow<T>) {
@@ -644,11 +704,15 @@ function getAriaSort(header: Header<T, unknown>): AriaAttributes['aria-sort'] {
     return 'none';
   }
 
-  return sorted === 'asc' ? 'ascending' : 'descending';
+  return sorted === 'asc'
+    ? 'ascending'
+    : 'descending';
 }
 
 watch(() => props.data, () => {
-  data.value = props.data ? [...props.data] : [];
+  data.value = props.data
+    ? [...props.data]
+    : [];
 }, props.watchOptions);
 
 defineExpose({
@@ -663,7 +727,7 @@ defineExpose({
 <template>
   <DefineRowTemplate v-slot="{ row, index }">
     <tr
-      :ref="virtualizer ? measureRow : undefined"
+      :ref="measureRowRef"
       :[indexAttribute]="index"
       :data-selected="row.getIsSelected()"
       :data-selectable="!!props.onSelect || !!props.onHover || !!props.onContextmenu"

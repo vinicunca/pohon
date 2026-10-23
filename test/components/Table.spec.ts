@@ -58,7 +58,9 @@ describe('table', () => {
     {
       id: 'select',
       header: ({ table }) => h(PCheckbox<boolean>, {
-        'modelValue': table.getIsSomePageRowsSelected() ? 'indeterminate' : table.getIsAllPageRowsSelected(),
+        'modelValue': table.getIsSomePageRowsSelected()
+          ? 'indeterminate'
+          : table.getIsAllPageRowsSelected(),
         'onUpdate:modelValue': (value) => table.toggleAllPageRowsSelected(!!value),
         'label': 'Select all',
       }),
@@ -110,7 +112,11 @@ describe('table', () => {
           color: 'neutral',
           variant: 'ghost',
           label: 'Email',
-          icon: isSorted ? (isSorted === 'asc' ? 'i-lucide-arrow-up-narrow-wide' : 'i-lucide-arrow-down-wide-narrow') : 'i-lucide-arrow-up-down',
+          icon: isSorted
+            ? (isSorted === 'asc'
+                ? 'i-lucide-arrow-up-narrow-wide'
+                : 'i-lucide-arrow-down-wide-narrow')
+            : 'i-lucide-arrow-up-down',
           class: '-mx-2.5',
           onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
         });
@@ -164,7 +170,9 @@ describe('table', () => {
             label: 'Copy payment ID',
           },
           {
-            label: row.getIsExpanded() ? 'Collapse' : 'Expand',
+            label: row.getIsExpanded()
+              ? 'Collapse'
+              : 'Expand',
           },
           {
             type: 'separator',
@@ -196,35 +204,246 @@ describe('table', () => {
 
   renderEach(Table, [
     // Props
-    ['with data', { props }],
+    [
+      'with data',
+      { props },
+    ],
     ['without data', {}],
-    ['with empty', { props: { empty: 'There is no data' } }],
-    ['with caption', { props: { ...props, caption: 'Table caption' } }],
-    ['with columns', { props: { ...props, columns } }],
-    ['with sticky', { props: { ...props, sticky: true } }],
-    ['with loading', { props: { ...props, loading: true } }],
-    ...loadingColors.map((loadingColor: string) => [`with loading color ${loadingColor}`, { props: { ...props, loading: true, loadingColor } }]),
-    ...loadingAnimations.map((loadingAnimation: string) => [`with loading animation ${loadingAnimation}`, { props: { ...props, loading: true, loadingAnimation } }]),
-    ['with meta prop', { props: { ...props, meta: { class: { tr: 'custom-row-class' }, style: { tr: { backgroundColor: 'lightgray' } } } } }],
-    ['with meta field on columns', { props: { ...props, columns: columns.map((c) => ({ ...c, meta: { class: { th: 'custom-heading-class', td: 'custom-cell-class' }, style: { th: { backgroundColor: 'black' }, td: { backgroundColor: 'lightgray' } } } })) } }],
-    ['with virtualize', { props: { ...props, virtualize: true } }],
-    ['with virtualize and sticky', { props: { ...props, columns, virtualize: true, sticky: true } }],
-    ['with virtualize external scroll element', { props: { ...props, virtualize: { getScrollElement: () => document.body, scrollMargin: 20 } } }],
-    ['with row pinning', { props: { ...props, rowPinning: { top: ['2'], bottom: ['3'] } } }],
-    ['with row pinning and virtualization', { props: { ...props, virtualize: true, rowPinning: { top: ['2'], bottom: ['3'] } } }],
-    ['with column pinning and footer', { props: { ...props, columns, columnPinning: { left: ['id'], right: ['actions'] } } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'absolute' } }],
-    ['with ui', { props: { ...props, ui: { base: 'table-auto' } } }],
+    [
+      'with empty',
+      {
+        props: { empty: 'There is no data' },
+      },
+    ],
+    [
+      'with caption',
+      {
+        props: { ...props, caption: 'Table caption' },
+      },
+    ],
+    [
+      'with columns',
+      {
+        props: { ...props, columns },
+      },
+    ],
+    [
+      'with sticky',
+      {
+        props: { ...props, sticky: true },
+      },
+    ],
+    [
+      'with loading',
+      {
+        props: { ...props, loading: true },
+      },
+    ],
+    ...loadingColors.map((loadingColor: string) => [
+      `with loading color ${loadingColor}`,
+      {
+        props: { ...props, loading: true, loadingColor },
+      },
+    ]),
+    ...loadingAnimations.map((loadingAnimation: string) => [
+      `with loading animation ${loadingAnimation}`,
+      {
+        props: { ...props, loading: true, loadingAnimation },
+      },
+    ]),
+    [
+      'with meta prop',
+      {
+        props: {
+          ...props,
+          meta: {
+            class: { tr: 'custom-row-class' },
+            style: {
+              tr: { backgroundColor: 'lightgray' },
+            },
+          },
+        },
+      },
+    ],
+    [
+      'with meta field on columns',
+      {
+        props: {
+          ...props,
+          columns: columns.map((c) => ({
+            ...c,
+            meta: {
+              class: { th: 'custom-heading-class', td: 'custom-cell-class' },
+              style: {
+                th: { backgroundColor: 'black' },
+                td: { backgroundColor: 'lightgray' },
+              },
+            },
+          })),
+        },
+      },
+    ],
+    [
+      'with virtualize',
+      {
+        props: { ...props, virtualize: true },
+      },
+    ],
+    [
+      'with virtualize and sticky',
+      {
+        props: {
+          ...props,
+          columns,
+          virtualize: true,
+          sticky: true,
+        },
+      },
+    ],
+    [
+      'with virtualize external scroll element',
+      {
+        props: {
+          ...props,
+          virtualize: {
+            getScrollElement: () => document.body,
+            scrollMargin: 20,
+          },
+        },
+      },
+    ],
+    [
+      'with row pinning',
+      {
+        props: {
+          ...props,
+          rowPinning: {
+            top: ['2'],
+            bottom: ['3'],
+          },
+        },
+      },
+    ],
+    [
+      'with row pinning and virtualization',
+      {
+        props: {
+          ...props,
+          virtualize: true,
+          rowPinning: {
+            top: ['2'],
+            bottom: ['3'],
+          },
+        },
+      },
+    ],
+    [
+      'with column pinning and footer',
+      {
+        props: {
+          ...props,
+          columns,
+          columnPinning: {
+            left: ['id'],
+            right: ['actions'],
+          },
+        },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'absolute' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { base: 'table-auto' },
+        },
+      },
+    ],
     // Slots
-    ['with header slot', { props, slots: { 'id-header': () => 'ID Header slot' } }],
-    ['with cell slot', { props, slots: { 'id-cell': () => 'ID Cell slot' } }],
-    ['with expanded slot', { props, slots: { expanded: () => 'Expanded slot' } }],
-    ['with empty slot', { props: { columns }, slots: { empty: () => 'Empty slot' } }],
-    ['with loading slot', { props: { columns, loading: true }, slots: { loading: () => 'Loading slot' } }],
-    ['with caption slot', { props, slots: { caption: () => 'Caption slot' } }],
-    ['with body-top slot', { props, slots: { 'body-top': () => 'Body top slot' } }],
-    ['with body-bottom slot', { props, slots: { 'body-bottom': () => 'Body bottom slot' } }],
+    [
+      'with header slot',
+      {
+        props,
+        slots: {
+          'id-header': () => 'ID Header slot',
+        },
+      },
+    ],
+    [
+      'with cell slot',
+      {
+        props,
+        slots: {
+          'id-cell': () => 'ID Cell slot',
+        },
+      },
+    ],
+    [
+      'with expanded slot',
+      {
+        props,
+        slots: {
+          expanded: () => 'Expanded slot',
+        },
+      },
+    ],
+    [
+      'with empty slot',
+      {
+        props: { columns },
+        slots: {
+          empty: () => 'Empty slot',
+        },
+      },
+    ],
+    [
+      'with loading slot',
+      {
+        props: { columns, loading: true },
+        slots: {
+          loading: () => 'Loading slot',
+        },
+      },
+    ],
+    [
+      'with caption slot',
+      {
+        props,
+        slots: {
+          caption: () => 'Caption slot',
+        },
+      },
+    ],
+    [
+      'with body-top slot',
+      {
+        props,
+        slots: {
+          'body-top': () => 'Body top slot',
+        },
+      },
+    ],
+    [
+      'with body-bottom slot',
+      {
+        props,
+        slots: {
+          'body-bottom': () => 'Body bottom slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {
@@ -319,16 +538,21 @@ describe('table', () => {
     const wrapper = await mountSuspended(Table, {
       props: {
         ...props,
-        columns: [{
-          id: 'controls',
-          header: 'Controls',
-          cell: () => [
-            h('input', { 'type': 'checkbox', 'aria-label': 'Select row' }),
-            h('button', { type: 'button' }, 'Edit'),
-            h('a', { href: '#' }, 'Details'),
-            h('label', {}, [h('input', { type: 'checkbox' }), 'Toggle']),
-          ],
-        }] as any,
+        columns: [
+          {
+            id: 'controls',
+            header: 'Controls',
+            cell: () => [
+              h('input', { 'type': 'checkbox', 'aria-label': 'Select row' }),
+              h('button', { type: 'button' }, 'Edit'),
+              h('a', { href: '#' }, 'Details'),
+              h('label', {}, [
+                h('input', { type: 'checkbox' }),
+                'Toggle',
+              ]),
+            ],
+          },
+        ] as any,
         onSelect,
       },
     });
@@ -362,11 +586,13 @@ describe('table', () => {
     const wrapper = await mountSuspended(Table, {
       props: {
         ...props,
-        columns: [{
-          id: 'notes',
-          header: 'Notes',
-          cell: () => h('div', { contenteditable: 'true' }, 'Notes'),
-        }] as any,
+        columns: [
+          {
+            id: 'notes',
+            header: 'Notes',
+            cell: () => h('div', { contenteditable: 'true' }, 'Notes'),
+          },
+        ] as any,
         onSelect,
       },
     });
@@ -398,10 +624,18 @@ describe('table', () => {
     // No `enableSorting` means no sort UI, so the column must not claim to be sortable.
     expect(amountTh!.attributes('aria-sort')).toBeUndefined();
 
-    await wrapper.setProps({ sorting: [{ id: 'id', desc: false }] });
+    await wrapper.setProps({
+      sorting: [
+        { id: 'id', desc: false },
+      ],
+    });
     expect(wrapper.findAll('th')[0]!.attributes('aria-sort')).toBe('ascending');
 
-    await wrapper.setProps({ sorting: [{ id: 'id', desc: true }] });
+    await wrapper.setProps({
+      sorting: [
+        { id: 'id', desc: true },
+      ],
+    });
     expect(wrapper.findAll('th')[0]!.attributes('aria-sort')).toBe('descending');
   });
 
@@ -415,7 +649,10 @@ describe('table', () => {
       props: {
         data,
         columns: sortableColumns as any,
-        sorting: [{ id: 'email', desc: false }, { id: 'id', desc: true }],
+        sorting: [
+          { id: 'email', desc: false },
+          { id: 'id', desc: true },
+        ],
       },
     });
 
@@ -434,7 +671,10 @@ describe('table', () => {
       props: {
         data,
         columns: sortableColumns as any,
-        sorting: [{ id: 'unknown', desc: false }, { id: 'id', desc: true }],
+        sorting: [
+          { id: 'unknown', desc: false },
+          { id: 'id', desc: true },
+        ],
       },
     });
 
@@ -445,7 +685,10 @@ describe('table', () => {
         data,
         columns: sortableColumns as any,
         columnVisibility: { email: false },
-        sorting: [{ id: 'email', desc: false }, { id: 'id', desc: true }],
+        sorting: [
+          { id: 'email', desc: false },
+          { id: 'id', desc: true },
+        ],
       },
     });
 
@@ -456,12 +699,28 @@ describe('table', () => {
 
   it('does not set aria-sort on footer or placeholder th elements', async () => {
     const groupedColumns: Array<TableColumn<typeof data[number]>> = [
-      { header: 'Group', columns: [{ accessorKey: 'id', header: 'Id', footer: 'Id total', enableSorting: true }] },
+      {
+        header: 'Group',
+        columns: [
+          {
+            accessorKey: 'id',
+            header: 'Id',
+            footer: 'Id total',
+            enableSorting: true,
+          },
+        ],
+      },
       { accessorKey: 'email', header: 'Email', enableSorting: true },
     ];
 
     const wrapper = await mountSuspended(Table, {
-      props: { data, columns: groupedColumns as any, sorting: [{ id: 'email', desc: false }] },
+      props: {
+        data,
+        columns: groupedColumns as any,
+        sorting: [
+          { id: 'email', desc: false },
+        ],
+      },
     });
 
     const [, emailPlaceholderTh] = wrapper.findAll('thead th');
@@ -481,7 +740,11 @@ describe('table', () => {
     ];
 
     const disabledWrapper = await mountSuspended(Table, {
-      props: { data, columns: sortableColumns as any, sortingOptions: { enableSorting: false } },
+      props: {
+        data,
+        columns: sortableColumns as any,
+        sortingOptions: { enableSorting: false },
+      },
     });
 
     expect(disabledWrapper.findAll('th').every((th) => th.attributes('aria-sort') === undefined)).toBe(true);
@@ -492,7 +755,11 @@ describe('table', () => {
     ];
 
     const defaultColumnWrapper = await mountSuspended(Table, {
-      props: { data, columns: displayColumns as any, defaultColumn: { enableSorting: true } },
+      props: {
+        data,
+        columns: displayColumns as any,
+        defaultColumn: { enableSorting: true },
+      },
     });
 
     const [actionsTh, idTh] = defaultColumnWrapper.findAll('th');
@@ -508,7 +775,15 @@ describe('table', () => {
 
     it('applies cell and header with explicit columns', async () => {
       const wrapper = await mountSuspended(Table, {
-        props: { data: [{ id: 1 }], columns: [{ accessorKey: 'id' }], defaultColumn },
+        props: {
+          data: [
+            { id: 1 },
+          ],
+          columns: [
+            { accessorKey: 'id' },
+          ],
+          defaultColumn,
+        },
       });
 
       expect(wrapper.find('th').text()).toBe('H:id');
@@ -517,7 +792,12 @@ describe('table', () => {
 
     it('applies header with auto-generated columns', async () => {
       const wrapper = await mountSuspended(Table, {
-        props: { data: [{ id: 1 }], defaultColumn: { header: defaultColumn.header } },
+        props: {
+          data: [
+            { id: 1 },
+          ],
+          defaultColumn: { header: defaultColumn.header },
+        },
       });
 
       expect(wrapper.find('th').text()).toBe('H:id');
@@ -525,7 +805,12 @@ describe('table', () => {
 
     it('applies cell with auto-generated columns', async () => {
       const wrapper = await mountSuspended(Table, {
-        props: { data: [{ id: 1 }], defaultColumn: { cell: defaultColumn.cell } },
+        props: {
+          data: [
+            { id: 1 },
+          ],
+          defaultColumn: { cell: defaultColumn.cell },
+        },
       });
 
       expect(wrapper.find('td').text()).toBe('C:1');
@@ -533,7 +818,18 @@ describe('table', () => {
 
     it('lets a column\'s own cell win over defaultColumn', async () => {
       const wrapper = await mountSuspended(Table, {
-        props: { data: [{ id: 1 }], columns: [{ accessorKey: 'id', cell: () => 'own' }], defaultColumn },
+        props: {
+          data: [
+            { id: 1 },
+          ],
+          columns: [
+            {
+              accessorKey: 'id',
+              cell: () => 'own',
+            },
+          ],
+          defaultColumn,
+        },
       });
 
       expect(wrapper.find('td').text()).toBe('own');
@@ -593,8 +889,15 @@ describe('table', () => {
     expect(empty.find('[data-slot="empty"]').attributes('colspan')).toBe(visibleColumns);
 
     const expanded = await mountSuspended(Table, {
-      props: { ...props, columns: columns as any, columnVisibility, expanded: { 0: true } },
-      slots: { expanded: () => 'Expanded slot' },
+      props: {
+        ...props,
+        columns: columns as any,
+        columnVisibility,
+        expanded: { 0: true },
+      },
+      slots: {
+        expanded: () => 'Expanded slot',
+      },
     });
 
     expect(expanded.findAll('td').find((td) => td.text() === 'Expanded slot')?.attributes('colspan')).toBe(visibleColumns);
@@ -610,7 +913,11 @@ describe('table', () => {
       props: {
         data,
         // jsdom has no layout, so give the virtualizer a viewport to render rows into
-        virtualize: { observeElementRect: (_, cb) => cb({ width: 1000, height: 500 }), measureElement, indexAttribute },
+        virtualize: {
+          observeElementRect: (_, cb) => cb({ width: 1000, height: 500 }),
+          measureElement,
+          indexAttribute,
+        },
       },
       attachTo: document.body,
     });
@@ -636,7 +943,9 @@ describe('table', () => {
     const sorted = data.map((row, index) => ({ ...row, index })).sort((a, b) => b.amount - a.amount);
     // A custom key with a stable reference that reads the current order
     let order = data.map((_, index) => index);
-    const getItemKey = customKey ? (index: number) => `key-${order[index]}` : undefined;
+    const getItemKey = customKey
+      ? (index: number) => `key-${order[index]}`
+      : undefined;
     let virtualizer: Virtualizer<Element, Element> | undefined;
 
     const wrapper = await mountSuspended(Table, {
@@ -656,12 +965,18 @@ describe('table', () => {
     await flushPromises();
 
     order = sorted.map((row) => row.index);
-    await wrapper.setProps({ sorting: [{ id: 'amount', desc: true }] });
+    await wrapper.setProps({
+      sorting: [
+        { id: 'amount', desc: true },
+      ],
+    });
     await flushPromises();
 
     const items = virtualizer!.getVirtualItems();
 
-    expect(items.map((item) => item.key)).toEqual(sorted.map((row) => customKey ? `key-${row.index}` : String(row.index)));
+    expect(items.map((item) => item.key)).toEqual(sorted.map((row) => customKey
+      ? `key-${row.index}`
+      : String(row.index)));
     expect(items.map((item) => item.size)).toEqual(sorted.map((row) => heights[row.id]));
 
     wrapper.unmount();
@@ -669,11 +984,21 @@ describe('table', () => {
 
   it.each([
     ['default measurement', undefined, 40],
-    ['custom measurement', (el: Element) => el.hasAttribute('data-index') ? 30 : 0, 30],
+    [
+      'custom measurement',
+      (el: Element) => el.hasAttribute('data-index')
+        ? 30
+        : 0,
+      30,
+    ],
   ])('measures the expanded row along with its virtualized row with %s', async (_name: string, measureElement: ((el: Element) => number) | undefined, rowHeight: number) => {
     // happy-dom has no layout: rows are 40px tall, expanded rows 100px
     const offsetHeight = vi.spyOn(HTMLElement.prototype, 'offsetHeight', 'get').mockImplementation(function (this: HTMLElement) {
-      return this.tagName !== 'TR' ? 0 : this.hasAttribute('data-index') ? 40 : 100;
+      return this.tagName !== 'TR'
+        ? 0
+        : this.hasAttribute('data-index')
+          ? 40
+          : 100;
     });
     let virtualizer: Virtualizer<Element, Element> | undefined;
 
@@ -689,7 +1014,9 @@ describe('table', () => {
           },
         },
       },
-      slots: { expanded: () => 'Expanded slot' },
+      slots: {
+        expanded: () => 'Expanded slot',
+      },
       attachTo: document.body,
     });
     await flushPromises();
@@ -698,7 +1025,9 @@ describe('table', () => {
 
     expect(sizes()).toEqual([100, 0, 0, 0, 0]);
 
-    await wrapper.setProps({ expanded: { 2: true } });
+    await wrapper.setProps({
+      expanded: { 2: true },
+    });
     await flushPromises();
 
     expect(sizes()).toEqual([0, 0, 100, 0, 0]);
@@ -710,5 +1039,41 @@ describe('table', () => {
 
     wrapper.unmount();
     offsetHeight.mockRestore();
+  });
+
+  it('does not re-render virtualized rows when the visible range is unchanged', async () => {
+    const renderCell = vi.fn(() => 'cell');
+    let onScroll: ((offset: number, isScrolling: boolean) => void) | undefined;
+    let virtualizer: Virtualizer<Element, Element> | undefined;
+
+    const wrapper = await mountSuspended(Table, {
+      props: {
+        data,
+        virtualize: {
+          observeElementRect: (_, cb) => cb({ width: 1000, height: 500 }),
+          observeElementOffset: (_, cb) => {
+            onScroll = cb;
+          },
+          onChange: (instance) => {
+            virtualizer = instance;
+          },
+        },
+      },
+      slots: { 'id-cell': renderCell },
+      attachTo: document.body,
+    });
+    await flushPromises();
+
+    const range = virtualizer!.getVirtualItems().map((item) => item.index);
+    renderCell.mockClear();
+
+    // Starting to scroll notifies the virtualizer's listeners without changing the rendered rows
+    onScroll!(5, true);
+    await flushPromises();
+
+    expect(virtualizer!.getVirtualItems().map((item) => item.index)).toEqual(range);
+    expect(renderCell).not.toHaveBeenCalled();
+
+    wrapper.unmount();
   });
 });
