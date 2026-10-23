@@ -11,15 +11,22 @@ const openRight = ref(true);
 
 const variant = ref('sidebar' as keyof typeof theme.variants.variant);
 
-const initialMessages: Array<UIMessage> = [{
-  id: '1',
-  role: 'user',
-  parts: [{ type: 'text', text: 'What is Pohon UI?' }],
-}, {
-  id: '2',
-  role: 'assistant',
-  parts: [{ type: 'text', text: 'Pohon UI is a Vue component library built on Akar, UnoCSS, and UnoCSS Variants. It provides 125+ accessible components for building modern web apps.' }],
-}];
+const initialMessages: Array<UIMessage> = [
+  {
+    id: '1',
+    role: 'user',
+    parts: [
+      { type: 'text', text: 'What is Pohon UI?' },
+    ],
+  },
+  {
+    id: '2',
+    role: 'assistant',
+    parts: [
+      { type: 'text', text: 'Pohon UI is a Vue component library built on Akar, UnoCSS, and UnoCSS Variants. It provides 125+ accessible components for building modern web apps.' },
+    ],
+  },
+];
 
 const { messages, status, error, sendMessage, regenerate, stop } = useChat({
   messages: initialMessages,
@@ -116,6 +123,7 @@ function onSubmit() {
       <template #footer>
         <PChatPrompt
           v-model="input"
+          :status="status"
           :error="error"
           variant="subtle"
           size="sm"

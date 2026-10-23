@@ -1,6 +1,6 @@
 import type { ModuleOptions } from '../module';
 import { defuFn } from 'defu';
-import { fieldGroupVariant } from './field-group';
+import { fieldGroupVariantWithHiddenInput } from './field-group';
 import input from './input';
 
 export default (options: Required<ModuleOptions>) => {
@@ -30,7 +30,7 @@ export default (options: Required<ModuleOptions>) => {
       itemDescription: 'truncate color-text-muted',
     },
     variants: {
-      ...fieldGroupVariant,
+      ...fieldGroupVariantWithHiddenInput,
       variant: (prev: Record<string, string>) => ({
         ...prev,
         outline: [prev.outline, 'hover:bg-background-elevated disabled:bg-background'].join(' '),

@@ -1,8 +1,22 @@
 <script setup lang="ts">
 import type { ChatStatus, UIMessage } from 'ai';
 
-const colors: Array<'neutral' | 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error'> = ['neutral', 'primary', 'secondary', 'success', 'info', 'warning', 'error'];
-const messageVariants: Array<'naked' | 'solid' | 'outline' | 'soft' | 'subtle'> = ['naked', 'solid', 'outline', 'soft', 'subtle'];
+const colors: Array<'neutral' | 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error'> = [
+  'neutral',
+  'primary',
+  'secondary',
+  'success',
+  'info',
+  'warning',
+  'error',
+];
+const messageVariants: Array<'naked' | 'solid' | 'outline' | 'soft' | 'subtle'> = [
+  'naked',
+  'solid',
+  'outline',
+  'soft',
+  'subtle',
+];
 const promptVariants: Array<'outline' | 'soft' | 'subtle'> = ['outline', 'soft', 'subtle'];
 
 const messageColor = ref<(typeof colors)[number]>('primary');
@@ -22,8 +36,20 @@ const animationKey = ref(0);
 const input = ref('');
 
 const messages = computed<Array<UIMessage>>(() => [
-  { id: 'prompt', role: 'user', parts: [{ type: 'text', text: 'Show me how the selected message treatment feels.' }] },
-  { id: 'reply', role: 'assistant', parts: [{ type: 'text', text: 'Every control on this page is passed directly to a chat component.' }] },
+  {
+    id: 'prompt',
+    role: 'user',
+    parts: [
+      { type: 'text', text: 'Show me how the selected message treatment feels.' },
+    ],
+  },
+  {
+    id: 'reply',
+    role: 'assistant',
+    parts: [
+      { type: 'text', text: 'Every control on this page is passed directly to a chat component.' },
+    ],
+  },
 ]);
 
 const status = computed<ChatStatus>(() => showIndicator.value ? 'submitted' : 'ready');
@@ -197,6 +223,7 @@ function submit() {
       <template #prompt>
         <PChatPrompt
           v-model="input"
+          :status="status"
           :color="promptColor"
           :variant="promptVariant"
           placeholder="Focus here to inspect the prompt highlight…"
