@@ -193,6 +193,12 @@ export interface CommandPaletteProps<G extends CommandPaletteGroup<T> = CommandP
    */
   preserveGroupOrder?: boolean;
   /**
+   * When `true`, items will not be filtered which is useful for custom filtering (useAsyncData, useFetch, etc.).
+   * Applies to every group, unless the group sets its own `ignoreFilter` field.
+   * @defaultValue false
+   */
+  ignoreFilter?: boolean;
+  /**
    * Delay (in milliseconds) before the search term is passed to Fuse (debounced).
    * Useful when indexing large datasets where fuzzy search becomes the bottleneck — the input stays responsive while Fuse and the result pipeline only re-run after typing settles.
    * Set to `0` (the default) to disable.
@@ -263,6 +269,7 @@ const _props = withDefaults(
     autofocus: true,
     back: true,
     preserveGroupOrder: false,
+    ignoreFilter: false,
     virtualize: false,
     highlightOnHover: true,
     searchDelay: 0,
@@ -284,7 +291,9 @@ const virtualizerProps = toRef(() => {
     return false;
   }
 
-  return defu(typeof props.virtualize === 'boolean' ? {} : props.virtualize, {
+  return defu(typeof props.virtualize === 'boolean'
+    ? {}
+    : props.virtualize, {
     estimateSize: getEstimateSize(filteredItems.value, 'md', props.descriptionKey as string, !!slots['item-description']),
   });
 });
@@ -306,7 +315,10 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: C
   },
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.commandPalette || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.commandPalette || {}),
+})({
   size: props.size,
   virtualize: !!props.virtualize,
 }));
@@ -325,14 +337,20 @@ const history = ref<Array<CommandPaletteGroup & { placeholder?: string }>>([]);
 
 const placeholder = computed(() => history.value[history.value.length - 1]?.placeholder || props.placeholder || t('commandPalette.placeholder'));
 
-const groups = computed(() => history.value?.length ? [history.value[history.value.length - 1] as G] : props.groups);
+const groups = computed(() => history.value?.length
+  ? [history.value[history.value.length - 1] as G]
+  : props.groups);
+
+function isFilterIgnored(group: G) {
+  return group.ignoreFilter ?? props.ignoreFilter;
+}
 
 const items = computed(() => groups.value?.filter((group) => {
   if (!group.id) {
     console.warn('[pohon-ui] CommandPalette group is missing an `id` property');
     return false;
   }
-  if (group.ignoreFilter) {
+  if (isFilterIgnored(group)) {
     return false;
   }
   return true;
@@ -390,7 +408,9 @@ const filteredGroups = computed(() => {
         continue;
       }
 
-      const items = group.ignoreFilter ? group.items : groupsById[group.id];
+      const items = isFilterIgnored(group)
+        ? group.items
+        : groupsById[group.id];
       if (!items?.length) {
         continue;
       }
@@ -420,7 +440,7 @@ const filteredGroups = computed(() => {
   const result = [...fuseGroups];
 
   for (const group of currentGroups || []) {
-    if (!group.ignoreFilter || !group.items?.length) {
+    if (!isFilterIgnored(group) || !group.items?.length) {
       continue;
     }
 
