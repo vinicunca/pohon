@@ -31,6 +31,37 @@ exports[`pricingPlan > renders with as correctly 1`] = `
 </section>"
 `;
 
+exports[`pricingPlan > renders with as object correctly 1`] = `
+"<section data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
+  <!--v-if-->
+  <div data-slot="body" class="flex flex-col min-w-0">
+    <div data-slot="titleWrapper" class="flex items-center gap-3">
+      <h3 data-slot="title" class="color-text-highlighted truncate text-2xl sm:text-3xl text-pretty font-600">Title</h3><span data-slot="badge" class="font-500 inline-flex items-center text-xs rounded-md gap-1 bg-primary/10 color-primary ring ring-inset ring-primary/25 px-2 py-1"><!--v-if--><span data-slot="label" class="truncate">Badge</span>
+      <!--v-if--></span>
+    </div>
+    <div data-slot="description" class="color-text-muted text-base text-pretty mt-2">Description</div>
+    <div data-slot="priceWrapper" class="flex items-center gap-1 mt-6">
+      <div data-slot="discount" class="color-text-muted line-through text-xl sm:text-2xl">$249</div>
+      <div data-slot="price" class="color-text-highlighted text-3xl sm:text-4xl font-600">$199</div>
+      <div data-slot="billing" class="flex flex-col justify-between min-w-0"><span data-slot="billingPeriod" class="color-text-toned truncate text-xs font-500">billed annually</span><span data-slot="billingCycle" class="color-text-muted truncate text-xs font-500">/month</span></div>
+    </div>
+    <ul data-slot="features" class="flex flex-col gap-3 flex-1 mt-6 grow-0">
+      <li data-slot="feature" class="flex items-center gap-2 min-w-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="featureIcon" class="size-5 shrink-0 color-primary"></svg><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 1</span></li>
+      <li data-slot="feature" class="flex items-center gap-2 min-w-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="featureIcon" class="size-5 shrink-0 color-primary"></svg><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 2</span></li>
+      <li data-slot="feature" class="flex items-center gap-2 min-w-0"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 16 16" data-slot="featureIcon" class="size-5 shrink-0 color-primary"></svg><span data-slot="featureTitle" class="color-text-muted text-sm truncate">Feature 3</span></li>
+    </ul>
+  </div>
+  <div data-slot="footer" class="flex flex-col gap-6 items-center justify-end">
+    <div data-slot="tagline" class="text-base font-600 color-text">Tagline</div>
+    <!--v-if--><button type="button" data-slot="button" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors text-sm gap-2 w-full justify-center color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-3 py-2">
+      <!--v-if--><span data-slot="label" class="truncate">Buy now</span>
+      <!--v-if-->
+    </button>
+    <div data-slot="terms" class="text-xs/5 color-text-muted text-center text-balance">Terms</div>
+  </div>
+</section>"
+`;
+
 exports[`pricingPlan > renders with badge correctly 1`] = `
 "<div data-slot="root" data-orientation="vertical" class="relative grid rounded-lg p-6 lg:p-8 xl:p-10 gap-6 bg-background ring ring-border">
   <!--v-if-->

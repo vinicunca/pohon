@@ -8,6 +8,17 @@ exports[`card > renders with as correctly 1`] = `
 </section>"
 `;
 
+exports[`card > renders with as object correctly 1`] = `
+"<section data-slot="root" class="rounded-lg overflow-hidden bg-background ring ring-border divide-y divide-border">
+  <div data-slot="header" class="p-4 sm:px-6">
+    <h3 data-slot="title" class="color-text-highlighted font-600">Title</h3>
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+  <!--v-if-->
+</section>"
+`;
+
 exports[`card > renders with class correctly 1`] = `
 "<div data-slot="root" class="rounded-lg overflow-hidden bg-background ring ring-border divide-y divide-border rounded-xl">
   <!--v-if-->

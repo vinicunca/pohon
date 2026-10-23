@@ -31,40 +31,270 @@ describe('pricingPlan', () => {
 
   renderEach(PricingPlan, [
     // Props
-    ['with title', { props: { title: 'Title' } }],
-    ['with description', { props: { description: 'Description' } }],
-    ['with badge', { props: { title: 'Title', badge: 'Badge' } }],
-    ['with badge object', { props: { title: 'Title', badge: { label: 'Badge', color: 'primary' } } }],
-    ['with price', { props: { price: '$249' } }],
-    ['with discount', { props: { discount: '$199', price: '$249' } }],
-    ['with billing cycle', { props: { discount: '$199', price: '$249', billingCycle: '/month' } }],
-    ['with billing period', { props: { discount: '$199', price: '$249', billingPeriod: 'billed annually' } }],
-    ['with features', { props: { features: ['Feature 1', 'Feature 2', 'Feature 3'] } }],
-    ['with features object', { props: { features: [{ title: 'Feature 1', icon: 'i-lucide-info' }, { title: 'Feature 2', icon: 'i-lucide-check' }, { title: 'Feature 3', icon: 'i-lucide-star' }] } }],
-    ['with button', { props: { button: { label: 'Buy now' } } }],
-    ['with tagline', { props: { tagline: 'Tagline' } }],
-    ['with terms', { props: { terms: 'Terms' } }],
-    ['with scale', { props: { ...props, scale: true } }],
-    ['with highlight', { props: { ...props, highlight: true } }],
-    ...variants.map((variant: string) => [`with variant ${variant}`, { props: { ...props, variant } }]),
-    ...orientations.map((orientation: string) => [`with orientation ${orientation}`, { props: { ...props, orientation } }]),
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'rounded-xl' } }],
-    ['with ui', { props: { ...props, ui: { footer: 'gap-12' } } }],
+    [
+      'with title',
+      {
+        props: { title: 'Title' },
+      },
+    ],
+    [
+      'with description',
+      {
+        props: { description: 'Description' },
+      },
+    ],
+    [
+      'with badge',
+      {
+        props: { title: 'Title', badge: 'Badge' },
+      },
+    ],
+    [
+      'with badge object',
+      {
+        props: {
+          title: 'Title',
+          badge: { label: 'Badge', color: 'primary' },
+        },
+      },
+    ],
+    [
+      'with price',
+      {
+        props: { price: '$249' },
+      },
+    ],
+    [
+      'with discount',
+      {
+        props: { discount: '$199', price: '$249' },
+      },
+    ],
+    [
+      'with billing cycle',
+      {
+        props: { discount: '$199', price: '$249', billingCycle: '/month' },
+      },
+    ],
+    [
+      'with billing period',
+      {
+        props: { discount: '$199', price: '$249', billingPeriod: 'billed annually' },
+      },
+    ],
+    [
+      'with features',
+      {
+        props: {
+          features: ['Feature 1', 'Feature 2', 'Feature 3'],
+        },
+      },
+    ],
+    [
+      'with features object',
+      {
+        props: {
+          features: [
+            { title: 'Feature 1', icon: 'i-lucide-info' },
+            { title: 'Feature 2', icon: 'i-lucide-check' },
+            { title: 'Feature 3', icon: 'i-lucide-star' },
+          ],
+        },
+      },
+    ],
+    [
+      'with button',
+      {
+        props: {
+          button: { label: 'Buy now' },
+        },
+      },
+    ],
+    [
+      'with tagline',
+      {
+        props: { tagline: 'Tagline' },
+      },
+    ],
+    [
+      'with terms',
+      {
+        props: { terms: 'Terms' },
+      },
+    ],
+    [
+      'with scale',
+      {
+        props: { ...props, scale: true },
+      },
+    ],
+    [
+      'with highlight',
+      {
+        props: { ...props, highlight: true },
+      },
+    ],
+    ...variants.map((variant: string) => [
+      `with variant ${variant}`,
+      {
+        props: { ...props, variant },
+      },
+    ]),
+    ...orientations.map((orientation: string) => [
+      `with orientation ${orientation}`,
+      {
+        props: { ...props, orientation },
+      },
+    ]),
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with as object',
+      {
+        props: {
+          ...props,
+          title: 'Title',
+          as: { root: 'section', title: 'h3' },
+        },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'rounded-xl' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { footer: 'gap-12' },
+        },
+      },
+    ],
     // Slots
-    ['with badge slot', { props, slots: { badge: () => 'Badge slot' } }],
-    ['with title slot', { props, slots: { title: () => 'Title slot' } }],
-    ['with description slot', { props, slots: { description: () => 'Description slot' } }],
-    ['with price slot', { props, slots: { price: () => 'Price slot' } }],
-    ['with discount slot', { props, slots: { discount: () => 'Discount slot' } }],
-    ['with billing slot', { props, slots: { billing: () => 'Billing slot' } }],
-    ['with features slot', { props, slots: { features: () => 'Features slot' } }],
-    ['with button slot', { props, slots: { button: () => 'Button slot' } }],
-    ['with tagline slot', { props, slots: { tagline: () => 'Tagline slot' } }],
-    ['with terms slot', { props, slots: { terms: () => 'Terms slot' } }],
-    ['with header slot', { props, slots: { header: () => 'Header slot' } }],
-    ['with body slot', { props, slots: { body: () => 'Body slot' } }],
-    ['with footer slot', { props, slots: { footer: () => 'Footer slot' } }],
+    [
+      'with badge slot',
+      {
+        props,
+        slots: {
+          badge: () => 'Badge slot',
+        },
+      },
+    ],
+    [
+      'with title slot',
+      {
+        props,
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        props,
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with price slot',
+      {
+        props,
+        slots: {
+          price: () => 'Price slot',
+        },
+      },
+    ],
+    [
+      'with discount slot',
+      {
+        props,
+        slots: {
+          discount: () => 'Discount slot',
+        },
+      },
+    ],
+    [
+      'with billing slot',
+      {
+        props,
+        slots: {
+          billing: () => 'Billing slot',
+        },
+      },
+    ],
+    [
+      'with features slot',
+      {
+        props,
+        slots: {
+          features: () => 'Features slot',
+        },
+      },
+    ],
+    [
+      'with button slot',
+      {
+        props,
+        slots: {
+          button: () => 'Button slot',
+        },
+      },
+    ],
+    [
+      'with tagline slot',
+      {
+        props,
+        slots: {
+          tagline: () => 'Tagline slot',
+        },
+      },
+    ],
+    [
+      'with terms slot',
+      {
+        props,
+        slots: {
+          terms: () => 'Terms slot',
+        },
+      },
+    ],
+    [
+      'with header slot',
+      {
+        props,
+        slots: {
+          header: () => 'Header slot',
+        },
+      },
+    ],
+    [
+      'with body slot',
+      {
+        props,
+        slots: {
+          body: () => 'Body slot',
+        },
+      },
+    ],
+    [
+      'with footer slot',
+      {
+        props,
+        slots: {
+          footer: () => 'Footer slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

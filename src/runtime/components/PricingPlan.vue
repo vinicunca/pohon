@@ -23,7 +23,7 @@ export interface PricingPlanProps {
    * The element or component this component should render as.
    * @defaultValue 'div'
    */
-  as?: any;
+  as?: any | { root?: any; title?: any };
   title?: string;
   description?: string;
   /**
@@ -117,6 +117,7 @@ import { Primitive } from 'akar';
 import { computed } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
+import { resolveAs } from '../utils';
 import { uv } from '../utils/uv';
 import PBadge from './Badge.vue';
 import PButton from './Button.vue';
@@ -138,14 +139,21 @@ const appConfig = useAppConfig() as PricingPlan['AppConfig'];
 
 const [DefinePriceTemplate, ReusePriceTemplate] = createReusableTemplate();
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pricingPlan || {}) })({
+const as = computed(() => resolveAs(props.as, { root: 'div', title: 'div' }));
+
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.pricingPlan || {}),
+})({
   orientation: props.orientation,
   variant: props.variant,
   highlight: props.highlight,
   scale: props.scale,
 }));
 
-const features = computed(() => props.features?.map((feature) => typeof feature === 'string' ? { title: feature } : feature));
+const features = computed(() => props.features?.map((feature) => typeof feature === 'string'
+  ? { title: feature }
+  : feature));
 </script>
 
 <template>
@@ -177,7 +185,7 @@ const features = computed(() => props.features?.map((feature) => typeof feature 
     </div>
   </DefinePriceTemplate>
 
-  <Primitive :as="props.as" data-slot="root" v-bind="$attrs" :data-orientation="props.orientation" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <Primitive :as="as.root" data-slot="root" v-bind="$attrs" :data-orientation="props.orientation" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <div v-if="!!slots.header && props.orientation === 'vertical'" data-slot="header" :class="ui.header({ class: props.ui?.header })">
       <slot name="header" />
     </div>
@@ -185,11 +193,11 @@ const features = computed(() => props.features?.map((feature) => typeof feature 
     <div data-slot="body" :class="ui.body({ class: props.ui?.body })">
       <slot name="body">
         <div data-slot="titleWrapper" :class="ui.titleWrapper({ class: props.ui?.titleWrapper })">
-          <div v-if="props.title || !!slots.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
+          <Primitive v-if="props.title || !!slots.title" :as="as.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
             <slot name="title">
               {{ props.title }}
             </slot>
-          </div>
+          </Primitive>
 
           <slot name="badge" :ui="ui">
             <PBadge

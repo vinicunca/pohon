@@ -55,7 +55,7 @@ export interface AuthFormProps<T extends FormSchema = FormSchema<object>, F exte
    * The element or component this component should render as.
    * @defaultValue 'div'
    */
-  as?: any;
+  as?: any | { root?: any; title?: any };
   /**
    * The icon displayed above the title.
    * @IconifyIcon
@@ -119,7 +119,7 @@ import { computed, reactive, shallowReactive, useTemplateRef } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useLocale } from '../composables/useLocale';
-import { omit, pick } from '../utils';
+import { omit, pick, resolveAs } from '../utils';
 import { uv } from '../utils/uv';
 import PButton from './Button.vue';
 import PCheckbox from './Checkbox.vue';
@@ -163,7 +163,12 @@ const props = useComponentProps<AuthFormProps<T, F>>('authForm', _props);
 const { t } = useLocale();
 const appConfig = useAppConfig() as AuthForm['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.authForm || {}) })());
+const as = computed(() => resolveAs(props.as, { root: 'div', title: 'div' }));
+
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.authForm || {}),
+})());
 
 const formRef = useTemplateRef('formRef');
 
@@ -178,7 +183,17 @@ const passwordVisibility = reactive<Record<string, boolean>>(
 const passwordRefs = shallowReactive<Record<string, { inputRef?: HTMLInputElement | null } | null>>({});
 
 function pickFieldProps(field: F) {
-  const fields = ['name', 'errorPattern', 'help', 'error', 'hint', 'size', 'required', 'eagerValidation', 'validateOnInputDelay'] as Array<keyof F>;
+  const fields = [
+    'name',
+    'errorPattern',
+    'help',
+    'error',
+    'hint',
+    'size',
+    'required',
+    'eagerValidation',
+    'validateOnInputDelay',
+  ] as Array<keyof F>;
 
   // Prevent binding `label` and `description` on Checkbox's FormField
   if (field.type === 'checkbox') {
@@ -189,7 +204,16 @@ function pickFieldProps(field: F) {
 }
 
 function omitFieldProps(field: F) {
-  const fields = ['errorPattern', 'help', 'error', 'hint', 'size', 'required', 'eagerValidation', 'validateOnInputDelay'] as Array<keyof F>;
+  const fields = [
+    'errorPattern',
+    'help',
+    'error',
+    'hint',
+    'size',
+    'required',
+    'eagerValidation',
+    'validateOnInputDelay',
+  ] as Array<keyof F>;
 
   // Prevent binding `type` on other fields than Input
   if (field.type === 'checkbox' || field.type === 'select' || field.type === 'otp') {
@@ -198,7 +222,12 @@ function omitFieldProps(field: F) {
       return omit(field, [...fields, 'type']);
     }
 
-    return omit(field, [...fields, 'type', 'label', 'description']);
+    return omit(field, [
+      ...fields,
+      'type',
+      'label',
+      'description',
+    ]);
   }
 
   return omit(field, [...fields, 'label', 'description']);
@@ -211,7 +240,7 @@ defineExpose({
 </script>
 
 <template>
-  <Primitive :as="props.as" :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <Primitive :as="as.root" :data-slot="($attrs['data-slot'] as string | undefined) ?? 'root'" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <div v-if="(props.icon || !!slots.leading) || (props.title || !!slots.title) || (props.description || !!slots.description) || !!slots.header" data-slot="header" :class="ui.header({ class: props.ui?.header })">
       <slot name="header">
         <div v-if="props.icon || !!slots.leading" data-slot="leading" :class="ui.leading({ class: props.ui?.leading })">
@@ -220,11 +249,11 @@ defineExpose({
           </slot>
         </div>
 
-        <div v-if="props.title || !!slots.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
+        <Primitive v-if="props.title || !!slots.title" :as="as.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
           <slot name="title">
             {{ props.title }}
           </slot>
-        </div>
+        </Primitive>
 
         <div v-if="props.description || !!slots.description" data-slot="description" :class="ui.description({ class: props.ui?.description })">
           <slot name="description">

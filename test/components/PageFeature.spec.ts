@@ -16,19 +16,103 @@ describe('pageFeature', () => {
 
   renderEach(PageFeature, [
     // Props
-    ['with as', { props: { as: 'section' } }],
-    ['with icon', { props: { icon: 'i-lucide-house' } }],
-    ['with title', { props: { title: 'Title' } }],
-    ['with description', { props: { description: 'Description' } }],
-    ['with to', { props: { to: 'https://github.com/benjamincanac' } }],
-    ...orientations.map((orientation: string) => [`with orientation ${orientation}`, { props: { ...props, orientation } }]),
-    ['with class', { props: { ...props, class: 'rounded-xl' } }],
-    ['with ui', { props: { ...props, ui: { title: 'font-700' } } }],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with as object',
+      {
+        props: {
+          title: 'Title',
+          as: { root: 'section', title: 'h3' },
+        },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { icon: 'i-lucide-house' },
+      },
+    ],
+    [
+      'with title',
+      {
+        props: { title: 'Title' },
+      },
+    ],
+    [
+      'with description',
+      {
+        props: { description: 'Description' },
+      },
+    ],
+    [
+      'with to',
+      {
+        props: { to: 'https://github.com/benjamincanac' },
+      },
+    ],
+    ...orientations.map((orientation: string) => [
+      `with orientation ${orientation}`,
+      {
+        props: { ...props, orientation },
+      },
+    ]),
+    [
+      'with class',
+      {
+        props: { ...props, class: 'rounded-xl' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { title: 'font-700' },
+        },
+      },
+    ],
     // Slots
-    ['with leading slot', { props, slots: { leading: () => 'Leading slot' } }],
-    ['with title slot', { props, slots: { title: () => 'Title slot' } }],
-    ['with description slot', { props, slots: { description: () => 'Description slot' } }],
-    ['with default slot', { props, slots: { default: () => 'Default slot' } }],
+    [
+      'with leading slot',
+      {
+        props,
+        slots: {
+          leading: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with title slot',
+      {
+        props,
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        props,
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

@@ -19,32 +19,190 @@ describe('pageCard', () => {
 
   renderEach(PageCard, [
     // Props
-    ['with as', { props: { as: 'section' } }],
-    ['with icon', { props: { icon: 'i-lucide-house' } }],
-    ['with title', { props: { title: 'Title' } }],
-    ['with description', { props: { description: 'Description' } }],
-    ['with to', { props: { to: 'https://github.com/benjamincanac' } }],
-    ...variants.map((variant: string) => [`with variant ${variant}`, { props: { ...props, variant } }]),
-    ...variants.map((variant: string) => [`with variant ${variant} to`, { props: { ...props, variant, to: 'https://github.com/benjamincanac' } }]),
-    ...variants.map((variant: string) => [`with variant ${variant} highlight`, { props: { ...props, variant, highlight: true } }]),
-    ...orientations.map((orientation: string) => [`with orientation ${orientation}`, { props: { ...props, orientation } }]),
-    ...orientations.map((orientation: string) => [`with orientation ${orientation} reverse`, { props: { ...props, orientation, reverse: true } }]),
-    ['with highlight', { props: { ...props, highlight: true } }],
-    ...highlightColors.map((highlightColor: string) => [`with highlight color ${highlightColor}`, { props: { ...props, highlight: true, highlightColor } }]),
-    ['with highlight color neutral', { props: { ...props, highlight: true, highlightColor: 'neutral' } }],
-    ['with spotlight', { props: { ...props, spotlight: true } }],
-    ...spotlightColors.map((spotlightColor: string) => [`with spotlight color ${spotlightColor}`, { props: { ...props, spotlight: true, spotlightColor } }]),
-    ['with spotlight color neutral', { props: { ...props, spotlight: true, spotlightColor: 'neutral' } }],
-    ['with class', { props: { ...props, class: 'rounded-xl' } }],
-    ['with ui', { props: { ...props, ui: { title: 'font-700' } } }],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with as object',
+      {
+        props: {
+          title: 'Title',
+          as: { root: 'section', title: 'h3' },
+        },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { icon: 'i-lucide-house' },
+      },
+    ],
+    [
+      'with title',
+      {
+        props: { title: 'Title' },
+      },
+    ],
+    [
+      'with description',
+      {
+        props: { description: 'Description' },
+      },
+    ],
+    [
+      'with to',
+      {
+        props: { to: 'https://github.com/benjamincanac' },
+      },
+    ],
+    ...variants.map((variant: string) => [
+      `with variant ${variant}`,
+      {
+        props: { ...props, variant },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with variant ${variant} to`,
+      {
+        props: { ...props, variant, to: 'https://github.com/benjamincanac' },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with variant ${variant} highlight`,
+      {
+        props: { ...props, variant, highlight: true },
+      },
+    ]),
+    ...orientations.map((orientation: string) => [
+      `with orientation ${orientation}`,
+      {
+        props: { ...props, orientation },
+      },
+    ]),
+    ...orientations.map((orientation: string) => [
+      `with orientation ${orientation} reverse`,
+      {
+        props: { ...props, orientation, reverse: true },
+      },
+    ]),
+    [
+      'with highlight',
+      {
+        props: { ...props, highlight: true },
+      },
+    ],
+    ...highlightColors.map((highlightColor: string) => [
+      `with highlight color ${highlightColor}`,
+      {
+        props: { ...props, highlight: true, highlightColor },
+      },
+    ]),
+    [
+      'with highlight color neutral',
+      {
+        props: { ...props, highlight: true, highlightColor: 'neutral' },
+      },
+    ],
+    [
+      'with spotlight',
+      {
+        props: { ...props, spotlight: true },
+      },
+    ],
+    ...spotlightColors.map((spotlightColor: string) => [
+      `with spotlight color ${spotlightColor}`,
+      {
+        props: { ...props, spotlight: true, spotlightColor },
+      },
+    ]),
+    [
+      'with spotlight color neutral',
+      {
+        props: { ...props, spotlight: true, spotlightColor: 'neutral' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'rounded-xl' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { title: 'font-700' },
+        },
+      },
+    ],
     // Slots
-    ['with header slot', { props, slots: { header: () => 'Header slot' } }],
-    ['with body slot', { props, slots: { body: () => 'Body slot' } }],
-    ['with leading slot', { props, slots: { leading: () => 'Leading slot' } }],
-    ['with title slot', { props, slots: { title: () => 'Title slot' } }],
-    ['with description slot', { props, slots: { description: () => 'Description slot' } }],
-    ['with footer slot', { props, slots: { footer: () => 'Footer slot' } }],
-    ['with default slot', { props, slots: { default: () => 'Default slot' } }],
+    [
+      'with header slot',
+      {
+        props,
+        slots: {
+          header: () => 'Header slot',
+        },
+      },
+    ],
+    [
+      'with body slot',
+      {
+        props,
+        slots: {
+          body: () => 'Body slot',
+        },
+      },
+    ],
+    [
+      'with leading slot',
+      {
+        props,
+        slots: {
+          leading: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with title slot',
+      {
+        props,
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        props,
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with footer slot',
+      {
+        props,
+        slots: {
+          footer: () => 'Footer slot',
+        },
+      },
+    ],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

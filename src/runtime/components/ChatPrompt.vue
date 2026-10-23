@@ -1,5 +1,6 @@
 <script lang="ts">
 import type { AppConfig } from '@nuxt/schema';
+import type { ChatStatus } from 'ai';
 import type { VNode } from 'vue';
 import type { ComponentConfig } from '../types/uv';
 import type { TextareaProps, TextareaSlots } from './Textarea.vue';
@@ -32,6 +33,10 @@ export interface ChatPromptProps extends Pick<TextareaProps, 'rows' | 'autofocus
    * @defaultValue true
    */
   submitOnEnter?: boolean;
+  /**
+   * The status of the chat. Submitting is ignored while it is `submitted` or `streaming`.
+   */
+  status?: ChatStatus;
   error?: Error;
   class?: any;
   ui?: ChatPrompt['slots'] & TextareaProps['ui'];
@@ -88,7 +93,10 @@ const textareaProps = useForwardProps(reactivePick(props, 'rows', 'autofocus', '
 
 const getProxySlots = () => omit(slots, ['header', 'footer', 'body']);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatPrompt || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.chatPrompt || {}),
+})({
   color: props.color,
   variant: props.variant,
 }));
@@ -96,7 +104,7 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatPrompt || {}
 const textareaRef = useTemplateRef('textareaRef');
 
 function submit(e?: Event) {
-  if (model.value.trim() === '') {
+  if (model.value.trim() === '' || props.status === 'submitted' || props.status === 'streaming') {
     return;
   }
 

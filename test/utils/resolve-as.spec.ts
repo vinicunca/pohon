@@ -19,12 +19,25 @@ describe('resolveAs', () => {
   });
 
   it('applies a component with a render function to root', () => {
-    const component = { render: () => h('div') };
+    const component = {
+      render: () => h('div'),
+    };
     expect(resolveAs(component, defaults).root).toBe(component);
   });
 
   it('applies a setup-only component to root', () => {
-    const component = defineComponent({ setup: () => () => h('div') });
+    const component = defineComponent({
+      setup: () => () => h('div'),
+    });
+    expect(resolveAs(component, defaults).root).toBe(component);
+  });
+
+  it('applies a component inheriting its render function to root', () => {
+    const component = defineComponent({
+      extends: {
+        render: () => h('div'),
+      },
+    });
     expect(resolveAs(component, defaults).root).toBe(component);
   });
 

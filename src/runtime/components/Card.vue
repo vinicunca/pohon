@@ -11,7 +11,7 @@ export interface CardProps {
    * The element or component this component should render as.
    * @defaultValue 'div'
    */
-  as?: any;
+  as?: any | { root?: any; title?: any };
   title?: string;
   description?: string;
   /**
@@ -36,6 +36,7 @@ import { Primitive } from 'akar';
 import { computed } from 'vue';
 import { useAppConfig } from '#imports';
 import { useComponentProps } from '../composables/useComponentProps';
+import { resolveAs } from '../utils';
 import { uv } from '../utils/uv';
 
 const _props = defineProps<CardProps>();
@@ -45,20 +46,25 @@ const props = useComponentProps('card', _props);
 
 const appConfig = useAppConfig() as Card['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.card || {}) })({
+const as = computed(() => resolveAs(props.as, { root: 'div', title: 'div' }));
+
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.card || {}),
+})({
   variant: props.variant,
 }));
 </script>
 
 <template>
-  <Primitive :as="props.as" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
+  <Primitive :as="as.root" data-slot="root" :class="ui.root({ class: [props.ui?.root, props.class] })">
     <div v-if="!!slots.header || (props.title || !!slots.title) || (props.description || !!slots.description)" data-slot="header" :class="ui.header({ class: props.ui?.header })">
       <slot name="header">
-        <div v-if="props.title || !!slots.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
+        <Primitive v-if="props.title || !!slots.title" :as="as.title" data-slot="title" :class="ui.title({ class: props.ui?.title })">
           <slot name="title">
             {{ props.title }}
           </slot>
-        </div>
+        </Primitive>
 
         <div v-if="props.description || !!slots.description" data-slot="description" :class="ui.description({ class: props.ui?.description })">
           <slot name="description">
