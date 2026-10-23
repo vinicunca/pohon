@@ -1,6 +1,9 @@
 import type { HookResult, ModuleDependencies } from '@nuxt/schema';
 import type { I18nLocale } from './utils/locales';
-import { addComponentsDir, addImports, addImportsDir, addPluginTemplate, createResolver, defineNuxtModule, hasNuxtModule } from '@nuxt/kit';
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import { IconUsageScanner } from '@nuxt/icon/utils';
+import { addComponentsDir, addImports, addImportsDir, addPluginTemplate, createResolver, defineNuxtModule, findPath, getLayerDirectories, hasNuxtModule } from '@nuxt/kit';
 import { defu } from 'defu';
 import { name, version } from '../package.json';
 import { publicComposables } from './imports';
@@ -213,9 +216,22 @@ export default defineNuxtModule<ModuleOptions>({
     // `@nuxt/icon` drops any name it can't resolve (collection not installed, icon
     // missing) and falls back to runtime loading instead of failing the build
     // (nuxt/icon#504), so we add them all and let it sort out what's available.
-    nuxt.hook('icon:clientBundleIcons', (icons) => {
+    nuxt.hook('icon:clientBundleIcons', async (icons) => {
       for (const name of getClientBundleIcons(nuxt.options.appConfig.ui?.icons)) {
         icons.add(name);
+      }
+
+      // `app.config.ts` is only evaluated at runtime, so the icons it sets never reach
+      // `nuxt.options.appConfig`. Read the icon names written in each layer's file instead,
+      // matching custom collections too, as `clientBundle.scan` does.
+      const scanner = new IconUsageScanner({
+        additionalCollections: ((nuxt.options.icon || {}).customCollections ?? []).map((collection) => collection.prefix),
+      });
+      for (const layer of getLayerDirectories(nuxt)) {
+        const path = await findPath(join(layer.app, 'app.config'));
+        if (path) {
+          scanner.extractFromCode(await readFile(path, 'utf-8'), icons);
+        }
       }
     });
 
@@ -232,7 +248,9 @@ export default defineNuxtModule<ModuleOptions>({
           // Resolved by `@nuxtjs/i18n`, including layers
           const { locales } = (nuxt.options.runtimeConfig.public.i18n || {}) as { locales?: Array<I18nLocale> };
 
-          return generateI18nPlugin(Array.isArray(locales) ? locales : [], getLocaleKeys(resolve('./runtime/locale')), resolve('./runtime'));
+          return generateI18nPlugin(Array.isArray(locales)
+            ? locales
+            : [], getLocaleKeys(resolve('./runtime/locale')), resolve('./runtime'));
         },
       });
     }
@@ -276,7 +294,10 @@ export default defineNuxtModule<ModuleOptions>({
 
     addImports(
       Object.entries(publicComposables).flatMap(([file, exports]) =>
-        exports.map((name) => ({ name, from: resolve(`./runtime/composables/${file}`) })),
+        exports.map((name) => ({
+          name,
+          from: resolve(`./runtime/composables/${file}`),
+        })),
       ),
     );
 
