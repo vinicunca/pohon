@@ -51,9 +51,8 @@ import { useComponentIcons } from '../composables/useComponentIcons';
 import { useComponentProps } from '../composables/useComponentProps';
 import { useFieldGroup } from '../composables/useFieldGroup';
 import { formLoadingInjectionKey } from '../composables/useFormField';
-import { useForwardProps } from '../composables/useForwardProps';
-import { mergeClasses, omit } from '../utils';
-import { pickLinkProps } from '../utils/link';
+import { mergeClasses } from '../utils';
+import { linkKeys, LinkSlot } from '../utils/link';
 import { uv } from '../utils/uv';
 import PAvatar from './Avatar.vue';
 import PIcon from './Icon.vue';
@@ -68,10 +67,24 @@ const props = useComponentProps('button', _props);
 const appConfig = useAppConfig() as Button['AppConfig'];
 const { orientation, size: buttonSize } = useFieldGroup<ButtonProps>(_props);
 
-// Memoized: `omit` iterates every forwarded key through the `useComponentProps`
-// proxy, so doing it inline in the template re-paid that walk on every render.
-const linkProps = useForwardProps(computed(() => pickLinkProps(props)));
-const forwardedLinkProps = computed(() => omit(linkProps.value, ['type', 'disabled', 'onClick']));
+// Without `to` or `href`, `LinkSlot` stands in for the Link and these are never read
+const isLink = computed(() => !!(props.to ?? props.href));
+
+// Reads only the link props through the `useComponentProps` proxy. `type`,
+// `disabled` and `onClick` are bound separately.
+const forwardedLinkProps = computed(() => {
+  const forwarded: Record<string, any> = {};
+  for (const key of linkKeys) {
+    if (key === 'type' || key === 'disabled' || key === 'onClick') {
+      continue;
+    }
+    const value = props[key as keyof typeof props];
+    if (value !== undefined) {
+      forwarded[key] = value;
+    }
+  }
+  return forwarded;
+});
 
 const loadingAutoState = ref(false);
 const formLoading = inject<Ref<boolean> | undefined>(formLoadingInjectionKey, undefined);
@@ -134,11 +147,12 @@ const ui = computed(() => uv({
 </script>
 
 <template>
-  <PLink
+  <component
+    :is="isLink ? PLink : LinkSlot"
     v-slot="{ active, ...slotProps }"
     :type="props.type"
     :disabled="props.disabled || isLoading"
-    v-bind="forwardedLinkProps"
+    v-bind="isLink ? forwardedLinkProps : { as: props.as, active: props.active }"
     custom
   >
     <PLinkBase
@@ -167,5 +181,5 @@ const ui = computed(() => uv({
         <PIcon v-if="isTrailing && trailingIconName" :name="trailingIconName" data-slot="trailingIcon" :class="ui.trailingIcon({ class: props.ui?.trailingIcon, active })" />
       </slot>
     </PLinkBase>
-  </PLink>
+  </component>
 </template>
