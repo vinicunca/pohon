@@ -589,10 +589,28 @@ function onUnmountAutoFocus(event: Event) {
 }
 
 function onMountAutoFocus(event: Event) {
-  // Prevent the `FocusScope` from focusing the search input on open when its autofocus is disabled.
+  // Focus the scope instead of the search input on open when its autofocus is disabled,
+  // so the focus still moves inside the menu without opening the virtual keyboard on touch devices.
   if (searchInputProps.value.autofocus === false) {
     event.preventDefault();
+    const el = focusScopeRef.value?.$el as HTMLElement | undefined;
+    el?.focus({ preventScroll: true });
   }
+}
+
+// The listbox only navigates from the search input while it's rendered, so forward the keys to it when the focus is on the scope itself.
+function onFocusScopeKeydown(event: KeyboardEvent) {
+  if (event.target !== event.currentTarget) {
+    return;
+  }
+
+  const input = (event.currentTarget as HTMLElement).querySelector<HTMLElement>('[data-slot="input"] input');
+  if (!input) {
+    return;
+  }
+
+  event.preventDefault();
+  input.dispatchEvent(new KeyboardEvent('keydown', { key: event.key, shiftKey: event.shiftKey, bubbles: true, cancelable: true }));
 }
 
 const viewportRef = useTemplateRef('viewportRef');
@@ -777,6 +795,7 @@ defineExpose({
             :class="ui.focusScope({ class: props.ui?.focusScope })"
             @mount-auto-focus="onMountAutoFocus"
             @unmount-auto-focus="onUnmountAutoFocus"
+            @keydown.down.up.home.end="onFocusScopeKeydown"
           >
             <slot name="content-top" />
 
