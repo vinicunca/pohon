@@ -309,8 +309,8 @@ function onUpdate(files: Array<T | File>, reset = false) {
     setModelValue(files[0] ?? null);
   }
 
-  // @ts-expect-error - 'target' does not exist in type 'EventInit'
   const event = new Event('change', {
+    // @ts-expect-error - 'target' does not exist in type 'EventInit'
     target: { value: modelValue.value },
   });
   emits('change', event);

@@ -181,8 +181,8 @@ function onUpdate(value: ApplyModifiers<T, Mod> | undefined) {
 
   emits('update:modelValue', value as ApplyModifiers<T, Mod>);
 
-  // @ts-expect-error - 'target' does not exist in type 'EventInit'
   const event = new Event('change', {
+    // @ts-expect-error - 'target' does not exist in type 'EventInit'
     target: { value },
   });
   emits('change', event);

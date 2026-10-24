@@ -119,8 +119,8 @@ const ui = computed(() => uv({
 }));
 
 function onUpdate(value: any) {
-  // @ts-expect-error - 'target' does not exist in type 'EventInit'
   const event = new Event('change', {
+    // @ts-expect-error - 'target' does not exist in type 'EventInit'
     target: { value },
   });
   emits('change', event);

@@ -1045,28 +1045,28 @@ describe('form', () => {
         ]),
       });
 
-      // @ts-expect-error a string is not assignable to a number field
       expect(defineFormProps({
         schema,
+        // @ts-expect-error a string is not assignable to a number field
         state: reactive({ count: 'abc' as string }),
       })).toBeDefined();
-      // @ts-expect-error an object is not assignable to a string field
       expect(defineFormProps({
         schema,
+        // @ts-expect-error an object is not assignable to a string field
         state: reactive({
           name: { first: '' },
         }),
       })).toBeDefined();
-      // @ts-expect-error an object is not assignable to an array field
       expect(defineFormProps({
         schema,
+        // @ts-expect-error an object is not assignable to an array field
         state: reactive({
           items: { quantity: 1 },
         }),
       })).toBeDefined();
-      // @ts-expect-error a number is not assignable to the string position of a tuple
       expect(defineFormProps({
         schema,
+        // @ts-expect-error a number is not assignable to the string position of a tuple
         state: reactive({
           pair: [1, 1] as [number, number],
         }),

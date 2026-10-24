@@ -156,8 +156,8 @@ function onUpdate(value: Array<T>) {
   if (toRaw(props.modelValue) === value) {
     return;
   }
-  // @ts-expect-error - 'target' does not exist in type 'EventInit'
   const event = new Event('change', {
+    // @ts-expect-error - 'target' does not exist in type 'EventInit'
     target: { value },
   });
   emits('change', event);
