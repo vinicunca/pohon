@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.4.1](https://github.com/vinicunca/pohon/compare/v2.4.0...v2.4.1) (2026-10-24)
+
+### Bug Fixes
+
+* typings ([e8eb226](https://github.com/vinicunca/pohon/commit/e8eb226c1ddacaf108368a2ef8d208e943fa942a))
+
 ## [2.4.0](https://github.com/vinicunca/pohon/compare/v2.3.1...v2.4.0) (2026-10-24)
 
 ### Features
