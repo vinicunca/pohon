@@ -36,7 +36,9 @@ function onClickWrapper(e: MouseEvent) {
   const results: Array<unknown> = [];
 
   if (props.onClick) {
-    for (const onClick of Array.isArray(props.onClick) ? props.onClick : [props.onClick]) {
+    for (const onClick of Array.isArray(props.onClick)
+      ? props.onClick
+      : [props.onClick]) {
       results.push(onClick(e));
     }
   }

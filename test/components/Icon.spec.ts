@@ -6,7 +6,9 @@ import { renderToString } from 'vue/server-renderer';
 import Icon from '../../src/runtime/vue/components/Icon.vue';
 
 function renderIconToString(name: string) {
-  return renderToString(createSSRApp({ render: () => h(Icon, { name, mode: 'svg' }) }));
+  return renderToString(createSSRApp({
+    render: () => h(Icon, { name, mode: 'svg' }),
+  }));
 }
 
 describe('icon', () => {

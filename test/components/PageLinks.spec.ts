@@ -34,17 +34,83 @@ describe('pageLinks', () => {
 
   renderEach(PageLinks, [
     // Props
-    ['with links', { props }],
-    ['with title', { props: { ...props, title: 'Resources' } }],
-    ['with as', { props: { ...props, as: 'div' } }],
-    ['with class', { props: { ...props, class: 'gap-1.5' } }],
-    ['with ui', { props: { ...props, ui: { list: 'gap-3' } } }],
+    [
+      'with links',
+      { props },
+    ],
+    [
+      'with title',
+      {
+        props: { ...props, title: 'Resources' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'div' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'gap-1.5' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { list: 'gap-3' },
+        },
+      },
+    ],
     // Slots
-    ['with title slot', { props, slots: { title: () => 'Title slot' } }],
-    ['with link slot', { props, slots: { link: () => 'Link slot' } }],
-    ['with link-leading slot', { props, slots: { 'link-leading': () => 'Link leading slot' } }],
-    ['with link-label slot', { props, slots: { 'link-label': () => 'Link label slot' } }],
-    ['with link-trailing slot', { props, slots: { 'link-trailing': () => 'Link trailing slot' } }],
+    [
+      'with title slot',
+      {
+        props,
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with link slot',
+      {
+        props,
+        slots: {
+          link: () => 'Link slot',
+        },
+      },
+    ],
+    [
+      'with link-leading slot',
+      {
+        props,
+        slots: {
+          'link-leading': () => 'Link leading slot',
+        },
+      },
+    ],
+    [
+      'with link-label slot',
+      {
+        props,
+        slots: {
+          'link-label': () => 'Link label slot',
+        },
+      },
+    ],
+    [
+      'with link-trailing slot',
+      {
+        props,
+        slots: {
+          'link-trailing': () => 'Link trailing slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

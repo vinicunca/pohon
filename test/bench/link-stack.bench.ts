@@ -16,12 +16,32 @@ import Link from '../../src/runtime/vue/overrides/vue-router/Link.vue';
 //   PLink custom + PLinkBase       — the exact pattern Button/NavigationMenu use
 //   PButton                        — full component
 const CASES: Array<[string, (cls: string) => any]> = [
-  ['plain <button>', (cls) => h('button', { class: cls, type: 'button' }, 'x')],
-  ['Primitive', (cls) => h(Primitive, { as: 'button', class: cls }, () => 'x')],
-  ['PLinkBase', (cls) => h(LinkBase, { class: cls }, () => 'x')],
-  ['PLink (default slot)', (cls) => h(Link, { class: cls }, () => 'x')],
-  ['PLink custom + PLinkBase', (cls) => h(Link, { custom: true }, { default: ({ active: _active, ...slotProps }: any) => h(LinkBase, { ...slotProps, class: cls }, () => 'x') })],
-  ['PButton', (cls) => h(Button, { label: 'x', class: cls })],
+  [
+    'plain <button>',
+    (cls) => h('button', { class: cls, type: 'button' }, 'x'),
+  ],
+  [
+    'Primitive',
+    (cls) => h(Primitive, { as: 'button', class: cls }, () => 'x'),
+  ],
+  [
+    'PLinkBase',
+    (cls) => h(LinkBase, { class: cls }, () => 'x'),
+  ],
+  [
+    'PLink (default slot)',
+    (cls) => h(Link, { class: cls }, () => 'x'),
+  ],
+  [
+    'PLink custom + PLinkBase',
+    (cls) => h(Link, { custom: true }, {
+      default: ({ active: _active, ...slotProps }: any) => h(LinkBase, { ...slotProps, class: cls }, () => 'x'),
+    }),
+  ],
+  [
+    'PButton',
+    (cls) => h(Button, { label: 'x', class: cls }),
+  ],
 ];
 
 function makeParent(render: (cls: string) => any) {
@@ -36,7 +56,9 @@ function makeParent(render: (cls: string) => any) {
 describe('mount', () => {
   for (const [name, render] of CASES) {
     bench(name, async () => {
-      const wrapper = await mountSuspended(makeParent(render), { props: { cls: 'p-2' } });
+      const wrapper = await mountSuspended(makeParent(render), {
+        props: { cls: 'p-2' },
+      });
       wrapper.unmount();
     });
   }
@@ -54,7 +76,9 @@ describe('re-render', () => {
       // Mounted lazily on the first call: CodSpeed's analysis runner invokes the
       // bench function without tinybench's `setup`/`teardown` options.
       bench(`${name} x${CYCLES}`, async () => {
-        wrapper ??= await mountSuspended(makeParent(render), { props: { cls: 'p-2' } });
+        wrapper ??= await mountSuspended(makeParent(render), {
+          props: { cls: 'p-2' },
+        });
         for (let i = 0; i < CYCLES; i++) {
           await wrapper.setProps({ cls: 'p-3' });
           await wrapper.setProps({ cls: 'p-2' });

@@ -14,44 +14,224 @@ describe('button', () => {
 
   renderEach(Button, [
     // Props
-    ['with label', { props: { label: 'Button' } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { label: 'Button', size } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { label: 'Button', variant } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { label: 'Button', variant, color: 'neutral' } }]),
-    ...variants.map((activeVariant: string) => [`with active variant ${activeVariant}`, { props: { label: 'Button', active: true, activeVariant } }]),
-    ['with icon', { props: { icon: 'i-lucide-rocket' } }],
-    ['with leading and icon', { props: { leading: true, icon: 'i-lucide-arrow-left' } }],
-    ['with leadingIcon', { props: { leadingIcon: 'i-lucide-arrow-left' } }],
-    ['with trailing and icon', { props: { trailing: true, icon: 'i-lucide-arrow-right' } }],
-    ['with trailingIcon', { props: { trailingIcon: 'i-lucide-arrow-right' } }],
-    ['with avatar', { props: { avatar: { src: 'https://github.com/praburangki.png' } } }],
-    ['with avatar and leadingIcon', { props: { avatar: { src: 'https://github.com/praburangki.png' }, leadingIcon: 'i-lucide-arrow-left' } }],
-    ['with avatar and trailingIcon', { props: { avatar: { src: 'https://github.com/praburangki.png' }, trailingIcon: 'i-lucide-arrow-right' } }],
-    ['with loading', { props: { loading: true } }],
-    ['with loading and avatar', { props: { loading: true, avatar: { src: 'https://github.com/praburangki.png' } } }],
-    ['with loading trailing', { props: { loading: true, trailing: true } }],
-    ['with loading trailing and avatar', { props: { loading: true, trailing: true, avatar: { src: 'https://github.com/praburangki.png' } } }],
-    ['with loadingIcon', { props: { loading: true, loadingIcon: 'i-lucide-loader' } }],
-    ['with disabled', { props: { label: 'Button', disabled: true } }],
-    ['with disabled and with link', { props: { label: 'Button', disabled: true, to: '/link' } }],
-    ['with block', { props: { label: 'Button', block: true } }],
-    ['with square', { props: { label: 'Button', square: true } }],
-    ['with as', { props: { label: 'Button', as: 'div' } }],
-    ['with class', { props: { label: 'Button', class: 'rounded-full font-700' } }],
-    ['with activeClass', { props: { label: 'Button', active: true, activeClass: 'font-700' } }],
-    ['with inactiveClass', { props: { label: 'Button', active: false, inactiveClass: 'font-light' } }],
-    ['with ui', { props: { label: 'Button', ui: { label: 'font-700' } } }],
+    [
+      'with label',
+      {
+        props: { label: 'Button' },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { label: 'Button', size },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant}`,
+      {
+        props: { label: 'Button', variant },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant}`,
+      {
+        props: { label: 'Button', variant, color: 'neutral' },
+      },
+    ]),
+    ...variants.map((activeVariant: string) => [
+      `with active variant ${activeVariant}`,
+      {
+        props: { label: 'Button', active: true, activeVariant },
+      },
+    ]),
+    [
+      'with icon',
+      {
+        props: { icon: 'i-lucide-rocket' },
+      },
+    ],
+    [
+      'with leading and icon',
+      {
+        props: { leading: true, icon: 'i-lucide-arrow-left' },
+      },
+    ],
+    [
+      'with leadingIcon',
+      {
+        props: { leadingIcon: 'i-lucide-arrow-left' },
+      },
+    ],
+    [
+      'with trailing and icon',
+      {
+        props: { trailing: true, icon: 'i-lucide-arrow-right' },
+      },
+    ],
+    [
+      'with trailingIcon',
+      {
+        props: { trailingIcon: 'i-lucide-arrow-right' },
+      },
+    ],
+    [
+      'with avatar',
+      {
+        props: {
+          avatar: { src: 'https://github.com/praburangki.png' },
+        },
+      },
+    ],
+    [
+      'with avatar and leadingIcon',
+      {
+        props: {
+          avatar: { src: 'https://github.com/praburangki.png' },
+          leadingIcon: 'i-lucide-arrow-left',
+        },
+      },
+    ],
+    [
+      'with avatar and trailingIcon',
+      {
+        props: {
+          avatar: { src: 'https://github.com/praburangki.png' },
+          trailingIcon: 'i-lucide-arrow-right',
+        },
+      },
+    ],
+    [
+      'with loading',
+      {
+        props: { loading: true },
+      },
+    ],
+    [
+      'with loading and avatar',
+      {
+        props: {
+          loading: true,
+          avatar: { src: 'https://github.com/praburangki.png' },
+        },
+      },
+    ],
+    [
+      'with loading trailing',
+      {
+        props: { loading: true, trailing: true },
+      },
+    ],
+    [
+      'with loading trailing and avatar',
+      {
+        props: {
+          loading: true,
+          trailing: true,
+          avatar: { src: 'https://github.com/praburangki.png' },
+        },
+      },
+    ],
+    [
+      'with loadingIcon',
+      {
+        props: { loading: true, loadingIcon: 'i-lucide-loader' },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { label: 'Button', disabled: true },
+      },
+    ],
+    [
+      'with disabled and with link',
+      {
+        props: { label: 'Button', disabled: true, to: '/link' },
+      },
+    ],
+    [
+      'with block',
+      {
+        props: { label: 'Button', block: true },
+      },
+    ],
+    [
+      'with square',
+      {
+        props: { label: 'Button', square: true },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { label: 'Button', as: 'div' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { label: 'Button', class: 'rounded-full font-700' },
+      },
+    ],
+    [
+      'with activeClass',
+      {
+        props: { label: 'Button', active: true, activeClass: 'font-700' },
+      },
+    ],
+    [
+      'with inactiveClass',
+      {
+        props: { label: 'Button', active: false, inactiveClass: 'font-light' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          label: 'Button',
+          ui: { label: 'font-700' },
+        },
+      },
+    ],
     // Slots
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
-    ['with leading slot', { slots: { leading: () => 'Leading slot' } }],
-    ['with trailing slot', { slots: { trailing: () => 'Trailing slot' } }],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with leading slot',
+      {
+        slots: {
+          leading: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with trailing slot',
+      {
+        slots: {
+          trailing: () => 'Trailing slot',
+        },
+      },
+    ],
   ]);
 
   it.each([
-    ['sync', () => {
-      throw new Error('click error');
-    }],
-    ['async', () => Promise.reject(new Error('click error'))],
+    [
+      'sync',
+      () => {
+        throw new Error('click error');
+      },
+    ],
+    [
+      'async',
+      () => Promise.reject(new Error('click error')),
+    ],
   ])('propagates %s click handler errors to onErrorCaptured', async (_, onClick) => {
     const onError = vi.fn(() => false);
     const wrapper = await mountSuspended({
@@ -154,7 +334,9 @@ describe('button', () => {
     const wrapper = await mountSuspended(Button, {
       props: {
         label: 'Button',
-        ui: { label: () => 'text-3xl font-700' },
+        ui: {
+          label: () => 'text-3xl font-700',
+        },
       },
     });
 

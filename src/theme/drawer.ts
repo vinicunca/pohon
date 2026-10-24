@@ -49,77 +49,90 @@ export default (options: Required<ModuleOptions>) => ({
       true: '',
     },
   },
-  compoundVariants: [{
-    direction: ['top', 'bottom'],
-    class: {
-      content: 'h-auto max-h-[96%]',
-      handle: 'w-12 h-1.5 mx-auto',
+  compoundVariants: [
+    {
+      direction: ['top', 'bottom'],
+      class: {
+        content: 'h-auto max-h-[96%]',
+        handle: 'w-12 h-1.5 mx-auto',
+      },
     },
-  }, {
-    direction: ['top', 'bottom'],
-    snapPoints: true,
-    class: {
-      content: 'h-full',
+    {
+      direction: ['top', 'bottom'],
+      snapPoints: true,
+      class: {
+        content: 'h-full',
+      },
     },
-  }, {
-    direction: ['right', 'left'],
-    class: {
-      content: 'w-auto max-w-[calc(100%-2rem)]',
-      handle: 'h-12 w-1.5 my-auto',
+    {
+      direction: ['right', 'left'],
+      class: {
+        content: 'w-auto max-w-[calc(100%-2rem)]',
+        handle: 'h-12 w-1.5 my-auto',
+      },
     },
-  }, {
-    direction: ['right', 'left'],
-    snapPoints: true,
-    class: {
-      content: 'w-full',
+    {
+      direction: ['right', 'left'],
+      snapPoints: true,
+      class: {
+        content: 'w-full',
+      },
     },
-  }, {
-    direction: 'top',
-    inset: true,
-    class: {
-      content: 'inset-x-4 top-4',
+    {
+      direction: 'top',
+      inset: true,
+      class: {
+        content: 'inset-x-4 top-4',
+      },
     },
-  }, {
-    direction: 'top',
-    inset: false,
-    class: {
-      content: 'inset-x-0 top-0 rounded-b-lg',
+    {
+      direction: 'top',
+      inset: false,
+      class: {
+        content: 'inset-x-0 top-0 rounded-b-lg',
+      },
     },
-  }, {
-    direction: 'bottom',
-    inset: true,
-    class: {
-      content: 'inset-x-4 bottom-4',
+    {
+      direction: 'bottom',
+      inset: true,
+      class: {
+        content: 'inset-x-4 bottom-4',
+      },
     },
-  }, {
-    direction: 'bottom',
-    inset: false,
-    class: {
-      content: 'inset-x-0 bottom-0 rounded-t-lg',
+    {
+      direction: 'bottom',
+      inset: false,
+      class: {
+        content: 'inset-x-0 bottom-0 rounded-t-lg',
+      },
     },
-  }, {
-    direction: 'left',
-    inset: true,
-    class: {
-      content: 'inset-y-4 left-4',
+    {
+      direction: 'left',
+      inset: true,
+      class: {
+        content: 'inset-y-4 left-4',
+      },
     },
-  }, {
-    direction: 'left',
-    inset: false,
-    class: {
-      content: 'inset-y-0 left-0 rounded-r-lg',
+    {
+      direction: 'left',
+      inset: false,
+      class: {
+        content: 'inset-y-0 left-0 rounded-r-lg',
+      },
     },
-  }, {
-    direction: 'right',
-    inset: true,
-    class: {
-      content: 'inset-y-4 right-4',
+    {
+      direction: 'right',
+      inset: true,
+      class: {
+        content: 'inset-y-4 right-4',
+      },
     },
-  }, {
-    direction: 'right',
-    inset: false,
-    class: {
-      content: 'inset-y-0 right-0 rounded-l-lg',
+    {
+      direction: 'right',
+      inset: false,
+      class: {
+        content: 'inset-y-0 right-0 rounded-l-lg',
+      },
     },
-  }],
+  ],
 });

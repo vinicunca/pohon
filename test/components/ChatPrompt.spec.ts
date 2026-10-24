@@ -11,16 +11,71 @@ describe('chatPrompt', () => {
 
   renderEach(ChatPrompt, [
     // Props
-    ['with placeholder', { props: { placeholder: 'Placeholder' } }],
-    ['with error', { props: { error: new Error('Error') } }],
-    ...variants.map((variant: string) => [`with variant ${variant}`, { props: { variant } }]),
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'p-5' } }],
-    ['with ui', { props: { ui: { footer: 'justify-end' } } }],
+    [
+      'with placeholder',
+      {
+        props: { placeholder: 'Placeholder' },
+      },
+    ],
+    [
+      'with error',
+      {
+        props: {
+          error: new Error('Error'),
+        },
+      },
+    ],
+    ...variants.map((variant: string) => [
+      `with variant ${variant}`,
+      {
+        props: { variant },
+      },
+    ]),
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'p-5' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { footer: 'justify-end' },
+        },
+      },
+    ],
     // Slots
-    ['with header slot', { slots: { header: () => 'Header slot' } }],
-    ['with footer slot', { slots: { footer: () => 'Footer slot' } }],
-    ['with body slot', { slots: { body: () => 'Body slot' } }],
+    [
+      'with header slot',
+      {
+        slots: {
+          header: () => 'Header slot',
+        },
+      },
+    ],
+    [
+      'with footer slot',
+      {
+        slots: {
+          footer: () => 'Footer slot',
+        },
+      },
+    ],
+    [
+      'with body slot',
+      {
+        slots: {
+          body: () => 'Body slot',
+        },
+      },
+    ],
   ]);
 
   it('emits submit on Enter', async () => {
@@ -118,7 +173,9 @@ describe('chatPrompt', () => {
 
   it('replaces the textarea with the body slot', async () => {
     const wrapper = await mountSuspended(ChatPrompt, {
-      slots: { body: () => h('div', { 'data-test': 'editor' }, 'Custom body') },
+      slots: {
+        body: () => h('div', { 'data-test': 'editor' }, 'Custom body'),
+      },
     });
 
     expect(wrapper.find('textarea').exists()).toBe(false);

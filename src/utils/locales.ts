@@ -11,8 +11,13 @@ export function getLocaleKeys(localeDir: string): Array<string> {
 }
 
 export function resolveLocaleKey(locale: I18nLocale, keys: Array<string>): string | undefined {
-  const tags = (typeof locale === 'string' ? [locale] : [locale.language, locale.code]).filter((tag): tag is string => !!tag);
-  const candidates = [...tags, ...tags.map((tag) => tag.split(/[-_]/)[0]!)].map((tag) => tag.toLowerCase().replace(/-/g, '_'));
+  const tags = (typeof locale === 'string'
+    ? [locale]
+    : [locale.language, locale.code]).filter((tag): tag is string => !!tag);
+  const candidates = [
+    ...tags,
+    ...tags.map((tag) => tag.split(/[-_]/)[0]!),
+  ].map((tag) => tag.toLowerCase().replace(/-/g, '_'));
 
   const key = candidates.find((key) => keys.includes(key));
   if (key) {
@@ -39,7 +44,12 @@ export function generateI18nPlugin(locales: Array<I18nLocale>, keys: Array<strin
     }
 
     imports.add(key);
-    entries.push([typeof locale === 'string' ? locale : locale.code, key]);
+    entries.push([
+      typeof locale === 'string'
+        ? locale
+        : locale.code,
+      key,
+    ]);
   }
 
   return [

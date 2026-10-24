@@ -74,7 +74,10 @@ const props = useComponentProps('formField', _props);
 
 const appConfig = useAppConfig() as FormField['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.formField || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.formField || {}),
+})({
   size: props.size,
   required: props.required,
   orientation: props.orientation,
@@ -109,7 +112,9 @@ provide(formFieldInjectionKey, computed(() => ({
   description: props.description,
   help: props.help,
   ariaId,
-  labelId: (props.label || !!slots.label) ? `${ariaId}-label` : undefined,
+  labelId: (props.label || !!slots.label)
+    ? `${ariaId}-label`
+    : undefined,
 }) as FormFieldInjectedOptions<FormFieldProps>));
 </script>
 

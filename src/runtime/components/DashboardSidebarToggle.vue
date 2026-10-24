@@ -53,9 +53,15 @@ const buttonProps = useForwardProps(reactiveOmit(props, 'icon', 'side', 'class')
 
 const { t } = useLocale();
 const appConfig = useAppConfig() as DashboardSidebarToggle['AppConfig'];
-const { sidebarOpen, toggleSidebar } = useDashboard({ sidebarOpen: ref(false), toggleSidebar: () => {} });
+const { sidebarOpen, toggleSidebar } = useDashboard({
+  sidebarOpen: ref(false),
+  toggleSidebar: () => {},
+});
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardSidebarToggle || {}) }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.dashboardSidebarToggle || {}),
+}));
 </script>
 
 <template>

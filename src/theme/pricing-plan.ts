@@ -67,19 +67,22 @@ export default {
       },
     },
   },
-  compoundVariants: [{
-    orientation: 'horizontal',
-    variant: 'soft',
-    class: {
-      root: 'divide-border-accented',
+  compoundVariants: [
+    {
+      orientation: 'horizontal',
+      variant: 'soft',
+      class: {
+        root: 'divide-border-accented',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    variant: 'subtle',
-    class: {
-      root: 'divide-border-accented',
+    {
+      orientation: 'horizontal',
+      variant: 'subtle',
+      class: {
+        root: 'divide-border-accented',
+      },
     },
-  }],
+  ],
   defaultVariants: {
     variant: 'outline',
   },

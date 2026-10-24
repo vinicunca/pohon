@@ -9,10 +9,13 @@ export default (options: Required<ModuleOptions>) => ({
   },
   variants: {
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        range: `bg-${color}`,
-        thumb: `ring-${color} outline-${color}/25`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          range: `bg-${color}`,
+          thumb: `ring-${color} outline-${color}/25`,
+        },
+      ])),
       neutral: {
         range: 'bg-background-inverted',
         thumb: 'ring-border-inverted outline-border-inverted/25',
@@ -51,67 +54,78 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
   },
-  compoundVariants: [{
-    orientation: 'horizontal',
-    size: 'xs',
-    class: {
-      track: 'h-[6px]',
+  compoundVariants: [
+    {
+      orientation: 'horizontal',
+      size: 'xs',
+      class: {
+        track: 'h-[6px]',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: 'sm',
-    class: {
-      track: 'h-[7px]',
+    {
+      orientation: 'horizontal',
+      size: 'sm',
+      class: {
+        track: 'h-[7px]',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: 'md',
-    class: {
-      track: 'h-[8px]',
+    {
+      orientation: 'horizontal',
+      size: 'md',
+      class: {
+        track: 'h-[8px]',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: 'lg',
-    class: {
-      track: 'h-[9px]',
+    {
+      orientation: 'horizontal',
+      size: 'lg',
+      class: {
+        track: 'h-[9px]',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: 'xl',
-    class: {
-      track: 'h-[10px]',
+    {
+      orientation: 'horizontal',
+      size: 'xl',
+      class: {
+        track: 'h-[10px]',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'xs',
-    class: {
-      track: 'w-[6px]',
+    {
+      orientation: 'vertical',
+      size: 'xs',
+      class: {
+        track: 'w-[6px]',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'sm',
-    class: {
-      track: 'w-[7px]',
+    {
+      orientation: 'vertical',
+      size: 'sm',
+      class: {
+        track: 'w-[7px]',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'md',
-    class: {
-      track: 'w-[8px]',
+    {
+      orientation: 'vertical',
+      size: 'md',
+      class: {
+        track: 'w-[8px]',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'lg',
-    class: {
-      track: 'w-[9px]',
+    {
+      orientation: 'vertical',
+      size: 'lg',
+      class: {
+        track: 'w-[9px]',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'xl',
-    class: {
-      track: 'w-[10px]',
+    {
+      orientation: 'vertical',
+      size: 'xl',
+      class: {
+        track: 'w-[10px]',
+      },
     },
-  }],
+  ],
   defaultVariants: {
     size: 'md',
     color: 'primary',

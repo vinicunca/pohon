@@ -32,25 +32,152 @@ describe('toast', () => {
 
   renderEach(ToastWrapper, [
     // Props
-    ['with title', { props }],
-    ['with description', { props: { ...props, description: 'This is a toast' } }],
-    ['with icon', { props: { ...props, icon: 'i-lucide-rocket' } }],
-    ['with avatar', { props: { ...props, avatar: { src: 'https://github.com/praburangki.png' } } }],
-    ['with actions', { props: { ...props, actions: [{ label: 'Action' }] } }],
-    ['with orientation vertical', { props: { ...props, icon: 'i-lucide-rocket', description: 'This is a toast', actions: [{ label: 'Action' }], orientation: 'vertical' } }],
-    ['with orientation horizontal', { props: { ...props, icon: 'i-lucide-rocket', description: 'This is a toast', actions: [{ label: 'Action' }], orientation: 'horizontal' } }],
-    ['without close', { props: { ...props, close: false } }],
-    ['with closeIcon', { props: { ...props, closeIcon: 'i-lucide-trash' } }],
-    ['with type', { props: { ...props, type: 'background' } }],
-    ['with color neutral', { props: { ...props, color: 'neutral' } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'bg-background-elevated/50' } }],
-    ['with ui', { props: { ...props, ui: { title: 'font-700' } } }],
+    [
+      'with title',
+      { props },
+    ],
+    [
+      'with description',
+      {
+        props: { ...props, description: 'This is a toast' },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { ...props, icon: 'i-lucide-rocket' },
+      },
+    ],
+    [
+      'with avatar',
+      {
+        props: {
+          ...props,
+          avatar: { src: 'https://github.com/praburangki.png' },
+        },
+      },
+    ],
+    [
+      'with actions',
+      {
+        props: {
+          ...props,
+          actions: [
+            { label: 'Action' },
+          ],
+        },
+      },
+    ],
+    [
+      'with orientation vertical',
+      {
+        props: {
+          ...props,
+          icon: 'i-lucide-rocket',
+          description: 'This is a toast',
+          actions: [
+            { label: 'Action' },
+          ],
+          orientation: 'vertical',
+        },
+      },
+    ],
+    [
+      'with orientation horizontal',
+      {
+        props: {
+          ...props,
+          icon: 'i-lucide-rocket',
+          description: 'This is a toast',
+          actions: [
+            { label: 'Action' },
+          ],
+          orientation: 'horizontal',
+        },
+      },
+    ],
+    [
+      'without close',
+      {
+        props: { ...props, close: false },
+      },
+    ],
+    [
+      'with closeIcon',
+      {
+        props: { ...props, closeIcon: 'i-lucide-trash' },
+      },
+    ],
+    [
+      'with type',
+      {
+        props: { ...props, type: 'background' },
+      },
+    ],
+    [
+      'with color neutral',
+      {
+        props: { ...props, color: 'neutral' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'bg-background-elevated/50' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { title: 'font-700' },
+        },
+      },
+    ],
     // Slots
-    ['with leading slot', { props, slots: { leading: () => 'Leading slot' } }],
-    ['with title slot', { props, slots: { title: () => 'Title slot' } }],
-    ['with description slot', { props, slots: { description: () => 'Description slot' } }],
-    ['with close slot', { props, slots: { close: () => 'Close slot' } }],
+    [
+      'with leading slot',
+      {
+        props,
+        slots: {
+          leading: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with title slot',
+      {
+        props,
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        props,
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with close slot',
+      {
+        props,
+        slots: {
+          close: () => 'Close slot',
+        },
+      },
+    ],
   ]);
 
   it('calls onClick once per click', async () => {
@@ -58,7 +185,9 @@ describe('toast', () => {
     const toast = useToast();
     toast.clear();
 
-    const wrapper = await mountSuspended(Toaster, { props: { portal: false } });
+    const wrapper = await mountSuspended(Toaster, {
+      props: { portal: false },
+    });
     const body = toast.add({ title: 'Toast', onClick });
 
     await vi.waitFor(() => expect(wrapper.find('[data-slot="base"]').exists()).toBe(true), { timeout: 4000 });
@@ -74,34 +203,54 @@ describe('toast', () => {
     const toast = useToast();
     toast.clear();
 
-    const wrapper = await mountSuspended(Toaster, { props: { portal: false, expand: false } });
+    const wrapper = await mountSuspended(Toaster, {
+      props: { portal: false, expand: false },
+    });
     toast.add({ title: 'Back' });
     toast.add({ title: 'Front' });
 
     await vi.waitFor(() => expect(wrapper.findAll('li[data-slot="base"]')).toHaveLength(2), { timeout: 4000 });
     const [back, front] = wrapper.findAll('li[data-slot="base"]');
 
-    expect([back!.attributes('data-collapsed'), back!.attributes('data-front')]).toEqual(['true', 'false']);
-    expect([front!.attributes('data-collapsed'), front!.attributes('data-front')]).toEqual(['true', 'true']);
+    expect([
+      back!.attributes('data-collapsed'),
+      back!.attributes('data-front'),
+    ]).toEqual(['true', 'false']);
+    expect([
+      front!.attributes('data-collapsed'),
+      front!.attributes('data-front'),
+    ]).toEqual(['true', 'true']);
 
     toast.clear();
   });
 
   it('labels the toasts with the label prop', async () => {
-    const wrapper = await mountSuspended(Toaster, { props: { portal: false, label: 'Alert' } });
+    const wrapper = await mountSuspended(Toaster, {
+      props: { portal: false, label: 'Alert' },
+    });
 
     expect(wrapper.findComponent(ToastProvider).props('label')).toBe('Alert');
   });
 
   it('does not pass attributes down to the provider', async () => {
-    const wrapper = await mountSuspended(Toaster, { props: { portal: false }, attrs: { limit: 1 } });
+    const wrapper = await mountSuspended(Toaster, {
+      props: { portal: false },
+      attrs: { limit: 1 },
+    });
 
     expect(wrapper.findComponent(ToastProvider).props('limit')).toBeUndefined();
   });
 
   it.each(['vertical', 'horizontal'] as const)('keeps the toast open when an action has closeOnClick false with orientation %s', async (orientation) => {
     const wrapper = await mountSuspended(ToastWrapper, {
-      props: { title: 'Toast', orientation, actions: [{ label: 'Keep', closeOnClick: false }, { label: 'Close' }] },
+      props: {
+        title: 'Toast',
+        orientation,
+        actions: [
+          { label: 'Keep', closeOnClick: false },
+          { label: 'Close' },
+        ],
+      },
     });
 
     const [keep, close] = wrapper.findAll('[data-slot="actions"] button');
@@ -111,7 +260,9 @@ describe('toast', () => {
     expect(wrapper.findComponent(Toast).emitted('update:open')).toBeUndefined();
 
     await close!.trigger('click');
-    expect(wrapper.findComponent(Toast).emitted('update:open')).toEqual([[false]]);
+    expect(wrapper.findComponent(Toast).emitted('update:open')).toEqual([
+      [false],
+    ]);
   });
 
   it('passes accessibility tests', async () => {
@@ -120,7 +271,9 @@ describe('toast', () => {
         title: 'Title',
         description: 'Description',
         avatar: { src: 'https://github.com/praburangki.png', alt: 'praburangki' },
-        actions: [{ label: 'Action' }],
+        actions: [
+          { label: 'Action' },
+        ],
       },
     });
     expect(await axe(wrapper.element, {

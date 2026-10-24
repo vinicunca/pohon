@@ -136,7 +136,10 @@ const contentEvents = computed(() => {
 
 const [DefineContentTemplate, ReuseContentTemplate] = createReusableTemplate();
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.modal || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.modal || {}),
+})({
   transition: props.transition,
   fullscreen: props.fullscreen,
   overlay: props.overlay,

@@ -95,7 +95,10 @@ const modelValue = defineModel<string | number>();
 
 const appConfig = useAppConfig() as Timeline['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.timeline || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.timeline || {}),
+})({
   orientation: props.orientation,
   size: props.size,
   color: props.color,
@@ -110,7 +113,9 @@ const currentStepIndex = computed(() => {
   }
 
   if (props.reverse) {
-    return value != null ? props.items.length - 1 - value : -1;
+    return value != null
+      ? props.items.length - 1 - value
+      : -1;
   } else {
     return value ?? -1;
   }
@@ -125,9 +130,13 @@ function getItemState(index: number): 'active' | 'completed' | undefined {
   }
 
   if (props.reverse) {
-    return index > currentStepIndex.value ? 'completed' : undefined;
+    return index > currentStepIndex.value
+      ? 'completed'
+      : undefined;
   } else {
-    return index < currentStepIndex.value ? 'completed' : undefined;
+    return index < currentStepIndex.value
+      ? 'completed'
+      : undefined;
   }
 }
 

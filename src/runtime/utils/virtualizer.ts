@@ -46,6 +46,8 @@ export function getEstimateSize(items: Array<any>, size: 'xs' | 'sm' | 'md' | 'l
   }
 
   return (index: number) => {
-    return itemHasDescription(items[index], descriptionKey) ? sizeWithDescription : sizeWithoutDescription;
+    return itemHasDescription(items[index], descriptionKey)
+      ? sizeWithDescription
+      : sizeWithoutDescription;
   };
 }

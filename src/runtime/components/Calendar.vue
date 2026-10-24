@@ -169,12 +169,82 @@ const _props = withDefaults(defineProps<CalendarProps<R, M>>(), {
 });
 const emits = defineEmits<CalendarEmits<R, M>>();
 defineSlots<CalendarSlots>();
-const SingleCalendar = { Root: CalendarRoot, Header: CalendarHeader, Heading: CalendarHeading, Grid: CalendarGrid, Cell: CalendarCell, HeadCell: CalendarHeadCell, Next: CalendarNext, Prev: CalendarPrev, GridHead: CalendarGridHead, GridBody: CalendarGridBody, GridRow: CalendarGridRow, CellTrigger: CalendarCellTrigger };
-const RangeCalendar = { Root: RangeCalendarRoot, Header: RangeCalendarHeader, Heading: RangeCalendarHeading, Grid: RangeCalendarGrid, Cell: RangeCalendarCell, HeadCell: RangeCalendarHeadCell, Next: RangeCalendarNext, Prev: RangeCalendarPrev, GridHead: RangeCalendarGridHead, GridBody: RangeCalendarGridBody, GridRow: RangeCalendarGridRow, CellTrigger: RangeCalendarCellTrigger };
-const MonthPicker = { Root: MonthPickerRoot, Header: MonthPickerHeader, Heading: MonthPickerHeading, Grid: MonthPickerGrid, Cell: MonthPickerCell, Next: MonthPickerNext, Prev: MonthPickerPrev, GridBody: MonthPickerGridBody, GridRow: MonthPickerGridRow, CellTrigger: MonthPickerCellTrigger };
-const MonthRangePicker = { Root: MonthRangePickerRoot, Header: MonthRangePickerHeader, Heading: MonthRangePickerHeading, Grid: MonthRangePickerGrid, Cell: MonthRangePickerCell, Next: MonthRangePickerNext, Prev: MonthRangePickerPrev, GridBody: MonthRangePickerGridBody, GridRow: MonthRangePickerGridRow, CellTrigger: MonthRangePickerCellTrigger };
-const YearPicker = { Root: YearPickerRoot, Header: YearPickerHeader, Heading: YearPickerHeading, Grid: YearPickerGrid, Cell: YearPickerCell, Next: YearPickerNext, Prev: YearPickerPrev, GridBody: YearPickerGridBody, GridRow: YearPickerGridRow, CellTrigger: YearPickerCellTrigger };
-const YearRangePicker = { Root: YearRangePickerRoot, Header: YearRangePickerHeader, Heading: YearRangePickerHeading, Grid: YearRangePickerGrid, Cell: YearRangePickerCell, Next: YearRangePickerNext, Prev: YearRangePickerPrev, GridBody: YearRangePickerGridBody, GridRow: YearRangePickerGridRow, CellTrigger: YearRangePickerCellTrigger };
+const SingleCalendar = {
+  Root: CalendarRoot,
+  Header: CalendarHeader,
+  Heading: CalendarHeading,
+  Grid: CalendarGrid,
+  Cell: CalendarCell,
+  HeadCell: CalendarHeadCell,
+  Next: CalendarNext,
+  Prev: CalendarPrev,
+  GridHead: CalendarGridHead,
+  GridBody: CalendarGridBody,
+  GridRow: CalendarGridRow,
+  CellTrigger: CalendarCellTrigger,
+};
+const RangeCalendar = {
+  Root: RangeCalendarRoot,
+  Header: RangeCalendarHeader,
+  Heading: RangeCalendarHeading,
+  Grid: RangeCalendarGrid,
+  Cell: RangeCalendarCell,
+  HeadCell: RangeCalendarHeadCell,
+  Next: RangeCalendarNext,
+  Prev: RangeCalendarPrev,
+  GridHead: RangeCalendarGridHead,
+  GridBody: RangeCalendarGridBody,
+  GridRow: RangeCalendarGridRow,
+  CellTrigger: RangeCalendarCellTrigger,
+};
+const MonthPicker = {
+  Root: MonthPickerRoot,
+  Header: MonthPickerHeader,
+  Heading: MonthPickerHeading,
+  Grid: MonthPickerGrid,
+  Cell: MonthPickerCell,
+  Next: MonthPickerNext,
+  Prev: MonthPickerPrev,
+  GridBody: MonthPickerGridBody,
+  GridRow: MonthPickerGridRow,
+  CellTrigger: MonthPickerCellTrigger,
+};
+const MonthRangePicker = {
+  Root: MonthRangePickerRoot,
+  Header: MonthRangePickerHeader,
+  Heading: MonthRangePickerHeading,
+  Grid: MonthRangePickerGrid,
+  Cell: MonthRangePickerCell,
+  Next: MonthRangePickerNext,
+  Prev: MonthRangePickerPrev,
+  GridBody: MonthRangePickerGridBody,
+  GridRow: MonthRangePickerGridRow,
+  CellTrigger: MonthRangePickerCellTrigger,
+};
+const YearPicker = {
+  Root: YearPickerRoot,
+  Header: YearPickerHeader,
+  Heading: YearPickerHeading,
+  Grid: YearPickerGrid,
+  Cell: YearPickerCell,
+  Next: YearPickerNext,
+  Prev: YearPickerPrev,
+  GridBody: YearPickerGridBody,
+  GridRow: YearPickerGridRow,
+  CellTrigger: YearPickerCellTrigger,
+};
+const YearRangePicker = {
+  Root: YearRangePickerRoot,
+  Header: YearRangePickerHeader,
+  Heading: YearRangePickerHeading,
+  Grid: YearRangePickerGrid,
+  Cell: YearRangePickerCell,
+  Next: YearRangePickerNext,
+  Prev: YearRangePickerPrev,
+  GridBody: YearRangePickerGridBody,
+  GridRow: YearRangePickerGridRow,
+  CellTrigger: YearRangePickerCellTrigger,
+};
 
 const props = useComponentProps<CalendarProps<R, M>>('calendar', _props);
 
@@ -183,7 +253,11 @@ const appConfig = useAppConfig() as Calendar['AppConfig'];
 
 const VIEWS: Array<CalendarView> = ['day', 'month', 'year'];
 
-const minView = computed<CalendarView>(() => props.type === 'year' ? 'year' : props.type === 'month' ? 'month' : 'day');
+const minView = computed<CalendarView>(() => props.type === 'year'
+  ? 'year'
+  : props.type === 'month'
+    ? 'month'
+    : 'day');
 const maxView: CalendarView = 'year';
 
 const view = ref<CalendarView>(minView.value);
@@ -206,7 +280,9 @@ function setView(value: CalendarView) {
 
 function cycleView() {
   const max = VIEWS.indexOf(maxView);
-  const next = VIEWS.indexOf(view.value) >= max ? minView.value : VIEWS[VIEWS.indexOf(view.value) + 1]!;
+  const next = VIEWS.indexOf(view.value) >= max
+    ? minView.value
+    : VIEWS[VIEWS.indexOf(view.value) + 1]!;
   view.value = next;
 }
 
@@ -255,7 +331,9 @@ function onSelect(value: DateValue | DateRange) {
 }
 
 function paginateYear(date: DateValue, sign: -1 | 1) {
-  return sign === -1 ? date.subtract({ years: 1 }) : date.add({ years: 1 });
+  return sign === -1
+    ? date.subtract({ years: 1 })
+    : date.add({ years: 1 });
 }
 
 const Picker = computed(() => {
@@ -270,9 +348,34 @@ const Picker = computed(() => {
   return props.range ? RangeCalendar : SingleCalendar;
 }) as unknown as ComputedRef<Record<string, Component>>;
 
-const omittedProps = ['type', 'placeholder', 'range', 'modelValue', 'defaultValue', 'color', 'variant', 'size', 'monthControls', 'yearControls', 'viewControl', 'class', 'ui'];
+const omittedProps = [
+  'type',
+  'placeholder',
+  'range',
+  'modelValue',
+  'defaultValue',
+  'color',
+  'variant',
+  'size',
+  'monthControls',
+  'yearControls',
+  'viewControl',
+  'class',
+  'ui',
+];
 // Only declared by the day `Calendar` / `RangeCalendar` primitives, omitted in other views to avoid fallthrough attributes.
-const dayOnlyProps = ['pagedNavigation', 'weekStartsOn', 'weekdayFormat', 'fixedWeeks', 'numberOfMonths', 'isDateDisabled', 'isDateUnavailable', 'isDateHighlightable', 'disableDaysOutsideCurrentView', 'maximumDays'];
+const dayOnlyProps = [
+  'pagedNavigation',
+  'weekStartsOn',
+  'weekdayFormat',
+  'fixedWeeks',
+  'numberOfMonths',
+  'isDateDisabled',
+  'isDateUnavailable',
+  'isDateHighlightable',
+  'disableDaysOutsideCurrentView',
+  'maximumDays',
+];
 const monthOnlyProps = ['isMonthDisabled', 'isMonthUnavailable'];
 const yearOnlyProps = ['isYearDisabled', 'isYearUnavailable', 'yearsPerPage'];
 // Only declared by the range pickers, omitted when drilling above the terminal view since the picker is not a range picker there.
@@ -295,19 +398,38 @@ function cellProps(cellDate: DateValue, monthValue: DateValue) {
   return { day: cellDate, month: monthValue };
 }
 
-const nextYearIcon = computed(() => props.nextYearIcon || (dir.value === 'rtl' ? appConfig.ui.icons.chevronDoubleLeft : appConfig.ui.icons.chevronDoubleRight));
+const nextYearIcon = computed(() => props.nextYearIcon || (dir.value === 'rtl'
+  ? appConfig.ui.icons.chevronDoubleLeft
+  : appConfig.ui.icons.chevronDoubleRight));
 
-const nextMonthIcon = computed(() => props.nextMonthIcon || (dir.value === 'rtl' ? appConfig.ui.icons.chevronLeft : appConfig.ui.icons.chevronRight));
+const nextMonthIcon = computed(() => props.nextMonthIcon || (dir.value === 'rtl'
+  ? appConfig.ui.icons.chevronLeft
+  : appConfig.ui.icons.chevronRight));
 
-const prevYearIcon = computed(() => props.prevYearIcon || (dir.value === 'rtl' ? appConfig.ui.icons.chevronDoubleRight : appConfig.ui.icons.chevronDoubleLeft));
+const prevYearIcon = computed(() => props.prevYearIcon || (dir.value === 'rtl'
+  ? appConfig.ui.icons.chevronDoubleRight
+  : appConfig.ui.icons.chevronDoubleLeft));
 
-const prevMonthIcon = computed(() => props.prevMonthIcon || (dir.value === 'rtl' ? appConfig.ui.icons.chevronRight : appConfig.ui.icons.chevronLeft));
+const prevMonthIcon = computed(() => props.prevMonthIcon || (dir.value === 'rtl'
+  ? appConfig.ui.icons.chevronRight
+  : appConfig.ui.icons.chevronLeft));
 
-const prevLabel = computed(() => view.value === 'day' ? t('calendar.prevMonth') : t('calendar.prevYear'));
-const nextLabel = computed(() => view.value === 'day' ? t('calendar.nextMonth') : t('calendar.nextYear'));
-const calendarLabel = computed(() => view.value === 'year' ? t('calendar.yearPicker') : view.value === 'month' ? t('calendar.monthPicker') : t('calendar.label'));
+const prevLabel = computed(() => view.value === 'day'
+  ? t('calendar.prevMonth')
+  : t('calendar.prevYear'));
+const nextLabel = computed(() => view.value === 'day'
+  ? t('calendar.nextMonth')
+  : t('calendar.nextYear'));
+const calendarLabel = computed(() => view.value === 'year'
+  ? t('calendar.yearPicker')
+  : view.value === 'month'
+    ? t('calendar.monthPicker')
+    : t('calendar.label'));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.calendar || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.calendar || {}),
+})({
   color: props.color,
   size: props.size,
   variant: props.variant,

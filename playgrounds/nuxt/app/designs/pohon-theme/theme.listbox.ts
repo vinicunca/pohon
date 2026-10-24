@@ -91,9 +91,12 @@ export const themeListbox = {
       },
     },
     color: {
-      ...Object.fromEntries(BRANDS.map((color: string) => [color, {
-        root: `outline-${color}/25 has-focus-visible:outline-3 has-focus-visible:ring-${color}`,
-      }])),
+      ...Object.fromEntries(BRANDS.map((color: string) => [
+        color,
+        {
+          root: `outline-${color}/25 has-focus-visible:outline-3 has-focus-visible:ring-${color}`,
+        },
+      ])),
       neutral: {
         root: 'outline-border-inverted/25 has-focus-visible:outline-3 has-focus-visible:ring-border-inverted',
       },

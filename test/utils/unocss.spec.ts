@@ -4,7 +4,9 @@ import { pohonColors } from '../../src/unocss';
 
 describe('pohon semantic colors', () => {
   const uno = createGenerator({
-    presets: [presetWind4()],
+    presets: [
+      presetWind4(),
+    ],
     theme: { colors: pohonColors },
   });
 
@@ -42,9 +44,24 @@ describe('pohon semantic colors', () => {
   });
 
   it.each([
-    ['outline-border-inverted/25', 'outline-color', 'border-inverted', 25],
-    ['focus-visible:ring-border-accented/50', '--un-ring-color', 'border-accented', 50],
-    ['stroke-border-inverted/10', 'stroke', 'border-inverted', 10],
+    [
+      'outline-border-inverted/25',
+      'outline-color',
+      'border-inverted',
+      25,
+    ],
+    [
+      'focus-visible:ring-border-accented/50',
+      '--un-ring-color',
+      'border-accented',
+      50,
+    ],
+    [
+      'stroke-border-inverted/10',
+      'stroke',
+      'border-inverted',
+      10,
+    ],
   ])('preserves opacity in %s', async (utility, property, token, opacity) => {
     const { css, matched } = await (await uno).generate(utility, { preflights: false });
 

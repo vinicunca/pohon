@@ -38,22 +38,26 @@ describe('contentSearch', () => {
       title: 'Getting Started',
       path: '/getting-started',
       stem: '1.getting-started/1.index',
-      children: [{
-        title: 'Introduction',
-        path: '/getting-started',
-        stem: '1.getting-started/1.index',
-        icon: 'i-lucide-house',
-      }, {
-        title: 'Installation',
-        path: '/getting-started/installation',
-        stem: '1.getting-started/2.installation',
-        icon: 'i-lucide-square-play',
-      }, {
-        title: 'Theme',
-        path: '/getting-started/theme',
-        stem: '1.getting-started/3.theme',
-        icon: 'i-lucide-swatch-book',
-      }],
+      children: [
+        {
+          title: 'Introduction',
+          path: '/getting-started',
+          stem: '1.getting-started/1.index',
+          icon: 'i-lucide-house',
+        },
+        {
+          title: 'Installation',
+          path: '/getting-started/installation',
+          stem: '1.getting-started/2.installation',
+          icon: 'i-lucide-square-play',
+        },
+        {
+          title: 'Theme',
+          path: '/getting-started/theme',
+          stem: '1.getting-started/3.theme',
+          icon: 'i-lucide-swatch-book',
+        },
+      ],
     },
   ];
 
@@ -139,21 +143,87 @@ describe('contentSearch', () => {
     },
   ];
 
-  const props = { links, navigation, files, open: true, portal: false };
+  const props = {
+    links,
+    navigation,
+    files,
+    open: true,
+    portal: false,
+  };
 
   renderEach(ContentSearch, [
     // Props
-    ['with links', { props }],
-    ['with icon', { props: { ...props, icon: 'i-lucide-home' } }],
-    ['with placeholder', { props: { ...props, placeholder: 'Search' } }],
-    ['with loading', { props: { ...props, loading: true } }],
-    ['with loadingIcon', { props: { ...props, loading: true, loadingIcon: 'i-lucide-loading' } }],
-    ['without colorMode', { props: { ...props, colorMode: false } }],
-    ['with fullscreen', { props: { ...props, fullscreen: true } }],
-    ['with search function', { props: { ...props, search: async () => [], files: undefined } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { ...props, size } }]),
-    ['with ui', { props: { ...props, ui: { input: '[&>input]:text-lg' } } }],
-    ['with class', { props: { ...props, class: 'sm:max-w-5xl' } }],
+    [
+      'with links',
+      { props },
+    ],
+    [
+      'with icon',
+      {
+        props: { ...props, icon: 'i-lucide-home' },
+      },
+    ],
+    [
+      'with placeholder',
+      {
+        props: { ...props, placeholder: 'Search' },
+      },
+    ],
+    [
+      'with loading',
+      {
+        props: { ...props, loading: true },
+      },
+    ],
+    [
+      'with loadingIcon',
+      {
+        props: { ...props, loading: true, loadingIcon: 'i-lucide-loading' },
+      },
+    ],
+    [
+      'without colorMode',
+      {
+        props: { ...props, colorMode: false },
+      },
+    ],
+    [
+      'with fullscreen',
+      {
+        props: { ...props, fullscreen: true },
+      },
+    ],
+    [
+      'with search function',
+      {
+        props: {
+          ...props,
+          search: async () => [],
+          files: undefined,
+        },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { ...props, size },
+      },
+    ]),
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { input: '[&>input]:text-lg' },
+        },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'sm:max-w-5xl' },
+      },
+    ],
   ], async (_, options) => {
     const wrapper = await mountSuspended(ContentSearch, options);
     await vi.dynamicImportSettled();
@@ -174,7 +244,14 @@ describe('contentSearch', () => {
 
   it('mounts the modal once opened', async () => {
     const { open } = useContentSearch();
-    const wrapper = await mountSuspended(ContentSearch, { props: { links, navigation, files, portal: false } });
+    const wrapper = await mountSuspended(ContentSearch, {
+      props: {
+        links,
+        navigation,
+        files,
+        portal: false,
+      },
+    });
 
     expect(wrapper.findComponent(Modal).exists()).toBe(false);
 
@@ -188,7 +265,15 @@ describe('contentSearch', () => {
   });
 
   it('mounts the modal before opening with `unmountOnHide: false`', async () => {
-    const wrapper = await mountSuspended(ContentSearch, { props: { links, navigation, files, portal: false, unmountOnHide: false } });
+    const wrapper = await mountSuspended(ContentSearch, {
+      props: {
+        links,
+        navigation,
+        files,
+        portal: false,
+        unmountOnHide: false,
+      },
+    });
     await vi.dynamicImportSettled();
 
     expect(wrapper.findComponent(CommandPalette).text()).toContain('Docs');
@@ -196,7 +281,15 @@ describe('contentSearch', () => {
 
   it('closes the modal on an `undefined` selection when an item is toggled off', async () => {
     const { open } = useContentSearch();
-    const wrapper = await mountSuspended(ContentSearch, { props: { links, navigation, files, portal: false, unmountOnHide: false } });
+    const wrapper = await mountSuspended(ContentSearch, {
+      props: {
+        links,
+        navigation,
+        files,
+        portal: false,
+        unmountOnHide: false,
+      },
+    });
     await vi.dynamicImportSettled();
 
     open.value = true;
@@ -234,7 +327,10 @@ describe('contentSearch', () => {
       await vi.advanceTimersByTimeAsync(150);
       expect(search).toHaveBeenCalledTimes(1);
       expect(search).toHaveBeenLastCalledWith('foo', expect.objectContaining({
-        snippet: { columns: ['title', 'content'], around: 20 },
+        snippet: {
+          columns: ['title', 'content'],
+          around: 20,
+        },
       }));
 
       await wrapper.setProps({ searchStatus: 'ready' });
@@ -249,13 +345,15 @@ describe('contentSearch', () => {
     // `findNavItem` returns the top-level node with `parent: undefined`.
     it('includes the section title in the prefix for index-page results', async () => {
       vi.useFakeTimers({ shouldAdvanceTime: true });
-      const search = vi.fn(async () => [{
-        id: '/getting-started#some-section',
-        title: 'Some Section',
-        titles: ['Introduction', 'Usage'],
-        level: 3,
-        content: 'lorem ipsum',
-      }]);
+      const search = vi.fn(async () => [
+        {
+          id: '/getting-started#some-section',
+          title: 'Some Section',
+          titles: ['Introduction', 'Usage'],
+          level: 3,
+          content: 'lorem ipsum',
+        },
+      ]);
 
       const wrapper = await mountSuspended(ContentSearch, {
         props: {
@@ -281,29 +379,39 @@ describe('contentSearch', () => {
     // top-level root and the immediate parent.
     it('includes every intermediate ancestor in the prefix for deeply nested results', async () => {
       vi.useFakeTimers({ shouldAdvanceTime: true });
-      const deepNavigation = [{
-        title: 'Docs',
-        path: '/docs',
-        children: [{
-          title: 'Guide',
-          path: '/docs/guide',
-          children: [{
-            title: 'Best Practices',
-            path: '/docs/guide/best-practices',
-            children: [{
-              title: 'Nuxt Plugins',
-              path: '/docs/guide/best-practices/plugins',
-            }],
-          }],
-        }],
-      }];
-      const search = vi.fn(async () => [{
-        id: '/docs/guide/best-practices/plugins',
-        title: 'Nuxt Plugins',
-        titles: [],
-        level: 1,
-        content: 'lorem ipsum',
-      }]);
+      const deepNavigation = [
+        {
+          title: 'Docs',
+          path: '/docs',
+          children: [
+            {
+              title: 'Guide',
+              path: '/docs/guide',
+              children: [
+                {
+                  title: 'Best Practices',
+                  path: '/docs/guide/best-practices',
+                  children: [
+                    {
+                      title: 'Nuxt Plugins',
+                      path: '/docs/guide/best-practices/plugins',
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ];
+      const search = vi.fn(async () => [
+        {
+          id: '/docs/guide/best-practices/plugins',
+          title: 'Nuxt Plugins',
+          titles: [],
+          level: 1,
+          content: 'lorem ipsum',
+        },
+      ]);
 
       const wrapper = await mountSuspended(ContentSearch, {
         props: {

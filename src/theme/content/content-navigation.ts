@@ -20,9 +20,12 @@ export default (options: Required<ModuleOptions>) => ({
   },
   variants: {
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        link: `before:outline-${color}/25`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          link: `before:outline-${color}/25`,
+        },
+      ])),
       neutral: {
         link: 'before:outline-border-inverted/25',
       },
@@ -59,92 +62,104 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
   },
-  compoundVariants: [{
-    highlight: true,
-    level: true,
-    class: {
-      link: ['after:absolute after:-left-1.5 after:inset-y-0.5 after:block after:w-px after:rounded-full', options.theme.transitions && 'after:transition-colors'],
+  compoundVariants: [
+    {
+      highlight: true,
+      level: true,
+      class: {
+        link: ['after:absolute after:-left-1.5 after:inset-y-0.5 after:block after:w-px after:rounded-full', options.theme.transitions && 'after:transition-colors'],
+      },
     },
-  }, {
-    disabled: false,
-    active: false,
-    variant: 'pill',
-    class: {
-      link: ['hover:color-text-highlighted hover:before:bg-background-elevated/50 data-[state=open]:color-text-highlighted', options.theme.transitions && 'transition-colors before:transition-colors'],
-      linkLeadingIcon: ['group-hover:color-text group-data-[state=open]:color-text', options.theme.transitions && 'transition-colors'],
+    {
+      disabled: false,
+      active: false,
+      variant: 'pill',
+      class: {
+        link: ['hover:color-text-highlighted hover:before:bg-background-elevated/50 data-[state=open]:color-text-highlighted', options.theme.transitions && 'transition-colors before:transition-colors'],
+        linkLeadingIcon: ['group-hover:color-text group-data-[state=open]:color-text', options.theme.transitions && 'transition-colors'],
+      },
     },
-  }, ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'pill',
-    active: true,
-    class: {
-      link: `color-${color}`,
-      linkLeadingIcon: `color-${color} group-data-[state=open]:color-${color}`,
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'pill',
+      active: true,
+      class: {
+        link: `color-${color}`,
+        linkLeadingIcon: `color-${color} group-data-[state=open]:color-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      variant: 'pill',
+      active: true,
+      class: {
+        link: 'color-text-highlighted',
+        linkLeadingIcon: 'color-text-highlighted group-data-[state=open]:color-text-highlighted',
+      },
     },
-  })), {
-    color: 'neutral',
-    variant: 'pill',
-    active: true,
-    class: {
-      link: 'color-text-highlighted',
-      linkLeadingIcon: 'color-text-highlighted group-data-[state=open]:color-text-highlighted',
+    {
+      variant: 'pill',
+      active: true,
+      highlight: false,
+      class: {
+        link: 'before:bg-background-elevated',
+      },
     },
-  }, {
-    variant: 'pill',
-    active: true,
-    highlight: false,
-    class: {
-      link: 'before:bg-background-elevated',
+    {
+      variant: 'pill',
+      active: true,
+      highlight: true,
+      disabled: false,
+      class: {
+        link: ['hover:before:bg-background-elevated/50', options.theme.transitions && 'before:transition-colors'],
+      },
     },
-  }, {
-    variant: 'pill',
-    active: true,
-    highlight: true,
-    disabled: false,
-    class: {
-      link: ['hover:before:bg-background-elevated/50', options.theme.transitions && 'before:transition-colors'],
+    {
+      disabled: false,
+      active: false,
+      variant: 'link',
+      class: {
+        link: ['hover:color-text-highlighted data-[state=open]:color-text-highlighted', options.theme.transitions && 'transition-colors'],
+        linkLeadingIcon: ['group-hover:color-text group-data-[state=open]:color-text', options.theme.transitions && 'transition-colors'],
+      },
     },
-  }, {
-    disabled: false,
-    active: false,
-    variant: 'link',
-    class: {
-      link: ['hover:color-text-highlighted data-[state=open]:color-text-highlighted', options.theme.transitions && 'transition-colors'],
-      linkLeadingIcon: ['group-hover:color-text group-data-[state=open]:color-text', options.theme.transitions && 'transition-colors'],
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'link',
+      active: true,
+      class: {
+        link: `color-${color}`,
+        linkLeadingIcon: `color-${color} group-data-[state=open]:color-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      variant: 'link',
+      active: true,
+      class: {
+        link: 'color-text-highlighted',
+        linkLeadingIcon: 'color-text-highlighted group-data-[state=open]:color-text-highlighted',
+      },
     },
-  }, ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'link',
-    active: true,
-    class: {
-      link: `color-${color}`,
-      linkLeadingIcon: `color-${color} group-data-[state=open]:color-${color}`,
+    ...(options.theme.colors || []).map((highlightColor: string) => ({
+      highlightColor,
+      highlight: true,
+      level: true,
+      active: true,
+      class: {
+        link: `after:bg-${highlightColor}`,
+      },
+    })),
+    {
+      highlightColor: 'neutral',
+      highlight: true,
+      level: true,
+      active: true,
+      class: {
+        link: 'after:bg-background-inverted',
+      },
     },
-  })), {
-    color: 'neutral',
-    variant: 'link',
-    active: true,
-    class: {
-      link: 'color-text-highlighted',
-      linkLeadingIcon: 'color-text-highlighted group-data-[state=open]:color-text-highlighted',
-    },
-  }, ...(options.theme.colors || []).map((highlightColor: string) => ({
-    highlightColor,
-    highlight: true,
-    level: true,
-    active: true,
-    class: {
-      link: `after:bg-${highlightColor}`,
-    },
-  })), {
-    highlightColor: 'neutral',
-    highlight: true,
-    level: true,
-    active: true,
-    class: {
-      link: 'after:bg-background-inverted',
-    },
-  }],
+  ],
   defaultVariants: {
     color: 'primary',
     highlightColor: 'primary',

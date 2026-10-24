@@ -86,7 +86,20 @@ const emits = defineEmits<DropdownMenuContentEmits>();
 
 const slots = defineSlots<DropdownMenuContentSlots<T>>();
 
-const AkarDropdownMenu = { Portal: DropdownMenuPortal, Content: DropdownMenuContent, Item: AkarDropdownMenuItem, Group: DropdownMenuGroup, Separator: DropdownMenuSeparator, CheckboxItem: DropdownMenuCheckboxItem, ItemIndicator: DropdownMenuItemIndicator, Label: DropdownMenuLabel, Sub: DropdownMenuSub, SubContent: DropdownMenuSubContent, SubTrigger: DropdownMenuSubTrigger, Filter: DropdownMenuFilter };
+const AkarDropdownMenu = {
+  Portal: DropdownMenuPortal,
+  Content: DropdownMenuContent,
+  Item: AkarDropdownMenuItem,
+  Group: DropdownMenuGroup,
+  Separator: DropdownMenuSeparator,
+  CheckboxItem: DropdownMenuCheckboxItem,
+  ItemIndicator: DropdownMenuItemIndicator,
+  Label: DropdownMenuLabel,
+  Sub: DropdownMenuSub,
+  SubContent: DropdownMenuSubContent,
+  SubTrigger: DropdownMenuSubTrigger,
+  Filter: DropdownMenuFilter,
+};
 
 const { t, dir } = useLocale();
 const appConfig = useAppConfig();
@@ -101,7 +114,10 @@ const searchTerm = computed({
   },
 });
 
-const inputProps = toRef(() => defu(props.filter, { placeholder: t('dropdownMenu.search'), variant: 'none' }) as Omit<InputProps, 'modelValue' | 'defaultValue'>);
+const inputProps = toRef(() => defu(props.filter, {
+  placeholder: t('dropdownMenu.search'),
+  variant: 'none',
+}) as Omit<InputProps, 'modelValue' | 'defaultValue'>);
 
 const portalProps = usePortal(toRef(() => props.portal));
 const contentProps = useForwardPropsEmits(reactiveOmit(props, 'sub', 'items', 'portal', 'labelKey', 'descriptionKey', 'checkedIcon', 'loadingIcon', 'externalIcon', 'size', 'filter', 'filterFields', 'ignoreFilter', 'searchTerm', 'class', 'ui', 'uiOverride'), emits);
@@ -109,12 +125,16 @@ const getProxySlots = () => omit(slots, ['default']);
 
 const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: DropdownMenuItem; active?: boolean; index: number }>();
 
-const childrenIcon = computed(() => dir.value === 'rtl' ? appConfig.ui.icons.chevronLeft : appConfig.ui.icons.chevronRight);
+const childrenIcon = computed(() => dir.value === 'rtl'
+  ? appConfig.ui.icons.chevronLeft
+  : appConfig.ui.icons.chevronRight);
 const groups = computed(() => {
   if (!props.items?.length) {
     return [] as Array<Array<DropdownMenuItem>>;
   }
-  return (isArrayOfArray(props.items) ? props.items : [props.items]) as Array<Array<DropdownMenuItem>>;
+  return (isArrayOfArray(props.items)
+    ? props.items
+    : [props.items]) as Array<Array<DropdownMenuItem>>;
 });
 const isStructuralItem = (item: DropdownMenuItem) => !!item.type && ['label', 'separator'].includes(item.type);
 
@@ -123,7 +143,9 @@ const filteredGroups = computed(() => {
     return groups.value;
   }
 
-  const fields = Array.isArray(props.filterFields) && props.filterFields.length ? props.filterFields : [props.labelKey] as Array<string>;
+  const fields = Array.isArray(props.filterFields) && props.filterFields.length
+    ? props.filterFields
+    : [props.labelKey] as Array<string>;
 
   return filterGroups(groups.value, searchTerm.value, {
     fields,

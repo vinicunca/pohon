@@ -144,7 +144,10 @@ const rootProps = useForwardProps(reactivePick(props, 'open', 'pressOpenDelay', 
 const contentProps = toRef(() => props.content);
 const getProxySlots = () => omit(slots, ['default']);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.contextMenu || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.contextMenu || {}),
+})({
   size: props.size,
 }));
 </script>

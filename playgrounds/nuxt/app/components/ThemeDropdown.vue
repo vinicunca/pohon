@@ -3,38 +3,73 @@ import type { DropdownMenuItem } from 'pohon-ui';
 
 const appConfig = useAppConfig();
 
-const colors = ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'];
-const neutrals = ['slate', 'gray', 'zinc', 'neutral', 'stone', 'taupe', 'mauve', 'mist', 'olive'];
+const colors = [
+  'red',
+  'orange',
+  'amber',
+  'yellow',
+  'lime',
+  'green',
+  'emerald',
+  'teal',
+  'cyan',
+  'sky',
+  'blue',
+  'indigo',
+  'violet',
+  'purple',
+  'fuchsia',
+  'pink',
+  'rose',
+];
+const neutrals = [
+  'slate',
+  'gray',
+  'zinc',
+  'neutral',
+  'stone',
+  'taupe',
+  'mauve',
+  'mist',
+  'olive',
+];
 
-const items = computed<Array<DropdownMenuItem>>(() => [{
-  label: 'Primary',
-  chip: appConfig.ui.colors.primary,
-  children: colors.map((color) => ({
-    label: color,
-    chip: color,
-    checked: appConfig.ui.colors.primary === color,
-    type: 'checkbox',
-    onSelect: (e) => {
-      e.preventDefault();
+const items = computed<Array<DropdownMenuItem>>(() => [
+  {
+    label: 'Primary',
+    chip: appConfig.ui.colors.primary,
+    children: colors.map((color) => ({
+      label: color,
+      chip: color,
+      checked: appConfig.ui.colors.primary === color,
+      type: 'checkbox',
+      onSelect: (e) => {
+        e.preventDefault();
 
-      appConfig.ui.colors.primary = color;
-    },
-  })),
-}, {
-  label: 'Neutral',
-  chip: appConfig.ui.colors.neutral === 'neutral' ? 'old-neutral' : appConfig.ui.colors.neutral,
-  children: neutrals.map((color) => ({
-    label: color,
-    chip: color === 'neutral' ? 'old-neutral' : color,
-    type: 'checkbox',
-    checked: appConfig.ui.colors.neutral === color,
-    onSelect: (e) => {
-      e.preventDefault();
+        appConfig.ui.colors.primary = color;
+      },
+    })),
+  },
+  {
+    label: 'Neutral',
+    chip: appConfig.ui.colors.neutral === 'neutral'
+      ? 'old-neutral'
+      : appConfig.ui.colors.neutral,
+    children: neutrals.map((color) => ({
+      label: color,
+      chip: color === 'neutral'
+        ? 'old-neutral'
+        : color,
+      type: 'checkbox',
+      checked: appConfig.ui.colors.neutral === color,
+      onSelect: (e) => {
+        e.preventDefault();
 
-      appConfig.ui.colors.neutral = color;
-    },
-  })),
-}]);
+        appConfig.ui.colors.neutral = color;
+      },
+    })),
+  },
+]);
 </script>
 
 <template>

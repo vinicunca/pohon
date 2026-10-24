@@ -33,31 +33,187 @@ describe('blogPost', () => {
 
   renderEach(BlogPost, [
     // Props
-    ['with title', { props: { title: 'Title' } }],
-    ['with description', { props: { description: 'Description' } }],
-    ['with to', { props: { to: 'https://github.com/benjamincanac' } }],
-    ['with image', { props: { image: 'https://picsum.photos/640/360' } }],
-    ['with to & image', { props: { to: 'https://github.com/benjamincanac', image: 'https://picsum.photos/640/360' } }],
-    ['with date', { props: { date: '2024-01-01' } }],
-    ['with badge', { props: { badge: 'Badge' } }],
-    ['with badge object', { props: { badge: { label: 'Badge', color: 'primary' } } }],
-    ['with author', { props: { authors: [author1] } }],
-    ['with authors', { props: { authors: [author1, author2] } }],
-    ...variants.map((variant: string) => [`with variant ${variant}`, { props: { ...props, variant } }]),
-    ...orientations.map((orientation: string) => [`with orientation ${orientation}`, { props: { ...props, orientation } }]),
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with as object', { props: { ...props, as: { root: 'section', title: 'h3' } } }],
-    ['with class', { props: { ...props, class: 'absolute' } }],
-    ['with ui', { props: { ...props, ui: { wrapper: 'items-center' } } }],
+    [
+      'with title',
+      {
+        props: { title: 'Title' },
+      },
+    ],
+    [
+      'with description',
+      {
+        props: { description: 'Description' },
+      },
+    ],
+    [
+      'with to',
+      {
+        props: { to: 'https://github.com/benjamincanac' },
+      },
+    ],
+    [
+      'with image',
+      {
+        props: { image: 'https://picsum.photos/640/360' },
+      },
+    ],
+    [
+      'with to & image',
+      {
+        props: { to: 'https://github.com/benjamincanac', image: 'https://picsum.photos/640/360' },
+      },
+    ],
+    [
+      'with date',
+      {
+        props: { date: '2024-01-01' },
+      },
+    ],
+    [
+      'with badge',
+      {
+        props: { badge: 'Badge' },
+      },
+    ],
+    [
+      'with badge object',
+      {
+        props: {
+          badge: { label: 'Badge', color: 'primary' },
+        },
+      },
+    ],
+    [
+      'with author',
+      {
+        props: {
+          authors: [author1],
+        },
+      },
+    ],
+    [
+      'with authors',
+      {
+        props: {
+          authors: [author1, author2],
+        },
+      },
+    ],
+    ...variants.map((variant: string) => [
+      `with variant ${variant}`,
+      {
+        props: { ...props, variant },
+      },
+    ]),
+    ...orientations.map((orientation: string) => [
+      `with orientation ${orientation}`,
+      {
+        props: { ...props, orientation },
+      },
+    ]),
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with as object',
+      {
+        props: {
+          ...props,
+          as: { root: 'section', title: 'h3' },
+        },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'absolute' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { wrapper: 'items-center' },
+        },
+      },
+    ],
     // Slots
-    ['with date slot', { props, slots: { date: () => 'Date slot' } }],
-    ['with badge slot', { props, slots: { badge: () => 'Badge slot' } }],
-    ['with title slot', { props, slots: { title: () => 'Title slot' } }],
-    ['with description slot', { props, slots: { description: () => 'Description slot' } }],
-    ['with authors slot', { props, slots: { authors: () => 'Authors slot' } }],
-    ['with header slot', { props, slots: { header: () => 'Header slot' } }],
-    ['with body slot', { props, slots: { body: () => 'Body slot' } }],
-    ['with footer slot', { props, slots: { footer: () => 'Footer slot' } }],
+    [
+      'with date slot',
+      {
+        props,
+        slots: {
+          date: () => 'Date slot',
+        },
+      },
+    ],
+    [
+      'with badge slot',
+      {
+        props,
+        slots: {
+          badge: () => 'Badge slot',
+        },
+      },
+    ],
+    [
+      'with title slot',
+      {
+        props,
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        props,
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with authors slot',
+      {
+        props,
+        slots: {
+          authors: () => 'Authors slot',
+        },
+      },
+    ],
+    [
+      'with header slot',
+      {
+        props,
+        slots: {
+          header: () => 'Header slot',
+        },
+      },
+    ],
+    [
+      'with body slot',
+      {
+        props,
+        slots: {
+          body: () => 'Body slot',
+        },
+      },
+    ],
+    [
+      'with footer slot',
+      {
+        props,
+        slots: {
+          footer: () => 'Footer slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

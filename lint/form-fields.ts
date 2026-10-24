@@ -46,7 +46,12 @@ interface TemplateParserServices {
  * than the use site, and appending `?? props.x` to the wrong branch of a
  * ternary would change behavior silently.
  */
-const RESOLVABLE_FORM_FIELD_KEYS = new Set<string>(['size', 'color', 'highlight', 'disabled']);
+const RESOLVABLE_FORM_FIELD_KEYS = new Set<string>([
+  'size',
+  'color',
+  'highlight',
+  'disabled',
+]);
 
 export const noUnresolvedFormFieldRefs: Rule.RuleModule = {
   meta: {
@@ -105,7 +110,9 @@ export const noUnresolvedFormFieldRefs: Rule.RuleModule = {
         if (node.type !== 'CallExpression') {
           return;
         }
-        const decl = node.parent?.type === 'VariableDeclarator' ? node.parent : null;
+        const decl = node.parent?.type === 'VariableDeclarator'
+          ? node.parent
+          : null;
         if (decl?.id?.type === 'Identifier') {
           propsVar = decl.id.name;
         }
@@ -114,7 +121,9 @@ export const noUnresolvedFormFieldRefs: Rule.RuleModule = {
         if (node.type !== 'CallExpression') {
           return;
         }
-        const decl = node.parent?.type === 'VariableDeclarator' ? node.parent : null;
+        const decl = node.parent?.type === 'VariableDeclarator'
+          ? node.parent
+          : null;
         if (decl?.id?.type !== 'ObjectPattern') {
           return;
         }

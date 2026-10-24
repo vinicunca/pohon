@@ -138,7 +138,10 @@ const contentEvents = computed(() => {
   };
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.slideover || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.slideover || {}),
+})({
   transition: props.transition,
   side: props.side,
   inset: props.inset,

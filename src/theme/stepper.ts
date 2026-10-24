@@ -70,10 +70,13 @@ export default (options: Required<ModuleOptions>) => ({
     },
 
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        trigger: `group-data-[state=completed]:bg-${color} group-data-[state=active]:bg-${color} group-data-[state=completed]:color-${color}-foreground group-data-[state=active]:color-${color}-foreground outline-${color}/25`,
-        separator: `group-data-[state=completed]:bg-${color}`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          trigger: `group-data-[state=completed]:bg-${color} group-data-[state=active]:bg-${color} group-data-[state=completed]:color-${color}-foreground group-data-[state=active]:color-${color}-foreground outline-${color}/25`,
+          separator: `group-data-[state=completed]:bg-${color}`,
+        },
+      ])),
       neutral: {
         trigger: 'group-data-[state=completed]:bg-background-inverted group-data-[state=active]:bg-background-inverted group-data-[state=completed]:color-text-inverted group-data-[state=active]:color-text-inverted outline-border-inverted/25',
         separator: 'group-data-[state=completed]:bg-background-inverted',
@@ -81,47 +84,58 @@ export default (options: Required<ModuleOptions>) => ({
     },
   },
 
-  compoundVariants: [{
-    orientation: 'horizontal',
-    size: 'xs',
-    class: { separator: 'start-[calc(50%+16px)] end-[calc(-50%+16px)]' },
-  }, {
-    orientation: 'horizontal',
-    size: 'sm',
-    class: { separator: 'start-[calc(50%+20px)] end-[calc(-50%+20px)]' },
-  }, {
-    orientation: 'horizontal',
-    size: 'md',
-    class: { separator: 'start-[calc(50%+28px)] end-[calc(-50%+28px)]' },
-  }, {
-    orientation: 'horizontal',
-    size: 'lg',
-    class: { separator: 'start-[calc(50%+32px)] end-[calc(-50%+32px)]' },
-  }, {
-    orientation: 'horizontal',
-    size: 'xl',
-    class: { separator: 'start-[calc(50%+36px)] end-[calc(-50%+36px)]' },
-  }, {
-    orientation: 'vertical',
-    size: 'xs',
-    class: { separator: 'top-[30px]', item: 'gap-1.5' },
-  }, {
-    orientation: 'vertical',
-    size: 'sm',
-    class: { separator: 'top-[38px]', item: 'gap-2' },
-  }, {
-    orientation: 'vertical',
-    size: 'md',
-    class: { separator: 'top-[46px]', item: 'gap-2.5' },
-  }, {
-    orientation: 'vertical',
-    size: 'lg',
-    class: { separator: 'top-[54px]', item: 'gap-3' },
-  }, {
-    orientation: 'vertical',
-    size: 'xl',
-    class: { separator: 'top-[62px]', item: 'gap-3.5' },
-  }],
+  compoundVariants: [
+    {
+      orientation: 'horizontal',
+      size: 'xs',
+      class: { separator: 'start-[calc(50%+16px)] end-[calc(-50%+16px)]' },
+    },
+    {
+      orientation: 'horizontal',
+      size: 'sm',
+      class: { separator: 'start-[calc(50%+20px)] end-[calc(-50%+20px)]' },
+    },
+    {
+      orientation: 'horizontal',
+      size: 'md',
+      class: { separator: 'start-[calc(50%+28px)] end-[calc(-50%+28px)]' },
+    },
+    {
+      orientation: 'horizontal',
+      size: 'lg',
+      class: { separator: 'start-[calc(50%+32px)] end-[calc(-50%+32px)]' },
+    },
+    {
+      orientation: 'horizontal',
+      size: 'xl',
+      class: { separator: 'start-[calc(50%+36px)] end-[calc(-50%+36px)]' },
+    },
+    {
+      orientation: 'vertical',
+      size: 'xs',
+      class: { separator: 'top-[30px]', item: 'gap-1.5' },
+    },
+    {
+      orientation: 'vertical',
+      size: 'sm',
+      class: { separator: 'top-[38px]', item: 'gap-2' },
+    },
+    {
+      orientation: 'vertical',
+      size: 'md',
+      class: { separator: 'top-[46px]', item: 'gap-2.5' },
+    },
+    {
+      orientation: 'vertical',
+      size: 'lg',
+      class: { separator: 'top-[54px]', item: 'gap-3' },
+    },
+    {
+      orientation: 'vertical',
+      size: 'xl',
+      class: { separator: 'top-[62px]', item: 'gap-3.5' },
+    },
+  ],
 
   defaultVariants: {
     size: 'md',

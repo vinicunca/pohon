@@ -9,11 +9,14 @@ export default (options: Required<ModuleOptions>) => ({
   },
   variants: {
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        root: `bg-${color}/10`,
-        fallback: `color-${color}`,
-        icon: `color-${color}`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          root: `bg-${color}/10`,
+          fallback: `color-${color}`,
+          icon: `color-${color}`,
+        },
+      ])),
       neutral: {
         root: 'bg-background-elevated',
         fallback: 'color-text-muted',

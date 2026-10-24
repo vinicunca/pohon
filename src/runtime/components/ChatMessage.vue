@@ -91,9 +91,24 @@ const appConfig = useAppConfig() as ChatMessage['AppConfig'];
 const fileParts = computed(() => props.parts?.filter((part): part is FileUIPart => part.type === 'file') ?? []);
 const textParts = computed(() => props.parts?.filter((part): part is TextUIPart => part.type === 'text') ?? []);
 
-const messageProps = computed(() => omit(props, ['as', 'icon', 'avatar', 'variant', 'color', 'side', 'actions', 'compact', 'class', 'ui', 'content']));
+const messageProps = computed(() => omit(props, [
+  'as',
+  'icon',
+  'avatar',
+  'variant',
+  'color',
+  'side',
+  'actions',
+  'compact',
+  'class',
+  'ui',
+  'content',
+]));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatMessage || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.chatMessage || {}),
+})({
   variant: props.variant,
   color: props.color,
   side: props.side,

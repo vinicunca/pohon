@@ -15,10 +15,13 @@ export default (options: Required<ModuleOptions>) => ({
   },
   variants: {
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        root: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
-        icon: `color-${color}`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          root: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
+          icon: `color-${color}`,
+        },
+      ])),
       neutral: {
         root: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:ring-border-inverted',
         icon: 'color-text-highlighted',

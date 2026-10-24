@@ -120,7 +120,9 @@ export function useFileUpload(options: UseFileUploadOptions) {
 
       const scope = effectScope();
       scope.run(() => {
-        const { isOverDropZone } = useDropZone(dropzoneRef, { onDrop: (files) => onDrop(files, true) });
+        const { isOverDropZone } = useDropZone(dropzoneRef, {
+          onDrop: (files) => onDrop(files, true),
+        });
 
         watch(isOverDropZone, (value) => {
           isDragging.value = value;

@@ -181,7 +181,10 @@ const contentProps = toRef(() => defu(props.content, { side: 'bottom', sideOffse
 const arrowProps = toRef(() => defu(props.arrow, { rounded: true }) as DropdownMenuArrowProps);
 const getProxySlots = () => omit(slots, ['default']);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dropdownMenu || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.dropdownMenu || {}),
+})({
   size: props.size,
 }));
 </script>

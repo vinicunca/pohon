@@ -15,10 +15,30 @@ const attrs = reactive({
 const orientation = ref('horizontal' as keyof typeof theme.variants.orientation);
 
 const items = ref<Array<ProgressGroupItem>>([
-  { label: 'System', value: 24, color: 'neutral', icon: 'i-lucide-cog' },
-  { label: 'Apps', value: 8, color: 'error', icon: 'i-lucide-app-window' },
-  { label: 'Documents', value: 12, color: 'warning', icon: 'i-lucide-file' },
-  { label: 'Multimedia', value: 42, color: 'success', icon: 'i-lucide-film' },
+  {
+    label: 'System',
+    value: 24,
+    color: 'neutral',
+    icon: 'i-lucide-cog',
+  },
+  {
+    label: 'Apps',
+    value: 8,
+    color: 'error',
+    icon: 'i-lucide-app-window',
+  },
+  {
+    label: 'Documents',
+    value: 12,
+    color: 'warning',
+    icon: 'i-lucide-file',
+  },
+  {
+    label: 'Multimedia',
+    value: 42,
+    color: 'success',
+    icon: 'i-lucide-film',
+  },
 ]);
 
 const plain = ref<Array<ProgressGroupItem>>([

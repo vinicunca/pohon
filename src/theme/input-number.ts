@@ -58,91 +58,113 @@ export default (options: Required<ModuleOptions>) => {
         false: '',
       },
     },
-    compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
-      color,
-      variant: ['outline', 'subtle'],
-      class: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
-    })), ...(options.theme.colors || []).map((color: string) => ({
-      color,
-      variant: ['soft', 'ghost'],
-      class: `outline-${color}/25 focus-visible:outline-3`,
-    })), ...(options.theme.colors || []).map((color: string) => ({
-      color,
-      highlight: true,
-      class: `ring ring-inset pohon:ring-${color}`,
-    })), {
-      color: 'neutral',
-      variant: ['outline', 'subtle'],
-      class: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:ring-border-inverted',
-    }, {
-      color: 'neutral',
-      variant: ['soft', 'ghost'],
-      class: 'outline-border-inverted/25 focus-visible:outline-3',
-    }, {
-      color: 'neutral',
-      highlight: true,
-      class: 'ring ring-inset ring-border-inverted',
-    }, {
-      orientation: 'horizontal',
-      decrement: false,
-      class: 'text-start',
-    }, {
-      decrement: true,
-      size: 'xs',
-      class: 'ps-7',
-    }, {
-      decrement: true,
-      size: 'sm',
-      class: 'ps-8',
-    }, {
-      decrement: true,
-      size: 'md',
-      class: 'ps-9',
-    }, {
-      decrement: true,
-      size: 'lg',
-      class: 'ps-10',
-    }, {
-      decrement: true,
-      size: 'xl',
-      class: 'ps-11',
-    }, {
-      increment: true,
-      size: 'xs',
-      class: 'pe-7',
-    }, {
-      increment: true,
-      size: 'sm',
-      class: 'pe-8',
-    }, {
-      increment: true,
-      size: 'md',
-      class: 'pe-9',
-    }, {
-      increment: true,
-      size: 'lg',
-      class: 'pe-10',
-    }, {
-      increment: true,
-      size: 'xl',
-      class: 'pe-11',
-    }, {
-      fixed: false,
-      size: 'xs',
-      class: 'md:text-xs',
-    }, {
-      fixed: false,
-      size: 'sm',
-      class: 'md:text-xs',
-    }, {
-      fixed: false,
-      size: 'md',
-      class: 'md:text-sm',
-    }, {
-      fixed: false,
-      size: 'lg',
-      class: 'md:text-sm',
-    }],
+    compoundVariants: [
+      ...(options.theme.colors || []).map((color: string) => ({
+        color,
+        variant: ['outline', 'subtle'],
+        class: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
+      })),
+      ...(options.theme.colors || []).map((color: string) => ({
+        color,
+        variant: ['soft', 'ghost'],
+        class: `outline-${color}/25 focus-visible:outline-3`,
+      })),
+      ...(options.theme.colors || []).map((color: string) => ({
+        color,
+        highlight: true,
+        class: `ring ring-inset pohon:ring-${color}`,
+      })),
+      {
+        color: 'neutral',
+        variant: ['outline', 'subtle'],
+        class: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:ring-border-inverted',
+      },
+      {
+        color: 'neutral',
+        variant: ['soft', 'ghost'],
+        class: 'outline-border-inverted/25 focus-visible:outline-3',
+      },
+      {
+        color: 'neutral',
+        highlight: true,
+        class: 'ring ring-inset ring-border-inverted',
+      },
+      {
+        orientation: 'horizontal',
+        decrement: false,
+        class: 'text-start',
+      },
+      {
+        decrement: true,
+        size: 'xs',
+        class: 'ps-7',
+      },
+      {
+        decrement: true,
+        size: 'sm',
+        class: 'ps-8',
+      },
+      {
+        decrement: true,
+        size: 'md',
+        class: 'ps-9',
+      },
+      {
+        decrement: true,
+        size: 'lg',
+        class: 'ps-10',
+      },
+      {
+        decrement: true,
+        size: 'xl',
+        class: 'ps-11',
+      },
+      {
+        increment: true,
+        size: 'xs',
+        class: 'pe-7',
+      },
+      {
+        increment: true,
+        size: 'sm',
+        class: 'pe-8',
+      },
+      {
+        increment: true,
+        size: 'md',
+        class: 'pe-9',
+      },
+      {
+        increment: true,
+        size: 'lg',
+        class: 'pe-10',
+      },
+      {
+        increment: true,
+        size: 'xl',
+        class: 'pe-11',
+      },
+      {
+        fixed: false,
+        size: 'xs',
+        class: 'md:text-xs',
+      },
+      {
+        fixed: false,
+        size: 'sm',
+        class: 'md:text-xs',
+      },
+      {
+        fixed: false,
+        size: 'md',
+        class: 'md:text-sm',
+      },
+      {
+        fixed: false,
+        size: 'lg',
+        class: 'md:text-sm',
+      },
+    ],
     defaultVariants: {
       size: 'md',
       color: 'primary',

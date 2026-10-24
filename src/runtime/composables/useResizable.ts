@@ -112,7 +112,10 @@ export function useResizable(key: string, options: Ref<UseResizableProps> | UseR
 
   const storageData = (opts.value.persistent && (opts.value.resizable || opts.value.collapsible))
     ? opts.value.storage === 'cookie'
-      ? useCookie<StorageType>(key, { ...opts.value.storageOptions, default: () => defaultStorageValue })
+      ? useCookie<StorageType>(key, {
+          ...opts.value.storageOptions,
+          default: () => defaultStorageValue,
+        })
       : useStorage<StorageType>(key, defaultStorageValue, undefined, opts.value.storageOptions)
     : ref(defaultStorageValue);
 
@@ -122,7 +125,10 @@ export function useResizable(key: string, options: Ref<UseResizableProps> | UseR
     if (storageData.value) {
       Object.assign(storageData.value, patch);
     } else {
-      storageData.value = { ...defaultStorageValue, ...patch };
+      storageData.value = {
+        ...defaultStorageValue,
+        ...patch,
+      };
     }
   }
 
@@ -155,7 +161,9 @@ export function useResizable(key: string, options: Ref<UseResizableProps> | UseR
 
   // Read once per drag: `getComputedStyle` on every pointer move forces a style recalc.
   function getRootFontSize() {
-    return opts.value.unit === 'rem' ? Number.parseFloat(getComputedStyle(document.documentElement).fontSize) : 1;
+    return opts.value.unit === 'rem'
+      ? Number.parseFloat(getComputedStyle(document.documentElement).fontSize)
+      : 1;
   }
 
   const resize = (clientX: number, initialPos: number, initialSize: number, rootFontSize: number): void => {
@@ -169,9 +177,13 @@ export function useResizable(key: string, options: Ref<UseResizableProps> | UseR
     // In RTL mode, we need to invert the delta calculation
     let delta: number;
     if (isRtl) {
-      delta = opts.value.side === 'left' ? initialPos - clientX : clientX - initialPos;
+      delta = opts.value.side === 'left'
+        ? initialPos - clientX
+        : clientX - initialPos;
     } else {
-      delta = opts.value.side === 'left' ? clientX - initialPos : initialPos - clientX;
+      delta = opts.value.side === 'left'
+        ? clientX - initialPos
+        : initialPos - clientX;
     }
 
     const newSize = initialSize + delta;

@@ -108,7 +108,10 @@ const size = computed(() => fieldGroupSize.value ?? formFieldSize.value ?? props
 
 const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.input || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.input || {}),
+})({
   type: props.type as Input['variants']['type'],
   color: color.value,
   variant: props.variant,

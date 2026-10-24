@@ -58,7 +58,9 @@ export function normalizeLocale(locale) {
 
   if (locale.includes('_')) {
     return locale.split('_')
-      .map((part, index) => index === 0 ? part.toLowerCase() : part.toUpperCase())
+      .map((part, index) => index === 0
+        ? part.toLowerCase()
+        : part.toUpperCase())
       .join('-');
   }
 

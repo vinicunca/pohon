@@ -20,12 +20,17 @@ export const ImageUpload = Node.create({
     return {};
   },
   parseHTML() {
-    return [{
-      tag: 'div[data-type="image-upload"]',
-    }];
+    return [
+      {
+        tag: 'div[data-type="image-upload"]',
+      },
+    ];
   },
   renderHTML({ HTMLAttributes }) {
-    return ['div', mergeAttributes(HTMLAttributes, { 'data-type': 'image-upload' })];
+    return [
+      'div',
+      mergeAttributes(HTMLAttributes, { 'data-type': 'image-upload' }),
+    ];
   },
   addNodeView(): NodeViewRenderer {
     return VueNodeViewRenderer(ImageUploadNodeComponent);

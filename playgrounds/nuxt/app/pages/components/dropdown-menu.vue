@@ -5,154 +5,192 @@ import theme from '#build/ui/dropdown-menu';
 const loading = ref(false);
 
 const items = computed(() => [
-  [{
-    label: 'My account',
-    avatar: {
-      src: 'https://github.com/praburangki.png',
+  [
+    {
+      label: 'My account',
+      avatar: {
+        src: 'https://github.com/praburangki.png',
+      },
+      type: 'label' as const,
     },
-    type: 'label' as const,
-  }],
-  [{
-    label: 'Profile',
-    description: 'View your profile',
-    icon: 'i-lucide-user',
-    slot: 'custom' as const,
-    onSelect(e: Event) {
-      e.preventDefault();
-      console.log('Profile clicked');
-    },
-  }, {
-    label: 'Billing',
-    description: 'Manage billing',
-    icon: 'i-lucide-credit-card',
-    kbds: ['meta', 'b'],
-    onSelect() {
-      console.log('Billing clicked');
-    },
-  }, {
-    label: 'Settings',
-    icon: 'i-lucide-cog',
-    kbds: ['?'],
-    onSelect() {
-      console.log('Settings clicked');
-    },
-  }],
-  [{
-    label: 'Team',
-    icon: 'i-lucide-users',
-    filter: {
-      placeholder: 'Search members...',
-    },
-    children: [{
-      label: 'benjamincanac',
-      avatar: { src: 'https://github.com/praburangki.png' },
-    }, {
-      label: 'HugoRCD',
-      avatar: { src: 'https://github.com/HugoRCD.png' },
-    }, {
-      label: 'romhml',
-      avatar: { src: 'https://github.com/romhml.png' },
-    }, {
-      label: 'sandros94',
-      avatar: { src: 'https://github.com/sandros94.png' },
-    }, {
-      label: 'hywax',
-      avatar: { src: 'https://github.com/hywax.png' },
-    }, {
-      label: 'J-Michalek',
-      avatar: { src: 'https://github.com/J-Michalek.png' },
-    }, {
-      label: 'genu',
-      avatar: { src: 'https://github.com/genu.png' },
-    }],
-  }, {
-    label: 'Invite users',
-    icon: 'i-lucide-user-plus',
-    children: [[{
-      label: 'Invite by email',
-      icon: 'i-lucide-send-horizontal',
-    }, {
-      label: 'Invite by link',
-      icon: 'i-lucide-link',
-      kbds: ['meta', 'i'],
+  ],
+  [
+    {
+      label: 'Profile',
+      description: 'View your profile',
+      icon: 'i-lucide-user',
+      slot: 'custom' as const,
       onSelect(e: Event) {
         e.preventDefault();
-        console.log('Invite by link clicked');
+        console.log('Profile clicked');
       },
-    }], [{
-      label: 'More',
-      description: 'Import from more sources',
-      icon: 'i-lucide-circle-plus',
-      children: [{
-        label: 'Import from Slack',
-        icon: 'i-simple-icons-slack',
-        to: 'https://slack.com',
-        target: '_blank',
-        onSelect(e: Event) {
-          e.preventDefault();
-          console.log('Import from Slack clicked');
+    },
+    {
+      label: 'Billing',
+      description: 'Manage billing',
+      icon: 'i-lucide-credit-card',
+      kbds: ['meta', 'b'],
+      onSelect() {
+        console.log('Billing clicked');
+      },
+    },
+    {
+      label: 'Settings',
+      icon: 'i-lucide-cog',
+      kbds: ['?'],
+      onSelect() {
+        console.log('Settings clicked');
+      },
+    },
+  ],
+  [
+    {
+      label: 'Team',
+      icon: 'i-lucide-users',
+      filter: {
+        placeholder: 'Search members...',
+      },
+      children: [
+        {
+          label: 'benjamincanac',
+          avatar: { src: 'https://github.com/praburangki.png' },
         },
-      }, {
-        label: 'Import from Trello',
-        icon: 'i-simple-icons-trello',
-        onSelect(e: Event) {
-          e.preventDefault();
-          console.log('Import from Trello clicked');
+        {
+          label: 'HugoRCD',
+          avatar: { src: 'https://github.com/HugoRCD.png' },
         },
-      }, {
-        label: 'Import from Asana',
-        icon: 'i-simple-icons-asana',
-        onSelect(e: Event) {
-          e.preventDefault();
-          console.log('Import from Asana clicked');
+        {
+          label: 'romhml',
+          avatar: { src: 'https://github.com/romhml.png' },
         },
-      }],
-    }]],
-  }, {
-    label: 'New team',
-    icon: 'i-lucide-plus',
-    kbds: ['meta', 'n'],
-    loading: loading.value,
-    onSelect(e: Event) {
-      e.preventDefault();
+        {
+          label: 'sandros94',
+          avatar: { src: 'https://github.com/sandros94.png' },
+        },
+        {
+          label: 'hywax',
+          avatar: { src: 'https://github.com/hywax.png' },
+        },
+        {
+          label: 'J-Michalek',
+          avatar: { src: 'https://github.com/J-Michalek.png' },
+        },
+        {
+          label: 'genu',
+          avatar: { src: 'https://github.com/genu.png' },
+        },
+      ],
+    },
+    {
+      label: 'Invite users',
+      icon: 'i-lucide-user-plus',
+      children: [
+        [
+          {
+            label: 'Invite by email',
+            icon: 'i-lucide-send-horizontal',
+          },
+          {
+            label: 'Invite by link',
+            icon: 'i-lucide-link',
+            kbds: ['meta', 'i'],
+            onSelect(e: Event) {
+              e.preventDefault();
+              console.log('Invite by link clicked');
+            },
+          },
+        ],
+        [
+          {
+            label: 'More',
+            description: 'Import from more sources',
+            icon: 'i-lucide-circle-plus',
+            children: [
+              {
+                label: 'Import from Slack',
+                icon: 'i-simple-icons-slack',
+                to: 'https://slack.com',
+                target: '_blank',
+                onSelect(e: Event) {
+                  e.preventDefault();
+                  console.log('Import from Slack clicked');
+                },
+              },
+              {
+                label: 'Import from Trello',
+                icon: 'i-simple-icons-trello',
+                onSelect(e: Event) {
+                  e.preventDefault();
+                  console.log('Import from Trello clicked');
+                },
+              },
+              {
+                label: 'Import from Asana',
+                icon: 'i-simple-icons-asana',
+                onSelect(e: Event) {
+                  e.preventDefault();
+                  console.log('Import from Asana clicked');
+                },
+              },
+            ],
+          },
+        ],
+      ],
+    },
+    {
+      label: 'New team',
+      icon: 'i-lucide-plus',
+      kbds: ['meta', 'n'],
+      loading: loading.value,
+      onSelect(e: Event) {
+        e.preventDefault();
 
-      loading.value = true;
-      setTimeout(() => {
-        loading.value = false;
-      }, 2000);
+        loading.value = true;
+        setTimeout(() => {
+          loading.value = false;
+        }, 2000);
+      },
     },
-  }],
-  [{
-    label: 'GitHub',
-    icon: 'i-simple-icons-github',
-    to: 'https://github.com/vinicunca/pohon',
-    target: '_blank',
-    onSelect(e: Event) {
-      e.preventDefault();
+  ],
+  [
+    {
+      label: 'GitHub',
+      icon: 'i-simple-icons-github',
+      to: 'https://github.com/vinicunca/pohon',
+      target: '_blank',
+      onSelect(e: Event) {
+        e.preventDefault();
+      },
     },
-  }, {
-    label: 'Support',
-    icon: 'i-lucide-life-buoy',
-    to: '/components/dropdown-menu',
-  }, {
-    type: 'separator' as const,
-  }, {
-    label: 'Keyboard Shortcuts',
-    icon: 'i-lucide-key-round',
-  }, {
-    label: 'API',
-    icon: 'i-lucide-box',
-    disabled: true,
-  }],
-  [{
-    label: 'Logout',
-    icon: 'i-lucide-log-out',
-    color: 'error',
-    kbds: ['shift', 'meta', 'q'],
-    onSelect() {
-      console.log('Logout clicked');
+    {
+      label: 'Support',
+      icon: 'i-lucide-life-buoy',
+      to: '/components/dropdown-menu',
     },
-  }],
+    {
+      type: 'separator' as const,
+    },
+    {
+      label: 'Keyboard Shortcuts',
+      icon: 'i-lucide-key-round',
+    },
+    {
+      label: 'API',
+      icon: 'i-lucide-box',
+      disabled: true,
+    },
+  ],
+  [
+    {
+      label: 'Logout',
+      icon: 'i-lucide-log-out',
+      color: 'error',
+      kbds: ['shift', 'meta', 'q'],
+      onSelect() {
+        console.log('Logout clicked');
+      },
+    },
+  ],
 ] satisfies Array<Array<DropdownMenuItem>>);
 
 const sizes = Object.keys(theme.variants.size);

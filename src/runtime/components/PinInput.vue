@@ -107,7 +107,10 @@ const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
 const size = computed(() => formFieldSize.value ?? props.size);
 const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pinInput || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.pinInput || {}),
+})({
   color: color.value,
   variant: props.variant,
   size: size.value,
@@ -124,7 +127,9 @@ function setInputRef(index: number, el: Element | ComponentPublicInstance | null
 
 function onComplete(value: Array<string> | Array<number>) {
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value } });
+  const event = new Event('change', {
+    target: { value },
+  });
   emits('change', event);
   emitFormChange();
 }

@@ -218,11 +218,18 @@ const virtualizerProps = toRef(() => {
     return false;
   }
 
-  return defu(typeof props.virtualize === 'boolean' ? {} : props.virtualize, {
+  return defu(typeof props.virtualize === 'boolean'
+    ? {}
+    : props.virtualize, {
     estimateSize: getEstimateSize(filteredItems.value, size.value ?? 'md', props.descriptionKey as string, !!slots['item-description']),
   });
 });
-const inputProps = toRef(() => defu(typeof props.filter === 'object' ? props.filter : {}, { placeholder: t('listbox.search'), variant: 'none' }) as Omit<InputProps, 'modelValue' | 'defaultValue'>);
+const inputProps = toRef(() => defu(typeof props.filter === 'object'
+  ? props.filter
+  : {}, {
+  placeholder: t('listbox.search'),
+  variant: 'none',
+}) as Omit<InputProps, 'modelValue' | 'defaultValue'>);
 
 const { emitFormChange, emitFormInput, name, size: formFieldSize, color: formFieldColor, id, highlight: formFieldHighlight, disabled: formFieldDisabled, labelId, ariaAttrs } = useFormField<InputProps>(_props, { bind: false });
 
@@ -247,7 +254,10 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: L
   },
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.listbox || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.listbox || {}),
+})({
   color: color.value,
   size: size.value,
   highlight: highlight.value,
@@ -277,7 +287,9 @@ function onUpdate(value: any) {
   }
 
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value } });
+  const event = new Event('change', {
+    target: { value },
+  });
   emits('change', event);
   emitFormChange();
   emitFormInput();
@@ -309,7 +321,9 @@ const filteredGroups = computed(() => {
     return groups.value;
   }
 
-  const fields = Array.isArray(props.filterFields) ? props.filterFields : [props.labelKey] as Array<string>;
+  const fields = Array.isArray(props.filterFields)
+    ? props.filterFields
+    : [props.labelKey] as Array<string>;
 
   return filterGroups(groups.value, searchTerm.value, {
     fields,

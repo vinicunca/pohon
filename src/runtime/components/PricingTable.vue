@@ -135,7 +135,10 @@ function formatSlotName(item: { id?: string; title: string }): string {
     .replace(/^-|-$/g, '');
 }
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pricingTable || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.pricingTable || {}),
+})());
 
 const [DefineTierTemplate, ReuseTierTemplate] = createReusableTemplate<{ tier: PricingTableTier }>({
   props: {

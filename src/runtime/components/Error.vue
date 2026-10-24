@@ -73,7 +73,10 @@ const appConfig = useAppConfig() as Error['AppConfig'];
 
 const as = computed(() => resolveAs(props.as, { root: 'main', statusMessage: 'h1' }));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.error || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.error || {}),
+})());
 
 function handleError() {
   clearError({ redirect: props.redirect });

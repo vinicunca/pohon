@@ -14,12 +14,15 @@ export default (options: Required<ModuleOptions>) => ({
   },
   variants: {
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        root: `bg-${color}`,
-        icon: `color-${color}-foreground`,
-        title: `color-${color}-foreground`,
-        close: `color-${color}-foreground`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          root: `bg-${color}`,
+          icon: `color-${color}-foreground`,
+          title: `color-${color}-foreground`,
+          close: `color-${color}-foreground`,
+        },
+      ])),
       neutral: {
         root: 'bg-background-inverted',
         icon: 'color-text-inverted',
@@ -33,19 +36,22 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
   },
-  compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
-    color,
-    to: true,
-    class: {
-      root: `hover:bg-${color}/90`,
+  compoundVariants: [
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      to: true,
+      class: {
+        root: `hover:bg-${color}/90`,
+      },
+    })),
+    {
+      color: 'neutral',
+      to: true,
+      class: {
+        root: 'hover:bg-background-inverted/90',
+      },
     },
-  })), {
-    color: 'neutral',
-    to: true,
-    class: {
-      root: 'hover:bg-background-inverted/90',
-    },
-  }],
+  ],
   defaultVariants: {
     color: 'primary',
   },

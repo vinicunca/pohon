@@ -19,9 +19,12 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        link: `before:outline-${color}/25`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          link: `before:outline-${color}/25`,
+        },
+      ])),
       neutral: {
         link: 'before:outline-border-inverted/25',
       },
@@ -69,25 +72,29 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
   },
-  compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
-    color,
-    selected: true,
-    class: {
-      link: `color-${color}`,
+  compoundVariants: [
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      selected: true,
+      class: {
+        link: `color-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      selected: true,
+      class: {
+        link: 'color-text-highlighted',
+      },
     },
-  })), {
-    color: 'neutral',
-    selected: true,
-    class: {
-      link: 'color-text-highlighted',
+    {
+      selected: false,
+      disabled: false,
+      class: {
+        link: ['hover:color-text-highlighted hover:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
+      },
     },
-  }, {
-    selected: false,
-    disabled: false,
-    class: {
-      link: ['hover:color-text-highlighted hover:before:bg-background-elevated/50', options.theme.transitions && 'transition-colors before:transition-colors'],
-    },
-  }],
+  ],
   defaultVariants: {
     color: 'primary',
     size: 'md',

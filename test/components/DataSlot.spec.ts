@@ -48,18 +48,34 @@ const skip: Record<string, string> = {
 
 // Minimal props for components that cannot render bare.
 const options: Record<string, { props?: any; slots?: any }> = {
-  Chart: { props: { tooltip: false } },
-  ChatReasoning: { props: { text: 'Reasoning' } },
-  ChatShimmer: { props: { text: 'Loading' } },
-  Form: { props: { state: {} } },
-  Icon: { props: { name: 'i-lucide-check' } },
+  Chart: {
+    props: { tooltip: false },
+  },
+  ChatReasoning: {
+    props: { text: 'Reasoning' },
+  },
+  ChatShimmer: {
+    props: { text: 'Loading' },
+  },
+  Form: {
+    props: { state: {} },
+  },
+  Icon: {
+    props: { name: 'i-lucide-check' },
+  },
 };
 
 // `Icon` is imported through `#components` so each test environment resolves
 // its own implementation (the Vue override does not depend on `@nuxt/icon`).
 const modules = import.meta.glob<Component>(['../../src/runtime/components/*.vue', '!../../src/runtime/components/Icon.vue'], { eager: true, import: 'default' });
 
-const entries = [...Object.entries(modules).map(([path, component]) => [path.split('/').pop()!.replace('.vue', ''), component] as const), ['Icon', PIcon] as const]
+const entries = [
+  ...Object.entries(modules).map(([path, component]) => [
+    path.split('/').pop()!.replace('.vue', ''),
+    component,
+  ] as const),
+  ['Icon', PIcon] as const,
+]
   .filter(([name]) => !(name in skip))
   .sort(([a], [b]) => a.localeCompare(b));
 

@@ -14,30 +14,157 @@ describe('pinInput', () => {
 
   renderEach(PinInput, [
     // Props
-    ['with modelValue', { props: { modelValue: ['1'] } }],
-    ['with defaultValue', { props: { defaultValue: ['1'] } }],
-    ['with id', { props: { id: 'pin-input-id' } }],
-    ['with name', { props: { name: 'pin-input-name' } }],
-    ['with type', { props: { type: 'number' } }],
-    ['with placeholder', { props: { placeholder: '*' } }],
-    ['with length', { props: { length: 6 } }],
-    ['with separator', { props: { length: 6, separator: 3 } }],
-    ['with separator positions', { props: { length: 7, separator: [3, 4] } }],
-    ['with disabled', { props: { disabled: true } }],
-    ['with required', { props: { required: true } }],
-    ['with mask', { props: { mask: true } }],
-    ['with otp', { props: { otp: true } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { size } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { variant } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant} highlight`, { props: { variant, highlight: true } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { variant, color: 'neutral' } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant} highlight`, { props: { variant, color: 'neutral', highlight: true } }]),
-    ['with ariaLabel', { attrs: { 'aria-label': 'Aria label' } }],
-    ['with as', { props: { as: 'span' } }],
-    ['with class', { props: { class: 'absolute' } }],
-    ['with ui', { props: { ui: { base: 'rounded-full' } } }],
+    [
+      'with modelValue',
+      {
+        props: {
+          modelValue: ['1'],
+        },
+      },
+    ],
+    [
+      'with defaultValue',
+      {
+        props: {
+          defaultValue: ['1'],
+        },
+      },
+    ],
+    [
+      'with id',
+      {
+        props: { id: 'pin-input-id' },
+      },
+    ],
+    [
+      'with name',
+      {
+        props: { name: 'pin-input-name' },
+      },
+    ],
+    [
+      'with type',
+      {
+        props: { type: 'number' },
+      },
+    ],
+    [
+      'with placeholder',
+      {
+        props: { placeholder: '*' },
+      },
+    ],
+    [
+      'with length',
+      {
+        props: { length: 6 },
+      },
+    ],
+    [
+      'with separator',
+      {
+        props: { length: 6, separator: 3 },
+      },
+    ],
+    [
+      'with separator positions',
+      {
+        props: {
+          length: 7,
+          separator: [3, 4],
+        },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { disabled: true },
+      },
+    ],
+    [
+      'with required',
+      {
+        props: { required: true },
+      },
+    ],
+    [
+      'with mask',
+      {
+        props: { mask: true },
+      },
+    ],
+    [
+      'with otp',
+      {
+        props: { otp: true },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { size },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant}`,
+      {
+        props: { variant },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant} highlight`,
+      {
+        props: { variant, highlight: true },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant}`,
+      {
+        props: { variant, color: 'neutral' },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant} highlight`,
+      {
+        props: { variant, color: 'neutral', highlight: true },
+      },
+    ]),
+    [
+      'with ariaLabel',
+      {
+        attrs: { 'aria-label': 'Aria label' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { as: 'span' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'absolute' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { base: 'rounded-full' },
+        },
+      },
+    ],
     // Slots
-    ['with separator slot', { props: { lenght: 6, separator: 3 }, slots: { separator: () => '=' } }],
+    [
+      'with separator slot',
+      {
+        props: { lenght: 6, separator: 3 },
+        slots: {
+          separator: () => '=',
+        },
+      },
+    ],
   ]);
 
   describe('emits', () => {
@@ -45,7 +172,13 @@ describe('pinInput', () => {
       const wrapper = mount(PinInput);
       const input = wrapper.findComponent({ name: 'PinInputRoot' });
       await input.vm.$emit('update:modelValue', ['1', '2', '3']);
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [[['1', '2', '3']]] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          [
+            ['1', '2', '3'],
+          ],
+        ],
+      });
     });
 
     it('change event', async () => {
@@ -53,7 +186,13 @@ describe('pinInput', () => {
       const input = wrapper.findComponent({ name: 'PinInputRoot' });
       await input.vm.$emit('complete', ['1', '2', '3', '4', '5']);
       await flushPromises();
-      expect(wrapper.emitted()).toMatchObject({ change: [[{ type: 'change' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        change: [
+          [
+            { type: 'change' },
+          ],
+        ],
+      });
     });
 
     it('blur event when focus leaves the group, not between pins', async () => {
@@ -75,7 +214,13 @@ describe('pinInput', () => {
       lastPin.element.dispatchEvent(new FocusEvent('focusout', { bubbles: true, relatedTarget: null }));
       await flushPromises();
 
-      expect(wrapper.emitted()).toMatchObject({ blur: [[{ type: 'focusout' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        blur: [
+          [
+            { type: 'focusout' },
+          ],
+        ],
+      });
     });
 
     it('focus event when focus enters the group, not between pins', async () => {
@@ -84,7 +229,13 @@ describe('pinInput', () => {
 
       pins[0]!.element.dispatchEvent(new FocusEvent('focusin', { bubbles: true, relatedTarget: null }));
       await flushPromises();
-      expect(wrapper.emitted()).toMatchObject({ focus: [[{ type: 'focusin' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        focus: [
+          [
+            { type: 'focusin' },
+          ],
+        ],
+      });
 
       pins[1]!.element.dispatchEvent(new FocusEvent('focusin', { bubbles: true, relatedTarget: pins[0]!.element }));
       await flushPromises();
@@ -100,7 +251,9 @@ describe('pinInput', () => {
           validateOnInputDelay: 0,
           async validate(state: any) {
             if (state.value?.length !== 5) {
-              return [{ name: 'value', message: 'Error message' }];
+              return [
+                { name: 'value', message: 'Error message' },
+              ];
             }
             return [];
           },

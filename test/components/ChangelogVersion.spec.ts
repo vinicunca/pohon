@@ -7,34 +7,210 @@ import { renderEach } from '../component-render';
 describe('changelogVersion', () => {
   renderEach(ChangelogVersion, [
     // Props
-    ['with title', { props: { title: 'Title' } }],
-    ['with description', { props: { description: 'Description' } }],
-    ['with to', { props: { to: '/changelog' } }],
-    ['with image', { props: { image: 'https://picsum.photos/640/360' } }],
-    ['with to & image', { props: { to: '/changelog', image: 'https://picsum.photos/640/360' } }],
-    ['with date', { props: { date: '2025-01-01' } }],
-    ['with badge', { props: { badge: 'Badge' } }],
-    ['with badge object', { props: { badge: { label: 'Badge', color: 'primary' } } }],
-    ['with authors', { props: { authors: [{ name: 'praburangki', description: 'benjamincanac', avatar: { src: 'https://github.com/praburangki.png', alt: 'benjamincanac' } }] } }],
-    ['without indicator', { props: { indicator: false } }],
-    ['with as', { props: { as: 'section' } }],
-    ['with as object', { props: { title: 'Title', as: { root: 'section', title: 'h3' } } }],
-    ['with class', { props: { class: 'absolute' } }],
-    ['with ui', { props: { ui: { container: 'max-w-xl' } } }],
+    [
+      'with title',
+      {
+        props: { title: 'Title' },
+      },
+    ],
+    [
+      'with description',
+      {
+        props: { description: 'Description' },
+      },
+    ],
+    [
+      'with to',
+      {
+        props: { to: '/changelog' },
+      },
+    ],
+    [
+      'with image',
+      {
+        props: { image: 'https://picsum.photos/640/360' },
+      },
+    ],
+    [
+      'with to & image',
+      {
+        props: { to: '/changelog', image: 'https://picsum.photos/640/360' },
+      },
+    ],
+    [
+      'with date',
+      {
+        props: { date: '2025-01-01' },
+      },
+    ],
+    [
+      'with badge',
+      {
+        props: { badge: 'Badge' },
+      },
+    ],
+    [
+      'with badge object',
+      {
+        props: {
+          badge: { label: 'Badge', color: 'primary' },
+        },
+      },
+    ],
+    [
+      'with authors',
+      {
+        props: {
+          authors: [
+            {
+              name: 'praburangki',
+              description: 'benjamincanac',
+              avatar: { src: 'https://github.com/praburangki.png', alt: 'benjamincanac' },
+            },
+          ],
+        },
+      },
+    ],
+    [
+      'without indicator',
+      {
+        props: { indicator: false },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with as object',
+      {
+        props: {
+          title: 'Title',
+          as: { root: 'section', title: 'h3' },
+        },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'absolute' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { container: 'max-w-xl' },
+        },
+      },
+    ],
     // Slots
-    ['with title slot', { slots: { title: () => 'Title slot' } }],
-    ['with description slot', { slots: { description: () => 'Description slot' } }],
-    ['with header slot', { slots: { header: () => 'Header slot' } }],
-    ['with badge slot', { slots: { badge: () => 'Badge slot' } }],
-    ['with date slot', { slots: { date: () => 'Date slot' } }],
-    ['with title slot', { slots: { title: () => 'Title slot' } }],
-    ['with description slot', { slots: { description: () => 'Description slot' } }],
-    ['with image slot', { slots: { image: () => 'Image slot' } }],
-    ['with body slot', { slots: { body: () => 'Body slot' } }],
-    ['with footer slot', { slots: { footer: () => 'Footer slot' } }],
-    ['with authors slot', { slots: { authors: () => 'Authors slot' } }],
-    ['with actions slot', { slots: { actions: () => 'Actions slot' } }],
-    ['with indicator slot', { slots: { indicator: () => 'Indicator slot' } }],
+    [
+      'with title slot',
+      {
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with header slot',
+      {
+        slots: {
+          header: () => 'Header slot',
+        },
+      },
+    ],
+    [
+      'with badge slot',
+      {
+        slots: {
+          badge: () => 'Badge slot',
+        },
+      },
+    ],
+    [
+      'with date slot',
+      {
+        slots: {
+          date: () => 'Date slot',
+        },
+      },
+    ],
+    [
+      'with title slot',
+      {
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with image slot',
+      {
+        slots: {
+          image: () => 'Image slot',
+        },
+      },
+    ],
+    [
+      'with body slot',
+      {
+        slots: {
+          body: () => 'Body slot',
+        },
+      },
+    ],
+    [
+      'with footer slot',
+      {
+        slots: {
+          footer: () => 'Footer slot',
+        },
+      },
+    ],
+    [
+      'with authors slot',
+      {
+        slots: {
+          authors: () => 'Authors slot',
+        },
+      },
+    ],
+    [
+      'with actions slot',
+      {
+        slots: {
+          actions: () => 'Actions slot',
+        },
+      },
+    ],
+    [
+      'with indicator slot',
+      {
+        slots: {
+          indicator: () => 'Indicator slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {
@@ -44,7 +220,13 @@ describe('changelogVersion', () => {
         description: 'Initial release',
         date: '2025-01-01',
         badge: 'Badge',
-        authors: [{ name: 'praburangki', description: 'benjamincanac', avatar: { src: 'https://github.com/praburangki.png', alt: 'praburangki' } }],
+        authors: [
+          {
+            name: 'praburangki',
+            description: 'benjamincanac',
+            avatar: { src: 'https://github.com/praburangki.png', alt: 'praburangki' },
+          },
+        ],
         indicator: true,
         to: '/changelog',
         image: 'https://picsum.photos/640/360',

@@ -9,7 +9,10 @@ import Pre from '../../../src/runtime/components/prose/Pre.vue';
 const Wrapper = defineComponent({
   props: {
     files: { type: Array as PropType<Array<string>>, required: true },
-    codeTreeProps: { type: Object, default: () => ({}) },
+    codeTreeProps: {
+      type: Object,
+      default: () => ({}),
+    },
   },
   setup(props) {
     return () => h(CodeTree, props.codeTreeProps, {
@@ -66,13 +69,17 @@ describe('codeTree', () => {
 
   it('updates the tree when the slotted files change', async () => {
     const wrapper = await mountSuspended(Wrapper, {
-      props: { files: ['app.vue'] },
+      props: {
+        files: ['app.vue'],
+      },
     });
 
     expect(wrapper.text()).toContain('app.vue');
     expect(wrapper.text()).not.toContain('index.vue');
 
-    await wrapper.setProps({ files: ['app.vue', 'index.vue'] });
+    await wrapper.setProps({
+      files: ['app.vue', 'index.vue'],
+    });
 
     expect(wrapper.text()).toContain('index.vue');
   });
@@ -104,7 +111,9 @@ describe('codeTree', () => {
 
     expect(wrapper.findAll('ul[role="group"]')).toHaveLength(0);
 
-    await wrapper.setProps({ files: ['app/app.vue', 'app/pages/index.vue', 'server/api/hello.ts'] });
+    await wrapper.setProps({
+      files: ['app/app.vue', 'app/pages/index.vue', 'server/api/hello.ts'],
+    });
 
     expect(wrapper.findAll('ul[role="group"]')).toHaveLength(4);
   });
@@ -119,7 +128,9 @@ describe('codeTree', () => {
 
     expect(wrapper.findAll('ul[role="group"]')).toHaveLength(4);
 
-    await wrapper.setProps({ codeTreeProps: { expandAll: false, defaultValue: 'app/pages/index.vue' } });
+    await wrapper.setProps({
+      codeTreeProps: { expandAll: false, defaultValue: 'app/pages/index.vue' },
+    });
 
     expect(wrapper.findAll('ul[role="group"]')).toHaveLength(2);
     expect(wrapper.text()).toContain('index.vue');
@@ -135,7 +146,9 @@ describe('codeTree', () => {
 
     expect(wrapper.findAll('ul[role="group"]')).toHaveLength(0);
 
-    await wrapper.setProps({ codeTreeProps: { expandAll: true } });
+    await wrapper.setProps({
+      codeTreeProps: { expandAll: true },
+    });
 
     expect(wrapper.findAll('ul[role="group"]')).toHaveLength(2);
   });

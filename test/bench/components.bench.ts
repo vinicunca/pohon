@@ -36,7 +36,9 @@ describe('button re-render (variant prop change)', () => {
   // bench function without tinybench's `setup`/`teardown` options, so a mount
   // there never happens under instrumentation. The warmup pass absorbs it.
   bench(`toggle loading x${CYCLES}`, async () => {
-    wrapper ??= await mountSuspended(Button, { props: { label: 'Button' } });
+    wrapper ??= await mountSuspended(Button, {
+      props: { label: 'Button' },
+    });
     for (let i = 0; i < CYCLES; i++) {
       await wrapper.setProps({ loading: true });
       await wrapper.setProps({ loading: false });
@@ -52,7 +54,9 @@ function makeData(n: number): Array<Row> {
     name: `Name ${i}`,
     email: `user${i}@example.com`,
     amount: i * 3,
-    status: i % 2 ? 'success' : 'failed',
+    status: i % 2
+      ? 'success'
+      : 'failed',
   }));
 }
 
@@ -73,7 +77,9 @@ describe('table mount (200 x 5)', () => {
   const data = makeData(200);
 
   bench('mount', async () => {
-    const wrapper = await mountSuspended(Table, { props: tableProps(data) });
+    const wrapper = await mountSuspended(Table, {
+      props: tableProps(data),
+    });
     wrapper.unmount();
   });
 });
@@ -82,7 +88,11 @@ describe('table re-render (new data identity)', () => {
   let wrapper: Awaited<ReturnType<typeof mountSuspended>> | undefined;
 
   bench('set data', async () => {
-    wrapper ??= await mountSuspended(Table, { props: tableProps(makeData(200)) });
-    await wrapper.setProps({ data: makeData(200) });
+    wrapper ??= await mountSuspended(Table, {
+      props: tableProps(makeData(200)),
+    });
+    await wrapper.setProps({
+      data: makeData(200),
+    });
   });
 });

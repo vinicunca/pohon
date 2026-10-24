@@ -36,13 +36,18 @@ export default (options: Required<ModuleOptions>) => {
         },
       },
       variant: (prev: Record<string, string>) => Object.fromEntries(
-        Object.entries(prev).map(([key, value]) => [key, replaceFocus(value)]),
+        Object.entries(prev).map(([key, value]) => [
+          key,
+          replaceFocus(value),
+        ]),
       ),
     },
     compoundVariants: (prev: Array<Record<string, any>>) => [
       ...prev.map((item) => ({
         ...item,
-        class: typeof item.class === 'string' ? replaceFocus(item.class) : item.class,
+        class: typeof item.class === 'string'
+          ? replaceFocus(item.class)
+          : item.class,
       })),
       {
         variant: 'outline',

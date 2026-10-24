@@ -15,26 +15,127 @@ describe('inputRating', () => {
 
   it.each([
     // Props
-    ['with modelValue', { props: { modelValue: 3 } }],
-    ['with defaultValue', { props: { defaultValue: 3 } }],
-    ['with length', { props: { length: 10, modelValue: 7 } }],
-    ['with step', { props: { step: 0.5, modelValue: 3.5 } }],
-    ['with readonly', { props: { readonly: true, modelValue: 4 } }],
-    ['with disabled', { props: { disabled: true, modelValue: 3 } }],
-    ['with clearable', { props: { clearable: true, modelValue: 3 } }],
-    ['with hoverable', { props: { hoverable: true, modelValue: 3 } }],
-    ['with icon', { props: { icon: 'i-lucide-heart', modelValue: 4 } }],
-    ['with emptyIcon', { props: { emptyIcon: 'i-lucide-star-off', modelValue: 3 } }],
-    ['with id', { props: { id: 'rating-id', modelValue: 3 } }],
-    ['with name', { props: { name: 'rating-name', modelValue: 3 } }],
-    ['with required', { props: { required: true, modelValue: 3 } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { size, modelValue: 3 } }]),
-    ...colors.map((color: string) => [`with color ${color}`, { props: { color, modelValue: 3 } }]),
-    ['with as', { props: { as: 'span', modelValue: 3 } }],
-    ['with class', { props: { class: 'inline-flex', modelValue: 3 } }],
-    ['with ui', { props: { ui: { root: 'gap-1' }, modelValue: 3 } }],
+    [
+      'with modelValue',
+      {
+        props: { modelValue: 3 },
+      },
+    ],
+    [
+      'with defaultValue',
+      {
+        props: { defaultValue: 3 },
+      },
+    ],
+    [
+      'with length',
+      {
+        props: { length: 10, modelValue: 7 },
+      },
+    ],
+    [
+      'with step',
+      {
+        props: { step: 0.5, modelValue: 3.5 },
+      },
+    ],
+    [
+      'with readonly',
+      {
+        props: { readonly: true, modelValue: 4 },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { disabled: true, modelValue: 3 },
+      },
+    ],
+    [
+      'with clearable',
+      {
+        props: { clearable: true, modelValue: 3 },
+      },
+    ],
+    [
+      'with hoverable',
+      {
+        props: { hoverable: true, modelValue: 3 },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { icon: 'i-lucide-heart', modelValue: 4 },
+      },
+    ],
+    [
+      'with emptyIcon',
+      {
+        props: { emptyIcon: 'i-lucide-star-off', modelValue: 3 },
+      },
+    ],
+    [
+      'with id',
+      {
+        props: { id: 'rating-id', modelValue: 3 },
+      },
+    ],
+    [
+      'with name',
+      {
+        props: { name: 'rating-name', modelValue: 3 },
+      },
+    ],
+    [
+      'with required',
+      {
+        props: { required: true, modelValue: 3 },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { size, modelValue: 3 },
+      },
+    ]),
+    ...colors.map((color: string) => [
+      `with color ${color}`,
+      {
+        props: { color, modelValue: 3 },
+      },
+    ]),
+    [
+      'with as',
+      {
+        props: { as: 'span', modelValue: 3 },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'inline-flex', modelValue: 3 },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { root: 'gap-1' },
+          modelValue: 3,
+        },
+      },
+    ],
     // Slots
-    ['with item slot', { slots: { item: () => '⭐' }, props: { modelValue: 3 } }],
+    [
+      'with item slot',
+      {
+        slots: {
+          item: () => '⭐',
+        },
+        props: { modelValue: 3 },
+      },
+    ],
   ])('renders %s correctly', async (nameOrHtml: string, options: { props?: InputRatingProps; slots?: Partial<InputRatingSlots> }) => {
     const html = await ComponentRender(nameOrHtml, options, InputRating);
     expect(html).toMatchSnapshot();
@@ -141,7 +242,9 @@ describe('inputRating', () => {
           validateOnInputDelay: 0,
           async validate(state: any) {
             if (state.rating < 3) {
-              return [{ name: 'rating', message: 'Rating must be at least 3' }];
+              return [
+                { name: 'rating', message: 'Rating must be at least 3' },
+              ];
             }
             return [];
           },

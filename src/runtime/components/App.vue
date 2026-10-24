@@ -45,7 +45,12 @@ const toasterProps = toRef(() => props.toaster);
 const parentLocale = inject(localeContextInjectionKey, undefined);
 const locale = toRef(() => {
   const value = props.locale || parentLocale?.value;
-  return props.dir ? { ...(value || en), dir: props.dir } : value;
+  return props.dir
+    ? {
+        ...(value || en),
+        dir: props.dir,
+      }
+    : value;
 });
 provide(localeContextInjectionKey, locale);
 

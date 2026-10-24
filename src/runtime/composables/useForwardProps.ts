@@ -20,7 +20,9 @@ export function useForwardProps<T extends object, E extends string = string>(
   // akar tightened `useEmitAsProps` to require an `Emit<Name, Fn>` inferred
   // from a concrete `defineEmits` signature; our generic proxy emit doesn't satisfy it,
   // so cast at the call site (this is a runtime-transparent name → `onXxx` prop mapping).
-  const emitAsProps = emits ? useEmitAsProps(emits as Parameters<typeof useEmitAsProps>[0]) : {};
+  const emitAsProps = emits
+    ? useEmitAsProps(emits as Parameters<typeof useEmitAsProps>[0])
+    : {};
   return computed(() => {
     const src = unref(source);
     const out: Record<string, any> = { ...emitAsProps };

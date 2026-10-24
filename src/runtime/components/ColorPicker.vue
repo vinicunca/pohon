@@ -15,12 +15,16 @@ type HSVColor = {
 };
 
 function HSLtoHSV(hsl: HSLObject): HSVColor {
-  const x = hsl.S * (hsl.L < 50 ? hsl.L : 100 - hsl.L);
+  const x = hsl.S * (hsl.L < 50
+    ? hsl.L
+    : 100 - hsl.L);
   const v = hsl.L + (x / 100);
 
   return {
     h: hsl.H,
-    s: hsl.L === 0 ? hsl.S : 2 * x / v,
+    s: hsl.L === 0
+      ? hsl.S
+      : 2 * x / v,
     v,
   };
 }
@@ -30,7 +34,11 @@ function HSVtoHSL(hsv: HSVColor): HSLObject {
 
   return {
     H: hsv.h,
-    S: x === 0 || x === 200 ? 0 : Math.round(hsv.s * hsv.v / (x <= 100 ? x : 200 - x)),
+    S: x === 0 || x === 200
+      ? 0
+      : Math.round(hsv.s * hsv.v / (x <= 100
+          ? x
+          : 200 - x)),
     L: x / 2,
   };
 }
@@ -95,7 +103,10 @@ const modelValue = defineModel<string>(undefined);
 
 const appConfig = useAppConfig() as ColorPicker['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.colorPicker || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.colorPicker || {}),
+})({
   size: props.size,
 }));
 
@@ -151,8 +162,12 @@ function useColorDraggable(targetElement: MaybeRefOrGetter<HTMLElement | null>, 
     const container = toValue(containerElement);
 
     pressedDelta.value = {
-      x: event.clientX - (container ? event.clientX - containerRect.left.value + container.scrollLeft : targetRect.left.value),
-      y: event.clientY - (container ? event.clientY - containerRect.top.value + container.scrollTop : targetRect.top.value),
+      x: event.clientX - (container
+        ? event.clientX - containerRect.left.value + container.scrollLeft
+        : targetRect.left.value),
+      y: event.clientY - (container
+        ? event.clientY - containerRect.top.value + container.scrollTop
+        : targetRect.top.value),
     };
 
     move(event);
@@ -246,7 +261,9 @@ watchThrottled([selectorThumbPosition, trackThumbPosition], () => {
   };
 
   nextTick(resumeWatchColor);
-}, { throttle: () => props.throttle });
+}, {
+  throttle: () => props.throttle,
+});
 
 const trackThumbColor = computed(() => new ColorTranslator(HSVtoHSL({
   h: normalizeHue(trackThumbPosition.value.y),

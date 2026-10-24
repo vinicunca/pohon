@@ -32,7 +32,10 @@ const props = useComponentProps('prose.tabsItem', _props);
 
 const appConfig = useAppConfig() as ProseTabsItem['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.tabsItem || {}) }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.tabsItem || {}),
+}));
 </script>
 
 <template>

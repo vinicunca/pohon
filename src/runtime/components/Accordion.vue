@@ -106,7 +106,10 @@ const appConfig = useAppConfig() as Accordion['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'collapsible', 'defaultValue', 'disabled', 'modelValue', 'unmountOnHide'), emits);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.accordion || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.accordion || {}),
+})({
   disabled: props.disabled,
 }));
 </script>

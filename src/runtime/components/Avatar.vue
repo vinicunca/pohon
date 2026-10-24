@@ -67,12 +67,17 @@ const appConfig = useAppConfig() as Avatar['AppConfig'];
 
 const { size, color } = useAvatarGroup(_props);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.avatar || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.avatar || {}),
+})({
   size: size.value ?? props.size,
   color: color.value ?? props.color,
 }));
 
-const rootClass = computed(() => ui.value.root({ class: [props.ui?.root, props.class] }));
+const rootClass = computed(() => ui.value.root({
+  class: [props.ui?.root, props.class],
+}));
 
 const sizePx = computed(() => {
   const sizeClass = (rootClass.value || '').split(' ').find((c) => /^size-\d+$/.test(c));

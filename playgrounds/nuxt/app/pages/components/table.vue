@@ -29,9 +29,37 @@ const table = useTemplateRef('table');
 const virtualize = ref(false);
 
 const statuses: Array<Payment['status']> = ['paid', 'failed', 'refunded'];
-const domains = ['gmail.com', 'outlook.com', 'yahoo.com', 'company.com', 'mail.com'];
-const firstNames = ['john', 'jane', 'alex', 'sarah', 'mike', 'emma', 'david', 'lisa', 'chris', 'anna'];
-const lastNames = ['smith', 'johnson', 'williams', 'brown', 'jones', 'garcia', 'miller', 'davis', 'rodriguez', 'martinez'];
+const domains = [
+  'gmail.com',
+  'outlook.com',
+  'yahoo.com',
+  'company.com',
+  'mail.com',
+];
+const firstNames = [
+  'john',
+  'jane',
+  'alex',
+  'sarah',
+  'mike',
+  'emma',
+  'david',
+  'lisa',
+  'chris',
+  'anna',
+];
+const lastNames = [
+  'smith',
+  'johnson',
+  'williams',
+  'brown',
+  'jones',
+  'garcia',
+  'miller',
+  'davis',
+  'rodriguez',
+  'martinez',
+];
 
 function makeData(id: number | string, index?: number): Payment {
   const i = index ?? Number(id);
@@ -40,11 +68,15 @@ function makeData(id: number | string, index?: number): Payment {
 
   return {
     id: id.toString(),
-    date: index !== undefined ? new Date(Date.now() - index * 3600000 * 2).toISOString() : new Date().toISOString(),
+    date: index !== undefined
+      ? new Date(Date.now() - index * 3600000 * 2).toISOString()
+      : new Date().toISOString(),
     firstName,
     lastName,
     status: statuses[i % statuses.length]!,
-    email: `${firstName}.${lastName}${i > 100 ? Math.floor(i / 10) : ''}@${domains[i % domains.length]}`,
+    email: `${firstName}.${lastName}${i > 100
+      ? Math.floor(i / 10)
+      : ''}@${domains[i % domains.length]}`,
     amount: Math.floor(Math.random() * 900) + 100,
   };
 }
@@ -70,7 +102,9 @@ function getRowItems(row: TableRow<Payment>) {
       },
     },
     {
-      label: row.getIsExpanded() ? 'Collapse' : 'Expand',
+      label: row.getIsExpanded()
+        ? 'Collapse'
+        : 'Expand',
       onSelect() {
         row.toggleExpanded();
       },
@@ -93,11 +127,19 @@ const columns: Array<TableColumn<Payment>> = [
   {
     id: 'pin',
     cell: ({ row }) => h(PButton, {
-      'icon': row.getIsPinned() ? 'i-lucide-pin-off' : 'i-lucide-pin',
-      'color': row.getIsPinned() ? 'primary' : 'neutral',
+      'icon': row.getIsPinned()
+        ? 'i-lucide-pin-off'
+        : 'i-lucide-pin',
+      'color': row.getIsPinned()
+        ? 'primary'
+        : 'neutral',
       'variant': 'ghost',
-      'aria-label': row.getIsPinned() ? 'Unpin row' : 'Pin row to top',
-      'onClick': () => row.pin(row.getIsPinned() ? false : 'top'),
+      'aria-label': row.getIsPinned()
+        ? 'Unpin row'
+        : 'Pin row to top',
+      'onClick': () => row.pin(row.getIsPinned()
+        ? false
+        : 'top'),
     }),
     enableSorting: false,
     enableHiding: false,
@@ -106,7 +148,9 @@ const columns: Array<TableColumn<Payment>> = [
   {
     id: 'select',
     header: ({ table }) => h(PCheckbox, {
-      'modelValue': table.getIsSomePageRowsSelected() ? 'indeterminate' : table.getIsAllPageRowsSelected(),
+      'modelValue': table.getIsSomePageRowsSelected()
+        ? 'indeterminate'
+        : table.getIsAllPageRowsSelected(),
       'onUpdate:modelValue': (value: boolean | 'indeterminate') => table.toggleAllPageRowsSelected(!!value),
       'aria-label': 'Select all',
     }),
@@ -189,7 +233,11 @@ const columns: Array<TableColumn<Payment>> = [
         color: 'neutral',
         variant: 'ghost',
         label: 'Email',
-        icon: isSorted ? (isSorted === 'asc' ? 'i-lucide-arrow-up-narrow-wide' : 'i-lucide-arrow-down-wide-narrow') : 'i-lucide-arrow-up-down',
+        icon: isSorted
+          ? (isSorted === 'asc'
+              ? 'i-lucide-arrow-up-narrow-wide'
+              : 'i-lucide-arrow-down-wide-narrow')
+          : 'i-lucide-arrow-up-down',
         class: '-mx-2.5',
         onClick: () => column.toggleSorting(column.getIsSorted() === 'asc'),
       });
@@ -262,7 +310,9 @@ function getPinnedHeader(column: Column<Payment>, label: string, position: 'left
     icon: isPinned ? 'i-lucide-pin-off' : 'i-lucide-pin',
     class: '-mx-2.5',
     onClick() {
-      column.pin(isPinned === position ? false : position);
+      column.pin(isPinned === position
+        ? false
+        : position);
     },
   });
 }
@@ -294,7 +344,9 @@ function onSelect(e: Event, row: TableRow<Payment>) {
 }
 
 const contextmenuRow = ref<TableRow<Payment> | null>(null);
-const contextmenuItems = computed(() => contextmenuRow.value ? getRowItems(contextmenuRow.value) : []);
+const contextmenuItems = computed(() => contextmenuRow.value
+  ? getRowItems(contextmenuRow.value)
+  : []);
 
 function onContextmenu(e: Event, row: TableRow<Payment>) {
   contextmenuRow.value = row;

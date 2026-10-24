@@ -73,8 +73,12 @@ export function sanitizeSnippet(snippet: string): string {
 }
 
 export function highlight<T>(item: T & { matches?: FuseResult<T>['matches'] }, searchTerm: string, forceKey?: GetItemKeys<T>, omitKeys?: Array<GetItemKeys<T>>, useTokenSearch?: boolean) {
-  const tokens = useTokenSearch ? (searchTerm.match(/[\p{L}\p{M}\p{N}_]+/gu) || []) : [];
-  const minTokenLength = tokens.length > 0 ? Math.min(...tokens.map((t) => t.length)) : searchTerm.length;
+  const tokens = useTokenSearch
+    ? (searchTerm.match(/[\p{L}\p{M}\p{N}_]+/gu) || [])
+    : [];
+  const minTokenLength = tokens.length > 0
+    ? Math.min(...tokens.map((t) => t.length))
+    : searchTerm.length;
 
   function generateHighlightedText(value: FuseResultMatch['value'], indices: FuseResultMatch['indices'] = []) {
     value = value || '';

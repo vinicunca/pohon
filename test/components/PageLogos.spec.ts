@@ -11,16 +11,70 @@ describe('pageLogos', () => {
   ];
   renderEach(PageLogos, [
     // Props
-    ['with as', { props: { as: 'section' } }],
-    ['with as object', { props: { title: 'Title', as: { root: 'section', title: 'h3' } } }],
-    ['with class', { props: { class: 'text-xl' } }],
-    ['with title', { props: { title: 'Title' } }],
-    ['with items', { props: { items } }],
-    ['with marquee', { props: { marquee: true, items } }],
-    ['with ui', { props: { ui: { title: 'font-700 text-xl' } } }],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with as object',
+      {
+        props: {
+          title: 'Title',
+          as: { root: 'section', title: 'h3' },
+        },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'text-xl' },
+      },
+    ],
+    [
+      'with title',
+      {
+        props: { title: 'Title' },
+      },
+    ],
+    [
+      'with items',
+      {
+        props: { items },
+      },
+    ],
+    [
+      'with marquee',
+      {
+        props: { marquee: true, items },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { title: 'font-700 text-xl' },
+        },
+      },
+    ],
     // Slots
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

@@ -7,10 +7,27 @@ import { renderEach } from '../component-render';
 describe('main', () => {
   renderEach(Main, [
     // Props
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'min-h-full' } }],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'min-h-full' },
+      },
+    ],
     // Slots
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

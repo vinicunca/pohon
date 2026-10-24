@@ -11,7 +11,10 @@ import { resolveRouterMode } from '../utils/router';
  */
 export default function NuxtEnvironmentPlugin(options: PohonUiOptions) {
   const routerMode = resolveRouterMode(options);
-  const stubPath = resolvePathSync(`./vue/stubs/${routerMode}`, { extensions: ['.ts', '.mjs', '.js'], url: runtimeUrl });
+  const stubPath = resolvePathSync(`./vue/stubs/${routerMode}`, {
+    extensions: ['.ts', '.mjs', '.js'],
+    url: runtimeUrl,
+  });
 
   return {
     name: 'pohon:ui',

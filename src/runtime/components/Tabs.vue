@@ -129,7 +129,10 @@ const appConfig = useAppConfig() as Tabs['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'unmountOnHide'), emits);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.tabs || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.tabs || {}),
+})({
   color: props.color,
   variant: props.variant,
   size: props.size,

@@ -89,12 +89,18 @@ function formatCell(base, head) {
     return formatSize(head);
   }
 
-  const sign = delta > 0 ? '+' : '-';
-  const percentage = base ? `, ${sign}${(Math.abs(delta) / base * 100).toFixed(1)}%` : '';
+  const sign = delta > 0
+    ? '+'
+    : '-';
+  const percentage = base
+    ? `, ${sign}${(Math.abs(delta) / base * 100).toFixed(1)}%`
+    : '';
 
   return `${formatSize(head)} (${sign}${formatSize(Math.abs(delta))}${percentage})`;
 }
 
 function formatSize(bytes) {
-  return bytes < 100 ? `${bytes} B` : `${(bytes / 1000).toFixed(1)} kB`;
+  return bytes < 100
+    ? `${bytes} B`
+    : `${(bytes / 1000).toFixed(1)} kB`;
 }

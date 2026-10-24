@@ -49,12 +49,17 @@ const props = useComponentProps('avatarGroup', _props);
 
 const appConfig = useAppConfig() as AvatarGroup['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.avatarGroup || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.avatarGroup || {}),
+})({
   size: props.size,
   color: props.color,
 }));
 
-const max = computed(() => typeof props.max === 'string' ? Number.parseInt(props.max, 10) : props.max);
+const max = computed(() => typeof props.max === 'string'
+  ? Number.parseInt(props.max, 10)
+  : props.max);
 
 const children = computed(() => {
   let children = slots.default?.();

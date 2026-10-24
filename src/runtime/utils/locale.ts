@@ -30,7 +30,9 @@ export function buildLocaleContext<M>(locale: MaybeRef<Locale<M>>): LocaleContex
   const lang = computed(() => unref(locale).name);
   const code = computed(() => unref(locale).code);
   const dir = computed(() => unref(locale).dir);
-  const localeRef = isRef(locale) ? locale : ref(locale) as Ref<Locale<M>>;
+  const localeRef = isRef(locale)
+    ? locale
+    : ref(locale) as Ref<Locale<M>>;
 
   return {
     lang,

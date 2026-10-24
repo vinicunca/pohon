@@ -38,7 +38,10 @@ const props = useComponentProps('prose.accordion', _props);
 
 const appConfig = useAppConfig() as ProseAccordion['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.accordion || {}) }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.accordion || {}),
+}));
 
 const rerenderCount = ref(1);
 

@@ -18,15 +18,26 @@ function _useContentSearch() {
     ancestors: Array<ContentNavigationItem> = [],
   ): ContentSearchItem {
     // Top-level section title is omitted — items render under their section's group label.
-    const prefix = [...new Set([...ancestors.map((a) => a.title), ...file.titles].filter(Boolean))];
+    const prefix = [
+      ...new Set([
+        ...ancestors.map((a) => a.title),
+        ...file.titles,
+      ].filter(Boolean)),
+    ];
     const ancestorIcon = ancestors.findLast((a) => a.icon)?.icon;
 
     return {
-      prefix: prefix?.length ? (`${prefix.join(' > ')} >`) : undefined,
-      label: file.id === link.path ? link.title : file.title,
+      prefix: prefix?.length
+        ? (`${prefix.join(' > ')} >`)
+        : undefined,
+      label: file.id === link.path
+        ? link.title
+        : file.title,
       suffix: file.content.replaceAll('<', '&lt;').replaceAll('>', '&gt;'),
       to: file.id,
-      icon: (link.icon || ancestorIcon || (file.level > 1 ? appConfig.ui.icons.hash : appConfig.ui.icons.file)) as string,
+      icon: (link.icon || ancestorIcon || (file.level > 1
+        ? appConfig.ui.icons.hash
+        : appConfig.ui.icons.file)) as string,
       level: file.level,
     };
   }
@@ -62,31 +73,40 @@ function _useContentSearch() {
           return visit(link.children, [...ancestors, link]);
         }
 
-        const matched = link.path ? filesByPath.get(link.path) : undefined;
+        const matched = link.path
+          ? filesByPath.get(link.path)
+          : undefined;
         return matched?.map((file) => mapFile(file, link, ancestors)) || [];
       });
     }
 
-    return visit(children, parent ? [parent] : []);
+    return visit(children, parent
+      ? [parent]
+      : []);
   }
 
   /**
    * Map links to ContentSearchItems
    */
   function mapLinks(links: Array<ContentSearchLink>): Array<ContentSearchItem> {
-    return links.flatMap((link) => [{
-      ...link,
-      suffix: link.description,
-      description: undefined,
-      icon: link.icon || appConfig.ui.icons.file,
-      children: undefined,
-    } as ContentSearchItem, ...(link.children?.map((child) => ({
-      ...child,
-      prefix: link.label ? `${link.label} >` : undefined,
-      suffix: child.description,
-      description: undefined,
-      icon: child.icon || link.icon || appConfig.ui.icons.file,
-    } as ContentSearchItem)) || [])]);
+    return links.flatMap((link) => [
+      {
+        ...link,
+        suffix: link.description,
+        description: undefined,
+        icon: link.icon || appConfig.ui.icons.file,
+        children: undefined,
+      } as ContentSearchItem,
+      ...(link.children?.map((child) => ({
+        ...child,
+        prefix: link.label
+          ? `${link.label} >`
+          : undefined,
+        suffix: child.description,
+        description: undefined,
+        icon: child.icon || link.icon || appConfig.ui.icons.file,
+      } as ContentSearchItem)) || []),
+    ]);
   }
 
   /**
@@ -135,20 +155,37 @@ function _useContentSearch() {
       // Fall back to the matched link when ancestors is empty so top-level
       // index-page results still show their section title (results are flat
       // here — no group label like `mapFile`).
-      const sectionChain = ancestors.length ? ancestors : (link ? [link] : []);
-      const prefixParts = [...new Set([...sectionChain.map((s) => s.title), ...result.titles].filter(Boolean))];
-      const prefix = prefixParts.length ? (`${prefixParts.join(' > ')} >`) : undefined;
+      const sectionChain = ancestors.length
+        ? ancestors
+        : (link
+            ? [link]
+            : []);
+      const prefixParts = [
+        ...new Set([
+          ...sectionChain.map((s) => s.title),
+          ...result.titles,
+        ].filter(Boolean)),
+      ];
+      const prefix = prefixParts.length
+        ? (`${prefixParts.join(' > ')} >`)
+        : undefined;
 
       const ancestorIcon = ancestors.findLast((a) => a.icon)?.icon;
 
       acc.push({
         label: result.title,
-        labelHtml: result.snippets?.title ? sanitizeSnippet(result.snippets.title) : undefined,
+        labelHtml: result.snippets?.title
+          ? sanitizeSnippet(result.snippets.title)
+          : undefined,
         prefix,
         description: result.content.replaceAll('<', '&lt;').replaceAll('>', '&gt;'),
-        descriptionHtml: result.snippets?.content ? sanitizeSnippet(result.snippets.content) : undefined,
+        descriptionHtml: result.snippets?.content
+          ? sanitizeSnippet(result.snippets.content)
+          : undefined,
         to: result.id,
-        icon: (link?.icon || ancestorIcon || (result.level > 1 ? appConfig.ui.icons.hash : appConfig.ui.icons.file)) as string,
+        icon: (link?.icon || ancestorIcon || (result.level > 1
+          ? appConfig.ui.icons.hash
+          : appConfig.ui.icons.file)) as string,
         level: result.level,
       });
 

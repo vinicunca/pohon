@@ -13,10 +13,13 @@ export default (options: Required<ModuleOptions>) => ({
   },
   variants: {
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        base: `data-[state=checked]:bg-${color} outline-${color}/25`,
-        icon: `group-data-[state=checked]:color-${color}`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          base: `data-[state=checked]:bg-${color} outline-${color}/25`,
+          icon: `group-data-[state=checked]:color-${color}`,
+        },
+      ])),
       neutral: {
         base: 'data-[state=checked]:bg-background-inverted outline-border-inverted/25',
         icon: 'group-data-[state=checked]:color-text-highlighted',

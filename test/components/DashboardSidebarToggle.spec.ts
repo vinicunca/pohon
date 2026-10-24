@@ -22,10 +22,30 @@ describe('dashboardSidebarToggle', () => {
     DashboardWrapper,
     [
     // Props
-      ['with color', { props: { color: 'primary' as const } }],
-      ['with variant', { props: { variant: 'solid' as const } }],
-      ['with side', { props: { side: 'right' as const } }],
-      ['with class', { props: { class: 'p-3' } }],
+      [
+        'with color',
+        {
+          props: { color: 'primary' as const },
+        },
+      ],
+      [
+        'with variant',
+        {
+          props: { variant: 'solid' as const },
+        },
+      ],
+      [
+        'with side',
+        {
+          props: { side: 'right' as const },
+        },
+      ],
+      [
+        'with class',
+        {
+          props: { class: 'p-3' },
+        },
+      ],
     ],
     async (_, options) => {
       const wrapper = await mountSuspended(DashboardWrapper, options);

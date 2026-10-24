@@ -7,12 +7,43 @@ import { renderEach } from '../component-render';
 describe('chatPalette', () => {
   renderEach(ChatPalette, [
     // Props
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'absolute' } }],
-    ['with ui', { props: { ui: { prompt: 'py-5' } } }],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'absolute' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { prompt: 'py-5' },
+        },
+      },
+    ],
     // Slots
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
-    ['with prompt slot', { slots: { prompt: () => 'Prompt slot' } }],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with prompt slot',
+      {
+        slots: {
+          prompt: () => 'Prompt slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

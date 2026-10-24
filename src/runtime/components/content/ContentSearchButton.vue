@@ -88,13 +88,21 @@ const [DefineButtonTemplate, ReuseButtonTemplate] = createReusableTemplate();
 const getProxySlots = () => omit(slots, ['trailing']);
 
 const buttonProps = useForwardProps(reactiveOmit(props, 'icon', 'label', 'variant', 'collapsed', 'tooltip', 'kbds', 'class', 'ui'));
-const tooltipProps = toRef(() => defu(typeof props.tooltip === 'boolean' ? {} : props.tooltip, { delayDuration: 0, content: { side: 'right' } }) as TooltipProps);
+const tooltipProps = toRef(() => defu(typeof props.tooltip === 'boolean'
+  ? {}
+  : props.tooltip, {
+  delayDuration: 0,
+  content: { side: 'right' },
+}) as TooltipProps);
 
 const { t } = useLocale();
 const { open } = useContentSearch();
 const appConfig = useAppConfig() as ContentSearchButton['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.contentSearchButton || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.contentSearchButton || {}),
+})({
   collapsed: props.collapsed,
 }));
 </script>

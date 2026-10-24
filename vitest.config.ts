@@ -47,8 +47,15 @@ export default defineConfig({
           name: 'vue',
           environment: 'happy-dom',
           dir: './test',
-          include: ['components/**.spec.ts', 'composables/**.spec.ts', 'utils/**/**.spec.ts', 'locale.spec.ts'],
-          benchmark: { include: ['bench/**/*.bench.ts'] },
+          include: [
+            'components/**.spec.ts',
+            'composables/**.spec.ts',
+            'utils/**/**.spec.ts',
+            'locale.spec.ts',
+          ],
+          benchmark: {
+            include: ['bench/**/*.bench.ts'],
+          },
           setupFiles: ['./test/utils/setup.ts'],
         },
         plugins: [
@@ -80,7 +87,11 @@ export default defineConfig({
             },
             load(id) {
               if (id === '\0virtual:pohon-ui-components') {
-                const resolvedComponents = [...vueRouterOverrides, ...vueComponents, ...components];
+                const resolvedComponents = [
+                  ...vueRouterOverrides,
+                  ...vueComponents,
+                  ...components,
+                ];
                 const renderedComponents = new Set<string>();
                 return resolvedComponents.map((file) => {
                   const componentName = file.split('/').pop()!.replace('.vue', '');

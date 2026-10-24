@@ -25,7 +25,10 @@ const props = useComponentProps('prose.icon', _props);
 
 const appConfig = useAppConfig() as ProseIcon['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.icon || {}) }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.icon || {}),
+}));
 </script>
 
 <template>

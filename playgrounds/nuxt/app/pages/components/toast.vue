@@ -11,85 +11,106 @@ const count = ref(1);
 const last = computed(() => toasts.value[toasts.value.length - 1]);
 
 function templates(id: number) {
-  return [{
-    title: 'Toast',
-    description: `This is the toast ${id}`,
-  }, {
-    title: `Toast ${id}`,
-  }, {
-    description: `This is the toast ${id}`,
-  }, {
-    title: 'Toast',
-    description: `This is the toast ${id}`,
-    icon: 'i-lucide-rocket',
-    actions: [{
-      label: 'Action 1',
-      color: 'neutral' as const,
-      onClick() {
-        console.log(`Toast ${id} action 1 clicked`);
-      },
-    }, {
-      label: 'Action 2',
-      color: 'neutral' as const,
-      variant: 'outline' as const,
-      onClick() {
-        console.log(`Toast ${id} action 2 clicked`);
-      },
-    }],
-  }, {
-    title: `Toast ${id}`,
-    icon: 'i-lucide-rocket',
-  }, {
-    description: `This is the toast ${id}`,
-    icon: 'i-lucide-rocket',
-  }, {
-    title: 'Toast',
-    description: `This is the toast ${id}`,
-    avatar: {
-      src: 'https://github.com/praburangki.png',
+  return [
+    {
+      title: 'Toast',
+      description: `This is the toast ${id}`,
     },
-  }, {
-    title: 'Toast',
-    description: `This is the toast ${id}`,
-    avatar: {
-      src: 'https://github.com/praburangki.png',
+    {
+      title: `Toast ${id}`,
     },
-    actions: [{
-      label: 'Action',
-      onClick() {
-        console.log(`Toast ${id} action clicked`);
+    {
+      description: `This is the toast ${id}`,
+    },
+    {
+      title: 'Toast',
+      description: `This is the toast ${id}`,
+      icon: 'i-lucide-rocket',
+      actions: [
+        {
+          label: 'Action 1',
+          color: 'neutral' as const,
+          onClick() {
+            console.log(`Toast ${id} action 1 clicked`);
+          },
+        },
+        {
+          label: 'Action 2',
+          color: 'neutral' as const,
+          variant: 'outline' as const,
+          onClick() {
+            console.log(`Toast ${id} action 2 clicked`);
+          },
+        },
+      ],
+    },
+    {
+      title: `Toast ${id}`,
+      icon: 'i-lucide-rocket',
+    },
+    {
+      description: `This is the toast ${id}`,
+      icon: 'i-lucide-rocket',
+    },
+    {
+      title: 'Toast',
+      description: `This is the toast ${id}`,
+      avatar: {
+        src: 'https://github.com/praburangki.png',
       },
-    }],
-  }, {
-    title: `Toast ${id}`,
-    icon: 'i-lucide-rocket',
-    orientation: 'horizontal' as const,
-    actions: [{
-      label: 'Action 1',
-      color: 'neutral' as const,
-      onClick() {
-        console.log(`Toast ${id} action 1 clicked`);
+    },
+    {
+      title: 'Toast',
+      description: `This is the toast ${id}`,
+      avatar: {
+        src: 'https://github.com/praburangki.png',
       },
-    }, {
-      label: 'Action 2',
-      color: 'neutral' as const,
-      variant: 'outline' as const,
-      onClick() {
-        console.log(`Toast ${id} action 2 clicked`);
-      },
-    }],
-  }, {
-    description: `This is the toast ${id}`,
-    icon: 'i-lucide-rocket',
-    orientation: 'horizontal' as const,
-    actions: [{
-      label: 'Action',
-      variant: 'outline' as const,
-      onClick() {
-        console.log(`Toast ${id} action clicked`);
-      },
-    }],
-  }];
+      actions: [
+        {
+          label: 'Action',
+          onClick() {
+            console.log(`Toast ${id} action clicked`);
+          },
+        },
+      ],
+    },
+    {
+      title: `Toast ${id}`,
+      icon: 'i-lucide-rocket',
+      orientation: 'horizontal' as const,
+      actions: [
+        {
+          label: 'Action 1',
+          color: 'neutral' as const,
+          onClick() {
+            console.log(`Toast ${id} action 1 clicked`);
+          },
+        },
+        {
+          label: 'Action 2',
+          color: 'neutral' as const,
+          variant: 'outline' as const,
+          onClick() {
+            console.log(`Toast ${id} action 2 clicked`);
+          },
+        },
+      ],
+    },
+    {
+      description: `This is the toast ${id}`,
+      icon: 'i-lucide-rocket',
+      orientation: 'horizontal' as const,
+      actions: [
+        {
+          label: 'Action',
+          variant: 'outline' as const,
+          onClick() {
+            console.log(`Toast ${id} action clicked`);
+          },
+        },
+      ],
+    },
+  ];
 }
 
 function addToast() {

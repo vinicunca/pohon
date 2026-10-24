@@ -14,17 +14,89 @@ import PageLogos from '../../src/runtime/components/PageLogos.vue';
 import PageSection from '../../src/runtime/components/PageSection.vue';
 
 const components: Array<[string, Component, string, string, Record<string, unknown>]> = [
-  ['BlogPost', BlogPost, 'title', 'H2', { title: 'Heading' }],
-  ['ChangelogVersion', ChangelogVersion, 'title', 'H2', { title: 'Heading' }],
-  ['DashboardNavbar', DashboardNavbar, 'title', 'H1', { title: 'Heading' }],
-  ['Empty', Empty, 'title', 'H2', { title: 'Heading' }],
-  ['Error', Error, 'statusMessage', 'H1', { error: { statusCode: 404, statusMessage: 'Missing' } }],
-  ['FooterColumns', FooterColumns, 'label', 'H3', { columns: [{ label: 'Links', children: [] }] }],
-  ['PageCTA', PageCTA, 'title', 'H2', { title: 'Heading' }],
-  ['PageHeader', PageHeader, 'title', 'H1', { title: 'Heading' }],
-  ['PageHero', PageHero, 'title', 'H1', { title: 'Heading' }],
-  ['PageLogos', PageLogos, 'title', 'H2', { title: 'Heading' }],
-  ['PageSection', PageSection, 'title', 'H2', { title: 'Heading' }],
+  [
+    'BlogPost',
+    BlogPost,
+    'title',
+    'H2',
+    { title: 'Heading' },
+  ],
+  [
+    'ChangelogVersion',
+    ChangelogVersion,
+    'title',
+    'H2',
+    { title: 'Heading' },
+  ],
+  [
+    'DashboardNavbar',
+    DashboardNavbar,
+    'title',
+    'H1',
+    { title: 'Heading' },
+  ],
+  [
+    'Empty',
+    Empty,
+    'title',
+    'H2',
+    { title: 'Heading' },
+  ],
+  [
+    'Error',
+    Error,
+    'statusMessage',
+    'H1',
+    {
+      error: { statusCode: 404, statusMessage: 'Missing' },
+    },
+  ],
+  [
+    'FooterColumns',
+    FooterColumns,
+    'label',
+    'H3',
+    {
+      columns: [
+        { label: 'Links', children: [] },
+      ],
+    },
+  ],
+  [
+    'PageCTA',
+    PageCTA,
+    'title',
+    'H2',
+    { title: 'Heading' },
+  ],
+  [
+    'PageHeader',
+    PageHeader,
+    'title',
+    'H1',
+    { title: 'Heading' },
+  ],
+  [
+    'PageHero',
+    PageHero,
+    'title',
+    'H1',
+    { title: 'Heading' },
+  ],
+  [
+    'PageLogos',
+    PageLogos,
+    'title',
+    'H2',
+    { title: 'Heading' },
+  ],
+  [
+    'PageSection',
+    PageSection,
+    'title',
+    'H2',
+    { title: 'Heading' },
+  ],
 ];
 
 describe('heading elements', () => {
@@ -33,7 +105,9 @@ describe('heading elements', () => {
     const heading = () => wrapper.get(`[data-slot="${slot}"]`).element.tagName;
     expect(heading()).toBe(defaultHeading);
 
-    await wrapper.setProps({ as: { root: 'section', [slot]: 'h4' } });
+    await wrapper.setProps({
+      as: { root: 'section', [slot]: 'h4' },
+    });
     expect(wrapper.get('[data-slot="root"]').element.tagName).toBe('SECTION');
     expect(heading()).toBe('H4');
 

@@ -21,9 +21,13 @@ function component({ name, primitive, prose, content }) {
   const camelName = toCamelCase(name);
   const kebabName = toKebabCase(name);
   const nested = prose || content;
-  const dirPrefix = prose ? 'prose/' : (content ? 'content/' : '');
+  const dirPrefix = prose
+    ? 'prose/'
+    : (content ? 'content/' : '');
   const importPrefix = nested ? '../..' : '..';
-  const componentKey = prose ? `prose.${camelName}` : camelName;
+  const componentKey = prose
+    ? `prose.${camelName}`
+    : camelName;
   const componentConfigArgs = prose
     ? `typeof theme, AppConfig, '${camelName}', 'ui.prose'`
     : `typeof theme, AppConfig, '${camelName}'`;

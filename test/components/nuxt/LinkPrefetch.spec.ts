@@ -29,7 +29,9 @@ class MockIntersectionObserver {
   }
 
   trigger(target: Element) {
-    this.callback([{ target, isIntersecting: true, intersectionRatio: 1 } as IntersectionObserverEntry], this as unknown as IntersectionObserver);
+    this.callback([
+      { target, isIntersecting: true, intersectionRatio: 1 } as IntersectionObserverEntry,
+    ], this as unknown as IntersectionObserver);
   }
 }
 
@@ -71,7 +73,12 @@ describe('link prefetch', () => {
 
   it('prefetches once on hover or focus with `prefetchOn: interaction`', async () => {
     const spy = spyOnPrefetch();
-    wrapper = await mountSuspended(Link, { props: { to: '/about', prefetchOn: 'interaction' }, slots: { default: () => 'About' } });
+    wrapper = await mountSuspended(Link, {
+      props: { to: '/about', prefetchOn: 'interaction' },
+      slots: {
+        default: () => 'About',
+      },
+    });
     const link = wrapper.get('a');
 
     await link.trigger('pointerenter');
@@ -91,7 +98,13 @@ describe('link prefetch', () => {
     const spy = spyOnPrefetch();
     const onPointerenter = vi.fn();
     const onFocus = vi.fn();
-    wrapper = await mountSuspended(Link, { props: { to: '/about', prefetchOn: 'interaction' }, attrs: { onPointerenter, onFocus }, slots: { default: () => 'About' } });
+    wrapper = await mountSuspended(Link, {
+      props: { to: '/about', prefetchOn: 'interaction' },
+      attrs: { onPointerenter, onFocus },
+      slots: {
+        default: () => 'About',
+      },
+    });
     const link = wrapper.get('a');
 
     await link.trigger('pointerenter');
@@ -106,7 +119,12 @@ describe('link prefetch', () => {
   it('prefetches when the link becomes visible', async () => {
     vi.stubGlobal('IntersectionObserver', MockIntersectionObserver);
     const spy = spyOnPrefetch();
-    wrapper = await mountSuspended(Link, { props: { to: '/about' }, slots: { default: () => 'About' } });
+    wrapper = await mountSuspended(Link, {
+      props: { to: '/about' },
+      slots: {
+        default: () => 'About',
+      },
+    });
     const link = wrapper.get('a').element;
 
     const observer = await waitForObserver();
@@ -131,7 +149,12 @@ describe('link prefetch', () => {
       nuxtApp._prefetch = scheduler;
     };
     const spy = spyOnPrefetch();
-    wrapper = await mountSuspended(Link, { props: { to: '/about?tab=1#team' }, slots: { default: () => 'About' } });
+    wrapper = await mountSuspended(Link, {
+      props: { to: '/about?tab=1#team' },
+      slots: {
+        default: () => 'About',
+      },
+    });
     const link = wrapper.get('a');
 
     await link.trigger('pointerenter');
@@ -152,7 +175,12 @@ describe('link prefetch', () => {
 
   it('does not observe visibility with `prefetchOn: interaction`', async () => {
     vi.stubGlobal('IntersectionObserver', MockIntersectionObserver);
-    wrapper = await mountSuspended(Link, { props: { to: '/about', prefetchOn: 'interaction' }, slots: { default: () => 'About' } });
+    wrapper = await mountSuspended(Link, {
+      props: { to: '/about', prefetchOn: 'interaction' },
+      slots: {
+        default: () => 'About',
+      },
+    });
 
     await idle();
 
@@ -162,7 +190,12 @@ describe('link prefetch', () => {
   it('does nothing with `noPrefetch`', async () => {
     vi.stubGlobal('IntersectionObserver', MockIntersectionObserver);
     const spy = spyOnPrefetch();
-    wrapper = await mountSuspended(Link, { props: { to: '/about', noPrefetch: true }, slots: { default: () => 'About' } });
+    wrapper = await mountSuspended(Link, {
+      props: { to: '/about', noPrefetch: true },
+      slots: {
+        default: () => 'About',
+      },
+    });
 
     await idle();
     await wrapper.get('a').trigger('pointerenter');

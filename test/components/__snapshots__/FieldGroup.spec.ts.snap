@@ -12,6 +12,26 @@ exports[`fieldGroup > renders orientation vertical with default slot correctly 1
 </div>"
 `;
 
+exports[`fieldGroup > renders orientation vertical with select and select menu in default slot correctly 1`] = `
+"<div data-orientation="vertical" class="relative flex flex-col -space-y-px"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors first:not-[*:only-child]:rounded-b-none last:not-[*:only-child]:rounded-t-none not-last:not-first:rounded-none focus-visible:z-1 text-sm gap-1.5 color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-2.5 py-1.5">
+    <!--v-if--> Click me!
+    <!--v-if-->
+  </button> <button data-slot="base" class="group rounded-md inline-flex items-center relative disabled:opacity-75 disabled:cursor-not-allowed transition-colors first:not-nth-last-[1_of_:not(input[aria-hidden],select[aria-hidden])]:rounded-b-none not-first:nth-last-[1_of_:not(input[aria-hidden],select[aria-hidden])]:rounded-t-none not-first:not-nth-last-[1_of_:not(input[aria-hidden],select[aria-hidden])]:rounded-none focus-visible:z-[1] px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-border-accented hover:bg-background-elevated disabled:bg-background outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" role="combobox" type="button" aria-expanded="false" aria-required="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-placeholder="">
+    <!--v-if--><span style="pointer-events: none;" data-placeholder="" data-slot="placeholder" class="truncate color-text-dimmed">&nbsp;</span><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><span class="iconify i-lucide:chevron-down shrink-0 color-text-dimmed size-5" aria-hidden="true" data-slot="trailingIcon"></span></span>
+  </button>
+  <!--teleport start-->
+  <!--teleport end-->
+  <!--v-if-->
+  <!---->
+  <!----><button type="button" tabindex="0" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-menu-listbox-v-0-0-1" data-state="closed" aria-disabled="false" dir="ltr" id="select-menu-v-0-0-1" data-slot="base" class="group rounded-md inline-flex items-center relative disabled:opacity-75 disabled:cursor-not-allowed transition-colors first:not-nth-last-[1_of_:not(input[aria-hidden],select[aria-hidden])]:rounded-b-none not-first:nth-last-[1_of_:not(input[aria-hidden],select[aria-hidden])]:rounded-t-none not-first:not-nth-last-[1_of_:not(input[aria-hidden],select[aria-hidden])]:rounded-none focus-visible:z-[1] px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-border-accented hover:bg-background-elevated disabled:bg-background outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm">
+    <!--v-if--><span data-slot="placeholder" class="truncate color-text-dimmed">&nbsp;</span><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><span class="iconify i-lucide:chevron-down shrink-0 color-text-dimmed size-5" aria-hidden="true" data-slot="trailingIcon"></span></span>
+  </button>
+  <!--teleport start-->
+  <!--teleport end-->
+  <!--v-if-->
+</div>"
+`;
+
 exports[`fieldGroup > renders with as correctly 1`] = `"<section data-orientation="horizontal" class="relative inline-flex -space-x-px"></section>"`;
 
 exports[`fieldGroup > renders with class correctly 1`] = `"<div data-orientation="horizontal" class="relative inline-flex -space-x-px absolute"></div>"`;
@@ -25,6 +45,26 @@ exports[`fieldGroup > renders with default slot correctly 1`] = `
     <!--v-if--> Click me!
     <!--v-if-->
   </button>
+</div>"
+`;
+
+exports[`fieldGroup > renders with select and select menu in default slot correctly 1`] = `
+"<div data-orientation="horizontal" class="relative inline-flex -space-x-px"><button type="button" data-slot="base" class="font-500 rounded-md inline-flex items-center aria-disabled:opacity-75 aria-disabled:cursor-not-allowed disabled:opacity-75 disabled:cursor-not-allowed transition-colors first:not-[*:only-child]:rounded-e-none last:not-[*:only-child]:rounded-s-none not-last:not-first:rounded-none focus-visible:z-1 text-sm gap-1.5 color-primary-foreground bg-primary hover:bg-primary/75 active:bg-primary/75 disabled:bg-primary aria-disabled:bg-primary outline-primary/25 focus-visible:outline-3 px-2.5 py-1.5">
+    <!--v-if--> Click me!
+    <!--v-if-->
+  </button> <button data-slot="base" class="group rounded-md inline-flex items-center relative disabled:opacity-75 disabled:cursor-not-allowed transition-colors first:not-nth-last-[1_of_:not(input[aria-hidden],select[aria-hidden])]:rounded-e-none not-first:nth-last-[1_of_:not(input[aria-hidden],select[aria-hidden])]:rounded-s-none not-first:not-nth-last-[1_of_:not(input[aria-hidden],select[aria-hidden])]:rounded-none focus-visible:z-[1] px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-border-accented hover:bg-background-elevated disabled:bg-background outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm" role="combobox" type="button" aria-expanded="false" aria-required="false" aria-autocomplete="none" dir="ltr" data-state="closed" data-placeholder="">
+    <!--v-if--><span style="pointer-events: none;" data-placeholder="" data-slot="placeholder" class="truncate color-text-dimmed">&nbsp;</span><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><span class="iconify i-lucide:chevron-down shrink-0 color-text-dimmed size-5" aria-hidden="true" data-slot="trailingIcon"></span></span>
+  </button>
+  <!--teleport start-->
+  <!--teleport end-->
+  <!--v-if-->
+  <!---->
+  <!----><button type="button" tabindex="0" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-menu-listbox-v-0-0-1" data-state="closed" aria-disabled="false" dir="ltr" id="select-menu-v-0-0-1" data-slot="base" class="group rounded-md inline-flex items-center relative disabled:opacity-75 disabled:cursor-not-allowed transition-colors first:not-nth-last-[1_of_:not(input[aria-hidden],select[aria-hidden])]:rounded-e-none not-first:nth-last-[1_of_:not(input[aria-hidden],select[aria-hidden])]:rounded-s-none not-first:not-nth-last-[1_of_:not(input[aria-hidden],select[aria-hidden])]:rounded-none focus-visible:z-[1] px-2.5 py-1.5 text-base/5 gap-1.5 color-text-highlighted bg-background ring ring-inset ring-border-accented hover:bg-background-elevated disabled:bg-background outline-primary/25 focus-visible:outline-3 focus-visible:ring-primary pe-9 md:text-sm">
+    <!--v-if--><span data-slot="placeholder" class="truncate color-text-dimmed">&nbsp;</span><span data-slot="trailing" class="absolute inset-y-0 end-0 flex items-center pe-2.5"><span class="iconify i-lucide:chevron-down shrink-0 color-text-dimmed size-5" aria-hidden="true" data-slot="trailingIcon"></span></span>
+  </button>
+  <!--teleport start-->
+  <!--teleport end-->
+  <!--v-if-->
 </div>"
 `;
 

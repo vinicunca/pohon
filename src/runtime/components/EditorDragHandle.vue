@@ -79,7 +79,10 @@ const buttonProps = useForwardProps(reactiveOmit(props, 'icon', 'options', 'edit
 
 const appConfig = useAppConfig() as EditorDragHandle['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.editorDragHandle || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.editorDragHandle || {}),
+})());
 
 const floatingUIOptions = computed(() => defu(props.options, {
   strategy: 'absolute' as Strategy,
@@ -128,7 +131,10 @@ function onNodeChange({ pos }: { pos: number }) {
 
   const node = props.editor.state.doc.nodeAt(pos);
   if (node) {
-    emit('hover', { node: node.toJSON(), pos });
+    emit('hover', {
+      node: node.toJSON(),
+      pos,
+    });
   }
 }
 
@@ -144,7 +150,10 @@ function onClick() {
 
   const node = props.editor.state.doc.nodeAt(pos);
   if (node) {
-    const selectedNode = { node: node.toJSON(), pos };
+    const selectedNode = {
+      node: node.toJSON(),
+      pos,
+    };
 
     emit('nodeChange', selectedNode);
 

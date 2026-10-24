@@ -292,8 +292,20 @@ const rootProps = useForwardProps(computed(() => ({
 const accordionProps = useForwardProps(reactivePick(props, 'collapsible', 'disabled', 'type', 'unmountOnHide'), emits);
 const contentProps = toRef(() => props.content);
 const viewportProps = toRef(() => props.viewport);
-const tooltipProps = toRef(() => defu(typeof props.tooltip === 'boolean' ? {} : props.tooltip, { ...(props.orientation === 'vertical' && { delayDuration: 0, content: { side: 'right' } }) }) as TooltipProps);
-const popoverProps = toRef(() => defu(typeof props.popover === 'boolean' ? {} : props.popover, { mode: 'hover', content: { side: 'right', align: 'start', alignOffset: 2 } }) as PopoverProps);
+const tooltipProps = toRef(() => defu(typeof props.tooltip === 'boolean'
+  ? {}
+  : props.tooltip, {
+  ...(props.orientation === 'vertical' && {
+    delayDuration: 0,
+    content: { side: 'right' },
+  }),
+}) as TooltipProps);
+const popoverProps = toRef(() => defu(typeof props.popover === 'boolean'
+  ? {}
+  : props.popover, {
+  mode: 'hover',
+  content: { side: 'right', align: 'start', alignOffset: 2 },
+}) as PopoverProps);
 
 const [DefineLinkTemplate, ReuseLinkTemplate] = createReusableTemplate<{ item: NavigationMenuItem; index: number; active?: boolean; trailingTrigger?: boolean }>();
 const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: NavigationMenuItem; index: number; level?: number; listIndex?: number }>({
@@ -305,9 +317,14 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: N
   },
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.navigationMenu || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.navigationMenu || {}),
+})({
   orientation: props.orientation,
-  contentOrientation: props.orientation === 'vertical' ? undefined : props.contentOrientation,
+  contentOrientation: props.orientation === 'vertical'
+    ? undefined
+    : props.contentOrientation,
   collapsed: props.collapsed,
   color: props.color,
   variant: props.variant,
@@ -324,8 +341,12 @@ const lists = computed<Array<Array<NavigationMenuItem>>>(() =>
 );
 
 function getItemValue(item: NavigationMenuItem, index: number, level: number, listIndex: number) {
-  const prefix = lists.value.length > 1 ? `group-${listIndex}-` : '';
-  return get(item, props.valueKey as string) ?? (level > 0 ? `${prefix}item-${level}-${index}` : `${prefix}item-${index}`);
+  const prefix = lists.value.length > 1
+    ? `group-${listIndex}-`
+    : '';
+  return get(item, props.valueKey as string) ?? (level > 0
+    ? `${prefix}item-${level}-${index}`
+    : `${prefix}item-${index}`);
 }
 
 function getAccordionDefaultValue(list: Array<NavigationMenuItem>, level = 0, listIndex = 0) {
@@ -336,7 +357,9 @@ function getAccordionDefaultValue(list: Array<NavigationMenuItem>, level = 0, li
     return acc;
   }, []);
 
-  return props.type === 'single' ? indexes[0] : indexes;
+  return props.type === 'single'
+    ? indexes[0]
+    : indexes;
 }
 
 const trailingClicks = new WeakSet<Event>();

@@ -13,4 +13,6 @@ function _useLocale(localeOverrides?: Ref<Locale<Messages> | undefined>) {
   return buildLocaleContext<Messages>(computed(() => locale.value || en));
 }
 
-export const useLocale = /* @__PURE__ */ import.meta.client ? createSharedComposable(_useLocale) : _useLocale;
+export const useLocale = /* @__PURE__ */ import.meta.client
+  ? createSharedComposable(_useLocale)
+  : _useLocale;

@@ -117,7 +117,9 @@ const inputProps = computed(() => {
   if (props.input === false) {
     return false;
   }
-  return defu(typeof props.input === 'object' ? props.input : {}, { fixed: true });
+  return defu(typeof props.input === 'object'
+    ? props.input
+    : {}, { fixed: true });
 });
 
 const getProxySlots = () => omit(slots, ['content']);
@@ -128,7 +130,10 @@ const fuse = computed(() => defu({}, props.fuse, {
   },
 }));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardSearch || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.dashboardSearch || {}),
+})({
   size: props.size,
   fullscreen: props.fullscreen,
 }));
@@ -142,28 +147,32 @@ const groups = computed(() => {
     groups.push({
       id: 'theme',
       label: t('dashboardSearch.theme'),
-      items: [{
-        label: t('colorMode.system'),
-        icon: appConfig.ui.icons.system,
-        active: colorMode.preference === 'system',
-        onSelect: () => {
-          colorMode.preference = 'system';
+      items: [
+        {
+          label: t('colorMode.system'),
+          icon: appConfig.ui.icons.system,
+          active: colorMode.preference === 'system',
+          onSelect: () => {
+            colorMode.preference = 'system';
+          },
         },
-      }, {
-        label: t('colorMode.light'),
-        icon: appConfig.ui.icons.light,
-        active: colorMode.preference === 'light',
-        onSelect: () => {
-          colorMode.preference = 'light';
+        {
+          label: t('colorMode.light'),
+          icon: appConfig.ui.icons.light,
+          active: colorMode.preference === 'light',
+          onSelect: () => {
+            colorMode.preference = 'light';
+          },
         },
-      }, {
-        label: t('colorMode.dark'),
-        icon: appConfig.ui.icons.dark,
-        active: colorMode.preference === 'dark',
-        onSelect: () => {
-          colorMode.preference = 'dark';
+        {
+          label: t('colorMode.dark'),
+          icon: appConfig.ui.icons.dark,
+          active: colorMode.preference === 'dark',
+          onSelect: () => {
+            colorMode.preference = 'dark';
+          },
         },
-      }],
+      ],
     });
   }
 
@@ -175,7 +184,10 @@ const loadCommandPalette = () => import('./CommandPalette.vue');
 const PModal = lazyOverlays.modal;
 const PCommandPalette = defineAsyncComponent(loadCommandPalette);
 
-const renderModal = useLazyOverlay(() => open.value || props.unmountOnHide === false, () => Promise.all([loadOverlay('modal'), loadCommandPalette()]));
+const renderModal = useLazyOverlay(() => open.value || props.unmountOnHide === false, () => Promise.all([
+  loadOverlay('modal'),
+  loadCommandPalette(),
+]));
 
 const commandPaletteRef = useTemplateRef('commandPaletteRef');
 

@@ -26,34 +26,217 @@ describe('inputDate', () => {
 
   renderEach(InputDate, [
     // Props
-    ['with modelValue', { props: { modelValue: new CalendarDate(2025, 1, 1) } }],
-    ['with default value', { props: { defaultValue: new CalendarDate(2025, 1, 1) } }],
-    ['with range', { props: { range: true } }],
-    ['with range and modelValue', { props: { range: true, modelValue: { start: new CalendarDate(2025, 1, 1), end: new CalendarDate(2025, 1, 15) } } }],
-    ['with range and defaultValue', { props: { range: true, defaultValue: { start: new CalendarDate(2025, 1, 1), end: new CalendarDate(2025, 1, 15) } } }],
-    ['with disabled', { props: { disabled: true } }],
-    ['with readonly', { props: { readonly: true } }],
-    ['with isDateUnavailable', { props: { isDateUnavailable: () => true } }],
-    ['with minValue', { props: { minValue: new CalendarDate(2025, 1, 1) } }],
-    ['with maxValue', { props: { maxValue: new CalendarDate(2025, 1, 31) } }],
-    ['with icon', { props: { icon: 'i-lucide-clock' } }],
-    ['with leadingIcon', { props: { leadingIcon: 'i-lucide-arrow-left' } }],
-    ['with trailingIcon', { props: { trailingIcon: 'i-lucide-arrow-right' } }],
-    ['with separatorIcon', { props: { range: true, separatorIcon: 'i-lucide-arrow-right' } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { size } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { variant, defaultValue: new CalendarDate(2025, 1, 15) } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant} highlight`, { props: { variant, highlight: true, defaultValue: new CalendarDate(2025, 1, 15) } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { variant, color: 'neutral', defaultValue: new CalendarDate(2025, 1, 15) } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant} highlight`, { props: { variant, color: 'neutral', highlight: true, defaultValue: new CalendarDate(2025, 1, 15) } }]),
-    ['with ariaLabel', { attrs: { 'aria-label': 'Aria label' } }],
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'max-w-sm' } }],
-    ['with ui', { props: { ui: { header: 'gap-4' } } }],
+    [
+      'with modelValue',
+      {
+        props: {
+          modelValue: new CalendarDate(2025, 1, 1),
+        },
+      },
+    ],
+    [
+      'with default value',
+      {
+        props: {
+          defaultValue: new CalendarDate(2025, 1, 1),
+        },
+      },
+    ],
+    [
+      'with range',
+      {
+        props: { range: true },
+      },
+    ],
+    [
+      'with range and modelValue',
+      {
+        props: {
+          range: true,
+          modelValue: {
+            start: new CalendarDate(2025, 1, 1),
+            end: new CalendarDate(2025, 1, 15),
+          },
+        },
+      },
+    ],
+    [
+      'with range and defaultValue',
+      {
+        props: {
+          range: true,
+          defaultValue: {
+            start: new CalendarDate(2025, 1, 1),
+            end: new CalendarDate(2025, 1, 15),
+          },
+        },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { disabled: true },
+      },
+    ],
+    [
+      'with readonly',
+      {
+        props: { readonly: true },
+      },
+    ],
+    [
+      'with isDateUnavailable',
+      {
+        props: {
+          isDateUnavailable: () => true,
+        },
+      },
+    ],
+    [
+      'with minValue',
+      {
+        props: {
+          minValue: new CalendarDate(2025, 1, 1),
+        },
+      },
+    ],
+    [
+      'with maxValue',
+      {
+        props: {
+          maxValue: new CalendarDate(2025, 1, 31),
+        },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { icon: 'i-lucide-clock' },
+      },
+    ],
+    [
+      'with leadingIcon',
+      {
+        props: { leadingIcon: 'i-lucide-arrow-left' },
+      },
+    ],
+    [
+      'with trailingIcon',
+      {
+        props: { trailingIcon: 'i-lucide-arrow-right' },
+      },
+    ],
+    [
+      'with separatorIcon',
+      {
+        props: { range: true, separatorIcon: 'i-lucide-arrow-right' },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { size },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant}`,
+      {
+        props: {
+          variant,
+          defaultValue: new CalendarDate(2025, 1, 15),
+        },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant} highlight`,
+      {
+        props: {
+          variant,
+          highlight: true,
+          defaultValue: new CalendarDate(2025, 1, 15),
+        },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant}`,
+      {
+        props: {
+          variant,
+          color: 'neutral',
+          defaultValue: new CalendarDate(2025, 1, 15),
+        },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant} highlight`,
+      {
+        props: {
+          variant,
+          color: 'neutral',
+          highlight: true,
+          defaultValue: new CalendarDate(2025, 1, 15),
+        },
+      },
+    ]),
+    [
+      'with ariaLabel',
+      {
+        attrs: { 'aria-label': 'Aria label' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'max-w-sm' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { header: 'gap-4' },
+        },
+      },
+    ],
     // Slots
-    ['with leading slot', { slots: { leading: () => 'Leading slot' } }],
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
-    ['with trailing slot', { slots: { trailing: () => 'Trailing slot' } }],
-    ['with separator slot', { slots: { separator: () => '=' } }],
+    [
+      'with leading slot',
+      {
+        slots: {
+          leading: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with trailing slot',
+      {
+        slots: {
+          trailing: () => 'Trailing slot',
+        },
+      },
+    ],
+    [
+      'with separator slot',
+      {
+        slots: {
+          separator: () => '=',
+        },
+      },
+    ],
   ]);
 
   describe('emits', () => {
@@ -62,15 +245,28 @@ describe('inputDate', () => {
       const date = new CalendarDate(2025, 1, 1);
 
       await wrapper.setValue(date);
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [[date]] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          [date],
+        ],
+      });
     });
 
     it('update:modelValue event range', async () => {
-      const wrapper = await mountSuspended(InputDate, { props: { range: true } });
-      const date = { start: new CalendarDate(2025, 1, 1), end: new CalendarDate(2025, 1, 2) };
+      const wrapper = await mountSuspended(InputDate, {
+        props: { range: true },
+      });
+      const date = {
+        start: new CalendarDate(2025, 1, 1),
+        end: new CalendarDate(2025, 1, 2),
+      };
 
       await wrapper.setValue(date);
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [[date]] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          [date],
+        ],
+      });
     });
 
     it('focus and blur events when focus enters and leaves the field, not between segments', async () => {
@@ -86,7 +282,18 @@ describe('inputDate', () => {
       second!.element.dispatchEvent(new FocusEvent('focusin', { bubbles: true, relatedTarget: first!.element }));
       second!.element.dispatchEvent(new FocusEvent('focusout', { bubbles: true, relatedTarget: null }));
 
-      expect(wrapper.emitted()).toMatchObject({ focus: [[{ type: 'focusin' }]], blur: [[{ type: 'focusout' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        focus: [
+          [
+            { type: 'focusin' },
+          ],
+        ],
+        blur: [
+          [
+            { type: 'focusout' },
+          ],
+        ],
+      });
     });
   });
 
@@ -98,7 +305,9 @@ describe('inputDate', () => {
           validateOnInputDelay: 0,
           async validate(state: any) {
             if (!state.value) {
-              return [{ name: 'value', message: 'Error message' }];
+              return [
+                { name: 'value', message: 'Error message' },
+              ];
             }
             return [];
           },

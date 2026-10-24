@@ -7,7 +7,9 @@ import { computed, ref, watchEffect } from 'vue';
 import { publicComposables } from '../../../src/imports';
 
 const colorMode = useColorMode();
-const theme = computed(() => colorMode.value === 'dark' ? 'dark' : 'light');
+const theme = computed(() => colorMode.value === 'dark'
+  ? 'dark'
+  : 'light');
 
 const {
   importMap: vueImportMap,

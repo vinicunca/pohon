@@ -60,7 +60,19 @@ const emits = defineEmits<ContextMenuContentEmits>();
 
 const slots = defineSlots<ContextMenuSlots<T>>();
 
-const AkarContextMenu = { Portal: ContextMenuPortal, Content: ContextMenuContent, Item: AkarContextMenuItem, Group: ContextMenuGroup, Separator: ContextMenuSeparator, CheckboxItem: ContextMenuCheckboxItem, ItemIndicator: ContextMenuItemIndicator, Label: ContextMenuLabel, Sub: ContextMenuSub, SubContent: ContextMenuSubContent, SubTrigger: ContextMenuSubTrigger };
+const AkarContextMenu = {
+  Portal: ContextMenuPortal,
+  Content: ContextMenuContent,
+  Item: AkarContextMenuItem,
+  Group: ContextMenuGroup,
+  Separator: ContextMenuSeparator,
+  CheckboxItem: ContextMenuCheckboxItem,
+  ItemIndicator: ContextMenuItemIndicator,
+  Label: ContextMenuLabel,
+  Sub: ContextMenuSub,
+  SubContent: ContextMenuSubContent,
+  SubTrigger: ContextMenuSubTrigger,
+};
 
 const { dir } = useLocale();
 const appConfig = useAppConfig();
@@ -71,7 +83,9 @@ const getProxySlots = () => omit(slots, ['default']);
 
 const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: ContextMenuItem; active?: boolean; index: number }>();
 
-const childrenIcon = computed(() => dir.value === 'rtl' ? appConfig.ui.icons.chevronLeft : appConfig.ui.icons.chevronRight);
+const childrenIcon = computed(() => dir.value === 'rtl'
+  ? appConfig.ui.icons.chevronLeft
+  : appConfig.ui.icons.chevronRight);
 const groups = computed<Array<Array<ContextMenuItem>>>(() =>
   props.items?.length
     ? isArrayOfArray(props.items)

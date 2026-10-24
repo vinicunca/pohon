@@ -34,15 +34,68 @@ describe('pageAnchors', () => {
 
   renderEach(PageAnchors, [
     // Props
-    ['with links', { props }],
-    ['with as', { props: { ...props, as: 'div' } }],
-    ['with class', { props: { ...props, class: 'lg:mb-12' } }],
-    ['with ui', { props: { ...props, ui: { list: 'gap-6' } } }],
+    [
+      'with links',
+      { props },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'div' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'lg:mb-12' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { list: 'gap-6' },
+        },
+      },
+    ],
     // Slots
-    ['with link slot', { props, slots: { link: () => 'Link slot' } }],
-    ['with link-leading slot', { props, slots: { 'link-leading': () => 'Link leading slot' } }],
-    ['with link-label slot', { props, slots: { 'link-label': () => 'Link label slot' } }],
-    ['with link-trailing slot', { props, slots: { 'link-trailing': () => 'Link trailing slot' } }],
+    [
+      'with link slot',
+      {
+        props,
+        slots: {
+          link: () => 'Link slot',
+        },
+      },
+    ],
+    [
+      'with link-leading slot',
+      {
+        props,
+        slots: {
+          'link-leading': () => 'Link leading slot',
+        },
+      },
+    ],
+    [
+      'with link-label slot',
+      {
+        props,
+        slots: {
+          'link-label': () => 'Link label slot',
+        },
+      },
+    ],
+    [
+      'with link-trailing slot',
+      {
+        props,
+        slots: {
+          'link-trailing': () => 'Link trailing slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

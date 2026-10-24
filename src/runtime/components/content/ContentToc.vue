@@ -116,7 +116,10 @@ const [DefineListTemplate, ReuseListTemplate] = createReusableTemplate<{ links: 
 const [DefineTriggerTemplate, ReuseTriggerTemplate] = createReusableTemplate<{ open: boolean }>();
 const [DefineContentTemplate, ReuseContentTemplate] = createReusableTemplate();
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.contentToc || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.contentToc || {}),
+})({
   color: props.color,
   highlight: props.highlight,
   highlightVariant: props.highlightVariant,
@@ -130,13 +133,20 @@ function scrollToHeading(id: string) {
 }
 
 function flattenLinks(links: Array<T>): Array<T> {
-  return links.flatMap((link) => [link, ...(link.children ? flattenLinks(link.children as Array<T>) : [])]);
+  return links.flatMap((link) => [
+    link,
+    ...(link.children
+      ? flattenLinks(link.children as Array<T>)
+      : []),
+  ]);
 }
 
 function flattenLinksWithLevel(links: Array<T>, level = 0): Array<{ link: T; level: number }> {
   return links.flatMap((link) => [
     { link, level },
-    ...(link.children ? flattenLinksWithLevel(link.children as Array<T>, level + 1) : []),
+    ...(link.children
+      ? flattenLinksWithLevel(link.children as Array<T>, level + 1)
+      : []),
   ]);
 }
 
@@ -163,7 +173,9 @@ const indicatorStyle = computed(() => {
 
   return {
     '--indicator-size': `${linkHeight * activeHeadings.value.length}rem`,
-    '--indicator-position': activeIndex.value >= 0 ? `${activeIndex.value * linkHeight}rem` : '0rem',
+    '--indicator-position': activeIndex.value >= 0
+      ? `${activeIndex.value * linkHeight}rem`
+      : '0rem',
   };
 });
 
@@ -211,7 +223,9 @@ const circuitMaskStyle = computed(() => {
   let y = 0;
 
   flatLinks.forEach((item, index) => {
-    const targetX = item.level > 0 ? x1 : x0;
+    const targetX = item.level > 0
+      ? x1
+      : x0;
     const nextY = y + svgLinkHeight;
 
     if (index === 0) {
@@ -224,7 +238,9 @@ const circuitMaskStyle = computed(() => {
       currentX = targetX;
     }
 
-    path += ` L${currentX} ${nextY - (index < flatLinks.length - 1 && flatLinks[index + 1]?.level !== item.level ? 6 : 0)}`;
+    path += ` L${currentX} ${nextY - (index < flatLinks.length - 1 && flatLinks[index + 1]?.level !== item.level
+      ? 6
+      : 0)}`;
     y = nextY;
   });
 

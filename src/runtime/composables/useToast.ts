@@ -38,7 +38,9 @@ export function useToast() {
     toasts.value[index] = {
       ...existing,
       ...toast,
-      _duplicate: animating ? existing._duplicate : (existing._duplicate || 0) + 1,
+      _duplicate: animating
+        ? existing._duplicate
+        : (existing._duplicate || 0) + 1,
       _animatedAt: animating ? existing._animatedAt : now,
     };
   }
@@ -69,7 +71,13 @@ export function useToast() {
         continue;
       }
 
-      toasts.value = [...toasts.value, { ...toast, _animatedAt: Date.now() }].slice(-maxValue);
+      toasts.value = [
+        ...toasts.value,
+        {
+          ...toast,
+          _animatedAt: Date.now(),
+        },
+      ].slice(-maxValue);
     }
 
     running.value = false;

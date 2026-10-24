@@ -8,11 +8,14 @@ export default (options: Required<ModuleOptions>) => ({
   },
   variants: {
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        base: `border border-${color}/25 bg-${color}/10 color-${color}-600 dark:color-${color}-300 [&_a]:color-${color} [&_a]:hover:border-${color} [&_a]:focus-visible:border-transparent [&_a]:outline-${color}/25 [&_a]:focus-visible:outline-3 [&_a]:focus-visible:has-[>code]:outline-0 [&_code]:color-${color}-600 dark:[&_code]:color-${color}-300 [&_code]:border-${color}/25 [&_a]:[&>code]:outline-${color}/25 [&_a]:hover:[&>code]:border-${color} [&_a]:hover:[&>code]:color-${color} [&_a]:focus-visible:[&>code]:border-${color} [&_a]:focus-visible:[&>code]:color-${color} [&>ul]:marker:color-${color}/50`,
-        icon: `color-${color}`,
-        externalIcon: `color-${color}-600 dark:color-${color}-300`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          base: `border border-${color}/25 bg-${color}/10 color-${color}-600 dark:color-${color}-300 [&_a]:color-${color} [&_a]:hover:border-${color} [&_a]:focus-visible:border-transparent [&_a]:outline-${color}/25 [&_a]:focus-visible:outline-3 [&_a]:focus-visible:has-[>code]:outline-0 [&_code]:color-${color}-600 dark:[&_code]:color-${color}-300 [&_code]:border-${color}/25 [&_a]:[&>code]:outline-${color}/25 [&_a]:hover:[&>code]:border-${color} [&_a]:hover:[&>code]:color-${color} [&_a]:focus-visible:[&>code]:border-${color} [&_a]:focus-visible:[&>code]:color-${color} [&>ul]:marker:color-${color}/50`,
+          icon: `color-${color}`,
+          externalIcon: `color-${color}-600 dark:color-${color}-300`,
+        },
+      ])),
       neutral: {
         base: 'border border-border-muted bg-background-muted color-text',
         icon: 'color-text-highlighted',
@@ -23,21 +26,24 @@ export default (options: Required<ModuleOptions>) => ({
       true: 'border-dashed',
     },
   },
-  compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
-    color,
-    to: true,
-    class: {
-      base: `hover:border-${color} outline-${color}/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-${color}`,
-      externalIcon: `group-hover:color-${color}`,
+  compoundVariants: [
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      to: true,
+      class: {
+        base: `hover:border-${color} outline-${color}/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-${color}`,
+        externalIcon: `group-hover:color-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      to: true,
+      class: {
+        base: 'hover:border-border-inverted outline-border-inverted/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-border-inverted',
+        externalIcon: 'group-hover:color-text-highlighted',
+      },
     },
-  })), {
-    color: 'neutral',
-    to: true,
-    class: {
-      base: 'hover:border-border-inverted outline-border-inverted/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-border-inverted',
-      externalIcon: 'group-hover:color-text-highlighted',
-    },
-  }],
+  ],
   defaultVariants: {
     color: 'neutral',
   },

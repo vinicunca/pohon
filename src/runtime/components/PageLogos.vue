@@ -61,7 +61,10 @@ const appConfig = useAppConfig() as PageLogos['AppConfig'];
 
 const as = computed(() => resolveAs(props.as, { root: 'div', title: 'h2' }));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageLogos || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.pageLogos || {}),
+})());
 </script>
 
 <template>

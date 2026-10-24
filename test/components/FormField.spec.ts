@@ -31,7 +31,20 @@ vi.mock('vue', async () => {
   };
 });
 
-const inputComponents = [PInput, PRadioGroup, PTextarea, PCheckbox, PSelect, PSelectMenu, PInputMenu, PInputNumber, PSwitch, PSlider, PPinInput, PFileUpload];
+const inputComponents = [
+  PInput,
+  PRadioGroup,
+  PTextarea,
+  PCheckbox,
+  PSelect,
+  PSelectMenu,
+  PInputMenu,
+  PInputNumber,
+  PSwitch,
+  PSlider,
+  PPinInput,
+  PFileUpload,
+];
 
 async function renderFormField(options: {
   props: Partial<FormFieldProps>;
@@ -75,23 +88,117 @@ describe('formField', () => {
 
   renderEach(FormFieldWrapper, [
     // Props
-    ['with label and description', { props: { label: 'Username', description: 'Enter your username' } }],
-    ['with required', { props: { label: 'Username', required: true } }],
-    ['with help', { props: { help: 'Username must be unique' } }],
-    ['with error', { props: { error: 'Username is already taken' } }],
-    ['with hint', { props: { hint: 'Use letters, numbers, and special characters' } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { label: 'Username', description: 'Enter your username', size } }]),
-    ...orientations.map((orientation: string) => [`with orientation ${orientation}`, { props: { label: 'Username', description: 'Enter your username', orientation } }]),
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'relative' } }],
-    ['with ui', { props: { ui: { label: 'color-text-highlighted' } } }],
+    [
+      'with label and description',
+      {
+        props: { label: 'Username', description: 'Enter your username' },
+      },
+    ],
+    [
+      'with required',
+      {
+        props: { label: 'Username', required: true },
+      },
+    ],
+    [
+      'with help',
+      {
+        props: { help: 'Username must be unique' },
+      },
+    ],
+    [
+      'with error',
+      {
+        props: { error: 'Username is already taken' },
+      },
+    ],
+    [
+      'with hint',
+      {
+        props: { hint: 'Use letters, numbers, and special characters' },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { label: 'Username', description: 'Enter your username', size },
+      },
+    ]),
+    ...orientations.map((orientation: string) => [
+      `with orientation ${orientation}`,
+      {
+        props: { label: 'Username', description: 'Enter your username', orientation },
+      },
+    ]),
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'relative' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { label: 'color-text-highlighted' },
+        },
+      },
+    ],
     // Slots
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
-    ['with label slot', { slots: { label: () => 'Label slot' } }],
-    ['with description slot', { slots: { description: () => 'Description slot' } }],
-    ['with error slot', { slots: { error: () => 'Error slot' } }],
-    ['with hint slot', { slots: { hint: () => 'Hint slot' } }],
-    ['with help slot', { slots: { help: () => 'Help slot' } }],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with label slot',
+      {
+        slots: {
+          label: () => 'Label slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with error slot',
+      {
+        slots: {
+          error: () => 'Error slot',
+        },
+      },
+    ],
+    [
+      'with hint slot',
+      {
+        slots: {
+          hint: () => 'Hint slot',
+        },
+      },
+    ],
+    [
+      'with help slot',
+      {
+        slots: {
+          help: () => 'Help slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

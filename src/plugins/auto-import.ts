@@ -23,7 +23,9 @@ export default function AutoImportPlugin(options: PohonUiOptions, meta: Unplugin
         imports: names,
       })),
     ],
-    dirs: [join(runtimeDir, 'vue/composables')],
+    dirs: [
+      join(runtimeDir, 'vue/composables'),
+    ],
   });
 
   return AutoImport.raw(pluginOptions, meta) as UnpluginOptions;

@@ -105,7 +105,10 @@ describe('slot invocation', () => {
 
   bench('td x100 (array class)', () => {
     for (let i = 0; i < 100; i++) {
-      tableUi.td({ class: [undefined, 'p-2'], pinned: false });
+      tableUi.td({
+        class: [undefined, 'p-2'],
+        pinned: false,
+      });
     }
   });
 });

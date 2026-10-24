@@ -13,69 +13,88 @@ const highlight = ref(true);
 const highlightColor = ref();
 const collapsible = ref(true);
 
-const navigation = [{
-  title: 'Overview',
-  path: '#overview',
-  children: [{
-    title: 'Introduction',
-    icon: 'i-lucide-house',
-    path: '#introduction',
-    active: true,
-  }, {
-    title: 'Installation',
-    icon: 'i-lucide-square-play',
-    path: '#installation',
-  }, {
-    title: 'Migration',
-    icon: 'i-lucide-arrow-right-left',
-    path: '#migration',
-  }, {
-    title: 'Contribution',
-    icon: 'i-lucide-handshake',
-    path: '#contribution',
-  }],
-}, {
-  title: 'Theme',
-  path: '#theme',
-  disabled: true,
-  children: [{
-    title: 'Design System',
-    icon: 'i-lucide-palette',
-    path: '#design-system',
-  }, {
-    title: 'CSS Variables',
-    icon: 'i-lucide-variable',
-    path: '#css-variables',
-  }, {
-    title: 'Components',
-    icon: 'i-lucide-blocks',
-    path: '#components',
-  }],
-}, {
-  title: 'Integrations',
-  path: '#integrations',
-  children: [{
-    title: 'Icons',
-    icon: 'i-lucide-smile',
-    path: '#icons',
-  }, {
-    title: 'Fonts',
-    icon: 'i-lucide-type',
-    path: '#fonts',
-  }, {
-    title: 'Color Mode',
-    icon: 'i-lucide-sun-moon',
-    path: '#color-mode',
-  }, {
-    title: 'i18n',
-    icon: 'i-lucide-globe',
-    path: '#i18n',
-  }, {
-    title: 'Content',
-    icon: 'i-lucide-file-text',
-    path: '#content',
-  }],
-}];
+const navigation = [
+  {
+    title: 'Overview',
+    path: '#overview',
+    children: [
+      {
+        title: 'Introduction',
+        icon: 'i-lucide-house',
+        path: '#introduction',
+        active: true,
+      },
+      {
+        title: 'Installation',
+        icon: 'i-lucide-square-play',
+        path: '#installation',
+      },
+      {
+        title: 'Migration',
+        icon: 'i-lucide-arrow-right-left',
+        path: '#migration',
+      },
+      {
+        title: 'Contribution',
+        icon: 'i-lucide-handshake',
+        path: '#contribution',
+      },
+    ],
+  },
+  {
+    title: 'Theme',
+    path: '#theme',
+    disabled: true,
+    children: [
+      {
+        title: 'Design System',
+        icon: 'i-lucide-palette',
+        path: '#design-system',
+      },
+      {
+        title: 'CSS Variables',
+        icon: 'i-lucide-variable',
+        path: '#css-variables',
+      },
+      {
+        title: 'Components',
+        icon: 'i-lucide-blocks',
+        path: '#components',
+      },
+    ],
+  },
+  {
+    title: 'Integrations',
+    path: '#integrations',
+    children: [
+      {
+        title: 'Icons',
+        icon: 'i-lucide-smile',
+        path: '#icons',
+      },
+      {
+        title: 'Fonts',
+        icon: 'i-lucide-type',
+        path: '#fonts',
+      },
+      {
+        title: 'Color Mode',
+        icon: 'i-lucide-sun-moon',
+        path: '#color-mode',
+      },
+      {
+        title: 'i18n',
+        icon: 'i-lucide-globe',
+        path: '#i18n',
+      },
+      {
+        title: 'Content',
+        icon: 'i-lucide-file-text',
+        path: '#content',
+      },
+    ],
+  },
+];
 </script>
 
 <template>

@@ -18,23 +18,28 @@ const items = [
     label: 'app',
     defaultExpanded: true,
     slot: 'app' as const,
-    children: [{
-      label: 'composables',
-      defaultExpanded: true,
-      children: [
-        { label: 'useAuth.ts', icon: 'i-vscode-icons-file-type-typescript' },
-        { label: 'useUser.ts', icon: 'i-vscode-icons-file-type-typescript' },
-      ],
-    }, {
-      label: 'components',
-      children: [{
-        label: 'Home',
+    children: [
+      {
+        label: 'composables',
+        defaultExpanded: true,
         children: [
-          { label: 'Card.vue', icon: 'i-vscode-icons-file-type-vue' },
-          { label: 'Button.vue', icon: 'i-vscode-icons-file-type-vue' },
+          { label: 'useAuth.ts', icon: 'i-vscode-icons-file-type-typescript' },
+          { label: 'useUser.ts', icon: 'i-vscode-icons-file-type-typescript' },
         ],
-      }],
-    }],
+      },
+      {
+        label: 'components',
+        children: [
+          {
+            label: 'Home',
+            children: [
+              { label: 'Card.vue', icon: 'i-vscode-icons-file-type-vue' },
+              { label: 'Button.vue', icon: 'i-vscode-icons-file-type-vue' },
+            ],
+          },
+        ],
+      },
+    ],
   },
   { label: 'app.vue', icon: 'i-vscode-icons-file-type-vue' },
   { label: 'nuxt.config.ts', icon: 'i-vscode-icons-file-type-nuxt' },

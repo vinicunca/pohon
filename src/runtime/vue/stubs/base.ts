@@ -27,13 +27,19 @@ export function useColorMode() {
 
   return {
     get preference() {
-      return store.value === 'auto' ? 'system' : store.value;
+      return store.value === 'auto'
+        ? 'system'
+        : store.value;
     },
     set preference(value) {
-      store.value = value === 'system' ? 'auto' : value;
+      store.value = value === 'system'
+        ? 'auto'
+        : value;
     },
     get value() {
-      return store.value === 'auto' ? system.value : store.value;
+      return store.value === 'auto'
+        ? system.value
+        : store.value;
     },
     forced: false,
   };

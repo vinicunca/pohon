@@ -62,7 +62,10 @@ export function applyUnstyled(result: any, unstyled?: boolean): any {
     result.variants = Object.fromEntries(
       Object.entries(result.variants).map(([name, group]) => [
         name,
-        Object.fromEntries(Object.entries(group as Record<string, unknown>).map(([key, value]) => [key, blank(value)])),
+        Object.fromEntries(Object.entries(group as Record<string, unknown>).map(([key, value]) => [
+          key,
+          blank(value),
+        ])),
       ]),
     );
   }
@@ -70,7 +73,10 @@ export function applyUnstyled(result: any, unstyled?: boolean): any {
   if (result.compoundVariants) {
     result.compoundVariants = result.compoundVariants.map((entry: Record<string, unknown>) => {
       const { class: cls, ...selectors } = entry;
-      return { ...selectors, class: blank(cls) };
+      return {
+        ...selectors,
+        class: blank(cls),
+      };
     });
   }
 

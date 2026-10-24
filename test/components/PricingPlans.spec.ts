@@ -27,17 +27,74 @@ describe('pricingPlans', () => {
 
   renderEach(PricingPlans, [
     // Props
-    ['with one plan', { props: { ...props, plans: [plans[0]!] } }],
-    ['with two plans', { props: { ...props, plans: [plans[0]!, plans[1]!] } }],
-    ['with three plans', { props }],
-    ['with orientation vertical', { props: { ...props, orientation: 'vertical' } }],
-    ['with compact', { props: { ...props, compact: true } }],
-    ['with scale', { props: { ...props, scale: true } }],
-    ['with compact and scale', { props: { ...props, compact: true, scale: true } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'gap-y-12' } }],
+    [
+      'with one plan',
+      {
+        props: {
+          ...props,
+          plans: [plans[0]!],
+        },
+      },
+    ],
+    [
+      'with two plans',
+      {
+        props: {
+          ...props,
+          plans: [plans[0]!, plans[1]!],
+        },
+      },
+    ],
+    [
+      'with three plans',
+      { props },
+    ],
+    [
+      'with orientation vertical',
+      {
+        props: { ...props, orientation: 'vertical' },
+      },
+    ],
+    [
+      'with compact',
+      {
+        props: { ...props, compact: true },
+      },
+    ],
+    [
+      'with scale',
+      {
+        props: { ...props, scale: true },
+      },
+    ],
+    [
+      'with compact and scale',
+      {
+        props: { ...props, compact: true, scale: true },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'gap-y-12' },
+      },
+    ],
     // Slots
-    ['with default slot', { props, slots: { default: () => 'Default slot' } }],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

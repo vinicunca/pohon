@@ -17,10 +17,13 @@ export default (options: Required<ModuleOptions>) => ({
       'elastic': '',
     },
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        indicator: `bg-${color}`,
-        steps: `color-${color}`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          indicator: `bg-${color}`,
+          steps: `color-${color}`,
+        },
+      ])),
       neutral: {
         indicator: 'bg-background-inverted',
         steps: 'color-text-highlighted',

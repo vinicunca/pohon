@@ -13,15 +13,57 @@ describe('kbd', () => {
 
   renderEach(Kbd, [
     // Props
-    ['with value', { props: { value: 'K' } }],
-    ['with platform-specific value', { props: { value: 'meta' } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { value: 'K', size } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { value: 'K', variant } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { value: 'K', variant, color: 'neutral' } }]),
-    ['with as', { props: { value: 'K', as: 'span' } }],
-    ['with class', { props: { value: 'K', class: 'font-700' } }],
+    [
+      'with value',
+      {
+        props: { value: 'K' },
+      },
+    ],
+    [
+      'with platform-specific value',
+      {
+        props: { value: 'meta' },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { value: 'K', size },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant}`,
+      {
+        props: { value: 'K', variant },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant}`,
+      {
+        props: { value: 'K', variant, color: 'neutral' },
+      },
+    ]),
+    [
+      'with as',
+      {
+        props: { value: 'K', as: 'span' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { value: 'K', class: 'font-700' },
+      },
+    ],
     // Slots
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {
@@ -36,7 +78,9 @@ describe('kbd', () => {
 
   it('hydrates platform-specific keys without mismatch after another Kbd has mounted', async () => {
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
-    const mounted = await mountSuspended(Kbd, { props: { value: 'meta' } });
+    const mounted = await mountSuspended(Kbd, {
+      props: { value: 'meta' },
+    });
 
     const html = await renderToString(createSSRApp(() => h(Kbd, { value: 'meta' })));
     const container = document.createElement('div');

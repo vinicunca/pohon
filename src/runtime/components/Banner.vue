@@ -88,7 +88,10 @@ const props = useComponentProps('banner', _props);
 const { t } = useLocale();
 const appConfig = useAppConfig() as Banner['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.banner || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.banner || {}),
+})({
   color: props.color,
   to: !!props.to,
 }));
@@ -116,9 +119,10 @@ useHead(() => {
   }
 
   return {
-    script: [{
-      key: `prehydrate-banner-${id.value}`,
-      innerHTML: `
+    script: [
+      {
+        key: `prehydrate-banner-${id.value}`,
+        innerHTML: `
         (function() {
           try {
             if (localStorage.getItem(${JSON.stringify(id.value)}) === 'true') {
@@ -127,14 +131,17 @@ useHead(() => {
           } catch (e) {}
         })();
       `.replace(/\s+/g, ' '),
-      type: 'text/javascript',
-      tagPosition: 'head',
-    }],
-    style: [{
-      key: `banner-style-${id.value}`,
-      innerHTML: `.banner[data-banner-id="${id.value}"] { display: var(--${id.value}-display, block); }`,
-      tagPosition: 'head',
-    }],
+        type: 'text/javascript',
+        tagPosition: 'head',
+      },
+    ],
+    style: [
+      {
+        key: `banner-style-${id.value}`,
+        innerHTML: `.banner[data-banner-id="${id.value}"] { display: var(--${id.value}-display, block); }`,
+        tagPosition: 'head',
+      },
+    ],
   };
 });
 

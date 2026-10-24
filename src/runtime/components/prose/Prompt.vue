@@ -56,16 +56,23 @@ const { t } = useLocale();
 const { copy, copied } = useClipboard();
 const appConfig = useAppConfig() as ProsePrompt['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.prompt || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.prompt || {}),
+})());
 
-const actions = computed(() => [...new Set(['copy', ...props.actions])]);
+const actions = computed(() => [
+  ...new Set(['copy', ...props.actions]),
+]);
 
 function getPromptText() {
   if (props.prompt) {
     return props.prompt.trim();
   }
   const children = slots.default?.();
-  return children ? getSlotChildrenText(children).trim() : '';
+  return children
+    ? getSlotChildrenText(children).trim()
+    : '';
 }
 
 function copyPrompt() {

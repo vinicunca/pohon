@@ -10,6 +10,9 @@
     "strings": true
   },
 
+  "eslint.lintTask.enable": true,
+  "eslint.lintTask.command": "pnpm lint:fix",
+
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {

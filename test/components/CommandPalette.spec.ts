@@ -11,147 +11,391 @@ describe('commandPalette', () => {
   const groups = [
     {
       id: 'actions',
-      items: [{
-        label: 'Add new file',
-        suffix: 'Create a new file in the current directory or workspace.',
-        icon: 'i-lucide-file-plus',
-        kbds: ['meta', 'N'],
-        active: true,
-      }, {
-        label: 'Add new folder',
-        suffix: 'Create a new folder in the current directory or workspace.',
-        icon: 'i-lucide-folder-plus',
-        kbds: ['meta', 'F'],
-      }, {
-        label: 'Add hashtag',
-        suffix: 'Add a hashtag to the current item.',
-        icon: 'i-lucide-hash',
-        kbds: ['meta', 'H'],
-        disabled: true,
-      }, {
-        label: 'Add label',
-        suffix: 'Add a label to the current item.',
-        icon: 'i-lucide-tag',
-        kbds: ['meta', 'L'],
-        slot: 'custom',
-      }],
+      items: [
+        {
+          label: 'Add new file',
+          suffix: 'Create a new file in the current directory or workspace.',
+          icon: 'i-lucide-file-plus',
+          kbds: ['meta', 'N'],
+          active: true,
+        },
+        {
+          label: 'Add new folder',
+          suffix: 'Create a new folder in the current directory or workspace.',
+          icon: 'i-lucide-folder-plus',
+          kbds: ['meta', 'F'],
+        },
+        {
+          label: 'Add hashtag',
+          suffix: 'Add a hashtag to the current item.',
+          icon: 'i-lucide-hash',
+          kbds: ['meta', 'H'],
+          disabled: true,
+        },
+        {
+          label: 'Add label',
+          suffix: 'Add a label to the current item.',
+          icon: 'i-lucide-tag',
+          kbds: ['meta', 'L'],
+          slot: 'custom',
+        },
+      ],
     },
     {
       id: 'labels',
       label: 'Labels',
-      items: [{
-        label: 'bug',
-        chip: {
-          color: 'error' as const,
+      items: [
+        {
+          label: 'bug',
+          chip: {
+            color: 'error' as const,
+          },
         },
-      }, {
-        label: 'feature',
-        chip: {
-          color: 'success' as const,
+        {
+          label: 'feature',
+          chip: {
+            color: 'success' as const,
+          },
         },
-      }, {
-        label: 'enhancement',
-        chip: {
-          color: 'info' as const,
+        {
+          label: 'enhancement',
+          chip: {
+            color: 'info' as const,
+          },
         },
-      }],
+      ],
     },
     {
       id: 'users',
       label: 'Users',
-      items: [{
-        label: 'benjamincanac',
-        avatar: {
-          src: 'https://github.com/praburangki.png',
-          alt: 'praburangki',
+      items: [
+        {
+          label: 'benjamincanac',
+          avatar: {
+            src: 'https://github.com/praburangki.png',
+            alt: 'praburangki',
+          },
+          to: 'https://github.com/benjamincanac',
+          target: '_blank',
         },
-        to: 'https://github.com/benjamincanac',
-        target: '_blank',
-      }],
+      ],
     },
   ];
 
   const groupsWithDescription = [
     {
       id: 'actions',
-      items: [{
-        label: 'Create Project',
-        description: 'Start a new project from scratch',
-        icon: 'i-lucide-folder-plus',
-        kbds: ['meta', 'N'],
-      }, {
-        label: 'Open File',
-        description: 'Browse and open an existing file',
-        icon: 'i-lucide-file',
-        kbds: ['meta', 'O'],
-      }, {
-        label: 'Settings',
-        description: 'Configure your preferences',
-        icon: 'i-lucide-settings',
-        kbds: ['meta', ','],
-      }],
+      items: [
+        {
+          label: 'Create Project',
+          description: 'Start a new project from scratch',
+          icon: 'i-lucide-folder-plus',
+          kbds: ['meta', 'N'],
+        },
+        {
+          label: 'Open File',
+          description: 'Browse and open an existing file',
+          icon: 'i-lucide-file',
+          kbds: ['meta', 'O'],
+        },
+        {
+          label: 'Settings',
+          description: 'Configure your preferences',
+          icon: 'i-lucide-settings',
+          kbds: ['meta', ','],
+        },
+      ],
     },
     {
       id: 'recent',
       label: 'Recent Files',
-      items: [{
-        label: 'index.vue',
-        description: '/src/pages/index.vue',
-        icon: 'i-lucide-file-code',
-      }, {
-        label: 'app.vue',
-        description: '/app.vue',
-        icon: 'i-lucide-file-code',
-      }],
+      items: [
+        {
+          label: 'index.vue',
+          description: '/src/pages/index.vue',
+          icon: 'i-lucide-file-code',
+        },
+        {
+          label: 'app.vue',
+          description: '/app.vue',
+          icon: 'i-lucide-file-code',
+        },
+      ],
     },
   ];
 
-  const groupsWithSlot = groups.map((g) => g.id === 'users' ? { ...g, slot: 'users' } : g);
+  const groupsWithSlot = groups.map((g) => g.id === 'users'
+    ? { ...g, slot: 'users' }
+    : g);
 
   const props = { groups };
 
   renderEach(CommandPalette, [
     // Props
-    ['with groups', { props }],
-    ['with groups with description', { props: { groups: groupsWithDescription } }],
+    [
+      'with groups',
+      { props },
+    ],
+    [
+      'with groups with description',
+      {
+        props: { groups: groupsWithDescription },
+      },
+    ],
     ['without groups', {}],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { ...props, size } }]),
-    ['with modelValue', { props: { ...props, modelValue: groups[2]?.items[0] } }],
-    ['with defaultValue', { props: { ...props, defaultValue: groups[2]?.items[0] } }],
-    ['with searchTerm', { props: { ...props, searchTerm: 'f' } }],
-    ['with searchTerm and preserveGroupOrder', { props: { ...props, searchTerm: 'f', preserveGroupOrder: true } }],
-    ['with ignoreFilter', { props: { ...props, searchTerm: 'f', ignoreFilter: true } }],
-    ['with valueKey', { props: { ...props, valueKey: 'label', defaultValue: 'Add new file' } }],
-    ['with by', { props: { ...props, by: 'label', defaultValue: groups[0]?.items[0] } }],
-    ['with labelKey', { props: { ...props, labelKey: 'icon' } }],
-    ['with descriptionKey', { props: { groups: groupsWithDescription, descriptionKey: 'label' } }],
-    ['with placeholder', { props: { ...props, placeholder: 'Search...' } }],
-    ['with disabled', { props: { ...props, disabled: true } }],
-    ['with icon', { props: { ...props, icon: 'i-lucide-terminal' } }],
-    ['with trailingIcon', { props: { ...props, trailingIcon: 'i-lucide-settings' } }],
-    ['with childrenIcon', { props: { ...props, childrenIcon: 'i-lucide-arrow-right' } }],
-    ['with loading', { props: { ...props, loading: true } }],
-    ['with loadingIcon', { props: { ...props, loading: true, loadingIcon: 'i-lucide-loader' } }],
-    ['with selectedIcon', { props: { ...props, selectedIcon: 'i-lucide-badge-check', modelValue: groups[2]?.items[0] } }],
-    ['with close', { props: { ...props, close: true } }],
-    ['with closeIcon', { props: { ...props, close: true, closeIcon: 'i-lucide-trash' } }],
-    ['with virtualize', { props: { ...props, virtualize: true } }],
-    ['without input', { props: { ...props, input: false } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'divide-accented' } }],
-    ['with ui', { props: { ...props, ui: { input: '[&>input]:h-10' } } }],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { ...props, size },
+      },
+    ]),
+    [
+      'with modelValue',
+      {
+        props: { ...props, modelValue: groups[2]?.items[0] },
+      },
+    ],
+    [
+      'with defaultValue',
+      {
+        props: { ...props, defaultValue: groups[2]?.items[0] },
+      },
+    ],
+    [
+      'with searchTerm',
+      {
+        props: { ...props, searchTerm: 'f' },
+      },
+    ],
+    [
+      'with searchTerm and preserveGroupOrder',
+      {
+        props: { ...props, searchTerm: 'f', preserveGroupOrder: true },
+      },
+    ],
+    [
+      'with ignoreFilter',
+      {
+        props: { ...props, searchTerm: 'f', ignoreFilter: true },
+      },
+    ],
+    [
+      'with valueKey',
+      {
+        props: { ...props, valueKey: 'label', defaultValue: 'Add new file' },
+      },
+    ],
+    [
+      'with by',
+      {
+        props: { ...props, by: 'label', defaultValue: groups[0]?.items[0] },
+      },
+    ],
+    [
+      'with labelKey',
+      {
+        props: { ...props, labelKey: 'icon' },
+      },
+    ],
+    [
+      'with descriptionKey',
+      {
+        props: { groups: groupsWithDescription, descriptionKey: 'label' },
+      },
+    ],
+    [
+      'with placeholder',
+      {
+        props: { ...props, placeholder: 'Search...' },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { ...props, disabled: true },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { ...props, icon: 'i-lucide-terminal' },
+      },
+    ],
+    [
+      'with trailingIcon',
+      {
+        props: { ...props, trailingIcon: 'i-lucide-settings' },
+      },
+    ],
+    [
+      'with childrenIcon',
+      {
+        props: { ...props, childrenIcon: 'i-lucide-arrow-right' },
+      },
+    ],
+    [
+      'with loading',
+      {
+        props: { ...props, loading: true },
+      },
+    ],
+    [
+      'with loadingIcon',
+      {
+        props: { ...props, loading: true, loadingIcon: 'i-lucide-loader' },
+      },
+    ],
+    [
+      'with selectedIcon',
+      {
+        props: { ...props, selectedIcon: 'i-lucide-badge-check', modelValue: groups[2]?.items[0] },
+      },
+    ],
+    [
+      'with close',
+      {
+        props: { ...props, close: true },
+      },
+    ],
+    [
+      'with closeIcon',
+      {
+        props: { ...props, close: true, closeIcon: 'i-lucide-trash' },
+      },
+    ],
+    [
+      'with virtualize',
+      {
+        props: { ...props, virtualize: true },
+      },
+    ],
+    [
+      'without input',
+      {
+        props: { ...props, input: false },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'divide-accented' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { input: '[&>input]:h-10' },
+        },
+      },
+    ],
     // Slots
-    ['with empty slot', { props, slots: { empty: () => 'Empty slot' } }],
-    ['with item slot', { props, slots: { item: () => 'Item slot' } }],
-    ['with item-leading slot', { props, slots: { 'item-leading': () => 'Item leading slot' } }],
-    ['with item-label slot', { props, slots: { 'item-label': () => 'Item label slot' } }],
-    ['with item-description slot', { props: { groups: groupsWithDescription }, slots: { 'item-description': () => 'Item description slot' } }],
-    ['with item-trailing slot', { props, slots: { 'item-trailing': () => 'Item trailing slot' } }],
-    ['with custom slot', { props, slots: { custom: () => 'Custom slot' } }],
-    ['with group-label slot', { props, slots: { 'group-label': () => 'Group label slot' } }],
-    ['with users-group-label slot', { props: { groups: groupsWithSlot }, slots: { 'users-group-label': () => 'Users group label slot' } }],
-    ['with close slot', { props: { ...props, close: true }, slots: { close: () => 'Close slot' } }],
-    ['with footer slot', { props, slots: { footer: () => 'Footer slot' } }],
+    [
+      'with empty slot',
+      {
+        props,
+        slots: {
+          empty: () => 'Empty slot',
+        },
+      },
+    ],
+    [
+      'with item slot',
+      {
+        props,
+        slots: {
+          item: () => 'Item slot',
+        },
+      },
+    ],
+    [
+      'with item-leading slot',
+      {
+        props,
+        slots: {
+          'item-leading': () => 'Item leading slot',
+        },
+      },
+    ],
+    [
+      'with item-label slot',
+      {
+        props,
+        slots: {
+          'item-label': () => 'Item label slot',
+        },
+      },
+    ],
+    [
+      'with item-description slot',
+      {
+        props: { groups: groupsWithDescription },
+        slots: {
+          'item-description': () => 'Item description slot',
+        },
+      },
+    ],
+    [
+      'with item-trailing slot',
+      {
+        props,
+        slots: {
+          'item-trailing': () => 'Item trailing slot',
+        },
+      },
+    ],
+    [
+      'with custom slot',
+      {
+        props,
+        slots: {
+          custom: () => 'Custom slot',
+        },
+      },
+    ],
+    [
+      'with group-label slot',
+      {
+        props,
+        slots: {
+          'group-label': () => 'Group label slot',
+        },
+      },
+    ],
+    [
+      'with users-group-label slot',
+      {
+        props: { groups: groupsWithSlot },
+        slots: {
+          'users-group-label': () => 'Users group label slot',
+        },
+      },
+    ],
+    [
+      'with close slot',
+      {
+        props: { ...props, close: true },
+        slots: {
+          close: () => 'Close slot',
+        },
+      },
+    ],
+    [
+      'with footer slot',
+      {
+        props,
+        slots: {
+          footer: () => 'Footer slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {
@@ -177,7 +421,9 @@ describe('commandPalette', () => {
   });
 
   it('does not filter any group when ignoreFilter is set', async () => {
-    const wrapper = await mountSuspended(CommandPalette, { props: { ...props, searchTerm: 'zzz', ignoreFilter: true } });
+    const wrapper = await mountSuspended(CommandPalette, {
+      props: { ...props, searchTerm: 'zzz', ignoreFilter: true },
+    });
 
     const labels = wrapper.findAll('[data-slot="itemLabelBase"]').map((label) => label.text());
     expect(labels).toEqual(groups.flatMap((group) => group.items.map((item) => item.label)));
@@ -187,14 +433,22 @@ describe('commandPalette', () => {
   it('filters a group that sets ignoreFilter to false when ignoreFilter is set', async () => {
     const wrapper = await mountSuspended(CommandPalette, {
       props: {
-        groups: groups.map((group) => group.id === 'actions' ? { ...group, ignoreFilter: false } : group),
+        groups: groups.map((group) => group.id === 'actions'
+          ? { ...group, ignoreFilter: false }
+          : group),
         searchTerm: 'folder',
         ignoreFilter: true,
       },
     });
 
     const labels = wrapper.findAll('[data-slot="itemLabelBase"]').map((label) => label.text());
-    expect(labels).toEqual(['Add new folder', 'bug', 'feature', 'enhancement', 'benjamincanac']);
+    expect(labels).toEqual([
+      'Add new folder',
+      'bug',
+      'feature',
+      'enhancement',
+      'benjamincanac',
+    ]);
   });
 
   // Results arriving after mount (e.g. `useLazyFetch({ server: false })`) must
@@ -207,7 +461,12 @@ describe('commandPalette', () => {
 
     try {
       const wrapper = await mountSuspended(CommandPalette, {
-        props: { groups: [{ id: 'users', items: [] }], autofocus: false } as any,
+        props: {
+          groups: [
+            { id: 'users', items: [] },
+          ],
+          autofocus: false,
+        } as any,
         attachTo: document.body,
       });
       await new Promise((resolve) => {
@@ -216,7 +475,12 @@ describe('commandPalette', () => {
 
       // Items arrive asynchronously while the palette is not focused
       await wrapper.setProps({
-        groups: [{ id: 'users', items: Array.from({ length: 10 }, (_, i) => ({ label: `User ${i}` })) }],
+        groups: [
+          {
+            id: 'users',
+            items: Array.from({ length: 10 }, (_, i) => ({ label: `User ${i}` })),
+          },
+        ],
       } as any);
       await new Promise((resolve) => {
         setTimeout(resolve, 60);
@@ -229,7 +493,12 @@ describe('commandPalette', () => {
       // Once the palette has focus, a results change scrolls the highlight into view.
       ;(wrapper.find('input').element as HTMLInputElement).focus();
       await wrapper.setProps({
-        groups: [{ id: 'users', items: Array.from({ length: 8 }, (_, i) => ({ label: `Person ${i}` })) }],
+        groups: [
+          {
+            id: 'users',
+            items: Array.from({ length: 8 }, (_, i) => ({ label: `Person ${i}` })),
+          },
+        ],
       } as any);
       await new Promise((resolve) => {
         setTimeout(resolve, 60);

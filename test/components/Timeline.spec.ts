@@ -44,26 +44,140 @@ describe('timeline', () => {
 
   renderEach(Timeline, [
     // Props
-    ['with items', { props }],
-    ['with modelValue', { props: { ...props, modelValue: 'design' } }],
-    ['with defaultValue', { props: { ...props, defaultValue: 'design' } }],
-    ['with valueKey', { props: { ...props, valueKey: 'title', defaultValue: 'Design Phase' } }],
-    ['with neutral color', { props: { ...props, color: 'neutral' } }],
-    ...sizes.map((size: string) => [`with size ${size} horizontal`, { props: { ...props, size } }]),
-    ...sizes.map((size: string) => [`with size ${size} vertical`, { props: { ...props, size, orientation: 'vertical' } }]),
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'gap-8' } }],
-    ['with ui', { props: { ...props, ui: { title: 'font-700' } } }],
-    ['with reverse', { props: { ...props, reverse: true } }],
-    ['with reverse and modelValue', { props: { ...props, reverse: true, modelValue: 'design' } }],
-    ['with reverse and defaultValue', { props: { ...props, reverse: true, defaultValue: 'design' } }],
+    [
+      'with items',
+      { props },
+    ],
+    [
+      'with modelValue',
+      {
+        props: { ...props, modelValue: 'design' },
+      },
+    ],
+    [
+      'with defaultValue',
+      {
+        props: { ...props, defaultValue: 'design' },
+      },
+    ],
+    [
+      'with valueKey',
+      {
+        props: { ...props, valueKey: 'title', defaultValue: 'Design Phase' },
+      },
+    ],
+    [
+      'with neutral color',
+      {
+        props: { ...props, color: 'neutral' },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size} horizontal`,
+      {
+        props: { ...props, size },
+      },
+    ]),
+    ...sizes.map((size: string) => [
+      `with size ${size} vertical`,
+      {
+        props: { ...props, size, orientation: 'vertical' },
+      },
+    ]),
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'gap-8' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { title: 'font-700' },
+        },
+      },
+    ],
+    [
+      'with reverse',
+      {
+        props: { ...props, reverse: true },
+      },
+    ],
+    [
+      'with reverse and modelValue',
+      {
+        props: { ...props, reverse: true, modelValue: 'design' },
+      },
+    ],
+    [
+      'with reverse and defaultValue',
+      {
+        props: { ...props, reverse: true, defaultValue: 'design' },
+      },
+    ],
     // Slots
-    ['with indicator slot', { props, slots: { indicator: () => 'Indicator slot' } }],
-    ['with wrapper slot', { props, slots: { wrapper: () => 'Wrapper slot' } }],
-    ['with date slot', { props, slots: { date: () => 'Date slot' } }],
-    ['with title slot', { props, slots: { title: () => 'Title slot' } }],
-    ['with description slot', { props, slots: { description: () => 'Description slot' } }],
-    ['with custom-wrapper slot', { props, slots: { 'custom-wrapper': () => 'Custom wrapper slot' } }],
+    [
+      'with indicator slot',
+      {
+        props,
+        slots: {
+          indicator: () => 'Indicator slot',
+        },
+      },
+    ],
+    [
+      'with wrapper slot',
+      {
+        props,
+        slots: {
+          wrapper: () => 'Wrapper slot',
+        },
+      },
+    ],
+    [
+      'with date slot',
+      {
+        props,
+        slots: {
+          date: () => 'Date slot',
+        },
+      },
+    ],
+    [
+      'with title slot',
+      {
+        props,
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        props,
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with custom-wrapper slot',
+      {
+        props,
+        slots: {
+          'custom-wrapper': () => 'Custom wrapper slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

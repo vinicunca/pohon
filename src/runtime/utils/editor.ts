@@ -9,7 +9,9 @@ export function isMarkInSchema(mark: string | Mark, editor: Editor | null): bool
     return false;
   }
 
-  const markName = typeof mark === 'string' ? mark : mark.name;
+  const markName = typeof mark === 'string'
+    ? mark
+    : mark.name;
   return editor.schema.spec.marks.get(markName) !== undefined;
 }
 
@@ -168,7 +170,9 @@ export function createListHandler(listType: 'bulletList' | 'orderedList' | 'task
     taskList: 'toggleTaskList',
   } as const;
   const fnName = fnNameMap[listType];
-  const listItemType = listType === 'taskList' ? 'taskItem' : 'listItem';
+  const listItemType = listType === 'taskList'
+    ? 'taskItem'
+    : 'listItem';
   const allListTypes = ['bulletList', 'orderedList', 'taskList'] as const;
 
   return {
@@ -210,7 +214,9 @@ export function createListHandler(listType: 'bulletList' | 'orderedList' | 'task
 
       // Check if a different list type is active and convert
       if (allListTypes.some((type) => isExtensionAvailable(editor, type) && editor.isActive(type))) {
-        const currentListItemType = editor.isActive('taskList') ? 'taskItem' : 'listItem';
+        const currentListItemType = editor.isActive('taskList')
+          ? 'taskItem'
+          : 'listItem';
         let unwrapped = chain.liftListItem(currentListItemType);
         for (const type of allListTypes) {
           if (isExtensionAvailable(editor, type)) {
@@ -247,7 +253,9 @@ export function createMoveHandler(direction: 'up' | 'down') {
       const $pos = editor.state.doc.resolve(cmd.pos);
       const parent = $pos.parent;
       const index = $pos.index();
-      return direction === 'up' ? index > 0 : index < parent.childCount - 1;
+      return direction === 'up'
+        ? index > 0
+        : index < parent.childCount - 1;
     },
     execute: (editor: Editor, cmd: any) => {
       if (cmd?.pos == null) {
@@ -385,7 +393,12 @@ export function createHandlers(): EditorHandlers {
           const node = state.doc.nodeAt(cmd.pos);
           if (node) {
             const insertPos = cmd.pos + node.nodeSize;
-            return editor.chain().focus().insertContentAt(insertPos, { type: 'paragraph', content: [{ type: 'text', text: '/' }] });
+            return editor.chain().focus().insertContentAt(insertPos, {
+              type: 'paragraph',
+              content: [
+                { type: 'text', text: '/' },
+              ],
+            });
           }
         }
 
@@ -394,7 +407,12 @@ export function createHandlers(): EditorHandlers {
         const currentNodePos = $from.before($from.depth);
         const insertPos = currentNodePos + currentNode.nodeSize;
 
-        return editor.chain().focus().insertContentAt(insertPos, { type: 'paragraph', content: [{ type: 'text', text: '/' }] });
+        return editor.chain().focus().insertContentAt(insertPos, {
+          type: 'paragraph',
+          content: [
+            { type: 'text', text: '/' },
+          ],
+        });
       },
       isActive: () => false,
       isDisabled: undefined,
@@ -439,7 +457,10 @@ export function mapEditorItems(
   items: Array<Partial<EditorItem> & Record<string, any>> | Array<Array<Partial<EditorItem> & Record<string, any>>>,
   customHandlers?: EditorCustomHandlers,
 ): Array<any> | Array<Array<any>> {
-  const handlers = { ...createHandlers(), ...customHandlers };
+  const handlers = {
+    ...createHandlers(),
+    ...customHandlers,
+  };
 
   // Handle nested arrays [[...], [...]]
   if (isArrayOfArray(items)) {
@@ -489,31 +510,45 @@ export function buildFloatingUIMiddleware(options: FloatingUIOptions): Array<Mid
   const middleware: Array<Middleware> = [];
 
   if (options.offset) {
-    middleware.push(offset(typeof options.offset !== 'boolean' ? options.offset : undefined));
+    middleware.push(offset(typeof options.offset !== 'boolean'
+      ? options.offset
+      : undefined));
   }
 
   if (options.flip) {
-    middleware.push(flip(typeof options.flip !== 'boolean' ? options.flip : undefined));
+    middleware.push(flip(typeof options.flip !== 'boolean'
+      ? options.flip
+      : undefined));
   }
 
   if (options.shift) {
-    middleware.push(shift(typeof options.shift !== 'boolean' ? options.shift : undefined));
+    middleware.push(shift(typeof options.shift !== 'boolean'
+      ? options.shift
+      : undefined));
   }
 
   if (options.size) {
-    middleware.push(size(typeof options.size !== 'boolean' ? options.size : undefined));
+    middleware.push(size(typeof options.size !== 'boolean'
+      ? options.size
+      : undefined));
   }
 
   if (options.autoPlacement) {
-    middleware.push(autoPlacement(typeof options.autoPlacement !== 'boolean' ? options.autoPlacement : undefined));
+    middleware.push(autoPlacement(typeof options.autoPlacement !== 'boolean'
+      ? options.autoPlacement
+      : undefined));
   }
 
   if (options.hide) {
-    middleware.push(hide(typeof options.hide !== 'boolean' ? options.hide : undefined));
+    middleware.push(hide(typeof options.hide !== 'boolean'
+      ? options.hide
+      : undefined));
   }
 
   if (options.inline) {
-    middleware.push(inline(typeof options.inline !== 'boolean' ? options.inline : undefined));
+    middleware.push(inline(typeof options.inline !== 'boolean'
+      ? options.inline
+      : undefined));
   }
 
   return middleware;

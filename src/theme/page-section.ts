@@ -53,23 +53,27 @@ export default {
       true: '',
     },
   },
-  compoundVariants: [{
-    orientation: 'vertical',
-    title: true,
-    class: {
-      body: 'mt-16',
+  compoundVariants: [
+    {
+      orientation: 'vertical',
+      title: true,
+      class: {
+        body: 'mt-16',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    description: true,
-    class: {
-      body: 'mt-16',
+    {
+      orientation: 'vertical',
+      description: true,
+      class: {
+        body: 'mt-16',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    body: true,
-    class: {
-      footer: 'mt-16',
+    {
+      orientation: 'vertical',
+      body: true,
+      class: {
+        footer: 'mt-16',
+      },
     },
-  }],
+  ],
 };

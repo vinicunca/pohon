@@ -4,8 +4,17 @@ import icons from '../theme/icons';
 
 export function resolveColors(colors?: Array<string>) {
   return colors?.length
-    ? [...new Set(['primary', ...colors])]
-    : ['primary', 'secondary', 'success', 'info', 'warning', 'error'];
+    ? [
+        ...new Set(['primary', ...colors]),
+      ]
+    : [
+        'primary',
+        'secondary',
+        'success',
+        'info',
+        'warning',
+        'error',
+      ];
 }
 
 export function getDefaultConfig(theme?: ModuleOptions['theme']) {
@@ -18,7 +27,10 @@ export function getDefaultConfig(theme?: ModuleOptions['theme']) {
       warning: 'yellow',
       error: 'red',
       neutral: 'slate',
-    }, [...(theme?.colors || []), 'neutral' as any]),
+    }, [
+      ...(theme?.colors || []),
+      'neutral' as any,
+    ]),
     icons,
   };
 }

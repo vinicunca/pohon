@@ -50,7 +50,9 @@ async function mountDir(appProps?: Pick<AppProps, 'dir' | 'locale' | 'toaster'>,
         provide(localeContextInjectionKey, shallowRef(providedLocale));
       }
     },
-    render: () => appProps ? h(PApp, appProps, () => h(Probe)) : h(Probe),
+    render: () => appProps
+      ? h(PApp, appProps, () => h(Probe))
+      : h(Probe),
   }));
   teardowns.push(() => wrapper.unmount());
 
@@ -132,7 +134,11 @@ describe('useLocale', () => {
   });
 
   it('labels Breadcrumb in the App locale', async () => {
-    const wrapper = await mountInApp({ locale: fr }, () => h(PBreadcrumb, { items: [{ label: 'Accueil' }] }));
+    const wrapper = await mountInApp({ locale: fr }, () => h(PBreadcrumb, {
+      items: [
+        { label: 'Accueil' },
+      ],
+    }));
 
     expect(wrapper.findComponent(PBreadcrumb).attributes('aria-label')).toBe('fil d\'Ariane');
   });
@@ -148,7 +154,11 @@ describe('useLocale', () => {
   });
 
   it('describes Carousel and its slides in the App locale', async () => {
-    const wrapper = await mountInApp({ locale: fr }, () => h(PCarousel, { items: [1, 2] }, { default: ({ item }: { item: number }) => h('span', item) }));
+    const wrapper = await mountInApp({ locale: fr }, () => h(PCarousel, {
+      items: [1, 2],
+    }, {
+      default: ({ item }: { item: number }) => h('span', item),
+    }));
 
     expect(wrapper.get('[data-slot="root"]').attributes('aria-roledescription')).toBe('carrousel');
     expect(wrapper.findAll('[data-slot="item"]').map((item) => item.attributes('aria-roledescription'))).toEqual(['diapositive', 'diapositive']);
@@ -207,8 +217,14 @@ describe('useLocale', () => {
   });
 
   it.each([
-    [10, ['Curseur']],
-    [[0, 10, 20], ['Valeur 1 sur 3', 'Valeur 2 sur 3', 'Valeur 3 sur 3']],
+    [
+      10,
+      ['Curseur'],
+    ],
+    [
+      [0, 10, 20],
+      ['Valeur 1 sur 3', 'Valeur 2 sur 3', 'Valeur 3 sur 3'],
+    ],
   ])('labels Slider thumbs of %j in the App locale', async (modelValue, labels) => {
     const wrapper = await mountInApp({ locale: fr }, () => h(PSlider, { modelValue }));
 
@@ -216,13 +232,20 @@ describe('useLocale', () => {
   });
 
   it('labels Stepper in the App locale', async () => {
-    const wrapper = await mountInApp({ locale: fr }, () => h(PStepper, { items: [{ title: 'A' }] }));
+    const wrapper = await mountInApp({ locale: fr }, () => h(PStepper, {
+      items: [
+        { title: 'A' },
+      ],
+    }));
 
     expect(wrapper.findComponent(PStepper).attributes('aria-label')).toBe('progression');
   });
 
   it('labels Toaster in the App locale', async () => {
-    const wrapper = await mountInApp({ locale: de, toaster: { portal: false } }, () => h('div'));
+    const wrapper = await mountInApp({
+      locale: de,
+      toaster: { portal: false },
+    }, () => h('div'));
 
     expect(wrapper.findComponent(ToastProvider).props('label')).toBe('Benachrichtigung');
     expect(wrapper.get('[role="region"]').attributes('aria-label')).toBe('Benachrichtigungen (F8)');

@@ -6,7 +6,11 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [
-    UnoCSS({ presets: [presetVinicunca()] }),
+    UnoCSS({
+      presets: [
+        presetVinicunca(),
+      ],
+    }),
     vue(),
     ui({
       dts: false,

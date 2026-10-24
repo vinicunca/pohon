@@ -46,7 +46,10 @@ const props = withDefaults(
 
 const appConfig = useAppConfig() as EditorEmojiMenu['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.editorEmojiMenu || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.editorEmojiMenu || {}),
+})({
   size: props.size,
 }));
 
@@ -86,9 +89,15 @@ onMounted(async () => {
     renderItem: (item, styles) => {
       const content = item.emoji || item.shortcodes[0] || item.name;
       return [
-        h('span', { class: styles.value.itemLeadingIcon() }, content),
-        h('span', { class: styles.value.itemWrapper() }, [
-          h('span', { class: styles.value.itemLabel() }, item.name),
+        h('span', {
+          class: styles.value.itemLeadingIcon(),
+        }, content),
+        h('span', {
+          class: styles.value.itemWrapper(),
+        }, [
+          h('span', {
+            class: styles.value.itemLabel(),
+          }, item.name),
         ]),
       ];
     },

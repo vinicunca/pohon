@@ -169,9 +169,13 @@ const appConfig = useAppConfig() as Carousel['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'active', 'align', 'breakpoints', 'containScroll', 'dragFree', 'dragThreshold', 'duration', 'inViewThreshold', 'loop', 'skipSnaps', 'slidesToScroll', 'startIndex', 'watchDrag', 'watchResize', 'watchSlides', 'watchFocus'));
 
-const prevIcon = computed(() => props.prevIcon || (dir.value === 'rtl' ? appConfig.ui.icons.arrowRight : appConfig.ui.icons.arrowLeft));
+const prevIcon = computed(() => props.prevIcon || (dir.value === 'rtl'
+  ? appConfig.ui.icons.arrowRight
+  : appConfig.ui.icons.arrowLeft));
 
-const nextIcon = computed(() => props.nextIcon || (dir.value === 'rtl' ? appConfig.ui.icons.arrowLeft : appConfig.ui.icons.arrowRight));
+const nextIcon = computed(() => props.nextIcon || (dir.value === 'rtl'
+  ? appConfig.ui.icons.arrowLeft
+  : appConfig.ui.icons.arrowRight));
 
 const stopAutoplayOnInteraction = computed(() => {
   if (typeof props.autoplay === 'boolean') {
@@ -189,15 +193,24 @@ const stopAutoScrollOnInteraction = computed(() => {
   return props.autoScroll?.stopOnInteraction ?? true;
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.carousel || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.carousel || {}),
+})({
   orientation: props.orientation,
 }));
 
 const options = computed<EmblaOptionsType>(() => ({
-  ...(props.fade ? { align: 'center', containScroll: false } : {}),
+  ...(props.fade
+    ? { align: 'center', containScroll: false }
+    : {}),
   ...rootProps.value,
-  axis: props.orientation === 'horizontal' ? 'x' : 'y',
-  direction: dir.value === 'rtl' ? 'rtl' : 'ltr',
+  axis: props.orientation === 'horizontal'
+    ? 'x'
+    : 'y',
+  direction: dir.value === 'rtl'
+    ? 'rtl'
+    : 'ltr',
 }));
 
 const plugins = ref<Array<EmblaPluginType>>([]);
@@ -207,32 +220,44 @@ async function loadPlugins() {
 
   if (props.autoplay) {
     const AutoplayPlugin = await import('embla-carousel-autoplay').then((r) => r.default);
-    emblaPlugins.push(AutoplayPlugin(typeof props.autoplay === 'boolean' ? {} : props.autoplay));
+    emblaPlugins.push(AutoplayPlugin(typeof props.autoplay === 'boolean'
+      ? {}
+      : props.autoplay));
   }
 
   if (props.autoScroll) {
     const AutoScrollPlugin = await import('embla-carousel-auto-scroll').then((r) => r.default);
-    emblaPlugins.push(AutoScrollPlugin(typeof props.autoScroll === 'boolean' ? {} : props.autoScroll));
+    emblaPlugins.push(AutoScrollPlugin(typeof props.autoScroll === 'boolean'
+      ? {}
+      : props.autoScroll));
   }
 
   if (props.autoHeight) {
     const AutoHeightPlugin = await import('embla-carousel-auto-height').then((r) => r.default);
-    emblaPlugins.push(AutoHeightPlugin(typeof props.autoHeight === 'boolean' ? {} : props.autoHeight));
+    emblaPlugins.push(AutoHeightPlugin(typeof props.autoHeight === 'boolean'
+      ? {}
+      : props.autoHeight));
   }
 
   if (props.classNames) {
     const ClassNamesPlugin = await import('embla-carousel-class-names').then((r) => r.default);
-    emblaPlugins.push(ClassNamesPlugin(typeof props.classNames === 'boolean' ? {} : props.classNames));
+    emblaPlugins.push(ClassNamesPlugin(typeof props.classNames === 'boolean'
+      ? {}
+      : props.classNames));
   }
 
   if (props.fade) {
     const FadePlugin = await import('embla-carousel-fade').then((r) => r.default);
-    emblaPlugins.push(FadePlugin(typeof props.fade === 'boolean' ? {} : props.fade));
+    emblaPlugins.push(FadePlugin(typeof props.fade === 'boolean'
+      ? {}
+      : props.fade));
   }
 
   if (props.wheelGestures) {
     const { WheelGesturesPlugin } = await import('embla-carousel-wheel-gestures');
-    emblaPlugins.push(WheelGesturesPlugin(typeof props.wheelGestures === 'boolean' ? {} : props.wheelGestures));
+    emblaPlugins.push(WheelGesturesPlugin(typeof props.wheelGestures === 'boolean'
+      ? {}
+      : props.wheelGestures));
   }
 
   plugins.value = emblaPlugins;
@@ -243,7 +268,14 @@ async function loadPlugins() {
 // guard, so we must not reinitialize here: plugin props passed as inline objects
 // (e.g. `:autoplay="{ delay: 5000 }"`) get a new reference on every parent render,
 // which would otherwise reinitialize the carousel and reset it to the first slide.
-watch(() => [props.autoplay, props.autoScroll, props.autoHeight, props.classNames, props.fade, props.wheelGestures], loadPlugins, { immediate: true });
+watch(() => [
+  props.autoplay,
+  props.autoScroll,
+  props.autoHeight,
+  props.classNames,
+  props.fade,
+  props.wheelGestures,
+], loadPlugins, { immediate: true });
 
 const [emblaRef, emblaApi] = useEmblaCarousel(options, plugins);
 
@@ -279,8 +311,12 @@ function onKeyDown(event: KeyboardEvent) {
   let prevKey;
   let nextKey;
   if (props.orientation === 'horizontal') {
-    prevKey = dir.value === 'ltr' ? 'ArrowLeft' : 'ArrowRight';
-    nextKey = dir.value === 'ltr' ? 'ArrowRight' : 'ArrowLeft';
+    prevKey = dir.value === 'ltr'
+      ? 'ArrowLeft'
+      : 'ArrowRight';
+    nextKey = dir.value === 'ltr'
+      ? 'ArrowRight'
+      : 'ArrowLeft';
   } else {
     prevKey = 'ArrowUp';
     nextKey = 'ArrowDown';

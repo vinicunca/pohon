@@ -18,16 +18,61 @@ describe('form', () => {
 
   renderEach(PForm, [
     // Props
-    ['with state', { props }],
-    ['with name', { props: { ...props, name: 'contact' } }],
-    ['with method', { props: { ...props, method: 'get' } }],
-    ['with id', { props: { ...props, id: 'id' } }],
-    ['with class', { props: { ...props, class: 'gap-4' } }],
-    ['with ui', { props: { ...props, ui: { base: 'rounded-lg' } } }],
+    [
+      'with state',
+      { props },
+    ],
+    [
+      'with name',
+      {
+        props: { ...props, name: 'contact' },
+      },
+    ],
+    [
+      'with method',
+      {
+        props: { ...props, method: 'get' },
+      },
+    ],
+    [
+      'with id',
+      {
+        props: { ...props, id: 'id' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'gap-4' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { base: 'rounded-lg' },
+        },
+      },
+    ],
     // Attrs
-    ['with aria-label', { props, attrs: { 'aria-label': 'Contact form' } }],
+    [
+      'with aria-label',
+      {
+        props,
+        attrs: { 'aria-label': 'Contact form' },
+      },
+    ],
     // Slots
-    ['with default slot', { props, slots: { default: () => 'Form slot' } }],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Form slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {
@@ -41,59 +86,77 @@ describe('form', () => {
   renderEach(
     PForm,
     [
-      ['zod', {
-        schema: z.object({
-          email: z.string(),
-          password: z.string().min(8, 'Must be at least 8 characters'),
-        }),
-      }],
-      ['yup', {
-        schema: yup.object({
-          email: yup.string(),
-          password: yup.string().min(8, 'Must be at least 8 characters'),
-        }),
-      }],
-      ['joi', {
-        schema: Joi.object({
-          email: Joi.string(),
-          password: Joi.string().min(8).messages({
-            'string.min': 'Must be at least {#limit} characters',
+      [
+        'zod',
+        {
+          schema: z.object({
+            email: z.string(),
+            password: z.string().min(8, 'Must be at least 8 characters'),
           }),
-        }),
-      }],
-      ['valibot', {
-        schema: valibot.object({
-          email: valibot.string(),
-          password: valibot.pipe(valibot.string(), valibot.minLength(8, 'Must be at least 8 characters')),
-        }),
-      }],
-      ['superstruct', {
-        schema: object({
-          email: nonempty(string()),
-          password: refine(string(), 'Password', (value) => {
-            if (value.length >= 8) {
-              return true;
-            }
-            return 'Must be at least 8 characters';
-          }),
-        }),
-      }],
-      ['custom', {
-        async validate(state: any) {
-          const errs = [];
-          if (!state.email) {
-            errs.push({ name: 'email', message: 'Email is required' });
-          }
-          if (state.password?.length < 8) {
-            errs.push({
-              name: 'password',
-              message: 'Must be at least 8 characters',
-            });
-          }
-
-          return errs;
         },
-      }],
+      ],
+      [
+        'yup',
+        {
+          schema: yup.object({
+            email: yup.string(),
+            password: yup.string().min(8, 'Must be at least 8 characters'),
+          }),
+        },
+      ],
+      [
+        'joi',
+        {
+          schema: Joi.object({
+            email: Joi.string(),
+            password: Joi.string().min(8).messages({
+              'string.min': 'Must be at least {#limit} characters',
+            }),
+          }),
+        },
+      ],
+      [
+        'valibot',
+        {
+          schema: valibot.object({
+            email: valibot.string(),
+            password: valibot.pipe(valibot.string(), valibot.minLength(8, 'Must be at least 8 characters')),
+          }),
+        },
+      ],
+      [
+        'superstruct',
+        {
+          schema: object({
+            email: nonempty(string()),
+            password: refine(string(), 'Password', (value) => {
+              if (value.length >= 8) {
+                return true;
+              }
+              return 'Must be at least 8 characters';
+            }),
+          }),
+        },
+      ],
+      [
+        'custom',
+        {
+          async validate(state: any) {
+            const errs = [];
+            if (!state.email) {
+              errs.push({ name: 'email', message: 'Email is required' });
+            }
+            if (state.password?.length < 8) {
+              errs.push({
+                name: 'password',
+                message: 'Must be at least 8 characters',
+              });
+            }
+
+            return errs;
+          },
+        },
+      ],
     ],
     '%s validation works',
     async (_, options) => {
@@ -164,16 +227,20 @@ describe('form', () => {
     });
 
     it('setErrors works', async () => {
-      form.setErrors([{
-        name: 'email',
-        message: 'this is an error',
-      }]);
+      form.setErrors([
+        {
+          name: 'email',
+          message: 'this is an error',
+        },
+      ]);
 
-      expect(form.errors).toMatchObject([{
-        id: 'email',
-        name: 'email',
-        message: 'this is an error',
-      }]);
+      expect(form.errors).toMatchObject([
+        {
+          id: 'email',
+          name: 'email',
+          message: 'this is an error',
+        },
+      ]);
 
       await nextTick();
 
@@ -185,12 +252,20 @@ describe('form', () => {
     });
 
     it('setErrors with regex works', async () => {
-      form.setErrors([{ id: 'email', name: 'email', message: 'this is an error' }]);
+      form.setErrors([
+        { id: 'email', name: 'email', message: 'this is an error' },
+      ]);
 
-      expect(form.errors).toMatchObject([{ id: 'email', name: 'email', message: 'this is an error' }]);
+      expect(form.errors).toMatchObject([
+        { id: 'email', name: 'email', message: 'this is an error' },
+      ]);
 
-      form.setErrors([{ id: 'password', name: 'password', message: 'this is another error' }], /email/);
-      expect(form.errors).toMatchObject([{ id: 'password', name: 'password', message: 'this is another error' }]);
+      form.setErrors([
+        { id: 'password', name: 'password', message: 'this is another error' },
+      ], /email/);
+      expect(form.errors).toMatchObject([
+        { id: 'password', name: 'password', message: 'this is another error' },
+      ]);
 
       await nextTick();
 
@@ -202,11 +277,13 @@ describe('form', () => {
     });
 
     it('clear works', async () => {
-      form.setErrors([{
-        id: 'email',
-        name: 'email',
-        message: 'this is an error',
-      }]);
+      form.setErrors([
+        {
+          id: 'email',
+          name: 'email',
+          message: 'this is an error',
+        },
+      ]);
 
       form.clear();
 
@@ -428,7 +505,9 @@ describe('form', () => {
 
       await expect(form.validate({ name: 'email' })).resolves.toBeTruthy();
       expect(await form.validate({ name: 'email', silent: true })).not.toBe(false);
-      expect(form.errors).toMatchObject([{ name: 'password' }]);
+      expect(form.errors).toMatchObject([
+        { name: 'password' },
+      ]);
     });
   });
 
@@ -444,7 +523,13 @@ describe('form', () => {
     }
 
     it('stays clean when submit beats the input debounce', async () => {
-      const wrapper: any = await renderForm({ fixture: 'FormBasic', props: { validateOnInputDelay: 50, onSubmit: vi.fn() } });
+      const wrapper: any = await renderForm({
+        fixture: 'FormBasic',
+        props: {
+          validateOnInputDelay: 50,
+          onSubmit: vi.fn(),
+        },
+      });
       const form = wrapper.setupState.form.value;
 
       await type(wrapper, '#email', 'bob@dylan.com');
@@ -459,7 +544,14 @@ describe('form', () => {
     it('ignores input typed before a submit', async () => {
       const wrapper: any = await renderForm({
         fixture: 'FormBasic',
-        props: { validateOnInputDelay: 50, onSubmit, schema: z.object({ email: z.email(), password: z.string().optional() }) },
+        props: {
+          validateOnInputDelay: 50,
+          onSubmit,
+          schema: z.object({
+            email: z.email(),
+            password: z.string().optional(),
+          }),
+        },
       });
 
       function onSubmit() {
@@ -478,7 +570,12 @@ describe('form', () => {
     });
 
     it('ignores nested input typed before the parent submits', async () => {
-      const wrapper: any = await renderForm({ fixture: 'FormNested', props: { onSubmit: vi.fn() } });
+      const wrapper: any = await renderForm({
+        fixture: 'FormNested',
+        props: {
+          onSubmit: vi.fn(),
+        },
+      });
       const form = wrapper.setupState.form.value;
       Object.assign(wrapper.setupState.state, { email: 'bob@dylan.com', password: 'strongpassword' });
 
@@ -497,7 +594,13 @@ describe('form', () => {
     ])('still validates a field cleared %s right after the input', async (_, target) => {
       const wrapper: any = await renderForm({
         fixture: 'FormBasic',
-        props: { validateOnInputDelay: 50, schema: z.object({ email: z.email(), password: z.string().optional() }) },
+        props: {
+          validateOnInputDelay: 50,
+          schema: z.object({
+            email: z.email(),
+            password: z.string().optional(),
+          }),
+        },
       });
       const form = wrapper.setupState.form.value;
 
@@ -506,7 +609,9 @@ describe('form', () => {
       form.clear(target);
       await wait(60);
 
-      expect(form.errors).toMatchObject([{ name: 'email' }]);
+      expect(form.errors).toMatchObject([
+        { name: 'email' },
+      ]);
     });
 
     it('keeps fields edited during an async submit dirty', async () => {
@@ -534,10 +639,19 @@ describe('form', () => {
 
     it('drops an older validation that finishes last', async () => {
       const validate = async ({ email }: any) => {
-        await wait(email === 'bad' ? 40 : 0);
-        return email === 'bad' ? [{ name: 'email', message: 'Bad' }] : [];
+        await wait(email === 'bad'
+          ? 40
+          : 0);
+        return email === 'bad'
+          ? [
+              { name: 'email', message: 'Bad' },
+            ]
+          : [];
       };
-      const wrapper: any = await renderForm({ fixture: 'FormBasic', props: { validate } });
+      const wrapper: any = await renderForm({
+        fixture: 'FormBasic',
+        props: { validate },
+      });
       const form = wrapper.setupState.form.value;
       const email = wrapper.find('#email');
 
@@ -594,7 +708,13 @@ describe('form', () => {
       state.nested.field = 'nested';
 
       await form.submit();
-      expect(onSubmit).toHaveBeenCalledWith(expect.objectContaining({ data: { email: 'bob@dylan.com', password: 'strongpassword', nested: { field: 'nested' } } }));
+      expect(onSubmit).toHaveBeenCalledWith(expect.objectContaining({
+        data: {
+          email: 'bob@dylan.com',
+          password: 'strongpassword',
+          nested: { field: 'nested' },
+        },
+      }));
     });
 
     it('submit works when child is disabled', async () => {
@@ -622,7 +742,10 @@ describe('form', () => {
 
     beforeEach(async () => {
       vi.clearAllMocks();
-      wrapper = await renderForm({ fixture: 'FormNested', props: { onSubmit, onError } });
+      wrapper = await renderForm({
+        fixture: 'FormNested',
+        props: { onSubmit, onError },
+      });
       form = wrapper.setupState.form.value;
     });
 
@@ -734,10 +857,18 @@ describe('form', () => {
   describe('apply transform', async () => {
     it.each([
       ['without a schema', {}],
-      ['with a validate function', { validate: () => [] }],
+      [
+        'with a validate function',
+        {
+          validate: () => [],
+        },
+      ],
     ])('merges an unnamed nested form into a parent %s', async (_, props) => {
       const onSubmit = vi.fn();
-      const wrapper: any = await renderForm({ fixture: 'FormNestedTransform', props: { ...props, onSubmit } });
+      const wrapper: any = await renderForm({
+        fixture: 'FormNestedTransform',
+        props: { ...props, onSubmit },
+      });
 
       await wrapper.setupState.form.value.submit();
 
@@ -836,9 +967,15 @@ describe('form', () => {
         file: z.file(),
         count: z.number(),
         date: z.date(),
-        items: z.array(z.object({ quantity: z.number(), price: z.number() })),
+        items: z.array(z.object({
+          quantity: z.number(),
+          price: z.number(),
+        })),
         tags: z.array(z.string()).readonly(),
-        range: z.tuple([z.number(), z.number()]),
+        range: z.tuple([
+          z.number(),
+          z.number(),
+        ]),
       });
 
       expect(defineFormProps({
@@ -847,7 +984,9 @@ describe('form', () => {
           file: null as File | null,
           count: '' as number | '',
           date: undefined as Date | undefined,
-          items: [{ quantity: undefined, price: null }],
+          items: [
+            { quantity: undefined, price: null },
+          ],
           tags: [] as ReadonlyArray<string>,
           range: [0, ''] as [number, number | ''],
         }),
@@ -856,8 +995,14 @@ describe('form', () => {
 
     it('accepts the fields of every member of a union', () => {
       const schema = z.discriminatedUnion('type', [
-        z.object({ type: z.literal('a'), a: z.string() }),
-        z.object({ type: z.literal('b'), b: z.number() }),
+        z.object({
+          type: z.literal('a'),
+          a: z.string(),
+        }),
+        z.object({
+          type: z.literal('b'),
+          b: z.number(),
+        }),
       ]);
 
       expect(defineFormProps({
@@ -867,31 +1012,65 @@ describe('form', () => {
     });
 
     it('keeps the schema input on the validate param', () => {
-      const schema = z.object({ current: z.string(), new: z.string() });
+      const schema = z.object({
+        current: z.string(),
+        new: z.string(),
+      });
 
       function validate(state: Partial<z.input<typeof schema>>) {
-        return state.current === state.new ? [{ name: 'new', message: 'Must be different' }] : [];
+        return state.current === state.new
+          ? [
+              { name: 'new', message: 'Must be different' },
+            ]
+          : [];
       }
 
-      expect(defineFormProps({ schema, validate, state: reactive({ current: undefined, new: undefined }) })).toBeDefined();
+      expect(defineFormProps({
+        schema,
+        validate,
+        state: reactive({ current: undefined, new: undefined }),
+      })).toBeDefined();
     });
 
     it('rejects values of another shape', () => {
       const schema = z.object({
         name: z.string(),
         count: z.number(),
-        items: z.array(z.object({ quantity: z.number() })),
-        pair: z.tuple([z.string(), z.number()]),
+        items: z.array(z.object({
+          quantity: z.number(),
+        })),
+        pair: z.tuple([
+          z.string(),
+          z.number(),
+        ]),
       });
 
       // @ts-expect-error a string is not assignable to a number field
-      expect(defineFormProps({ schema, state: reactive({ count: 'abc' as string }) })).toBeDefined();
+      expect(defineFormProps({
+        schema,
+        state: reactive({ count: 'abc' as string }),
+      })).toBeDefined();
       // @ts-expect-error an object is not assignable to a string field
-      expect(defineFormProps({ schema, state: reactive({ name: { first: '' } }) })).toBeDefined();
+      expect(defineFormProps({
+        schema,
+        state: reactive({
+          name: { first: '' },
+        }),
+      })).toBeDefined();
       // @ts-expect-error an object is not assignable to an array field
-      expect(defineFormProps({ schema, state: reactive({ items: { quantity: 1 } }) })).toBeDefined();
+      expect(defineFormProps({
+        schema,
+        state: reactive({
+          items: { quantity: 1 },
+        }),
+      })).toBeDefined();
       // @ts-expect-error a number is not assignable to the string position of a tuple
-      expect(defineFormProps({ schema, state: reactive({ pair: [1, 1] as [number, number] }) })).toBeDefined();
+      expect(defineFormProps({
+        schema,
+        state: reactive({
+          pair: [1, 1] as [number, number],
+        }),
+      })).toBeDefined();
     });
   });
 

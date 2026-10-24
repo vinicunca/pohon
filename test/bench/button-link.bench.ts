@@ -10,7 +10,10 @@ import Button from '../../src/runtime/components/Button.vue';
 // (2) − (1) = the Pohon UI component-stack overhead; (3) − (2) = the routing overhead.
 
 // Declares `loading` so the re-render benches can toggle a prop on it too.
-const Plain = { props: ['loading'], template: '<button type="button">x</button>' };
+const Plain = {
+  props: ['loading'],
+  template: '<button type="button">x</button>',
+};
 
 describe('mount', () => {
   bench('plain <button>', async () => {
@@ -19,12 +22,16 @@ describe('mount', () => {
   });
 
   bench('pButton (no link)', async () => {
-    const wrapper = await mountSuspended(Button, { props: { label: 'x' } });
+    const wrapper = await mountSuspended(Button, {
+      props: { label: 'x' },
+    });
     wrapper.unmount();
   });
 
   bench('pButton (link)', async () => {
-    const wrapper = await mountSuspended(Button, { props: { label: 'x', to: '/' } });
+    const wrapper = await mountSuspended(Button, {
+      props: { label: 'x', to: '/' },
+    });
     wrapper.unmount();
   });
 });

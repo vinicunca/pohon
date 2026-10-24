@@ -10,8 +10,13 @@ describe('prose prompt', () => {
     const open = vi.spyOn(window, 'open').mockImplementation(() => null);
     const prompt = 'Build a form.\n\n- Use `PInput`\n- Validate on submit';
     const wrapper = await mountSuspended(Prompt, {
-      props: { prompt, actions: ['cursor'] },
-      slots: { default: () => h('p', 'Fallback text') },
+      props: {
+        prompt,
+        actions: ['cursor'],
+      },
+      slots: {
+        default: () => h('p', 'Fallback text'),
+      },
     });
     const cursorButton = wrapper.findAll('button').find((button) => button.text().includes('Cursor'))!;
     await cursorButton.trigger('click');

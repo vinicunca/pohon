@@ -300,20 +300,33 @@ const appConfig = useAppConfig() as SelectMenu['AppConfig'];
 const { filterGroups } = useFilter();
 const rootProps = useForwardProps(reactivePick(props, 'modelValue', 'defaultValue', 'open', 'defaultOpen', 'required', 'multiple', 'resetSearchTermOnBlur', 'resetSearchTermOnSelect', 'resetModelValueOnClear', 'highlightOnHover', 'loop', 'by'), emits);
 const portalProps = usePortal(toRef(() => props.portal));
-const contentProps = toRef(() => defu(props.content, { side: 'bottom', sideOffset: 8, collisionPadding: 8, position: 'popper' }) as ComboboxContentProps);
+const contentProps = toRef(() => defu(props.content, {
+  side: 'bottom',
+  sideOffset: 8,
+  collisionPadding: 8,
+  position: 'popper',
+}) as ComboboxContentProps);
 const arrowProps = toRef(() => defu(props.arrow, { rounded: true }) as ComboboxArrowProps);
-const clearProps = computed(() => typeof props.clear === 'object' ? props.clear : {} as Partial<Omit<ButtonProps, LinkPropsKeys>>);
+const clearProps = computed(() => typeof props.clear === 'object'
+  ? props.clear
+  : {} as Partial<Omit<ButtonProps, LinkPropsKeys>>);
 
 const virtualizerProps = toRef(() => {
   if (!props.virtualize) {
     return false;
   }
 
-  return defu(typeof props.virtualize === 'boolean' ? {} : props.virtualize, {
+  return defu(typeof props.virtualize === 'boolean'
+    ? {}
+    : props.virtualize, {
     estimateSize: getEstimateSize(filteredItems.value, size.value ?? 'md', props.descriptionKey as string, !!slots['item-description']),
   });
 });
-const searchInputProps = toRef(() => defu(props.searchInput, { placeholder: t('selectMenu.search'), variant: 'none', fixed: props.fixed }) as Omit<InputProps, 'modelValue' | 'defaultValue'>);
+const searchInputProps = toRef(() => defu(props.searchInput, {
+  placeholder: t('selectMenu.search'),
+  variant: 'none',
+  fixed: props.fixed,
+}) as Omit<InputProps, 'modelValue' | 'defaultValue'>);
 
 const { emitFormBlur, emitFormFocus, emitFormInput, emitFormChange, size: formFieldSize, color: formFieldColor, id, name, highlight: formFieldHighlight, disabled: formFieldDisabled, ariaAttrs } = useFormField<InputProps>(_props);
 
@@ -354,7 +367,10 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: S
   },
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.selectMenu || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.selectMenu || {}),
+})({
   color: color.value,
   variant: props.variant,
   size: size.value,
@@ -378,7 +394,9 @@ function displayValue(value: GetItemValue<T, VK, ExcludeItem> | Array<GetItemVal
       }))
       .filter((v): v is string => v != null && v !== '');
 
-    return displayedValues.length > 0 ? displayedValues.join(', ') : undefined;
+    return displayedValues.length > 0
+      ? displayedValues.join(', ')
+      : undefined;
   }
 
   return getDisplayValue<Array<T>, GetItemValue<T, VK, ExcludeItem>>(items.value, value as GetItemValue<T, VK, ExcludeItem>, {
@@ -403,7 +421,9 @@ const filteredGroups = computed(() => {
     return groups.value;
   }
 
-  const fields = Array.isArray(props.filterFields) ? props.filterFields : [props.labelKey] as Array<string>;
+  const fields = Array.isArray(props.filterFields)
+    ? props.filterFields
+    : [props.labelKey] as Array<string>;
 
   return filterGroups(groups.value, searchTerm.value, {
     fields,
@@ -417,7 +437,9 @@ const createItem = computed(() => {
     return false;
   }
 
-  const newItem = props.valueKey ? { [props.valueKey]: searchTerm.value } as NestedItem<T> : searchTerm.value;
+  const newItem = props.valueKey
+    ? { [props.valueKey]: searchTerm.value } as NestedItem<T>
+    : searchTerm.value;
 
   if ((typeof props.createItem === 'object' && props.createItem.when === 'always') || props.createItem === 'always') {
     return !filteredItems.value.some((item) => compare(item, newItem, (props.by ?? props.valueKey) as string | undefined));
@@ -425,7 +447,9 @@ const createItem = computed(() => {
 
   return !filteredItems.value.length;
 });
-const createItemPosition = computed(() => typeof props.createItem === 'object' ? props.createItem.position : 'bottom');
+const createItemPosition = computed(() => typeof props.createItem === 'object'
+  ? props.createItem.position
+  : 'bottom');
 
 const triggerRef = useTemplateRef('triggerRef');
 
@@ -469,7 +493,9 @@ function onUpdate(value: any) {
   }
 
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value } });
+  const event = new Event('change', {
+    target: { value },
+  });
   emits('change', event);
   emitFormChange();
   emitFormInput();
@@ -575,7 +601,9 @@ function onFocusOutside(event: Event) {
 
   event.preventDefault();
 
-  const input = searchInputProps.value.autofocus !== false ? el.querySelector<HTMLElement>('[data-slot="input"] input') : null;
+  const input = searchInputProps.value.autofocus !== false
+    ? el.querySelector<HTMLElement>('[data-slot="input"] input')
+    : null;
   const target = input ?? el;
   target.focus({ preventScroll: true });
 }
@@ -610,7 +638,12 @@ function onFocusScopeKeydown(event: KeyboardEvent) {
   }
 
   event.preventDefault();
-  input.dispatchEvent(new KeyboardEvent('keydown', { key: event.key, shiftKey: event.shiftKey, bubbles: true, cancelable: true }));
+  input.dispatchEvent(new KeyboardEvent('keydown', {
+    key: event.key,
+    shiftKey: event.shiftKey,
+    bubbles: true,
+    cancelable: true,
+  }));
 }
 
 const viewportRef = useTemplateRef('viewportRef');

@@ -91,7 +91,10 @@ const formatter = useDateFormatter(locale.value.code);
 
 const as = computed(() => resolveAs(props.as, { root: 'article', title: 'h2' }));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.blogPost || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.blogPost || {}),
+})({
   orientation: props.orientation,
   variant: props.variant,
   image: !!props.image,

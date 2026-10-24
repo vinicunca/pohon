@@ -58,79 +58,98 @@ export default (options: Required<ModuleOptions>) => ({
       true: '',
     },
   },
-  compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'solid',
-    class: `bg-${color} color-${color}-foreground`,
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'outline',
-    class: `color-${color} ring ring-inset ring-${color}/50`,
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'soft',
-    class: `bg-${color}/10 color-${color}`,
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: 'subtle',
-    class: `bg-${color}/10 color-${color} ring ring-inset ring-${color}/25`,
-  })), {
-    color: 'neutral',
-    variant: 'solid',
-    class: 'color-text-inverted bg-background-inverted',
-  }, {
-    color: 'neutral',
-    variant: 'outline',
-    class: 'ring ring-inset ring-border-accented color-text bg-background',
-  }, {
-    color: 'neutral',
-    variant: 'soft',
-    class: 'color-text bg-background-elevated',
-  }, {
-    color: 'neutral',
-    variant: 'subtle',
-    class: 'ring ring-inset ring-border-accented color-text bg-background-elevated',
-  }, {
-    size: 'xs',
-    square: false,
-    class: 'px-1 py-0.5',
-  }, {
-    size: 'xs',
-    square: true,
-    class: 'p-0.5',
-  }, {
-    size: 'sm',
-    square: false,
-    class: 'px-1.5 py-1',
-  }, {
-    size: 'sm',
-    square: true,
-    class: 'p-1',
-  }, {
-    size: 'md',
-    square: false,
-    class: 'px-2 py-1',
-  }, {
-    size: 'md',
-    square: true,
-    class: 'p-1',
-  }, {
-    size: 'lg',
-    square: false,
-    class: 'px-2 py-1',
-  }, {
-    size: 'lg',
-    square: true,
-    class: 'p-1',
-  }, {
-    size: 'xl',
-    square: false,
-    class: 'px-2.5 py-1',
-  }, {
-    size: 'xl',
-    square: true,
-    class: 'p-1',
-  }],
+  compoundVariants: [
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'solid',
+      class: `bg-${color} color-${color}-foreground`,
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'outline',
+      class: `color-${color} ring ring-inset ring-${color}/50`,
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'soft',
+      class: `bg-${color}/10 color-${color}`,
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: 'subtle',
+      class: `bg-${color}/10 color-${color} ring ring-inset ring-${color}/25`,
+    })),
+    {
+      color: 'neutral',
+      variant: 'solid',
+      class: 'color-text-inverted bg-background-inverted',
+    },
+    {
+      color: 'neutral',
+      variant: 'outline',
+      class: 'ring ring-inset ring-border-accented color-text bg-background',
+    },
+    {
+      color: 'neutral',
+      variant: 'soft',
+      class: 'color-text bg-background-elevated',
+    },
+    {
+      color: 'neutral',
+      variant: 'subtle',
+      class: 'ring ring-inset ring-border-accented color-text bg-background-elevated',
+    },
+    {
+      size: 'xs',
+      square: false,
+      class: 'px-1 py-0.5',
+    },
+    {
+      size: 'xs',
+      square: true,
+      class: 'p-0.5',
+    },
+    {
+      size: 'sm',
+      square: false,
+      class: 'px-1.5 py-1',
+    },
+    {
+      size: 'sm',
+      square: true,
+      class: 'p-1',
+    },
+    {
+      size: 'md',
+      square: false,
+      class: 'px-2 py-1',
+    },
+    {
+      size: 'md',
+      square: true,
+      class: 'p-1',
+    },
+    {
+      size: 'lg',
+      square: false,
+      class: 'px-2 py-1',
+    },
+    {
+      size: 'lg',
+      square: true,
+      class: 'p-1',
+    },
+    {
+      size: 'xl',
+      square: false,
+      class: 'px-2.5 py-1',
+    },
+    {
+      size: 'xl',
+      square: true,
+      class: 'p-1',
+    },
+  ],
   defaultVariants: {
     color: 'primary',
     variant: 'solid',

@@ -3,7 +3,10 @@ import { CalendarDate } from '@internationalized/date';
 import theme from '#build/ui/calendar';
 
 const singleValue = shallowRef(new CalendarDate(2022, 1, 10));
-const multipleValue = shallowRef([new CalendarDate(2022, 1, 10), new CalendarDate(2022, 1, 20)]);
+const multipleValue = shallowRef([
+  new CalendarDate(2022, 1, 10),
+  new CalendarDate(2022, 1, 20),
+]);
 const rangeValue = shallowRef({
   start: new CalendarDate(2022, 1, 10),
   end: new CalendarDate(2022, 1, 20),

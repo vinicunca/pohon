@@ -7,16 +7,65 @@ import { renderEach } from '../component-render';
 describe('marquee', () => {
   renderEach(Marquee, [
     // Props
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'text-xl' } }],
-    ['with pauseOnHover', { props: { pauseOnHover: true } }],
-    ['with reverse', { props: { reverse: true } }],
-    ['with orientation', { props: { orientation: 'vertical' } }],
-    ['with repeat', { props: { repeat: 6 } }],
-    ['with overlay off', { props: { overlay: false } }],
-    ['with ui', { props: { ui: { content: 'gap-4' } } }],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'text-xl' },
+      },
+    ],
+    [
+      'with pauseOnHover',
+      {
+        props: { pauseOnHover: true },
+      },
+    ],
+    [
+      'with reverse',
+      {
+        props: { reverse: true },
+      },
+    ],
+    [
+      'with orientation',
+      {
+        props: { orientation: 'vertical' },
+      },
+    ],
+    [
+      'with repeat',
+      {
+        props: { repeat: 6 },
+      },
+    ],
+    [
+      'with overlay off',
+      {
+        props: { overlay: false },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { content: 'gap-4' },
+        },
+      },
+    ],
     // Slots
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

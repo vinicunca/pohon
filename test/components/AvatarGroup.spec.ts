@@ -25,12 +25,44 @@ describe('avatarGroup', () => {
 
   renderEach(AvatarGroupWrapper, [
     // Props
-    ['with max', { props: { max: 2 } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { size } }]),
-    ...colors.map((color: string) => [`with color ${color}`, { props: { color, max: 1 } }]),
-    ['with as', { props: { as: 'span' } }],
-    ['with class', { props: { class: 'justify-start' } }],
-    ['with ui', { props: { ui: { base: 'rounded-lg' } } }],
+    [
+      'with max',
+      {
+        props: { max: 2 },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { size },
+      },
+    ]),
+    ...colors.map((color: string) => [
+      `with color ${color}`,
+      {
+        props: { color, max: 1 },
+      },
+    ]),
+    [
+      'with as',
+      {
+        props: { as: 'span' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'justify-start' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { base: 'rounded-lg' },
+        },
+      },
+    ],
     // Slots
     ['with default slot', {}],
   ]);

@@ -94,98 +94,116 @@ export default (options: Required<ModuleOptions>) => ({
       true: 'cursor-not-allowed opacity-75',
     },
   },
-  compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
-    color,
-    class: `outline-${color}/25 focus-visible:outline-3 focus-visible:border-${color}`,
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    highlight: true,
-    class: `border-${color}`,
-  })), {
-    color: 'neutral',
-    class: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:border-border-inverted',
-  }, {
-    color: 'neutral',
-    highlight: true,
-    class: 'border-border-inverted',
-  }, {
-    size: 'xs',
-    layout: 'list',
-    class: {
-      fileTrailingButton: '-me-1',
+  compoundVariants: [
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      class: `outline-${color}/25 focus-visible:outline-3 focus-visible:border-${color}`,
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      highlight: true,
+      class: `border-${color}`,
+    })),
+    {
+      color: 'neutral',
+      class: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:border-border-inverted',
     },
-  }, {
-    size: 'sm',
-    layout: 'list',
-    class: {
-      fileTrailingButton: '-me-1.5',
+    {
+      color: 'neutral',
+      highlight: true,
+      class: 'border-border-inverted',
     },
-  }, {
-    size: 'md',
-    layout: 'list',
-    class: {
-      fileTrailingButton: '-me-1.5',
+    {
+      size: 'xs',
+      layout: 'list',
+      class: {
+        fileTrailingButton: '-me-1',
+      },
     },
-  }, {
-    size: 'lg',
-    layout: 'list',
-    class: {
-      fileTrailingButton: '-me-2',
+    {
+      size: 'sm',
+      layout: 'list',
+      class: {
+        fileTrailingButton: '-me-1.5',
+      },
     },
-  }, {
-    size: 'xl',
-    layout: 'list',
-    class: {
-      fileTrailingButton: '-me-2',
+    {
+      size: 'md',
+      layout: 'list',
+      class: {
+        fileTrailingButton: '-me-1.5',
+      },
     },
-  }, {
-    variant: 'button',
-    size: 'xs',
-    class: {
-      base: 'p-1',
+    {
+      size: 'lg',
+      layout: 'list',
+      class: {
+        fileTrailingButton: '-me-2',
+      },
     },
-  }, {
-    variant: 'button',
-    size: 'sm',
-    class: {
-      base: 'p-1.5',
+    {
+      size: 'xl',
+      layout: 'list',
+      class: {
+        fileTrailingButton: '-me-2',
+      },
     },
-  }, {
-    variant: 'button',
-    size: 'md',
-    class: {
-      base: 'p-1.5',
+    {
+      variant: 'button',
+      size: 'xs',
+      class: {
+        base: 'p-1',
+      },
     },
-  }, {
-    variant: 'button',
-    size: 'lg',
-    class: {
-      base: 'p-2',
+    {
+      variant: 'button',
+      size: 'sm',
+      class: {
+        base: 'p-1.5',
+      },
     },
-  }, {
-    variant: 'button',
-    size: 'xl',
-    class: {
-      base: 'p-2',
+    {
+      variant: 'button',
+      size: 'md',
+      class: {
+        base: 'p-1.5',
+      },
     },
-  }, {
-    layout: 'grid',
-    multiple: true,
-    class: {
-      files: 'grid grid-cols-2 md:grid-cols-3 gap-4 w-full',
-      file: 'pohon:p-0 aspect-square',
+    {
+      variant: 'button',
+      size: 'lg',
+      class: {
+        base: 'p-2',
+      },
     },
-  }, {
-    layout: 'grid',
-    multiple: false,
-    class: {
-      file: 'pohon:absolute inset-0 pohon:p-0',
+    {
+      variant: 'button',
+      size: 'xl',
+      class: {
+        base: 'p-2',
+      },
     },
-  }, {
-    interactive: true,
-    disabled: false,
-    class: 'hover:bg-background-elevated/25',
-  }],
+    {
+      layout: 'grid',
+      multiple: true,
+      class: {
+        files: 'grid grid-cols-2 md:grid-cols-3 gap-4 w-full',
+        file: 'pohon:p-0 aspect-square',
+      },
+    },
+    {
+      layout: 'grid',
+      multiple: false,
+      class: {
+        file: 'pohon:absolute inset-0 pohon:p-0',
+      },
+    },
+    {
+      interactive: true,
+      disabled: false,
+      class: 'hover:bg-background-elevated/25',
+    },
+  ],
   defaultVariants: {
     color: 'primary',
     variant: 'area',

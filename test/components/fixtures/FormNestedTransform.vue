@@ -4,7 +4,10 @@ import { z } from 'zod';
 
 defineProps<{ nestedName?: string }>();
 
-const state = reactive<any>({ field: 'abc', nested: { field: 'abc' } });
+const state = reactive<any>({
+  field: 'abc',
+  nested: { field: 'abc' },
+});
 const nestedSchema = z.object({
   field: z.string().transform((value) => value.toUpperCase()),
 });

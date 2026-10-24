@@ -1,22 +1,27 @@
 <script setup lang="ts">
-const items = [{
-  label: 'Docs',
-  icon: 'i-lucide-book-open',
-}, {
-  label: 'Components',
-  icon: 'i-lucide-box',
-  active: true,
-}, {
-  label: 'Figma',
-  icon: 'i-simple-icons-figma',
-  to: 'https://go.nuxt.com/figma-ui',
-  target: '_blank',
-}, {
-  label: 'Releases',
-  icon: 'i-lucide-rocket',
-  to: 'https://github.com/vinicunca/pohon/releases',
-  target: '_blank',
-}];
+const items = [
+  {
+    label: 'Docs',
+    icon: 'i-lucide-book-open',
+  },
+  {
+    label: 'Components',
+    icon: 'i-lucide-box',
+    active: true,
+  },
+  {
+    label: 'Figma',
+    icon: 'i-simple-icons-figma',
+    to: 'https://go.nuxt.com/figma-ui',
+    target: '_blank',
+  },
+  {
+    label: 'Releases',
+    icon: 'i-lucide-rocket',
+    to: 'https://github.com/vinicunca/pohon/releases',
+    target: '_blank',
+  },
+];
 </script>
 
 <template>

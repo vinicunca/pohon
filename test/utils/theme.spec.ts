@@ -18,7 +18,10 @@ describe('applyUnstyled', () => {
     },
     compoundVariants: [
       { color: 'primary', variant: 'solid', class: 'bg-primary' },
-      { size: 'md', class: { base: 'gap-1.5' } },
+      {
+        size: 'md',
+        class: { base: 'gap-1.5' },
+      },
     ],
     defaultVariants: {
       color: 'primary',
@@ -33,7 +36,9 @@ describe('applyUnstyled', () => {
     expect(applyUnstyled(stringBase, true)).toEqual({ base: '' });
     expect(stringBase.base).toBe('animate-pulse rounded-md bg-background-elevated');
 
-    expect(applyUnstyled({ base: ['flex', 'transition-colors'] }, true)).toEqual({ base: '' });
+    expect(applyUnstyled({
+      base: ['flex', 'transition-colors'],
+    }, true)).toEqual({ base: '' });
   });
 
   it('does not mutate the input theme', () => {
@@ -71,7 +76,10 @@ describe('applyUnstyled', () => {
     const result = applyUnstyled(theme(), true);
     expect(result.compoundVariants).toEqual([
       { color: 'primary', variant: 'solid', class: '' },
-      { size: 'md', class: { base: '' } },
+      {
+        size: 'md',
+        class: { base: '' },
+      },
     ]);
   });
 

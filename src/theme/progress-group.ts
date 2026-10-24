@@ -16,11 +16,14 @@ export default (options: Required<ModuleOptions>) => ({
   },
   variants: {
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        indicator: `bg-${color}`,
-        itemLeadingIcon: `color-${color}`,
-        itemLeadingDot: `bg-${color}`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          indicator: `bg-${color}`,
+          itemLeadingIcon: `color-${color}`,
+          itemLeadingDot: `bg-${color}`,
+        },
+      ])),
       neutral: {
         indicator: 'bg-background-inverted',
         itemLeadingIcon: 'color-text-highlighted',

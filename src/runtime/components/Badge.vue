@@ -65,7 +65,10 @@ const appConfig = useAppConfig() as Badge['AppConfig'];
 const { orientation, size: fieldGroupSize } = useFieldGroup<BadgeProps>(_props);
 const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.badge || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.badge || {}),
+})({
   color: props.color,
   variant: props.variant,
   size: fieldGroupSize.value ?? props.size,

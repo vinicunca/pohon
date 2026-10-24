@@ -19,15 +19,32 @@ const position = ref('outside' as keyof typeof theme.variants.position);
 const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2MB
 const MIN_DIMENSIONS = { width: 200, height: 200 };
 const MAX_DIMENSIONS = { width: 4096, height: 4096 };
-const ACCEPTED_IMAGE_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
+const ACCEPTED_IMAGE_TYPES = [
+  'image/jpeg',
+  'image/jpg',
+  'image/png',
+  'image/webp',
+];
 
 function formatBytes(bytes: number, decimals = 2) {
   if (bytes === 0) {
     return '0 Bytes';
   }
   const k = 1024;
-  const dm = decimals < 0 ? 0 : decimals;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+  const dm = decimals < 0
+    ? 0
+    : decimals;
+  const sizes = [
+    'Bytes',
+    'KB',
+    'MB',
+    'GB',
+    'TB',
+    'PB',
+    'EB',
+    'ZB',
+    'YB',
+  ];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return `${Number.parseFloat((bytes / k ** i).toFixed(dm))} ${sizes[i]}`;
 }

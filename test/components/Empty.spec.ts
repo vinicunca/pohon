@@ -13,33 +13,178 @@ describe('empty', () => {
     icon: 'i-lucide-file',
     title: 'Title',
     description: 'Description',
-    actions: [{ icon: 'i-lucide-plus', label: 'Add' }],
+    actions: [
+      { icon: 'i-lucide-plus', label: 'Add' },
+    ],
   };
 
   renderEach(Empty, [
     // Props
-    ['with as', { props: { as: 'section' } }],
-    ['with as object', { props: { title: 'Title', as: { root: 'section', title: 'h3' } } }],
-    ['with icon', { props: { icon: 'i-lucide-file' } }],
-    ['with avatar', { props: { avatar: { src: 'https://github.com/praburangki.png' } } }],
-    ['with title', { props: { icon: 'i-lucide-file', title: 'Title' } }],
-    ['with description', { props: { icon: 'i-lucide-file', title: 'Title', description: 'Description' } }],
-    ['with actions', { props: { icon: 'i-lucide-file', title: 'Title', description: 'Description', actions: [{ icon: 'i-lucide-plus', label: 'Add' }] } }],
-    ['with loading', { props: { icon: 'i-lucide-file', title: 'Title', loading: true } }],
-    ['with loading without icon', { props: { title: 'Title', loading: true } }],
-    ['with loadingIcon', { props: { icon: 'i-lucide-file', title: 'Title', loading: true, loadingIcon: 'i-lucide-loader' } }],
-    ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { ...props, variant } }]),
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { ...props, size } }]),
-    ['with class', { props: { ...props, class: 'gap-6' } }],
-    ['with ui', { props: { ...props, ui: {} } }],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with as object',
+      {
+        props: {
+          title: 'Title',
+          as: { root: 'section', title: 'h3' },
+        },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { icon: 'i-lucide-file' },
+      },
+    ],
+    [
+      'with avatar',
+      {
+        props: {
+          avatar: { src: 'https://github.com/praburangki.png' },
+        },
+      },
+    ],
+    [
+      'with title',
+      {
+        props: { icon: 'i-lucide-file', title: 'Title' },
+      },
+    ],
+    [
+      'with description',
+      {
+        props: { icon: 'i-lucide-file', title: 'Title', description: 'Description' },
+      },
+    ],
+    [
+      'with actions',
+      {
+        props: {
+          icon: 'i-lucide-file',
+          title: 'Title',
+          description: 'Description',
+          actions: [
+            { icon: 'i-lucide-plus', label: 'Add' },
+          ],
+        },
+      },
+    ],
+    [
+      'with loading',
+      {
+        props: { icon: 'i-lucide-file', title: 'Title', loading: true },
+      },
+    ],
+    [
+      'with loading without icon',
+      {
+        props: { title: 'Title', loading: true },
+      },
+    ],
+    [
+      'with loadingIcon',
+      {
+        props: {
+          icon: 'i-lucide-file',
+          title: 'Title',
+          loading: true,
+          loadingIcon: 'i-lucide-loader',
+        },
+      },
+    ],
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant}`,
+      {
+        props: { ...props, variant },
+      },
+    ]),
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { ...props, size },
+      },
+    ]),
+    [
+      'with class',
+      {
+        props: { ...props, class: 'gap-6' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: { ...props, ui: {} },
+      },
+    ],
     // Slots
-    ['with header slot', { props, slots: { header: () => 'Header slot' } }],
-    ['with leading slot', { props, slots: { leading: () => 'Leading slot' } }],
-    ['with title slot', { props, slots: { title: () => 'Title slot' } }],
-    ['with description slot', { props, slots: { description: () => 'Description slot' } }],
-    ['with body slot', { props, slots: { body: () => 'Body slot' } }],
-    ['with actions slot', { props, slots: { actions: () => 'Actions slot' } }],
-    ['with footer slot', { props, slots: { footer: () => 'Footer slot' } }],
+    [
+      'with header slot',
+      {
+        props,
+        slots: {
+          header: () => 'Header slot',
+        },
+      },
+    ],
+    [
+      'with leading slot',
+      {
+        props,
+        slots: {
+          leading: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with title slot',
+      {
+        props,
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        props,
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with body slot',
+      {
+        props,
+        slots: {
+          body: () => 'Body slot',
+        },
+      },
+    ],
+    [
+      'with actions slot',
+      {
+        props,
+        slots: {
+          actions: () => 'Actions slot',
+        },
+      },
+    ],
+    [
+      'with footer slot',
+      {
+        props,
+        slots: {
+          footer: () => 'Footer slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

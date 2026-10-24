@@ -45,28 +45,155 @@ describe('accordion', () => {
 
   renderEach(Accordion<typeof items[number]>, [
     // Props
-    ['with items', { props }],
-    ['with modelValue', { props: { ...props, modelValue: '1' } }],
-    ['with defaultValue', { props: { ...props, defaultValue: '1' } }],
-    ['with valueKey', { props: { ...props, valueKey: 'label', defaultValue: 'Getting Started' } }],
-    ['with labelKey', { props: { ...props, labelKey: 'icon' } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with type', { props: { ...props, type: 'multiple' } }],
-    ['with disabled', { props: { ...props, disabled: true } }],
-    ['with collapsible', { props: { ...props, collapsible: false } }],
-    ['with unmountOnHide', { props: { ...props, unmountOnHide: false } }],
-    ['with trailingIcon', { props: { ...props, trailingIcon: 'i-lucide-plus' } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'w-96' } }],
-    ['with ui', { props: { ...props, ui: { item: 'border-border-accented' } } }],
+    [
+      'with items',
+      { props },
+    ],
+    [
+      'with modelValue',
+      {
+        props: { ...props, modelValue: '1' },
+      },
+    ],
+    [
+      'with defaultValue',
+      {
+        props: { ...props, defaultValue: '1' },
+      },
+    ],
+    [
+      'with valueKey',
+      {
+        props: { ...props, valueKey: 'label', defaultValue: 'Getting Started' },
+      },
+    ],
+    [
+      'with labelKey',
+      {
+        props: { ...props, labelKey: 'icon' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with type',
+      {
+        props: { ...props, type: 'multiple' },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { ...props, disabled: true },
+      },
+    ],
+    [
+      'with collapsible',
+      {
+        props: { ...props, collapsible: false },
+      },
+    ],
+    [
+      'with unmountOnHide',
+      {
+        props: { ...props, unmountOnHide: false },
+      },
+    ],
+    [
+      'with trailingIcon',
+      {
+        props: { ...props, trailingIcon: 'i-lucide-plus' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'w-96' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { item: 'border-border-accented' },
+        },
+      },
+    ],
     // Slots
-    ['with leading slot', { props: { ...props, modelValue: '1' }, slots: { leading: () => 'Leading slot' } }],
-    ['with default slot', { props: { ...props, modelValue: '1' }, slots: { default: () => 'Default slot' } }],
-    ['with trailing slot', { props: { ...props, modelValue: '1' }, slots: { trailing: () => 'Trailing slot' } }],
-    ['with content slot', { props: { ...props, modelValue: '1' }, slots: { content: () => 'Content slot' } }],
-    ['with body slot', { props: { ...props, modelValue: '1' }, slots: { body: () => 'Body slot' } }],
-    ['with custom slot', { props: { ...props, modelValue: '5' }, slots: { custom: () => 'Custom slot' } }],
-    ['with custom body slot', { props: { ...props, modelValue: '5' }, slots: { 'custom-body': () => 'Custom body slot' } }],
+    [
+      'with leading slot',
+      {
+        props: { ...props, modelValue: '1' },
+        slots: {
+          leading: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with default slot',
+      {
+        props: { ...props, modelValue: '1' },
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with trailing slot',
+      {
+        props: { ...props, modelValue: '1' },
+        slots: {
+          trailing: () => 'Trailing slot',
+        },
+      },
+    ],
+    [
+      'with content slot',
+      {
+        props: { ...props, modelValue: '1' },
+        slots: {
+          content: () => 'Content slot',
+        },
+      },
+    ],
+    [
+      'with body slot',
+      {
+        props: { ...props, modelValue: '1' },
+        slots: {
+          body: () => 'Body slot',
+        },
+      },
+    ],
+    [
+      'with custom slot',
+      {
+        props: { ...props, modelValue: '5' },
+        slots: {
+          custom: () => 'Custom slot',
+        },
+      },
+    ],
+    [
+      'with custom body slot',
+      {
+        props: { ...props, modelValue: '5' },
+        slots: {
+          'custom-body': () => 'Custom body slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

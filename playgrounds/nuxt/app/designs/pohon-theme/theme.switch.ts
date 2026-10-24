@@ -14,10 +14,13 @@ export const themeSwitch = {
   },
   variants: {
     color: {
-      ...Object.fromEntries(BRANDS.map((color: string) => [color, {
-        base: `data-[state=checked]:bg-${color} outline-${color}/25`,
-        icon: `group-data-[state=checked]:color-${color}`,
-      }])),
+      ...Object.fromEntries(BRANDS.map((color: string) => [
+        color,
+        {
+          base: `data-[state=checked]:bg-${color} outline-${color}/25`,
+          icon: `group-data-[state=checked]:color-${color}`,
+        },
+      ])),
       neutral: {
         base: 'outline-border-inverted/25 data-[state=checked]:bg-background-inverted',
         icon: 'group-data-[state=checked]:color-text-highlighted',

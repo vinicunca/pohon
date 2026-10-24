@@ -47,7 +47,10 @@ const model = defineModel<string>();
 
 const appConfig = useAppConfig() as ProseCodeGroup['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.codeGroup || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.codeGroup || {}),
+})());
 
 const rerenderCount = ref(1);
 

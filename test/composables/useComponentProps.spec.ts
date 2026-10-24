@@ -52,7 +52,9 @@ describe('app.config defaultVariants', () => {
   beforeAll(() => {
     appConfig = useAppConfig() as { ui?: Record<string, any> };
     appConfig.ui ??= {};
-    appConfig.ui.formField = { defaultVariants: { orientation: 'horizontal' } };
+    appConfig.ui.formField = {
+      defaultVariants: { orientation: 'horizontal' },
+    };
   });
 
   afterAll(() => {
@@ -92,7 +94,11 @@ describe('vue internal flags', () => {
         const props = useComponentProps('button', rawProps);
         const replace = vi.spyOn(String.prototype, 'replace');
         try {
-          flags = [isReadonly(props), isShallow(props), isRef(props)];
+          flags = [
+            isReadonly(props),
+            isShallow(props),
+            isRef(props),
+          ];
           calls = replace.mock.calls.length;
         } finally {
           replace.mockRestore();

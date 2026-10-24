@@ -30,26 +30,146 @@ describe('stepper', () => {
 
   renderEach(Stepper, [
     // Props
-    ['with items', { props }],
-    ['with defaultValue', { props: { ...props, defaultValue: 1 } }],
-    ['with modelValue', { props: { ...props, modelValue: 1 } }],
-    ['with valueKey', { props: { ...props, valueKey: 'title', defaultValue: 'Address' } }],
-    ['with neutral color', { props: { ...props, color: 'neutral' } }],
-    ...sizes.map((size: string) => [`with size ${size} horizontal`, { props: { ...props, size } }]),
-    ...sizes.map((size: string) => [`with size ${size} vertical`, { props: { ...props, size, orientation: 'vertical' } }]),
-    ['without linear', { props: { ...props, linear: false } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'gap-8' } }],
-    ['with ui', { props: { ...props, ui: { title: 'font-700' } } }],
+    [
+      'with items',
+      { props },
+    ],
+    [
+      'with defaultValue',
+      {
+        props: { ...props, defaultValue: 1 },
+      },
+    ],
+    [
+      'with modelValue',
+      {
+        props: { ...props, modelValue: 1 },
+      },
+    ],
+    [
+      'with valueKey',
+      {
+        props: { ...props, valueKey: 'title', defaultValue: 'Address' },
+      },
+    ],
+    [
+      'with neutral color',
+      {
+        props: { ...props, color: 'neutral' },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size} horizontal`,
+      {
+        props: { ...props, size },
+      },
+    ]),
+    ...sizes.map((size: string) => [
+      `with size ${size} vertical`,
+      {
+        props: { ...props, size, orientation: 'vertical' },
+      },
+    ]),
+    [
+      'without linear',
+      {
+        props: { ...props, linear: false },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'gap-8' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { title: 'font-700' },
+        },
+      },
+    ],
     // Slots
-    ['with default slot', { props, slots: { default: () => 'Default slot' } }],
-    ['with indicator slot', { props, slots: { indicator: () => 'Indicator slot' } }],
-    ['with wrapper slot', { props, slots: { wrapper: () => 'Wrapper slot' } }],
-    ['with title slot', { props, slots: { title: () => 'Title slot' } }],
-    ['with description slot', { props, slots: { description: () => 'Description slot' } }],
-    ['with content slot', { props, slots: { content: () => 'Content slot' } }],
-    ['with custom slot', { props: { ...props, defaultValue: 2 }, slots: { custom: () => 'Custom slot' } }],
-    ['with custom-wrapper slot', { props, slots: { 'custom-wrapper': () => 'Custom wrapper slot' } }],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with indicator slot',
+      {
+        props,
+        slots: {
+          indicator: () => 'Indicator slot',
+        },
+      },
+    ],
+    [
+      'with wrapper slot',
+      {
+        props,
+        slots: {
+          wrapper: () => 'Wrapper slot',
+        },
+      },
+    ],
+    [
+      'with title slot',
+      {
+        props,
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        props,
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with content slot',
+      {
+        props,
+        slots: {
+          content: () => 'Content slot',
+        },
+      },
+    ],
+    [
+      'with custom slot',
+      {
+        props: { ...props, defaultValue: 2 },
+        slots: {
+          custom: () => 'Custom slot',
+        },
+      },
+    ],
+    [
+      'with custom-wrapper slot',
+      {
+        props,
+        slots: {
+          'custom-wrapper': () => 'Custom wrapper slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

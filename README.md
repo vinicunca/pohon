@@ -67,7 +67,9 @@ import { pohonColors } from 'pohon-ui/unocss';
 import { defineConfig } from 'unocss';
 
 export default defineConfig({
-  presets: [presetVinicunca()],
+  presets: [
+    presetVinicunca()
+  ],
   theme: { colors: pohonColors },
 });
 ```
@@ -85,7 +87,11 @@ import UnoCSS from 'unocss/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  plugins: [UnoCSS(), vue(), ui()],
+  plugins: [
+    UnoCSS(),
+    vue(),
+    ui()
+  ],
 });
 ```
 
@@ -119,7 +125,9 @@ import { pohonColors } from 'pohon-ui/unocss';
 import { defineConfig } from 'unocss';
 
 export default defineConfig({
-  presets: [presetVinicunca()],
+  presets: [
+    presetVinicunca()
+  ],
   theme: { colors: pohonColors },
 });
 ```

@@ -4,38 +4,45 @@ import * as z from 'zod';
 
 const toast = useToast();
 
-const fields: Array<AuthFormField> = [{
-  name: 'email',
-  type: 'email',
-  label: 'Email',
-  placeholder: 'Enter your email',
-  required: true,
-  error: 'Invalid email',
-}, {
-  name: 'password',
-  label: 'Password',
-  type: 'password',
-  placeholder: 'Enter your password',
-  required: true,
-}, {
-  name: 'remember',
-  label: 'Remember me',
-  type: 'checkbox',
-}];
+const fields: Array<AuthFormField> = [
+  {
+    name: 'email',
+    type: 'email',
+    label: 'Email',
+    placeholder: 'Enter your email',
+    required: true,
+    error: 'Invalid email',
+  },
+  {
+    name: 'password',
+    label: 'Password',
+    type: 'password',
+    placeholder: 'Enter your password',
+    required: true,
+  },
+  {
+    name: 'remember',
+    label: 'Remember me',
+    type: 'checkbox',
+  },
+];
 
-const providers = [{
-  label: 'Google',
-  icon: 'i-simple-icons-google',
-  onClick: () => {
-    toast.add({ title: 'Google', description: 'Login with Google' });
+const providers = [
+  {
+    label: 'Google',
+    icon: 'i-simple-icons-google',
+    onClick: () => {
+      toast.add({ title: 'Google', description: 'Login with Google' });
+    },
   },
-}, {
-  label: 'GitHub',
-  icon: 'i-simple-icons-github',
-  onClick: () => {
-    toast.add({ title: 'GitHub', description: 'Login with GitHub' });
+  {
+    label: 'GitHub',
+    icon: 'i-simple-icons-github',
+    onClick: () => {
+      toast.add({ title: 'GitHub', description: 'Login with GitHub' });
+    },
   },
-}];
+];
 
 const schema = z.object({
   email: z.email('Invalid email'),

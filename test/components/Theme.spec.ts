@@ -31,54 +31,112 @@ describe('theme', () => {
         'with empty ui',
       {
         props: { ui: {} },
-        slots: { default: () => [h(Button, { label: 'Button' })] },
+        slots: {
+          default: () => [
+            h(Button, { label: 'Button' }),
+          ],
+        },
       } satisfies CaseOptions,
       [],
       ],
       [
         'with theme applied to button base slot',
       {
-        props: { ui: { button: { label: 'text-[#ff0]', base: 'px-[1.234rem]' } } },
-        slots: { default: () => [h(Button, { label: 'Button' })] },
+        props: {
+          ui: {
+            button: { label: 'text-[#ff0]', base: 'px-[1.234rem]' },
+          },
+        },
+        slots: {
+          default: () => [
+            h(Button, { label: 'Button' }),
+          ],
+        },
       } satisfies CaseOptions,
       ['px-[1.234rem]', 'text-[#ff0]'],
       ],
       [
         'with ui prop taking priority over theme',
       {
-        props: { ui: { button: { label: 'text-[#ff0]', base: 'px-[1.234rem]' } } },
-        slots: { default: () => [h(Button, { label: 'Button', ui: { base: 'px-[2.234rem]' } })] },
+        props: {
+          ui: {
+            button: { label: 'text-[#ff0]', base: 'px-[1.234rem]' },
+          },
+        },
+        slots: {
+          default: () => [
+            h(Button, {
+              label: 'Button',
+              ui: { base: 'px-[2.234rem]' },
+            }),
+          ],
+        },
       } satisfies CaseOptions,
       ['px-[2.234rem]'],
       ],
       [
         'with nested theme overriding outer theme',
       {
-        props: { ui: { button: { label: 'text-[#ff0]', base: 'px-[1.234rem]' } } },
-        slots: { default: () => [h(Theme, { ui: { button: { label: 'text-[#000]', base: 'px-[2.234rem]' } } }, () => [h(Button, { label: 'Button' })])] },
+        props: {
+          ui: {
+            button: { label: 'text-[#ff0]', base: 'px-[1.234rem]' },
+          },
+        },
+        slots: {
+          default: () => [
+            h(Theme, {
+              ui: {
+                button: { label: 'text-[#000]', base: 'px-[2.234rem]' },
+              },
+            }, () => [
+              h(Button, { label: 'Button' }),
+            ]),
+          ],
+        },
       } satisfies CaseOptions,
       ['px-[2.234rem]', 'text-[#000]'],
       ],
       [
         'with theme applied to badge',
       {
-        props: { ui: { badge: { base: 'rounded-[1.234rem]' } } },
-        slots: { default: () => [h(Badge, { label: 'Badge' })] },
+        props: {
+          ui: {
+            badge: { base: 'rounded-[1.234rem]' },
+          },
+        },
+        slots: {
+          default: () => [
+            h(Badge, { label: 'Badge' }),
+          ],
+        },
       } satisfies CaseOptions,
       ['rounded-[1.234rem]'],
       ],
       [
         'with theme applied to alert',
       {
-        props: { ui: { alert: { root: 'border-[3px]' } } },
-        slots: { default: () => [h(Alert, { title: 'Alert' })] },
+        props: {
+          ui: {
+            alert: { root: 'border-[3px]' },
+          },
+        },
+        slots: {
+          default: () => [
+            h(Alert, { title: 'Alert' }),
+          ],
+        },
       } satisfies CaseOptions,
       ['border-[3px]'],
       ],
       [
         'with theme applied to multiple component types',
       {
-        props: { ui: { button: { base: 'px-[1.234rem]' }, badge: { base: 'rounded-[1.234rem]' } } },
+        props: {
+          ui: {
+            button: { base: 'px-[1.234rem]' },
+            badge: { base: 'rounded-[1.234rem]' },
+          },
+        },
         slots: {
           default: () => [
             h(Button, { label: 'Button' }),
@@ -91,8 +149,16 @@ describe('theme', () => {
       [
         'with theme not affecting unrelated component',
       {
-        props: { ui: { badge: { base: 'rounded-[1.234rem]' } } },
-        slots: { default: () => [h(Button, { label: 'Button' })] },
+        props: {
+          ui: {
+            badge: { base: 'rounded-[1.234rem]' },
+          },
+        },
+        slots: {
+          default: () => [
+            h(Button, { label: 'Button' }),
+          ],
+        },
       } satisfies CaseOptions,
       [],
       ],
@@ -219,7 +285,9 @@ describe('theme', () => {
   });
 
   it('reacts to theme prop changes', async () => {
-    const ui = ref<any>({ button: { base: 'initial-class' } });
+    const ui = ref<any>({
+      button: { base: 'initial-class' },
+    });
 
     const wrapper = await mountSuspended({
       components: { Theme, Button },
@@ -233,7 +301,9 @@ describe('theme', () => {
 
     expect(wrapper.find('button').classes()).toContain('initial-class');
 
-    ui.value = { button: { base: 'updated-class' } };
+    ui.value = {
+      button: { base: 'updated-class' },
+    };
     await nextTick();
 
     expect(wrapper.find('button').classes()).toContain('updated-class');
@@ -338,7 +408,12 @@ describe('theme', () => {
   // tooltip defaults, and the inner's button override applies only locally.
   it('nested :props inherits across different components', async () => {
     const wrapper = await mountSuspended({
-      components: { Theme, TooltipProvider, Tooltip, Button },
+      components: {
+        Theme,
+        TooltipProvider,
+        Tooltip,
+        Button,
+      },
       template: `
         <Theme :props="{ tooltip: { arrow: true }, button: { color: 'error', variant: 'soft' } }">
           <TooltipProvider>
@@ -364,7 +439,9 @@ describe('theme', () => {
   });
 
   it('reacts to :props changes', async () => {
-    const themeProps = ref<{ button: Partial<ButtonProps> }>({ button: { color: 'error', variant: 'soft' } });
+    const themeProps = ref<{ button: Partial<ButtonProps> }>({
+      button: { color: 'error', variant: 'soft' },
+    });
 
     const wrapper = await mountSuspended({
       components: { Theme, Button },
@@ -378,7 +455,9 @@ describe('theme', () => {
 
     expect(wrapper.find('button').classes()).toContain('bg-error/10');
 
-    themeProps.value = { button: { color: 'success', variant: 'soft' } };
+    themeProps.value = {
+      button: { color: 'success', variant: 'soft' },
+    };
     await nextTick();
 
     expect(wrapper.find('button').classes()).toContain('bg-success/10');
@@ -652,7 +731,9 @@ describe('theme', () => {
   });
 
   it('reactivity: toggling a boolean in :props re-renders the akar primitive', async () => {
-    const themeProps = ref<{ tooltip: { arrow?: boolean } }>({ tooltip: { arrow: false } });
+    const themeProps = ref<{ tooltip: { arrow?: boolean } }>({
+      tooltip: { arrow: false },
+    });
 
     const wrapper = await mountSuspended({
       components: { Theme, TooltipProvider, Tooltip },
@@ -668,7 +749,9 @@ describe('theme', () => {
 
     expect(wrapper.find('[data-slot="arrow"]').exists()).toBe(false);
 
-    themeProps.value = { tooltip: { arrow: true } };
+    themeProps.value = {
+      tooltip: { arrow: true },
+    };
     await nextTick();
 
     expect(wrapper.find('[data-slot="arrow"]').exists()).toBe(true);

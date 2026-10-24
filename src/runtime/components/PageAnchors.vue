@@ -62,7 +62,10 @@ const props = useComponentProps<PageAnchorsProps<T>>('pageAnchors', _props);
 
 const appConfig = useAppConfig() as PageAnchors['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageAnchors || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.pageAnchors || {}),
+})());
 </script>
 
 <template>

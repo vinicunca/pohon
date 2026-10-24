@@ -41,67 +41,373 @@ describe('select', () => {
     },
   ];
 
-  const itemsWithDescription = [...items.map((item) => ({ ...item, description: 'Description' }))];
+  const itemsWithDescription = [
+    ...items.map((item) => ({ ...item, description: 'Description' })),
+  ];
 
   const props = { open: true, portal: false, items };
 
   renderEach(Select, [
     // Props
-    ['with items', { props }],
-    ['with items with description', { props: { ...props, items: itemsWithDescription } }],
-    ['with modelValue', { props: { ...props, modelValue: items[0]?.value } }],
-    ['with defaultValue', { props: { ...props, defaultValue: items[0]?.value } }],
-    ['with valueKey', { props: { ...props, valueKey: 'label', defaultValue: 'Backlog' } }],
-    ['with labelKey', { props: { ...props, labelKey: 'value' } }],
-    ['with descriptionKey', { props: { ...props, descriptionKey: 'description' } }],
-    ['with multiple', { props: { ...props, multiple: true } }],
-    ['with multiple and modelValue', { props: { ...props, multiple: true, modelValue: [items[0], items[1]] } }],
-    ['with id', { props: { ...props, id: 'id' } }],
-    ['with name', { props: { ...props, name: 'name' } }],
-    ['with placeholder', { props: { ...props, placeholder: 'Search...' } }],
-    ['with disabled', { props: { ...props, disabled: true } }],
-    ['with required', { props: { ...props, required: true } }],
-    ['with icon', { props: { icon: 'i-lucide-search' } }],
-    ['with leading and icon', { props: { leading: true, icon: 'i-lucide-arrow-left' } }],
-    ['with leadingIcon', { props: { leadingIcon: 'i-lucide-arrow-left' } }],
-    ['with trailing and icon', { props: { trailing: true, icon: 'i-lucide-arrow-right' } }],
-    ['with trailingIcon', { props: { trailingIcon: 'i-lucide-arrow-right' } }],
-    ['with avatar', { props: { avatar: { src: 'https://github.com/praburangki.png' } } }],
-    ['with avatar and leadingIcon', { props: { avatar: { src: 'https://github.com/praburangki.png' }, leadingIcon: 'i-lucide-arrow-left' } }],
-    ['with avatar and trailingIcon', { props: { avatar: { src: 'https://github.com/praburangki.png' }, trailingIcon: 'i-lucide-arrow-right' } }],
-    ['with loading', { props: { loading: true } }],
-    ['with loading and avatar', { props: { loading: true, avatar: { src: 'https://github.com/praburangki.png' } } }],
-    ['with loading trailing', { props: { loading: true, trailing: true } }],
-    ['with loading trailing and avatar', { props: { loading: true, trailing: true, avatar: { src: 'https://github.com/praburangki.png' } } }],
-    ['with loadingIcon', { props: { loading: true, loadingIcon: 'i-lucide-loader' } }],
-    ['with trailingIcon', { props: { ...props, trailingIcon: 'i-lucide-chevron-down' } }],
-    ['with selectedIcon', { props: { ...props, selectedIcon: 'i-lucide-check' } }],
-    ['with arrow', { props: { ...props, arrow: true } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { ...props, size } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { ...props, variant } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant} highlight`, { props: { ...props, variant, highlight: true } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { ...props, variant, color: 'neutral' } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant} highlight`, { props: { ...props, variant, color: 'neutral', highlight: true } }]),
-    ['with ariaLabel', { props, attrs: { 'aria-label': 'Aria label' } }],
-    ['with class', { props: { ...props, class: 'rounded-full' } }],
-    ['with ui', { props: { ...props, ui: { group: 'p-2' } } }],
+    [
+      'with items',
+      { props },
+    ],
+    [
+      'with items with description',
+      {
+        props: { ...props, items: itemsWithDescription },
+      },
+    ],
+    [
+      'with modelValue',
+      {
+        props: { ...props, modelValue: items[0]?.value },
+      },
+    ],
+    [
+      'with defaultValue',
+      {
+        props: { ...props, defaultValue: items[0]?.value },
+      },
+    ],
+    [
+      'with valueKey',
+      {
+        props: { ...props, valueKey: 'label', defaultValue: 'Backlog' },
+      },
+    ],
+    [
+      'with labelKey',
+      {
+        props: { ...props, labelKey: 'value' },
+      },
+    ],
+    [
+      'with descriptionKey',
+      {
+        props: { ...props, descriptionKey: 'description' },
+      },
+    ],
+    [
+      'with multiple',
+      {
+        props: { ...props, multiple: true },
+      },
+    ],
+    [
+      'with multiple and modelValue',
+      {
+        props: {
+          ...props,
+          multiple: true,
+          modelValue: [items[0], items[1]],
+        },
+      },
+    ],
+    [
+      'with id',
+      {
+        props: { ...props, id: 'id' },
+      },
+    ],
+    [
+      'with name',
+      {
+        props: { ...props, name: 'name' },
+      },
+    ],
+    [
+      'with placeholder',
+      {
+        props: { ...props, placeholder: 'Search...' },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { ...props, disabled: true },
+      },
+    ],
+    [
+      'with required',
+      {
+        props: { ...props, required: true },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { icon: 'i-lucide-search' },
+      },
+    ],
+    [
+      'with leading and icon',
+      {
+        props: { leading: true, icon: 'i-lucide-arrow-left' },
+      },
+    ],
+    [
+      'with leadingIcon',
+      {
+        props: { leadingIcon: 'i-lucide-arrow-left' },
+      },
+    ],
+    [
+      'with trailing and icon',
+      {
+        props: { trailing: true, icon: 'i-lucide-arrow-right' },
+      },
+    ],
+    [
+      'with trailingIcon',
+      {
+        props: { trailingIcon: 'i-lucide-arrow-right' },
+      },
+    ],
+    [
+      'with avatar',
+      {
+        props: {
+          avatar: { src: 'https://github.com/praburangki.png' },
+        },
+      },
+    ],
+    [
+      'with avatar and leadingIcon',
+      {
+        props: {
+          avatar: { src: 'https://github.com/praburangki.png' },
+          leadingIcon: 'i-lucide-arrow-left',
+        },
+      },
+    ],
+    [
+      'with avatar and trailingIcon',
+      {
+        props: {
+          avatar: { src: 'https://github.com/praburangki.png' },
+          trailingIcon: 'i-lucide-arrow-right',
+        },
+      },
+    ],
+    [
+      'with loading',
+      {
+        props: { loading: true },
+      },
+    ],
+    [
+      'with loading and avatar',
+      {
+        props: {
+          loading: true,
+          avatar: { src: 'https://github.com/praburangki.png' },
+        },
+      },
+    ],
+    [
+      'with loading trailing',
+      {
+        props: { loading: true, trailing: true },
+      },
+    ],
+    [
+      'with loading trailing and avatar',
+      {
+        props: {
+          loading: true,
+          trailing: true,
+          avatar: { src: 'https://github.com/praburangki.png' },
+        },
+      },
+    ],
+    [
+      'with loadingIcon',
+      {
+        props: { loading: true, loadingIcon: 'i-lucide-loader' },
+      },
+    ],
+    [
+      'with trailingIcon',
+      {
+        props: { ...props, trailingIcon: 'i-lucide-chevron-down' },
+      },
+    ],
+    [
+      'with selectedIcon',
+      {
+        props: { ...props, selectedIcon: 'i-lucide-check' },
+      },
+    ],
+    [
+      'with arrow',
+      {
+        props: { ...props, arrow: true },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { ...props, size },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant}`,
+      {
+        props: { ...props, variant },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant} highlight`,
+      {
+        props: { ...props, variant, highlight: true },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant}`,
+      {
+        props: { ...props, variant, color: 'neutral' },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant} highlight`,
+      {
+        props: {
+          ...props,
+          variant,
+          color: 'neutral',
+          highlight: true,
+        },
+      },
+    ]),
+    [
+      'with ariaLabel',
+      {
+        props,
+        attrs: { 'aria-label': 'Aria label' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'rounded-full' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { group: 'p-2' },
+        },
+      },
+    ],
     // Slots
-    ['with leading slot', { props, slots: { leading: () => 'Leading slot' } }],
-    ['with trailing slot', { props, slots: { trailing: () => 'Trailing slot' } }],
-    ['with item slot', { props, slots: { item: () => 'Item slot' } }],
-    ['with item-leading slot', { props, slots: { 'item-leading': () => 'Item leading slot' } }],
-    ['with item-label slot', { props, slots: { 'item-label': () => 'Item label slot' } }],
-    ['with item-description slot', { props: { ...props, items: itemsWithDescription }, slots: { 'item-description': () => 'Item description slot' } }],
-    ['with item-trailing slot', { props, slots: { 'item-trailing': () => 'Item trailing slot' } }],
+    [
+      'with leading slot',
+      {
+        props,
+        slots: {
+          leading: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with trailing slot',
+      {
+        props,
+        slots: {
+          trailing: () => 'Trailing slot',
+        },
+      },
+    ],
+    [
+      'with item slot',
+      {
+        props,
+        slots: {
+          item: () => 'Item slot',
+        },
+      },
+    ],
+    [
+      'with item-leading slot',
+      {
+        props,
+        slots: {
+          'item-leading': () => 'Item leading slot',
+        },
+      },
+    ],
+    [
+      'with item-label slot',
+      {
+        props,
+        slots: {
+          'item-label': () => 'Item label slot',
+        },
+      },
+    ],
+    [
+      'with item-description slot',
+      {
+        props: { ...props, items: itemsWithDescription },
+        slots: {
+          'item-description': () => 'Item description slot',
+        },
+      },
+    ],
+    [
+      'with item-trailing slot',
+      {
+        props,
+        slots: {
+          'item-trailing': () => 'Item trailing slot',
+        },
+      },
+    ],
   ]);
 
   renderEach(
     Select,
     [
-      ['with .trim modifier', { props: { modelModifiers: { trim: true } } }, { input: 'input  ', expected: 'input' }],
-      ['with .number modifier', { props: { modelModifiers: { number: true } } }, { input: '42', expected: 42 }],
-      ['with .nullable modifier', { props: { modelModifiers: { nullable: true } } }, { input: null, expected: null }],
-      ['with .optional modifier', { props: { modelModifiers: { optional: true } } }, { input: undefined, expected: undefined }],
+      [
+        'with .trim modifier',
+        {
+          props: {
+            modelModifiers: { trim: true },
+          },
+        },
+        { input: 'input  ', expected: 'input' },
+      ],
+      [
+        'with .number modifier',
+        {
+          props: {
+            modelModifiers: { number: true },
+          },
+        },
+        { input: '42', expected: 42 },
+      ],
+      [
+        'with .nullable modifier',
+        {
+          props: {
+            modelModifiers: { nullable: true },
+          },
+        },
+        { input: null, expected: null },
+      ],
+      [
+        'with .optional modifier',
+        {
+          props: {
+            modelModifiers: { optional: true },
+          },
+        },
+        { input: undefined, expected: undefined },
+      ],
     ],
     '%s works',
     async (_, options, spec) => {
@@ -112,7 +418,11 @@ describe('select', () => {
       const select = wrapper.findComponent({ name: 'SelectRoot' });
       await select.setValue(spec.input);
 
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [[spec.expected]] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          [spec.expected],
+        ],
+      });
     },
   );
 
@@ -206,24 +516,52 @@ describe('select', () => {
 
   describe('emits', () => {
     it('update:modelValue event', async () => {
-      const wrapper = mount(Select, { props: { items: ['Option 1', 'Option 2'] } });
+      const wrapper = mount(Select, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+        },
+      });
       const input = wrapper.findComponent({ name: 'SelectRoot' });
       await input.setValue('Option 1');
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [['Option 1']] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          ['Option 1'],
+        ],
+      });
     });
 
     it('change event', async () => {
-      const wrapper = mount(Select, { props: { items: ['Option 1', 'Option 2'] } });
+      const wrapper = mount(Select, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+        },
+      });
       const input = wrapper.findComponent({ name: 'SelectRoot' });
       await input.setValue('Option 1');
-      expect(wrapper.emitted()).toMatchObject({ change: [[{ type: 'change' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        change: [
+          [
+            { type: 'change' },
+          ],
+        ],
+      });
     });
 
     it('blur event', async () => {
-      const wrapper = mount(Select, { props: { items: ['Option 1', 'Option 2'] } });
+      const wrapper = mount(Select, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+        },
+      });
       const input = wrapper.findComponent({ name: 'SelectRoot' });
       await input.vm.$emit('update:open', false);
-      expect(wrapper.emitted()).toMatchObject({ blur: [[{ type: 'blur' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        blur: [
+          [
+            { type: 'blur' },
+          ],
+        ],
+      });
     });
   });
 
@@ -257,7 +595,15 @@ describe('select', () => {
       const input = document.createElement('input');
       document.body.appendChild(input);
 
-      const wrapper = mount(Select, { attachTo: document.body, props: { 'defaultOpen': true, 'portal': false, items, 'onUpdate:modelValue': () => input.focus() } });
+      const wrapper = mount(Select, {
+        attachTo: document.body,
+        props: {
+          'defaultOpen': true,
+          'portal': false,
+          items,
+          'onUpdate:modelValue': () => input.focus(),
+        },
+      });
 
       await flushPromises();
       await new Promise((resolve) => {
@@ -285,7 +631,9 @@ describe('select', () => {
           validateOnInputDelay: 0,
           async validate(state: any) {
             if (state.value !== 'Option 2') {
-              return [{ name: 'value', message: 'Error message' }];
+              return [
+                { name: 'value', message: 'Error message' },
+              ];
             }
             return [];
           },
@@ -346,7 +694,9 @@ describe('select', () => {
     it('should have the correct types', () => {
       // with object item
       expectEmitPayloadType('update:modelValue', () => Select({
-        items: [{ label: 'foo', value: 'bar' }],
+        items: [
+          { label: 'foo', value: 'bar' },
+        ],
       })).toEqualTypeOf<[string]>();
 
       // with string item
@@ -356,17 +706,37 @@ describe('select', () => {
 
       // with groups
       expectEmitPayloadType('update:modelValue', () => Select({
-        items: [['foo']],
+        items: [
+          ['foo'],
+        ],
       })).toEqualTypeOf<[string]>();
 
       // with groups and mixed types
       expectEmitPayloadType('update:modelValue', () => Select({
-        items: [['foo', { value: 1 }], [{ value: 'bar' }, 2]],
+        items: [
+          [
+            'foo',
+            { value: 1 },
+          ],
+          [
+            { value: 'bar' },
+            2,
+          ],
+        ],
       })).toEqualTypeOf<[string | number]>();
 
       // with groups, multiple, mixed types and valueKey
       expectEmitPayloadType('update:modelValue', () => Select({
-        items: [['foo', { value: 1 }], [{ value: 'bar' }, 2]],
+        items: [
+          [
+            'foo',
+            { value: 1 },
+          ],
+          [
+            { value: 'bar' },
+            2,
+          ],
+        ],
         valueKey: 'value', // TODO: value is already the default valueKey
       })).toEqualTypeOf<[string | number]>();
     });

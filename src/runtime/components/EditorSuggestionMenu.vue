@@ -72,7 +72,10 @@ const appConfig = useAppConfig() as EditorSuggestionMenu['AppConfig'];
 
 const handlers = inject('editorHandlers', computed(() => createHandlers()));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.editorSuggestionMenu || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.editorSuggestionMenu || {}),
+})({
   size: props.size,
 }));
 
@@ -114,18 +117,29 @@ onMounted(async () => {
     renderItem: (item, styles) => {
       // Render label (just text)
       if (item.type === 'label') {
-        return [h('span', {}, item.label)];
+        return [
+          h('span', {}, item.label),
+        ];
       }
 
       // Render regular item
       return [
         item.icon
-          ? h(PIcon, { name: item.icon, class: styles.value.itemLeadingIcon() })
+          ? h(PIcon, {
+              name: item.icon,
+              class: styles.value.itemLeadingIcon(),
+            })
           : null,
-        h('span', { class: styles.value.itemWrapper() }, [
-          h('span', { class: styles.value.itemLabel() }, item.label),
+        h('span', {
+          class: styles.value.itemWrapper(),
+        }, [
+          h('span', {
+            class: styles.value.itemLabel(),
+          }, item.label),
           item.description
-            ? h('span', { class: styles.value.itemDescription() }, item.description)
+            ? h('span', {
+                class: styles.value.itemDescription(),
+              }, item.description)
             : null,
         ]),
       ];

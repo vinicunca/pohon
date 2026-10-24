@@ -38,10 +38,13 @@ export const themeCalendar = {
   },
   variants: {
     color: {
-      ...Object.fromEntries(BRANDS.map((color) => [color, {
-        headCell: `color-${color}`,
-        cellTrigger: `outline-${color}/25`,
-      }])),
+      ...Object.fromEntries(BRANDS.map((color) => [
+        color,
+        {
+          headCell: `color-${color}`,
+          cellTrigger: `outline-${color}/25`,
+        },
+      ])),
       neutral: {
         headCell: 'color-text-highlighted',
         cellTrigger: 'outline-border-inverted/25',

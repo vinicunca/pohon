@@ -73,7 +73,10 @@ const getProxySlots = () => omit(slots, ['default']);
 
 const appConfig = useAppConfig() as PricingPlans['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pricingPlans || {}) }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.pricingPlans || {}),
+}));
 
 const count = computed(() => props.plans?.length || slots.default?.()?.flatMap(mapSlot).filter(Boolean)?.length || 3);
 

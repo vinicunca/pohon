@@ -40,7 +40,10 @@ function createOptions(overrides: Partial<EditorMenuOptions<{ label: string }>> 
     editor: createEditor(),
     char: ':',
     pluginKey: 'suggestion-menu',
-    items: [{ label: 'Alpha' }, { label: 'Beta' }],
+    items: [
+      { label: 'Alpha' },
+      { label: 'Beta' },
+    ],
     onSelect: vi.fn(),
     renderItem: vi.fn(() => []),
     ui: computed(() => ({
@@ -96,7 +99,9 @@ describe('useEditorMenu', () => {
     const items = config.items({ query: 'al' });
 
     expect(config).not.toHaveProperty('allowedPrefixes');
-    expect(items).toEqual([{ label: 'Alpha' }]);
+    expect(items).toEqual([
+      { label: 'Alpha' },
+    ]);
   });
 
   it('keeps plugin identity fields authoritative over suggestion overrides', () => {

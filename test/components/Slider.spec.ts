@@ -15,23 +15,119 @@ describe('slider', () => {
 
   renderEach(Slider, [
     // Props
-    ['with modelValue', { props: { modelValue: 10 } }],
-    ['with defaultValue', { props: { defaultValue: 10 } }],
-    ['with multiple thumbs', { props: { defaultValue: [0, 10] } }],
-    ['with name', { props: { name: 'custom-name' } }],
-    ['with disabled', { props: { disabled: true } }],
-    ['with inverted', { props: { inverted: true } }],
-    ['with orientation vertical', { props: { orientation: 'vertical' } }],
-    ['with min max step', { props: { min: 4, max: 12, step: 2 } }],
-    ['with min steps between thumbs', { props: { defaultValue: [0, 30], minStepsBetweenThumbs: 30 } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { size } }]),
-    ['with color neutral', { props: { color: 'neutral', defaultValue: 10 } }],
-    ['with ariaLabel', { attrs: { 'aria-label': 'Aria label' } }],
-    ['with ariaLabel and multiple thumbs', { props: { defaultValue: [0, 10] }, attrs: { 'aria-label': 'Aria label' } }],
-    ['with ariaValueText', { props: { modelValue: 10 }, attrs: { 'aria-valuetext': '10 milliseconds' } }],
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'w-48' } }],
-    ['with ui', { props: { ui: { track: 'bg-background-elevated' } } }],
+    [
+      'with modelValue',
+      {
+        props: { modelValue: 10 },
+      },
+    ],
+    [
+      'with defaultValue',
+      {
+        props: { defaultValue: 10 },
+      },
+    ],
+    [
+      'with multiple thumbs',
+      {
+        props: {
+          defaultValue: [0, 10],
+        },
+      },
+    ],
+    [
+      'with name',
+      {
+        props: { name: 'custom-name' },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { disabled: true },
+      },
+    ],
+    [
+      'with inverted',
+      {
+        props: { inverted: true },
+      },
+    ],
+    [
+      'with orientation vertical',
+      {
+        props: { orientation: 'vertical' },
+      },
+    ],
+    [
+      'with min max step',
+      {
+        props: { min: 4, max: 12, step: 2 },
+      },
+    ],
+    [
+      'with min steps between thumbs',
+      {
+        props: {
+          defaultValue: [0, 30],
+          minStepsBetweenThumbs: 30,
+        },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { size },
+      },
+    ]),
+    [
+      'with color neutral',
+      {
+        props: { color: 'neutral', defaultValue: 10 },
+      },
+    ],
+    [
+      'with ariaLabel',
+      {
+        attrs: { 'aria-label': 'Aria label' },
+      },
+    ],
+    [
+      'with ariaLabel and multiple thumbs',
+      {
+        props: {
+          defaultValue: [0, 10],
+        },
+        attrs: { 'aria-label': 'Aria label' },
+      },
+    ],
+    [
+      'with ariaValueText',
+      {
+        props: { modelValue: 10 },
+        attrs: { 'aria-valuetext': '10 milliseconds' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'w-48' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { track: 'bg-background-elevated' },
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {
@@ -47,11 +143,17 @@ describe('slider', () => {
   describe('aria', () => {
     async function renderThumbs(options: { props?: any; attrs?: any } = {}) {
       const wrapper = await mountSuspended(Slider, options);
-      return { wrapper, thumbs: wrapper.findAll('[role="slider"]') };
+      return {
+        wrapper,
+        thumbs: wrapper.findAll('[role="slider"]'),
+      };
     }
 
     it('names a single thumb from aria-label', async () => {
-      const { wrapper, thumbs } = await renderThumbs({ props: { modelValue: 10 }, attrs: { 'aria-label': 'Volume' } });
+      const { wrapper, thumbs } = await renderThumbs({
+        props: { modelValue: 10 },
+        attrs: { 'aria-label': 'Volume' },
+      });
 
       expect(thumbs).toHaveLength(1);
       expect(thumbs[0]!.attributes('aria-label')).toBe('Volume');
@@ -59,32 +161,50 @@ describe('slider', () => {
     });
 
     it('names a single thumb from aria-labelledby', async () => {
-      const { thumbs } = await renderThumbs({ props: { modelValue: 10 }, attrs: { 'aria-labelledby': 'volume-label' } });
+      const { thumbs } = await renderThumbs({
+        props: { modelValue: 10 },
+        attrs: { 'aria-labelledby': 'volume-label' },
+      });
 
       expect(thumbs[0]!.attributes('aria-labelledby')).toBe('volume-label');
       expect(thumbs[0]!.attributes('aria-label')).toBeUndefined();
     });
 
     it('falls back to a default label when a single thumb is unnamed', async () => {
-      const { thumbs } = await renderThumbs({ props: { modelValue: 10 } });
+      const { thumbs } = await renderThumbs({
+        props: { modelValue: 10 },
+      });
 
       expect(thumbs[0]!.attributes('aria-label')).toBe('Thumb');
     });
 
     it('keeps Akar default labels for two thumbs', async () => {
-      const { thumbs } = await renderThumbs({ props: { modelValue: [0, 10] } });
+      const { thumbs } = await renderThumbs({
+        props: {
+          modelValue: [0, 10],
+        },
+      });
 
       expect(thumbs.map((thumb) => thumb.attributes('aria-label'))).toStrictEqual(['Minimum', 'Maximum']);
     });
 
     it('keeps Akar default labels for three or more thumbs', async () => {
-      const { thumbs } = await renderThumbs({ props: { modelValue: [0, 10, 20] } });
+      const { thumbs } = await renderThumbs({
+        props: {
+          modelValue: [0, 10, 20],
+        },
+      });
 
       expect(thumbs.map((thumb) => thumb.attributes('aria-label'))).toStrictEqual(['Value 1 of 3', 'Value 2 of 3', 'Value 3 of 3']);
     });
 
     it('groups multiple thumbs under an aria-label instead of naming each of them', async () => {
-      const { wrapper, thumbs } = await renderThumbs({ props: { modelValue: [10, 90] }, attrs: { 'aria-label': 'Price range' } });
+      const { wrapper, thumbs } = await renderThumbs({
+        props: {
+          modelValue: [10, 90],
+        },
+        attrs: { 'aria-label': 'Price range' },
+      });
 
       expect(thumbs.map((thumb) => thumb.attributes('aria-label'))).toStrictEqual(['Minimum', 'Maximum']);
 
@@ -94,7 +214,12 @@ describe('slider', () => {
     });
 
     it('groups three or more thumbs under an aria-label instead of naming each of them', async () => {
-      const { wrapper, thumbs } = await renderThumbs({ props: { modelValue: [0, 10, 20] }, attrs: { 'aria-label': 'Levels' } });
+      const { wrapper, thumbs } = await renderThumbs({
+        props: {
+          modelValue: [0, 10, 20],
+        },
+        attrs: { 'aria-label': 'Levels' },
+      });
 
       expect(thumbs.map((thumb) => thumb.attributes('aria-label'))).toStrictEqual(['Value 1 of 3', 'Value 2 of 3', 'Value 3 of 3']);
 
@@ -104,19 +229,29 @@ describe('slider', () => {
     });
 
     it('does not group an unlabelled slider', async () => {
-      const { wrapper } = await renderThumbs({ props: { modelValue: [10, 90] } });
+      const { wrapper } = await renderThumbs({
+        props: {
+          modelValue: [10, 90],
+        },
+      });
 
       expect(wrapper.get('[data-slot="root"]').attributes('role')).toBeUndefined();
     });
 
     it('forwards aria-valuetext to the thumb', async () => {
-      const { thumbs } = await renderThumbs({ props: { modelValue: 10 }, attrs: { 'aria-valuetext': '10 milliseconds' } });
+      const { thumbs } = await renderThumbs({
+        props: { modelValue: 10 },
+        attrs: { 'aria-valuetext': '10 milliseconds' },
+      });
 
       expect(thumbs[0]!.attributes('aria-valuetext')).toBe('10 milliseconds');
     });
 
     it('forwards validity attributes to the thumb', async () => {
-      const { wrapper, thumbs } = await renderThumbs({ props: { modelValue: 10 }, attrs: { 'aria-invalid': 'true', 'aria-errormessage': 'volume-error' } });
+      const { wrapper, thumbs } = await renderThumbs({
+        props: { modelValue: 10 },
+        attrs: { 'aria-invalid': 'true', 'aria-errormessage': 'volume-error' },
+      });
 
       expect(thumbs[0]!.attributes('aria-invalid')).toBe('true');
       expect(thumbs[0]!.attributes('aria-errormessage')).toBe('volume-error');
@@ -125,7 +260,10 @@ describe('slider', () => {
     });
 
     it('keeps non-aria attributes on the root', async () => {
-      const { wrapper, thumbs } = await renderThumbs({ props: { modelValue: 10 }, attrs: { 'data-testid': 'slider' } });
+      const { wrapper, thumbs } = await renderThumbs({
+        props: { modelValue: 10 },
+        attrs: { 'data-testid': 'slider' },
+      });
 
       expect(wrapper.get('[data-slot="root"]').attributes('data-testid')).toBe('slider');
       expect(thumbs[0]!.attributes('data-testid')).toBeUndefined();
@@ -166,7 +304,12 @@ describe('slider', () => {
     });
 
     it('keeps a caller role on a grouped slider', async () => {
-      const { wrapper } = await renderThumbs({ props: { modelValue: [10, 90] }, attrs: { 'role': 'application', 'aria-label': 'Price range' } });
+      const { wrapper } = await renderThumbs({
+        props: {
+          modelValue: [10, 90],
+        },
+        attrs: { 'role': 'application', 'aria-label': 'Price range' },
+      });
 
       expect(wrapper.get('[data-slot="root"]').attributes('role')).toBe('application');
     });
@@ -175,7 +318,9 @@ describe('slider', () => {
     it('merges the form aria attributes with a caller label on the thumb', async () => {
       const wrapper = await mountSuspended(FormField, {
         props: { error: 'Error' },
-        slots: { default: () => h(Slider, { 'modelValue': 10, 'aria-label': 'Volume' }) },
+        slots: {
+          default: () => h(Slider, { 'modelValue': 10, 'aria-label': 'Volume' }),
+        },
       });
 
       const thumb = wrapper.get('[role="slider"]');
@@ -192,25 +337,45 @@ describe('slider', () => {
       const input = wrapper.findComponent({ name: 'SliderRoot' });
       input.vm.$emit('update:modelValue', 1);
 
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [[1]] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          [1],
+        ],
+      });
     });
 
     it('update:modelValue event with a single thumb', async () => {
-      const wrapper = mount(Slider, { props: { modelValue: 25 } });
+      const wrapper = mount(Slider, {
+        props: { modelValue: 25 },
+      });
 
       const input = wrapper.findComponent({ name: 'SliderRoot' });
       input.vm.$emit('update:modelValue', [71]);
 
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [[71]] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          [71],
+        ],
+      });
     });
 
     it('update:modelValue event with multiple thumbs', async () => {
-      const wrapper = mount(Slider, { props: { modelValue: [10, 90] } });
+      const wrapper = mount(Slider, {
+        props: {
+          modelValue: [10, 90],
+        },
+      });
 
       const input = wrapper.findComponent({ name: 'SliderRoot' });
       input.vm.$emit('update:modelValue', [10, 71]);
 
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [[[10, 71]]] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          [
+            [10, 71],
+          ],
+        ],
+      });
     });
 
     it('change event', async () => {
@@ -219,7 +384,13 @@ describe('slider', () => {
       const input = wrapper.findComponent({ name: 'SliderRoot' });
       input.vm.$emit('valueCommit');
 
-      expect(wrapper.emitted()).toMatchObject({ change: [[{ type: 'change' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        change: [
+          [
+            { type: 'change' },
+          ],
+        ],
+      });
     });
   });
 
@@ -231,7 +402,9 @@ describe('slider', () => {
           validateOnInputDelay: 0,
           async validate(state: any) {
             if (state.value < 20) {
-              return [{ name: 'value', message: 'Error message' }];
+              return [
+                { name: 'value', message: 'Error message' },
+              ];
             }
             return [];
           },

@@ -174,7 +174,9 @@ const inputProps = computed(() => {
   if (props.input === false) {
     return false;
   }
-  return defu(typeof props.input === 'object' ? props.input : {}, { fixed: true });
+  return defu(typeof props.input === 'object'
+    ? props.input
+    : {}, { fixed: true });
 });
 
 const getProxySlots = () => omit(slots, ['content']);
@@ -191,7 +193,10 @@ const fuse = computed(() => defu(
   } as UseFuseOptions<T>,
 ));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.contentSearch || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.contentSearch || {}),
+})({
   size: props.size,
   fullscreen: props.fullscreen,
 }));
@@ -203,7 +208,10 @@ const loadCommandPalette = () => import('../CommandPalette.vue');
 const PModal = lazyOverlays.modal;
 const PCommandPalette = defineAsyncComponent(loadCommandPalette);
 
-const renderModal = useLazyOverlay(() => open.value || (attrs.open !== undefined && attrs.open !== false) || props.unmountOnHide === false, () => Promise.all([loadOverlay('modal'), loadCommandPalette()]));
+const renderModal = useLazyOverlay(() => open.value || (attrs.open !== undefined && attrs.open !== false) || props.unmountOnHide === false, () => Promise.all([
+  loadOverlay('modal'),
+  loadCommandPalette(),
+]));
 
 const commandPaletteRef = useTemplateRef('commandPaletteRef');
 
@@ -227,7 +235,10 @@ async function runSearch(term: string) {
   try {
     const results = await props.search(term, {
       limit: (fuse.value as UseFuseOptions<T>).resultLimit,
-      snippet: { columns: ['title', 'content'], around: 20 },
+      snippet: {
+        columns: ['title', 'content'],
+        around: 20,
+      },
     });
     // Discard stale responses: a newer request started before this one resolved.
     if (requestId !== searchRequestId) {
@@ -274,12 +285,14 @@ const searchGroups = computed(() => {
     return [];
   }
 
-  return [{
-    id: 'search',
-    label: t('contentSearch.search'),
-    items: searchResults.value,
-    ignoreFilter: true,
-  }];
+  return [
+    {
+      id: 'search',
+      label: t('contentSearch.search'),
+      items: searchResults.value,
+      ignoreFilter: true,
+    },
+  ];
 });
 
 const navigationGroups = computed(() => {
@@ -295,7 +308,13 @@ const navigationGroups = computed(() => {
       postFilter,
     }));
   } else {
-    return [{ id: 'docs', items: mapNavigationItems(props.navigation, props.files || []), postFilter }];
+    return [
+      {
+        id: 'docs',
+        items: mapNavigationItems(props.navigation, props.files || []),
+        postFilter,
+      },
+    ];
   }
 });
 
@@ -307,28 +326,32 @@ const themeGroup = computed(() => {
   return {
     id: 'theme',
     label: t('contentSearch.theme'),
-    items: [{
-      label: t('colorMode.system'),
-      icon: appConfig.ui.icons.system,
-      active: colorMode.preference === 'system',
-      onSelect: () => {
-        colorMode.preference = 'system';
+    items: [
+      {
+        label: t('colorMode.system'),
+        icon: appConfig.ui.icons.system,
+        active: colorMode.preference === 'system',
+        onSelect: () => {
+          colorMode.preference = 'system';
+        },
       },
-    }, {
-      label: t('colorMode.light'),
-      icon: appConfig.ui.icons.light,
-      active: colorMode.preference === 'light',
-      onSelect: () => {
-        colorMode.preference = 'light';
+      {
+        label: t('colorMode.light'),
+        icon: appConfig.ui.icons.light,
+        active: colorMode.preference === 'light',
+        onSelect: () => {
+          colorMode.preference = 'light';
+        },
       },
-    }, {
-      label: t('colorMode.dark'),
-      icon: appConfig.ui.icons.dark,
-      active: colorMode.preference === 'dark',
-      onSelect: () => {
-        colorMode.preference = 'dark';
+      {
+        label: t('colorMode.dark'),
+        icon: appConfig.ui.icons.dark,
+        active: colorMode.preference === 'dark',
+        onSelect: () => {
+          colorMode.preference = 'dark';
+        },
       },
-    }],
+    ],
   };
 });
 

@@ -86,102 +86,119 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
   },
-  compoundVariants: [{
-    breakpoint: 'sm',
-    collapsible: ['offcanvas', 'icon'],
-    class: {
-      root: 'sm:block',
+  compoundVariants: [
+    {
+      breakpoint: 'sm',
+      collapsible: ['offcanvas', 'icon'],
+      class: {
+        root: 'sm:block',
+      },
     },
-  }, {
-    breakpoint: 'md',
-    collapsible: ['offcanvas', 'icon'],
-    class: {
-      root: 'md:block',
+    {
+      breakpoint: 'md',
+      collapsible: ['offcanvas', 'icon'],
+      class: {
+        root: 'md:block',
+      },
     },
-  }, {
-    breakpoint: 'lg',
-    collapsible: ['offcanvas', 'icon'],
-    class: {
-      root: 'lg:block',
+    {
+      breakpoint: 'lg',
+      collapsible: ['offcanvas', 'icon'],
+      class: {
+        root: 'lg:block',
+      },
     },
-  }, {
-    breakpoint: 'xl',
-    collapsible: ['offcanvas', 'icon'],
-    class: {
-      root: 'xl:block',
+    {
+      breakpoint: 'xl',
+      collapsible: ['offcanvas', 'icon'],
+      class: {
+        root: 'xl:block',
+      },
     },
-  }, {
-    breakpoint: '2xl',
-    collapsible: ['offcanvas', 'icon'],
-    class: {
-      root: '2xl:block',
+    {
+      breakpoint: '2xl',
+      collapsible: ['offcanvas', 'icon'],
+      class: {
+        root: '2xl:block',
+      },
     },
-  }, {
-    side: 'left',
-    collapsible: ['offcanvas', 'icon'],
-    class: {
-      rail: 'cursor-w-resize rtl:cursor-e-resize data-[state=collapsed]:cursor-e-resize data-[state=collapsed]:rtl:cursor-w-resize',
+    {
+      side: 'left',
+      collapsible: ['offcanvas', 'icon'],
+      class: {
+        rail: 'cursor-w-resize rtl:cursor-e-resize data-[state=collapsed]:cursor-e-resize data-[state=collapsed]:rtl:cursor-w-resize',
+      },
     },
-  }, {
-    side: 'right',
-    collapsible: ['offcanvas', 'icon'],
-    class: {
-      rail: 'cursor-e-resize rtl:cursor-w-resize data-[state=collapsed]:cursor-w-resize data-[state=collapsed]:rtl:cursor-e-resize',
+    {
+      side: 'right',
+      collapsible: ['offcanvas', 'icon'],
+      class: {
+        rail: 'cursor-e-resize rtl:cursor-w-resize data-[state=collapsed]:cursor-w-resize data-[state=collapsed]:rtl:cursor-e-resize',
+      },
     },
-  }, {
-    side: 'left',
-    collapsible: 'none',
-    class: {
-      root: 'border-e border-border',
+    {
+      side: 'left',
+      collapsible: 'none',
+      class: {
+        root: 'border-e border-border',
+      },
     },
-  }, {
-    side: 'right',
-    collapsible: 'none',
-    class: {
-      root: 'border-s border-border',
+    {
+      side: 'right',
+      collapsible: 'none',
+      class: {
+        root: 'border-s border-border',
+      },
     },
-  }, {
-    side: 'left',
-    collapsible: 'offcanvas',
-    class: {
-      container: 'data-[state=collapsed]:-start-$sidebar-width',
+    {
+      side: 'left',
+      collapsible: 'offcanvas',
+      class: {
+        container: 'data-[state=collapsed]:-start-$sidebar-width',
+      },
     },
-  }, {
-    side: 'right',
-    collapsible: 'offcanvas',
-    class: {
-      container: 'data-[state=collapsed]:-end-$sidebar-width',
+    {
+      side: 'right',
+      collapsible: 'offcanvas',
+      class: {
+        container: 'data-[state=collapsed]:-end-$sidebar-width',
+      },
     },
-  }, {
-    variant: 'floating',
-    collapsible: 'icon',
-    class: {
-      gap: 'data-[state=collapsed]:w-[calc(var(--sidebar-width-icon)+--spacing(8))]',
-      container: 'data-[state=collapsed]:w-[calc(var(--sidebar-width-icon)+--spacing(8)+2px)]',
+    {
+      variant: 'floating',
+      collapsible: 'icon',
+      class: {
+        gap: 'data-[state=collapsed]:w-[calc(var(--sidebar-width-icon)+--spacing(8))]',
+        container: 'data-[state=collapsed]:w-[calc(var(--sidebar-width-icon)+--spacing(8)+2px)]',
+      },
     },
-  }, {
-    variant: 'floating',
-    collapsible: 'none',
-    class: {
-      root: 'p-4 border-0',
+    {
+      variant: 'floating',
+      collapsible: 'none',
+      class: {
+        root: 'p-4 border-0',
+      },
     },
-  }, {
-    variant: 'inset',
-    collapsible: 'none',
-    class: {
-      root: 'py-4 border-0',
+    {
+      variant: 'inset',
+      collapsible: 'none',
+      class: {
+        root: 'py-4 border-0',
+      },
     },
-  }, {
-    variant: 'floating',
-    side: 'left',
-    class: {
-      rail: 'end-4',
+    {
+      variant: 'floating',
+      side: 'left',
+      class: {
+        rail: 'end-4',
+      },
     },
-  }, {
-    variant: 'floating',
-    side: 'right',
-    class: {
-      rail: 'start-[calc(--spacing(4)-1px)]',
+    {
+      variant: 'floating',
+      side: 'right',
+      class: {
+        rail: 'start-[calc(--spacing(4)-1px)]',
+      },
     },
-  }],
+  ],
 });

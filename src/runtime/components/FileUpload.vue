@@ -218,7 +218,9 @@ const size = computed(() => formFieldSize.value ?? props.size);
 const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 const variant = computed(() => props.multiple ? 'area' : props.variant);
 
-const layout = computed(() => props.variant === 'button' && !props.multiple ? 'grid' : props.layout);
+const layout = computed(() => props.variant === 'button' && !props.multiple
+  ? 'grid'
+  : props.layout);
 
 const position = computed(() => {
   if (layout.value === 'grid' && props.multiple) {
@@ -231,7 +233,10 @@ const position = computed(() => {
   return props.position;
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.fileUpload || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.fileUpload || {}),
+})({
   dropzone: props.dropzone,
   interactive: props.interactive,
   color: color.value,
@@ -274,7 +279,9 @@ function formatFileSize(bytes?: number): string | undefined {
   const i = Math.floor(Math.log(bytes) / Math.log(k));
 
   const value = bytes / k ** i;
-  const formattedSize = i === 0 ? value.toString() : value.toFixed(0);
+  const formattedSize = i === 0
+    ? value.toString()
+    : value.toFixed(0);
 
   return `${formattedSize}${sizes[i]}`;
 }
@@ -291,14 +298,21 @@ function onUpdate(files: Array<T | File>, reset = false) {
   }
 
   if (props.multiple) {
-    const existingFiles = reset ? [] : (modelValue.value as Array<T | File>) || [];
-    setModelValue([...existingFiles, ...files]);
+    const existingFiles = reset
+      ? []
+      : (modelValue.value as Array<T | File>) || [];
+    setModelValue([
+      ...existingFiles,
+      ...files,
+    ]);
   } else {
     setModelValue(files[0] ?? null);
   }
 
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value: modelValue.value } });
+  const event = new Event('change', {
+    target: { value: modelValue.value },
+  });
   emits('change', event);
   emitFormChange();
   emitFormInput();
@@ -333,7 +347,9 @@ function removeFile(index?: number) {
 }
 
 watch(modelValue, (newValue) => {
-  const hasModelReset = props.multiple ? !(newValue as Array<T | File>)?.length : !newValue;
+  const hasModelReset = props.multiple
+    ? !(newValue as Array<T | File>)?.length
+    : !newValue;
 
   if (hasModelReset && inputRef.value?.$el) {
     inputRef.value.$el.value = '';

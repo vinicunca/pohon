@@ -13,17 +13,20 @@ export default {
       true: '',
     },
   },
-  compoundVariants: [{
-    left: true,
-    right: true,
-    class: {
-      center: 'lg:col-span-6',
+  compoundVariants: [
+    {
+      left: true,
+      right: true,
+      class: {
+        center: 'lg:col-span-6',
+      },
     },
-  }, {
-    left: false,
-    right: false,
-    class: {
-      center: 'lg:col-span-10',
+    {
+      left: false,
+      right: false,
+      class: {
+        center: 'lg:col-span-10',
+      },
     },
-  }],
+  ],
 };

@@ -75,7 +75,14 @@ async function mountField(props?: FieldProps, opts?: FieldOpts, ctx: Context = {
 describe('useFormField', () => {
   describe('without a wrapping form field', () => {
     it('derives its values from the props', async () => {
-      const { api } = await mountField({ id: 'my-id', name: 'my-name', size: 'lg', color: 'primary', highlight: true, disabled: true });
+      const { api } = await mountField({
+        id: 'my-id',
+        name: 'my-name',
+        size: 'lg',
+        color: 'primary',
+        highlight: true,
+        disabled: true,
+      });
 
       expect(api.id.value).toBe('my-id');
       expect(api.name.value).toBe('my-name');
@@ -107,7 +114,10 @@ describe('useFormField', () => {
       const { api } = await mountField(
         {},
         undefined,
-        { formField: { name: 'field-name', size: 'sm', ariaId: 'aria-1' }, inputId: 'input-1' },
+        {
+          formField: { name: 'field-name', size: 'sm', ariaId: 'aria-1' },
+          inputId: 'input-1',
+        },
       );
 
       expect(api.name.value).toBe('field-name');
@@ -119,7 +129,9 @@ describe('useFormField', () => {
       const { api } = await mountField(
         { name: 'prop-name', size: 'xl' },
         undefined,
-        { formField: { name: 'field-name', size: 'sm', ariaId: 'aria-1' } },
+        {
+          formField: { name: 'field-name', size: 'sm', ariaId: 'aria-1' },
+        },
       );
 
       expect(api.name.value).toBe('prop-name');
@@ -130,7 +142,9 @@ describe('useFormField', () => {
       const { api } = await mountField(
         { color: 'primary', highlight: false },
         undefined,
-        { formField: { ariaId: 'aria-1', error: 'Required' } },
+        {
+          formField: { ariaId: 'aria-1', error: 'Required' },
+        },
       );
 
       expect(api.color.value).toBe('error');
@@ -141,7 +155,14 @@ describe('useFormField', () => {
       const { api } = await mountField(
         {},
         undefined,
-        { formField: { ariaId: 'aria-1', error: 'Required', hint: 'Hint', description: 'Desc' } },
+        {
+          formField: {
+            ariaId: 'aria-1',
+            error: 'Required',
+            hint: 'Hint',
+            description: 'Desc',
+          },
+        },
       );
 
       const attrs = api.ariaAttrs.value!;
@@ -150,7 +171,9 @@ describe('useFormField', () => {
     });
 
     it('marks aria-invalid false and omits describedby when there is no error or description', async () => {
-      const { api } = await mountField({}, undefined, { formField: { ariaId: 'aria-1' } });
+      const { api } = await mountField({}, undefined, {
+        formField: { ariaId: 'aria-1' },
+      });
 
       const attrs = api.ariaAttrs.value!;
       expect(attrs['aria-invalid']).toBe(false);
@@ -158,7 +181,10 @@ describe('useFormField', () => {
     });
 
     it('reflects the form-level disabled option', async () => {
-      const { api } = await mountField({}, undefined, { formField: { ariaId: 'aria-1' }, formOptions: { disabled: true } });
+      const { api } = await mountField({}, undefined, {
+        formField: { ariaId: 'aria-1' },
+        formOptions: { disabled: true },
+      });
 
       expect(api.disabled.value).toBe(true);
     });
@@ -166,13 +192,19 @@ describe('useFormField', () => {
 
   describe('input id binding', () => {
     it('sets the input id from props.id by default', async () => {
-      const { inputIdRef } = await mountField({ id: 'bound-id' }, undefined, { formField: { ariaId: 'aria-1' }, inputId: 'initial' });
+      const { inputIdRef } = await mountField({ id: 'bound-id' }, undefined, {
+        formField: { ariaId: 'aria-1' },
+        inputId: 'initial',
+      });
 
       expect(inputIdRef.value).toBe('bound-id');
     });
 
     it('clears the input id when bind is false', async () => {
-      const { inputIdRef } = await mountField({ id: 'bound-id' }, { bind: false }, { formField: { ariaId: 'aria-1' }, inputId: 'initial' });
+      const { inputIdRef } = await mountField({ id: 'bound-id' }, { bind: false }, {
+        formField: { ariaId: 'aria-1' },
+        inputId: 'initial',
+      });
 
       expect(inputIdRef.value).toBeUndefined();
     });
@@ -180,7 +212,9 @@ describe('useFormField', () => {
 
   describe('form events', () => {
     it('emits blur, focus and change with the field name', async () => {
-      const { api, events } = await mountField({}, undefined, { formField: { name: 'email', ariaId: 'aria-1' } });
+      const { api, events } = await mountField({}, undefined, {
+        formField: { name: 'email', ariaId: 'aria-1' },
+      });
 
       api.emitFormBlur();
       api.emitFormFocus();
@@ -194,31 +228,55 @@ describe('useFormField', () => {
     });
 
     it('emits the input right away and a debounced eager validation', async () => {
-      const { api, events } = await mountField({}, undefined, { formField: { name: 'email', ariaId: 'aria-1' }, formOptions: { validateOnInputDelay: 20 } });
+      const { api, events } = await mountField({}, undefined, {
+        formField: { name: 'email', ariaId: 'aria-1' },
+        formOptions: { validateOnInputDelay: 20 },
+      });
 
       api.emitFormInput();
-      expect(events).toEqual([{ type: 'input', name: 'email', validate: false }]);
+      expect(events).toEqual([
+        { type: 'input', name: 'email', validate: false },
+      ]);
 
       await vi.waitFor(() => expect(events).toEqual([
         { type: 'input', name: 'email', validate: false },
-        { type: 'input', name: 'email', eager: true, track: false },
+        {
+          type: 'input',
+          name: 'email',
+          eager: true,
+          track: false,
+        },
       ]));
     });
 
     it('defers input validation when requested and the field is not eager', async () => {
-      const { api, events } = await mountField({}, { deferInputValidation: true }, { formField: { name: 'email', ariaId: 'aria-1', eagerValidation: false } });
+      const { api, events } = await mountField({}, { deferInputValidation: true }, {
+        formField: { name: 'email', ariaId: 'aria-1', eagerValidation: false },
+      });
 
       api.emitFormInput();
 
-      await vi.waitFor(() => expect(events).toContainEqual({ type: 'input', name: 'email', eager: false, track: false }));
+      await vi.waitFor(() => expect(events).toContainEqual({
+        type: 'input',
+        name: 'email',
+        eager: false,
+        track: false,
+      }));
     });
 
     it('stays eager when the field opts into eager validation, even with defer', async () => {
-      const { api, events } = await mountField({}, { deferInputValidation: true }, { formField: { name: 'email', ariaId: 'aria-1', eagerValidation: true } });
+      const { api, events } = await mountField({}, { deferInputValidation: true }, {
+        formField: { name: 'email', ariaId: 'aria-1', eagerValidation: true },
+      });
 
       api.emitFormInput();
 
-      await vi.waitFor(() => expect(events).toContainEqual({ type: 'input', name: 'email', eager: true, track: false }));
+      await vi.waitFor(() => expect(events).toContainEqual({
+        type: 'input',
+        name: 'email',
+        eager: true,
+        track: false,
+      }));
     });
   });
 });

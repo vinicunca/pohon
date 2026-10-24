@@ -7,7 +7,12 @@ import { createRouter, createWebHistory } from 'vue-router';
 const head = createHead();
 const router = createRouter({
   history: createWebHistory(),
-  routes: [{ path: '/', component: { template: '<div>Home</div>' } }],
+  routes: [
+    {
+      path: '/',
+      component: { template: '<div>Home</div>' },
+    },
+  ],
 });
 
 export async function mountSuspended(...args: Parameters<typeof mount>) {

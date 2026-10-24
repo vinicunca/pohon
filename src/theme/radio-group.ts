@@ -17,9 +17,12 @@ export default (options: Required<ModuleOptions>) => ({
   },
   variants: {
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        indicator: `bg-${color}`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          indicator: `bg-${color}`,
+        },
+      ])),
       neutral: {
         indicator: 'bg-background-inverted',
       },
@@ -133,16 +136,56 @@ export default (options: Required<ModuleOptions>) => ({
         item: `${hover}border-border-accented ${hover}z-1`,
       },
     },
-    { size: 'xs', indicator: 'hidden', class: { icon: 'size-3' } },
-    { size: 'sm', indicator: 'hidden', class: { icon: 'size-3.5' } },
-    { size: 'md', indicator: 'hidden', class: { icon: 'size-4' } },
-    { size: 'lg', indicator: 'hidden', class: { icon: 'size-4.5' } },
-    { size: 'xl', indicator: 'hidden', class: { icon: 'size-5' } },
-    { size: 'xs', variant: ['card', 'table'], class: { item: 'p-2.5' } },
-    { size: 'sm', variant: ['card', 'table'], class: { item: 'p-3' } },
-    { size: 'md', variant: ['card', 'table'], class: { item: 'p-3.5' } },
-    { size: 'lg', variant: ['card', 'table'], class: { item: 'p-4' } },
-    { size: 'xl', variant: ['card', 'table'], class: { item: 'p-4.5' } },
+    {
+      size: 'xs',
+      indicator: 'hidden',
+      class: { icon: 'size-3' },
+    },
+    {
+      size: 'sm',
+      indicator: 'hidden',
+      class: { icon: 'size-3.5' },
+    },
+    {
+      size: 'md',
+      indicator: 'hidden',
+      class: { icon: 'size-4' },
+    },
+    {
+      size: 'lg',
+      indicator: 'hidden',
+      class: { icon: 'size-4.5' },
+    },
+    {
+      size: 'xl',
+      indicator: 'hidden',
+      class: { icon: 'size-5' },
+    },
+    {
+      size: 'xs',
+      variant: ['card', 'table'],
+      class: { item: 'p-2.5' },
+    },
+    {
+      size: 'sm',
+      variant: ['card', 'table'],
+      class: { item: 'p-3' },
+    },
+    {
+      size: 'md',
+      variant: ['card', 'table'],
+      class: { item: 'p-3.5' },
+    },
+    {
+      size: 'lg',
+      variant: ['card', 'table'],
+      class: { item: 'p-4' },
+    },
+    {
+      size: 'xl',
+      variant: ['card', 'table'],
+      class: { item: 'p-4.5' },
+    },
     {
       orientation: 'horizontal',
       variant: 'table',
@@ -159,7 +202,10 @@ export default (options: Required<ModuleOptions>) => ({
         fieldset: 'gap-0 -space-y-px',
       },
     },
-    ...[...(options.theme.colors || []).map((color: string) => [color, color]), ['neutral', 'inverted']].map(([color, token]: Array<string>) => ({
+    ...[
+      ...(options.theme.colors || []).map((color: string) => [color, color]),
+      ['neutral', 'inverted'],
+    ].map(([color, token]: Array<string>) => ({
       color,
       variant: 'list',
       indicator: ['start', 'end'],
@@ -167,14 +213,20 @@ export default (options: Required<ModuleOptions>) => ({
         base: focusControl(token!),
       },
     })),
-    ...[...(options.theme.colors || []).map((color: string) => [color, color]), ['neutral', 'inverted']].map(([color, token]: Array<string>) => ({
+    ...[
+      ...(options.theme.colors || []).map((color: string) => [color, color]),
+      ['neutral', 'inverted'],
+    ].map(([color, token]: Array<string>) => ({
       color,
       variant: ['card', 'table'],
       class: {
         item: focusCard(token!),
       },
     })),
-    ...[...(options.theme.colors || []).map((color: string) => [color, color]), ['neutral', 'inverted']].map(([color, token]: Array<string>) => ({
+    ...[
+      ...(options.theme.colors || []).map((color: string) => [color, color]),
+      ['neutral', 'inverted'],
+    ].map(([color, token]: Array<string>) => ({
       color,
       variant: 'list',
       indicator: 'hidden',

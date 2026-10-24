@@ -25,44 +25,281 @@ describe('checkboxGroup', () => {
   const props = { items };
 
   renderEach(CheckboxGroup, [
-    ['with items', { props }],
-    ['with modelValue', { props: { ...props, modelValue: ['1'] } }],
-    ['with defaultValue', { props: { ...props, defaultValue: ['1'] } }],
-    ['with valueKey', { props: { ...props, valueKey: 'label', defaultValue: ['Option 1'] } }],
-    ['with labelKey', { props: { ...props, labelKey: 'value' } }],
-    ['with descriptionKey', { props: { ...props, descriptionKey: 'value' } }],
-    ['with disabled', { props: { ...props, disabled: true } }],
-    ['with max', { props: { ...props, max: 1, defaultValue: ['1'] } }],
-    ['with max variant table', { props: { ...props, variant: 'table', max: 1, defaultValue: ['1'] } }],
-    ['with description', { props: { items: items.map((opt, count) => ({ ...opt, description: `Description ${count}` })) } }],
-    ['with icon', { props: { items: items.map((opt) => ({ ...opt, icon: 'i-lucide-rocket' })), indicator: 'hidden' } }],
-    ['with icon card', { props: { items: items.map((opt) => ({ ...opt, icon: 'i-lucide-rocket' })), indicator: 'hidden', variant: 'card', defaultValue: ['1'] } }],
-    ['with icon table', { props: { items: items.map((opt) => ({ ...opt, icon: 'i-lucide-rocket' })), indicator: 'hidden', variant: 'table', defaultValue: ['1'] } }],
-    ['with highlight indicator hidden', { props: { ...props, indicator: 'hidden', variant: 'card', highlight: true, defaultValue: ['1'] } }],
-    ['with required', { props: { ...props, legend: 'Legend', required: true } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { ...props, size, defaultValue: ['1'] } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { ...props, variant, defaultValue: ['1'] } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant} highlight`, { props: { ...props, variant, highlight: true, defaultValue: ['1'] } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { ...props, variant, color: 'neutral', defaultValue: ['1'] } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant} highlight`, { props: { ...props, variant, color: 'neutral', highlight: true, defaultValue: ['1'] } }]),
-    ...variants.map((variant: string) => [`with horizontal variant ${variant}`, { props: { ...props, variant, orientation: 'horizontal', defaultValue: ['1'] } }]),
-    ...indicators.map((indicator: string) => [`with indicator ${indicator}`, { props: { ...props, indicator, defaultValue: ['1'] } }]),
-    ['with ariaLabel', { props, attrs: { 'aria-label': 'Aria label' } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'absolute' } }],
-    ['with ui', { props: { ...props, ui: { fieldset: 'gap-x-4', label: 'text-red' } } }],
+    [
+      'with items',
+      { props },
+    ],
+    [
+      'with modelValue',
+      {
+        props: {
+          ...props,
+          modelValue: ['1'],
+        },
+      },
+    ],
+    [
+      'with defaultValue',
+      {
+        props: {
+          ...props,
+          defaultValue: ['1'],
+        },
+      },
+    ],
+    [
+      'with valueKey',
+      {
+        props: {
+          ...props,
+          valueKey: 'label',
+          defaultValue: ['Option 1'],
+        },
+      },
+    ],
+    [
+      'with labelKey',
+      {
+        props: { ...props, labelKey: 'value' },
+      },
+    ],
+    [
+      'with descriptionKey',
+      {
+        props: { ...props, descriptionKey: 'value' },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { ...props, disabled: true },
+      },
+    ],
+    [
+      'with max',
+      {
+        props: {
+          ...props,
+          max: 1,
+          defaultValue: ['1'],
+        },
+      },
+    ],
+    [
+      'with max variant table',
+      {
+        props: {
+          ...props,
+          variant: 'table',
+          max: 1,
+          defaultValue: ['1'],
+        },
+      },
+    ],
+    [
+      'with description',
+      {
+        props: {
+          items: items.map((opt, count) => ({ ...opt, description: `Description ${count}` })),
+        },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: {
+          items: items.map((opt) => ({ ...opt, icon: 'i-lucide-rocket' })),
+          indicator: 'hidden',
+        },
+      },
+    ],
+    [
+      'with icon card',
+      {
+        props: {
+          items: items.map((opt) => ({ ...opt, icon: 'i-lucide-rocket' })),
+          indicator: 'hidden',
+          variant: 'card',
+          defaultValue: ['1'],
+        },
+      },
+    ],
+    [
+      'with icon table',
+      {
+        props: {
+          items: items.map((opt) => ({ ...opt, icon: 'i-lucide-rocket' })),
+          indicator: 'hidden',
+          variant: 'table',
+          defaultValue: ['1'],
+        },
+      },
+    ],
+    [
+      'with highlight indicator hidden',
+      {
+        props: {
+          ...props,
+          indicator: 'hidden',
+          variant: 'card',
+          highlight: true,
+          defaultValue: ['1'],
+        },
+      },
+    ],
+    [
+      'with required',
+      {
+        props: { ...props, legend: 'Legend', required: true },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: {
+          ...props,
+          size,
+          defaultValue: ['1'],
+        },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant}`,
+      {
+        props: {
+          ...props,
+          variant,
+          defaultValue: ['1'],
+        },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant} highlight`,
+      {
+        props: {
+          ...props,
+          variant,
+          highlight: true,
+          defaultValue: ['1'],
+        },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant}`,
+      {
+        props: {
+          ...props,
+          variant,
+          color: 'neutral',
+          defaultValue: ['1'],
+        },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant} highlight`,
+      {
+        props: {
+          ...props,
+          variant,
+          color: 'neutral',
+          highlight: true,
+          defaultValue: ['1'],
+        },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with horizontal variant ${variant}`,
+      {
+        props: {
+          ...props,
+          variant,
+          orientation: 'horizontal',
+          defaultValue: ['1'],
+        },
+      },
+    ]),
+    ...indicators.map((indicator: string) => [
+      `with indicator ${indicator}`,
+      {
+        props: {
+          ...props,
+          indicator,
+          defaultValue: ['1'],
+        },
+      },
+    ]),
+    [
+      'with ariaLabel',
+      {
+        props,
+        attrs: { 'aria-label': 'Aria label' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'absolute' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { fieldset: 'gap-x-4', label: 'text-red' },
+        },
+      },
+    ],
     // Slots
-    ['with legend slot', { props, slots: { legend: () => 'Legend slot' } }],
-    ['with label slot', { props, slots: { label: () => 'Label slot' } }],
-    ['with description slot', { props, slots: { description: () => 'Description slot' } }],
+    [
+      'with legend slot',
+      {
+        props,
+        slots: {
+          legend: () => 'Legend slot',
+        },
+      },
+    ],
+    [
+      'with label slot',
+      {
+        props,
+        slots: {
+          label: () => 'Label slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        props,
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
   ]);
 
   it.each([
     ['without value', null, 'on'],
-    ['with a null value', { label: 'Null', value: null }, null],
+    [
+      'with a null value',
+      { label: 'Null', value: null },
+      null,
+    ],
   ])('keeps a checked item %s enabled when max is reached', async (_, item, value) => {
     const wrapper = await mountSuspended(CheckboxGroup, {
-      props: { items: [item, 'a'] as any, max: 1, defaultValue: [value] as any },
+      props: {
+        items: [item, 'a'] as any,
+        max: 1,
+        defaultValue: [value] as any,
+      },
     });
 
     const [checked, blocked] = wrapper.findAll('[data-slot="item"]');
@@ -87,7 +324,11 @@ describe('checkboxGroup', () => {
 
   it('forwards an item icon to the checkbox icon prop', async () => {
     const wrapper = await mountSuspended(CheckboxGroup, {
-      props: { items: [{ value: '1', label: 'Option 1', icon: 'i-lucide-rocket' }] },
+      props: {
+        items: [
+          { value: '1', label: 'Option 1', icon: 'i-lucide-rocket' },
+        ],
+      },
     });
     const checkbox = wrapper.findComponent(Checkbox) as unknown as VueWrapper<any>;
     expect(checkbox.props('icon')).toBe('i-lucide-rocket');
@@ -97,7 +338,10 @@ describe('checkboxGroup', () => {
     const wrapper = await mountSuspended(CheckboxGroup, {
       props: {
         icon: 'i-lucide-heart',
-        items: [{ value: '1', label: 'Option 1', icon: 'i-lucide-rocket' }, { value: '2', label: 'Option 2' }],
+        items: [
+          { value: '1', label: 'Option 1', icon: 'i-lucide-rocket' },
+          { value: '2', label: 'Option 2' },
+        ],
       },
     });
     const checkboxes = wrapper.findAllComponents(Checkbox) as unknown as Array<VueWrapper<any>>;
@@ -106,18 +350,29 @@ describe('checkboxGroup', () => {
   });
 
   it('renders an item icon next to the label only when the indicator is hidden', async () => {
-    const items = [{ value: '1', label: 'Option 1', icon: 'i-lucide-rocket' }];
+    const items = [
+      { value: '1', label: 'Option 1', icon: 'i-lucide-rocket' },
+    ];
 
-    const wrapper = await mountSuspended(CheckboxGroup, { props: { items } });
+    const wrapper = await mountSuspended(CheckboxGroup, {
+      props: { items },
+    });
     expect(wrapper.find('[data-slot="wrapper"] [data-slot="icon"]').exists()).toBe(false);
 
-    const hidden = await mountSuspended(CheckboxGroup, { props: { items, indicator: 'hidden' } });
+    const hidden = await mountSuspended(CheckboxGroup, {
+      props: { items, indicator: 'hidden' },
+    });
     expect(hidden.find('[data-slot="wrapper"] [data-slot="icon"]').exists()).toBe(true);
   });
 
   it('renders an item icon without a label', async () => {
     const wrapper = await mountSuspended(CheckboxGroup, {
-      props: { items: [{ value: 'table', icon: 'i-lucide-table' }], indicator: 'hidden' },
+      props: {
+        items: [
+          { value: 'table', icon: 'i-lucide-table' },
+        ],
+        indicator: 'hidden',
+      },
     });
     expect(wrapper.find('[data-slot="wrapper"] [data-slot="icon"]').exists()).toBe(true);
   });
@@ -125,7 +380,10 @@ describe('checkboxGroup', () => {
   it('passes accessibility tests with icon items', async () => {
     const wrapper = await mountSuspended(CheckboxGroup, {
       props: {
-        items: [{ value: 'system', label: 'System', icon: 'i-lucide-monitor' }, { value: 'light', label: 'Light', icon: 'i-lucide-sun' }],
+        items: [
+          { value: 'system', label: 'System', icon: 'i-lucide-monitor' },
+          { value: 'light', label: 'Light', icon: 'i-lucide-sun' },
+        ],
         variant: 'table',
         indicator: 'hidden',
         orientation: 'horizontal',
@@ -137,17 +395,35 @@ describe('checkboxGroup', () => {
 
   describe('emits', () => {
     it('update:modelValue event', async () => {
-      const wrapper = mount(CheckboxGroup, { props: { items: ['Option 1', 'Option 2'] } });
+      const wrapper = mount(CheckboxGroup, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+        },
+      });
       const input = wrapper.findComponent({ name: 'CheckboxGroupRoot' });
       await input.setValue('Option 1');
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [['Option 1']] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          ['Option 1'],
+        ],
+      });
     });
 
     it('change event', async () => {
-      const wrapper = mount(CheckboxGroup, { props: { items: ['Option 1', 'Option 2'] } });
+      const wrapper = mount(CheckboxGroup, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+        },
+      });
       const input = wrapper.findComponent({ name: 'CheckboxGroupRoot' });
       await input.setValue('Option 1');
-      expect(wrapper.emitted()).toMatchObject({ change: [[{ type: 'change' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        change: [
+          [
+            { type: 'change' },
+          ],
+        ],
+      });
     });
   });
 
@@ -159,7 +435,9 @@ describe('checkboxGroup', () => {
           validateOnInputDelay: 0,
           async validate(state: any) {
             if (!state.value?.includes('Option 2')) {
-              return [{ name: 'value', message: 'Error message' }];
+              return [
+                { name: 'value', message: 'Error message' },
+              ];
             }
             return [];
           },
@@ -213,10 +491,17 @@ describe('checkboxGroup', () => {
 
   // https://github.com/nuxt/ui/issues/6033
   describe('label element', () => {
-    const items = [{ value: '1', label: 'Option 1' }];
+    const items = [
+      { value: '1', label: 'Option 1' },
+    ];
 
     it('is a <label> in the default (list) variant', async () => {
-      const wrapper = await mountSuspended(CheckboxGroup, { props: { items, defaultValue: ['1'] } });
+      const wrapper = await mountSuspended(CheckboxGroup, {
+        props: {
+          items,
+          defaultValue: ['1'],
+        },
+      });
       const label = wrapper.find('[data-slot="label"]');
 
       expect(label.exists()).toBe(true);
@@ -225,7 +510,13 @@ describe('checkboxGroup', () => {
     });
 
     it.each(['card', 'table'] as const)('is a <div> in the %s variant', async (variant) => {
-      const wrapper = await mountSuspended(CheckboxGroup, { props: { items, defaultValue: ['1'], variant } });
+      const wrapper = await mountSuspended(CheckboxGroup, {
+        props: {
+          items,
+          defaultValue: ['1'],
+          variant,
+        },
+      });
       const label = wrapper.find('[data-slot="label"]');
 
       expect(label.exists()).toBe(true);

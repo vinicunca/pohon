@@ -57,7 +57,10 @@ const props = useComponentProps('prose.collapsible', _props);
 const { t } = useLocale();
 const appConfig = useAppConfig() as ProseCollapsible['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.collapsible || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.collapsible || {}),
+})());
 </script>
 
 <template>

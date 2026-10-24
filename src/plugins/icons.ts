@@ -15,7 +15,9 @@ const VIRTUAL_ID = 'virtual:pohon-ui-icons';
  */
 function parseUserIcon(icon: string): string | undefined {
   const parsed = parseIconName(icon, collectionNames, true);
-  return parsed ? `${parsed[0]}:${parsed[1]}` : undefined;
+  return parsed
+    ? `${parsed[0]}:${parsed[1]}`
+    : undefined;
 }
 
 /**

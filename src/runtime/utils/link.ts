@@ -32,9 +32,17 @@ export const LinkSlot: FunctionalComponent<{ as?: string; type?: string; disable
     isExternal: false,
   });
 
-  return children?.length === 1 ? children[0] : children;
+  return children?.length === 1
+    ? children[0]
+    : children;
 };
-LinkSlot.props = ['as', 'type', 'disabled', 'active', 'custom'];
+LinkSlot.props = [
+  'as',
+  'type',
+  'disabled',
+  'active',
+  'custom',
+];
 LinkSlot.inheritAttrs = false;
 
 export function isPartiallyEqual(item1: any, item2: any) {

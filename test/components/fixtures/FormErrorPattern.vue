@@ -4,7 +4,9 @@ import { reactive, useTemplateRef } from 'vue';
 const form = useTemplateRef('form');
 const state = reactive<any>({});
 function validate() {
-  return [{ name: 'email.1', message: 'Error message' }];
+  return [
+    { name: 'email.1', message: 'Error message' },
+  ];
 }
 </script>
 

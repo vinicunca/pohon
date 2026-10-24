@@ -83,75 +83,87 @@ export default (options: Required<ModuleOptions>) => ({
       neutral: '',
     },
   },
-  compoundVariants: [{
-    variant: 'solid',
-    to: true,
-    class: {
-      root: 'hover:bg-background-inverted/90',
+  compoundVariants: [
+    {
+      variant: 'solid',
+      to: true,
+      class: {
+        root: 'hover:bg-background-inverted/90',
+      },
     },
-  }, {
-    variant: 'outline',
-    to: true,
-    class: {
-      root: 'hover:bg-background-elevated/50',
+    {
+      variant: 'outline',
+      to: true,
+      class: {
+        root: 'hover:bg-background-elevated/50',
+      },
     },
-  }, {
-    variant: 'soft',
-    to: true,
-    class: {
-      root: 'hover:bg-background-elevated',
+    {
+      variant: 'soft',
+      to: true,
+      class: {
+        root: 'hover:bg-background-elevated',
+      },
     },
-  }, {
-    variant: 'subtle',
-    to: true,
-    class: {
-      root: 'hover:bg-background-elevated',
+    {
+      variant: 'subtle',
+      to: true,
+      class: {
+        root: 'hover:bg-background-elevated',
+      },
     },
-  }, {
-    variant: 'subtle',
-    to: true,
-    highlight: false,
-    class: {
-      root: 'hover:ring-border-accented',
+    {
+      variant: 'subtle',
+      to: true,
+      highlight: false,
+      class: {
+        root: 'hover:ring-border-accented',
+      },
     },
-  }, {
-    variant: ['outline', 'subtle'],
-    to: true,
-    highlight: false,
-    class: {
-      root: 'has-[>a:focus-visible]:ring-primary',
+    {
+      variant: ['outline', 'subtle'],
+      to: true,
+      highlight: false,
+      class: {
+        root: 'has-[>a:focus-visible]:ring-primary',
+      },
     },
-  }, {
-    variant: 'ghost',
-    to: true,
-    class: {
-      root: 'hover:bg-background-elevated/50',
+    {
+      variant: 'ghost',
+      to: true,
+      class: {
+        root: 'hover:bg-background-elevated/50',
+      },
     },
-  }, ...(options.theme.colors || []).map((highlightColor: string) => ({
-    highlightColor,
-    highlight: true,
-    class: {
-      root: `pohon:ring-${highlightColor}`,
+    ...(options.theme.colors || []).map((highlightColor: string) => ({
+      highlightColor,
+      highlight: true,
+      class: {
+        root: `pohon:ring-${highlightColor}`,
+      },
+    })),
+    {
+      highlightColor: 'neutral',
+      highlight: true,
+      class: {
+        root: 'ring-border-inverted',
+      },
     },
-  })), {
-    highlightColor: 'neutral',
-    highlight: true,
-    class: {
-      root: 'ring-border-inverted',
+    ...(options.theme.colors || []).map((spotlightColor: string) => ({
+      spotlightColor,
+      spotlight: true,
+      class: {
+        root: `[--spotlight-color:var(--ui-${spotlightColor})]`,
+      },
+    })),
+    {
+      spotlightColor: 'neutral',
+      spotlight: true,
+      class: {
+        root: '[--spotlight-color:var(--ui-color-bg-inverted)]',
+      },
     },
-  }, ...(options.theme.colors || []).map((spotlightColor: string) => ({
-    spotlightColor,
-    spotlight: true,
-    class: {
-      root: `[--spotlight-color:var(--ui-${spotlightColor})]`,
-    },
-  })), {
-    spotlightColor: 'neutral',
-    spotlight: true,
-    class: {
-      root: '[--spotlight-color:var(--ui-color-bg-inverted)]',
-    },
-  }],
+  ],
   defaultVariants: {
     variant: 'outline',
     highlightColor: 'primary',

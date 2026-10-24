@@ -106,7 +106,10 @@ const forwardedAttrs = computed(() => {
   return rest;
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.switch || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.switch || {}),
+})({
   size: size.value,
   color: color.value,
   highlight: highlight.value,
@@ -117,7 +120,9 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.switch || {}) })
 
 function onUpdate(value: any) {
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value } });
+  const event = new Event('change', {
+    target: { value },
+  });
   emits('change', event);
   emitFormChange();
   emitFormInput();

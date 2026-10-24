@@ -64,7 +64,10 @@ const props = useComponentProps<PageLinksProps<T>>('pageLinks', _props);
 
 const appConfig = useAppConfig() as PageLinks['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageLinks || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.pageLinks || {}),
+})());
 </script>
 
 <template>

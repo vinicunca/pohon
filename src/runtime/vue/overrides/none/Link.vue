@@ -139,7 +139,10 @@ const linkClass = computed(() => {
   const active = isLinkActive.value;
 
   if (props.raw) {
-    return [props.class, active ? props.activeClass : props.inactiveClass];
+    return [
+      props.class,
+      active ? props.activeClass : props.inactiveClass,
+    ];
   }
 
   return ui.value({ class: props.class, active, disabled: props.disabled });

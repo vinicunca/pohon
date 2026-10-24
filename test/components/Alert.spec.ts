@@ -12,25 +12,152 @@ describe('alert', () => {
 
   renderEach(Alert, [
     // Props
-    ['with title', { props }],
-    ['with description', { props: { ...props, description: 'Description' } }],
-    ['with icon', { props: { ...props, icon: 'i-lucide-lightbulb' } }],
-    ['with avatar', { props: { ...props, avatar: { src: 'https://github.com/praburangki.png' } } }],
-    ['with actions', { props: { ...props, actions: [{ label: 'Action' }] } }],
-    ['with orientation vertical', { props: { ...props, icon: 'i-lucide-lightbulb', description: 'This is a description', actions: [{ label: 'Action' }], orientation: 'vertical' } }],
-    ['with orientation horizontal', { props: { ...props, icon: 'i-lucide-lightbulb', description: 'This is a description', actions: [{ label: 'Action' }], orientation: 'horizontal' } }],
-    ['with close', { props: { ...props, close: true } }],
-    ['with closeIcon', { props: { ...props, close: true, closeIcon: 'i-lucide-trash' } }],
-    ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { ...props, variant } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { ...props, variant, color: 'neutral' } }]),
-    ['with as', { props: { ...props, as: 'article' } }],
-    ['with class', { props: { ...props, class: 'w-48' } }],
-    ['with ui', { props: { ...props, ui: { title: 'font-700' } } }],
+    [
+      'with title',
+      { props },
+    ],
+    [
+      'with description',
+      {
+        props: { ...props, description: 'Description' },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { ...props, icon: 'i-lucide-lightbulb' },
+      },
+    ],
+    [
+      'with avatar',
+      {
+        props: {
+          ...props,
+          avatar: { src: 'https://github.com/praburangki.png' },
+        },
+      },
+    ],
+    [
+      'with actions',
+      {
+        props: {
+          ...props,
+          actions: [
+            { label: 'Action' },
+          ],
+        },
+      },
+    ],
+    [
+      'with orientation vertical',
+      {
+        props: {
+          ...props,
+          icon: 'i-lucide-lightbulb',
+          description: 'This is a description',
+          actions: [
+            { label: 'Action' },
+          ],
+          orientation: 'vertical',
+        },
+      },
+    ],
+    [
+      'with orientation horizontal',
+      {
+        props: {
+          ...props,
+          icon: 'i-lucide-lightbulb',
+          description: 'This is a description',
+          actions: [
+            { label: 'Action' },
+          ],
+          orientation: 'horizontal',
+        },
+      },
+    ],
+    [
+      'with close',
+      {
+        props: { ...props, close: true },
+      },
+    ],
+    [
+      'with closeIcon',
+      {
+        props: { ...props, close: true, closeIcon: 'i-lucide-trash' },
+      },
+    ],
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant}`,
+      {
+        props: { ...props, variant },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant}`,
+      {
+        props: { ...props, variant, color: 'neutral' },
+      },
+    ]),
+    [
+      'with as',
+      {
+        props: { ...props, as: 'article' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'w-48' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { title: 'font-700' },
+        },
+      },
+    ],
     // Slots
-    ['with leading slot', { props, slots: { title: () => 'Leading slot' } }],
-    ['with title slot', { props, slots: { title: () => 'Title slot' } }],
-    ['with description slot', { props, slots: { description: () => 'Description slot' } }],
-    ['with close slot', { props, slots: { close: () => 'Close slot' } }],
+    [
+      'with leading slot',
+      {
+        props,
+        slots: {
+          title: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with title slot',
+      {
+        props,
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        props,
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with close slot',
+      {
+        props,
+        slots: {
+          close: () => 'Close slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {
@@ -39,7 +166,9 @@ describe('alert', () => {
         title: 'Alert',
         icon: 'i-lucide-lightbulb',
         description: 'This is a description',
-        actions: [{ label: 'Action' }],
+        actions: [
+          { label: 'Action' },
+        ],
         close: true,
         avatar: {
           src: 'https://github.com/praburangki.png',

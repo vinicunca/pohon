@@ -9,15 +9,18 @@ const attrs = reactive({
   position: [theme.defaultVariants.position],
 });
 
-const items = [{
-  name: 'messages',
-  icon: 'i-lucide-message-circle',
-  count: 3,
-}, {
-  name: 'notifications',
-  icon: 'i-lucide-bell',
-  count: 0,
-}];
+const items = [
+  {
+    name: 'messages',
+    icon: 'i-lucide-message-circle',
+    count: 3,
+  },
+  {
+    name: 'notifications',
+    icon: 'i-lucide-bell',
+    count: 0,
+  },
+];
 </script>
 
 <template>

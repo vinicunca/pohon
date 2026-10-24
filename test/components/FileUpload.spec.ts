@@ -43,15 +43,25 @@ describe('fileUpload', () => {
     const first = { name: 'first.png', progress: 0 };
     const second = { name: 'second.png', progress: 0 };
     const wrapper = mount(FileUpload, {
-      props: { modelValue: [first, second], multiple: true },
-      slots: { file: () => h('input', { 'data-test': 'file-state' }) },
+      props: {
+        modelValue: [first, second],
+        multiple: true,
+      },
+      slots: {
+        file: () => h('input', { 'data-test': 'file-state' }),
+      },
     });
 
     const inputs = wrapper.findAll<HTMLInputElement>('[data-test="file-state"]');
     await inputs[0]!.setValue('first file');
     await inputs[1]!.setValue('second file');
 
-    await wrapper.setProps({ modelValue: [{ ...second, progress: 50 }, { ...first, progress: 50 }] });
+    await wrapper.setProps({
+      modelValue: [
+        { ...second, progress: 50 },
+        { ...first, progress: 50 },
+      ],
+    });
 
     const updatedInputs = wrapper.findAll<HTMLInputElement>('[data-test="file-state"]');
     expect(updatedInputs.map((input) => input.element.value)).toEqual(['second file', 'first file']);
@@ -73,7 +83,10 @@ describe('fileUpload', () => {
     const item: CustomFileUploadItem = { name: 'existing.png', id: 'file-1' };
 
     expectEmitPayloadType('update:modelValue', () => FileUpload({ modelValue: item })).toEqualTypeOf<[CustomFileUploadItem | File | null | undefined]>();
-    expectEmitPayloadType('update:modelValue', () => FileUpload({ modelValue: [item], multiple: true })).toEqualTypeOf<[Array<CustomFileUploadItem | File> | null | undefined]>();
+    expectEmitPayloadType('update:modelValue', () => FileUpload({
+      modelValue: [item],
+      multiple: true,
+    })).toEqualTypeOf<[Array<CustomFileUploadItem | File> | null | undefined]>();
     expectSlotProps('file', () => FileUpload({ modelValue: item })).toEqualTypeOf<{
       file: CustomFileUploadItem | File;
       index: number;
@@ -86,75 +99,360 @@ describe('fileUpload', () => {
   const layouts = Object.keys(theme.variants.layout) as any;
   const positions = Object.keys(theme.variants.position) as any;
 
-  const modelValue = [new File([], 'file.txt', { type: 'text/plain' })];
+  const modelValue = [
+    new File([], 'file.txt', { type: 'text/plain' }),
+  ];
 
   const props = { modelValue };
 
   renderEach(FileUpload, [
     // Props
-    ['with modelValue', { props }],
-    ['with id', { props: { id: 'id' } }],
-    ['with name', { props: { name: 'name' } }],
-    ['with icon', { props: { icon: 'i-lucide-image' } }],
-    ['with label', { props: { label: 'Drop your image here' } }],
-    ['with description', { props: { description: 'SVG, PNG, JPG or GIF (max. 2MB)' } }],
-    ['with neutral color', { props: { color: 'neutral' } }],
-    ...variants.map((variant: string) => [`with variant ${variant}`, { props: { ...props, variant } }]),
-    ...layouts.map((layout: string) => [`with layout ${layout}`, { props: { ...props, layout } }]),
-    ...layouts.map((layout: string) => [`with layout ${layout} multiple`, { props: { ...props, layout, multiple: true } }]),
-    ...positions.map((position: string) => [`with position ${position}`, { props: { ...props, position } }]),
-    ...positions.map((position: string) => [`with position ${position} multiple`, { props: { ...props, position, multiple: true } }]),
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { ...props, size } }]),
-    ...sizes.map((size: string) => [`with size ${size} variant button`, { props: { ...props, size, variant: 'button' } }]),
-    ['with highlight', { props: { highlight: true } }],
-    ['with highlight neutral', { props: { highlight: true, color: 'neutral' } }],
-    ['with required', { props: { required: true } }],
-    ['with disabled', { props: { disabled: true } }],
-    ['with disabled variant button', { props: { disabled: true, variant: 'button' } }],
-    ['with accept', { props: { accept: 'image/*' } }],
-    ['with multiple', { props: { ...props, multiple: true } }],
-    ['without dropzone', { props: { dropzone: false } }],
-    ['without interactive', { props: { interactive: false } }],
-    ['without preview', { props: { ...props, preview: false } }],
-    ['without preview with multiple', { props: { ...props, preview: false, multiple: true } }],
-    ['with required', { props: { required: true } }],
-    ['with disabled', { props: { disabled: true } }],
-    ['with fileIcon', { props: { ...props, fileIcon: 'i-lucide-house' } }],
-    ['with fileDelete', { props: { ...props, fileDelete: { color: 'primary' } } }],
-    ['with fileDeleteIcon', { props: { ...props, fileDeleteIcon: 'i-lucide-trash' } }],
-    ['with ariaLabel', { attrs: { 'aria-label': 'Aria label' } }],
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'w-full gap-4' } }],
-    ['with ui', { props: { ui: { base: 'rounded-xl' } } }],
+    [
+      'with modelValue',
+      { props },
+    ],
+    [
+      'with id',
+      {
+        props: { id: 'id' },
+      },
+    ],
+    [
+      'with name',
+      {
+        props: { name: 'name' },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { icon: 'i-lucide-image' },
+      },
+    ],
+    [
+      'with label',
+      {
+        props: { label: 'Drop your image here' },
+      },
+    ],
+    [
+      'with description',
+      {
+        props: { description: 'SVG, PNG, JPG or GIF (max. 2MB)' },
+      },
+    ],
+    [
+      'with neutral color',
+      {
+        props: { color: 'neutral' },
+      },
+    ],
+    ...variants.map((variant: string) => [
+      `with variant ${variant}`,
+      {
+        props: { ...props, variant },
+      },
+    ]),
+    ...layouts.map((layout: string) => [
+      `with layout ${layout}`,
+      {
+        props: { ...props, layout },
+      },
+    ]),
+    ...layouts.map((layout: string) => [
+      `with layout ${layout} multiple`,
+      {
+        props: { ...props, layout, multiple: true },
+      },
+    ]),
+    ...positions.map((position: string) => [
+      `with position ${position}`,
+      {
+        props: { ...props, position },
+      },
+    ]),
+    ...positions.map((position: string) => [
+      `with position ${position} multiple`,
+      {
+        props: { ...props, position, multiple: true },
+      },
+    ]),
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { ...props, size },
+      },
+    ]),
+    ...sizes.map((size: string) => [
+      `with size ${size} variant button`,
+      {
+        props: { ...props, size, variant: 'button' },
+      },
+    ]),
+    [
+      'with highlight',
+      {
+        props: { highlight: true },
+      },
+    ],
+    [
+      'with highlight neutral',
+      {
+        props: { highlight: true, color: 'neutral' },
+      },
+    ],
+    [
+      'with required',
+      {
+        props: { required: true },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { disabled: true },
+      },
+    ],
+    [
+      'with disabled variant button',
+      {
+        props: { disabled: true, variant: 'button' },
+      },
+    ],
+    [
+      'with accept',
+      {
+        props: { accept: 'image/*' },
+      },
+    ],
+    [
+      'with multiple',
+      {
+        props: { ...props, multiple: true },
+      },
+    ],
+    [
+      'without dropzone',
+      {
+        props: { dropzone: false },
+      },
+    ],
+    [
+      'without interactive',
+      {
+        props: { interactive: false },
+      },
+    ],
+    [
+      'without preview',
+      {
+        props: { ...props, preview: false },
+      },
+    ],
+    [
+      'without preview with multiple',
+      {
+        props: { ...props, preview: false, multiple: true },
+      },
+    ],
+    [
+      'with required',
+      {
+        props: { required: true },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { disabled: true },
+      },
+    ],
+    [
+      'with fileIcon',
+      {
+        props: { ...props, fileIcon: 'i-lucide-house' },
+      },
+    ],
+    [
+      'with fileDelete',
+      {
+        props: {
+          ...props,
+          fileDelete: { color: 'primary' },
+        },
+      },
+    ],
+    [
+      'with fileDeleteIcon',
+      {
+        props: { ...props, fileDeleteIcon: 'i-lucide-trash' },
+      },
+    ],
+    [
+      'with ariaLabel',
+      {
+        attrs: { 'aria-label': 'Aria label' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'w-full gap-4' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { base: 'rounded-xl' },
+        },
+      },
+    ],
     // Slots
-    ['with default slot', { props, slots: { default: () => 'Default slot' } }],
-    ['with leading slot', { props, slots: { leading: () => 'Leading slot' } }],
-    ['with label slot', { props, slots: { label: () => 'Label slot' } }],
-    ['with description slot', { props, slots: { description: () => 'Description slot' } }],
-    ['with actions slot', { props, slots: { actions: () => 'Actions slot' } }],
-    ['with files slot', { props, slots: { files: () => 'Files slot' } }],
-    ['with files-top slot', { props, slots: { 'files-top': () => 'Files top slot' } }],
-    ['with files-bottom slot', { props, slots: { 'files-bottom': () => 'Files bottom slot' } }],
-    ['with file slot', { props, slots: { file: () => 'File slot' } }],
-    ['with file-leading slot', { props, slots: { 'file-leading': () => 'File leading slot' } }],
-    ['with file-name slot', { props, slots: { 'file-name': () => 'File name slot' } }],
-    ['with file-size slot', { props, slots: { 'file-size': () => 'File size slot' } }],
-    ['with file-trailing slot', { props, slots: { 'file-trailing': () => 'File trailing slot' } }],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with leading slot',
+      {
+        props,
+        slots: {
+          leading: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with label slot',
+      {
+        props,
+        slots: {
+          label: () => 'Label slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        props,
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with actions slot',
+      {
+        props,
+        slots: {
+          actions: () => 'Actions slot',
+        },
+      },
+    ],
+    [
+      'with files slot',
+      {
+        props,
+        slots: {
+          files: () => 'Files slot',
+        },
+      },
+    ],
+    [
+      'with files-top slot',
+      {
+        props,
+        slots: {
+          'files-top': () => 'Files top slot',
+        },
+      },
+    ],
+    [
+      'with files-bottom slot',
+      {
+        props,
+        slots: {
+          'files-bottom': () => 'Files bottom slot',
+        },
+      },
+    ],
+    [
+      'with file slot',
+      {
+        props,
+        slots: {
+          file: () => 'File slot',
+        },
+      },
+    ],
+    [
+      'with file-leading slot',
+      {
+        props,
+        slots: {
+          'file-leading': () => 'File leading slot',
+        },
+      },
+    ],
+    [
+      'with file-name slot',
+      {
+        props,
+        slots: {
+          'file-name': () => 'File name slot',
+        },
+      },
+    ],
+    [
+      'with file-size slot',
+      {
+        props,
+        slots: {
+          'file-size': () => 'File size slot',
+        },
+      },
+    ],
+    [
+      'with file-trailing slot',
+      {
+        props,
+        slots: {
+          'file-trailing': () => 'File trailing slot',
+        },
+      },
+    ],
   ]);
 
   it('hides the icon when icon is false', async () => {
     const withIcon = await mountSuspended(FileUpload);
     expect(withIcon.find('[data-slot="icon"]').exists()).toBe(true);
 
-    const withoutIcon = await mountSuspended(FileUpload, { props: { icon: false } });
+    const withoutIcon = await mountSuspended(FileUpload, {
+      props: { icon: false },
+    });
     expect(withoutIcon.find('[data-slot="icon"]').exists()).toBe(false);
   });
 
   it('hides the icon when icon is false with variant button', async () => {
-    const withIcon = await mountSuspended(FileUpload, { props: { variant: 'button' } });
+    const withIcon = await mountSuspended(FileUpload, {
+      props: { variant: 'button' },
+    });
     expect(withIcon.find('[data-slot="icon"]').exists()).toBe(true);
 
-    const withoutIcon = await mountSuspended(FileUpload, { props: { variant: 'button', icon: false } });
+    const withoutIcon = await mountSuspended(FileUpload, {
+      props: { variant: 'button', icon: false },
+    });
     expect(withoutIcon.find('[data-slot="icon"]').exists()).toBe(false);
   });
 
@@ -283,7 +581,9 @@ describe('fileUpload', () => {
     }
 
     it('accepts drops once dropzone is enabled', async () => {
-      const wrapper = await mountSuspended(FileUpload, { props: { dropzone: false } });
+      const wrapper = await mountSuspended(FileUpload, {
+        props: { dropzone: false },
+      });
 
       await wrapper.setProps({ dropzone: true });
       await drag(wrapper, ['dragenter', 'drop']);
@@ -292,7 +592,9 @@ describe('fileUpload', () => {
     });
 
     it('ignores drops once dropzone is disabled', async () => {
-      const wrapper = await mountSuspended(FileUpload, { props: { dropzone: true } });
+      const wrapper = await mountSuspended(FileUpload, {
+        props: { dropzone: true },
+      });
 
       await wrapper.setProps({ dropzone: false });
       await drag(wrapper, ['dragenter', 'drop']);
@@ -301,7 +603,9 @@ describe('fileUpload', () => {
     });
 
     it('clears the drag state when dropzone is disabled mid-drag', async () => {
-      const wrapper = await mountSuspended(FileUpload, { props: { dropzone: true } });
+      const wrapper = await mountSuspended(FileUpload, {
+        props: { dropzone: true },
+      });
       const base = wrapper.find('[data-slot="base"]');
 
       await drag(wrapper, ['dragenter']);
@@ -342,11 +646,21 @@ describe('fileUpload', () => {
     });
 
     it('reject event', async () => {
-      const wrapper = mount(FileUpload, { props: { accept: 'image/*' }, attachTo: document.body });
+      const wrapper = mount(FileUpload, {
+        props: { accept: 'image/*' },
+        attachTo: document.body,
+      });
       const file = new File(['foo'], 'file.pdf', { type: 'application/pdf' });
-      const dataTransfer = { items: [{ kind: 'file', type: file.type }], files: [file] };
+      const dataTransfer = {
+        items: [
+          { kind: 'file', type: file.type },
+        ],
+        files: [file],
+      };
       await wrapper.find('[data-slot="base"]').trigger('drop', { dataTransfer });
-      expect(wrapper.emitted('reject')?.[0]).toEqual([[file]]);
+      expect(wrapper.emitted('reject')?.[0]).toEqual([
+        [file],
+      ]);
       expect(wrapper.emitted('update:modelValue')).toBeFalsy();
       wrapper.unmount();
     });
@@ -359,9 +673,15 @@ describe('fileUpload', () => {
           validateOn,
           validateOnInputDelay: 0,
           async validate(state: any) {
-            const files = Array.isArray(state.value) ? state.value : state.value ? [state.value] : [];
+            const files = Array.isArray(state.value)
+              ? state.value
+              : state.value
+                ? [state.value]
+                : [];
             if (!files.length || files.some((f: any) => f.name !== 'valid')) {
-              return [{ name: 'value', message: 'Error message' }];
+              return [
+                { name: 'value', message: 'Error message' },
+              ];
             }
 
             console.log('valid');
@@ -383,19 +703,27 @@ describe('fileUpload', () => {
 
     it('validate on change works', async () => {
       const { input, wrapper } = await createForm(['change']);
-      await setFilesOnInput(input, [new File(['foo'], 'invalid.txt', { type: 'text/plain' })]);
+      await setFilesOnInput(input, [
+        new File(['foo'], 'invalid.txt', { type: 'text/plain' }),
+      ]);
       expect(wrapper.text()).toContain('Error message');
 
-      await setFilesOnInput(input, [new File(['foo'], 'valid', { type: 'text/plain' })]);
+      await setFilesOnInput(input, [
+        new File(['foo'], 'valid', { type: 'text/plain' }),
+      ]);
       expect(wrapper.text()).not.toContain('Error message');
     });
 
     it('validate on input works', async () => {
       const { input, wrapper } = await createForm(['input']);
-      await setFilesOnInput(input, [new File(['foo'], 'invalid.txt', { type: 'text/plain' })]);
+      await setFilesOnInput(input, [
+        new File(['foo'], 'invalid.txt', { type: 'text/plain' }),
+      ]);
       expect(wrapper.text()).toContain('Error message');
 
-      await setFilesOnInput(input, [new File(['foo'], 'valid', { type: 'text/plain' })]);
+      await setFilesOnInput(input, [
+        new File(['foo'], 'valid', { type: 'text/plain' }),
+      ]);
       expect(wrapper.text()).not.toContain('Error message');
     });
   });

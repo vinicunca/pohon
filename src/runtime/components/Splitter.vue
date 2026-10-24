@@ -96,7 +96,10 @@ const appConfig = useAppConfig() as Splitter['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'id', 'autoSaveId', 'keyboardResizeBy', 'storage'));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.splitter || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.splitter || {}),
+})({
   orientation: props.orientation,
 }));
 
@@ -111,11 +114,15 @@ onBeforeUpdate(() => {
 // Panels and handles are matched through their ids, so they have to be derived from the
 // group id to stay identical between the server and the client.
 function getPanelId(item: T, index: number) {
-  return item.id ?? (props.id ? `${props.id}-panel-${index}` : undefined);
+  return item.id ?? (props.id
+    ? `${props.id}-panel-${index}`
+    : undefined);
 }
 
 function getHandleId(index: number) {
-  return props.id ? `${props.id}-handle-${index}` : undefined;
+  return props.id
+    ? `${props.id}-handle-${index}`
+    : undefined;
 }
 
 function setPanelRef(index: number, el: Element | ComponentPublicInstance | null) {

@@ -21,11 +21,15 @@ export function getTemplates(options: ModuleOptions, uiConfig: Record<string, an
   function writeThemeTemplate(theme: Record<string, any>, path?: string) {
     for (const component in theme) {
       templates.push({
-        filename: `ui/${path ? `${path}/` : ''}${toKebabCase(component)}.ts`,
+        filename: `ui/${path
+          ? `${path}/`
+          : ''}${toKebabCase(component)}.ts`,
         write: true,
         getContents: async () => {
           const template = (theme as any)[component];
-          let result = typeof template === 'function' ? template(options) : template;
+          let result = typeof template === 'function'
+            ? template(options)
+            : template;
 
           // Override default variants from nuxt.config.ts
           result = applyDefaultVariants(result, options.theme?.defaultVariants);
@@ -59,7 +63,9 @@ export function getTemplates(options: ModuleOptions, uiConfig: Record<string, an
 
           // For local development, import directly from theme
           if (isDev) {
-            const templatePath = fileURLToPath(new URL(`./theme/${path ? `${path}/` : ''}${toKebabCase(component)}`, import.meta.url));
+            const templatePath = fileURLToPath(new URL(`./theme/${path
+              ? `${path}/`
+              : ''}${toKebabCase(component)}`, import.meta.url));
             const themeUtilsPath = fileURLToPath(new URL('./utils/theme', import.meta.url));
             const defaultVariantsJson = JSON.stringify(options.theme?.defaultVariants) ?? 'undefined';
             const unstyledJson = JSON.stringify(options.theme?.unstyled) ?? 'undefined';
@@ -114,8 +120,12 @@ export function getTemplates(options: ModuleOptions, uiConfig: Record<string, an
     write: true,
     getContents: () => [
       ...Object.keys(theme).map((component) => `export { default as ${component} } from './${toKebabCase(component)}'`),
-      ...(hasContent ? Object.keys(themeContent).map((component) => `export { default as ${component} } from './content/${toKebabCase(component)}'`) : []),
-      ...(hasProse ? ['export * as prose from \'./prose\''] : []),
+      ...(hasContent
+        ? Object.keys(themeContent).map((component) => `export { default as ${component} } from './content/${toKebabCase(component)}'`)
+        : []),
+      ...(hasProse
+        ? ['export * as prose from \'./prose\'']
+        : []),
     ].join('\n'),
   });
 
@@ -124,7 +134,9 @@ export function getTemplates(options: ModuleOptions, uiConfig: Record<string, an
     filename: 'types/ui.d.ts',
     getContents: () => {
       const iconKeys = Object.keys(uiConfig?.icons || {});
-      const iconUnion = iconKeys.length ? iconKeys.map((i) => JSON.stringify(i)).join(' | ') : 'string';
+      const iconUnion = iconKeys.length
+        ? iconKeys.map((i) => JSON.stringify(i)).join(' | ')
+        : 'string';
 
       return `import * as ui from '#build/ui';
 import type { UvConfig, DeepRequired } from 'pohon-ui';
@@ -170,7 +182,11 @@ export {};
     getContents: ({ app }) => {
       const image = app?.components?.find((c) => c.pascalName === 'NuxtImg' && !/nuxt(?:-nightly)?\/dist\/app/.test(c.filePath));
 
-      return image ? genExport(image.filePath, [{ name: image.export, as: 'default' }]) : 'export default "img"';
+      return image
+        ? genExport(image.filePath, [
+            { name: image.export, as: 'default' },
+          ])
+        : 'export default "img"';
     },
   });
 
@@ -188,6 +204,8 @@ export function addTemplates(options: ModuleOptions, nuxt: Nuxt, resolve: Resolv
   }
 
   nuxt.hook('prepare:types', ({ references }) => {
-    references.push({ path: resolve('./runtime/types/app.config.d.ts') });
+    references.push({
+      path: resolve('./runtime/types/app.config.d.ts'),
+    });
   });
 }

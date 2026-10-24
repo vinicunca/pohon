@@ -118,7 +118,10 @@ const appConfig = useAppConfig() as ScrollArea['AppConfig'];
 // When an external scroll element is provided, it owns the scroll (the root grows inline).
 const isExternalScroll = computed(() => typeof props.virtualize === 'object' && !!props.virtualize.getScrollElement);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.scrollArea || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.scrollArea || {}),
+})({
   orientation: props.orientation,
   externalScroll: isExternalScroll.value,
 }));
@@ -130,7 +133,9 @@ const scrollShadowStyle = props.shadow
     computed(() => rootRef.value?.$el as HTMLElement | undefined),
     {
       orientation: () => props.orientation ?? 'vertical',
-      size: typeof props.shadow === 'object' ? props.shadow.size : undefined,
+      size: typeof props.shadow === 'object'
+        ? props.shadow.size
+        : undefined,
     },
   ).style
   : undefined;
@@ -140,10 +145,16 @@ const isHorizontal = computed(() => props.orientation === 'horizontal');
 const isVertical = computed(() => !isHorizontal.value);
 
 // The scroll viewport: the external element when provided, otherwise the component's root.
-const getScrollElement = () => (isExternalScroll.value ? virtualizerProps.value.getScrollElement?.() : rootRef.value?.$el) ?? null;
+function getScrollElement() {
+  return (isExternalScroll.value
+    ? virtualizerProps.value.getScrollElement?.()
+    : rootRef.value?.$el) ?? null;
+}
 
 const virtualizerProps = toRef(() => {
-  const options = typeof props.virtualize === 'boolean' ? {} : props.virtualize;
+  const options = typeof props.virtualize === 'boolean'
+    ? {}
+    : props.virtualize;
 
   return defu(options, {
     estimateSize: 100,
@@ -157,7 +168,9 @@ const virtualizerProps = toRef(() => {
 
 const lanes = computed(() => {
   const value = virtualizerProps.value.lanes;
-  return typeof value === 'number' ? value : undefined;
+  return typeof value === 'number'
+    ? value
+    : undefined;
 });
 
 const skipMeasurement = computed(() => {
@@ -196,17 +209,27 @@ const virtualizer = !!props.virtualize && useVirtualizer({
   },
   estimateSize: (index: number) => {
     const estimate = virtualizerProps.value.estimateSize;
-    return typeof estimate === 'function' ? estimate(index) : estimate;
+    return typeof estimate === 'function'
+      ? estimate(index)
+      : estimate;
   },
 });
 
-const virtualItems = computed<Array<VirtualItem>>(() => virtualizer ? virtualizer.value.getVirtualItems() : []);
-const totalSize = computed(() => virtualizer ? virtualizer.value.getTotalSize() : 0);
+const virtualItems = computed<Array<VirtualItem>>(() => virtualizer
+  ? virtualizer.value.getVirtualItems()
+  : []);
+const totalSize = computed(() => virtualizer
+  ? virtualizer.value.getTotalSize()
+  : 0);
 
 const virtualViewportStyle = computed<CSSProperties>(() => ({
   position: 'relative',
-  inlineSize: isHorizontal.value ? `${totalSize.value}px` : '100%',
-  blockSize: isVertical.value ? `${totalSize.value}px` : '100%',
+  inlineSize: isHorizontal.value
+    ? `${totalSize.value}px`
+    : '100%',
+  blockSize: isVertical.value
+    ? `${totalSize.value}px`
+    : '100%',
 }));
 
 function getVirtualItemStyle(virtualItem: VirtualItem): CSSProperties {
@@ -228,12 +251,22 @@ function getVirtualItemStyle(virtualItem: VirtualItem): CSSProperties {
 
   return {
     position: 'absolute',
-    insetBlockStart: isHorizontal.value && hasLanes ? lanePosition : 0,
-    insetInlineStart: isVertical.value && hasLanes ? lanePosition : 0,
-    blockSize: isHorizontal.value ? (hasLanes ? laneSize : '100%') : undefined,
-    inlineSize: isVertical.value ? (hasLanes ? laneSize : '100%') : undefined,
+    insetBlockStart: isHorizontal.value && hasLanes
+      ? lanePosition
+      : 0,
+    insetInlineStart: isVertical.value && hasLanes
+      ? lanePosition
+      : 0,
+    blockSize: isHorizontal.value
+      ? (hasLanes ? laneSize : '100%')
+      : undefined,
+    inlineSize: isVertical.value
+      ? (hasLanes ? laneSize : '100%')
+      : undefined,
     transform: isHorizontal.value
-      ? `translateX(${isRtl.value ? -offset : offset}px)`
+      ? `translateX(${isRtl.value
+        ? -offset
+        : offset}px)`
       : `translateY(${offset}px)`,
   };
 }
@@ -275,7 +308,9 @@ onUnmounted(() => {
 
 function measureElement(el: Element | ComponentPublicInstance | null) {
   if (el && virtualizer && !skipMeasurement.value) {
-    const element = el instanceof Element ? el : (el as ComponentPublicInstance).$el as Element;
+    const element = el instanceof Element
+      ? el
+      : (el as ComponentPublicInstance).$el as Element;
     virtualizer.value.measureElement(element);
   }
 }

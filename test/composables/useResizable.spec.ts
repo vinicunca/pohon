@@ -4,11 +4,21 @@ import { useResizable } from '../../src/runtime/composables/useResizable';
 
 // A fake pointer event carrying just what the handlers read.
 function mouseEvent(clientX = 0): MouseEvent {
-  return { clientX, preventDefault() {}, stopPropagation() {} } as unknown as MouseEvent;
+  return {
+    clientX,
+    preventDefault() {},
+    stopPropagation() {},
+  } as unknown as MouseEvent;
 }
 
 function touchEvent(clientX = 0): TouchEvent {
-  return { touches: [{ clientX }], preventDefault() {}, stopPropagation() {} } as unknown as TouchEvent;
+  return {
+    touches: [
+      { clientX },
+    ],
+    preventDefault() {},
+    stopPropagation() {},
+  } as unknown as TouchEvent;
 }
 
 // An element with a known width whose parent has a known width, so the
@@ -18,7 +28,17 @@ function mockEl(width = 100, parentWidth = 200): HTMLElement {
   Object.defineProperty(parent, 'offsetWidth', { value: parentWidth, configurable: true });
   const el = document.createElement('div');
   parent.appendChild(el);
-  el.getBoundingClientRect = () => ({ width, height: 0, top: 0, left: 0, right: 0, bottom: 0, x: 0, y: 0, toJSON: () => ({}) });
+  el.getBoundingClientRect = () => ({
+    width,
+    height: 0,
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    x: 0,
+    y: 0,
+    toJSON: () => ({}),
+  });
   return el;
 }
 
@@ -52,7 +72,12 @@ describe('useResizable', () => {
 
   describe('collapse', () => {
     it('toggles collapse and reports the collapsed size while collapsed', () => {
-      const r = useResizable('col', { persistent: false, collapsible: true, defaultSize: 60, collapsedSize: 5 });
+      const r = useResizable('col', {
+        persistent: false,
+        collapsible: true,
+        defaultSize: 60,
+        collapsedSize: 5,
+      });
 
       expect(r.isCollapsed.value).toBe(false);
       expect(r.size.value).toBe(60);
@@ -68,7 +93,12 @@ describe('useResizable', () => {
     });
 
     it('accepts an explicit collapsed value', () => {
-      const r = useResizable('col-explicit', { persistent: false, collapsible: true, defaultSize: 30, collapsedSize: 0 });
+      const r = useResizable('col-explicit', {
+        persistent: false,
+        collapsible: true,
+        defaultSize: 30,
+        collapsedSize: 0,
+      });
 
       r.collapse(true);
       expect(r.isCollapsed.value).toBe(true);
@@ -88,7 +118,12 @@ describe('useResizable', () => {
 
     it('syncs with an external collapsed ref both ways', async () => {
       const collapsed = ref(false);
-      const r = useResizable('ext', { persistent: false, collapsible: true, defaultSize: 50, collapsedSize: 0 }, { collapsed });
+      const r = useResizable('ext', {
+        persistent: false,
+        collapsible: true,
+        defaultSize: 50,
+        collapsedSize: 0,
+      }, { collapsed });
 
       // Internal -> external
       r.collapse(true);
@@ -105,7 +140,12 @@ describe('useResizable', () => {
 
   describe('onDoubleClick', () => {
     it('expands a collapsed panel and resets to the default size', () => {
-      const r = useResizable('dbl', { persistent: false, collapsible: true, defaultSize: 40, collapsedSize: 0 });
+      const r = useResizable('dbl', {
+        persistent: false,
+        collapsible: true,
+        defaultSize: 40,
+        collapsedSize: 0,
+      });
       r.el.value = mockEl();
 
       r.collapse(true);
@@ -120,7 +160,13 @@ describe('useResizable', () => {
 
   describe('mouse drag', () => {
     it('starts dragging, resizes as a percentage, then stops on mouseup', () => {
-      const r = useResizable('drag', { persistent: false, unit: '%', side: 'left', minSize: 0, maxSize: 100 });
+      const r = useResizable('drag', {
+        persistent: false,
+        unit: '%',
+        side: 'left',
+        minSize: 0,
+        maxSize: 100,
+      });
       r.el.value = mockEl(100, 200);
 
       r.onMouseDown(mouseEvent(0));
@@ -135,7 +181,13 @@ describe('useResizable', () => {
     });
 
     it('clamps the size to maxSize', () => {
-      const r = useResizable('clamp', { persistent: false, unit: '%', side: 'left', minSize: 10, maxSize: 60 });
+      const r = useResizable('clamp', {
+        persistent: false,
+        unit: '%',
+        side: 'left',
+        minSize: 10,
+        maxSize: 60,
+      });
       r.el.value = mockEl(100, 200);
 
       r.onMouseDown(mouseEvent(0));

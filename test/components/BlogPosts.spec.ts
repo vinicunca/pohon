@@ -15,12 +15,14 @@ describe('blogPosts', () => {
         alt: 'Image alt',
       },
       badge: { label: 'Badge' },
-      authors: [{
-        name: 'Author',
-        avatar: {
-          src: 'https://i.pravatar.cc/120?img=1',
+      authors: [
+        {
+          name: 'Author',
+          avatar: {
+            src: 'https://i.pravatar.cc/120?img=1',
+          },
         },
-      }],
+      ],
     },
   ];
 
@@ -28,12 +30,38 @@ describe('blogPosts', () => {
 
   renderEach(BlogPosts, [
     // Props
-    ['with posts', { props }],
-    ['with orientation vertical', { props: { ...props, orientation: 'vertical' } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'gap-y-12' } }],
+    [
+      'with posts',
+      { props },
+    ],
+    [
+      'with orientation vertical',
+      {
+        props: { ...props, orientation: 'vertical' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'gap-y-12' },
+      },
+    ],
     // Slots
-    ['with default slot', { props, slots: { default: () => 'Default slot' } }],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

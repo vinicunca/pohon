@@ -156,7 +156,12 @@ describe('useFileUpload', () => {
     it('matches full MIME types and extensions', async () => {
       const onUpdate = vi.fn();
       const onReject = vi.fn();
-      await mountUpload({ onUpdate, onReject, multiple: true, accept: '.pdf, image/png' });
+      await mountUpload({
+        onUpdate,
+        onReject,
+        multiple: true,
+        accept: '.pdf, image/png',
+      });
       const pdf = file('A.PDF', '');
       const png = file('b.png', 'image/png');
       const jpg = file('c.jpg', 'image/jpeg');
@@ -230,7 +235,10 @@ describe('useFileUpload', () => {
 
     it('registers the drop zone once dropzone is enabled', async () => {
       const dropzone = ref(false);
-      await mountUpload({ onUpdate: vi.fn(), dropzone });
+      await mountUpload({
+        onUpdate: vi.fn(),
+        dropzone,
+      });
 
       expect(vueuse.dropOptions).toBeUndefined();
 
@@ -242,7 +250,10 @@ describe('useFileUpload', () => {
 
     it('stops dragging when dropzone is disabled mid-drag', async () => {
       const dropzone = ref(true);
-      const { api } = await mountUpload({ onUpdate: vi.fn(), dropzone });
+      const { api } = await mountUpload({
+        onUpdate: vi.fn(),
+        dropzone,
+      });
 
       vueuse.isOver!.value = true;
       await nextTick();

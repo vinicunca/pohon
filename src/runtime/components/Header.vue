@@ -120,7 +120,10 @@ watch(() => route.fullPath, () => {
   open.value = false;
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.header || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.header || {}),
+})());
 
 const { slideover: PSlideover, modal: PModal, drawer: PDrawer } = lazyOverlays;
 
@@ -130,7 +133,9 @@ const Menu = computed(() => ({
   drawer: PDrawer,
 })[props.mode as HeaderMode]);
 
-const menuProps = toRef(() => defu(props.menu, {}, props.mode === 'modal' ? { fullscreen: true, transition: false } : {}) as HeaderMenu<T>);
+const menuProps = toRef(() => defu(props.menu, {}, props.mode === 'modal'
+  ? { fullscreen: true, transition: false }
+  : {}) as Omit<HeaderMenu<T>, 'modal'> & Pick<ModalProps, 'modal'>);
 
 const renderMenu = useLazyOverlay(() => open.value || (props.menu as ModalProps | undefined)?.unmountOnHide === false, () => loadOverlay(props.mode as HeaderMode));
 

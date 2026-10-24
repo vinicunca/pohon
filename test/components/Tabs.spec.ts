@@ -36,26 +36,137 @@ describe('tabs', () => {
 
   renderEach(Tabs, [
     // Props
-    ['with items', { props }],
-    ['with modelValue', { props: { ...props, modelValue: '1' } }],
-    ['with defaultValue', { props: { ...props, defaultValue: '1' } }],
-    ['with valueKey', { props: { ...props, valueKey: 'label', defaultValue: 'Tab1' } }],
-    ['with labelKey', { props: { ...props, labelKey: 'icon' } }],
-    ['with orientation vertical', { props: { ...props, orientation: 'vertical' } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { ...props, size } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { ...props, variant } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { ...props, variant, color: 'neutral' } }]),
-    ['without content', { props: { ...props, content: false } }],
-    ['with unmountOnHide', { props: { ...props, unmountOnHide: false } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'w-96' } }],
-    ['with ui', { props: { ...props, ui: { content: 'w-full ring ring-border' } } }],
+    [
+      'with items',
+      { props },
+    ],
+    [
+      'with modelValue',
+      {
+        props: { ...props, modelValue: '1' },
+      },
+    ],
+    [
+      'with defaultValue',
+      {
+        props: { ...props, defaultValue: '1' },
+      },
+    ],
+    [
+      'with valueKey',
+      {
+        props: { ...props, valueKey: 'label', defaultValue: 'Tab1' },
+      },
+    ],
+    [
+      'with labelKey',
+      {
+        props: { ...props, labelKey: 'icon' },
+      },
+    ],
+    [
+      'with orientation vertical',
+      {
+        props: { ...props, orientation: 'vertical' },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { ...props, size },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant}`,
+      {
+        props: { ...props, variant },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant}`,
+      {
+        props: { ...props, variant, color: 'neutral' },
+      },
+    ]),
+    [
+      'without content',
+      {
+        props: { ...props, content: false },
+      },
+    ],
+    [
+      'with unmountOnHide',
+      {
+        props: { ...props, unmountOnHide: false },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'w-96' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { content: 'w-full ring ring-border' },
+        },
+      },
+    ],
     // Slots
-    ['with leading slot', { props, slots: { leading: () => 'Leading slot' } }],
-    ['with default slot', { props, slots: { default: () => 'Default slot' } }],
-    ['with trailing slot', { props, slots: { trailing: () => 'Trailing slot' } }],
-    ['with content slot', { props, slots: { content: () => 'Content slot' } }],
-    ['with custom slot', { props, slots: { custom: () => 'Custom slot' } }],
+    [
+      'with leading slot',
+      {
+        props,
+        slots: {
+          leading: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with trailing slot',
+      {
+        props,
+        slots: {
+          trailing: () => 'Trailing slot',
+        },
+      },
+    ],
+    [
+      'with content slot',
+      {
+        props,
+        slots: {
+          content: () => 'Content slot',
+        },
+      },
+    ],
+    [
+      'with custom slot',
+      {
+        props,
+        slots: {
+          custom: () => 'Custom slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

@@ -41,17 +41,20 @@ export default {
       },
     },
   },
-  compoundVariants: [{
-    scrollable: true,
-    fullscreen: false,
-    class: {
-      overlay: 'grid place-items-center p-4 sm:py-8',
+  compoundVariants: [
+    {
+      scrollable: true,
+      fullscreen: false,
+      class: {
+        overlay: 'grid place-items-center p-4 sm:py-8',
+      },
     },
-  }, {
-    scrollable: false,
-    fullscreen: false,
-    class: {
-      content: 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-h-[calc(100dvh-2rem)] sm:max-h-[calc(100dvh-4rem)] overflow-hidden',
+    {
+      scrollable: false,
+      fullscreen: false,
+      class: {
+        content: 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-h-[calc(100dvh-2rem)] sm:max-h-[calc(100dvh-4rem)] overflow-hidden',
+      },
     },
-  }],
+  ],
 };

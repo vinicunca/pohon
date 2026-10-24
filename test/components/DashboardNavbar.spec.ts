@@ -26,23 +26,124 @@ describe('dashboardNavbar', () => {
     DashboardWrapper,
     [
     // Props
-      ['with icon', { props: { icon: 'i-lucide-house' } }],
-      ['with title', { props: { title: 'Dashboard' } }],
-      ['without toggle', { props: { toggle: false } }],
-      ['with toggle', { props: { toggle: { color: 'primary' as const, variant: 'solid' as const } } }],
-      ['with toggleSide', { props: { toggleSide: 'right' as const } }],
-      ['with as', { props: { as: 'section' } }],
-      ['with as object', { props: { title: 'Dashboard', as: { root: 'section', title: 'h2' } } }],
-      ['with class', { props: { class: 'px-8' } }],
-      ['with ui', { props: { ui: { left: 'gap-3' } } }],
+      [
+        'with icon',
+        {
+          props: { icon: 'i-lucide-house' },
+        },
+      ],
+      [
+        'with title',
+        {
+          props: { title: 'Dashboard' },
+        },
+      ],
+      [
+        'without toggle',
+        {
+          props: { toggle: false },
+        },
+      ],
+      [
+        'with toggle',
+        {
+          props: {
+            toggle: { color: 'primary' as const, variant: 'solid' as const },
+          },
+        },
+      ],
+      [
+        'with toggleSide',
+        {
+          props: { toggleSide: 'right' as const },
+        },
+      ],
+      [
+        'with as',
+        {
+          props: { as: 'section' },
+        },
+      ],
+      [
+        'with as object',
+        {
+          props: {
+            title: 'Dashboard',
+            as: { root: 'section', title: 'h2' },
+          },
+        },
+      ],
+      [
+        'with class',
+        {
+          props: { class: 'px-8' },
+        },
+      ],
+      [
+        'with ui',
+        {
+          props: {
+            ui: { left: 'gap-3' },
+          },
+        },
+      ],
       // Slots
-      ['with title slot', { slots: { title: () => 'Title slot' } }],
-      ['with leading slot', { slots: { leading: () => 'Leading slot' } }],
-      ['with trailing slot', { slots: { trailing: () => 'Trailing slot' } }],
-      ['with left slot', { slots: { left: () => 'Left slot' } }],
-      ['with default slot', { slots: { default: () => 'Default slot' } }],
-      ['with right slot', { slots: { right: () => 'Right slot' } }],
-      ['with toggle slot', { slots: { toggle: () => 'Toggle slot' } }],
+      [
+        'with title slot',
+        {
+          slots: {
+            title: () => 'Title slot',
+          },
+        },
+      ],
+      [
+        'with leading slot',
+        {
+          slots: {
+            leading: () => 'Leading slot',
+          },
+        },
+      ],
+      [
+        'with trailing slot',
+        {
+          slots: {
+            trailing: () => 'Trailing slot',
+          },
+        },
+      ],
+      [
+        'with left slot',
+        {
+          slots: {
+            left: () => 'Left slot',
+          },
+        },
+      ],
+      [
+        'with default slot',
+        {
+          slots: {
+            default: () => 'Default slot',
+          },
+        },
+      ],
+      [
+        'with right slot',
+        {
+          slots: {
+            right: () => 'Right slot',
+          },
+        },
+      ],
+      [
+        'with toggle slot',
+        {
+          slots: {
+            toggle: () => 'Toggle slot',
+          },
+        },
+      ],
     ],
     async (_, options) => {
       const wrapper = await mountSuspended(DashboardWrapper, options);

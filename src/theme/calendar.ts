@@ -35,10 +35,13 @@ export default (options: Required<ModuleOptions>) => ({
   },
   variants: {
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        headCell: `color-${color}`,
-        cellTrigger: `outline-${color}/25`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          headCell: `color-${color}`,
+          cellTrigger: `outline-${color}/25`,
+        },
+      ])),
       neutral: {
         headCell: 'color-text-highlighted',
         cellTrigger: 'outline-border-inverted/25',

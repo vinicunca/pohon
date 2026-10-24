@@ -111,7 +111,10 @@ const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 // `readonly` blocks interaction too, but only an explicit `disabled` dims the control.
 const rootDisabled = computed(() => disabled.value || props.readonly);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputRating || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.inputRating || {}),
+})({
   size: size.value,
   color: color.value,
   orientation: props.orientation,
@@ -123,7 +126,9 @@ const starIcon = computed(() => props.icon ?? appConfig.ui.icons.star);
 
 function onUpdate(value: number) {
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value } });
+  const event = new Event('change', {
+    target: { value },
+  });
   emits('change', event);
   emitFormChange();
   emitFormInput();

@@ -16,9 +16,11 @@ export default {
       false: 'w-full',
     },
   },
-  compoundVariants: [{
-    zoom: true,
-    open: false,
-    class: 'cursor-zoom-in',
-  }],
+  compoundVariants: [
+    {
+      zoom: true,
+      open: false,
+      class: 'cursor-zoom-in',
+    },
+  ],
 };

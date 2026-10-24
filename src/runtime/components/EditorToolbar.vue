@@ -150,7 +150,10 @@ const options = computed(() => defu((props as any).options, {
   shift: { padding: 8 },
 }));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.editorToolbar || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.editorToolbar || {}),
+})({
   layout: props.layout,
 }));
 
@@ -188,7 +191,9 @@ function isDisabled(item: EditorToolbarItem): boolean {
   }
 
   if ('items' in item && item.items?.length) {
-    const items = isArrayOfArray(item.items) ? item.items.flat() : item.items;
+    const items = isArrayOfArray(item.items)
+      ? item.items.flat()
+      : item.items;
     // Filter out structural elements (separators, labels)
     const actionableItems = items.filter((item: any) => item.type !== 'separator' && item.type !== 'label');
 
@@ -224,7 +229,9 @@ function onClick(e: MouseEvent, item: EditorToolbarItem) {
 
   if (('items' in item) || !('kind' in item)) {
     if ('onClick' in item) {
-      for (const onClick of Array.isArray(item.onClick) ? item.onClick : [item.onClick]) {
+      for (const onClick of Array.isArray(item.onClick)
+        ? item.onClick
+        : [item.onClick]) {
         onClick?.(e);
       }
     }
@@ -242,7 +249,9 @@ function getActiveChildItem(item: EditorToolbarDropdownItem): EditorToolbarItem 
     return undefined;
   }
 
-  const items = isArrayOfArray(item.items) ? item.items.flat() : item.items;
+  const items = isArrayOfArray(item.items)
+    ? item.items.flat()
+    : item.items;
 
   return items.find((childItem: any): childItem is EditorToolbarItem => {
     if (!('kind' in childItem)) {
@@ -253,7 +262,26 @@ function getActiveChildItem(item: EditorToolbarDropdownItem): EditorToolbarItem 
 }
 
 function getButtonProps(item: EditorToolbarItem) {
-  const baseProps = omit(item as any, ['kind', 'mark', 'align', 'level', 'href', 'src', 'pos', 'items', 'slot', 'checkedIcon', 'loadingIcon', 'externalIcon', 'content', 'arrow', 'portal', 'modal', 'tooltip', 'onClick']);
+  const baseProps = omit(item as any, [
+    'kind',
+    'mark',
+    'align',
+    'level',
+    'href',
+    'src',
+    'pos',
+    'items',
+    'slot',
+    'checkedIcon',
+    'loadingIcon',
+    'externalIcon',
+    'content',
+    'arrow',
+    'portal',
+    'modal',
+    'tooltip',
+    'onClick',
+  ]);
 
   // For dropdown items, use the active child's icon if available
   if ('items' in item && item.items?.length) {
@@ -277,7 +305,17 @@ function getButtonProps(item: EditorToolbarItem) {
 }
 
 function getDropdownProps(item: EditorToolbarDropdownItem) {
-  const baseProps = pick(item as any, ['size', 'checkedIcon', 'loadingIcon', 'externalIcon', 'content', 'arrow', 'portal', 'modal', 'ui']);
+  const baseProps = pick(item as any, [
+    'size',
+    'checkedIcon',
+    'loadingIcon',
+    'externalIcon',
+    'content',
+    'arrow',
+    'portal',
+    'modal',
+    'ui',
+  ]);
 
   return defu(baseProps, {
     modal: false,
@@ -293,7 +331,9 @@ function mapDropdownItem(item: EditorToolbarDropdownChildItem): DropdownMenuItem
 
   // If it's a separator or label (no 'kind' property), return with mapped children
   if (!('kind' in item)) {
-    return children ? { ...item, children } : item;
+    return children
+      ? { ...item, children }
+      : item;
   }
 
   const editorToolbarItem = item as EditorToolbarDropdownChildItem;
@@ -313,7 +353,9 @@ function getDropdownItems(item: EditorToolbarDropdownItem) {
 
   return isArrayOfArray(item.items)
     ? item.items.map((group: any) => group.map(mapDropdownItem))
-    : [item.items.map(mapDropdownItem)];
+    : [
+        item.items.map(mapDropdownItem),
+      ];
 }
 </script>
 

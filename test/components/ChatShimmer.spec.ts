@@ -11,11 +11,37 @@ describe('chatShimmer', () => {
 
   renderEach(ChatShimmer, [
     // Props
-    ['with text', { props }],
-    ['with duration', { props: { ...props, duration: 3 } }],
-    ['with spread', { props: { ...props, spread: 4 } }],
-    ['with class', { props: { ...props, class: 'font-700' } }],
-    ['with ui', { props: { ...props, ui: { base: 'font-700' } } }],
+    [
+      'with text',
+      { props },
+    ],
+    [
+      'with duration',
+      {
+        props: { ...props, duration: 3 },
+      },
+    ],
+    [
+      'with spread',
+      {
+        props: { ...props, spread: 4 },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'font-700' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { base: 'font-700' },
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

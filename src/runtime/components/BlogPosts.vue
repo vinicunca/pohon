@@ -60,7 +60,10 @@ const getProxySlots = () => omit(slots, ['default']);
 
 const appConfig = useAppConfig() as BlogPosts['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.blogPosts || {}) }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.blogPosts || {}),
+}));
 </script>
 
 <template>

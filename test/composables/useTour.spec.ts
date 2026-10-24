@@ -9,7 +9,11 @@ describe('useTour', () => {
 
   describe('state & navigation', () => {
     it('starts closed with sensible defaults', () => {
-      const tour = useTour([{ title: 'a' }, { title: 'b' }, { title: 'c' }]);
+      const tour = useTour([
+        { title: 'a' },
+        { title: 'b' },
+        { title: 'c' },
+      ]);
 
       expect(tour.open.value).toBe(false);
       expect(tour.index.value).toBe(0);
@@ -20,7 +24,11 @@ describe('useTour', () => {
     });
 
     it('opens with start() and walks forward/back', () => {
-      const tour = useTour([{ title: 'a' }, { title: 'b' }, { title: 'c' }]);
+      const tour = useTour([
+        { title: 'a' },
+        { title: 'b' },
+        { title: 'c' },
+      ]);
 
       tour.start();
       expect(tour.open.value).toBe(true);
@@ -40,7 +48,10 @@ describe('useTour', () => {
     });
 
     it('finishes (closes) when calling next() on the last step without loop', () => {
-      const tour = useTour([{ title: 'a' }, { title: 'b' }]);
+      const tour = useTour([
+        { title: 'a' },
+        { title: 'b' },
+      ]);
 
       tour.start(1);
       expect(tour.open.value).toBe(true);
@@ -50,7 +61,10 @@ describe('useTour', () => {
     });
 
     it('loops back to the first step when loop is enabled', () => {
-      const tour = useTour([{ title: 'a' }, { title: 'b' }], { loop: true });
+      const tour = useTour([
+        { title: 'a' },
+        { title: 'b' },
+      ], { loop: true });
 
       tour.start(1);
       tour.next();
@@ -59,7 +73,11 @@ describe('useTour', () => {
     });
 
     it('clamps goTo() to the steps range and opens', () => {
-      const tour = useTour([{ title: 'a' }, { title: 'b' }, { title: 'c' }]);
+      const tour = useTour([
+        { title: 'a' },
+        { title: 'b' },
+        { title: 'c' },
+      ]);
 
       tour.goTo(99);
       expect(tour.index.value).toBe(2);
@@ -70,7 +88,10 @@ describe('useTour', () => {
     });
 
     it('respects initialStep', () => {
-      const tour = useTour([{ title: 'a' }, { title: 'b' }], { initialStep: 1 });
+      const tour = useTour([
+        { title: 'a' },
+        { title: 'b' },
+      ], { initialStep: 1 });
 
       expect(tour.index.value).toBe(1);
       tour.start();
@@ -78,7 +99,9 @@ describe('useTour', () => {
     });
 
     it('closes automatically when the steps become empty', async () => {
-      const steps = ref([{ title: 'a' }]);
+      const steps = ref([
+        { title: 'a' },
+      ]);
       const tour = useTour(steps);
 
       tour.start();
@@ -103,7 +126,14 @@ describe('useTour', () => {
     });
 
     it('passes arbitrary step fields through via current', () => {
-      const tour = useTour([{ target: null, title: 'x', side: 'right', body: 'hello' }]);
+      const tour = useTour([
+        {
+          target: null,
+          title: 'x',
+          side: 'right',
+          body: 'hello',
+        },
+      ]);
       tour.start();
 
       expect(tour.current.value?.side).toBe('right');
@@ -114,14 +144,18 @@ describe('useTour', () => {
   describe('reference resolution', () => {
     it('is undefined while the tour is closed', () => {
       const el = document.createElement('div');
-      const tour = useTour([{ target: el }]);
+      const tour = useTour([
+        { target: el },
+      ]);
 
       expect(tour.reference.value).toBeUndefined();
     });
 
     it('resolves a direct element target', () => {
       const el = document.createElement('div');
-      const tour = useTour([{ target: el }]);
+      const tour = useTour([
+        { target: el },
+      ]);
       tour.start();
 
       expect(tour.reference.value).toBe(el);
@@ -129,7 +163,11 @@ describe('useTour', () => {
 
     it('resolves a getter target', () => {
       const el = document.createElement('div');
-      const tour = useTour([{ target: () => el }]);
+      const tour = useTour([
+        {
+          target: () => el,
+        },
+      ]);
       tour.start();
 
       expect(tour.reference.value).toBe(el);
@@ -140,7 +178,9 @@ describe('useTour', () => {
       el.id = 'tour-step';
       document.body.appendChild(el);
 
-      const tour = useTour([{ target: '#tour-step' }]);
+      const tour = useTour([
+        { target: '#tour-step' },
+      ]);
       tour.start();
 
       expect(tour.reference.value).toBe(el);
@@ -151,7 +191,9 @@ describe('useTour', () => {
       el.id = 'bare-id';
       document.body.appendChild(el);
 
-      const tour = useTour([{ target: 'bare-id' }]);
+      const tour = useTour([
+        { target: 'bare-id' },
+      ]);
       tour.start();
 
       expect(tour.reference.value).toBe(el);
@@ -162,7 +204,9 @@ describe('useTour', () => {
       el.setAttribute('data-tour', 'step');
       document.body.appendChild(el);
 
-      const tour = useTour([{ target: 'button[data-tour="step"]' }]);
+      const tour = useTour([
+        { target: 'button[data-tour="step"]' },
+      ]);
       tour.start();
 
       expect(tour.reference.value).toBe(el);
@@ -174,7 +218,9 @@ describe('useTour', () => {
       el.id = 'header';
       document.body.append(tag, el);
 
-      const tour = useTour([{ target: 'header' }]);
+      const tour = useTour([
+        { target: 'header' },
+      ]);
       tour.start();
 
       expect(tour.reference.value).toBe(el);
@@ -184,7 +230,9 @@ describe('useTour', () => {
       const tag = document.createElement('header');
       document.body.appendChild(tag);
 
-      const tour = useTour([{ target: 'header' }]);
+      const tour = useTour([
+        { target: 'header' },
+      ]);
       tour.start();
 
       expect(tour.reference.value).toBeUndefined();
@@ -197,21 +245,27 @@ describe('useTour', () => {
       el.id = 'cta';
       document.body.append(literal, el);
 
-      const tour = useTour([{ target: '#cta' }]);
+      const tour = useTour([
+        { target: '#cta' },
+      ]);
       tour.start();
 
       expect(tour.reference.value).toBe(el);
     });
 
     it('is undefined for a non-matching selector', () => {
-      const tour = useTour([{ target: '#no-such-id' }]);
+      const tour = useTour([
+        { target: '#no-such-id' },
+      ]);
       tour.start();
 
       expect(tour.reference.value).toBeUndefined();
     });
 
     it('does not throw on a malformed selector and resolves to undefined', () => {
-      const tour = useTour([{ target: '#a b]' }]);
+      const tour = useTour([
+        { target: '#a b]' },
+      ]);
       tour.start();
 
       expect(() => tour.reference.value).not.toThrow();
@@ -219,7 +273,9 @@ describe('useTour', () => {
     });
 
     it('falls back to a centered virtual element when target is null', () => {
-      const tour = useTour([{ target: null }]);
+      const tour = useTour([
+        { target: null },
+      ]);
       tour.start();
 
       expect(typeof tour.reference.value?.getBoundingClientRect).toBe('function');

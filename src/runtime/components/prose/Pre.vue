@@ -59,7 +59,10 @@ const appConfig = useAppConfig() as ProsePre['AppConfig'];
 
 const baseRef = useTemplateRef('baseRef');
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.pre || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.pre || {}),
+})());
 
 function copyCode() {
   const code = props.code ?? baseRef.value?.textContent ?? '';

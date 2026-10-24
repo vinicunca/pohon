@@ -5,7 +5,9 @@ import ComponentImportPlugin from '../../src/plugins/components';
 const runtimeDir = join(process.cwd(), 'src/runtime');
 
 // `src/unplugin` resolves `runtimeDir` from `import.meta.url`, which is not a file url under happy-dom.
-vi.mock('../../src/unplugin', () => ({ runtimeDir: join(process.cwd(), 'src/runtime') }));
+vi.mock('../../src/unplugin', () => ({
+  runtimeDir: join(process.cwd(), 'src/runtime'),
+}));
 
 function resolveId(id: string, importer?: string, options: Record<string, any> = {}) {
   const [plugin] = ComponentImportPlugin({ prefix: 'P', components: false, ...options } as any, { framework: 'vite' } as any);

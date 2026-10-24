@@ -9,26 +9,126 @@ import { renderEach } from '../component-render';
 describe('link', () => {
   renderEach(Link, [
     // Props
-    ['with as', { props: { as: 'div' } }],
-    ['with to', { props: { to: '/' } }],
-    ['with type', { props: { type: 'submit' } }],
-    ['with disabled', { props: { disabled: true } }],
-    ['with activeClass', { props: { active: true, activeClass: 'color-text-highlighted' } }],
-    ['with inactiveClass', { props: { active: false, inactiveClass: 'hover:color-primary' } }],
-    ['with raw', { props: { raw: true } }],
-    ['with raw activeClass', { props: { raw: true, active: true, activeClass: 'color-text-highlighted' } }],
-    ['with raw inactiveClass', { props: { raw: true, active: false, inactiveClass: 'hover:color-primary' } }],
-    ['with class', { props: { class: 'font-500' } }],
-    ['with external to', { props: { to: 'https://example.com' } }],
-    ['with external to and target', { props: { to: 'https://example.com', target: '_blank' } }],
-    ['with internal to and target', { props: { to: '/about', target: '_blank' } }],
-    ['with internal to object and target', { props: { to: { path: '/about' }, target: '_blank' } }],
-    ['with internal to and rel', { props: { to: '/about', rel: 'nofollow' } }],
-    ['with internal to and noRel', { props: { to: '/about', rel: 'nofollow', noRel: true } }],
-    ['with external to and rel', { props: { to: 'https://example.com', rel: 'nofollow' } }],
-    ['with external prop', { props: { to: '/api/download', external: true } }],
+    [
+      'with as',
+      {
+        props: { as: 'div' },
+      },
+    ],
+    [
+      'with to',
+      {
+        props: { to: '/' },
+      },
+    ],
+    [
+      'with type',
+      {
+        props: { type: 'submit' },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { disabled: true },
+      },
+    ],
+    [
+      'with activeClass',
+      {
+        props: { active: true, activeClass: 'color-text-highlighted' },
+      },
+    ],
+    [
+      'with inactiveClass',
+      {
+        props: { active: false, inactiveClass: 'hover:color-primary' },
+      },
+    ],
+    [
+      'with raw',
+      {
+        props: { raw: true },
+      },
+    ],
+    [
+      'with raw activeClass',
+      {
+        props: { raw: true, active: true, activeClass: 'color-text-highlighted' },
+      },
+    ],
+    [
+      'with raw inactiveClass',
+      {
+        props: { raw: true, active: false, inactiveClass: 'hover:color-primary' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'font-500' },
+      },
+    ],
+    [
+      'with external to',
+      {
+        props: { to: 'https://example.com' },
+      },
+    ],
+    [
+      'with external to and target',
+      {
+        props: { to: 'https://example.com', target: '_blank' },
+      },
+    ],
+    [
+      'with internal to and target',
+      {
+        props: { to: '/about', target: '_blank' },
+      },
+    ],
+    [
+      'with internal to object and target',
+      {
+        props: {
+          to: { path: '/about' },
+          target: '_blank',
+        },
+      },
+    ],
+    [
+      'with internal to and rel',
+      {
+        props: { to: '/about', rel: 'nofollow' },
+      },
+    ],
+    [
+      'with internal to and noRel',
+      {
+        props: { to: '/about', rel: 'nofollow', noRel: true },
+      },
+    ],
+    [
+      'with external to and rel',
+      {
+        props: { to: 'https://example.com', rel: 'nofollow' },
+      },
+    ],
+    [
+      'with external prop',
+      {
+        props: { to: '/api/download', external: true },
+      },
+    ],
     // Slots
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('propagates async click handler errors to onErrorCaptured', async () => {
@@ -38,7 +138,9 @@ describe('link', () => {
       setup() {
         onErrorCaptured(onError);
 
-        return { onClick: () => Promise.reject(new Error('click error')) };
+        return {
+          onClick: () => Promise.reject(new Error('click error')),
+        };
       },
       template: `
         <Link @click="onClick"> Click </Link>

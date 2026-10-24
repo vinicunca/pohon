@@ -109,7 +109,10 @@ const appConfig = useAppConfig() as Stepper['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'linear'));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.stepper || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.stepper || {}),
+})({
   orientation: props.orientation,
   size: props.size,
   color: props.color,

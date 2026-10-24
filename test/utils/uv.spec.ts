@@ -13,14 +13,26 @@ describe('uv class replace', () => {
   const theme = {
     slots: { base: 'inline-flex rounded-md text-sm', label: 'truncate' },
     variants: {
-      color: { primary: { base: 'bg-primary color-text-inverted' } },
-      size: { md: { base: 'px-2.5 text-sm' } },
+      color: {
+        primary: { base: 'bg-primary color-text-inverted' },
+      },
+      size: {
+        md: { base: 'px-2.5 text-sm' },
+      },
     },
-    compoundVariants: [{ color: 'primary', size: 'md', class: { base: 'gap-1.5' } }],
+    compoundVariants: [
+      {
+        color: 'primary',
+        size: 'md',
+        class: { base: 'gap-1.5' },
+      },
+    ],
     defaultVariants: { color: 'primary', size: 'md' },
   };
 
-  const build = () => uvt({ extend: uvt(theme) })({ color: 'primary', size: 'md' });
+  const build = () => uvt({
+    extend: uvt(theme),
+  })({ color: 'primary', size: 'md' });
   // Mirrors a component config with `app.config.ui` slot overrides spread in.
   const buildWith = (slots: any) => uvt({ extend: theme, slots })({ color: 'primary', size: 'md' });
 
@@ -40,7 +52,9 @@ describe('uv class replace', () => {
   });
 
   it('replaces a slot via a function in `:ui` and drops the defaults', () => {
-    expect(build().label({ class: () => 'text-3xl font-700' })).toBe('text-3xl font-700');
+    expect(build().label({
+      class: () => 'text-3xl font-700',
+    })).toBe('text-3xl font-700');
   });
 
   it('passes the resolved default classes to the replacer', () => {
@@ -55,26 +69,39 @@ describe('uv class replace', () => {
   });
 
   it('keeps plain classes passed alongside the replacer', () => {
-    expect(build().label({ class: [() => 'text-3xl', 'opacity-50'] })).toBe('text-3xl opacity-50');
+    expect(build().label({
+      class: [
+        () => 'text-3xl',
+        'opacity-50',
+      ],
+    })).toBe('text-3xl opacity-50');
   });
 
   it('detects a replacer as a scalar value (the `transformUI` path)', () => {
-    expect(build().base({ class: () => 'block w-full' })).toBe('block w-full');
+    expect(build().base({
+      class: () => 'block w-full',
+    })).toBe('block w-full');
   });
 
   it('detects a replacer in the `className` alias', () => {
-    expect(build().label({ className: () => 'text-3xl' })).toBe('text-3xl');
+    expect(build().label({
+      className: () => 'text-3xl',
+    })).toBe('text-3xl');
   });
 
   it('applies a construction-time replacer from `app.config.ui` slots', () => {
-    const ui = buildWith({ label: () => 'text-xl' });
+    const ui = buildWith({
+      label: () => 'text-xl',
+    });
     expect(ui.label()).toBe('text-xl');
     // A sibling slot keeps its defaults.
     expect(ui.base()).toContain('inline-flex');
   });
 
   it('keeps variants and compound variants on a construction-time replacer', () => {
-    const base = buildWith({ base: () => 'block w-full' }).base();
+    const base = buildWith({
+      base: () => 'block w-full',
+    }).base();
 
     expect(base).not.toContain('inline-flex');
     expect(base).not.toContain('rounded-md');
@@ -99,21 +126,37 @@ describe('uv class replace', () => {
   });
 
   it('merges call-time classes onto a construction-time replacement', () => {
-    expect(buildWith({ label: () => 'text-xl' }).label({ class: 'font-700' })).toBe('text-xl font-700');
+    expect(buildWith({
+      label: () => 'text-xl',
+    }).label({ class: 'font-700' })).toBe('text-xl font-700');
   });
 
   it('lets a call-time `:ui` replacer win over an `app.config.ui` one', () => {
-    expect(buildWith({ label: () => 'from-config' }).label({ class: () => 'from-ui' })).toBe('from-ui');
+    expect(buildWith({
+      label: () => 'from-config',
+    }).label({
+      class: () => 'from-ui',
+    })).toBe('from-ui');
   });
 
   it('replaces the base slot through a function forwarded in the class array', () => {
     // Mirrors how components forward `class: [props.ui?.base, props.class]`.
-    expect(build().base({ class: [undefined, () => 'block w-full'] })).toBe('block w-full');
+    expect(build().base({
+      class: [
+        undefined,
+        () => 'block w-full',
+      ],
+    })).toBe('block w-full');
   });
 
   it('lets the last replacer win when several are forwarded in the class array', () => {
     // Mirrors `[props.ui?.base, props.class]` with both set: `class` wins, like twMerge.
-    expect(build().base({ class: [() => 'block', () => 'w-full'] })).toBe('w-full');
+    expect(build().base({
+      class: [
+        () => 'block',
+        () => 'w-full',
+      ],
+    })).toBe('w-full');
   });
 });
 
@@ -121,7 +164,9 @@ describe('uv class replace (slotless component)', () => {
   // A slotless theme has only a `base` and no `slots`, so `uv()(props)` returns
   // a string rather than an object of slot functions (e.g. the Container theme).
   const uvBase = uv as unknown as (config?: any) => (props?: any) => string;
-  const build = () => uvBase({ extend: uvBase({ base: 'inline-flex rounded-md px-4' }) });
+  const build = () => uvBase({
+    extend: uvBase({ base: 'inline-flex rounded-md px-4' }),
+  });
 
   it('still merges plain classes', () => {
     const result = build()({ class: 'font-700' });
@@ -130,12 +175,19 @@ describe('uv class replace (slotless component)', () => {
   });
 
   it('replaces the base through a function in `:ui` / `class`', () => {
-    expect(build()({ class: () => 'block w-full' })).toBe('block w-full');
+    expect(build()({
+      class: () => 'block w-full',
+    })).toBe('block w-full');
   });
 
   it('replaces the base through a `:ui` function forwarded in the class array', () => {
     // Mirrors how a slotless component forwards `class: [props.ui?.base, props.class]`.
-    expect(build()({ class: [() => 'block w-full', undefined] })).toBe('block w-full');
+    expect(build()({
+      class: [
+        () => 'block w-full',
+        undefined,
+      ],
+    })).toBe('block w-full');
   });
 
   it('passes the resolved default classes to the replacer', () => {
@@ -153,7 +205,9 @@ describe('uv class replace (slotless component)', () => {
     const ui = uvBase({
       extend: {
         base: 'inline-flex px-4',
-        variants: { active: { true: 'font-700' } },
+        variants: {
+          active: { true: 'font-700' },
+        },
       },
       base: () => 'block',
     });
@@ -176,7 +230,9 @@ describe('uv slot memoization', () => {
     },
   };
 
-  const build = () => uvt({ extend: uvt(theme) })();
+  const build = () => uvt({
+    extend: uvt(theme),
+  })();
 
   // Counts how often the `active` variant is read. Building the cache key reads
   // it a fixed number of times per call, so a call served from the cache reads
@@ -208,7 +264,14 @@ describe('uv slot memoization', () => {
   it('caches a slot whose chain resolves to no classes', () => {
     // `uv` returns `undefined` for such a slot rather than `''`, so it can't
     // double as the "not cached yet" sentinel (`navigation-menu` has two).
-    const ui = uvt({ extend: uvt({ slots: { base: '' }, variants: { active: { true: {}, false: {} } } }) })();
+    const ui = uvt({
+      extend: uvt({
+        slots: { base: '' },
+        variants: {
+          active: { true: {}, false: {} },
+        },
+      }),
+    })();
     const [props, counter] = countingProps(true);
 
     expect(ui.base(props)).toBeUndefined();
@@ -234,7 +297,9 @@ describe('uv slot memoization', () => {
     expect(ui.base({ active: true, class: 'p-2' })).toContain('p-2');
     expect(ui.base({ active: true })).not.toContain('p-2');
     // String and array class forms resolve to the same output independently.
-    expect(ui.base({ class: ['p-2', undefined] })).toContain('p-2');
+    expect(ui.base({
+      class: ['p-2', undefined],
+    })).toContain('p-2');
   });
 
   it('treats an `undefined`-valued key the same as an absent one', () => {
@@ -248,7 +313,10 @@ describe('uv slot memoization', () => {
   });
 
   it('does not share entries between NaN and null variant values', () => {
-    const ui = uvt({ extend: uvt(theme), defaultVariants: { active: true } })();
+    const ui = uvt({
+      extend: uvt(theme),
+      defaultVariants: { active: true },
+    })();
     // Both serialize to `"null"`, but uv resolves `null` to the default variant
     // while NaN falls through the `key || "false"` lookup.
     expect(ui.base({ active: Number.NaN })).toContain('font-light');
@@ -258,16 +326,22 @@ describe('uv slot memoization', () => {
   it('does not poison the cache through clsx object classes', () => {
     const ui = build();
     // Object classes bail out of the memo but still resolve...
-    expect(ui.label({ class: { 'font-700': true, 'opacity-50': false } })).toBe('truncate font-700');
+    expect(ui.label({
+      class: { 'font-700': true, 'opacity-50': false },
+    })).toBe('truncate font-700');
     // ...and cached plain calls before/after stay independent.
     expect(ui.label({})).toBe('truncate');
-    expect(ui.label({ class: { 'font-700': false } })).toBe('truncate');
+    expect(ui.label({
+      class: { 'font-700': false },
+    })).toBe('truncate');
   });
 
   it('does not poison the cache through replacers', () => {
     const ui = build();
     expect(ui.label({ class: 'p-2' })).toBe('truncate p-2');
-    expect(ui.label({ class: () => 'block' })).toBe('block');
+    expect(ui.label({
+      class: () => 'block',
+    })).toBe('block');
     expect(ui.label({ class: 'p-2' })).toBe('truncate p-2');
   });
 

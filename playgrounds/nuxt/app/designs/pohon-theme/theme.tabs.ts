@@ -24,9 +24,12 @@ export const themeTabs = {
   },
   variants: {
     color: {
-      ...Object.fromEntries(BRANDS.map((color: string) => [color, {
-        content: `outline-${color}/25`,
-      }])),
+      ...Object.fromEntries(BRANDS.map((color: string) => [
+        color,
+        {
+          content: `outline-${color}/25`,
+        },
+      ])),
       neutral: {
         content: 'outline-border-inverted/25',
       },

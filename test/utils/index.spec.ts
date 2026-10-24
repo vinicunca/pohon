@@ -31,7 +31,12 @@ describe('omit', () => {
 
 describe('get', () => {
   it('reads nested values from string and array paths', () => {
-    const object = { a: { b: 1 }, items: [{ label: 'a' }] };
+    const object = {
+      a: { b: 1 },
+      items: [
+        { label: 'a' },
+      ],
+    };
     expect(get(object, 'a.b')).toBe(1);
     expect(get(object, 'items.0.label')).toBe('a');
     expect(get(object, ['items', 0, 'label'])).toBe('a');
@@ -48,7 +53,9 @@ describe('get', () => {
   });
 
   it('does not cast keys to numbers', () => {
-    const object = { a: { 1: 'one', 16: 'sixteen' } };
+    const object = {
+      a: { 1: 'one', 16: 'sixteen' },
+    };
     expect(get(object, 'a.0x10')).toBeUndefined();
     expect(get(object, 'a.01')).toBeUndefined();
   });
@@ -63,21 +70,34 @@ describe('set', () => {
     const object: Record<string, any> = {};
     set(object, 'a.b.c', 1);
     set(object, ['d', 'e'], 2);
-    expect(object).toEqual({ a: { b: { c: 1 } }, d: { e: 2 } });
+    expect(object).toEqual({
+      a: {
+        b: { c: 1 },
+      },
+      d: { e: 2 },
+    });
   });
 
   it('creates arrays for index keys', () => {
     const object: Record<string, any> = {};
     set(object, 'items.0.label', 'a');
     set(object, ['list', 1], 'b');
-    expect(object).toEqual({ items: [{ label: 'a' }], list: [undefined, 'b'] });
+    expect(object).toEqual({
+      items: [
+        { label: 'a' },
+      ],
+      list: [undefined, 'b'],
+    });
   });
 
   it('replaces primitive values in the path', () => {
     const object: Record<string, any> = { a: null, b: 'string' };
     set(object, 'a.c', 1);
     set(object, 'b.c', 2);
-    expect(object).toEqual({ a: { c: 1 }, b: { c: 2 } });
+    expect(object).toEqual({
+      a: { c: 1 },
+      b: { c: 2 },
+    });
   });
 
   it.each([
@@ -85,8 +105,16 @@ describe('set', () => {
     'constructor.prototype.polluted',
     ['__proto__', 'polluted'],
     'a.__proto__.polluted',
-    [['__proto__'], 'polluted'],
-    [{ toString: () => '__proto__' }, 'polluted'],
+    [
+      ['__proto__'],
+      'polluted',
+    ],
+    [
+      {
+        toString: () => '__proto__',
+      },
+      'polluted',
+    ],
   ])('does not pollute the prototype with %j', (path) => {
     const object = {};
     set(object, path as any, true);
@@ -126,7 +154,11 @@ describe('compare', () => {
   });
 
   it('falls back to deep equality', () => {
-    expect(compare({ a: [1] }, { a: [1] })).toBe(true);
+    expect(compare({
+      a: [1],
+    }, {
+      a: [1],
+    })).toBe(true);
     expect(compare({ a: 1 }, { a: 2 })).toBe(false);
     expect(compare(1, 1)).toBe(true);
   });
@@ -152,7 +184,9 @@ describe('isEmpty', () => {
     0,
     'a',
     [1],
-    new Map([[1, 1]]),
+    new Map([
+      [1, 1],
+    ]),
     new Set([1]),
     new Date(),
     /a/,
@@ -164,7 +198,10 @@ describe('isEmpty', () => {
 });
 
 describe('getDisplayValue', () => {
-  const items = [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }];
+  const items = [
+    { value: 1, label: 'One' },
+    { value: 2, label: 'Two' },
+  ];
 
   it('returns primitive values as strings', () => {
     expect(getDisplayValue(['a', 'b'], 'b')).toBe('b');
@@ -182,7 +219,9 @@ describe('getDisplayValue', () => {
   });
 
   it('returns the label of an item matching an empty value', () => {
-    expect(getDisplayValue([{ value: '', label: 'None' }], '', { valueKey: 'value', labelKey: 'label' })).toBe('None');
+    expect(getDisplayValue([
+      { value: '', label: 'None' },
+    ], '', { valueKey: 'value', labelKey: 'label' })).toBe('None');
   });
 
   it('returns undefined for an empty value without a match', () => {
@@ -191,15 +230,23 @@ describe('getDisplayValue', () => {
   });
 
   it('matches items with `by`', () => {
-    const users = [{ id: 1, name: 'A' }];
+    const users = [
+      { id: 1, name: 'A' },
+    ];
     expect(getDisplayValue(users, { id: 1 }, { labelKey: 'name', by: 'id' })).toBe('A');
-    expect(getDisplayValue(users, { id: 1 }, { labelKey: 'name', by: (a, b) => a.id === b.id })).toBe('A');
+    expect(getDisplayValue(users, { id: 1 }, {
+      labelKey: 'name',
+      by: (a, b) => a.id === b.id,
+    })).toBe('A');
   });
 });
 
 describe('isArrayOfArray', () => {
   it('checks the first item', () => {
-    expect(isArrayOfArray([[1], [2]])).toBe(true);
+    expect(isArrayOfArray([
+      [1],
+      [2],
+    ])).toBe(true);
     expect(isArrayOfArray([1, 2])).toBe(false);
     expect(isArrayOfArray([])).toBe(false);
   });
@@ -222,8 +269,18 @@ describe('getSlotChildrenText', () => {
   it('joins the text of nested children', () => {
     expect(getSlotChildrenText([
       { children: 'Hello ' },
-      { children: [{ children: 'World' }] },
-      { children: { default: () => [{ children: '!' }] } },
+      {
+        children: [
+          { children: 'World' },
+        ],
+      },
+      {
+        children: {
+          default: () => [
+            { children: '!' },
+          ],
+        },
+      },
       { children: null },
     ])).toBe('Hello World!');
   });

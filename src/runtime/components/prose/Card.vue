@@ -45,13 +45,18 @@ const props = useComponentProps('prose.card', _props);
 
 const appConfig = useAppConfig() as ProseCard['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.card || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.card || {}),
+})({
   color: props.color,
   to: !!props.to,
   title: !!props.title,
 }));
 
-const target = computed(() => props.target || (!!props.to && typeof props.to === 'string' && props.to.startsWith('http') ? '_blank' : undefined));
+const target = computed(() => props.target || (!!props.to && typeof props.to === 'string' && props.to.startsWith('http')
+  ? '_blank'
+  : undefined));
 
 const ariaLabel = computed(() => (props.title || 'Card link').trim());
 </script>

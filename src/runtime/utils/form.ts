@@ -26,7 +26,9 @@ export async function validateStandardSchema(
   if (result.issues) {
     return {
       errors: result.issues?.map((issue) => ({
-        name: issue.path?.map((item) => typeof item === 'object' ? item.key : item).join('.') || '',
+        name: issue.path?.map((item) => typeof item === 'object'
+          ? item.key
+          : item).join('.') || '',
         message: issue.message,
       })) || [],
       result: null,

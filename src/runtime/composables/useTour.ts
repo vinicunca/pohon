@@ -110,9 +110,23 @@ export function useTour(steps: MaybeRefOrGetter<Array<TourStep>>, options: UseTo
   // A virtual element centered in the viewport, for steps without a target.
   const centerAnchor: ReferenceElement = {
     getBoundingClientRect() {
-      const x = typeof window === 'undefined' ? 0 : window.innerWidth / 2;
-      const y = typeof window === 'undefined' ? 0 : window.innerHeight / 2;
-      return { x, y, top: y, left: x, right: x, bottom: y, width: 0, height: 0, toJSON: () => ({}) } as DOMRect;
+      const x = typeof window === 'undefined'
+        ? 0
+        : window.innerWidth / 2;
+      const y = typeof window === 'undefined'
+        ? 0
+        : window.innerHeight / 2;
+      return {
+        x,
+        y,
+        top: y,
+        left: x,
+        right: x,
+        bottom: y,
+        width: 0,
+        height: 0,
+        toJSON: () => ({}),
+      } as DOMRect;
     },
   };
 
@@ -148,7 +162,9 @@ export function useTour(steps: MaybeRefOrGetter<Array<TourStep>>, options: UseTo
     }
     const el = reference.value;
     if (el instanceof Element) {
-      el.scrollIntoView(typeof scrollIntoView === 'object' ? scrollIntoView : { behavior: 'smooth', block: 'center' });
+      el.scrollIntoView(typeof scrollIntoView === 'object'
+        ? scrollIntoView
+        : { behavior: 'smooth', block: 'center' });
     }
   }
 

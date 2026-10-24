@@ -31,10 +31,12 @@ describe('dashboardSearch', () => {
     {
       id: 'links',
       label: 'Go to',
-      items: [{
-        label: 'Home',
-        to: '/',
-      }],
+      items: [
+        {
+          label: 'Home',
+          to: '/',
+        },
+      ],
     },
   ];
 
@@ -44,16 +46,67 @@ describe('dashboardSearch', () => {
     DashboardWrapper,
     [
     // Props
-      ['with groups', { props }],
-      ['with icon', { props: { ...props, icon: 'i-lucide-home' } }],
-      ['with placeholder', { props: { ...props, placeholder: 'Search' } }],
-      ['with loading', { props: { ...props, loading: true } }],
-      ['with loadingIcon', { props: { ...props, loading: true, loadingIcon: 'i-lucide-loading' } }],
-      ['without colorMode', { props: { ...props, colorMode: false } }],
-      ['with fullscreen', { props: { ...props, fullscreen: true } }],
-      ...sizes.map((size: string) => [`with size ${size}`, { props: { ...props, size } }]),
-      ['with ui', { props: { ...props, ui: { input: '[&>input]:text-lg' } } }],
-      ['with class', { props: { ...props, class: 'sm:max-w-5xl' } }],
+      [
+        'with groups',
+        { props },
+      ],
+      [
+        'with icon',
+        {
+          props: { ...props, icon: 'i-lucide-home' },
+        },
+      ],
+      [
+        'with placeholder',
+        {
+          props: { ...props, placeholder: 'Search' },
+        },
+      ],
+      [
+        'with loading',
+        {
+          props: { ...props, loading: true },
+        },
+      ],
+      [
+        'with loadingIcon',
+        {
+          props: { ...props, loading: true, loadingIcon: 'i-lucide-loading' },
+        },
+      ],
+      [
+        'without colorMode',
+        {
+          props: { ...props, colorMode: false },
+        },
+      ],
+      [
+        'with fullscreen',
+        {
+          props: { ...props, fullscreen: true },
+        },
+      ],
+      ...sizes.map((size: string) => [
+        `with size ${size}`,
+        {
+          props: { ...props, size },
+        },
+      ]),
+      [
+        'with ui',
+        {
+          props: {
+            ...props,
+            ui: { input: '[&>input]:text-lg' },
+          },
+        },
+      ],
+      [
+        'with class',
+        {
+          props: { ...props, class: 'sm:max-w-5xl' },
+        },
+      ],
     ],
     async (_, options) => {
       const wrapper = await mountSuspended(DashboardWrapper, options);
@@ -63,7 +116,9 @@ describe('dashboardSearch', () => {
   );
 
   it('mounts the modal once opened', async () => {
-    const wrapper = await mountSuspended(DashboardWrapper, { props: { ...props, open: false } });
+    const wrapper = await mountSuspended(DashboardWrapper, {
+      props: { ...props, open: false },
+    });
 
     expect(wrapper.findComponent(Modal).exists()).toBe(false);
 
@@ -74,7 +129,9 @@ describe('dashboardSearch', () => {
   });
 
   it('mounts the modal before opening with `unmountOnHide: false`', async () => {
-    const wrapper = await mountSuspended(DashboardWrapper, { props: { ...props, open: false, unmountOnHide: false } });
+    const wrapper = await mountSuspended(DashboardWrapper, {
+      props: { ...props, open: false, unmountOnHide: false },
+    });
     await vi.dynamicImportSettled();
 
     expect(wrapper.findComponent(CommandPalette).text()).toContain('Home');

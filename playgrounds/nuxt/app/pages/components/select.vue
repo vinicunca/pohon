@@ -13,41 +13,72 @@ const attrs = reactive({
   variant: [theme.defaultVariants.variant],
 });
 
-const fruits = ['Apple', 'Banana', 'Blueberry', 'Grapes', 'Pineapple'];
-const vegetables = ['Aubergine', 'Broccoli', 'Carrot', 'Courgette', 'Leek'];
+const fruits = [
+  'Apple',
+  'Banana',
+  'Blueberry',
+  'Grapes',
+  'Pineapple',
+];
+const vegetables = [
+  'Aubergine',
+  'Broccoli',
+  'Carrot',
+  'Courgette',
+  'Leek',
+];
 
-const items = [[{ label: 'Fruits', type: 'label' as const }, ...fruits], [{ label: 'Vegetables', type: 'label' as const }, ...vegetables]];
+const items = [
+  [
+    { label: 'Fruits', type: 'label' as const },
+    ...fruits,
+  ],
+  [
+    { label: 'Vegetables', type: 'label' as const },
+    ...vegetables,
+  ],
+];
 
-const statuses = [{
-  label: 'Backlog',
-  value: 'backlog',
-  description: 'Issues that have been identified but not yet prioritized',
-  icon: 'i-lucide-circle-help',
-}, {
-  label: 'Todo',
-  value: 'todo',
-  description: 'Issues that are ready to be worked on',
-  icon: 'i-lucide-circle-plus',
-}, {
-  label: 'In Progress',
-  value: 'in_progress',
-  description: 'Issues that are currently being worked on',
-  icon: 'i-lucide-circle-arrow-up',
-}, {
-  label: 'Done',
-  value: 'done',
-  description: 'Issues that have been completed successfully',
-  icon: 'i-lucide-circle-check',
-}, {
-  label: 'Canceled',
-  value: 'canceled',
-  description: 'Issues that have been cancelled or rejected',
-  icon: 'i-lucide-circle-x',
-}] satisfies Array<SelectItem>;
+const statuses = [
+  {
+    label: 'Backlog',
+    value: 'backlog',
+    description: 'Issues that have been identified but not yet prioritized',
+    icon: 'i-lucide-circle-help',
+  },
+  {
+    label: 'Todo',
+    value: 'todo',
+    description: 'Issues that are ready to be worked on',
+    icon: 'i-lucide-circle-plus',
+  },
+  {
+    label: 'In Progress',
+    value: 'in_progress',
+    description: 'Issues that are currently being worked on',
+    icon: 'i-lucide-circle-arrow-up',
+  },
+  {
+    label: 'Done',
+    value: 'done',
+    description: 'Issues that have been completed successfully',
+    icon: 'i-lucide-circle-check',
+  },
+  {
+    label: 'Canceled',
+    value: 'canceled',
+    description: 'Issues that have been cancelled or rejected',
+    icon: 'i-lucide-circle-x',
+  },
+] satisfies Array<SelectItem>;
 
 const { data: users, status } = await useFetch('https://jsonplaceholder.typicode.com/users', {
   transform: (data: Array<User>) => {
-    return data?.map((user) => ({ label: user.name, value: String(user.id), avatar: { src: `https://i.pravatar.cc/120?img=${user.id}` } })) || [];
+    return data?.map((user) => ({
+      label: user.name,
+      value: String(user.id),
+      avatar: { src: `https://i.pravatar.cc/120?img=${user.id}` },
+    })) || [];
   },
   lazy: true,
 });

@@ -97,7 +97,9 @@ const sliderValue = computed({
     return (modelValue.value as Array<number>) ?? defaultSliderValue.value;
   },
   set(value) {
-    modelValue.value = (value?.length !== 1 ? value : value[0]) as T;
+    modelValue.value = (value?.length !== 1
+      ? value
+      : value[0]) as T;
   },
 });
 
@@ -105,22 +107,36 @@ const thumbs = computed(() => sliderValue.value?.length ?? 1);
 
 // The thumb is the element with `role="slider"`, so these describe it rather than the root.
 // Multiple thumbs get positional names and the caller's label groups them on the root.
-const thumbAttrs = ['aria-label', 'aria-labelledby', 'aria-describedby', 'aria-valuetext', 'aria-invalid', 'aria-errormessage'];
+const thumbAttrs = [
+  'aria-label',
+  'aria-labelledby',
+  'aria-describedby',
+  'aria-valuetext',
+  'aria-invalid',
+  'aria-errormessage',
+];
 const attrs = useAttrs();
 
 // A single thumb is named by the caller's `aria-labelledby` / `aria-label` first.
 function thumbLabel(index: number) {
   if (thumbs.value === 1) {
-    return attrs['aria-labelledby'] ? undefined : (attrs['aria-label'] as string | undefined) ?? t('slider.thumb');
+    return attrs['aria-labelledby']
+      ? undefined
+      : (attrs['aria-label'] as string | undefined) ?? t('slider.thumb');
   }
   if (thumbs.value === 2) {
-    return index === 0 ? t('slider.min') : t('slider.max');
+    return index === 0
+      ? t('slider.min')
+      : t('slider.max');
   }
 
   return t('slider.value', { index: index + 1, total: thumbs.value });
 }
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.slider || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.slider || {}),
+})({
   disabled: disabled.value,
   size: size.value,
   color: color.value,
@@ -129,7 +145,9 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.slider || {}) })
 
 function onChange(value: any) {
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value } });
+  const event = new Event('change', {
+    target: { value },
+  });
   emits('change', event);
   emitFormChange();
 }

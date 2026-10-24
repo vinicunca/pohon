@@ -11,9 +11,11 @@ export default (options: Required<ModuleOptions>) => ({
       true: 'cursor-not-allowed opacity-75',
     },
   },
-  compoundVariants: [{
-    active: false,
-    disabled: false,
-    class: ['hover:color-text', options.theme.transitions && 'transition-colors'],
-  }],
+  compoundVariants: [
+    {
+      active: false,
+      disabled: false,
+      class: ['hover:color-text', options.theme.transitions && 'transition-colors'],
+    },
+  ],
 });

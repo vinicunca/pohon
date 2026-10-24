@@ -164,7 +164,10 @@ function stepVariant(index: number | string) {
   return 'other';
 }
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.progress || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.progress || {}),
+})({
   animation: props.animation,
   size: props.size,
   color: props.color as Progress['variants']['color'],
@@ -174,9 +177,14 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.progress || {}) 
 
 // `uv` skips a color it doesn't know, so a value outside the theme palette adds no class
 // and is applied inline instead.
-const themeColors = computed(() => Object.keys({ ...theme.variants?.color, ...appConfig.ui?.progress?.variants?.color }));
+const themeColors = computed(() => Object.keys({
+  ...theme.variants?.color,
+  ...appConfig.ui?.progress?.variants?.color,
+}));
 
-const customColor = computed(() => props.color && !themeColors.value.includes(props.color) ? props.color : undefined);
+const customColor = computed(() => props.color && !themeColors.value.includes(props.color)
+  ? props.color
+  : undefined);
 </script>
 
 <template>

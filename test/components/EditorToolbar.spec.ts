@@ -14,70 +14,127 @@ const EditorToolbarWrapper = defineComponent({
 });
 
 describe('editorToolbar', () => {
-  const items = [[{
-    'icon': 'i-lucide-heading',
-    'aria-label': 'Headings',
-    'content': {
-      align: 'start',
-    },
-    'items': [{
-      kind: 'heading',
-      level: 1,
-      icon: 'i-lucide-heading-1',
-      label: 'Heading 1',
-    }, {
-      kind: 'heading',
-      level: 2,
-      icon: 'i-lucide-heading-2',
-      label: 'Heading 2',
-    }, {
-      kind: 'heading',
-      level: 3,
-      icon: 'i-lucide-heading-3',
-      label: 'Heading 3',
-    }, {
-      kind: 'heading',
-      level: 4,
-      icon: 'i-lucide-heading-4',
-      label: 'Heading 4',
-    }],
-  }], [{
-    'kind': 'mark',
-    'mark': 'bold',
-    'icon': 'i-lucide-bold',
-    'aria-label': 'Bold',
-  }, {
-    'kind': 'mark',
-    'mark': 'italic',
-    'icon': 'i-lucide-italic',
-    'aria-label': 'Italic',
-  }, {
-    'kind': 'mark',
-    'mark': 'underline',
-    'icon': 'i-lucide-underline',
-    'aria-label': 'Underline',
-  }, {
-    'kind': 'mark',
-    'mark': 'strike',
-    'icon': 'i-lucide-strikethrough',
-    'aria-label': 'Strikethrough',
-  }, {
-    'kind': 'mark',
-    'mark': 'code',
-    'icon': 'i-lucide-code',
-    'aria-label': 'Code',
-  }]];
-  const props = { editor: { registerPlugin: vi.fn() } as unknown as Editor, items };
+  const items = [
+    [
+      {
+        'icon': 'i-lucide-heading',
+        'aria-label': 'Headings',
+        'content': {
+          align: 'start',
+        },
+        'items': [
+          {
+            kind: 'heading',
+            level: 1,
+            icon: 'i-lucide-heading-1',
+            label: 'Heading 1',
+          },
+          {
+            kind: 'heading',
+            level: 2,
+            icon: 'i-lucide-heading-2',
+            label: 'Heading 2',
+          },
+          {
+            kind: 'heading',
+            level: 3,
+            icon: 'i-lucide-heading-3',
+            label: 'Heading 3',
+          },
+          {
+            kind: 'heading',
+            level: 4,
+            icon: 'i-lucide-heading-4',
+            label: 'Heading 4',
+          },
+        ],
+      },
+    ],
+    [
+      {
+        'kind': 'mark',
+        'mark': 'bold',
+        'icon': 'i-lucide-bold',
+        'aria-label': 'Bold',
+      },
+      {
+        'kind': 'mark',
+        'mark': 'italic',
+        'icon': 'i-lucide-italic',
+        'aria-label': 'Italic',
+      },
+      {
+        'kind': 'mark',
+        'mark': 'underline',
+        'icon': 'i-lucide-underline',
+        'aria-label': 'Underline',
+      },
+      {
+        'kind': 'mark',
+        'mark': 'strike',
+        'icon': 'i-lucide-strikethrough',
+        'aria-label': 'Strikethrough',
+      },
+      {
+        'kind': 'mark',
+        'mark': 'code',
+        'icon': 'i-lucide-code',
+        'aria-label': 'Code',
+      },
+    ],
+  ];
+  const props = {
+    editor: {
+      registerPlugin: vi.fn(),
+    } as unknown as Editor,
+    items,
+  };
 
   renderEach(EditorToolbar, [
     // Props
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with layout bubble', { props: { ...props, layout: 'bubble' } }],
-    ['with layout floating', { props: { ...props, layout: 'floating' } }],
-    ['with class', { props: { ...props, class: 'overflow-x-auto' } }],
-    ['with ui', { props: { ...props, ui: { separator: 'bg-background' } } }],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with layout bubble',
+      {
+        props: { ...props, layout: 'bubble' },
+      },
+    ],
+    [
+      'with layout floating',
+      {
+        props: { ...props, layout: 'floating' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'overflow-x-auto' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { separator: 'bg-background' },
+        },
+      },
+    ],
     // Slots
-    ['with item slot', { props, slots: { item: () => 'Item slot' } }],
+    [
+      'with item slot',
+      {
+        props,
+        slots: {
+          item: () => 'Item slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {
@@ -91,13 +148,34 @@ describe('editorToolbar', () => {
   it('names icon-only buttons from their tooltips', async () => {
     const wrapper = await mountSuspended(EditorToolbarWrapper, {
       props: {
-        editor: { registerPlugin: vi.fn() } as unknown as Editor,
-        items: [[
-          { kind: 'mark', mark: 'bold', icon: 'i-lucide-bold', tooltip: { text: 'Bold' } },
-          { 'kind': 'mark', 'mark': 'italic', 'icon': 'i-lucide-italic', 'tooltip': { text: 'Italic' }, 'aria-label': 'Italic text' },
-          { kind: 'mark', mark: 'underline', icon: 'i-lucide-underline', label: 'Underline', tooltip: { text: 'Underline' } },
-          { kind: 'mark', mark: 'strike', icon: 'i-lucide-strikethrough' },
-        ]],
+        editor: {
+          registerPlugin: vi.fn(),
+        } as unknown as Editor,
+        items: [
+          [
+            {
+              kind: 'mark',
+              mark: 'bold',
+              icon: 'i-lucide-bold',
+              tooltip: { text: 'Bold' },
+            },
+            {
+              'kind': 'mark',
+              'mark': 'italic',
+              'icon': 'i-lucide-italic',
+              'tooltip': { text: 'Italic' },
+              'aria-label': 'Italic text',
+            },
+            {
+              kind: 'mark',
+              mark: 'underline',
+              icon: 'i-lucide-underline',
+              label: 'Underline',
+              tooltip: { text: 'Underline' },
+            },
+            { kind: 'mark', mark: 'strike', icon: 'i-lucide-strikethrough' },
+          ],
+        ],
       },
     });
 
@@ -113,12 +191,25 @@ describe('editorToolbar', () => {
   it('names dropdown triggers from their tooltips', async () => {
     const wrapper = await mountSuspended(EditorToolbarWrapper, {
       props: {
-        editor: { registerPlugin: vi.fn() } as unknown as Editor,
-        items: [[{
-          icon: 'i-lucide-heading',
-          tooltip: { text: 'Headings' },
-          items: [{ kind: 'heading', level: 1, icon: 'i-lucide-heading-1', label: 'Heading 1' }],
-        }]],
+        editor: {
+          registerPlugin: vi.fn(),
+        } as unknown as Editor,
+        items: [
+          [
+            {
+              icon: 'i-lucide-heading',
+              tooltip: { text: 'Headings' },
+              items: [
+                {
+                  kind: 'heading',
+                  level: 1,
+                  icon: 'i-lucide-heading-1',
+                  label: 'Heading 1',
+                },
+              ],
+            },
+          ],
+        ],
       },
     });
 

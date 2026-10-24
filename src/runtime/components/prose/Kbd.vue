@@ -31,7 +31,10 @@ const props = useComponentProps('prose.kbd', _props);
 
 const appConfig = useAppConfig() as ProseKbd['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.kbd || {}) }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.kbd || {}),
+}));
 </script>
 
 <template>

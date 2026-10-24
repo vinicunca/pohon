@@ -91,7 +91,9 @@ const formLoading = inject<Ref<boolean> | undefined>(formLoadingInjectionKey, un
 
 async function onClickWrapper(event: MouseEvent) {
   loadingAutoState.value = true;
-  const callbacks = Array.isArray(props.onClick) ? props.onClick : [props.onClick];
+  const callbacks = Array.isArray(props.onClick)
+    ? props.onClick
+    : [props.onClick];
   try {
     await Promise.all(callbacks.map((fn) => fn?.(event)));
   } finally {

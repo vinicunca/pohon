@@ -36,7 +36,10 @@ const props = useComponentProps('pageBody', _props);
 
 const appConfig = useAppConfig() as PageBody['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageBody || {}) }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.pageBody || {}),
+}));
 </script>
 
 <template>

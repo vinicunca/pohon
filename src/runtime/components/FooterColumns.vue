@@ -69,7 +69,10 @@ const appConfig = useAppConfig() as FooterColumns['AppConfig'];
 
 const as = computed(() => resolveAs(props.as, { root: 'nav', label: 'h3' }));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.footerColumns || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.footerColumns || {}),
+})());
 </script>
 
 <template>

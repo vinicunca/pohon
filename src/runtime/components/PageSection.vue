@@ -91,7 +91,10 @@ const appConfig = useAppConfig() as PageSection['AppConfig'];
 
 const as = computed(() => resolveAs(props.as, { root: 'section', title: 'h2' }));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageSection || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.pageSection || {}),
+})({
   orientation: props.orientation,
   reverse: props.reverse,
   title: !!props.title || !!slots.title,

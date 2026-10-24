@@ -36,77 +36,90 @@ export default {
       },
     },
   },
-  compoundVariants: [{
-    side: 'top',
-    inset: true,
-    class: {
-      content: 'max-h-[calc(100%-2rem)] inset-x-4 top-4',
+  compoundVariants: [
+    {
+      side: 'top',
+      inset: true,
+      class: {
+        content: 'max-h-[calc(100%-2rem)] inset-x-4 top-4',
+      },
     },
-  }, {
-    side: 'top',
-    inset: false,
-    class: {
-      content: 'max-h-full inset-x-0 top-0',
+    {
+      side: 'top',
+      inset: false,
+      class: {
+        content: 'max-h-full inset-x-0 top-0',
+      },
     },
-  }, {
-    side: 'right',
-    inset: true,
-    class: {
-      content: 'w-[calc(100%-2rem)] inset-y-4 right-4',
+    {
+      side: 'right',
+      inset: true,
+      class: {
+        content: 'w-[calc(100%-2rem)] inset-y-4 right-4',
+      },
     },
-  }, {
-    side: 'right',
-    inset: false,
-    class: {
-      content: 'w-full inset-y-0 right-0',
+    {
+      side: 'right',
+      inset: false,
+      class: {
+        content: 'w-full inset-y-0 right-0',
+      },
     },
-  }, {
-    side: 'bottom',
-    inset: true,
-    class: {
-      content: 'max-h-[calc(100%-2rem)] inset-x-4 bottom-4',
+    {
+      side: 'bottom',
+      inset: true,
+      class: {
+        content: 'max-h-[calc(100%-2rem)] inset-x-4 bottom-4',
+      },
     },
-  }, {
-    side: 'bottom',
-    inset: false,
-    class: {
-      content: 'max-h-full inset-x-0 bottom-0',
+    {
+      side: 'bottom',
+      inset: false,
+      class: {
+        content: 'max-h-full inset-x-0 bottom-0',
+      },
     },
-  }, {
-    side: 'left',
-    inset: true,
-    class: {
-      content: 'w-[calc(100%-2rem)] inset-y-4 left-4',
+    {
+      side: 'left',
+      inset: true,
+      class: {
+        content: 'w-[calc(100%-2rem)] inset-y-4 left-4',
+      },
     },
-  }, {
-    side: 'left',
-    inset: false,
-    class: {
-      content: 'w-full inset-y-0 left-0',
+    {
+      side: 'left',
+      inset: false,
+      class: {
+        content: 'w-full inset-y-0 left-0',
+      },
     },
-  }, {
-    transition: true,
-    side: 'top',
-    class: {
-      content: 'data-[state=open]:animate-in data-[state=open]:slide-in-from-top data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top',
+    {
+      transition: true,
+      side: 'top',
+      class: {
+        content: 'data-[state=open]:animate-in data-[state=open]:slide-in-from-top data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top',
+      },
     },
-  }, {
-    transition: true,
-    side: 'right',
-    class: {
-      content: 'data-[state=open]:animate-in data-[state=open]:slide-in-from-right data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right',
+    {
+      transition: true,
+      side: 'right',
+      class: {
+        content: 'data-[state=open]:animate-in data-[state=open]:slide-in-from-right data-[state=closed]:animate-out data-[state=closed]:slide-out-to-right',
+      },
     },
-  }, {
-    transition: true,
-    side: 'bottom',
-    class: {
-      content: 'data-[state=open]:animate-in data-[state=open]:slide-in-from-bottom data-[state=closed]:animate-out data-[state=closed]:slide-out-to-bottom',
+    {
+      transition: true,
+      side: 'bottom',
+      class: {
+        content: 'data-[state=open]:animate-in data-[state=open]:slide-in-from-bottom data-[state=closed]:animate-out data-[state=closed]:slide-out-to-bottom',
+      },
     },
-  }, {
-    transition: true,
-    side: 'left',
-    class: {
-      content: 'data-[state=open]:animate-in data-[state=open]:slide-in-left data-[state=closed]:animate-out data-[state=closed]:slide-out-left',
+    {
+      transition: true,
+      side: 'left',
+      class: {
+        content: 'data-[state=open]:animate-in data-[state=open]:slide-in-left data-[state=closed]:animate-out data-[state=closed]:slide-out-left',
+      },
     },
-  }],
+  ],
 };

@@ -148,7 +148,13 @@ export const noBarePropRefs: Rule.RuleModule = {
         && value !== null
         && 'type' in value
         && typeof value.type === 'string'
-        && ['Identifier', 'ObjectPattern', 'ArrayPattern', 'AssignmentPattern', 'RestElement'].includes(value.type);
+        && [
+          'Identifier',
+          'ObjectPattern',
+          'ArrayPattern',
+          'AssignmentPattern',
+          'RestElement',
+        ].includes(value.type);
     }
 
     return parserServices.defineTemplateBodyVisitor(
@@ -232,7 +238,9 @@ export const noBarePropRefs: Rule.RuleModule = {
         },
         'CallExpression[callee.name="useComponentProps"]': function (node: CallExpressionNode) {
           usesComponentProps = true;
-          const decl = node.parent?.type === 'VariableDeclarator' ? node.parent : null;
+          const decl = node.parent?.type === 'VariableDeclarator'
+            ? node.parent
+            : null;
           if (decl?.id?.type === 'Identifier') {
             propsVar = decl.id.name;
           }

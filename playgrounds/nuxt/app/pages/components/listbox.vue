@@ -22,12 +22,30 @@ const virtualItems = Array.from({ length: 1000 }, (_, i) => ({
   description: `Description for item ${i + 1}`,
 }));
 
-const fruits = ['Apple', 'Banana', 'Blueberry', 'Grapes', 'Pineapple'].map((f) => ({ label: f }));
-const vegetables = ['Aubergine', 'Broccoli', 'Carrot', 'Courgette', 'Leek'].map((v) => ({ label: v }));
+const fruits = [
+  'Apple',
+  'Banana',
+  'Blueberry',
+  'Grapes',
+  'Pineapple',
+].map((f) => ({ label: f }));
+const vegetables = [
+  'Aubergine',
+  'Broccoli',
+  'Carrot',
+  'Courgette',
+  'Leek',
+].map((v) => ({ label: v }));
 
 const items = [
-  [{ label: 'Fruits', type: 'label' as const }, ...fruits],
-  [{ label: 'Vegetables', type: 'label' as const }, ...vegetables],
+  [
+    { label: 'Fruits', type: 'label' as const },
+    ...fruits,
+  ],
+  [
+    { label: 'Vegetables', type: 'label' as const },
+    ...vegetables,
+  ],
 ] satisfies Array<ListboxItem>;
 </script>
 

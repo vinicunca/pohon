@@ -7,13 +7,51 @@ import { renderEach } from '../component-render';
 describe('pageAside', () => {
   renderEach(PageAside, [
     // Props
-    ['with as', { props: { as: 'div' } }],
-    ['with class', { props: { class: 'lg:flex' } }],
-    ['with ui', { props: { ui: { container: 'absolute' } } }],
+    [
+      'with as',
+      {
+        props: { as: 'div' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'lg:flex' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { container: 'absolute' },
+        },
+      },
+    ],
     // Slots
-    ['with top slot', { slots: { top: () => 'Top slot' } }],
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
-    ['with bottom slot', { slots: { bottom: () => 'Bottom slot' } }],
+    [
+      'with top slot',
+      {
+        slots: {
+          top: () => 'Top slot',
+        },
+      },
+    ],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with bottom slot',
+      {
+        slots: {
+          bottom: () => 'Bottom slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

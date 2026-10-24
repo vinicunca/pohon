@@ -7,20 +7,104 @@ import { renderEach } from '../component-render';
 describe('pageHeader', () => {
   renderEach(PageHeader, [
     // Props
-    ['with title', { props: { title: 'Title' } }],
-    ['with description', { props: { description: 'Description' } }],
-    ['with headline', { props: { headline: 'Headline' } }],
-    ['with links', { props: { links: [{ label: 'GitHub', icon: 'i-simple-icons-github' }] } }],
-    ['with as', { props: { as: 'section' } }],
-    ['with as object', { props: { title: 'Title', as: { root: 'section', title: 'h2' } } }],
-    ['with class', { props: { class: 'py-12' } }],
-    ['with ui', { props: { ui: { container: 'py-12' } } }],
+    [
+      'with title',
+      {
+        props: { title: 'Title' },
+      },
+    ],
+    [
+      'with description',
+      {
+        props: { description: 'Description' },
+      },
+    ],
+    [
+      'with headline',
+      {
+        props: { headline: 'Headline' },
+      },
+    ],
+    [
+      'with links',
+      {
+        props: {
+          links: [
+            { label: 'GitHub', icon: 'i-simple-icons-github' },
+          ],
+        },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with as object',
+      {
+        props: {
+          title: 'Title',
+          as: { root: 'section', title: 'h2' },
+        },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'py-12' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { container: 'py-12' },
+        },
+      },
+    ],
     // Slots
-    ['with title slot', { slots: { title: () => 'Title slot' } }],
-    ['with description slot', { slots: { description: () => 'Description slot' } }],
-    ['with headline slot', { slots: { headline: () => 'Headline slot' } }],
-    ['with links slot', { slots: { links: () => 'Links slot' } }],
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
+    [
+      'with title slot',
+      {
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with headline slot',
+      {
+        slots: {
+          headline: () => 'Headline slot',
+        },
+      },
+    ],
+    [
+      'with links slot',
+      {
+        slots: {
+          links: () => 'Links slot',
+        },
+      },
+    ],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {
@@ -29,7 +113,9 @@ describe('pageHeader', () => {
         title: 'Title',
         description: 'Description',
         headline: 'Breaking News',
-        links: [{ label: 'GitHub', icon: 'i-simple-icons-github', to: 'https://github.com' }],
+        links: [
+          { label: 'GitHub', icon: 'i-simple-icons-github', to: 'https://github.com' },
+        ],
       },
     });
 

@@ -43,12 +43,17 @@ const props = useComponentProps('prose.callout', _props);
 
 const appConfig = useAppConfig() as ProseCallout['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.callout || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.callout || {}),
+})({
   color: props.color,
   to: !!props.to,
 }));
 
-const target = computed(() => props.target || (!!props.to && typeof props.to === 'string' && props.to.startsWith('http') ? '_blank' : undefined));
+const target = computed(() => props.target || (!!props.to && typeof props.to === 'string' && props.to.startsWith('http')
+  ? '_blank'
+  : undefined));
 </script>
 
 <template>

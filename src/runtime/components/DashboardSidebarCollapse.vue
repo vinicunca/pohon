@@ -51,9 +51,15 @@ const buttonProps = useForwardProps(reactiveOmit(props, 'icon', 'side', 'class')
 
 const { t } = useLocale();
 const appConfig = useAppConfig() as DashboardSidebarCollapse['AppConfig'];
-const { sidebarCollapsed, collapseSidebar } = useDashboard({ sidebarCollapsed: ref(false), collapseSidebar: () => {} });
+const { sidebarCollapsed, collapseSidebar } = useDashboard({
+  sidebarCollapsed: ref(false),
+  collapseSidebar: () => {},
+});
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardSidebarCollapse || {}) }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.dashboardSidebarCollapse || {}),
+}));
 </script>
 
 <template>

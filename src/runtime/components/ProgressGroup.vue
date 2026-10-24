@@ -90,7 +90,10 @@ const props = useComponentProps<ProgressGroupProps<T>>('progressGroup', _props);
 
 const appConfig = useAppConfig() as ProgressGroup['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.progressGroup || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.progressGroup || {}),
+})({
   size: props.size,
   color: props.color as ProgressGroup['variants']['color'],
   orientation: props.orientation,
@@ -102,7 +105,9 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.progressGroup ||
 const max = computed(() => {
   const value = Number(props.max);
 
-  return Number.isFinite(value) && value > 0 ? value : 100;
+  return Number.isFinite(value) && value > 0
+    ? value
+    : 100;
 });
 
 // `ProgressRoot` turns a value below `0` or above `max` into `null`, which reads as
@@ -119,11 +124,16 @@ const statusStyle = computed(() => ({ '--percent': `${percent.value}%` }));
 
 // `uv` skips a color it doesn't know, so a value outside the theme palette adds no class
 // and is applied inline instead.
-const themeColors = computed(() => Object.keys({ ...theme.variants?.color, ...appConfig.ui?.progressGroup?.variants?.color }));
+const themeColors = computed(() => Object.keys({
+  ...theme.variants?.color,
+  ...appConfig.ui?.progressGroup?.variants?.color,
+}));
 
 const itemColors = computed(() => (props.items ?? []).map((item) => (item.color || props.color) as ProgressGroup['variants']['color']));
 
-const customColors = computed(() => itemColors.value.map((color) => color && !themeColors.value.includes(color) ? color : undefined));
+const customColors = computed(() => itemColors.value.map((color) => color && !themeColors.value.includes(color)
+  ? color
+  : undefined));
 
 const hasList = computed(() => !!props.items?.length
   && (props.items.some((item) => item.label || item.icon || item.slot)
@@ -132,7 +142,9 @@ const hasList = computed(() => !!props.items?.length
 function segmentStyle(index: number) {
   const value = `${percents.value[index] ?? 0}%`;
 
-  return props.orientation === 'vertical' ? { height: value } : { width: value };
+  return props.orientation === 'vertical'
+    ? { height: value }
+    : { width: value };
 }
 
 // `ProgressRoot` derives `aria-label` from `getValueLabel`, whose default is the segment's
@@ -140,7 +152,9 @@ function segmentStyle(index: number) {
 const valueLabels = computed(() => (props.items ?? []).map((item) => {
   const label = item.label;
 
-  return label ? () => label : undefined;
+  return label
+    ? () => label
+    : undefined;
 }));
 </script>
 

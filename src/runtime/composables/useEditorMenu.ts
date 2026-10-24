@@ -159,7 +159,11 @@ export function useEditorMenu<T = any>(options: EditorMenuOptions<T>) {
           continue;
         }
 
-        const values = Array.isArray(value) ? value.map(String) : [String(value)];
+        const values = Array.isArray(value)
+          ? value.map(String)
+          : [
+              String(value),
+            ];
 
         for (const v of values) {
           const normalized = v.replace(/[\s_-]/g, '');
@@ -189,7 +193,9 @@ export function useEditorMenu<T = any>(options: EditorMenuOptions<T>) {
   const limit = options.limit ?? 42;
 
   // Create the plugin key instance early (needed by showMenu helper)
-  const pluginKeyInstance = typeof options.pluginKey === 'string' ? new PluginKey(options.pluginKey) : options.pluginKey;
+  const pluginKeyInstance = typeof options.pluginKey === 'string'
+    ? new PluginKey(options.pluginKey)
+    : options.pluginKey;
 
   // Normalize items into groups first
   const groups = computed<Array<Array<T>>>(() => {
@@ -449,7 +455,9 @@ export function useEditorMenu<T = any>(options: EditorMenuOptions<T>) {
     };
     element.addEventListener('mousedown', handleMouseDown);
 
-    const appendToElement = typeof options.appendTo === 'function' ? options.appendTo() : options.appendTo;
+    const appendToElement = typeof options.appendTo === 'function'
+      ? options.appendTo()
+      : options.appendTo;
     const container = appendToElement ?? options.editor.view.dom.parentElement;
     container?.appendChild(element);
     if (renderer.element) {

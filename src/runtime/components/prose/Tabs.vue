@@ -52,7 +52,10 @@ const model = defineModel<string>();
 
 const appConfig = useAppConfig() as ProseTabs['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.tabs || {}) }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.tabs || {}),
+}));
 
 const rerenderCount = ref(1);
 
@@ -107,7 +110,9 @@ onMounted(() => {
 
 async function onUpdateModelValue() {
   if (props.hash) {
-    const hash = props.hash.startsWith('#') ? props.hash : `#${props.hash}`;
+    const hash = props.hash.startsWith('#')
+      ? props.hash
+      : `#${props.hash}`;
     setTimeout(() => {
       document.querySelector(hash)?.scrollIntoView();
     }, 200);

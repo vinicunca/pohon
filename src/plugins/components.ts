@@ -16,7 +16,10 @@ interface ComponentSource {
 }
 
 function createComponentSource(cwd: string, prefix: string, ignore: Array<string> = []): ComponentSource {
-  const files = globSync('**/*.vue', { cwd, ignore: ignore.filter(Boolean) as Array<string> });
+  const files = globSync('**/*.vue', {
+    cwd,
+    ignore: ignore.filter(Boolean) as Array<string>,
+  });
   const names = new Set(files.map((c) => `${prefix}${c.split('/').pop()?.replace(/\.vue$/, '')}`));
   const paths = new Map(files.map((c) => {
     const componentName = `${prefix}${c.split('/').pop()?.replace(/\.vue$/, '')}`;
@@ -30,7 +33,10 @@ function createComponentSource(cwd: string, prefix: string, ignore: Array<string
       if (!relativePath) {
         return;
       }
-      return { name: 'default', from: join(cwd, relativePath) };
+      return {
+        name: 'default',
+        from: join(cwd, relativePath),
+      };
     },
     resolveFile: (filename) => {
       const componentName = `${prefix}${filename}`;
@@ -40,7 +46,9 @@ function createComponentSource(cwd: string, prefix: string, ignore: Array<string
       }
       return join(cwd, relativePath);
     },
-    resolvePath: (relativePath) => files.includes(relativePath) ? join(cwd, relativePath) : undefined,
+    resolvePath: (relativePath) => files.includes(relativePath)
+      ? join(cwd, relativePath)
+      : undefined,
   };
 }
 
@@ -51,7 +59,9 @@ const PACKAGE_IMPORT_RE = /(?:^|\/node_modules\/)pohon-ui\/(?:dist\/)?(?:runtime
  * This plugin adds all the Pohon UI components as auto-imports.
  */
 export default function ComponentImportPlugin(options: PohonUiOptions & { prefix: NonNullable<PohonUiOptions['prefix']> }, meta: UnpluginContextMeta) {
-  const colorModeIgnore = !options.colorMode ? ['color-mode/**/*.vue'] : [];
+  const colorModeIgnore = !options.colorMode
+    ? ['color-mode/**/*.vue']
+    : [];
   const routerMode = resolveRouterMode(options);
 
   const routerOverrides: Record<string, ComponentSource> = {
@@ -83,7 +93,9 @@ export default function ComponentImportPlugin(options: PohonUiOptions & { prefix
       // or by absolute path, which is also what an alias hands over once Vite has replaced it.
       const normalizedId = normalize(id);
       const packagePath = normalizedId.match(PACKAGE_IMPORT_RE)?.[1]
-        ?? (normalizedId.startsWith(componentsDir) && normalizedId.endsWith('.vue') ? normalizedId.slice(componentsDir.length) : undefined);
+        ?? (normalizedId.startsWith(componentsDir) && normalizedId.endsWith('.vue')
+          ? normalizedId.slice(componentsDir.length)
+          : undefined);
       if (packagePath) {
         for (const source of overrideSources) {
           const resolved = source.resolvePath(packagePath);
@@ -146,13 +158,20 @@ export default function ComponentImportPlugin(options: PohonUiOptions & { prefix
     ? createComponentSource(join(runtimeDir, 'components/prose'), 'Prose')
     : undefined;
 
-  const allSources: Array<ComponentSource | undefined> = [routerOverrides[routerMode], unpluginComponents, defaultComponents, proseComponents];
+  const allSources: Array<ComponentSource | undefined> = [
+    routerOverrides[routerMode],
+    unpluginComponents,
+    defaultComponents,
+    proseComponents,
+  ];
   const filteredSources = allSources.filter((s): s is ComponentSource => !!s);
 
   const packagesToScan = [
     'pohon-ui',
     '@compodium/examples',
-    ...(Array.isArray(options.scanPackages) ? options.scanPackages : []),
+    ...(Array.isArray(options.scanPackages)
+      ? options.scanPackages
+      : []),
   ];
   const escapeRegex = (str: string) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const packagesRegex = packagesToScan.map(escapeRegex).join('|');

@@ -13,33 +13,169 @@ describe('switch', () => {
 
   renderEach(Switch, [
     // Props
-    ['with modelValue', { props: { modelValue: true } }],
-    ['with defaultValue', { props: { defaultValue: true } }],
-    ['with id', { props: { id: 'id' } }],
-    ['with name', { props: { name: 'name' } }],
-    ['with value', { props: { value: 'value' } }],
-    ['with disabled', { props: { disabled: true } }],
-    ['with checkedIcon', { props: { checkedIcon: 'i-lucide-check', defaultValue: true } }],
-    ['with uncheckedIcon', { props: { uncheckedIcon: 'i-lucide-x' } }],
-    ['with loading', { props: { loading: true } }],
-    ['with loadingIcon', { props: { loading: true, loadingIcon: 'i-lucide-loader' } }],
-    ['with label', { props: { label: 'Label' } }],
-    ['with required', { props: { label: 'Label', required: true } }],
-    ['with description', { props: { label: 'Label', description: 'Description' } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { size } }]),
-    ['with color neutral', { props: { color: 'neutral', defaultValue: true } }],
-    ['with highlight', { props: { highlight: true } }],
-    ['with highlight neutral', { props: { highlight: true, color: 'neutral' } }],
-    ['with ariaLabel', { attrs: { 'aria-label': 'Aria label' } }],
-    ['with trueValue/falseValue as string', { props: { trueValue: 'on', falseValue: 'off', defaultValue: 'on' } }],
-    ['with trueValue/falseValue as number', { props: { trueValue: 1, falseValue: 0, defaultValue: 1 } }],
-    ['with trueValue/falseValue unchecked', { props: { trueValue: 'on', falseValue: 'off', defaultValue: 'off' } }],
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'inline-flex' } }],
-    ['with ui', { props: { ui: { wrapper: 'ms-4' } } }],
+    [
+      'with modelValue',
+      {
+        props: { modelValue: true },
+      },
+    ],
+    [
+      'with defaultValue',
+      {
+        props: { defaultValue: true },
+      },
+    ],
+    [
+      'with id',
+      {
+        props: { id: 'id' },
+      },
+    ],
+    [
+      'with name',
+      {
+        props: { name: 'name' },
+      },
+    ],
+    [
+      'with value',
+      {
+        props: { value: 'value' },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { disabled: true },
+      },
+    ],
+    [
+      'with checkedIcon',
+      {
+        props: { checkedIcon: 'i-lucide-check', defaultValue: true },
+      },
+    ],
+    [
+      'with uncheckedIcon',
+      {
+        props: { uncheckedIcon: 'i-lucide-x' },
+      },
+    ],
+    [
+      'with loading',
+      {
+        props: { loading: true },
+      },
+    ],
+    [
+      'with loadingIcon',
+      {
+        props: { loading: true, loadingIcon: 'i-lucide-loader' },
+      },
+    ],
+    [
+      'with label',
+      {
+        props: { label: 'Label' },
+      },
+    ],
+    [
+      'with required',
+      {
+        props: { label: 'Label', required: true },
+      },
+    ],
+    [
+      'with description',
+      {
+        props: { label: 'Label', description: 'Description' },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { size },
+      },
+    ]),
+    [
+      'with color neutral',
+      {
+        props: { color: 'neutral', defaultValue: true },
+      },
+    ],
+    [
+      'with highlight',
+      {
+        props: { highlight: true },
+      },
+    ],
+    [
+      'with highlight neutral',
+      {
+        props: { highlight: true, color: 'neutral' },
+      },
+    ],
+    [
+      'with ariaLabel',
+      {
+        attrs: { 'aria-label': 'Aria label' },
+      },
+    ],
+    [
+      'with trueValue/falseValue as string',
+      {
+        props: { trueValue: 'on', falseValue: 'off', defaultValue: 'on' },
+      },
+    ],
+    [
+      'with trueValue/falseValue as number',
+      {
+        props: { trueValue: 1, falseValue: 0, defaultValue: 1 },
+      },
+    ],
+    [
+      'with trueValue/falseValue unchecked',
+      {
+        props: { trueValue: 'on', falseValue: 'off', defaultValue: 'off' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'inline-flex' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { wrapper: 'ms-4' },
+        },
+      },
+    ],
     // Slots
-    ['with label slot', { slots: { label: () => 'Label slot' } }],
-    ['with description slot', { slots: { label: () => 'Description slot' } }],
+    [
+      'with label slot',
+      {
+        slots: {
+          label: () => 'Label slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        slots: {
+          label: () => 'Description slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {
@@ -59,14 +195,24 @@ describe('switch', () => {
       const wrapper = mount(Switch);
       const input = wrapper.findComponent({ name: 'SwitchRoot' });
       await input.vm.$emit('update:modelValue', true);
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [[true]] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          [true],
+        ],
+      });
     });
 
     it('change event', async () => {
       const wrapper = mount(Switch);
       const input = wrapper.findComponent({ name: 'SwitchRoot' });
       await input.vm.$emit('update:modelValue', true);
-      expect(wrapper.emitted()).toMatchObject({ change: [[{ type: 'change' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        change: [
+          [
+            { type: 'change' },
+          ],
+        ],
+      });
     });
 
     it('toggle with custom trueValue/falseValue via click', async () => {
@@ -95,7 +241,9 @@ describe('switch', () => {
           validateOnInputDelay: 0,
           async validate(state: any) {
             if (!state.value) {
-              return [{ name: 'value', message: 'Error message' }];
+              return [
+                { name: 'value', message: 'Error message' },
+              ];
             }
             return [];
           },

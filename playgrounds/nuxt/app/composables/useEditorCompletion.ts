@@ -38,7 +38,14 @@ export function useEditorCompletion(editorRef: Ref<{ editor: any | undefined } |
       }
 
       // For transform modes, insert the full completion with markdown parsing
-      const transformModes = ['fix', 'extend', 'reduce', 'simplify', 'summarize', 'translate'];
+      const transformModes = [
+        'fix',
+        'extend',
+        'reduce',
+        'simplify',
+        'summarize',
+        'translate',
+      ];
       if (transformModes.includes(mode.value) && insertState.value && completionText) {
         const editor = editorRef.value?.editor;
         if (editor) {
@@ -91,7 +98,14 @@ export function useEditorCompletion(editorRef: Ref<{ editor: any | undefined } |
       // Direct insertion/transform mode (from toolbar actions)
 
       // Transform modes use markdown insertion - wait for full completion
-      const transformModes = ['fix', 'extend', 'reduce', 'simplify', 'summarize', 'translate'];
+      const transformModes = [
+        'fix',
+        'extend',
+        'reduce',
+        'simplify',
+        'summarize',
+        'translate',
+      ];
       if (transformModes.includes(mode.value)) {
         // Don't stream - will be handled in onFinish
         return;
@@ -149,7 +163,10 @@ export function useEditorCompletion(editorRef: Ref<{ editor: any | undefined } |
     const selectedText = state.doc.textBetween(selection.from, selection.to);
 
     // Replace the selected text with the transformed version
-    insertState.value = { pos: selection.from, deleteRange: { from: selection.from, to: selection.to } };
+    insertState.value = {
+      pos: selection.from,
+      deleteRange: { from: selection.from, to: selection.to },
+    };
 
     complete(selectedText);
   }

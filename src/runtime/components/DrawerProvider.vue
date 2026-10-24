@@ -38,7 +38,10 @@ const _props = withDefaults(defineProps<DrawerProviderProps>(), { scale: false }
 defineSlots<DrawerProviderSlots>();
 const props = useComponentProps('drawerProvider', _props);
 const appConfig = useAppConfig() as DrawerProviderConfig['AppConfig'];
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.drawerProvider || {}) })({ scale: props.scale }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.drawerProvider || {}),
+})({ scale: props.scale }));
 </script>
 
 <template>

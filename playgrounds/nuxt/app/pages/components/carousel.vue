@@ -28,89 +28,101 @@ const bind = computed(() => ({
   dots: dots.value,
 }));
 
-const options = computed(() => [{
-  label: 'Loop',
-  type: 'checkbox' as const,
-  checked: loop.value,
-  onSelect: (e: Event) => {
-    e.preventDefault();
-    loop.value = !loop.value;
+const options = computed(() => [
+  {
+    label: 'Loop',
+    type: 'checkbox' as const,
+    checked: loop.value,
+    onSelect: (e: Event) => {
+      e.preventDefault();
+      loop.value = !loop.value;
+    },
   },
-}, {
-  label: 'Skip Snaps',
-  type: 'checkbox' as const,
-  checked: skipSnaps.value,
-  onSelect: (e: Event) => {
-    e.preventDefault();
-    skipSnaps.value = !skipSnaps.value;
+  {
+    label: 'Skip Snaps',
+    type: 'checkbox' as const,
+    checked: skipSnaps.value,
+    onSelect: (e: Event) => {
+      e.preventDefault();
+      skipSnaps.value = !skipSnaps.value;
+    },
   },
-}, {
-  label: 'Arrows',
-  type: 'checkbox' as const,
-  checked: arrows.value,
-  onSelect: (e: Event) => {
-    e.preventDefault();
-    arrows.value = !arrows.value;
+  {
+    label: 'Arrows',
+    type: 'checkbox' as const,
+    checked: arrows.value,
+    onSelect: (e: Event) => {
+      e.preventDefault();
+      arrows.value = !arrows.value;
+    },
   },
-}, {
-  label: 'Dots',
-  type: 'checkbox' as const,
-  checked: dots.value,
-  onSelect: (e: Event) => {
-    e.preventDefault();
-    dots.value = !dots.value;
+  {
+    label: 'Dots',
+    type: 'checkbox' as const,
+    checked: dots.value,
+    onSelect: (e: Event) => {
+      e.preventDefault();
+      dots.value = !dots.value;
+    },
   },
-}]);
+]);
 
-const plugins = computed(() => [{
-  label: 'Autoplay',
-  type: 'checkbox' as const,
-  checked: autoplay.value,
-  onSelect: (e: Event) => {
-    e.preventDefault();
-    autoplay.value = !autoplay.value;
+const plugins = computed(() => [
+  {
+    label: 'Autoplay',
+    type: 'checkbox' as const,
+    checked: autoplay.value,
+    onSelect: (e: Event) => {
+      e.preventDefault();
+      autoplay.value = !autoplay.value;
+    },
   },
-}, {
-  label: 'Auto Scroll',
-  type: 'checkbox' as const,
-  checked: autoScroll.value,
-  onSelect: (e: Event) => {
-    e.preventDefault();
-    autoScroll.value = !autoScroll.value;
+  {
+    label: 'Auto Scroll',
+    type: 'checkbox' as const,
+    checked: autoScroll.value,
+    onSelect: (e: Event) => {
+      e.preventDefault();
+      autoScroll.value = !autoScroll.value;
+    },
   },
-}, {
-  label: 'Auto Height',
-  type: 'checkbox' as const,
-  checked: autoHeight.value,
-  onSelect: (e: Event) => {
-    e.preventDefault();
-    autoHeight.value = !autoHeight.value;
+  {
+    label: 'Auto Height',
+    type: 'checkbox' as const,
+    checked: autoHeight.value,
+    onSelect: (e: Event) => {
+      e.preventDefault();
+      autoHeight.value = !autoHeight.value;
+    },
   },
-}, {
-  label: 'Fade',
-  type: 'checkbox' as const,
-  checked: fade.value,
-  onSelect: (e: Event) => {
-    e.preventDefault();
-    fade.value = !fade.value;
+  {
+    label: 'Fade',
+    type: 'checkbox' as const,
+    checked: fade.value,
+    onSelect: (e: Event) => {
+      e.preventDefault();
+      fade.value = !fade.value;
+    },
   },
-}, {
-  label: 'Class Names',
-  type: 'checkbox' as const,
-  checked: classNames.value,
-  onSelect: (e: Event) => {
-    e.preventDefault();
-    classNames.value = !classNames.value;
+  {
+    label: 'Class Names',
+    type: 'checkbox' as const,
+    checked: classNames.value,
+    onSelect: (e: Event) => {
+      e.preventDefault();
+      classNames.value = !classNames.value;
+    },
   },
-}, {
-  label: 'Wheel Gestures',
-  type: 'checkbox' as const,
-  checked: wheelGestures.value,
-  onSelect: (e: Event) => {
-    e.preventDefault();
-    wheelGestures.value = !wheelGestures.value;
+  {
+    label: 'Wheel Gestures',
+    type: 'checkbox' as const,
+    checked: wheelGestures.value,
+    onSelect: (e: Event) => {
+      e.preventDefault();
+      wheelGestures.value = !wheelGestures.value;
+    },
   },
-}]);
+]);
 
 const items = Array.from({ length: 6 }).map((_, index) => ({
   id: index,

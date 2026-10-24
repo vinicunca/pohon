@@ -10,10 +10,23 @@ describe('useFilter', () => {
     it('keeps labels and separators where they are while sorting the matches', () => {
       const { filterGroups } = useFilter();
       const separator: Item = { type: 'separator' };
-      const group: Array<Item> = ['Banana', separator, 'Aubergine', 'Broccoli'];
+      const group: Array<Item> = [
+        'Banana',
+        separator,
+        'Aubergine',
+        'Broccoli',
+      ];
 
-      expect(filterGroups([group], 'b', { fields: ['label'], isStructural })).toEqual([
-        ['Banana', separator, 'Broccoli', 'Aubergine'],
+      expect(filterGroups([group], 'b', {
+        fields: ['label'],
+        isStructural,
+      })).toEqual([
+        [
+          'Banana',
+          separator,
+          'Broccoli',
+          'Aubergine',
+        ],
       ]);
     });
 
@@ -21,10 +34,23 @@ describe('useFilter', () => {
       const { filterGroups } = useFilter();
       const fruits: Item = { type: 'label', label: 'Fruits' };
       const vegetables: Item = { type: 'label', label: 'Vegetables' };
-      const group: Array<Item> = [fruits, 'Banana', vegetables, 'Aubergine'];
+      const group: Array<Item> = [
+        fruits,
+        'Banana',
+        vegetables,
+        'Aubergine',
+      ];
 
-      expect(filterGroups([group], 'a', { fields: ['label'], isStructural })).toEqual([
-        [fruits, 'Banana', vegetables, 'Aubergine'],
+      expect(filterGroups([group], 'a', {
+        fields: ['label'],
+        isStructural,
+      })).toEqual([
+        [
+          fruits,
+          'Banana',
+          vegetables,
+          'Aubergine',
+        ],
       ]);
     });
 
@@ -32,7 +58,10 @@ describe('useFilter', () => {
       const { filterGroups } = useFilter();
       const group: Array<Item> = ['Aubergine', 'Broccoli', 'B'];
 
-      expect(filterGroups([group], 'b', { fields: ['label'], isStructural })).toEqual([
+      expect(filterGroups([group], 'b', {
+        fields: ['label'],
+        isStructural,
+      })).toEqual([
         ['B', 'Broccoli', 'Aubergine'],
       ]);
     });
@@ -40,12 +69,24 @@ describe('useFilter', () => {
     it('drops a group left with structural items only', () => {
       const { filterGroups } = useFilter();
       const groups: Array<Array<Item>> = [
-        [{ type: 'label', label: 'Fruits' }, 'Apple'],
-        [{ type: 'label', label: 'Vegetables' }, 'Carrot'],
+        [
+          { type: 'label', label: 'Fruits' },
+          'Apple',
+        ],
+        [
+          { type: 'label', label: 'Vegetables' },
+          'Carrot',
+        ],
       ];
 
-      expect(filterGroups(groups, 'apple', { fields: ['label'], isStructural })).toEqual([
-        [{ type: 'label', label: 'Fruits' }, 'Apple'],
+      expect(filterGroups(groups, 'apple', {
+        fields: ['label'],
+        isStructural,
+      })).toEqual([
+        [
+          { type: 'label', label: 'Fruits' },
+          'Apple',
+        ],
       ]);
     });
   });

@@ -119,7 +119,10 @@ const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
 const size = computed(() => fieldGroupSize.value ?? formFieldSize.value ?? props.size);
 const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputTags || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.inputTags || {}),
+})({
   color: color.value,
   variant: props.variant,
   size: size.value,
@@ -154,7 +157,9 @@ function onUpdate(value: Array<T>) {
     return;
   }
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value } });
+  const event = new Event('change', {
+    target: { value },
+  });
   emits('change', event);
   emitFormChange();
   emitFormInput();

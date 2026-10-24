@@ -19,7 +19,9 @@ describe('useToast', () => {
   describe('add', () => {
     // Only `Date` is faked so the animation window does not depend on how long the test takes.
     beforeEach(() => {
-      vi.useFakeTimers({ toFake: ['Date'] });
+      vi.useFakeTimers({
+        toFake: ['Date'],
+      });
     });
 
     afterEach(() => {

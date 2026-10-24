@@ -71,7 +71,9 @@ function _useOverlay() {
     const { props, defaultOpen, destroyOnClose } = _options || {};
 
     const options = reactive<Overlay>({
-      id: Symbol(import.meta.dev ? 'useOverlay' : ''),
+      id: Symbol(import.meta.dev
+        ? 'useOverlay'
+        : ''),
       isOpen: !!defaultOpen,
       component: markRaw(component!),
       isMounted: !!defaultOpen,
@@ -96,7 +98,10 @@ function _useOverlay() {
 
     // If props are provided, merge them with the original props, otherwise use the original props
     if (props) {
-      overlay.props = { ...overlay.originalProps, ...props };
+      overlay.props = {
+        ...overlay.originalProps,
+        ...props,
+      };
     } else {
       overlay.props = { ...overlay.originalProps };
     }
@@ -146,7 +151,10 @@ function _useOverlay() {
   function patch<T extends Component>(id: symbol, props: Partial<ComponentProps<T>>): void {
     const overlay = getOverlay(id);
 
-    overlay.props = { ...overlay.props, ...props };
+    overlay.props = {
+      ...overlay.props,
+      ...props,
+    };
   }
 
   function getOverlay(id: symbol): Overlay {

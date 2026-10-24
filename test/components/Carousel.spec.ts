@@ -28,17 +28,81 @@ describe('carousel', () => {
 
   renderEach(CarouselWrapper, [
     // Props
-    ['with items', { props }],
-    ['with orientation vertical', { props: { ...props, orientation: 'vertical' } }],
-    ['with arrows', { props: { ...props, arrows: true } }],
-    ['with prev', { props: { ...props, arrows: true, prev: { color: 'primary' } } }],
-    ['with prevIcon', { props: { ...props, arrows: true, prevIcon: 'i-lucide-arrow-left' } }],
-    ['with next', { props: { ...props, arrows: true, next: { color: 'primary' } } }],
-    ['with nextIcon', { props: { ...props, arrows: true, nextIcon: 'i-lucide-arrow-right' } }],
-    ['with dots', { props: { ...props, dots: true } }],
-    ['with as', { props: { ...props, as: 'nav' } }],
-    ['with class', { props: { ...props, class: 'w-full max-w-xs' } }],
-    ['with ui', { props: { ...props, ui: { viewport: 'h-[320px]' } } }],
+    [
+      'with items',
+      { props },
+    ],
+    [
+      'with orientation vertical',
+      {
+        props: { ...props, orientation: 'vertical' },
+      },
+    ],
+    [
+      'with arrows',
+      {
+        props: { ...props, arrows: true },
+      },
+    ],
+    [
+      'with prev',
+      {
+        props: {
+          ...props,
+          arrows: true,
+          prev: { color: 'primary' },
+        },
+      },
+    ],
+    [
+      'with prevIcon',
+      {
+        props: { ...props, arrows: true, prevIcon: 'i-lucide-arrow-left' },
+      },
+    ],
+    [
+      'with next',
+      {
+        props: {
+          ...props,
+          arrows: true,
+          next: { color: 'primary' },
+        },
+      },
+    ],
+    [
+      'with nextIcon',
+      {
+        props: { ...props, arrows: true, nextIcon: 'i-lucide-arrow-right' },
+      },
+    ],
+    [
+      'with dots',
+      {
+        props: { ...props, dots: true },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'nav' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'w-full max-w-xs' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { viewport: 'h-[320px]' },
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

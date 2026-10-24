@@ -193,7 +193,9 @@ const to = computed(() => {
     return path;
   }
 
-  const localizedPath = localePath(path, typeof props.locale === 'string' ? props.locale : undefined);
+  const localizedPath = localePath(path, typeof props.locale === 'string'
+    ? props.locale
+    : undefined);
 
   return localizedPath || path;
 });
@@ -277,10 +279,20 @@ function resolveLinkClass({ route, isActive, isExactActive, prefetched }: any = 
   const prefetchedClass = prefetched ? props.prefetchedClass : undefined;
 
   if (props.raw) {
-    return [props.class, active ? props.activeClass : props.inactiveClass, prefetchedClass];
+    return [
+      props.class,
+      active ? props.activeClass : props.inactiveClass,
+      prefetchedClass,
+    ];
   }
 
-  return ui.value({ class: prefetchedClass ? [props.class, prefetchedClass] : props.class, active, disabled: props.disabled });
+  return ui.value({
+    class: prefetchedClass
+      ? [props.class, prefetchedClass]
+      : props.class,
+    active,
+    disabled: props.disabled,
+  });
 }
 
 // Since Nuxt 4.5, NuxtLink no longer prefetches `custom` links itself and
@@ -326,7 +338,12 @@ function getPrefetchListeners({ prefetch, shouldPrefetch, prefetched, isExternal
     return undefined;
   }
 
-  prefetchApi = { prefetch, shouldPrefetch, prefetched, fullPath: isExternal ? undefined : linkRoute?.fullPath };
+  prefetchApi = {
+    prefetch,
+    shouldPrefetch,
+    prefetched,
+    fullPath: isExternal ? undefined : linkRoute?.fullPath,
+  };
 
   // Before prefetching, only interaction mode has anything to do on these events.
   if (!prefetched && !shouldPrefetch('interaction')) {
@@ -353,7 +370,9 @@ onMounted(() => {
   // is its next sibling. This is the element NuxtLink itself observed for
   // custom links before 4.5.
   const root = instance?.proxy?.$el as Element | CharacterData | null;
-  const el = root instanceof Element ? root : root?.nextElementSibling;
+  const el = root instanceof Element
+    ? root
+    : root?.nextElementSibling;
   if (!el) {
     return;
   }

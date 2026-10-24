@@ -34,23 +34,28 @@ export default (options: Required<ModuleOptions>) => ({
       false: 'absolute',
     },
   },
-  compoundVariants: [{
-    position: 'top-right',
-    inset: false,
-    class: '-translate-y-1/2 translate-x-1/2 transform',
-  }, {
-    position: 'bottom-right',
-    inset: false,
-    class: 'translate-y-1/2 translate-x-1/2 transform',
-  }, {
-    position: 'top-left',
-    inset: false,
-    class: '-translate-y-1/2 -translate-x-1/2 transform',
-  }, {
-    position: 'bottom-left',
-    inset: false,
-    class: 'translate-y-1/2 -translate-x-1/2 transform',
-  }],
+  compoundVariants: [
+    {
+      position: 'top-right',
+      inset: false,
+      class: '-translate-y-1/2 translate-x-1/2 transform',
+    },
+    {
+      position: 'bottom-right',
+      inset: false,
+      class: 'translate-y-1/2 translate-x-1/2 transform',
+    },
+    {
+      position: 'top-left',
+      inset: false,
+      class: '-translate-y-1/2 -translate-x-1/2 transform',
+    },
+    {
+      position: 'bottom-left',
+      inset: false,
+      class: 'translate-y-1/2 -translate-x-1/2 transform',
+    },
+  ],
   defaultVariants: {
     size: 'md',
     color: 'primary',

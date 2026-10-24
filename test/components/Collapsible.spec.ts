@@ -9,15 +9,62 @@ describe('collapsible', () => {
 
   renderEach(Collapsible, [
     // Props
-    ['with open', { props }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with unmountOnHide', { props: { ...props, unmountOnHide: false } }],
-    ['with disabled', { props: { ...props, disabled: true } }],
-    ['with class', { props: { ...props, class: 'flex flex-col gap-2 w-48' } }],
-    ['with ui', { props: { ...props, ui: { content: 'bg-background-elevated' } } }],
+    [
+      'with open',
+      { props },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with unmountOnHide',
+      {
+        props: { ...props, unmountOnHide: false },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { ...props, disabled: true },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'flex flex-col gap-2 w-48' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { content: 'bg-background-elevated' },
+        },
+      },
+    ],
     // Slots
-    ['with default slot', { props, slots: { default: () => 'Default slot' } }],
-    ['with content slot', { props, slots: { content: () => 'Content slot' } }],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with content slot',
+      {
+        props,
+        slots: {
+          content: () => 'Content slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

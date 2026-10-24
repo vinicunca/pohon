@@ -12,10 +12,13 @@ export const themeSlider = {
   },
   variants: {
     color: {
-      ...Object.fromEntries(BRANDS.map((color: string) => [color, {
-        range: `bg-${color}`,
-        thumb: `ring-${color} outline-${color}/25`,
-      }])),
+      ...Object.fromEntries(BRANDS.map((color: string) => [
+        color,
+        {
+          range: `bg-${color}`,
+          thumb: `ring-${color} outline-${color}/25`,
+        },
+      ])),
       neutral: {
         range: 'bg-background-inverted',
         thumb: 'outline-border-inverted/25 ring-border-inverted',

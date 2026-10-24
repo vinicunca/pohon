@@ -15,52 +15,194 @@ describe('inputNumber', () => {
 
   renderEach(InputNumber, [
     // Props
-    ['with name', { props: { name: 'name' } }],
-    ['with placeholder', { props: { placeholder: 'Number...' } }],
-    ['with disabled', { props: { disabled: true } }],
-    ['with required', { props: { required: true } }],
-    ['with orientation vertical', { props: { orientation: 'vertical' } }],
-    ['with incrementIcon', { props: { incrementIcon: 'i-lucide-arrow-left' } }],
-    ['with decrementIcon', { props: { decrementIcon: 'i-lucide-arrow-right' } }],
-    ['without increment', { props: { increment: false } }],
-    ['without increment vertical', { props: { increment: false, orientation: 'vertical' } }],
-    ['without decrement', { props: { decrement: false } }],
-    ['without decrement vertical', { props: { decrement: false, orientation: 'vertical' } }],
-    ['without increment and decrement', { props: { increment: false, decrement: false } }],
-    ['without increment and decrement vertical', { props: { increment: false, decrement: false, orientation: 'vertical' } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { size } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { variant } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant} highlight`, { props: { variant, highlight: true } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { variant, color: 'neutral' } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant} highlight`, { props: { variant, color: 'neutral', highlight: true } }]),
-    ['with ariaLabel', { attrs: { 'aria-label': 'Aria label' } }],
-    ['with .optional modifier', { props: { modelModifiers: { optional: true } } }, { input: '', expected: undefined }],
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'absolute' } }],
-    ['with ui', { props: { ui: { base: 'rounded-full' } } }],
+    [
+      'with name',
+      {
+        props: { name: 'name' },
+      },
+    ],
+    [
+      'with placeholder',
+      {
+        props: { placeholder: 'Number...' },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { disabled: true },
+      },
+    ],
+    [
+      'with required',
+      {
+        props: { required: true },
+      },
+    ],
+    [
+      'with orientation vertical',
+      {
+        props: { orientation: 'vertical' },
+      },
+    ],
+    [
+      'with incrementIcon',
+      {
+        props: { incrementIcon: 'i-lucide-arrow-left' },
+      },
+    ],
+    [
+      'with decrementIcon',
+      {
+        props: { decrementIcon: 'i-lucide-arrow-right' },
+      },
+    ],
+    [
+      'without increment',
+      {
+        props: { increment: false },
+      },
+    ],
+    [
+      'without increment vertical',
+      {
+        props: { increment: false, orientation: 'vertical' },
+      },
+    ],
+    [
+      'without decrement',
+      {
+        props: { decrement: false },
+      },
+    ],
+    [
+      'without decrement vertical',
+      {
+        props: { decrement: false, orientation: 'vertical' },
+      },
+    ],
+    [
+      'without increment and decrement',
+      {
+        props: { increment: false, decrement: false },
+      },
+    ],
+    [
+      'without increment and decrement vertical',
+      {
+        props: { increment: false, decrement: false, orientation: 'vertical' },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { size },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant}`,
+      {
+        props: { variant },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant} highlight`,
+      {
+        props: { variant, highlight: true },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant}`,
+      {
+        props: { variant, color: 'neutral' },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant} highlight`,
+      {
+        props: { variant, color: 'neutral', highlight: true },
+      },
+    ]),
+    [
+      'with ariaLabel',
+      {
+        attrs: { 'aria-label': 'Aria label' },
+      },
+    ],
+    [
+      'with .optional modifier',
+      {
+        props: {
+          modelModifiers: { optional: true },
+        },
+      },
+      { input: '', expected: undefined },
+    ],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'absolute' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { base: 'rounded-full' },
+        },
+      },
+    ],
     // Slots
-    ['with increment slot', { slots: { increment: () => '+' } }],
-    ['with decrement slot', { slots: { decrement: () => '-' } }],
+    [
+      'with increment slot',
+      {
+        slots: {
+          increment: () => '+',
+        },
+      },
+    ],
+    [
+      'with decrement slot',
+      {
+        slots: {
+          decrement: () => '-',
+        },
+      },
+    ],
   ]);
 
   it.each(['increment', 'decrement'])('starts from startingValue on the first %s of an empty field', async (slot) => {
-    const wrapper = await mountSuspended(InputNumber, { props: { startingValue: 18 } });
+    const wrapper = await mountSuspended(InputNumber, {
+      props: { startingValue: 18 },
+    });
 
     const button = wrapper.find(`[data-slot="${slot}"] button`);
     await button.trigger('pointerdown', { button: 0, pointerType: 'mouse' });
     await button.trigger('pointerup', { button: 0, pointerType: 'mouse' });
 
-    expect(wrapper.emitted('update:modelValue')).toEqual([[18]]);
+    expect(wrapper.emitted('update:modelValue')).toEqual([
+      [18],
+    ]);
   });
 
   it('keeps an out of range typed value with allowInvalid', async () => {
-    const wrapper = await mountSuspended(InputNumber, { props: { max: 10, allowInvalid: true } });
+    const wrapper = await mountSuspended(InputNumber, {
+      props: { max: 10, allowInvalid: true },
+    });
 
     const input = wrapper.find('input');
     await input.setValue('15');
     await input.trigger('blur');
 
-    expect(wrapper.emitted('update:modelValue')).toEqual([[15]]);
+    expect(wrapper.emitted('update:modelValue')).toEqual([
+      [15],
+    ]);
   });
 
   it('passes accessibility tests', async () => {
@@ -81,12 +223,19 @@ describe('inputNumber', () => {
       const wrapper = await mountSuspended(InputNumber);
       const input = wrapper.findComponent({ name: 'NumberFieldRoot' });
       await input.setValue(1);
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [[1]] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          [1],
+        ],
+      });
       expect(1).toBe(1);
     });
 
     it('increments uncontrolled defaultValue without v-model', async () => {
-      const wrapper = await mountSuspended(InputNumber, { props: { defaultValue: 5 }, attachTo: document.body });
+      const wrapper = await mountSuspended(InputNumber, {
+        props: { defaultValue: 5 },
+        attachTo: document.body,
+      });
       const increment = wrapper.find('[data-slot="increment"] button');
 
       await increment.trigger('pointerdown');
@@ -94,7 +243,9 @@ describe('inputNumber', () => {
       await wrapper.find('input').trigger('blur');
       await flushPromises();
 
-      expect(wrapper.emitted('update:modelValue')).toEqual([[6]]);
+      expect(wrapper.emitted('update:modelValue')).toEqual([
+        [6],
+      ]);
       expect((wrapper.find('input').element as HTMLInputElement).value).toBe('6');
 
       wrapper.unmount();
@@ -116,7 +267,9 @@ describe('inputNumber', () => {
       await wrapper.find('input').trigger('blur');
       await flushPromises();
 
-      expect(wrapper.emitted('update:modelValue')).toEqual([[6]]);
+      expect(wrapper.emitted('update:modelValue')).toEqual([
+        [6],
+      ]);
       expect(wrapper.emitted('change')).toHaveLength(1);
 
       wrapper.unmount();
@@ -138,11 +291,15 @@ describe('inputNumber', () => {
       await input.trigger('blur');
       await flushPromises();
 
-      expect(wrapper.emitted('update:modelValue')).toEqual([[undefined]]);
+      expect(wrapper.emitted('update:modelValue')).toEqual([
+        [undefined],
+      ]);
     });
 
     it('does not emit when blurred with a null modelValue', async () => {
-      const wrapper = await mountSuspended(InputNumber, { props: { modelValue: null } });
+      const wrapper = await mountSuspended(InputNumber, {
+        props: { modelValue: null },
+      });
 
       await wrapper.find('input').trigger('blur');
       await flushPromises();
@@ -154,14 +311,26 @@ describe('inputNumber', () => {
       const wrapper = await mountSuspended(InputNumber);
       const input = wrapper.findComponent({ name: 'NumberFieldRoot' });
       await input.setValue(1);
-      expect(wrapper.emitted()).toMatchObject({ change: [[{ type: 'change' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        change: [
+          [
+            { type: 'change' },
+          ],
+        ],
+      });
     });
 
     it('blur event', async () => {
       const wrapper = await mountSuspended(InputNumber);
       const input = wrapper.findComponent({ name: 'NumberFieldInput' });
       await input.trigger('blur');
-      expect(wrapper.emitted()).toMatchObject({ blur: [[{ type: 'blur' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        blur: [
+          [
+            { type: 'blur' },
+          ],
+        ],
+      });
     });
   });
 
@@ -174,7 +343,9 @@ describe('inputNumber', () => {
           validateOnInputDelay: 0,
           async validate(state: any) {
             if (state.value !== 1) {
-              return [{ name: 'value', message: 'Error message' }];
+              return [
+                { name: 'value', message: 'Error message' },
+              ];
             }
             return [];
           },

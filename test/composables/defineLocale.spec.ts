@@ -77,7 +77,10 @@ describe('extendLocale', () => {
 
   it('does not mutate the base locale', () => {
     const base = defineLocale<TestMessages>(baseOptions);
-    extendLocale<TestMessages>(base, { name: 'Variant', messages: { greeting: 'Yo' } });
+    extendLocale<TestMessages>(base, {
+      name: 'Variant',
+      messages: { greeting: 'Yo' },
+    });
 
     expect(base.name).toBe('English');
     expect(base.messages.greeting).toBe('Hello');

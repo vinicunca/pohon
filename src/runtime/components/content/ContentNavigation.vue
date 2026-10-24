@@ -135,7 +135,10 @@ const appConfig = useAppConfig() as ContentNavigation['AppConfig'];
 
 const [DefineLinkTemplate, ReuseLinkTemplate] = createReusableTemplate<{ link: ContentNavigationLink; active: boolean }>();
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.contentNavigation || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.contentNavigation || {}),
+})({
   color: props.color,
   variant: props.variant,
   highlight: props.highlight,
@@ -158,7 +161,9 @@ const defaultValue = computed(() => {
   }
   // When `defaultOpen` is `undefined`, open the first item or the first level
   if (props.defaultOpen === undefined) {
-    return props.type === 'single' ? '0' : props.navigation?.map((link, index) => link.defaultOpen !== false && String(index)).filter(Boolean) as Array<string>;
+    return props.type === 'single'
+      ? '0'
+      : props.navigation?.map((link, index) => link.defaultOpen !== false && String(index)).filter(Boolean) as Array<string>;
   }
   // When `defaultOpen` is `true`, open items based on the current route
   const indices = props.navigation?.reduce((acc, link, index) => {
@@ -168,7 +173,9 @@ const defaultValue = computed(() => {
     return acc;
   }, [] as Array<string>) || [];
 
-  return props.type === 'multiple' ? indices : indices[0];
+  return props.type === 'multiple'
+    ? indices
+    : indices[0];
 });
 </script>
 

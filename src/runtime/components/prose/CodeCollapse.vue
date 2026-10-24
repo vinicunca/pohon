@@ -56,7 +56,10 @@ const open = defineModel<boolean>('open', { default: false });
 const { t } = useLocale();
 const appConfig = useAppConfig() as ProseCodeCollapse['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.codeCollapse || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.codeCollapse || {}),
+})({
   open: open.value,
 }));
 </script>

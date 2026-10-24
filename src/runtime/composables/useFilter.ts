@@ -39,7 +39,11 @@ export function useFilter() {
         continue;
       }
 
-      const values = Array.isArray(value) ? value.map(String) : [String(value)];
+      const values = Array.isArray(value)
+        ? value.map(String)
+        : [
+            String(value),
+          ];
       for (const v of values) {
         const s = score(v, searchTerm);
         if (s !== null && (bestScore === null || s < bestScore)) {
@@ -118,5 +122,10 @@ export function useFilter() {
     }).filter((group) => group.some((item) => !options.isStructural?.(item)));
   }
 
-  return { score, scoreItem, filter, filterGroups };
+  return {
+    score,
+    scoreItem,
+    filter,
+    filterGroups,
+  };
 }

@@ -7,18 +7,47 @@ import { renderEach } from '../component-render';
 describe('dashboardSearchButton', () => {
   renderEach(DashboardSearchButton, [
     // Props
-    ['with label', { props: { label: 'Open' } }],
-    ['with icon', { props: { icon: 'i-lucide-house' } }],
-    ['with kbds', { props: { kbds: ['alt', 'o'] } }],
-    ['with collapsed', { props: { collapsed: true } }],
-    ['with class', { props: { class: 'w-full' } }],
+    [
+      'with label',
+      {
+        props: { label: 'Open' },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { icon: 'i-lucide-house' },
+      },
+    ],
+    [
+      'with kbds',
+      {
+        props: {
+          kbds: ['alt', 'o'],
+        },
+      },
+    ],
+    [
+      'with collapsed',
+      {
+        props: { collapsed: true },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'w-full' },
+      },
+    ],
   ]);
 
   it('hides the icon when icon is false', async () => {
     const withIcon = await mountSuspended(DashboardSearchButton);
     expect(withIcon.find('[data-slot="leadingIcon"]').exists()).toBe(true);
 
-    const withoutIcon = await mountSuspended(DashboardSearchButton, { props: { icon: false } });
+    const withoutIcon = await mountSuspended(DashboardSearchButton, {
+      props: { icon: false },
+    });
     expect(withoutIcon.find('[data-slot="leadingIcon"]').exists()).toBe(false);
   });
 

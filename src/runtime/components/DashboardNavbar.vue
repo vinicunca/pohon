@@ -82,7 +82,10 @@ const [DefineToggleTemplate, ReuseToggleTemplate] = createReusableTemplate();
 
 const as = computed(() => resolveAs(props.as, { root: 'div', title: 'h1' }));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardNavbar || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.dashboardNavbar || {}),
+})());
 </script>
 
 <template>

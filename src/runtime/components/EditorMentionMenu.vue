@@ -54,7 +54,10 @@ const searchTerm = defineModel<string>('searchTerm', { default: '' });
 
 const appConfig = useAppConfig() as EditorMentionMenu['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.editorMentionMenu || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.editorMentionMenu || {}),
+})({
   size: props.size,
 }));
 
@@ -97,14 +100,27 @@ onMounted(async () => {
     },
     renderItem: (item, styles) => [
       item.avatar
-        ? h(PAvatar, { ...item.avatar, size: styles.value.itemLeadingAvatarSize(), class: styles.value.itemLeadingAvatar() })
+        ? h(PAvatar, {
+            ...item.avatar,
+            size: styles.value.itemLeadingAvatarSize(),
+            class: styles.value.itemLeadingAvatar(),
+          })
         : item.icon
-          ? h(PIcon, { name: item.icon, class: styles.value.itemLeadingIcon() })
+          ? h(PIcon, {
+              name: item.icon,
+              class: styles.value.itemLeadingIcon(),
+            })
           : null,
-      h('span', { class: styles.value.itemWrapper() }, [
-        h('span', { class: styles.value.itemLabel() }, item.label),
+      h('span', {
+        class: styles.value.itemWrapper(),
+      }, [
+        h('span', {
+          class: styles.value.itemLabel(),
+        }, item.label),
         item.description
-          ? h('span', { class: styles.value.itemDescription() }, item.description)
+          ? h('span', {
+              class: styles.value.itemDescription(),
+            }, item.description)
           : null,
       ]),
     ],

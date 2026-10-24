@@ -86,14 +86,29 @@ const _props = withDefaults(
 );
 const emits = defineEmits<PopoverEmits>();
 const slots = defineSlots<PopoverSlots<M>>();
-const AkarPopover = { Root: PopoverRoot, Trigger: PopoverTrigger, Portal: PopoverPortal, Content: PopoverContent, Arrow: PopoverArrow, Anchor: PopoverAnchor };
-const HoverCard = { Root: HoverCardRoot, Trigger: HoverCardTrigger, Portal: HoverCardPortal, Content: HoverCardContent, Arrow: HoverCardArrow };
+const AkarPopover = {
+  Root: PopoverRoot,
+  Trigger: PopoverTrigger,
+  Portal: PopoverPortal,
+  Content: PopoverContent,
+  Arrow: PopoverArrow,
+  Anchor: PopoverAnchor,
+};
+const HoverCard = {
+  Root: HoverCardRoot,
+  Trigger: HoverCardTrigger,
+  Portal: HoverCardPortal,
+  Content: HoverCardContent,
+  Arrow: HoverCardArrow,
+};
 
 const props = useComponentProps<PopoverProps<M>>('popover', _props);
 
 const appConfig = useAppConfig() as Popover['AppConfig'];
 
-const pick = props.mode === 'hover' ? reactivePick(props, 'defaultOpen', 'open', 'openDelay', 'closeDelay', 'enableTouch') : reactivePick(props, 'defaultOpen', 'open', 'modal');
+const pick = props.mode === 'hover'
+  ? reactivePick(props, 'defaultOpen', 'open', 'openDelay', 'closeDelay', 'enableTouch')
+  : reactivePick(props, 'defaultOpen', 'open', 'modal');
 const rootProps = useForwardProps(pick, emits);
 const portalProps = usePortal(toRef(() => props.portal));
 const contentProps = toRef(() => defu(props.content, { side: 'bottom', sideOffset: 8, collisionPadding: 8 }) as PopoverContentProps);
@@ -116,11 +131,16 @@ const contentEvents = computed(() => {
 });
 const arrowProps = toRef(() => defu(props.arrow, { rounded: true }) as PopoverArrowProps);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.popover || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.popover || {}),
+})({
   side: contentProps.value.side,
 }));
 
-const Component = computed(() => props.mode === 'hover' ? HoverCard : AkarPopover);
+const Component = computed(() => props.mode === 'hover'
+  ? HoverCard
+  : AkarPopover);
 </script>
 
 <template>

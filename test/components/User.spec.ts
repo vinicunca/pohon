@@ -17,21 +17,107 @@ describe('user', () => {
 
   renderEach(User, [
     // Props
-    ['with name', { props: { name: props.name } }],
-    ['with description', { props: { name: props.name, description: props.description } }],
-    ['with to', { props: { ...props, to: 'https://github.com/benjamincanac' } }],
-    ['with avatar', { props }],
-    ['with chip', { props: { ...props, chip: { color: 'success' } } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { ...props, size } }]),
-    ...orientations.map((orientation: string) => [`with orientation ${orientation}`, { props: { ...props, orientation } }]),
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'absolute' } }],
-    ['with ui', { props: { ...props, ui: { name: 'font-700' } } }],
+    [
+      'with name',
+      {
+        props: { name: props.name },
+      },
+    ],
+    [
+      'with description',
+      {
+        props: { name: props.name, description: props.description },
+      },
+    ],
+    [
+      'with to',
+      {
+        props: { ...props, to: 'https://github.com/benjamincanac' },
+      },
+    ],
+    [
+      'with avatar',
+      { props },
+    ],
+    [
+      'with chip',
+      {
+        props: {
+          ...props,
+          chip: { color: 'success' },
+        },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { ...props, size },
+      },
+    ]),
+    ...orientations.map((orientation: string) => [
+      `with orientation ${orientation}`,
+      {
+        props: { ...props, orientation },
+      },
+    ]),
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'absolute' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { name: 'font-700' },
+        },
+      },
+    ],
     // Slots
-    ['with avatar slot', { props, slots: { avatar: () => 'Avatar slot' } }],
-    ['with name slot', { props, slots: { name: () => 'Name slot' } }],
-    ['with description slot', { props, slots: { description: () => 'Description slot' } }],
-    ['with default slot', { props, slots: { default: () => 'Default slot' } }],
+    [
+      'with avatar slot',
+      {
+        props,
+        slots: {
+          avatar: () => 'Avatar slot',
+        },
+      },
+    ],
+    [
+      'with name slot',
+      {
+        props,
+        slots: {
+          name: () => 'Name slot',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        props,
+        slots: {
+          description: () => 'Description slot',
+        },
+      },
+    ],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

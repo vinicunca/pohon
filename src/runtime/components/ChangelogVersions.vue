@@ -74,14 +74,21 @@ const getProxySlots = () => omit(slots, ['default', 'indicator']);
 
 const appConfig = useAppConfig() as ChangelogVersions['AppConfig'];
 
-const springOptions = computed(() => defu(typeof props.indicatorMotion === 'object' ? props.indicatorMotion : {}, { damping: 30, restDelta: 0.001 }));
-const scrollOptions = computed(() => typeof props.indicator === 'object' ? props.indicator : {});
+const springOptions = computed(() => defu(typeof props.indicatorMotion === 'object'
+  ? props.indicatorMotion
+  : {}, { damping: 30, restDelta: 0.001 }));
+const scrollOptions = computed(() => typeof props.indicator === 'object'
+  ? props.indicator
+  : {});
 
 const { scrollYProgress } = useScroll(scrollOptions.value);
 const y = useSpring(scrollYProgress, springOptions);
 const height = useTransform(() => `${Number(y.get()) * 100}%`);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.changelogVersions || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.changelogVersions || {}),
+})());
 </script>
 
 <template>

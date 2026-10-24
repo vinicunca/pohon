@@ -102,7 +102,9 @@ describe('useOverlay', () => {
   });
 
   it('should open an overlay with default props', async () => {
-    const modal = overlay.create(MockModal, { props: { title: 'Default' } });
+    const modal = overlay.create(MockModal, {
+      props: { title: 'Default' },
+    });
     const instance = modal.open();
 
     const createdModal = getModalById(overlay.overlays, instance.id);
@@ -111,7 +113,9 @@ describe('useOverlay', () => {
   });
 
   it('should open an overlay and override default props', async () => {
-    const modal = overlay.create(MockModal, { props: { title: 'default' } });
+    const modal = overlay.create(MockModal, {
+      props: { title: 'default' },
+    });
     const instance = modal.open({ title: 'custom', description: 'custom description' });
 
     const createdModal = getModalById(overlay.overlays, instance.id);

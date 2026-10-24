@@ -8,27 +8,161 @@ import { renderEach } from '../component-render';
 describe('header', () => {
   renderEach(Header, [
     // Props
-    ['with title', { props: { title: 'Documentation' } }],
-    ['with to', { props: { to: '/docs' } }],
-    ['with mode modal', { props: { open: true, mode: 'modal', menu: { portal: false } } }],
-    ['with mode slideover', { props: { open: true, mode: 'slideover', menu: { portal: false } } }],
-    ['with mode drawer', { props: { open: true, mode: 'drawer', menu: { portal: false } } }],
-    ['without toggle', { props: { toggle: false } }],
-    ['with toggle', { props: { toggle: { color: 'primary', variant: 'solid' } } }],
-    ['with toggleSide', { props: { toggleSide: 'left' } }],
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'border-b-0' } }],
-    ['with ui', { props: { ui: { container: 'gap-1.5' } } }],
+    [
+      'with title',
+      {
+        props: { title: 'Documentation' },
+      },
+    ],
+    [
+      'with to',
+      {
+        props: { to: '/docs' },
+      },
+    ],
+    [
+      'with mode modal',
+      {
+        props: {
+          open: true,
+          mode: 'modal',
+          menu: { portal: false },
+        },
+      },
+    ],
+    [
+      'with mode slideover',
+      {
+        props: {
+          open: true,
+          mode: 'slideover',
+          menu: { portal: false },
+        },
+      },
+    ],
+    [
+      'with mode drawer',
+      {
+        props: {
+          open: true,
+          mode: 'drawer',
+          menu: { portal: false },
+        },
+      },
+    ],
+    [
+      'without toggle',
+      {
+        props: { toggle: false },
+      },
+    ],
+    [
+      'with toggle',
+      {
+        props: {
+          toggle: { color: 'primary', variant: 'solid' },
+        },
+      },
+    ],
+    [
+      'with toggleSide',
+      {
+        props: { toggleSide: 'left' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'border-b-0' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { container: 'gap-1.5' },
+        },
+      },
+    ],
     // Slots
-    ['with title slot', { slots: { title: () => 'Title slot' } }],
-    ['with left slot', { slots: { left: () => 'Left slot' } }],
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
-    ['with right slot', { slots: { right: () => 'Right slot' } }],
-    ['with toggle slot', { slots: { toggle: () => 'Toggle slot' } }],
-    ['with top slot', { slots: { top: () => 'Top slot' } }],
-    ['with bottom slot', { slots: { bottom: () => 'Bottom slot' } }],
-    ['with body slot', { slots: { body: () => 'Body slot' } }],
-    ['with content slot', { slots: { content: () => 'Content slot' } }],
+    [
+      'with title slot',
+      {
+        slots: {
+          title: () => 'Title slot',
+        },
+      },
+    ],
+    [
+      'with left slot',
+      {
+        slots: {
+          left: () => 'Left slot',
+        },
+      },
+    ],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with right slot',
+      {
+        slots: {
+          right: () => 'Right slot',
+        },
+      },
+    ],
+    [
+      'with toggle slot',
+      {
+        slots: {
+          toggle: () => 'Toggle slot',
+        },
+      },
+    ],
+    [
+      'with top slot',
+      {
+        slots: {
+          top: () => 'Top slot',
+        },
+      },
+    ],
+    [
+      'with bottom slot',
+      {
+        slots: {
+          bottom: () => 'Bottom slot',
+        },
+      },
+    ],
+    [
+      'with body slot',
+      {
+        slots: {
+          body: () => 'Body slot',
+        },
+      },
+    ],
+    [
+      'with content slot',
+      {
+        slots: {
+          content: () => 'Content slot',
+        },
+      },
+    ],
   ], async (_, options) => {
     const wrapper = await mountSuspended(Header, options);
     await vi.dynamicImportSettled();
@@ -36,7 +170,12 @@ describe('header', () => {
   });
 
   it('labels the menu dialog with the translated toggle label', async () => {
-    const wrapper = await mountSuspended(Header, { props: { open: true, menu: { portal: false } } });
+    const wrapper = await mountSuspended(Header, {
+      props: {
+        open: true,
+        menu: { portal: false },
+      },
+    });
     await vi.dynamicImportSettled();
 
     const dialog = wrapper.find('[role="dialog"]');
@@ -48,7 +187,14 @@ describe('header', () => {
   });
 
   it('mounts the menu once opened', async () => {
-    const wrapper = await mountSuspended(Header, { props: { menu: { portal: false } }, slots: { body: () => 'Body slot' } });
+    const wrapper = await mountSuspended(Header, {
+      props: {
+        menu: { portal: false },
+      },
+      slots: {
+        body: () => 'Body slot',
+      },
+    });
 
     expect(wrapper.findComponent(Modal).exists()).toBe(false);
 
@@ -59,7 +205,14 @@ describe('header', () => {
   });
 
   it('mounts the menu before opening with `unmountOnHide: false`', async () => {
-    const wrapper = await mountSuspended(Header, { props: { menu: { portal: false, unmountOnHide: false } }, slots: { body: () => 'Body slot' } });
+    const wrapper = await mountSuspended(Header, {
+      props: {
+        menu: { portal: false, unmountOnHide: false },
+      },
+      slots: {
+        body: () => 'Body slot',
+      },
+    });
     await vi.dynamicImportSettled();
 
     expect(wrapper.find('[role="dialog"]').text()).toContain('Body slot');

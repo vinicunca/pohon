@@ -41,8 +41,12 @@ function renderEach<T, const C extends ReadonlyArray<[string, MountSuspendedOpti
   fnOrTestName?: string | RenderEachFn<T, RenderEachRest<T, C>>,
   fn?: RenderEachFn<T, RenderEachRest<T, C>>,
 ) {
-  const testName = typeof fnOrTestName === 'string' ? fnOrTestName : 'renders %s correctly';
-  const callback = typeof fnOrTestName === 'function' ? fnOrTestName : fn;
+  const testName = typeof fnOrTestName === 'string'
+    ? fnOrTestName
+    : 'renders %s correctly';
+  const callback = typeof fnOrTestName === 'function'
+    ? fnOrTestName
+    : fn;
 
   return it.each(cases as ReadonlyArray<[string, MountSuspendedOptions<T>, ...Array<any>]>)(testName, async (nameOrHtml: string, options: MountSuspendedOptions<T>, ...args: RenderEachRest<T, C>) => {
     if (callback) {

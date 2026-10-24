@@ -18,9 +18,12 @@ export const themeBanner = {
   },
   variants: {
     color: {
-      ...Object.fromEntries(BRANDS.map((color) => [color, {
-        root: `bg-${color}`,
-      }])),
+      ...Object.fromEntries(BRANDS.map((color) => [
+        color,
+        {
+          root: `bg-${color}`,
+        },
+      ])),
       neutral: {
         root: 'bg-background-inverted',
       },

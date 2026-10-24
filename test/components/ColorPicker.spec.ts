@@ -17,12 +17,44 @@ describe('colorPicker', () => {
 
   renderEach(ColorPicker, [
     // Props
-    ['with disabled', { props: { disabled: true } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { size } }]),
-    ...formats.map((format) => [`with format ${format[0]}`, { props: { format: format[0], defaultValue: format[1] } }]),
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'w-96' } }],
-    ['with ui', { props: { ui: { picker: 'gap-8' } } }],
+    [
+      'with disabled',
+      {
+        props: { disabled: true },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { size },
+      },
+    ]),
+    ...formats.map((format) => [
+      `with format ${format[0]}`,
+      {
+        props: { format: format[0], defaultValue: format[1] },
+      },
+    ]),
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'w-96' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { picker: 'gap-8' },
+        },
+      },
+    ],
   ]);
 
   it('renders the RGB color represented by CMYK input', async () => {
@@ -44,7 +76,11 @@ describe('colorPicker', () => {
       const wrapper = await mountSuspended(ColorPicker);
       await wrapper.setValue('#00C16A');
 
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [['#00C16A']] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          ['#00C16A'],
+        ],
+      });
     });
   });
 });

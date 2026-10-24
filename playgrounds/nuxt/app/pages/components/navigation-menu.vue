@@ -30,23 +30,28 @@ const items = [
       icon: 'i-lucide-book-open',
       badge: 10,
       chip: true,
-      children: [{
-        label: 'Introduction',
-        description: 'Fully styled and customizable components for Nuxt.',
-        icon: 'i-lucide-house',
-      }, {
-        label: 'Installation',
-        description: 'Learn how to install and configure Pohon UI in your application.',
-        icon: 'i-lucide-cloud-download',
-      }, {
-        label: 'Theming',
-        description: 'Learn how to customize the look and feel of the components.',
-        icon: 'i-lucide-swatch-book',
-      }, {
-        label: 'Shortcuts',
-        description: 'Learn how to display and define keyboard shortcuts in your app.',
-        icon: 'i-lucide-monitor',
-      }],
+      children: [
+        {
+          label: 'Introduction',
+          description: 'Fully styled and customizable components for Nuxt.',
+          icon: 'i-lucide-house',
+        },
+        {
+          label: 'Installation',
+          description: 'Learn how to install and configure Pohon UI in your application.',
+          icon: 'i-lucide-cloud-download',
+        },
+        {
+          label: 'Theming',
+          description: 'Learn how to customize the look and feel of the components.',
+          icon: 'i-lucide-swatch-book',
+        },
+        {
+          label: 'Shortcuts',
+          description: 'Learn how to display and define keyboard shortcuts in your app.',
+          icon: 'i-lucide-monitor',
+        },
+      ],
     },
     // {
     //   label: 'Components',

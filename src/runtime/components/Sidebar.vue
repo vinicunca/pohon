@@ -241,7 +241,7 @@ const menuProps = toRef(() => defu(props.menu, {
   ? { }
   : props.mode === 'slideover'
     ? { side: props.side, inset: props.variant === 'inset' }
-    : {}) as SidebarMenu<T>);
+    : {}) as Omit<SidebarMenu<T>, 'modal'> & Pick<ModalProps, 'modal'>);
 
 const renderMenu = useLazyOverlay(() => openMobile.value || (props.menu as ModalProps | undefined)?.unmountOnHide === false, async () => {
   if (isMobile.value) {

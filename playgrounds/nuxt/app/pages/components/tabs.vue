@@ -14,23 +14,27 @@ const attrs = reactive({
 
 const orientation = ref('horizontal' as keyof typeof theme.variants.orientation);
 
-const items = [{
-  label: 'Tab1',
-  avatar: {
-    src: 'https://github.com/praburangki.png',
+const items = [
+  {
+    label: 'Tab1',
+    avatar: {
+      src: 'https://github.com/praburangki.png',
+    },
+    content: 'This is the content shown for Tab1',
   },
-  content: 'This is the content shown for Tab1',
-}, {
-  label: 'Tab2',
-  icon: 'i-lucide-user',
-  content: 'And, this is the content for Tab2',
-}, {
-  label: 'Tab3',
-  icon: 'i-lucide-bell',
-  content: 'Finally, this is the content for Tab3',
-  slot: 'custom' as const,
-  badge: '300',
-}];
+  {
+    label: 'Tab2',
+    icon: 'i-lucide-user',
+    content: 'And, this is the content for Tab2',
+  },
+  {
+    label: 'Tab3',
+    icon: 'i-lucide-bell',
+    content: 'Finally, this is the content for Tab3',
+    slot: 'custom' as const,
+    badge: '300',
+  },
+];
 </script>
 
 <template>

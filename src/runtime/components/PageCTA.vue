@@ -76,7 +76,10 @@ const appConfig = useAppConfig() as PageCTA['AppConfig'];
 
 const as = computed(() => resolveAs(props.as, { root: 'div', title: 'h2' }));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageCTA || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.pageCTA || {}),
+})({
   variant: props.variant,
   orientation: props.orientation,
   reverse: props.reverse,

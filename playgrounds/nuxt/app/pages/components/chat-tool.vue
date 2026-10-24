@@ -2,8 +2,16 @@
 import type { ButtonProps } from 'pohon-ui';
 
 const actions: Array<ButtonProps> = [
-  { label: 'Approve', onClick: () => console.log('approve') },
-  { label: 'Deny', color: 'neutral', variant: 'soft', onClick: () => console.log('deny') },
+  {
+    label: 'Approve',
+    onClick: () => console.log('approve'),
+  },
+  {
+    label: 'Deny',
+    color: 'neutral',
+    variant: 'soft',
+    onClick: () => console.log('deny'),
+  },
 ];
 </script>
 

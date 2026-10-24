@@ -126,7 +126,12 @@ const { t } = useLocale();
 const appConfig = useAppConfig() as Drawer['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'modal', 'open', 'defaultOpen', 'snapPoints', 'snapPoint', 'defaultSnapPoint', 'snapToSequentialPoints'));
-const swipeDirection = computed(() => ({ top: 'up', bottom: 'down', left: 'left', right: 'right' } as const)[props.direction]);
+const swipeDirection = computed(() => ({
+  top: 'up',
+  bottom: 'down',
+  left: 'left',
+  right: 'right',
+} as const)[props.direction]);
 
 function onOpenChange(open: boolean, details: DrawerOpenChangeDetails) {
   if (!open && !props.dismissible && ['swipe', 'escape-key', 'outside-press'].includes(details.reason ?? '')) {
@@ -180,7 +185,10 @@ function onAnimationEnd(event: AnimationEvent) {
   onOpenComplete((event.currentTarget as HTMLElement).dataset.state === 'open');
 }
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.drawer || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.drawer || {}),
+})({
   direction: props.direction,
   inset: props.inset,
   transition: props.transition,

@@ -35,10 +35,13 @@ export default (options: Required<ModuleOptions>) => ({
   },
   variants: {
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        link: `before:outline-${color}/25`,
-        childLink: `before:outline-${color}/25`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          link: `before:outline-${color}/25`,
+          childLink: `before:outline-${color}/25`,
+        },
+      ])),
       neutral: {
         link: 'before:outline-border-inverted/25',
         childLink: 'before:outline-border-inverted/25',

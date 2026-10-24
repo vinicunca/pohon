@@ -28,10 +28,13 @@ export default (options: Required<ModuleOptions>) => ({
     },
 
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        indicator: `group-data-[state=completed]:bg-${color} group-data-[state=active]:bg-${color} group-data-[state=completed]:color-${color}-foreground group-data-[state=active]:color-${color}-foreground`,
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          indicator: `group-data-[state=completed]:bg-${color} group-data-[state=active]:bg-${color} group-data-[state=completed]:color-${color}-foreground group-data-[state=active]:color-${color}-foreground`,
 
-      }])),
+        },
+      ])),
       neutral: {
         indicator: 'group-data-[state=completed]:bg-background-inverted group-data-[state=active]:bg-background-inverted group-data-[state=completed]:color-text-inverted group-data-[state=active]:color-text-inverted',
       },
@@ -54,139 +57,162 @@ export default (options: Required<ModuleOptions>) => ({
     },
   },
 
-  compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
-    color,
-    reverse: false,
-    class: {
-      separator: `group-data-[state=completed]:bg-${color}`,
+  compoundVariants: [
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      reverse: false,
+      class: {
+        separator: `group-data-[state=completed]:bg-${color}`,
+      },
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      reverse: true,
+      class: {
+        separator: `group-data-[state=active]:bg-${color} group-data-[state=completed]:bg-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      reverse: false,
+      class: {
+        separator: 'group-data-[state=completed]:bg-background-inverted',
+      },
     },
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    reverse: true,
-    class: {
-      separator: `group-data-[state=active]:bg-${color} group-data-[state=completed]:bg-${color}`,
+    {
+      color: 'neutral',
+      reverse: true,
+      class: {
+        separator: 'group-data-[state=active]:bg-background-inverted group-data-[state=completed]:bg-background-inverted',
+      },
     },
-  })), {
-    color: 'neutral',
-    reverse: false,
-    class: {
-      separator: 'group-data-[state=completed]:bg-background-inverted',
+    {
+      orientation: 'horizontal',
+      size: '3xs',
+      class: {
+        wrapper: 'pe-4.5',
+      },
     },
-  }, {
-    color: 'neutral',
-    reverse: true,
-    class: {
-      separator: 'group-data-[state=active]:bg-background-inverted group-data-[state=completed]:bg-background-inverted',
+    {
+      orientation: 'horizontal',
+      size: '2xs',
+      class: {
+        wrapper: 'pe-5',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: '3xs',
-    class: {
-      wrapper: 'pe-4.5',
+    {
+      orientation: 'horizontal',
+      size: 'xs',
+      class: {
+        wrapper: 'pe-5.5',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: '2xs',
-    class: {
-      wrapper: 'pe-5',
+    {
+      orientation: 'horizontal',
+      size: 'sm',
+      class: {
+        wrapper: 'pe-6',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: 'xs',
-    class: {
-      wrapper: 'pe-5.5',
+    {
+      orientation: 'horizontal',
+      size: 'md',
+      class: {
+        wrapper: 'pe-6.5',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: 'sm',
-    class: {
-      wrapper: 'pe-6',
+    {
+      orientation: 'horizontal',
+      size: 'lg',
+      class: {
+        wrapper: 'pe-7',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: 'md',
-    class: {
-      wrapper: 'pe-6.5',
+    {
+      orientation: 'horizontal',
+      size: 'xl',
+      class: {
+        wrapper: 'pe-7.5',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: 'lg',
-    class: {
-      wrapper: 'pe-7',
+    {
+      orientation: 'horizontal',
+      size: '2xl',
+      class: {
+        wrapper: 'pe-8',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: 'xl',
-    class: {
-      wrapper: 'pe-7.5',
+    {
+      orientation: 'horizontal',
+      size: '3xl',
+      class: {
+        wrapper: 'pe-8.5',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: '2xl',
-    class: {
-      wrapper: 'pe-8',
+    {
+      orientation: 'vertical',
+      size: '3xs',
+      class: {
+        wrapper: '-mt-0.5 pb-4.5',
+      },
     },
-  }, {
-    orientation: 'horizontal',
-    size: '3xl',
-    class: {
-      wrapper: 'pe-8.5',
+    {
+      orientation: 'vertical',
+      size: '2xs',
+      class: {
+        wrapper: 'pb-5',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: '3xs',
-    class: {
-      wrapper: '-mt-0.5 pb-4.5',
+    {
+      orientation: 'vertical',
+      size: 'xs',
+      class: {
+        wrapper: 'mt-0.5 pb-5.5',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: '2xs',
-    class: {
-      wrapper: 'pb-5',
+    {
+      orientation: 'vertical',
+      size: 'sm',
+      class: {
+        wrapper: 'mt-1 pb-6',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'xs',
-    class: {
-      wrapper: 'mt-0.5 pb-5.5',
+    {
+      orientation: 'vertical',
+      size: 'md',
+      class: {
+        wrapper: 'mt-1.5 pb-6.5',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'sm',
-    class: {
-      wrapper: 'mt-1 pb-6',
+    {
+      orientation: 'vertical',
+      size: 'lg',
+      class: {
+        wrapper: 'mt-2 pb-7',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'md',
-    class: {
-      wrapper: 'mt-1.5 pb-6.5',
+    {
+      orientation: 'vertical',
+      size: 'xl',
+      class: {
+        wrapper: 'mt-2.5 pb-7.5',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'lg',
-    class: {
-      wrapper: 'mt-2 pb-7',
+    {
+      orientation: 'vertical',
+      size: '2xl',
+      class: {
+        wrapper: 'mt-3 pb-8',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: 'xl',
-    class: {
-      wrapper: 'mt-2.5 pb-7.5',
+    {
+      orientation: 'vertical',
+      size: '3xl',
+      class: {
+        wrapper: 'mt-3.5 pb-8.5',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    size: '2xl',
-    class: {
-      wrapper: 'mt-3 pb-8',
-    },
-  }, {
-    orientation: 'vertical',
-    size: '3xl',
-    class: {
-      wrapper: 'mt-3.5 pb-8.5',
-    },
-  }],
+  ],
 
   defaultVariants: {
     size: 'md',

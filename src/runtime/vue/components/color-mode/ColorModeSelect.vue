@@ -28,9 +28,21 @@ const appConfig = useAppConfig();
 const selectMenuProps = useForwardProps(props);
 
 const items = computed(() => [
-  { label: t('colorMode.system'), value: 'system', icon: appConfig.ui.icons.system },
-  { label: t('colorMode.light'), value: 'light', icon: appConfig.ui.icons.light },
-  { label: t('colorMode.dark'), value: 'dark', icon: appConfig.ui.icons.dark },
+  {
+    label: t('colorMode.system'),
+    value: 'system',
+    icon: appConfig.ui.icons.system,
+  },
+  {
+    label: t('colorMode.light'),
+    value: 'light',
+    icon: appConfig.ui.icons.light,
+  },
+  {
+    label: t('colorMode.dark'),
+    value: 'dark',
+    icon: appConfig.ui.icons.dark,
+  },
 ]);
 
 const preference = computed({

@@ -41,9 +41,14 @@ const appConfig = useAppConfig() as ProseH1['AppConfig'];
 // NOTE: the `mdc.headings.anchorLinks` fallback is deprecated, remove in v5 in favor of the `anchor` prop.
 const { headings } = useRuntimeConfig().public?.mdc || {};
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.h1 || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.h1 || {}),
+})());
 
-const generate = computed(() => props.id && (props.anchor ?? (isBoolean(headings?.anchorLinks) ? headings.anchorLinks : headings?.anchorLinks?.h1) ?? false));
+const generate = computed(() => props.id && (props.anchor ?? (isBoolean(headings?.anchorLinks)
+  ? headings.anchorLinks
+  : headings?.anchorLinks?.h1) ?? false));
 </script>
 
 <template>

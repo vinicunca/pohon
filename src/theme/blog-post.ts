@@ -65,59 +65,68 @@ export default (options: Required<ModuleOptions>) => ({
       true: '',
     },
   },
-  compoundVariants: [{
-    variant: 'outline',
-    to: true,
-    class: {
-      root: 'hover:bg-background-elevated/50',
+  compoundVariants: [
+    {
+      variant: 'outline',
+      to: true,
+      class: {
+        root: 'hover:bg-background-elevated/50',
+      },
     },
-  }, {
-    variant: 'soft',
-    to: true,
-    class: {
-      root: 'hover:bg-background-elevated',
+    {
+      variant: 'soft',
+      to: true,
+      class: {
+        root: 'hover:bg-background-elevated',
+      },
     },
-  }, {
-    variant: 'subtle',
-    to: true,
-    class: {
-      root: 'hover:bg-background-elevated hover:ring-border-accented',
+    {
+      variant: 'subtle',
+      to: true,
+      class: {
+        root: 'hover:bg-background-elevated hover:ring-border-accented',
+      },
     },
-  }, {
-    variant: ['outline', 'subtle'],
-    to: true,
-    class: {
-      root: 'has-[>a:focus-visible]:ring-primary',
+    {
+      variant: ['outline', 'subtle'],
+      to: true,
+      class: {
+        root: 'has-[>a:focus-visible]:ring-primary',
+      },
     },
-  }, {
-    variant: 'ghost',
-    to: true,
-    class: {
-      root: 'hover:bg-background-elevated/50',
-      header: ['group-hover/blog-post:shadow-none', options.theme.transitions && 'transition-[box-shadow,border-radius] ease-out'],
+    {
+      variant: 'ghost',
+      to: true,
+      class: {
+        root: 'hover:bg-background-elevated/50',
+        header: ['group-hover/blog-post:shadow-none', options.theme.transitions && 'transition-[box-shadow,border-radius] ease-out'],
+      },
     },
-  }, {
-    variant: 'ghost',
-    to: true,
-    orientation: 'vertical',
-    class: {
-      header: 'group-hover/blog-post:rounded-b-none',
+    {
+      variant: 'ghost',
+      to: true,
+      orientation: 'vertical',
+      class: {
+        header: 'group-hover/blog-post:rounded-b-none',
+      },
     },
-  }, {
-    variant: 'ghost',
-    to: true,
-    orientation: 'horizontal',
-    class: {
-      header: 'group-hover/blog-post:rounded-e-none',
+    {
+      variant: 'ghost',
+      to: true,
+      orientation: 'horizontal',
+      class: {
+        header: 'group-hover/blog-post:rounded-e-none',
+      },
     },
-  }, {
-    orientation: 'vertical',
-    image: false,
-    variant: 'naked',
-    class: {
-      body: 'p-0 sm:p-0',
+    {
+      orientation: 'vertical',
+      image: false,
+      variant: 'naked',
+      class: {
+        body: 'p-0 sm:p-0',
+      },
     },
-  }],
+  ],
   defaultVariants: {
     variant: 'outline',
   },

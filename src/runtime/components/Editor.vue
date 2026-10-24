@@ -126,8 +126,13 @@ const attrs = useAttrs();
 
 const appConfig = useAppConfig() as Editor['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.editor || {}) })({
-  placeholderMode: typeof props.placeholder === 'object' ? props.placeholder.mode : undefined,
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.editor || {}),
+})({
+  placeholderMode: typeof props.placeholder === 'object'
+    ? props.placeholder.mode
+    : undefined,
 }));
 
 const rootProps = useForwardProps(reactiveOmit(props, 'starterKit', 'extensions', 'editorProps', 'contentType', 'class', 'placeholder', 'markdown', 'image', 'mention', 'handlers'));
@@ -142,10 +147,14 @@ const editorProps = computed(() => defu(props.editorProps, {
   },
 } as EditorOptions['editorProps']));
 
-const contentType = computed(() => props.contentType || (typeof props.modelValue === 'string' ? 'html' : 'json'));
+const contentType = computed(() => props.contentType || (typeof props.modelValue === 'string'
+  ? 'html'
+  : 'json'));
 
 const starterKit = computed(() => {
-  const options: Partial<StarterKitOptions> = typeof props.starterKit === 'boolean' ? {} : (props.starterKit ?? {});
+  const options: Partial<StarterKitOptions> = typeof props.starterKit === 'boolean'
+    ? {}
+    : (props.starterKit ?? {});
 
   // When disabled, keep a plain-text editor: document, paragraph, text, hard break and history remain, all formatting is turned off
   const plainText: Partial<StarterKitOptions> = props.starterKit === false
@@ -184,7 +193,9 @@ const starterKit = computed(() => {
 });
 
 const placeholder = computed(() => {
-  const options = typeof props.placeholder === 'string' ? { placeholder: props.placeholder } : props.placeholder;
+  const options = typeof props.placeholder === 'string'
+    ? { placeholder: props.placeholder }
+    : props.placeholder;
   const { mode, ...rest } = options || {};
 
   return defu(rest, {
@@ -199,9 +210,13 @@ const markdown = computed(() => defu(props.markdown, {
   },
 } as Partial<MarkdownExtensionOptions>));
 
-const image = computed(() => typeof props.image === 'boolean' ? {} : props.image);
+const image = computed(() => typeof props.image === 'boolean'
+  ? {}
+  : props.image);
 
-const mention = computed(() => defu(typeof props.mention === 'boolean' ? {} : props.mention, {
+const mention = computed(() => defu(typeof props.mention === 'boolean'
+  ? {}
+  : props.mention, {
   HTMLAttributes: {
     class: 'mention',
   },

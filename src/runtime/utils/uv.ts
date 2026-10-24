@@ -73,7 +73,9 @@ export const uv = ((componentConfig?: any) => {
         const slotProps = args[0] ?? {};
         const replacer = findReplacer(slotProps.class) ?? findReplacer(slotProps.className);
         if (replacer) {
-          return applyReplacer(replacer, slotProps, () => Reflect.apply(target, thisArg, [{ ...slotProps, class: undefined, className: undefined }]));
+          return applyReplacer(replacer, slotProps, () => Reflect.apply(target, thisArg, [
+            { ...slotProps, class: undefined, className: undefined },
+          ]));
         }
       }
 
@@ -277,7 +279,9 @@ function resolveReplacers(componentConfig: any): any {
   const replacers = slots && typeof slots === 'object'
     ? Object.entries(slots).filter((entry): entry is [string, SlotClassReplacer] => typeof entry[1] === 'function')
     : [];
-  const baseReplacer = typeof componentConfig.base === 'function' ? componentConfig.base as SlotClassReplacer : undefined;
+  const baseReplacer = typeof componentConfig.base === 'function'
+    ? componentConfig.base as SlotClassReplacer
+    : undefined;
 
   if (!replacers.length && !baseReplacer) {
     return componentConfig;
@@ -305,7 +309,10 @@ function resolveReplacers(componentConfig: any): any {
     for (const [slot, replacer] of replacers) {
       cleaned[slot] = replacer(defaultClasses(extend?.slots?.[slot]));
       if (extend?.slots?.[slot]) {
-        extendSlots = { ...(extendSlots ?? extend.slots), [slot]: '' };
+        extendSlots = {
+          ...(extendSlots ?? extend.slots),
+          [slot]: '',
+        };
       }
     }
     resolved.slots = cleaned;
@@ -377,7 +384,9 @@ function cx(...classnames: Array<ClassValue>) {
   }
 
   // join classes and remove extra spaces
-  return classList.length > 0 ? removeExtraSpaces(classList.join(' ')) : undefined;
+  return classList.length > 0
+    ? removeExtraSpaces(classList.join(' '))
+    : undefined;
 }
 
 const SPACE_REGEX = /\s+/g;

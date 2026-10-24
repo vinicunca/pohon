@@ -107,7 +107,10 @@ const props = useComponentProps('chatTool', _props);
 
 const appConfig = useAppConfig() as ChatTool['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatTool || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.chatTool || {}),
+})({
   variant: props.variant,
   chevron: props.chevron,
   loading: props.loading,

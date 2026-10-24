@@ -98,7 +98,10 @@ const props = useComponentProps('alert', _props);
 const { t } = useLocale();
 const appConfig = useAppConfig() as Alert['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.alert || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.alert || {}),
+})({
   color: props.color,
   variant: props.variant,
   orientation: props.orientation,

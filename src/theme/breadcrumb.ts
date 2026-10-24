@@ -31,30 +31,37 @@ export default (options: Required<ModuleOptions>) => ({
       true: '',
     },
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, { link: `outline-${color}/25 focus-visible:outline-3` }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        { link: `outline-${color}/25 focus-visible:outline-3` },
+      ])),
       neutral: { link: 'outline-border-inverted/25 focus-visible:outline-3' },
     },
   },
-  compoundVariants: [{
-    disabled: false,
-    active: false,
-    to: true,
-    class: {
-      link: ['hover:color-text', options.theme.transitions && 'transition-colors'],
+  compoundVariants: [
+    {
+      disabled: false,
+      active: false,
+      to: true,
+      class: {
+        link: ['hover:color-text', options.theme.transitions && 'transition-colors'],
+      },
     },
-  }, ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    active: true,
-    class: {
-      link: `color-${color}`,
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      active: true,
+      class: {
+        link: `color-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      active: true,
+      class: {
+        link: 'color-text-highlighted',
+      },
     },
-  })), {
-    color: 'neutral',
-    active: true,
-    class: {
-      link: 'color-text-highlighted',
-    },
-  }],
+  ],
   defaultVariants: {
     color: 'primary',
   },

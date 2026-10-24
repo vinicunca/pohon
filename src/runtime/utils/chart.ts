@@ -8,15 +8,21 @@ function round(value: number) {
 }
 
 function sign(value: number) {
-  return value < 0 ? -1 : 1;
+  return value < 0
+    ? -1
+    : 1;
 }
 
 // Tangent at the middle point, Fritsch–Carlson as in d3's `curveMonotoneX`.
 function innerTangent([x0, y0]: Point, [x1, y1]: Point, [x2, y2]: Point) {
   const h0 = x1 - x0;
   const h1 = x2 - x1;
-  const s0 = (y1 - y0) / (h0 || (h1 < 0 ? -0 : 0));
-  const s1 = (y2 - y1) / (h1 || (h0 < 0 ? -0 : 0));
+  const s0 = (y1 - y0) / (h0 || (h1 < 0
+    ? -0
+    : 0));
+  const s1 = (y2 - y1) / (h1 || (h0 < 0
+    ? -0
+    : 0));
   const p = (s0 * h1 + s1 * h0) / (h0 + h1);
 
   return (sign(s0) + sign(s1)) * Math.min(Math.abs(s0), Math.abs(s1), 0.5 * Math.abs(p)) || 0;
@@ -25,7 +31,9 @@ function innerTangent([x0, y0]: Point, [x1, y1]: Point, [x2, y2]: Point) {
 function edgeTangent([x0, y0]: Point, [x1, y1]: Point, tangent: number) {
   const h = x1 - x0;
 
-  return h ? (3 * (y1 - y0) / h - tangent) / 2 : tangent;
+  return h
+    ? (3 * (y1 - y0) / h - tangent) / 2
+    : tangent;
 }
 
 function monotoneSegments(points: ReadonlyArray<Point>) {
@@ -33,7 +41,9 @@ function monotoneSegments(points: ReadonlyArray<Point>) {
     return points.slice(1).map(([x, y]) => `L${round(x)},${round(y)}`).join('');
   }
 
-  const tangents = points.map((point, i) => i > 0 && i < points.length - 1 ? innerTangent(points[i - 1]!, point, points[i + 1]!) : 0);
+  const tangents = points.map((point, i) => i > 0 && i < points.length - 1
+    ? innerTangent(points[i - 1]!, point, points[i + 1]!)
+    : 0);
   tangents[0] = edgeTangent(points[0]!, points[1]!, tangents[1]!);
   tangents[points.length - 1] = edgeTangent(points[points.length - 2]!, points[points.length - 1]!, tangents[points.length - 2]!);
 
@@ -55,7 +65,9 @@ function stepSegments(points: ReadonlyArray<Point>) {
 }
 
 function createCurve(segments: (points: ReadonlyArray<Point>) => string): ChartCurve {
-  const line = (points: ReadonlyArray<Point>) => points.length ? `M${round(points[0]![0])},${round(points[0]![1])}${segments(points)}` : '';
+  const line = (points: ReadonlyArray<Point>) => points.length
+    ? `M${round(points[0]![0])},${round(points[0]![1])}${segments(points)}`
+    : '';
 
   return {
     line,

@@ -13,29 +13,143 @@ describe('chatMessage', () => {
   const props = {
     id: '6045235a-a435-46b8-989d-2df38ca2eb47',
     role: 'user' as const,
-    parts: [{ type: 'text' as const, text: 'Hello, how are you?' }],
+    parts: [
+      { type: 'text' as const, text: 'Hello, how are you?' },
+    ],
   };
 
   renderEach(ChatMessage, [
     // Props
-    ['with parts', { props }],
-    ['with content', { props: { ...props, content: 'Hello, how are you?' } }],
-    ['with icon', { props: { ...props, icon: 'i-lucide-user' } }],
-    ['with avatar', { props: { ...props, avatar: { src: 'https://github.com/praburangki.png' } } }],
-    ['with role assistant', { props: { ...props, role: 'assistant' } }],
-    ['with side right', { props: { ...props, side: 'right' } }],
-    ['with compact', { props: { ...props, compact: true } }],
-    ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { ...props, variant } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { ...props, variant, color: 'primary' } }]),
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: '' } }],
-    ['with ui', { props: { ...props, ui: {} } }],
+    [
+      'with parts',
+      { props },
+    ],
+    [
+      'with content',
+      {
+        props: { ...props, content: 'Hello, how are you?' },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { ...props, icon: 'i-lucide-user' },
+      },
+    ],
+    [
+      'with avatar',
+      {
+        props: {
+          ...props,
+          avatar: { src: 'https://github.com/praburangki.png' },
+        },
+      },
+    ],
+    [
+      'with role assistant',
+      {
+        props: { ...props, role: 'assistant' },
+      },
+    ],
+    [
+      'with side right',
+      {
+        props: { ...props, side: 'right' },
+      },
+    ],
+    [
+      'with compact',
+      {
+        props: { ...props, compact: true },
+      },
+    ],
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant}`,
+      {
+        props: { ...props, variant },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant}`,
+      {
+        props: { ...props, variant, color: 'primary' },
+      },
+    ]),
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: '' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: { ...props, ui: {} },
+      },
+    ],
     // Slots
-    ['with header slot', { props, slots: { header: () => 'Header slot' } }],
-    ['with leading slot', { props, slots: { leading: () => 'Leading slot' } }],
-    ['with files slot', { props: { ...props, parts: [...props.parts, { type: 'file' as const, mediaType: 'text/plain', url: 'https://example.com/test.txt', filename: 'test.txt' }] }, slots: { files: () => 'Files slot' } }],
-    ['with content slot', { props, slots: { content: () => 'Content slot' } }],
-    ['with actions slot', { props, slots: { actions: () => 'Actions slot' } }],
+    [
+      'with header slot',
+      {
+        props,
+        slots: {
+          header: () => 'Header slot',
+        },
+      },
+    ],
+    [
+      'with leading slot',
+      {
+        props,
+        slots: {
+          leading: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with files slot',
+      {
+        props: {
+          ...props,
+          parts: [
+            ...props.parts,
+            {
+              type: 'file' as const,
+              mediaType: 'text/plain',
+              url: 'https://example.com/test.txt',
+              filename: 'test.txt',
+            },
+          ],
+        },
+        slots: {
+          files: () => 'Files slot',
+        },
+      },
+    ],
+    [
+      'with content slot',
+      {
+        props,
+        slots: {
+          content: () => 'Content slot',
+        },
+      },
+    ],
+    [
+      'with actions slot',
+      {
+        props,
+        slots: {
+          actions: () => 'Actions slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {
@@ -49,7 +163,12 @@ describe('chatMessage', () => {
   it('uses the action label as aria-label', async () => {
     const wrapper = await mountSuspended(defineComponent({
       setup() {
-        return () => h(TooltipProvider, () => h(ChatMessage, { ...props, actions: [{ icon: 'i-lucide-copy', label: 'Copy' }] }));
+        return () => h(TooltipProvider, () => h(ChatMessage, {
+          ...props,
+          actions: [
+            { icon: 'i-lucide-copy', label: 'Copy' },
+          ],
+        }));
       },
     }));
 
@@ -60,7 +179,11 @@ describe('chatMessage', () => {
   it('forwards id, role, parts, metadata and content to the content slot', async () => {
     const captured: Array<Parameters<Exclude<ChatMessageSlots['content'], undefined>>[0]> = [];
     await mountSuspended(ChatMessage, {
-      props: { ...props, metadata: { foo: 'bar' }, content: 'fallback' },
+      props: {
+        ...props,
+        metadata: { foo: 'bar' },
+        content: 'fallback',
+      },
       slots: {
         content: (slotProps) => {
           captured.push(slotProps);
@@ -88,7 +211,9 @@ describe('chatMessage', () => {
         avatar: { src: 'https://github.com/praburangki.png' },
         variant: 'soft' as const,
         side: 'right' as const,
-        actions: [{ icon: 'i-lucide-copy', label: 'Copy' }],
+        actions: [
+          { icon: 'i-lucide-copy', label: 'Copy' },
+        ],
         compact: true,
         class: 'foo',
         ui: {},
@@ -102,7 +227,18 @@ describe('chatMessage', () => {
       },
     });
 
-    for (const key of ['as', 'icon', 'avatar', 'variant', 'color', 'side', 'actions', 'compact', 'class', 'ui']) {
+    for (const key of [
+      'as',
+      'icon',
+      'avatar',
+      'variant',
+      'color',
+      'side',
+      'actions',
+      'compact',
+      'class',
+      'ui',
+    ]) {
       expect(captured[0]).not.toHaveProperty(key);
     }
   });

@@ -92,9 +92,14 @@ const props = useComponentProps<BreadcrumbProps<T>>('breadcrumb', _props);
 const { dir, t } = useLocale();
 const appConfig = useAppConfig() as Breadcrumb['AppConfig'];
 
-const separatorIcon = computed(() => props.separatorIcon || (dir.value === 'rtl' ? appConfig.ui.icons.chevronLeft : appConfig.ui.icons.chevronRight));
+const separatorIcon = computed(() => props.separatorIcon || (dir.value === 'rtl'
+  ? appConfig.ui.icons.chevronLeft
+  : appConfig.ui.icons.chevronRight));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.breadcrumb || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.breadcrumb || {}),
+})({
   color: props.color,
 }));
 </script>

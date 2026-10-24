@@ -129,7 +129,10 @@ const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
 const size = computed(() => fieldGroupSize.value ?? formFieldSize.value ?? props.size);
 const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputDate || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.inputDate || {}),
+})({
   color: color.value,
   variant: props.variant,
   size: size.value,
@@ -149,12 +152,16 @@ function setInputRef(index: number, el: Element | ComponentPublicInstance | null
 }
 // Literal segments are hidden from assistive technologies.
 function segmentLabel(part: SegmentPart) {
-  return part !== 'literal' ? t(`inputDate.${part}`) : undefined;
+  return part !== 'literal'
+    ? t(`inputDate.${part}`)
+    : undefined;
 }
 
 function onUpdate(value: any) {
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value } });
+  const event = new Event('change', {
+    target: { value },
+  });
   emits('change', event);
 
   emitFormChange();

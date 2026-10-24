@@ -67,7 +67,10 @@ const props = useComponentProps('user', _props);
 
 const appConfig = useAppConfig() as User['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.user || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.user || {}),
+})({
   size: props.size,
   orientation: props.orientation,
   to: !!props.to || !!props.onClick,

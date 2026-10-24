@@ -84,12 +84,16 @@ describe('useScrollspy', () => {
     const b = heading('b');
     api.updateHeadings([a, b]);
 
-    observer.trigger([{ target: a, isIntersecting: true }]);
+    observer.trigger([
+      { target: a, isIntersecting: true },
+    ]);
     expect(api.visibleHeadings.value).toEqual(['a']);
     await nextTick();
     expect(api.activeHeadings.value).toEqual(['a']);
 
-    observer.trigger([{ target: b, isIntersecting: true }]);
+    observer.trigger([
+      { target: b, isIntersecting: true },
+    ]);
     expect(api.visibleHeadings.value).toEqual(['a', 'b']);
     await nextTick();
     expect(api.activeHeadings.value).toEqual(['a', 'b']);
@@ -100,8 +104,12 @@ describe('useScrollspy', () => {
     const a = heading('a');
     api.updateHeadings([a]);
 
-    observer.trigger([{ target: a, isIntersecting: true }]);
-    observer.trigger([{ target: a, isIntersecting: false }]);
+    observer.trigger([
+      { target: a, isIntersecting: true },
+    ]);
+    observer.trigger([
+      { target: a, isIntersecting: false },
+    ]);
 
     expect(api.visibleHeadings.value).toEqual([]);
   });
@@ -111,11 +119,15 @@ describe('useScrollspy', () => {
     const a = heading('a');
     api.updateHeadings([a]);
 
-    observer.trigger([{ target: a, isIntersecting: true }]);
+    observer.trigger([
+      { target: a, isIntersecting: true },
+    ]);
     await nextTick();
     expect(api.activeHeadings.value).toEqual(['a']);
 
-    observer.trigger([{ target: a, isIntersecting: false }]);
+    observer.trigger([
+      { target: a, isIntersecting: false },
+    ]);
     await nextTick();
 
     expect(api.visibleHeadings.value).toEqual([]);
@@ -129,7 +141,9 @@ describe('useScrollspy', () => {
     const b = heading('b');
 
     api.updateHeadings([a]);
-    observer.trigger([{ target: a, isIntersecting: true }]);
+    observer.trigger([
+      { target: a, isIntersecting: true },
+    ]);
     await nextTick();
     expect(api.activeHeadings.value).toEqual(['a']);
 
@@ -142,7 +156,9 @@ describe('useScrollspy', () => {
     // The last highlight is retained until new intersections arrive.
     expect(api.activeHeadings.value).toEqual(['a']);
 
-    observer.trigger([{ target: b, isIntersecting: true }]);
+    observer.trigger([
+      { target: b, isIntersecting: true },
+    ]);
     await nextTick();
     expect(api.activeHeadings.value).toEqual(['b']);
   });
@@ -150,7 +166,12 @@ describe('useScrollspy', () => {
   it('ignores entries whose target has no id', async () => {
     const { api, observer } = await mountSpy();
 
-    observer.trigger([{ target: document.createElement('div'), isIntersecting: true }]);
+    observer.trigger([
+      {
+        target: document.createElement('div'),
+        isIntersecting: true,
+      },
+    ]);
 
     expect(api.visibleHeadings.value).toEqual([]);
   });

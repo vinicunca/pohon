@@ -137,15 +137,26 @@ const appConfig = useAppConfig() as Pagination['AppConfig'];
 
 const rootProps = useForwardProps(reactivePick(props, 'as', 'defaultPage', 'disabled', 'itemsPerPage', 'page', 'showEdges', 'siblingCount', 'total'), emits);
 
-const firstIcon = computed(() => props.firstIcon || (dir.value === 'rtl' ? appConfig.ui.icons.chevronDoubleRight : appConfig.ui.icons.chevronDoubleLeft));
+const firstIcon = computed(() => props.firstIcon || (dir.value === 'rtl'
+  ? appConfig.ui.icons.chevronDoubleRight
+  : appConfig.ui.icons.chevronDoubleLeft));
 
-const prevIcon = computed(() => props.prevIcon || (dir.value === 'rtl' ? appConfig.ui.icons.chevronRight : appConfig.ui.icons.chevronLeft));
+const prevIcon = computed(() => props.prevIcon || (dir.value === 'rtl'
+  ? appConfig.ui.icons.chevronRight
+  : appConfig.ui.icons.chevronLeft));
 
-const nextIcon = computed(() => props.nextIcon || (dir.value === 'rtl' ? appConfig.ui.icons.chevronLeft : appConfig.ui.icons.chevronRight));
+const nextIcon = computed(() => props.nextIcon || (dir.value === 'rtl'
+  ? appConfig.ui.icons.chevronLeft
+  : appConfig.ui.icons.chevronRight));
 
-const lastIcon = computed(() => props.lastIcon || (dir.value === 'rtl' ? appConfig.ui.icons.chevronDoubleLeft : appConfig.ui.icons.chevronDoubleRight));
+const lastIcon = computed(() => props.lastIcon || (dir.value === 'rtl'
+  ? appConfig.ui.icons.chevronDoubleLeft
+  : appConfig.ui.icons.chevronDoubleRight));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pagination || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.pagination || {}),
+})());
 </script>
 
 <template>

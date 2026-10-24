@@ -42,47 +42,58 @@ export default (options: Required<ModuleOptions>) => ({
       false: '',
     },
   },
-  compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: ['outline', 'subtle'],
-    class: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: ['soft', 'ghost'],
-    class: `outline-${color}/25 focus-visible:outline-3`,
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    highlight: true,
-    class: `ring ring-inset pohon:ring-${color}`,
-  })), {
-    color: 'neutral',
-    variant: ['outline', 'subtle'],
-    class: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:ring-border-inverted',
-  }, {
-    color: 'neutral',
-    variant: ['soft', 'ghost'],
-    class: 'outline-border-inverted/25 focus-visible:outline-3',
-  }, {
-    color: 'neutral',
-    highlight: true,
-    class: 'ring ring-inset ring-border-inverted',
-  }, {
-    fixed: false,
-    size: 'xs',
-    class: 'md:text-xs',
-  }, {
-    fixed: false,
-    size: 'sm',
-    class: 'md:text-xs',
-  }, {
-    fixed: false,
-    size: 'md',
-    class: 'md:text-sm',
-  }, {
-    fixed: false,
-    size: 'lg',
-    class: 'md:text-sm',
-  }],
+  compoundVariants: [
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: ['outline', 'subtle'],
+      class: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: ['soft', 'ghost'],
+      class: `outline-${color}/25 focus-visible:outline-3`,
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      highlight: true,
+      class: `ring ring-inset pohon:ring-${color}`,
+    })),
+    {
+      color: 'neutral',
+      variant: ['outline', 'subtle'],
+      class: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:ring-border-inverted',
+    },
+    {
+      color: 'neutral',
+      variant: ['soft', 'ghost'],
+      class: 'outline-border-inverted/25 focus-visible:outline-3',
+    },
+    {
+      color: 'neutral',
+      highlight: true,
+      class: 'ring ring-inset ring-border-inverted',
+    },
+    {
+      fixed: false,
+      size: 'xs',
+      class: 'md:text-xs',
+    },
+    {
+      fixed: false,
+      size: 'sm',
+      class: 'md:text-xs',
+    },
+    {
+      fixed: false,
+      size: 'md',
+      class: 'md:text-sm',
+    },
+    {
+      fixed: false,
+      size: 'lg',
+      class: 'md:text-sm',
+    },
+  ],
   defaultVariants: {
     size: 'md',
     color: 'primary',

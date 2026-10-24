@@ -120,11 +120,15 @@ const appConfig = useAppConfig() as ChatPromptSubmit['AppConfig'];
 
 const buttonProps = useForwardProps(reactiveOmit(props, 'icon', 'color', 'variant', 'status', 'disabled', 'streamingIcon', 'streamingColor', 'streamingVariant', 'submittedIcon', 'submittedColor', 'submittedVariant', 'errorIcon', 'errorColor', 'errorVariant', 'class', 'ui'));
 
-const disabled = computed(() => props.status === 'ready' ? props.disabled : false);
+const disabled = computed(() => props.status === 'ready'
+  ? props.disabled
+  : false);
 
 const statusButtonProps = computed(() => ({
   ready: {
-    icon: props.icon === false ? undefined : (props.icon ?? appConfig.ui.icons.arrowUp),
+    icon: props.icon === false
+      ? undefined
+      : (props.icon ?? appConfig.ui.icons.arrowUp),
     color: props.color,
     variant: props.variant,
     type: 'submit' as const,
@@ -162,7 +166,10 @@ const ariaLabel = computed(() => ({
   error: t('chatPromptSubmit.reload'),
 })[props.status]);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.chatPromptSubmit || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.chatPromptSubmit || {}),
+})());
 </script>
 
 <template>

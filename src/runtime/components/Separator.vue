@@ -87,7 +87,10 @@ const [DefineContainer, ReuseContainer] = createReusableTemplate();
 
 const hasContent = computed(() => !!(props.label || props.icon || props.avatar || slots.default));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.separator || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.separator || {}),
+})({
   color: props.color,
   orientation: props.orientation,
   size: props.size,

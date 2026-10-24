@@ -12,9 +12,11 @@ export default {
       true: '',
     },
   },
-  compoundVariants: [{
-    compact: false,
-    scale: true,
-    class: 'lg:gap-x-13',
-  }],
+  compoundVariants: [
+    {
+      compact: false,
+      scale: true,
+      class: 'lg:gap-x-13',
+    },
+  ],
 };

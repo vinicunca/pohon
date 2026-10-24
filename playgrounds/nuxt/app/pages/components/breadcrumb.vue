@@ -8,26 +8,35 @@ const attrs = reactive({
   color: [theme.defaultVariants.color],
 });
 
-const items = [{
-  label: 'Home',
-  to: '/',
-}, {
-  slot: 'dropdown' as const,
-  icon: 'i-lucide-ellipsis',
-  children: [{
-    label: 'Documentation',
-  }, {
-    label: 'Themes',
-  }, {
-    label: 'GitHub',
-  }],
-}, {
-  label: 'Components',
-  disabled: true,
-}, {
-  label: 'Breadcrumb',
-  to: '/components/breadcrumb',
-}] satisfies Array<BreadcrumbItem>;
+const items = [
+  {
+    label: 'Home',
+    to: '/',
+  },
+  {
+    slot: 'dropdown' as const,
+    icon: 'i-lucide-ellipsis',
+    children: [
+      {
+        label: 'Documentation',
+      },
+      {
+        label: 'Themes',
+      },
+      {
+        label: 'GitHub',
+      },
+    ],
+  },
+  {
+    label: 'Components',
+    disabled: true,
+  },
+  {
+    label: 'Breadcrumb',
+    to: '/components/breadcrumb',
+  },
+] satisfies Array<BreadcrumbItem>;
 </script>
 
 <template>

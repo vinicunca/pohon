@@ -107,7 +107,10 @@ const props = useComponentProps<FormProps<S, T, N>>('form', _props);
 
 const appConfig = useAppConfig() as FormConfig['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.form || {}) }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.form || {}),
+}));
 
 const formId = props.id ?? useId() as string;
 const formRef = useTemplateRef('formRef');
@@ -119,11 +122,15 @@ const parentBus = props.nested === true && inject(
   undefined,
 );
 
-const parentState = props.nested === true ? inject(formStateInjectionKey, undefined) : undefined;
+const parentState = props.nested === true
+  ? inject(formStateInjectionKey, undefined)
+  : undefined;
 
 const state = computed(() => {
   if (parentState?.value) {
-    return props.name ? getAtPath(parentState.value, props.name) : parentState.value;
+    return props.name
+      ? getAtPath(parentState.value, props.name)
+      : parentState.value;
   }
   return props.state;
 });
@@ -136,7 +143,14 @@ const nestedForms = ref<Map<string | number, { validate: typeof _validate; clear
 onMounted(async () => {
   if (parentBus) {
     await nextTick();
-    parentBus.emit({ type: 'attach', validate: _validate, clearDirty, formId, name: props.name, api });
+    parentBus.emit({
+      type: 'attach',
+      validate: _validate,
+      clearDirty,
+      formId,
+      name: props.name,
+      api,
+    });
   }
 });
 
@@ -150,7 +164,12 @@ onUnmounted(() => {
 onMounted(async () => {
   bus.on(async (event) => {
     if (event.type === 'attach') {
-      nestedForms.value.set(event.formId, { validate: event.validate, clearDirty: event.clearDirty, name: event.name, api: event.api as any });
+      nestedForms.value.set(event.formId, {
+        validate: event.validate,
+        clearDirty: event.clearDirty,
+        name: event.name,
+        api: event.api as any,
+      });
       return;
     }
 
@@ -237,7 +256,9 @@ function resolveErrorIds(errs: Array<FormError>): Array<FormErrorWithId> {
 const transformedState = ref<O | null>(null);
 
 async function getErrors(): Promise<Array<FormErrorWithId>> {
-  let errs = props.validate ? (await props.validate(state.value)) ?? [] : [];
+  let errs = props.validate
+    ? (await props.validate(state.value)) ?? []
+    : [];
 
   if (props.schema) {
     const { errors, result } = await validateSchema(state.value, props.schema);
@@ -255,7 +276,9 @@ type ValidateOpts<Silent extends boolean, Transform extends boolean> = { name?: 
 async function _validate<T extends boolean>(opts: ValidateOpts<false, T>): Promise<FormData<S, T>>;
 async function _validate<T extends boolean>(opts: ValidateOpts<true, T>): Promise<FormData<S, T> | false>;
 async function _validate<T extends boolean>(opts: ValidateOpts<boolean, boolean> = { silent: false, nested: false, transform: false }): Promise<FormData<S, T> | false> {
-  const names = opts.name && !Array.isArray(opts.name) ? [opts.name] : opts.name as Array<keyof O>;
+  const names = opts.name && !Array.isArray(opts.name)
+    ? [opts.name]
+    : opts.name as Array<keyof O>;
   if (!names) {
     epoch++;
   }
@@ -283,14 +306,20 @@ async function _validate<T extends boolean>(opts: ValidateOpts<boolean, boolean>
     return false;
   }
 
-  const allErrors = [...currentErrors, ...nestedErrors];
+  const allErrors = [
+    ...currentErrors,
+    ...nestedErrors,
+  ];
 
   // Only the targeted fields decide the result, errors on other fields are kept as is
   let failedErrors = allErrors;
   if (names) {
     const matchesNames = nameMatcher(names);
     failedErrors = allErrors.filter(matchesNames);
-    errors.value = [...errors.value.filter((error) => !matchesNames(error)), ...failedErrors];
+    errors.value = [
+      ...errors.value.filter((error) => !matchesNames(error)),
+      ...failedErrors,
+    ];
   } else {
     errors.value = allErrors;
   }
@@ -311,7 +340,9 @@ async function _validate<T extends boolean>(opts: ValidateOpts<boolean, boolean>
         setAtPath(transformedState.value, result.name, result.output);
       } else {
         // A parent without a schema has no output yet, merge into a copy of the state
-        output = Object.assign(output ?? { ...toRaw(state.value) }, result.output);
+        output = Object.assign(output ?? {
+          ...toRaw(state.value),
+        }, result.output);
       }
     });
     return output ?? state.value;
@@ -394,7 +425,9 @@ function filterFormErrors(errors: Array<FormError>, formPath?: string): Array<Fo
 
 function getFormErrors(form: { name?: string; api: Form<any> }): Array<FormErrorWithId> {
   return form.api.getErrors().map((e) =>
-    form.name ? { ...e, name: `${form.name}.${e.name}` } : e,
+    form.name
+      ? { ...e, name: `${form.name}.${e.name}` }
+      : e,
   );
 }
 
@@ -470,9 +503,16 @@ const api = {
 
     if (name) {
       const keepErrors = filterErrorsByTarget(errors.value, name);
-      errors.value = [...keepErrors, ...localErrors, ...nestedErrors];
+      errors.value = [
+        ...keepErrors,
+        ...localErrors,
+        ...nestedErrors,
+      ];
     } else {
-      errors.value = [...localErrors, ...nestedErrors];
+      errors.value = [
+        ...localErrors,
+        ...nestedErrors,
+      ];
     }
   },
 
@@ -513,12 +553,17 @@ const api = {
       // A RegExp is written against the parent's prefixed names, so it cannot be
       // re-tested inside the nested form and clears it whole.
       if (matchesTarget(name, form.name)) {
-        form.api.clear(name instanceof RegExp ? undefined : getNestedTarget(name, form.name || ''));
+        form.api.clear(name instanceof RegExp
+          ? undefined
+          : getNestedTarget(name, form.name || ''));
       }
       nestedErrors.push(...getFormErrors(form as any));
     }
 
-    errors.value = [...localErrors, ...nestedErrors];
+    errors.value = [
+      ...localErrors,
+      ...nestedErrors,
+    ];
   },
 
   disabled,

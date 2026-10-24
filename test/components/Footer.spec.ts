@@ -7,15 +7,67 @@ import { renderEach } from '../component-render';
 describe('footer', () => {
   renderEach(Footer, [
     // Props
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'relative' } }],
-    ['with ui', { props: { ui: { container: 'lg:gap-x-1.5' } } }],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'relative' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { container: 'lg:gap-x-1.5' },
+        },
+      },
+    ],
     // Slots
-    ['with left slot', { slots: { left: () => 'Left slot' } }],
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
-    ['with right slot', { slots: { right: () => 'Right slot' } }],
-    ['with top slot', { slots: { top: () => 'Top slot' } }],
-    ['with bottom slot', { slots: { bottom: () => 'Bottom slot' } }],
+    [
+      'with left slot',
+      {
+        slots: {
+          left: () => 'Left slot',
+        },
+      },
+    ],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with right slot',
+      {
+        slots: {
+          right: () => 'Right slot',
+        },
+      },
+    ],
+    [
+      'with top slot',
+      {
+        slots: {
+          top: () => 'Top slot',
+        },
+      },
+    ],
+    [
+      'with bottom slot',
+      {
+        slots: {
+          bottom: () => 'Bottom slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

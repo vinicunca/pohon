@@ -7,8 +7,18 @@ import { renderEach } from '../component-render';
 describe('skeleton', () => {
   renderEach(Skeleton, [
     // Props
-    ['with as', { props: { as: 'span' } }],
-    ['with class', { props: { class: 'rounded-full size-12' } }],
+    [
+      'with as',
+      {
+        props: { as: 'span' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'rounded-full size-12' },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

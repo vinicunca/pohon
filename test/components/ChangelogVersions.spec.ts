@@ -15,13 +15,15 @@ describe('changelogVersions', () => {
         alt: 'Image alt',
       },
       badge: { label: 'Badge' },
-      authors: [{
-        name: 'benjamincanac',
-        avatar: {
-          src: 'https://github.com/praburangki.png',
-          alt: 'benjamincanac',
+      authors: [
+        {
+          name: 'benjamincanac',
+          avatar: {
+            src: 'https://github.com/praburangki.png',
+            alt: 'benjamincanac',
+          },
         },
-      }],
+      ],
     },
   ];
 
@@ -29,14 +31,56 @@ describe('changelogVersions', () => {
 
   renderEach(ChangelogVersions, [
     // Props
-    ['with versions', { props }],
-    ['without indicator', { props: { ...props, indicator: false } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'absolute' } }],
-    ['with ui', { props: { ...props, ui: { indicator: 'bg-primary' } } }],
+    [
+      'with versions',
+      { props },
+    ],
+    [
+      'without indicator',
+      {
+        props: { ...props, indicator: false },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'absolute' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { indicator: 'bg-primary' },
+        },
+      },
+    ],
     // Slots
-    ['with default slot', { props, slots: { default: () => 'Default slot' } }],
-    ['with indicator slot', { props, slots: { indicator: () => 'Indicator slot' } }],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with indicator slot',
+      {
+        props,
+        slots: {
+          indicator: () => 'Indicator slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

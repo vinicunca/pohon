@@ -274,8 +274,40 @@ const _props = withDefaults(defineProps<InputMenuProps<T, VK, M, Mod, C>>(), {
 });
 const emits = defineEmits<InputMenuEmits<T, VK, M, Mod, C>>();
 const slots = defineSlots<InputMenuSlots<T, VK, M, Mod, C>>();
-const Combobox = { Root: ComboboxRoot, Input: ComboboxInput, Anchor: ComboboxAnchor, Empty: ComboboxEmpty, Trigger: ComboboxTrigger, Cancel: ComboboxCancel, Group: ComboboxGroup, Label: ComboboxLabel, Content: ComboboxContent, Virtualizer: ComboboxVirtualizer, Item: ComboboxItem, ItemIndicator: ComboboxItemIndicator, Separator: ComboboxSeparator, Arrow: ComboboxArrow, Portal: ComboboxPortal };
-const Autocomplete = { Root: AutocompleteRoot, Input: AutocompleteInput, Anchor: AutocompleteAnchor, Empty: AutocompleteEmpty, Trigger: AutocompleteTrigger, Cancel: AutocompleteCancel, Group: AutocompleteGroup, Label: AutocompleteLabel, Content: AutocompleteContent, Virtualizer: AutocompleteVirtualizer, Item: AutocompleteItem, ItemIndicator: AutocompleteItemIndicator, Separator: AutocompleteSeparator, Arrow: AutocompleteArrow, Portal: AutocompletePortal };
+const Combobox = {
+  Root: ComboboxRoot,
+  Input: ComboboxInput,
+  Anchor: ComboboxAnchor,
+  Empty: ComboboxEmpty,
+  Trigger: ComboboxTrigger,
+  Cancel: ComboboxCancel,
+  Group: ComboboxGroup,
+  Label: ComboboxLabel,
+  Content: ComboboxContent,
+  Virtualizer: ComboboxVirtualizer,
+  Item: ComboboxItem,
+  ItemIndicator: ComboboxItemIndicator,
+  Separator: ComboboxSeparator,
+  Arrow: ComboboxArrow,
+  Portal: ComboboxPortal,
+};
+const Autocomplete = {
+  Root: AutocompleteRoot,
+  Input: AutocompleteInput,
+  Anchor: AutocompleteAnchor,
+  Empty: AutocompleteEmpty,
+  Trigger: AutocompleteTrigger,
+  Cancel: AutocompleteCancel,
+  Group: AutocompleteGroup,
+  Label: AutocompleteLabel,
+  Content: AutocompleteContent,
+  Virtualizer: AutocompleteVirtualizer,
+  Item: AutocompleteItem,
+  ItemIndicator: AutocompleteItemIndicator,
+  Separator: AutocompleteSeparator,
+  Arrow: AutocompleteArrow,
+  Portal: AutocompletePortal,
+};
 
 const props = useComponentProps<InputMenuProps<T, VK, M, Mod, C>>('inputMenu', _props);
 
@@ -305,15 +337,24 @@ const baseDataSlot = computed(() => isMultiple.value
   ? ((attrs['data-slot'] as string | undefined) ?? 'base')
   : 'base');
 const portalProps = usePortal(toRef(() => props.portal));
-const contentProps = toRef(() => defu(props.content, { side: 'bottom', sideOffset: 8, collisionPadding: 8, position: 'popper' }) as ComboboxContentProps);
+const contentProps = toRef(() => defu(props.content, {
+  side: 'bottom',
+  sideOffset: 8,
+  collisionPadding: 8,
+  position: 'popper',
+}) as ComboboxContentProps);
 const arrowProps = toRef(() => defu(props.arrow, { rounded: true }) as ComboboxArrowProps);
-const clearProps = computed(() => typeof props.clear === 'object' ? props.clear : {} as Partial<Omit<ButtonProps, LinkPropsKeys>>);
+const clearProps = computed(() => typeof props.clear === 'object'
+  ? props.clear
+  : {} as Partial<Omit<ButtonProps, LinkPropsKeys>>);
 const virtualizerProps = toRef(() => {
   if (!props.virtualize) {
     return false;
   }
 
-  return defu(typeof props.virtualize === 'boolean' ? {} : props.virtualize, {
+  return defu(typeof props.virtualize === 'boolean'
+    ? {}
+    : props.virtualize, {
     estimateSize: getEstimateSize(filteredItems.value, size.value ?? 'md', props.descriptionKey as string, !!slots['item-description']),
   });
 });
@@ -367,7 +408,10 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: I
   },
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputMenu || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.inputMenu || {}),
+})({
   color: color.value,
   variant: props.variant,
   size: size.value,
@@ -404,7 +448,9 @@ const filteredGroups = computed(() => {
     return groups.value;
   }
 
-  const fields = Array.isArray(props.filterFields) ? props.filterFields : [props.labelKey] as Array<string>;
+  const fields = Array.isArray(props.filterFields)
+    ? props.filterFields
+    : [props.labelKey] as Array<string>;
 
   return filterGroups(groups.value, searchTerm.value, {
     fields,
@@ -418,7 +464,9 @@ const createItem = computed(() => {
     return false;
   }
 
-  const newItem = props.valueKey ? { [props.valueKey]: searchTerm.value } as NestedItem<T> : searchTerm.value;
+  const newItem = props.valueKey
+    ? { [props.valueKey]: searchTerm.value } as NestedItem<T>
+    : searchTerm.value;
 
   if ((typeof props.createItem === 'object' && props.createItem.when === 'always') || props.createItem === 'always') {
     return !filteredItems.value.some((item) => compare(item, newItem, (props.by ?? props.valueKey) as string | undefined));
@@ -426,7 +474,9 @@ const createItem = computed(() => {
 
   return !filteredItems.value.length;
 });
-const createItemPosition = computed(() => typeof props.createItem === 'object' ? props.createItem.position : 'bottom');
+const createItemPosition = computed(() => typeof props.createItem === 'object'
+  ? props.createItem.position
+  : 'bottom');
 
 const inputRef = useTemplateRef('inputRef');
 
@@ -482,7 +532,9 @@ function onUpdate(value: any) {
   }
 
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value } });
+  const event = new Event('change', {
+    target: { value },
+  });
   emits('change', event);
   emitFormChange();
   emitFormInput();

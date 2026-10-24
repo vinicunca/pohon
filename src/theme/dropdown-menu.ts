@@ -96,21 +96,24 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
   },
-  compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
-    color,
-    active: false,
-    class: {
-      item: `color-${color} data-[highlighted]:color-${color} data-[highlighted]:before:bg-${color}/10 data-[state=open]:before:bg-${color}/10`,
-      itemLeadingIcon: `color-${color}/75 group-data-[highlighted]:color-${color} group-data-[state=open]:color-${color}`,
-    },
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    active: true,
-    class: {
-      item: `color-${color} before:bg-${color}/10`,
-      itemLeadingIcon: `color-${color}`,
-    },
-  }))],
+  compoundVariants: [
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      active: false,
+      class: {
+        item: `color-${color} data-[highlighted]:color-${color} data-[highlighted]:before:bg-${color}/10 data-[state=open]:before:bg-${color}/10`,
+        itemLeadingIcon: `color-${color}/75 group-data-[highlighted]:color-${color} group-data-[state=open]:color-${color}`,
+      },
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      active: true,
+      class: {
+        item: `color-${color} before:bg-${color}/10`,
+        itemLeadingIcon: `color-${color}`,
+      },
+    })),
+  ],
   defaultVariants: {
     size: 'md',
   },

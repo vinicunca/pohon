@@ -120,7 +120,10 @@ const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
 const { isLeading, isTrailing, leadingIconName, trailingIconName } = useComponentIcons(props);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.textarea || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.textarea || {}),
+})({
   color: color.value,
   variant: props.variant,
   size: size.value,
@@ -207,7 +210,9 @@ function autoResize() {
     const newRows = (scrollHeight - padding) / lineHeight;
 
     if (newRows > props.rows!) {
-      textareaRef.value.rows = props.maxrows ? Math.min(newRows, props.maxrows) : newRows;
+      textareaRef.value.rows = props.maxrows
+        ? Math.min(newRows, props.maxrows)
+        : newRows;
     }
 
     textareaRef.value.style.overflow = overflow;

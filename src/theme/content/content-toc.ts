@@ -27,9 +27,12 @@ export default (options: Required<ModuleOptions>) => ({
       neutral: '',
     },
     highlightColor: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        indicatorActive: `bg-${color}`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          indicatorActive: `bg-${color}`,
+        },
+      ])),
       neutral: {
         indicatorActive: 'bg-background-inverted',
       },

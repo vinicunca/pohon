@@ -9,55 +9,203 @@ import { renderEach } from '../component-render';
 import { expectEmitPayloadType } from '../utils/types';
 
 describe('authForm', () => {
-  const fields = [{
-    name: 'email',
-    label: 'Email',
-    type: 'text' as const,
-    error: 'Invalid email format',
-  }, {
-    name: 'password',
-    label: 'Password',
-    type: 'password' as const,
-  }] satisfies AuthFormProps['fields'];
+  const fields = [
+    {
+      name: 'email',
+      label: 'Email',
+      type: 'text' as const,
+      error: 'Invalid email format',
+    },
+    {
+      name: 'password',
+      label: 'Password',
+      type: 'password' as const,
+    },
+  ] satisfies AuthFormProps['fields'];
 
   const props = { fields };
 
   renderEach(AuthForm<FormSchema, typeof fields[number]>, [
     // Props
-    ['with fields', { props }],
-    ['with title', { props: { ...props, title: 'Title' } }],
-    ['with description', { props: { ...props, description: 'Description' } }],
-    ['with icon', { props: { ...props, icon: 'i-lucide-user' } }],
-    ['with providers', { props: { ...props, providers: [{ label: 'Google', icon: 'i-simple-icons-google' }] } }],
-    ['with separator', { props: { ...props, separator: 'or' } }],
-    ['with disabled', { props: { ...props, disabled: true } }],
-    ['with loading', { props: { ...props, loading: true } }],
-    ['with submit', { props: { ...props, submit: { label: 'Submit' } } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with as object', { props: { ...props, title: 'Title', as: { root: 'section', title: 'h3' } } }],
-    ['with class', { props: { ...props, class: 'max-w-sm' } }],
-    ['with ui', { props: { ...props, ui: { title: 'text-2xl' } } }],
+    [
+      'with fields',
+      { props },
+    ],
+    [
+      'with title',
+      {
+        props: { ...props, title: 'Title' },
+      },
+    ],
+    [
+      'with description',
+      {
+        props: { ...props, description: 'Description' },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { ...props, icon: 'i-lucide-user' },
+      },
+    ],
+    [
+      'with providers',
+      {
+        props: {
+          ...props,
+          providers: [
+            { label: 'Google', icon: 'i-simple-icons-google' },
+          ],
+        },
+      },
+    ],
+    [
+      'with separator',
+      {
+        props: { ...props, separator: 'or' },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { ...props, disabled: true },
+      },
+    ],
+    [
+      'with loading',
+      {
+        props: { ...props, loading: true },
+      },
+    ],
+    [
+      'with submit',
+      {
+        props: {
+          ...props,
+          submit: { label: 'Submit' },
+        },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with as object',
+      {
+        props: {
+          ...props,
+          title: 'Title',
+          as: { root: 'section', title: 'h3' },
+        },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'max-w-sm' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { title: 'text-2xl' },
+        },
+      },
+    ],
     // Slots
-    ['with header slot', { props, slots: { header: () => 'Header' } }],
-    ['with leading slot', { props, slots: { leading: () => 'Leading' } }],
-    ['with title slot', { props, slots: { title: () => 'Title' } }],
-    ['with description slot', { props, slots: { description: () => 'Description' } }],
-    ['with providers slot', { props, slots: { providers: () => 'Providers' } }],
-    ['with validation slot', { props, slots: { validation: () => 'Validation' } }],
-    ['with submit slot', { props, slots: { submit: () => 'Submit' } }],
-    ['with footer slot', { props, slots: { footer: () => 'Footer' } }],
+    [
+      'with header slot',
+      {
+        props,
+        slots: {
+          header: () => 'Header',
+        },
+      },
+    ],
+    [
+      'with leading slot',
+      {
+        props,
+        slots: {
+          leading: () => 'Leading',
+        },
+      },
+    ],
+    [
+      'with title slot',
+      {
+        props,
+        slots: {
+          title: () => 'Title',
+        },
+      },
+    ],
+    [
+      'with description slot',
+      {
+        props,
+        slots: {
+          description: () => 'Description',
+        },
+      },
+    ],
+    [
+      'with providers slot',
+      {
+        props,
+        slots: {
+          providers: () => 'Providers',
+        },
+      },
+    ],
+    [
+      'with validation slot',
+      {
+        props,
+        slots: {
+          validation: () => 'Validation',
+        },
+      },
+    ],
+    [
+      'with submit slot',
+      {
+        props,
+        slots: {
+          submit: () => 'Submit',
+        },
+      },
+    ],
+    [
+      'with footer slot',
+      {
+        props,
+        slots: {
+          footer: () => 'Footer',
+        },
+      },
+    ],
   ]);
 
   it('toggles password fields visibility independently', async () => {
-    const passwordFields = [{
-      name: 'password',
-      label: 'Password',
-      type: 'password' as const,
-    }, {
-      name: 'password_confirmation',
-      label: 'Password confirmation',
-      type: 'password' as const,
-    }] satisfies AuthFormProps['fields'];
+    const passwordFields = [
+      {
+        name: 'password',
+        label: 'Password',
+        type: 'password' as const,
+      },
+      {
+        name: 'password_confirmation',
+        label: 'Password confirmation',
+        type: 'password' as const,
+      },
+    ] satisfies AuthFormProps['fields'];
 
     const wrapper = await mountSuspended(AuthForm, {
       props: { fields: passwordFields },
@@ -85,7 +233,9 @@ describe('authForm', () => {
         title: 'Title',
         description: 'Description',
         icon: 'i-lucide-user',
-        providers: [{ label: 'Google', icon: 'i-simple-icons-google' }],
+        providers: [
+          { label: 'Google', icon: 'i-simple-icons-google' },
+        ],
         separator: 'or',
         submit: { label: 'Submit' },
       },
@@ -103,7 +253,10 @@ describe('authForm', () => {
     // with a schema default
     expectEmitPayloadType('submit', () => AuthForm({
       schema,
-      fields: [{ name: 'email', type: 'text' }, { name: 'rememberMe', type: 'checkbox' }],
+      fields: [
+        { name: 'email', type: 'text' },
+        { name: 'rememberMe', type: 'checkbox' },
+      ],
     })).toEqualTypeOf<[FormSubmitEvent<{ email: string; rememberMe: boolean }>]>();
   });
 });

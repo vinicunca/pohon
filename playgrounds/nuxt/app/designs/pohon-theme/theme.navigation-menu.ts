@@ -38,10 +38,13 @@ export const themeNavigationMenu = {
   },
   variants: {
     color: {
-      ...Object.fromEntries(BRANDS.map((color: string) => [color, {
-        link: `before:outline-${color}/25`,
-        childLink: `before:outline-${color}/25`,
-      }])),
+      ...Object.fromEntries(BRANDS.map((color: string) => [
+        color,
+        {
+          link: `before:outline-${color}/25`,
+          childLink: `before:outline-${color}/25`,
+        },
+      ])),
       neutral: {
         link: 'before:outline-border-inverted/25',
         childLink: 'before:outline-border-inverted/25',

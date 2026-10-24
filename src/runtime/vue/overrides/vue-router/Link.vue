@@ -179,7 +179,10 @@ function resolveLinkClass({ route, isActive, isExactActive }: any = {}) {
   const active = isLinkActive({ route, isActive, isExactActive });
 
   if (props.raw) {
-    return [props.class, active ? props.activeClass : props.inactiveClass];
+    return [
+      props.class,
+      active ? props.activeClass : props.inactiveClass,
+    ];
   }
 
   return ui.value({ class: props.class, active, disabled: props.disabled });

@@ -40,10 +40,13 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        indicator: `data-[state=active]:color-${color}`,
-        item: `outline-${color}/25`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          indicator: `data-[state=active]:color-${color}`,
+          item: `outline-${color}/25`,
+        },
+      ])),
       neutral: {
         indicator: 'data-[state=active]:color-text-highlighted',
         item: 'outline-border-inverted/25',
@@ -64,13 +67,15 @@ export default (options: Required<ModuleOptions>) => ({
       false: {},
     },
   },
-  compoundVariants: [{
-    readonly: false,
-    disabled: false,
-    class: {
-      item: 'hover:scale-110',
+  compoundVariants: [
+    {
+      readonly: false,
+      disabled: false,
+      class: {
+        item: 'hover:scale-110',
+      },
     },
-  }],
+  ],
   defaultVariants: {
     color: 'primary',
     size: 'md',

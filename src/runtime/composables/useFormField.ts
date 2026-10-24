@@ -120,7 +120,9 @@ export function useFormField<T>(props?: Props<T>, opts?: { bind?: boolean; defer
     name: computed(() => props?.name ?? formField?.value.name),
     size: computed(() => props?.size ?? formField?.value.size),
     color: computed(() => formField?.value.error ? 'error' : props?.color),
-    highlight: computed(() => formField?.value.error ? true : (props?.highlight || undefined)),
+    highlight: computed(() => formField?.value.error
+      ? true
+      : (props?.highlight || undefined)),
     disabled: computed(() => formOptions?.value.disabled || props?.disabled || undefined),
     emitFormBlur,
     emitFormInput,
@@ -131,7 +133,12 @@ export function useFormField<T>(props?: Props<T>, opts?: { bind?: boolean; defer
         return;
       }
 
-      const descriptiveAttrs = ['error' as const, 'hint' as const, 'description' as const, 'help' as const]
+      const descriptiveAttrs = [
+        'error' as const,
+        'hint' as const,
+        'description' as const,
+        'help' as const,
+      ]
         .filter((type) => formField?.value?.[type])
         .map((type) => `${formField?.value.ariaId}-${type}`) || [];
 

@@ -7,10 +7,27 @@ import { renderEach } from '../component-render';
 describe('pageGrid', () => {
   renderEach(PageGrid, [
     // Props
-    ['with as', { props: { as: 'section' } }],
-    ['with class', { props: { class: 'xl:grid-cols-4' } }],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'xl:grid-cols-4' },
+      },
+    ],
     // Slots
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

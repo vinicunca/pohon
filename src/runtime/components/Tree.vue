@@ -194,7 +194,9 @@ const virtualizerProps = toRef(() => {
     return false;
   }
 
-  return defu(typeof props.virtualize === 'boolean' ? {} : props.virtualize, {
+  return defu(typeof props.virtualize === 'boolean'
+    ? {}
+    : props.virtualize, {
     estimateSize: getEstimateSize(props.items || [], props.size || 'md'),
   });
 });
@@ -217,7 +219,10 @@ const [DefineItemTemplate, ReuseItemTemplate] = createReusableTemplate<{ item: T
   },
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.tree || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.tree || {}),
+})({
   color: props.color,
   size: props.size,
   virtualize: !!props.virtualize,
@@ -236,7 +241,9 @@ function getItemKey<Item extends T[number]>(item: Item): string {
 }
 
 function getDefaultOpenedItems(item: T[number]): Array<string> {
-  const currentItem = item.defaultExpanded ? getItemKey(item) : null;
+  const currentItem = item.defaultExpanded
+    ? getItemKey(item)
+    : null;
   const childItems = item.children?.flatMap((child: T[number]) => getDefaultOpenedItems(child)) ?? [];
 
   return [currentItem, ...childItems].filter(Boolean) as Array<string>;

@@ -70,10 +70,15 @@ const appConfig = useAppConfig() as ProseCodeTree['AppConfig'];
 
 const [DefineTreeTemplate, ReuseTreeTemplate] = createReusableTemplate<{ items: Array<TreeNode>; level: number }>();
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.prose?.codeTree || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.prose?.codeTree || {}),
+})());
 
 const initialPath = props.modelValue ?? props.defaultValue;
-const model = ref(initialPath ? { path: initialPath } : undefined);
+const model = ref(initialPath
+  ? { path: initialPath }
+  : undefined);
 
 watch(model, (value) => {
   if (value?.path !== props.modelValue) {
@@ -85,7 +90,9 @@ watch(() => props.modelValue, (value) => {
     return;
   }
 
-  model.value = value ? { path: value } : undefined;
+  model.value = value
+    ? { path: value }
+    : undefined;
   // Expand the tree to show the selected item, keeping paths already expanded
   const next = [...expanded.value];
   for (const path of getExpandedPaths(value)) {
@@ -114,10 +121,16 @@ function buildTree(items: Array<{ label: string }>): Array<TreeNode> {
     let path = '';
 
     parts.forEach((part, i) => {
-      path = path ? `${path}/${part}` : part;
+      path = path
+        ? `${path}/${part}`
+        : part;
 
       if (!map.has(path)) {
-        const node = { label: part, path, ...(i < parts.length - 1 && { children: [] }) };
+        const node = {
+          label: part,
+          path,
+          ...(i < parts.length - 1 && { children: [] }),
+        };
         map.set(path, node);
 
         if (i === 0) {
@@ -131,7 +144,11 @@ function buildTree(items: Array<{ label: string }>): Array<TreeNode> {
 
   const sort = (nodes: Array<TreeNode>): Array<TreeNode> =>
     nodes.sort((a, b) =>
-      !!a.children === !!b.children ? a.label.localeCompare(b.label) : b.children ? 1 : -1,
+      !!a.children === !!b.children
+        ? a.label.localeCompare(b.label)
+        : b.children
+          ? 1
+          : -1,
     ).map((n) => ({ ...n, children: n.children && sort(n.children) }));
 
   return sort(root);
@@ -169,7 +186,9 @@ function getExpandedPaths(path?: string) {
   return parts.slice(0, -1).map((_, index) => parts.slice(0, index + 1).join('/'));
 }
 
-const expandedOverride = ref<Array<string> | null>(props.expandAll ? null : getExpandedPaths(model.value?.path));
+const expandedOverride = ref<Array<string> | null>(props.expandAll
+  ? null
+  : getExpandedPaths(model.value?.path));
 const expanded = computed<Array<string>>({
   get: () => expandedOverride.value ?? getExpandedPaths(),
   set: (value) => {
@@ -178,7 +197,9 @@ const expanded = computed<Array<string>>({
 });
 
 watch(() => props.expandAll, (value) => {
-  expandedOverride.value = value ? null : getExpandedPaths(model.value?.path);
+  expandedOverride.value = value
+    ? null
+    : getExpandedPaths(model.value?.path);
 });
 
 // Re-expand all when flatItems actually change and expandAll is true.

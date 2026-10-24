@@ -27,14 +27,18 @@ const nameExceptions: Record<string, string> = {
 
 function normalizeLocale(locale: string): string {
   if (locale.includes('_')) {
-    return locale.split('_').map((part, index) => index === 0 ? part.toLowerCase() : part.toUpperCase()).join('-');
+    return locale.split('_').map((part, index) => index === 0
+      ? part.toLowerCase()
+      : part.toUpperCase()).join('-');
   }
   return locale.toLowerCase();
 }
 
 function flatten(messages: object, prefix = '', result: Record<string, string> = {}): Record<string, string> {
   for (const [key, value] of Object.entries(messages)) {
-    const path = prefix ? `${prefix}.${key}` : key;
+    const path = prefix
+      ? `${prefix}.${key}`
+      : key;
     if (value && typeof value === 'object') {
       flatten(value, path, result);
     } else {
@@ -45,7 +49,9 @@ function flatten(messages: object, prefix = '', result: Record<string, string> =
 }
 
 function placeholders(message: string): string {
-  return [...message.matchAll(/\{(\w+)\}/g)].map((match) => match[1]).sort().join(',');
+  return [
+    ...message.matchAll(/\{(\w+)\}/g),
+  ].map((match) => match[1]).sort().join(',');
 }
 
 const enMessages = flatten(en.messages);

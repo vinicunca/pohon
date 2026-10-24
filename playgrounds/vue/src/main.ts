@@ -11,7 +11,9 @@ const pages = import.meta.glob(['../../nuxt/app/pages/*.vue', '../../nuxt/app/pa
 const routes = Object.keys(pages).map((path) => {
   const name = path.match(/\.\.\/\.\.\/nuxt\/app\/pages(.*)\.vue$/)![1].toLowerCase();
   return {
-    path: name === '/index' ? '/' : name,
+    path: name === '/index'
+      ? '/'
+      : name,
     component: pages[path],
   };
 });
@@ -33,7 +35,9 @@ globalThis.useFetch = async (url: string, options: RequestInit & { transform?: (
   async function _fetch() {
     status.value = 'loading';
     try {
-      data.value = await fetch(url, options).then((r) => r.json()).then((r) => options.transform ? options.transform(r) : r);
+      data.value = await fetch(url, options).then((r) => r.json()).then((r) => options.transform
+        ? options.transform(r)
+        : r);
       status.value = 'success';
     } catch (error) {
       console.error(error);

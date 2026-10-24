@@ -20,15 +20,70 @@ describe('contentSurround', () => {
 
   renderEach(ContentSurround, [
     // Props
-    ['with surround', { props }],
-    ['with prevIcon', { props: { ...props, prevIcon: 'i-lucide-chevron-left' } }],
-    ['with nextIcon', { props: { ...props, nextIcon: 'i-lucide-chevron-right' } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'gap-12' } }],
-    ['with ui', { props: { ...props, ui: { linkTitle: 'text-xl' } } }],
+    [
+      'with surround',
+      { props },
+    ],
+    [
+      'with prevIcon',
+      {
+        props: { ...props, prevIcon: 'i-lucide-chevron-left' },
+      },
+    ],
+    [
+      'with nextIcon',
+      {
+        props: { ...props, nextIcon: 'i-lucide-chevron-right' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'gap-12' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { linkTitle: 'text-xl' },
+        },
+      },
+    ],
     // Slots
-    ['with link slot', { props, slots: { link: () => 'Link slot' } }],
-    ['with link-leading slot', { props, slots: { 'link-leading': () => 'Link leading slot' } }],
-    ['with link-title slot', { props, slots: { 'link-title': () => 'Link title slot' } }],
+    [
+      'with link slot',
+      {
+        props,
+        slots: {
+          link: () => 'Link slot',
+        },
+      },
+    ],
+    [
+      'with link-leading slot',
+      {
+        props,
+        slots: {
+          'link-leading': () => 'Link leading slot',
+        },
+      },
+    ],
+    [
+      'with link-title slot',
+      {
+        props,
+        slots: {
+          'link-title': () => 'Link title slot',
+        },
+      },
+    ],
   ]);
 });

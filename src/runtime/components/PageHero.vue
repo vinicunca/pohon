@@ -73,7 +73,10 @@ const appConfig = useAppConfig() as PageHero['AppConfig'];
 
 const as = computed(() => resolveAs(props.as, { root: 'div', title: 'h1' }));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageHero || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.pageHero || {}),
+})({
   orientation: props.orientation,
   reverse: props.reverse,
   title: !!props.title || !!slots.title,

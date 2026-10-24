@@ -14,98 +14,472 @@ describe('selectMenu', () => {
   const sizes = Object.keys(theme.variants.size) as any;
   const variants = Object.keys(theme.variants.variant) as any;
 
-  const items = [{
-    label: 'Backlog',
-    value: 'backlog',
-    icon: 'i-lucide-circle-help',
-  }, {
-    label: 'Todo',
-    value: 'todo',
-    icon: 'i-lucide-circle-plus',
-  }, {
-    label: 'In Progress',
-    value: 'in_progress',
-    icon: 'i-lucide-circle-arrow-up',
-  }, {
-    label: 'Done',
-    value: 'done',
-    icon: 'i-lucide-circle-check',
-  }, {
-    label: 'Canceled',
-    value: 'canceled',
-    icon: 'i-lucide-circle-x',
-  }];
+  const items = [
+    {
+      label: 'Backlog',
+      value: 'backlog',
+      icon: 'i-lucide-circle-help',
+    },
+    {
+      label: 'Todo',
+      value: 'todo',
+      icon: 'i-lucide-circle-plus',
+    },
+    {
+      label: 'In Progress',
+      value: 'in_progress',
+      icon: 'i-lucide-circle-arrow-up',
+    },
+    {
+      label: 'Done',
+      value: 'done',
+      icon: 'i-lucide-circle-check',
+    },
+    {
+      label: 'Canceled',
+      value: 'canceled',
+      icon: 'i-lucide-circle-x',
+    },
+  ];
 
-  const itemsWithDescription = [...items.map((item) => ({ ...item, description: 'Description' }))];
+  const itemsWithDescription = [
+    ...items.map((item) => ({ ...item, description: 'Description' })),
+  ];
 
   const props = { open: true, portal: false, items };
 
   renderEach(SelectMenu, [
     // Props
-    ['with items', { props }],
-    ['with items with description', { props: { ...props, items: itemsWithDescription } }],
-    ['with modelValue', { props: { ...props, modelValue: items[0] } }],
-    ['with defaultValue', { props: { ...props, defaultValue: items[0] } }],
-    ['with valueKey', { props: { ...props, valueKey: 'label', defaultValue: 'Backlog' } }],
-    ['with by', { props: { ...props, by: 'value', defaultValue: items[0] } }],
-    ['with labelKey', { props: { ...props, labelKey: 'value' } }],
-    ['with descriptionKey', { props: { ...props, descriptionKey: 'description' } }],
-    ['with multiple', { props: { ...props, multiple: true } }],
-    ['with multiple and modelValue', { props: { ...props, multiple: true, modelValue: [items[0], items[1]] } }],
-    ['with id', { props: { ...props, id: 'id' } }],
-    ['with name', { props: { ...props, name: 'name' } }],
-    ['with placeholder', { props: { ...props, placeholder: 'Search...' } }],
-    ['without searchInput', { props: { ...props, searchInput: false } }],
-    ['with searchInput placeholder', { props: { ...props, searchInput: { placeholder: 'Filter items...' } } }],
-    ['with searchInput icon', { props: { ...props, searchInput: { icon: 'i-lucide-search' } } }],
-    ['with disabled', { props: { ...props, disabled: true } }],
-    ['with required', { props: { ...props, required: true } }],
-    ['with icon', { props: { icon: 'i-lucide-search' } }],
-    ['with leading and icon', { props: { leading: true, icon: 'i-lucide-arrow-left' } }],
-    ['with leadingIcon', { props: { leadingIcon: 'i-lucide-arrow-left' } }],
-    ['with trailing and icon', { props: { trailing: true, icon: 'i-lucide-arrow-right' } }],
-    ['with trailingIcon', { props: { trailingIcon: 'i-lucide-arrow-right' } }],
-    ['with avatar', { props: { avatar: { src: 'https://github.com/benjamincanac.png' } } }],
-    ['with avatar and leadingIcon', { props: { avatar: { src: 'https://github.com/benjamincanac.png' }, leadingIcon: 'i-lucide-arrow-left' } }],
-    ['with avatar and trailingIcon', { props: { avatar: { src: 'https://github.com/benjamincanac.png' }, trailingIcon: 'i-lucide-arrow-right' } }],
-    ['with loading', { props: { loading: true } }],
-    ['with loading and avatar', { props: { loading: true, avatar: { src: 'https://github.com/benjamincanac.png' } } }],
-    ['with loading trailing', { props: { loading: true, trailing: true } }],
-    ['with loading trailing and avatar', { props: { loading: true, trailing: true, avatar: { src: 'https://github.com/benjamincanac.png' } } }],
-    ['with loadingIcon', { props: { loading: true, loadingIcon: 'i-lucide-loader' } }],
-    ['with trailingIcon', { props: { ...props, trailingIcon: 'i-lucide-chevron-down' } }],
-    ['with selectedIcon', { props: { ...props, selectedIcon: 'i-lucide-check' } }],
-    ['with clear', { props: { ...props, clear: true, modelValue: items[0] } }],
-    ['with clear and clearIcon', { props: { ...props, clear: true, clearIcon: 'i-lucide-x', modelValue: items[0] } }],
-    ['with arrow', { props: { ...props, arrow: true } }],
-    ['with virtualize', { props: { ...props, virtualize: true } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { ...props, size } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { ...props, variant } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant} highlight`, { props: { ...props, variant, highlight: true } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { ...props, variant, color: 'neutral' } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant} highlight`, { props: { ...props, variant, color: 'neutral', highlight: true } }]),
-    ['with ariaLabel', { props, attrs: { 'aria-label': 'Aria label' } }],
-    ['with class', { props: { ...props, class: 'rounded-full' } }],
-    ['with ui', { props: { ...props, ui: { group: 'p-2' } } }],
+    [
+      'with items',
+      { props },
+    ],
+    [
+      'with items with description',
+      {
+        props: { ...props, items: itemsWithDescription },
+      },
+    ],
+    [
+      'with modelValue',
+      {
+        props: { ...props, modelValue: items[0] },
+      },
+    ],
+    [
+      'with defaultValue',
+      {
+        props: { ...props, defaultValue: items[0] },
+      },
+    ],
+    [
+      'with valueKey',
+      {
+        props: { ...props, valueKey: 'label', defaultValue: 'Backlog' },
+      },
+    ],
+    [
+      'with by',
+      {
+        props: { ...props, by: 'value', defaultValue: items[0] },
+      },
+    ],
+    [
+      'with labelKey',
+      {
+        props: { ...props, labelKey: 'value' },
+      },
+    ],
+    [
+      'with descriptionKey',
+      {
+        props: { ...props, descriptionKey: 'description' },
+      },
+    ],
+    [
+      'with multiple',
+      {
+        props: { ...props, multiple: true },
+      },
+    ],
+    [
+      'with multiple and modelValue',
+      {
+        props: {
+          ...props,
+          multiple: true,
+          modelValue: [items[0], items[1]],
+        },
+      },
+    ],
+    [
+      'with id',
+      {
+        props: { ...props, id: 'id' },
+      },
+    ],
+    [
+      'with name',
+      {
+        props: { ...props, name: 'name' },
+      },
+    ],
+    [
+      'with placeholder',
+      {
+        props: { ...props, placeholder: 'Search...' },
+      },
+    ],
+    [
+      'without searchInput',
+      {
+        props: { ...props, searchInput: false },
+      },
+    ],
+    [
+      'with searchInput placeholder',
+      {
+        props: {
+          ...props,
+          searchInput: { placeholder: 'Filter items...' },
+        },
+      },
+    ],
+    [
+      'with searchInput icon',
+      {
+        props: {
+          ...props,
+          searchInput: { icon: 'i-lucide-search' },
+        },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { ...props, disabled: true },
+      },
+    ],
+    [
+      'with required',
+      {
+        props: { ...props, required: true },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { icon: 'i-lucide-search' },
+      },
+    ],
+    [
+      'with leading and icon',
+      {
+        props: { leading: true, icon: 'i-lucide-arrow-left' },
+      },
+    ],
+    [
+      'with leadingIcon',
+      {
+        props: { leadingIcon: 'i-lucide-arrow-left' },
+      },
+    ],
+    [
+      'with trailing and icon',
+      {
+        props: { trailing: true, icon: 'i-lucide-arrow-right' },
+      },
+    ],
+    [
+      'with trailingIcon',
+      {
+        props: { trailingIcon: 'i-lucide-arrow-right' },
+      },
+    ],
+    [
+      'with avatar',
+      {
+        props: {
+          avatar: { src: 'https://github.com/benjamincanac.png' },
+        },
+      },
+    ],
+    [
+      'with avatar and leadingIcon',
+      {
+        props: {
+          avatar: { src: 'https://github.com/benjamincanac.png' },
+          leadingIcon: 'i-lucide-arrow-left',
+        },
+      },
+    ],
+    [
+      'with avatar and trailingIcon',
+      {
+        props: {
+          avatar: { src: 'https://github.com/benjamincanac.png' },
+          trailingIcon: 'i-lucide-arrow-right',
+        },
+      },
+    ],
+    [
+      'with loading',
+      {
+        props: { loading: true },
+      },
+    ],
+    [
+      'with loading and avatar',
+      {
+        props: {
+          loading: true,
+          avatar: { src: 'https://github.com/benjamincanac.png' },
+        },
+      },
+    ],
+    [
+      'with loading trailing',
+      {
+        props: { loading: true, trailing: true },
+      },
+    ],
+    [
+      'with loading trailing and avatar',
+      {
+        props: {
+          loading: true,
+          trailing: true,
+          avatar: { src: 'https://github.com/benjamincanac.png' },
+        },
+      },
+    ],
+    [
+      'with loadingIcon',
+      {
+        props: { loading: true, loadingIcon: 'i-lucide-loader' },
+      },
+    ],
+    [
+      'with trailingIcon',
+      {
+        props: { ...props, trailingIcon: 'i-lucide-chevron-down' },
+      },
+    ],
+    [
+      'with selectedIcon',
+      {
+        props: { ...props, selectedIcon: 'i-lucide-check' },
+      },
+    ],
+    [
+      'with clear',
+      {
+        props: { ...props, clear: true, modelValue: items[0] },
+      },
+    ],
+    [
+      'with clear and clearIcon',
+      {
+        props: {
+          ...props,
+          clear: true,
+          clearIcon: 'i-lucide-x',
+          modelValue: items[0],
+        },
+      },
+    ],
+    [
+      'with arrow',
+      {
+        props: { ...props, arrow: true },
+      },
+    ],
+    [
+      'with virtualize',
+      {
+        props: { ...props, virtualize: true },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { ...props, size },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant}`,
+      {
+        props: { ...props, variant },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant} highlight`,
+      {
+        props: { ...props, variant, highlight: true },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant}`,
+      {
+        props: { ...props, variant, color: 'neutral' },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant} highlight`,
+      {
+        props: {
+          ...props,
+          variant,
+          color: 'neutral',
+          highlight: true,
+        },
+      },
+    ]),
+    [
+      'with ariaLabel',
+      {
+        props,
+        attrs: { 'aria-label': 'Aria label' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'rounded-full' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { group: 'p-2' },
+        },
+      },
+    ],
     // Slots
-    ['with leading slot', { props, slots: { leading: () => 'Leading slot' } }],
-    ['with default slot', { props, slots: { default: () => 'Default slot' } }],
-    ['with trailing slot', { props, slots: { trailing: () => 'Trailing slot' } }],
-    ['with item slot', { props, slots: { item: () => 'Item slot' } }],
-    ['with item-leading slot', { props, slots: { 'item-leading': () => 'Item leading slot' } }],
-    ['with item-label slot', { props, slots: { 'item-label': () => 'Item label slot' } }],
-    ['with item-description slot', { props: { ...props, items: itemsWithDescription }, slots: { 'item-description': () => 'Item description slot' } }],
-    ['with item-trailing slot', { props, slots: { 'item-trailing': () => 'Item trailing slot' } }],
-    ['with create-item-label slot', { props: { ...props, searchTerm: 'New value', createItem: true }, slots: { 'create-item-label': () => 'Create item slot' } }],
+    [
+      'with leading slot',
+      {
+        props,
+        slots: {
+          leading: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with trailing slot',
+      {
+        props,
+        slots: {
+          trailing: () => 'Trailing slot',
+        },
+      },
+    ],
+    [
+      'with item slot',
+      {
+        props,
+        slots: {
+          item: () => 'Item slot',
+        },
+      },
+    ],
+    [
+      'with item-leading slot',
+      {
+        props,
+        slots: {
+          'item-leading': () => 'Item leading slot',
+        },
+      },
+    ],
+    [
+      'with item-label slot',
+      {
+        props,
+        slots: {
+          'item-label': () => 'Item label slot',
+        },
+      },
+    ],
+    [
+      'with item-description slot',
+      {
+        props: { ...props, items: itemsWithDescription },
+        slots: {
+          'item-description': () => 'Item description slot',
+        },
+      },
+    ],
+    [
+      'with item-trailing slot',
+      {
+        props,
+        slots: {
+          'item-trailing': () => 'Item trailing slot',
+        },
+      },
+    ],
+    [
+      'with create-item-label slot',
+      {
+        props: { ...props, searchTerm: 'New value', createItem: true },
+        slots: {
+          'create-item-label': () => 'Create item slot',
+        },
+      },
+    ],
   ]);
 
   renderEach(
     SelectMenu,
     [
-      ['with .trim modifier', { props: { modelModifiers: { trim: true } } }, { input: 'input  ', expected: 'input' }],
-      ['with .number modifier', { props: { modelModifiers: { number: true } } }, { input: '42', expected: 42 }],
-      ['with .nullable modifier', { props: { modelModifiers: { nullable: true } } }, { input: null, expected: null }],
-      ['with .optional modifier', { props: { modelModifiers: { optional: true } } }, { input: undefined, expected: undefined }],
+      [
+        'with .trim modifier',
+        {
+          props: {
+            modelModifiers: { trim: true },
+          },
+        },
+        { input: 'input  ', expected: 'input' },
+      ],
+      [
+        'with .number modifier',
+        {
+          props: {
+            modelModifiers: { number: true },
+          },
+        },
+        { input: '42', expected: 42 },
+      ],
+      [
+        'with .nullable modifier',
+        {
+          props: {
+            modelModifiers: { nullable: true },
+          },
+        },
+        { input: null, expected: null },
+      ],
+      [
+        'with .optional modifier',
+        {
+          props: {
+            modelModifiers: { optional: true },
+          },
+        },
+        { input: undefined, expected: undefined },
+      ],
     ],
     '%s works',
     async (_, options, spec) => {
@@ -116,7 +490,11 @@ describe('selectMenu', () => {
       const selectMenu = wrapper.findComponent({ name: 'ComboboxRoot' });
       await selectMenu.setValue(spec.input);
 
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [[spec.expected]] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          [spec.expected],
+        ],
+      });
     },
   );
 
@@ -152,8 +530,14 @@ describe('selectMenu', () => {
       { searchInput: false, multiple: true },
     ])('keeps controls outside the listbox with %j', async (options) => {
       const wrapper = await mountSuspended(SelectMenu, {
-        props: { ...props, ...options, placeholder: 'Select a status' },
-        slots: { 'content-top': () => h('button', 'Extra action') },
+        props: {
+          ...props,
+          ...options,
+          placeholder: 'Select a status',
+        },
+        slots: {
+          'content-top': () => h('button', 'Extra action'),
+        },
       });
 
       const listbox = wrapper.get('[role="listbox"]');
@@ -179,7 +563,10 @@ describe('selectMenu', () => {
     });
 
     it('keeps a caller label', () => {
-      const wrapper = mount(SelectMenu, { props, attrs: { 'aria-label': 'Aria label' } });
+      const wrapper = mount(SelectMenu, {
+        props,
+        attrs: { 'aria-label': 'Aria label' },
+      });
 
       expect(wrapper.get('[data-slot="base"]').attributes('aria-label')).toBe('Aria label');
     });
@@ -201,37 +588,74 @@ describe('selectMenu', () => {
 
   describe('emits', () => {
     it('update:modelValue event', async () => {
-      const wrapper = mount(SelectMenu, { props: { items: ['Option 1', 'Option 2'] } });
+      const wrapper = mount(SelectMenu, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+        },
+      });
       const input = wrapper.findComponent({ name: 'ComboboxRoot' });
       await input.setValue('Option 1');
 
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [['Option 1']] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          ['Option 1'],
+        ],
+      });
     });
 
     it('change event', async () => {
-      const wrapper = mount(SelectMenu, { props: { items: ['Option 1', 'Option 2'] } });
+      const wrapper = mount(SelectMenu, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+        },
+      });
       const input = wrapper.findComponent({ name: 'ComboboxRoot' });
       await input.setValue('Option 1');
-      expect(wrapper.emitted()).toMatchObject({ change: [[{ type: 'change' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        change: [
+          [
+            { type: 'change' },
+          ],
+        ],
+      });
     });
 
     it('blur event', async () => {
-      const wrapper = mount(SelectMenu, { props: { items: ['Option 1', 'Option 2'] } });
+      const wrapper = mount(SelectMenu, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+        },
+      });
       const input = wrapper.findComponent({ name: 'ComboboxRoot' });
       input.vm.$emit('update:open', false);
-      expect(wrapper.emitted()).toMatchObject({ blur: [[{ type: 'blur' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        blur: [
+          [
+            { type: 'blur' },
+          ],
+        ],
+      });
     });
   });
 
   describe('clear', () => {
     it('does not render the clear button when disabled', () => {
-      const wrapper = mount(SelectMenu, { props: { items, modelValue: items[0]!, clear: true, disabled: true } });
+      const wrapper = mount(SelectMenu, {
+        props: {
+          items,
+          modelValue: items[0]!,
+          clear: true,
+          disabled: true,
+        },
+      });
 
       expect(wrapper.find('[data-slot="trailingClear"]').exists()).toBe(false);
     });
 
     it('renders the clear button when not disabled', () => {
-      const wrapper = mount(SelectMenu, { props: { items, modelValue: items[0]!, clear: true } });
+      const wrapper = mount(SelectMenu, {
+        props: { items, modelValue: items[0]!, clear: true },
+      });
 
       expect(wrapper.find('[data-slot="trailingClear"]').exists()).toBe(true);
     });
@@ -239,25 +663,35 @@ describe('selectMenu', () => {
 
   describe('keyboard', () => {
     it.each(['ArrowDown', 'ArrowUp'])('opens the menu on %s', async (key) => {
-      const wrapper = mount(SelectMenu, { attachTo: document.body, props: { portal: false, items } });
+      const wrapper = mount(SelectMenu, {
+        attachTo: document.body,
+        props: { portal: false, items },
+      });
 
       await wrapper.find('[data-slot="base"]').trigger('keydown', { key });
       await flushPromises();
 
-      expect(wrapper.emitted('update:open')).toMatchObject([[true]]);
+      expect(wrapper.emitted('update:open')).toMatchObject([
+        [true],
+      ]);
 
       wrapper.unmount();
     });
 
     it('does not toggle the menu on ArrowDown when already open', async () => {
-      const wrapper = mount(SelectMenu, { attachTo: document.body, props: { portal: false, items } });
+      const wrapper = mount(SelectMenu, {
+        attachTo: document.body,
+        props: { portal: false, items },
+      });
       const root = wrapper.findComponent({ name: 'ComboboxRoot' });
 
       await root.vm.$emit('update:open', true);
       await wrapper.find('[data-slot="base"]').trigger('keydown', { key: 'ArrowDown' });
       await flushPromises();
 
-      expect(wrapper.emitted('update:open')).toMatchObject([[true]]);
+      expect(wrapper.emitted('update:open')).toMatchObject([
+        [true],
+      ]);
 
       wrapper.unmount();
     });
@@ -265,7 +699,10 @@ describe('selectMenu', () => {
 
   describe('search input', () => {
     it('focuses the search input when the menu opens by default', async () => {
-      const wrapper = mount(SelectMenu, { attachTo: document.body, props: { open: true, portal: false, items } });
+      const wrapper = mount(SelectMenu, {
+        attachTo: document.body,
+        props: { open: true, portal: false, items },
+      });
 
       await flushPromises();
       // Input.vue's autofocus runs on a macrotask
@@ -280,7 +717,15 @@ describe('selectMenu', () => {
     });
 
     it('does not focus the search input with searchInput autofocus disabled', async () => {
-      const wrapper = mount(SelectMenu, { attachTo: document.body, props: { open: true, portal: false, items, searchInput: { autofocus: false } } });
+      const wrapper = mount(SelectMenu, {
+        attachTo: document.body,
+        props: {
+          open: true,
+          portal: false,
+          items,
+          searchInput: { autofocus: false },
+        },
+      });
 
       await flushPromises();
       await new Promise((resolve) => {
@@ -295,7 +740,15 @@ describe('selectMenu', () => {
     });
 
     it('navigates the items with the keyboard with searchInput autofocus disabled', async () => {
-      const wrapper = mount(SelectMenu, { attachTo: document.body, props: { open: true, portal: false, items, searchInput: { autofocus: false } } });
+      const wrapper = mount(SelectMenu, {
+        attachTo: document.body,
+        props: {
+          open: true,
+          portal: false,
+          items,
+          searchInput: { autofocus: false },
+        },
+      });
 
       await flushPromises();
       await new Promise((resolve) => {
@@ -311,7 +764,9 @@ describe('selectMenu', () => {
 
       await focusScope.trigger('keydown', { key: 'Enter' });
       await flushPromises();
-      expect(wrapper.emitted('update:modelValue')).toMatchObject([[items[1]]]);
+      expect(wrapper.emitted('update:modelValue')).toMatchObject([
+        [items[1]],
+      ]);
 
       wrapper.unmount();
     });
@@ -322,7 +777,15 @@ describe('selectMenu', () => {
       const input = document.createElement('input');
       document.body.appendChild(input);
 
-      const wrapper = mount(SelectMenu, { attachTo: document.body, props: { 'defaultOpen': true, 'portal': false, items, 'onUpdate:modelValue': () => input.focus() } });
+      const wrapper = mount(SelectMenu, {
+        attachTo: document.body,
+        props: {
+          'defaultOpen': true,
+          'portal': false,
+          items,
+          'onUpdate:modelValue': () => input.focus(),
+        },
+      });
 
       await flushPromises();
       await new Promise((resolve) => {
@@ -345,7 +808,10 @@ describe('selectMenu', () => {
       const button = document.createElement('button');
       document.body.appendChild(button);
 
-      const wrapper = mount(SelectMenu, { attachTo: document.body, props: { defaultOpen: true, portal: false, items } });
+      const wrapper = mount(SelectMenu, {
+        attachTo: document.body,
+        props: { defaultOpen: true, portal: false, items },
+      });
 
       await flushPromises();
       await new Promise((resolve) => {
@@ -394,7 +860,9 @@ describe('selectMenu', () => {
       await flushPromises();
 
       // Items arrive asynchronously (e.g. fetched from a backend)
-      await wrapper.setProps({ items: ['Option 1', 'Option 2'] });
+      await wrapper.setProps({
+        items: ['Option 1', 'Option 2'],
+      });
       await flushPromises();
 
       const highlighted = wrapper.find('[role="option"][data-highlighted]');
@@ -470,7 +938,9 @@ describe('selectMenu', () => {
           validateOnInputDelay: 0,
           async validate(state: any) {
             if (state.value !== 'Option 2') {
-              return [{ name: 'value', message: 'Error message' }];
+              return [
+                { name: 'value', message: 'Error message' },
+              ];
             }
             return [];
           },
@@ -520,31 +990,44 @@ describe('selectMenu', () => {
     it('should have the correct types', () => {
       // with object item
       expectEmitPayloadType('update:modelValue', () => SelectMenu({
-        items: [{ label: 'foo', value: 'bar' }],
+        items: [
+          { label: 'foo', value: 'bar' },
+        ],
       })).toEqualTypeOf<[{ label: string; value: string }]>();
 
       // with object item and multiple
       expectEmitPayloadType('update:modelValue', () => SelectMenu({
-        items: [{ label: 'foo', value: 1 }],
+        items: [
+          { label: 'foo', value: 1 },
+        ],
         multiple: true,
       })).toEqualTypeOf<[Array<{ label: string; value: number }>]>();
 
       // with object item and valueKey
       expectEmitPayloadType('update:modelValue', () => SelectMenu({
-        items: [{ label: 'foo', value: 'bar' }],
+        items: [
+          { label: 'foo', value: 'bar' },
+        ],
         valueKey: 'value',
       })).toEqualTypeOf<[string]>();
 
       // with object item and multiple and valueKey
       expectEmitPayloadType('update:modelValue', () => SelectMenu({
-        items: [{ label: 'foo', value: 1 }],
+        items: [
+          { label: 'foo', value: 1 },
+        ],
         multiple: true,
         valueKey: 'value',
       })).toEqualTypeOf<[Array<number>]>();
 
       // with object item and object valueKey
       expectEmitPayloadType('update:modelValue', () => SelectMenu({
-        items: [{ label: 'foo', value: { id: 1, name: 'bar' } }],
+        items: [
+          {
+            label: 'foo',
+            value: { id: 1, name: 'bar' },
+          },
+        ],
         valueKey: 'value',
       })).toEqualTypeOf<[{ id: number; name: string }]>();
 
@@ -561,24 +1044,46 @@ describe('selectMenu', () => {
 
       // with groups
       expectEmitPayloadType('update:modelValue', () => SelectMenu({
-        items: [['foo']],
+        items: [
+          ['foo'],
+        ],
       })).toEqualTypeOf<[string]>();
 
       // with groups and multiple
       expectEmitPayloadType('update:modelValue', () => SelectMenu({
-        items: [['foo']],
+        items: [
+          ['foo'],
+        ],
         multiple: true,
       })).toEqualTypeOf<[Array<string>]>();
 
       // with groups, multiple and mixed types
       expectEmitPayloadType('update:modelValue', () => SelectMenu({
-        items: [['foo', { value: 1 }], [{ value: 'bar' }, 2]],
+        items: [
+          [
+            'foo',
+            { value: 1 },
+          ],
+          [
+            { value: 'bar' },
+            2,
+          ],
+        ],
         multiple: true,
       })).toEqualTypeOf<[Array<string | number | { value: string } | { value: number }>]>();
 
       // with groups, multiple, mixed types and valueKey
       expectEmitPayloadType('update:modelValue', () => SelectMenu({
-        items: [['foo', { value: 1 }], [{ value: 'bar' }, 2]],
+        items: [
+          [
+            'foo',
+            { value: 1 },
+          ],
+          [
+            { value: 'bar' },
+            2,
+          ],
+        ],
         multiple: true,
         valueKey: 'value',
       })).toEqualTypeOf<[Array<string | number>]>();

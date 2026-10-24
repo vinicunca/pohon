@@ -31,20 +31,104 @@ describe('breadcrumb', () => {
 
   renderEach(Breadcrumb<typeof items[number]>, [
     // Props
-    ['with items', { props }],
-    ['with labelKey', { props: { ...props, labelKey: 'icon' } }],
-    ['with separatorIcon', { props: { ...props, separatorIcon: 'i-lucide-minus' } }],
-    ['with color neutral', { props: { ...props, color: 'neutral' } }],
-    ['with as', { props: { ...props, as: 'div' } }],
-    ['with class', { props: { ...props, class: 'w-48' } }],
-    ['with ui', { props: { ...props, ui: { link: 'font-700' } } }],
+    [
+      'with items',
+      { props },
+    ],
+    [
+      'with labelKey',
+      {
+        props: { ...props, labelKey: 'icon' },
+      },
+    ],
+    [
+      'with separatorIcon',
+      {
+        props: { ...props, separatorIcon: 'i-lucide-minus' },
+      },
+    ],
+    [
+      'with color neutral',
+      {
+        props: { ...props, color: 'neutral' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'div' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'w-48' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { link: 'font-700' },
+        },
+      },
+    ],
     // Slots
-    ['with item slot', { props, slots: { item: () => 'Item slot' } }],
-    ['with item-leading slot', { props, slots: { 'item-leading': () => 'Item leading slot' } }],
-    ['with item-label slot', { props, slots: { 'item-label': () => 'Item label slot' } }],
-    ['with item-trailing slot', { props, slots: { 'item-trailing': () => 'Item trailing slot' } }],
-    ['with custom slot', { props, slots: { custom: () => 'Custom slot' } }],
-    ['with separator slot', { props, slots: { separator: () => '/' } }],
+    [
+      'with item slot',
+      {
+        props,
+        slots: {
+          item: () => 'Item slot',
+        },
+      },
+    ],
+    [
+      'with item-leading slot',
+      {
+        props,
+        slots: {
+          'item-leading': () => 'Item leading slot',
+        },
+      },
+    ],
+    [
+      'with item-label slot',
+      {
+        props,
+        slots: {
+          'item-label': () => 'Item label slot',
+        },
+      },
+    ],
+    [
+      'with item-trailing slot',
+      {
+        props,
+        slots: {
+          'item-trailing': () => 'Item trailing slot',
+        },
+      },
+    ],
+    [
+      'with custom slot',
+      {
+        props,
+        slots: {
+          custom: () => 'Custom slot',
+        },
+      },
+    ],
+    [
+      'with separator slot',
+      {
+        props,
+        slots: {
+          separator: () => '/',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

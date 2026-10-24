@@ -88,9 +88,12 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        root: `outline-${color}/25 has-focus-visible:outline-3 has-focus-visible:ring-${color}`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          root: `outline-${color}/25 has-focus-visible:outline-3 has-focus-visible:ring-${color}`,
+        },
+      ])),
       neutral: {
         root: 'outline-border-inverted/25 has-focus-visible:outline-3 has-focus-visible:ring-border-inverted',
       },
@@ -112,19 +115,22 @@ export default (options: Required<ModuleOptions>) => ({
       true: '',
     },
   },
-  compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
-    color,
-    highlight: true,
-    class: {
-      root: `ring ring-inset ring-${color}`,
+  compoundVariants: [
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      highlight: true,
+      class: {
+        root: `ring ring-inset ring-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      highlight: true,
+      class: {
+        root: 'ring ring-inset ring-border-inverted',
+      },
     },
-  })), {
-    color: 'neutral',
-    highlight: true,
-    class: {
-      root: 'ring ring-inset ring-border-inverted',
-    },
-  }],
+  ],
   defaultVariants: {
     color: 'primary',
     size: 'md',

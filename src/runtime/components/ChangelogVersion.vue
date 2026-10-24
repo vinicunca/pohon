@@ -99,7 +99,10 @@ const [DefineDateTemplate, ReuseDateTemplate] = createReusableTemplate<{ hidden?
 
 const as = computed(() => resolveAs(props.as, { root: 'article', title: 'h2' }));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.changelogVersion || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.changelogVersion || {}),
+})({
   to: !!props.to || !!props.onClick,
 }));
 

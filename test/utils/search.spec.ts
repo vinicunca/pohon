@@ -33,7 +33,18 @@ describe('sanitizeSnippet', () => {
 describe('highlight', () => {
   it('escapes an injected tag in the unmatched tail while keeping the match highlighted', () => {
     const value = 'zzzzz &<img src=x onerror=alert(1)>';
-    const result = highlight({ label: value, matches: [{ key: 'label', value, indices: [[0, 4]] }] }, 'zzzzz', 'label');
+    const result = highlight({
+      label: value,
+      matches: [
+        {
+          key: 'label',
+          value,
+          indices: [
+            [0, 4],
+          ],
+        },
+      ],
+    }, 'zzzzz', 'label');
 
     expect(result).toContain('<mark>zzzzz</mark>');
     expect(result).not.toContain('<img');
@@ -43,7 +54,12 @@ describe('highlight', () => {
 
   it('escapes payloads that contain a pre-existing HTML entity (regression: sanitize bypass)', () => {
     const value = '&amp;<img src=x onerror=alert(1)>';
-    const result = highlight({ label: value, matches: [{ key: 'label', value, indices: [] }] }, 'x', 'label');
+    const result = highlight({
+      label: value,
+      matches: [
+        { key: 'label', value, indices: [] },
+      ],
+    }, 'x', 'label');
 
     expect(result).not.toContain('<img');
     expect(result).toBe('&amp;amp;&lt;img src=x onerror=alert(1)&gt;');
@@ -51,7 +67,18 @@ describe('highlight', () => {
 
   it('escapes HTML-special characters around the highlighted region', () => {
     const value = 'match < & "a" \'b\'';
-    const result = highlight({ label: value, matches: [{ key: 'label', value, indices: [[0, 4]] }] }, 'match', 'label');
+    const result = highlight({
+      label: value,
+      matches: [
+        {
+          key: 'label',
+          value,
+          indices: [
+            [0, 4],
+          ],
+        },
+      ],
+    }, 'match', 'label');
 
     expect(result).toBe('<mark>match</mark> &lt; &amp; &quot;a&quot; &#39;b&#39;');
   });
@@ -70,7 +97,18 @@ describe('highlight', () => {
       const value = `${filler.repeat(count)}match`;
       const index = value.indexOf('match');
 
-      return highlight({ label: value, matches: [{ key: 'label', value, indices: [[index, index + 4]] }] }, 'match', 'label');
+      return highlight({
+        label: value,
+        matches: [
+          {
+            key: 'label',
+            value,
+            indices: [
+              [index, index + 4],
+            ],
+          },
+        ],
+      }, 'match', 'label');
     }
 
     it('never splits an astral character, at any truncation boundary', () => {

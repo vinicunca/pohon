@@ -140,7 +140,10 @@ const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
 const size = computed(() => fieldGroupSize.value ?? formFieldSize.value ?? props.size);
 const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputNumber || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.inputNumber || {}),
+})({
   color: color.value,
   variant: props.variant,
   size: size.value,
@@ -148,13 +151,21 @@ const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.inputNumber || {
   fixed: props.fixed,
   orientation: props.orientation,
   fieldGroup: orientation.value,
-  increment: props.orientation === 'vertical' ? (!!props.increment || !!props.decrement) : !!props.increment,
-  decrement: props.orientation === 'vertical' ? false : !!props.decrement,
+  increment: props.orientation === 'vertical'
+    ? (!!props.increment || !!props.decrement)
+    : !!props.increment,
+  decrement: props.orientation === 'vertical'
+    ? false
+    : !!props.decrement,
 }));
 
-const incrementIcon = computed(() => props.incrementIcon || (props.orientation === 'horizontal' ? appConfig.ui.icons.plus : appConfig.ui.icons.chevronUp));
+const incrementIcon = computed(() => props.incrementIcon || (props.orientation === 'horizontal'
+  ? appConfig.ui.icons.plus
+  : appConfig.ui.icons.chevronUp));
 
-const decrementIcon = computed(() => props.decrementIcon || (props.orientation === 'horizontal' ? appConfig.ui.icons.minus : appConfig.ui.icons.chevronDown));
+const decrementIcon = computed(() => props.decrementIcon || (props.orientation === 'horizontal'
+  ? appConfig.ui.icons.minus
+  : appConfig.ui.icons.chevronDown));
 
 const inputRef = useTemplateRef('inputRef');
 
@@ -171,7 +182,9 @@ function onUpdate(value: ApplyModifiers<T, Mod> | undefined) {
   emits('update:modelValue', value as ApplyModifiers<T, Mod>);
 
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value } });
+  const event = new Event('change', {
+    target: { value },
+  });
   emits('change', event);
 
   emitFormChange();

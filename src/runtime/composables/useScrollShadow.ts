@@ -21,7 +21,9 @@ export function useScrollShadow(element: MaybeRef<HTMLElement | null | undefined
   const style = computed<CSSProperties | undefined>(() => {
     const el = toValue(element);
     const orientation = toValue(options.orientation) ?? 'vertical';
-    const [startKey, endKey] = orientation === 'horizontal' ? ['left', 'right'] as const : ['top', 'bottom'] as const;
+    const [startKey, endKey] = orientation === 'horizontal'
+      ? ['left', 'right'] as const
+      : ['top', 'bottom'] as const;
 
     const showStart = !arrivedState[startKey];
     const showEnd = !arrivedState[endKey];
@@ -31,7 +33,9 @@ export function useScrollShadow(element: MaybeRef<HTMLElement | null | undefined
     }
 
     const overflows = el
-      ? orientation === 'horizontal' ? el.scrollWidth > el.clientWidth : el.scrollHeight > el.clientHeight
+      ? orientation === 'horizontal'
+        ? el.scrollWidth > el.clientWidth
+        : el.scrollHeight > el.clientHeight
       : false;
     if (!overflows) {
       return undefined;
@@ -39,7 +43,9 @@ export function useScrollShadow(element: MaybeRef<HTMLElement | null | undefined
 
     const size = `${toValue(options.size) ?? 24}px`;
 
-    const angle = orientation === 'horizontal' ? '90deg' : '180deg';
+    const angle = orientation === 'horizontal'
+      ? '90deg'
+      : '180deg';
 
     if (showStart && showEnd) {
       return { maskImage: `linear-gradient(${angle}, transparent, #000 ${size}, #000 calc(100% - ${size}), transparent)` };

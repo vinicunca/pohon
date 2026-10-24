@@ -9,8 +9,14 @@ describe('i18n plugin', () => {
     ['fr', 'fr'],
     ['pt-BR', 'pt_br'],
     ['en-US', 'en'],
-    [{ code: 'en', language: 'en-GB' }, 'en_gb'],
-    [{ code: 'zh-Hant', language: 'zh-TW' }, 'zh_tw'],
+    [
+      { code: 'en', language: 'en-GB' },
+      'en_gb',
+    ],
+    [
+      { code: 'zh-Hant', language: 'zh-TW' },
+      'zh_tw',
+    ],
     ['fa', 'fa_ir'],
     ['nb', 'nb_no'],
     ['zh', undefined],
@@ -20,7 +26,13 @@ describe('i18n plugin', () => {
   });
 
   it('imports only the configured locales', () => {
-    const contents = generateI18nPlugin(['en', { code: 'fr' }, { code: 'pt-BR', language: 'pt-BR' }, 'en-US', 'xx'], keys, '/runtime');
+    const contents = generateI18nPlugin([
+      'en',
+      { code: 'fr' },
+      { code: 'pt-BR', language: 'pt-BR' },
+      'en-US',
+      'xx',
+    ], keys, '/runtime');
 
     expect(contents).toMatchInlineSnapshot(`
       "import { computed, unref } from "vue";

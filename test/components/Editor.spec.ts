@@ -9,12 +9,42 @@ describe('editor', () => {
 
   renderEach(Editor, [
     // Props
-    ['with as', { props: { as: 'section' } }],
-    ['with placeholder', { props: { placeholder: 'Write something...' } }],
-    ['with class', { props: { class: 'min-h-80' } }],
-    ['with ui', { props: { ui: { base: 'sm:px-14' } } }],
+    [
+      'with as',
+      {
+        props: { as: 'section' },
+      },
+    ],
+    [
+      'with placeholder',
+      {
+        props: { placeholder: 'Write something...' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'min-h-80' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { base: 'sm:px-14' },
+        },
+      },
+    ],
     // Slots
-    ['with default slot', { props, slots: { default: () => 'Default slot' } }],
+    [
+      'with default slot',
+      {
+        props,
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

@@ -81,11 +81,18 @@ const [DefineLinkTemplate, ReuseLinkTemplate] = createReusableTemplate<{ link?: 
   },
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.contentSurround || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.contentSurround || {}),
+})());
 
-const prevIcon = computed(() => props.prevIcon || (dir.value === 'rtl' ? appConfig.ui.icons.arrowRight : appConfig.ui.icons.arrowLeft));
+const prevIcon = computed(() => props.prevIcon || (dir.value === 'rtl'
+  ? appConfig.ui.icons.arrowRight
+  : appConfig.ui.icons.arrowLeft));
 
-const nextIcon = computed(() => props.nextIcon || (dir.value === 'rtl' ? appConfig.ui.icons.arrowLeft : appConfig.ui.icons.arrowRight));
+const nextIcon = computed(() => props.nextIcon || (dir.value === 'rtl'
+  ? appConfig.ui.icons.arrowLeft
+  : appConfig.ui.icons.arrowRight));
 </script>
 
 <template>

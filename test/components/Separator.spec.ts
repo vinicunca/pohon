@@ -11,19 +11,88 @@ describe('separator', () => {
 
   renderEach(Separator, [
     // Props
-    ['with label', { props: { label: '+1' } }],
-    ['with icon', { props: { icon: 'i-lucide-image' } }],
-    ['with position start', { props: { position: 'start', icon: 'i-lucide-image' } }],
-    ['with position end', { props: { position: 'end', icon: 'i-lucide-image' } }],
-    ['with avatar', { props: { avatar: { src: 'https://github.com/praburangki.png' } } }],
-    ['with orientation vertical', { props: { orientation: 'vertical' } }],
-    ['with decorative', { props: { decorative: true } }],
-    ...types.map((type: string) => [`with type ${type}`, { props: { type } }]),
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { size } }]),
-    ['with color primary', { props: { color: 'primary' } }],
-    ['with as', { props: { as: 'span' } }],
-    ['with class', { props: { class: 'flex-row-reverse' } }],
-    ['with ui', { props: { ui: { label: 'text-lg' } } }],
+    [
+      'with label',
+      {
+        props: { label: '+1' },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { icon: 'i-lucide-image' },
+      },
+    ],
+    [
+      'with position start',
+      {
+        props: { position: 'start', icon: 'i-lucide-image' },
+      },
+    ],
+    [
+      'with position end',
+      {
+        props: { position: 'end', icon: 'i-lucide-image' },
+      },
+    ],
+    [
+      'with avatar',
+      {
+        props: {
+          avatar: { src: 'https://github.com/praburangki.png' },
+        },
+      },
+    ],
+    [
+      'with orientation vertical',
+      {
+        props: { orientation: 'vertical' },
+      },
+    ],
+    [
+      'with decorative',
+      {
+        props: { decorative: true },
+      },
+    ],
+    ...types.map((type: string) => [
+      `with type ${type}`,
+      {
+        props: { type },
+      },
+    ]),
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { size },
+      },
+    ]),
+    [
+      'with color primary',
+      {
+        props: { color: 'primary' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { as: 'span' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'flex-row-reverse' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ui: { label: 'text-lg' },
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

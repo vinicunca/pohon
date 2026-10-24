@@ -105,7 +105,9 @@ export const PohonUiPlugin = createUnplugin<PohonUiOptions | undefined>((_option
 
   // `clientBundle` is a build-time concern, so keep it out of the runtime app config.
   const { clientBundle, ...icon } = options.icon || {};
-  const appConfig = defu({ ui: options.ui, colorMode: options.colorMode, icon }, { ui: getDefaultConfig(options.theme) });
+  const appConfig = defu({ ui: options.ui, colorMode: options.colorMode, icon }, {
+    ui: getDefaultConfig(options.theme),
+  });
 
   return [
     NuxtEnvironmentPlugin(options),

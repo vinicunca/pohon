@@ -10,9 +10,12 @@ export default (options: Required<ModuleOptions>) => ({
   },
   variants: {
     color: {
-      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [color, {
-        icon: `color-${color}`,
-      }])),
+      ...Object.fromEntries((options.theme.colors || []).map((color: string) => [
+        color,
+        {
+          icon: `color-${color}`,
+        },
+      ])),
       neutral: {
         icon: 'color-text-highlighted',
       },
@@ -26,21 +29,24 @@ export default (options: Required<ModuleOptions>) => ({
       },
     },
   },
-  compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
-    color,
-    to: true,
-    class: {
-      base: `hover:bg-${color}/10 hover:border-${color} outline-${color}/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-${color}`,
-      externalIcon: `group-hover:color-${color}`,
+  compoundVariants: [
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      to: true,
+      class: {
+        base: `hover:bg-${color}/10 hover:border-${color} outline-${color}/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-${color}`,
+        externalIcon: `group-hover:color-${color}`,
+      },
+    })),
+    {
+      color: 'neutral',
+      to: true,
+      class: {
+        base: 'hover:bg-background-elevated/50 hover:border-border-inverted outline-border-inverted/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-border-inverted',
+        externalIcon: 'group-hover:color-text-highlighted',
+      },
     },
-  })), {
-    color: 'neutral',
-    to: true,
-    class: {
-      base: 'hover:bg-background-elevated/50 hover:border-border-inverted outline-border-inverted/25 has-[>a:focus-visible]:outline-3 has-[>a:focus-visible]:border-border-inverted',
-      externalIcon: 'group-hover:color-text-highlighted',
-    },
-  }],
+  ],
   defaultVariants: {
     color: 'primary',
   },

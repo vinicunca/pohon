@@ -31,7 +31,10 @@ const { t } = useLocale();
 
 const appConfig = useAppConfig() as Skeleton['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.skeleton || {}) }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.skeleton || {}),
+}));
 </script>
 
 <template>

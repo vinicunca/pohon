@@ -14,103 +14,492 @@ describe('inputMenu', () => {
   const sizes = Object.keys(theme.variants.size) as any;
   const variants = Object.keys(theme.variants.variant) as any;
 
-  const items = [{
-    label: 'Backlog',
-    value: 'backlog',
-    icon: 'i-lucide-circle-help',
-  }, {
-    label: 'Todo',
-    value: 'todo',
-    icon: 'i-lucide-circle-plus',
-  }, {
-    label: 'In Progress',
-    value: 'in_progress',
-    icon: 'i-lucide-circle-arrow-up',
-  }, {
-    label: 'Done',
-    value: 'done',
-    icon: 'i-lucide-circle-check',
-  }, {
-    label: 'Canceled',
-    value: 'canceled',
-    icon: 'i-lucide-circle-x',
-  }];
+  const items = [
+    {
+      label: 'Backlog',
+      value: 'backlog',
+      icon: 'i-lucide-circle-help',
+    },
+    {
+      label: 'Todo',
+      value: 'todo',
+      icon: 'i-lucide-circle-plus',
+    },
+    {
+      label: 'In Progress',
+      value: 'in_progress',
+      icon: 'i-lucide-circle-arrow-up',
+    },
+    {
+      label: 'Done',
+      value: 'done',
+      icon: 'i-lucide-circle-check',
+    },
+    {
+      label: 'Canceled',
+      value: 'canceled',
+      icon: 'i-lucide-circle-x',
+    },
+  ];
 
-  const itemsWithDescription = [...items.map((item) => ({ ...item, description: 'Description' }))];
+  const itemsWithDescription = [
+    ...items.map((item) => ({ ...item, description: 'Description' })),
+  ];
 
   const props = { open: true, portal: false, items };
 
   renderEach(InputMenu, [
     // Props
-    ['with items', { props }],
-    ['with items with description', { props: { ...props, items: itemsWithDescription } }],
-    ['with modelValue', { props: { ...props, modelValue: items[0] } }],
-    ['with defaultValue', { props: { ...props, defaultValue: items[0] } }],
-    ['with valueKey', { props: { ...props, valueKey: 'label', defaultValue: 'Backlog' } }],
-    ['with by', { props: { ...props, by: 'value', defaultValue: items[0] } }],
-    ['with labelKey', { props: { ...props, labelKey: 'value' } }],
-    ['with descriptionKey', { props: { ...props, descriptionKey: 'description' } }],
-    ['with multiple', { props: { ...props, multiple: true } }],
-    ['with multiple and modelValue', { props: { ...props, multiple: true, modelValue: [items[0], items[1]] } }],
-    ['with id', { props: { ...props, id: 'id' } }],
-    ['with name', { props: { ...props, name: 'name' } }],
-    ['with placeholder', { props: { ...props, placeholder: 'Search...' } }],
-    ['with disabled', { props: { ...props, disabled: true } }],
-    ['with required', { props: { ...props, required: true } }],
+    [
+      'with items',
+      { props },
+    ],
+    [
+      'with items with description',
+      {
+        props: { ...props, items: itemsWithDescription },
+      },
+    ],
+    [
+      'with modelValue',
+      {
+        props: { ...props, modelValue: items[0] },
+      },
+    ],
+    [
+      'with defaultValue',
+      {
+        props: { ...props, defaultValue: items[0] },
+      },
+    ],
+    [
+      'with valueKey',
+      {
+        props: { ...props, valueKey: 'label', defaultValue: 'Backlog' },
+      },
+    ],
+    [
+      'with by',
+      {
+        props: { ...props, by: 'value', defaultValue: items[0] },
+      },
+    ],
+    [
+      'with labelKey',
+      {
+        props: { ...props, labelKey: 'value' },
+      },
+    ],
+    [
+      'with descriptionKey',
+      {
+        props: { ...props, descriptionKey: 'description' },
+      },
+    ],
+    [
+      'with multiple',
+      {
+        props: { ...props, multiple: true },
+      },
+    ],
+    [
+      'with multiple and modelValue',
+      {
+        props: {
+          ...props,
+          multiple: true,
+          modelValue: [items[0], items[1]],
+        },
+      },
+    ],
+    [
+      'with id',
+      {
+        props: { ...props, id: 'id' },
+      },
+    ],
+    [
+      'with name',
+      {
+        props: { ...props, name: 'name' },
+      },
+    ],
+    [
+      'with placeholder',
+      {
+        props: { ...props, placeholder: 'Search...' },
+      },
+    ],
+    [
+      'with disabled',
+      {
+        props: { ...props, disabled: true },
+      },
+    ],
+    [
+      'with required',
+      {
+        props: { ...props, required: true },
+      },
+    ],
     // Autocomplete
-    ['with autocomplete mode', { props: { ...props, mode: 'autocomplete' as const } }],
-    ['with autocomplete mode and modelValue', { props: { ...props, mode: 'autocomplete' as const, modelValue: 'Backlog' } }],
-    ['with autocomplete mode and defaultValue', { props: { ...props, mode: 'autocomplete' as const, defaultValue: 'Backlog' } }],
-    ['with autocomplete mode and placeholder', { props: { ...props, mode: 'autocomplete' as const, placeholder: 'Type something...' } }],
-    ['with autocomplete mode and content', { props: { ...props, mode: 'autocomplete' as const, content: { hideWhenEmpty: true } } }],
-    ['with html autocomplete attribute', { props: { ...props, autocomplete: 'email' } }],
-    ['with icon', { props: { icon: 'i-lucide-search' } }],
-    ['with leading and icon', { props: { leading: true, icon: 'i-lucide-arrow-left' } }],
-    ['with leadingIcon', { props: { leadingIcon: 'i-lucide-arrow-left' } }],
-    ['with trailing and icon', { props: { trailing: true, icon: 'i-lucide-arrow-right' } }],
-    ['with trailingIcon', { props: { trailingIcon: 'i-lucide-arrow-right' } }],
-    ['with avatar', { props: { avatar: { src: 'https://github.com/benjamincanac.png' } } }],
-    ['with avatar and leadingIcon', { props: { avatar: { src: 'https://github.com/benjamincanac.png' }, leadingIcon: 'i-lucide-arrow-left' } }],
-    ['with avatar and trailingIcon', { props: { avatar: { src: 'https://github.com/benjamincanac.png' }, trailingIcon: 'i-lucide-arrow-right' } }],
-    ['with loading', { props: { loading: true } }],
-    ['with loading and avatar', { props: { loading: true, avatar: { src: 'https://github.com/benjamincanac.png' } } }],
-    ['with loading trailing', { props: { loading: true, trailing: true } }],
-    ['with loading trailing and avatar', { props: { loading: true, trailing: true, avatar: { src: 'https://github.com/benjamincanac.png' } } }],
-    ['with loadingIcon', { props: { loading: true, loadingIcon: 'i-lucide-loader' } }],
-    ['with trailingIcon', { props: { ...props, trailingIcon: 'i-lucide-chevron-down' } }],
-    ['with selectedIcon', { props: { ...props, selectedIcon: 'i-lucide-check' } }],
-    ['with clear', { props: { ...props, clear: true, modelValue: items[0] } }],
-    ['with clear and clearIcon', { props: { ...props, clear: true, clearIcon: 'i-lucide-x', modelValue: items[0] } }],
-    ['with arrow', { props: { ...props, arrow: true } }],
-    ['with virtualize', { props: { ...props, virtualize: true } }],
-    ...sizes.map((size: string) => [`with size ${size}`, { props: { ...props, size } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant}`, { props: { ...props, variant } }]),
-    ...variants.map((variant: string) => [`with primary variant ${variant} highlight`, { props: { ...props, variant, highlight: true } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant}`, { props: { ...props, variant, color: 'neutral' } }]),
-    ...variants.map((variant: string) => [`with neutral variant ${variant} highlight`, { props: { ...props, variant, color: 'neutral', highlight: true } }]),
-    ['with ariaLabel', { props, attrs: { 'aria-label': 'Aria label' } }],
-    ['with as', { props: { ...props, as: 'section' } }],
-    ['with class', { props: { ...props, class: 'absolute' } }],
-    ['with ui', { props: { ...props, ui: { group: 'p-2' } } }],
+    [
+      'with autocomplete mode',
+      {
+        props: { ...props, mode: 'autocomplete' as const },
+      },
+    ],
+    [
+      'with autocomplete mode and modelValue',
+      {
+        props: { ...props, mode: 'autocomplete' as const, modelValue: 'Backlog' },
+      },
+    ],
+    [
+      'with autocomplete mode and defaultValue',
+      {
+        props: { ...props, mode: 'autocomplete' as const, defaultValue: 'Backlog' },
+      },
+    ],
+    [
+      'with autocomplete mode and placeholder',
+      {
+        props: { ...props, mode: 'autocomplete' as const, placeholder: 'Type something...' },
+      },
+    ],
+    [
+      'with autocomplete mode and content',
+      {
+        props: {
+          ...props,
+          mode: 'autocomplete' as const,
+          content: { hideWhenEmpty: true },
+        },
+      },
+    ],
+    [
+      'with html autocomplete attribute',
+      {
+        props: { ...props, autocomplete: 'email' },
+      },
+    ],
+    [
+      'with icon',
+      {
+        props: { icon: 'i-lucide-search' },
+      },
+    ],
+    [
+      'with leading and icon',
+      {
+        props: { leading: true, icon: 'i-lucide-arrow-left' },
+      },
+    ],
+    [
+      'with leadingIcon',
+      {
+        props: { leadingIcon: 'i-lucide-arrow-left' },
+      },
+    ],
+    [
+      'with trailing and icon',
+      {
+        props: { trailing: true, icon: 'i-lucide-arrow-right' },
+      },
+    ],
+    [
+      'with trailingIcon',
+      {
+        props: { trailingIcon: 'i-lucide-arrow-right' },
+      },
+    ],
+    [
+      'with avatar',
+      {
+        props: {
+          avatar: { src: 'https://github.com/benjamincanac.png' },
+        },
+      },
+    ],
+    [
+      'with avatar and leadingIcon',
+      {
+        props: {
+          avatar: { src: 'https://github.com/benjamincanac.png' },
+          leadingIcon: 'i-lucide-arrow-left',
+        },
+      },
+    ],
+    [
+      'with avatar and trailingIcon',
+      {
+        props: {
+          avatar: { src: 'https://github.com/benjamincanac.png' },
+          trailingIcon: 'i-lucide-arrow-right',
+        },
+      },
+    ],
+    [
+      'with loading',
+      {
+        props: { loading: true },
+      },
+    ],
+    [
+      'with loading and avatar',
+      {
+        props: {
+          loading: true,
+          avatar: { src: 'https://github.com/benjamincanac.png' },
+        },
+      },
+    ],
+    [
+      'with loading trailing',
+      {
+        props: { loading: true, trailing: true },
+      },
+    ],
+    [
+      'with loading trailing and avatar',
+      {
+        props: {
+          loading: true,
+          trailing: true,
+          avatar: { src: 'https://github.com/benjamincanac.png' },
+        },
+      },
+    ],
+    [
+      'with loadingIcon',
+      {
+        props: { loading: true, loadingIcon: 'i-lucide-loader' },
+      },
+    ],
+    [
+      'with trailingIcon',
+      {
+        props: { ...props, trailingIcon: 'i-lucide-chevron-down' },
+      },
+    ],
+    [
+      'with selectedIcon',
+      {
+        props: { ...props, selectedIcon: 'i-lucide-check' },
+      },
+    ],
+    [
+      'with clear',
+      {
+        props: { ...props, clear: true, modelValue: items[0] },
+      },
+    ],
+    [
+      'with clear and clearIcon',
+      {
+        props: {
+          ...props,
+          clear: true,
+          clearIcon: 'i-lucide-x',
+          modelValue: items[0],
+        },
+      },
+    ],
+    [
+      'with arrow',
+      {
+        props: { ...props, arrow: true },
+      },
+    ],
+    [
+      'with virtualize',
+      {
+        props: { ...props, virtualize: true },
+      },
+    ],
+    ...sizes.map((size: string) => [
+      `with size ${size}`,
+      {
+        props: { ...props, size },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant}`,
+      {
+        props: { ...props, variant },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with primary variant ${variant} highlight`,
+      {
+        props: { ...props, variant, highlight: true },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant}`,
+      {
+        props: { ...props, variant, color: 'neutral' },
+      },
+    ]),
+    ...variants.map((variant: string) => [
+      `with neutral variant ${variant} highlight`,
+      {
+        props: {
+          ...props,
+          variant,
+          color: 'neutral',
+          highlight: true,
+        },
+      },
+    ]),
+    [
+      'with ariaLabel',
+      {
+        props,
+        attrs: { 'aria-label': 'Aria label' },
+      },
+    ],
+    [
+      'with as',
+      {
+        props: { ...props, as: 'section' },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { ...props, class: 'absolute' },
+      },
+    ],
+    [
+      'with ui',
+      {
+        props: {
+          ...props,
+          ui: { group: 'p-2' },
+        },
+      },
+    ],
     // Slots
-    ['with leading slot', { slots: { leading: () => 'Leading slot' } }],
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
-    ['with trailing slot', { slots: { trailing: () => 'Trailing slot' } }],
-    ['with item slot', { props, slots: { item: () => 'Item slot' } }],
-    ['with item-leading slot', { props, slots: { 'item-leading': () => 'Item leading slot' } }],
-    ['with item-label slot', { props, slots: { 'item-label': () => 'Item label slot' } }],
-    ['with item-description slot', { props: { ...props, items: itemsWithDescription }, slots: { 'item-description': () => 'Item description slot' } }],
-    ['with item-trailing slot', { props, slots: { 'item-trailing': () => 'Item trailing slot' } }],
-    ['with create-item-label slot', { props: { ...props, searchTerm: 'New value', createItem: true }, slots: { 'create-item-label': () => 'Create item slot' } }],
+    [
+      'with leading slot',
+      {
+        slots: {
+          leading: () => 'Leading slot',
+        },
+      },
+    ],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
+    [
+      'with trailing slot',
+      {
+        slots: {
+          trailing: () => 'Trailing slot',
+        },
+      },
+    ],
+    [
+      'with item slot',
+      {
+        props,
+        slots: {
+          item: () => 'Item slot',
+        },
+      },
+    ],
+    [
+      'with item-leading slot',
+      {
+        props,
+        slots: {
+          'item-leading': () => 'Item leading slot',
+        },
+      },
+    ],
+    [
+      'with item-label slot',
+      {
+        props,
+        slots: {
+          'item-label': () => 'Item label slot',
+        },
+      },
+    ],
+    [
+      'with item-description slot',
+      {
+        props: { ...props, items: itemsWithDescription },
+        slots: {
+          'item-description': () => 'Item description slot',
+        },
+      },
+    ],
+    [
+      'with item-trailing slot',
+      {
+        props,
+        slots: {
+          'item-trailing': () => 'Item trailing slot',
+        },
+      },
+    ],
+    [
+      'with create-item-label slot',
+      {
+        props: { ...props, searchTerm: 'New value', createItem: true },
+        slots: {
+          'create-item-label': () => 'Create item slot',
+        },
+      },
+    ],
   ]);
 
   renderEach(
     InputMenu,
     [
-      ['with .trim modifier', { props: { modelModifiers: { trim: true } } }, { input: 'input  ', expected: 'input' }],
-      ['with .number modifier', { props: { modelModifiers: { number: true } } }, { input: '42', expected: 42 }],
-      ['with .nullable modifier', { props: { modelModifiers: { nullable: true } } }, { input: null, expected: null }],
-      ['with .optional modifier', { props: { modelModifiers: { optional: true } } }, { input: undefined, expected: undefined }],
+      [
+        'with .trim modifier',
+        {
+          props: {
+            modelModifiers: { trim: true },
+          },
+        },
+        { input: 'input  ', expected: 'input' },
+      ],
+      [
+        'with .number modifier',
+        {
+          props: {
+            modelModifiers: { number: true },
+          },
+        },
+        { input: '42', expected: 42 },
+      ],
+      [
+        'with .nullable modifier',
+        {
+          props: {
+            modelModifiers: { nullable: true },
+          },
+        },
+        { input: null, expected: null },
+      ],
+      [
+        'with .optional modifier',
+        {
+          props: {
+            modelModifiers: { optional: true },
+          },
+        },
+        { input: undefined, expected: undefined },
+      ],
     ],
     '%s works',
     async (_, options, spec) => {
@@ -121,7 +510,11 @@ describe('inputMenu', () => {
       const input = wrapper.findComponent({ name: 'ComboboxRoot' });
       await input.setValue(spec.input);
 
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [[spec.expected]] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          [spec.expected],
+        ],
+      });
     },
   );
 
@@ -149,8 +542,12 @@ describe('inputMenu', () => {
   });
 
   it('with autocomplete mode ignores multiple', () => {
-    const autocomplete = mount(InputMenu, { props: { items, mode: 'autocomplete' as const } });
-    const withMultiple = mount(InputMenu, { props: { items, mode: 'autocomplete' as const, multiple: true } });
+    const autocomplete = mount(InputMenu, {
+      props: { items, mode: 'autocomplete' as const },
+    });
+    const withMultiple = mount(InputMenu, {
+      props: { items, mode: 'autocomplete' as const, multiple: true },
+    });
 
     expect(withMultiple.html()).toBe(autocomplete.html());
   });
@@ -172,49 +569,113 @@ describe('inputMenu', () => {
 
   describe('emits', () => {
     it('update:modelValue event', async () => {
-      const wrapper = mount(InputMenu, { props: { items: ['Option 1', 'Option 2'] } });
+      const wrapper = mount(InputMenu, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+        },
+      });
       const input = wrapper.findComponent({ name: 'ComboboxRoot' });
       await input.setValue('Option 1');
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [['Option 1']] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          ['Option 1'],
+        ],
+      });
     });
 
     it('change event', async () => {
-      const wrapper = mount(InputMenu, { props: { items: ['Option 1', 'Option 2'] } });
+      const wrapper = mount(InputMenu, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+        },
+      });
       const input = wrapper.findComponent({ name: 'ComboboxRoot' });
       await input.setValue('Option 1');
-      expect(wrapper.emitted()).toMatchObject({ change: [[{ type: 'change' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        change: [
+          [
+            { type: 'change' },
+          ],
+        ],
+      });
     });
 
     it('blur event', async () => {
-      const wrapper = mount(InputMenu, { props: { items: ['Option 1', 'Option 2'] } });
+      const wrapper = mount(InputMenu, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+        },
+      });
       const input = wrapper.findComponent({ name: 'ComboboxRoot' });
       await input.vm.$emit('update:open', false);
-      expect(wrapper.emitted()).toMatchObject({ blur: [[{ type: 'blur' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        blur: [
+          [
+            { type: 'blur' },
+          ],
+        ],
+      });
     });
 
     it('remove-tag event', async () => {
-      const wrapper = mount(InputMenu, { props: { modelValue: ['Option 1'], items: ['Option 1', 'Option 2'], multiple: true } });
+      const wrapper = mount(InputMenu, {
+        props: {
+          modelValue: ['Option 1'],
+          items: ['Option 1', 'Option 2'],
+          multiple: true,
+        },
+      });
       const input = wrapper.findComponent({ name: 'TagsInputRoot' });
       await input.vm.$emit('remove-tag', 'Option 1');
-      expect(wrapper.emitted()).toMatchObject({ 'remove-tag': [['Option 1']] });
+      expect(wrapper.emitted()).toMatchObject({
+        'remove-tag': [
+          ['Option 1'],
+        ],
+      });
     });
 
     it('update:modelValue event with autocomplete', async () => {
-      const wrapper = mount(InputMenu, { props: { items: ['Option 1', 'Option 2'], mode: 'autocomplete' as const } });
+      const wrapper = mount(InputMenu, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+          mode: 'autocomplete' as const,
+        },
+      });
       const input = wrapper.findComponent({ name: 'AutocompleteRoot' });
       await input.setValue('Option 1');
-      expect(wrapper.emitted()).toMatchObject({ 'update:modelValue': [['Option 1']] });
+      expect(wrapper.emitted()).toMatchObject({
+        'update:modelValue': [
+          ['Option 1'],
+        ],
+      });
     });
 
     it('change event with autocomplete', async () => {
-      const wrapper = mount(InputMenu, { props: { items: ['Option 1', 'Option 2'], mode: 'autocomplete' as const } });
+      const wrapper = mount(InputMenu, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+          mode: 'autocomplete' as const,
+        },
+      });
       const input = wrapper.findComponent({ name: 'AutocompleteRoot' });
       await input.setValue('Option 1');
-      expect(wrapper.emitted()).toMatchObject({ change: [[{ type: 'change' }]] });
+      expect(wrapper.emitted()).toMatchObject({
+        change: [
+          [
+            { type: 'change' },
+          ],
+        ],
+      });
     });
 
     it('searchTerm syncs when parent updates modelValue in autocomplete mode', async () => {
-      const wrapper = mount(InputMenu, { props: { items: ['Option 1', 'Option 2'], mode: 'autocomplete' as const, modelValue: 'Option 1' } });
+      const wrapper = mount(InputMenu, {
+        props: {
+          items: ['Option 1', 'Option 2'],
+          mode: 'autocomplete' as const,
+          modelValue: 'Option 1',
+        },
+      });
 
       await wrapper.setProps({ modelValue: 'Option 2' });
 
@@ -226,13 +687,22 @@ describe('inputMenu', () => {
 
   describe('clear', () => {
     it('does not render the clear button when disabled', () => {
-      const wrapper = mount(InputMenu, { props: { items, modelValue: items[0]!, clear: true, disabled: true } });
+      const wrapper = mount(InputMenu, {
+        props: {
+          items,
+          modelValue: items[0]!,
+          clear: true,
+          disabled: true,
+        },
+      });
 
       expect(wrapper.find('[data-slot="trailingClear"]').exists()).toBe(false);
     });
 
     it('renders the clear button when not disabled', () => {
-      const wrapper = mount(InputMenu, { props: { items, modelValue: items[0]!, clear: true } });
+      const wrapper = mount(InputMenu, {
+        props: { items, modelValue: items[0]!, clear: true },
+      });
 
       expect(wrapper.find('[data-slot="trailingClear"]').exists()).toBe(true);
     });
@@ -265,7 +735,9 @@ describe('inputMenu', () => {
       await flushPromises();
 
       // Items arrive asynchronously (e.g. fetched from a backend)
-      await wrapper.setProps({ items: ['Option 1', 'Option 2'] });
+      await wrapper.setProps({
+        items: ['Option 1', 'Option 2'],
+      });
       await flushPromises();
 
       const highlighted = wrapper.find('[role="option"][data-highlighted]');
@@ -325,7 +797,11 @@ describe('inputMenu', () => {
       await input.trigger('keydown', { key: 'Enter' });
       await flushPromises();
 
-      expect(wrapper.emitted('update:modelValue')).toMatchObject([[['Option 1', 'Option 2']]]);
+      expect(wrapper.emitted('update:modelValue')).toMatchObject([
+        [
+          ['Option 1', 'Option 2'],
+        ],
+      ]);
 
       wrapper.unmount();
     });
@@ -396,7 +872,9 @@ describe('inputMenu', () => {
           validateOnInputDelay: 0,
           async validate(state: any) {
             if (state.value !== 'Option 2') {
-              return [{ name: 'value', message: 'Error message' }];
+              return [
+                { name: 'value', message: 'Error message' },
+              ];
             }
             return [];
           },
@@ -446,31 +924,44 @@ describe('inputMenu', () => {
     it('should have the correct types', () => {
       // with object item
       expectEmitPayloadType('update:modelValue', () => InputMenu({
-        items: [{ label: 'foo', value: 'bar' }],
+        items: [
+          { label: 'foo', value: 'bar' },
+        ],
       })).toEqualTypeOf<[{ label: string; value: string }]>();
 
       // with object item and multiple
       expectEmitPayloadType('update:modelValue', () => InputMenu({
-        items: [{ label: 'foo', value: 1 }],
+        items: [
+          { label: 'foo', value: 1 },
+        ],
         multiple: true,
       })).toEqualTypeOf<[Array<{ label: string; value: number }>]>();
 
       // with object item and valueKey
       expectEmitPayloadType('update:modelValue', () => InputMenu({
-        items: [{ label: 'foo', value: 'bar' }],
+        items: [
+          { label: 'foo', value: 'bar' },
+        ],
         valueKey: 'value',
       })).toEqualTypeOf<[string]>();
 
       // with object item and multiple and valueKey
       expectEmitPayloadType('update:modelValue', () => InputMenu({
-        items: [{ label: 'foo', value: 1 }],
+        items: [
+          { label: 'foo', value: 1 },
+        ],
         multiple: true,
         valueKey: 'value',
       })).toEqualTypeOf<[Array<number>]>();
 
       // with object item and object valueKey
       expectEmitPayloadType('update:modelValue', () => InputMenu({
-        items: [{ label: 'foo', value: { id: 1, name: 'bar' } }],
+        items: [
+          {
+            label: 'foo',
+            value: { id: 1, name: 'bar' },
+          },
+        ],
         valueKey: 'value',
       })).toEqualTypeOf<[{ id: number; name: string }]>();
 
@@ -487,24 +978,46 @@ describe('inputMenu', () => {
 
       // with groups
       expectEmitPayloadType('update:modelValue', () => InputMenu({
-        items: [['foo']],
+        items: [
+          ['foo'],
+        ],
       })).toEqualTypeOf<[string]>();
 
       // with groups and multiple
       expectEmitPayloadType('update:modelValue', () => InputMenu({
-        items: [['foo']],
+        items: [
+          ['foo'],
+        ],
         multiple: true,
       })).toEqualTypeOf<[Array<string>]>();
 
       // with groups, multiple and mixed types
       expectEmitPayloadType('update:modelValue', () => InputMenu({
-        items: [['foo', { value: 1 }], [{ value: 'bar' }, 2]],
+        items: [
+          [
+            'foo',
+            { value: 1 },
+          ],
+          [
+            { value: 'bar' },
+            2,
+          ],
+        ],
         multiple: true,
       })).toEqualTypeOf<[Array<string | number | { value: string } | { value: number }>]>();
 
       // with groups, multiple, mixed types and valueKey
       expectEmitPayloadType('update:modelValue', () => InputMenu({
-        items: [['foo', { value: 1 }], [{ value: 'bar' }, 2]],
+        items: [
+          [
+            'foo',
+            { value: 1 },
+          ],
+          [
+            { value: 'bar' },
+            2,
+          ],
+        ],
         multiple: true,
         valueKey: 'value',
       })).toEqualTypeOf<[Array<string | number>]>();

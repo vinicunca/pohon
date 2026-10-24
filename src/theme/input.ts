@@ -86,100 +86,123 @@ export default (options: Required<ModuleOptions>) => ({
       file: 'file:me-1.5 file:font-500 file:color-text-muted file:outline-none',
     },
   },
-  compoundVariants: [...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: ['outline', 'subtle'],
-    class: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    variant: ['soft', 'ghost'],
-    class: `outline-${color}/25 focus-visible:outline-3`,
-  })), ...(options.theme.colors || []).map((color: string) => ({
-    color,
-    highlight: true,
-    class: `ring ring-inset pohon:ring-${color}`,
-  })), {
-    color: 'neutral',
-    variant: ['outline', 'subtle'],
-    class: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:ring-border-inverted',
-  }, {
-    color: 'neutral',
-    variant: ['soft', 'ghost'],
-    class: 'outline-border-inverted/25 focus-visible:outline-3',
-  }, {
-    color: 'neutral',
-    highlight: true,
-    class: 'ring ring-inset ring-border-inverted',
-  }, {
-    leading: true,
-    size: 'xs',
-    class: 'ps-7',
-  }, {
-    leading: true,
-    size: 'sm',
-    class: 'ps-8',
-  }, {
-    leading: true,
-    size: 'md',
-    class: 'ps-9',
-  }, {
-    leading: true,
-    size: 'lg',
-    class: 'ps-10',
-  }, {
-    leading: true,
-    size: 'xl',
-    class: 'ps-11',
-  }, {
-    trailing: true,
-    size: 'xs',
-    class: 'pe-7',
-  }, {
-    trailing: true,
-    size: 'sm',
-    class: 'pe-8',
-  }, {
-    trailing: true,
-    size: 'md',
-    class: 'pe-9',
-  }, {
-    trailing: true,
-    size: 'lg',
-    class: 'pe-10',
-  }, {
-    trailing: true,
-    size: 'xl',
-    class: 'pe-11',
-  }, {
-    loading: true,
-    leading: true,
-    class: {
-      leadingIcon: 'animate-spin',
+  compoundVariants: [
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: ['outline', 'subtle'],
+      class: `outline-${color}/25 focus-visible:outline-3 focus-visible:ring-${color}`,
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      variant: ['soft', 'ghost'],
+      class: `outline-${color}/25 focus-visible:outline-3`,
+    })),
+    ...(options.theme.colors || []).map((color: string) => ({
+      color,
+      highlight: true,
+      class: `ring ring-inset pohon:ring-${color}`,
+    })),
+    {
+      color: 'neutral',
+      variant: ['outline', 'subtle'],
+      class: 'outline-border-inverted/25 focus-visible:outline-3 focus-visible:ring-border-inverted',
     },
-  }, {
-    loading: true,
-    leading: false,
-    trailing: true,
-    class: {
-      trailingIcon: 'animate-spin',
+    {
+      color: 'neutral',
+      variant: ['soft', 'ghost'],
+      class: 'outline-border-inverted/25 focus-visible:outline-3',
     },
-  }, {
-    fixed: false,
-    size: 'xs',
-    class: 'md:text-xs',
-  }, {
-    fixed: false,
-    size: 'sm',
-    class: 'md:text-xs',
-  }, {
-    fixed: false,
-    size: 'md',
-    class: 'md:text-sm',
-  }, {
-    fixed: false,
-    size: 'lg',
-    class: 'md:text-sm',
-  }],
+    {
+      color: 'neutral',
+      highlight: true,
+      class: 'ring ring-inset ring-border-inverted',
+    },
+    {
+      leading: true,
+      size: 'xs',
+      class: 'ps-7',
+    },
+    {
+      leading: true,
+      size: 'sm',
+      class: 'ps-8',
+    },
+    {
+      leading: true,
+      size: 'md',
+      class: 'ps-9',
+    },
+    {
+      leading: true,
+      size: 'lg',
+      class: 'ps-10',
+    },
+    {
+      leading: true,
+      size: 'xl',
+      class: 'ps-11',
+    },
+    {
+      trailing: true,
+      size: 'xs',
+      class: 'pe-7',
+    },
+    {
+      trailing: true,
+      size: 'sm',
+      class: 'pe-8',
+    },
+    {
+      trailing: true,
+      size: 'md',
+      class: 'pe-9',
+    },
+    {
+      trailing: true,
+      size: 'lg',
+      class: 'pe-10',
+    },
+    {
+      trailing: true,
+      size: 'xl',
+      class: 'pe-11',
+    },
+    {
+      loading: true,
+      leading: true,
+      class: {
+        leadingIcon: 'animate-spin',
+      },
+    },
+    {
+      loading: true,
+      leading: false,
+      trailing: true,
+      class: {
+        trailingIcon: 'animate-spin',
+      },
+    },
+    {
+      fixed: false,
+      size: 'xs',
+      class: 'md:text-xs',
+    },
+    {
+      fixed: false,
+      size: 'sm',
+      class: 'md:text-xs',
+    },
+    {
+      fixed: false,
+      size: 'md',
+      class: 'md:text-sm',
+    },
+    {
+      fixed: false,
+      size: 'lg',
+      class: 'md:text-sm',
+    },
+  ],
   defaultVariants: {
     size: 'md',
     color: 'primary',

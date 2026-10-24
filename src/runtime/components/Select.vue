@@ -203,7 +203,12 @@ const appConfig = useAppConfig() as Select['AppConfig'];
 const rootProps = useForwardProps(reactivePick(props, 'open', 'defaultOpen', 'disabled', 'autocomplete', 'required', 'multiple', 'nullableValue'), emits);
 const portalProps = usePortal(toRef(() => props.portal));
 const position = computed(() => props.content?.position ?? appConfig.ui?.select?.defaultVariants?.position ?? theme.defaultVariants?.position);
-const contentProps = toRef(() => defu(props.content, { side: 'bottom', sideOffset: 8, collisionPadding: 8, position: position.value }) as SelectContentProps);
+const contentProps = toRef(() => defu(props.content, {
+  side: 'bottom',
+  sideOffset: 8,
+  collisionPadding: 8,
+  position: position.value,
+}) as SelectContentProps);
 const arrowProps = toRef(() => defu(props.arrow, { rounded: true }) as SelectArrowProps);
 
 const { emitFormChange, emitFormInput, emitFormBlur, emitFormFocus, size: formFieldSize, color: formFieldColor, id, name, highlight: formFieldHighlight, disabled: formFieldDisabled, ariaAttrs } = useFormField<InputProps>(_props);
@@ -233,7 +238,10 @@ const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
 const isItemAligned = computed(() => position.value === 'item-aligned');
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.select || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.select || {}),
+})({
   color: color.value,
   variant: props.variant,
   size: size.value,
@@ -266,7 +274,9 @@ function displayValue(value: ApplyModifiers<GetModelValue<T, VK, M, ExcludeItem>
       }))
       .filter((v): v is string => v != null && v !== '');
 
-    return displayedValues.length > 0 ? displayedValues.join(', ') : undefined;
+    return displayedValues.length > 0
+      ? displayedValues.join(', ')
+      : undefined;
   }
 
   return getDisplayValue<Array<T>, ApplyModifiers<GetModelValue<T, VK, M, ExcludeItem>, Mod>>(items.value, value as ApplyModifiers<GetModelValue<T, VK, M, ExcludeItem>, Mod>, {
@@ -313,7 +323,9 @@ function onUpdate(value: any) {
   }
 
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value } });
+  const event = new Event('change', {
+    target: { value },
+  });
   emits('change', event);
 
   emitFormChange();
@@ -359,7 +371,9 @@ defineExpose({
   triggerRef: toRef(() => triggerRef.value?.$el as HTMLButtonElement),
   viewportRef: toRef(() => {
     const instance = viewportRef.value;
-    return (instance && typeof instance === 'object' && '$el' in instance ? instance.$el : instance) as HTMLElement | null;
+    return (instance && typeof instance === 'object' && '$el' in instance
+      ? instance.$el
+      : instance) as HTMLElement | null;
   }),
 });
 </script>

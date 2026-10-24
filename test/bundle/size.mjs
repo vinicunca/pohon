@@ -13,12 +13,19 @@ const fixtures = {
   'vue': 'dist',
 };
 
-const { values: args } = parseArgs({ options: { json: { type: 'string' } } });
+const { values: args } = parseArgs({
+  options: {
+    json: { type: 'string' },
+  },
+});
 
 const build = fileURLToPath(new URL('./build.mjs', import.meta.url));
 const env = { ...process.env, NODE_ENV: 'production' };
 
-await Promise.all(Object.keys(fixtures).map((name) => promisify(execFile)(process.execPath, [build], { cwd: getFixtureDir(name), env })));
+await Promise.all(Object.keys(fixtures).map((name) => promisify(execFile)(process.execPath, [build], {
+  cwd: getFixtureDir(name),
+  env,
+})));
 
 const sizes = {};
 

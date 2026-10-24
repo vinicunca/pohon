@@ -108,7 +108,10 @@ const dashboardContext = useDashboard({
 
 const id = `${dashboardContext.storageKey}-sidebar-${props.id || useId()}`;
 
-const { el, size, collapse, isCollapsed, isDragging, onMouseDown, onTouchStart, onDoubleClick } = useResizable(id, toRef(() => ({ ...dashboardContext, ...props })), { collapsed });
+const { el, size, collapse, isCollapsed, isDragging, onMouseDown, onTouchStart, onDoubleClick } = useResizable(id, toRef(() => ({
+  ...dashboardContext,
+  ...props,
+})), { collapsed });
 
 const [DefineToggleTemplate, ReuseToggleTemplate] = createReusableTemplate();
 const [DefineResizeHandleTemplate, ReuseResizeHandleTemplate] = createReusableTemplate();
@@ -144,7 +147,10 @@ watch(() => route.fullPath, () => {
   open.value = false;
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.dashboardSidebar || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.dashboardSidebar || {}),
+})({
   side: props.side,
 }));
 
@@ -156,7 +162,11 @@ const Menu = computed(() => ({
   drawer: PDrawer,
 })[props.mode as DashboardSidebarMode]);
 
-const menuProps = toRef(() => defu(props.menu, {}, props.mode === 'modal' ? { fullscreen: true, transition: false } : props.mode === 'slideover' ? { side: 'left' } : {}) as DashboardSidebarMenu<T>);
+const menuProps = toRef(() => defu(props.menu, {}, props.mode === 'modal'
+  ? { fullscreen: true, transition: false }
+  : props.mode === 'slideover'
+    ? { side: 'left' }
+    : {}) as Omit<DashboardSidebarMenu<T>, 'modal'> & Pick<ModalProps, 'modal'>);
 
 const renderMenu = useLazyOverlay(() => open.value || (props.menu as ModalProps | undefined)?.unmountOnHide === false, () => loadOverlay(props.mode as DashboardSidebarMode));
 

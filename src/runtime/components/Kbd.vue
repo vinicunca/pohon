@@ -56,19 +56,26 @@ const props = useComponentProps('kbd', _props);
 const { getKbdKey } = useKbd();
 const appConfig = useAppConfig() as Kbd['AppConfig'];
 
-const platformKey = computed(() => props.value && Object.hasOwn(kbdKeysPlatformMap, props.value) ? kbdKeysPlatformMap[props.value as KbdKeySpecific] : undefined);
+const platformKey = computed(() => props.value && Object.hasOwn(kbdKeysPlatformMap, props.value)
+  ? kbdKeysPlatformMap[props.value as KbdKeySpecific]
+  : undefined);
 
 if (!import.meta.client && platformKey.value) {
   useHead({
-    script: [{
-      key: 'ui-kbd-macos',
-      innerHTML: '/Macintosh;/.test(navigator.userAgent)&&document.documentElement.classList.add(\'ui-macos\')',
-      tagPosition: 'head',
-    }],
+    script: [
+      {
+        key: 'ui-kbd-macos',
+        innerHTML: '/Macintosh;/.test(navigator.userAgent)&&document.documentElement.classList.add(\'ui-macos\')',
+        tagPosition: 'head',
+      },
+    ],
   });
 }
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.kbd || {}) }));
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.kbd || {}),
+}));
 </script>
 
 <template>

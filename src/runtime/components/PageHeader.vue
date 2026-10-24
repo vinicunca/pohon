@@ -52,7 +52,10 @@ const appConfig = useAppConfig() as PageHeader['AppConfig'];
 
 const as = computed(() => resolveAs(props.as, { root: 'div', title: 'h1' }));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.pageHeader || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.pageHeader || {}),
+})({
   title: !!props.title || !!slots.title,
 }));
 </script>

@@ -59,7 +59,9 @@ export function useKbd() {
   const { macOS } = useSharedKbd();
   // Platform-specific keys resolve after mount to match the server-rendered placeholder.
   // Outside of a component there is no mount to wait for.
-  const mounted = getCurrentInstance() ? useMounted() : shallowRef(import.meta.client);
+  const mounted = getCurrentInstance()
+    ? useMounted()
+    : shallowRef(import.meta.client);
 
   function getKbdKey(value?: KbdKey | string) {
     if (!value) {
@@ -67,7 +69,9 @@ export function useKbd() {
     }
 
     if (['meta', 'alt', 'ctrl'].includes(value)) {
-      return mounted.value ? kbdKeysPlatformMap[value as KbdKeySpecific][macOS.value ? 'macos' : 'other'] : ' ';
+      return mounted.value
+        ? kbdKeysPlatformMap[value as KbdKeySpecific][macOS.value ? 'macos' : 'other']
+        : ' ';
     }
 
     return kbdKeysMap[value as KbdKey] || value;

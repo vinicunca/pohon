@@ -7,11 +7,33 @@ import { renderEach } from '../component-render';
 describe('pageList', () => {
   renderEach(PageList, [
     // Props
-    ['with as', { props: { as: 'div' } }],
-    ['with divide', { props: { divide: true } }],
-    ['with class', { props: { class: 'gap-2' } }],
+    [
+      'with as',
+      {
+        props: { as: 'div' },
+      },
+    ],
+    [
+      'with divide',
+      {
+        props: { divide: true },
+      },
+    ],
+    [
+      'with class',
+      {
+        props: { class: 'gap-2' },
+      },
+    ],
     // Slots
-    ['with default slot', { slots: { default: () => 'Default slot' } }],
+    [
+      'with default slot',
+      {
+        slots: {
+          default: () => 'Default slot',
+        },
+      },
+    ],
   ]);
 
   it('passes accessibility tests', async () => {

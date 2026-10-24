@@ -137,7 +137,10 @@ const size = computed(() => formFieldSize.value ?? props.size);
 const highlight = computed(() => formFieldHighlight.value ?? props.highlight);
 const disabled = computed(() => formFieldDisabled.value ?? props.disabled);
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.checkboxGroup || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.checkboxGroup || {}),
+})({
   size: size.value,
   required: props.required,
   orientation: props.orientation,
@@ -186,7 +189,9 @@ const normalizedItems = computed(() => {
 
 function onUpdate(value: any) {
   // @ts-expect-error - 'target' does not exist in type 'EventInit'
-  const event = new Event('change', { target: { value } });
+  const event = new Event('change', {
+    target: { value },
+  });
   emits('change', event);
   emitFormChange();
   emitFormInput();

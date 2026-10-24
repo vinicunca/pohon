@@ -45,7 +45,10 @@ const props = useComponentProps('footer', _props);
 
 const appConfig = useAppConfig() as Footer['AppConfig'];
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.footer || {}) })());
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.footer || {}),
+})());
 </script>
 
 <template>

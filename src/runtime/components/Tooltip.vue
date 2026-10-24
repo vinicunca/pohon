@@ -90,10 +90,18 @@ const ariaLabel = computed(() => {
     return contentProps.value.ariaLabel;
   }
 
-  return [props.text, ...(props.kbds || []).map((kbd) => getKbdKey(typeof kbd === 'object' ? kbd.value : kbd))].filter(Boolean).join(' ');
+  return [
+    props.text,
+    ...(props.kbds || []).map((kbd) => getKbdKey(typeof kbd === 'object'
+      ? kbd.value
+      : kbd)),
+  ].filter(Boolean).join(' ');
 });
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.tooltip || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.tooltip || {}),
+})({
   side: contentProps.value.side,
 }));
 </script>

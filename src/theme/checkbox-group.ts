@@ -69,7 +69,10 @@ export default (options: Required<ModuleOptions>) => ({
     },
   },
   compoundVariants: [
-    ...[...(options.theme.colors || []).map((color: string) => [color, color]), ['neutral', 'inverted']].map(([color, token]: Array<string>) => ({
+    ...[
+      ...(options.theme.colors || []).map((color: string) => [color, color]),
+      ['neutral', 'inverted'],
+    ].map(([color, token]: Array<string>) => ({
       color,
       variant: 'table',
       class: {
@@ -83,11 +86,31 @@ export default (options: Required<ModuleOptions>) => ({
         item: `${hover}border-border-accented ${hover}z-1`,
       },
     },
-    { size: 'xs', variant: 'table', class: { item: 'p-2.5' } },
-    { size: 'sm', variant: 'table', class: { item: 'p-3' } },
-    { size: 'md', variant: 'table', class: { item: 'p-3.5' } },
-    { size: 'lg', variant: 'table', class: { item: 'p-4' } },
-    { size: 'xl', variant: 'table', class: { item: 'p-4.5' } },
+    {
+      size: 'xs',
+      variant: 'table',
+      class: { item: 'p-2.5' },
+    },
+    {
+      size: 'sm',
+      variant: 'table',
+      class: { item: 'p-3' },
+    },
+    {
+      size: 'md',
+      variant: 'table',
+      class: { item: 'p-3.5' },
+    },
+    {
+      size: 'lg',
+      variant: 'table',
+      class: { item: 'p-4' },
+    },
+    {
+      size: 'xl',
+      variant: 'table',
+      class: { item: 'p-4.5' },
+    },
     {
       orientation: 'horizontal',
       variant: 'table',

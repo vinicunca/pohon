@@ -10,11 +10,13 @@ declare module 'vitest' {
 
 configureAxe({
   globalOptions: {
-    rules: [{
+    rules: [
+      {
       // Disable region rule as it doesn't work well with components rendered in isolation.
-      id: 'region',
-      enabled: false,
-    }],
+        id: 'region',
+        enabled: false,
+      },
+    ],
   },
 });
 

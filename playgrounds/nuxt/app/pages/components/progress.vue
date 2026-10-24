@@ -17,7 +17,13 @@ const orientation = ref('horizontal' as keyof typeof theme.variants.orientation)
 
 const value1 = ref(0);
 const value2 = ref(0);
-const max = ['Waiting...', 'Cloning...', 'Migrating...', 'Deploying...', 'Done!'];
+const max = [
+  'Waiting...',
+  'Cloning...',
+  'Migrating...',
+  'Deploying...',
+  'Done!',
+];
 
 onMounted(() => {
   setInterval(() => {

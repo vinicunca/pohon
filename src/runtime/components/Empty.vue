@@ -75,11 +75,16 @@ const props = useComponentProps('empty', _props);
 
 const appConfig = useAppConfig() as Empty['AppConfig'];
 
-const iconName = computed(() => props.loading ? (props.loadingIcon || appConfig.ui.icons.loading) : props.icon);
+const iconName = computed(() => props.loading
+  ? (props.loadingIcon || appConfig.ui.icons.loading)
+  : props.icon);
 
 const as = computed(() => resolveAs(props.as, { root: 'div', title: 'h2' }));
 
-const ui = computed(() => uv({ extend: theme, ...(appConfig.ui?.empty || {}) })({
+const ui = computed(() => uv({
+  extend: theme,
+  ...(appConfig.ui?.empty || {}),
+})({
   variant: props.variant,
   size: props.size,
   loading: props.loading,
