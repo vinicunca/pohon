@@ -1,5 +1,33 @@
 # Changelog
 
+## [2.4.0](https://github.com/vinicunca/pohon/compare/v2.3.1...v2.4.0) (2026-10-24)
+
+### Features
+
+* **CommandPalette:** add ignoreFilter prop ([648249a](https://github.com/vinicunca/pohon/commit/648249a5b57900d1f2ce56354faee23956900549))
+
+### Bug Fixes
+
+* **ai:** stop isToolStreaming on denied approvals ([6fb93f4](https://github.com/vinicunca/pohon/commit/6fb93f4768b0a60a2890c312bef5ee14ff1f3d7b))
+* **Chart:** animate data changes ([ae84fba](https://github.com/vinicunca/pohon/commit/ae84fba3467688f8adba602071cbafcc363fb933))
+* **ChatMessage:** show actions on focus and align them in RTL ([f858c45](https://github.com/vinicunca/pohon/commit/f858c4530c15d4897af1ce99f80f7c6f81996b15))
+* **ChatMessages:** keep the user's scroll position while streamingOnly ([5349c8c](https://github.com/vinicunca/pohon/commit/5349c8c0f02c80735801b0283b5419f02917c0d3))
+* **ChatReasoning:** don't auto-close after the user toggles it ([ac32e00](https://github.com/vinicunca/pohon/commit/ac32e003db27f13f75c694d4aec173ccda1f5a0e))
+* **Checkbox/RadioGroup:** allow block content in label slot ([f503357](https://github.com/vinicunca/pohon/commit/f503357603cf7a729ea723f3cac6fa9d6086262c))
+* **components:** add missing as title support ([1ab5387](https://github.com/vinicunca/pohon/commit/1ab5387ec29a9cce16ad1f84dc2fda3d5bc3467c))
+* **defineShortcuts:** match key sequences case insensitively ([68e8b8c](https://github.com/vinicunca/pohon/commit/68e8b8c9273dc2f2be69f341aae30e8762abe036))
+* **LocaleSelect:** show Tajikistan flag for the Tajik locale ([143e944](https://github.com/vinicunca/pohon/commit/143e94429bac30d0b26e5dfc86f76ca4220ee360))
+* **module:** bundle the icons set in app config ([3751f09](https://github.com/vinicunca/pohon/commit/3751f095f3f24dd82de2ec798718b3a06687152c))
+* **Select/SelectMenu:** keep rounded corners in FieldGroup inside a form ([34521dd](https://github.com/vinicunca/pohon/commit/34521dd9eb8458807719bb33d5271c0749cb34d5))
+* **SelectMenu:** allow keyboard navigation with search input autofocus disabled ([cfdaa29](https://github.com/vinicunca/pohon/commit/cfdaa295e610e3bbf5811bee762fb4c3078a0d73))
+* **Sidebar:** add missing button type to rail ([dc55e63](https://github.com/vinicunca/pohon/commit/dc55e630161c2b37e9e9cd4c195e6aea89a41067))
+* **Table:** avoid re-rendering virtualized rows on every scroll ([e049ced](https://github.com/vinicunca/pohon/commit/e049ced8d0adacbc9fc90c52a83a6601ad99a811))
+* vue-tsc ([c977b06](https://github.com/vinicunca/pohon/commit/c977b06e7972c47fc0a1cf556f461832a1a7af99))
+
+### Performance Improvements
+
+* **Button:** skip the link when there is no to or href ([fac8aa8](https://github.com/vinicunca/pohon/commit/fac8aa8f3f61c0fb67ef1254de7228f2b9873938))
+
 ## [2.3.1](https://github.com/vinicunca/pohon/compare/v2.2.0...v2.3.1) (2026-10-16)
 
 ### Features
