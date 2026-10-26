@@ -8,7 +8,7 @@ export default {
   variants: {
     marquee: {
       false: {
-        logos: 'flex shrink-0 gap-$gap [--gap:--spacing(16)] items-center justify-around',
+        logos: 'flex shrink-0 gap-$gap [--gap:calc(var(--spacing)*16)] items-center justify-around',
       },
     },
   },

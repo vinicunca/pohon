@@ -43,7 +43,56 @@ describe('pohon semantic colors', () => {
     expect(css).toContain(`${property}:color-mix(in srgb, var(--ui-color-${color}-foreground)`);
   });
 
+  const brands = [
+    'primary',
+    'secondary',
+    'success',
+    'info',
+    'warning',
+    'error',
+  ];
+  const shades = [
+    '50',
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    '800',
+    '900',
+    '950',
+  ];
+
+  it.each(
+    brands.flatMap((brand) => shades.map((shade) => [`bg-${brand}-${shade}`, brand, shade])),
+  )('generates %s using the brand shade CSS variable', async (utility, brand, shade) => {
+    const { css, matched } = await (await uno).generate(utility, { preflights: false });
+
+    expect(matched.has(utility)).toBe(true);
+    expect(css).toContain(`background-color:color-mix(in srgb, var(--ui-color-${brand}-${shade})`);
+  });
+
   it.each([
+    ['color-warning-600', 'color', 'warning-600'],
+    ['dark:color-warning-300', 'color', 'warning-300'],
+    ['[&_code]:color-error-600', 'color', 'error-600'],
+    ['dark:[&_code]:color-error-300', 'color', 'error-300'],
+  ])('generates the prose callout shade %s', async (utility, property, token) => {
+    const { css, matched } = await (await uno).generate(utility, { preflights: false });
+
+    expect(matched.has(utility)).toBe(true);
+    expect(css).toContain(`${property}:color-mix(in srgb, var(--ui-color-${token})`);
+  });
+
+  it.each([
+    [
+      'bg-primary-500/40',
+      'background-color',
+      'primary-500',
+      40,
+    ],
     [
       'outline-border-inverted/25',
       'outline-color',

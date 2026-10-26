@@ -2,7 +2,7 @@ import type { ModuleOptions } from '../../module';
 
 export default (options: Required<ModuleOptions>) => ({
   slots: {
-    root: 'sticky top-(--ui-header-height) z-10 bg-background/75 lg:bg-[initial] backdrop-blur-sm -mx-4 px-4 sm:px-6 sm:-mx-6 lg:ms-0 flex flex-col overflow-y-auto max-h-[calc(100vh-var(--ui-header-height))]',
+    root: 'sticky top-$ui-header-height z-10 bg-background/75 lg:bg-[initial] backdrop-blur-sm -mx-4 px-4 sm:px-6 sm:-mx-6 lg:ms-0 flex flex-col overflow-y-auto max-h-[calc(100vh-var(--ui-header-height))]',
     container: 'pt-4 sm:pt-6 pb-2.5 sm:pb-4.5 lg:py-8 border-b border-dashed border-border lg:border-0 flex flex-col lg:min-h-0',
     top: 'lg:shrink-0',
     bottom: 'hidden lg:flex lg:flex-col lg:shrink-0 gap-6',
@@ -76,7 +76,7 @@ export default (options: Required<ModuleOptions>) => ({
       class: {
         list: 'ms-2.5 ps-4 border-s border-border',
         item: '-ms-px',
-        indicator: 'absolute ms-2.5 transition-[translate,height] duration-280 ease-out motion-reduce:transition-none h-(--indicator-size) translate-y-(--indicator-position) w-px rounded-full',
+        indicator: 'absolute ms-2.5 transition-[transform,height] duration-280 ease-out motion-reduce:transition-none h-$indicator-size translate-y-$indicator-position w-px rounded-full',
         indicatorLine: 'hidden',
         indicatorActive: 'w-full h-full',
       },
@@ -89,8 +89,8 @@ export default (options: Required<ModuleOptions>) => ({
         item: '-ms-px',
         itemWithChildren: 'ps-px',
         indicator: 'absolute ms-2.5 start-0 top-0 rtl:-scale-x-100',
-        indicatorLine: 'absolute inset-0 bg-(--ui-border)',
-        indicatorActive: 'absolute w-full h-(--indicator-size) translate-y-(--indicator-position) transition-[translate,height] duration-280 ease-out motion-reduce:transition-none',
+        indicatorLine: 'absolute inset-0 bg-border',
+        indicatorActive: 'absolute w-full h-$indicator-size translate-y-$indicator-position transition-[transform,height] duration-280 ease-out motion-reduce:transition-none',
       },
     },
   ],

@@ -9,7 +9,7 @@ export default (options: Required<ModuleOptions>) => ({
       // Paragraph
       '[&_p]:leading-7',
       // Links
-      '[&_a]:color-primary [&_a]:border-b [&_a]:border-transparent [&_a]:hover:border-primary [&_a]:focus-visible:border-transparent [&_a]:font-500 [&_a]:focus-visible:rounded-xs [&_a]:outline-primary/25 [&_a]:focus-visible:outline-3 [&_a:has(>code)]:focus-visible:outline-0',
+      '[&_a]:color-primary [&_a]:border-b [&_a]:border-transparent [&_a:hover]:border-primary [&_a:focus-visible]:border-transparent [&_a]:font-500 [&_a:focus-visible]:rounded-xs [&_a]:outline-primary/25 [&_a:focus-visible]:outline-3 [&_a:focus-visible:has(>code)]:outline-0',
       options.theme?.transitions && '[&_a]:transition-colors',
       // Code inside links
       '[&_a:has(>code)]:border-b-0 [&_a>code]:border-dashed [&_a>code]:outline-primary/25 [&_a:focus-visible>code]:outline-3 [&_a:hover>code]:border-primary [&_a:hover>code]:color-primary [&_a:focus-visible>code]:border-primary [&_a:focus-visible>code]:color-primary',
@@ -34,10 +34,10 @@ export default (options: Required<ModuleOptions>) => ({
       '[&_[data-type=horizontalRule]]:my-8 [&_[data-type=horizontalRule]]:py-2',
       '[&_hr]:border-t [&_hr]:border-border',
       // Code blocks
-      '[&_pre]:text-sm/6 [&_pre]:border [&_pre]:border-border-border-muted [&_pre]:bg-background-muted [&_pre]:rounded-md [&_pre]:px-4 [&_pre]:py-3 [&_pre]:whitespace-pre-wrap [&_pre]:wrap-break-word [&_pre]:overflow-x-auto',
+      '[&_pre]:text-sm/6 [&_pre]:border [&_pre]:border-border-muted [&_pre]:bg-background-muted [&_pre]:rounded-md [&_pre]:px-4 [&_pre]:py-3 [&_pre]:whitespace-pre-wrap [&_pre]:wrap-break-word [&_pre]:overflow-x-auto',
       '[&_pre_code]:p-0 [&_pre_code]:text-inherit [&_pre_code]:font-inherit [&_pre_code]:rounded-none [&_pre_code]:inline [&_pre_code]:border-0 [&_pre_code]:bg-transparent',
       // Inline code
-      '[&_code]:px-1.5 [&_code]:py-0.5 [&_code]:text-sm [&_code]:font-mono [&_code]:font-500 [&_code]:rounded-md [&_code]:inline-block [&_code]:border [&_code]:border-border-border-muted [&_code]:color-text-highlighted [&_code]:bg-background-muted',
+      '[&_code]:px-1.5 [&_code]:py-0.5 [&_code]:text-sm [&_code]:font-mono [&_code]:font-500 [&_code]:rounded-md [&_code]:inline-block [&_code]:border [&_code]:border-border-muted [&_code]:color-text-highlighted [&_code]:bg-background-muted',
       // Lists
       '[&_:is(ul,ol)]:ps-6',
       '[&_ul]:list-disc [&_ul]:marker:color-border-accented',

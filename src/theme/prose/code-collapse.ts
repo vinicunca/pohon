@@ -12,7 +12,7 @@ export default {
       },
       false: {
         root: 'max-h-[200px] overflow-hidden rounded-b-md [&_pre]:overflow-hidden',
-        footer: 'inset-x-0 bottom-0 border border-t-0 border-border-muted bg-linear-to-t from-muted',
+        footer: 'inset-x-0 bottom-0 border border-t-0 border-border-muted bg-linear-to-t from-background-muted',
       },
     },
   },

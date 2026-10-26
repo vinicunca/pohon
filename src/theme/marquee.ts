@@ -1,6 +1,6 @@
 export default {
   slots: {
-    root: 'group flex gap-$gap [--duration:20s] [--gap:--spacing(16)] items-center relative overflow-hidden',
+    root: 'group flex gap-$gap [--duration:20s] [--gap:calc(var(--spacing)*16)] items-center relative overflow-hidden',
     content: 'flex shrink-0 gap-$gap min-w-max items-center justify-around',
   },
   variants: {

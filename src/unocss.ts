@@ -1,3 +1,17 @@
+const SHADES = [
+  '50',
+  '100',
+  '200',
+  '300',
+  '400',
+  '500',
+  '600',
+  '700',
+  '800',
+  '900',
+  '950',
+] as const;
+
 /**
  * A brand color and the text color that sits on top of it (`bg-primary color-primary-foreground`).
  * `--ui-color-<name>-foreground` is optional and falls back to `--ui-color-text-inverted`.
@@ -6,6 +20,7 @@ function brandColor(name: string) {
   return {
     DEFAULT: `var(--ui-color-${name})`,
     foreground: `var(--ui-color-${name}-foreground)`,
+    ...Object.fromEntries(SHADES.map((shade) => [shade, `var(--ui-color-${name}-${shade})`])),
   };
 }
 

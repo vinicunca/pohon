@@ -13,7 +13,7 @@ exports[`table > renders with as correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -68,7 +68,7 @@ exports[`table > renders with body-bottom slot correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -123,7 +123,7 @@ exports[`table > renders with body-top slot correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">Body top slot<tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">Body top slot<tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">success</td>
@@ -177,7 +177,7 @@ exports[`table > renders with caption correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -232,7 +232,7 @@ exports[`table > renders with caption slot correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -287,7 +287,7 @@ exports[`table > renders with cell slot correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">ID Cell slot</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -342,7 +342,7 @@ exports[`table > renders with class correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -416,7 +416,7 @@ exports[`table > renders with column pinning and footer correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="left" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0 sticky bg-background/75 z-1" style="left: 0px;">#m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">
@@ -608,7 +608,7 @@ exports[`table > renders with columns correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">
           <div data-slot="root" class="relative flex items-start flex-row">
@@ -781,7 +781,7 @@ exports[`table > renders with data correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -831,7 +831,7 @@ exports[`table > renders with empty correctly 1`] = `
       <tr data-slot="tr" class="data-[selected=true]:bg-background-elevated/50"></tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr>
         <td colspan="0" data-slot="empty" class="py-6 text-center text-sm color-text-muted">There is no data</td>
       </tr>
@@ -873,7 +873,7 @@ exports[`table > renders with empty slot correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr>
         <td colspan="7" data-slot="empty" class="py-6 text-center text-sm color-text-muted">Empty slot</td>
       </tr>
@@ -919,7 +919,7 @@ exports[`table > renders with expanded slot correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -974,7 +974,7 @@ exports[`table > renders with header slot correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -1029,7 +1029,7 @@ exports[`table > renders with loading animation carousel correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -1084,7 +1084,7 @@ exports[`table > renders with loading animation carousel-inverse correctly 1`] =
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -1139,7 +1139,7 @@ exports[`table > renders with loading animation elastic correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -1194,7 +1194,7 @@ exports[`table > renders with loading animation swing correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -1249,7 +1249,7 @@ exports[`table > renders with loading color error correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -1304,7 +1304,7 @@ exports[`table > renders with loading color info correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -1359,7 +1359,7 @@ exports[`table > renders with loading color neutral correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -1414,7 +1414,7 @@ exports[`table > renders with loading color primary correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -1469,7 +1469,7 @@ exports[`table > renders with loading color secondary correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -1524,7 +1524,7 @@ exports[`table > renders with loading color success correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -1579,7 +1579,7 @@ exports[`table > renders with loading color warning correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -1634,7 +1634,7 @@ exports[`table > renders with loading correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -1708,7 +1708,7 @@ exports[`table > renders with loading slot correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr>
         <td colspan="7" data-slot="loading" class="py-6 text-center">Loading slot</td>
       </tr>
@@ -1773,7 +1773,7 @@ exports[`table > renders with meta field on columns correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0 custom-cell-class" style="background-color: lightgray;">
           <div data-slot="root" class="relative flex items-start flex-row">
@@ -1946,7 +1946,7 @@ exports[`table > renders with meta prop correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50 custom-row-class" style="background-color: lightgray;">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -2001,7 +2001,7 @@ exports[`table > renders with row pinning and virtualization correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <!--v-if-->
       <!--v-if-->
     </tbody>
@@ -2023,7 +2023,7 @@ exports[`table > renders with row pinning correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-pinned="top" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">derv1ws0</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">837</td>
@@ -2078,7 +2078,7 @@ exports[`table > renders with sticky correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -2133,7 +2133,7 @@ exports[`table > renders with ui correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr data-selected="false" data-selectable="false" data-expanded="false" data-slot="tr" class="data-[selected=true]:bg-background-elevated/50">
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">m5gr84i9</td>
         <td data-pinned="false" data-slot="td" class="p-4 text-sm color-text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">316</td>
@@ -2207,7 +2207,7 @@ exports[`table > renders with virtualize and sticky correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <!--v-if-->
       <!--v-if-->
     </tbody>
@@ -2252,7 +2252,7 @@ exports[`table > renders with virtualize correctly 1`] = `
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <!--v-if-->
       <!--v-if-->
     </tbody>
@@ -2274,7 +2274,7 @@ exports[`table > renders with virtualize external scroll element correctly 1`] =
       </tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <!--v-if-->
       <!--v-if-->
     </tbody>
@@ -2291,7 +2291,7 @@ exports[`table > renders without data correctly 1`] = `
       <tr data-slot="tr" class="data-[selected=true]:bg-background-elevated/50"></tr>
       <tr data-slot="separator" class="bg-border-accented h-px w-full start-0 absolute z-1"></tr>
     </thead>
-    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr]:data-[selectable=true]:outline-primary/25 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-3 [&amp;>tr]:data-[selectable=true]:hover:bg-background-elevated/50 [&amp;>tr]:data-[selectable=true]:-outline-offset-3">
+    <tbody data-slot="tbody" class="isolate divide-border divide-y [&amp;>tr[data-selectable=true]]:outline-primary/25 [&amp;>tr[data-selectable=true]:focus-visible]:outline-3 [&amp;>tr[data-selectable=true]:hover]:bg-background-elevated/50 [&amp;>tr[data-selectable=true]]:-outline-offset-3">
       <tr>
         <td colspan="0" data-slot="empty" class="py-6 text-center text-sm color-text-muted">No data</td>
       </tr>

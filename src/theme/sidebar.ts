@@ -168,8 +168,8 @@ export default (options: Required<ModuleOptions>) => ({
       variant: 'floating',
       collapsible: 'icon',
       class: {
-        gap: 'data-[state=collapsed]:w-[calc(var(--sidebar-width-icon)+--spacing(8))]',
-        container: 'data-[state=collapsed]:w-[calc(var(--sidebar-width-icon)+--spacing(8)+2px)]',
+        gap: 'data-[state=collapsed]:w-[calc(var(--sidebar-width-icon)+var(--spacing)*8)]',
+        container: 'data-[state=collapsed]:w-[calc(var(--sidebar-width-icon)+var(--spacing)*8+2px)]',
       },
     },
     {
@@ -197,7 +197,7 @@ export default (options: Required<ModuleOptions>) => ({
       variant: 'floating',
       side: 'right',
       class: {
-        rail: 'start-[calc(--spacing(4)-1px)]',
+        rail: 'start-[calc(var(--spacing)*4-1px)]',
       },
     },
   ],
