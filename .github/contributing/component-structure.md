@@ -335,7 +335,7 @@ export * from '../components/ComponentName.vue'
 
 ## Register in `ThemeDefaults`
 
-The `ThemeDefaults` interface in `src/runtime/composables/useComponentProps.ts` powers autocomplete inside `<PTheme :props="{ componentName: { … } }">`. The CLI scaffolder (`pnpm cli make component`) auto-inserts the entry; only do this manually if you skipped the CLI:
+The `ThemeDefaults` interface in `src/runtime/types/theme.ts` powers autocomplete inside `<PTheme :props="{ componentName: { … } }">`. Add an entry for every new component:
 
 ```ts
 export interface ThemeDefaults {

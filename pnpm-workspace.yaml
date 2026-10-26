@@ -5,7 +5,6 @@ minimumReleaseAge: 0
 
 packages:
   - ./
-  - cli
   - playgrounds/nuxt
   - playgrounds/vue
   - playgrounds/repl
@@ -95,7 +94,6 @@ catalog:
   '@vueuse/shared': ^15.0.0
   ai: ^7.0.143
   akar: 2.0.24
-  citty: ^0.2.2
   colortranslator: ^5.0.0
   consola: ^3.4.2
   defu: ^6.1.7

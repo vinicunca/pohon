@@ -32,33 +32,11 @@ pnpm run dev:prepare  # Generate type stubs (run after install)
 pnpm run dev          # Nuxt playground
 pnpm run dev:vue      # Vue playground
 pnpm run dev:repl     # REPL playground
-pnpm run docs         # Documentation site
 pnpm run lint         # Check linting
 pnpm run lint:fix     # Fix linting
 pnpm run typecheck    # Type checking
 pnpm run test         # Run tests
 ```
-
-## CLI for Scaffolding
-
-Link the CLI first (one-time setup):
-
-```bash
-npm link
-```
-
-Then use it to create new components:
-
-```bash
-pohon-ui make component <name> [options]
-```
-
-Options:
-
-- `--primitive` - Primitive component (uses Akar Primitive)
-- `--prose` - Prose/typography component
-- `--content` - Content component
-- `--template` - Generate specific template only (`playground`, `docs`, `test`, `theme`, `component`)
 
 ## Key Conventions
 
@@ -104,17 +82,16 @@ Copy this checklist and track progress when creating a new component:
 ```bash
 Component: [name]
 Progress:
-- [ ] 1. Scaffold with CLI: pohon-ui make component <name>
-- [ ] 2. Implement component in src/runtime/components/
-- [ ] 3. Create theme in src/theme/
-- [ ] 4. Export types from src/runtime/types/index.ts
-- [ ] 5. Register in ThemeDefaults interface (src/runtime/composables/useComponentProps.ts)
-- [ ] 6. Write tests in test/components/
-- [ ] 7. Create docs in the vinicunca/docs repo: content/pohon/2.components/
-- [ ] 8. Add playground page
-- [ ] 9. Run pnpm run lint
-- [ ] 10. Run pnpm run typecheck
-- [ ] 11. Run pnpm run test
+- [ ] 1. Implement component in src/runtime/components/
+- [ ] 2. Create theme in src/theme/ and export it from src/theme/index.ts
+- [ ] 3. Export types from src/runtime/types/index.ts
+- [ ] 4. Register in ThemeDefaults interface (src/runtime/types/theme.ts)
+- [ ] 5. Write tests in test/components/
+- [ ] 6. Create docs in the vinicunca/docs repo: content/pohon/2.components/
+- [ ] 7. Add playground page
+- [ ] 8. Run pnpm run lint
+- [ ] 9. Run pnpm run typecheck
+- [ ] 10. Run pnpm run test
 ```
 
 ### PR Review Checklist

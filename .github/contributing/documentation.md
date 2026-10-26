@@ -4,7 +4,7 @@ Component documentation uses MDC (Markdown Components) syntax.
 
 ## File Location
 
-Docs live in the [vinicunca/docs](https://github.com/vinicunca/docs) repository, in `content/pohon/2.components/` with kebab-case naming (e.g., `button.md`). `pohon-ui make component` writes the page there when that repo is checked out next to this one.
+Docs live in the [vinicunca/docs](https://github.com/vinicunca/docs) repository, in `content/pohon/2.components/` with kebab-case naming (e.g., `button.md`).
 
 ## Basic Structure
 
