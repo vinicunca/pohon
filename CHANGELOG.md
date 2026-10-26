@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.5.0](https://github.com/vinicunca/pohon/compare/v2.4.1...v2.5.0) (2026-10-26)
+
+### Features
+
+* use uno clasess ([22a16b2](https://github.com/vinicunca/pohon/commit/22a16b23012d1e79140d7dbf60d07953abd1fe31))
+
 ## [2.4.1](https://github.com/vinicunca/pohon/compare/v2.4.0...v2.4.1) (2026-10-24)
 
 ### Bug Fixes
