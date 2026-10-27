@@ -164,6 +164,7 @@ function onSubmit() {
               v-else-if="isToolUIPart(part)"
               :text="getToolName(part)"
               :streaming="isToolStreaming(part, streaming)"
+              :error="part.state === 'output-error'"
             />
 
             <Comark

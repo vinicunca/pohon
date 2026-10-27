@@ -46,6 +46,18 @@ describe('chatTool', () => {
       },
     ],
     [
+      'with error',
+      {
+        props: { ...props, error: true },
+      },
+    ],
+    [
+      'with error and errorIcon',
+      {
+        props: { ...props, error: true, errorIcon: 'i-lucide-circle-alert' },
+      },
+    ],
+    [
       'with variant inline',
       {
         props: { ...props, variant: 'inline' },
