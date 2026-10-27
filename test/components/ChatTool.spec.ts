@@ -1,6 +1,7 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { describe, expect, it, vi } from 'vitest';
 import { axe } from 'vitest-axe';
+import { defineComponent, h, nextTick, ref } from 'vue';
 import ChatTool from '../../src/runtime/components/ChatTool.vue';
 import { renderEach } from '../component-render';
 
@@ -246,6 +247,28 @@ describe('chatTool', () => {
     });
 
     expect(wrapper.find('[data-slot="actions"]').exists()).toBe(false);
+  });
+
+  it('becomes collapsible when a conditional default slot appears', async () => {
+    const ready = ref(false);
+    const Parent = defineComponent({
+      setup() {
+        return () => h(ChatTool, { text: 'Searched the web' }, ready.value
+          ? {
+              default: () => 'Output',
+            }
+          : {});
+      },
+    });
+
+    const wrapper = await mountSuspended(Parent);
+    expect(wrapper.find('[data-slot="trailingIcon"]').exists()).toBe(false);
+
+    ready.value = true;
+    await nextTick();
+
+    expect(wrapper.find('[data-slot="trailingIcon"]').exists()).toBe(true);
+    expect(wrapper.find('[data-slot="trigger"]').attributes('disabled')).toBeUndefined();
   });
 
   it('passes accessibility tests', async () => {
