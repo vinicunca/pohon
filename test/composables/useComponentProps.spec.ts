@@ -113,3 +113,31 @@ describe('vue internal flags', () => {
     expect(flags).toEqual([false, false, false]);
   });
 });
+
+describe('prop name conversion cache', () => {
+  const Probe = defineComponent({
+    props: { cachedProp: String },
+    setup(rawProps) {
+      const p = useComponentProps('button', rawProps);
+      return { p };
+    },
+    render: () => h('i'),
+  });
+
+  it('does not re-convert a prop name on repeated reads', async () => {
+    const wrapper = await mountSuspended(Probe, {
+      props: { cachedProp: 'a' },
+    });
+    const p = (wrapper.vm as any).p as { cachedProp: string };
+    expect(p.cachedProp).toBe('a');
+
+    // Both case conversions lower-case their output, so a cache miss would call it.
+    const toLowerCase = vi.spyOn(String.prototype, 'toLowerCase');
+    try {
+      expect(p.cachedProp).toBe('a');
+      expect(toLowerCase).not.toHaveBeenCalled();
+    } finally {
+      toLowerCase.mockRestore();
+    }
+  });
+});

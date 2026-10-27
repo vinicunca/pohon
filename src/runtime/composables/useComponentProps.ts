@@ -26,6 +26,20 @@ export function injectThemeContext(fallback: ThemeContext = defaultThemeContext)
 
 export { provideThemeContext };
 
+const propNameCache = new Map<string, [string, string]>();
+
+function propNames(prop: string): [string, string] {
+  let names = propNameCache.get(prop);
+  if (!names) {
+    names = [
+      toCamelCase(prop),
+      toKebabCase(prop),
+    ];
+    propNameCache.set(prop, names);
+  }
+  return names;
+}
+
 /**
  * Vuetify-style detection for whether a prop was explicitly passed by the parent,
  * distinguishing "user set it" from "got the `withDefaults` fallback".
@@ -35,8 +49,9 @@ function propIsDefined(vnode: VNode | null | undefined, prop: string): boolean {
   if (!vnode || !vnode.props) {
     return false;
   }
-  return vnode.props[toCamelCase(prop)] !== undefined
-    || vnode.props[toKebabCase(prop)] !== undefined;
+  const [camel, kebab] = propNames(prop);
+  return vnode.props[camel] !== undefined
+    || vnode.props[kebab] !== undefined;
 }
 
 /**
@@ -59,6 +74,7 @@ export function useComponentProps<T extends object>(name: string, props: T): T {
   const vm = getCurrentInstance();
   const { defaults } = injectThemeContext();
   const appConfig = useAppConfig() as { ui?: Record<string, any> };
+  const isNested = name.includes('.');
 
   return new Proxy(props, {
     get(target, prop, receiver) {
@@ -89,7 +105,7 @@ export function useComponentProps<T extends object>(name: string, props: T): T {
       // Support dotted-path names (e.g. `prose.p`, `prose.code`) so prose
       // components can pull from the same nested `ThemeContext.defaults` shape
       // that `normalizeUi` produces in `<PTheme>`.
-      const themeEntry = name.includes('.')
+      const themeEntry = isNested
         ? get(defaults.value, name)
         : defaults.value[name];
 
@@ -119,7 +135,7 @@ export function useComponentProps<T extends object>(name: string, props: T): T {
       // working uniformly for every variant, including props a component pins in
       // `withDefaults` (e.g. `orientation`, kept defined so `:data-orientation`
       // always renders a value).
-      const appConfigEntry = name.includes('.')
+      const appConfigEntry = isNested
         ? get(appConfig.ui ?? {}, name)
         : appConfig.ui?.[name];
       const appConfigValue = appConfigEntry?.defaultVariants?.[prop];
