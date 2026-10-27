@@ -3,7 +3,7 @@ import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { TooltipProvider } from 'akar';
 import { describe, expect, it } from 'vitest';
 import { axe } from 'vitest-axe';
-import { defineComponent, h } from 'vue';
+import { createCommentVNode, defineComponent, h } from 'vue';
 import theme from '#build/ui/chat-message';
 import ChatMessage from '../../src/runtime/components/ChatMessage.vue';
 import { renderEach } from '../component-render';
@@ -142,6 +142,15 @@ describe('chatMessage', () => {
       },
     ],
     [
+      'with part slot',
+      {
+        props,
+        slots: {
+          part: () => 'Part slot',
+        },
+      },
+    ],
+    [
       'with actions slot',
       {
         props,
@@ -241,5 +250,32 @@ describe('chatMessage', () => {
     ]) {
       expect(captured[0]).not.toHaveProperty(key);
     }
+  });
+
+  it('renders the part slot once per part and falls back for parts it does not render', async () => {
+    const parts = [
+      { type: 'reasoning' as const, text: 'Thinking' },
+      { type: 'text' as const, text: 'Hello' },
+    ];
+    const captured: Array<Parameters<Exclude<ChatMessageSlots['part'], undefined>>[0]> = [];
+    const wrapper = await mountSuspended(ChatMessage, {
+      props: { ...props, role: 'assistant', parts },
+      slots: {
+        part: (slotProps) => {
+          captured.push(slotProps);
+          return slotProps.part.type === 'reasoning'
+            ? h('span', { class: 'reasoning' }, slotProps.part.text)
+            : createCommentVNode('v-if');
+        },
+      },
+    });
+
+    expect(captured.map(({ part, index }) => [part.type, index])).toEqual([
+      ['reasoning', 0],
+      ['text', 1],
+    ]);
+    expect(captured[0]!.message).toMatchObject({ id: props.id, role: 'assistant', parts });
+    expect(wrapper.find('.reasoning').text()).toBe('Thinking');
+    expect(wrapper.find('[data-slot="content"]').text()).toBe('ThinkingHello');
   });
 });

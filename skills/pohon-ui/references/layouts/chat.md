@@ -105,7 +105,7 @@ export default defineEventHandler(async (event) => {
 PDashboardPanel
 ├── #header → PDashboardNavbar
 ├── #body → PContainer → PChatMessages
-│                         ├── #content → PChatReasoning, PChatTool, Comark
+│                         ├── #part → PChatReasoning, PChatTool, Comark
 │                         └── #indicator (loading)
 └── #footer → PContainer → PChatPrompt
                             └── PChatPromptSubmit
@@ -146,40 +146,33 @@ function onSubmit() {
     <template #body>
       <PContainer>
         <PChatMessages :messages="messages" :status="status">
-          <template #content="{ message, streaming }">
-            <template v-for="(part, index) in message.parts" :key="`${message.id}-${part.type}-${index}`">
-              <PChatReasoning
-                v-if="isReasoningUIPart(part)"
-                :text="part.text"
+          <template #part="{ part, message, streaming }">
+            <PChatReasoning
+              v-if="isReasoningUIPart(part)"
+              :text="part.text"
+              :streaming="isPartStreaming(part, streaming)"
+            >
+              <Comark
+                :markdown="part.text"
                 :streaming="isPartStreaming(part, streaming)"
-              >
-                <Comark
-                  :markdown="part.text"
-                  :streaming="isPartStreaming(part, streaming)"
-                  :plugins="[highlight()]"
-                  class="*:first:mt-0 *:last:mb-0"
-                />
-              </PChatReasoning>
-
-              <PChatTool
-                v-else-if="isToolUIPart(part)"
-                :text="getToolName(part)"
-                :streaming="isToolStreaming(part, streaming)"
+                :plugins="[highlight()]"
+                class="*:first:mt-0 *:last:mb-0"
               />
+            </PChatReasoning>
 
-              <template v-else-if="isTextUIPart(part)">
-                <Comark
-                  v-if="message.role === 'assistant'"
-                  :markdown="part.text"
-                  :streaming="isPartStreaming(part, streaming)"
-                  :plugins="[highlight()]"
-                  class="*:first:mt-0 *:last:mb-0"
-                />
-                <p v-else-if="message.role === 'user'" class="whitespace-pre-wrap">
-                  {{ part.text }}
-                </p>
-              </template>
-            </template>
+            <PChatTool
+              v-else-if="isToolUIPart(part)"
+              :text="getToolName(part)"
+              :streaming="isToolStreaming(part, streaming)"
+            />
+
+            <Comark
+              v-else-if="isTextUIPart(part) && message.role === 'assistant'"
+              :markdown="part.text"
+              :streaming="isPartStreaming(part, streaming)"
+              :plugins="[highlight()]"
+              class="*:first:mt-0 *:last:mb-0"
+            />
           </template>
         </PChatMessages>
       </PContainer>
@@ -198,9 +191,9 @@ function onSubmit() {
 
 ## Key components
 
-- `PChatMessages` — scrollable message list with auto-scroll. Props: `messages`, `status`. Slots: `#content` (per message), `#actions`, `#indicator`.
+- `PChatMessages` — scrollable message list with auto-scroll. Props: `messages`, `status`. Slots: `#part` (per part, unrendered parts fall back to the default output), `#content` (per message), `#actions`, `#indicator`.
 - `PChatMessage` — individual bubble. Props: `message`, `side` (`'left'`/`'right'`).
-- `PChatReasoning` — collapsible reasoning block. Auto-opens during streaming, auto-closes when done. Use `isPartStreaming(part, streaming)` from `pohon-ui/utils/ai`, with `streaming` from the `#content` slot.
+- `PChatReasoning` — collapsible reasoning block. Auto-opens during streaming, auto-closes when done. Use `isPartStreaming(part, streaming)` from `pohon-ui/utils/ai`, with `streaming` from the `#part` slot.
 - `PChatTool` — tool invocation status. Use `isToolStreaming(part, streaming)`. Variants: `'inline'` (default), `'card'`.
 - `PChatPrompt` — enhanced textarea for chat. Its typed API exposes a selected subset of `PTextarea` props, forwards additional attributes to the underlying textarea, and adds chat-specific props such as `error` and `submitOnEnter`.
 - `PChatPromptSubmit` — submit button with automatic status handling (send/stop/reload).

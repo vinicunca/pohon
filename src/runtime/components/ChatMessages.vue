@@ -22,6 +22,11 @@ type PropsBase<T extends Array<UIMessage>>
     ? ChatMessageProps<M, D, U>
     : never;
 
+type SlotsBase<T extends Array<UIMessage>>
+  = MessageBase<T> extends UIMessage<infer M, infer D, infer U>
+    ? ChatMessageSlots<M, D, U>
+    : never;
+
 export interface ChatMessagesProps<T extends Array<UIMessage> = Array<UIMessage>> {
   messages?: T;
   status?: ChatStatus;
@@ -77,7 +82,7 @@ export type ChatMessagesSlots<T extends Array<UIMessage> = Array<UIMessage>> = {
   indicator?(props: { ui: ChatMessages['ui'] }): Array<VNode>;
   viewport?(props: { ui: ChatMessages['ui']; onClick: () => void }): Array<VNode>;
 } & {
-  [K in keyof ChatMessageSlots]?: NonNullable<ChatMessageSlots[K]> extends (props: infer P) => Array<VNode>
+  [K in keyof ChatMessageSlots]?: NonNullable<SlotsBase<T>[K]> extends (props: infer P) => Array<VNode>
     ? (props: P & { message: MessageBase<T>; streaming: boolean }) => Array<VNode>
     : never
 };
