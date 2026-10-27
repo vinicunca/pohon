@@ -388,3 +388,126 @@ describe('uv slot memoization', () => {
     expect(ui.label({})).toBe('truncate');
   });
 });
+
+describe('uv factory memoization', () => {
+  const theme = {
+    slots: { base: 'inline-flex text-sm', label: 'truncate' },
+    variants: {
+      color: {
+        primary: { base: 'bg-primary' },
+        secondary: { base: 'bg-secondary' },
+      },
+    },
+    defaultVariants: { color: 'primary' },
+  };
+
+  it('reuses the component for equal configs', () => {
+    expect(uvt({
+      extend: theme,
+      slots: { base: 'p-2' },
+    })).toBe(uvt({
+      extend: theme,
+      slots: { base: 'p-2' },
+    }));
+  });
+
+  it('does not share a component across configs', () => {
+    expect(uvt({
+      extend: theme,
+      slots: { base: 'p-2' },
+    })().base()).toContain('p-2');
+    expect(uvt({
+      extend: theme,
+      slots: { base: 'p-4' },
+    })().base()).toContain('p-4');
+  });
+
+  it('does not share a component across themes', () => {
+    expect(uvt({ extend: theme })().base()).toContain('inline-flex');
+    expect(uvt({
+      extend: {
+        ...theme,
+        slots: { base: 'block' },
+      },
+    })().base()).toContain('block');
+  });
+
+  it('keeps an undefined config value distinct from a missing one', () => {
+    expect(uvt({ extend: theme, defaultVariants: {} })().base()).toContain('bg-primary');
+    expect(uvt({
+      extend: theme,
+      defaultVariants: { color: undefined },
+    })().base()).not.toContain('bg-primary');
+  });
+
+  it('does not share a component between undefined and a string matching its key marker', () => {
+    expect(uvt({
+      extend: theme,
+      slots: { label: undefined },
+    })().label()).toBe('truncate');
+    expect(uvt({
+      extend: theme,
+      slots: { label: '\0undefined' },
+    })().label()).toBe('truncate \0undefined');
+  });
+
+  it('falls back to the uncached path for configs that cannot be serialized', () => {
+    const cyclic: any = {};
+    cyclic.self = cyclic;
+    expect(uvt({
+      extend: theme,
+      slots: { label: 10n },
+    })().label()).toBe('truncate 10');
+    expect(uvt({ extend: theme, meta: cyclic })().label()).toBe('truncate');
+  });
+
+  it('does not key configs through `toJSON`', () => {
+    const variants = Object.defineProperty({
+      color: {
+        primary: { base: 'p-4' },
+      },
+    }, 'toJSON', {
+      value: () => ({}),
+    });
+    expect(uvt({ extend: theme, variants: {} })().base()).not.toContain('p-4');
+    expect(uvt({ extend: theme, variants })().base()).toContain('p-4');
+  });
+
+  it('does not share a component across configs containing functions', () => {
+    expect(uvt({
+      extend: theme,
+      slots: {
+        label: () => 'text-xl',
+      },
+    })().label()).toBe('text-xl');
+    expect(uvt({
+      extend: theme,
+      slots: {
+        label: () => 'text-2xl',
+      },
+    })().label()).toBe('text-2xl');
+  });
+
+  it('does not share a component between non-finite numbers and null', () => {
+    expect(uvt({
+      extend: theme,
+      slots: { label: null },
+    })().label()).toBe('truncate');
+    expect(uvt({
+      extend: theme,
+      slots: { label: Number.POSITIVE_INFINITY },
+    })().label()).toBe('truncate Infinity');
+  });
+
+  it('does not key configs carrying inherited enumerable props as plain ones', () => {
+    // `unocss-variants` ignores inherited props, but the key must not assume it:
+    // a non-plain object always takes the uncached path.
+    const inherited = Object.create({
+      color: {
+        primary: { base: 'p-4' },
+      },
+    });
+    expect(uvt({ extend: theme, variants: inherited })).not.toBe(uvt({ extend: theme, variants: {} }));
+    expect(uvt({ extend: theme, variants: inherited })).not.toBe(uvt({ extend: theme, variants: inherited }));
+  });
+});
