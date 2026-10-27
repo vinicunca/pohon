@@ -1,4 +1,4 @@
-import { bench, describe } from 'vitest';
+import { it } from 'vitest';
 import buttonTheme from '#build/ui/button';
 import navigationMenuTheme from '#build/ui/navigation-menu';
 import tableTheme from '#build/ui/table';
@@ -33,82 +33,89 @@ const tableProps = {
 const ITERATIONS = 100;
 
 // Building the factory is the expensive step (deep-merges the whole variant
-// matrix, joins every slot, flattens compound variants). Today it happens inside
-// each component's `computed`, so every variant-prop change re-runs it.
-describe('factory build', () => {
-  bench('button (~6 slots)', () => {
+// matrix, joins every slot, flattens compound variants). `uv` memoizes it per
+// theme and config, so only the cold build below skips the cache.
+it('factory build', async ({ bench }) => {
+  await bench('button (~6 slots)', () => {
     for (let i = 0; i < ITERATIONS; i++) {
       uv({ extend: buttonTheme });
     }
-  });
+  }).run();
 
-  bench('table (~13 slots)', () => {
+  await bench('table (~13 slots)', () => {
     for (let i = 0; i < ITERATIONS; i++) {
       uv({ extend: tableTheme });
     }
-  });
+  }).run();
 
-  bench('navigation-menu (~31 slots)', () => {
+  await bench('navigation-menu (~31 slots)', () => {
     for (let i = 0; i < ITERATIONS; i++) {
       uv({ extend: navigationMenuTheme });
     }
-  });
+  }).run();
+
+  let cold = 0;
+  await bench('button (~6 slots, cold build)', () => {
+    for (let i = 0; i < ITERATIONS; i++) {
+      uv({ extend: buttonTheme, base: `cold-${cold++}` });
+    }
+  }).run();
 });
 
 // Invoking a prebuilt factory is the cheap step — this is all a variant-prop
 // change should cost once the build is hoisted out of the invocation computed.
-describe('invocation (prebuilt factory)', () => {
+it('invocation (prebuilt factory)', async ({ bench }) => {
   const buttonFactory = uv({ extend: buttonTheme });
   const tableFactory = uv({ extend: tableTheme });
 
-  bench('button', () => {
+  await bench('button', () => {
     for (let i = 0; i < ITERATIONS; i++) {
       buttonFactory(buttonProps);
     }
-  });
+  }).run();
 
-  bench('table', () => {
+  await bench('table', () => {
     for (let i = 0; i < ITERATIONS; i++) {
       tableFactory(tableProps);
     }
-  });
+  }).run();
 });
 
 // Build and invoke fused in one call, as every component does today. The gap
 // between this and "invocation (prebuilt factory)" is the overhead saved by
 // hoisting factory construction out of the per-variant-prop recomputation.
-describe('build + invoke (current fused pattern)', () => {
-  bench('button', () => {
+it('build + invoke (current fused pattern)', async ({ bench }) => {
+  await bench('button', () => {
     for (let i = 0; i < ITERATIONS; i++) {
       uv({ extend: buttonTheme })(buttonProps);
     }
-  });
+  }).run();
 
-  bench('table', () => {
+  await bench('table', () => {
     for (let i = 0; i < ITERATIONS; i++) {
       uv({ extend: tableTheme })(tableProps);
     }
-  });
+  }).run();
 });
 
 // Table renders call `ui.td(...)` once per cell through the `wrapSlots` proxy.
 // This models a 100-cell render, exercising the per-access wrapper-closure
 // allocation and the replacer scan on every slot call.
-describe('slot invocation', () => {
+it('slot invocation', async ({ bench }) => {
   const tableUi = uv({ extend: tableTheme })(tableProps);
 
-  bench('td x100 (string class)', () => {
+  await bench('td x100 (string class)', () => {
     for (let i = 0; i < 100; i++) {
       tableUi.td({ class: 'p-2', pinned: false });
     }
-  });
+  }).run();
 
-  bench('td x100 (array class)', () => {
+  await bench('td x100 (array class)', () => {
     for (let i = 0; i < 100; i++) {
       tableUi.td({
         class: [undefined, 'p-2'],
         pinned: false,
       });
     }
-  });
+  }).run();
 });

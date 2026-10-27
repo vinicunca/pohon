@@ -1,5 +1,5 @@
 import { mountSuspended } from '@nuxt/test-utils/runtime';
-import { bench, describe } from 'vitest';
+import { it } from 'vitest';
 import Button from '../../src/runtime/components/Button.vue';
 
 // Where does a Button's render cost come from? Three rungs isolate it:
@@ -15,25 +15,25 @@ const Plain = {
   template: '<button type="button">x</button>',
 };
 
-describe('mount', () => {
-  bench('plain <button>', async () => {
+it('mount', async ({ bench }) => {
+  await bench('plain <button>', async () => {
     const wrapper = await mountSuspended(Plain);
     wrapper.unmount();
-  });
+  }).run();
 
-  bench('pButton (no link)', async () => {
+  await bench('PButton (no link)', async () => {
     const wrapper = await mountSuspended(Button, {
       props: { label: 'x' },
     });
     wrapper.unmount();
-  });
+  }).run();
 
-  bench('pButton (link)', async () => {
+  await bench('PButton (link)', async () => {
     const wrapper = await mountSuspended(Button, {
       props: { label: 'x', to: '/' },
     });
     wrapper.unmount();
-  });
+  }).run();
 });
 
 // CodSpeed measures one run after a forced GC, and a single on/off cycle is
@@ -46,18 +46,15 @@ const CYCLES = 20;
 // Re-render cost: a full on/off `loading` cycle per iteration (deterministic,
 // ends in the initial state), re-rendering the whole subtree.
 function reRenderBench(name: string, comp: any, props: Record<string, any> = {}) {
-  describe(`re-render: ${name}`, () => {
-    let wrapper: Awaited<ReturnType<typeof mountSuspended>> | undefined;
+  it(`re-render: ${name}`, async ({ bench }) => {
+    const wrapper = await mountSuspended(comp, { props });
 
-    // Mounted lazily on the first call: CodSpeed's analysis runner invokes the
-    // bench function without tinybench's `setup`/`teardown` options.
-    bench(`${name} x${CYCLES}`, async () => {
-      wrapper ??= await mountSuspended(comp, { props });
+    await bench(`${name} x${CYCLES}`, async () => {
       for (let i = 0; i < CYCLES; i++) {
         await wrapper.setProps({ loading: true });
         await wrapper.setProps({ loading: false });
       }
-    });
+    }).run();
   });
 }
 

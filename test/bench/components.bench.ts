@@ -1,6 +1,6 @@
 import type { TableColumn } from '../../src/runtime/components/Table.vue';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
-import { bench, describe } from 'vitest';
+import { it } from 'vitest';
 import Button from '../../src/runtime/components/Button.vue';
 import Table from '../../src/runtime/components/Table.vue';
 
@@ -19,31 +19,27 @@ const Toolbar = {
 // count so CodSpeed reads them as new benches rather than as a 20x regression.
 const CYCLES = 20;
 
-describe('button mount', () => {
-  bench('toolbar of 25', async () => {
+it('button mount', async ({ bench }) => {
+  await bench('toolbar of 25', async () => {
     const wrapper = await mountSuspended(Toolbar);
     wrapper.unmount();
-  });
+  }).run();
 });
 
 // Toggling a variant prop re-runs the component's `ui` computed and re-renders
 // its subtree. Each iteration performs a full on/off cycle so the work measured
 // is deterministic and always ends back in the initial `false` state.
-describe('button re-render (variant prop change)', () => {
-  let wrapper: Awaited<ReturnType<typeof mountSuspended>> | undefined;
+it('button re-render (variant prop change)', async ({ bench }) => {
+  const wrapper = await mountSuspended(Button, {
+    props: { label: 'Button' },
+  });
 
-  // Mounted lazily on the first call: CodSpeed's analysis runner invokes the
-  // bench function without tinybench's `setup`/`teardown` options, so a mount
-  // there never happens under instrumentation. The warmup pass absorbs it.
-  bench(`toggle loading x${CYCLES}`, async () => {
-    wrapper ??= await mountSuspended(Button, {
-      props: { label: 'Button' },
-    });
+  await bench(`toggle loading x${CYCLES}`, async () => {
     for (let i = 0; i < CYCLES; i++) {
       await wrapper.setProps({ loading: true });
       await wrapper.setProps({ loading: false });
     }
-  });
+  }).run();
 });
 
 type Row = { id: number; name: string; email: string; amount: number; status: string };
@@ -72,27 +68,30 @@ const columns: Array<TableColumn<Row>> = [
 // expects `TableColumn<unknown, unknown>[]` — cast the checked columns at use.
 const tableProps = (data: Array<Row>) => ({ data, columns: columns as unknown as Array<TableColumn<unknown, unknown>> });
 
+// Under CodSpeed's simulator each Table test runs well past the 60s timeout
+// Vitest gives benchmark projects, so it is disabled for them.
+const tableBench = { timeout: 0 };
+
 // The per-cell `ui.td()` path at scale (200 rows x 5 columns = 1000 cells).
-describe('table mount (200 x 5)', () => {
+it('table mount (200 x 5)', tableBench, async ({ bench }) => {
   const data = makeData(200);
 
-  bench('mount', async () => {
+  await bench('mount', async () => {
     const wrapper = await mountSuspended(Table, {
       props: tableProps(data),
     });
     wrapper.unmount();
-  });
+  }).run();
 });
 
-describe('table re-render (new data identity)', () => {
-  let wrapper: Awaited<ReturnType<typeof mountSuspended>> | undefined;
+it('table re-render (new data identity)', tableBench, async ({ bench }) => {
+  const wrapper = await mountSuspended(Table, {
+    props: tableProps(makeData(200)),
+  });
 
-  bench('set data', async () => {
-    wrapper ??= await mountSuspended(Table, {
-      props: tableProps(makeData(200)),
-    });
+  await bench('set data', async () => {
     await wrapper.setProps({
       data: makeData(200),
     });
-  });
+  }).run();
 });
