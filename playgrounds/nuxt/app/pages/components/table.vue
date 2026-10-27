@@ -175,7 +175,7 @@ const columns: Array<TableColumn<Payment>> = [
     meta: {
       class: {
         td: 'text-center font-600',
-        th: 'pohon:text-right text-green-500 w-48',
+        th: 'pohon:text-right color-green-500 w-48',
       },
     },
     cell: ({ row }) => {

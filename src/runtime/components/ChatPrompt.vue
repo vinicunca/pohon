@@ -51,7 +51,7 @@ export interface ChatPromptSlots extends TextareaSlots {
   header?(props?: {}): Array<VNode>;
   footer?(props?: {}): Array<VNode>;
   /**
-   * Replace the internal textarea, e.g. to render an [Editor](/docs/components/editor) with mentions.
+   * Replace the internal textarea, e.g. to render an [Editor](/pohon/components/editor) with mentions.
    */
   body?(props: { submit: (event?: Event) => void; close: (event?: Event) => void; placeholder: string; disabled: boolean; ui: any }): Array<VNode>;
 }

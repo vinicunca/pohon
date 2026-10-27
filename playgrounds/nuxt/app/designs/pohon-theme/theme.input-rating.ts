@@ -7,7 +7,7 @@ export const themeInputRating = {
   slots: {
     root: '',
     item: 'rounded-sm inline-block cursor-pointer select-none transition relative has-focus-visible:outline-3',
-    indicator: 'text-transparent outline-none opacity-$akar-rating-item-step-opacity w-$akar-rating-item-step-width inset-0 absolute z-$akar-rating-item-step-z-index overflow-hidden',
+    indicator: 'color-transparent outline-none opacity-$akar-rating-item-step-opacity w-$akar-rating-item-step-width inset-0 absolute z-$akar-rating-item-step-z-index overflow-hidden',
     icon: 'block',
     emptyIcon: 'color-text-muted h-full w-full block pointer-events-none',
   },

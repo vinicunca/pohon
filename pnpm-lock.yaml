@@ -296,10 +296,16 @@ catalogs:
     '@unhead/vue':
       specifier: ^3.4.3
       version: 3.4.3
+    '@unocss/core':
+      specifier: 66.11.0
+      version: 66.11.0
     '@unocss/nuxt':
       specifier: 66.11.0
       version: 66.11.0
     '@unocss/preset-wind4':
+      specifier: 66.11.0
+      version: 66.11.0
+    '@unocss/runtime':
       specifier: 66.11.0
       version: 66.11.0
     '@vinicunca/eslint-config':
@@ -835,6 +841,15 @@ importers:
 
   playgrounds/repl:
     dependencies:
+      '@unocss/core':
+        specifier: 'catalog:'
+        version: 66.11.0
+      '@unocss/runtime':
+        specifier: 'catalog:'
+        version: 66.11.0
+      '@vinicunca/unocss-preset':
+        specifier: 'catalog:'
+        version: 2.6.0(@vinicunca/perkakas@1.19.1)(unocss@66.11.0(@oxc-project/types@0.155.0)(@unocss/webpack@66.11.0(esbuild@0.28.0)(rolldown@1.2.15)(rollup@4.60.4)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3)))(cac@7.1.0)(rolldown@1.2.15)(rollup@4.60.4)(srvx@1.0.5)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0)))
       '@vue/repl':
         specifier: 'catalog:'
         version: 4.7.2
@@ -848,6 +863,9 @@ importers:
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
         version: 6.0.10(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(vue@3.5.44(typescript@6.0.3))
+      unocss:
+        specifier: 'catalog:'
+        version: 66.11.0(@oxc-project/types@0.155.0)(@unocss/webpack@66.11.0(esbuild@0.28.0)(rolldown@1.2.15)(rollup@4.60.4)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3)))(cac@7.1.0)(rolldown@1.2.15)(rollup@4.60.4)(srvx@1.0.5)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))
       vite:
         specifier: 'catalog:'
         version: 8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0)
@@ -3911,6 +3929,9 @@ packages:
 
   '@unocss/rule-utils@66.11.0':
     resolution: {integrity: sha512-QW7B4whiR9x6m7FHEdsDuObFY9lbuoZunVoTvmZZDNSN/GNmdDNzMNmeCSLq1+QeEvz1ac5LnxRXdQzcrQ2MVg==}
+
+  '@unocss/runtime@66.11.0':
+    resolution: {integrity: sha512-PlcCsyv8PcMm2Y3FlgJ1WA4lbsR9CYWhU+nBQdamXtYPJX474AQAK+3rqD5tzv7wRJrVdw5PoMb/WcChyzMkqg==}
 
   '@unocss/transformer-attributify-jsx@66.11.0':
     resolution: {integrity: sha512-V0U6qSuKIilm2IzozdY2ipMgToFJ1SGjCbBdoEIthwzfZ0VvuO7pSy/EPtkW5MiFFISHBA9UMfqSvR3IH1YHyA==}
@@ -12667,11 +12688,27 @@ snapshots:
       '@unocss/core': 66.11.0
       magic-string: 1.4.3
 
+  '@unocss/runtime@66.11.0':
+    dependencies:
+      '@iconify/utils': 3.1.7
+      '@unocss/core': 66.11.0
+      '@unocss/preset-attributify': 66.11.0
+      '@unocss/preset-uno': 66.11.0
+
   '@unocss/transformer-attributify-jsx@66.11.0(@oxc-project/types@0.153.0)(rolldown@1.2.15)':
     dependencies:
       '@unocss/core': 66.11.0
       oxc-parser: 0.153.0
       oxc-walker: 1.1.1(@oxc-project/types@0.153.0)(oxc-parser@0.153.0)(rolldown@1.2.15)
+    transitivePeerDependencies:
+      - '@oxc-project/types'
+      - rolldown
+
+  '@unocss/transformer-attributify-jsx@66.11.0(@oxc-project/types@0.155.0)(rolldown@1.2.15)':
+    dependencies:
+      '@unocss/core': 66.11.0
+      oxc-parser: 0.153.0
+      oxc-walker: 1.1.1(@oxc-project/types@0.155.0)(oxc-parser@0.153.0)(rolldown@1.2.15)
     transitivePeerDependencies:
       - '@oxc-project/types'
       - rolldown
@@ -12833,6 +12870,11 @@ snapshots:
     dependencies:
       '@vinicunca/perkakas': 1.19.1
       unocss: 66.11.0(@oxc-project/types@0.153.0)(@unocss/webpack@66.11.0(esbuild@0.28.0)(rolldown@1.2.15)(rollup@4.60.4)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3)))(cac@7.1.0)(rolldown@1.2.15)(rollup@4.60.4)(srvx@1.0.5)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))
+
+  '@vinicunca/unocss-preset@2.6.0(@vinicunca/perkakas@1.19.1)(unocss@66.11.0(@oxc-project/types@0.155.0)(@unocss/webpack@66.11.0(esbuild@0.28.0)(rolldown@1.2.15)(rollup@4.60.4)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3)))(cac@7.1.0)(rolldown@1.2.15)(rollup@4.60.4)(srvx@1.0.5)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0)))':
+    dependencies:
+      '@vinicunca/perkakas': 1.19.1
+      unocss: 66.11.0(@oxc-project/types@0.155.0)(@unocss/webpack@66.11.0(esbuild@0.28.0)(rolldown@1.2.15)(rollup@4.60.4)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3)))(cac@7.1.0)(rolldown@1.2.15)(rollup@4.60.4)(srvx@1.0.5)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))
 
   '@vitejs/plugin-vue-jsx@5.1.6(supports-color@10.2.2)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(vue@3.5.44(typescript@6.0.3))':
     dependencies:
@@ -16983,6 +17025,12 @@ snapshots:
       oxc-parser: 0.153.0
       rolldown: 1.2.15
 
+  oxc-walker@1.1.1(@oxc-project/types@0.155.0)(oxc-parser@0.153.0)(rolldown@1.2.15):
+    optionalDependencies:
+      '@oxc-project/types': 0.155.0
+      oxc-parser: 0.153.0
+      rolldown: 1.2.15
+
   oxfmt@0.35.0:
     dependencies:
       tinypool: 2.1.0
@@ -18624,6 +18672,38 @@ snapshots:
       '@unocss/transformer-directives': 66.11.0
       '@unocss/transformer-variant-group': 66.11.0
       '@unocss/vite': 66.11.0(srvx@0.11.22)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))
+    optionalDependencies:
+      '@unocss/webpack': 66.11.0(esbuild@0.28.0)(rolldown@1.2.15)(rollup@4.60.4)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3))
+    transitivePeerDependencies:
+      - '@devframes/agentic'
+      - '@oxc-project/types'
+      - cac
+      - ocache
+      - rolldown
+      - rollup
+      - srvx
+      - vite
+
+  unocss@66.11.0(@oxc-project/types@0.155.0)(@unocss/webpack@66.11.0(esbuild@0.28.0)(rolldown@1.2.15)(rollup@4.60.4)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3)))(cac@7.1.0)(rolldown@1.2.15)(rollup@4.60.4)(srvx@1.0.5)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0)):
+    dependencies:
+      '@unocss/cli': 66.11.0
+      '@unocss/core': 66.11.0
+      '@unocss/preset-attributify': 66.11.0
+      '@unocss/preset-icons': 66.11.0
+      '@unocss/preset-mini': 66.11.0
+      '@unocss/preset-tagify': 66.11.0
+      '@unocss/preset-typography': 66.11.0
+      '@unocss/preset-uno': 66.11.0
+      '@unocss/preset-web-fonts': 66.11.0
+      '@unocss/preset-wind': 66.11.0
+      '@unocss/preset-wind3': 66.11.0
+      '@unocss/preset-wind4': 66.11.0
+      '@unocss/rollup': 66.11.0(rolldown@1.2.15)(rollup@4.60.4)
+      '@unocss/transformer-attributify-jsx': 66.11.0(@oxc-project/types@0.155.0)(rolldown@1.2.15)
+      '@unocss/transformer-compile-class': 66.11.0
+      '@unocss/transformer-directives': 66.11.0
+      '@unocss/transformer-variant-group': 66.11.0
+      '@unocss/vite': 66.11.0(cac@7.1.0)(srvx@1.0.5)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))
     optionalDependencies:
       '@unocss/webpack': 66.11.0(esbuild@0.28.0)(rolldown@1.2.15)(rollup@4.60.4)(vite@8.3.5(@types/node@26.6.4)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.46.0)(yaml@2.9.0))(webpack@5.106.2(esbuild@0.28.0)(uglify-js@3.19.3))
     transitivePeerDependencies:

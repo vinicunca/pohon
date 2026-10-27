@@ -68,7 +68,7 @@ const sections = [
       <div class="flex gap-2 items-center">
         <PIcon
           name="i-lucide-crown"
-          class="text-amber-500 size-4"
+          class="color-amber-500 size-4"
         />
         {{ tier.title }}
       </div>
@@ -79,9 +79,9 @@ const sections = [
       <div class="flex gap-2 items-center">
         <PIcon
           name="i-lucide-shield-check"
-          class="text-green-500 size-4"
+          class="color-green-500 size-4"
         />
-        <span class="text-green-700 font-600">{{ section.title }}</span>
+        <span class="color-green-700 font-600">{{ section.title }}</span>
       </div>
     </template>
 

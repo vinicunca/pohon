@@ -162,7 +162,7 @@ function onSelect(event: Event, item: T) {
           v-bind="typeof item.avatar === 'object' ? item.avatar : {}"
           data-slot="indicator"
           :class="ui.indicator({ class: [props.ui?.indicator, item.ui?.indicator] })"
-          :ui="{ icon: 'text-inherit', fallback: 'text-inherit' }"
+          :ui="{ icon: 'color-inherit', fallback: 'color-inherit' }"
         >
           <slot :name="((item.slot ? `${item.slot}-indicator` : 'indicator') as keyof TimelineSlots<T>)" :item="(item as Extract<T, { slot: string; }>)" />
         </PAvatar>

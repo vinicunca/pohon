@@ -9,12 +9,16 @@
     "build": "pnpm bundle && vite build"
   },
   "dependencies": {
+    "@unocss/core": "catalog:",
+    "@unocss/runtime": "catalog:",
+    "@vinicunca/unocss-preset": "catalog:",
     "@vue/repl": "catalog:",
     "pohon-ui": "catalog:",
     "vue": "catalog:"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "catalog:",
+    "unocss": "catalog:",
     "vite": "catalog:"
   }
 }

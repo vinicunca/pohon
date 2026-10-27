@@ -153,7 +153,7 @@ export default (options: Required<ModuleOptions>) => ({
       spotlightColor,
       spotlight: true,
       class: {
-        root: `[--spotlight-color:var(--ui-${spotlightColor})]`,
+        root: `[--spotlight-color:var(--ui-color-${spotlightColor})]`,
       },
     })),
     {

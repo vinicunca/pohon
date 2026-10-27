@@ -23,8 +23,8 @@ const {
 const builtinImportMap = computed(() => ({
   imports: {
     ...vueImportMap.value.imports,
-    'pohon-ui': '/nuxt-ui.js',
-    'pohon-ui/composables': '/nuxt-ui.js',
+    'pohon-ui': '/pohon-ui.js',
+    'pohon-ui/composables': '/pohon-ui.js',
     'zod': 'https://esm.sh/zod@4?external=vue',
     '@vueuse/core': 'https://esm.sh/@vueuse/core?external=vue',
     '@tanstack/vue-table': 'https://esm.sh/@tanstack/vue-table?external=vue',
@@ -176,17 +176,14 @@ const composables = Object.values(publicComposables).flat();
 const previewOptions = {
   headHTML: [
     '<script>window.__VUE_PROD_DEVTOOLS__=false<\/script>',
-    '<link rel="stylesheet" href="/nuxt-ui.css">',
+    '<link rel="stylesheet" href="/pohon-ui.css">',
     '<link rel="preconnect" href="https://fonts.bunny.net">',
     '<link href="https://fonts.bunny.net/css?family=public-sans:400,500,600,700" rel="stylesheet">',
-    '<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"><\/script>',
-    '<style type="text/tailwindcss">@theme { --font-sans: \'Public Sans\', sans-serif; }</style>',
-    '<style>body { font-family: var(--font-sans); }</style>',
     '<style>#app { isolation: isolate; }</style>',
   ].join(''),
   customCode: {
     importCode: `import ui, { ${composables.join(', ')} } from 'pohon-ui'\nimport { h } from 'vue'\n${composables.map((name) => `window.${name} = ${name}`).join('\n')}`,
-    useCode: 'app.use(ui)\napp.component(\'Placeholder\', { template: \'<div class="relative overflow-hidden rounded-sm border border-dashed border-border-accented opacity-75 px-4 flex items-center justify-center"><svg class="absolute inset-0 size-full stroke-inverted/10" fill="none"><defs><pattern id="placeholder-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3" /></pattern></defs><rect stroke="none" fill="url(#placeholder-pattern)" width="100%" height="100%" /></svg><slot /></div>\' })\nconst _Root = app._component\nconst _UApp = app.component(\'PApp\')\nconst _origMount = app.mount\napp.mount = function(el) {\n  const wrapper = _createApp({ render() { return h(_UApp, null, { default: () => h(_Root) }) } })\n  Object.assign(wrapper._context.components, app._context.components)\n  Object.assign(wrapper._context.directives, app._context.directives)\n  Object.assign(wrapper._context.provides, app._context.provides)\n  wrapper.config.errorHandler = e => console.error(e)\n  wrapper.mount(el)\n  window.__app__ = wrapper\n}',
+    useCode: 'app.use(ui)\napp.component(\'Placeholder\', { template: \'<div class="relative overflow-hidden rounded-sm border border-dashed border-border-accented opacity-75 px-4 flex items-center justify-center"><svg class="absolute inset-0 size-full stroke-border-inverted/10" fill="none"><defs><pattern id="placeholder-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3" /></pattern></defs><rect stroke="none" fill="url(#placeholder-pattern)" width="100%" height="100%" /></svg><slot /></div>\' })\nconst _Root = app._component\nconst _PApp = app.component(\'PApp\')\nconst _origMount = app.mount\napp.mount = function(el) {\n  const wrapper = _createApp({ render() { return h(_PApp, null, { default: () => h(_Root) }) } })\n  Object.assign(wrapper._context.components, app._context.components)\n  Object.assign(wrapper._context.directives, app._context.directives)\n  Object.assign(wrapper._context.provides, app._context.provides)\n  wrapper.config.errorHandler = e => console.error(e)\n  wrapper.mount(el)\n  window.__app__ = wrapper\n}',
   },
 };
 </script>
@@ -199,7 +196,10 @@ const previewOptions = {
         :ui="{ container: 'max-w-none' }"
       >
         <template #left>
-          <Logo class="color-text-highlighted shrink-0 h-6 w-auto" />
+          <div class="text-lg color-text-highlighted font-bold flex shrink-0 gap-2 items-center">
+            <Logo class="h-6 w-auto" />
+            <span>Pohon UI Playground</span>
+          </div>
         </template>
 
         <template #right>
@@ -251,27 +251,27 @@ const previewOptions = {
 <style>
 .iframe-container,
 .iframe-container iframe {
-  background-color: var(--ui-bg) !important;
+  background-color: var(--ui-color-bg) !important;
 }
 
 .vue-repl,
 .dark .vue-repl {
-  --bg: var(--ui-bg);
-  --bg-soft: var(--ui-bg-muted);
-  --border: var(--ui-border);
-  --text-light: var(--ui-text-muted);
-  --color-branding: var(--ui-primary);
-  --color-branding-dark: var(--ui-primary);
+  --bg: var(--ui-color-bg);
+  --bg-soft: var(--ui-color-bg-muted);
+  --border: var(--ui-color-border);
+  --text-light: var(--ui-color-text-muted);
+  --color-branding: var(--ui-color-primary);
+  --color-branding-dark: var(--ui-color-primary);
 
   & .file-selector {
-    padding-inline: calc(var(--spacing) * 4);
+    padding-inline: 1rem;
 
     @media (width >= 40rem) {
-      padding-inline: calc(var(--spacing) * 6);
+      padding-inline: 1.5rem;
     }
 
     @media (width >= 64rem) {
-      padding-inline: calc(var(--spacing) * 8);
+      padding-inline: 2rem;
     }
   }
 
@@ -288,9 +288,9 @@ const previewOptions = {
 
 .CodeMirror,
 .dark .CodeMirror {
-  --base: var(--ui-text);
-  --comment: var(--ui-text-dimmed);
-  --selected-bg: var(--ui-bg-accented);
-  --selected-bg-non-focus: var(--ui-bg-accented);
+  --base: var(--ui-color-text);
+  --comment: var(--ui-color-text-dimmed);
+  --selected-bg: var(--ui-color-bg-accented);
+  --selected-bg-non-focus: var(--ui-color-bg-accented);
 }
 </style>

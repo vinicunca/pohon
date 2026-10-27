@@ -305,7 +305,7 @@ describe('chart', () => {
     });
 
     expect(wrapper.findAll('[data-ts-key^="legend-label"]').map((label) => label.text())).toEqual(['Desktop', 'Mobile']);
-    expect(wrapper.find('[data-slot="root"]').attributes('style')).toContain('--ts-chart-2: var(--ui-error)');
+    expect(wrapper.find('[data-slot="root"]').attributes('style')).toContain('--ts-chart-2: var(--ui-color-error)');
     expect(wrapper.find('svg.ts-chart').attributes('aria-label')).toBe('Visitors');
   });
 

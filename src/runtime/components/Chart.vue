@@ -201,7 +201,7 @@ function resolveColor(color: string) {
   }
 
   return themeColors.value.includes(color)
-    ? `var(--ui-${color})`
+    ? `var(--ui-color-${color})`
     : color;
 }
 

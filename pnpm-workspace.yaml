@@ -81,8 +81,10 @@ catalog:
   '@tiptap/suggestion': ^3.32.0
   '@tiptap/vue-3': ^3.32.0
   '@unhead/vue': ^3.4.3
+  '@unocss/core': 66.11.0
   '@unocss/nuxt': 66.11.0
   '@unocss/preset-wind4': 66.11.0
+  '@unocss/runtime': 66.11.0
   '@vinicunca/eslint-config': 6.1.1
   '@vinicunca/perkakas': 1.19.1
   '@vinicunca/unocss-preset': 2.6.0

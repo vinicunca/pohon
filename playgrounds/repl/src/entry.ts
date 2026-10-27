@@ -1,6 +1,12 @@
 import type { App } from 'vue';
+import initUnocssRuntime from '@unocss/runtime';
 import basePlugin from 'pohon-ui/vue-plugin';
+import unoConfig from '../uno.config';
 import './main.css';
+
+// The preview runs user code that can use any utility class, so generate the CSS in the browser
+// from the DOM instead of shipping a prebuilt stylesheet.
+initUnocssRuntime({ defaults: unoConfig });
 
 const componentModules = import.meta.glob([
   '../../../src/runtime/components/*.vue',

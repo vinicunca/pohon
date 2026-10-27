@@ -4,7 +4,7 @@
 
 Pohon UI uses 7 semantic colors. Never use raw UnoCSS palette colors in components — always use these semantic names.
 
-| Color | Default | When to use |
+| Color | Typical palette | When to use |
 |---|---|---|
 | `primary` | green | CTAs, active states, brand accent, links |
 | `secondary` | blue | Secondary actions, complementary highlights |
@@ -24,74 +24,40 @@ Pohon UI uses 7 semantic colors. Never use raw UnoCSS palette colors in componen
 
 ### Configuring colors
 
-```ts
-// Nuxt — app.config.ts
-export default defineAppConfig({
-  ui: {
-    colors: {
-      primary: 'indigo',
-      secondary: 'violet',
-      success: 'emerald',
-      error: 'rose',
-      neutral: 'zinc'
-    }
-  }
-})
-```
-
-```ts
-// Vue — vite.config.ts
-ui({
-  ui: {
-    colors: { primary: 'indigo', secondary: 'violet', neutral: 'zinc' }
-  }
-})
-```
-
-Only colors that exist in your theme work — either UnoCSS's defaults or custom colors defined in `uno.config.ts`.
-
-Available color palettes:
-- **Standard UnoCSS**: red, orange, amber, yellow, lime, green, emerald, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose
-- **Neutral palettes** (for `neutral` key — pick one that matches the aesthetic):
-  - `slate` — cool blue-gray, professional (default)
-  - `gray` — true neutral, clean
-  - `zinc` — slightly cool, modern, techy
-  - `neutral` — perfectly balanced
-  - `stone` — warm gray, earthy
-  - `taupe` — warm brown-gray, sophisticated
-  - `mauve` — purple-tinted gray, elegant
-  - `mist` — soft blue-gray, airy
-  - `olive` — green-tinted gray, natural
-
-### Adding custom brand colors
-
-1. Define all 11 shades in CSS:
+Each semantic color is a set of CSS variables in the app's `main.css`: 11 shades, then the shade used per color mode. Pohon UI ships no values, so every color the app uses needs this block:
 
 ```css
 /* app/assets/css/main.css */
 :root {
-  --color-brand-50: #fef2f2;
-  --color-brand-100: #fee2e2;
-  --color-brand-200: #fecaca;
-  --color-brand-300: #fca5a5;
-  --color-brand-400: #f87171;
-  --color-brand-500: #ef4444;
-  --color-brand-600: #dc2626;
-  --color-brand-700: #b91c1c;
-  --color-brand-800: #991b1b;
-  --color-brand-900: #7f1d1d;
-  --color-brand-950: #450a0a;
+  --ui-color-primary-50: oklch(98.2% 0.018 155.826);
+  /* ...every shade 100 to 900 */
+  --ui-color-primary-950: oklch(26.6% 0.065 152.934);
+  --ui-color-primary-foreground: var(--ui-color-primary-950); /* optional: text on `bg-primary` */
+}
+
+:root, .light {
+  --ui-color-primary: var(--ui-color-primary-500);
+}
+
+.dark {
+  --ui-color-primary: var(--ui-color-primary-400);
 }
 ```
 
-2. Assign it: `ui: { colors: { primary: 'brand' } }`
+- Define all 11 shades: component themes read `-300` and `-600`, not only the base.
+- Take shade values from the UnoCSS palette (`import { colors } from '@unocss/preset-wind4/colors'`) or from a custom brand ramp.
+- `ui.colors` in `app.config.ts` / `vite.config.ts` does not change colors; the CSS variables above are the only source.
+
+`neutral` follows the same pattern with `--ui-color-neutral-*`, which the text, background and border variables read. Pick its ramp for the aesthetic: `slate` (cool, professional), `gray` (true neutral), `zinc` (modern, techy), `neutral` (balanced), `stone` (warm, earthy).
 
 ### Extending with new semantic color names
 
-To add a color beyond the 7 defaults (e.g., `tertiary`), register it in `theme.colors`:
+To add a color beyond the defaults (e.g., `tertiary`):
+
+1. Register it so components get the variant:
 
 ```ts
-// nuxt.config.ts
+// nuxt.config.ts (Vue: the same `theme` key in the `ui()` options of vite.config.ts)
 export default defineNuxtConfig({
   ui: {
     theme: {
@@ -99,6 +65,23 @@ export default defineNuxtConfig({
     }
   }
 })
+```
+
+2. Define its `--ui-color-tertiary-*` variables in CSS, as above.
+3. Add its utilities in `uno.config.ts`, since `pohonColors` covers only the default colors:
+
+```ts
+theme: {
+  colors: {
+    ...pohonColors,
+    tertiary: {
+      DEFAULT: 'var(--ui-color-tertiary)',
+      foreground: 'var(--ui-color-tertiary-foreground)',
+      ...Object.fromEntries(['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950']
+        .map((shade) => [shade, `var(--ui-color-tertiary-${shade})`]))
+    }
+  }
+}
 ```
 
 ## Semantic utility classes

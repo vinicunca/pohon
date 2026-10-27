@@ -199,7 +199,7 @@ export const themeChatTool = {
 } satisfies PThemeChatTool;
 
 export const themeChatShimmer = {
-  base: 'text-transparent will-change-[background-position] bg-[image:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--ui-color-text-highlighted),#0000_calc(50%+var(--spread))),linear-gradient(var(--ui-color-text-muted),var(--ui-color-text-muted))] bg-size-[calc(200%+var(--spread)*2+2px)_100%,auto] bg-clip-text bg-no-repeat motion-reduce:color-text-muted motion-safe:animate-shimmer motion-reduce:bg-none motion-safe:rtl:animate-shimmer-rtl',
+  base: 'color-transparent will-change-[background-position] bg-[image:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--ui-color-text-highlighted),#0000_calc(50%+var(--spread))),linear-gradient(var(--ui-color-text-muted),var(--ui-color-text-muted))] bg-size-[calc(200%+var(--spread)*2+2px)_100%,auto] bg-clip-text bg-no-repeat motion-reduce:color-text-muted motion-safe:animate-shimmer motion-reduce:bg-none motion-safe:rtl:animate-shimmer-rtl',
 } satisfies PThemeChatShimmer;
 
 export const themeChatReasoning = {

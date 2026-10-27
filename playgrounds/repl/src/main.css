@@ -1,6 +1,9 @@
-@import "tailwindcss" theme(static) source("../../..");
-@import "pohon-ui";
+@import "../../nuxt/app/designs/styles/theme.css";
 
-@theme {
-  --font-sans: "Public Sans", sans-serif;
+body {
+  font-family: "Public Sans", sans-serif;
+  background-color: var(--ui-color-bg);
+  color: var(--ui-color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

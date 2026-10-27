@@ -36,7 +36,7 @@ export const themeEditor = {
       '[&_hr]:(border-t border-border)',
       // Code blocks
       '[&_pre]:(text-sm/6 px-4 py-3 border border-border-muted rounded-md bg-background-muted whitespace-pre-wrap break-words overflow-x-auto)',
-      '[&_pre_code]:(text-inherit font-inherit p-0 border-0 rounded-none bg-transparent inline)',
+      '[&_pre_code]:(color-inherit font-inherit p-0 border-0 rounded-none bg-transparent inline)',
       // Inline code
       '[&_code]:(text-sm color-text-highlighted font-500 font-mono px-1.5 py-0.5 border border-border-muted rounded-md bg-background-muted inline-block)',
       // Lists

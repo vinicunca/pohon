@@ -185,7 +185,7 @@ exports[`chatTool > renders with loading correctly 1`] = `
 
 exports[`chatTool > renders with streaming correctly 1`] = `
 "<div data-state="closed" data-slot="root" class=""><button type="button" aria-controls="" aria-expanded="false" data-state="closed" disabled="" data-slot="trigger" class="group flex w-full items-center gap-1.5 color-text-muted text-sm disabled:cursor-default disabled:hover:color-text-muted hover:color-text min-w-0 transition-colors rounded-sm outline-primary/25 focus-visible:outline-3">
-    <!--v-if--><span data-slot="label" class="truncate"><span style="--spread: 40px; --duration: 2s;" data-slot="base" class="motion-reduce:color-text-muted text-transparent will-change-[background-position] bg-[image:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--ui-color-text-highlighted),#0000_calc(50%+var(--spread))),linear-gradient(var(--ui-color-text-muted),var(--ui-color-text-muted))] bg-size-[calc(200%+var(--spread)*2+2px)_100%,auto] bg-clip-text bg-no-repeat motion-safe:animate-shimmer motion-reduce:bg-none motion-safe:rtl:animate-shimmer-rtl">Searching components</span>
+    <!--v-if--><span data-slot="label" class="truncate"><span style="--spread: 40px; --duration: 2s;" data-slot="base" class="motion-reduce:color-text-muted color-transparent will-change-[background-position] bg-[image:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--ui-color-text-highlighted),#0000_calc(50%+var(--spread))),linear-gradient(var(--ui-color-text-muted),var(--ui-color-text-muted))] bg-size-[calc(200%+var(--spread)*2+2px)_100%,auto] bg-clip-text bg-no-repeat motion-safe:animate-shimmer motion-reduce:bg-none motion-safe:rtl:animate-shimmer-rtl">Searching components</span>
     <!--v-if--></span>
     <!--v-if-->
   </button>

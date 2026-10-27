@@ -30,7 +30,7 @@ export interface EditorProps<T extends Content = Content, H extends EditorCustom
   /**
    * The starter kit options to configure the editor.
    * Set to `false` for a plain-text editor: keeps the essential nodes (paragraph, text, history) and disables all rich-text formatting.
-   * @defaultValue { horizontalRule: false, link: { openOnClick: false }, dropcursor: { color: 'var(--ui-primary)', width: 2 } }
+   * @defaultValue { horizontalRule: false, link: { openOnClick: false }, dropcursor: { color: 'var(--ui-color-primary)', width: 2 } }
    * @see https://tiptap.dev/docs/editor/extensions/functionality/starterkit
    */
   starterKit?: boolean | Partial<StarterKitOptions>;
@@ -183,7 +183,7 @@ const starterKit = computed(() => {
     code: false,
     horizontalRule: false,
     dropcursor: {
-      color: 'var(--ui-primary)',
+      color: 'var(--ui-color-primary)',
       width: 2,
     },
     link: {

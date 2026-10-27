@@ -50,6 +50,18 @@ export default defineConfig({
       components: false,
     }),
   ],
+  resolve: {
+    alias: [
+      {
+        find: /^unocss$/,
+        replacement: resolve(__dirname, 'src/shims/unocss.ts'),
+      },
+      {
+        find: /^node:module$/,
+        replacement: resolve(__dirname, 'src/shims/node-module.ts'),
+      },
+    ],
+  },
   publicDir: false,
   build: {
     lib: {
