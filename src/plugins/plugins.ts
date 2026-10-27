@@ -35,7 +35,7 @@ export default function PluginsPlugin(options: PohonUiOptions) {
     }));
   }
 
-  const proseComponents = (options.prose || options.mdc)
+  const proseComponents = (options.prose !== false && (options.prose || options.mdc))
     ? globSync(['**/*.vue'], {
         cwd: join(runtimeDir, 'components/prose'),
         absolute: true,
