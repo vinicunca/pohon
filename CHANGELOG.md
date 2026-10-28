@@ -1,5 +1,30 @@
 # Changelog
 
+## [2.6.0](https://github.com/vinicunca/pohon/compare/v2.5.1...v2.6.0) (2026-10-28)
+
+### Features
+
+* **ChatAttachment:** new component ([a7f6b0e](https://github.com/vinicunca/pohon/commit/a7f6b0e1f3dd917b16c6c8cd845575df88e63a46))
+* **ChatMessage:** add `part` slot ([0128a0b](https://github.com/vinicunca/pohon/commit/0128a0b2d9689a8bb77e6f1104613fe8251918a9))
+* **ChatMessages:** add `footer` slot ([cb4501c](https://github.com/vinicunca/pohon/commit/cb4501c5ca788fbd134f9663561c7b748996c4ee))
+* **ChatMessages:** expose scroll methods and mark the list as a live region ([5400700](https://github.com/vinicunca/pohon/commit/540070098b27128c30221b999c1fa8a3cb552893))
+* **ChatPrompt:** add `v-model:queue` ([26166da](https://github.com/vinicunca/pohon/commit/26166da8d463f6a5f5f43f6e8fec3e303dd199d7))
+* **ChatTool:** add `error` prop ([6ce3f3a](https://github.com/vinicunca/pohon/commit/6ce3f3a6a28b8b16f2aab8e616f498bf8c42f4ca))
+
+### Bug Fixes
+
+* **ChatTool:** pick up a default slot added after mount ([b3b3a1f](https://github.com/vinicunca/pohon/commit/b3b3a1f3bc76ba4a75faab7bd82d4151b470d8bc))
+* **module:** skip prose components when `prose` is `false` ([c8bf5e1](https://github.com/vinicunca/pohon/commit/c8bf5e1f76838a95b1b28a728df68e3ea10e9bc4))
+* **ProseImg/ColorModeImage:** avoid applying `app.baseURL` twice with `@nuxt/image` ([8d0f638](https://github.com/vinicunca/pohon/commit/8d0f638d9b65766f1dbbde908b33eb03face31ae))
+* **prose:** size inline code in headings without anchor links ([93e17fe](https://github.com/vinicunca/pohon/commit/93e17febe8a6eda3e2aa47928e7228cf8599ff58))
+* **Table:** merge grouped headers across rows ([1cc6fb7](https://github.com/vinicunca/pohon/commit/1cc6fb720ee8ae48ef6c2ffae6cf4f2450ed78d7))
+* **Toaster:** expand stacked toasts on keyboard focus ([ff09544](https://github.com/vinicunca/pohon/commit/ff09544878bd8c0fb5426d2a2c774b61be977cc2))
+
+### Performance Improvements
+
+* **components:** memoize uv components per theme and config ([2103f87](https://github.com/vinicunca/pohon/commit/2103f8777221b2566e66f2953ca2b57202122e22))
+* **useComponentProps:** cache prop name case conversions ([ffb6206](https://github.com/vinicunca/pohon/commit/ffb6206280dd679329cc07e6f247231e355bd7af))
+
 ## [2.5.1](https://github.com/vinicunca/pohon/compare/v2.5.0...v2.5.1) (2026-10-26)
 
 ## [2.5.0](https://github.com/vinicunca/pohon/compare/v2.4.1...v2.5.0) (2026-10-26)
