@@ -24,8 +24,8 @@ export interface ProseImgProps {
 import { createReusableTemplate, useEventListener } from '@vueuse/core';
 import { DialogPortal, DialogRoot, DialogTrigger } from 'akar';
 import { AnimatePresence, Motion } from 'motion-v';
-import { computed, ref, useId } from 'vue';
-import ImageComponent from '#build/ui-image-component';
+import { computed, ref, useAttrs, useId } from 'vue';
+import ImageComponent, { useImage } from '#build/ui-image-component';
 import { useAppConfig, useRuntimeConfig } from '#imports';
 import { useComponentProps } from '../../composables/useComponentProps';
 import { resolveBaseURL } from '../../utils';
@@ -58,7 +58,16 @@ const ui = computed(() => uv({
   width: !!props.width,
 }));
 
-const refinedSrc = computed(() => resolveBaseURL(props.src, useRuntimeConfig().app.baseURL));
+const attrs = useAttrs();
+const image = useImage?.();
+
+// `@nuxt/image`'s ipx providers already prefix `app.baseURL`
+const refinedSrc = computed(() => {
+  const provider = (attrs.provider as string | undefined) || image?.options.provider;
+  return provider === 'ipx' || provider === 'ipxStatic'
+    ? props.src
+    : resolveBaseURL(props.src, useRuntimeConfig().app.baseURL);
+});
 
 const layoutId = computed(() => `${refinedSrc.value}::${useId()}`);
 
