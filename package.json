@@ -284,6 +284,7 @@
   },
   "devDependencies": {
     "@codspeed/vitest-plugin": "catalog:",
+    "@nuxt/image": "catalog:",
     "@nuxt/module-builder": "catalog:",
     "@nuxt/test-utils": "catalog:",
     "@release-it/conventional-changelog": "catalog:",
