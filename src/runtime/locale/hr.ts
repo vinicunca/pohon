@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Upišite svoju poruku ovdje…',
+      queue: 'Poruke u redu čekanja',
+      sendNow: 'Pošalji sada',
+      edit: 'Uredi',
+      remove: 'Ukloni',
     },
     chatPromptSubmit: {
       label: 'Pošalji upit',

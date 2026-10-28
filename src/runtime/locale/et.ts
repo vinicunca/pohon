@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Siia kirjutage oma sõnum…',
+      queue: 'Järjekorras sõnumid',
+      sendNow: 'Saada kohe',
+      edit: 'Muuda',
+      remove: 'Eemalda',
     },
     chatPromptSubmit: {
       label: 'Saada',

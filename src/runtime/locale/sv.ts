@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Skriv ditt meddelande här…',
+      queue: 'Meddelanden i kö',
+      sendNow: 'Skicka nu',
+      edit: 'Redigera',
+      remove: 'Ta bort',
     },
     chatPromptSubmit: {
       label: 'Skicka',

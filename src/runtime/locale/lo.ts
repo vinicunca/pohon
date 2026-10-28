@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'ພິມຂໍ້ຄວາມຂອງທ່ານທີ່ນີ້…',
+      queue: 'ຂໍ້ຄວາມທີ່ລໍຖ້າ',
+      sendNow: 'ສົ່ງດຽວນີ້',
+      edit: 'ແກ້ໄຂ',
+      remove: 'ລຶບອອກ',
     },
     chatPromptSubmit: {
       label: 'ສົ່ງຄຳສັ່ງ',

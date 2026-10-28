@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Εδώ γράψτε το μήνυμά σας…',
+      queue: 'Μηνύματα σε αναμονή',
+      sendNow: 'Αποστολή τώρα',
+      edit: 'Επεξεργασία',
+      remove: 'Αφαίρεση',
     },
     chatPromptSubmit: {
       label: 'Αποστολή',

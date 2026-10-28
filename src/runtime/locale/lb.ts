@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Tippt hei Äre Message…',
+      queue: 'Messagen an der Schlaang',
+      sendNow: 'Elo schécken',
+      edit: 'Änneren',
+      remove: 'Ewechhuelen',
     },
     chatPromptSubmit: {
       label: 'Prompt schécken',

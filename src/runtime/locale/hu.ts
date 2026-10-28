@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Írd be a kérdésedet itt…',
+      queue: 'Várakozó üzenetek',
+      sendNow: 'Küldés most',
+      edit: 'Szerkesztés',
+      remove: 'Eltávolítás',
     },
     chatPromptSubmit: {
       label: 'Küldés',

@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Skrifaðu skilaboðin þín hér…',
+      queue: 'Skilaboð í biðröð',
+      sendNow: 'Senda núna',
+      edit: 'Breyta',
+      remove: 'Fjarlægja',
     },
     chatPromptSubmit: {
       label: 'Senda fyrirspurn',

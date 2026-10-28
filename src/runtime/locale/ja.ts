@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'ここにメッセージを入力してください…',
+      queue: 'キュー内のメッセージ',
+      sendNow: '今すぐ送信',
+      edit: '編集',
+      remove: '削除',
     },
     chatPromptSubmit: {
       label: '送信',

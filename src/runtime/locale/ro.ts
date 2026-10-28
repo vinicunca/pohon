@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Scrieți mesajul dvs. aici…',
+      queue: 'Mesaje în așteptare',
+      sendNow: 'Trimite acum',
+      edit: 'Editează',
+      remove: 'Elimină',
     },
     chatPromptSubmit: {
       label: 'Trimite',

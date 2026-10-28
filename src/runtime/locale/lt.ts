@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Įveskite savo žinutę čia…',
+      queue: 'Eilėje esantys pranešimai',
+      sendNow: 'Siųsti dabar',
+      edit: 'Redaguoti',
+      remove: 'Pašalinti',
     },
     chatPromptSubmit: {
       label: 'Siųsti žinutę',

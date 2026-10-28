@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Raksti savu ziņu šeit…',
+      queue: 'Rindā esošās ziņas',
+      sendNow: 'Sūtīt tagad',
+      edit: 'Rediģēt',
+      remove: 'Noņemt',
     },
     chatPromptSubmit: {
       label: 'Sūtīt ziņu',

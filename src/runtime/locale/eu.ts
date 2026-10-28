@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Idatzi zure mezua hemen…',
+      queue: 'Ilaran dauden mezuak',
+      sendNow: 'Bidali orain',
+      edit: 'Editatu',
+      remove: 'Kendu',
     },
     chatPromptSubmit: {
       label: 'Bidali',

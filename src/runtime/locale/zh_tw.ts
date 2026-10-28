@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: '在這裡輸入你的消息…',
+      queue: '排隊中的訊息',
+      sendNow: '立即傳送',
+      edit: '編輯',
+      remove: '移除',
     },
     chatPromptSubmit: {
       label: '發送',

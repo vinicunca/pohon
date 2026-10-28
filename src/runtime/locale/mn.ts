@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Энд мессежээ бичнэ үү…',
+      queue: 'Дараалалд буй мессежүүд',
+      sendNow: 'Одоо илгээх',
+      edit: 'Засах',
+      remove: 'Устгах',
     },
     chatPromptSubmit: {
       label: 'Мессеж илгээх',

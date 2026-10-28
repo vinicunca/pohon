@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Hier schreiben Sie Ihre Nachricht…',
+      queue: 'Nachrichten in der Warteschlange',
+      sendNow: 'Jetzt senden',
+      edit: 'Bearbeiten',
+      remove: 'Entfernen',
     },
     chatPromptSubmit: {
       label: 'Senden',

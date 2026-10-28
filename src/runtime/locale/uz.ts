@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Bu yerda savolingizni yozing…',
+      queue: 'Navbatdagi xabarlar',
+      sendNow: 'Hozir yuborish',
+      edit: 'Tahrirlash',
+      remove: 'Oʻchirish',
     },
     chatPromptSubmit: {
       label: 'Jo\'natish',

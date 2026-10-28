@@ -45,6 +45,10 @@ export default defineLocale<Messages>({
     },
     chatPrompt: {
       placeholder: 'Shkruaj mesazhin tënd këtu…',
+      queue: 'Mesazhe në radhë',
+      sendNow: 'Dërgo tani',
+      edit: 'Ndrysho',
+      remove: 'Hiq',
     },
     chatPromptSubmit: {
       label: 'Dërgo mesazhin',
