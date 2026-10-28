@@ -157,6 +157,7 @@ import { useComponentProps } from '../composables/useComponentProps';
 import { useFileUpload } from '../composables/useFileUpload';
 import { useFormField } from '../composables/useFormField';
 import { useLocale } from '../composables/useLocale';
+import { formatFileSize } from '../utils/file';
 import { uv } from '../utils/uv';
 import PAvatar from './Avatar.vue';
 import PButton from './Button.vue';
@@ -264,26 +265,6 @@ function getFilePreview(file: FileUploadItem): string | undefined {
     return undefined;
   }
   return URL.createObjectURL(file);
-}
-
-function formatFileSize(bytes?: number): string | undefined {
-  if (bytes === undefined) {
-    return undefined;
-  }
-  if (bytes === 0) {
-    return '0B';
-  }
-
-  const k = 1024;
-  const sizes = ['B', 'KB', 'MB', 'GB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-
-  const value = bytes / k ** i;
-  const formattedSize = i === 0
-    ? value.toString()
-    : value.toFixed(0);
-
-  return `${formattedSize}${sizes[i]}`;
 }
 
 function setModelValue(value: T | File | Array<T | File> | null) {
