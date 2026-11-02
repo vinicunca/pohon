@@ -16,7 +16,7 @@ overrides:
   # the whole vite peer group down to vitest's vite 7. The plugin only ever runs
   # inside vitest's own vite, so the wider range is bookkeeping, not runtime.
   '@codspeed/vitest-plugin>vite': ^7.0.0 || ^8.0.0
-  '@nuxt/kit': ^4.6.2
+  '@nuxt/kit': ^4.6.3
   c12: ^3.3.4
   pohon-ui: workspace:*
   typescript: ^6.0.3
@@ -41,23 +41,23 @@ catalog:
   '@codspeed/vitest-plugin': ^6.1.0
   '@comark/vue': ^0.8.1
   '@floating-ui/dom': ^1.8.0
-  '@iconify-json/lucide': ^1.2.147
-  '@iconify-json/simple-icons': ^1.2.100
-  '@iconify/vue': ^5.0.4
+  '@iconify-json/lucide': ^1.2.150
+  '@iconify-json/simple-icons': ^1.2.101
+  '@iconify/vue': ^5.0.5
   '@internationalized/date': ^3.12.4
   '@internationalized/number': ^3.6.9
   '@nuxt/content': ^3.16.2
   '@nuxt/fonts': ^1.2.0
-  '@nuxt/icon': ^2.6.1
-  '@nuxt/image': ^2.2.0
-  '@nuxt/kit': ^4.6.2
+  '@nuxt/icon': ^2.6.2
+  '@nuxt/image': ^2.2.1
+  '@nuxt/kit': ^4.6.3
   '@nuxt/module-builder': ^1.0.3
-  '@nuxt/schema': ^4.6.2
+  '@nuxt/schema': ^4.6.3
   '@nuxt/test-utils': ^4.3.4
-  '@nuxtjs/color-mode': ^4.0.1
+  '@nuxtjs/color-mode': ^4.1.0
   '@release-it/conventional-changelog': ^12.0.2
   '@standard-schema/spec': ^1.1.0
-  '@tanstack/charts': ^1.1.0
+  '@tanstack/charts': ^1.2.0
   '@tanstack/table-core': ^8.21.3
   '@tanstack/vue-table': ^8.21.3
   '@tanstack/vue-virtual': ^3.13.48
@@ -95,7 +95,7 @@ catalog:
   '@vueuse/integrations': ^15.0.0
   '@vueuse/shared': ^15.0.0
   ai: ^7.0.153
-  akar: 2.0.25
+  akar: 2.0.26
   colortranslator: ^5.0.0
   consola: ^3.4.2
   defu: ^6.1.7
@@ -107,26 +107,26 @@ catalog:
   embla-carousel-fade: ^8.6.0
   embla-carousel-vue: ^8.6.0
   embla-carousel-wheel-gestures: ^8.1.0
-  eslint: ^10.13.0
+  eslint: ^10.14.0
   fuse.js: ^7.5.0
   happy-dom: ^21.0.1
   hookable: ^6.1.2
   knitwork: ^1.3.0
   magic-string: ^1.4.3
   mlly: ^1.8.2
-  motion-v: ^2.8.0
-  nuxt: ^4.6.2
+  motion-v: ^2.10.0
+  nuxt: ^4.6.3
   ohash: ^2.0.12
   pathe: ^2.0.3
   pohon-ui: workspace:*
-  release-it: ^21.1.1
+  release-it: ^21.1.2
   scule: ^1.3.0
   tinyglobby: ^0.2.17
   typescript: ^6.0.3
   ufo: ^1.6.4
   unbuild: ^3.6.1
   unocss: 66.12.0
-  unocss-variants: 1.7.0
+  unocss-variants: 1.8.0
   unplugin: ^3.4.0
   unplugin-auto-import: ^21.1.0
   unplugin-vue-components: ^32.1.0
