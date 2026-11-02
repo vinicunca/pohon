@@ -85,7 +85,13 @@ describe('popover', () => {
         },
       },
     ],
-  ]);
+  ], async (_name, options) => {
+    const wrapper = await mountSuspended(Popover, options);
+
+    // Akar loads content outside Suspense, so mounting can finish before it renders.
+    await expect.poll(() => wrapper.find('[data-slot="content"]').exists()).toBe(true);
+    expect(wrapper.html()).toMatchSnapshot();
+  });
 
   it('anchors the content to a custom reference without rendering a trigger', async () => {
     const wrapper = await mountSuspended(Popover, {
@@ -96,7 +102,7 @@ describe('popover', () => {
     });
 
     // Content renders, positioned against the reference
-    expect(wrapper.find('[data-slot="content"]').exists()).toBe(true);
+    await expect.poll(() => wrapper.find('[data-slot="content"]').exists()).toBe(true);
     expect(wrapper.text()).toContain('Tour step');
 
     // No trigger and no leftover anchor placeholder element
@@ -114,7 +120,7 @@ describe('popover', () => {
     });
 
     expect(wrapper.text()).toContain('Trigger');
-    expect(wrapper.find('[data-slot="content"]').exists()).toBe(true);
+    await expect.poll(() => wrapper.find('[data-slot="content"]').exists()).toBe(true);
     expect(wrapper.text()).toContain('Anchored content');
   });
 
@@ -133,6 +139,7 @@ describe('popover', () => {
       },
     });
 
+    await expect.poll(() => wrapper.find('[data-slot="content"]').exists()).toBe(true);
     expect(await axe(wrapper.element, {
       rules: {
         // Akar does not handle nor check for aria-dialog-name in their tests either

@@ -435,7 +435,7 @@ describe('theme', () => {
 
     // Tooltip below the inner theme inherits the outer theme's `arrow: true`
     // because the inner theme didn't touch the `tooltip` key.
-    expect(wrapper.find('[data-slot="arrow"]').exists()).toBe(true);
+    await expect.poll(() => wrapper.find('[data-slot="arrow"]').exists()).toBe(true);
   });
 
   it('reacts to :props changes', async () => {
@@ -531,7 +531,7 @@ describe('theme', () => {
       `,
     });
 
-    expect(wrapper.find('[data-slot="arrow"]').exists()).toBe(true);
+    await expect.poll(() => wrapper.find('[data-slot="arrow"]').exists()).toBe(true);
   });
 
   // Without a `<PTheme :props>` ancestor, an unset Boolean prop must stay unset
@@ -548,6 +548,7 @@ describe('theme', () => {
       `,
     });
 
+    await expect.poll(() => wrapper.find('[data-slot="content"]').exists()).toBe(true);
     expect(wrapper.find('[data-slot="arrow"]').exists()).toBe(false);
   });
 
@@ -747,6 +748,7 @@ describe('theme', () => {
       `,
     });
 
+    await expect.poll(() => wrapper.find('[data-slot="content"]').exists()).toBe(true);
     expect(wrapper.find('[data-slot="arrow"]').exists()).toBe(false);
 
     themeProps.value = {

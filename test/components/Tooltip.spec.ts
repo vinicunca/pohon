@@ -94,13 +94,20 @@ describe('tooltip', () => {
         },
       },
     ],
-  ]);
+  ], async (_name, options) => {
+    const wrapper = await mountSuspended(TooltipWrapper, options);
+
+    // Akar loads content outside Suspense, so mounting can finish before it renders.
+    await expect.poll(() => wrapper.find('[data-slot="content"]').exists()).toBe(true);
+    expect(wrapper.html()).toMatchSnapshot();
+  });
 
   it('respects provider content defaults', async () => {
     const wrapper = await mountSuspended(TooltipProviderContentWrapper, {
       props: { text: 'Tooltip', open: true, portal: false },
     });
 
+    await expect.poll(() => wrapper.find('[data-slot="content"]').exists()).toBe(true);
     const content = wrapper.find('[data-slot="content"]');
     expect(content.attributes('data-side')).toBe('right');
   });
@@ -115,6 +122,7 @@ describe('tooltip', () => {
       },
     });
 
+    await expect.poll(() => wrapper.find('[data-slot="content"]').exists()).toBe(true);
     const content = wrapper.find('[data-slot="content"]');
     expect(content.attributes('data-side')).toBe('top');
   });
@@ -127,7 +135,7 @@ describe('tooltip', () => {
       },
     });
 
-    expect(wrapper.find('[role="tooltip"]').text()).toBe('Tooltip Ctrl K');
+    await expect.poll(() => wrapper.find('[role="tooltip"]').text()).toBe('Tooltip Ctrl K');
   });
 
   it('passes accessibility tests', async () => {
@@ -138,6 +146,7 @@ describe('tooltip', () => {
         kbds: ['meta', 'K'],
       },
     });
+    await expect.poll(() => wrapper.find('[data-slot="content"]').exists()).toBe(true);
     expect(await axe(wrapper.element)).toHaveNoViolations();
   });
 });
